@@ -16,6 +16,7 @@ exports[`Related publications Component  should not render data with empty looku
         key="fez_record_search_key_has_related_datasets-0"
       >
         <WithStyles(ForwardRef(Typography))
+          data-testid="rek-has-related-datasets-0"
           variant="body2"
         >
           <Link
@@ -29,6 +30,7 @@ exports[`Related publications Component  should not render data with empty looku
         key="fez_record_search_key_has_related_datasets-1"
       >
         <WithStyles(ForwardRef(Typography))
+          data-testid="rek-has-related-datasets-1"
           variant="body2"
         >
           <Link
@@ -59,6 +61,7 @@ exports[`Related publications Component  should render component 1`] = `
         key="fez_record_search_key_has_related_datasets-0"
       >
         <WithStyles(ForwardRef(Typography))
+          data-testid="rek-has-related-datasets-0"
           variant="body2"
         >
           <Link
@@ -72,6 +75,7 @@ exports[`Related publications Component  should render component 1`] = `
         key="fez_record_search_key_has_related_datasets-1"
       >
         <WithStyles(ForwardRef(Typography))
+          data-testid="rek-has-related-datasets-1"
           variant="body2"
         >
           <Link
@@ -3878,6 +3882,7 @@ exports[`Related publications Component  should render component 2`] = `
                                                 key="fez_record_search_key_has_related_datasets-0"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="rek-has-related-datasets-0"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -3915,10 +3920,12 @@ exports[`Related publications Component  should render component 2`] = `
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="rek-has-related-datasets-0"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="rek-has-related-datasets-0"
                                                     >
                                                       <Link
                                                         to="/view/UQ:313292"
@@ -3943,6 +3950,7 @@ exports[`Related publications Component  should render component 2`] = `
                                                 key="fez_record_search_key_has_related_datasets-1"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="rek-has-related-datasets-1"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -3980,10 +3988,12 @@ exports[`Related publications Component  should render component 2`] = `
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="rek-has-related-datasets-1"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="rek-has-related-datasets-1"
                                                     >
                                                       <Link
                                                         to="/view/UQ:313292"
@@ -7847,6 +7857,7 @@ exports[`Related publications Component  should render with a publication title 
                                                 key="current"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="undefined-current"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -7884,10 +7895,12 @@ exports[`Related publications Component  should render with a publication title 
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="undefined-current"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="undefined-current"
                                                     >
                                                       Data collection mock testing record
                                                       <b>
@@ -7901,6 +7914,7 @@ exports[`Related publications Component  should render with a publication title 
                                                 key="fez_record_search_key_has_related_datasets-0"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="rek-has-related-datasets-0"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -7938,10 +7952,12 @@ exports[`Related publications Component  should render with a publication title 
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="rek-has-related-datasets-0"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="rek-has-related-datasets-0"
                                                     >
                                                       <Link
                                                         to="/view/UQ:313292"
@@ -7966,6 +7982,7 @@ exports[`Related publications Component  should render with a publication title 
                                                 key="fez_record_search_key_has_related_datasets-1"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="rek-has-related-datasets-1"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -8003,10 +8020,12 @@ exports[`Related publications Component  should render with a publication title 
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="rek-has-related-datasets-1"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="rek-has-related-datasets-1"
                                                     >
                                                       <Link
                                                         to="/view/UQ:313292"
@@ -11892,6 +11911,7 @@ exports[`Related publications Component  should render without a child search ke
                                                 key="fez_record_search_key_has_related_datasets-0"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="rek-has-related-datasets-0"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -11929,10 +11949,12 @@ exports[`Related publications Component  should render without a child search ke
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="rek-has-related-datasets-0"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="rek-has-related-datasets-0"
                                                     >
                                                       <Link
                                                         to="/view/UQ:313292"
@@ -11957,6 +11979,7 @@ exports[`Related publications Component  should render without a child search ke
                                                 key="fez_record_search_key_has_related_datasets-1"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="rek-has-related-datasets-1"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -11994,10 +12017,12 @@ exports[`Related publications Component  should render without a child search ke
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="rek-has-related-datasets-1"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="rek-has-related-datasets-1"
                                                     >
                                                       <Link
                                                         to="/view/UQ:313292"
@@ -24094,6 +24119,7 @@ exports[`Related publications Component  should render without a parent search k
                                                 key="fez_record_search_key_isderivationof-0"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
+                                                  data-testid="rek-isderivationof-0"
                                                   variant="body2"
                                                 >
                                                   <ForwardRef(Typography)
@@ -24131,10 +24157,12 @@ exports[`Related publications Component  should render without a parent search k
                                                         "subtitle2": "MuiTypography-subtitle2",
                                                       }
                                                     }
+                                                    data-testid="rek-isderivationof-0"
                                                     variant="body2"
                                                   >
                                                     <p
                                                       className="MuiTypography-root MuiTypography-body2"
+                                                      data-testid="rek-isderivationof-0"
                                                     >
                                                       <Link
                                                         to="/view/UQ:390658"

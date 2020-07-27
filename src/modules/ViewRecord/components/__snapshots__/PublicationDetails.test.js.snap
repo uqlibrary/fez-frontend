@@ -6094,56 +6094,89 @@ exports[`Publication Details Component  should render component 1`] = `
     <Component
       data="Journal Article"
       heading="Type of work"
+      rowId="rek-display-type"
     />
     <Component
       data="Article (original research)"
       heading="Sub-type"
+      rowId="rek-subtype"
     />
     <Component
-      data="Scholarship of Teaching and Learning, Protocol"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Scholarship of Teaching and Learning
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Protocol
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Content Indicators"
+      rowId="rek-content-indicator"
     />
     <Component
       data={
         <ul
           className="ul"
         >
-          <li>
+          <li
+            data-testid="rek-ismemberof-0"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
             >
               School of Chemistry and Molecular Biosciences
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-1"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
             >
               HERDC Pre-Audit
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-2"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
             >
               UQ Centre for Clinical Research Publications
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-3"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3858&searchMode=advanced"
             >
               Institute for Molecular Bioscience - Publications
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-4"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3860&searchMode=advanced"
             >
               Australian Institute for Bioengineering and Nanotechnology Publications
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-5"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3831&searchMode=advanced"
             >
@@ -6153,6 +6186,7 @@ exports[`Publication Details Component  should render component 1`] = `
         </ul>
       }
       heading="Collections"
+      rowId="rek-ismemberof"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -6169,10 +6203,30 @@ exports[`Publication Details Component  should render with publication without c
     <Component
       data="Journal Article"
       heading="Type of work"
+      rowId="rek-display-type"
     />
     <Component
-      data="Scholarship of Teaching and Learning, Protocol"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Scholarship of Teaching and Learning
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Protocol
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Content Indicators"
+      rowId="rek-content-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -6189,52 +6243,84 @@ exports[`Publication Details Component  should render with publication without s
     <Component
       data="Journal Article"
       heading="Type of work"
+      rowId="rek-display-type"
     />
     <Component
-      data="Scholarship of Teaching and Learning, Protocol"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Scholarship of Teaching and Learning
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Protocol
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Content Indicators"
+      rowId="rek-content-indicator"
     />
     <Component
       data={
         <ul
           className="ul"
         >
-          <li>
+          <li
+            data-testid="rek-ismemberof-0"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
             >
               School of Chemistry and Molecular Biosciences
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-1"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
             >
               HERDC Pre-Audit
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-2"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
             >
               UQ Centre for Clinical Research Publications
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-3"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3858&searchMode=advanced"
             >
               Institute for Molecular Bioscience - Publications
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-4"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3860&searchMode=advanced"
             >
               Australian Institute for Bioengineering and Nanotechnology Publications
             </Link>
           </li>
-          <li>
+          <li
+            data-testid="rek-ismemberof-5"
+          >
             <Link
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3831&searchMode=advanced"
             >
@@ -6244,6 +6330,7 @@ exports[`Publication Details Component  should render with publication without s
         </ul>
       }
       heading="Collections"
+      rowId="rek-ismemberof"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>

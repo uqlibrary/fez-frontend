@@ -8,7 +8,7 @@ const DoiCitationView = ({ doi, hideDoiLink }) => {
     const txt = locale.global.doiCitationLink;
     const doiLink = txt.externalUrl.replace('[id]', doi);
     return (
-        <React.Fragment>
+        <span data-testid="rek-doi">
             {hideDoiLink && (
                 <span>
                     <br />
@@ -25,7 +25,7 @@ const DoiCitationView = ({ doi, hideDoiLink }) => {
                     {txt.prefix + doi}
                 </ExternalLink>
             )}
-        </React.Fragment>
+        </span>
     );
 };
 

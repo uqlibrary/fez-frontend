@@ -2063,6 +2063,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -2071,11 +2072,13 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Dickson, Michael
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=" and "
@@ -2084,6 +2087,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                          and 
                         Francis, Mara
@@ -4211,6 +4215,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -4219,11 +4224,13 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Dickson, Michael
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=" and "
@@ -4232,6 +4239,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                          and 
                         Francis, Mara

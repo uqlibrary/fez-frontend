@@ -16741,7 +16741,7 @@ export const recordWithRelatedItems = {
             "rek_institutional_status_lookup": "UQ"
     },
     "fez_record_search_key_isbn": [],
-        "fez_record_search_key_isderivationof": [{
+    "fez_record_search_key_isderivationof": [{
         "rek_isderivationof_id": 14046,
         "rek_isderivationof_pid": "UQ:76a9027",
         "rek_isderivationof_xsdmf_id": null,

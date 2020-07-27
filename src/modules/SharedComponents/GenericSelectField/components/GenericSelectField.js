@@ -130,6 +130,7 @@ export class GenericSelectFieldClass extends Component {
                         key={index + 1}
                         disabled={item && ((!this.props.canUnselect && !item.value) || !!item.disabled)}
                         aria-label={item.text || item.value || item}
+                        data-testid={`${this.props.genericSelectFieldId}-option-${index}`}
                     >
                         {item.text || item.value || item}
                     </MenuItem>
@@ -141,7 +142,11 @@ export class GenericSelectFieldClass extends Component {
     render() {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
-                <InputLabel hidden={this.props.hideLabel} id={`${this.props.genericSelectFieldId}-label`}>
+                <InputLabel
+                    hidden={this.props.hideLabel}
+                    data-testid={`${this.props.genericSelectFieldId}-label`}
+                    id={`${this.props.genericSelectFieldId}-label`}
+                >
                     {this.props.label}
                 </InputLabel>
                 <Select

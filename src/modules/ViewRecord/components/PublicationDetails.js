@@ -27,16 +27,21 @@ export class PublicationDetailsClass extends PureComponent {
         classes: PropTypes.object,
     };
 
-    ViewRecordRow = ({ heading, data }) => (
+    ViewRecordRow = ({ heading, data, rowId }) => (
         <div style={{ padding: 8 }}>
             <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>
+                    <Typography
+                        variant="body2"
+                        component={'span'}
+                        classes={{ root: this.props.classes.header }}
+                        data-testid={`${rowId}-label`}
+                    >
                         {heading}
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={9} className={this.props.classes.data}>
-                    <Typography variant="body2" component={'span'}>
+                    <Typography variant="body2" component={'span'} data-testid={`${rowId}`}>
                         {data}
                     </Typography>
                 </Grid>
@@ -58,18 +63,32 @@ export class PublicationDetailsClass extends PureComponent {
                         <this.ViewRecordRow
                             heading={headings.rek_display_type}
                             data={this.props.publication.rek_display_type_lookup}
+                            rowId="rek-display-type"
                         />
                     )}
                     {this.props.publication.rek_subtype && (
-                        <this.ViewRecordRow heading={headings.rek_subtype} data={this.props.publication.rek_subtype} />
+                        <this.ViewRecordRow
+                            heading={headings.rek_subtype}
+                            data={this.props.publication.rek_subtype}
+                            rowId="rek-subtype"
+                        />
                     )}
                     {this.props.publication.fez_record_search_key_content_indicator &&
                         this.props.publication.fez_record_search_key_content_indicator.length > 0 && (
                             <this.ViewRecordRow
                                 heading={componentLocale.components.contentIndicators.label}
-                                data={this.props.publication.fez_record_search_key_content_indicator
-                                    .map(item => item.rek_content_indicator_lookup)
-                                    .join(componentLocale.components.contentIndicators.divider)}
+                                data={this.props.publication.fez_record_search_key_content_indicator.map(
+                                    (item, index, fsrkciArray) => (
+                                        <React.Fragment>
+                                            <span data-testid={`rek-content-indicator-${index}`}>
+                                                {item.rek_content_indicator_lookup}
+                                            </span>
+                                            {index < fsrkciArray.length - 1 &&
+                                                componentLocale.components.contentIndicators.divider}
+                                        </React.Fragment>
+                                    ),
+                                )}
+                                rowId="rek-content-indicator"
                             />
                         )}
                     {this.props.publication.fez_record_search_key_ismemberof &&
@@ -82,7 +101,10 @@ export class PublicationDetailsClass extends PureComponent {
                                             (collection, index) =>
                                                 collection.rek_ismemberof &&
                                                 collection.rek_ismemberof_lookup && (
-                                                    <li key={`collection-${index}`}>
+                                                    <li
+                                                        key={`collection-${index}`}
+                                                        data-testid={`rek-ismemberof-${index}`}
+                                                    >
                                                         <Link
                                                             to={pathConfig.list.collection(
                                                                 collection.rek_ismemberof,
@@ -96,6 +118,7 @@ export class PublicationDetailsClass extends PureComponent {
                                         )}
                                     </ul>
                                 }
+                                rowId="rek-ismemberof"
                             />
                         )}
                 </StandardCard>

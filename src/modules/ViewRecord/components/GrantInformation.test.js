@@ -36,14 +36,23 @@ describe('Grant Information Component ', () => {
 
     it('should not render component with empty publication', () => {
         const wrapper = setup({ publication: {} });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(toJson(wrapper)).toBe('');
     });
 
     it('should render with publication without grant id data', () => {
         const publication = Object.assign({}, journalArticle);
         delete publication.fez_record_search_key_grant_id;
         const wrapper = setup({ publication: publication });
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        const grantRow = wrapper
+            .find('GrantDetails')
+            .first()
+            .shallow();
+
+        expect(grantRow.find('[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
+        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe(
+            publication.fez_record_search_key_grant_text[0].rek_grant_text,
+        );
     });
 
     it('should not render empty grant ids', () => {
@@ -55,25 +64,13 @@ describe('Grant Information Component ', () => {
 
         const wrapper = setup({ publication: publication });
 
-        const grantDetail = wrapper
+        const grantRow = wrapper
             .find('GrantDetails')
-            .first()
-            .shallow()
-            .find('GrantInformationCell')
             .first()
             .shallow();
 
-        expect(grantDetail.find('WithStyles(ForwardRef(Typography))').length).toEqual(1);
-        expect(grantDetail.find('WithStyles(ForwardRef(Typography))').text()).toBe('Grant agency');
-
-        const grantDetail2 = wrapper
-            .find('GrantDetails')
-            .at(0)
-            .shallow()
-            .find('WithStyles(ForwardRef(Typography))')
-            .shallow();
-
-        expect(grantDetail2.find('ForwardRef(Typography)').text()).toBe('testing rek_grant_text');
+        expect(grantRow.find('[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
+        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe('testing rek_grant_text');
     });
 
     it('should not break if grant text is not in the record', () => {

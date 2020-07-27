@@ -111,10 +111,12 @@ export class AuthorsCitationView extends PureComponent {
             const suffix = authors.length > 2 && index < authors.length - 2 ? separator : '';
 
             const key = `citationAuthor_${index + 1}`;
+            const testId = this.props.searchKey.subkey.replace(/_/g, '-');
             const element = (
                 <CitationView
                     className="citationAuthor"
                     key={key}
+                    citationId={`${testId}-${index}`}
                     value={author.value}
                     prefix={prefix}
                     suffix={suffix}
@@ -125,7 +127,7 @@ export class AuthorsCitationView extends PureComponent {
                 const href = getLink(author.value, author.id);
                 const className = author.id ? this.props.classes.authorIdLink : 'authorNameLink';
                 return (
-                    <Link className={className} to={href} key={key}>
+                    <Link className={className} to={href} key={key} data-testid={`${testId}-${index}-link`}>
                         {element}
                     </Link>
                 );

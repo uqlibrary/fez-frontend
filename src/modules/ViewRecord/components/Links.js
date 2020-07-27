@@ -37,7 +37,7 @@ export class LinksClass extends PureComponent {
         classes: PropTypes.object,
     };
 
-    LinkRow = ({ link, description, openAccessStatus }) => (
+    LinkRow = ({ link, linkId, description, openAccessStatus }) => (
         <Grid
             container
             spacing={4}
@@ -46,13 +46,13 @@ export class LinksClass extends PureComponent {
             alignContent={'center'}
             justify={'center'}
         >
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} data-testid={`${linkId}-link`}>
                 <Typography variant={'body2'}>{link}</Typography>
             </Grid>
-            <Grid item xs={10} sm={4} className={this.props.classes.description}>
+            <Grid item xs={10} sm={4} className={this.props.classes.description} data-testid={`${linkId}-description`}>
                 <Typography variant={'body2'}>{description}</Typography>
             </Grid>
-            <Grid item xs={2} sm={2} style={{ textAlign: 'right' }}>
+            <Grid item xs={2} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
                 <OpenAccessIcon {...openAccessStatus} />
             </Grid>
         </Grid>
@@ -204,17 +204,17 @@ export class LinksClass extends PureComponent {
                             spacing={2}
                             className={this.props.classes.header}
                         >
-                            <Grid item sm={6}>
+                            <Grid item sm={6} data-testid="link-label">
                                 <Typography variant="caption" gutterBottom>
                                     {txt.headerTitles.link}
                                 </Typography>
                             </Grid>
-                            <Grid item sm={4}>
+                            <Grid item sm={4} data-testid="description-label">
                                 <Typography variant="caption" gutterBottom>
                                     {txt.headerTitles.description}
                                 </Typography>
                             </Grid>
-                            <Grid item sm={2}>
+                            <Grid item sm={2} data-testid="oa-status-label">
                                 <Typography variant="caption" gutterBottom>
                                     {txt.headerTitles.oaStatus}
                                 </Typography>
@@ -224,19 +224,26 @@ export class LinksClass extends PureComponent {
                     {// if record has a PubMedCentral Id - display link, should be always OA
                     // prettier-ignore
                     !!pubmedCentralId &&
-                        <this.LinkRow {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />}
+                        <this.LinkRow linkId="rek-pubmed-central-id" {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />}
                     {// if record has a DOI - display a link, should be OA or OA with a date
-                    !!doi && <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />}
+                    !!doi && <this.LinkRow linkId="rek-doi" {...this.getDOILink(doi, doiOpenAccessStatus)} />}
                     {// record has OA status of "Link (no DOI)" and has no actual links of its own
                     // then produce a google scholar link for the publication title
                     openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
                         record.fez_record_search_key_link &&
                         record.fez_record_search_key_link.length === 0 && (
-                            <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
+                            <this.LinkRow
+                                linkId="rek-title"
+                                {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)}
+                            />
                         )}
                     {hasLinks &&
                         record.fez_record_search_key_link.map((item, index) => (
-                            <this.LinkRow {...this.getPublicationLink(item, index)} key={index} />
+                            <this.LinkRow
+                                linkId={`rek-link-${index}`}
+                                {...this.getPublicationLink(item, index)}
+                                key={index}
+                            />
                         ))}
                 </StandardCard>
             </Grid>

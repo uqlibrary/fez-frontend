@@ -42,7 +42,8 @@ export class AdditionalInformationClass extends PureComponent {
         userCountry: PropTypes.any,
     };
 
-    renderRow = (heading, data, index) => {
+    renderRow = (heading, data, index, field) => {
+        const labelTestId = `${field.replace(/_/g, '-')}-label`;
         return (
             <div style={{ padding: 8 }} key={index}>
                 <Grid
@@ -53,7 +54,12 @@ export class AdditionalInformationClass extends PureComponent {
                     alignItems="flex-start"
                 >
                     <Grid item xs={12} sm={3}>
-                        <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>
+                        <Typography
+                            variant="body2"
+                            component={'span'}
+                            classes={{ root: this.props.classes.header }}
+                            data-testid={labelTestId}
+                        >
                             {heading}
                         </Typography>
                     </Grid>
@@ -67,15 +73,20 @@ export class AdditionalInformationClass extends PureComponent {
         );
     };
 
-    renderLink = (link, value) => {
-        return <Link to={link}>{value}</Link>;
+    renderLink = (link, value, testId = '') => {
+        return (
+            <Link to={link} {...{ ['data-testid']: testId || undefined }}>
+                {value}
+            </Link>
+        );
     };
 
     renderList = (list, subkey, getLink) => {
+        const testId = subkey.replace(/_/g, '-');
         return (
             <ul key={subkey} className={this.props.classes.list}>
                 {list.map((item, index) => (
-                    <li key={`${subkey}-${index}`}>
+                    <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
                         {(() => {
                             const data = this.getData(item, subkey);
                             if (getLink) {
@@ -126,56 +137,66 @@ export class AdditionalInformationClass extends PureComponent {
             return this.renderHTML(data);
         }
 
+        const testId = subkey.replace(/_/g, '-');
+
         switch (subkey) {
             case 'rek_doi':
                 return this.renderDoi(data);
             case 'rek_journal_name':
                 return this.renderJournalName();
             case 'rek_publisher':
-                return this.renderLink(routes.pathConfig.list.publisher(data), data);
+                return this.renderLink(routes.pathConfig.list.publisher(data), data, testId);
             case 'rek_herdc_code':
-                return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data, testId);
             case 'rek_herdc_status':
-                return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data);
+                return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data, testId);
             case 'rek_ands_collection_type':
-                return !!data && data;
             case 'rek_access_conditions':
-                return !!data && data;
+                return !!data && <span data-testid={testId}>{data}</span>;
             case 'rek_series':
-                return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey]);
+                return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
             case 'rek_org_unit_name':
-                return this.renderLink(routes.pathConfig.list.orgUnitName(data), data);
+                return this.renderLink(routes.pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
-                return this.renderLink(routes.pathConfig.list.institutionalStatus(object[`${subkey}_lookup`]), data);
+                return this.renderLink(
+                    routes.pathConfig.list.institutionalStatus(object[`${subkey}_lookup`]),
+                    data,
+                    testId,
+                );
             case 'rek_book_title':
-                return this.renderLink(routes.pathConfig.list.bookTitle(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.bookTitle(object[subkey]), data, testId);
             // case 'rek_job_number':
             //     return this.renderLink(routes.pathConfig.list.jobNumber(object[subkey]), data);
             case 'rek_conference_name':
-                return this.renderLink(routes.pathConfig.list.conferenceName(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.conferenceName(object[subkey]), data, testId);
             case 'rek_proceedings_title':
-                return this.renderLink(routes.pathConfig.list.proceedingsTitle(object[subkey]), data);
+                return this.renderLink(routes.pathConfig.list.proceedingsTitle(object[subkey]), data, testId);
             default:
-                return data;
+                return <span data-testid={testId}>{data}</span>;
         }
     };
 
     // render rek fields from fez_record_search_key
     renderContent = (key, value) => {
+        let renderedValue;
         switch (key) {
             case 'rek_title':
-                return this.renderTitle();
+                renderedValue = this.renderTitle();
+                break;
             case 'rek_date':
-                return this.formatPublicationDate(value);
-            // case 'rek_start_date': return this.formatPublicationDate(value);
-            // case 'rek_end_date': return this.formatPublicationDate(value);
+                renderedValue = this.formatPublicationDate(value);
+                break;
+            // case 'rek_start_date': renderedValue = this.formatPublicationDate(value); break;
+            // case 'rek_end_date': renderedValue = this.formatPublicationDate(value); break;
             case 'rek_description':
-                return this.renderHTML(value);
+                renderedValue = this.renderHTML(value);
+                break;
             default:
-                return value;
+                renderedValue = value;
         }
+        return <span data-testid={key.replace(/_/g, '-')}>{renderedValue}</span>;
     };
 
     renderTitle = () => {
@@ -186,7 +207,7 @@ export class AdditionalInformationClass extends PureComponent {
     };
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLookup = this.renderLink(routes.pathConfig.list.license(lookup), lookup);
+        const licenseLookup = this.renderLink(routes.pathConfig.list.license(lookup), lookup, 'rek-license-lookup');
         const licenseLink = viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
         const uqLicenseLinkText =
             licenseLink && licenseLink.className.indexOf('uq') === 0
@@ -206,7 +227,7 @@ export class AdditionalInformationClass extends PureComponent {
                         <p key={`license_description_line-${index}`}>{line}</p>
                     ))}
                 {licenseLink && (
-                    <div>
+                    <div data-testid="rek-license-link">
                         <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText}>
                             {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
                         </ExternalLink>
@@ -257,7 +278,7 @@ export class AdditionalInformationClass extends PureComponent {
             <PublicationMap
                 googleMapURL={mapApiUrl}
                 loadingElement={<div className="googleMap loading" />}
-                containerElement={<div style={{ height: '400px' }} />}
+                containerElement={<div style={{ height: '400px' }} data-testid="rek-geographic-area" />}
                 mapElement={<div style={{ height: '100%' }} />}
                 coordinates={coordinatesList[0].rek_geographic_area}
                 readOnly
@@ -292,7 +313,11 @@ export class AdditionalInformationClass extends PureComponent {
 
     // TODO: display original contact email for admin users
     renderContactEmail = () => {
-        return <a href={`mailto:${viewRecordsConfig.genericDataEmail}`}>{viewRecordsConfig.genericDataEmail}</a>;
+        return (
+            <a href={`mailto:${viewRecordsConfig.genericDataEmail}`} data-testid="rek-contact-details-email">
+                {viewRecordsConfig.genericDataEmail}
+            </a>
+        );
     };
 
     formatPublicationDate = publicationDate => {
@@ -303,7 +328,7 @@ export class AdditionalInformationClass extends PureComponent {
     };
 
     formatDate = (date, format = 'YYYY-MM-DD') => {
-        return <DateCitationView format={format} date={date} prefix={''} suffix={''} />;
+        return <DateCitationView format={format} date={date} prefix={''} suffix={''} data-testid="rek-date" />;
     };
 
     transformFieldNameToSubkey = field => {
@@ -362,7 +387,7 @@ export class AdditionalInformationClass extends PureComponent {
                         data = this.renderContent(field, value);
                     }
 
-                    rows.push(this.renderRow(heading, data, index));
+                    rows.push(this.renderRow(heading, data, index, subkey || field));
                 }
             });
 

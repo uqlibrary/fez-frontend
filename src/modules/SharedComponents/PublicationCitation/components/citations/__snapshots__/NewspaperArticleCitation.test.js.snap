@@ -1862,6 +1862,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1870,12 +1871,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Wong, Kam Cheong
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -1884,12 +1887,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Wong, Catherine
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -1898,12 +1903,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Li, Stephen
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
@@ -1912,11 +1919,13 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                         Woo, Kai Hui
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
                       prefix=" and "
@@ -1925,6 +1934,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-4"
                       >
                          and 
                         Woo, Kai Zhi
@@ -3877,6 +3887,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -3885,12 +3896,14 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Wong, Kam Cheong
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -3899,12 +3912,14 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Wong, Catherine
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -3913,12 +3928,14 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Li, Stephen
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
@@ -3927,11 +3944,13 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                         Woo, Kai Hui
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
                       prefix=" and "
@@ -3940,6 +3959,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-4"
                       >
                          and 
                         Woo, Kai Zhi

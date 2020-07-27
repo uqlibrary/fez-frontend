@@ -1670,6 +1670,7 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1678,6 +1679,7 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Keniger, Michael, 1947-
                       </span>

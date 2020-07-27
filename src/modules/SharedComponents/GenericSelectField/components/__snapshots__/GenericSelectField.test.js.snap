@@ -877,6 +877,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                       className="MuiFormControl-root MuiFormControl-fullWidth"
                     >
                       <WithStyles(ForwardRef(InputLabel))
+                        data-testid="generic-test-label"
                         id="generic-test-label"
                       >
                         <ForwardRef(InputLabel)
@@ -896,6 +897,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                               "shrink": "MuiInputLabel-shrink",
                             }
                           }
+                          data-testid="generic-test-label"
                           id="generic-test-label"
                         >
                           <WithStyles(ForwardRef(FormLabel))
@@ -910,6 +912,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                               }
                             }
                             data-shrink={false}
+                            data-testid="generic-test-label"
                             id="generic-test-label"
                           >
                             <ForwardRef(FormLabel)
@@ -927,11 +930,13 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                 }
                               }
                               data-shrink={false}
+                              data-testid="generic-test-label"
                               id="generic-test-label"
                             >
                               <label
                                 className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                 data-shrink={false}
+                                data-testid="generic-test-label"
                                 id="generic-test-label"
                               />
                             </ForwardRef(FormLabel)>
@@ -1779,6 +1784,7 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
+    data-testid="generic-test-label"
     hidden={false}
     id="generic-test-label"
   />
@@ -1815,6 +1821,7 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-0"
       disabled={true}
       key="1"
       style={
@@ -1833,6 +1840,7 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-1"
       disabled={true}
       key="2"
       style={
@@ -1851,6 +1859,7 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-2"
       disabled={true}
       key="3"
       style={
@@ -1879,6 +1888,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-0"
     disabled={false}
     style={
       Object {
@@ -1896,6 +1906,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-1"
     disabled={false}
     style={
       Object {
@@ -1913,6 +1924,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-2"
     disabled={false}
     style={
       Object {
@@ -1936,6 +1948,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-0"
     disabled={true}
     style={
       Object {
@@ -1953,6 +1966,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-1"
     disabled={true}
     style={
       Object {
@@ -1970,6 +1984,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-2"
     disabled={true}
     style={
       Object {
@@ -2001,6 +2016,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-0"
     disabled={false}
     style={
       Object {
@@ -2018,6 +2034,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-1"
     disabled={false}
     style={
       Object {
@@ -2035,6 +2052,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-2"
     disabled={false}
     style={
       Object {
@@ -2058,6 +2076,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-0"
     disabled={true}
     selected={true}
     style={
@@ -2076,6 +2095,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-1"
     disabled={true}
     style={
       Object {
@@ -2093,6 +2113,7 @@ Array [
         "selected": undefined,
       }
     }
+    data-testid="generic-test-option-2"
     disabled={true}
     style={
       Object {
@@ -2112,6 +2133,7 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
+    data-testid="generic-test-label"
     id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
@@ -2147,6 +2169,7 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-0"
       disabled={true}
       key="1"
       style={
@@ -2165,6 +2188,7 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-1"
       disabled={true}
       key="2"
       style={
@@ -2183,6 +2207,7 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-2"
       disabled={true}
       key="3"
       style={
@@ -2204,6 +2229,7 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
+    data-testid="generic-test-label"
     hidden={true}
     id="generic-test-label"
   />
@@ -2250,6 +2276,7 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-0"
       disabled={true}
       key="1"
       style={
@@ -2268,6 +2295,7 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-1"
       disabled={true}
       key="2"
       style={
@@ -2286,6 +2314,7 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-2"
       disabled={true}
       key="3"
       style={
@@ -2307,6 +2336,7 @@ exports[`GenericSelectField should render snapshots for no items 1`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
+    data-testid="generic-test-label"
     id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
@@ -2344,6 +2374,7 @@ exports[`GenericSelectField should render snapshots for one item 1`] = `
   fullWidth={true}
 >
   <WithStyles(ForwardRef(InputLabel))
+    data-testid="generic-test-label"
     id="generic-test-label"
   />
   <WithStyles(ForwardRef(Select))
@@ -2379,6 +2410,7 @@ exports[`GenericSelectField should render snapshots for one item 1`] = `
           "selected": undefined,
         }
       }
+      data-testid="generic-test-option-0"
       disabled={true}
       key="1"
       style={

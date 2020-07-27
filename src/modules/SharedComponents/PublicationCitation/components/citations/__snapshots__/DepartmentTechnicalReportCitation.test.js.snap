@@ -1463,6 +1463,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1471,6 +1472,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Norman, Rosana
                       </span>
@@ -3055,6 +3057,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -3063,6 +3066,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Norman, Rosana
                       </span>

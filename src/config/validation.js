@@ -308,13 +308,18 @@ export const getErrorAlertProps = ({
         } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
             const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
+            const keyPrefix = `validation-${alertLocale.validationAlert.type || 'warning'}`;
             const message = (
                 <span>
                     {alertLocale.validationAlert.message}
                     <ul>
                         {errorMessagesList &&
                             errorMessagesList.length > 0 &&
-                            errorMessagesList.map((item, index) => <li key={`validation-summary-${index}`}>{item}</li>)}
+                            errorMessagesList.map((item, index) => (
+                                <li key={`${keyPrefix}-${index}`} data-testid={`${keyPrefix}-${index}`}>
+                                    {item}
+                                </li>
+                            ))}
                     </ul>
                 </span>
             );

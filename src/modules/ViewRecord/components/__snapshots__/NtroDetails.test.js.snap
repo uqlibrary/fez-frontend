@@ -12,12 +12,14 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -30,6 +32,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -40,59 +43,103 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -2425,6 +2472,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               data="Major"
                                               heading="Scale/Significance of work"
                                               key="0"
+                                              rowId="rek-significance-0"
                                               subheading="(Ky Lane)"
                                             >
                                               <div
@@ -2557,6 +2605,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-significance-0-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -2669,12 +2718,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-significance-0-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-significance-0-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -2683,6 +2734,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-significance-0-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -2721,10 +2773,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-significance-0-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-significance-0-label-0"
                                                                 >
                                                                   Scale/Significance of work
                                                                 </span>
@@ -2737,6 +2791,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-significance-0-label-1"
                                                               variant="caption"
                                                             >
                                                               <ForwardRef(Typography)
@@ -2775,10 +2830,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-significance-0-label-1"
                                                                 variant="caption"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-caption"
+                                                                  data-testid="rek-significance-0-label-1"
                                                                 >
                                                                   (Ky Lane)
                                                                 </span>
@@ -2909,6 +2966,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-significance-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -2947,10 +3005,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-significance-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-significance-0"
                                                                 >
                                                                   Major
                                                                 </span>
@@ -2968,6 +3028,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               data="Missing"
                                               heading="Scale/Significance of work"
                                               key="1"
+                                              rowId="rek-significance-1"
                                               subheading="(Someone else)"
                                             >
                                               <div
@@ -3100,6 +3161,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-significance-1-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -3212,12 +3274,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-significance-1-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-significance-1-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -3226,6 +3290,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-significance-1-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -3264,10 +3329,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-significance-1-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-significance-1-label-0"
                                                                 >
                                                                   Scale/Significance of work
                                                                 </span>
@@ -3280,6 +3347,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-significance-1-label-1"
                                                               variant="caption"
                                                             >
                                                               <ForwardRef(Typography)
@@ -3318,10 +3386,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-significance-1-label-1"
                                                                 variant="caption"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-caption"
+                                                                  data-testid="rek-significance-1-label-1"
                                                                 >
                                                                   (Someone else)
                                                                 </span>
@@ -3452,6 +3522,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-significance-1"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -3490,10 +3561,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-significance-1"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-significance-1"
                                                                 >
                                                                   Missing
                                                                 </span>
@@ -3518,6 +3591,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               }
                                               heading="Creator research statement"
                                               key="0"
+                                              rowId="rek-creator-contribution-statement-0"
                                               subheading="(Ky Lane)"
                                             >
                                               <div
@@ -3650,6 +3724,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-creator-contribution-statement-0-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -3762,12 +3837,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-creator-contribution-statement-0-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-creator-contribution-statement-0-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -3776,6 +3853,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-creator-contribution-statement-0-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -3814,10 +3892,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-creator-contribution-statement-0-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-creator-contribution-statement-0-label-0"
                                                                 >
                                                                   Creator research statement
                                                                 </span>
@@ -3830,6 +3910,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-creator-contribution-statement-0-label-1"
                                                               variant="caption"
                                                             >
                                                               <ForwardRef(Typography)
@@ -3868,10 +3949,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-creator-contribution-statement-0-label-1"
                                                                 variant="caption"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-caption"
+                                                                  data-testid="rek-creator-contribution-statement-0-label-1"
                                                                 >
                                                                   (Ky Lane)
                                                                 </span>
@@ -4003,6 +4086,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                             <WithStyles(ForwardRef(Typography))
                                                               className="NtroDetailsClass-richTextParagraphFix-2"
                                                               component="span"
+                                                              data-testid="rek-creator-contribution-statement-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -4042,10 +4126,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-creator-contribution-statement-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root NtroDetailsClass-richTextParagraphFix-2 MuiTypography-body2"
+                                                                  data-testid="rek-creator-contribution-statement-0"
                                                                 >
                                                                   <p
                                                                     key="0"
@@ -4072,6 +4158,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               }
                                               heading="Creator research statement"
                                               key="1"
+                                              rowId="rek-creator-contribution-statement-1"
                                               subheading="(Someone else)"
                                             >
                                               <div
@@ -4204,6 +4291,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-creator-contribution-statement-1-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -4316,12 +4404,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-creator-contribution-statement-1-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-creator-contribution-statement-1-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -4330,6 +4420,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-creator-contribution-statement-1-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -4368,10 +4459,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-creator-contribution-statement-1-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-creator-contribution-statement-1-label-0"
                                                                 >
                                                                   Creator research statement
                                                                 </span>
@@ -4384,6 +4477,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-creator-contribution-statement-1-label-1"
                                                               variant="caption"
                                                             >
                                                               <ForwardRef(Typography)
@@ -4422,10 +4516,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-creator-contribution-statement-1-label-1"
                                                                 variant="caption"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-caption"
+                                                                  data-testid="rek-creator-contribution-statement-1-label-1"
                                                                 >
                                                                   (Someone else)
                                                                 </span>
@@ -4557,6 +4653,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                             <WithStyles(ForwardRef(Typography))
                                                               className="NtroDetailsClass-richTextParagraphFix-2"
                                                               component="span"
+                                                              data-testid="rek-creator-contribution-statement-1"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -4596,10 +4693,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-creator-contribution-statement-1"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root NtroDetailsClass-richTextParagraphFix-2 MuiTypography-body2"
+                                                                  data-testid="rek-creator-contribution-statement-1"
                                                                 >
                                                                   Missing.
                                                                 </span>
@@ -4623,6 +4722,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                 ]
                                               }
                                               heading="Abstract/Description"
+                                              rowId="rek-formatted-abstract"
                                             >
                                               <div
                                                 style={
@@ -4754,6 +4854,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-formatted-abstract-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -4866,12 +4967,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-formatted-abstract-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-formatted-abstract-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -4880,6 +4983,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-formatted-abstract-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -4918,10 +5022,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-formatted-abstract-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-formatted-abstract-label-0"
                                                                 >
                                                                   Abstract/Description
                                                                 </span>
@@ -5053,6 +5159,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                             <WithStyles(ForwardRef(Typography))
                                                               className="NtroDetailsClass-richTextParagraphFix-2"
                                                               component="span"
+                                                              data-testid="rek-formatted-abstract"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -5092,10 +5199,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-formatted-abstract"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root NtroDetailsClass-richTextParagraphFix-2 MuiTypography-body2"
+                                                                  data-testid="rek-formatted-abstract"
                                                                 >
                                                                   <p
                                                                     key="0"
@@ -5116,12 +5225,15 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             <Component
                                               data={
                                                 Array [
-                                                  <span>
+                                                  <span
+                                                    data-testid="rek-ismn-0"
+                                                  >
                                                     979-0-7062-0805-4
                                                   </span>,
                                                 ]
                                               }
                                               heading="ISMN"
+                                              rowId="rek-ismn"
                                             >
                                               <div
                                                 style={
@@ -5253,6 +5365,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-ismn-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -5365,12 +5478,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-ismn-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-ismn-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -5379,6 +5494,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-ismn-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -5417,10 +5533,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-ismn-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-ismn-label-0"
                                                                 >
                                                                   ISMN
                                                                 </span>
@@ -5551,6 +5669,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-ismn"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -5589,12 +5708,15 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-ismn"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-ismn"
                                                                 >
                                                                   <span
+                                                                    data-testid="rek-ismn-0"
                                                                     key="0"
                                                                   >
                                                                     979-0-7062-0805-4
@@ -5613,6 +5735,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             <Component
                                               data="Volume"
                                               heading="Volume"
+                                              rowId="rek-description"
                                             >
                                               <div
                                                 style={
@@ -5744,6 +5867,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-description-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -5856,12 +5980,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-description-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-description-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -5870,6 +5996,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-description-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -5908,10 +6035,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-description-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-description-label-0"
                                                                 >
                                                                   Volume
                                                                 </span>
@@ -6042,6 +6171,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-description"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -6080,10 +6210,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-description"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-description"
                                                                 >
                                                                   Volume
                                                                 </span>
@@ -6100,6 +6232,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             <Component
                                               data="Issue"
                                               heading="Issue"
+                                              rowId="rek-issue-number"
                                             >
                                               <div
                                                 style={
@@ -6231,6 +6364,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-issue-number-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -6343,12 +6477,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-issue-number-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-issue-number-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -6357,6 +6493,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-issue-number-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -6395,10 +6532,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-issue-number-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-issue-number-label-0"
                                                                 >
                                                                   Issue
                                                                 </span>
@@ -6529,6 +6668,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-issue-number"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -6567,10 +6707,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-issue-number"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-issue-number"
                                                                 >
                                                                   Issue
                                                                 </span>
@@ -6587,6 +6729,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             <Component
                                               data="Extent"
                                               heading="Extent"
+                                              rowId="rek-total-pages"
                                             >
                                               <div
                                                 style={
@@ -6718,6 +6861,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-total-pages-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -6830,12 +6974,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-total-pages-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-total-pages-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -6844,6 +6990,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-total-pages-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -6882,10 +7029,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-total-pages-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-total-pages-label-0"
                                                                 >
                                                                   Extent
                                                                 </span>
@@ -7016,6 +7165,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-total-pages"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -7054,10 +7204,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-total-pages"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-total-pages"
                                                                 >
                                                                   Extent
                                                                 </span>
@@ -7074,24 +7226,33 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             <Component
                                               data={
                                                 Array [
-                                                  <span>
+                                                  <span
+                                                    data-testid="rek-language-0"
+                                                  >
                                                     English
                                                     , 
                                                   </span>,
-                                                  <span>
+                                                  <span
+                                                    data-testid="rek-language-1"
+                                                  >
                                                     Elamite
                                                     , 
                                                   </span>,
-                                                  <span>
+                                                  <span
+                                                    data-testid="rek-language-2"
+                                                  >
                                                     Egyptian (Ancient)
                                                     , 
                                                   </span>,
-                                                  <span>
+                                                  <span
+                                                    data-testid="rek-language-3"
+                                                  >
                                                     Dutch
                                                   </span>,
                                                 ]
                                               }
                                               heading="Language(s)"
+                                              rowId="rek-language"
                                             >
                                               <div
                                                 style={
@@ -7223,6 +7384,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-language-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -7335,12 +7497,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-language-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-language-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -7349,6 +7513,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-language-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -7387,10 +7552,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-language-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-language-label-0"
                                                                 >
                                                                   Language(s)
                                                                 </span>
@@ -7521,6 +7688,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-language"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -7559,30 +7727,36 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-language"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-language"
                                                                 >
                                                                   <span
+                                                                    data-testid="rek-language-0"
                                                                     key="0"
                                                                   >
                                                                     English
                                                                     , 
                                                                   </span>
                                                                   <span
+                                                                    data-testid="rek-language-1"
                                                                     key="1"
                                                                   >
                                                                     Elamite
                                                                     , 
                                                                   </span>
                                                                   <span
+                                                                    data-testid="rek-language-2"
                                                                     key="2"
                                                                   >
                                                                     Egyptian (Ancient)
                                                                     , 
                                                                   </span>
                                                                   <span
+                                                                    data-testid="rek-language-3"
                                                                     key="3"
                                                                   >
                                                                     Dutch
@@ -7601,6 +7775,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             <Component
                                               data="Description"
                                               heading="Physical description"
+                                              rowId="rek-original-format"
                                             >
                                               <div
                                                 style={
@@ -7732,6 +7907,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-original-format-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -7844,12 +8020,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-original-format-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-original-format-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -7858,6 +8036,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-original-format-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -7896,10 +8075,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-original-format-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-original-format-label-0"
                                                                 >
                                                                   Physical description
                                                                 </span>
@@ -8030,6 +8211,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-original-format"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -8068,10 +8250,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-original-format"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-original-format"
                                                                 >
                                                                   Description
                                                                 </span>
@@ -8086,8 +8270,35 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               </div>
                                             </Component>
                                             <Component
-                                              data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+                                              data={
+                                                Array [
+                                                  <React.Fragment>
+                                                    <span
+                                                      data-testid="rek-content-indicator-0"
+                                                    >
+                                                      Disseminated via nationally recognised outlet or entity
+                                                    </span>
+                                                    , 
+                                                  </React.Fragment>,
+                                                  <React.Fragment>
+                                                    <span
+                                                      data-testid="rek-content-indicator-1"
+                                                    >
+                                                      Disseminated via internationally recognised outlet or entity
+                                                    </span>
+                                                    , 
+                                                  </React.Fragment>,
+                                                  <React.Fragment>
+                                                    <span
+                                                      data-testid="rek-content-indicator-2"
+                                                    >
+                                                      Association with recognised national entities, distinct from co-creation
+                                                    </span>
+                                                  </React.Fragment>,
+                                                ]
+                                              }
                                               heading="Quality indicators"
+                                              rowId="rek-quality-indicator"
                                             >
                                               <div
                                                 style={
@@ -8219,6 +8430,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                       className="MuiGrid-root NtroDetailsClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                     >
                                                       <WithStyles(ForwardRef(Grid))
+                                                        data-testid="rek-quality-indicator-label"
                                                         item={true}
                                                         sm={3}
                                                         xs={12}
@@ -8331,12 +8543,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                               "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                             }
                                                           }
+                                                          data-testid="rek-quality-indicator-label"
                                                           item={true}
                                                           sm={3}
                                                           xs={12}
                                                         >
                                                           <div
                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                            data-testid="rek-quality-indicator-label"
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               classes={
@@ -8345,6 +8559,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 }
                                                               }
                                                               component="span"
+                                                              data-testid="rek-quality-indicator-label-0"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -8383,10 +8598,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-quality-indicator-label-0"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-quality-indicator-label-0"
                                                                 >
                                                                   Quality indicators
                                                                 </span>
@@ -8517,6 +8734,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Typography))
                                                               component="span"
+                                                              data-testid="rek-quality-indicator"
                                                               variant="body2"
                                                             >
                                                               <ForwardRef(Typography)
@@ -8555,12 +8773,30 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   }
                                                                 }
                                                                 component="span"
+                                                                data-testid="rek-quality-indicator"
                                                                 variant="body2"
                                                               >
                                                                 <span
                                                                   className="MuiTypography-root MuiTypography-body2"
+                                                                  data-testid="rek-quality-indicator"
                                                                 >
-                                                                  Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation
+                                                                  <span
+                                                                    data-testid="rek-content-indicator-0"
+                                                                  >
+                                                                    Disseminated via nationally recognised outlet or entity
+                                                                  </span>
+                                                                  , 
+                                                                  <span
+                                                                    data-testid="rek-content-indicator-1"
+                                                                  >
+                                                                    Disseminated via internationally recognised outlet or entity
+                                                                  </span>
+                                                                  , 
+                                                                  <span
+                                                                    data-testid="rek-content-indicator-2"
+                                                                  >
+                                                                    Association with recognised national entities, distinct from co-creation
+                                                                  </span>
                                                                 </span>
                                                               </ForwardRef(Typography)>
                                                             </WithStyles(ForwardRef(Typography))>
@@ -8608,12 +8844,14 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8626,6 +8864,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -8636,6 +8875,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8647,62 +8887,108 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             12345
             <br />
           </span>,
-          <span>
+          <span
+            data-testid="rek-ismn-1"
+          >
             67890
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -8720,12 +9006,14 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8738,6 +9026,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -8748,6 +9037,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8759,72 +9049,121 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-isrc-0"
+          >
             12345
             <br />
           </span>,
-          <span>
+          <span
+            data-testid="rek-isrc-1"
+          >
             67890
           </span>,
         ]
       }
       heading="ISRC"
+      rowId="rek-isrc"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -8842,12 +9181,14 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8860,6 +9201,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -8870,6 +9212,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8881,62 +9224,107 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
       data="Not set"
       heading="Audience size"
+      rowId="rek-audience-size"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -8954,12 +9342,14 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8972,6 +9362,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -8982,6 +9373,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -8993,62 +9385,107 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
       data="Not set"
       heading="Audience size"
+      rowId="rek-audience-size"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9066,12 +9503,14 @@ exports[`NtroDetails  renders component as expected 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9084,6 +9523,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -9094,6 +9534,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9105,58 +9546,102 @@ exports[`NtroDetails  renders component as expected 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9174,12 +9659,14 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9190,12 +9677,14 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9207,58 +9696,102 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9276,12 +9809,14 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9292,6 +9827,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -9303,58 +9839,102 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9372,12 +9952,14 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       data="Minor"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9390,6 +9972,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -9400,6 +9983,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9411,58 +9995,102 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9482,12 +10110,14 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9500,6 +10130,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -9510,6 +10141,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9521,66 +10153,112 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data={1}
       heading="Start page"
+      rowId="rek-start-page"
     />
     <Component
       data={2}
       heading="End page"
+      rowId="rek-end-page"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9600,12 +10278,14 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Someone else)"
     />
     <Component
@@ -9618,6 +10298,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -9628,63 +10309,108 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
     />
     <Component
       data="Plain text abstract"
       heading="Abstract/Description"
+      rowId="rek-description"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9704,18 +10430,21 @@ exports[`NtroDetails  should render component with record 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="()"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="2"
+      rowId="rek-significance-2"
       subheading="(the third guy)"
     />
     <Component
@@ -9728,6 +10457,7 @@ exports[`NtroDetails  should render component with record 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -9738,6 +10468,7 @@ exports[`NtroDetails  should render component with record 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading=""
     />
     <Component
@@ -9749,88 +10480,142 @@ exports[`NtroDetails  should render component with record 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
             <br />
           </span>,
-          <span>
+          <span
+            data-testid="rek-ismn-1"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-isrc-0"
+          >
             GBJRZ1600010
             <br />
           </span>,
-          <span>
+          <span
+            data-testid="rek-isrc-1"
+          >
             GBJRZ1600010
           </span>,
         ]
       }
       heading="ISRC"
+      rowId="rek-isrc"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="160"
       heading="Start page"
+      rowId="rek-start-page"
     />
     <Component
       data="160"
       heading="End page"
+      rowId="rek-end-page"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
       data="Huuuge"
       heading="Audience size"
+      rowId="rek-audience-size"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9848,41 +10633,76 @@ exports[`NtroDetails  should render default fields for record with missing looku
       data="Missing"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="(Ky Lane)"
     />
     <Component
       data="This is an abstract"
       heading="Abstract/Description"
+      rowId="rek-description"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
       data="Not set"
       heading="Audience size"
+      rowId="rek-audience-size"
     />
     <Component
-      data="Reviews, prizes, awards recognition of the output, Association with recognised international entities, distinct from co-creation, Not set"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Reviews, prizes, awards recognition of the output
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Association with recognised international entities, distinct from co-creation
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Not set
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -9900,18 +10720,21 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       data="Major"
       heading="Scale/Significance of work"
       key="0"
+      rowId="rek-significance-0"
       subheading="(Ky Lane)"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="1"
+      rowId="rek-significance-1"
       subheading="()"
     />
     <Component
       data="Missing"
       heading="Scale/Significance of work"
       key="2"
+      rowId="rek-significance-2"
       subheading="(the third guy)"
     />
     <Component
@@ -9924,6 +10747,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       }
       heading="Creator research statement"
       key="0"
+      rowId="rek-creator-contribution-statement-0"
       subheading="(Ky Lane)"
     />
     <Component
@@ -9934,6 +10758,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       }
       heading="Creator research statement"
       key="1"
+      rowId="rek-creator-contribution-statement-1"
       subheading=""
     />
     <Component
@@ -9945,88 +10770,142 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
         ]
       }
       heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-ismn-0"
+          >
             979-0-7062-0805-4
             <br />
           </span>,
-          <span>
+          <span
+            data-testid="rek-ismn-1"
+          >
             979-0-7062-0805-4
           </span>,
         ]
       }
       heading="ISMN"
+      rowId="rek-ismn"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-isrc-0"
+          >
             GBJRZ1600010
             <br />
           </span>,
-          <span>
+          <span
+            data-testid="rek-isrc-1"
+          >
             GBJRZ1600010
           </span>,
         ]
       }
       heading="ISRC"
+      rowId="rek-isrc"
     />
     <Component
       data="Volume"
       heading="Volume"
+      rowId="rek-description"
     />
     <Component
       data="Issue"
       heading="Issue"
+      rowId="rek-issue-number"
     />
     <Component
       data="160"
       heading="Start page"
+      rowId="rek-start-page"
     />
     <Component
       data="160"
       heading="End page"
+      rowId="rek-end-page"
     />
     <Component
       data="Extent"
       heading="Extent"
+      rowId="rek-total-pages"
     />
     <Component
       data={
         Array [
-          <span>
+          <span
+            data-testid="rek-language-0"
+          >
             English
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-1"
+          >
             Elamite
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-2"
+          >
             Egyptian (Ancient)
             , 
           </span>,
-          <span>
+          <span
+            data-testid="rek-language-3"
+          >
             Dutch
           </span>,
         ]
       }
       heading="Language(s)"
+      rowId="rek-language"
     />
     <Component
       data="Description"
       heading="Physical description"
+      rowId="rek-original-format"
     />
     <Component
       data="Huuuge"
       heading="Audience size"
+      rowId="rek-audience-size"
     />
     <Component
-      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
       heading="Quality indicators"
+      rowId="rek-quality-indicator"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>

@@ -42,7 +42,13 @@ export class Page extends Component {
             <Grid container className="StandardPage">
                 {title && (
                     <Grid item xs>
-                        <Typography variant={'h4'} component={'h2'} color={'primary'} className={classes.layoutTitle}>
+                        <Typography
+                            className={classes.layoutTitle}
+                            color={'primary'}
+                            component={'h2'}
+                            data-testid="page-title"
+                            variant={'h4'}
+                        >
                             {title}
                         </Typography>
                     </Grid>

@@ -1003,6 +1003,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                         className="MuiFormControl-root MuiFormControl-fullWidth"
                       >
                         <WithStyles(ForwardRef(InputLabel))
+                          data-testid="rek-status-label"
                           hidden={false}
                           id="rek-status-label"
                         >
@@ -1023,6 +1024,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 "shrink": "MuiInputLabel-shrink",
                               }
                             }
+                            data-testid="rek-status-label"
                             hidden={false}
                             id="rek-status-label"
                           >
@@ -1038,6 +1040,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 }
                               }
                               data-shrink={false}
+                              data-testid="rek-status-label"
                               hidden={false}
                               id="rek-status-label"
                             >
@@ -1056,12 +1059,14 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   }
                                 }
                                 data-shrink={false}
+                                data-testid="rek-status-label"
                                 hidden={false}
                                 id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                   data-shrink={false}
+                                  data-testid="rek-status-label"
                                   hidden={false}
                                   id="rek-status-label"
                                 />
@@ -1205,6 +1210,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-0"
                                       disabled={false}
                                       style={
                                         Object {
@@ -1222,6 +1228,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-1"
                                       disabled={false}
                                       style={
                                         Object {
@@ -1239,6 +1246,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-2"
                                       disabled={false}
                                       style={
                                         Object {
@@ -1256,6 +1264,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-3"
                                       disabled={false}
                                       style={
                                         Object {
@@ -1273,6 +1282,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-4"
                                       disabled={false}
                                       style={
                                         Object {
@@ -1290,6 +1300,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-5"
                                       disabled={false}
                                       style={
                                         Object {
@@ -1307,6 +1318,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-6"
                                       disabled={false}
                                       style={
                                         Object {
@@ -1434,6 +1446,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-0"
                                         disabled={false}
                                         style={
                                           Object {
@@ -1451,6 +1464,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-1"
                                         disabled={false}
                                         style={
                                           Object {
@@ -1468,6 +1482,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-2"
                                         disabled={false}
                                         style={
                                           Object {
@@ -1485,6 +1500,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-3"
                                         disabled={false}
                                         style={
                                           Object {
@@ -1502,6 +1518,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-4"
                                         disabled={false}
                                         style={
                                           Object {
@@ -1519,6 +1536,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-5"
                                         disabled={false}
                                         style={
                                           Object {
@@ -1536,6 +1554,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-6"
                                         disabled={false}
                                         style={
                                           Object {
@@ -1664,6 +1683,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-0"
                                           disabled={false}
                                           style={
                                             Object {
@@ -1681,6 +1701,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-1"
                                           disabled={false}
                                           style={
                                             Object {
@@ -1698,6 +1719,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-2"
                                           disabled={false}
                                           style={
                                             Object {
@@ -1715,6 +1737,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-3"
                                           disabled={false}
                                           style={
                                             Object {
@@ -1732,6 +1755,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-4"
                                           disabled={false}
                                           style={
                                             Object {
@@ -1749,6 +1773,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-5"
                                           disabled={false}
                                           style={
                                             Object {
@@ -1766,6 +1791,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-6"
                                           disabled={false}
                                           style={
                                             Object {
@@ -1900,6 +1926,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-0"
                                             disabled={false}
                                             style={
                                               Object {
@@ -1917,6 +1944,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-1"
                                             disabled={false}
                                             style={
                                               Object {
@@ -1934,6 +1962,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-2"
                                             disabled={false}
                                             style={
                                               Object {
@@ -1951,6 +1980,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-3"
                                             disabled={false}
                                             style={
                                               Object {
@@ -1968,6 +1998,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-4"
                                             disabled={false}
                                             style={
                                               Object {
@@ -1985,6 +2016,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-5"
                                             disabled={false}
                                             style={
                                               Object {
@@ -2002,6 +2034,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-6"
                                             disabled={false}
                                             style={
                                               Object {
@@ -3360,6 +3393,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                         className="MuiFormControl-root MuiFormControl-fullWidth"
                       >
                         <WithStyles(ForwardRef(InputLabel))
+                          data-testid="rek-status-label"
                           hidden={false}
                           id="rek-status-label"
                         >
@@ -3380,6 +3414,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 "shrink": "MuiInputLabel-shrink",
                               }
                             }
+                            data-testid="rek-status-label"
                             hidden={false}
                             id="rek-status-label"
                           >
@@ -3395,6 +3430,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 }
                               }
                               data-shrink={false}
+                              data-testid="rek-status-label"
                               hidden={false}
                               id="rek-status-label"
                             >
@@ -3413,12 +3449,14 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   }
                                 }
                                 data-shrink={false}
+                                data-testid="rek-status-label"
                                 hidden={false}
                                 id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-error Mui-error"
                                   data-shrink={false}
+                                  data-testid="rek-status-label"
                                   hidden={false}
                                   id="rek-status-label"
                                 />
@@ -3562,6 +3600,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-0"
                                       disabled={false}
                                       style={
                                         Object {
@@ -3579,6 +3618,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-1"
                                       disabled={false}
                                       style={
                                         Object {
@@ -3596,6 +3636,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-2"
                                       disabled={false}
                                       style={
                                         Object {
@@ -3613,6 +3654,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-3"
                                       disabled={false}
                                       style={
                                         Object {
@@ -3630,6 +3672,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-4"
                                       disabled={false}
                                       style={
                                         Object {
@@ -3647,6 +3690,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-5"
                                       disabled={false}
                                       style={
                                         Object {
@@ -3664,6 +3708,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-6"
                                       disabled={false}
                                       style={
                                         Object {
@@ -3791,6 +3836,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-0"
                                         disabled={false}
                                         style={
                                           Object {
@@ -3808,6 +3854,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-1"
                                         disabled={false}
                                         style={
                                           Object {
@@ -3825,6 +3872,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-2"
                                         disabled={false}
                                         style={
                                           Object {
@@ -3842,6 +3890,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-3"
                                         disabled={false}
                                         style={
                                           Object {
@@ -3859,6 +3908,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-4"
                                         disabled={false}
                                         style={
                                           Object {
@@ -3876,6 +3926,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-5"
                                         disabled={false}
                                         style={
                                           Object {
@@ -3893,6 +3944,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-6"
                                         disabled={false}
                                         style={
                                           Object {
@@ -4021,6 +4073,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-0"
                                           disabled={false}
                                           style={
                                             Object {
@@ -4038,6 +4091,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-1"
                                           disabled={false}
                                           style={
                                             Object {
@@ -4055,6 +4109,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-2"
                                           disabled={false}
                                           style={
                                             Object {
@@ -4072,6 +4127,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-3"
                                           disabled={false}
                                           style={
                                             Object {
@@ -4089,6 +4145,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-4"
                                           disabled={false}
                                           style={
                                             Object {
@@ -4106,6 +4163,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-5"
                                           disabled={false}
                                           style={
                                             Object {
@@ -4123,6 +4181,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-6"
                                           disabled={false}
                                           style={
                                             Object {
@@ -4257,6 +4316,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-0"
                                             disabled={false}
                                             style={
                                               Object {
@@ -4274,6 +4334,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-1"
                                             disabled={false}
                                             style={
                                               Object {
@@ -4291,6 +4352,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-2"
                                             disabled={false}
                                             style={
                                               Object {
@@ -4308,6 +4370,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-3"
                                             disabled={false}
                                             style={
                                               Object {
@@ -4325,6 +4388,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-4"
                                             disabled={false}
                                             style={
                                               Object {
@@ -4342,6 +4406,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-5"
                                             disabled={false}
                                             style={
                                               Object {
@@ -4359,6 +4424,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-6"
                                             disabled={false}
                                             style={
                                               Object {
@@ -5723,6 +5789,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                         className="MuiFormControl-root MuiFormControl-fullWidth"
                       >
                         <WithStyles(ForwardRef(InputLabel))
+                          data-testid="rek-status-label"
                           hidden={false}
                           id="rek-status-label"
                         >
@@ -5743,6 +5810,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 "shrink": "MuiInputLabel-shrink",
                               }
                             }
+                            data-testid="rek-status-label"
                             hidden={false}
                             id="rek-status-label"
                           >
@@ -5758,6 +5826,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 }
                               }
                               data-shrink={false}
+                              data-testid="rek-status-label"
                               hidden={false}
                               id="rek-status-label"
                             >
@@ -5776,12 +5845,14 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   }
                                 }
                                 data-shrink={false}
+                                data-testid="rek-status-label"
                                 hidden={false}
                                 id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                                   data-shrink={false}
+                                  data-testid="rek-status-label"
                                   hidden={false}
                                   id="rek-status-label"
                                 />
@@ -5925,6 +5996,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-0"
                                       disabled={false}
                                       style={
                                         Object {
@@ -5942,6 +6014,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-1"
                                       disabled={false}
                                       style={
                                         Object {
@@ -5959,6 +6032,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-2"
                                       disabled={false}
                                       style={
                                         Object {
@@ -5976,6 +6050,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-3"
                                       disabled={false}
                                       style={
                                         Object {
@@ -5993,6 +6068,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-4"
                                       disabled={false}
                                       style={
                                         Object {
@@ -6010,6 +6086,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-5"
                                       disabled={false}
                                       style={
                                         Object {
@@ -6027,6 +6104,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-6"
                                       disabled={false}
                                       style={
                                         Object {
@@ -6154,6 +6232,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-0"
                                         disabled={false}
                                         style={
                                           Object {
@@ -6171,6 +6250,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-1"
                                         disabled={false}
                                         style={
                                           Object {
@@ -6188,6 +6268,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-2"
                                         disabled={false}
                                         style={
                                           Object {
@@ -6205,6 +6286,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-3"
                                         disabled={false}
                                         style={
                                           Object {
@@ -6222,6 +6304,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-4"
                                         disabled={false}
                                         style={
                                           Object {
@@ -6239,6 +6322,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-5"
                                         disabled={false}
                                         style={
                                           Object {
@@ -6256,6 +6340,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-6"
                                         disabled={false}
                                         style={
                                           Object {
@@ -6384,6 +6469,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-0"
                                           disabled={false}
                                           style={
                                             Object {
@@ -6401,6 +6487,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-1"
                                           disabled={false}
                                           style={
                                             Object {
@@ -6418,6 +6505,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-2"
                                           disabled={false}
                                           style={
                                             Object {
@@ -6435,6 +6523,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-3"
                                           disabled={false}
                                           style={
                                             Object {
@@ -6452,6 +6541,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-4"
                                           disabled={false}
                                           style={
                                             Object {
@@ -6469,6 +6559,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-5"
                                           disabled={false}
                                           style={
                                             Object {
@@ -6486,6 +6577,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-6"
                                           disabled={false}
                                           style={
                                             Object {
@@ -6620,6 +6712,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-0"
                                             disabled={false}
                                             style={
                                               Object {
@@ -6637,6 +6730,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-1"
                                             disabled={false}
                                             style={
                                               Object {
@@ -6654,6 +6748,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-2"
                                             disabled={false}
                                             style={
                                               Object {
@@ -6671,6 +6766,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-3"
                                             disabled={false}
                                             style={
                                               Object {
@@ -6688,6 +6784,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-4"
                                             disabled={false}
                                             style={
                                               Object {
@@ -6705,6 +6802,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-5"
                                             disabled={false}
                                             style={
                                               Object {
@@ -6722,6 +6820,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-6"
                                             disabled={false}
                                             style={
                                               Object {
@@ -8083,6 +8182,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                         className="MuiFormControl-root MuiFormControl-fullWidth"
                       >
                         <WithStyles(ForwardRef(InputLabel))
+                          data-testid="rek-status-label"
                           hidden={false}
                           id="rek-status-label"
                         >
@@ -8103,6 +8203,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 "shrink": "MuiInputLabel-shrink",
                               }
                             }
+                            data-testid="rek-status-label"
                             hidden={false}
                             id="rek-status-label"
                           >
@@ -8118,6 +8219,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 }
                               }
                               data-shrink={true}
+                              data-testid="rek-status-label"
                               hidden={false}
                               id="rek-status-label"
                             >
@@ -8136,12 +8238,14 @@ exports[`UnpublishedStatusField component should render with value selected from
                                   }
                                 }
                                 data-shrink={true}
+                                data-testid="rek-status-label"
                                 hidden={false}
                                 id="rek-status-label"
                               >
                                 <label
                                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
                                   data-shrink={true}
+                                  data-testid="rek-status-label"
                                   hidden={false}
                                   id="rek-status-label"
                                 />
@@ -8285,6 +8389,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-0"
                                       disabled={false}
                                       style={
                                         Object {
@@ -8302,6 +8407,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-1"
                                       disabled={false}
                                       style={
                                         Object {
@@ -8319,6 +8425,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-2"
                                       disabled={false}
                                       style={
                                         Object {
@@ -8336,6 +8443,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-3"
                                       disabled={false}
                                       style={
                                         Object {
@@ -8353,6 +8461,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-4"
                                       disabled={false}
                                       style={
                                         Object {
@@ -8370,6 +8479,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-5"
                                       disabled={false}
                                       style={
                                         Object {
@@ -8387,6 +8497,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                         }
                                       }
+                                      data-testid="rek-status-option-6"
                                       disabled={false}
                                       style={
                                         Object {
@@ -8514,6 +8625,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-0"
                                         disabled={false}
                                         style={
                                           Object {
@@ -8531,6 +8643,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-1"
                                         disabled={false}
                                         style={
                                           Object {
@@ -8548,6 +8661,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-2"
                                         disabled={false}
                                         style={
                                           Object {
@@ -8565,6 +8679,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-3"
                                         disabled={false}
                                         style={
                                           Object {
@@ -8582,6 +8697,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-4"
                                         disabled={false}
                                         style={
                                           Object {
@@ -8599,6 +8715,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-5"
                                         disabled={false}
                                         style={
                                           Object {
@@ -8616,6 +8733,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                           }
                                         }
+                                        data-testid="rek-status-option-6"
                                         disabled={false}
                                         style={
                                           Object {
@@ -8744,6 +8862,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-0"
                                           disabled={false}
                                           style={
                                             Object {
@@ -8761,6 +8880,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-1"
                                           disabled={false}
                                           style={
                                             Object {
@@ -8778,6 +8898,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-2"
                                           disabled={false}
                                           style={
                                             Object {
@@ -8795,6 +8916,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-3"
                                           disabled={false}
                                           style={
                                             Object {
@@ -8812,6 +8934,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-4"
                                           disabled={false}
                                           style={
                                             Object {
@@ -8829,6 +8952,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-5"
                                           disabled={false}
                                           style={
                                             Object {
@@ -8846,6 +8970,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                             }
                                           }
+                                          data-testid="rek-status-option-6"
                                           disabled={false}
                                           style={
                                             Object {
@@ -8980,6 +9105,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-0"
                                             disabled={false}
                                             style={
                                               Object {
@@ -8997,6 +9123,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-1"
                                             disabled={false}
                                             style={
                                               Object {
@@ -9014,6 +9141,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-2"
                                             disabled={false}
                                             style={
                                               Object {
@@ -9031,6 +9159,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-3"
                                             disabled={false}
                                             style={
                                               Object {
@@ -9048,6 +9177,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-4"
                                             disabled={false}
                                             style={
                                               Object {
@@ -9065,6 +9195,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-5"
                                             disabled={false}
                                             style={
                                               Object {
@@ -9082,6 +9213,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 "selected": "GenericSelectFieldClass-selectedMenuItem-1",
                                               }
                                             }
+                                            data-testid="rek-status-option-6"
                                             disabled={false}
                                             style={
                                               Object {

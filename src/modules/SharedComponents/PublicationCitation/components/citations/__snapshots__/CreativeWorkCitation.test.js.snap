@@ -2027,6 +2027,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -2035,6 +2036,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Webster-Mannison, Marci
                       </span>
