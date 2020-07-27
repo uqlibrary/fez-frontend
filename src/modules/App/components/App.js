@@ -297,7 +297,7 @@ export class AppClass extends PureComponent {
         return (
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig} />
-                <AppBar className="AppBar" color="primary" position="fixed">
+                <AppBar className="AppBar" color="primary" position="fixed" id="mainHeader">
                     <Toolbar style={{ height: '70px' }}>
                         <Grid
                             container

@@ -235,7 +235,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       id="skipNav"
       onClick={[Function]}
       onKeyPress={[Function]}
-      tabIndex={1}
+      tabIndex={0}
       type="button"
     >
       <WithStyles(ForwardRef(Button))
@@ -390,7 +390,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       id="skipNav"
       onClick={[Function]}
       onKeyPress={[Function]}
-      tabIndex={1}
+      tabIndex={0}
       type="button"
     >
       <WithStyles(ForwardRef(Button))

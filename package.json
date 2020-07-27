@@ -215,6 +215,7 @@
         "cypress:dashboard": "cypress run --record --parallel --config video=true",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run",
+        "cypress:wcag": "cypress run --spec 'cypress/integration/accessibility/*.spec.js' --headed",
         "cypress:watch": "cypress run --headed",
         "eslint": "eslint '**/*.js' --quiet",
         "eslint:fix": "eslint '**/*.js' --quiet --fix",

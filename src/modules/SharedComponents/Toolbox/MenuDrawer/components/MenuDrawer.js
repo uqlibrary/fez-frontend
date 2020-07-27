@@ -238,7 +238,7 @@ export class MenuDrawer extends Component {
                                     id="skipNav"
                                     onClick={this.skipMenuItems}
                                     onKeyPress={this.skipMenuItems}
-                                    tabIndex={1}
+                                    tabIndex={0}
                                     aria-label={locale.skipNavAriaLabel}
                                 >
                                     <Button

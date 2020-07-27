@@ -64,6 +64,7 @@ exports[`Application component Should display mobile correctly 1`] = `
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -660,6 +661,7 @@ exports[`Application component should determine if it has incomplete works from 
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -1488,6 +1490,7 @@ exports[`Application component should determine if it has incomplete works from 
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -2134,6 +2137,7 @@ exports[`Application component should not show orcid alert for a student without
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -2510,6 +2514,7 @@ exports[`Application component should redirect to login page with correct return
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -3102,6 +3107,7 @@ exports[`Application component should render alert if user is not fez author 1`]
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -3934,6 +3940,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -4610,6 +4617,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -5271,6 +5279,7 @@ exports[`Application component should render app for account with author account
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -6174,6 +6183,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -7153,6 +7163,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -8217,6 +8228,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -9232,6 +9244,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -10477,6 +10490,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -11686,6 +11700,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -12786,6 +12801,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -13485,6 +13501,7 @@ exports[`Application component should render application with routing for the us
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -13784,6 +13801,7 @@ exports[`Application component should render for anon user 1`] = `
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -14185,6 +14203,7 @@ exports[`Application component should render thesis submission for HDR without m
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -14493,6 +14512,7 @@ exports[`Application component should show orcid alert for a student without an 
   <WithStyles(ForwardRef(AppBar))
     className="AppBar"
     color="primary"
+    id="mainHeader"
     position="fixed"
   >
     <WithStyles(ForwardRef(Toolbar))
@@ -16503,6 +16523,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       <WithStyles(ForwardRef(AppBar))
                         className="AppBar"
                         color="primary"
+                        id="mainHeader"
                         position="fixed"
                       >
                         <ForwardRef(AppBar)
@@ -16523,12 +16544,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             }
                           }
                           color="primary"
+                          id="mainHeader"
                           position="fixed"
                         >
                           <WithStyles(ForwardRef(Paper))
                             className="MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary AppBar mui-fixed"
                             component="header"
                             elevation={4}
+                            id="mainHeader"
                             square={true}
                           >
                             <ForwardRef(Paper)
@@ -16567,10 +16590,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               }
                               component="header"
                               elevation={4}
+                              id="mainHeader"
                               square={true}
                             >
                               <header
                                 className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary AppBar mui-fixed MuiPaper-elevation4"
+                                id="mainHeader"
                               >
                                 <WithStyles(ForwardRef(Toolbar))
                                   style={

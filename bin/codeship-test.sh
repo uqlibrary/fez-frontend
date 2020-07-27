@@ -4,10 +4,6 @@ if [[ -z $CI_BRANCH ]]; then
   CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 fi
 
-if [[ $CI_COMMIT_MESSAGE == *"[cypress]"* ]] then
-  printf "----- \"$CI_COMMIT_MESSAGE\" -----"
-fi
-
 # Not running code coverage check for feature branches.
 BRANCH_INCLUDES_CC=false
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_COMMIT_MESSAGE == *"[cypress]"*) ]]; then
