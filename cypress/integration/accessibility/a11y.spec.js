@@ -5,13 +5,13 @@ context('WCAG', () => {
         cy.viewport(1280, 900);
         cy.wait(2000);
 
-        cy.log('Testing header');
+        cy.log('Header');
         cy.checkA11y('header#mainHeader', {
             reportName: 'App',
             scopeName: 'Header',
             includedImpacts: ['serious', 'critical'],
         });
-        cy.log('Testing navigation');
+        cy.log('Navigation');
         cy.checkA11y('nav#mainMenu', {
             reportName: 'App',
             scopeName: 'Navigation menu',
