@@ -107,4 +107,19 @@ describe('Add new record', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render thesis as alert if HDR student', () => {
+        const wrapper = setup({
+            author: { aut_id: 44, aut_display_name: 'Test' },
+            newRecordFileUploadingOrIssueError: true,
+            newRecord: {
+                rek_pid: 'UQ:111111',
+            },
+            account: {
+                class: ['IS_UQ_STUDENT_PLACEMENT', 'IS_CURRENT'],
+            },
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

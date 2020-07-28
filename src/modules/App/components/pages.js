@@ -21,7 +21,6 @@ export const ThesisSubmission = React.lazy(() => import('modules/ThesisSubmissio
 export const ThirdPartyLookupTool = React.lazy(() =>
     import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool'),
 );
-export const ViewRecord = React.lazy(() => import('modules/ViewRecord/containers/ViewRecord'));
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
