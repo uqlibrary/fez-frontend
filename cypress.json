@@ -8,6 +8,7 @@
   "videoUploadOnPasses": false,
   "projectId": "mvfnrv",
   "blacklistHosts": ["www.googletagmanager.com"],
+  "stopOnFailure": false,
   "firefoxGcInterval": {
     "runMode": 1,
     "openMode": 1
