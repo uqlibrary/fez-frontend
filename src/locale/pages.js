@@ -845,6 +845,9 @@ export default {
         prototype: {
             title: 'Admin prototype',
         },
+        favouriteSearch: {
+            title: 'Favourite search',
+        },
         edit: {
             sections: {
                 identifiers: {

@@ -20,6 +20,7 @@ export const ThirdPartyLookupTool = React.lazy(() =>
 export const BatchImport = React.lazy(() => import('modules/BatchImport/containers/BatchImport'));
 export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
 export const NewViewRecord = React.lazy(() => import('modules/ViewRecord/containers/NewViewRecord'));
+export const FavouriteSearch = React.lazy(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch'));
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';

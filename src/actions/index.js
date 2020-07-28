@@ -6,6 +6,7 @@ export * from './batchImport';
 export * from './claimPublications';
 export * from './controlledVocabularies';
 export * from './exportPublications';
+export * from './favouriteSearch';
 export * from './fixRecord';
 export * from './incompleteRecords';
 export * from './issnLinks';

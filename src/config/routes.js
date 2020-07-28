@@ -143,6 +143,7 @@ export const pathConfig = {
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
+        favouriteSearch: '/admin/favourite-search',
     },
     authorIdentifiers: {
         orcid: {
@@ -177,6 +178,7 @@ const flattedPathConfig = [
     '/admin/add',
     '/admin/edit',
     '/admin/delete',
+    '/admin/favourite-search',
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/thirdPartyTools',
@@ -466,6 +468,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.favouriteSearch,
+                      component: components.FavouriteSearch,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.favouriteSearch.title,
                   },
               ]
             : []),
