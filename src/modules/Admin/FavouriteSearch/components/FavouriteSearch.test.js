@@ -1,6 +1,6 @@
 import React from 'react';
 import FavouriteSearch from './FavouriteSearch';
-import { render, RenderWithRouter, WithRedux, fireEvent } from 'test-utils';
+import { render, RenderWithRouter, WithRedux } from 'test-utils';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
 import mediaQuery from 'css-mediaquery';
 
@@ -25,10 +25,6 @@ const setup = (testProps = {}, renderer = render) => {
 describe('FavouriteSearch', () => {
     beforeAll(() => {
         window.matchMedia = createMatchMedia(window.innerWidth);
-    });
-
-    beforeEach(() => {
-        mockActionsStore = setupStoreForActions();
     });
 
     it('should render default view', () => {
