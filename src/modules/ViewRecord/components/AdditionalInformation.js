@@ -208,14 +208,10 @@ export class AdditionalInformationClass extends PureComponent {
                 renderedValue = this.renderTitle();
                 break;
             case 'rek_date':
+                // case 'rek_start_date':
+                // case 'rek_end_date':
                 renderedValue = formatPublicationDate(value, this.props.publication.rek_display_type_lookup);
                 break;
-            // case 'rek_start_date':
-            //     renderedValue =  formatPublicationDate(value, this.props.publication.rek_display_type_lookup);
-            //     break;
-            // case 'rek_end_date':
-            //     renderedValue = formatPublicationDate(value, this.props.publication.rek_display_type_lookup);
-            //     break;
             case 'rek_description':
                 renderedValue = this.renderHTML(value);
                 break;
