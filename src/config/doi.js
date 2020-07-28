@@ -31,6 +31,7 @@ export const doiFields = {
                 field: 'fez_record_search_key_publisher',
                 order: 6,
                 isRequired: true,
+                requiresUQ: true,
             },
             {
                 field: 'rek_date',
@@ -43,6 +44,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_series',
                 order: 12,
+                needsIssnForVisibility: true,
             },
             {
                 field: 'fez_record_search_key_isbn',
@@ -51,6 +53,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_issn',
                 order: 14,
+                needsSeriesForVisibility: true,
             },
             {
                 field: 'fez_record_search_key_contributor',
@@ -96,6 +99,7 @@ export const doiFields = {
                 field: 'fez_record_search_key_publisher',
                 order: 18,
                 isRequired: true,
+                requiresUQ: true,
             },
             {
                 field: 'rek_date',
@@ -138,11 +142,11 @@ export const doiFields = {
                 // Manually added (not found in locale file mentioned above)
                 field: 'fez_record_search_key_org_name',
                 order: 7.7,
+                requiresUQ: true,
             },
             {
                 field: 'rek_date',
                 order: 27,
-                format: 'YYYY',
             },
         ],
     },
@@ -165,6 +169,7 @@ export const doiFields = {
                 // Manually added (not found in locale file mentioned above)
                 field: 'fez_record_search_key_org_name',
                 order: 3.7,
+                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_org_unit_name',
@@ -177,6 +182,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_series',
                 order: 8,
+                needsIssnForVisibility: true,
             },
             {
                 field: 'rek_date',
@@ -206,6 +212,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_issn',
                 order: 19,
+                needsSeriesForVisibility: true,
             },
         ],
     },
@@ -244,6 +251,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 16,
+                requiresUQ: true,
             },
         ],
     },
@@ -278,6 +286,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_issn',
                 order: 8,
+                needsSeriesForVisibility: true,
             },
             {
                 field: 'fez_record_search_key_publisher',
@@ -286,6 +295,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_series',
                 order: 12,
+                needsIssnForVisibility: true,
             },
             {
                 field: 'fez_record_search_key_place_of_publication',
@@ -295,6 +305,7 @@ export const doiFields = {
                 // Manually added (not found in locale file mentioned above)
                 field: 'fez_record_search_key_org_name',
                 order: 13.5,
+                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_start_page',
@@ -361,10 +372,12 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_org_name',
                 order: 6,
+                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_series',
                 order: 8,
+                needsIssnForVisibility: true,
             },
             {
                 field: 'fez_record_search_key_report_number',
@@ -389,6 +402,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_issn',
                 order: 21,
+                needsSeriesForVisibility: true,
             },
         ],
     },

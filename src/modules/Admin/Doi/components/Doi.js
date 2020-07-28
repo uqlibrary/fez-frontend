@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 
 import pagesLocale from 'locale/pages';
 import viewRecordLocale from 'locale/viewRecord';
+import globalLocale from 'locale/global';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { pathConfig } from 'config/routes';
 import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
@@ -97,6 +98,12 @@ export const getInvalidPreviewFields = record => {
 
     previewFields.map(fieldConfig => {
         const subKey = fieldConfig.field.replace('fez_record_search_key', 'rek');
+        const value =
+            !!record[fieldConfig.field] &&
+            typeof record[fieldConfig.field] === 'object' &&
+            !Array.isArray(record[fieldConfig.field])
+                ? record[fieldConfig.field][subKey]
+                : record[fieldConfig.field];
 
         let isValid = true;
         switch (fieldConfig.field) {
@@ -108,16 +115,16 @@ export const getInvalidPreviewFields = record => {
                 isValid = isArrayValid(record, fieldConfig, value => validation.isValidIsbn(value) === '');
                 break;
 
+            case 'fez_record_search_key_org_name':
+            case 'fez_record_search_key_publisher':
+                isValid = !!value && value.indexOf(globalLocale.global.orgTitle) > -1;
+                break;
+
             default:
-                const value =
-                    !!record[fieldConfig.field] &&
-                    typeof record[fieldConfig.field] === 'object' &&
-                    !Array.isArray(record[fieldConfig.field])
-                        ? record[fieldConfig.field][subKey]
-                        : record[fieldConfig.field];
                 isValid = !fieldConfig.isRequired || !!value;
                 break;
         }
+
         if (!isValid) {
             invalidPreviewFields.push(fieldConfig.field);
         }
@@ -178,7 +185,13 @@ export const getErrorMessage = record => {
                 // const fieldName = displayTypeHeadings[field]
                 // ? displayTypeHeadings[field] : txt.headings.default[field];
                 const fieldName = txt.headings.default[field];
-                errorMessages.push(txt.alertMessages.missingRequiredField.replace('[FIELDNAME]', fieldName));
+                const errorTemplate = ['fez_record_search_key_org_name', 'fez_record_search_key_publisher'].includes(
+                    field,
+                )
+                    ? txt.alertMessages.uqCheckMessage
+                    : txt.alertMessages.missingRequiredField;
+
+                errorMessages.push(errorTemplate.replace('[FIELDNAME]', fieldName));
             });
         }
     }

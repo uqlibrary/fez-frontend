@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Doi, getWarningMessage, isArrayValid } from './Doi';
+import { Doi, getErrorMessage, getWarningMessage, isArrayValid } from './Doi';
 
 import { DOI_ORG_PREFIX } from 'config/doi';
 import { openAccessFiles } from 'config/openAccess';
@@ -11,9 +11,25 @@ import publicationTypeListJournalArticle from 'mock/data/records/publicationType
 import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
 import collectionRecord from 'mock/data/records/collectionRecord';
 
-const confPaperRecord = publicationTypeListConferencePaper.data[0];
+const confPaperRecord = {
+    ...publicationTypeListConferencePaper.data[0],
+    fez_record_search_key_doi: {
+        rek_doi: DOI_ORG_PREFIX,
+    },
+    fez_record_search_key_publisher: {
+        rek_publisher: 'The University of Queensland',
+    },
+};
 const journalArticleRecord = publicationTypeListJournalArticle.data[0];
-const mockRecord = publicationTypeListResearchReport.data[0];
+const mockRecord = {
+    ...publicationTypeListResearchReport.data[0],
+    fez_record_search_key_publisher: {
+        rek_publisher: 'The University of Queensland',
+    },
+    fez_record_search_key_org_name: {
+        rek_org_name: 'The University of Queensland',
+    },
+};
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ pid: mockRecord.rek_pid })),
@@ -105,15 +121,23 @@ describe('DOI component', () => {
             record: {
                 ...confPaperRecord,
                 rek_subtype: 'Published abstract',
-                fez_record_search_key_doi: {
-                    rek_doi: DOI_ORG_PREFIX,
-                },
             },
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
         expect(renderedWarningMessage.text()).toBe(
             'Error:Sorry, only the following subytypes are supported for Conference Paper: Fully published paper',
         );
+    });
+
+    it('should flag required field with no data', () => {
+        const testRecord = {
+            ...confPaperRecord,
+            fez_record_search_key_proceedings_title: {
+                rek_proceedings_title: '',
+            },
+        };
+        const renderedError = shallow(getErrorMessage(testRecord).errorMessage);
+        expect(renderedError.text()).toBe('Error:Required field Proceedings title is either missing or invalid.');
     });
 
     it('should flag required field with empty array', () => {
@@ -125,6 +149,17 @@ describe('DOI component', () => {
             isRequired: true,
         };
         expect(isArrayValid(record, fieldConfig, () => {})).toBe(false);
+    });
+
+    it('should render error for missing full name of UQ', () => {
+        const testRecord = {
+            ...mockRecord,
+            fez_record_search_key_publisher: {
+                rek_publisher: 'UQ',
+            },
+        };
+        const renderedError = shallow(getErrorMessage(testRecord).errorMessage);
+        expect(renderedError.text()).toBe('Error:Publisher should contain "The University of Queensland".');
     });
 
     it('should render warning for invalid preview field', () => {
@@ -171,8 +206,8 @@ describe('DOI component', () => {
         const wrapper1 = setup({
             record: journalArticleRecord,
         });
-        const renderedWarningMessage1 = shallow(wrapper1.find('Alert').props().message);
-        expect(renderedWarningMessage1.text()).toBe('Error:Sorry, type Journal Article is not currently supported.');
+        const renderedError1 = shallow(wrapper1.find('Alert').props().message);
+        expect(renderedError1.text()).toBe('Error:Sorry, type Journal Article is not currently supported.');
 
         const wrapper2 = setup({
             record: {
@@ -180,8 +215,8 @@ describe('DOI component', () => {
                 rek_display_type_lookup: null,
             },
         });
-        const renderedWarningMessage2 = shallow(wrapper2.find('Alert').props().message);
-        expect(renderedWarningMessage2.text()).toBe('Error:Sorry, type Collection is not currently supported.');
+        const renderedError2 = shallow(wrapper2.find('Alert').props().message);
+        expect(renderedError2.text()).toBe('Error:Sorry, type Collection is not currently supported.');
     });
 
     it('should disable submit button for existing non-UQ DOI', () => {
