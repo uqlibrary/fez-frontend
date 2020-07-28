@@ -13,8 +13,5 @@
     "runMode": 1,
     "openMode": 1
   },
-  "numTestsKeptInMemory": 1,
-  "env": {
-    "RETRIES": 5
-  }
+  "numTestsKeptInMemory": 1
 }
