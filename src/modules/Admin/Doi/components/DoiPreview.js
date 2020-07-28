@@ -10,6 +10,9 @@ import locale from 'locale/viewRecord';
 import pagesLocale from 'locale/pages';
 import { doiFields } from 'config/doi';
 
+import { validation } from 'config';
+import { isArrayValid } from './Doi';
+
 import { useAccountContext } from 'context';
 
 export const DoiPreview = ({ publication }) => {
@@ -27,25 +30,62 @@ export const DoiPreview = ({ publication }) => {
 
     const previewFields = fieldConfig
         .sort((field1, field2) => field1.order - field2.order)
-        .map(({ field }) => {
+        .map(({ field, needsSeriesForVisibility, needsIssnForVisibility }) => {
             let data = publication[field];
-            if (field === 'fez_record_search_key_parent_publication' && !!data) {
-                const startPage =
-                    !!publication.fez_record_search_key_start_page &&
-                    publication.fez_record_search_key_start_page.rek_start_page;
-                if (!/^\d+$/.test(startPage) || parseInt(startPage, 10) <= 1) {
-                    return '';
-                }
+            if (!data) {
+                return '';
             }
-            if (field === 'fez_record_search_key_author') {
-                data = data.map((author, index) => ({
-                    ...author,
-                    aut_orcid_id:
-                        publication.fez_record_search_key_author_id[index] &&
-                        publication.fez_record_search_key_author_id[index].author &&
-                        publication.fez_record_search_key_author_id[index].author.aut_orcid_id,
-                }));
+
+            switch (field) {
+                case 'fez_record_search_key_author':
+                    data = data.map((author, index) => ({
+                        ...author,
+                        aut_orcid_id:
+                            publication.fez_record_search_key_author_id[index] &&
+                            publication.fez_record_search_key_author_id[index].author &&
+                            publication.fez_record_search_key_author_id[index].author.aut_orcid_id,
+                    }));
+                    break;
+
+                case 'fez_record_search_key_issn':
+                    if (
+                        needsSeriesForVisibility &&
+                        (!publication.fez_record_search_key_series ||
+                            !publication.fez_record_search_key_series.rek_series)
+                    ) {
+                        return '';
+                    }
+                    break;
+
+                case 'fez_record_search_key_parent_publication':
+                    const startPage =
+                        !!publication.fez_record_search_key_start_page &&
+                        publication.fez_record_search_key_start_page.rek_start_page;
+                    if (!/^\d+$/.test(startPage) || parseInt(startPage, 10) <= 1) {
+                        return '';
+                    }
+                    break;
+
+                case 'fez_record_search_key_series':
+                    if (
+                        needsIssnForVisibility &&
+                        (!publication.fez_record_search_key_issn ||
+                            !Array.isArray(publication.fez_record_search_key_issn) ||
+                            publication.fez_record_search_key_issn.length === 0 ||
+                            !isArrayValid(
+                                publication,
+                                { field: 'fez_record_search_key_issn' },
+                                value => validation.isValidIssn(value) === '',
+                            ))
+                    ) {
+                        return '';
+                    }
+                    break;
+
+                default:
+                    break;
             }
+
             const componentProps = {
                 data,
                 displayTypeLookup,
