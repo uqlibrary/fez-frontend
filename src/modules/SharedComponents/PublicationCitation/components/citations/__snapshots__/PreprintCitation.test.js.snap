@@ -1814,6 +1814,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1822,12 +1823,14 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Asmussen, S.
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -1836,11 +1839,13 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Kroese, D. P.
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=" and "
@@ -1849,6 +1854,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                          and 
                         Rubinstein, R. Y.

@@ -1748,6 +1748,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1756,12 +1757,14 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Teesson, Maree
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -1770,12 +1773,14 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Hall, Wayne
                         , 
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -1784,11 +1789,13 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Proudfoot, Heather
                       </span>
                     </CitationView>
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=" and "
@@ -1797,6 +1804,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                          and 
                         Degenhardt, Louisa
@@ -3741,6 +3749,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
@@ -3749,12 +3758,14 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Smith, A
                           , 
                         </span>
                       </CitationView>
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
                         prefix=""
@@ -3763,11 +3774,13 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-1"
                         >
                           Smith, C
                         </span>
                       </CitationView>
                       <CitationView
+                        citationId="rek-contributor-2"
                         className="citationAuthor"
                         key="citationAuthor_3"
                         prefix=" and "
@@ -3776,6 +3789,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-2"
                         >
                            and 
                           Smith, B
@@ -6618,6 +6632,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
@@ -6626,12 +6641,14 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Smith, A
                           , 
                         </span>
                       </CitationView>
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
                         prefix=""
@@ -6640,11 +6657,13 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-1"
                         >
                           Smith, C
                         </span>
                       </CitationView>
                       <CitationView
+                        citationId="rek-contributor-2"
                         className="citationAuthor"
                         key="citationAuthor_3"
                         prefix=" and "
@@ -6653,6 +6672,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-2"
                         >
                            and 
                           Smith, B

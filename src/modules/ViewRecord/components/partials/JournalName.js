@@ -39,7 +39,7 @@ export default class JournalName extends PureComponent {
         let sherpaRomeoElement = <span />;
         if (sherpaRomeoData) {
             sherpaRomeoElement = (
-                <span>
+                <span data-testid="rek-journal-name-sherpa-link">
                     {' '}
                     <ExternalLink href={sherpaRomeoData.url} aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}>
                         {viewRecordLocale.viewRecord.linkTexts.journalOpenAccessPolicyLink}
@@ -58,12 +58,12 @@ export default class JournalName extends PureComponent {
                 ? viewRecordLocale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', '))
                 : '';
         return (
-            <React.Fragment>
+            <span data-testid="rek-journal-name">
                 <Link to={pathConfig.list.journalName(journalName)}>
                     <span>{journalName}</span>
                 </Link>
                 {eraJournalListedText && <span className={'eraYearListed'}> {eraJournalListedText}</span>}
-            </React.Fragment>
+            </span>
         );
     };
 
