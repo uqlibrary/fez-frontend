@@ -117,7 +117,7 @@ export const getInvalidPreviewFields = record => {
 
             case 'fez_record_search_key_org_name':
             case 'fez_record_search_key_publisher':
-                isValid = !!value && value.indexOf(globalLocale.global.orgTitle) > -1;
+                isValid = !fieldConfig.requiresUQ || (!!value && value.indexOf(globalLocale.global.orgTitle) > -1);
                 break;
 
             default:

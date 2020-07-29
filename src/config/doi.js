@@ -30,7 +30,6 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 6,
-                isRequired: true,
                 requiresUQ: true,
             },
             {
@@ -98,7 +97,6 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 18,
-                isRequired: true,
                 requiresUQ: true,
             },
             {
@@ -142,6 +140,10 @@ export const doiFields = {
                 // Manually added (not found in locale file mentioned above)
                 field: 'fez_record_search_key_org_name',
                 order: 7.7,
+            },
+            {
+                field: 'fez_record_search_key_publisher',
+                order: 26,
                 requiresUQ: true,
             },
             {
@@ -169,7 +171,6 @@ export const doiFields = {
                 // Manually added (not found in locale file mentioned above)
                 field: 'fez_record_search_key_org_name',
                 order: 3.7,
-                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_org_unit_name',
@@ -199,6 +200,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 13,
+                requiresUQ: true,
             },
             {
                 // Manually added (not found in locale file mentioned above)
@@ -291,6 +293,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 11,
+                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_series',
@@ -305,7 +308,6 @@ export const doiFields = {
                 // Manually added (not found in locale file mentioned above)
                 field: 'fez_record_search_key_org_name',
                 order: 13.5,
-                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_start_page',
@@ -339,6 +341,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_org_name',
                 order: 5,
+                requiresUQ: true,
             },
             {
                 field: 'rek_date',
@@ -372,7 +375,6 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_org_name',
                 order: 6,
-                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_series',
@@ -390,6 +392,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_publisher',
                 order: 12,
+                requiresUQ: true,
             },
             {
                 field: 'fez_record_search_key_start_page',
