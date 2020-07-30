@@ -881,7 +881,6 @@ export default {
                     edition: ', e.g. 3rd or 3rd edn instead of 3',
                 },
                 missingRequiredField: 'Required field [FIELDNAME] is either missing or invalid.',
-                noOADatastreams: 'No open access datastreams are attached; DOI will be for metadata only.',
                 unsupportedMessage: 'Sorry, type [TYPE] is not currently supported.',
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
                 uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',

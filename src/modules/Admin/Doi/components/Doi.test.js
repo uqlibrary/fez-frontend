@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import { Doi, getErrorMessage, getWarningMessage, isArrayValid } from './Doi';
 
 import { DOI_ORG_PREFIX } from 'config/doi';
-import { openAccessFiles } from 'config/openAccess';
 
 import publicationTypeListConferencePaper from 'mock/data/records/publicationTypeListConferencePaper';
 import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
@@ -25,9 +24,6 @@ const mockRecord = {
     ...publicationTypeListResearchReport.data[0],
     fez_record_search_key_publisher: {
         rek_publisher: 'The University of Queensland',
-    },
-    fez_record_search_key_org_name: {
-        rek_org_name: 'The University of Queensland',
     },
 };
 
@@ -103,19 +99,6 @@ describe('DOI component', () => {
         expect(testFn2).toHaveBeenCalledTimes(1);
     });
 
-    it('should render warning for missing OA datastreams', () => {
-        const wrapper = setup({
-            record: {
-                ...mockRecord,
-                fez_datastream_info: [],
-            },
-        });
-        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
-            'Please note:No open access datastreams are attached; DOI will be for metadata only.',
-        );
-    });
-
     it('should render error for unsupported subtype', () => {
         const wrapper = setup({
             record: {
@@ -166,15 +149,6 @@ describe('DOI component', () => {
         const wrapper = setup({
             record: {
                 ...mockRecord,
-                fez_datastream_info: [
-                    {
-                        dsi_open_access: 1,
-                        dsi_embargo_date: '2017-01-01',
-                    },
-                ],
-                fez_record_search_key_oa_status: {
-                    rek_oa_status: openAccessFiles[0],
-                },
                 fez_record_search_key_edition: {
                     rek_edition: '3rd',
                 },
@@ -187,19 +161,7 @@ describe('DOI component', () => {
     });
 
     it('should not generate unnecessary warnings', () => {
-        const testRecord = {
-            ...mockRecord,
-            fez_record_search_key_oa_status: {
-                rek_oa_status: openAccessFiles[0],
-            },
-            fez_datastream_info: [
-                {
-                    dsi_open_access: 1,
-                    dsi_embargo_date: '2017-01-01',
-                },
-            ],
-        };
-        expect(getWarningMessage(testRecord)).toBe('');
+        expect(getWarningMessage(mockRecord)).toBe('');
     });
 
     it('should render error for unsupported types', () => {
