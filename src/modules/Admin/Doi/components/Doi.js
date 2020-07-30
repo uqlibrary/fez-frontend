@@ -22,7 +22,6 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
-import { getFileOpenAccessStatus } from 'modules/ViewRecord/components/Files';
 import DoiPreview from './DoiPreview';
 
 const txt = {
@@ -53,13 +52,6 @@ export const getWarningMessage = record => {
     const alertTitle = txt.alertMessages.warningTitle;
     const alertType = 'warning';
     const warningMessages = [];
-
-    // Warn if record doesn't have open-access datastreams
-    const datastreamIsOpenAccess = datastream =>
-        getFileOpenAccessStatus(record, datastream, { isAdmin: true }).isOpenAccess;
-    if (!record.fez_datastream_info || record.fez_datastream_info.filter(datastreamIsOpenAccess).length === 0) {
-        warningMessages.push(txt.alertMessages.noOADatastreams);
-    }
 
     // Warn if Edition is not purely numeric
     const editionValue = !!record.fez_record_search_key_edition && record.fez_record_search_key_edition.rek_edition;
