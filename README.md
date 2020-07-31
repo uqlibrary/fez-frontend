@@ -28,7 +28,7 @@ UQ's branding for Fez is UQ eSpace.
 This project is using `npm` for dependency management. Make sure `npm` is installed on your machine.
 
 - make sure to create a .env file based on example.env
-- `nvm use 11.10.1 && npm i -g npm@6 jest webpack-dev-server` - initial setup
+- `nvm use 14.7.0 && npm i -g npm@6 jest webpack-dev-server` - initial setup
 - `npm ci` - when weird errors happen your local npm probably doesnt match the latest project requirements, this
   clears & reinstalls npm packages
 - `npm run start`
