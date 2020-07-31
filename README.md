@@ -58,7 +58,7 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
 
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
-  - uses PRODUCTION DATA from the aws api (ie `https://api.library.uq.edu.au/v1/1) as a backend!! Careful!!
+  - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/1>) as a backend!! Careful!!
 - `npm run start:build:e2e`
   - runs production build version on <http://localhost:9000/>
   - uses mock data from src/mock
