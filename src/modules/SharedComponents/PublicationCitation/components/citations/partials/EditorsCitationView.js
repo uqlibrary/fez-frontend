@@ -9,7 +9,6 @@ const EditorsCitationView = ({
     suffix = '. ',
     separator = ', ',
     showLink = false,
-    initialNumberOfEditors = 10,
 }) => {
     return (
         <AuthorsCitationView
@@ -28,7 +27,6 @@ const EditorsCitationView = ({
                 idSubkey: 'rek_contributor_id',
                 idOrder: 'rek_contributor_id_order',
             }}
-            initialNumberOfAuthors={initialNumberOfEditors}
             showLink={showLink}
             getLink={pathConfig.list.contributor}
         />

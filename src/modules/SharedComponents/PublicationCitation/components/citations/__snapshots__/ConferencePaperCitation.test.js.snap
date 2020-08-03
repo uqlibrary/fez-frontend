@@ -1455,7 +1455,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
+                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -2315,7 +2315,6 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -2325,7 +2324,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Larance, Briony"
                     >
                       <span
@@ -2333,15 +2332,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-0"
                       >
                         Larance, Briony
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Peacock, Amy"
                     >
                       <span
@@ -2349,15 +2348,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-1"
                       >
                         Peacock, Amy
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Campbell, Gabrielle"
                     >
                       <span
@@ -2365,15 +2364,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-2"
                       >
                         Campbell, Gabrielle
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Freckleton, Sarah"
                     >
                       <span
@@ -2381,15 +2380,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-3"
                       >
                         Freckleton, Sarah
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Smith, Kimberley"
                     >
                       <span
@@ -2397,15 +2396,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-4"
                       >
                         Smith, Kimberley
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-5"
                       className="citationAuthor"
                       key="citationAuthor_6"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Mattick, Richard"
                     >
                       <span
@@ -2413,15 +2412,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-5"
                       >
                         Mattick, Richard
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-6"
                       className="citationAuthor"
                       key="citationAuthor_7"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Bruno, Raimondo"
                     >
                       <span
@@ -2429,15 +2428,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-6"
                       >
                         Bruno, Raimondo
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-7"
                       className="citationAuthor"
                       key="citationAuthor_8"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Nielsen, Suzanne"
                     >
                       <span
@@ -2445,15 +2444,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-7"
                       >
                         Nielsen, Suzanne
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-8"
                       className="citationAuthor"
                       key="citationAuthor_9"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Cohen, Milton"
                     >
                       <span
@@ -2461,15 +2460,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-8"
                       >
                         Cohen, Milton
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-9"
                       className="citationAuthor"
                       key="citationAuthor_10"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Lintzeris, Nicholas"
                     >
                       <span
@@ -2477,20 +2476,73 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         data-testid="rek-author-9"
                       >
                         Lintzeris, Nicholas
-                        , 
                       </span>
                     </CitationView>
-                    <span>
-                       
-                      <a
-                        className="citationShowMoreAuthors"
-                        onClick={[Function]}
-                        onKeyPress={[Function]}
-                        title="Click to show 4 more authors"
+                    , 
+                    <CitationView
+                      citationId="rek-author-10"
+                      className="citationAuthor"
+                      key="citationAuthor_11"
+                      prefix=""
+                      suffix=""
+                      value="Shand, Fiona"
+                    >
+                      <span
+                        className="citationAuthor"
+                        data-testid="rek-author-10"
                       >
-                        Show 4 more...
-                      </a>
-                    </span>
+                        Shand, Fiona
+                      </span>
+                    </CitationView>
+                    , 
+                    <CitationView
+                      citationId="rek-author-11"
+                      className="citationAuthor"
+                      key="citationAuthor_12"
+                      prefix=""
+                      suffix=""
+                      value="Hall, Wayne D."
+                    >
+                      <span
+                        className="citationAuthor"
+                        data-testid="rek-author-11"
+                      >
+                        Hall, Wayne D.
+                      </span>
+                    </CitationView>
+                    , 
+                    <CitationView
+                      citationId="rek-author-12"
+                      className="citationAuthor"
+                      key="citationAuthor_13"
+                      prefix=""
+                      suffix=""
+                      value="Farrell, Michael"
+                    >
+                      <span
+                        className="citationAuthor"
+                        data-testid="rek-author-12"
+                      >
+                        Farrell, Michael
+                      </span>
+                    </CitationView>
+                    , 
+                     and 
+                    <CitationView
+                      citationId="rek-author-13"
+                      className="citationAuthor"
+                      key="citationAuthor_14"
+                      prefix=""
+                      suffix=""
+                      value="Degenhardt, Louisa"
+                    >
+                      <span
+                        className="citationAuthor"
+                        data-testid="rek-author-13"
+                      >
+                        Degenhardt, Louisa
+                      </span>
+                    </CitationView>
                      
                   </span>
                 </AuthorsCitationView>
@@ -3487,7 +3539,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
+                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -3848,7 +3900,6 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

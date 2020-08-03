@@ -23,6 +23,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
             title="Work to be amended"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -513,6 +514,7 @@ exports[`Component FixRecord UNSAFE_componentWillReceiveProps() 1`] = `
             title="Work to be amended"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -1021,6 +1023,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
             title="Work to be amended"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -1708,6 +1711,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
             title="Work to be amended"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -2198,6 +2202,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             title="Work to be amended"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -2881,6 +2886,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             title="Work to be amended"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -3552,6 +3558,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             title="Work to be amended"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],

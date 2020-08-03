@@ -263,8 +263,8 @@ export class AdditionalInformationClass extends PureComponent {
                 prefix={''}
                 suffix={''}
                 separator={', '}
-                initialNumberOfAuthors={publication.fez_record_search_key_author.length}
                 showLink
+                citationStyle={'all'}
             />
         );
     };
