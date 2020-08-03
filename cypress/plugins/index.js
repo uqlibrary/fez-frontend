@@ -20,7 +20,7 @@ module.exports = (on, config) => {
     // `config` is the resolved Cypress config
     // initPlugin(on, config);
     require('cypress-plugin-retries/lib/plugin')(on);
-    on('task', require('@cypress/code-coverage/task'));
+    require('@cypress/code-coverage/task')(on, config);
     on('file:preprocessor', require('@cypress/code-coverage/use-browserify-istanbul'));
     return config;
 };

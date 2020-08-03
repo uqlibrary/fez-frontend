@@ -1,6 +1,6 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import Files from './Files';
+import Files, { getFileOpenAccessStatus } from './Files';
 import { FilesClass } from './Files';
 import * as mock from 'mock/data';
 
@@ -1117,11 +1117,9 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        const wrapper = setup({ isAdmin: false });
+        const props = { isAdmin: false };
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0], props),
         ).toEqual({
             embargoDate: '1st December 2021',
             isOpenAccess: false,
@@ -1129,9 +1127,7 @@ describe('Files Component ', () => {
             securityStatus: false,
         });
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[1]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[1], props),
         ).toEqual({
             embargoDate: '1st November 2021',
             isOpenAccess: false,
@@ -1139,14 +1135,10 @@ describe('Files Component ', () => {
             securityStatus: false,
         });
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
     });
 
@@ -1204,11 +1196,11 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        const wrapper = setup({ isAdmin: true, isAuthor: true });
+
+        const props = { isAdmin: true, isAuthor: true };
+
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0], props),
         ).toEqual({
             embargoDate: '1st December 2021',
             isOpenAccess: false,
@@ -1216,9 +1208,7 @@ describe('Files Component ', () => {
             securityStatus: true,
         });
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[1]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[1], props),
         ).toEqual({
             embargoDate: '1st November 2021',
             isOpenAccess: false,
@@ -1226,14 +1216,10 @@ describe('Files Component ', () => {
             securityStatus: true,
         });
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3]),
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
     });
 
@@ -1301,14 +1287,12 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        const wrapper = setup({});
         expect(
-            wrapper
-                .instance()
-                .getFileOpenAccessStatus(
-                    publicationEmbargoOAFile,
-                    publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date,
-                ),
+            getFileOpenAccessStatus(
+                publicationEmbargoOAFile,
+                publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date,
+                {},
+            ),
         ).toEqual({ embargoDate: null, isOpenAccess: false, openAccessStatusId: null });
     });
 
