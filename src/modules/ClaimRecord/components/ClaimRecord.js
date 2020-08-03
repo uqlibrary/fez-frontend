@@ -207,7 +207,7 @@ export default class ClaimRecord extends PureComponent {
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
-                                    <PublicationCitation publication={publication} />
+                                    <PublicationCitation publication={publication} citationStyle={'header'} />
                                 </StandardCard>
                             </Grid>
                             {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (

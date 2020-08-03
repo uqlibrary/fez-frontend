@@ -7,8 +7,6 @@ function setup(testProps = {}, args = { isShallow: false }) {
         prefix: testProps.prefix,
         suffix: testProps.suffix,
         className: testProps.className || '',
-        initialNumberOfAuthors: testProps.initialNumberOfAuthors || 10,
-        thresholdNumberOfAuthors: testProps.thresholdNumberOfAuthors || 3,
         showLink: testProps.showLink || false,
         ...testProps,
     };
@@ -94,8 +92,6 @@ describe('AuthorsCitationView test ', () => {
             ],
         };
         const wrapper = setup({ publication: testObject, showLink: true });
-        expect(wrapper.find('CitationView').get(0).props.suffix).toEqual('');
-        expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -117,8 +113,6 @@ describe('AuthorsCitationView test ', () => {
             ],
         };
         const wrapper = setup({ publication: testObject, showLink: true });
-        expect(wrapper.find('CitationView').get(0).props.suffix).toEqual('');
-        expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -163,9 +157,6 @@ describe('AuthorsCitationView test ', () => {
             ],
         };
         const wrapper = setup({ publication: testObject, showLink: true });
-        expect(wrapper.find('CitationView').get(0).props.suffix).toEqual(', ');
-        expect(wrapper.find('CitationView').get(1).props.suffix).toEqual('');
-        expect(wrapper.find('CitationView').get(2).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -305,25 +296,19 @@ describe('AuthorsCitationView test ', () => {
                 publication: testObject,
                 prefix: 'Authored by: ',
                 suffix: ' people.',
-                thresholdNumberOfAuthors: 0,
             },
             { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().hasMoreAuthors).toEqual(true);
-        expect(wrapper.state().toggleShowMoreLink).toEqual(true);
         expect(wrapper.state().authors.length).toEqual(12);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
-        expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(1);
-        expect(wrapper.find('.citationShowMoreAuthors').text()).toEqual('Show 2 more...');
-
-        wrapper.instance()._toggleShowMore({ preventDefault: jest.fn() });
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().toggleShowMoreLink).toEqual(false);
         expect(wrapper.find('.citationAuthor').length).toEqual(12);
-        expect(wrapper.find('.citationShowMoreAuthors').text()).toEqual('Show less');
+    });
+
+    it('should not fail with missing data', () => {
+        const wrapper = setup({ publication: null, prefix: 'Authored by: ', suffix: ' people.' }, true);
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.state().authors.length).toEqual(0);
+        expect(wrapper.find('.citationAuthor').length).toEqual(0);
     });
 
     it('should render component with exactly 10 authors', () => {
@@ -393,14 +378,11 @@ describe('AuthorsCitationView test ', () => {
         };
         const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.' }, true);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().hasMoreAuthors).toEqual(false);
-        expect(wrapper.state().toggleShowMoreLink).toEqual(false);
         expect(wrapper.state().authors.length).toEqual(10);
         expect(wrapper.find('.citationAuthor').length).toEqual(10);
-        expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
     });
 
-    it('should render component with 10 authors (8 initial number and threshold 2)', () => {
+    it('should render a list with ellipsis when elasticsearch cant supply all authors', () => {
         const testObject = {
             fez_record_search_key_author: [
                 {
@@ -427,60 +409,228 @@ describe('AuthorsCitationView test ', () => {
                     rek_author: 'Andersen, J',
                     rek_author_order: 4,
                 },
+            ],
+            fez_record_search_key_author_id: [
                 {
-                    rek_author_id: null,
-                    rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
-                    rek_author_order: 5,
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 7654,
+                    rek_author_order_id: 1,
                 },
                 {
-                    rek_author_id: null,
-                    rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
-                    rek_author_order: 6,
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 23235,
+                    rek_author_order_id: 2,
                 },
                 {
-                    rek_author_id: null,
-                    rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
-                    rek_author_order: 7,
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 78678,
+                    rek_author_order_id: 3,
                 },
                 {
-                    rek_author_id: null,
-                    rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
-                    rek_author_order: 8,
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 76845,
+                    rek_author_order_id: 4,
                 },
                 {
-                    rek_author_id: null,
-                    rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
-                    rek_author_order: 9,
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 6856346,
+                    rek_author_order_id: 5,
                 },
                 {
-                    rek_author_id: null,
-                    rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
-                    rek_author_order: 10,
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 1234,
+                    rek_author_order_id: 6,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 342546,
+                    rek_author_order_id: 7,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 87765,
+                    rek_author_order_id: 8,
                 },
             ],
         };
         const wrapper = setup(
             {
                 publication: testObject,
-                prefix: 'Authored by: ',
-                suffix: ' people.',
-                initialNumberOfAuthors: 8,
-                thresholdNumberOfAuthors: 2,
+                maxAuthorDisplayNumber: 3,
+                citationStyle: 'list',
             },
             { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().hasMoreAuthors).toEqual(false);
-        expect(wrapper.state().toggleShowMoreLink).toEqual(false);
-        expect(wrapper.state().authors.length).toEqual(10);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
-        expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
+        expect(wrapper.state().authors.length).toEqual(4);
+        expect(wrapper.find('.citationAuthor').length).toEqual(4);
+    });
+
+    it('should render a header correctly when too many authors are provided', () => {
+        const testObject = {
+            fez_record_search_key_author: [
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Pedroso, Marcelo Monteiro',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Smith, J',
+                    rek_author_order: 2,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Andersen, J',
+                    rek_author_order: 3,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Andersen, J',
+                    rek_author_order: 4,
+                },
+            ],
+            fez_record_search_key_author_id: [
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 7654,
+                    rek_author_order_id: 1,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 23235,
+                    rek_author_order_id: 2,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 78678,
+                    rek_author_order_id: 3,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 76845,
+                    rek_author_order_id: 4,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 6856346,
+                    rek_author_order_id: 5,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 1234,
+                    rek_author_order_id: 6,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 342546,
+                    rek_author_order_id: 7,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 87765,
+                    rek_author_order_id: 8,
+                },
+            ],
+        };
+        const wrapper = setup(
+            {
+                publication: testObject,
+                maxAuthorDisplayNumber: 3,
+                citationStyle: 'header',
+            },
+            { isShallow: true },
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.state().authors.length).toEqual(4);
+        expect(wrapper.find('.citationAuthor').length).toEqual(5);
+    });
+
+    it('should render a header correctly when all authors are provided', () => {
+        const testObject = {
+            fez_record_search_key_author: [
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Pedroso, Marcelo Monteiro',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Smith, J',
+                    rek_author_order: 2,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Andersen, J',
+                    rek_author_order: 3,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:678742',
+                    rek_author: 'Andersen, J',
+                    rek_author_order: 4,
+                },
+            ],
+            fez_record_search_key_author_id: [
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 7654,
+                    rek_author_order_id: 1,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 23235,
+                    rek_author_order_id: 2,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 78678,
+                    rek_author_order_id: 3,
+                },
+                {
+                    rek_author_id_id: null,
+                    rek_author_pid_id: 'UQ:678742',
+                    rek_author_id: 76845,
+                    rek_author_order_id: 4,
+                },
+            ],
+        };
+        const wrapper = setup(
+            {
+                publication: testObject,
+                citationStyle: 'header',
+            },
+            { isShallow: true },
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.state().authors.length).toEqual(4);
+        expect(wrapper.find('.citationAuthor').length).toEqual(5);
     });
 
     it('should render component with 3 authors with prefix/suffix without changing original data structure', () => {

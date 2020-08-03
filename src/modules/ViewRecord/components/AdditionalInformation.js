@@ -38,7 +38,7 @@ export const renderAuthors = (publication, props = {}) => {
         prefix: '',
         suffix: '',
         separator: ', ',
-        initialNumberOfAuthors: publication.fez_record_search_key_author.length,
+        citationStyle: 'all',
         showLink: true,
         ...props,
     };

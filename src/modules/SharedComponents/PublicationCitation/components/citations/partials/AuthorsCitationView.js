@@ -21,11 +21,11 @@ export class AuthorsCitationView extends PureComponent {
         prefix: PropTypes.string,
         suffix: PropTypes.string,
         separator: PropTypes.string,
-        initialNumberOfAuthors: PropTypes.number,
-        thresholdNumberOfAuthors: PropTypes.number,
         showLink: PropTypes.bool,
         getLink: PropTypes.func,
         classes: PropTypes.object,
+        maxAuthorDisplayNumber: PropTypes.number,
+        citationStyle: PropTypes.string,
     };
 
     static defaultProps = {
@@ -42,10 +42,9 @@ export class AuthorsCitationView extends PureComponent {
             idOrder: 'rek_author_id_order',
         },
         className: 'citationAuthors',
-        initialNumberOfAuthors: 10,
-        thresholdNumberOfAuthors: 3,
         showLink: false,
         getLink: pathConfig.list.author,
+        maxAuthorDisplayNumber: 29,
     };
 
     constructor(props) {
@@ -54,27 +53,19 @@ export class AuthorsCitationView extends PureComponent {
         const {
             publication,
             searchKey: { key, order, subkey },
-            initialNumberOfAuthors,
-            thresholdNumberOfAuthors,
         } = props;
 
         // copy authors to separate variable so sorting doesn't change original record
         const publicationAuthors = publication && publication[key] && [...publication[key]];
-
-        const authorsCount = publicationAuthors && Array.isArray(publicationAuthors) ? publicationAuthors.length : 0;
-
         this.state = {
-            hasMoreAuthors: authorsCount > initialNumberOfAuthors + thresholdNumberOfAuthors,
-            toggleShowMoreLink: authorsCount > initialNumberOfAuthors + thresholdNumberOfAuthors,
+            authorsTotal: ((publication || {}).fez_record_search_key_author_id || []).length,
             authors:
                 publicationAuthors && Array.isArray(publicationAuthors)
-                    ? publicationAuthors
-                          .sort((author1, author2) => author1[order] - author2[order])
-                          .map(author => ({
-                              id: this.getAuthorId(author[order]),
-                              value: author[subkey],
-                              order: author[order],
-                          }))
+                    ? publicationAuthors.map(author => ({
+                          id: this.getAuthorId(author[order]),
+                          value: author[subkey],
+                          order: author[order],
+                      }))
                     : [],
         };
     }
@@ -102,91 +93,92 @@ export class AuthorsCitationView extends PureComponent {
         return id;
     };
 
-    renderAuthors = (authors, separator, showLink, getLink) => {
-        return authors.map((author, index) => {
+    renderAuthors = (authors, separator, showLink, getLink, maxAuthorDisplayNumber, citationStyle, authorsTotal) => {
+        let authorsList = authors;
+        if (citationStyle === 'header' || citationStyle === 'list') {
+            authorsList = authorsList.slice(0, maxAuthorDisplayNumber);
+        }
+        if (citationStyle === 'header') {
+            // TODO if number > otherwise we get last twice?
+            authorsList.push(authors[authors.length - 1]);
+        }
+        const numAuthorsMore = authorsTotal - authorsList.length;
+
+        return authorsList.map((author, index) => {
+            const isLastAuthor = index === authorsList.length - 1;
+            const hasMultipleAuthors = authorsList.length > 1;
+
+            // prefix to each author
             let prefix = '';
-            if (authors.length > 1 && index === authors.length - 1) {
-                prefix = showLink ? separator : ' and ';
+            if (isLastAuthor && hasMultipleAuthors) {
+                if (citationStyle === 'header') {
+                    if (authorsList.length < authorsTotal) {
+                        prefix = ' ... ';
+                    } else {
+                        prefix = ' and ';
+                    }
+                } else if (authorsTotal === authorsList.length && index !== 0) {
+                    prefix = ' and ';
+                }
             }
-            const suffix = authors.length > 2 && index < authors.length - 2 ? separator : '';
+
+            let suffix = '';
+            if (citationStyle === 'list' && isLastAuthor && authorsList.length > 2 && numAuthorsMore > 0) {
+                suffix = ` and ${numAuthorsMore} more`;
+            } else if (authorsList.length > 2 && index < authorsList.length - 1) {
+                suffix = separator;
+            }
 
             const key = `citationAuthor_${index + 1}`;
             const testId = this.props.searchKey.subkey.replace(/_/g, '-');
-            const element = (
+            let element = (
                 <CitationView
                     className="citationAuthor"
                     key={key}
                     citationId={`${testId}-${index}`}
                     value={author.value}
-                    prefix={prefix}
-                    suffix={suffix}
+                    prefix=""
+                    suffix=""
                 />
             );
 
             if (showLink) {
                 const href = getLink(author.value, author.id);
                 const className = author.id ? this.props.classes.authorIdLink : 'authorNameLink';
-                return (
+                element = (
                     <Link className={className} to={href} key={key} data-testid={`${testId}-${index}-link`}>
                         {element}
                     </Link>
                 );
-            } else {
-                return element;
             }
-        });
-    };
-
-    _toggleShowMore = e => {
-        e.preventDefault();
-        this.setState({
-            toggleShowMoreLink: !this.state.toggleShowMoreLink,
+            return (
+                <React.Fragment key={key}>
+                    {prefix}
+                    {element}
+                    {suffix}
+                </React.Fragment>
+            );
         });
     };
 
     render() {
-        const {
-            showMoreLabel,
-            showMoreTitle,
-            showLessTitle,
-            showLessLabel,
-        } = locale.components.publicationCitation.citationAuthors;
-        const { className, prefix, suffix, separator, initialNumberOfAuthors, showLink, getLink } = this.props;
-        const { authors, hasMoreAuthors, toggleShowMoreLink } = this.state;
+        const { maxAuthorDisplayNumber } = locale.components.publicationCitation.citationAuthors;
+        const { className, prefix, suffix, separator, showLink, getLink, citationStyle } = this.props;
+        const { authors, authorsTotal } = this.state; // authorsTotal
 
         if (authors.length === 0) return <span className={`${className || ''} empty`} />;
 
         return (
             <span className={className || ''}>
                 {prefix}
-                {this.renderAuthors(authors, separator, showLink, getLink).slice(
-                    0,
-                    hasMoreAuthors && toggleShowMoreLink ? initialNumberOfAuthors : authors.length,
-                )}
-                {hasMoreAuthors && (
-                    <span>
-                        &nbsp;
-                        <a
-                            className="citationShowMoreAuthors"
-                            onClick={this._toggleShowMore}
-                            onKeyPress={this._toggleShowMore}
-                            title={
-                                toggleShowMoreLink
-                                    ? showMoreTitle.replace(
-                                          '[numberOfAuthors]',
-                                          `${authors.length - initialNumberOfAuthors}`,
-                                      )
-                                    : showLessTitle
-                            }
-                        >
-                            {toggleShowMoreLink
-                                ? showMoreLabel.replace(
-                                      '[numberOfAuthors]',
-                                      `${authors.length - initialNumberOfAuthors}`,
-                                  )
-                                : showLessLabel}
-                        </a>
-                    </span>
+                {this.renderAuthors(
+                    authors,
+                    separator,
+                    showLink,
+                    getLink,
+                    maxAuthorDisplayNumber,
+                    citationStyle,
+                    authorsTotal,
                 )}
                 {suffix}
             </span>

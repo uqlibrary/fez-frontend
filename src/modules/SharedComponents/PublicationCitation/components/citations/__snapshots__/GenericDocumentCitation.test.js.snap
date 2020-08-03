@@ -1393,7 +1393,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
+                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -2222,7 +2222,6 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -3686,7 +3685,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
+                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -4516,7 +4515,6 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -5988,7 +5986,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
+                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -6820,7 +6818,6 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -7346,7 +7343,7 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
+                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -7707,7 +7704,6 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"
