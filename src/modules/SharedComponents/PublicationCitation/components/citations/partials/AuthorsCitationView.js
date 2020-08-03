@@ -27,10 +27,6 @@ export class AuthorsCitationView extends PureComponent {
         maxAuthorDisplayNumber: PropTypes.number,
         citationStyle: PropTypes.string,
     };
-    // citationStyle:
-    // 'full' => this citation is within body of a Work detail page
-    // 'header' => this citation is at top of a Work detail page
-    // 'list' => this citation is in a list of eg search results (only truncated list of authors provided)
 
     static defaultProps = {
         suffix: ' ',
