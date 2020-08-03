@@ -31,6 +31,7 @@ export default {
                 ],
                 ['rek_date'],
                 ['rek_description'],
+                ['fez_record_search_key_parent_publication'],
                 ['fez_record_search_key_org_name'],
                 ['fez_record_search_key_org_unit_name'],
                 ['fez_record_search_key_report_number'],

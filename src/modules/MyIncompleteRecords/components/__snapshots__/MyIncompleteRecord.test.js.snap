@@ -453,6 +453,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -1380,6 +1381,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
         when={false}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -2325,6 +2327,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -3336,6 +3339,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -4263,6 +4267,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -5190,6 +5195,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -6117,6 +6123,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -7044,6 +7051,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -7971,6 +7979,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -8911,6 +8920,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -9838,6 +9848,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={

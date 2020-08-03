@@ -60,11 +60,11 @@ export class ExternalLink extends PureComponent {
 
     render() {
         const { className, children, openInNewIcon, classes, height, width, ...rest } = this.props;
+        delete rest.theme;
         if (!!height && !!width) {
             rest.onClick = this.openInSizedWindow(rest.href, width, height);
             delete rest.href;
             delete rest.target;
-            delete rest.theme;
             delete rest.rel;
         }
         return (

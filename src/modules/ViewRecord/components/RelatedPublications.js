@@ -38,13 +38,14 @@ export class RelatedPublicationsClass extends PureComponent {
     renderList = (publication, parentSearchKey, childrenSearchKey, showPublicationTitle) => {
         const parents = (parentSearchKey && publication[parentSearchKey.key]) || [];
         const children = publication[childrenSearchKey.key];
+        const testId = parentSearchKey && parentSearchKey.pid.replace(/_/g, '-');
 
         return (
             <ul className={`${this.props.classes.list} publicationList`}>
                 {this.renderSubList(parents, parentSearchKey)}
                 {showPublicationTitle && (
                     <li key={'current'}>
-                        <Typography variant="body2">
+                        <Typography variant="body2" data-testid={`${testId}-current`}>
                             {publication.rek_title}
                             <b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
                         </Typography>
@@ -57,13 +58,16 @@ export class RelatedPublicationsClass extends PureComponent {
 
     renderSubList = (subList, searchKey) => {
         if (subList && searchKey) {
+            const testId = searchKey.pid.replace(/_/g, '-');
             return subList
                 .filter(item => item[searchKey.title] && item[searchKey.title].trim().length > 0)
                 .sort((item1, item2) => item1[searchKey.order] - item2[searchKey.order])
                 .map((item, index) => {
                     return (
                         <li key={`${searchKey.key}-${index}`}>
-                            <Typography variant="body2">{this.renderTitle(item, searchKey)}</Typography>
+                            <Typography variant="body2" data-testid={`${testId}-${index}`}>
+                                {this.renderTitle(item, searchKey)}
+                            </Typography>
                         </li>
                     );
                 });
