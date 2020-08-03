@@ -2,7 +2,7 @@
 
 Creates a citation that is placed at the top of a record.
 
-99.2% of pubs have < 31 authors (in 2020). There are some records with > 5000 records!!!
+99.2% of pubs have < 31 authors (in 2020). There are some records with > 5000 authors!!! and over 1000 with > 100 authors.
 
 Citations happen in multiple ways in espace:
 
