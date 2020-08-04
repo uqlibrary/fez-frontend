@@ -1,12 +1,15 @@
 import React from 'react';
 import AdminActions, { navigateToUrl, getLegacyEditUrl } from './AdminActions';
 import { rtlRender, fireEvent, cleanup } from 'test-utils';
-import { RECORD_ACTION_URLS as defaultActions, STAGING_URL } from 'config/general';
+import { PUBLICATION_TYPE_WORKING_PAPER, RECORD_ACTION_URLS as defaultActions, STAGING_URL } from 'config/general';
 import { APP_URL } from '../../../../../../config';
 
 function setup(testProps = {}) {
     const props = {
-        pid: 'UQ:111111',
+        publication: {
+            rek_pid: 'UQ:111111',
+            rek_display_type: PUBLICATION_TYPE_WORKING_PAPER,
+        },
         ...testProps,
     };
     return rtlRender(<AdminActions {...props} />);
@@ -32,6 +35,11 @@ describe('AdminActions component', () => {
     it('should handle admin actions menu', () => {
         const { getByTestId, getByText } = setup({
             navigatedFrom: 'test',
+            publication: {
+                rek_pid: 'UQ:111111',
+                rek_object_type_lookup: 'Record',
+                rek_display_type: PUBLICATION_TYPE_WORKING_PAPER,
+            },
         });
 
         fireEvent.click(getByTestId('admin-actions-button'));
@@ -47,7 +55,7 @@ describe('AdminActions component', () => {
         expectedActions[0].url = legacyEditUrl;
 
         expectedActions.map(action => {
-            fireEvent.click(getByText(action.label, menu));
+            fireEvent.click(getByText(action.isDoi ? action.label(false) : action.label, menu));
             expect(global.window.open).toHaveBeenCalledTimes(1);
             expect(global.window.open).toHaveBeenCalledWith(
                 action.url,
@@ -66,10 +74,12 @@ describe('AdminActions component', () => {
                 {
                     label: 'Show in deleted records',
                     showInDeleted: true,
+                    url: jest.fn(),
                 },
                 {
                     label: 'Dont show in deleted records',
                     showInDeleted: false,
+                    url: jest.fn(),
                 },
             ],
         });
@@ -80,7 +90,46 @@ describe('AdminActions component', () => {
         expect(queryByText('Dont show in deleted records', menu)).toBeNull();
     });
 
-    it('should handle admin actions in a new window ', () => {
+    it('should not include DOI item for communities and collections', () => {
+        const { getByTestId, queryByText } = setup({
+            navigatedFrom: 'test',
+            publication: {
+                rek_pid: 'UQ:111111',
+                rek_object_type_lookup: 'Community',
+                fez_record_search_key_doi: {
+                    rek_doi: 'testing',
+                },
+            },
+        });
+
+        fireEvent.click(getByTestId('admin-actions-button'));
+
+        const menu = getByTestId('admin-actions-menu');
+        const doiAction = defaultActions.find(action => !!action.isDoi);
+
+        expect(queryByText(doiAction.label(false), menu)).toBeNull();
+    });
+
+    it('should not include Update DOI item for records with existing non-UQ DOIs', () => {
+        const { getByTestId, queryByText } = setup({
+            publication: {
+                rek_pid: 'UQ:111111',
+                rek_display_type: PUBLICATION_TYPE_WORKING_PAPER,
+                fez_record_search_key_doi: {
+                    rek_doi: '123456',
+                },
+            },
+        });
+
+        fireEvent.click(getByTestId('admin-actions-button'));
+
+        const menu = getByTestId('admin-actions-menu');
+        const doiAction = defaultActions.find(action => !!action.isDoi);
+
+        expect(queryByText(doiAction.label(false), menu)).toBeNull();
+    });
+
+    it('should handle admin actions in a new window', () => {
         const { getByTestId, getByText } = setup({
             adminActions: [
                 {

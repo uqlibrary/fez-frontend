@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 
 import locale from 'locale/viewRecord';
 import { openAccessConfig } from 'config';
+import { DOI_ORG_PREFIX } from 'config/doi';
 import moment from 'moment';
 
 const styles = theme => ({
@@ -59,7 +60,7 @@ export class LinksClass extends PureComponent {
     );
 
     getDOILink = (doi, openAccessStatus) => {
-        if (doi.indexOf('10.14264') === -1) {
+        if (doi.indexOf(DOI_ORG_PREFIX) === -1) {
             return {
                 index: 'doi',
                 link: <DoiCitationView doi={doi} />,
