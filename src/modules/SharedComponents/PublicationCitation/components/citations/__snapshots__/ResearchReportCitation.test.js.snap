@@ -142,6 +142,11 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -1350,6 +1355,11 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
                             "width": "100%",
                           },
                         },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
+                          },
+                        },
                         "MuiMenuItem": Object {
                           "root": Object {
                             "&$selected": Object {
@@ -1814,6 +1824,11 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiIconButton": Object {
+                              "colorInherit": Object {
+                                "color": "none",
                               },
                             },
                             "MuiMenuItem": Object {
@@ -2306,6 +2321,11 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -3514,6 +3534,11 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
                             "width": "100%",
                           },
                         },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
+                          },
+                        },
                         "MuiMenuItem": Object {
                           "root": Object {
                             "&$selected": Object {
@@ -3978,6 +4003,11 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiIconButton": Object {
+                              "colorInherit": Object {
+                                "color": "none",
                               },
                             },
                             "MuiMenuItem": Object {
@@ -4468,6 +4498,11 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -5684,6 +5719,11 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
                             "width": "100%",
                           },
                         },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
+                          },
+                        },
                         "MuiMenuItem": Object {
                           "root": Object {
                             "&$selected": Object {
@@ -6148,6 +6188,11 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiIconButton": Object {
+                              "colorInherit": Object {
+                                "color": "none",
                               },
                             },
                             "MuiMenuItem": Object {
@@ -6640,6 +6685,11 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -7027,6 +7077,11 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
                           },
                         },
                         "MuiMenuItem": Object {

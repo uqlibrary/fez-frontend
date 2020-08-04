@@ -847,6 +847,7 @@ export default {
         },
         favouriteSearch: {
             title: 'Favourite search',
+            loadingMessage: 'Loading list of favourite search',
         },
         edit: {
             sections: {

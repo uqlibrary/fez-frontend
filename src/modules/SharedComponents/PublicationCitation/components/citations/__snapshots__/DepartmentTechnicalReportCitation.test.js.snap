@@ -142,6 +142,11 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -1170,6 +1175,11 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                             "width": "100%",
                           },
                         },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
+                          },
+                        },
                         "MuiMenuItem": Object {
                           "root": Object {
                             "&$selected": Object {
@@ -1719,6 +1729,11 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -2764,6 +2779,11 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                             "width": "100%",
                           },
                         },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
+                          },
+                        },
                         "MuiMenuItem": Object {
                           "root": Object {
                             "&$selected": Object {
@@ -3315,6 +3335,11 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -3702,6 +3727,11 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
                           },
                         },
                         "MuiMenuItem": Object {

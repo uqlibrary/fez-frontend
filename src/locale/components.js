@@ -2725,5 +2725,32 @@ export default {
         audienceSizeField: {
             label: 'Audience size',
         },
+        favouriteSearchList: {
+            tableTitle: 'List of favourite search',
+            columns: {
+                realLink: {
+                    title: 'Real link',
+                    cellText: 'Link',
+                },
+                description: {
+                    title: 'Description (Click to edit)',
+                    placeholderText: 'Description',
+                    validationMessage: {
+                        empty: 'This field is required',
+                    },
+                },
+                aliasedLink: {
+                    title: 'Aliased link',
+                },
+                alias: {
+                    title: 'Alias (Click to edit)',
+                    placeholderText: 'Alias',
+                    validationMessage: {
+                        empty: 'This field is required',
+                        invalid: 'Alias is not valid',
+                    },
+                },
+            },
+        },
     },
 };
