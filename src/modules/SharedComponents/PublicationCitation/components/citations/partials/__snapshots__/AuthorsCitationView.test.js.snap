@@ -37,23 +37,14 @@ exports[`AuthorsCitationView test  should render a header correctly when all aut
     value="Andersen, J"
   />
   , 
+   and 
   <CitationView
     citationId="rek-author-3"
     className="citationAuthor"
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
-  />
-  , 
-   and 
-  <CitationView
-    citationId="rek-author-4"
-    className="citationAuthor"
-    key="citationAuthor_5"
-    prefix=""
-    suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
    
 </span>
@@ -90,23 +81,14 @@ exports[`AuthorsCitationView test  should render a header correctly when too man
     value="Andersen, J"
   />
   , 
+   ... 
   <CitationView
     citationId="rek-author-3"
     className="citationAuthor"
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
-  />
-  , 
-   ... 
-  <CitationView
-    citationId="rek-author-4"
-    className="citationAuthor"
-    key="citationAuthor_5"
-    prefix=""
-    suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
    
 </span>
@@ -142,16 +124,7 @@ exports[`AuthorsCitationView test  should render a list with ellipsis when elast
     suffix=""
     value="Andersen, J"
   />
-  , 
-  <CitationView
-    citationId="rek-author-3"
-    className="citationAuthor"
-    key="citationAuthor_4"
-    prefix=""
-    suffix=""
-    value="Andersen, J"
-  />
-   and 4 more
+   and 5 more
    
 </span>
 `;
@@ -600,7 +573,6 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -1096,7 +1068,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -1613,7 +1584,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -2179,7 +2149,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -2738,7 +2707,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -3278,7 +3246,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -3890,7 +3857,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             prefix="Authored by: "
             publication={
               Object {
@@ -4432,7 +4398,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             prefix="Authored by: "
             publication={
               Object {
@@ -4568,7 +4533,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
   , 
   <CitationView
@@ -4577,7 +4542,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_5"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J B"
   />
   , 
   <CitationView
@@ -4586,7 +4551,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_6"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J C"
   />
   , 
   <CitationView
@@ -4595,7 +4560,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_7"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J D"
   />
   , 
   <CitationView
@@ -4604,7 +4569,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_8"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J E"
   />
   , 
   <CitationView
@@ -4613,7 +4578,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_9"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J F"
   />
   , 
   <CitationView
@@ -4622,7 +4587,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_10"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J G"
   />
   , 
   <CitationView
@@ -4631,7 +4596,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_11"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J H"
   />
   , 
   <CitationView
@@ -4640,7 +4605,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_12"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J J"
   />
    people.
 </span>
@@ -4684,7 +4649,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
   , 
   <CitationView
@@ -4693,7 +4658,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_5"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J B"
   />
   , 
   <CitationView
@@ -4702,7 +4667,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_6"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J C"
   />
   , 
   <CitationView
@@ -4711,7 +4676,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_7"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J D"
   />
   , 
   <CitationView
@@ -4720,7 +4685,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_8"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J E"
   />
   , 
   <CitationView
@@ -4729,7 +4694,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_9"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J F"
   />
   , 
   <CitationView
@@ -4738,7 +4703,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_10"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J G"
   />
    people.
 </span>
@@ -5188,7 +5153,6 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={Object {}}
             searchKey={
               Object {
@@ -5656,7 +5620,6 @@ exports[`AuthorsCitationView test  should set class on component with no authors
                 "idSubkey": "rek_author_id",
               }
             }
-            maxAuthorDisplayNumber={29}
             publication={Object {}}
             searchKey={
               Object {

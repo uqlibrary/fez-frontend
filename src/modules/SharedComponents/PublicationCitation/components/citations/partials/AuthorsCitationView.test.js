@@ -238,55 +238,55 @@ describe('AuthorsCitationView test ', () => {
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J A',
                     rek_author_order: 4,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J B',
                     rek_author_order: 5,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J C',
                     rek_author_order: 6,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J D',
                     rek_author_order: 7,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J E',
                     rek_author_order: 8,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J F',
                     rek_author_order: 9,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J G',
                     rek_author_order: 10,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J H',
                     rek_author_order: 11,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J J',
                     rek_author_order: 12,
                 },
             ],
@@ -335,43 +335,43 @@ describe('AuthorsCitationView test ', () => {
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J A',
                     rek_author_order: 4,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J B',
                     rek_author_order: 5,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J C',
                     rek_author_order: 6,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J D',
                     rek_author_order: 7,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J E',
                     rek_author_order: 8,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J F',
                     rek_author_order: 9,
                 },
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J G',
                     rek_author_order: 10,
                 },
             ],
@@ -406,7 +406,7 @@ describe('AuthorsCitationView test ', () => {
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J A',
                     rek_author_order: 4,
                 },
             ],
@@ -471,7 +471,7 @@ describe('AuthorsCitationView test ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(4);
+        expect(wrapper.find('.citationAuthor').length).toEqual(3);
     });
 
     it('should render a header correctly when too many authors are provided', () => {
@@ -498,7 +498,7 @@ describe('AuthorsCitationView test ', () => {
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J A',
                     rek_author_order: 4,
                 },
             ],
@@ -563,7 +563,7 @@ describe('AuthorsCitationView test ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(5);
+        expect(wrapper.find('.citationAuthor').length).toEqual(4);
     });
 
     it('should render a header correctly when all authors are provided', () => {
@@ -590,7 +590,7 @@ describe('AuthorsCitationView test ', () => {
                 {
                     rek_author_id: null,
                     rek_author_pid: 'UQ:678742',
-                    rek_author: 'Andersen, J',
+                    rek_author: 'Andersen, J A',
                     rek_author_order: 4,
                 },
             ],
@@ -630,7 +630,7 @@ describe('AuthorsCitationView test ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(5);
+        expect(wrapper.find('.citationAuthor').length).toEqual(4);
     });
 
     it('should render component with 3 authors with prefix/suffix without changing original data structure', () => {

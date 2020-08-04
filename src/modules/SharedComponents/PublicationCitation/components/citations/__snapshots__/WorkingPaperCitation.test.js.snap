@@ -1123,7 +1123,6 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -3496,7 +3495,6 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -4786,7 +4784,6 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {

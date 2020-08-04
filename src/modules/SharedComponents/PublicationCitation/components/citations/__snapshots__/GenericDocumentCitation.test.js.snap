@@ -1393,7 +1393,6 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -3685,7 +3684,6 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -5986,7 +5984,6 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -7343,7 +7340,6 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {
