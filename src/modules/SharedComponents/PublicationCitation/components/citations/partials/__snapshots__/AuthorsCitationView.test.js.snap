@@ -43,7 +43,7 @@ exports[`AuthorsCitationView test  should render a header correctly when all aut
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
   , 
    and 
@@ -53,7 +53,7 @@ exports[`AuthorsCitationView test  should render a header correctly when all aut
     key="citationAuthor_5"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
    
 </span>
@@ -96,7 +96,7 @@ exports[`AuthorsCitationView test  should render a header correctly when too man
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
   , 
    ... 
@@ -106,7 +106,7 @@ exports[`AuthorsCitationView test  should render a header correctly when too man
     key="citationAuthor_5"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
    
 </span>
@@ -149,7 +149,7 @@ exports[`AuthorsCitationView test  should render a list with ellipsis when elast
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
    and 4 more
    
@@ -4568,7 +4568,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
   , 
   <CitationView
@@ -4577,7 +4577,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_5"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J B"
   />
   , 
   <CitationView
@@ -4586,7 +4586,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_6"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J C"
   />
   , 
   <CitationView
@@ -4595,7 +4595,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_7"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J D"
   />
   , 
   <CitationView
@@ -4604,7 +4604,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_8"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J E"
   />
   , 
   <CitationView
@@ -4613,7 +4613,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_9"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J F"
   />
   , 
   <CitationView
@@ -4622,7 +4622,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_10"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J G"
   />
   , 
   <CitationView
@@ -4631,7 +4631,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_11"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J H"
   />
   , 
   <CitationView
@@ -4640,7 +4640,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
     key="citationAuthor_12"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J J"
   />
    people.
 </span>
@@ -4684,7 +4684,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_4"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J A"
   />
   , 
   <CitationView
@@ -4693,7 +4693,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_5"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J B"
   />
   , 
   <CitationView
@@ -4702,7 +4702,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_6"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J C"
   />
   , 
   <CitationView
@@ -4711,7 +4711,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_7"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J D"
   />
   , 
   <CitationView
@@ -4720,7 +4720,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_8"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J E"
   />
   , 
   <CitationView
@@ -4729,7 +4729,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_9"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J F"
   />
   , 
   <CitationView
@@ -4738,7 +4738,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
     key="citationAuthor_10"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J G"
   />
    people.
 </span>
