@@ -5933,7 +5933,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         "idSubkey": "rek_author_id",
                                                                       }
                                                                     }
-                                                                    maxAuthorDisplayNumber={29}
                                                                     prefix=""
                                                                     publication={
                                                                       Object {

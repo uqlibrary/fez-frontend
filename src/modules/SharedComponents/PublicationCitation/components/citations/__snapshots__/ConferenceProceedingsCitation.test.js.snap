@@ -1709,7 +1709,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    maxAuthorDisplayNumber={29}
                     prefix=""
                     publication={
                       Object {
@@ -4353,7 +4352,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    maxAuthorDisplayNumber={29}
                     prefix=""
                     publication={
                       Object {
@@ -5764,7 +5762,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    maxAuthorDisplayNumber={29}
                     prefix=""
                     publication={Object {}}
                     searchKey={

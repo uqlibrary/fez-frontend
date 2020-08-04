@@ -1073,7 +1073,6 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -3131,7 +3130,6 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    maxAuthorDisplayNumber={29}
                     prefix=""
                     publication={
                       Object {
@@ -4357,7 +4355,6 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -6013,7 +6010,6 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    maxAuthorDisplayNumber={29}
                     prefix=""
                     publication={
                       Object {

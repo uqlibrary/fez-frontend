@@ -1149,7 +1149,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -3172,7 +3171,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -4501,7 +4499,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {

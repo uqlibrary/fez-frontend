@@ -44,7 +44,6 @@ export class AuthorsCitationView extends PureComponent {
         className: 'citationAuthors',
         showLink: false,
         getLink: pathConfig.list.author,
-        maxAuthorDisplayNumber: 29,
     };
 
     constructor(props) {
@@ -98,8 +97,7 @@ export class AuthorsCitationView extends PureComponent {
         if (citationStyle === 'header' || citationStyle === 'list') {
             authorsList = authorsList.slice(0, maxAuthorDisplayNumber);
         }
-        if (citationStyle === 'header') {
-            // TODO if number > otherwise we get last twice?
+        if (citationStyle === 'header' && authors.length > maxAuthorDisplayNumber) {
             authorsList.push(authors[authors.length - 1]);
         }
         const numAuthorsMore = authorsTotal - authorsList.length;
@@ -162,9 +160,11 @@ export class AuthorsCitationView extends PureComponent {
     };
 
     render() {
-        const { maxAuthorDisplayNumber } = locale.components.publicationCitation.citationAuthors;
+        const maxAuthorDisplayNumber = !!this.props.maxAuthorDisplayNumber
+            ? this.props.maxAuthorDisplayNumber
+            : locale.components.publicationCitation.citationAuthors.maxAuthorDisplayNumber;
         const { className, prefix, suffix, separator, showLink, getLink, citationStyle } = this.props;
-        const { authors, authorsTotal } = this.state; // authorsTotal
+        const { authors, authorsTotal } = this.state;
 
         if (authors.length === 0) return <span className={`${className || ''} empty`} />;
 

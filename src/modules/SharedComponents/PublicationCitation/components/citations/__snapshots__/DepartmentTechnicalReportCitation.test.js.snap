@@ -883,7 +883,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -2471,7 +2470,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -3628,7 +3626,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {

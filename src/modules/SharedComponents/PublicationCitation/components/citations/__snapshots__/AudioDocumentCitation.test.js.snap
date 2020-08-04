@@ -1199,7 +1199,6 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -3287,7 +3286,6 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -4631,7 +4629,6 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  maxAuthorDisplayNumber={29}
                   publication={Object {}}
                   searchKey={
                     Object {

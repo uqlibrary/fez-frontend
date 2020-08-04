@@ -471,7 +471,7 @@ describe('AuthorsCitationView test ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(4);
+        expect(wrapper.find('.citationAuthor').length).toEqual(3);
     });
 
     it('should render a header correctly when too many authors are provided', () => {
@@ -563,7 +563,7 @@ describe('AuthorsCitationView test ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(5);
+        expect(wrapper.find('.citationAuthor').length).toEqual(4);
     });
 
     it('should render a header correctly when all authors are provided', () => {
@@ -630,7 +630,7 @@ describe('AuthorsCitationView test ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(5);
+        expect(wrapper.find('.citationAuthor').length).toEqual(4);
     });
 
     it('should render component with 3 authors with prefix/suffix without changing original data structure', () => {
