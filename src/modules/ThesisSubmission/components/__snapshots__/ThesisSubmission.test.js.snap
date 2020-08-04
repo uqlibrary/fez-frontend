@@ -1207,6 +1207,8 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
       xs={12}
     >
       <Alert
+        action={[Function]}
+        actionButtonLabel="Retry upload"
         allowDismiss={false}
         customIcon={null}
         customType={null}
@@ -1214,7 +1216,7 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
         dismissTitle="Click to dismiss this alert"
         message={
           Array [
-            "There was an issue uploading your thesis files. Please contact ",
+            "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact ",
             <a
               href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
             >

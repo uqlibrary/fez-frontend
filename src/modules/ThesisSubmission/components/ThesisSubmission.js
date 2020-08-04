@@ -38,6 +38,7 @@ export default class ThesisSubmission extends Component {
         isSessionValid: PropTypes.bool,
         newRecord: PropTypes.object,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
+        retryUpload: PropTypes.func,
     };
 
     constructor(props) {
@@ -63,6 +64,10 @@ export default class ThesisSubmission extends Component {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
     };
 
+    retryUpload = () => {
+        this.props.retryUpload(this.props.formValues);
+    };
+
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
@@ -73,7 +78,7 @@ export default class ThesisSubmission extends Component {
     };
 
     getfileUploadAlertProps = locale => {
-        const { type, title } = locale;
+        const { actionButtonLabel, type, title } = locale;
         const emailSubject = locale.emailSubject
             .replace('[studentFullName]', `${this.props.author.aut_fname} ${this.props.author.aut_lname}`)
             .replace('[studentNumber]', this.props.author.aut_org_student_id);
@@ -81,7 +86,7 @@ export default class ThesisSubmission extends Component {
         const message = ReactHtmlParser(
             locale.message.replace('[linkStart]', `<a href="${mailtoUri}">`).replace('[linkEnd]', '</a>'),
         );
-        return { type, title, message };
+        return { actionButtonLabel, type, title, message };
     };
 
     // customise error for thesis submission
@@ -123,7 +128,10 @@ export default class ThesisSubmission extends Component {
                     {this.props.newRecordFileUploadingOrIssueError && (
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <Alert {...this.getfileUploadAlertProps(thesisLocale.fileUpload.failedAlertLocale)} />
+                                <Alert
+                                    {...this.getfileUploadAlertProps(thesisLocale.fileUpload.failedAlertLocale)}
+                                    action={this.retryUpload}
+                                />
                             </Grid>
                         </Grid>
                     )}

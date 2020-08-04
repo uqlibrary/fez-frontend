@@ -175,9 +175,10 @@ const prepareThesisSubmission = data => {
 /**
  * Submit thesis involves four steps: create record - get signed url to upload files - upload files - patch record.
  * @param {object} data to be posted, refer to backend API
+ * @param {object} newRecordData If present, the newly created record from a previous attempt.
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
-export function submitThesis(data) {
+export function submitThesis(data, newRecordData = {}) {
     return dispatch => {
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
         const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
@@ -221,6 +222,9 @@ export function submitThesis(data) {
             return Promise.resolve(newRecord);
         };
         const onRecordPatchFailure = error => {
+            if (!!newRecordData.rek_pid) {
+                return Promise.resolve({});
+            }
             if (recordCreated) {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
@@ -241,7 +245,7 @@ export function submitThesis(data) {
             return onRecordCreationFailure(error);
         };
 
-        const onIssueReportSuccess = () => recordCreated && Promise.resolve(newRecord);
+        const onIssueReportSuccess = () => (!!newRecordData.rek_pid || recordCreated) && Promise.resolve(newRecord);
         const onIssueReportFailure = error => {
             Raven.captureException(error);
             return (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
@@ -253,7 +257,7 @@ export function submitThesis(data) {
             return post(NEW_RECORD_API(), recordRequest);
         };
 
-        const submission = createRecord(data);
+        const submission = !!newRecordData.rek_pid ? Promise.resolve({ data: newRecordData }) : createRecord(data);
 
         return submission
             .then(onRecordCreationSuccess, onRecordCreationFailure)
