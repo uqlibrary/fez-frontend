@@ -1,4 +1,8 @@
-import { loadFavouriteSearchList } from './favouriteSearch';
+import {
+    loadFavouriteSearchList,
+    updateFavouriteSearchListItem,
+    deleteFavouriteSearchListItem,
+} from './favouriteSearch';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data/testing/favouriteSearch';
@@ -35,6 +39,74 @@ describe('favouriteSearch actions', () => {
             ];
 
             await expect(mockActionsStore.dispatch(loadFavouriteSearchList())).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('updateFavouriteSearchListItem action', () => {
+        it('should dispatch correct number of actions on favourite search list item successfully updated', async () => {
+            mockApi
+                .onPut(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 1 }).apiUrl)
+                .reply(200, { data: { ...mockData.favouriteSearchListItem } });
+
+            const expectedActions = [
+                actions.FAVOURITE_SEARCH_ITEM_UPDATING,
+                actions.FAVOURITE_SEARCH_ITEM_UPDATE_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(updateFavouriteSearchListItem({ fvs_id: 1 }, { fvs_id: 1 }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on favourite search list item update failed', async () => {
+            mockApi.onPut(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 1 }).apiUrl).reply(500);
+
+            const expectedActions = [
+                actions.FAVOURITE_SEARCH_ITEM_UPDATING,
+                actions.APP_ALERT_SHOW,
+                actions.FAVOURITE_SEARCH_ITEM_UPDATE_FAILED,
+            ];
+
+            await expect(
+                mockActionsStore.dispatch(updateFavouriteSearchListItem({ fvs_id: 1 }, { fvs_id: 1 })),
+            ).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('deleteFavouriteSearchListItem action', () => {
+        it('should dispatch correct number of actions on favourite search list item successfully deleted', async () => {
+            mockApi
+                .onDelete(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 1 }).apiUrl)
+                .reply(200, { data: { ...mockData.favouriteSearchListItem } });
+
+            const expectedActions = [
+                actions.FAVOURITE_SEARCH_ITEM_DELETING,
+                actions.FAVOURITE_SEARCH_ITEM_DELETE_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(deleteFavouriteSearchListItem({ fvs_id: 1 }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on favourite search list item delete failed', async () => {
+            mockApi.onDelete(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 1 }).apiUrl).reply(500);
+
+            const expectedActions = [
+                actions.FAVOURITE_SEARCH_ITEM_DELETING,
+                actions.APP_ALERT_SHOW,
+                actions.FAVOURITE_SEARCH_ITEM_DELETE_FAILED,
+            ];
+
+            await expect(mockActionsStore.dispatch(deleteFavouriteSearchListItem({ fvs_id: 1 }))).rejects.toEqual({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
