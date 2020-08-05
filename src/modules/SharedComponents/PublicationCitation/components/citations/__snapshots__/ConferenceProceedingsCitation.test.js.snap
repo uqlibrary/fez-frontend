@@ -1272,7 +1272,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={
                     Object {
@@ -1710,7 +1709,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={
                       Object {
@@ -2481,7 +2479,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors"
@@ -2505,7 +2502,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
-                        prefix=" and "
+                        prefix=""
                         suffix=""
                         value="Hubert Chanson"
                       >
@@ -2513,7 +2510,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           className="citationAuthor"
                           data-testid="rek-contributor-1"
                         >
-                           and 
                           Hubert Chanson
                         </span>
                       </CitationView>
@@ -3916,7 +3912,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={
                     Object {
@@ -4357,7 +4352,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={
                       Object {
@@ -5131,7 +5125,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors"
@@ -5155,7 +5148,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
-                        prefix=" and "
+                        prefix=""
                         suffix=""
                         value="Hubert Chanson"
                       >
@@ -5163,7 +5156,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           className="citationAuthor"
                           data-testid="rek-contributor-1"
                         >
-                           and 
                           Hubert Chanson
                         </span>
                       </CitationView>
@@ -5742,7 +5734,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={Object {}}
                   searchKey={
@@ -5771,7 +5762,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={Object {}}
                     searchKey={
@@ -6133,7 +6123,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors empty"

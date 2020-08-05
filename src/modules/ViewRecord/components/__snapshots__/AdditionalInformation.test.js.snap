@@ -4923,7 +4923,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2"
                                                               >
                                                                 <WithStyles(AuthorsCitationView)
-                                                                  initialNumberOfAuthors={9}
+                                                                  citationStyle="all"
                                                                   key="additional-information-authors"
                                                                   prefix=""
                                                                   publication={
@@ -5918,6 +5918,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                   suffix=""
                                                                 >
                                                                   <AuthorsCitationView
+                                                                    citationStyle="all"
                                                                     className="citationAuthors"
                                                                     classes={
                                                                       Object {
@@ -5932,7 +5933,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         "idSubkey": "rek_author_id",
                                                                       }
                                                                     }
-                                                                    initialNumberOfAuthors={9}
                                                                     prefix=""
                                                                     publication={
                                                                       Object {
@@ -7280,7 +7280,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         Symbol(mui.nested): false,
                                                                       }
                                                                     }
-                                                                    thresholdNumberOfAuthors={3}
                                                                   >
                                                                     <span
                                                                       className="citationAuthors"
@@ -7308,7 +7307,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_1"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Azimi, Iman"
                                                                             >
                                                                               <span
@@ -7316,12 +7315,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-0"
                                                                               >
                                                                                 Azimi, Iman
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="authorNameLink"
                                                                         data-testid="rek-author-1-link"
@@ -7345,7 +7344,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_2"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Milevskiy, Michael J. G."
                                                                             >
                                                                               <span
@@ -7353,12 +7352,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-1"
                                                                               >
                                                                                 Milevskiy, Michael J. G.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-2-link"
@@ -7382,7 +7381,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_3"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Kaemmerer, Elke"
                                                                             >
                                                                               <span
@@ -7390,12 +7389,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-2"
                                                                               >
                                                                                 Kaemmerer, Elke
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-3-link"
@@ -7419,7 +7418,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_4"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Turner, Dane"
                                                                             >
                                                                               <span
@@ -7427,12 +7426,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-3"
                                                                               >
                                                                                 Turner, Dane
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-4-link"
@@ -7456,7 +7455,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_5"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Yapa, Kunsala T. D. S."
                                                                             >
                                                                               <span
@@ -7464,12 +7463,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-4"
                                                                               >
                                                                                 Yapa, Kunsala T. D. S.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-5-link"
@@ -7493,7 +7492,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_6"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Brown, Melissa A."
                                                                             >
                                                                               <span
@@ -7501,12 +7500,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-5"
                                                                               >
                                                                                 Brown, Melissa A.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="authorNameLink"
                                                                         data-testid="rek-author-6-link"
@@ -7530,7 +7529,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_7"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Thompson, Erik W."
                                                                             >
                                                                               <span
@@ -7538,12 +7537,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-6"
                                                                               >
                                                                                 Thompson, Erik W.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-7-link"
@@ -7580,6 +7579,8 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
+                                                                       and 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-8-link"
@@ -7602,7 +7603,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               citationId="rek-author-8"
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_9"
-                                                                              prefix=", "
+                                                                              prefix=""
                                                                               suffix=""
                                                                               value="Monteith, Gregory R."
                                                                             >
@@ -7610,7 +7611,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 className="citationAuthor"
                                                                                 data-testid="rek-author-8"
                                                                               >
-                                                                                , 
                                                                                 Monteith, Gregory R.
                                                                               </span>
                                                                             </CitationView>
@@ -20180,7 +20180,7 @@ exports[`Additional Information Component  should render component with audio do
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -21248,7 +21248,7 @@ exports[`Additional Information Component  should render component with book 1`]
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={4}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -22536,7 +22536,7 @@ exports[`Additional Information Component  should render component with book cha
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -24572,7 +24572,7 @@ exports[`Additional Information Component  should render component with conferen
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={14}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -28074,7 +28074,7 @@ exports[`Additional Information Component  should render component with creative
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -30012,7 +30012,7 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -33405,7 +33405,7 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -35044,7 +35044,7 @@ exports[`Additional Information Component  should render component with design d
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={2}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -36935,7 +36935,7 @@ exports[`Additional Information Component  should render component with digilib 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -38125,7 +38125,7 @@ exports[`Additional Information Component  should render component with generic 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -40315,7 +40315,7 @@ exports[`Additional Information Component  should render component with journal 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={9}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -43377,7 +43377,7 @@ exports[`Additional Information Component  should render component with manuscri
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -45158,7 +45158,7 @@ exports[`Additional Information Component  should render component with newspape
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -46756,7 +46756,7 @@ exports[`Additional Information Component  should render component with patent 1
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={4}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -47892,7 +47892,7 @@ exports[`Additional Information Component  should render component with preprint
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={3}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -48502,7 +48502,7 @@ exports[`Additional Information Component  should render component with proceedi
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={3}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -50902,7 +50902,7 @@ exports[`Additional Information Component  should render component with referenc
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -52279,7 +52279,7 @@ exports[`Additional Information Component  should render component with rek_herd
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={9}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -55500,7 +55500,7 @@ exports[`Additional Information Component  should render component with rek_star
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -56577,7 +56577,7 @@ exports[`Additional Information Component  should render component with research
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -57351,7 +57351,7 @@ exports[`Additional Information Component  should render component with thesis 1
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -58306,7 +58306,7 @@ exports[`Additional Information Component  should render component with video do
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -59150,7 +59150,7 @@ exports[`Additional Information Component  should render component with working 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={2}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -60497,7 +60497,7 @@ exports[`Additional Information Component  should render oa status value link in
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={

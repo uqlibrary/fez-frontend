@@ -5,6 +5,7 @@ import * as Partials from './partials';
 export default class ImageDocumentCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        citationStyle: PropTypes.string,
     };
 
     constructor(props) {
@@ -26,7 +27,10 @@ export default class ImageDocumentCitation extends Component {
         return (
             <div className="citationContent citationImageDocument">
                 {/* {Creator} */}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Publication Year| (|).} */}
                 <Partials.DateCitationView date={this.props.publication.rek_date} />

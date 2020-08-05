@@ -50,6 +50,7 @@ export default class PublicationsList extends PureComponent {
                 showUnpublishedBufferFields={this.props.showUnpublishedBufferFields}
                 hideCountDiff={this.props.hideCountDiff}
                 hideCountTotal={this.props.hideCountTotal}
+                citationStyle="list"
             />
         );
     }

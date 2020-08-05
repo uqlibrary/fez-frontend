@@ -100,6 +100,7 @@ export const NewViewRecord = ({
                         hideContentIndicators
                         showAdminActions={isAdmin}
                         isPublicationDeleted={isDeleted}
+                        citationStyle={'header'}
                     />
                 </Grid>
                 {!isDeleted && !!recordToView && (

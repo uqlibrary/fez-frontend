@@ -6,6 +6,7 @@ export default class ThesisCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideDoiLink: PropTypes.bool,
+        citationStyle: PropTypes.string,
     };
 
     constructor(props) {
@@ -34,7 +35,10 @@ export default class ThesisCitation extends Component {
         return (
             <div className="citationContent citationThesis">
                 {/* {Author}*/}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Year| (|).}*/}
                 <Partials.DateCitationView date={this.props.publication.rek_date} />
