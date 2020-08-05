@@ -595,10 +595,26 @@ describe('Record action creators', () => {
                 actions.CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
                 'FILE_UPLOAD_PROGRESS@Test.png',
+                'FILE_UPLOAD_SUCCESS',
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
             await mockActionsStore.dispatch(recordActions.submitThesis(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on upload retry', async () => {
+            mockApi
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', {})
+                .reply(200, { data: { ...record } });
+
+            const expectedActions = ['FILE_UPLOAD_STARTED', 'FILE_UPLOAD_PROGRESS@Test.png', 'FILE_UPLOAD_SUCCESS'];
+
+            await mockActionsStore.dispatch(recordActions.submitThesis(testInput, { rek_pid: 'UQ:1234567' }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

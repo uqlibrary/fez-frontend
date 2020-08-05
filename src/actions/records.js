@@ -201,8 +201,14 @@ export function submitThesis(data, newRecordData = {}) {
             return Promise.reject(error);
         };
 
-        const onFileUploadSuccess = response =>
-            (hasFilesToUpload && patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch)) || response;
+        const onFileUploadSuccess = response => {
+            if (hasFilesToUpload) {
+                dispatch({ type: 'FILE_UPLOAD_SUCCESS' });
+                return patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch);
+            }
+            return response;
+        };
+
         const onFileUploadFailure = error => {
             fileUploadFailed = true;
             return Promise.reject(error);
