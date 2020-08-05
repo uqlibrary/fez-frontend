@@ -5,6 +5,7 @@ import * as Partials from './partials';
 export default class AudioDocumentCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        citationStyle: PropTypes.string,
     };
 
     constructor(props) {
@@ -31,7 +32,10 @@ export default class AudioDocumentCitation extends Component {
         return (
             <div className="citationContent citationAudio">
                 {/* {Creator}*/}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Publication Year| (|).} */}
                 <Partials.DateCitationView date={this.props.publication.rek_date} />

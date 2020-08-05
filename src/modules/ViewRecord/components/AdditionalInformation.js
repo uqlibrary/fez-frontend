@@ -33,12 +33,12 @@ const styles = theme => ({
 
 export const renderAuthors = (publication, props = {}) => {
     const componentProps = {
+        citationStyle: 'all',
         key: 'additional-information-authors',
         publication,
         prefix: '',
         suffix: '',
         separator: ', ',
-        initialNumberOfAuthors: publication.fez_record_search_key_author.length,
         showLink: true,
         ...props,
     };

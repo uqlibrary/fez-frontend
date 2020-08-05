@@ -61,7 +61,7 @@
             "rek_author_id": 28593829,
             "rek_author_pid": "UQ:396321",
             "rek_author_xsdmf_id": null,
-            "rek_author": "Milevskiy, Michael J. G.",
+            "rek_author": "Milevskiy, Michael J. G. A.",
             "rek_author_order": 1
         },
         {

@@ -3,6 +3,7 @@
 exports[`PublicationsList renders component with items 1`] = `
 <Fragment>
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="0ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network2017-08-07T00:00:00Z"
@@ -864,6 +865,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="1Flux of signalling endosomes undergoing axonal retrograde transport is encoded by presynaptic activity and TrkB2016-09-30T00:00:00Z"
@@ -1893,6 +1895,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="2Extracellular vesicles secreted by highly metastatic clonal variants of osteosarcoma preferentially localize to the lungs and induce metastatic behaviour in poorly metastatic clones2016-06-02T00:00:00Z"
@@ -2848,6 +2851,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="3Botulinum neurotoxin type-A enters a non-recycling pool of synaptic vesicles2016-01-25T00:00:00Z"
@@ -3761,6 +3765,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="4A mutant tat protein inhibits HIV-1 reverse transcription by targeting the reverse transcription complex2015-05-01T00:00:00Z"
@@ -4722,6 +4727,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="5Control of autophagosome axonal retrograde flux by presynaptic activity unveiled using botulinum neurotoxin type A2015-04-15T00:00:00Z"
@@ -5915,6 +5921,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="6Activity-driven relaxation of the cortical actomyosin II network synchronizes Munc18-1-dependent neurosecretory vesicle docking2015-02-25T00:00:00Z"
@@ -6764,6 +6771,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="7An acto-myosin II constricting ring initiates the fission of activity-dependent bulk endosomes in neurosecretory cells2015-01-28T00:00:00Z"
@@ -7523,6 +7531,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="8Increased polyubiquitination and proteasomal degradation of a Munc18-1 disease-linked mutant causes temperature-sensitive defect in exocytosis2014-10-09T00:00:00Z"
@@ -8495,6 +8504,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="9Caveolin-1 is necessary for hepatic oxidative lipid metabolism: evidence for crosstalk between caveolin-1 and bile acid signaling2013-07-25T00:00:00Z"
@@ -8673,6 +8683,76 @@ exports[`PublicationsList renders component with items 1`] = `
             "rek_author": "Parton, Robert G.",
             "rek_author_id": 28858977,
             "rek_author_order": 21,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Larsen, Niels",
+            "rek_author_id": 32523125,
+            "rek_author_order": 22,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Linke, Burkhard",
+            "rek_author_id": 32523126,
+            "rek_author_order": 23,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "McHardy, Alice C.",
+            "rek_author_id": 32523127,
+            "rek_author_order": 24,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Meyer, Folker",
+            "rek_author_id": 32523128,
+            "rek_author_order": 25,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Neuweger, Heiko",
+            "rek_author_id": 32523129,
+            "rek_author_order": 26,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Olsen, Gary",
+            "rek_author_id": 32523130,
+            "rek_author_order": 27,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Smithers, John",
+            "rek_author_id": 32523131,
+            "rek_author_order": 28,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Osterman, Andrei",
+            "rek_author_id": 32523132,
+            "rek_author_order": 29,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Portnoy, Vasiliy",
+            "rek_author_id": 32523133,
+            "rek_author_order": 30,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+          },
+          Object {
+            "rek_author": "Mayhem, Carey",
+            "rek_author_id": 32523134,
+            "rek_author_order": 31,
             "rek_author_pid": "UQ:306039",
             "rek_author_xsdmf_id": null,
           },
@@ -9324,6 +9404,94 @@ exports[`PublicationsList renders component with items 1`] = `
             "rek_author_id_pid": "UQ:306039",
             "rek_author_id_xsdmf_id": null,
           },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640521,
+            "rek_author_id_order": 22,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640522,
+            "rek_author_id_order": 23,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640523,
+            "rek_author_id_order": 24,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640524,
+            "rek_author_id_order": 25,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640525,
+            "rek_author_id_order": 26,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640526,
+            "rek_author_id_order": 27,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640527,
+            "rek_author_id_order": 28,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640528,
+            "rek_author_id_order": 29,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640529,
+            "rek_author_id_order": 30,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640530,
+            "rek_author_id_order": 31,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
+          Object {
+            "author": null,
+            "rek_author_id": 0,
+            "rek_author_id_id": 32640531,
+            "rek_author_id_order": 32,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+          },
         ],
         "fez_record_search_key_biosis_id": null,
         "fez_record_search_key_contributor": Array [],
@@ -9878,6 +10046,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="10The Munc18-1 domain 3a loop is essential for neuroexocytosis but not for syntaxin-1A transport to the plasma membrane2013-06-01T00:00:00Z"
@@ -10906,6 +11075,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="11Inhibition of PIKfyve by YM-201636 Dysregulates Autophagy and Leads to Apoptosis-Independent Neuronal Cell Death2013-03-01T00:00:00Z"
@@ -11653,6 +11823,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="12Myosin VI small insert isoform maintains exocytosis by tethering secretory granules to the cortical actin2013-02-01T00:00:00Z"
@@ -12593,6 +12764,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="13Secretagogue stimulation of neurosecretory cells elicits filopodial extensions uncovering new functional release sites2013-01-01T00:00:00Z"
@@ -13402,6 +13574,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="14Caveolin-1 deficiency leads to increased susceptibility to cell death and fibrosis in white adipose tissue: characterization of a lipodystrophic model2012-09-26T00:00:00Z"
@@ -14263,6 +14436,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="15Co-regulation of cell polarization and migration by caveolar proteins PTRF/cavin-1 and caveolin-12012-08-13T00:00:00Z"
@@ -15384,6 +15558,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="16Caveolin-1 orchestrates the balance between glucose and lipid-dependent energy metabolism: Implications for liver regeneration2012-05-01T00:00:00Z"
@@ -16695,6 +16870,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="17Postlipolytic insulin-dependent remodeling of micro lipid droplets in adipocytes2012-03-15T00:00:00Z"
@@ -17669,6 +17845,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="18Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins2012-01-01T00:00:00Z"
@@ -18297,6 +18474,7 @@ exports[`PublicationsList renders component with items 1`] = `
     showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     customActions={Array []}
     hideCountDiff={false}
     key="19Dynamin inhibition blocks botulinum neurotoxin type A endocytosis in neurons and delays botulism2011-10-01T00:00:00Z"

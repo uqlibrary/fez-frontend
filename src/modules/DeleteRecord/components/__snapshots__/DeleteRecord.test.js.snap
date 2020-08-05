@@ -23,6 +23,7 @@ exports[`Component DeleteRecord UNSAFE_componentWillReceiveProps() 1`] = `
             title="Work to be deleted"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -580,6 +581,7 @@ exports[`Component DeleteRecord should display alert and disable delete button o
             title="Work to be deleted"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -1077,6 +1079,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
             title="Work to be deleted"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [],

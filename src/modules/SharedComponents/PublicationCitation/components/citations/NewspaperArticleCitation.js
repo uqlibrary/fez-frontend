@@ -5,6 +5,7 @@ import * as Partials from './partials';
 export default class NewspaperArticleCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        citationStyle: PropTypes.string,
     };
 
     constructor(props) {
@@ -32,7 +33,10 @@ export default class NewspaperArticleCitation extends Component {
         return (
             <div className="citationContent citationNewspaperArticle">
                 {/* {Author} */}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Publication Date| (|).|Y, m d} */}
                 <Partials.DateCitationView date={this.props.publication.rek_date} format="YYYY[,] MMMM D" />

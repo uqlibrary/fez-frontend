@@ -971,6 +971,156 @@ export default {
                     rek_author_xsdmf_id: 4191,
                     rek_author: 'Toth, I.',
                     rek_author_order: 5
+                }, {
+                    "rek_author_id": 32523110,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "de Crecy-Lagard, Valerie",
+                    "rek_author_order": 7
+                }, {
+                    "rek_author_id": 32523111,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Diaz, Naryttza",
+                    "rek_author_order": 8
+                }, {
+                    "rek_author_id": 32523112,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Disz, Terry",
+                    "rek_author_order": 9
+                }, {
+                    "rek_author_id": 32523113,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Edwards, Robert",
+                    "rek_author_order": 10
+                }, {
+                    "rek_author_id": 32523114,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Fonstein, Michael",
+                    "rek_author_order": 11
+                }, {
+                    "rek_author_id": 32523115,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Frank, Ed D.",
+                    "rek_author_order": 12
+                }, {
+                    "rek_author_id": 32523116,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Gerdes, Svetlana",
+                    "rek_author_order": 13
+                }, {
+                    "rek_author_id": 32523117,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Glass, Elizabeth M.",
+                    "rek_author_order": 14
+                }, {
+                    "rek_author_id": 32523118,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Goesmann, Alexander",
+                    "rek_author_order": 15
+                }, {
+                    "rek_author_id": 32523119,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Hanson, Andrew",
+                    "rek_author_order": 16
+                }, {
+                    "rek_author_id": 32523120,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Iwata-Reuyl, Dirk",
+                    "rek_author_order": 17
+                }, {
+                    "rek_author_id": 32523121,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Jensen, Roy",
+                    "rek_author_order": 18
+                }, {
+                    "rek_author_id": 32523122,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Jamshidi, Neema",
+                    "rek_author_order": 19
+                }, {
+                    "rek_author_id": 32523123,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Krause, Lutz",
+                    "rek_author_order": 20
+                }, {
+                    "rek_author_id": 32523124,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Kubal, Michael",
+                    "rek_author_order": 21
+                }, {
+                    "rek_author_id": 32523125,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Larsen, Niels",
+                    "rek_author_order": 22
+                }, {
+                    "rek_author_id": 32523126,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Linke, Burkhard",
+                    "rek_author_order": 23
+                }, {
+                    "rek_author_id": 32523127,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "McHardy, Alice C.",
+                    "rek_author_order": 24
+                }, {
+                    "rek_author_id": 32523128,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Meyer, Folker",
+                    "rek_author_order": 25
+                }, {
+                    "rek_author_id": 32523129,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Neuweger, Heiko",
+                    "rek_author_order": 26
+                }, {
+                    "rek_author_id": 32523130,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Olsen, Gary",
+                    "rek_author_order": 27
+                }, {
+                    "rek_author_id": 32523131,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Olsen, Robert",
+                    "rek_author_order": 28
+                }, {
+                    "rek_author_id": 32523132,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Osterman, Andrei",
+                    "rek_author_order": 29
+                }, {
+                    "rek_author_id": 32523133,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Portnoy, Vasiliy",
+                    "rek_author_order": 30
+                }, {
+                    "rek_author_id": 32523134,
+                    "rek_author_pid": "UQ:95980",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Pusch, Gordon D.",
+                    "rek_author_order": 31
                 }
             ],
             fez_record_search_key_author_affiliation_id: [],
@@ -1012,6 +1162,256 @@ export default {
                     rek_author_id_xsdmf_id: 3951,
                     rek_author_id: 1475,
                     rek_author_id_order: 5
+                }, {
+                    "rek_author_id_id": 32640505,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 6,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640506,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 7,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640507,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 8,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640508,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 9,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640509,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 10,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640510,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 11,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640511,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 12,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640512,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 13,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640513,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 14,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640514,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 15,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640515,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 16,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640516,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 17,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640517,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 18,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640518,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 19,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640519,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 88421,
+                    "rek_author_id_order": 20,
+                    "author": {
+                        "aut_id": 88421,
+                        "aut_orcid_id": "0000-0003-3806-0845",
+                        "aut_title": "Associate Professor"
+                    },
+                    "rek_author_id_lookup": "Lutz Krause"
+                }, {
+                    "rek_author_id_id": 32640520,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 21,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640521,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 22,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640522,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 23,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640523,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 24,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640524,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 25,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640525,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 26,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640526,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 27,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640527,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 28,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640528,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 29,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640529,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 30,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640530,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 31,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640531,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 32,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640532,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 33,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640533,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 34,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640534,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 35,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640535,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 36,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640536,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 37,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640537,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 38,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640538,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 39,
+                    "author": null
+                }, {
+                    "rek_author_id_id": 32640539,
+                    "rek_author_id_pid": "UQ:95980",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 0,
+                    "rek_author_id_order": 40,
+                    "author": null
                 }
             ],
             fez_record_search_key_author_role: [],

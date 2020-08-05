@@ -1123,7 +1123,6 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -1817,7 +1816,6 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -1837,11 +1835,12 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                         Laselle, Laurence
                       </span>
                     </CitationView>
+                     and 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tisdell, Clem"
                     >
@@ -1849,7 +1848,6 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
                         className="citationAuthor"
                         data-testid="rek-author-1"
                       >
-                         and 
                         Tisdell, Clem
                       </span>
                     </CitationView>
@@ -3497,7 +3495,6 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -4189,7 +4186,6 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -4209,11 +4205,12 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                         Laselle, Laurence
                       </span>
                     </CitationView>
+                     and 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tisdell, Clem"
                     >
@@ -4221,7 +4218,6 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
                         className="citationAuthor"
                         data-testid="rek-author-1"
                       >
-                         and 
                         Tisdell, Clem
                       </span>
                     </CitationView>
@@ -4788,7 +4784,6 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -5149,7 +5144,6 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"
