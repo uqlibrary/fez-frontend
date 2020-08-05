@@ -18,6 +18,7 @@ import {
     DOCUMENT_TYPES_LOOKUP,
 } from 'config/general';
 import * as actions from './actionTypes';
+import Raven from 'raven-js';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -194,7 +195,10 @@ export function submitThesis(data) {
             }
             return (hasFilesToUpload && putUploadFiles(response.data.rek_pid, data.files.queue, dispatch)) || response;
         };
-        const onRecordCreationFailure = error => Promise.reject(error);
+        const onRecordCreationFailure = error => {
+            Raven.captureException(error);
+            return Promise.reject(error);
+        };
 
         const onFileUploadSuccess = response =>
             (hasFilesToUpload && patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch)) || response;
@@ -225,6 +229,7 @@ export function submitThesis(data) {
                         fileUploadOrIssueFailed: true,
                     },
                 });
+                Raven.captureException(error);
                 return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
                     issue: `The submitter had issues uploading files on this record: ${newRecord.rek_pid}`,
                 });
@@ -237,7 +242,10 @@ export function submitThesis(data) {
         };
 
         const onIssueReportSuccess = () => recordCreated && Promise.resolve(newRecord);
-        const onIssueReportFailure = error => (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
+        const onIssueReportFailure = error => {
+            Raven.captureException(error);
+            return (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
+        };
 
         const createRecord = recordData => {
             const recordRequest = prepareThesisSubmission(recordData);
