@@ -1878,6 +1878,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "createNewRecord": [Function],
                                                         "createSearchPromise": [Function],
                                                         "deleteAttachedFile": [Function],
+                                                        "deleteFavouriteSearchListItem": [Function],
                                                         "deleteRecord": [Function],
                                                         "dismissAppAlert": [Function],
                                                         "exportAuthorPublications": [Function],
@@ -1932,6 +1933,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "updateCollection": [Function],
                                                         "updateCommunity": [Function],
                                                         "updateCurrentAuthor": [Function],
+                                                        "updateFavouriteSearchListItem": [Function],
                                                         "updateIncompleteRecord": [Function],
                                                       }
                                                     }
@@ -2009,6 +2011,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "createNewRecord": [Function],
                                                           "createSearchPromise": [Function],
                                                           "deleteAttachedFile": [Function],
+                                                          "deleteFavouriteSearchListItem": [Function],
                                                           "deleteRecord": [Function],
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
@@ -2063,6 +2066,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "updateCollection": [Function],
                                                           "updateCommunity": [Function],
                                                           "updateCurrentAuthor": [Function],
+                                                          "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
                                                         }
                                                       }
@@ -3274,6 +3278,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "createNewRecord": [Function],
                                                                   "createSearchPromise": [Function],
                                                                   "deleteAttachedFile": [Function],
+                                                                  "deleteFavouriteSearchListItem": [Function],
                                                                   "deleteRecord": [Function],
                                                                   "dismissAppAlert": [Function],
                                                                   "exportAuthorPublications": [Function],
@@ -3328,6 +3333,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "updateCollection": [Function],
                                                                   "updateCommunity": [Function],
                                                                   "updateCurrentAuthor": [Function],
+                                                                  "updateFavouriteSearchListItem": [Function],
                                                                   "updateIncompleteRecord": [Function],
                                                                 }
                                                               }
@@ -3359,6 +3365,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "createNewRecord": [Function],
                                                                     "createSearchPromise": [Function],
                                                                     "deleteAttachedFile": [Function],
+                                                                    "deleteFavouriteSearchListItem": [Function],
                                                                     "deleteRecord": [Function],
                                                                     "dismissAppAlert": [Function],
                                                                     "exportAuthorPublications": [Function],
@@ -3413,6 +3420,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "updateCollection": [Function],
                                                                     "updateCommunity": [Function],
                                                                     "updateCurrentAuthor": [Function],
+                                                                    "updateFavouriteSearchListItem": [Function],
                                                                     "updateIncompleteRecord": [Function],
                                                                   }
                                                                 }

@@ -1,76 +1,56 @@
 import React from 'react';
-import * as ReactRedux from 'react-redux';
 import FavouriteSearch from './FavouriteSearch';
-import { render, RenderWithRouter, WithRedux, fireEvent } from 'test-utils';
+import { render, WithRedux, fireEvent, waitFor, act } from 'test-utils';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
-import mediaQuery from 'css-mediaquery';
-import Immutable from 'immutable';
+import * as repository from 'repositories';
 
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
-
-const setup = (testProps = {}, renderer = render) => {
-    return renderer(
-        <RenderWithRouter>
-            <WithRedux>
-                <FavouriteSearch {...testProps} />
-            </WithRedux>
-        </RenderWithRouter>,
+const setup = (testProps = {}) => {
+    return render(
+        <WithRedux>
+            <FavouriteSearch {...testProps} />
+        </WithRedux>,
     );
 };
 
 describe('FavouriteSearch', () => {
-    beforeAll(() => {
-        window.matchMedia = createMatchMedia(window.innerWidth);
+    beforeEach(() => {
+        mockApi.onGet(repository.routes.FAVOURITE_SEARCH_LIST_API().apiUrl).reply(200, {
+            data: [
+                {
+                    fvs_id: 1,
+                    fvs_description: 'test',
+                    fvs_alias: 'test',
+                    fvs_search_parameters: 'test',
+                },
+                {
+                    fvs_id: 2,
+                    fvs_description: 'testing',
+                    fvs_alias: 'testing',
+                    fvs_search_parameters: 'testing',
+                },
+            ],
+        });
+        mockApi.onPut(new RegExp(repository.routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                fvs_id: 1,
+                fvs_description: 'test',
+                fvs_alias: 'test',
+                fvs_search_parameters: 'test',
+            },
+        });
+        mockApi
+            .onDelete(new RegExp(repository.routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl))
+            .reply(200, { data: {} });
     });
 
-    it('should render default view', () => {
-        const useSelector = jest.spyOn(ReactRedux, 'useSelector');
-
-        useSelector.mockImplementation(selectorFn =>
-            selectorFn(
-                new Immutable.Map({
-                    favouriteSearchReducer: {
-                        favouriteSearchListLoading: true,
-                        favouriteSearchList: null,
-                    },
-                }),
-            ),
-        );
-
+    it('should render default view', async () => {
         const loadFavouriteSearchListFn = jest.spyOn(FavouriteSearchActions, 'loadFavouriteSearchList');
 
-        const { getByText, getByTestId, rerender } = setup({});
+        const { getByText } = setup({});
         expect(getByText('Loading list of favourite search')).toBeInTheDocument();
         expect(loadFavouriteSearchListFn).toBeCalled();
 
-        useSelector.mockClear();
-
-        useSelector.mockImplementation(selectorFn =>
-            selectorFn(
-                new Immutable.Map({
-                    favouriteSearchReducer: {
-                        favouriteSearchListLoading: false,
-                        favouriteSearchList: [
-                            {
-                                fvs_id: 1,
-                                fvs_description: 'test',
-                                fvs_alias: 'test',
-                                fvs_search_parameters: 'test',
-                            },
-                        ],
-                    },
-                }),
-            ),
-        );
-
-        setup({}, rerender);
-
+        await waitFor(() => getByText('Favourite search'));
         expect(getByText('Favourite search')).toBeInTheDocument();
         expect(getByText('List of favourite search')).toBeInTheDocument();
 
@@ -79,11 +59,35 @@ describe('FavouriteSearch', () => {
         expect(getByText('Description (Click to edit)')).toBeInTheDocument();
         expect(getByText('Aliased link')).toBeInTheDocument();
         expect(getByText('Alias (Click to edit)')).toBeInTheDocument();
+    });
 
-        const listItem = getByTestId('favourite-search-list-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-edit', listItem));
+    it('should handle row update', async done => {
+        const { getByText, getByTestId, getAllByTestId } = setup({});
+        const updateFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'updateFavouriteSearchListItem');
 
-        const editListItem = getByTestId('favourite-search-list-edit-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-save', editListItem));
+        await waitFor(() => getByText('Favourite search'));
+        fireEvent.click(getAllByTestId('favourite-search-list-item-edit')[0]);
+
+        act(() => {
+            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+        });
+        expect(updateFavouriteSearchListItemFn).toBeCalled();
+
+        done();
+    });
+
+    it('should handle row delete', async done => {
+        const { getByText, getByTestId, getAllByTestId } = setup({});
+        const deleteFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'deleteFavouriteSearchListItem');
+
+        await waitFor(() => getByText('Favourite search'));
+        fireEvent.click(getAllByTestId('favourite-search-list-item-delete')[0]);
+
+        act(() => {
+            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+        });
+        expect(deleteFavouriteSearchListItemFn).toBeCalled();
+
+        done();
     });
 });

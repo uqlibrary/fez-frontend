@@ -308,6 +308,14 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
 // .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
+mock.onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*'}).apiUrl)))
+    .reply(config => {
+        console.log('test');
+        return [200, { data: { ...mockData.favouriteSearchItem}}]
+    });
+
+mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API( { id: '.*'}))
+    .reply(200, {data: {}});
 
 mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: '' })

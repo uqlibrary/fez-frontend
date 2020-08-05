@@ -17997,6 +17997,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "createNewRecord": [Function],
                                                             "createSearchPromise": [Function],
                                                             "deleteAttachedFile": [Function],
+                                                            "deleteFavouriteSearchListItem": [Function],
                                                             "deleteRecord": [Function],
                                                             "dismissAppAlert": [Function],
                                                             "exportAuthorPublications": [Function],
@@ -18051,6 +18052,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "updateCollection": [Function],
                                                             "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
+                                                            "updateFavouriteSearchListItem": [Function],
                                                             "updateIncompleteRecord": [Function],
                                                           }
                                                         }
@@ -20314,6 +20316,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "createNewRecord": [Function],
                                 "createSearchPromise": [Function],
                                 "deleteAttachedFile": [Function],
+                                "deleteFavouriteSearchListItem": [Function],
                                 "deleteRecord": [Function],
                                 "dismissAppAlert": [Function],
                                 "exportAuthorPublications": [Function],
@@ -20368,6 +20371,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "updateCollection": [Function],
                                 "updateCommunity": [Function],
                                 "updateCurrentAuthor": [Function],
+                                "updateFavouriteSearchListItem": [Function],
                                 "updateIncompleteRecord": [Function],
                               }
                             }
@@ -21939,6 +21943,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "createNewRecord": [Function],
                                                                             "createSearchPromise": [Function],
                                                                             "deleteAttachedFile": [Function],
+                                                                            "deleteFavouriteSearchListItem": [Function],
                                                                             "deleteRecord": [Function],
                                                                             "dismissAppAlert": [Function],
                                                                             "exportAuthorPublications": [Function],
@@ -21993,6 +21998,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateCollection": [Function],
                                                                             "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
+                                                                            "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
                                                                           }
                                                                         }
@@ -22070,6 +22076,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "createNewRecord": [Function],
                                                                               "createSearchPromise": [Function],
                                                                               "deleteAttachedFile": [Function],
+                                                                              "deleteFavouriteSearchListItem": [Function],
                                                                               "deleteRecord": [Function],
                                                                               "dismissAppAlert": [Function],
                                                                               "exportAuthorPublications": [Function],
@@ -22124,6 +22131,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "updateCollection": [Function],
                                                                               "updateCommunity": [Function],
                                                                               "updateCurrentAuthor": [Function],
+                                                                              "updateFavouriteSearchListItem": [Function],
                                                                               "updateIncompleteRecord": [Function],
                                                                             }
                                                                           }
@@ -23335,6 +23343,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "createNewRecord": [Function],
                                                                                       "createSearchPromise": [Function],
                                                                                       "deleteAttachedFile": [Function],
+                                                                                      "deleteFavouriteSearchListItem": [Function],
                                                                                       "deleteRecord": [Function],
                                                                                       "dismissAppAlert": [Function],
                                                                                       "exportAuthorPublications": [Function],
@@ -23389,6 +23398,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateCollection": [Function],
                                                                                       "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
+                                                                                      "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
                                                                                     }
                                                                                   }
@@ -23420,6 +23430,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "createNewRecord": [Function],
                                                                                         "createSearchPromise": [Function],
                                                                                         "deleteAttachedFile": [Function],
+                                                                                        "deleteFavouriteSearchListItem": [Function],
                                                                                         "deleteRecord": [Function],
                                                                                         "dismissAppAlert": [Function],
                                                                                         "exportAuthorPublications": [Function],
@@ -23474,6 +23485,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "updateCollection": [Function],
                                                                                         "updateCommunity": [Function],
                                                                                         "updateCurrentAuthor": [Function],
+                                                                                        "updateFavouriteSearchListItem": [Function],
                                                                                         "updateIncompleteRecord": [Function],
                                                                                       }
                                                                                     }

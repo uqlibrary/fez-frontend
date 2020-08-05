@@ -6,6 +6,8 @@ import { waitFor } from '@testing-library/dom';
 function setup(testProps = {}, renderer = render) {
     const props = {
         list: [],
+        handleRowDelete: jest.fn(() => Promise.resolve()),
+        handleRowUpdate: jest.fn(() => Promise.resolve()),
         ...testProps,
     };
 
@@ -127,7 +129,7 @@ describe('FavouriteSearchList', () => {
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing_testing' } });
 
-        await act(() => {
+        act(() => {
             fireEvent.click(getByTestId('favourite-search-list-item-save'));
         });
 
@@ -161,7 +163,7 @@ describe('FavouriteSearchList', () => {
 
         fireEvent.click(getAllByTestId('favourite-search-list-item-delete')[0]);
 
-        await act(() => {
+        act(() => {
             fireEvent.click(getByTestId('favourite-search-list-item-save'));
         });
 

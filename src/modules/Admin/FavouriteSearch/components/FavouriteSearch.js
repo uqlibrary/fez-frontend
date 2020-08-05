@@ -8,7 +8,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import FavouriteSearchList from './FavouriteSearchList';
 
-import { loadFavouriteSearchList } from 'actions';
+import { loadFavouriteSearchList, updateFavouriteSearchListItem, deleteFavouriteSearchListItem } from 'actions';
 import pageLocale from 'locale/pages';
 
 export const FavouriteSearch = () => {
@@ -24,6 +24,14 @@ export const FavouriteSearch = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    const handleRowUpdate = (newData, oldData) => {
+        return dispatch(updateFavouriteSearchListItem(newData, oldData));
+    };
+
+    const handleRowDelete = oldData => {
+        return dispatch(deleteFavouriteSearchListItem(oldData));
+    };
+
     if (favouriteSearchListLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
     }
@@ -33,7 +41,11 @@ export const FavouriteSearch = () => {
             {!!favouriteSearchList && (
                 <Grid container>
                     <Grid item xs={12}>
-                        <FavouriteSearchList list={favouriteSearchList} />
+                        <FavouriteSearchList
+                            handleRowDelete={handleRowDelete}
+                            handleRowUpdate={handleRowUpdate}
+                            list={favouriteSearchList}
+                        />
                     </Grid>
                 </Grid>
             )}

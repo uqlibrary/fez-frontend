@@ -98,7 +98,7 @@ export const getColumns = () => {
     ];
 };
 
-export const FavouriteSearchList = ({ list }) => {
+export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) => {
     const {
         components: { favouriteSearchList },
     } = componentsLocale;
@@ -107,15 +107,12 @@ export const FavouriteSearchList = ({ list }) => {
     const columns = React.createRef();
     columns.current = getColumns();
 
-    const [state, setState] = React.useState({
-        columns: columns.current,
-        data: list,
-    });
+    const [data, setData] = React.useState(list);
 
     return (
         <MaterialTable
             tableRef={materialTableRef}
-            columns={state.columns}
+            columns={columns.current}
             components={{
                 Container: props => <Paper {...props} style={{ padding: 16 }} />,
                 Row: props => (
@@ -133,33 +130,28 @@ export const FavouriteSearchList = ({ list }) => {
                     />
                 ),
             }}
-            data={state.data}
+            data={data}
             icons={tableIcons}
             title={favouriteSearchList.tableTitle}
             editable={{
-                onRowUpdate: (newData, oldData) =>
-                    new Promise(resolve => {
-                        setTimeout(() => {
-                            resolve();
-                            oldData &&
-                                setState(prevState => {
-                                    const data = [...prevState.data];
-                                    data[data.indexOf(oldData)] = newData;
-                                    return { ...prevState, data };
-                                });
-                        }, 600);
-                    }),
-                onRowDelete: oldData =>
-                    new Promise(resolve => {
-                        setTimeout(() => {
-                            resolve();
-                            setState(prevState => {
-                                const data = [...prevState.data];
-                                data.splice(data.indexOf(oldData), 1);
-                                return { ...prevState, data };
-                            });
-                        }, 600);
-                    }),
+                onRowUpdate: (newData, oldData) => {
+                    return handleRowUpdate(newData, oldData).then(() => {
+                        setData(prevState => {
+                            const data = [...prevState];
+                            data[data.indexOf(oldData)] = newData;
+                            return data;
+                        });
+                    });
+                },
+                onRowDelete: oldData => {
+                    return handleRowDelete(oldData).then(() => {
+                        setData(prevState => {
+                            const data = [...prevState];
+                            data.splice(data.indexOf(oldData), 1);
+                            return data;
+                        });
+                    });
+                },
             }}
             options={{
                 actionsColumnIndex: -1,
@@ -171,6 +163,8 @@ export const FavouriteSearchList = ({ list }) => {
 };
 
 FavouriteSearchList.propTypes = {
+    handleRowDelete: PropTypes.func,
+    handleRowUpdate: PropTypes.func,
     list: PropTypes.array,
 };
 

@@ -64,3 +64,4 @@ export { mockRecordToFix } from './testing/records';
 
 // Favourite search mock data
 export { default as favouriteSearchList } from './favouriteSearch/favouriteSearchList';
+export { default as favouriteSearchItem } from './favouriteSearch/favouriteSearchItem';
