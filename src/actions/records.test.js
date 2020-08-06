@@ -127,6 +127,8 @@ describe('Record action creators', () => {
                 'FILE_UPLOAD_STARTED',
                 actions.APP_ALERT_SHOW,
                 'FILE_UPLOADED_FAILED@test.txt',
+                actions.APP_ALERT_SHOW,
+                'FILE_UPLOADED_FAILED@test.txt',
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -834,7 +836,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on create record successfully with file upload', async () => {
+        it('dispatches expected actions on create record successfully with failed file upload', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -848,6 +850,8 @@ describe('Record action creators', () => {
             const expectedActions = [
                 actions.ADMIN_CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
+                actions.APP_ALERT_SHOW,
+                'FILE_UPLOADED_FAILED@test.txt',
                 actions.APP_ALERT_SHOW,
                 'FILE_UPLOADED_FAILED@test.txt',
                 actions.ADMIN_CREATE_RECORD_SUCCESS,

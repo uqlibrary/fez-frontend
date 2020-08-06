@@ -313,7 +313,16 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(() => {
 });
 // .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
 
+// let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
+    // .reply(() => {
+    //     if (retried) {
+    //         return [200, ['s3-ap-southeast-2.amazonaws.com']];
+    //     } else {
+    //         retried = true;
+    //         return [500, { message: ['error - failed FILE_UPLOAD_API'] }];
+    //     }
+    // })
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
     // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
