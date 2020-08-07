@@ -22,6 +22,7 @@ const handlers = {
         ...state,
         favouriteSearchListLoading: false,
         favouriteSearchList: action.payload,
+        existingAliasCheckError: null,
     }),
 
     [actions.FAVOURITE_SEARCH_LIST_FAILED]: (state, action) => ({
@@ -29,17 +30,20 @@ const handlers = {
         favouriteSearchListLoading: false,
         favouriteSearchList: null,
         favouriteSearchListError: action.payload,
+        existingAliasCheckError: null,
     }),
 
     [actions.FAVOURITE_SEARCH_ITEM_UPDATING]: state => ({
         ...state,
         favouriteSearchListItemUpdating: true,
+        existingAliasCheckError: null,
     }),
 
     [actions.FAVOURITE_SEARCH_ITEM_UPDATE_SUCCESS]: (state, action) => {
         const index = state.favouriteSearchList.indexOf(action.oldData);
         return {
             ...state,
+            existingAliasCheckError: null,
             favouriteSearchListItemUpdating: false,
             favouriteSearchList: [
                 ...state.favouriteSearchList.slice(0, index),
@@ -51,12 +55,14 @@ const handlers = {
 
     [actions.FAVOURITE_SEARCH_ITEM_UPDATE_FAILED]: (state, action) => ({
         ...state,
+        existingAliasCheckError: null,
         favouriteSearchListItemUpdating: false,
         favouriteSearchListItemUpdateError: action.payload,
     }),
 
     [actions.FAVOURITE_SEARCH_ITEM_DELETING]: state => ({
         ...state,
+        existingAliasCheckError: null,
         favouriteSearchListItemDeleting: true,
     }),
 
@@ -64,6 +70,7 @@ const handlers = {
         const index = state.favouriteSearchList.indexOf(action.payload);
         return {
             ...state,
+            existingAliasCheckError: null,
             favouriteSearchListItemDeleting: false,
             favouriteSearchList: [
                 ...state.favouriteSearchList.slice(0, index),
@@ -74,6 +81,7 @@ const handlers = {
 
     [actions.FAVOURITE_SEARCH_ITEM_DELETE_FAILED]: (state, action) => ({
         ...state,
+        existingAliasCheckError: null,
         favouriteSearchListItemDeleting: false,
         favouriteSearchListItemDeleteError: action.payload,
     }),

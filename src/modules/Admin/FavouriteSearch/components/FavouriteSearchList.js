@@ -159,6 +159,8 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 actionsColumnIndex: -1,
                 grouping: false,
                 draggable: false,
+                paging: false,
+                search: false,
             }}
         />
     );
