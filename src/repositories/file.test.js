@@ -1,6 +1,7 @@
 import { putUploadFile } from './file';
 import * as repositories from 'repositories';
 import { locale } from 'locale';
+import * as actions from 'actions/actionTypes';
 
 describe('File repository tests ', () => {
     beforeEach(() => {
@@ -34,9 +35,9 @@ describe('File repository tests ', () => {
 
         const expectedActions = [
             'APP_ALERT_SHOW',
-            'FILE_UPLOADED_FAILED@a.txt',
+            `${actions.FILE_UPLOAD_FAILED}@a.txt`,
             'APP_ALERT_SHOW',
-            'FILE_UPLOADED_FAILED@a.txt',
+            `${actions.FILE_UPLOAD_FAILED}@a.txt`,
         ];
 
         await expect(putUploadFile('PID:111111', { name: 'a.txt' }, mockActionsStore.dispatch)).rejects.toEqual(

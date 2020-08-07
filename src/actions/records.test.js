@@ -102,8 +102,8 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -124,11 +124,11 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@test.txt',
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@test.txt',
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -172,8 +172,8 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
                 actions.APP_ALERT_SHOW,
                 actions.CREATE_RECORD_SUCCESS,
             ];
@@ -485,8 +485,8 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOADED_FAILED@Test.png',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -508,9 +508,9 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@Test.png',
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -534,8 +534,8 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOADED_FAILED@Test.png',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -580,9 +580,9 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@Test.png',
-                'FILE_UPLOAD_SUCCESS',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@Test.png`,
+                actions.FILE_UPLOAD_COMPLETE,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -597,7 +597,11 @@ describe('Record action creators', () => {
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, { data: { ...record } });
 
-            const expectedActions = ['FILE_UPLOAD_STARTED', 'FILE_UPLOAD_PROGRESS@Test.png', 'FILE_UPLOAD_SUCCESS'];
+            const expectedActions = [
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@Test.png`,
+                actions.FILE_UPLOAD_COMPLETE,
+            ];
 
             await mockActionsStore.dispatch(recordActions.submitThesis(testInput, { ...record }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -719,8 +723,8 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.ADMIN_UPDATE_WORK_PROCESSING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
                 actions.ADMIN_UPDATE_WORK_SUCCESS,
             ];
 
@@ -827,8 +831,8 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.ADMIN_CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
                 actions.ADMIN_CREATE_RECORD_SUCCESS,
             ];
 
@@ -849,11 +853,11 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.ADMIN_CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@test.txt',
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@test.txt',
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.ADMIN_CREATE_RECORD_SUCCESS,
             ];
 

@@ -242,7 +242,7 @@ export function submitThesis(data, preCreatedRecord = {}) {
          */
         const onFileUploadSuccess = response => {
             // Signal the successful upload
-            hasFilesToUpload && dispatch({ type: 'FILE_UPLOAD_SUCCESS' });
+            hasFilesToUpload && dispatch({ type: actions.FILE_UPLOAD_COMPLETE });
 
             return (hasFilesToUpload && getRecord(false)) || Promise.resolve(response);
         };
