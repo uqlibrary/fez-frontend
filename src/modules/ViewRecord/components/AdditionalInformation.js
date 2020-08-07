@@ -33,12 +33,12 @@ const styles = theme => ({
 
 export const renderAuthors = (publication, props = {}) => {
     const componentProps = {
+        citationStyle: 'all',
         key: 'additional-information-authors',
         publication,
         prefix: '',
         suffix: '',
         separator: ', ',
-        citationStyle: 'all',
         showLink: true,
         ...props,
     };

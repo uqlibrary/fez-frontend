@@ -76,6 +76,10 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag, ...actions }, dispatch),
+    retryUpload: values =>
+        dispatch(submitThesis({ ...values.toJS() }), true).catch(error => {
+            throw new SubmissionError({ _error: error });
+        }),
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);

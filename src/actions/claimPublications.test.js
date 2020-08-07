@@ -490,8 +490,8 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.jpg',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.jpg`,
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
             ];
 
@@ -520,8 +520,8 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.jpg',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.jpg`,
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
             ];
 
@@ -607,8 +607,9 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOADED_FAILED@test.jpg',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
+                `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
             ];
 
@@ -647,9 +648,11 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
-                'FILE_UPLOAD_STARTED',
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@test.jpg',
+                `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
+                actions.APP_ALERT_SHOW,
+                `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
             ];
 

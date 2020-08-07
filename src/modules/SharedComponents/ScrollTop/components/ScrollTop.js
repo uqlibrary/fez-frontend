@@ -39,12 +39,16 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
         !!document.getElementById('scrolltopbtn').style
     ) {
         scrollableContainer.onscroll = () => {
+            const scrollTopButton = document.getElementById('scrolltopbtn');
+            if (!scrollTopButton) {
+                return;
+            }
             if (scrollableContainer.scrollTop > showAfter) {
-                document.getElementById('scrolltopbtn').style.opacity = '0.5';
-                document.getElementById('scrolltopbtn').style.right = '32px !important';
+                scrollTopButton.style.opacity = '0.5';
+                scrollTopButton.style.right = '32px !important';
             } else {
-                document.getElementById('scrolltopbtn').style.opacity = '0';
-                document.getElementById('scrolltopbtn').style.right = '-1000px !important';
+                scrollTopButton.style.opacity = '0';
+                scrollTopButton.style.right = '-1000px !important';
             }
         };
     }
