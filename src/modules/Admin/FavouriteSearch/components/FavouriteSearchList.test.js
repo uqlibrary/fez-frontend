@@ -139,6 +139,38 @@ describe('FavouriteSearchList', () => {
         expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('testing_testing');
     });
 
+    it('should render previous info if handleRowUpdate throws exception', async () => {
+        const { getByTestId } = setup({
+            list: [
+                {
+                    fvs_id: 1,
+                    fvs_description: 'test',
+                    fvs_alias: 'test',
+                    fvs_search_parameters: 'test',
+                },
+            ],
+            handleRowUpdate: jest.fn(() => Promise.reject()),
+        });
+        let listItem = getByTestId('favourite-search-list-item-0');
+
+        expect(getByTestId('fvs-description', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('test');
+
+        fireEvent.click(getByTestId('favourite-search-list-item-edit'));
+
+        fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
+        fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing_testing' } });
+
+        act(() => {
+            fireEvent.click(getByTestId('favourite-search-list-item-save'));
+        });
+
+        listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
+
+        expect(getByTestId('fvs-description', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('test');
+    });
+
     it('should delete favourite search item', async () => {
         const { getByTestId, getAllByTestId } = setup({
             list: [

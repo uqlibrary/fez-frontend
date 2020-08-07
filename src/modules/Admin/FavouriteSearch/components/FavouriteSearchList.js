@@ -135,13 +135,15 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
             title={favouriteSearchList.tableTitle}
             editable={{
                 onRowUpdate: (newData, oldData) => {
-                    return handleRowUpdate(newData, oldData).then(() => {
-                        setData(prevState => {
-                            const data = [...prevState];
-                            data[data.indexOf(oldData)] = newData;
-                            return data;
-                        });
-                    });
+                    return handleRowUpdate(newData, oldData)
+                        .then(() => {
+                            setData(prevState => {
+                                const data = [...prevState];
+                                data[data.indexOf(oldData)] = newData;
+                                return data;
+                            });
+                        })
+                        .catch(() => setData(prevState => prevState));
                 },
                 onRowDelete: oldData => {
                     return handleRowDelete(oldData).then(() => {

@@ -1,17 +1,5 @@
 import * as actions from 'actions/actionTypes';
-import favouriteSearchReducer from './favouriteSearch';
-
-export const initialState = {
-    favouriteSearchListLoading: true,
-    favouriteSearchList: null,
-    favouriteSearchListError: null,
-    favouriteSearchListItemUpdating: false,
-    favouriteSearchListItemUpdateFailed: null,
-    favouriteSearchListItemUpdateError: null,
-    favouriteSearchListItemDeleting: false,
-    favouriteSearchListItemDeleteFailed: null,
-    favouriteSearchListItemDeleteError: null,
-};
+import favouriteSearchReducer, { initialState } from './favouriteSearch';
 
 describe('favourite search reducer', () => {
     it('returns the correct state while favourite search are loading', () => {
@@ -157,5 +145,24 @@ describe('favourite search reducer', () => {
         });
         expect(test.favouriteSearchListItemDeleting).toEqual(false);
         expect(test.favouriteSearchListItemDeleteError).toEqual({ status: 403, message: 'Test error message' });
+    });
+
+    it('returns the correct state when existing alias found', () => {
+        const test = favouriteSearchReducer(initialState, {
+            type: actions.EXISTING_ALIAS_FOUND,
+            payload: 'test',
+        });
+        expect(test.existingAliasCheckError).toEqual({
+            type: 'error',
+            title: 'Alias check',
+            message: 'Alias "test" has been taken',
+        });
+    });
+
+    it('returns the correct state when existing alias not found', () => {
+        const test = favouriteSearchReducer(initialState, {
+            type: actions.EXISTING_ALIAS_NOT_FOUND,
+        });
+        expect(test.existingAliasCheckError).toEqual(null);
     });
 });

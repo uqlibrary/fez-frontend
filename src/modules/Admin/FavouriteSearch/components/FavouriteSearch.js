@@ -5,10 +5,11 @@ import Grid from '@material-ui/core/Grid';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import FavouriteSearchList from './FavouriteSearchList';
 
-import { loadFavouriteSearchList, updateFavouriteSearchListItem, deleteFavouriteSearchListItem } from 'actions';
+import { deleteFavouriteSearchListItem, loadFavouriteSearchList, updateFavouriteSearchListItem } from 'actions';
 import pageLocale from 'locale/pages';
 
 export const FavouriteSearch = () => {
@@ -18,6 +19,7 @@ export const FavouriteSearch = () => {
         state => state.get('favouriteSearchReducer').favouriteSearchListLoading,
     );
     const favouriteSearchList = useSelector(state => state.get('favouriteSearchReducer').favouriteSearchList);
+    const existingAliasCheckError = useSelector(state => state.get('favouriteSearchReducer').existingAliasCheckError);
 
     React.useEffect(() => {
         dispatch(loadFavouriteSearchList());
@@ -39,7 +41,12 @@ export const FavouriteSearch = () => {
     return (
         <StandardPage title={txt.title}>
             {!!favouriteSearchList && (
-                <Grid container>
+                <Grid container spacing={2}>
+                    {!!existingAliasCheckError && (
+                        <Grid item xs={12}>
+                            <Alert {...existingAliasCheckError} />
+                        </Grid>
+                    )}
                     <Grid item xs={12}>
                         <FavouriteSearchList
                             handleRowDelete={handleRowDelete}

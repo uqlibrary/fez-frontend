@@ -848,6 +848,11 @@ export default {
         favouriteSearch: {
             title: 'Favourite search',
             loadingMessage: 'Loading list of favourite search',
+            aliasExistsAlert: {
+                type: 'error',
+                message: 'Alias "[alias]" has been taken',
+                title: 'Alias check',
+            },
         },
         edit: {
             sections: {

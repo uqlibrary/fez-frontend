@@ -83,7 +83,9 @@ export const withRedux = (initialState = Immutable.Map()) => WrappedComponent =>
 
 // eslint-disable-next-line react/prop-types
 export const WithRedux = ({ initialState = Immutable.Map(), children }) => (
-    <Provider store={getStore(initialState)}>{children}</Provider>
+    <Provider store={getStore(initialState)}>
+        <AllTheProviders>{children}</AllTheProviders>
+    </Provider>
 );
 
 module.exports = {

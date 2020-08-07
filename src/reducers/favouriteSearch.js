@@ -1,4 +1,5 @@
 import * as actions from 'actions/actionTypes';
+import locale from 'locale/pages';
 
 export const initialState = {
     favouriteSearchListLoading: true,
@@ -8,6 +9,7 @@ export const initialState = {
     favouriteSearchListItemUpdateError: null,
     favouriteSearchListItemDeleting: false,
     favouriteSearchListItemDeleteError: null,
+    existingAliasCheckError: false,
 };
 
 const handlers = {
@@ -74,6 +76,19 @@ const handlers = {
         ...state,
         favouriteSearchListItemDeleting: false,
         favouriteSearchListItemDeleteError: action.payload,
+    }),
+
+    [actions.EXISTING_ALIAS_FOUND]: (state, action) => ({
+        ...state,
+        existingAliasCheckError: {
+            ...locale.pages.favouriteSearch.aliasExistsAlert,
+            message: locale.pages.favouriteSearch.aliasExistsAlert.message.replace('[alias]', action.payload),
+        },
+    }),
+
+    [actions.EXISTING_ALIAS_NOT_FOUND]: state => ({
+        ...state,
+        existingAliasCheckError: null,
     }),
 };
 
