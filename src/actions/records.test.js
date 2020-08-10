@@ -104,6 +104,7 @@ describe('Record action creators', () => {
                 actions.CREATE_RECORD_SAVING,
                 actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -155,31 +156,6 @@ describe('Record action creators', () => {
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
-        });
-
-        it('dispatches expected actions if patch record fails', async () => {
-            mockApi
-                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
-                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
-                .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, { data: {} })
-                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
-                .reply(200, { data: '' })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(500);
-
-            const expectedActions = [
-                actions.CREATE_RECORD_SAVING,
-                actions.FILE_UPLOAD_STARTED,
-                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
-                actions.APP_ALERT_SHOW,
-                actions.CREATE_RECORD_SUCCESS,
-            ];
-
-            await mockActionsStore.dispatch(recordActions.createNewRecord(testInput));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatches expected actions on issues api posts comments successfully', async () => {
@@ -582,6 +558,7 @@ describe('Record action creators', () => {
                 actions.CREATE_RECORD_SAVING,
                 actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_PROGRESS}@Test.png`,
+                `${actions.FILE_UPLOAD_COMPLETE}@Test.png`,
                 actions.FILE_UPLOAD_COMPLETE,
                 actions.CREATE_RECORD_SUCCESS,
             ];
@@ -600,6 +577,7 @@ describe('Record action creators', () => {
             const expectedActions = [
                 actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_PROGRESS}@Test.png`,
+                `${actions.FILE_UPLOAD_COMPLETE}@Test.png`,
                 actions.FILE_UPLOAD_COMPLETE,
             ];
 
@@ -725,6 +703,7 @@ describe('Record action creators', () => {
                 actions.ADMIN_UPDATE_WORK_PROCESSING,
                 actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.ADMIN_UPDATE_WORK_SUCCESS,
             ];
 
@@ -833,6 +812,7 @@ describe('Record action creators', () => {
                 actions.ADMIN_CREATE_RECORD_SAVING,
                 actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.ADMIN_CREATE_RECORD_SUCCESS,
             ];
 

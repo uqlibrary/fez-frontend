@@ -15,6 +15,7 @@ export * from './orcidSync';
 export * from './publications';
 export * from './records';
 export * from './search';
+export * from './fileUpload';
 export * from './thirdPartyLookupTool';
 export * from './viewRecord';
 export * from './deleteRecord';

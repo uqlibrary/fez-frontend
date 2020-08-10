@@ -180,9 +180,11 @@ const prepareThesisSubmission = data => {
  *  4. log if reporting failed.
  * @param {object} data to be posted, refer to backend API
  * @param {object} preCreatedRecord If present, the newly created record from a previous attempt.
+ * @param {string} formName the name of the form being submitted
+ * @param {Array} fullyUploadedFiles List of names of files which have been uploaded already to the server
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
-export function submitThesis(data, preCreatedRecord = {}) {
+export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUploadedFiles = []) {
     return dispatch => {
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
 
@@ -228,7 +230,13 @@ export function submitThesis(data, preCreatedRecord = {}) {
                 return Promise.reject({ message: 'API did not return valid PID' });
             }
             return (
-                (hasFilesToUpload && putUploadFiles(response.data.rek_pid, data.files.queue, dispatch)) ||
+                (hasFilesToUpload &&
+                    putUploadFiles(
+                        response.data.rek_pid,
+                        data.files.queue.filter(file => !fullyUploadedFiles.includes(file.name)),
+                        dispatch,
+                        formName,
+                    )) ||
                 Promise.resolve(getRecord(false))
             );
         };
