@@ -57038,6 +57038,57 @@ exports[`Additional Information Component  should render component with research
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-DOI"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-doi-label"
+            variant="body2"
+          >
+            DOI
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <DoiCitationView
+              doi="10.129839/sometext"
+              key="additional-information-doi"
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="8"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-ISBN"
         spacing={2}
       >
@@ -57091,7 +57142,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -57144,7 +57195,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -57196,7 +57247,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -57248,7 +57299,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
