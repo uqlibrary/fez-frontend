@@ -28,7 +28,7 @@ UQ's branding for Fez is UQ eSpace.
 This project is using `npm` for dependency management. Make sure `npm` is installed on your machine.
 
 - make sure to create a .env file based on example.env
-- `nvm use 11.10.1 && npm i -g npm@6 jest webpack-dev-server` - initial setup
+- `nvm use 14.7.0 && npm i -g npm@6 jest webpack-dev-server` - initial setup
 - `npm ci` - when weird errors happen your local npm probably doesnt match the latest project requirements, this
   clears & reinstalls npm packages
 - `npm run start`
@@ -58,7 +58,7 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
 
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
-  - uses PRODUCTION DATA from the aws api (ie `https://api.library.uq.edu.au/v1/1) as a backend!! Careful!!
+  - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/1>) as a backend!! Careful!!
 - `npm run start:build:e2e`
   - runs production build version on <http://localhost:9000/>
   - uses mock data from src/mock
@@ -114,7 +114,7 @@ or
 
 #### Optimisation
 
-to keep initial load to a minimum following optimisation has been added to the project:
+To keep initial load to a minimum, the following optimisations have been added to the project:
 
 - Async (lazy) loading of non-essential (essential components are only those components user can see on public pages
   when not authenticated)

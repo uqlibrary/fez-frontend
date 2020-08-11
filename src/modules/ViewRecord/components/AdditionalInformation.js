@@ -266,6 +266,7 @@ export class AdditionalInformationClass extends PureComponent {
     renderContributors = publication => {
         return (
             <EditorsCitationView
+                citationStyle="all"
                 key="additional-information-editors"
                 publication={publication}
                 prefix={''}
