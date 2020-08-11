@@ -50,7 +50,10 @@ export default class BookChapterCitation extends Component {
                 <Partials.CitationView className="citationBookTitle" value={record.bookTitle} />
 
                 {/* {Editor| edited by |.}*/}
-                <Partials.EditorsCitationView publication={this.props.publication} />
+                <Partials.EditorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Place of Publication| |:} */}
                 <Partials.CitationView
