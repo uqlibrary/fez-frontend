@@ -86,8 +86,7 @@ describe('FavouriteSearchList', () => {
         fireEvent.click(getByTestId('favourite-search-list-item-edit', listItem));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: '' } });
-        expect(getByTestId('fvs-alias-helper-text')).toBeInTheDocument();
-        expect(getByTestId('fvs-alias-helper-text')).toHaveTextContent('This field is required');
+        expect(queryByTestId('fvs-alias-helper-text')).not.toBeInTheDocument();
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'test_' } });
         expect(getByTestId('fvs-alias-helper-text')).toBeInTheDocument();
@@ -105,7 +104,8 @@ describe('FavouriteSearchList', () => {
         expect(queryByTestId('fvs-alias-helper-text')).not.toBeInTheDocument();
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'test_alias' } });
-        expect(queryByTestId('fvs-alias-helper-text')).not.toBeInTheDocument();
+        expect(getByTestId('fvs-alias-helper-text')).toBeInTheDocument();
+        expect(getByTestId('fvs-alias-helper-text')).toHaveTextContent('Alias is not valid');
     });
 
     it('should render updated info after editing', async () => {
@@ -127,7 +127,7 @@ describe('FavouriteSearchList', () => {
         fireEvent.click(getByTestId('favourite-search-list-item-edit'));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
-        fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing_testing' } });
+        fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing-testing' } });
 
         act(() => {
             fireEvent.click(getByTestId('favourite-search-list-item-save'));
@@ -136,7 +136,7 @@ describe('FavouriteSearchList', () => {
         listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
         expect(getByTestId('fvs-description', listItem)).toHaveTextContent('testing');
-        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('testing_testing');
+        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('testing-testing');
     });
 
     it('should render previous info if handleRowUpdate throws exception', async () => {
@@ -159,7 +159,7 @@ describe('FavouriteSearchList', () => {
         fireEvent.click(getByTestId('favourite-search-list-item-edit'));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
-        fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing_testing' } });
+        fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing-testing' } });
 
         act(() => {
             fireEvent.click(getByTestId('favourite-search-list-item-save'));

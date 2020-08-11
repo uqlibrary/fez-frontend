@@ -10,6 +10,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { tableIcons } from './FavouriteSearchListIcons';
 
 import locale from 'locale/global';
+import { APP_URL, PATH_PREFIX } from 'config';
 import componentsLocale from 'locale/components';
 
 export const getColumns = () => {
@@ -24,7 +25,7 @@ export const getColumns = () => {
             render: rowData => (
                 <ExternalLink
                     key={rowData.fvs_search_parameters}
-                    href={rowData.fvs_search_parameters}
+                    href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_search_parameters.replace('/', '')}`}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
                     {favouriteSearchList.columns.realLink.cellText}
@@ -85,14 +86,10 @@ export const getColumns = () => {
                 />
             ),
             validate: rowData => {
-                if (rowData.fvs_alias === '') {
-                    return { isValid: false, helperText: favouriteSearchList.columns.alias.validationMessage.empty };
-                } else {
-                    const snakeCaseRegex = new RegExp(/^[a-z][a-z_]+[a-z]$/gi);
-                    return !snakeCaseRegex.test(rowData.fvs_alias)
-                        ? { isValid: false, helperText: favouriteSearchList.columns.alias.validationMessage.invalid }
-                        : true;
-                }
+                return rowData.fvs_alias !== '' &&
+                    !new RegExp(favouriteSearchList.columns.alias.regex).test(rowData.fvs_alias)
+                    ? { isValid: false, helperText: favouriteSearchList.columns.alias.validationMessage.invalid }
+                    : true;
             },
         },
     ];
