@@ -287,6 +287,11 @@ exports[`NtroDetails  rendered full mount 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -1986,6 +1991,11 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
+                                    },
+                                  },
+                                  "MuiIconButton": Object {
+                                    "colorInherit": Object {
+                                      "color": "none",
                                     },
                                   },
                                   "MuiMenuItem": Object {

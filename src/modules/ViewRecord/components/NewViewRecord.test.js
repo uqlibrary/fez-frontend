@@ -50,7 +50,6 @@ describe('NewViewRecord', () => {
     });
 
     beforeEach(() => {
-        mockActionsStore = setupStoreForActions();
         userIsAdmin.mockImplementation(() => false);
         userIsAuthor.mockImplementation(() => true);
     });

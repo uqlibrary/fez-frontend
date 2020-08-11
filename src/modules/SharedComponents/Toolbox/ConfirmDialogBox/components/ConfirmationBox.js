@@ -22,6 +22,7 @@ export const useStyles = makeStyles(theme => ({
 
 export const ConfirmationBox = ({
     confirmationBoxId,
+    InputForm,
     hideCancelButton,
     isOpen,
     locale,
@@ -30,6 +31,7 @@ export const ConfirmationBox = ({
     onCancelAction,
     onClose,
     showAlternateActionButton,
+    showInputForm,
 }) => {
     const classes = useStyles();
 
@@ -53,6 +55,7 @@ export const ConfirmationBox = ({
             <DialogTitle data-testid="message-title">{locale.confirmationTitle}</DialogTitle>
             <DialogContent>
                 <DialogContentText data-testid="message-content">{locale.confirmationMessage}</DialogContentText>
+                {!!showInputForm && <InputForm />}
             </DialogContent>
             <DialogActions>
                 <Grid container spacing={1}>
@@ -106,6 +109,7 @@ export const ConfirmationBox = ({
 ConfirmationBox.propTypes = {
     confirmationBoxId: PropTypes.string.isRequired,
     hideCancelButton: PropTypes.bool,
+    InputForm: PropTypes.func,
     isOpen: PropTypes.bool,
     locale: PropTypes.object,
     onAction: PropTypes.func,
@@ -113,6 +117,7 @@ ConfirmationBox.propTypes = {
     onAlternateAction: PropTypes.func,
     onClose: PropTypes.func,
     showAlternateActionButton: PropTypes.bool,
+    showInputForm: PropTypes.bool,
 };
 
 ConfirmationBox.defaultProps = {
@@ -126,6 +131,7 @@ ConfirmationBox.defaultProps = {
         alternateActionButtonLabel: 'Cancel',
     },
     showAlternateActionButton: false,
+    showInputForm: false,
 };
 
 export default ConfirmationBox;

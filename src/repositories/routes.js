@@ -318,3 +318,7 @@ export const ORCID_SYNC_API = () => ({
 export const UNLOCK_RECORD_API = ({ pid }) => ({
     apiUrl: `records/${pid}/unlock`,
 });
+
+export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
+    apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
+});

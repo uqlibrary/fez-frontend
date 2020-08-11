@@ -55,6 +55,6 @@ export function get({ apiUrl, options = {} }, config = {}) {
  * @param {object} config any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function destory({ apiUrl, options = {} }, data = {}, config = {}) {
+export function destroy({ apiUrl, options = {} }, data = {}, config = {}) {
     return api.delete(apiUrl, { ...config, ...options, data: { ...data } });
 }

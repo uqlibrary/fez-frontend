@@ -299,7 +299,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.authorOrcidDetails })
     // .reply(500, { message: ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"] })
     .onGet(routes.ORCID_SYNC_API().apiUrl)
-    .reply(200, mockData.orcidSyncStatus);
+    .reply(200, mockData.orcidSyncStatus)
+    .onGet(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)
+    .reply(200, mockData.favouriteSearchList);
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(() => {
@@ -312,6 +314,14 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(() => {
     return [200, { data: {} }];
 });
 // .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
+mock.onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*'}).apiUrl)))
+    .reply(config => {
+        console.log('test');
+        return [200, { data: { ...mockData.favouriteSearchItem}}]
+    });
+
+mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API( { id: '.*'}))
+    .reply(200, {data: {}});
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
