@@ -1854,6 +1854,7 @@ exports[`Index page should render placeholders 1`] = `
                                                   <WithStyles(WithWidth(TopCitedPublicationsClass))
                                                     actions={
                                                       Object {
+                                                        "addFavouriteSearch": [Function],
                                                         "adminCreate": [Function],
                                                         "adminReset": [Function],
                                                         "adminUpdate": [Function],
@@ -1988,6 +1989,7 @@ exports[`Index page should render placeholders 1`] = `
                                                     <WithWidth(TopCitedPublicationsClass)
                                                       actions={
                                                         Object {
+                                                          "addFavouriteSearch": [Function],
                                                           "adminCreate": [Function],
                                                           "adminReset": [Function],
                                                           "adminUpdate": [Function],
@@ -3256,6 +3258,7 @@ exports[`Index page should render placeholders 1`] = `
                                                             <WithStyles(NewsFeed)
                                                               actions={
                                                                 Object {
+                                                                  "addFavouriteSearch": [Function],
                                                                   "adminCreate": [Function],
                                                                   "adminReset": [Function],
                                                                   "adminUpdate": [Function],
@@ -3344,6 +3347,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               <NewsFeed
                                                                 actions={
                                                                   Object {
+                                                                    "addFavouriteSearch": [Function],
                                                                     "adminCreate": [Function],
                                                                     "adminReset": [Function],
                                                                     "adminUpdate": [Function],

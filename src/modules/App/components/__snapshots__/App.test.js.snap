@@ -17973,6 +17973,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       <SearchComponent
                                                         actions={
                                                           Object {
+                                                            "addFavouriteSearch": [Function],
                                                             "adminCreate": [Function],
                                                             "adminReset": [Function],
                                                             "adminUpdate": [Function],
@@ -20293,6 +20294,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           <AppAlert
                             actions={
                               Object {
+                                "addFavouriteSearch": [Function],
                                 "adminCreate": [Function],
                                 "adminReset": [Function],
                                 "adminUpdate": [Function],
@@ -21921,6 +21923,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       <WithStyles(WithWidth(TopCitedPublicationsClass))
                                                                         actions={
                                                                           Object {
+                                                                            "addFavouriteSearch": [Function],
                                                                             "adminCreate": [Function],
                                                                             "adminReset": [Function],
                                                                             "adminUpdate": [Function],
@@ -22055,6 +22058,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         <WithWidth(TopCitedPublicationsClass)
                                                                           actions={
                                                                             Object {
+                                                                              "addFavouriteSearch": [Function],
                                                                               "adminCreate": [Function],
                                                                               "adminReset": [Function],
                                                                               "adminUpdate": [Function],
@@ -23323,6 +23327,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 <WithStyles(NewsFeed)
                                                                                   actions={
                                                                                     Object {
+                                                                                      "addFavouriteSearch": [Function],
                                                                                       "adminCreate": [Function],
                                                                                       "adminReset": [Function],
                                                                                       "adminUpdate": [Function],
@@ -23411,6 +23416,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <NewsFeed
                                                                                     actions={
                                                                                       Object {
+                                                                                        "addFavouriteSearch": [Function],
                                                                                         "adminCreate": [Function],
                                                                                         "adminReset": [Function],
                                                                                         "adminUpdate": [Function],
