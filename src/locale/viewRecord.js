@@ -1314,6 +1314,10 @@ export default {
                     order: 9,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 9.5,
+                },
+                {
                     field: 'fez_record_search_key_start_page',
                     order: 10,
                 },
@@ -2232,6 +2236,10 @@ export default {
                 {
                     field: 'rek_date',
                     order: 6,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 6.5,
                 },
                 {
                     field: 'fez_record_search_key_isbn',
