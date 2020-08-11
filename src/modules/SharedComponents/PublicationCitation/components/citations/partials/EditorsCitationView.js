@@ -4,6 +4,7 @@ import AuthorsCitationView from './AuthorsCitationView';
 import { pathConfig } from 'config/routes';
 
 const EditorsCitationView = ({
+    citationStyle,
     publication,
     prefix = ' Edited by ',
     suffix = '. ',
@@ -13,6 +14,7 @@ const EditorsCitationView = ({
     return (
         <AuthorsCitationView
             publication={publication}
+            citationStyle={citationStyle}
             className="citationEditors"
             prefix={prefix}
             suffix={suffix}
@@ -34,6 +36,7 @@ const EditorsCitationView = ({
 };
 
 EditorsCitationView.propTypes = {
+    citationStyle: PropTypes.string,
     publication: PropTypes.object.isRequired,
     prefix: PropTypes.string,
     suffix: PropTypes.string,

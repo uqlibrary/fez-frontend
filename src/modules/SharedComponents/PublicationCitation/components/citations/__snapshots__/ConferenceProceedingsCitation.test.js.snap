@@ -2498,6 +2498,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           Frédérique Larrarte
                         </span>
                       </CitationView>
+                       and 
                       <CitationView
                         citationId="rek-contributor-1"
                         className="citationAuthor"
@@ -5144,6 +5145,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           Frédérique Larrarte
                         </span>
                       </CitationView>
+                       and 
                       <CitationView
                         citationId="rek-contributor-1"
                         className="citationAuthor"
