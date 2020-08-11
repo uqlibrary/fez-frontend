@@ -1,7 +1,6 @@
 import { generateCancelToken } from 'config';
 import { MIME_TYPE_WHITELIST } from 'modules/SharedComponents/Toolbox/FileUploader/config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
-import * as actions from 'actions';
 import { FILE_UPLOAD_API } from './routes';
 import { post, put } from './generic';
 import Raven from 'raven-js';
@@ -48,7 +47,7 @@ export function putUploadFile(pid, file, dispatch, formName) {
             })
             .then(uploadResponse => {
                 fileUploadActions.notifyFileUploadProgress(file.name, dispatch)({ loaded: 1, total: 1 });
-                actions.markCompletedUpload(formName, file.name)(dispatch);
+                fileUploadActions.markCompletedUpload(formName, file.name)(dispatch);
                 return Promise.resolve(uploadResponse);
             })
             .catch(error => {
