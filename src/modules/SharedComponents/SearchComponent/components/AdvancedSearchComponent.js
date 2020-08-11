@@ -43,7 +43,6 @@ export const useStyles = makeStyles(
 );
 
 export const AdvancedSearchComponent = ({
-    className,
     fieldRows,
     docTypes,
     yearFilter,
@@ -123,7 +122,6 @@ export const AdvancedSearchComponent = ({
 
     const _captionProps = () => {
         return {
-            className: className,
             fieldRows: fieldRows,
             docTypes: docTypes,
             yearFilter: yearFilter,
@@ -305,8 +303,6 @@ export const AdvancedSearchComponent = ({
 };
 
 AdvancedSearchComponent.propTypes = {
-    className: PropTypes.string,
-
     fieldRows: PropTypes.array,
     docTypes: PropTypes.array,
     yearFilter: PropTypes.object,

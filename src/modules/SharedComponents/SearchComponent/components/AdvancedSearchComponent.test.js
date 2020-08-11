@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithRedux, RenderWithRouter, fireEvent, waitFor, act } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -18,7 +18,13 @@ function setup(testProps = {}) {
         onAdvancedSearchRowChange: jest.fn(),
         ...testProps,
     };
-    return rtlRender(<AdvancedSearchComponent {...props} />);
+    return render(
+        <RenderWithRouter>
+            <WithRedux>
+                <AdvancedSearchComponent {...props} />
+            </WithRedux>
+        </RenderWithRouter>,
+    );
 }
 
 describe('AdvancedSearchComponent', () => {

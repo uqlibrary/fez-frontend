@@ -65,8 +65,6 @@ export const styles = theme => ({
 
 export class SimpleSearchComponent extends PureComponent {
     static propTypes = {
-        className: PropTypes.string,
-
         searchText: PropTypes.string,
         autoFocus: PropTypes.bool,
 

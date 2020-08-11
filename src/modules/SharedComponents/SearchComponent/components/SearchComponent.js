@@ -38,7 +38,6 @@ export default class SearchComponent extends PureComponent {
         isAdmin: PropTypes.bool,
         isUnpublishedBufferPage: PropTypes.bool,
 
-        className: PropTypes.string,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
         location: PropTypes.object,
@@ -498,7 +497,6 @@ export default class SearchComponent extends PureComponent {
                     <SimpleSearchComponent
                         autoFocus={this.props.autoFocus}
                         {...this.state.simpleSearch}
-                        className={this.props.className}
                         isInHeader={this.props.isInHeader}
                         showSearchButton={this.props.showSearchButton}
                         showMobileSearchButton={this.props.showMobileSearchButton}
@@ -513,7 +511,6 @@ export default class SearchComponent extends PureComponent {
                 {this.state.isAdvancedSearch && !this.props.isInHeader && (
                     <AdvancedSearchComponent
                         {...this.state.advancedSearch}
-                        className={this.props.className}
                         onToggleSearchMode={this._toggleSearchMode}
                         onToggleMinimise={this._toggleMinimise}
                         onToggleOpenAccess={this._toggleOpenAccess}

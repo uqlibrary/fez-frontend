@@ -249,7 +249,6 @@ class SearchRecords extends PureComponent {
                     <Grid item xs={12}>
                         <StandardCard className="searchComponent" noHeader>
                             <SearchComponent
-                                className="search-body"
                                 showAdvancedSearchButton
                                 activeFacets={this.state.activeFacets}
                                 facetsChanged={this.facetsChanged}

@@ -23,7 +23,6 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -78,7 +77,6 @@ exports[`SearchRecords page renders loading screen while export publications loa
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -128,7 +126,6 @@ exports[`SearchRecords page should render advanced search component 1`] = `
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={true}
           isUnpublishedBufferPage={false}
@@ -165,7 +162,6 @@ exports[`SearchRecords page should render loading screen while export publicatio
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -267,7 +263,6 @@ exports[`SearchRecords page should render loading screen while loading publicati
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -377,7 +372,6 @@ exports[`SearchRecords page should render loading screen while loading search re
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -422,7 +416,6 @@ exports[`SearchRecords page should render no results 1`] = `
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -476,7 +469,6 @@ exports[`SearchRecords page should render placeholders 1`] = `
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -513,7 +505,6 @@ exports[`SearchRecords page should render when paging 1`] = `
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -662,7 +653,6 @@ exports[`SearchRecords page should show available filters or selected filters if
               "showOpenAccessOnly": true,
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -717,7 +707,6 @@ exports[`SearchRecords page should show available filters or selected filters if
               },
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -775,7 +764,6 @@ exports[`SearchRecords page should show available filters or selected filters if
               },
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -829,7 +817,6 @@ exports[`SearchRecords page should show available filters or selected filters if
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}
@@ -934,7 +921,6 @@ exports[`SearchRecords page should show available filters or selected filters if
               "ranges": Object {},
             }
           }
-          className="search-body"
           facetsChanged={[Function]}
           isAdvancedSearch={false}
           isUnpublishedBufferPage={false}

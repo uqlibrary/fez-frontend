@@ -1910,6 +1910,7 @@ export default {
                             (value.from &&
                                 value.to &&
                                 value.from.isBefore(value.to) && {
+                                    field: 'rek_created_date',
                                     title: 'Created',
                                     combiner: 'between',
                                     value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
@@ -1931,6 +1932,7 @@ export default {
                             (value.from &&
                                 value.to &&
                                 value.from.isBefore(value.to) && {
+                                    field: 'rek_updated_date',
                                     title: 'Updated',
                                     combiner: 'between',
                                     value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
@@ -1957,6 +1959,14 @@ export default {
                 simpleSearch: {
                     title: 'Simple search',
                     aria: 'Click to return to the simple search',
+                },
+                favouriteSearch: {
+                    inputForm: {
+                        confirmationTitle: 'Please add description',
+                        confirmButtonLabel: 'Save favourite search',
+                        cancelButtonLabel: 'Cancel',
+                    },
+                    favouriteSearchHint: 'Click to save favourite search',
                 },
             },
         },
@@ -2749,6 +2759,7 @@ export default {
                         empty: 'This field is required',
                         invalid: 'Alias is not valid',
                     },
+                    regex: /^[a-z0-9]+[a-z0-9-]*$/gi,
                 },
             },
         },
