@@ -57,7 +57,12 @@ export default class BookCitation extends Component {
 
                 {/* {Editor|| ed.} */}
                 {record.isEditedBook && (
-                    <Partials.EditorsCitationView publication={this.props.publication} prefix="" suffix=" ed." />
+                    <Partials.EditorsCitationView
+                        citationStyle={this.props.citationStyle}
+                        prefix=""
+                        publication={this.props.publication}
+                        suffix=" ed."
+                    />
                 )}
 
                 {/* {Publication Year| (|).} */}
