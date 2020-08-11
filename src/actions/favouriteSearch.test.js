@@ -3,6 +3,7 @@ import {
     deleteFavouriteSearchListItem,
     loadFavouriteSearchList,
     updateFavouriteSearchListItem,
+    addFavouriteSearch,
 } from './favouriteSearch';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -197,6 +198,46 @@ describe('favouriteSearch actions', () => {
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             });
 
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('addFavouriteSearch action', () => {
+        it('should dispatch correct number of actions on favourite search successfully added', async () => {
+            mockApi
+                .onPost(repositories.routes.FAVOURITE_SEARCH_LIST_API().apiUrl)
+                .reply(200, { data: { ...mockData.favouriteSearchListItem } });
+
+            const expectedActions = [actions.FAVOURITE_SEARCH_ADDING, actions.FAVOURITE_SEARCH_ADD_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                addFavouriteSearch({ fvs_description: 'test', fvs_search_parameters: 'test', fvs_username: 'uqtest' }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on favourite search add failed', async () => {
+            mockApi.onPost(repositories.routes.FAVOURITE_SEARCH_LIST_API().apiUrl).reply(500);
+
+            const expectedActions = [
+                actions.FAVOURITE_SEARCH_ADDING,
+                actions.APP_ALERT_SHOW,
+                actions.FAVOURITE_SEARCH_ADD_FAILED,
+            ];
+
+            await expect(
+                mockActionsStore.dispatch(
+                    addFavouriteSearch({
+                        fvs_description: 'test',
+                        fvs_search_parameters: 'test',
+                        fvs_username: 'uqtest',
+                    }),
+                ),
+            ).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

@@ -1,4 +1,7 @@
 import {
+    FAVOURITE_SEARCH_ADDING,
+    FAVOURITE_SEARCH_ADD_SUCCESS,
+    FAVOURITE_SEARCH_ADD_FAILED,
     FAVOURITE_SEARCH_LIST_LOADING,
     FAVOURITE_SEARCH_LIST_LOADED,
     FAVOURITE_SEARCH_LIST_FAILED,
@@ -13,7 +16,7 @@ import {
     EXISTING_ALIAS_NOT_FOUND,
     EXISTING_ALIAS_CHECK_FAILED,
 } from './actionTypes';
-import { get, put, destroy } from 'repositories/generic';
+import { get, put, destroy, post } from 'repositories/generic';
 import { FAVOURITE_SEARCH_LIST_API } from 'repositories/routes';
 
 export function loadFavouriteSearchList() {
@@ -118,6 +121,29 @@ export function deleteFavouriteSearchListItem(oldData) {
         } catch (e) {
             dispatch({
                 type: FAVOURITE_SEARCH_ITEM_DELETE_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+}
+
+export function addFavouriteSearch(data) {
+    return async dispatch => {
+        dispatch({ type: FAVOURITE_SEARCH_ADDING });
+
+        try {
+            const response = await post(FAVOURITE_SEARCH_LIST_API(), data);
+            dispatch({
+                type: FAVOURITE_SEARCH_ADD_SUCCESS,
+                payload: response.data,
+            });
+
+            return Promise.resolve(response.data);
+        } catch (e) {
+            dispatch({
+                type: FAVOURITE_SEARCH_ADD_FAILED,
                 payload: e,
             });
 
