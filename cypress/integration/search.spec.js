@@ -80,7 +80,7 @@ context('Search', () => {
         cy.contains('[data-testid=rek-ismemberof-options] li', 'Adaptive Interactive Profit Expectations').click();
         cy.get('[data-testid=rek-ismemberof-input]').click();
         cy.contains('[data-testid=rek-ismemberof-options] li', 'Admin only - CHRC').click();
-        cy.get('#advancedSearchForm .searchQueryCaption').should($caption => {
+        cy.get('[data-testid=advanced-search-caption]').should($caption => {
             expect(cleanExtraSpaces($caption.text())).to.equal(
                 "Any field contains it's raining cats and dogs AND Author Name contains Ky Lane AND Collection" +
                     ' is one of UQ:131735, UQ:131375 or UQ:292807 AND is open access/full text',
@@ -125,8 +125,8 @@ context('Search', () => {
         cy.get('@searchButton').should('not.be.disabled');
         cy.get('@helpText').should('not.exist');
 
-        cy.get('#advancedSearchForm .searchQueryCaption').should($caption => {
-            expect(cleanExtraSpaces($caption.text())).to.equal('PID is uq:123');
+        cy.get('[data-testid=advanced-search-caption]').should($caption => {
+            expect(cleanExtraSpaces($caption.text())).to.equal('PIDisuq:123');
         });
     });
 
