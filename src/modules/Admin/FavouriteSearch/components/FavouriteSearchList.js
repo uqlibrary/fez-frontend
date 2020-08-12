@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -13,7 +14,13 @@ import locale from 'locale/global';
 import { APP_URL, PATH_PREFIX } from 'config';
 import componentsLocale from 'locale/components';
 
-export const getColumns = () => {
+export const useStyles = makeStyles(() => ({
+    text: {
+        fontSize: 13,
+    },
+}));
+
+export const getColumns = classes => {
     const {
         components: { favouriteSearchList },
     } = componentsLocale;
@@ -36,13 +43,18 @@ export const getColumns = () => {
             title: favouriteSearchList.columns.description.title,
             field: 'fvs_description',
             render: rowData => (
-                <Typography data-testid="fvs-description" id="fvs-description">
+                <Typography data-testid="fvs-description" id="fvs-description" className={classes.text}>
                     {rowData.fvs_description}
                 </Typography>
             ),
             editComponent: props => (
                 <TextField
                     {...props}
+                    InputProps={{
+                        style: {
+                            fontSize: 13,
+                        },
+                    }}
                     value={props.value}
                     onChange={e => props.onChange(e.target.value)}
                     textFieldId="fvs-description"
@@ -64,7 +76,7 @@ export const getColumns = () => {
                     href={rowData.fvs_alias}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
-                    {rowData.fvs_alias}
+                    <span className={classes.text}>{rowData.fvs_alias}</span>
                 </ExternalLink>
             ),
         },
@@ -73,12 +85,17 @@ export const getColumns = () => {
             field: 'fvs_alias',
             render: rowData => (
                 <Typography data-testid="fvs-alias" id="fvs-alias">
-                    {rowData.fvs_alias}
+                    <span className={classes.text}>{rowData.fvs_alias}</span>
                 </Typography>
             ),
             editComponent: props => (
                 <TextField
                     {...props}
+                    InputProps={{
+                        style: {
+                            fontSize: 13,
+                        },
+                    }}
                     value={props.value}
                     onChange={e => props.onChange(e.target.value)}
                     textFieldId="fvs-alias"
@@ -96,13 +113,14 @@ export const getColumns = () => {
 };
 
 export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) => {
+    const classes = useStyles();
     const {
         components: { favouriteSearchList },
     } = componentsLocale;
 
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns();
+    columns.current = getColumns(classes);
 
     const [data, setData] = React.useState(list);
 
@@ -115,6 +133,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 Row: props => (
                     <MTableBodyRow
                         {...props}
+                        className={classes.text}
                         id={`favourite-search-list-item-${props.index}`}
                         data-testid={`favourite-search-list-item-${props.index}`}
                     />
