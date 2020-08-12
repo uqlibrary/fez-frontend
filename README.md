@@ -114,7 +114,7 @@ or
 
 #### Optimisation
 
-to keep initial load to a minimum following optimisation has been added to the project:
+To keep initial load to a minimum, the following optimisations have been added to the project:
 
 - Async (lazy) loading of non-essential (essential components are only those components user can see on public pages
   when not authenticated)

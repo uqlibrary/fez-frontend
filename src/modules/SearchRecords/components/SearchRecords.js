@@ -251,7 +251,6 @@ class SearchRecords extends PureComponent {
                             <SearchComponent
                                 showAdvancedSearchButton
                                 activeFacets={this.state.activeFacets}
-                                facetsChanged={this.facetsChanged}
                                 searchLoading={this.props.searchLoading}
                                 clearSearchQuery={this.props.actions.clearSearchQuery}
                                 updateFacetExcludesFromSearchFields={this.handleFacetExcludesFromSearchFields}
@@ -369,8 +368,8 @@ class SearchRecords extends PureComponent {
                                             disabled={isLoadingOrExporting}
                                             excludeFacetsList={
                                                 (this.state.advancedSearchFields.length &&
-                                                this.state.advancedSearchFields) ||
-                                            locale.pages.searchRecords.facetsFilter.excludeFacetsList
+                                                    this.state.advancedSearchFields) ||
+                                                locale.pages.searchRecords.facetsFilter.excludeFacetsList
                                             }
                                             renameFacetsList={txt.facetsFilter.renameFacetsList}
                                             lookupFacetsList={txt.facetsFilter.lookupFacetsList}
