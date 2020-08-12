@@ -67,6 +67,9 @@ export default {
                 primaryText: 'CSV ingest',
             },
         },
+        favouriteSearch: {
+            primaryText: 'Favourite search',
+        },
     },
     footer: {
         cricos: {

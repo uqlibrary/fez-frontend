@@ -685,6 +685,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.digiteam.batchImport,
                       ...locale.menu.digiteam.batchImport,
                   },
+                  {
+                      linkTo: pathConfig.admin.favouriteSearch,
+                      ...locale.menu.favouriteSearch,
+                  },
               ]
             : []),
         ...((account && account.canMasquerade) || isAdmin(authorDetails)
