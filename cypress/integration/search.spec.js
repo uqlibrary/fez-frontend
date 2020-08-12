@@ -82,8 +82,7 @@ context('Search', () => {
         cy.contains('[data-testid=rek-ismemberof-options] li', 'Admin only - CHRC').click();
         cy.get('[data-testid=advanced-search-caption]').should($caption => {
             expect(cleanExtraSpaces($caption.text())).to.equal(
-                "Any field contains it's raining cats and dogs AND Author Name contains Ky Lane AND Collection" +
-                    ' is one of UQ:131735, UQ:131375 or UQ:292807 AND is open access/full text',
+                "Any fieldcontainsit's raining cats and dogsANDAuthor NamecontainsKy LaneANDCollectionis one ofUQ:131735, UQ:131375 or UQ:292807ANDisopen access/full text",
             );
         });
         cy.get('button#advancedSearchButton')
