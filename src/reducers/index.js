@@ -13,6 +13,7 @@ export { default as createRecordReducer } from './createRecord';
 export { default as createAdminRecordReducer } from './createAdminRecord';
 export { default as doiReducer } from './doi';
 export { default as exportPublicationsReducer } from './exportPublications';
+export { default as fileUploadReducer } from './fileUpload';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
 export { default as myLatestPublicationsReducer } from './myLatestPublications';

@@ -213,6 +213,7 @@ describe('Fix record actions', () => {
                 actions.FIX_RECORD_PROCESSING,
                 actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.FIX_RECORD_SUCCESS,
             ];
 

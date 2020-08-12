@@ -52,3 +52,20 @@ export const startFileUpload = () => {
         type: actions.FILE_UPLOAD_STARTED,
     };
 };
+
+/**
+ * Mark an upload as completed.
+ *
+ * @param {{type: string}} formName
+ * @param {{type: string}} fileName
+ */
+export const markCompletedUpload = (formName, fileName) => {
+    return dispatch => {
+        dispatch({
+            type: `${actions.FILE_UPLOAD_COMPLETE}@${fileName}`,
+            payload: {
+                form: formName,
+            },
+        });
+    };
+};

@@ -12,9 +12,10 @@ const moment = require('moment');
  * @param {string} pid of object, folder name to where file will be uploaded
  * @param {object} file to be uploaded
  * @param {function} dispatch
+ * @param {string} formName the name of the form being used to upload the file
  * @returns {Promise}
  */
-export function putUploadFile(pid, file, dispatch) {
+export function putUploadFile(pid, file, dispatch, formName) {
     let retried = false;
     const uploadFile = () =>
         post(FILE_UPLOAD_API(), {
@@ -46,6 +47,7 @@ export function putUploadFile(pid, file, dispatch) {
             })
             .then(uploadResponse => {
                 fileUploadActions.notifyFileUploadProgress(file.name, dispatch)({ loaded: 1, total: 1 });
+                fileUploadActions.markCompletedUpload(formName, file.name)(dispatch);
                 return Promise.resolve(uploadResponse);
             })
             .catch(error => {
@@ -68,9 +70,10 @@ export function putUploadFile(pid, file, dispatch) {
  * @param {string} pid of object, folder name to where file will be uploaded
  * @param {array} files to be uploaded
  * @param {function} dispatch
+ * @param {string} formName the name of the form being used to upload the files
  * @returns {Promise.all}
  */
-export function putUploadFiles(pid, files, dispatch) {
+export function putUploadFiles(pid, files, dispatch, formName = '') {
     const filenameList = files && Array.isArray(files) && files.map(item => item.name);
     const checkIfDuplicateExists = w => {
         return new Set(w).size !== w.length;
@@ -80,9 +83,6 @@ export function putUploadFiles(pid, files, dispatch) {
         Raven.captureMessage(`Duplicate files found when uploading files for PID ${pid} : ${filenameList}`);
     }
     dispatch(fileUploadActions.startFileUpload());
-    const uploadFilesPromises = files.map(file => {
-        return putUploadFile(pid, file, dispatch);
-    });
-
+    const uploadFilesPromises = files.map(file => putUploadFile(pid, file, dispatch, formName));
     return Promise.all(uploadFilesPromises);
 }

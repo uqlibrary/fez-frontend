@@ -73,9 +73,11 @@ export const ThesisSubmission = ({
     fileAccessId,
     formErrors,
     formValues,
+    fullyUploadedFiles,
     handleSubmit,
     isHdrThesis,
     isSessionValid,
+    newRecord,
     newRecordFileUploadingOrIssueError,
     retryUpload,
     submitSucceeded,
@@ -87,7 +89,7 @@ export const ThesisSubmission = ({
 
     /* istanbul ignore next */
     const _retryUpload = () => {
-        retryUpload(formValues);
+        retryUpload(formValues, newRecord, fullyUploadedFiles);
     };
 
     const depositConfirmationRef = React.useRef();
@@ -350,6 +352,7 @@ ThesisSubmission.propTypes = {
     fileAccessId: PropTypes.number,
     formErrors: PropTypes.object,
     formValues: PropTypes.object,
+    fullyUploadedFiles: PropTypes.array,
     handleSubmit: PropTypes.func,
     isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
     isSessionValid: PropTypes.bool,

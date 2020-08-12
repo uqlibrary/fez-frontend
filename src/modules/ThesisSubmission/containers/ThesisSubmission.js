@@ -14,7 +14,7 @@ import { LocallyStoredReducerContext } from 'context';
 const FORM_NAME = 'ThesisSubmission';
 
 const onSubmit = (values, dispatch) => {
-    return dispatch(submitThesis({ ...values.toJS() })).catch(error => {
+    return dispatch(submitThesis({ ...values.toJS() }, {}, FORM_NAME)).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };
@@ -35,6 +35,10 @@ const mapStateToProps = (state, props) => {
             ? state.get('createRecordReducer').newRecordFileUploadingOrIssueError
             : false;
     const newRecord = state && state.get('createRecordReducer') ? state.get('createRecordReducer').newRecord : null;
+    const fullyUploadedFiles =
+        state && state.get('fileUploadReducer') && state.get('fileUploadReducer')[FORM_NAME]
+            ? state.get('fileUploadReducer')[FORM_NAME].completedUploads
+            : [];
 
     // eslint-disable-next-line no-unused-vars
     const { files, ...locallyStoredValues } =
@@ -71,15 +75,26 @@ const mapStateToProps = (state, props) => {
         newRecordFileUploadingOrIssueError,
         newRecord,
         isSessionValid,
+        fullyUploadedFiles,
     };
 };
 
 const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag, ...actions }, dispatch),
-    retryUpload: values =>
-        dispatch(submitThesis({ ...values.toJS() }), true).catch(error => {
-            throw new SubmissionError({ _error: error });
-        }),
+    retryUpload: (values, newRecordData, fullyUploadedFiles) =>
+        dispatch(submitThesis({ ...values.toJS() }, newRecordData, FORM_NAME, fullyUploadedFiles))
+            .then(() => {
+                dispatch({
+                    type: 'CREATE_RECORD_SUCCESS',
+                    payload: {
+                        newRecord: newRecordData,
+                        fileUploadOrIssueFailed: false,
+                    },
+                });
+            })
+            .catch(error => {
+                throw new SubmissionError({ _error: error });
+            }),
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);

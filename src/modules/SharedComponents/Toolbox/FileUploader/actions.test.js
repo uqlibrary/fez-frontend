@@ -1,5 +1,11 @@
 import * as actions from 'actions/actionTypes';
-import { notifyFileUploadProgress, clearFileUpload, notifyUploadFailed, startFileUpload } from './actions';
+import {
+    clearFileUpload,
+    markCompletedUpload,
+    notifyFileUploadProgress,
+    notifyUploadFailed,
+    startFileUpload,
+} from './actions';
 
 describe('FileUploader actions ', () => {
     it('notifies progress for uploading file from an event data', () => {
@@ -25,5 +31,12 @@ describe('FileUploader actions ', () => {
         expect(startFileUpload()).toEqual({
             type: actions.FILE_UPLOAD_STARTED,
         });
+    });
+
+    it('should dispatch expected actions', () => {
+        mockActionsStore = setupStoreForActions();
+        const expectedActions = [`${actions.FILE_UPLOAD_COMPLETE}@test.txt`];
+        mockActionsStore.dispatch(markCompletedUpload('form', 'test.txt'));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });
