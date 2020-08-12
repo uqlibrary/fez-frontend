@@ -7409,6 +7409,10 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "CSV ingest",
         },
         Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite search",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -9521,6 +9525,10 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "CSV ingest",
         },
         Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite search",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -10799,6 +10807,10 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "CSV ingest",
         },
         Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite search",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -12039,6 +12051,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite search",
         },
         Object {
           "divider": true,
