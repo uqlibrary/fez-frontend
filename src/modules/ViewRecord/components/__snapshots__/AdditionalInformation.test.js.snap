@@ -20836,58 +20836,6 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Type"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-genre-label"
-            variant="body2"
-          >
-            Type
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span
-              data-testid="rek-genre"
-            >
-              CD-ROM
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="21"
       style={
         Object {
@@ -36021,7 +35969,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -36491,7 +36439,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -36567,7 +36515,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -37478,7 +37426,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -37536,7 +37484,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -37594,7 +37542,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -37658,7 +37606,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -44691,58 +44639,6 @@ exports[`Additional Information Component  should render component with manuscri
             >
               Father Edward Leo Hayes Collection, UQFL2
             </Link>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="11"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Type"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-genre-label"
-            variant="body2"
-          >
-            Type
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span
-              data-testid="rek-genre"
-            >
-              text/tiff
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -58880,58 +58776,6 @@ exports[`Additional Information Component  should render component with video do
             >
               SEG Special Publication Video Series
             </Link>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="13"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Type"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-genre-label"
-            variant="body2"
-          >
-            Type
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span
-              data-testid="rek-genre"
-            >
-              Generic Document
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
