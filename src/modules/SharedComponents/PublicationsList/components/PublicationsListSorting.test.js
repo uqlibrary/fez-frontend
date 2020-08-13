@@ -1,4 +1,5 @@
-import { PublicationsListSorting } from './PublicationsListSorting';
+import React from 'react';
+import PublicationsListSorting from './PublicationsListSorting';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 function setup(testProps = {}) {
@@ -64,47 +65,58 @@ describe('PublicationsListSorting renders ', () => {
     });
 
     it('component with non-empty paging data, pageChanged called', () => {
-        const testFunction = jest.fn();
-        const testValue = 1000;
-        const wrapper = setup({ onPageSizeChanged: testFunction });
-        wrapper.instance().pageSizeChanged({ target: { value: testValue } });
-        expect(wrapper.state().pageSize).toEqual(testValue);
-        expect(testFunction).toBeCalled();
+        const testFn = jest.fn();
+        const wrapper = setup({ onPageSizeChanged: testFn });
+        wrapper
+            .find('#pageSize')
+            .props()
+            .onChange({ target: { value: 50 } });
+        expect(testFn).toBeCalled();
     });
 
     it('component with non-empty paging data, orderDirectionsChanged called', () => {
-        const testFunction = jest.fn();
+        const testFn = jest.fn();
         const testValue = 'test';
-        const wrapper = setup({ onSortByChanged: testFunction });
-        wrapper.instance().orderDirectionsChanged({ target: { value: testValue } });
-        expect(wrapper.state().sortDirection).toEqual(testValue);
-        expect(testFunction).toBeCalled();
+        const wrapper = setup({ onSortByChanged: testFn });
+        wrapper
+            .find('#sortOrder')
+            .props()
+            .onChange({ target: { value: testValue } });
+        expect(testFn).toBeCalled();
     });
 
     it('component with non-empty paging data, sortByChanged called', () => {
-        const testFunction = jest.fn();
+        const testFn = jest.fn();
         const testValue = 'test';
-        const wrapper = setup({ onSortByChanged: testFunction });
-        wrapper.instance().sortByChanged({ target: { value: testValue } });
-        expect(wrapper.state().sortBy).toEqual(testValue);
-        expect(testFunction).toBeCalled();
+        const wrapper = setup({ onSortByChanged: testFn });
+        wrapper
+            .find('#sortBy')
+            .props()
+            .onChange({ target: { value: testValue } });
+        expect(testFn).toBeCalled();
     });
 
     it('component with non-empty paging data, onExportPublications called', () => {
         const expected = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
-        const testFunction = jest.fn();
-        const wrapper = setup({ onExportPublications: testFunction });
-        wrapper.instance().exportPublicationsFormatChanged(expected);
-        expect(wrapper.state().exportPublicationsFormat).toEqual(expected);
-        expect(testFunction).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
+        const testFn = jest.fn();
+        const wrapper = setup({ onExportPublications: testFn, canUseExport: true });
+        wrapper
+            .find('ExportPublications')
+            .props()
+            .onChange(expected);
+        expect(testFn).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
     });
 
     it('component will set state on receiving new props', () => {
+        const mockUseEffect = jest.spyOn(React, 'useEffect');
+        let enableMock = false;
+        mockUseEffect.mockImplementation(f => enableMock && f());
         const wrapper = setup({
             initPageLength: 5,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
+        enableMock = true;
         wrapper.setProps({
             sortBy: 'Publication date',
             sortDirection: 'test',
@@ -112,5 +124,6 @@ describe('PublicationsListSorting renders ', () => {
             pagingData: {},
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+        mockUseEffect.mockRestore();
     });
 });
