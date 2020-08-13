@@ -41,7 +41,7 @@ export default {
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
             "rek_subtype_xsdmf_id": null,
-            "rek_subtype": null,
+            "rek_subtype": 'Non-NTRO',
             "rek_scopus_citation_count": null,
             "rek_herdc_notes_xsdmf_id": null,
             "rek_herdc_notes": null,

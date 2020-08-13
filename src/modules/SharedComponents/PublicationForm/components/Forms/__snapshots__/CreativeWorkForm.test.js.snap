@@ -122,6 +122,21 @@ exports[`CreativeWorkForm renders  component 1`] = `
             }
           />
         </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            allowPartial={true}
+            component={[Function]}
+            disabled={false}
+            floatingTitle="End date"
+            hasError=""
+            name="fez_record_search_key_end_date.rek_end_date"
+            partialDateFieldId="rek-end-date"
+          />
+        </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
