@@ -3,6 +3,7 @@ import { rtlRender, fireEvent } from 'test-utils';
 import FacetsFilter from './FacetsFilter';
 import { possibleUnclaimedList } from 'mock/data';
 import { general } from 'config';
+import { waitFor } from '@testing-library/dom';
 
 function setup(testProps = {}) {
     return rtlRender(
@@ -47,42 +48,42 @@ describe('FacetsFilter', () => {
 
         fireEvent.click(getByTestId('facet-category-display-type'));
         fireEvent.click(getByText('Journal Article (2)'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(2);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(1);
 
         expect(getByText('Reset')).toBeInTheDocument();
 
         fireEvent.click(getByText('Journal Article (2)'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(3);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(2);
 
         fireEvent.click(getByText('Journal Article (2)'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(4);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(3);
 
         fireEvent.click(getByText('Reset'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(5);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(4);
 
         fireEvent.click(getByTestId('facet-category-date-range'));
         fireEvent.click(getByText('Go'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(6);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(5);
 
         fireEvent.click(getByTestId('facet-category-open-access'));
         fireEvent.click(getByText('Show only open access records'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(7);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(6);
 
         fireEvent.click(getByTestId('clear-facet-filter-nested-item-date-range'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(8);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(7);
 
         fireEvent.change(getByTestId('from'), { target: { value: '2001' } });
         fireEvent.change(getByTestId('to'), { target: { value: '2012' } });
         fireEvent.click(getByText('Go'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(9);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(8);
 
         fireEvent.click(getByText('Reset'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(10);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(9);
 
         fireEvent.change(getByTestId('from'), { target: { value: '2001' } });
         fireEvent.change(getByTestId('to'), { target: { value: '20012' } });
         fireEvent.click(getByText('Go'));
-        expect(onFacetsChangedFn).toHaveBeenCalledTimes(11);
+        expect(onFacetsChangedFn).toHaveBeenCalledTimes(10);
         expect(getByText('2001 - *')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('clear-facet-filter-nested-item-date-range'));
@@ -183,19 +184,14 @@ describe('FacetsFilter', () => {
         const onFacetsChangedFn = jest.fn();
         const facetsData = possibleUnclaimedList.filters.facets;
 
-        const { getByTestId, getByText } = setup({
+        const { getByTestId, getByText, queryByTestId } = setup({
             facetsData,
             initialFacets: {
                 filters: {
                     'Display type': `${general.PUBLICATION_TYPE_DATA_COLLECTION}`,
                 },
             },
-            activeFacets: {
-                filters: {
-                    Keywords: 'Biochemistry',
-                },
-            },
-            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
+            excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published', 'Display type'],
             showOpenAccessFilter: true,
             onFacetsChanged: onFacetsChangedFn,
             lookupFacetsList: {
@@ -205,11 +201,10 @@ describe('FacetsFilter', () => {
             },
         });
 
-        try {
-            getByTestId('clickable-facet-category-display-type');
-        } catch (e) {
-            expect(e instanceof Error).toBeTruthy();
-        }
+        expect(queryByTestId('clickable-facet-category-display-type')).not.toBeInTheDocument();
+
+        fireEvent.click(getByTestId('facet-category-keywords'));
+        fireEvent.click(getByText('Biochemistry (1)'));
 
         expect(onFacetsChangedFn).toHaveBeenCalledWith({
             filters: {
@@ -219,8 +214,5 @@ describe('FacetsFilter', () => {
             ranges: {},
             showOpenAccessOnly: false,
         });
-
-        fireEvent.click(getByTestId('clickable-facet-category-keywords'));
-        expect(getByText(/Biochemistry*/)).toBeInTheDocument();
     });
 });
