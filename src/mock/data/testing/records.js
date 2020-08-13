@@ -1044,6 +1044,7 @@ export const newspaperArticle = {
             "rek_language_order": 2
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_newspaper": {
@@ -1064,6 +1065,7 @@ export const newspaperArticle = {
         "rek_oa_status_xsdmf_id": 16992,
         "rek_oa_status": 453697
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_place_of_publication": null,
     "fez_record_search_key_publisher": {
         "rek_publisher_id": 4431620,
@@ -1251,6 +1253,7 @@ export const thesis = {
         }
     ],
     "fez_record_search_key_language": [],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_notes": {
@@ -1265,6 +1268,7 @@ export const thesis = {
         "rek_oa_status_xsdmf_id": 17004,
         "rek_oa_status": 453695
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": {
         "rek_org_name_id": 400082,
         "rek_org_name_pid": "UQ:170415",
@@ -1668,6 +1672,7 @@ export const conferenceProceedings = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_notes": {
@@ -1677,6 +1682,7 @@ export const conferenceProceedings = {
         "rek_notes": "The full conference proceedings bibliographic details are : LARRARTE, F., and CHANSON, H. (2008). \"Experiences and Challenges in Sewers: Measurements and Hydrodynamics.\" Proceedings of the International Meeting on Measurements and Hydraulics of Sewers, Summer School GEMCEA/LCPC, 19-21 Aug. 2008, Bouguenais, Hydraulic Model Report No. CH70/08, Div. of Civil Engineering, The University of Queensland, Brisbane, Australia, 114 pages (ISBN 9781864999280)."
     },
     "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4191351,
         "rek_place_of_publication_pid": "UQ:159544",
@@ -2027,6 +2033,7 @@ export const digilibImage = {
         "rek_oa_status_xsdmf_id": 17013,
         "rek_oa_status": 453697
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_period": [],
     "fez_record_search_key_publisher": {
         "rek_publisher_id": 4611429,
@@ -2264,6 +2271,7 @@ export const workingPaper = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3191760,
@@ -2294,6 +2302,7 @@ export const workingPaper = {
         "rek_oa_status_xsdmf_id": 17007,
         "rek_oa_status": 453697
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": {
         "rek_org_name_id": 349870,
         "rek_org_name_pid": "UQ:176145",
@@ -2712,6 +2721,7 @@ export const design = {
         }
     ],
     "fez_record_search_key_language": [],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_location": [
@@ -2725,6 +2735,7 @@ export const design = {
     ],
     "fez_record_search_key_notes": null,
     "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_original_format": null,
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4344342,
@@ -3007,6 +3018,7 @@ export const creativeWork = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_notes": null,
@@ -3016,6 +3028,7 @@ export const creativeWork = {
         "rek_oa_status_xsdmf_id": 16975,
         "rek_oa_status": 453692
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4167616,
         "rek_place_of_publication_pid": "UQ:177836",
@@ -3337,6 +3350,7 @@ export const departmentTechnicalReport = {
             "rek_language_order": 1
         }
     ],
+    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [
         {
             "rek_link_id": 3201460,
@@ -3362,6 +3376,7 @@ export const departmentTechnicalReport = {
         "rek_notes": "ISBN 1-920015-12-4"
     },
     "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": {
         "rek_org_name_id": 352116,
         "rek_org_name_pid": "UQ:165945",
@@ -4183,7 +4198,14 @@ export const journalArticle = {
     "fez_record_search_key_oa_status": {
         "rek_oa_status_id": null,
         "rek_oa_status_pid": "UQ:676287",
-        "rek_oa_status": 453695
+        "rek_oa_status": 453693,
+        "rek_oa_status_lookup": "DOI",
+    },
+    "fez_record_search_key_oa_status_type": {
+        "rek_oa_status_type_id": null,
+        "rek_oa_status_type_pid": "UQ:676287",
+        "rek_oa_status_type": 454123,
+        "rek_oa_status_type_lookup": "Bronze",
     },
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
@@ -4559,6 +4581,7 @@ export const bookChapter = {
         "rek_oa_status_pid": "UQ:376215",
         "rek_oa_status": 453698
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -4876,7 +4899,18 @@ export const book = {
     "fez_record_search_key_notes": null,
     "fez_record_search_key_oa_embargo_days": null,
     "fez_record_search_key_oa_notes": null,
-    "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": null,
+        "rek_oa_status_pid": "UQ:376215",
+        "rek_oa_status": 454118,
+        "rek_oa_status_lookup": 453698
+    },
+    "fez_record_search_key_oa_status_type": {
+        "rek_oa_status_type_id": null,
+        "rek_oa_status_type_pid": "UQ:376215",
+        "rek_oa_status_type": 454122,
+        "rek_oa_status_type_lookup": "Hybrid",
+    },
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -5124,6 +5158,7 @@ export const editedBook = {
     "fez_record_search_key_oa_embargo_days": null,
     "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -5617,6 +5652,7 @@ export const conferencePaper = {
     "fez_record_search_key_oa_embargo_days": null,
     "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -5995,6 +6031,7 @@ export const generic = {
         "rek_oa_status_xsdmf_id": 16984,
         "rek_oa_status": 453697
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -6532,6 +6569,7 @@ export const audioDocument = {
     "fez_record_search_key_oa_embargo_days": null,
     "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_org_name": null,
     "fez_record_search_key_org_unit_name": null,
     "fez_record_search_key_original_format": null,
@@ -6896,6 +6934,7 @@ export const preprint = {
         "rek_oa_status_xsdmf_id": 16967,
         "rek_oa_status": 453697
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_publisher": null,
     "fez_record_search_key_refereed": null,
     "fez_record_search_key_refereed_source": {
@@ -16702,7 +16741,7 @@ export const recordWithRelatedItems = {
             "rek_institutional_status_lookup": "UQ"
     },
     "fez_record_search_key_isbn": [],
-        "fez_record_search_key_isderivationof": [{
+    "fez_record_search_key_isderivationof": [{
         "rek_isderivationof_id": 14046,
         "rek_isderivationof_pid": "UQ:76a9027",
         "rek_isderivationof_xsdmf_id": null,
@@ -16844,21 +16883,21 @@ export const recordWithRelatedItems = {
         "rek_language": "eng",
         "rek_language_order": 1
     }],
-        "fez_record_search_key_language_of_journal_name": [],
-        "fez_record_search_key_language_of_title": [],
-        "fez_record_search_key_link": [],
-        "fez_record_search_key_link_description": [],
-        "fez_record_search_key_native_script_journal_name": null,
-        "fez_record_search_key_native_script_title": null,
-        "fez_record_search_key_notes": null,
-        "fez_record_search_key_oa_embargo_days": null,
-        "fez_record_search_key_oa_notes": null,
-        "fez_record_search_key_oa_status": {
-        "rek_oa_status_id": 692848,
-            "rek_oa_status_pid": "UQ:76a9027",
-            "rek_oa_status_xsdmf_id": null,
-            "rek_oa_status": 453698,
-            "rek_oa_status_lookup": "Not Open Access"
+    "fez_record_search_key_language_of_journal_name": [],
+    "fez_record_search_key_language_of_title": [],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_native_script_journal_name": null,
+    "fez_record_search_key_native_script_title": null,
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_oa_embargo_days": null,
+    "fez_record_search_key_oa_notes": null,
+    "fez_record_search_key_oa_status": {
+    "rek_oa_status_id": 692848,
+        "rek_oa_status_pid": "UQ:76a9027",
+        "rek_oa_status_xsdmf_id": null,
+        "rek_oa_status": 453698,
+        "rek_oa_status_lookup": "Not Open Access"
     },
     "fez_record_search_key_place_of_publication": {
         "rek_place_of_publication_id": 4436642,

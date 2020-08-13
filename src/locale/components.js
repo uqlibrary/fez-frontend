@@ -63,10 +63,7 @@ export default {
             },
             linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',
             citationAuthors: {
-                showMoreLabel: 'Show [numberOfAuthors] more...',
-                showMoreTitle: 'Click to show [numberOfAuthors] more authors',
-                showLessLabel: 'Show less',
-                showLessTitle: 'Show less authors',
+                maxAuthorDisplayNumber: 29,
             },
             defaultActions: [
                 { key: 'fixRecord', label: 'Request Correction', primary: false },

@@ -326,6 +326,7 @@ export default {
         "rek_oa_status": 453697,
         "rek_oa_status_lookup": "Other"
     },
+    "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_period": [
         {
             "rek_period_id": 16492,

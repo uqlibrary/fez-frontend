@@ -883,7 +883,6 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -1457,40 +1456,44 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Walsh, Laurence J"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Walsh, Laurence J
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Ota R"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Ota R
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -1499,21 +1502,25 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Nagao S
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Sato T"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
-                         and 
                         Sato T
                       </span>
                     </CitationView>
@@ -2031,7 +2038,6 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -2392,7 +2398,6 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

@@ -5,6 +5,7 @@ import * as Partials from './partials';
 export default class DigilibImageCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        citationStyle: PropTypes.string,
     };
 
     constructor(props) {
@@ -26,7 +27,10 @@ export default class DigilibImageCitation extends Component {
         return (
             <div className="citationContent citationDesign">
                 {/* {Photographer} */}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Date photo taken| (|).} */}
                 <Partials.DateCitationView date={record.datePhotoTaken} />

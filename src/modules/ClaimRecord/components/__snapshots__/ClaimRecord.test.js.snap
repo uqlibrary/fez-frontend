@@ -23,6 +23,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -785,9 +786,16 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -1168,6 +1176,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -2131,6 +2140,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -2878,9 +2888,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -3304,6 +3321,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -4217,6 +4235,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -5067,9 +5086,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -5598,6 +5624,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -6448,9 +6475,16 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -6979,6 +7013,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -7829,9 +7864,16 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -8360,6 +8402,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -9210,9 +9253,16 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -9741,6 +9791,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -10503,9 +10554,16 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -10719,6 +10777,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -11569,9 +11628,16 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -12122,6 +12188,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -12972,9 +13039,16 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -13503,6 +13577,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -14353,9 +14428,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -14903,6 +14985,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -15753,9 +15836,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -16302,6 +16392,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -17152,9 +17243,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -17702,6 +17800,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -18552,9 +18651,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -19026,10 +19132,14 @@ exports[`Component ClaimRecord  should return and render alert message depending
               <span>
                 Form cannot be submitted until all fields are valid. Please review all input fields.
                 <ul>
-                  <li>
+                  <li
+                    data-testid="validation-warning-0"
+                  >
                     Title is required
                   </li>
-                  <li>
+                  <li
+                    data-testid="validation-warning-1"
+                  >
                     Publication date is required
                   </li>
                 </ul>
@@ -19113,6 +19223,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "rek_pid": null,
@@ -19390,6 +19501,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={Object {}}
             />
           </StandardCard>
@@ -19648,6 +19760,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -20507,9 +20620,16 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,

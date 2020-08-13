@@ -141,6 +141,7 @@ const mapStateToProps = (state, props) => {
         author: state.get('accountReducer').author,
         recordToView,
         isDeleted: state.get('viewRecordReducer').isDeleted,
+        recordToViewError: state.get('viewRecordReducer').recordToViewError,
         ...initialFormValues,
         locked,
     };

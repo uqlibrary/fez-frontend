@@ -91,6 +91,13 @@ export default {
                 "rek_keywords": "University of Queensland. Library -- Exhibitions",
                 "rek_keywords_order": 2
             }],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:151480",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 694142,
                 "rek_oa_status_pid": "UQ:151480",
@@ -98,6 +105,7 @@ export default {
                 "rek_oa_status": 453698,
                 "rek_oa_status_lookup": "Not Open Access"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_notes": {
                 "rek_notes_id": 1185841,
                 "rek_notes_pid": "UQ:692945",

@@ -31,7 +31,7 @@
         "@babel/preset-react": "^7.8.3",
         "@babel/register": "^7.8.6",
         "@babel/runtime-corejs2": "^7.8.7",
-        "@cypress/code-coverage": "^2.0.0",
+        "@cypress/code-coverage": "^3.8.1",
         "@sentry/webpack-plugin": "^1.10.0",
         "@testing-library/dom": "^7.1.2",
         "@testing-library/jest-dom": "^5.1.1",
@@ -78,11 +78,11 @@
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
         "css-mediaquery": "^0.1.2",
-        "cypress": "^4.9.0",
+        "cypress": "^4.11.0",
         "cypress-file-upload": "^3.5.3",
         "cypress-plugin-retries": "^1.5.2",
         "cypress-plugin-tab": "^1.0.5",
-        "cypress-wait-until": "^1.6.1",
+        "cypress-wait-until": "^1.7.1",
         "dotenv-webpack": "^1.7.0",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.2",
@@ -244,7 +244,7 @@
     },
     "engines": {
         "npm": "^6",
-        "node": "11.10.1"
+        "node": "14.7.0"
     },
     "babel": {
         "presets": [

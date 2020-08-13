@@ -714,6 +714,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                     "rek_language_xsdmf_id": 10636,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_notes": Object {
@@ -723,6 +724,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                   "rek_notes_xsdmf_id": 12436,
                 },
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Brisbane, Australia",
                   "rek_place_of_publication_id": 4191351,
@@ -1128,6 +1130,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         "rek_language_xsdmf_id": 10636,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_notes": Object {
@@ -1137,6 +1140,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       "rek_notes_xsdmf_id": 12436,
                     },
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "Brisbane, Australia",
                       "rek_place_of_publication_id": 4191351,
@@ -1268,7 +1272,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={
                     Object {
@@ -1550,6 +1553,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           "rek_language_xsdmf_id": 10636,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_notes": Object {
@@ -1559,6 +1563,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         "rek_notes_xsdmf_id": 12436,
                       },
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "Brisbane, Australia",
                         "rek_place_of_publication_id": 4191351,
@@ -1704,7 +1709,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={
                       Object {
@@ -1986,6 +1990,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                             "rek_language_xsdmf_id": 10636,
                           },
                         ],
+                        "fez_record_search_key_license": null,
                         "fez_record_search_key_link": Array [],
                         "fez_record_search_key_link_description": Array [],
                         "fez_record_search_key_notes": Object {
@@ -1995,6 +2000,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           "rek_notes_xsdmf_id": 12436,
                         },
                         "fez_record_search_key_oa_status": null,
+                        "fez_record_search_key_oa_status_type": null,
                         "fez_record_search_key_place_of_publication": Object {
                           "rek_place_of_publication": "Brisbane, Australia",
                           "rek_place_of_publication_id": 4191351,
@@ -2473,12 +2479,12 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
@@ -2487,21 +2493,24 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Frédérique Larrarte
                         </span>
                       </CitationView>
+                       and 
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
-                        prefix=" and "
+                        prefix=""
                         suffix=""
                         value="Hubert Chanson"
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-1"
                         >
-                           and 
                           Hubert Chanson
                         </span>
                       </CitationView>
@@ -3343,6 +3352,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                     "rek_language_xsdmf_id": 10636,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_notes": Object {
@@ -3352,6 +3362,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                   "rek_notes_xsdmf_id": 12436,
                 },
                 "fez_record_search_key_oa_status": null,
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Brisbane, Australia",
                   "rek_place_of_publication_id": 4191351,
@@ -3760,6 +3771,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         "rek_language_xsdmf_id": 10636,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_notes": Object {
@@ -3769,6 +3781,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       "rek_notes_xsdmf_id": 12436,
                     },
                     "fez_record_search_key_oa_status": null,
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "Brisbane, Australia",
                       "rek_place_of_publication_id": 4191351,
@@ -3900,7 +3913,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={
                     Object {
@@ -4185,6 +4197,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           "rek_language_xsdmf_id": 10636,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_notes": Object {
@@ -4194,6 +4207,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         "rek_notes_xsdmf_id": 12436,
                       },
                       "fez_record_search_key_oa_status": null,
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "Brisbane, Australia",
                         "rek_place_of_publication_id": 4191351,
@@ -4339,7 +4353,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={
                       Object {
@@ -4624,6 +4637,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                             "rek_language_xsdmf_id": 10636,
                           },
                         ],
+                        "fez_record_search_key_license": null,
                         "fez_record_search_key_link": Array [],
                         "fez_record_search_key_link_description": Array [],
                         "fez_record_search_key_notes": Object {
@@ -4633,6 +4647,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           "rek_notes_xsdmf_id": 12436,
                         },
                         "fez_record_search_key_oa_status": null,
+                        "fez_record_search_key_oa_status_type": null,
                         "fez_record_search_key_place_of_publication": Object {
                           "rek_place_of_publication": "Brisbane, Australia",
                           "rek_place_of_publication_id": 4191351,
@@ -5111,12 +5126,12 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
@@ -5125,21 +5140,24 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Frédérique Larrarte
                         </span>
                       </CitationView>
+                       and 
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
-                        prefix=" and "
+                        prefix=""
                         suffix=""
                         value="Hubert Chanson"
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-1"
                         >
-                           and 
                           Hubert Chanson
                         </span>
                       </CitationView>
@@ -5718,7 +5736,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={Object {}}
                   searchKey={
@@ -5747,7 +5764,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={Object {}}
                     searchKey={
@@ -6109,7 +6125,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors empty"

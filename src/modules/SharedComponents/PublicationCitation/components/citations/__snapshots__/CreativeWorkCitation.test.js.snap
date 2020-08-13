@@ -726,6 +726,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                     "rek_language_xsdmf_id": 11997,
                   },
                 ],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_notes": null,
@@ -735,6 +736,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                   "rek_oa_status_pid": "UQ:177836",
                   "rek_oa_status_xsdmf_id": 16975,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "St Lucia, Brisbane, QLD, Australia",
                   "rek_place_of_publication_id": 4167616,
@@ -1131,6 +1133,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                         "rek_language_xsdmf_id": 11997,
                       },
                     ],
+                    "fez_record_search_key_license": null,
                     "fez_record_search_key_link": Array [],
                     "fez_record_search_key_link_description": Array [],
                     "fez_record_search_key_notes": null,
@@ -1140,6 +1143,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       "rek_oa_status_pid": "UQ:177836",
                       "rek_oa_status_xsdmf_id": 16975,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_place_of_publication": Object {
                       "rek_place_of_publication": "St Lucia, Brisbane, QLD, Australia",
                       "rek_place_of_publication_id": 4167616,
@@ -1255,7 +1259,6 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -1548,6 +1551,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                           "rek_language_xsdmf_id": 11997,
                         },
                       ],
+                      "fez_record_search_key_license": null,
                       "fez_record_search_key_link": Array [],
                       "fez_record_search_key_link_description": Array [],
                       "fez_record_search_key_notes": null,
@@ -1557,6 +1561,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                         "rek_oa_status_pid": "UQ:177836",
                         "rek_oa_status_xsdmf_id": 16975,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_place_of_publication": Object {
                         "rek_place_of_publication": "St Lucia, Brisbane, QLD, Australia",
                         "rek_place_of_publication_id": 4167616,
@@ -2015,12 +2020,12 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -2029,6 +2034,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Webster-Mannison, Marci
                       </span>
@@ -2561,7 +2567,6 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -2922,7 +2927,6 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

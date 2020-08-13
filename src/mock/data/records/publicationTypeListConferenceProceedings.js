@@ -89,40 +89,8 @@ export default {
                 "rek_conference_name": "The International Association for the Study of Cooperation in Education (IASCE) 2010"
             },
             "fez_record_search_key_content_indicator": [],
-            "fez_record_search_key_contributor": [
-                {
-                    "rek_contributor_id": 3098508,
-                    "rek_contributor_pid": "UQ:242447",
-                    "rek_contributor_xsdmf_id": 7350,
-                    "rek_contributor": "Robyn Gillies",
-                    "rek_contributor_order": 1
-                },
-                {
-                    "rek_contributor_id": 3098509,
-                    "rek_contributor_pid": "UQ:242447",
-                    "rek_contributor_xsdmf_id": 7350,
-                    "rek_contributor": "Michael Boyle",
-                    "rek_contributor_order": 2
-                }
-            ],
-            "fez_record_search_key_contributor_id": [
-                {
-                    "rek_contributor_id_id": 2310395,
-                    "rek_contributor_id_pid": "UQ:242447",
-                    "rek_contributor_id_xsdmf_id": 7345,
-                    "rek_contributor_id": 477,
-                    "rek_contributor_id_order": 1,
-                    "rek_contributor_id_lookup": "Gillies, Robyn Margaret"
-                },
-                {
-                    "rek_contributor_id_id": 2310396,
-                    "rek_contributor_id_pid": "UQ:242447",
-                    "rek_contributor_id_xsdmf_id": 7345,
-                    "rek_contributor_id": 4834,
-                    "rek_contributor_id_order": 2,
-                    "rek_contributor_id_lookup": "Michael Boyle"
-                }
-            ],
+            "fez_record_search_key_contributor": [],
+            "fez_record_search_key_contributor_id": [],
             "fez_record_search_key_convener": null,
             "fez_record_search_key_corresponding_country": [],
             "fez_record_search_key_corresponding_email": [],
@@ -198,10 +166,18 @@ export default {
                     "rek_language_order": 1
                 }
             ],
+            "fez_record_search_key_license": {
+                "rek_license_id": 24759,
+                "rek_license_pid": "UQ:242447",
+                "rek_license_xsdmf_id": 16636,
+                "rek_license": 453609,
+                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": null,

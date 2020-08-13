@@ -661,14 +661,11 @@ describe('Academic data transformers ', () => {
     describe('getAuthorArticleCount', () => {
         it('should transform correctly when data is provided', () => {
             const total = 40;
-            const data = {
-                min_date_year_t: {
-                    value: 21214421215,
-                    value_as_string: '1990',
-                },
-                max_date_year_t: {
-                    value: 12245421214,
-                    value_as_string: '2015',
+            const authorDetails = {
+                espace: {
+                    first_year: '1990',
+                    last_year: '2015',
+                    doc_count: 41,
                 },
             };
             const expected = {
@@ -677,13 +674,13 @@ describe('Academic data transformers ', () => {
                 articleLastYear: '2015',
             };
 
-            const result = transformers.getAuthorArticleCount(total, data);
+            const result = transformers.getAuthorArticleCount(total, authorDetails);
             expect(result).toEqual(expected);
         });
 
         it('should transform correctly when data is null', () => {
             const total = 5;
-            const data = null;
+            const authorDetails = null;
 
             const expected = {
                 articleCount: total,
@@ -691,40 +688,44 @@ describe('Academic data transformers ', () => {
                 articleLastYear: null,
             };
 
-            const result = transformers.getAuthorArticleCount(total, data);
+            const result = transformers.getAuthorArticleCount(total, authorDetails);
             expect(result).toEqual(expected);
         });
 
         it('should transform correctly when year data is null', () => {
             const total = 10;
-            const data = {
-                min_date_year_t: null,
-                max_date_year_t: {
-                    value: 4548745412,
-                    value_as_string: '2015',
+            const authorDetails = {
+                espace: {
+                    first_year: null,
+                    last_year: '2015',
+                    doc_count: 8,
                 },
             };
+
             const expected = {
                 articleCount: total,
                 articleFirstYear: null,
                 articleLastYear: '2015',
             };
-            const result = transformers.getAuthorArticleCount(total, data);
+            const result = transformers.getAuthorArticleCount(total, authorDetails);
             expect(result).toEqual(expected);
         });
 
         it('should transform correctly when total and data is null', () => {
             const total = null;
-            const data = {
-                min_date_year_t: null,
-                max_date_year_t: null,
+            const authorDetails = {
+                espace: {
+                    first_year: null,
+                    last_year: null,
+                    doc_count: 8,
+                },
             };
             const expected = {
                 articleCount: total,
                 articleFirstYear: null,
                 articleLastYear: null,
             };
-            const result = transformers.getAuthorArticleCount(total, data);
+            const result = transformers.getAuthorArticleCount(total, authorDetails);
             expect(result).toEqual(expected);
         });
     });

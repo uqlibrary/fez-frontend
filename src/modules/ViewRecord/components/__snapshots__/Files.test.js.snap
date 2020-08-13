@@ -29,6 +29,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -43,6 +44,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -58,6 +60,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -97,6 +100,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -113,6 +117,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -148,8 +153,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -162,6 +167,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -177,6 +183,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -192,6 +199,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -202,8 +210,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -243,6 +251,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -257,6 +266,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -272,6 +282,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -311,6 +322,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -319,6 +331,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -346,8 +359,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -360,6 +373,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -375,6 +389,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -390,6 +405,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -400,8 +416,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -445,6 +461,7 @@ exports[`Files Component  should not render cultural message 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -459,6 +476,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -474,6 +492,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -513,6 +532,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -529,6 +549,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -564,8 +585,8 @@ exports[`Files Component  should not render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -578,6 +599,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -593,6 +615,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -608,6 +631,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -618,8 +642,8 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -644,6 +668,7 @@ exports[`Files Component  should not render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -652,6 +677,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -679,8 +705,8 @@ exports[`Files Component  should not render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -693,6 +719,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -708,6 +735,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -723,6 +751,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -733,8 +762,8 @@ exports[`Files Component  should not render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -774,6 +803,7 @@ exports[`Files Component  should not render cultural message 2`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -788,6 +818,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -803,6 +834,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -842,6 +874,7 @@ exports[`Files Component  should not render cultural message 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -858,6 +891,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -893,8 +927,8 @@ exports[`Files Component  should not render cultural message 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -907,6 +941,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -922,6 +957,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -937,6 +973,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -947,8 +984,8 @@ exports[`Files Component  should not render cultural message 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -973,6 +1010,7 @@ exports[`Files Component  should not render cultural message 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -981,6 +1019,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -1008,8 +1047,8 @@ exports[`Files Component  should not render cultural message 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1022,6 +1061,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -1037,6 +1077,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -1052,6 +1093,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -1062,8 +1104,8 @@ exports[`Files Component  should not render cultural message 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1115,6 +1157,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1129,6 +1172,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1144,6 +1188,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -1183,6 +1228,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -1199,6 +1245,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -1234,8 +1281,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1248,6 +1295,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -1263,6 +1311,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -1278,6 +1327,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -1288,8 +1338,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1314,6 +1364,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -1322,6 +1373,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -1349,8 +1401,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1363,6 +1415,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -1378,6 +1431,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -1393,6 +1447,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -1403,8 +1458,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1444,6 +1499,7 @@ exports[`Files Component  should render an image as the original filename with n
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1458,6 +1514,7 @@ exports[`Files Component  should render an image as the original filename with n
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1473,6 +1530,7 @@ exports[`Files Component  should render an image as the original filename with n
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -1512,6 +1570,7 @@ exports[`Files Component  should render an image as the original filename with n
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -1520,6 +1579,7 @@ exports[`Files Component  should render an image as the original filename with n
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -1547,8 +1607,8 @@ exports[`Files Component  should render an image as the original filename with n
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1561,6 +1621,7 @@ exports[`Files Component  should render an image as the original filename with n
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -1576,6 +1637,7 @@ exports[`Files Component  should render an image as the original filename with n
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -1591,6 +1653,7 @@ exports[`Files Component  should render an image as the original filename with n
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -1601,8 +1664,8 @@ exports[`Files Component  should render an image as the original filename with n
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1642,6 +1705,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1656,6 +1720,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1671,6 +1736,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -1710,6 +1776,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -1718,6 +1785,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -1745,8 +1813,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1759,6 +1827,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -1774,6 +1843,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -1789,6 +1859,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -1799,8 +1870,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1825,6 +1896,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -1833,6 +1905,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -1860,8 +1933,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -1874,6 +1947,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -1889,6 +1963,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -1904,6 +1979,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -1914,8 +1990,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -1955,6 +2031,7 @@ exports[`Files Component  should render component 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -1969,6 +2046,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -1984,6 +2062,7 @@ exports[`Files Component  should render component 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -2023,6 +2102,7 @@ exports[`Files Component  should render component 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -2039,6 +2119,7 @@ exports[`Files Component  should render component 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -2074,8 +2155,8 @@ exports[`Files Component  should render component 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -2088,6 +2169,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -2103,6 +2185,7 @@ exports[`Files Component  should render component 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -2118,6 +2201,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -2128,8 +2212,8 @@ exports[`Files Component  should render component 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -2154,6 +2238,7 @@ exports[`Files Component  should render component 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -2162,6 +2247,7 @@ exports[`Files Component  should render component 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -2189,8 +2275,8 @@ exports[`Files Component  should render component 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -2203,6 +2289,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -2218,6 +2305,7 @@ exports[`Files Component  should render component 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -2233,6 +2321,7 @@ exports[`Files Component  should render component 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -2243,8 +2332,8 @@ exports[`Files Component  should render component 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -3548,9 +3637,16 @@ exports[`Files Component  should render component full mount 1`] = `
                 "fez_record_search_key_oa_embargo_days": null,
                 "fez_record_search_key_oa_notes": null,
                 "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453695,
+                  "rek_oa_status": 453693,
                   "rek_oa_status_id": null,
+                  "rek_oa_status_lookup": "DOI",
                   "rek_oa_status_pid": "UQ:676287",
+                },
+                "fez_record_search_key_oa_status_type": Object {
+                  "rek_oa_status_type": 454123,
+                  "rek_oa_status_type_id": null,
+                  "rek_oa_status_type_lookup": "Bronze",
+                  "rek_oa_status_type_pid": "UQ:676287",
                 },
                 "fez_record_search_key_org_name": null,
                 "fez_record_search_key_org_unit_name": null,
@@ -4541,9 +4637,16 @@ exports[`Files Component  should render component full mount 1`] = `
                   "fez_record_search_key_oa_embargo_days": null,
                   "fez_record_search_key_oa_notes": null,
                   "fez_record_search_key_oa_status": Object {
-                    "rek_oa_status": 453695,
+                    "rek_oa_status": 453693,
                     "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
                     "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
                   },
                   "fez_record_search_key_org_name": null,
                   "fez_record_search_key_org_unit_name": null,
@@ -5541,9 +5644,16 @@ exports[`Files Component  should render component full mount 1`] = `
                     "fez_record_search_key_oa_embargo_days": null,
                     "fez_record_search_key_oa_notes": null,
                     "fez_record_search_key_oa_status": Object {
-                      "rek_oa_status": 453695,
+                      "rek_oa_status": 453693,
                       "rek_oa_status_id": null,
+                      "rek_oa_status_lookup": "DOI",
                       "rek_oa_status_pid": "UQ:676287",
+                    },
+                    "fez_record_search_key_oa_status_type": Object {
+                      "rek_oa_status_type": 454123,
+                      "rek_oa_status_type_id": null,
+                      "rek_oa_status_type_lookup": "Bronze",
+                      "rek_oa_status_type_pid": "UQ:676287",
                     },
                     "fez_record_search_key_org_name": null,
                     "fez_record_search_key_org_unit_name": null,
@@ -6604,6 +6714,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
+                                                      data-testid="dsi-dsid-label"
                                                       item={true}
                                                       sm={4}
                                                     >
@@ -6715,11 +6826,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-dsid-label"
                                                         item={true}
                                                         sm={4}
                                                       >
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4"
+                                                          data-testid="dsi-dsid-label"
                                                         >
                                                           <WithStyles(ForwardRef(Typography))
                                                             gutterBottom={true}
@@ -6962,6 +7075,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-thumbIconCentered-4"
+                                                      data-testid="dsi-mimetype-0"
                                                       item={true}
                                                       xs={1}
                                                     >
@@ -7074,11 +7188,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-mimetype-0"
                                                         item={true}
                                                         xs={1}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-thumbIconCentered-4 MuiGrid-item MuiGrid-grid-xs-1"
+                                                          data-testid="dsi-mimetype-0"
                                                         >
                                                           <WithStyles(Thumbnail)
                                                             fileName="image.jpg"
@@ -7190,6 +7306,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-dataWrapper-2"
+                                                      data-testid="dsi-dsid-0"
                                                       item={true}
                                                       sm={4}
                                                     >
@@ -7302,11 +7419,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-dsid-0"
                                                         item={true}
                                                         sm={4}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-dataWrapper-2 MuiGrid-item MuiGrid-grid-sm-4"
+                                                          data-testid="dsi-dsid-0"
                                                         >
                                                           <WithStyles(FileName)
                                                             allowDownload={true}
@@ -7340,8 +7459,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             openAccessStatus={
                                                               Object {
                                                                 "embargoDate": null,
-                                                                "isOpenAccess": true,
-                                                                "openAccessStatusId": 453695,
+                                                                "isOpenAccess": false,
+                                                                "openAccessStatusId": 453693,
                                                               }
                                                             }
                                                             pid="UQ:676287"
@@ -7386,8 +7505,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               openAccessStatus={
                                                                 Object {
                                                                   "embargoDate": null,
-                                                                  "isOpenAccess": true,
-                                                                  "openAccessStatusId": 453695,
+                                                                  "isOpenAccess": false,
+                                                                  "openAccessStatusId": 453693,
                                                                 }
                                                               }
                                                               pid="UQ:676287"
@@ -8251,6 +8370,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-thumbIconCentered-4"
+                                                      data-testid="dsi-mimetype-1"
                                                       item={true}
                                                       xs={1}
                                                     >
@@ -8363,11 +8483,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-mimetype-1"
                                                         item={true}
                                                         xs={1}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-thumbIconCentered-4 MuiGrid-item MuiGrid-grid-xs-1"
+                                                          data-testid="dsi-mimetype-1"
                                                         >
                                                           <ForwardRef
                                                             className="FilesClass-fileIcon-3"
@@ -8412,6 +8534,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
                                                       className="FilesClass-dataWrapper-2"
+                                                      data-testid="dsi-dsid-1"
                                                       item={true}
                                                       sm={4}
                                                     >
@@ -8524,11 +8647,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             "zeroMinWidth": "MuiGrid-zeroMinWidth",
                                                           }
                                                         }
+                                                        data-testid="dsi-dsid-1"
                                                         item={true}
                                                         sm={4}
                                                       >
                                                         <div
                                                           className="MuiGrid-root FilesClass-dataWrapper-2 MuiGrid-item MuiGrid-grid-sm-4"
+                                                          data-testid="dsi-dsid-1"
                                                         >
                                                           <WithStyles(FileName)
                                                             allowDownload={true}
@@ -8555,8 +8680,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             openAccessStatus={
                                                               Object {
                                                                 "embargoDate": null,
-                                                                "isOpenAccess": true,
-                                                                "openAccessStatusId": 453695,
+                                                                "isOpenAccess": false,
+                                                                "openAccessStatusId": 453693,
                                                               }
                                                             }
                                                             pid="UQ:676287"
@@ -8594,8 +8719,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               openAccessStatus={
                                                                 Object {
                                                                   "embargoDate": null,
-                                                                  "isOpenAccess": true,
-                                                                  "openAccessStatusId": 453695,
+                                                                  "isOpenAccess": false,
+                                                                  "openAccessStatusId": 453693,
                                                                 }
                                                               }
                                                               pid="UQ:676287"
@@ -9387,6 +9512,7 @@ exports[`Files Component  should render cultural message 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -9401,6 +9527,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -9416,6 +9543,7 @@ exports[`Files Component  should render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -9455,6 +9583,7 @@ exports[`Files Component  should render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -9471,6 +9600,7 @@ exports[`Files Component  should render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -9506,8 +9636,8 @@ exports[`Files Component  should render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -9520,6 +9650,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -9535,6 +9666,7 @@ exports[`Files Component  should render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -9550,6 +9682,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -9560,8 +9693,8 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -9586,6 +9719,7 @@ exports[`Files Component  should render cultural message 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -9594,6 +9728,7 @@ exports[`Files Component  should render cultural message 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -9621,8 +9756,8 @@ exports[`Files Component  should render cultural message 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -9635,6 +9770,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -9650,6 +9786,7 @@ exports[`Files Component  should render cultural message 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -9665,6 +9802,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -9675,8 +9813,8 @@ exports[`Files Component  should render cultural message 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -9716,6 +9854,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -9730,6 +9869,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -9745,6 +9885,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -9784,6 +9925,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -9800,6 +9942,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -9835,8 +9978,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -9849,6 +9992,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -9864,6 +10008,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -9879,6 +10024,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -9889,8 +10035,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -9915,6 +10061,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -9923,6 +10070,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -9950,8 +10098,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -9964,6 +10112,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -9979,6 +10128,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -9994,6 +10144,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -10004,8 +10155,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10045,6 +10196,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -10059,6 +10211,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -10074,6 +10227,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -10113,6 +10267,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -10129,6 +10284,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -10164,8 +10320,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10178,6 +10334,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -10193,6 +10350,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -10208,6 +10366,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -10218,8 +10377,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10244,6 +10403,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -10252,6 +10412,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -10279,8 +10440,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10293,6 +10454,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -10308,6 +10470,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -10323,6 +10486,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -10333,8 +10497,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10374,6 +10538,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -10388,6 +10553,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -10403,6 +10569,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -10442,6 +10609,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -10458,6 +10626,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -10493,8 +10662,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10507,6 +10676,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -10522,6 +10692,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -10537,6 +10708,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -10547,8 +10719,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10573,6 +10745,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -10581,6 +10754,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -10608,8 +10782,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10622,6 +10796,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -10637,6 +10812,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -10652,6 +10828,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -10662,8 +10839,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10703,6 +10880,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -10717,6 +10895,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -10732,6 +10911,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -10771,6 +10951,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -10787,6 +10968,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -10822,8 +11004,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10836,6 +11018,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -10851,6 +11034,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -10866,6 +11050,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -10876,8 +11061,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -10902,6 +11087,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -10910,6 +11096,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -10937,8 +11124,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -10951,6 +11138,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -10966,6 +11154,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -10981,6 +11170,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -10991,8 +11181,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11032,6 +11222,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11046,6 +11237,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -11061,6 +11253,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -11100,6 +11293,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -11116,6 +11310,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -11151,8 +11346,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11165,6 +11360,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -11180,6 +11376,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -11195,6 +11392,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -11205,8 +11403,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11231,6 +11429,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -11239,6 +11438,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -11266,8 +11466,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11280,6 +11480,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -11295,6 +11496,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -11310,6 +11512,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -11320,8 +11523,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11361,6 +11564,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11375,6 +11579,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -11390,6 +11595,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -11429,6 +11635,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -11445,6 +11652,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -11480,8 +11688,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11494,6 +11702,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -11509,6 +11718,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -11524,6 +11734,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -11534,8 +11745,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11560,6 +11771,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -11568,6 +11780,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -11595,8 +11808,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11609,6 +11822,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -11624,6 +11838,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -11639,6 +11854,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -11649,8 +11865,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11780,6 +11996,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11794,6 +12011,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -11809,6 +12027,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -11848,6 +12067,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -11856,6 +12076,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
@@ -11883,8 +12104,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -11897,6 +12118,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -11912,6 +12134,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -11927,6 +12150,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -11937,8 +12161,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -11978,6 +12202,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
            
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
           item={true}
           sm={4}
         >
@@ -11992,6 +12217,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
             item={true}
             sm={4}
           >
@@ -12007,6 +12233,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
             item={true}
             md={2}
           >
@@ -12046,6 +12273,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
           item={true}
           xs={1}
         >
@@ -12062,11 +12290,12 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
           item={true}
           sm={4}
         >
           <WithStyles(FileName)
-            allowDownload={false}
+            allowDownload={true}
             calculatedSize="95.49 KB"
             checksums={
               Object {
@@ -12096,10 +12325,9 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             onFileSelect={[Function]}
             openAccessStatus={
               Object {
-                "embargoDate": "1st December 2050",
+                "embargoDate": null,
                 "isOpenAccess": false,
-                "openAccessStatusId": 453695,
-                "securityStatus": true,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -12112,6 +12340,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
             item={true}
             sm={4}
           >
@@ -12127,6 +12356,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
             item={true}
             sm={2}
           >
@@ -12142,6 +12372,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
             item={true}
             sm={true}
             style={
@@ -12151,9 +12382,9 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             }
           >
             <WithStyles(OpenAccessIcon)
-              embargoDate="1st December 2050"
+              embargoDate={null}
               isOpenAccess={false}
-              openAccessStatusId={453695}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>
@@ -12178,6 +12409,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         wrap="nowrap"
       >
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
           item={true}
           xs={1}
         >
@@ -12186,6 +12418,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
           item={true}
           sm={4}
         >
@@ -12213,8 +12446,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             openAccessStatus={
               Object {
                 "embargoDate": null,
-                "isOpenAccess": true,
-                "openAccessStatusId": 453695,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
               }
             }
             pid="UQ:676287"
@@ -12227,6 +12460,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
             item={true}
             sm={4}
           >
@@ -12242,6 +12476,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           smDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
             item={true}
             sm={2}
           >
@@ -12257,6 +12492,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           xsDown={true}
         >
           <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
             item={true}
             sm={true}
             style={
@@ -12267,8 +12503,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           >
             <WithStyles(OpenAccessIcon)
               embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453695}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
               securityStatus={true}
             />
           </WithStyles(ForwardRef(Grid))>

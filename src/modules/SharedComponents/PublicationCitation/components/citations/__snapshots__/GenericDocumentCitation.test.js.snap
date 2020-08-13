@@ -781,6 +781,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                   "rek_oa_status_pid": "UQ:239427",
                   "rek_oa_status_xsdmf_id": 16984,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": null,
                 "fez_record_search_key_org_unit_name": null,
                 "fez_record_search_key_original_format": null,
@@ -1254,6 +1255,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                       "rek_oa_status_pid": "UQ:239427",
                       "rek_oa_status_xsdmf_id": 16984,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": null,
                     "fez_record_search_key_org_unit_name": null,
                     "fez_record_search_key_original_format": null,
@@ -1391,7 +1393,6 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -1739,6 +1740,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                         "rek_oa_status_pid": "UQ:239427",
                         "rek_oa_status_xsdmf_id": 16984,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": null,
                       "fez_record_search_key_org_unit_name": null,
                       "fez_record_search_key_original_format": null,
@@ -2219,12 +2221,12 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -2233,6 +2235,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Louise Olsen-Kettle
                       </span>
@@ -3067,6 +3070,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                   "rek_oa_status_pid": "UQ:239427",
                   "rek_oa_status_xsdmf_id": 16984,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": null,
                 "fez_record_search_key_org_unit_name": null,
                 "fez_record_search_key_original_format": null,
@@ -3541,6 +3545,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                       "rek_oa_status_pid": "UQ:239427",
                       "rek_oa_status_xsdmf_id": 16984,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": null,
                     "fez_record_search_key_org_unit_name": null,
                     "fez_record_search_key_original_format": null,
@@ -3679,7 +3684,6 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -4027,6 +4031,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                         "rek_oa_status_pid": "UQ:239427",
                         "rek_oa_status_xsdmf_id": 16984,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": null,
                       "fez_record_search_key_org_unit_name": null,
                       "fez_record_search_key_original_format": null,
@@ -4508,12 +4513,12 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -4522,6 +4527,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Louise Olsen-Kettle
                       </span>
@@ -5360,6 +5366,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                   "rek_oa_status_pid": "UQ:239427",
                   "rek_oa_status_xsdmf_id": 16984,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": null,
                 "fez_record_search_key_org_unit_name": null,
                 "fez_record_search_key_original_format": null,
@@ -5836,6 +5843,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                       "rek_oa_status_pid": "UQ:239427",
                       "rek_oa_status_xsdmf_id": 16984,
                     },
+                    "fez_record_search_key_oa_status_type": null,
                     "fez_record_search_key_org_name": null,
                     "fez_record_search_key_org_unit_name": null,
                     "fez_record_search_key_original_format": null,
@@ -5976,7 +5984,6 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -6324,6 +6331,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                         "rek_oa_status_pid": "UQ:239427",
                         "rek_oa_status_xsdmf_id": 16984,
                       },
+                      "fez_record_search_key_oa_status_type": null,
                       "fez_record_search_key_org_name": null,
                       "fez_record_search_key_org_unit_name": null,
                       "fez_record_search_key_original_format": null,
@@ -6807,12 +6815,12 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -6821,6 +6829,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Louise Olsen-Kettle
                       </span>
@@ -7331,7 +7340,6 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -7692,7 +7700,6 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

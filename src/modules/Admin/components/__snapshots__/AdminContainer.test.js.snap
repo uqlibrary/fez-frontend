@@ -434,6 +434,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
           utils={[Function]}
         >
           <AdminContainer
+            authorDetails={
+              Object {
+                "username": "uqstaff",
+              }
+            }
             classes={
               Object {
                 "badgeMargin": "badgemargin",
@@ -1233,6 +1238,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                   "rek_oa_status_pid": "UQ:252236",
                   "rek_oa_status_xsdmf_id": null,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_org_name": null,
                 "fez_record_search_key_org_unit_name": null,
                 "fez_record_search_key_possible_author_id": Array [],
@@ -1334,6 +1340,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
             }
           >
             <Memo(AdminInterface)
+              authorDetails={
+                Object {
+                  "username": "uqstaff",
+                }
+              }
               classes={
                 Object {
                   "badgeMargin": "makeStyles-badgeMargin-6",
@@ -9606,6 +9617,11 @@ exports[`AdminContainer component should not render non-security errors for comm
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
@@ -10525,6 +10541,7 @@ exports[`AdminContainer component should render default view 1`] = `
               "rek_oa_status_pid": "UQ:252236",
               "rek_oa_status_xsdmf_id": null,
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_name": null,
             "fez_record_search_key_org_unit_name": null,
             "fez_record_search_key_possible_author_id": Array [],
@@ -10627,6 +10644,11 @@ exports[`AdminContainer component should render default view 1`] = `
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
@@ -11551,6 +11573,7 @@ exports[`AdminContainer component should render memoized component with styles 1
               "rek_oa_status_pid": "UQ:252236",
               "rek_oa_status_xsdmf_id": null,
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_name": null,
             "fez_record_search_key_org_unit_name": null,
             "fez_record_search_key_possible_author_id": Array [],
@@ -11653,6 +11676,11 @@ exports[`AdminContainer component should render memoized component with styles 1
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
@@ -12564,6 +12592,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
               "rek_oa_status_pid": "UQ:252236",
               "rek_oa_status_xsdmf_id": null,
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_name": null,
             "fez_record_search_key_org_unit_name": null,
             "fez_record_search_key_possible_author_id": Array [],
@@ -12666,6 +12695,11 @@ exports[`AdminContainer component should render mobile view 1`] = `
       }
     >
       <Memo(AdminInterface)
+        authorDetails={
+          Object {
+            "username": "uqstaff",
+          }
+        }
         classes={
           Object {
             "badgeMargin": "makeStyles-badgeMargin-3",
@@ -12816,6 +12850,51 @@ exports[`AdminContainer component should render mobile view 1`] = `
     </ContextProvider>
   </ContextProvider>
 </Fragment>
+`;
+
+exports[`AdminContainer component should render record not found view 1`] = `
+<StandardPage
+  className="viewRecord"
+  title="Work not found"
+>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <div>
+        <p>
+          The work you are attempting to access does not appear in our system.
+        </p>
+        <p>
+          If you believe this is in error, please
+          <a
+            href="mailto:espace@library.uq.edu.au"
+          >
+             contact the eSpace team.
+          </a>
+        </p>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Typography))
+    style={
+      Object {
+        "opacity": 0.5,
+      }
+    }
+    variant="caption"
+  >
+    (404 - test)
+  </WithStyles(ForwardRef(Typography))>
+</StandardPage>
 `;
 
 exports[`AdminContainer component should show Add form 1`] = `

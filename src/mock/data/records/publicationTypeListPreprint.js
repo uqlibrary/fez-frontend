@@ -202,6 +202,7 @@ export default {
                 "rek_keywords": "UQ Cultural History Project",
                 "rek_keywords_order": 11
             }],
+            "fez_record_search_key_license": null,
             "fez_record_search_key_link": [{
                 "rek_link_id": 3192039,
                 "rek_link_pid": "UQ:154936",
@@ -241,6 +242,7 @@ export default {
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4433447,
@@ -491,10 +493,18 @@ export default {
                 "rek_ismemberof_lookup": "School of Social Science Publications"
             }],
             "fez_record_search_key_keywords": [],
+            "fez_record_search_key_license": {
+                "rek_license_id": 28752,
+                "rek_license_pid": "UQ:245064",
+                "rek_license_xsdmf_id": 16246,
+                "rek_license": 454104,
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
+            },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4471270,

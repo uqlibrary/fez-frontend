@@ -22,6 +22,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -453,6 +454,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -949,6 +951,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -1380,6 +1383,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
         when={false}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -1894,6 +1898,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -2325,6 +2330,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -2905,6 +2911,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -3336,6 +3343,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -3832,6 +3840,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -4263,6 +4272,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -4759,6 +4769,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -5190,6 +5201,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -5686,6 +5698,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -6117,6 +6130,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -6613,6 +6627,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -7044,6 +7059,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -7540,6 +7556,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -7971,6 +7988,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -8480,6 +8498,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -8911,6 +8930,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={
@@ -9407,6 +9427,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    citationStyle="list"
     hideContentIndicators={true}
     publication={
       Object {
@@ -9838,6 +9859,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         when={true}
       />
       <ConfirmationBox
+        confirmationBoxId="submit-succeeded"
         hideCancelButton={false}
         isOpen={false}
         locale={

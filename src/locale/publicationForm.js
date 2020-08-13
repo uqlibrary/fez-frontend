@@ -517,6 +517,11 @@ export default {
     thesis: {
         information: {
             title: 'Thesis information',
+            hdrRedirectActionButtonLabel: 'Visit now',
+            nonHdrWarningMessage: 'If you are trying to submit your UQ HDR thesis, please use the HDR submission form',
+            hdrRedirectMessage:
+                "HDR theses cannot be submitted via 'Add a missing work' - use the official submission link to upload your thesis",
+            hdrRedirectAlertTitle: 'Redirect',
             // help: {
             //     title: 'Thesis information',
             //     text: 'Some help',
@@ -1522,25 +1527,6 @@ export default {
                 title: 'Access and licence',
                 help: {
                     title: 'Access and licence',
-                    text: (
-                        <p>
-                            <h3>Access conditions</h3>
-                            <ul>
-                                <li>Open Access (upload your data, or link to the data)</li>
-                                <li>Meditated Access</li>
-                            </ul>
-                            <h3>Licence</h3>
-                            <p>
-                                View{' '}
-                                <a
-                                    href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
-                                    target="_blank"
-                                >
-                                    UQ Terms & Conditions
-                                </a>
-                            </p>
-                        </p>
-                    ),
                 },
                 fieldLabels: {
                     accessConditions: {

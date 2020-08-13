@@ -1,5 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AuthorsCitationView test  should not fail with missing data 1`] = `
+<span
+  className=" empty"
+/>
+`;
+
+exports[`AuthorsCitationView test  should render a header correctly when all authors are provided 1`] = `
+<span
+  className=""
+>
+  <CitationView
+    citationId="rek-author-0"
+    className="citationAuthor"
+    key="citationAuthor_1"
+    prefix=""
+    suffix=""
+    value="Pedroso, Marcelo Monteiro"
+  />
+  , 
+  <CitationView
+    citationId="rek-author-1"
+    className="citationAuthor"
+    key="citationAuthor_2"
+    prefix=""
+    suffix=""
+    value="Smith, J"
+  />
+  , 
+  <CitationView
+    citationId="rek-author-2"
+    className="citationAuthor"
+    key="citationAuthor_3"
+    prefix=""
+    suffix=""
+    value="Andersen, J"
+  />
+  , 
+   and 
+  <CitationView
+    citationId="rek-author-3"
+    className="citationAuthor"
+    key="citationAuthor_4"
+    prefix=""
+    suffix=""
+    value="Andersen, J A"
+  />
+   
+</span>
+`;
+
+exports[`AuthorsCitationView test  should render a header correctly when too many authors are provided 1`] = `
+<span
+  className=""
+>
+  <CitationView
+    citationId="rek-author-0"
+    className="citationAuthor"
+    key="citationAuthor_1"
+    prefix=""
+    suffix=""
+    value="Pedroso, Marcelo Monteiro"
+  />
+  , 
+  <CitationView
+    citationId="rek-author-1"
+    className="citationAuthor"
+    key="citationAuthor_2"
+    prefix=""
+    suffix=""
+    value="Smith, J"
+  />
+  , 
+  <CitationView
+    citationId="rek-author-2"
+    className="citationAuthor"
+    key="citationAuthor_3"
+    prefix=""
+    suffix=""
+    value="Andersen, J"
+  />
+  , 
+   ... 
+  <CitationView
+    citationId="rek-author-3"
+    className="citationAuthor"
+    key="citationAuthor_4"
+    prefix=""
+    suffix=""
+    value="Andersen, J A"
+  />
+   
+</span>
+`;
+
+exports[`AuthorsCitationView test  should render a list with ellipsis when elasticsearch cant supply all authors 1`] = `
+<span
+  className=""
+>
+  <CitationView
+    citationId="rek-author-0"
+    className="citationAuthor"
+    key="citationAuthor_1"
+    prefix=""
+    suffix=""
+    value="Pedroso, Marcelo Monteiro"
+  />
+  , 
+  <CitationView
+    citationId="rek-author-1"
+    className="citationAuthor"
+    key="citationAuthor_2"
+    prefix=""
+    suffix=""
+    value="Smith, J"
+  />
+  , 
+  <CitationView
+    citationId="rek-author-2"
+    className="citationAuthor"
+    key="citationAuthor_3"
+    prefix=""
+    suffix=""
+    value="Andersen, J"
+  />
+   and 5 more
+   
+</span>
+`;
+
 exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
 <Provider
   store={
@@ -444,7 +573,6 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -467,12 +595,12 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
             separator=", "
             showLink={false}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               <CitationView
+                citationId="rek-author-0"
                 className="citationAuthor"
                 key="citationAuthor_1"
                 prefix=""
@@ -481,6 +609,7 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-0"
                 >
                   Pedroso, Marcelo Monteiro
                 </span>
@@ -939,7 +1068,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -968,12 +1096,12 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
             separator=", "
             showLink={false}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               <CitationView
+                citationId="rek-author-0"
                 className="citationAuthor"
                 key="citationAuthor_1"
                 prefix=""
@@ -982,21 +1110,23 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-0"
                 >
                   Pedroso, Marcelo Monteiro
                 </span>
               </CitationView>
               <CitationView
+                citationId="rek-author-1"
                 className="citationAuthor"
                 key="citationAuthor_2"
-                prefix=" and "
+                prefix=""
                 suffix=""
                 value="Smith, J"
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-1"
                 >
-                   and 
                   Smith, J
                 </span>
               </CitationView>
@@ -1454,7 +1584,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -1495,24 +1624,27 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             separator=", "
             showLink={true}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               <Link
+                data-testid="rek-author-0-link"
                 key="citationAuthor_1"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               >
                 <LinkAnchor
+                  data-testid="rek-author-0-link"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
                   navigate={[Function]}
                 >
                   <a
+                    data-testid="rek-author-0-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
                     onClick={[Function]}
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1521,6 +1653,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Pedroso, Marcelo Monteiro
                       </span>
@@ -1528,29 +1661,34 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                   </a>
                 </LinkAnchor>
               </Link>
+               and 
               <Link
+                data-testid="rek-author-1-link"
                 key="citationAuthor_2"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               >
                 <LinkAnchor
+                  data-testid="rek-author-1-link"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
                   navigate={[Function]}
                 >
                   <a
+                    data-testid="rek-author-1-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
                     onClick={[Function]}
                   >
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
-                      prefix=", "
+                      prefix=""
                       suffix=""
                       value="Smith, J"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
-                        , 
                         Smith, J
                       </span>
                     </CitationView>
@@ -2011,7 +2149,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -2040,27 +2177,30 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             separator=", "
             showLink={true}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               <Link
                 className="authorNameLink"
+                data-testid="rek-author-0-link"
                 key="citationAuthor_1"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
               >
                 <LinkAnchor
                   className="authorNameLink"
+                  data-testid="rek-author-0-link"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
                   navigate={[Function]}
                 >
                   <a
                     className="authorNameLink"
+                    data-testid="rek-author-0-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
                     onClick={[Function]}
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -2069,6 +2209,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Pedroso, Marcelo Monteiro
                       </span>
@@ -2078,30 +2219,34 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               </Link>
               <Link
                 className="authorNameLink"
+                data-testid="rek-author-1-link"
                 key="citationAuthor_2"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
               >
                 <LinkAnchor
                   className="authorNameLink"
+                  data-testid="rek-author-1-link"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
                   navigate={[Function]}
                 >
                   <a
                     className="authorNameLink"
+                    data-testid="rek-author-1-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
                     onClick={[Function]}
                   >
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
-                      prefix=", "
+                      prefix=""
                       suffix=""
                       value="Smith, J"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
-                        , 
                         Smith, J
                       </span>
                     </CitationView>
@@ -2562,7 +2707,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -2597,26 +2741,28 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
             separator=", "
             showLink={false}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               <CitationView
+                citationId="rek-author-0"
                 className="citationAuthor"
                 key="citationAuthor_1"
                 prefix=""
-                suffix=", "
+                suffix=""
                 value="Pedroso, Marcelo Monteiro"
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-0"
                 >
                   Pedroso, Marcelo Monteiro
-                  , 
                 </span>
               </CitationView>
+              , 
               <CitationView
+                citationId="rek-author-1"
                 className="citationAuthor"
                 key="citationAuthor_2"
                 prefix=""
@@ -2625,21 +2771,24 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-1"
                 >
                   Smith, J
                 </span>
               </CitationView>
+              , 
               <CitationView
+                citationId="rek-author-2"
                 className="citationAuthor"
                 key="citationAuthor_3"
-                prefix=" and "
+                prefix=""
                 suffix=""
                 value="Andersen, J"
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-2"
                 >
-                   and 
                   Andersen, J
                 </span>
               </CitationView>
@@ -3097,7 +3246,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={
               Object {
                 "fez_record_search_key_author": Array [
@@ -3149,53 +3297,61 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             separator=", "
             showLink={true}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               <Link
+                data-testid="rek-author-0-link"
                 key="citationAuthor_1"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               >
                 <LinkAnchor
+                  data-testid="rek-author-0-link"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
                   navigate={[Function]}
                 >
                   <a
+                    data-testid="rek-author-0-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
                     onClick={[Function]}
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Pedroso, Marcelo Monteiro"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Pedroso, Marcelo Monteiro
-                        , 
                       </span>
                     </CitationView>
                   </a>
                 </LinkAnchor>
               </Link>
+              , 
               <Link
+                data-testid="rek-author-1-link"
                 key="citationAuthor_2"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               >
                 <LinkAnchor
+                  data-testid="rek-author-1-link"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
                   navigate={[Function]}
                 >
                   <a
+                    data-testid="rek-author-1-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
                     onClick={[Function]}
                   >
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
@@ -3204,6 +3360,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Smith, J
                       </span>
@@ -3211,29 +3368,35 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
                   </a>
                 </LinkAnchor>
               </Link>
+              , 
+               and 
               <Link
+                data-testid="rek-author-2-link"
                 key="citationAuthor_3"
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
               >
                 <LinkAnchor
+                  data-testid="rek-author-2-link"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
                   navigate={[Function]}
                 >
                   <a
+                    data-testid="rek-author-2-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
                     onClick={[Function]}
                   >
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
-                      prefix=", "
+                      prefix=""
                       suffix=""
                       value="Smith, J"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
-                        , 
                         Smith, J
                       </span>
                     </CitationView>
@@ -3694,7 +3857,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             prefix="Authored by: "
             publication={
               Object {
@@ -3730,27 +3892,29 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
             separator=", "
             showLink={false}
             suffix=" people."
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               Authored by: 
               <CitationView
+                citationId="rek-author-0"
                 className="citationAuthor"
                 key="citationAuthor_1"
                 prefix=""
-                suffix=", "
+                suffix=""
                 value="Pedroso, Marcelo Monteiro"
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-0"
                 >
                   Pedroso, Marcelo Monteiro
-                  , 
                 </span>
               </CitationView>
+              , 
               <CitationView
+                citationId="rek-author-1"
                 className="citationAuthor"
                 key="citationAuthor_2"
                 prefix=""
@@ -3759,21 +3923,24 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-1"
                 >
                   Smith, J
                 </span>
               </CitationView>
+              , 
               <CitationView
+                citationId="rek-author-2"
                 className="citationAuthor"
                 key="citationAuthor_3"
-                prefix=" and "
+                prefix=""
                 suffix=""
                 value="Andersen, J"
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-2"
                 >
-                   and 
                   Andersen, J
                 </span>
               </CitationView>
@@ -4231,7 +4398,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             prefix="Authored by: "
             publication={
               Object {
@@ -4267,51 +4433,56 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
             separator=", "
             showLink={false}
             suffix=" people."
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=""
             >
               Authored by: 
               <CitationView
+                citationId="rek-author-0"
                 className="citationAuthor"
                 key="citationAuthor_1"
                 prefix=""
-                suffix=", "
+                suffix=""
+                value="Pedroso, Marcelo Monteiro"
+              >
+                <span
+                  className="citationAuthor"
+                  data-testid="rek-author-0"
+                >
+                  Pedroso, Marcelo Monteiro
+                </span>
+              </CitationView>
+              , 
+              <CitationView
+                citationId="rek-author-1"
+                className="citationAuthor"
+                key="citationAuthor_2"
+                prefix=""
+                suffix=""
                 value="Smith, J"
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-1"
                 >
                   Smith, J
-                  , 
                 </span>
               </CitationView>
+              , 
               <CitationView
+                citationId="rek-author-2"
                 className="citationAuthor"
-                key="citationAuthor_2"
+                key="citationAuthor_3"
                 prefix=""
                 suffix=""
                 value="Andersen, J"
               >
                 <span
                   className="citationAuthor"
+                  data-testid="rek-author-2"
                 >
                   Andersen, J
-                </span>
-              </CitationView>
-              <CitationView
-                className="citationAuthor"
-                key="citationAuthor_3"
-                prefix=" and "
-                suffix=""
-                value="Pedroso, Marcelo Monteiro"
-              >
-                <span
-                  className="citationAuthor"
-                >
-                   and 
-                  Pedroso, Marcelo Monteiro
                 </span>
               </CitationView>
                people.
@@ -4324,275 +4495,118 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 10 authors (8 initial number and threshold 2) 1`] = `
-<span
-  className=""
->
-  Authored by: 
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_1"
-    prefix=""
-    suffix=", "
-    value="Pedroso, Marcelo Monteiro"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_2"
-    prefix=""
-    suffix=", "
-    value="Smith, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_3"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_4"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_5"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_6"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_7"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_8"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_9"
-    prefix=""
-    suffix=""
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_10"
-    prefix=" and "
-    suffix=""
-    value="Andersen, J"
-  />
-   people.
-</span>
-`;
-
 exports[`AuthorsCitationView test  should render component with 10 authors and show more link 1`] = `
 <span
   className=""
 >
   Authored by: 
   <CitationView
+    citationId="rek-author-0"
     className="citationAuthor"
     key="citationAuthor_1"
     prefix=""
-    suffix=", "
+    suffix=""
     value="Pedroso, Marcelo Monteiro"
   />
+  , 
   <CitationView
+    citationId="rek-author-1"
     className="citationAuthor"
     key="citationAuthor_2"
     prefix=""
-    suffix=", "
+    suffix=""
     value="Smith, J"
   />
+  , 
   <CitationView
+    citationId="rek-author-2"
     className="citationAuthor"
     key="citationAuthor_3"
     prefix=""
-    suffix=", "
+    suffix=""
     value="Andersen, J"
   />
+  , 
   <CitationView
+    citationId="rek-author-3"
     className="citationAuthor"
     key="citationAuthor_4"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J A"
   />
+  , 
   <CitationView
+    citationId="rek-author-4"
     className="citationAuthor"
     key="citationAuthor_5"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J B"
   />
+  , 
   <CitationView
+    citationId="rek-author-5"
     className="citationAuthor"
     key="citationAuthor_6"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J C"
   />
+  , 
   <CitationView
+    citationId="rek-author-6"
     className="citationAuthor"
     key="citationAuthor_7"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J D"
   />
+  , 
   <CitationView
+    citationId="rek-author-7"
     className="citationAuthor"
     key="citationAuthor_8"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J E"
   />
+  , 
   <CitationView
+    citationId="rek-author-8"
     className="citationAuthor"
     key="citationAuthor_9"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J F"
   />
+  , 
   <CitationView
+    citationId="rek-author-9"
     className="citationAuthor"
     key="citationAuthor_10"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J G"
   />
-  <span>
-     
-    <a
-      className="citationShowMoreAuthors"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      title="Click to show 2 more authors"
-    >
-      Show 2 more...
-    </a>
-  </span>
-   people.
-</span>
-`;
-
-exports[`AuthorsCitationView test  should render component with 10 authors and show more link 2`] = `
-<span
-  className=""
->
-  Authored by: 
+  , 
   <CitationView
-    className="citationAuthor"
-    key="citationAuthor_1"
-    prefix=""
-    suffix=", "
-    value="Pedroso, Marcelo Monteiro"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_2"
-    prefix=""
-    suffix=", "
-    value="Smith, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_3"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_4"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_5"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_6"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_7"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_8"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_9"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
-    className="citationAuthor"
-    key="citationAuthor_10"
-    prefix=""
-    suffix=", "
-    value="Andersen, J"
-  />
-  <CitationView
+    citationId="rek-author-10"
     className="citationAuthor"
     key="citationAuthor_11"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J H"
   />
+  , 
   <CitationView
+    citationId="rek-author-11"
     className="citationAuthor"
     key="citationAuthor_12"
-    prefix=" and "
+    prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J J"
   />
-  <span>
-     
-    <a
-      className="citationShowMoreAuthors"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      title="Show less authors"
-    >
-      Show less
-    </a>
-  </span>
    people.
 </span>
 `;
@@ -4603,74 +4617,93 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
 >
   Authored by: 
   <CitationView
+    citationId="rek-author-0"
     className="citationAuthor"
     key="citationAuthor_1"
     prefix=""
-    suffix=", "
+    suffix=""
     value="Pedroso, Marcelo Monteiro"
   />
+  , 
   <CitationView
+    citationId="rek-author-1"
     className="citationAuthor"
     key="citationAuthor_2"
     prefix=""
-    suffix=", "
+    suffix=""
     value="Smith, J"
   />
+  , 
   <CitationView
+    citationId="rek-author-2"
     className="citationAuthor"
     key="citationAuthor_3"
     prefix=""
-    suffix=", "
+    suffix=""
     value="Andersen, J"
   />
+  , 
   <CitationView
+    citationId="rek-author-3"
     className="citationAuthor"
     key="citationAuthor_4"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J A"
   />
+  , 
   <CitationView
+    citationId="rek-author-4"
     className="citationAuthor"
     key="citationAuthor_5"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J B"
   />
+  , 
   <CitationView
+    citationId="rek-author-5"
     className="citationAuthor"
     key="citationAuthor_6"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J C"
   />
+  , 
   <CitationView
+    citationId="rek-author-6"
     className="citationAuthor"
     key="citationAuthor_7"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J D"
   />
+  , 
   <CitationView
+    citationId="rek-author-7"
     className="citationAuthor"
     key="citationAuthor_8"
     prefix=""
-    suffix=", "
-    value="Andersen, J"
+    suffix=""
+    value="Andersen, J E"
   />
+  , 
   <CitationView
+    citationId="rek-author-8"
     className="citationAuthor"
     key="citationAuthor_9"
     prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J F"
   />
+  , 
   <CitationView
+    citationId="rek-author-9"
     className="citationAuthor"
     key="citationAuthor_10"
-    prefix=" and "
+    prefix=""
     suffix=""
-    value="Andersen, J"
+    value="Andersen, J G"
   />
    people.
 </span>
@@ -5120,7 +5153,6 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={Object {}}
             searchKey={
               Object {
@@ -5132,7 +5164,6 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
             separator=", "
             showLink={false}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className=" empty"
@@ -5589,7 +5620,6 @@ exports[`AuthorsCitationView test  should set class on component with no authors
                 "idSubkey": "rek_author_id",
               }
             }
-            initialNumberOfAuthors={10}
             publication={Object {}}
             searchKey={
               Object {
@@ -5601,7 +5631,6 @@ exports[`AuthorsCitationView test  should set class on component with no authors
             separator=", "
             showLink={false}
             suffix=" "
-            thresholdNumberOfAuthors={3}
           >
             <span
               className="myClass empty"

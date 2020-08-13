@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 
 import locale from 'locale/pages';
 import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
+import { USER_IDS_WITH_LEGACY_LINK } from 'config/admin/adminInterface';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
@@ -12,6 +13,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 import SecuritySection from './security/SecuritySectionContainer';
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
@@ -24,6 +27,7 @@ import NtroSection from './ntro/NtroSectionContainer';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY, RECORD_TYPE_RECORD } from 'config/general';
+import { StandardPage } from '../../SharedComponents/Toolbox/StandardPage';
 
 const useStyles = makeStyles(
     theme => ({
@@ -63,6 +67,7 @@ export const AdminContainer = ({
     history,
     loadingRecordToView,
     loadRecordToView,
+    recordToViewError,
     locked,
     match,
     recordToView,
@@ -119,13 +124,32 @@ export const AdminContainer = ({
 
     if (!!match.params.pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
+    } else if (!recordToView && isDeleted) {
+        return (
+            <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
+                <Grid container style={{ marginTop: -24 }}>
+                    <Grid item xs={12}>
+                        {locale.pages.viewRecord.notFound.message}
+                    </Grid>
+                </Grid>
+                {recordToViewError && (
+                    <Typography variant={'caption'} style={{ opacity: 0.5 }}>
+                        {`(${recordToViewError.status} - ${recordToViewError.message})`}
+                    </Typography>
+                )}
+            </StandardPage>
+        );
     } else if (!!match.params.pid && !recordToView) {
         return <div className="empty" />;
     }
 
     const isActivated = () => {
         if (recordToView && recordToView.rek_object_type_lookup) {
-            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
+            return (
+                recordToView &&
+                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
+                USER_IDS_WITH_LEGACY_LINK.includes(authorDetails.username)
+            );
         }
         return false;
     };
@@ -230,6 +254,7 @@ AdminContainer.propTypes = {
     history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
+    recordToViewError: PropTypes.object,
     locked: PropTypes.bool,
     match: PropTypes.object,
     recordToView: PropTypes.object,

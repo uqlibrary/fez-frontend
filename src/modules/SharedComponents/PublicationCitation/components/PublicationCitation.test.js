@@ -10,6 +10,7 @@ function setup(testProps = {}) {
             setRecordToView: jest.fn(),
         },
         hideLinks: false,
+        citationStyle: 'header',
         ...testProps,
     };
     return getElement(PublicationCitation, props);

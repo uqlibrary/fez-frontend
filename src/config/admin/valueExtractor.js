@@ -556,6 +556,9 @@ export default {
     fez_record_search_key_oa_status: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_oa_status'),
     },
+    fez_record_search_key_oa_status_type: {
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_oa_status_type'),
+    },
     fez_record_search_key_date_available: {
         getValue: record => {
             const returnValue = record.fez_record_search_key_date_available &&

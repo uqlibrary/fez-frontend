@@ -14,6 +14,7 @@ describe('viewRecord reducer', () => {
         const expectedState = {
             loadingRecordToView: true,
             isRecordLocked: false,
+            isDeleted: false,
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: false,
@@ -28,6 +29,7 @@ describe('viewRecord reducer', () => {
         const expectedState = {
             loadingRecordToView: true,
             isRecordLocked: false,
+            isDeleted: false,
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: true,
@@ -100,5 +102,31 @@ describe('viewRecord reducer', () => {
             type: actions.VIEW_RECORD_UNLOCK,
         });
         expect(test).toEqual({ ...initialState, isRecordLocked: false });
+    });
+
+    it('should set isDeleted flag to true', () => {
+        const test = viewRecordReducer(initialState, {
+            type: actions.VIEW_RECORD_DELETED,
+            payload: {
+                rek_pid: 'UQ:1234',
+                rek_title: 'This is a title',
+                rek_description: 'This is a description.',
+                rek_editing_user: 'uqtest',
+            },
+        });
+
+        expect(test).toEqual({
+            ...initialState,
+            isRecordLocked: false,
+            hideCulturalSensitivityStatement: true,
+            loadingRecordToView: false,
+            isDeleted: true,
+            recordToView: {
+                rek_pid: 'UQ:1234',
+                rek_title: 'This is a title',
+                rek_description: 'This is a description.',
+                rek_editing_user: 'uqtest',
+            },
+        });
     });
 });

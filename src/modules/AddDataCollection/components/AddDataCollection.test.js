@@ -1,4 +1,4 @@
-import AddDataCollection from './AddDataCollection';
+import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
 
@@ -168,5 +168,13 @@ describe('AddDataCollection test', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not generate an error when licence locale is missing', () => {
+        // licence text not supplied
+        expect(toJson(licenseText())).toMatchSnapshot();
+
+        // licence text lacks required internal structure
+        expect(toJson(licenseText(['something']))).toMatchSnapshot();
     });
 });

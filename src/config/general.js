@@ -117,6 +117,17 @@ export const DOCUMENT_TYPE_WORKING_PAPER = 'Working Paper';
 
 export const DOCUMENT_TYPES_EDIT_ONLY = [PUBLICATION_TYPE_REFERENCE_ENTRY];
 
+export const PUBLICATION_TYPES_WITH_DOI = [
+    PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_RESEARCH_REPORT,
+    PUBLICATION_TYPE_THESIS,
+    PUBLICATION_TYPE_WORKING_PAPER,
+];
+
 export const DOCUMENT_TYPES_LOOKUP = {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: DOCUMENT_TYPE_AUDIO_DOCUMENT,
     [PUBLICATION_TYPE_BOOK]: DOCUMENT_TYPE_BOOK,
@@ -727,16 +738,30 @@ export const CURRENT_LICENCES = [
         value: 453701,
         text: 'Permitted Re-use with Acknowledgement',
         link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.',
+        ],
     },
     {
         value: 454104,
         text: 'Permitted Re-Use with Commercial Use Restriction',
         link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.',
+            'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.',
+        ],
     },
     {
         value: 454105,
         text: 'Permitted Re-Use with Share Alike Requirement',
         link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.',
+            'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.',
+        ],
     },
 ];
 export const DEPRECATED_LICENCES = [
@@ -1106,6 +1131,7 @@ export const RECORD_ACTION_URLS = [
         inApp: true,
         showInDeleted: true,
         options: null,
+        isRecordEdit: true,
     },
     {
         label: 'Edit author affiliations',
@@ -1121,6 +1147,13 @@ export const RECORD_ACTION_URLS = [
         showInDeleted: false,
         options: null,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
+    },
+    {
+        label: hasDoi => `${hasDoi ? 'Update' : 'Create'} DOI`,
+        inApp: true,
+        options: null,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/doi/${pid}`,
+        isDoi: true,
     },
     {
         label: 'Delete selected record',
@@ -1411,11 +1444,21 @@ export const OA_STATUS = [
     { value: '453694', text: 'Link (no DOI)' },
     { value: '453695', text: 'File (Publisher version)' },
     { value: '453696', text: 'File (Author Post-print)' },
+    { value: '454127', text: 'File (Author Pre-print)' },
     { value: '453697', text: 'Other' },
     { value: '453698', text: 'Not Open Access' },
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
     { value: '454116', text: 'RDM open' },
+    { value: '454118', text: 'Not yet assessed (Unpaywall)' },
+];
+
+export const OA_STATUS_TYPE = [
+    { value: null, text: 'Please choose an option' },
+    { value: 454120, text: 'Green' },
+    { value: 454121, text: 'Gold' },
+    { value: 454122, text: 'Hybrid' },
+    { value: 454123, text: 'Bronze' },
 ];
 
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;

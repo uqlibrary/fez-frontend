@@ -45,16 +45,31 @@ describe('View record actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             expect(mockActionsStore.getActions()).toContainEqual({
                 type: actions.VIEW_RECORD_LOAD_FAILED,
-                payload: locale.global.errorMessages[500].message,
+                payload: locale.global.errorMessages[500],
             });
         });
 
         it('dispatches expected actions when loading a deleted record to view', async () => {
-            mockApi
-                .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
-                .reply(410, { data: { ...mockData.record } });
+            mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl).reply(410, {
+                status: 410,
+                message: 'Some test message',
+                data: { ...mockData.record },
+            });
 
-            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOADED];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED];
+
+            try {
+                await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions when loading a missing record to view', async () => {
+            mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl).reply(404);
+
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOAD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
@@ -77,7 +92,7 @@ describe('View record actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             expect(mockActionsStore.getActions()).toContainEqual({
                 type: actions.VIEW_RECORD_LOAD_FAILED,
-                payload: locale.global.errorMessages[403].message,
+                payload: locale.global.errorMessages[403],
             });
         });
 
@@ -88,10 +103,6 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_LOAD_FAILED,
-                payload: locale.global.errorMessages[404].message,
-            });
         });
 
         it('dispatch expected actions on hiding cultural sensitivity statement', () => {

@@ -16,22 +16,20 @@ export function loadRecordToView(pid, isEdit = false) {
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
                     payload: response.data,
-                    isDeleted: false,
                 });
 
                 return Promise.resolve(response.data);
             })
             .catch(error => {
-                if (error.response && error.response.status === 410 && error.response.data) {
+                if (error.status === 410) {
                     dispatch({
-                        type: actions.VIEW_RECORD_LOADED,
-                        payload: error.response.data.data,
-                        isDeleted: true,
+                        type: actions.VIEW_RECORD_DELETED,
+                        payload: error.data,
                     });
                 } else {
                     dispatch({
                         type: actions.VIEW_RECORD_LOAD_FAILED,
-                        payload: error.message,
+                        payload: error,
                     });
                 }
             });

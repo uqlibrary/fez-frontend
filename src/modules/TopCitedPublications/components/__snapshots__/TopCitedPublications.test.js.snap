@@ -568,6 +568,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
                 ],
                 "fez_record_search_key_language_of_journal_name": Array [],
                 "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_native_script_journal_name": null,
@@ -592,6 +593,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
                   "rek_oa_status_pid": "UQ:330391",
                   "rek_oa_status_xsdmf_id": null,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Bethesda, MD, United States",
                   "rek_place_of_publication_id": 4161211,
@@ -1317,6 +1319,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 ],
                 "fez_record_search_key_language_of_journal_name": Array [],
                 "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_license": null,
                 "fez_record_search_key_link": Array [],
                 "fez_record_search_key_link_description": Array [],
                 "fez_record_search_key_native_script_journal_name": null,
@@ -1341,6 +1344,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                   "rek_oa_status_pid": "UQ:330391",
                   "rek_oa_status_xsdmf_id": null,
                 },
+                "fez_record_search_key_oa_status_type": null,
                 "fez_record_search_key_place_of_publication": Object {
                   "rek_place_of_publication": "Bethesda, MD, United States",
                   "rek_place_of_publication_id": 4161211,

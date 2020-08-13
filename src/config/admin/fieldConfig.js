@@ -10,6 +10,7 @@ import {
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
     PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DESIGN,
@@ -58,6 +59,7 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
+import { OAStatusTypeField } from 'modules/SharedComponents/Toolbox/OAStatusTypeField';
 import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -534,7 +536,7 @@ export default {
                 locale: locale.components.issnForm.field,
                 inputNormalizer: value => {
                     const newValue = value.replace('-', '');
-                    return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
+                    return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
                 canEdit: true,
                 rowItemTemplate: IssnRowItemTemplate,
@@ -842,6 +844,13 @@ export default {
                 label: 'Institutional status',
             },
         },
+        fez_record_search_key_oa_status_type: {
+            component: OAStatusTypeField,
+            componentProps: {
+                name: 'adminSection.fez_record_search_key_oa_status_type.rek_oa_status_type',
+                label: 'OA status type',
+            },
+        },
         fez_record_search_key_oa_status: {
             component: OAStatusField,
             componentProps: {
@@ -1059,9 +1068,9 @@ export default {
         fez_record_search_key_license: {
             component: LicenceSelectorField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_license.rek_license',
+                name: 'adminSection.fez_record_search_key_license.rek_license',
                 label: 'Licence',
-                isAdmin: true,
+                isAdmin: true, // show the extra info that is only visible to admins
             },
         },
         fez_record_search_key_original_format: {
@@ -1624,6 +1633,12 @@ export default {
     override: {
         [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
             fez_record_search_key_journal_name: () => ({
+                required: false,
+                validate: null,
+            }),
+        },
+        [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
+            fez_record_search_key_contributors: () => ({
                 required: false,
                 validate: null,
             }),

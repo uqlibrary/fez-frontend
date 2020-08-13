@@ -620,6 +620,7 @@ export default {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -1520,6 +1521,7 @@ export default {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -2367,6 +2369,7 @@ export default {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -3146,6 +3149,7 @@ export default {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -3925,6 +3929,7 @@ export default {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -4969,6 +4974,7 @@ export default {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -5710,6 +5716,7 @@ export default {
         }],
         "fez_record_search_key_language_of_journal_name": [],
         "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_license": null,
         "fez_record_search_key_link": [],
         "fez_record_search_key_link_description": [],
         "fez_record_search_key_native_script_journal_name": null,
@@ -7518,6 +7525,66 @@ export default {
             "rek_author_xsdmf_id": null,
             "rek_author": "Parton, Robert G.",
             "rek_author_order": 21
+        }, {
+            "rek_author_id": 32523125,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Larsen, Niels",
+            "rek_author_order": 22
+        }, {
+            "rek_author_id": 32523126,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Linke, Burkhard",
+            "rek_author_order": 23
+        }, {
+            "rek_author_id": 32523127,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "McHardy, Alice C.",
+            "rek_author_order": 24
+        }, {
+            "rek_author_id": 32523128,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Meyer, Folker",
+            "rek_author_order": 25
+        }, {
+            "rek_author_id": 32523129,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Neuweger, Heiko",
+            "rek_author_order": 26
+        }, {
+            "rek_author_id": 32523130,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Olsen, Gary",
+            "rek_author_order": 27
+        }, {
+            "rek_author_id": 32523131,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Smithers, John",
+            "rek_author_order": 28
+        }, {
+            "rek_author_id": 32523132,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Osterman, Andrei",
+            "rek_author_order": 29
+        }, {
+            "rek_author_id": 32523133,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Portnoy, Vasiliy",
+            "rek_author_order": 30
+        }, {
+            "rek_author_id": 32523134,
+            "rek_author_pid": "UQ:306039",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Mayhem, Carey",
+            "rek_author_order": 31
         }],
         "fez_record_search_key_author_affiliation_country": [{
             "rek_author_affiliation_country_id": 29184,
@@ -8073,6 +8140,83 @@ export default {
             "rek_author_id": 824,
             "rek_author_id_order": 21,
             "rek_author_id_lookup": "Parton, Robert G."
+        }, {
+            "rek_author_id_id": 32640521,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 22,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640522,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 23,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640523,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 24,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640524,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 25,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640525,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 26,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640526,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 27,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640527,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 28,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640528,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 29,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640529,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 30,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640530,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 31,
+            "author": null
+        }, {
+            "rek_author_id_id": 32640531,
+            "rek_author_id_pid": "UQ:306039",
+            "rek_author_id_xsdmf_id": null,
+            "rek_author_id": 0,
+            "rek_author_id_order": 32,
+            "author": null
         }],
         "fez_record_search_key_biosis_id": null,
         "fez_record_search_key_contributor": [],

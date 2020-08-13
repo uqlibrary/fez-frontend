@@ -24,6 +24,9 @@ jest.mock('@material-ui/styles/useTheme', () => () => ({
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
+        authorDetails: {
+            username: 'uqstaff',
+        },
         classes: {
             helpIcon: 'helpicon',
             tabIndicator: 'tabindicator',
@@ -67,6 +70,16 @@ describe('AdminContainer component', () => {
     it('should render loading record view', () => {
         const wrapper = setup({
             loadingRecordToView: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render record not found view', () => {
+        const wrapper = setup({
+            recordToView: null,
+            loadingRecordToView: false,
+            isDeleted: true,
+            recordToViewError: { message: 'test', status: 404 },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -134,6 +147,9 @@ describe('AdminContainer component', () => {
                 helpIcon: 'helpicon',
                 tabIndicator: 'tabindicator',
                 badgeMargin: 'badgemargin',
+            },
+            authorDetails: {
+                username: 'uqstaff',
             },
             match: {
                 params: {
