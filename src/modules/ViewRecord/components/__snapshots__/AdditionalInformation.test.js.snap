@@ -39873,7 +39873,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -39923,7 +39923,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -39975,7 +39975,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -40028,7 +40028,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -40086,7 +40086,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -40144,7 +40144,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
