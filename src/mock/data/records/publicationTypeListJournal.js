@@ -365,7 +365,13 @@ export default {
                 "rek_volume_number": "67"
             },
             "fez_record_search_key_wok_doc_types": [],
-            "fez_record_search_key_doi": null,
+            "fez_record_search_key_doi": {
+                "rek_doi_id":1796978,
+                "rek_doi_pid":"UQ:175806",
+                "rek_doi_xsdmf_id":null,
+                "rek_doi":"10.14264/175806",
+                "fez_altmetric":null
+            },
             "fez_datastream_info": [],
             "fez_matched_journals": [],
             "rek_display_type_lookup": "Journal",

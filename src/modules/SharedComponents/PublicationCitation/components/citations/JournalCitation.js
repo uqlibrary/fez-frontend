@@ -5,6 +5,7 @@ import * as Partials from './partials';
 export default class JournalCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        hideDoiLink: PropTypes.bool,
     };
 
     constructor(props) {
@@ -20,6 +21,9 @@ export default class JournalCitation extends Component {
                 : null,
             issueNumber: this.props.publication.fez_record_search_key_issue_number
                 ? this.props.publication.fez_record_search_key_issue_number.rek_issue_number
+                : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
                 : null,
         };
 
@@ -42,6 +46,9 @@ export default class JournalCitation extends Component {
                     prefix="("
                     suffix=")."
                 />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
             </div>
         );
     }
