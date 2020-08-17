@@ -21,6 +21,8 @@ export const useStyles = makeStyles(theme => ({
 }));
 
 export const ConfirmationBox = ({
+    actionButtonColor,
+    cancelButtonColor,
     confirmationBoxId,
     InputForm,
     hideCancelButton,
@@ -66,7 +68,7 @@ export const ConfirmationBox = ({
                         <Button
                             children={locale.confirmButtonLabel}
                             autoFocus
-                            color={'primary'}
+                            color={actionButtonColor || 'primary'}
                             fullWidth
                             onClick={_onAction}
                             id="confirm-action"
@@ -91,7 +93,7 @@ export const ConfirmationBox = ({
                         <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
-                                color={'primary'}
+                                color={cancelButtonColor || 'primary'}
                                 children={locale.cancelButtonLabel}
                                 fullWidth
                                 onClick={_onCancelAction}
@@ -107,6 +109,8 @@ export const ConfirmationBox = ({
 };
 
 ConfirmationBox.propTypes = {
+    actionButtonColor: PropTypes.string,
+    cancelButtonColor: PropTypes.string,
     confirmationBoxId: PropTypes.string.isRequired,
     hideCancelButton: PropTypes.bool,
     InputForm: PropTypes.func,

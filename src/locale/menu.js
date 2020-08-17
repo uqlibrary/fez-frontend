@@ -68,7 +68,7 @@ export default {
             },
         },
         favouriteSearch: {
-            primaryText: 'Favourite search',
+            primaryText: 'Favourite searches',
         },
     },
     footer: {

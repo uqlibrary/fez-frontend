@@ -198,6 +198,8 @@ export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenA
         <div data-testid="advanced-search-caption">
             {!!isUserAdmin && (
                 <ConfirmationBox
+                    actionButtonColor="primary"
+                    cancelButtonColor="secondary"
                     confirmationBoxId="favourite-search-save"
                     onAction={handleFavouriteSearchSave}
                     onClose={hideConfirmation}

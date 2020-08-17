@@ -2736,14 +2736,14 @@ export default {
             label: 'Audience size',
         },
         favouriteSearchList: {
-            tableTitle: 'List of favourite search',
+            tableTitle: '',
             columns: {
                 realLink: {
                     title: 'Real link',
                     cellText: 'Link',
                 },
                 description: {
-                    title: 'Description (Click to edit)',
+                    title: 'Description',
                     placeholderText: 'Description',
                     validationMessage: {
                         empty: 'This field is required',
@@ -2753,7 +2753,7 @@ export default {
                     title: 'Aliased link',
                 },
                 alias: {
-                    title: 'Alias (Click to edit)',
+                    title: 'Alias',
                     placeholderText: 'Alias',
                     validationMessage: {
                         empty: 'This field is required',
