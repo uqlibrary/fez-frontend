@@ -199,6 +199,7 @@ export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenA
             {!!isUserAdmin && (
                 <ConfirmationBox
                     actionButtonColor="primary"
+                    actionButtonVariant="contained"
                     cancelButtonColor="secondary"
                     confirmationBoxId="favourite-search-save"
                     onAction={handleFavouriteSearchSave}
