@@ -60,25 +60,24 @@ describe('FavouriteSearch', () => {
         const loadFavouriteSearchListFn = jest.spyOn(FavouriteSearchActions, 'loadFavouriteSearchList');
 
         const { getByText } = setup({});
-        expect(getByText('Loading list of favourite search')).toBeInTheDocument();
+        expect(getByText('Loading list of favourite searches')).toBeInTheDocument();
         expect(loadFavouriteSearchListFn).toBeCalled();
 
-        await waitFor(() => getByText('Favourite search'));
-        expect(getByText('Favourite search')).toBeInTheDocument();
-        expect(getByText('List of favourite search')).toBeInTheDocument();
+        await waitFor(() => getByText('Favourite searches'));
+        expect(getByText('Favourite searches')).toBeInTheDocument();
 
         // Expect table column titles
         expect(getByText('Real link')).toBeInTheDocument();
-        expect(getByText('Description (Click to edit)')).toBeInTheDocument();
+        expect(getByText('Description')).toBeInTheDocument();
         expect(getByText('Aliased link')).toBeInTheDocument();
-        expect(getByText('Alias (Click to edit)')).toBeInTheDocument();
+        expect(getByText('Alias')).toBeInTheDocument();
     });
 
     it('should handle row update', async done => {
         const { getByText, getByTestId, getAllByTestId } = setup({});
         const updateFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'updateFavouriteSearchListItem');
 
-        await waitFor(() => getByText('Favourite search'));
+        await waitFor(() => getByText('Favourite searches'));
         fireEvent.click(getAllByTestId('favourite-search-list-item-edit')[0]);
 
         act(() => {
@@ -92,7 +91,7 @@ describe('FavouriteSearch', () => {
     it('should not update row if alias has found', async () => {
         const { getByText, getByTestId, getAllByTestId } = setup({});
 
-        await waitFor(() => getByText('Favourite search'));
+        await waitFor(() => getByText('Favourite searches'));
 
         fireEvent.click(getAllByTestId('favourite-search-list-item-edit')[0]);
 
@@ -111,7 +110,7 @@ describe('FavouriteSearch', () => {
         const { getByText, getByTestId, getAllByTestId } = setup({});
         const deleteFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'deleteFavouriteSearchListItem');
 
-        await waitFor(() => getByText('Favourite search'));
+        await waitFor(() => getByText('Favourite searches'));
         fireEvent.click(getAllByTestId('favourite-search-list-item-delete')[0]);
 
         act(() => {
