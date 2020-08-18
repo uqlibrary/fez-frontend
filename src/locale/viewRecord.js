@@ -1793,6 +1793,10 @@ export default {
                     order: 10,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 10.5,
+                },
+                {
                     field: 'fez_record_search_key_oa_status',
                     order: 11,
                 },

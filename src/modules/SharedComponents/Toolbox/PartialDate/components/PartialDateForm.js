@@ -11,7 +11,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import { withStyles } from '@material-ui/core/styles';
 import { PLACEHOLDER_DATE } from 'config/general';
 
-const moment = require('moment');
+import moment from 'moment';
 
 const styles = theme => ({
     fakeTitle: {
@@ -128,12 +128,12 @@ export class PartialDateForm extends Component {
      * @private
      */
     _validate = state => {
-        const { day, month: monthActual, year } = state;
-
-        // moment validation doesn't recognise -1 as a valid date
+        const { day: dayActual, month: monthActual, year } = state;
+        // moment validation doesn't recognise -1 or empty string as a valid date
         const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
+        const day = isNaN(dayActual) || !dayActual ? null : dayActual;
         const hasRequired = !!year && (this.props.allowPartial || (!!day && month !== null));
-        const momentDate = { ...state, month };
+        const momentDate = { ...state, month, day };
         const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
 
         if (validationStatus === STATUS_VALID && !!this.props.disableFuture) {
@@ -247,7 +247,9 @@ export class PartialDateForm extends Component {
 
         // moment validation doesn't recognise -1 as a valid date
         const month = date.month === MONTH_UNSELECTED ? null : date.month;
-        const momentDate = { ...date, month };
+        const day = isNaN(date.day) || !date.day ? null : date.day;
+        const momentDate = { ...date, month, day };
+
         return validationStatus === STATUS_VALID ? moment(momentDate).format(this.props.dateFormat) : '';
     };
 
