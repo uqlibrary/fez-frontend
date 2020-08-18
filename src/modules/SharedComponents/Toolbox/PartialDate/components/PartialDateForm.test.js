@@ -7,6 +7,7 @@ function setup(testProps, isShallow = true) {
         classes: testProps.classes || {
             hideLabel: 'hidden',
         },
+        partialDateFieldId: 'test',
     };
     return getElement(PartialDateForm, props, isShallow);
 }

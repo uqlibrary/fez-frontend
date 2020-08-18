@@ -14,9 +14,9 @@ const DashboardOrcidSyncMessage = ({
     status,
     statusIconStyle,
 }) => (
-    <Grid container spacing={24} style={{ marginTop: '0' }}>
-        <Grid item>
-            <Grid container direction="row" alignItems="flex-start" spacing={16}>
+    <Grid container spacing={4} style={{ marginTop: '0' }} data-testid="orcid-help-panel">
+        <Grid item data-testid="orcid-help-panel-message">
+            <Grid container direction="row" alignItems="flex-start" spacing={2}>
                 <Grid item xs={2}>
                     <DoneIcon
                         color="action"
@@ -28,7 +28,7 @@ const DashboardOrcidSyncMessage = ({
                     {lastSyncMessage}
                 </Grid>
             </Grid>
-            <Grid container direction="row" alignItems="flex-start" spacing={16}>
+            <Grid container direction="row" alignItems="flex-start" spacing={2}>
                 <Grid item xs={2}>
                     <StatusIcon size={24} style={statusIconStyle} />
                 </Grid>
@@ -42,6 +42,7 @@ const DashboardOrcidSyncMessage = ({
                 aria-label={locale.actionButtonLabel}
                 children={locale.actionButtonLabel}
                 color="primary"
+                data-testid="orcid-upload-start-button"
                 disabled={disableRequest}
                 fullWidth
                 onClick={primaryClick}
@@ -53,6 +54,7 @@ const DashboardOrcidSyncMessage = ({
                 aria-label={locale.alternateActionButtonLabel}
                 children={locale.alternateActionButtonLabel}
                 color="secondary"
+                data-testid="orcid-view-works-button"
                 fullWidth
                 onClick={secondaryClick}
                 variant="contained"
@@ -62,7 +64,7 @@ const DashboardOrcidSyncMessage = ({
 );
 
 DashboardOrcidSyncMessage.propTypes = {
-    StatusIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.object]),
+    StatusIcon: PropTypes.any,
     disableRequest: PropTypes.bool,
     lastSyncMessage: PropTypes.string,
     locale: PropTypes.object,
