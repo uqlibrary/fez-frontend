@@ -7090,7 +7090,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Favourite search",
+          "pageTitle": "Favourite searches",
           "path": "/admin/favourite-search",
         },
         Object {
@@ -7424,7 +7424,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/favourite-search",
-          "primaryText": "Favourite search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -7927,7 +7927,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Favourite search"
+            pageTitle="Favourite searches"
             path="/admin/favourite-search"
           />
           <Route
@@ -9239,7 +9239,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Favourite search",
+          "pageTitle": "Favourite searches",
           "path": "/admin/favourite-search",
         },
         Object {
@@ -9573,7 +9573,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/favourite-search",
-          "primaryText": "Favourite search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -10112,7 +10112,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Favourite search"
+            pageTitle="Favourite searches"
             path="/admin/favourite-search"
           />
           <Route
@@ -10554,7 +10554,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Favourite search",
+          "pageTitle": "Favourite searches",
           "path": "/admin/favourite-search",
         },
         Object {
@@ -10888,7 +10888,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/favourite-search",
-          "primaryText": "Favourite search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -11391,7 +11391,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Favourite search"
+            pageTitle="Favourite searches"
             path="/admin/favourite-search"
           />
           <Route
@@ -11833,7 +11833,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Favourite search",
+          "pageTitle": "Favourite searches",
           "path": "/admin/favourite-search",
         },
         Object {
@@ -12167,7 +12167,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/favourite-search",
-          "primaryText": "Favourite search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -12706,7 +12706,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Favourite search"
+            pageTitle="Favourite searches"
             path="/admin/favourite-search"
           />
           <Route

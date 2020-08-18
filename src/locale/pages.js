@@ -916,8 +916,8 @@ export default {
             },
         },
         favouriteSearch: {
-            title: 'Favourite search',
-            loadingMessage: 'Loading list of favourite search',
+            title: 'Favourite searches',
+            loadingMessage: 'Loading list of favourite searches',
             aliasExistsAlert: {
                 type: 'error',
                 message: 'Alias "[alias]" has been taken',
