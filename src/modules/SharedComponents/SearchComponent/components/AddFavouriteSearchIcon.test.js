@@ -50,7 +50,7 @@ describe('Component AddFavouriteSearchIcon', () => {
         });
     });
 
-    it('should display icon for saved search as favourite search as an admin user', async () => {
+    it('should display icon for saved search as favourite search as an admin user', () => {
         const { getByTestId } = setup({
             state: Immutable.Map({
                 searchRecordsReducer: {

@@ -304,40 +304,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(routes.ORCID_SYNC_API().apiUrl)
     .reply(200, mockData.orcidSyncStatus)
     .onGet(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)
-    .reply(200, mockData.favouriteSearchList);
-
-mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
-// .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
-mock.onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*'}).apiUrl)))
-    .reply(config => {
-        console.log('test');
-        return [200, { data: { ...mockData.favouriteSearchItem}}]
-    });
-
-mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API( { id: '.*'}))
-    .reply(200, {data: {}});
-
-mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
-    .reply(200, { data: '' })
-    // .reply(500, { message: ['error - failed POST RECORDS_ISSUES_API'] })
-    .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
-    .reply(200, { data: {} })
-    // .reply(500, { message: ['error - failed HIDE_POSSIBLE_RECORD_API'] })
-    .onPost(routes.BATCH_IMPORT_API().apiUrl)
-    .reply(201, { data: 'Batch Import Job Created' })
-    // .reply(422)
-    .onPost(routes.ORCID_SYNC_API().apiUrl)
-    .reply(201, mockData.orcidSyncResponse)
-    // .reply(400) // if current sync job exists
-    .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
-    // .reply(500, { message: ['error - failed NEW_RECORD_API'] })
-    // .reply(403, {message: ['Session expired']})
-    .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
-    .reply(() => [200, { data: mockData.collectionRecord }])
-    .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
-    .reply(() => [200, { data: mockData.communityRecord }])
-    .onGet(new RegExp(escapeRegExp(routes.ISSN_LINKS_API({ type: 'sherpa-romeo', issn: '.*' }).apiUrl)))
+    .reply(200, mockData.favouriteSearchList).onGet(new RegExp(escapeRegExp(routes.ISSN_LINKS_API({ type: 'sherpa-romeo', issn: '.*' }).apiUrl)))
     .reply(config => {
         const issn = config.url.split(/[\s,\/]+/).pop();
         const data = [];
@@ -376,6 +343,39 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
         }
         return [200, { data }];
     });
+
+mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
+// .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
+mock.onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*'}).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.favouriteSearchItem}}]
+    });
+
+mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API( { id: '.*'}))
+    .reply(200, {data: {}});
+
+mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: '' })
+    // .reply(500, { message: ['error - failed POST RECORDS_ISSUES_API'] })
+    .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
+    .reply(200, { data: {} })
+    // .reply(500, { message: ['error - failed HIDE_POSSIBLE_RECORD_API'] })
+    .onPost(routes.BATCH_IMPORT_API().apiUrl)
+    .reply(201, { data: 'Batch Import Job Created' })
+    // .reply(422)
+    .onPost(routes.ORCID_SYNC_API().apiUrl)
+    .reply(201, mockData.orcidSyncResponse)
+    // .reply(400) // if current sync job exists
+    .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
+    .reply(config => [200, { data: { ...JSON.parse(config.data), rek_pid: 'UQ:1111111' } }])
+    // .reply(500, { message: ['error - failed NEW_RECORD_API'] })
+    // .reply(403, {message: ['Session expired']})
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
+    .reply(() => [200, { data: mockData.collectionRecord }])
+    .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
+    .reply(() => [200, { data: mockData.communityRecord }])
+    .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
+    .reply(200, { data: { ...mockData.favouriteSearchItem}});
 
 mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {
     data: 'Record deleted',
