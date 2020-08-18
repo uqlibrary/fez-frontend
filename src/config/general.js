@@ -1492,3 +1492,6 @@ export const UQ_DOI_PREFIX = '10.14264/';
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
 
 export const THESIS_UPLOAD_RETRIES = 5;
+
+export const MY_RECORDS_BULK_EXPORT_SIZE = 1000;
+export const PUB_SEARCH_BULK_EXPORT_SIZE = 500;

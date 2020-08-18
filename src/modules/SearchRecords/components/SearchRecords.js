@@ -8,6 +8,7 @@ import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { routes } from 'config';
+import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import param from 'can-param';
 import deparam from 'can-deparam';
 
@@ -54,6 +55,7 @@ class SearchRecords extends PureComponent {
                 ranges: {},
             },
             advancedSearchFields: [],
+            bulkExportSelected: false,
         };
 
         if (!!props.location && props.location.search.indexOf('?') >= 0) {
@@ -131,7 +133,13 @@ class SearchRecords extends PureComponent {
         }
 
         const pageSize = parseInt(providedSearchQuery.pageSize, 10);
-        providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
+        if (pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
+            providedSearchQuery.bulkExportSelected = true;
+            providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
+        } else {
+            providedSearchQuery.pageSize =
+                locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
+        }
 
         providedSearchQuery.sortDirection =
             locale.components.sorting.sortDirection.indexOf(providedSearchQuery.sortDirection) < 0
@@ -200,7 +208,9 @@ class SearchRecords extends PureComponent {
             search: param(this.state),
             state: { ...this.state },
         });
-        this.updateSearch();
+        if (this.state.pageSize !== PUB_SEARCH_BULK_EXPORT_SIZE) {
+            this.updateSearch();
+        }
     };
 
     updateSearch = () => {
@@ -208,7 +218,11 @@ class SearchRecords extends PureComponent {
     };
 
     handleExportPublications = exportFormat => {
-        this.props.actions.exportEspacePublications({ ...exportFormat, ...this.state });
+        this.props.actions.exportEspacePublications({
+            ...exportFormat,
+            ...this.state,
+            pageSize: this.state.bulkExportSelected ? PUB_SEARCH_BULK_EXPORT_SIZE : this.state.pageSize,
+        });
     };
 
     handleFacetExcludesFromSearchFields = searchFields => {
@@ -309,6 +323,7 @@ class SearchRecords extends PureComponent {
                                             onPageSizeChanged={this.pageSizeChanged}
                                             onExportPublications={this.handleExportPublications}
                                             disabled={isLoadingOrExporting}
+                                            bulkExportSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>

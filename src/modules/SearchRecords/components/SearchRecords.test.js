@@ -9,15 +9,18 @@ function setup(testProps = {}) {
         exportPublicationsLoading: false,
         isAdvancedSearch: false,
         isUnpublishedBufferPage: false,
-        actions: {
-            exportEspacePublications: jest.fn(),
-            searchEspacePublications: jest.fn(),
-        },
         location: {
             search: '?searchQueryParams%5Ball%5D=test',
         },
-        history: {},
+        history: {
+            push: jest.fn(),
+        },
         ...testProps,
+        actions: {
+            exportEspacePublications: jest.fn(),
+            searchEspacePublications: jest.fn(),
+            ...testProps.actions,
+        },
     };
     return getElement(SearchRecords, props);
 }
@@ -584,6 +587,7 @@ describe('SearchRecords page', () => {
                 showOpenAccessOnly: false,
             },
             advancedSearchFields: [],
+            bulkExportSelected: false,
         };
 
         const wrapper = setup({
@@ -664,5 +668,40 @@ describe('SearchRecords page', () => {
         wrapper.unmount();
         expect(componentWillUnmount).toHaveBeenCalled();
         expect(clearSearchQueryFn).toHaveBeenCalled();
+    });
+
+    it('sets bulk export size as expected', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: testFn,
+            },
+        });
+        wrapper.setState({ pageSize: 500, bulkExportSelected: true }, () => {
+            wrapper.instance().updateHistoryAndSearch();
+        });
+        expect(testFn).toHaveBeenCalledTimes(0);
+
+        wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
+        expect(testFn).toHaveBeenCalledWith({
+            activeFacets: {
+                filters: {},
+                ranges: {},
+            },
+            bulkExportSelected: true,
+            exportPublicationsFormat: 'excel',
+            advancedSearchFields: [],
+            page: 1,
+            pageSize: 500,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                all: 'test',
+            },
+        });
+
+        const ret = wrapper.instance().parseSearchQueryStringFromUrl('pageSize=500');
+        expect(ret.bulkExportSelected).toBe(true);
+        expect(ret.pageSize).toBe(500);
     });
 });

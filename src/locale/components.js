@@ -1649,6 +1649,7 @@ export default {
             ],
             sortDirection: ['Desc', 'Asc'],
             recordsPerPage: [20, 50, 100],
+            exportOnlyLabel: 'Export Only:',
         },
         newsFeed: {
             title: 'Latest news',

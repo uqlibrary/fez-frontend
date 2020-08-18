@@ -194,6 +194,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={500}
               disabled={true}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -302,6 +303,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={500}
               disabled={true}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -532,6 +534,7 @@ exports[`SearchRecords page should render when paging 1`] = `
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={500}
               disabled={false}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -616,6 +619,7 @@ Object {
     "ranges": Object {},
   },
   "advancedSearchFields": Array [],
+  "bulkExportSelected": false,
   "page": 1,
   "pageSize": 20,
   "sortBy": "score",

@@ -255,6 +255,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -391,6 +392,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -536,6 +538,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -769,6 +772,7 @@ exports[`MyRecords test renders loading screen while export publications loading
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -889,6 +893,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -1045,6 +1050,7 @@ exports[`MyRecords test should handle export publications 1`] = `
             xs={12}
           >
             <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -1055,7 +1061,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                 Object {
                   "current_page": 1,
                   "from": 1,
-                  "per_page": 20,
+                  "per_page": 500,
                   "to": 20,
                   "total": 147,
                 }
@@ -1076,7 +1082,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                 Object {
                   "current_page": 1,
                   "from": 1,
-                  "per_page": 20,
+                  "per_page": 500,
                   "to": 20,
                   "total": 147,
                 }
@@ -1118,7 +1124,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                 Object {
                   "current_page": 1,
                   "from": 1,
-                  "per_page": 20,
+                  "per_page": 500,
                   "to": 20,
                   "total": 147,
                 }
