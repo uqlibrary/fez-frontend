@@ -91,7 +91,7 @@ export const ContributorForm = ({
     );
 
     const _onCancel = () => {
-        onSubmit({ ...initialContributor });
+        initialContributor.nameAsPublished && onSubmit({ ...initialContributor });
         resetInternalState();
     };
 
