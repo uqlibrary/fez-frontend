@@ -84,7 +84,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
+              bulkExportSize={1000}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -208,7 +209,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
+              bulkExportSize={1000}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -447,7 +449,8 @@ exports[`myDatasets test renders loading screen while loading publications while
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}

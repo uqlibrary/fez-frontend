@@ -25,8 +25,8 @@ function setup(testProps = {}) {
     return getElement(PublicationsListSorting, props);
 }
 
-describe('PublicationsListSorting renders ', () => {
-    it('component with empty paging data', () => {
+describe('PublicationsListSorting component', () => {
+    it('renders with empty paging data', () => {
         const data = {
             from: 0,
             to: 0,
@@ -37,7 +37,7 @@ describe('PublicationsListSorting renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with non-empty paging data', () => {
+    it('renders with non-empty paging data', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('.publicationsListSorting.empty').length).toBe(0);
@@ -45,26 +45,26 @@ describe('PublicationsListSorting renders ', () => {
         // expect(pages.length).toBe(3);
     });
 
-    it('component with export dropdown for admin or author', () => {
+    it('renders with export dropdown for admin or author', () => {
         const wrapper = setup({ canUseExport: true });
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('ExportPublications').length).toBe(1);
     });
 
-    it('component with export dropdown hidden', () => {
+    it('renders with export dropdown hidden', () => {
         const wrapper = setup({ canUseExport: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('ExportPublications').length).toBe(0);
     });
 
-    it('component with all fields disabled', () => {
+    it('renders with all fields disabled', () => {
         const wrapper = setup({ disabled: true });
         wrapper.find('Select').forEach(option => {
             expect(option.props().disabled).toEqual(true);
         });
     });
 
-    it('component with non-empty paging data, pageChanged called', () => {
+    it('renders with non-empty paging data, pageChanged called', () => {
         const testFn = jest.fn();
         const wrapper = setup({ onPageSizeChanged: testFn });
         wrapper
@@ -74,7 +74,7 @@ describe('PublicationsListSorting renders ', () => {
         expect(testFn).toBeCalled();
     });
 
-    it('component with non-empty paging data, orderDirectionsChanged called', () => {
+    it('renders with non-empty paging data, orderDirectionsChanged called', () => {
         const testFn = jest.fn();
         const testValue = 'test';
         const wrapper = setup({ onSortByChanged: testFn });
@@ -85,7 +85,7 @@ describe('PublicationsListSorting renders ', () => {
         expect(testFn).toBeCalled();
     });
 
-    it('component with non-empty paging data, sortByChanged called', () => {
+    it('renders with non-empty paging data, sortByChanged called', () => {
         const testFn = jest.fn();
         const testValue = 'test';
         const wrapper = setup({ onSortByChanged: testFn });
@@ -96,7 +96,7 @@ describe('PublicationsListSorting renders ', () => {
         expect(testFn).toBeCalled();
     });
 
-    it('component with non-empty paging data, onExportPublications called', () => {
+    it('renders with non-empty paging data, onExportPublications called', () => {
         const expected = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const testFn = jest.fn();
         const wrapper = setup({ onExportPublications: testFn, canUseExport: true });
@@ -107,7 +107,7 @@ describe('PublicationsListSorting renders ', () => {
         expect(testFn).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
     });
 
-    it('component will set state on receiving new props', () => {
+    it('renders will set state on receiving new props', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
         let enableMock = false;
         mockUseEffect.mockImplementation(f => enableMock && f());
@@ -125,5 +125,10 @@ describe('PublicationsListSorting renders ', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         mockUseEffect.mockRestore();
+    });
+
+    it('renders bulk export options when applicable', () => {
+        const wrapper = setup({ canUseExport: true, bulkExportSize: 1000 });
+        expect(wrapper.find('[data-testid="search-export-size-entry-1000"]').text()).toBe('1000');
     });
 });

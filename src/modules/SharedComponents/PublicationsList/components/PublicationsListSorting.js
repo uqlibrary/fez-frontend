@@ -7,14 +7,15 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
+import ListSubheader from '@material-ui/core/ListSubheader';
+
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
+import { userIsAdmin, userIsResearcher } from 'hooks';
 
 const PublicationsListSorting = props => {
-    const [sortBy, setSortBy] = React.useState(
-        props.sortBy || locale.components.sorting.sortBy[0].value || 'published_date',
-    );
+    const [sortBy, setSortBy] = React.useState(props.sortBy || locale.components.sorting.sortBy[0].value);
     const [sortDirection, setSortDirection] = React.useState(
-        props.sortDirection || locale.components.sorting.sortDirection[0] || 'Desc',
+        props.sortDirection || locale.components.sorting.sortDirection[0],
     );
     const [pageSize, setPageSize] = React.useState(
         props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20),
@@ -60,6 +61,7 @@ const PublicationsListSorting = props => {
         pageLength.push(props.initPageLength);
         pageLength.sort((a, b) => a - b);
     }
+
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={props.canUseExport ? 3 : 4}>
@@ -106,6 +108,20 @@ const PublicationsListSorting = props => {
                                 </MenuItem>
                             );
                         })}
+                        {props.canUseExport &&
+                            (userIsAdmin() || userIsResearcher()) &&
+                            !!props.bulkExportSize && [
+                                <ListSubheader key="export-heading" data-testid="search-export-size-heading">
+                                    {txt.exportOnlyLabel}
+                                </ListSubheader>,
+                                <MenuItem
+                                    key={`records-per-page-${props.bulkExportSize}`}
+                                    value={props.bulkExportSize}
+                                    data-testid={`search-export-size-entry-${props.bulkExportSize}`}
+                                >
+                                    {props.bulkExportSize}
+                                </MenuItem>,
+                            ]}
                     </Select>
                 </FormControl>
             </Grid>
@@ -125,6 +141,7 @@ const PublicationsListSorting = props => {
 };
 
 PublicationsListSorting.propTypes = {
+    bulkExportSize: PropTypes.number,
     canUseExport: PropTypes.bool,
     disabled: PropTypes.bool,
     initPageLength: PropTypes.number,

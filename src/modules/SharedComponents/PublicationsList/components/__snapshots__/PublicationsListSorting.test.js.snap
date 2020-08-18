@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PublicationsListSorting renders  component will set state on receiving new props 1`] = `
+exports[`PublicationsListSorting component renders will set state on receiving new props 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={2}
@@ -161,7 +161,7 @@ exports[`PublicationsListSorting renders  component will set state on receiving 
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`PublicationsListSorting renders  component will set state on receiving new props 2`] = `
+exports[`PublicationsListSorting component renders will set state on receiving new props 2`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={2}
@@ -322,13 +322,13 @@ exports[`PublicationsListSorting renders  component will set state on receiving 
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`PublicationsListSorting renders  component with empty paging data 1`] = `
+exports[`PublicationsListSorting component renders with empty paging data 1`] = `
 <span
   className="publicationsListSorting empty"
 />
 `;
 
-exports[`PublicationsListSorting renders  component with export dropdown for admin or author 1`] = `
+exports[`PublicationsListSorting component renders with export dropdown for admin or author 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={2}
@@ -497,7 +497,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`PublicationsListSorting renders  component with export dropdown hidden 1`] = `
+exports[`PublicationsListSorting component renders with export dropdown hidden 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={2}
@@ -652,7 +652,7 @@ exports[`PublicationsListSorting renders  component with export dropdown hidden 
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`PublicationsListSorting renders  component with non-empty paging data 1`] = `
+exports[`PublicationsListSorting component renders with non-empty paging data 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={2}

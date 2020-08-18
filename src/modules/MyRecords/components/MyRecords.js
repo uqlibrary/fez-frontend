@@ -12,6 +12,7 @@ import {
 } from 'modules/SharedComponents/PublicationsList';
 import locale from 'locale/components';
 import { routes } from 'config';
+import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -49,6 +50,7 @@ export default class MyRecords extends PureComponent {
                 ranges: {},
                 ...props.initialFacets,
             },
+            bulkExportSelected: false,
         };
 
         this.state = {
@@ -142,11 +144,19 @@ export default class MyRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: { ...this.state },
         });
-        this.props.actions.loadAuthorPublications({ ...this.state });
+        if (this.state.pageSize === MY_RECORDS_BULK_EXPORT_SIZE) {
+            this.setState({ bulkExportSelected: true });
+        } else {
+            this.props.actions.loadAuthorPublications({ ...this.state });
+        }
     };
 
     handleExportPublications = exportFormat => {
-        this.props.actions.exportAuthorPublications({ ...exportFormat, ...this.state });
+        this.props.actions.exportEspacePublications({
+            ...exportFormat,
+            ...this.state,
+            pageSize: this.state.bulkExportSelected ? MY_RECORDS_BULK_EXPORT_SIZE : this.state.pageSize,
+        });
     };
 
     render() {
@@ -214,6 +224,7 @@ export default class MyRecords extends PureComponent {
                                                 onExportPublications={this.handleExportPublications}
                                                 canUseExport={this.props.canUseExport}
                                                 disabled={isLoadingOrExporting}
+                                                bulkExportSize={MY_RECORDS_BULK_EXPORT_SIZE}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
