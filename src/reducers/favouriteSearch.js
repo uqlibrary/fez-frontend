@@ -10,6 +10,9 @@ export const initialState = {
     favouriteSearchListItemDeleting: false,
     favouriteSearchListItemDeleteError: null,
     existingAliasCheckError: false,
+    favouriteSearchAdding: false,
+    favouriteSearchAddSuccess: false,
+    favouriteSearchAddError: null,
 };
 
 const handlers = {
@@ -97,6 +100,24 @@ const handlers = {
     [actions.EXISTING_ALIAS_NOT_FOUND]: state => ({
         ...state,
         existingAliasCheckError: null,
+    }),
+
+    [actions.FAVOURITE_SEARCH_ADDING]: state => ({
+        ...state,
+        favouriteSearchAdding: true,
+    }),
+
+    [actions.FAVOURITE_SEARCH_ADD_SUCCESS]: state => ({
+        ...state,
+        favouriteSearchAdding: false,
+        favouriteSearchAddSuccess: true,
+    }),
+
+    [actions.FAVOURITE_SEARCH_ADD_FAILED]: (state, action) => ({
+        ...state,
+        favouriteSearchAdding: false,
+        favouriteSearchAddSuccess: false,
+        favouriteSearchAddError: action.payload,
     }),
 };
 

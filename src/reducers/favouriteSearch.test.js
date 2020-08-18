@@ -165,4 +165,24 @@ describe('favourite search reducer', () => {
         });
         expect(test.existingAliasCheckError).toEqual(null);
     });
+
+    it('returns the correct state while adding favourite search', () => {
+        const test = favouriteSearchReducer(initialState, { type: actions.FAVOURITE_SEARCH_ADDING });
+        expect(test.favouriteSearchAdding).toEqual(true);
+    });
+
+    it('returns the correct state on favourite search added successfully', () => {
+        const test = favouriteSearchReducer(initialState, { type: actions.FAVOURITE_SEARCH_ADD_SUCCESS });
+        expect(test.favouriteSearchAdding).toEqual(false);
+        expect(test.favouriteSearchAddSuccess).toEqual(true);
+    });
+
+    it('returns the correct state when favourite search item add failed', () => {
+        const test = favouriteSearchReducer(initialState, {
+            type: actions.FAVOURITE_SEARCH_ADD_FAILED,
+            payload: { status: 403, message: 'Test error message' },
+        });
+        expect(test.favouriteSearchAdding).toEqual(false);
+        expect(test.favouriteSearchAddError).toEqual({ status: 403, message: 'Test error message' });
+    });
 });

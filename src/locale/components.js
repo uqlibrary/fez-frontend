@@ -1967,6 +1967,7 @@ export default {
                         cancelButtonLabel: 'Cancel',
                     },
                     favouriteSearchHint: 'Click to save favourite search',
+                    favouriteSearchSaved: 'Saved as a favourite search',
                 },
             },
         },

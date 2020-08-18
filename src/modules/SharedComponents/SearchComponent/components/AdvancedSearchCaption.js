@@ -1,21 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { useLocation } from 'react-router';
 import PropTypes from 'prop-types';
 
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 import { locale } from 'locale';
-import { userIsAdmin, useConfirmationState } from 'hooks';
-import { useAccountContext } from 'context';
+import { userIsAdmin } from 'hooks';
 
-import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { addFavouriteSearch } from 'actions';
+import AddFavouriteSearchIcon from './AddFavouriteSearchIcon';
 
 const useStyles = makeStyles(
     theme => ({
@@ -115,42 +107,12 @@ const updateStateData = ({ fieldRows, docTypes, isOpenAccess, yearFilter }) => {
     ];
 };
 
-export const FvsDescription = React.forwardRef((props, ref) => (
-    <TextField ref={ref} textFieldId="fvs-description" fullWidth onChange={props.onChange} />
-));
-
-FvsDescription.propTypes = {
-    onChange: PropTypes.func,
-};
-
 export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenAccess }) => {
     const classes = useStyles();
-    const dispatch = useDispatch();
-    const location = useLocation();
-    const { account } = useAccountContext();
     const isUserAdmin = userIsAdmin();
-    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [captionData, setCaptionData] = React.useState(
         updateStateData({ fieldRows, docTypes, yearFilter, isOpenAccess }),
     );
-    const descriptionInputRef = React.createRef(null);
-
-    const txt = locale.components.searchComponent.advancedSearch.favouriteSearch;
-
-    const handleFavouriteSearchSave = () => {
-        dispatch(
-            addFavouriteSearch({
-                fvs_search_parameters: `${location.pathname}${location.search}`,
-                fvs_description: descriptionInputRef.current,
-                fvs_username: account.id,
-            }),
-        );
-    };
-
-    const handleFavouriteSearchDescriptionChange = event => {
-        descriptionInputRef.current = event.target.value;
-    };
-
     React.useEffect(() => {
         setCaptionData(updateStateData({ fieldRows, docTypes, yearFilter, isOpenAccess }));
     }, [fieldRows, docTypes, yearFilter, isOpenAccess]);
@@ -196,37 +158,8 @@ export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenA
     const captions = renderCaptions(captionData);
     return (
         <div data-testid="advanced-search-caption">
-            {!!isUserAdmin && (
-                <ConfirmationBox
-                    actionButtonColor="primary"
-                    actionButtonVariant="contained"
-                    cancelButtonColor="secondary"
-                    confirmationBoxId="favourite-search-save"
-                    onAction={handleFavouriteSearchSave}
-                    onClose={hideConfirmation}
-                    onCancelAction={hideConfirmation}
-                    isOpen={isOpen}
-                    locale={txt.inputForm}
-                    showInputForm
-                    InputForm={() => (
-                        <FvsDescription ref={descriptionInputRef} onChange={handleFavouriteSearchDescriptionChange} />
-                    )}
-                />
-            )}
             {captions}
-            {!!isUserAdmin && captions.length > 0 && (
-                <Tooltip title={txt.favouriteSearchHint}>
-                    <span>
-                        <IconButton
-                            onClick={showConfirmation}
-                            id="favourite-search-save"
-                            data-testid="favourite-search-save"
-                        >
-                            <StarBorderIcon />
-                        </IconButton>
-                    </span>
-                </Tooltip>
-            )}
+            {!!isUserAdmin && captions.length > 0 && <AddFavouriteSearchIcon />}
         </div>
     );
 };
@@ -254,4 +187,4 @@ AdvancedSearchCaption.defaultProps = {
     isOpenAccess: false,
 };
 
-export default AdvancedSearchCaption;
+export default React.memo(AdvancedSearchCaption);
