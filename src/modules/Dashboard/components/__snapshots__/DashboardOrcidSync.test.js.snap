@@ -4,6 +4,7 @@ exports[`DashboardOrcidSync should render Done status, and be able to click the 
 <Connect(HelpIcon)
   iconSize={20}
   style={Object {}}
+  testId="orcid-help-icon"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -67,6 +68,7 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
   }
   iconSize={20}
   style={Object {}}
+  testId="orcid-help-icon"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -453,6 +455,7 @@ exports[`DashboardOrcidSync should render Pending status 1`] = `
       "marginLeft": "2px",
     }
   }
+  testId="orcid-help-icon"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -1135,6 +1138,7 @@ exports[`DashboardOrcidSync should render Pending status 2`] = `
       "marginLeft": "2px",
     }
   }
+  testId="orcid-help-icon"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -1493,6 +1497,7 @@ exports[`DashboardOrcidSync should render properly 1`] = `
 <Connect(HelpIcon)
   iconSize={20}
   style={Object {}}
+  testId="orcid-help-icon"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
