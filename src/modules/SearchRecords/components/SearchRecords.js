@@ -137,6 +137,7 @@ class SearchRecords extends PureComponent {
             providedSearchQuery.bulkExportSelected = true;
             providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
         } else {
+            providedSearchQuery.bulkExportSelected = false;
             providedSearchQuery.pageSize =
                 locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
         }
