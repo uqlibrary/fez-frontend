@@ -26,11 +26,11 @@ export function exportPublications(requestParams) {
                 if (getOptions.responseType === 'blob') {
                     promptForDownload(requestParams.options.params.export_to, response);
                 }
-
                 dispatch({
                     type: actions.EXPORT_PUBLICATIONS_LOADED,
                     payload: requestParams.options.params.export_to,
                 });
+                return Promise.resolve();
             })
             .catch(error => {
                 dispatch({

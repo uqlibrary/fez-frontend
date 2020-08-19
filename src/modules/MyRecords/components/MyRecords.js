@@ -10,6 +10,7 @@ import {
     PublicationsListSorting,
     FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import locale from 'locale/components';
 import { routes } from 'config';
 import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
@@ -152,12 +153,22 @@ export default class MyRecords extends PureComponent {
         }
     };
 
+    _setSuccessConfirmation = ref => {
+        this.successConfirmationBox = ref;
+    };
+
     handleExportPublications = exportFormat => {
-        this.props.actions.exportEspacePublications({
+        const exportResponse = this.props.actions.exportEspacePublications({
             ...exportFormat,
             ...this.state,
             pageSize: this.state.bulkExportSelected ? MY_RECORDS_BULK_EXPORT_SIZE : this.state.pageSize,
         });
+
+        if (this.state.bulkExportSelected) {
+            exportResponse.then(() => {
+                this.successConfirmationBox.showConfirmation();
+            });
+        }
     };
 
     render() {
@@ -178,6 +189,7 @@ export default class MyRecords extends PureComponent {
         const isAdmin =
             this.props.authorDetails &&
             (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
+        const confirmationLocale = locale.components.sorting.bulkExportConfirmation;
         return (
             <StandardPage title={txt.pageTitle}>
                 <Grid container spacing={2}>
@@ -234,6 +246,14 @@ export default class MyRecords extends PureComponent {
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
                                                 disabled={isLoadingOrExporting}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <ConfirmDialogBox
+                                                locale={confirmationLocale}
+                                                hideCancelButton
+                                                onRef={this._setSuccessConfirmation}
+                                                onAction={() => {}}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
