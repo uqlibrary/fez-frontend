@@ -147,6 +147,7 @@ export default class MyRecords extends PureComponent {
         if (this.state.pageSize === MY_RECORDS_BULK_EXPORT_SIZE) {
             this.setState({ bulkExportSelected: true });
         } else {
+            this.setState({ bulkExportSelected: false });
             this.props.actions.loadAuthorPublications({ ...this.state });
         }
     };
