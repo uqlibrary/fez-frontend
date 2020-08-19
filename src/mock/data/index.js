@@ -21,6 +21,7 @@ export {
     publicationTypeListAudio,
     publicationTypeListBook,
     publicationTypeListBookChapter,
+    publicationTypeListBookEdited,
     publicationTypeListConferencePaper,
     publicationTypeListConferenceProceedings,
     publicationTypeListCreativeWork,
