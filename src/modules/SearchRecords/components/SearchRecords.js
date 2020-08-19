@@ -7,6 +7,7 @@ import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/Standard
 import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { routes } from 'config';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import param from 'can-param';
@@ -218,12 +219,22 @@ class SearchRecords extends PureComponent {
         this.props.actions.searchEspacePublications({ ...this.props.searchQuery, ...this.state });
     };
 
+    _setSuccessConfirmation = ref => {
+        this.successConfirmationBox = ref;
+    };
+
     handleExportPublications = exportFormat => {
-        this.props.actions.exportEspacePublications({
+        const exportResponse = this.props.actions.exportEspacePublications({
             ...exportFormat,
             ...this.state,
             pageSize: this.state.bulkExportSelected ? PUB_SEARCH_BULK_EXPORT_SIZE : this.state.pageSize,
         });
+
+        if (this.state.bulkExportSelected) {
+            exportResponse.then(() => {
+                this.successConfirmationBox.showConfirmation();
+            });
+        }
     };
 
     handleFacetExcludesFromSearchFields = searchFields => {
@@ -258,6 +269,7 @@ class SearchRecords extends PureComponent {
             ...txt.errorAlert,
             message: txt.errorAlert.message(locale.global.errorMessages.generic),
         };
+        const confirmationLocale = locale.components.sorting.bulkExportConfirmation;
         return (
             <StandardPage className="page-search-records">
                 <Grid container spacing={3}>
@@ -274,6 +286,14 @@ class SearchRecords extends PureComponent {
                                 isUnpublishedBufferPage={this.props.isUnpublishedBufferPage}
                             />
                         </StandardCard>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ConfirmDialogBox
+                            locale={confirmationLocale}
+                            hideCancelButton
+                            onRef={this._setSuccessConfirmation}
+                            onAction={() => {}}
+                        />
                     </Grid>
                     {// first time loading search results
                     !hasSearchParams && this.props.searchLoading && (
