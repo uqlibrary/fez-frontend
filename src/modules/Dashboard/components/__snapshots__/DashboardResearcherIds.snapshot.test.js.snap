@@ -527,7 +527,6 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        theme="[object Object]"
       >
         <div
           class="fez-icon publons error"
@@ -546,7 +545,6 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        theme="[object Object]"
       >
         <div
           class="fez-icon researcher ok"
@@ -565,7 +563,6 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        theme="[object Object]"
       >
         <div
           class="fez-icon scopus error"
@@ -584,7 +581,6 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        theme="[object Object]"
       >
         <div
           class="fez-icon google_scholar error"
@@ -603,7 +599,6 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        theme="[object Object]"
       >
         <div
           class="fez-icon orcid ok"
@@ -615,6 +610,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         <button
           aria-label="Information about uploading your eSpace works to ORCID"
           class="MuiButtonBase-root MuiIconButton-root"
+          data-testid="orcid-help-icon"
           id="help-icon"
           tabindex="0"
           title="Information about uploading your eSpace works to ORCID"

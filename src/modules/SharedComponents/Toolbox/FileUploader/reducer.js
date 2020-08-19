@@ -1,12 +1,12 @@
-import { FILE_UPLOAD_PROGRESS, FILE_UPLOADED_FAILED, FILE_UPLOAD_CLEARED, FILE_UPLOAD_STARTED } from './actions';
+import * as actions from 'actions/actionTypes';
 
 const handlers = {
-    [`${FILE_UPLOAD_STARTED}`]: () => {
+    [`${actions.FILE_UPLOAD_STARTED}`]: () => {
         return {
             isUploadInProgress: true,
         };
     },
-    [`${FILE_UPLOAD_PROGRESS}@`]: (state, action) => {
+    [`${actions.FILE_UPLOAD_PROGRESS}@`]: (state, action) => {
         const file = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
 
         const uploadProgress = {
@@ -19,7 +19,7 @@ const handlers = {
             isUploadInProgress: true,
         };
     },
-    [`${FILE_UPLOADED_FAILED}@`]: (state, action) => {
+    [`${actions.FILE_UPLOAD_FAILED}@`]: (state, action) => {
         const file = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
 
         const uploadProgress = {
@@ -34,7 +34,7 @@ const handlers = {
             isUploadInProgress: false,
         };
     },
-    [FILE_UPLOAD_CLEARED]: () => {
+    [actions.FILE_UPLOAD_CLEARED]: () => {
         return {
             isUploadInProgress: false,
         };
@@ -43,7 +43,7 @@ const handlers = {
 
 const fileUploadReducer = (state = { isUploadInProgress: false }, action) => {
     const handler =
-        [FILE_UPLOAD_STARTED, FILE_UPLOAD_CLEARED].indexOf(action.type) > -1
+        [actions.FILE_UPLOAD_STARTED, actions.FILE_UPLOAD_CLEARED].indexOf(action.type) > -1
             ? handlers[action.type]
             : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
 

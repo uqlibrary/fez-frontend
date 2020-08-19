@@ -883,7 +883,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -1457,12 +1456,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1471,6 +1470,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Norman, Rosana
                       </span>
@@ -2470,7 +2470,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -3049,12 +3048,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -3063,6 +3062,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Norman, Rosana
                       </span>
@@ -3626,7 +3626,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -3987,7 +3986,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

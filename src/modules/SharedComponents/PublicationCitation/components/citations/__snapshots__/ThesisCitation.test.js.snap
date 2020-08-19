@@ -1013,7 +1013,6 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -1652,12 +1651,12 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -1666,6 +1665,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Jennifer Moffatt
                       </span>
@@ -2779,7 +2779,6 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -3420,12 +3419,12 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
@@ -3434,6 +3433,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Jennifer Moffatt
                       </span>
@@ -3987,7 +3987,6 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -4348,7 +4347,6 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

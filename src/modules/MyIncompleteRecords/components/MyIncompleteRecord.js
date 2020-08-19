@@ -118,11 +118,12 @@ export const MyIncompleteRecord = props => {
 
     return (
         <StandardPage title={txt.title} help={txt.help}>
-            <PublicationCitation publication={recordToFix} hideContentIndicators />
+            <PublicationCitation publication={recordToFix} hideContentIndicators citationStyle={'list'} />
             <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
                 <form onSubmit={_handleDefaultSubmit}>
                     <NavigationDialogBox when={dirty && !submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
                     <ConfirmationBox
+                        confirmationBoxId="submit-succeeded"
                         onAction={_navigateToDashboard}
                         onClose={hideConfirmation}
                         onCancelAction={_navigateToMyIncomplete}

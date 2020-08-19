@@ -37,6 +37,35 @@ const styles = theme => ({
     },
 });
 
+const getSecurityAccess = (dataStream, props) => {
+    const { isAdmin, isAuthor, author } = props;
+    return !!(
+        isAdmin ||
+        isAuthor ||
+        (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
+        /* istanbul ignore next */
+        (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
+    );
+};
+
+export const getFileOpenAccessStatus = (publication, dataStream, props) => {
+    const embargoDate = dataStream.dsi_embargo_date;
+    const openAccessStatusId =
+        (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
+        null;
+    if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
+        return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
+    } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
+        return {
+            isOpenAccess: false,
+            embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
+            openAccessStatusId: openAccessStatusId,
+            securityStatus: getSecurityAccess(dataStream, props),
+        };
+    }
+    return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
+};
+
 export class FilesClass extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
@@ -144,36 +173,6 @@ export class FilesClass extends Component {
         return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
     };
 
-    getFileOpenAccessStatus = (publication, dataStream) => {
-        const embargoDate = dataStream.dsi_embargo_date;
-        const openAccessStatusId =
-            (!!publication.fez_record_search_key_oa_status &&
-                publication.fez_record_search_key_oa_status.rek_oa_status) ||
-            null;
-        if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
-            return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
-        } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
-            return {
-                isOpenAccess: false,
-                embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
-                openAccessStatusId: openAccessStatusId,
-                securityStatus: this.getSecurityAccess(dataStream),
-            };
-        }
-        return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
-    };
-
-    getSecurityAccess = dataStream => {
-        const { isAdmin, isAuthor, author } = this.props;
-        return !!(
-            isAdmin ||
-            isAuthor ||
-            (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
-            /* istanbul ignore next */
-            (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
-        );
-    };
-
     getUrl = (pid, fileName, checksum = '') => {
         return pid && fileName && routes.pathConfig.file.url(pid, fileName, checksum);
     };
@@ -183,7 +182,7 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
-        return this.getSecurityAccess(dataStream) && !isDerivative(dataStream) && isAdded(dataStream);
+        return getSecurityAccess(dataStream, this.props) && !isDerivative(dataStream) && isAdded(dataStream);
     };
 
     getMatchingFilename = names => {
@@ -279,6 +278,7 @@ export class FilesClass extends Component {
 
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
+        const componentProps = this.props;
         return this.isViewableByUser(publication, dataStreams)
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                   const pid = publication.rek_pid;
@@ -287,8 +287,8 @@ export class FilesClass extends Component {
                   const thumbnailFileName = this.checkForThumbnail(fileName);
                   const previewFileName = this.checkForPreview(fileName);
                   const webFileName = this.checkForWeb(fileName);
-                  const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
-                  const securityAccess = this.getSecurityAccess(dataStream);
+                  const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
+                  const securityAccess = getSecurityAccess(dataStream, componentProps);
                   const checksums = this.getChecksums(
                       dataStream,
                       thumbnailFileName,
@@ -322,7 +322,7 @@ export class FilesClass extends Component {
                       ),
                       webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
                       mediaUrl: this.getUrl(pid, fileName, checksums.media),
-                      securityStatus: this.getSecurityAccess(dataStream),
+                      securityStatus: securityAccess,
                       checksums: checksums,
                   };
               })
@@ -398,20 +398,20 @@ export class FilesClass extends Component {
                             <Grid item xs={1}>
                                 &nbsp;
                             </Grid>
-                            <Grid item sm={4}>
+                            <Grid item sm={4} data-testid="dsi-dsid-label">
                                 <Typography variant="caption" gutterBottom>
                                     {locale.viewRecord.sections.files.fileName}
                                 </Typography>
                             </Grid>
                             <Hidden xsDown>
-                                <Grid item sm={4}>
+                                <Grid item sm={4} data-testid="dsi-label-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.description}
                                     </Typography>
                                 </Grid>
                             </Hidden>
                             <Hidden smDown>
-                                <Grid item md={2}>
+                                <Grid item md={2} data-testid="dsi-size-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.size}
                                     </Typography>
@@ -433,28 +433,48 @@ export class FilesClass extends Component {
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >
-                                <Grid item xs={1} className={this.props.classes.thumbIconCentered}>
+                                <Grid
+                                    item
+                                    xs={1}
+                                    className={this.props.classes.thumbIconCentered}
+                                    data-testid={`dsi-mimetype-${index}`}
+                                >
                                     {item.icon}
                                 </Grid>
-                                <Grid item sm={4} className={this.props.classes.dataWrapper}>
+                                <Grid
+                                    item
+                                    sm={4}
+                                    className={this.props.classes.dataWrapper}
+                                    data-testid={`dsi-dsid-${index}`}
+                                >
                                     <FileName {...item} onFileSelect={this.showPreview} />
                                 </Grid>
                                 <Hidden xsDown>
-                                    <Grid item sm={4} className={this.props.classes.dataWrapper}>
+                                    <Grid
+                                        item
+                                        sm={4}
+                                        className={this.props.classes.dataWrapper}
+                                        data-testid={`dsi-label-${index}`}
+                                    >
                                         <Typography variant="body2" noWrap>
                                             {item.description}
                                         </Typography>
                                     </Grid>
                                 </Hidden>
                                 <Hidden smDown>
-                                    <Grid item sm={2} className={this.props.classes.dataWrapper}>
+                                    <Grid
+                                        item
+                                        sm={2}
+                                        className={this.props.classes.dataWrapper}
+                                        data-testid={`dsi-size-${index}`}
+                                    >
                                         <Typography variant="body2" noWrap>
                                             {item.calculatedSize}
                                         </Typography>
                                     </Grid>
                                 </Hidden>
                                 <Hidden xsDown>
-                                    <Grid item sm style={{ textAlign: 'right' }}>
+                                    <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
                                         <OpenAccessIcon
                                             {...item.openAccessStatus}
                                             securityStatus={item.securityStatus}

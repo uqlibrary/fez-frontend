@@ -4,16 +4,17 @@ import AuthorsCitationView from './AuthorsCitationView';
 import { pathConfig } from 'config/routes';
 
 const EditorsCitationView = ({
+    citationStyle,
     publication,
     prefix = ' Edited by ',
     suffix = '. ',
     separator = ', ',
     showLink = false,
-    initialNumberOfEditors = 10,
 }) => {
     return (
         <AuthorsCitationView
             publication={publication}
+            citationStyle={citationStyle}
             className="citationEditors"
             prefix={prefix}
             suffix={suffix}
@@ -28,7 +29,6 @@ const EditorsCitationView = ({
                 idSubkey: 'rek_contributor_id',
                 idOrder: 'rek_contributor_id_order',
             }}
-            initialNumberOfAuthors={initialNumberOfEditors}
             showLink={showLink}
             getLink={pathConfig.list.contributor}
         />
@@ -36,6 +36,7 @@ const EditorsCitationView = ({
 };
 
 EditorsCitationView.propTypes = {
+    citationStyle: PropTypes.string,
     publication: PropTypes.object.isRequired,
     prefix: PropTypes.string,
     suffix: PropTypes.string,

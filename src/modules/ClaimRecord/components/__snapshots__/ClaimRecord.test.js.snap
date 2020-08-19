@@ -23,6 +23,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -1175,6 +1176,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -2138,6 +2140,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -3318,6 +3321,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -4231,6 +4235,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -5619,6 +5624,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -7007,6 +7013,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -8395,6 +8402,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -9783,6 +9791,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -10768,6 +10777,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -12178,6 +12188,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -13566,6 +13577,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -14973,6 +14985,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -16379,6 +16392,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -17786,6 +17800,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [
@@ -19117,10 +19132,14 @@ exports[`Component ClaimRecord  should return and render alert message depending
               <span>
                 Form cannot be submitted until all fields are valid. Please review all input fields.
                 <ul>
-                  <li>
+                  <li
+                    data-testid="validation-warning-0"
+                  >
                     Title is required
                   </li>
-                  <li>
+                  <li
+                    data-testid="validation-warning-1"
+                  >
                     Publication date is required
                   </li>
                 </ul>
@@ -19204,6 +19223,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "rek_pid": null,
@@ -19481,6 +19501,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={Object {}}
             />
           </StandardCard>
@@ -19739,6 +19760,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
             title="You are claiming to be an author for the following work:"
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
+              citationStyle="header"
               publication={
                 Object {
                   "fez_datastream_info": Array [

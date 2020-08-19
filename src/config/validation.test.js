@@ -76,7 +76,7 @@ describe('Validation method', () => {
         let testValue = validation.isValidIssn('1234-1243');
         expect(testValue).toEqual('');
 
-        testValue = validation.isValidIssn('ISSN 1234-1243');
+        testValue = validation.isValidIssn('1234-124X');
         expect(testValue).toEqual('');
     });
 
@@ -84,7 +84,7 @@ describe('Validation method', () => {
         const testFailValue = validation.isValidIsbn('sdjflsjdlfjsl');
         expect(testFailValue).toEqual(locale.validationErrors.isbn);
 
-        let testValue = validation.isValidIsbn('ISBN 0-14-020652-3');
+        let testValue = validation.isValidIsbn('9781510849419');
         expect(testValue).toEqual('');
 
         testValue = validation.isValidIsbn('0-14-020652-3');

@@ -108,7 +108,10 @@ export default class DeleteRecord extends PureComponent {
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.subTitle} help={txt.help}>
-                                    <PublicationCitation publication={this.props.recordToDelete} />
+                                    <PublicationCitation
+                                        publication={this.props.recordToDelete}
+                                        citationStyle={'header'}
+                                    />
                                 </StandardCard>
                             </Grid>
                             {!hasUQDOI && (

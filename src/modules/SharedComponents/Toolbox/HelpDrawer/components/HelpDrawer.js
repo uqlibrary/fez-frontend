@@ -26,19 +26,19 @@ const styles = theme => ({
 
 export class HelpDrawer extends Component {
     static propTypes = {
-        open: PropTypes.bool.isRequired,
-        title: PropTypes.string.isRequired,
-        text: PropTypes.any.isRequired,
-        hide: PropTypes.func.isRequired,
         buttonLabel: PropTypes.string,
         classes: PropTypes.object,
+        hide: PropTypes.func.isRequired,
+        open: PropTypes.bool.isRequired,
+        text: PropTypes.any.isRequired,
+        title: PropTypes.string.isRequired,
     };
     static defaultProps = {
         buttonLabel: 'CLOSE',
     };
 
     render() {
-        const { classes, title, text, buttonLabel, open, hide } = this.props;
+        const { buttonLabel, classes, hide, open, text, title } = this.props;
         let indexedText = null;
         if (this.props.text && this.props.text.props && this.props.text.props.children) {
             indexedText = React.Children.map(this.props.text.props.children, (child, index) => {
@@ -54,30 +54,33 @@ export class HelpDrawer extends Component {
                 <Grid container spacing={5} id="help-drawer">
                     <Grid item xs={12}>
                         <Typography
-                            key={'title'}
-                            component={'span'}
-                            variant={'h6'}
                             className={classes.title}
+                            component={'span'}
+                            data-testid="help-drawer-title"
                             id="help-drawer-title"
+                            key={'title'}
+                            variant={'h6'}
                         >
                             {title}
                         </Typography>
                         <Typography
-                            key={'text'}
                             component={'span'}
-                            variant="body2"
+                            data-testid="help-drawer-message"
                             id={`help-drawer-text-${title.replace(/\s/g, '')}`}
+                            key={'text'}
+                            variant="body2"
                         >
                             {indexedText || text}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} id="help-drawer-button">
                         <Button
-                            variant="contained"
-                            color="primary"
-                            className={classes.button}
                             children={buttonLabel}
+                            className={classes.button}
+                            color="primary"
+                            data-testid="help-drawer-close"
                             onClick={hide}
+                            variant="contained"
                         />
                     </Grid>
                 </Grid>

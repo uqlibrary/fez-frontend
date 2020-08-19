@@ -1,7 +1,4 @@
-export const FILE_UPLOAD_PROGRESS = 'FILE_UPLOAD_PROGRESS';
-export const FILE_UPLOADED_FAILED = 'FILE_UPLOADED_FAILED';
-export const FILE_UPLOAD_CLEARED = 'FILE_UPLOAD_CLEARED';
-export const FILE_UPLOAD_STARTED = 'FILE_UPLOAD_STARTED';
+import * as actions from 'actions/actionTypes';
 
 /**
  * Notify progress for individual file
@@ -12,7 +9,7 @@ export const FILE_UPLOAD_STARTED = 'FILE_UPLOAD_STARTED';
  */
 export const notifyProgress = (name, progress) => {
     return {
-        type: `${FILE_UPLOAD_PROGRESS}@${name}`,
+        type: `${actions.FILE_UPLOAD_PROGRESS}@${name}`,
         complete: progress,
     };
 };
@@ -30,7 +27,7 @@ export const notifyFileUploadProgress = (name, dispatch) => event => {
  */
 export const notifyUploadFailed = name => {
     return {
-        type: `${FILE_UPLOADED_FAILED}@${name}`,
+        type: `${actions.FILE_UPLOAD_FAILED}@${name}`,
     };
 };
 
@@ -41,7 +38,7 @@ export const notifyUploadFailed = name => {
  */
 export const clearFileUpload = () => {
     return {
-        type: FILE_UPLOAD_CLEARED,
+        type: actions.FILE_UPLOAD_CLEARED,
     };
 };
 
@@ -52,6 +49,23 @@ export const clearFileUpload = () => {
  */
 export const startFileUpload = () => {
     return {
-        type: FILE_UPLOAD_STARTED,
+        type: actions.FILE_UPLOAD_STARTED,
+    };
+};
+
+/**
+ * Mark an upload as completed.
+ *
+ * @param {{type: string}} formName
+ * @param {{type: string}} fileName
+ */
+export const markCompletedUpload = (formName, fileName) => {
+    return dispatch => {
+        dispatch({
+            type: `${actions.FILE_UPLOAD_COMPLETE}@${fileName}`,
+            payload: {
+                form: formName,
+            },
+        });
     };
 };

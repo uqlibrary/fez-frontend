@@ -22,6 +22,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
     >
       <WithStyles(ForwardRef(Typography))
         component="span"
+        data-testid="help-drawer-title"
         id="help-drawer-title"
         key="title"
         variant="h6"
@@ -30,6 +31,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
+        data-testid="help-drawer-message"
         id="help-drawer-text-HelpDrawerTitle"
         key="text"
         variant="body2"
@@ -44,6 +46,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
     >
       <WithStyles(ForwardRef(Button))
         color="primary"
+        data-testid="help-drawer-close"
         onClick={[MockFunction]}
         variant="contained"
       >
@@ -76,6 +79,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
     >
       <WithStyles(ForwardRef(Typography))
         component="span"
+        data-testid="help-drawer-title"
         id="help-drawer-title"
         key="title"
         variant="h6"
@@ -84,6 +88,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
+        data-testid="help-drawer-message"
         id="help-drawer-text-HelpDrawertitle"
         key="text"
         variant="body2"
@@ -102,6 +107,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
     >
       <WithStyles(ForwardRef(Button))
         color="primary"
+        data-testid="help-drawer-close"
         onClick={[MockFunction]}
         variant="contained"
       >
@@ -134,6 +140,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
     >
       <WithStyles(ForwardRef(Typography))
         component="span"
+        data-testid="help-drawer-title"
         id="help-drawer-title"
         key="title"
         variant="h6"
@@ -142,6 +149,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Typography))
         component="span"
+        data-testid="help-drawer-message"
         id="help-drawer-text-HelpDrawertitle"
         key="text"
         variant="body2"
@@ -156,6 +164,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
     >
       <WithStyles(ForwardRef(Button))
         color="primary"
+        data-testid="help-drawer-close"
         onClick={[MockFunction]}
         variant="contained"
       >

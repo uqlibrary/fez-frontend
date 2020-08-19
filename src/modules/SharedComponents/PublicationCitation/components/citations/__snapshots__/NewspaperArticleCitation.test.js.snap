@@ -1149,7 +1149,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -1856,54 +1855,60 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Wong, Kam Cheong"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Wong, Kam Cheong
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Wong, Catherine"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Wong, Catherine
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Li, Stephen"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Li, Stephen
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
@@ -1912,21 +1917,25 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                         Woo, Kai Hui
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
+                      citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Woo, Kai Zhi"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-4"
                       >
-                         and 
                         Woo, Kai Zhi
                       </span>
                     </CitationView>
@@ -3162,7 +3171,6 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_article_number": null,
@@ -3871,54 +3879,60 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Wong, Kam Cheong"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Wong, Kam Cheong
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Wong, Catherine"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Wong, Catherine
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Li, Stephen"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Li, Stephen
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
@@ -3927,21 +3941,25 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
                         Woo, Kai Hui
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
+                      citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Woo, Kai Zhi"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-4"
                       >
-                         and 
                         Woo, Kai Zhi
                       </span>
                     </CitationView>
@@ -4481,7 +4499,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -4842,7 +4859,6 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

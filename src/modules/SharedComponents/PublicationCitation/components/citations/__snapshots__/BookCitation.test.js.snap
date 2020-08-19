@@ -1073,7 +1073,6 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -1742,40 +1741,44 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
                   >
                     <CitationView
+                      citationId="rek-author-0"
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Teesson, Maree"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-0"
                       >
                         Teesson, Maree
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Hall, Wayne"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-1"
                       >
                         Hall, Wayne
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
+                      citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
@@ -1784,21 +1787,25 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-2"
                       >
                         Proudfoot, Heather
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
+                      citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Degenhardt, Louisa"
                     >
                       <span
                         className="citationAuthor"
+                        data-testid="rek-author-3"
                       >
-                         and 
                         Degenhardt, Louisa
                       </span>
                     </CitationView>
@@ -2846,7 +2853,6 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={
                     Object {
@@ -3124,7 +3130,6 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={
                       Object {
@@ -3735,50 +3740,55 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
-                        suffix=", "
+                        suffix=""
                         value="Smith, A"
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Smith, A
-                          , 
                         </span>
                       </CitationView>
+                      , 
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
+                        prefix=""
+                        suffix=""
+                        value="Smith, B"
+                      >
+                        <span
+                          className="citationAuthor"
+                          data-testid="rek-contributor-1"
+                        >
+                          Smith, B
+                        </span>
+                      </CitationView>
+                      , 
+                      <CitationView
+                        citationId="rek-contributor-2"
+                        className="citationAuthor"
+                        key="citationAuthor_3"
                         prefix=""
                         suffix=""
                         value="Smith, C"
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-2"
                         >
                           Smith, C
-                        </span>
-                      </CitationView>
-                      <CitationView
-                        className="citationAuthor"
-                        key="citationAuthor_3"
-                        prefix=" and "
-                        suffix=""
-                        value="Smith, B"
-                      >
-                        <span
-                          className="citationAuthor"
-                        >
-                           and 
-                          Smith, B
                         </span>
                       </CitationView>
                        ed.
@@ -4345,7 +4355,6 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -4706,7 +4715,6 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"
@@ -5727,7 +5735,6 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=""
                   publication={
                     Object {
@@ -6003,7 +6010,6 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=""
                     publication={
                       Object {
@@ -6612,50 +6618,55 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors"
                     >
                       <CitationView
+                        citationId="rek-contributor-0"
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
-                        suffix=", "
+                        suffix=""
                         value="Smith, A"
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-0"
                         >
                           Smith, A
-                          , 
                         </span>
                       </CitationView>
+                      , 
                       <CitationView
+                        citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
+                        prefix=""
+                        suffix=""
+                        value="Smith, B"
+                      >
+                        <span
+                          className="citationAuthor"
+                          data-testid="rek-contributor-1"
+                        >
+                          Smith, B
+                        </span>
+                      </CitationView>
+                      , 
+                      <CitationView
+                        citationId="rek-contributor-2"
+                        className="citationAuthor"
+                        key="citationAuthor_3"
                         prefix=""
                         suffix=""
                         value="Smith, C"
                       >
                         <span
                           className="citationAuthor"
+                          data-testid="rek-contributor-2"
                         >
                           Smith, C
-                        </span>
-                      </CitationView>
-                      <CitationView
-                        className="citationAuthor"
-                        key="citationAuthor_3"
-                        prefix=" and "
-                        suffix=""
-                        value="Smith, B"
-                      >
-                        <span
-                          className="citationAuthor"
-                        >
-                           and 
-                          Smith, B
                         </span>
                       </CitationView>
                        ed.

@@ -6,6 +6,7 @@ export default class BookChapterCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideDoiLink: PropTypes.bool,
+        citationStyle: PropTypes.string,
     };
 
     constructor(props) {
@@ -34,7 +35,10 @@ export default class BookChapterCitation extends Component {
         return (
             <div className="citationContent citationBookChapter">
                 {/* {Author} */}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Publication Year| (|).} */}
                 <Partials.DateCitationView date={this.props.publication.rek_date} />
@@ -46,7 +50,10 @@ export default class BookChapterCitation extends Component {
                 <Partials.CitationView className="citationBookTitle" value={record.bookTitle} />
 
                 {/* {Editor| edited by |.}*/}
-                <Partials.EditorsCitationView publication={this.props.publication} />
+                <Partials.EditorsCitationView
+                    citationStyle={this.props.citationStyle}
+                    publication={this.props.publication}
+                />
 
                 {/* {Place of Publication| |:} */}
                 <Partials.CitationView

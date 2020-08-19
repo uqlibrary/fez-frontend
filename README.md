@@ -28,7 +28,7 @@ UQ's branding for Fez is UQ eSpace.
 This project is using `npm` for dependency management. Make sure `npm` is installed on your machine.
 
 - make sure to create a .env file based on example.env
-- `nvm use 11.10.1 && npm i -g npm@6 jest webpack-dev-server` - initial setup
+- `nvm use 14.7.0 && npm i -g npm@6 jest webpack-dev-server` - initial setup
 - `npm ci` - when weird errors happen your local npm probably doesnt match the latest project requirements, this
   clears & reinstalls npm packages
 - `npm run start`
@@ -58,7 +58,7 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
 
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
-  - uses PRODUCTION DATA from the aws api (ie `https://api.library.uq.edu.au/v1/1) as a backend!! Careful!!
+  - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/1>) as a backend!! Careful!!
 - `npm run start:build:e2e`
   - runs production build version on <http://localhost:9000/>
   - uses mock data from src/mock
@@ -114,7 +114,7 @@ or
 
 #### Optimisation
 
-to keep initial load to a minimum following optimisation has been added to the project:
+To keep initial load to a minimum, the following optimisations have been added to the project:
 
 - Async (lazy) loading of non-essential (essential components are only those components user can see on public pages
   when not authenticated)
@@ -248,7 +248,9 @@ Before pushing to a branch make sure to run `npm run test:all`. This runs the un
 
 Codeship runs `npm run test:e2e:dashboard` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
 
-You can watch video recordings of any failed test runs and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). We have open-source license which allows unlimited runs. To manage the account, username/pass in PasswordState under "GitHub Cypress.io Admin User".
+You can watch video recordings of any failed test runs and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). We have open-source license which allows unlimited runs.
+
+To manage the account, the admin username/pass is in PasswordState under "GitHub Cypress.io Admin User" (login to Github as this user, then use the github account to log into Cypress).
 
 If you want Codeship to run cypress tests before you merge to master, include the text `cypress` in the branch name and push and cypress tests will be run on that branch (set up in bin/codeship-test.sh).
 
