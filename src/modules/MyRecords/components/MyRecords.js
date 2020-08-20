@@ -158,7 +158,7 @@ export default class MyRecords extends PureComponent {
     };
 
     handleExportPublications = exportFormat => {
-        const exportResponse = this.props.actions.exportEspacePublications({
+        const exportResponse = this.props.actions.exportAuthorPublications({
             ...exportFormat,
             ...this.state,
             pageSize: this.state.bulkExportSelected ? MY_RECORDS_BULK_EXPORT_SIZE : this.state.pageSize,
