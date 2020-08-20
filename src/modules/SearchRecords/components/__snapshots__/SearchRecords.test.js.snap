@@ -36,6 +36,31 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
       item={true}
       xs={12}
     >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
       <Alert
         allowDismiss={false}
         customIcon={null}
@@ -86,6 +111,31 @@ exports[`SearchRecords page renders loading screen while export publications loa
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
@@ -97,6 +147,7 @@ Object {
     "ranges": Object {},
     "test1": "test2",
   },
+  "bulkExportSelected": false,
   "pageSize": 20,
   "sortBy": "score",
   "sortDirection": "Desc",
@@ -135,6 +186,31 @@ exports[`SearchRecords page should render advanced search component 1`] = `
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
@@ -170,6 +246,31 @@ exports[`SearchRecords page should render loading screen while export publicatio
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -272,6 +373,31 @@ exports[`SearchRecords page should render loading screen while loading publicati
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -387,6 +513,31 @@ exports[`SearchRecords page should render loading screen while loading search re
       item={true}
       xs={12}
     >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
       <WithStyles(InlineLoader)
         message="Searching for works"
       />
@@ -426,6 +577,31 @@ exports[`SearchRecords page should render no results 1`] = `
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -480,6 +656,31 @@ exports[`SearchRecords page should render placeholders 1`] = `
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
@@ -515,6 +716,31 @@ exports[`SearchRecords page should render when paging 1`] = `
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -670,6 +896,31 @@ exports[`SearchRecords page should show available filters or selected filters if
       item={true}
       xs={12}
     >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
       <StandardCard
         text={
           <div>
@@ -719,6 +970,31 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -781,6 +1057,31 @@ exports[`SearchRecords page should show available filters or selected filters if
       item={true}
       xs={12}
     >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
       <StandardCard
         text={
           <div>
@@ -829,6 +1130,31 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -933,6 +1259,31 @@ exports[`SearchRecords page should show available filters or selected filters if
           updateFacetExcludesFromSearchFields={[Function]}
         />
       </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ConfirmDialogBox)
+        hideCancelButton={true}
+        locale={
+          Object {
+            "confirmButtonLabel": "Close",
+            "confirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
+              Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+            </span>,
+            "confirmationTitle": "Export queued successfully",
+          }
+        }
+        onRef={[Function]}
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}

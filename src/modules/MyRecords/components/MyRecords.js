@@ -164,11 +164,13 @@ export default class MyRecords extends PureComponent {
             pageSize: this.state.bulkExportSelected ? MY_RECORDS_BULK_EXPORT_SIZE : this.state.pageSize,
         });
 
-        if (this.state.bulkExportSelected) {
+        this.state.bulkExportSelected &&
+            !!exportResponse &&
             exportResponse.then(() => {
                 this.successConfirmationBox.showConfirmation();
             });
-        }
+
+        return exportResponse;
     };
 
     render() {
@@ -253,7 +255,6 @@ export default class MyRecords extends PureComponent {
                                                 locale={confirmationLocale}
                                                 hideCancelButton
                                                 onRef={this._setSuccessConfirmation}
-                                                onAction={() => {}}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>

@@ -81,7 +81,7 @@ export class ConfirmDialogBox extends Component {
 
     _onAction() {
         this._hideConfirmation();
-        this.props.onAction();
+        this.props.onAction && this.props.onAction();
     }
 
     _onCancelAction() {

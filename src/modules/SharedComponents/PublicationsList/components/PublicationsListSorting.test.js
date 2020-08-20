@@ -2,6 +2,9 @@ import React from 'react';
 import PublicationsListSorting from './PublicationsListSorting';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
+jest.mock('../../../../hooks');
+import { userIsAdmin } from 'hooks';
+
 function setup(testProps = {}) {
     const props = {
         classes: {},
@@ -128,7 +131,9 @@ describe('PublicationsListSorting component', () => {
     });
 
     it('renders bulk export options when applicable', () => {
+        userIsAdmin.mockImplementation(() => true);
         const wrapper = setup({ canUseExport: true, bulkExportSize: 1000 });
         expect(wrapper.find('[data-testid="search-export-size-entry-1000"]').text()).toBe('1000');
+        userIsAdmin.mockRestore();
     });
 });
