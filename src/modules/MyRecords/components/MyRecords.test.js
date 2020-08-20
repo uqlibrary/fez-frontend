@@ -226,10 +226,10 @@ describe('MyRecords test', () => {
     });
 
     it('should handle export publications', () => {
-        const exportEspacePublicationsFn = jest.fn();
+        const exportAuthorPublicationsFn = jest.fn();
         const wrapper = setup({
             actions: {
-                exportEspacePublications: exportEspacePublicationsFn,
+                exportAuthorPublications: exportAuthorPublicationsFn,
                 loadAuthorPublications: jest.fn(),
             },
             publicationsList: [1, 2, 3], // myRecordsList.data,
@@ -274,7 +274,7 @@ describe('MyRecords test', () => {
             .find('PublicationsListSorting')
             .props()
             .onExportPublications({ exportFormat: 'csv' });
-        expect(exportEspacePublicationsFn).toHaveBeenCalled();
+        expect(exportAuthorPublicationsFn).toHaveBeenCalled();
     });
 
     it('component has displayable facets', () => {
@@ -295,7 +295,7 @@ describe('MyRecords test', () => {
         const testFn = jest.fn();
         const wrapper = setup({
             actions: {
-                exportEspacePublications: testFn,
+                exportAuthorPublications: testFn,
             },
             publicationsListCustomActions: null,
         });
@@ -322,7 +322,7 @@ describe('MyRecords test', () => {
     it('shows confirmation message on success confirmation for bulk export', done => {
         const wrapper = setup({
             actions: {
-                exportEspacePublications: jest.fn(() => Promise.resolve()),
+                exportAuthorPublications: jest.fn(() => Promise.resolve()),
             },
             publicationsListCustomActions: null,
         });
