@@ -57,6 +57,9 @@ const PublicationsListSorting = props => {
         pageLength.sort((a, b) => a - b);
     }
 
+    const isAdmin = userIsAdmin();
+    const isResearcher = userIsResearcher();
+
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={props.canUseExport ? 3 : 4}>
@@ -104,7 +107,7 @@ const PublicationsListSorting = props => {
                             );
                         })}
                         {props.canUseExport &&
-                            (userIsAdmin() || userIsResearcher()) &&
+                            (isAdmin || isResearcher) &&
                             !!props.bulkExportSize && [
                                 <ListSubheader key="export-heading" data-testid="search-export-size-heading">
                                     {txt.exportOnlyLabel}

@@ -230,11 +230,13 @@ class SearchRecords extends PureComponent {
             pageSize: this.state.bulkExportSelected ? PUB_SEARCH_BULK_EXPORT_SIZE : this.state.pageSize,
         });
 
-        if (this.state.bulkExportSelected) {
+        this.state.bulkExportSelected &&
+            !!exportResponse &&
             exportResponse.then(() => {
                 this.successConfirmationBox.showConfirmation();
             });
-        }
+
+        return exportResponse;
     };
 
     handleFacetExcludesFromSearchFields = searchFields => {
@@ -292,7 +294,6 @@ class SearchRecords extends PureComponent {
                             locale={confirmationLocale}
                             hideCancelButton
                             onRef={this._setSuccessConfirmation}
-                            onAction={() => {}}
                         />
                     </Grid>
                     {// first time loading search results

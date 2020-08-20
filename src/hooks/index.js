@@ -17,7 +17,7 @@ export const userIsAdmin = () => {
 
 export const userIsResearcher = () => {
     const { account } = useAccountContext();
-    return (account.aut_org_username || account.aut_student_username) === account.id;
+    return (account.aut_org_username || account.aut_student_username || false) === account.id;
 };
 
 export const userIsAuthor = () => {

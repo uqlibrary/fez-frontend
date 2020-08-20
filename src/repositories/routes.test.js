@@ -193,7 +193,8 @@ describe('Backend routes method', () => {
     it('should construct url for SEARCH_INTERNAL_RECORDS_API', () => {
         const testCases = [
             {
-                values: { searchQuery: 'title search' },
+                query: { searchQuery: 'title search' },
+                route: 'search',
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -209,7 +210,7 @@ describe('Backend routes method', () => {
                 },
             },
             {
-                values: {
+                query: {
                     searchQuery: 'title search',
                     page: 2,
                     pageSize: 30,
@@ -217,6 +218,7 @@ describe('Backend routes method', () => {
                     sortDirection: 'asc',
                     facets: { filters: { one: 'one facet' } },
                 },
+                route: 'search',
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -232,10 +234,37 @@ describe('Backend routes method', () => {
                     },
                 },
             },
+            {
+                query: {
+                    searchQuery: 'title search',
+                    page: 2,
+                    pageSize: 500,
+                    sortBy: 'score',
+                    sortDirection: 'asc',
+                    facets: { filters: { one: 'one facet' } },
+                },
+                route: 'export',
+                expected: {
+                    apiUrl: 'records/export',
+                    options: {
+                        params: {
+                            export_to: '',
+                            order_by: 'asc',
+                            page: 2,
+                            per_page: 500,
+                            sort: 'score',
+                            title: 'title search',
+                            ['filters[facets][one]']: 'one facet',
+                            queryString:
+                                'export_to%3D%26page%3D2%26per_page%3D500%26sort%3Dscore%26order_by%3Dasc%26filters%255Bfacets%255D%255Bone%255D%3Done%2Bfacet',
+                        },
+                    },
+                },
+            },
         ];
 
         testCases.map(item => {
-            expect(routes.SEARCH_INTERNAL_RECORDS_API({ ...item.values })).toEqual(item.expected);
+            expect(routes.SEARCH_INTERNAL_RECORDS_API({ ...item.query }, item.route)).toEqual(item.expected);
         });
     });
 

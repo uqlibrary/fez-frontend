@@ -318,4 +318,26 @@ describe('MyRecords test', () => {
             sortDirection: 'Desc',
         });
     });
+
+    it('shows confirmation message on success confirmation for bulk export', done => {
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: jest.fn(() => Promise.resolve()),
+            },
+            publicationsListCustomActions: null,
+        });
+        const showConfirmation = jest.fn();
+        wrapper.instance()._setSuccessConfirmation({
+            showConfirmation,
+        });
+        wrapper.setState({ bulkExportSelected: true }, () => {
+            wrapper
+                .instance()
+                .handleExportPublications('excel')
+                .then(() => {
+                    expect(showConfirmation).toHaveBeenCalledTimes(1);
+                    done();
+                });
+        });
+    });
 });

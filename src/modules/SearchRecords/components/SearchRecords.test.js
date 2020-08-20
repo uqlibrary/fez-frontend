@@ -344,6 +344,7 @@ describe('SearchRecords page', () => {
                 filters: {},
                 ranges: {},
             },
+            bulkExportSelected: false,
         });
     });
 
@@ -382,6 +383,7 @@ describe('SearchRecords page', () => {
                     ranges: {},
                     showOpenAccessOnly: false,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -415,6 +417,7 @@ describe('SearchRecords page', () => {
                     ranges: {},
                     showOpenAccessOnly: true,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -449,6 +452,7 @@ describe('SearchRecords page', () => {
                 },
                 showOpenAccessOnly: false,
             },
+            bulkExportSelected: false,
         });
     });
 
@@ -484,6 +488,7 @@ describe('SearchRecords page', () => {
                     },
                     showOpenAccessOnly: false,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -520,6 +525,7 @@ describe('SearchRecords page', () => {
                     },
                     showOpenAccessOnly: false,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -553,6 +559,7 @@ describe('SearchRecords page', () => {
                 },
                 showOpenAccessOnly: false,
             },
+            bulkExportSelected: false,
         });
     });
 
@@ -651,6 +658,7 @@ describe('SearchRecords page', () => {
             pageSize: 20,
             sortBy: 'score',
             sortDirection: 'Desc',
+            bulkExportSelected: false,
         };
         const result = wrapper.instance().parseSearchQueryStringFromUrl('');
         expect(result).toEqual(expected);
@@ -703,5 +711,26 @@ describe('SearchRecords page', () => {
         const ret = wrapper.instance().parseSearchQueryStringFromUrl('pageSize=500');
         expect(ret.bulkExportSelected).toBe(true);
         expect(ret.pageSize).toBe(500);
+    });
+
+    it('shows confirmation message on success confirmation for bulk export', done => {
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: jest.fn(() => Promise.resolve()),
+            },
+        });
+        const showConfirmation = jest.fn();
+        wrapper.instance()._setSuccessConfirmation({
+            showConfirmation,
+        });
+        wrapper.setState({ bulkExportSelected: true }, () => {
+            wrapper
+                .instance()
+                .handleExportPublications('excel')
+                .then(() => {
+                    expect(showConfirmation).toHaveBeenCalledTimes(1);
+                    done();
+                });
+        });
     });
 });
