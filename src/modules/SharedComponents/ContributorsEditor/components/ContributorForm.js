@@ -130,7 +130,7 @@ export const ContributorForm = ({
 
     const _onUQIdentifierCleared = () => {
         setContributor({
-            nameAsPublished: contributor.nameAsPublished,
+            nameAsPublished: initialContributor.nameAsPublished,
             creatorRole: contributor.creatorRole,
             orgaff: 'Missing',
             orgtype: '',
