@@ -58,6 +58,8 @@ export function getFavouriteSearchAlias(newData) {
             dispatch({
                 type: EXISTING_ALIAS_NOT_FOUND,
             });
+
+            return false;
         }
     };
 }
