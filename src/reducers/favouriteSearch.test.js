@@ -150,7 +150,7 @@ describe('favourite search reducer', () => {
     it('returns the correct state when existing alias found', () => {
         const test = favouriteSearchReducer(initialState, {
             type: actions.EXISTING_ALIAS_FOUND,
-            payload: 'test',
+            payload: { fvs_alias: 'test' },
         });
         expect(test.existingAliasCheckError).toEqual({
             type: 'error',

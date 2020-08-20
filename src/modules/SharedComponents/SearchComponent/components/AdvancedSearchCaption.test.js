@@ -1,6 +1,6 @@
 import React from 'react';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
-import { render, WithRedux, RenderWithRouter } from 'test-utils';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 import moment from 'moment';
 import * as Hooks from 'hooks';
 
@@ -19,11 +19,11 @@ function setup(testProps = {}) {
         ...testProps,
     };
     return render(
-        <RenderWithRouter>
-            <WithRedux>
+        <WithRouter>
+            <WithReduxStore>
                 <AdvancedSearchCaption {...props} />
-            </WithRedux>
-        </RenderWithRouter>,
+            </WithReduxStore>
+        </WithRouter>,
     );
 }
 

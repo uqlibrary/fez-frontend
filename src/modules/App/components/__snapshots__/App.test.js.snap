@@ -55,8 +55,13 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -397,9 +402,16 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -651,8 +663,13 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -1229,9 +1246,16 @@ exports[`Application component should determine if it has incomplete works from 
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -1479,8 +1503,13 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2057,9 +2086,16 @@ exports[`Application component should determine if it has incomplete works from 
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -2125,8 +2161,13 @@ exports[`Application component should not show orcid alert for a student without
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2433,9 +2474,16 @@ exports[`Application component should not show orcid alert for a student without
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -2501,8 +2549,13 @@ exports[`Application component should redirect to login page with correct return
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2843,9 +2896,16 @@ exports[`Application component should redirect to login page with correct return
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -3093,8 +3153,13 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -3675,9 +3740,16 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -3925,8 +3997,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -4524,9 +4601,16 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -5262,8 +5346,13 @@ exports[`Application component should render app for account with author account
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -5915,9 +6004,16 @@ exports[`Application component should render app for account with author account
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -6165,8 +6261,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -6749,9 +6850,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -7158,8 +7266,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -7995,9 +8108,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_34"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -8245,8 +8365,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -8865,9 +8990,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -9274,8 +9406,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -10147,9 +10284,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_34"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -10556,8 +10700,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -11393,9 +11542,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_34"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -11802,8 +11958,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -12675,9 +12836,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_34"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -12925,8 +13093,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -13374,9 +13547,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -13624,8 +13804,13 @@ exports[`Application component should render application with routing for the us
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -13923,8 +14108,13 @@ exports[`Application component should render for anon user 1`] = `
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -14229,9 +14419,16 @@ exports[`Application component should render for anon user 1`] = `
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -14632,8 +14829,13 @@ exports[`Application component should show orcid alert for a student without an 
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -14967,9 +15169,16 @@ exports[`Application component should show orcid alert for a student without an 
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -16032,8 +16241,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/records/search",
                             },
                             Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_ctor": [Function],
+                                "_result": null,
+                                "_status": -1,
+                              },
                               "pageTitle": "Page not found",
-                              "render": [Function],
                             },
                           ]
                         }
@@ -16317,8 +16531,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/records/search",
                               },
                               Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_ctor": [Function],
+                                  "_result": null,
+                                  "_status": -1,
+                                },
                                 "pageTitle": "Page not found",
-                                "render": [Function],
                               },
                             ]
                           }
@@ -16603,8 +16822,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   "path": "/records/search",
                                 },
                                 Object {
+                                  "component": Object {
+                                    "$$typeof": Symbol(react.lazy),
+                                    "_ctor": [Function],
+                                    "_result": null,
+                                    "_status": -1,
+                                  },
                                   "pageTitle": "Page not found",
-                                  "render": [Function],
                                 },
                               ]
                             }
@@ -18024,6 +18248,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "fixRecord": [Function],
                                                             "getBatchImportDirectories": [Function],
                                                             "getCollectionsListAPI": [Function],
+                                                            "getFavouriteSearchAlias": [Function],
                                                             "getSearchLookupApi": [Function],
                                                             "getSherpaFromIssn": [Function],
                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -20345,6 +20570,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "fixRecord": [Function],
                                 "getBatchImportDirectories": [Function],
                                 "getCollectionsListAPI": [Function],
+                                "getFavouriteSearchAlias": [Function],
                                 "getSearchLookupApi": [Function],
                                 "getSherpaFromIssn": [Function],
                                 "getThirdPartyLookupApiUrl": [Function],
@@ -21974,6 +22200,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "fixRecord": [Function],
                                                                             "getBatchImportDirectories": [Function],
                                                                             "getCollectionsListAPI": [Function],
+                                                                            "getFavouriteSearchAlias": [Function],
                                                                             "getSearchLookupApi": [Function],
                                                                             "getSherpaFromIssn": [Function],
                                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -22109,6 +22336,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "fixRecord": [Function],
                                                                               "getBatchImportDirectories": [Function],
                                                                               "getCollectionsListAPI": [Function],
+                                                                              "getFavouriteSearchAlias": [Function],
                                                                               "getSearchLookupApi": [Function],
                                                                               "getSherpaFromIssn": [Function],
                                                                               "getThirdPartyLookupApiUrl": [Function],
@@ -23378,6 +23606,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "fixRecord": [Function],
                                                                                       "getBatchImportDirectories": [Function],
                                                                                       "getCollectionsListAPI": [Function],
+                                                                                      "getFavouriteSearchAlias": [Function],
                                                                                       "getSearchLookupApi": [Function],
                                                                                       "getSherpaFromIssn": [Function],
                                                                                       "getThirdPartyLookupApiUrl": [Function],
@@ -23467,6 +23696,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "fixRecord": [Function],
                                                                                         "getBatchImportDirectories": [Function],
                                                                                         "getCollectionsListAPI": [Function],
+                                                                                        "getFavouriteSearchAlias": [Function],
                                                                                         "getSearchLookupApi": [Function],
                                                                                         "getSherpaFromIssn": [Function],
                                                                                         "getThirdPartyLookupApiUrl": [Function],

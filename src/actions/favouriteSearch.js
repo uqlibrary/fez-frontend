@@ -42,6 +42,26 @@ export function loadFavouriteSearchList() {
     };
 }
 
+export function getFavouriteSearchAlias(newData) {
+    return async dispatch => {
+        dispatch({ type: EXISTING_ALIAS_CHECK_IN_PROGRESS });
+        try {
+            const response = await get(FAVOURITE_SEARCH_LIST_API({ id: newData.fvs_alias }));
+
+            dispatch({
+                type: EXISTING_ALIAS_FOUND,
+                payload: response.data,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: EXISTING_ALIAS_NOT_FOUND,
+            });
+        }
+    };
+}
+
 export function checkForExistingFavouriteSearchAlias(newData) {
     return async dispatch => {
         dispatch({ type: EXISTING_ALIAS_CHECK_IN_PROGRESS });
@@ -50,8 +70,9 @@ export function checkForExistingFavouriteSearchAlias(newData) {
             // successful response means api found existing alias
             dispatch({
                 type: EXISTING_ALIAS_FOUND,
-                payload: response.data.fvs_alias,
+                payload: response.data,
             });
+
             // reject the promise to indicate that it's not OK to go ahead with saving favourite search
             return Promise.reject({ message: 'Alias found' });
         } catch (e) {

@@ -1,18 +1,17 @@
 import React from 'react';
 import AddFavouriteSearchIcon from './AddFavouriteSearchIcon';
-import { render, WithRedux, RenderWithRouter, fireEvent, waitFor, act } from 'test-utils';
-import * as Hooks from 'hooks';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act } from 'test-utils';
 import * as Context from 'context';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
 import Immutable from 'immutable';
 
 function setup({ state = Immutable.Map({}) }) {
     return render(
-        <RenderWithRouter>
-            <WithRedux initialState={state}>
+        <WithRouter>
+            <WithReduxStore initialState={state}>
                 <AddFavouriteSearchIcon />
-            </WithRedux>
-        </RenderWithRouter>,
+            </WithReduxStore>
+        </WithRouter>,
     );
 }
 

@@ -288,7 +288,6 @@ export class AppClass extends PureComponent {
             components: pages,
             authorDetails: this.props.authorDetails,
             account: this.props.account,
-            accountAuthorDetailsLoading: this.props.accountAuthorDetailsLoading,
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent,
         });

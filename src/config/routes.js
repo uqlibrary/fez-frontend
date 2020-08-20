@@ -3,7 +3,6 @@ import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
-import { AUTH_URL_LOGIN } from 'config';
 import { createHash } from 'crypto';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
@@ -168,12 +167,11 @@ export const pathConfig = {
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = [
+export const flattedPathConfig = [
     '/',
     '/admin/collection',
     '/admin/community',
     '/admin/masquerade',
-    '/admin/thirdPartyTools',
     '/admin/unpublished',
     '/admin/add',
     '/admin/edit',
@@ -181,15 +179,17 @@ const flattedPathConfig = [
     '/admin/favourite-search',
     '/admin/masquerade',
     '/admin/unpublished',
-    '/admin/thirdPartyTools',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
     '/batch-import',
     '/contact',
     '/dashboard',
+    '/data-collections/add',
+    '/data-collections/mine',
     '/contact',
     '/rhdsubmission',
     '/sbslodge_new',
+    '/tool/lookup',
     '/records/search',
     '/records/mine',
     '/records/possible',
@@ -201,7 +201,7 @@ const flattedPathConfig = [
     '/view',
 ];
 
-const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
+export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
 
 // TODO: will we even have roles?
 export const roles = {
@@ -214,7 +214,6 @@ export const getRoutesConfig = ({
     components = {},
     account = null,
     authorDetails = null,
-    accountAuthorDetailsLoading = true,
     forceOrcidRegistration = false,
     isHdrStudent = false,
 }) => {
@@ -516,28 +515,7 @@ export const getRoutesConfig = ({
             : []),
         ...publicPages,
         {
-            render: childProps => {
-                const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
-                const isValidFileRoute = fileRegexConfig.test(childProps.location.pathname);
-                if (!accountAuthorDetailsLoading) {
-                    if ((isValidRoute || isValidFileRoute) && account && !accountAuthorDetailsLoading) {
-                        return components.StandardPage({ ...locale.pages.permissionDenied });
-                    }
-                    if ((isValidRoute || isValidFileRoute) && !account && !accountAuthorDetailsLoading) {
-                        if (
-                            process.env.NODE_ENV !== 'test' &&
-                            process.env.NODE_ENV !== 'cc' &&
-                            process.env.NODE_ENV !== 'development'
-                        ) {
-                            window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
-                        }
-                        return components.StandardPage({ ...locale.pages.authenticationRequired });
-                    }
-                    return components.StandardPage({ ...locale.pages.notFound });
-                } else {
-                    return null;
-                }
-            },
+            component: components.NotFound,
             pageTitle: locale.pages.notFound.title,
         },
     ];
