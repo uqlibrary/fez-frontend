@@ -4,6 +4,7 @@ import {
     loadFavouriteSearchList,
     updateFavouriteSearchListItem,
     addFavouriteSearch,
+    getFavouriteSearchAlias,
 } from './favouriteSearch';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -238,6 +239,32 @@ describe('favouriteSearch actions', () => {
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             });
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('getFavouriteSearchAlias action', () => {
+        it('should dispatch correct number of actions for not finding existing alias', async () => {
+            mockApi
+                .onGet(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 'test' }).apiUrl)
+                .reply(404, { data: 'Not found' });
+
+            const expectedActions = [actions.EXISTING_ALIAS_CHECK_IN_PROGRESS, actions.EXISTING_ALIAS_NOT_FOUND];
+
+            await mockActionsStore.dispatch(getFavouriteSearchAlias({ fvs_id: 1, fvs_alias: 'test' }));
+
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions for finding existing alias', async () => {
+            mockApi
+                .onGet(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 'test' }).apiUrl)
+                .reply(200, { data: { fvs_id: 1, fvs_alias: 'test', fvs_description: 'test' } });
+
+            const expectedActions = [actions.EXISTING_ALIAS_CHECK_IN_PROGRESS, actions.EXISTING_ALIAS_FOUND];
+
+            await mockActionsStore.dispatch(getFavouriteSearchAlias({ fvs_id: 1, fvs_alias: 'test' }));
+
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { render, RenderWithRouter, WithRedux, fireEvent } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -36,11 +36,11 @@ const setup = (testProps = {}, renderer = render) => {
         ...testProps,
     };
     return renderer(
-        <RenderWithRouter>
-            <WithRedux>
+        <WithRouter>
+            <WithReduxStore>
                 <NewViewRecord {...props} />
-            </WithRedux>
-        </RenderWithRouter>,
+            </WithReduxStore>
+        </WithRouter>,
     );
 };
 

@@ -73,7 +73,7 @@ export const getColumns = classes => {
             render: rowData => (
                 <ExternalLink
                     key={rowData.fvs_alias}
-                    href={rowData.fvs_alias}
+                    href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_alias}`}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
                     <span className={classes.text}>{rowData.fvs_alias}</span>

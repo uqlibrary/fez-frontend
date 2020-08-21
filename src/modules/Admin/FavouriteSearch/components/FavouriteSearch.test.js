@@ -1,14 +1,14 @@
 import React from 'react';
 import FavouriteSearch from './FavouriteSearch';
-import { render, WithRedux, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, act } from 'test-utils';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
 import * as repository from 'repositories';
 
 const setup = (testProps = {}) => {
     return render(
-        <WithRedux>
+        <WithReduxStore>
             <FavouriteSearch {...testProps} />
-        </WithRedux>,
+        </WithReduxStore>,
     );
 };
 

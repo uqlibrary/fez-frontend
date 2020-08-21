@@ -1,10 +1,8 @@
 import React from 'react';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
-import { render, WithRedux, RenderWithRouter, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 import moment from 'moment';
 import * as Hooks from 'hooks';
-import * as Context from 'context';
-import * as FavouriteSearchActions from 'actions/favouriteSearch';
 
 function setup(testProps = {}) {
     const props = {
@@ -21,11 +19,11 @@ function setup(testProps = {}) {
         ...testProps,
     };
     return render(
-        <RenderWithRouter>
-            <WithRedux>
+        <WithRouter>
+            <WithReduxStore>
                 <AdvancedSearchCaption {...props} />
-            </WithRedux>
-        </RenderWithRouter>,
+            </WithReduxStore>
+        </WithRouter>,
     );
 }
 
@@ -127,32 +125,22 @@ describe('Component AdvancedSearchCaption', () => {
         );
     });
 
-    it('should save search as favourite search as an admin user', async () => {
+    it('should render star icon to save favourite search', () => {
         const userIsAdminHook = jest.spyOn(Hooks, 'userIsAdmin');
-        const useAccountContext = jest.spyOn(Context, 'useAccountContext');
-        const addFavouriteSearch = jest.spyOn(FavouriteSearchActions, 'addFavouriteSearch');
 
         userIsAdminHook.mockImplementation(() => true);
-        useAccountContext.mockImplementation(() => ({ account: { id: 'uqtest' } }));
 
-        const { getByTestId } = setup();
-
-        act(() => {
-            fireEvent.click(getByTestId('favourite-search-save'));
+        const { getByTestId } = setup({
+            fieldRows: [
+                { searchField: 'all', value: '', label: '' },
+                { searchField: 'rek_ismemberof', value: ['UQ:120743'], label: '' },
+                { searchField: 'rek_author_id', value: '570', label: '570 (Ashkanasy, Neal M.)' },
+            ],
+            docTypes: [263],
+            yearFilter: { from: '1991', to: '2012', invalid: false },
+            isOpenAccess: true,
         });
 
-        const descriptionInput = await waitFor(() => getByTestId('fvs-description-input'));
-
-        fireEvent.change(descriptionInput, { target: { value: 'test favourite search' } });
-
-        act(() => {
-            fireEvent.click(getByTestId('confirm-action'));
-        });
-
-        expect(addFavouriteSearch).toHaveBeenCalledWith({
-            fvs_description: 'test favourite search',
-            fvs_username: 'uqtest',
-            fvs_search_parameters: '/',
-        });
+        expect(getByTestId('add-favourite-search')).toBeInTheDocument();
     });
 });

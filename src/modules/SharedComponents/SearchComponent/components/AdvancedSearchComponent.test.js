@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-import { render, WithRedux, RenderWithRouter, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -19,11 +19,11 @@ function setup(testProps = {}) {
         ...testProps,
     };
     return render(
-        <RenderWithRouter>
-            <WithRedux>
+        <WithRouter>
+            <WithReduxStore>
                 <AdvancedSearchComponent {...props} />
-            </WithRedux>
-        </RenderWithRouter>,
+            </WithReduxStore>
+        </WithRouter>,
     );
 }
 
