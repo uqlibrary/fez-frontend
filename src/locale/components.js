@@ -2722,5 +2722,17 @@ export default {
         audienceSizeField: {
             label: 'Audience size',
         },
+        changeDisplayType: {
+            title: 'Change display type',
+            rek_display_type: {
+                inputLabelText: 'Work type',
+                hintText: 'Select a Work type from the dropdown list',
+            },
+            rek_subtype: {
+                inputLabelText: 'Work subtype',
+                hintText: 'Select a work subtype from the dropdown list',
+            },
+            submit: 'Change display type',
+        },
     },
 };

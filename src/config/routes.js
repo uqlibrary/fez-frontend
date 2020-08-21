@@ -133,6 +133,7 @@ export const pathConfig = {
     },
     admin: {
         add: '/admin/add',
+        changeDisplayType: pid => `/admin/changeDisplayType/${pid}`,
         collection: '/admin/collection',
         community: '/admin/community',
         delete: pid => `/admin/delete/${pid}`,
@@ -172,6 +173,7 @@ export const pathConfig = {
 const flattedPathConfig = [
     '/',
     '/admin/add',
+    '/admin/changeDisplayType',
     '/admin/collection',
     '/admin/community',
     '/admin/delete',
@@ -469,6 +471,13 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.admin.doi(pid),
                       component: components.Doi,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.changeDisplayType(pid),
+                      component: components.ChangeDisplayType,
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
