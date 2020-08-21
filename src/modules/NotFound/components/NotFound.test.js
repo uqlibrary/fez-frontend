@@ -28,19 +28,13 @@ function setup(state = {}, renderer = render) {
 
 describe('NotFound page component', () => {
     let useLocationHook;
-    let useHistoryHook;
     let useAccountContext;
     let getFavouriteSearchAlias;
 
-    const historyPushFn = jest.fn();
-
     beforeEach(() => {
         useLocationHook = jest.spyOn(ReactRouterHooks, 'useLocation');
-        useHistoryHook = jest.spyOn(ReactRouterHooks, 'useHistory');
         useAccountContext = jest.spyOn(Context, 'useAccountContext');
         getFavouriteSearchAlias = jest.spyOn(FavouriteSearchAction, 'getFavouriteSearchAlias');
-
-        useHistoryHook.mockImplementation(() => ({ push: historyPushFn }));
     });
 
     afterEach(() => {
@@ -121,9 +115,6 @@ describe('NotFound page component', () => {
         });
 
         await waitForElementToBeRemoved(() => getByTestId('empty'));
-
-        expect(historyPushFn).toHaveBeenCalledWith('/records/search?test=parameters');
-
         done();
     });
 });

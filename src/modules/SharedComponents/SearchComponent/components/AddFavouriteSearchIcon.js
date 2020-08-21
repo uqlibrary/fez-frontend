@@ -37,6 +37,7 @@ export const AddFavouriteSearchIcon = () => {
     const descriptionInputRef = React.createRef(null);
 
     const txt = locale.components.searchComponent.advancedSearch.favouriteSearch;
+    const redirectedFromNotFound = (!!location.state && !!location.state.redirectedFromNotFound) || false;
 
     const handleFavouriteSearchSave = () => {
         dispatch(
@@ -71,26 +72,24 @@ export const AddFavouriteSearchIcon = () => {
                     )}
                 />
             )}
-            {!!publicationsListLoaded &&
-                (!favouriteSearchAddSuccess ? (
-                    <Tooltip title={txt.favouriteSearchHint}>
-                        <span>
-                            <IconButton
-                                onClick={showConfirmation}
-                                id="favourite-search-save"
-                                data-testid="favourite-search-save"
-                            >
-                                <StarBorderIcon />
-                            </IconButton>
-                        </span>
-                    </Tooltip>
-                ) : (
-                    <Tooltip title={txt.favouriteSearchSaved}>
-                        <IconButton id="favourite-search-saved" data-testid="favourite-search-saved">
-                            <StarIcon />
+            {!!publicationsListLoaded && !favouriteSearchAddSuccess && (
+                <Tooltip title={txt.favouriteSearchHint}>
+                    <span>
+                        <IconButton
+                            onClick={showConfirmation}
+                            id="favourite-search-save"
+                            data-testid="favourite-search-save"
+                        >
+                            <StarBorderIcon color="primary" />
                         </IconButton>
-                    </Tooltip>
-                ))}
+                    </span>
+                </Tooltip>
+            )}
+            {((!!publicationsListLoaded && favouriteSearchAddSuccess) || redirectedFromNotFound) && (
+                <Tooltip title={txt.favouriteSearchSaved}>
+                    <StarIcon id="favourite-search-saved" data-testid="favourite-search-saved" color="primary" />
+                </Tooltip>
+            )}
         </div>
     );
 };

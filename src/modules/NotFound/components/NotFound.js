@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation, useHistory } from 'react-router';
+import { useLocation, Redirect } from 'react-router';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
@@ -12,7 +12,6 @@ import { getFavouriteSearchAlias } from 'actions';
 
 export const NotFound = () => {
     const location = useLocation();
-    const history = useHistory();
     const dispatch = useDispatch();
     const { account } = useAccountContext();
 
@@ -47,7 +46,16 @@ export const NotFound = () => {
     }
 
     if (!!existingAlias) {
-        history.push(existingAlias.fvs_search_parameters);
+        const [pathname, search] = existingAlias.fvs_search_parameters.split('?');
+        return (
+            <Redirect
+                to={{
+                    pathname,
+                    search,
+                    state: { redirectedFromNotFound: true },
+                }}
+            />
+        );
     }
 
     if (!!account.id && !isValidFileRoute && !isValidRoute && !existingAliasChecking) {
