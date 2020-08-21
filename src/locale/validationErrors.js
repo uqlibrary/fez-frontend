@@ -46,6 +46,7 @@ export default {
                 Please <b>provide a list of editors/contributors</b> of the work
             </span>
         ),
+        onlyOneOfAuthorOrEditor: <span>Please provide either authors/creators or editors/contributors, not both.</span>,
         supervisorRequired: 'Please provide a list of supervisors',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',

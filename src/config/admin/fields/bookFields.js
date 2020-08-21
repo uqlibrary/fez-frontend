@@ -134,5 +134,5 @@ export const validateBook = (
             rek_copyright: summary.rek_copyright,
         }),
     },
-    authorsSection: isAuthorOrEditorSelected(as || {}, true),
+    authorsSection: isAuthorOrEditorSelected(as || {}, true, true),
 });

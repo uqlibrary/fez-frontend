@@ -336,7 +336,7 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEd
     return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
 };
 
-export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
+export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false) => {
     const errors = {};
     if (
         (!data.authors && !data.editors) ||
@@ -354,6 +354,9 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
     ) {
         errors.authors = isAdmin ? locale.validationErrors.authorRequiredAdmin : locale.validationErrors.authorRequired;
         errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
+    } else if (allowOnlyOne && data.authors && data.authors.length > 0 && data.editors && data.editors.length > 0) {
+        errors.authors = locale.validationErrors.onlyOneOfAuthorOrEditor;
+        errors.editors = locale.validationErrors.onlyOneOfAuthorOrEditor;
     }
 
     return errors;
