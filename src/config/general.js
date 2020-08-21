@@ -1167,6 +1167,13 @@ export const RECORD_ACTION_URLS = [
         options: 'menubar=no,location=no,width=300,height=300,resizable=yes,scrollbars=yes,status=no',
     },
     {
+        label: 'Change display type',
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/changeDisplayType/${pid}`,
+        inApp: true,
+        showInDeleted: false,
+        options: null,
+    },
+    {
         label: 'More options',
         url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
         inApp: true,
