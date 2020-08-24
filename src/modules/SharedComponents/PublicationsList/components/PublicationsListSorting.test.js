@@ -112,14 +112,12 @@ describe('PublicationsListSorting component', () => {
 
     it('renders will set state on receiving new props', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
-        let enableMock = false;
-        mockUseEffect.mockImplementation(f => enableMock && f());
         const wrapper = setup({
             initPageLength: 5,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        enableMock = true;
+        mockUseEffect.mockImplementation(f => f());
         wrapper.setProps({
             sortBy: 'Publication date',
             sortDirection: 'test',
