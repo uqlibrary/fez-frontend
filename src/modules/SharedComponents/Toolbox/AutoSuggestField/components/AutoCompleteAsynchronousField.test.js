@@ -114,7 +114,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(onClearFn).toBeCalled();
     });
 
-    it('should clear the input value on deleting input value by keyboard', () => {
+    it('should not clear the input value on deleting input value by keyboard', () => {
         const onClearFn = jest.fn();
         const { getByTestId } = setup({
             onClear: onClearFn,
@@ -128,7 +128,7 @@ describe('AutoCompleteAsynchronousField component', () => {
             fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
         });
 
-        expect(onClearFn).toBeCalled();
+        expect(onClearFn).not.toBeCalled();
     });
 
     it('should render give option template for options', async () => {
