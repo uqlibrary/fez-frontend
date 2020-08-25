@@ -23,7 +23,7 @@ export const AuthorsSection = ({ disabled = false }) => {
 
     const onlyEditors = record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK;
 
-    const cards = useRef(adminInterfaceConfig[displayType].authors(onlyEditors));
+    const cards = useRef(adminInterfaceConfig[displayType].authors({ onlyEditors }));
 
     return <Section cards={cards.current} disabled={disabled} />;
 };
