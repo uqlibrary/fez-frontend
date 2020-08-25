@@ -84,7 +84,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
+              bulkExportSize={1000}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -118,6 +119,31 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   "total": 2,
                 }
               }
+            />
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ConfirmDialogBox)
+              hideCancelButton={true}
+              locale={
+                Object {
+                  "confirmButtonLabel": "Close",
+                  "confirmationMessage": <span
+                    style={
+                      Object {
+                        "display": "block",
+                        "margin": "1em 0",
+                      }
+                    }
+                  >
+                    Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+                  </span>,
+                  "confirmationTitle": "Export queued successfully",
+                }
+              }
+              onRef={[Function]}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -208,7 +234,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
+              bulkExportSize={1000}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -242,6 +269,31 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   "total": 2,
                 }
               }
+            />
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ConfirmDialogBox)
+              hideCancelButton={true}
+              locale={
+                Object {
+                  "confirmButtonLabel": "Close",
+                  "confirmationMessage": <span
+                    style={
+                      Object {
+                        "display": "block",
+                        "margin": "1em 0",
+                      }
+                    }
+                  >
+                    Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+                  </span>,
+                  "confirmationTitle": "Export queued successfully",
+                }
+              }
+              onRef={[Function]}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -447,7 +499,8 @@ exports[`myDatasets test renders loading screen while loading publications while
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
+              bulkExportSize={1000}
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -468,6 +521,31 @@ exports[`myDatasets test renders loading screen while loading publications while
               loading={true}
               onPageChanged={[Function]}
               pagingData={Object {}}
+            />
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ConfirmDialogBox)
+              hideCancelButton={true}
+              locale={
+                Object {
+                  "confirmButtonLabel": "Close",
+                  "confirmationMessage": <span
+                    style={
+                      Object {
+                        "display": "block",
+                        "margin": "1em 0",
+                      }
+                    }
+                  >
+                    Bulk export request has been queued. When the request has been processed, you will receive an email with the exported file as an attachment.
+                  </span>,
+                  "confirmationTitle": "Export queued successfully",
+                }
+              }
+              onRef={[Function]}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))

@@ -35,7 +35,6 @@ describe('Export publications actions', () => {
         });
 
         it('dispatches expected actions on successful search export', async () => {
-            // mock promptForDownload
             promptForDownload.mockImplementation(() => exportPublicationsFormat);
 
             mockApi.onGet(requestParams.apiUrl).reply(200, exportSearchToExcelResponse);
@@ -46,8 +45,31 @@ describe('Export publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on failed search export', async () => {
-            // mock promptForDownload
+        it('dispatches expected actions on successful bulk search export', async () => {
+            const testFn = jest.fn();
+            promptForDownload.mockImplementation(testFn);
+
+            mockApi.onGet(requestParams.apiUrl).reply(200, exportSearchToExcelResponse);
+
+            const expectedActions = [actions.EXPORT_PUBLICATIONS_LOADING, actions.EXPORT_PUBLICATIONS_LOADED];
+
+            await mockActionsStore.dispatch(
+                exportPublicationsActions.exportPublications({
+                    ...requestParams,
+                    options: {
+                        ...requestParams.options,
+                        params: {
+                            ...requestParams.options.params,
+                            per_page: 500,
+                        },
+                    },
+                }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(testFn).toHaveBeenCalledTimes(0);
+        });
+
+        it('dispatches expected actions on unexpected export format', async () => {
             promptForDownload.mockImplementation(() => {
                 throw 'Error';
             });

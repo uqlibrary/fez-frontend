@@ -10,8 +10,10 @@ import {
     PublicationsListSorting,
     FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import locale from 'locale/components';
 import { routes } from 'config';
+import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -49,6 +51,7 @@ export default class MyRecords extends PureComponent {
                 ranges: {},
                 ...props.initialFacets,
             },
+            bulkExportSelected: false,
         };
 
         this.state = {
@@ -142,11 +145,32 @@ export default class MyRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: { ...this.state },
         });
-        this.props.actions.loadAuthorPublications({ ...this.state });
+        if (this.state.pageSize === MY_RECORDS_BULK_EXPORT_SIZE) {
+            this.setState({ bulkExportSelected: true });
+        } else {
+            this.setState({ bulkExportSelected: false });
+            this.props.actions.loadAuthorPublications({ ...this.state });
+        }
+    };
+
+    _setSuccessConfirmation = ref => {
+        this.successConfirmationBox = ref;
     };
 
     handleExportPublications = exportFormat => {
-        this.props.actions.exportAuthorPublications({ ...exportFormat, ...this.state });
+        const exportResponse = this.props.actions.exportAuthorPublications({
+            ...exportFormat,
+            ...this.state,
+            pageSize: this.state.bulkExportSelected ? MY_RECORDS_BULK_EXPORT_SIZE : this.state.pageSize,
+        });
+
+        this.state.bulkExportSelected &&
+            !!exportResponse &&
+            exportResponse.then(() => {
+                this.successConfirmationBox.showConfirmation();
+            });
+
+        return exportResponse;
     };
 
     render() {
@@ -167,6 +191,7 @@ export default class MyRecords extends PureComponent {
         const isAdmin =
             this.props.authorDetails &&
             (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
+        const confirmationLocale = locale.components.sorting.bulkExportConfirmation;
         return (
             <StandardPage title={txt.pageTitle}>
                 <Grid container spacing={2}>
@@ -214,6 +239,7 @@ export default class MyRecords extends PureComponent {
                                                 onExportPublications={this.handleExportPublications}
                                                 canUseExport={this.props.canUseExport}
                                                 disabled={isLoadingOrExporting}
+                                                bulkExportSize={MY_RECORDS_BULK_EXPORT_SIZE}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -222,6 +248,13 @@ export default class MyRecords extends PureComponent {
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
                                                 disabled={isLoadingOrExporting}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <ConfirmDialogBox
+                                                locale={confirmationLocale}
+                                                hideCancelButton
+                                                onRef={this._setSuccessConfirmation}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>

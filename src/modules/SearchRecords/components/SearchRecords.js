@@ -7,7 +7,9 @@ import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/Standard
 import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { routes } from 'config';
+import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import param from 'can-param';
 import deparam from 'can-deparam';
 
@@ -54,6 +56,7 @@ class SearchRecords extends PureComponent {
                 ranges: {},
             },
             advancedSearchFields: [],
+            bulkExportSelected: false,
         };
 
         if (!!props.location && props.location.search.indexOf('?') >= 0) {
@@ -131,7 +134,14 @@ class SearchRecords extends PureComponent {
         }
 
         const pageSize = parseInt(providedSearchQuery.pageSize, 10);
-        providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
+        if (pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
+            providedSearchQuery.bulkExportSelected = true;
+            providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
+        } else {
+            providedSearchQuery.bulkExportSelected = false;
+            providedSearchQuery.pageSize =
+                locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
+        }
 
         providedSearchQuery.sortDirection =
             locale.components.sorting.sortDirection.indexOf(providedSearchQuery.sortDirection) < 0
@@ -200,15 +210,33 @@ class SearchRecords extends PureComponent {
             search: param(this.state),
             state: { ...this.state },
         });
-        this.updateSearch();
+        if (this.state.pageSize !== PUB_SEARCH_BULK_EXPORT_SIZE) {
+            this.updateSearch();
+        }
     };
 
     updateSearch = () => {
         this.props.actions.searchEspacePublications({ ...this.props.searchQuery, ...this.state });
     };
 
+    _setSuccessConfirmation = ref => {
+        this.successConfirmationBox = ref;
+    };
+
     handleExportPublications = exportFormat => {
-        this.props.actions.exportEspacePublications({ ...exportFormat, ...this.state });
+        const exportResponse = this.props.actions.exportEspacePublications({
+            ...exportFormat,
+            ...this.state,
+            pageSize: this.state.bulkExportSelected ? PUB_SEARCH_BULK_EXPORT_SIZE : this.state.pageSize,
+        });
+
+        this.state.bulkExportSelected &&
+            !!exportResponse &&
+            exportResponse.then(() => {
+                this.successConfirmationBox.showConfirmation();
+            });
+
+        return exportResponse;
     };
 
     handleFacetExcludesFromSearchFields = searchFields => {
@@ -243,6 +271,7 @@ class SearchRecords extends PureComponent {
             ...txt.errorAlert,
             message: txt.errorAlert.message(locale.global.errorMessages.generic),
         };
+        const confirmationLocale = locale.components.sorting.bulkExportConfirmation;
         return (
             <StandardPage className="page-search-records">
                 <Grid container spacing={3}>
@@ -259,6 +288,13 @@ class SearchRecords extends PureComponent {
                                 isUnpublishedBufferPage={this.props.isUnpublishedBufferPage}
                             />
                         </StandardCard>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ConfirmDialogBox
+                            locale={confirmationLocale}
+                            hideCancelButton
+                            onRef={this._setSuccessConfirmation}
+                        />
                     </Grid>
                     {// first time loading search results
                     !hasSearchParams && this.props.searchLoading && (
@@ -309,6 +345,7 @@ class SearchRecords extends PureComponent {
                                             onPageSizeChanged={this.pageSizeChanged}
                                             onExportPublications={this.handleExportPublications}
                                             disabled={isLoadingOrExporting}
+                                            bulkExportSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
