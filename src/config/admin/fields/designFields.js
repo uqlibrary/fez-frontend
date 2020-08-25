@@ -66,7 +66,7 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: (isDesignNtro = true) => [
+    authors: ({ isDesignNtro = true }) => [
         {
             title: 'Designers',
             groups: [['authors']],
