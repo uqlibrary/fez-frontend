@@ -1705,7 +1705,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add some text to search all fields with',
                         captionValue: 'anything',
-                        validation: ['maxLength500'],
+                        validation: ['maxLength2000'],
                         ariaLabel: 'Type a value to search all fields for',
                     },
                     rek_keywords: {
