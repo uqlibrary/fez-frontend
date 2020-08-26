@@ -15,6 +15,14 @@ const mapStateToProps = (state, props) => ({
         !!state.get('accountReducer') &&
         !!state.get('accountReducer').account &&
         state.get('accountReducer').account.canMasquerade,
+    isResearcher:
+        !!state &&
+        !!state.get('accountReducer') &&
+        !!state.get('accountReducer').account &&
+        !!state.get('accountReducer').author &&
+        (state.get('accountReducer').author.aut_org_username ||
+            state.get('accountReducer').author.aut_student_username ||
+            false) === state.get('accountReducer').account.id,
 });
 
 function mapDispatchToProps(dispatch) {
