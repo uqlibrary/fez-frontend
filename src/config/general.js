@@ -1121,6 +1121,7 @@ export const LANGUAGE = [
 
 export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
 
+export const CHANGE_DISPLAY_MENU_ID = 'changeDisplayTypeMenuItem';
 export const RECORD_ACTION_URLS = [
     {
         label: 'Edit selected record',
@@ -1172,6 +1173,7 @@ export const RECORD_ACTION_URLS = [
         inApp: true,
         showInDeleted: false,
         options: null,
+        id: CHANGE_DISPLAY_MENU_ID,
     },
     {
         label: 'More options',
