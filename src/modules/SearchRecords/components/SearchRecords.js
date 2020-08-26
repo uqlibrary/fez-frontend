@@ -37,6 +37,7 @@ class SearchRecords extends PureComponent {
         searchLoadingError: PropTypes.bool,
         isAdvancedSearch: PropTypes.bool,
         isAdmin: PropTypes.bool,
+        isResearcher: PropTypes.bool,
         isUnpublishedBufferPage: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
@@ -60,7 +61,10 @@ class SearchRecords extends PureComponent {
         };
 
         if (!!props.location && props.location.search.indexOf('?') >= 0) {
-            const providedSearchQuery = this.parseSearchQueryStringFromUrl(props.location.search.substr(1));
+            const providedSearchQuery = this.parseSearchQueryStringFromUrl(
+                props.location.search.substr(1),
+                props.isResearcher || props.isAdmin,
+            );
             this.initState = { ...this.initState, ...providedSearchQuery };
         }
 
@@ -96,7 +100,10 @@ class SearchRecords extends PureComponent {
             this.setState({
                 ...((!!newProps.location.search &&
                     newProps.location.search.length > 1 &&
-                    this.parseSearchQueryStringFromUrl(newProps.location.search.substr(1))) ||
+                    this.parseSearchQueryStringFromUrl(
+                        newProps.location.search.substr(1),
+                        newProps.isResearcher || newProps.isAdmin,
+                    )) ||
                     {}),
             });
         }
@@ -110,7 +117,7 @@ class SearchRecords extends PureComponent {
      * Parse provided query string and return active filters, facets etc
      * @returns object
      */
-    parseSearchQueryStringFromUrl = searchQuery => {
+    parseSearchQueryStringFromUrl = (searchQuery, canBulkExport) => {
         const providedSearchQuery = deparam(searchQuery);
 
         if (providedSearchQuery.hasOwnProperty('activeFacets')) {
@@ -134,7 +141,7 @@ class SearchRecords extends PureComponent {
         }
 
         const pageSize = parseInt(providedSearchQuery.pageSize, 10);
-        if (pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
+        if (canBulkExport && pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
             providedSearchQuery.bulkExportSelected = true;
             providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
         } else {
