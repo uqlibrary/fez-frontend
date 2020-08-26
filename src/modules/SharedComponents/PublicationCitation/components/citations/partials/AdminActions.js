@@ -7,6 +7,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 import {
     APP_URL,
+    CHANGE_DISPLAY_MENU_ID,
     PATH_PREFIX,
     PUBLICATION_TYPES_WITH_DOI,
     RECORD_ACTION_URLS as defaultActions,
@@ -80,6 +81,13 @@ export const AdminActions = ({
 
     // Remove actions which should not be shown for deleted records, if specified
     let filteredActions = isRecordDeleted ? adminActions.filter(action => action.showInDeleted) : adminActions;
+
+    // 'change display type' only applies to Record types
+    filteredActions = filteredActions.filter(action => {
+        const isChangeDisplayMenuItem = (action.id || null) === CHANGE_DISPLAY_MENU_ID;
+        const isTypeRecord = !['community', 'collection'].includes(recordType);
+        return !isChangeDisplayMenuItem || isTypeRecord;
+    });
 
     // Restrict DOI option to restricted types
     const isRecord = !['community', 'collection'].includes(recordType);
