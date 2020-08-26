@@ -708,7 +708,7 @@ describe('SearchRecords page', () => {
             },
         });
 
-        const ret = wrapper.instance().parseSearchQueryStringFromUrl('pageSize=500');
+        const ret = wrapper.instance().parseSearchQueryStringFromUrl('pageSize=500', true);
         expect(ret.bulkExportSelected).toBe(true);
         expect(ret.pageSize).toBe(500);
     });
