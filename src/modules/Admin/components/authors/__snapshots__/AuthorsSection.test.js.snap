@@ -69,3 +69,21 @@ exports[`AuthorsSection component should render disabled view 1`] = `
   disabled={true}
 />
 `;
+
+exports[`AuthorsSection component should render edited book form fields 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "editors",
+          ],
+        ],
+        "title": "Editors",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
