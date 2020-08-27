@@ -27,3 +27,4 @@ export { default as thirdPartyLookupToolReducer } from './thirdPartyLookupTool';
 export { default as topCitedPublicationsReducer } from './topCitedPublications';
 export { default as viewRecordReducer } from './viewRecord';
 export { default as deleteRecordReducer } from './deleteRecord';
+export { default as bulkUpdatesReducer } from './bulkUpdates';
