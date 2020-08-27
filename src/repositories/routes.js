@@ -8,6 +8,7 @@ import {
     SUBMITTED_FOR_APPROVAL,
     PUB_SEARCH_BULK_EXPORT_SIZE,
 } from 'config/general';
+import param from 'can-param';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
@@ -264,7 +265,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     };
 
     if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
-        searchParams.querystring = encodeURIComponent(new URLSearchParams(searchParams).toString());
+        searchParams.querystring = encodeURIComponent(param(searchParams));
     }
 
     return {
