@@ -13,6 +13,7 @@ export default {
                 ['fez_record_search_key_publisher'],
                 ['rek_date'],
                 ['rek_description'],
+                ['fez_record_search_key_type_of_data'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_construction_date'],
                 ['fez_record_search_key_date_photo_taken'],
