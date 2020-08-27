@@ -257,21 +257,20 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         };
     }
 
-    const standardSearchParams = getStandardSearchParams(values);
-    const exportedSearchQuery = {};
+    const searchParams = {
+        ...getSearchType(values.searchQuery),
+        ...getStandardSearchParams(values),
+        ...(advancedSearchQueryParams || searchQueryParams),
+    };
+
     if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
-        exportedSearchQuery.querystring = encodeURIComponent(new URLSearchParams(standardSearchParams).toString());
+        searchParams.querystring = encodeURIComponent(new URLSearchParams(searchParams).toString());
     }
 
     return {
         apiUrl: `records/${route}`,
         options: {
-            params: {
-                ...getSearchType(values.searchQuery),
-                ...standardSearchParams,
-                ...(advancedSearchQueryParams || searchQueryParams),
-                ...exportedSearchQuery,
-            },
+            params: searchParams,
         },
     };
 };
