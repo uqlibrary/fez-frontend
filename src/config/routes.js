@@ -145,6 +145,7 @@ export const pathConfig = {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',
+        bulkUpdates: '/admin/bulk-updates',
     },
     authorIdentifiers: {
         orcid: {
@@ -172,6 +173,7 @@ export const pathConfig = {
 const flattedPathConfig = [
     '/',
     '/admin/add',
+    '/admin/bulk-updates',
     '/admin/collection',
     '/admin/community',
     '/admin/delete',

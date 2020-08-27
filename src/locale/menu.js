@@ -67,6 +67,9 @@ export default {
                 primaryText: 'CSV ingest',
             },
         },
+        bulkUpdates: {
+            primaryText: 'Bulk updates',
+        },
     },
     footer: {
         cricos: {
