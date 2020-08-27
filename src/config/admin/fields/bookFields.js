@@ -1,5 +1,6 @@
 import commonFields from './commonFields';
 import { isAuthorOrEditorSelected } from 'config/validation';
+import { SUBTYPE_EDITED_BOOK } from 'config/general';
 
 export default {
     ...commonFields,
@@ -60,11 +61,13 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: () => [
-        {
-            title: 'Authors',
-            groups: [['authors']],
-        },
+    authors: ({ onlyEditors = false } = {}) => [
+        ...[
+            !onlyEditors && {
+                title: 'Authors',
+                groups: [['authors']],
+            },
+        ].filter(Boolean),
         {
             title: 'Editors',
             groups: [['editors']],
@@ -108,7 +111,7 @@ export default {
 };
 
 export const validateBook = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as, adminSection: ais },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -130,5 +133,5 @@ export const validateBook = (
             rek_copyright: summary.rek_copyright,
         }),
     },
-    authorsSection: isAuthorOrEditorSelected(as || {}, true),
+    authorsSection: isAuthorOrEditorSelected(as || {}, true, true, ais.rek_subtype === SUBTYPE_EDITED_BOOK),
 });

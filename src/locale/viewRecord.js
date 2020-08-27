@@ -183,7 +183,7 @@ export default {
                 fez_record_search_key_geographic_area: 'Geographic area',
                 fez_record_search_key_rights: 'Copyright notice',
                 fez_record_search_key_software_required: 'Software required',
-                fez_record_search_key_type_of_data: 'Type of data',
+                fez_record_search_key_type_of_data: 'Type',
                 fez_record_search_key_original_format: 'Original format',
                 fez_record_search_key_job_number: 'Job number',
                 fez_record_search_key_scale: 'Scale',
@@ -281,6 +281,7 @@ export default {
                 fez_record_search_key_author_role: 'Creator(s) role',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_grant_id: 'Grant ID',
+                fez_record_search_key_type_of_data: 'Type of data',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
                 fez_record_search_key_related_publications: 'Additional related publication(s)',
                 fez_record_search_key_related_datasets: 'Additional related dataset(s)',
@@ -449,7 +450,7 @@ export default {
                     order: 15,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 16,
                 },
                 {
@@ -1436,10 +1437,10 @@ export default {
                     field: 'fez_record_search_key_location',
                     order: 15,
                 },
-                // {
-                //     field: 'rek_genre',
-                //     order: 16,
-                // },
+                {
+                    field: 'fez_record_search_key_type_of_data',
+                    order: 16,
+                },
                 {
                     field: 'fez_record_search_key_contributor',
                     order: 17,
@@ -1569,6 +1570,10 @@ export default {
                 {
                     field: 'fez_record_search_key_style',
                     order: 16,
+                },
+                {
+                    field: 'fez_record_search_key_type_of_data',
+                    order: 16.5,
                 },
                 {
                     field: 'fez_record_search_key_condition',
@@ -1703,7 +1708,7 @@ export default {
                     order: 11,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 12,
                 },
                 {
@@ -1787,6 +1792,10 @@ export default {
                 {
                     field: 'fez_record_search_key_start_page',
                     order: 10,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 10.5,
                 },
                 {
                     field: 'fez_record_search_key_oa_status',
@@ -1993,7 +2002,7 @@ export default {
                     order: 8,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 9,
                 },
                 {
@@ -2641,7 +2650,7 @@ export default {
                     order: 11,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 12,
                 },
                 {

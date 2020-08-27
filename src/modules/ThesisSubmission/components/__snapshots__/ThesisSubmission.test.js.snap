@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ThesisSubmission should display confirmation box before submission 1`] = `
+<WithStyles(ConfirmDialogBox)
+  confirmDialogBoxId="thesis"
+  locale={
+    Object {
+      "cancelButtonLabel": "No, continue editing",
+      "confirmButtonLabel": "Yes, deposit thesis",
+      "confirmationMessage": "You are about to deposit your thesis with attached files. Are you sure you want to proceed?",
+      "confirmationTitle": "Thesis deposit",
+    }
+  }
+  onAction={[MockFunction]}
+  onRef={[Function]}
+/>
+`;
+
 exports[`ThesisSubmission should display successfull submission screen 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
@@ -1167,7 +1183,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
 </StandardPage>
 `;
 
-exports[`ThesisSubmission should show the file upload alert 1`] = `
+exports[`ThesisSubmission should show the file upload failure alert 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
 >
@@ -1207,6 +1223,8 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
       xs={12}
     >
       <Alert
+        action={[Function]}
+        actionButtonLabel="Retry upload"
         allowDismiss={false}
         customIcon={null}
         customType={null}
@@ -1214,7 +1232,7 @@ exports[`ThesisSubmission should show the file upload alert 1`] = `
         dismissTitle="Click to dismiss this alert"
         message={
           Array [
-            "There was an issue uploading your thesis files. Please contact ",
+            "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact ",
             <a
               href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
             >

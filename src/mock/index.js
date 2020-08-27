@@ -301,10 +301,28 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(routes.ORCID_SYNC_API().apiUrl)
     .reply(200, mockData.orcidSyncStatus);
 
-mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
+// let uploadTryCount = 1;
+mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(() => {
+    // if(uploadTryCount < 3) {
+    //     console.log(`Failing try ${uploadTryCount}`);
+    //     uploadTryCount++;
+    //     return [500, { message: ['error - failed PUT FILE_UPLOAD_S3'] }];
+    // }
+    // console.log('Successful upload');
+    return [200, { data: {} }];
+});
 // .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
 
+// let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
+    // .reply(() => {
+    //     if (retried) {
+    //         return [200, ['s3-ap-southeast-2.amazonaws.com']];
+    //     } else {
+    //         retried = true;
+    //         return [500, { message: ['error - failed FILE_UPLOAD_API'] }];
+    //     }
+    // })
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
     // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
