@@ -5,9 +5,11 @@ import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 import {
+    PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DESIGN,
     NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+    SUBTYPE_EDITED_BOOK,
 } from 'config/general';
 
 export const AuthorsSection = ({ disabled = false }) => {
@@ -18,7 +20,10 @@ export const AuthorsSection = ({ disabled = false }) => {
         record.rek_subtype === NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK
             ? PUBLICATION_TYPE_DESIGN
             : record.rek_display_type;
-    const cards = useRef(adminInterfaceConfig[displayType].authors());
+
+    const onlyEditors = record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK;
+
+    const cards = useRef(adminInterfaceConfig[displayType].authors({ onlyEditors }));
 
     return <Section cards={cards.current} disabled={disabled} />;
 };
