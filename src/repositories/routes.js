@@ -318,3 +318,7 @@ export const ORCID_SYNC_API = () => ({
 export const UNLOCK_RECORD_API = ({ pid }) => ({
     apiUrl: `records/${pid}/unlock`,
 });
+
+export const BULK_UPDATES_API = () => ({
+    apiUrl: 'records/bulk-updates',
+});
