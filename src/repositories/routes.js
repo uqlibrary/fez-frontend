@@ -8,6 +8,7 @@ import {
     SUBMITTED_FOR_APPROVAL,
     PUB_SEARCH_BULK_EXPORT_SIZE,
 } from 'config/general';
+import param from 'can-param';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
@@ -257,10 +258,9 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         };
     }
 
-    const standardSearchParams = getStandardSearchParams(values);
-    const exportedSearchQuery = {};
+    const exportParams = {};
     if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
-        exportedSearchQuery.queryString = encodeURIComponent(new URLSearchParams(standardSearchParams).toString());
+        exportParams.querystring = encodeURIComponent(param(query));
     }
 
     return {
@@ -268,9 +268,9 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         options: {
             params: {
                 ...getSearchType(values.searchQuery),
-                ...standardSearchParams,
+                ...getStandardSearchParams(values),
                 ...(advancedSearchQueryParams || searchQueryParams),
-                ...exportedSearchQuery,
+                ...exportParams,
             },
         },
     };
