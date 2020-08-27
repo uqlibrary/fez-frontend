@@ -258,20 +258,20 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         };
     }
 
-    const searchParams = {
-        ...getSearchType(values.searchQuery),
-        ...getStandardSearchParams(values),
-        ...(advancedSearchQueryParams || searchQueryParams),
-    };
-
+    const exportParams = {};
     if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
-        searchParams.querystring = encodeURIComponent(param(searchParams));
+        exportParams.querystring = encodeURIComponent(param(query));
     }
 
     return {
         apiUrl: `records/${route}`,
         options: {
-            params: searchParams,
+            params: {
+                ...getSearchType(values.searchQuery),
+                ...getStandardSearchParams(values),
+                ...(advancedSearchQueryParams || searchQueryParams),
+                ...exportParams,
+            },
         },
     };
 };
