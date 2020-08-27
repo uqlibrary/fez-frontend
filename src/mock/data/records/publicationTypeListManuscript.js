@@ -7,35 +7,35 @@ export default {
     "to": 2,
     "data": [
         {
-            "rek_pid": "UQ:383809",
+            "rek_pid": "UQ:364367",
             "rek_title_xsdmf_id": 16753,
-            "rek_title": "Hugh Gordon Garland, Moasca [Moascar] Camp, (near Ismailia), [Egypt] to Mr Sowden, 15 Feb 1916",
-            "rek_description_xsdmf_id": null,
-            "rek_description": null,
+            "rek_title": "Henry Fryer, [3rd Australian Auxiliary Hospital], Dartford, [England] to Liz, 23 Jul 1917",
+            "rek_description_xsdmf_id": 16771,
+            "rek_description": "John Denis (Jack) Fryer was born in 1895 at Springsure, Queensland, son of Charles George Fryer and his wife Rosina, née Richards. Charles and Rosina had seven children: Elizabeth Stuart (later Gilmour), William Thomas, Charles George, Henry Hardy, John Denis, Richard Alexander James and Walter Ponsonby. Jack won a scholarship to the University of Queensland and commenced study in 1915. By the end of first term, Jack decided to volunteer for military service in the first Australian Imperial Force. He was commissioned in 1916 and went to France where he was gassed in early 1917. After hospitalisation in England, Jack returned to France for the final push to Amiens, in August 1918. There he was again wounded, by a stick bomb. After the war he re-enrolled at the University of Queensland for the first term of 1920 to complete his English honours examinations. His health failed in 1922 and he died in February 1923. In 1926, as a memorial to their former member and vice-president, members of the University Dramatic Society donated £10 to establish a collection of works in Australian literature. The Fryer collection was maintained in the English Department until the 1950s when it became part of the University of Queensland Library.",
             "rek_display_type_xsdmf_id": 16810,
             "rek_display_type": 374,
             "rek_status_xsdmf_id": 16816,
             "rek_status": 2,
             "rek_date_xsdmf_id": 16739,
-            "rek_date": "1916-02-15T00:00:00Z",
+            "rek_date": "1917-07-23T00:00:00Z",
             "rek_object_type_xsdmf_id": 16811,
             "rek_object_type": 3,
             "rek_depositor_xsdmf_id": 16818,
-            "rek_depositor": 19929,
+            "rek_depositor": 3946,
             "rek_created_date_xsdmf_id": 16813,
-            "rek_created_date": "2016-04-01T16:27:23Z",
+            "rek_created_date": "2015-07-08T13:56:45Z",
             "rek_updated_date_xsdmf_id": 16814,
-            "rek_updated_date": "2019-05-19T02:31:36Z",
+            "rek_updated_date": "2020-07-24T07:42:57Z",
             "rek_file_downloads": 0,
-            "rek_citation": "",
+            "rek_citation": "<a class=\"citation_title\" title=\"Click to view Manuscript: Henry Fryer, [3rd Australian Auxiliary Hospital], Dartford, [England] to Liz, 23 Jul 1917\" href=\"/view/UQ:364367\">Henry Fryer, [3rd Australian Auxiliary Hospital], Dartford, [England] to Liz, 23 Jul 1917</a>",
             "rek_genre_xsdmf_id": 16740,
-            "rek_genre": "text/tiff",
+            "rek_genre": "text/pdf",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
             "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": 16773,
-            "rek_formatted_abstract": "Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia.<br /><br />Father Hayes was born in 1889 at Frederickton, New South Wales, and began book collecting at age seven. He commenced studies for the priesthood at St Columbia's College, Springwood, in 1911 and was ordained after further study at St Patrick&rsquo;s, Manly, in 1918. Over the course of 70 years he amassed one of the greatest collections of Australiana, including more than 25,000 volumes, 30,000 manuscript items, 1,500 Indigenous artefacts, maps, stamps, coins, weapons, geological specimens, cattle bells, and a variety of other material. On 19-20 October 1967 a convoy of removal trucks transported eighty large crates and 400 cartons of material to The University of Queensland Library at St Lucia, doubling its holdings on Australian subjects and effectively putting the Library on the map as an institution capable of supporting high-level research in Australian studies. (Information from Follett, Roslyn &amp; University of Queensland. Library &amp; Fryer Library (2010). Found in Fryer : stories from the Fryer Library collection. The University of Queensland Library, St Lucia, Qld.) <br />",
+            "rek_formatted_abstract_xsdmf_id": null,
+            "rek_formatted_abstract": null,
             "rek_depositor_affiliation_xsdmf_id": 16822,
             "rek_depositor_affiliation": 789,
             "rek_thomson_citation_count": null,
@@ -44,7 +44,6 @@ export default {
             "rek_subtype": null,
             "rek_scopus_citation_count": null,
             "rek_herdc_notes_xsdmf_id": null,
-            "rek_herdc_notes": null,
             "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": null,
             "rek_wok_doc_type_xsdmf_id": null,
@@ -60,132 +59,88 @@ export default {
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
-            "fez_record_search_key_acknowledgements": null,
+            "fez_record_search_key_acknowledgements": {
+                "rek_acknowledgements_id": 25415,
+                "rek_acknowledgements_pid": "UQ:364367",
+                "rek_acknowledgements_xsdmf_id": 16795,
+                "rek_acknowledgements": "This project supported by the Queensland State Government."
+            },
             "fez_record_search_key_additional_notes": {
-                "rek_additional_notes_id": 692,
-                "rek_additional_notes_pid": "UQ:383809",
+                "rek_additional_notes_id": 550,
+                "rek_additional_notes_pid": "UQ:364367",
                 "rek_additional_notes_xsdmf_id": 16817,
-                "rek_additional_notes": "Hugh Gordon Garland was lieutenant in the 48th Battalion in Australian Imperial Force, during the First World War. He was killed in action 3 May 1918, on the the battlefield of France. (Information from the Australian War Memorial)"
+                "rek_additional_notes": "Written on letterhead from the Australian Branch B.R.C.S. [British Red Cross Society]. Letterhead at top of page bears the Red Cross emblem."
             },
-            "fez_record_search_key_advisory_statement": {
-                "rek_advisory_statement_id": 22293,
-                "rek_advisory_statement_pid": "UQ:383809",
-                "rek_advisory_statement_xsdmf_id": 16797,
-                "rek_advisory_statement": "Content of this letter may contain language or terms that are no longer used."
-            },
+            "fez_record_search_key_advisory_statement": null,
             "fez_record_search_key_assigned_group_id": [],
             "fez_record_search_key_assigned_user_id": [
                 {
-                    "rek_assigned_user_id_id": 905033,
-                    "rek_assigned_user_id_pid": "UQ:383809",
+                    "rek_assigned_user_id_id": 907647,
+                    "rek_assigned_user_id_pid": "UQ:364367",
                     "rek_assigned_user_id_xsdmf_id": 16820,
-                    "rek_assigned_user_id": 19929,
+                    "rek_assigned_user_id": 3946,
                     "rek_assigned_user_id_order": 1
                 }
             ],
             "fez_record_search_key_author": [
                 {
-                    "rek_author_id": 28680693,
-                    "rek_author_pid": "UQ:383809",
+                    "rek_author_id": 28817405,
+                    "rek_author_pid": "UQ:364367",
                     "rek_author_xsdmf_id": 16722,
-                    "rek_author": "Hayes, Edward Leo",
+                    "rek_author": "Fryer, John Denis, 1895-1923",
                     "rek_author_order": 1
                 }
             ],
-            "fez_record_search_key_author_id": [
-                {
-                    "rek_author_id_id": 29481979,
-                    "rek_author_id_pid": "UQ:383809",
-                    "rek_author_id_xsdmf_id": 16717,
-                    "rek_author_id": 0,
-                    "rek_author_id_order": 1
-                }
-            ],
+            "fez_record_search_key_author_id": [],
             "fez_record_search_key_contributor": [
                 {
-                    "rek_contributor_id": 3073722,
-                    "rek_contributor_pid": "UQ:383809",
+                    "rek_contributor_id": 3081119,
+                    "rek_contributor_pid": "UQ:364367",
                     "rek_contributor_xsdmf_id": 16730,
-                    "rek_contributor": "Garland, Hugh Gordon",
+                    "rek_contributor": "Fryer, Henry Hardy",
                     "rek_contributor_order": 1
                 }
             ],
-            "fez_record_search_key_contributor_id": [
-                {
-                    "rek_contributor_id_id": 2388713,
-                    "rek_contributor_id_pid": "UQ:383809",
-                    "rek_contributor_id_xsdmf_id": 16725,
-                    "rek_contributor_id": 0,
-                    "rek_contributor_id_order": 1
-                }
-            ],
+            "fez_record_search_key_contributor_id": [],
             "fez_record_search_key_datastream_policy": null,
             "fez_record_search_key_date_available": {
-                "rek_date_available_id": 902013,
-                "rek_date_available_pid": "UQ:383809",
+                "rek_date_available_id": 911585,
+                "rek_date_available_pid": "UQ:364367",
                 "rek_date_available_xsdmf_id": 16761,
-                "rek_date_available": "2016-01-01T00:00:00Z"
+                "rek_date_available": "2015-01-01T00:00:00Z"
             },
             "fez_record_search_key_file_attachment_access_condition": [],
             "fez_record_search_key_file_attachment_embargo_date": [],
             "fez_record_search_key_file_attachment_name": [
                 {
-                    "rek_file_attachment_name_id": 4190040,
-                    "rek_file_attachment_name_pid": "UQ:383809",
+                    "rek_file_attachment_name_id": 3847381,
+                    "rek_file_attachment_name_pid": "UQ:364367",
                     "rek_file_attachment_name_xsdmf_id": 16693,
-                    "rek_file_attachment_name": "presmd_UQFL2_i1086.xml",
-                    "rek_file_attachment_name_order": 4
+                    "rek_file_attachment_name": "UQFL23_b1f03_0013a_p01_02.pdf",
+                    "rek_file_attachment_name_order": 1
                 },
                 {
-                    "rek_file_attachment_name_id": 4190041,
-                    "rek_file_attachment_name_pid": "UQ:383809",
+                    "rek_file_attachment_name_id": 3847382,
+                    "rek_file_attachment_name_pid": "UQ:364367",
                     "rek_file_attachment_name_xsdmf_id": 16693,
-                    "rek_file_attachment_name": "presmd_UQFL2_i1086x.xml",
-                    "rek_file_attachment_name_order": 5
-                },
-                {
-                    "rek_file_attachment_name_id": 4190042,
-                    "rek_file_attachment_name_pid": "UQ:383809",
-                    "rek_file_attachment_name_xsdmf_id": 16693,
-                    "rek_file_attachment_name": "presmd_UQFL2_i1086_transcript.xml",
-                    "rek_file_attachment_name_order": 6
-                },
-                {
-                    "rek_file_attachment_name_id": 4190043,
-                    "rek_file_attachment_name_pid": "UQ:383809",
-                    "rek_file_attachment_name_xsdmf_id": 16693,
-                    "rek_file_attachment_name": "UQFL2_i1086.zip",
-                    "rek_file_attachment_name_order": 7
-                },
-                {
-                    "rek_file_attachment_name_id": 4190044,
-                    "rek_file_attachment_name_pid": "UQ:383809",
-                    "rek_file_attachment_name_xsdmf_id": 16693,
-                    "rek_file_attachment_name": "UQFL2_i1086x.pdf",
-                    "rek_file_attachment_name_order": 8
-                },
-                {
-                    "rek_file_attachment_name_id": 4190045,
-                    "rek_file_attachment_name_pid": "UQ:383809",
-                    "rek_file_attachment_name_xsdmf_id": 16693,
-                    "rek_file_attachment_name": "UQFL2_i1086_transcript.pdf",
-                    "rek_file_attachment_name_order": 9
+                    "rek_file_attachment_name": "presmd_UQFL23_b1f03_0013a_p01_02.xml",
+                    "rek_file_attachment_name_order": 2
                 }
             ],
             "fez_record_search_key_geographic_area": [
                 {
-                    "rek_geographic_area_id": 18953,
-                    "rek_geographic_area_pid": "UQ:383809",
+                    "rek_geographic_area_id": 12218,
+                    "rek_geographic_area_pid": "UQ:364367",
                     "rek_geographic_area_xsdmf_id": 16737,
-                    "rek_geographic_area": "32.325771,30.634808 32.148081,30.634808 32.148081,30.525537 32.325771,30.525537 32.325771,30.634808",
+                    "rek_geographic_area": "0.281572,51.482959 0.149134,51.482959 0.149134,51.406804 0.281572,51.406804 0.281572,51.482959",
                     "rek_geographic_area_order": 1
                 }
             ],
             "fez_record_search_key_isderivationof": [],
             "fez_record_search_key_ismemberof": [
                 {
-                    "rek_ismemberof_id": 12437130,
-                    "rek_ismemberof_pid": "UQ:383809",
+                    "rek_ismemberof_id": 11490839,
+                    "rek_ismemberof_pid": "UQ:364367",
                     "rek_ismemberof_xsdmf_id": 149,
                     "rek_ismemberof": "UQ:278419",
                     "rek_ismemberof_order": 1,
@@ -199,66 +154,87 @@ export default {
             ],
             "fez_record_search_key_keywords": [
                 {
-                    "rek_keywords_id": 30226505,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105813,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "Hayes, Edward Leo, 1889-1967 -- Archives",
+                    "rek_keywords": "World War, 1914-1918",
                     "rek_keywords_order": 1
                 },
                 {
-                    "rek_keywords_id": 30226506,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105814,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "Garland, Hugh Gordon",
+                    "rek_keywords": "Fryer Library",
                     "rek_keywords_order": 2
                 },
                 {
-                    "rek_keywords_id": 30226507,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105815,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "Australian Army. Australian Imperial Force (1914-1921)",
+                    "rek_keywords": "Fryer, Henry Hardy",
                     "rek_keywords_order": 3
                 },
                 {
-                    "rek_keywords_id": 30226508,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105816,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "World War, 1914-1918",
+                    "rek_keywords": "Australian Army. Australian Imperial Force (1914-1921)",
                     "rek_keywords_order": 4
                 },
                 {
-                    "rek_keywords_id": 30226509,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105817,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "World War, 1914-1918 -- Personal narratives, Australian",
+                    "rek_keywords": "World War, 1914-1918 -- Australia -- Correspondence",
                     "rek_keywords_order": 5
                 },
                 {
-                    "rek_keywords_id": 30226510,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105818,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "World War, 1914-1918 -- Campaigns -- Turkey -- Gallipoli Peninsula -- Personal narratives",
+                    "rek_keywords": "World War, 1914-1918 -- Personal narratives, Australian",
                     "rek_keywords_order": 6
                 },
                 {
-                    "rek_keywords_id": 30226511,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105819,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "New Zealand. Army. Expeditionary Force",
+                    "rek_keywords": "Gilmour, Elizabeth Stuart",
                     "rek_keywords_order": 7
                 },
                 {
-                    "rek_keywords_id": 30226512,
-                    "rek_keywords_pid": "UQ:383809",
+                    "rek_keywords_id": 29105820,
+                    "rek_keywords_pid": "UQ:364367",
                     "rek_keywords_xsdmf_id": 16735,
-                    "rek_keywords": "Military camps -- New Zealand -- Egypt -- Moascar Camp",
+                    "rek_keywords": "Soldiers -- Wounds and injuries",
                     "rek_keywords_order": 8
+                },
+                {
+                    "rek_keywords_id": 29105821,
+                    "rek_keywords_pid": "UQ:364367",
+                    "rek_keywords_xsdmf_id": 16735,
+                    "rek_keywords": "World War, 1914-1918 -- Hospitals -- England",
+                    "rek_keywords_order": 9
+                },
+                {
+                    "rek_keywords_id": 29105822,
+                    "rek_keywords_pid": "UQ:364367",
+                    "rek_keywords_xsdmf_id": 16735,
+                    "rek_keywords": "Australia. Army. Battalion, 47th",
+                    "rek_keywords_order": 10
+                },
+                {
+                    "rek_keywords_id": 29105823,
+                    "rek_keywords_pid": "UQ:364367",
+                    "rek_keywords_xsdmf_id": 16735,
+                    "rek_keywords": "3rd Australian Auxiliary Hospital (Dartford, England)",
+                    "rek_keywords_order": 11
                 }
             ],
             "fez_record_search_key_language": [
                 {
-                    "rek_language_id": 5185394,
-                    "rek_language_pid": "UQ:383809",
+                    "rek_language_id": 5211960,
+                    "rek_language_pid": "UQ:364367",
                     "rek_language_xsdmf_id": 16751,
                     "rek_language": "eng",
                     "rek_language_order": 1
@@ -269,150 +245,112 @@ export default {
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": {
-                "rek_oa_status_id": 289696,
-                "rek_oa_status_pid": "UQ:383809",
+                "rek_oa_status_id": 305299,
+                "rek_oa_status_pid": "UQ:364367",
                 "rek_oa_status_xsdmf_id": 16989,
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
             "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
-                "rek_original_format_id": 8383,
-                "rek_original_format_pid": "UQ:383809",
+                "rek_original_format_id": 10088,
+                "rek_original_format_pid": "UQ:364367",
                 "rek_original_format_xsdmf_id": 16742,
-                "rek_original_format": "Letter, 9p; 26 x 21 cm."
+                "rek_original_format": "Letter, 3p ; 18 x 23 cm."
             },
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_rights": {
-                "rek_rights_id": 109703,
-                "rek_rights_pid": "UQ:383809",
+                "rek_rights_id": 111422,
+                "rek_rights_pid": "UQ:364367",
                 "rek_rights_xsdmf_id": 16800,
-                "rek_rights": "For all enquiries about this work, please contact the Fryer Library, The University of Queensland Library."
+                "rek_rights": "For all enquiries about this work, please contact the Fryer Library, The University of Queensland Library"
             },
+            "fez_record_search_key_security_policy": [
+                {
+                    "rek_security_policy_id": 585708,
+                    "rek_security_policy_pid": "UQ:364367",
+                    "rek_security_policy": 5,
+                    "rek_security_policy_order": 1
+                }
+            ],
             "fez_record_search_key_series": {
-                "rek_series_id": 188583,
-                "rek_series_pid": "UQ:383809",
+                "rek_series_id": 191119,
+                "rek_series_pid": "UQ:364367",
                 "rek_series_xsdmf_id": 16748,
-                "rek_series": "Father Edward Leo Hayes Collection, UQFL2"
+                "rek_series": "John Denis Fryer Collection, UQFL23"
             },
             "fez_record_search_key_source": {
-                "rek_source_id": 58057,
-                "rek_source_pid": "UQ:383809",
+                "rek_source_id": 59761,
+                "rek_source_pid": "UQ:364367",
                 "rek_source_xsdmf_id": 16746,
-                "rek_source": "Father Edward Leo Hayes Collection, UQFL2, item 1086"
+                "rek_source": "John Denis Fryer Collection, UQFL23, Box 1, Folder 3, item 13"
             },
             "fez_record_search_key_subject": [],
-            "fez_record_search_key_transcript": {
-                "rek_transcript_id": 21888,
-                "rek_transcript_pid": "UQ:383809",
-                "rek_transcript_xsdmf_id": 16793,
-                "rek_transcript": "Letter transcribed by Eliza Copeland 18 March 2016."
-            },
+            "fez_record_search_key_transcript": null,
             "fez_record_search_key_translated_title": null,
-            "fez_record_search_key_issn": [],
-            "fez_record_search_key_doi": null,
-            "fez_record_search_key_isi_loc": null,
-            "fez_record_search_key_scopus_id": null,
+            "fez_record_search_key_type_of_data": [],
             "fez_datastream_info": [
                 {
-                    "dsi_pid": "UQ:383809",
-                    "dsi_dsid": "presmd_UQFL2_i1086.xml",
+                    "dsi_id": 2742258,
+                    "dsi_pid": "UQ:364367",
+                    "dsi_dsid": "presmd_UQFL23_b1f03_0013a_p01_02.xml",
+                    "dsi_checksum": "a28ab9e12954d37ab0de68ef0a23bbba",
                     "dsi_embargo_date": null,
                     "dsi_open_access": null,
                     "dsi_label": "",
                     "dsi_mimetype": "application/xml",
                     "dsi_copyright": null,
                     "dsi_state": "A",
-                    "dsi_size": 1255,
+                    "dsi_size": 12079,
                     "dsi_security_policy": 1,
                     "dsi_security_inherited": 0
                 },
                 {
-                    "dsi_pid": "UQ:383809",
-                    "dsi_dsid": "presmd_UQFL2_i1086x.xml",
+                    "dsi_id": 3582515,
+                    "dsi_pid": "UQ:364367",
+                    "dsi_dsid": "thumbnail_UQFL23_b1f03_0013a_p01_02_t.jpg",
+                    "dsi_checksum": "70909d38595db26104a6fa6a783e02d7",
                     "dsi_embargo_date": null,
                     "dsi_open_access": null,
-                    "dsi_label": "",
-                    "dsi_mimetype": "application/xml",
+                    "dsi_label": null,
+                    "dsi_mimetype": "image/jpeg",
                     "dsi_copyright": null,
                     "dsi_state": "A",
-                    "dsi_size": 1257,
+                    "dsi_size": 3352,
                     "dsi_security_policy": 1,
                     "dsi_security_inherited": 0
                 },
                 {
-                    "dsi_pid": "UQ:383809",
-                    "dsi_dsid": "presmd_UQFL2_i1086_transcript.xml",
+                    "dsi_id": 2742259,
+                    "dsi_pid": "UQ:364367",
+                    "dsi_dsid": "UQFL23_b1f03_0013a_p01_02.pdf",
+                    "dsi_checksum": "ce1c41039d846cde679cb1b5f3f3447e",
                     "dsi_embargo_date": null,
                     "dsi_open_access": null,
-                    "dsi_label": "",
-                    "dsi_mimetype": "application/xml",
-                    "dsi_copyright": null,
-                    "dsi_state": "A",
-                    "dsi_size": 8346,
-                    "dsi_security_policy": 1,
-                    "dsi_security_inherited": 0
-                },
-                {
-                    "dsi_pid": "UQ:383809",
-                    "dsi_dsid": "UQFL2_i1086.pdf",
-                    "dsi_embargo_date": null,
-                    "dsi_open_access": null,
-                    "dsi_label": "Letter (open access)",
-                    "dsi_mimetype": "application/pdf",
-                    "dsi_copyright": null,
-                    "dsi_state": "D",
-                    "dsi_size": 51263291,
-                    "dsi_security_policy": 1,
-                    "dsi_security_inherited": 0
-                },
-                {
-                    "dsi_pid": "UQ:383809",
-                    "dsi_dsid": "UQFL2_i1086.zip",
-                    "dsi_embargo_date": null,
-                    "dsi_open_access": null,
-                    "dsi_label": "Archival tiff files (restricted access)",
-                    "dsi_mimetype": "application/zip",
-                    "dsi_copyright": null,
-                    "dsi_state": "A",
-                    "dsi_size": 467881114,
-                    "dsi_security_policy": 1,
-                    "dsi_security_inherited": 0
-                },
-                {
-                    "dsi_pid": "UQ:383809",
-                    "dsi_dsid": "UQFL2_i1086x.pdf",
-                    "dsi_embargo_date": null,
-                    "dsi_open_access": null,
-                    "dsi_label": "Letter (open access)",
+                    "dsi_label": null,
                     "dsi_mimetype": "application/pdf",
                     "dsi_copyright": null,
                     "dsi_state": "A",
-                    "dsi_size": 51263291,
-                    "dsi_security_policy": 5,
-                    "dsi_security_inherited": 1
-                },
-                {
-                    "dsi_pid": "UQ:383809",
-                    "dsi_dsid": "UQFL2_i1086_transcript.pdf",
-                    "dsi_embargo_date": null,
-                    "dsi_open_access": null,
-                    "dsi_label": "Letter transcription (open access)",
-                    "dsi_mimetype": "application/pdf",
-                    "dsi_copyright": null,
-                    "dsi_state": "A",
-                    "dsi_size": 76683,
+                    "dsi_size": 3719067,
                     "dsi_security_policy": 5,
                     "dsi_security_inherited": 1
                 }
             ],
             "fez_matched_journals": [],
+            "fez_record_search_key_issn": [],
+            "fez_record_search_key_doi": null,
+            "fez_record_search_key_isi_loc": null,
+            "fez_record_search_key_scopus_id": null,
+            "fez_record_search_key_isdatasetof": [],
+            "fez_record_search_key_has_related_datasets": [],
+            "fez_record_search_key_has_derivations": [],
+            "rek_author_count": 1,
             "rek_display_type_lookup": "Manuscript",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
             "rek_scopus_doc_type_lookup": null,
             "rek_status_lookup": "Published",
-            "rek_wok_doc_type_lookup": null
+            "rek_wok_doc_type_lookup": "Abstract of Published Item"
         },
     ]
 }
