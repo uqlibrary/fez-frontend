@@ -255,7 +255,7 @@ describe('Backend routes method', () => {
                             sort: 'score',
                             title: 'title search',
                             ['filters[facets][one]']: 'one facet',
-                            queryString:
+                            querystring:
                                 'export_to%3D%26page%3D2%26per_page%3D500%26sort%3Dscore%26order_by%3Dasc%26filters%255Bfacets%255D%255Bone%255D%3Done%2Bfacet',
                         },
                     },

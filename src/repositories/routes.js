@@ -260,7 +260,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     const standardSearchParams = getStandardSearchParams(values);
     const exportedSearchQuery = {};
     if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
-        exportedSearchQuery.queryString = encodeURIComponent(new URLSearchParams(standardSearchParams).toString());
+        exportedSearchQuery.querystring = encodeURIComponent(new URLSearchParams(standardSearchParams).toString());
     }
 
     return {
