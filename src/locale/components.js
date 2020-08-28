@@ -2734,6 +2734,13 @@ export default {
             },
             submit: 'Change display type',
             cancelButtonLabel: 'Cancel',
+            loadingMessage: 'Loading work',
+            workflowConfirmation: {
+                confirmationTitle: 'Change Display type',
+                confirmationMessage: 'Display type has been changed',
+                cancelButtonLabel: 'View record',
+                confirmButtonLabel: 'Edit full record',
+            },
         },
     },
 };
