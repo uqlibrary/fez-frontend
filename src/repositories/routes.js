@@ -260,7 +260,9 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
 
     const exportParams = {};
     if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
-        exportParams.querystring = encodeURIComponent(param(query));
+        // eslint-disable-next-line no-unused-vars
+        const { exportPublicationsFormat, ...queryValuesToSend } = query;
+        exportParams.querystring = encodeURIComponent(param(queryValuesToSend));
     }
 
     return {
