@@ -20,7 +20,7 @@ import {
     NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     NTRO_SUBTYPE_CW_OTHER,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-    NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     RRW_NTRO_SUBTYPES,
 } from 'config/general';
 import moment from 'moment';
@@ -53,7 +53,7 @@ export default class CreativeWorkForm extends Component {
         const displayEndDate = [
             ...LP_NTRO_SUBTYPES,
             ...CPEE_NTRO_SUBTYPES,
-            NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         ].includes(this.props.subtype);
 
         return (

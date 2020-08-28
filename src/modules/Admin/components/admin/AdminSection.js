@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import { Section } from '../common/Section';
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 // import {
@@ -13,6 +13,7 @@ import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 
 export const AdminSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
+    const { formValues } = useFormValuesContext();
 
     /*
      *  Disbale below line in favour of #171299373
@@ -25,7 +26,7 @@ export const AdminSection = ({ disabled = false }) => {
     //         : record.rek_display_type;
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].admin(
-            record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            formValues.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         ),
     );
 

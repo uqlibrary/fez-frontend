@@ -106,7 +106,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
             "editors",
           ],
         ],
-        "title": "Consultants",
+        "title": "Contributors",
       },
       Object {
         "groups": Array [

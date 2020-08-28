@@ -28,6 +28,7 @@ import {
     NTRO_SUBTYPE_RRW_INTERARTS,
     NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
     NTRO_SUBTYPE_RRW_OTHER,
+    SUBTYPE_EDITED_BOOK,
 } from 'config/general';
 
 export const identifiersParams = record => ({
@@ -87,4 +88,9 @@ export const bibliographicParams = record => ({
         NTRO_SUBTYPE_CPEE_OTHER,
     ].includes(record.rek_subtype),
     isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+});
+
+export const authorsParams = record => ({
+    isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    onlyEditors: record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK,
 });

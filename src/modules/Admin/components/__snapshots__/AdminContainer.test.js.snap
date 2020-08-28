@@ -446,6 +446,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                 "tabIndicator": "tabindicator",
               }
             }
+            formValues={
+              Immutable.Map {
+                "rek_subtype": "Original Journal Article",
+              }
+            }
             handleSubmit={
               [MockFunction] {
                 "calls": Array [
