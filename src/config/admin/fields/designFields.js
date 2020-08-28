@@ -75,10 +75,14 @@ export default {
             title: isDesignNtro ? 'Consultants' : 'Contributors',
             groups: [['editors']],
         },
-        {
-            title: 'Creators',
-            groups: [['creators']],
-        },
+        ...(isDesignNtro
+            ? [
+                  {
+                      title: 'Creators',
+                      groups: [['creators']],
+                  },
+              ]
+            : []),
     ],
     admin: (isDesignNtro = true) => [
         {

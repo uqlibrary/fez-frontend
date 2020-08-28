@@ -93,15 +93,5 @@ context('Design admin edit', () => {
                 cy.get(`[id=rek-contributor-list-row-${index}-name-as-published]`).should('contain', consultant);
             });
         });
-
-        cy.get('[data-testid=author-details-section-content]').within(() => {
-            cy.get('h4')
-                .eq(2)
-                .should('contain', 'Creators');
-            const creators = record.fez_record_search_key_creator_name.map(item => item.rek_creator_name);
-            creators.forEach((creator, index) => {
-                cy.get(`[id=rek-creator-name-list-row-${index}-name-as-published]`).should('contain', creator);
-            });
-        });
     });
 });
