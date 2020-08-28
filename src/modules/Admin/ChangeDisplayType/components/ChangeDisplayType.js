@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { useParams } from 'react-router';
@@ -11,9 +11,9 @@ import Typography from '@material-ui/core/Typography';
 
 import viewRecordLocale from 'locale/viewRecord';
 import { DOCUMENT_TYPES_EDIT_ONLY, publicationTypes } from 'config/general';
-import { pathConfig } from 'config/routes';
-import { validation } from 'config';
+import { routes, validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
+import { default as pagesLocale } from 'locale/pages';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -21,10 +21,12 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 const txt = {
     ...componentsLocale.components.changeDisplayType,
     headings: viewRecordLocale.viewRecord.headings,
+    alertProps: pagesLocale.pages.edit.alerts,
 };
 
 export const getErrorMessage = () => {
@@ -57,10 +59,11 @@ export const ChangeDisplayType = ({
     record,
     resetSubType,
     selectedPublicationType,
+    submitSucceeded,
     submitting,
 }) => {
     const { pid: pidParam } = useParams();
-    React.useEffect(() => {
+    useEffect(() => {
         // Load record if it hasn't
         !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
         return () => {
@@ -68,6 +71,25 @@ export const ChangeDisplayType = ({
             resetSubType();
         };
     }, [loadRecordToView, pidParam, record, resetSubType]);
+
+    const alertProps = validation.getErrorAlertProps({
+        submitting,
+        submitSucceeded,
+        // formErrors,
+        alertLocale: txt.alertProps,
+    });
+
+    const successConfirmationRef = useRef();
+
+    useEffect(() => {
+        if (!submitting && submitSucceeded && successConfirmationRef.current) {
+            successConfirmationRef.current.showConfirmation();
+        }
+    }, [submitting, submitSucceeded]);
+
+    const setSuccessConfirmationRef = React.useCallback(node => {
+        successConfirmationRef.current = node; // TODO: Add check that this worked
+    }, []);
 
     if (!!pidParam && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -107,16 +129,17 @@ export const ChangeDisplayType = ({
     // Look for possible issues
     const { errorMessage } = getErrorMessage(record);
 
-    const navigateToViewPage = () => {
-        window.location.assign(pathConfig.records.view(pid, true));
+    const navigateToViewPage = pid => {
+        if (!!pid && validation.isValidPid(pid)) {
+            history.push(routes.pathConfig.records.view(pid));
+        }
     };
 
-    const alertProps = validation.getErrorAlertProps({
-        // submitting,
-        // submitSucceeded,
-        // formErrors,
-        alertLocale: txt.alertProps,
-    });
+    const navigateToEditRecord = pid => {
+        if (!!pid && validation.isValidPid(pid)) {
+            history.push(routes.pathConfig.admin.edit(pid));
+        }
+    };
 
     const clearSubitems = () => {
         resetSubType();
@@ -136,6 +159,12 @@ export const ChangeDisplayType = ({
                                 hideContentIndicators
                             />
                         </Grid>
+                        <ConfirmDialogBox
+                            onRef={setSuccessConfirmationRef}
+                            onAction={() => navigateToEditRecord(record.rek_pid)}
+                            locale={txt.workflowConfirmation}
+                            onCancelAction={() => navigateToViewPage(record.rek_pid)}
+                        />
                         <Grid item xs={12}>
                             <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
                                 <Grid container spacing={1}>
@@ -155,7 +184,6 @@ export const ChangeDisplayType = ({
                                             {publicationTypeItems}
                                         </Field>
                                     </Grid>
-                                    {/* {(hasSubtypes || hasDefaultDocTypeSubType) && (*/}
                                     {!!subitems && subitems.length > 0 && (
                                         <Grid item xs={12}>
                                             <Field
@@ -230,6 +258,7 @@ ChangeDisplayType.propTypes = {
     record: PropTypes.object,
     resetSubType: PropTypes.func,
     selectedPublicationType: PropTypes.object,
+    submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
     subtypes: PropTypes.array,
 };
