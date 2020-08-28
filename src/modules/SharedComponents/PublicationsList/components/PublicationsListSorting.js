@@ -19,7 +19,6 @@ const PublicationsListSorting = props => {
     const [pageSize, setPageSize] = React.useState(
         props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20),
     );
-    const [exportPublicationsFormat, setExportPublicationsFormat] = React.useState();
 
     React.useEffect(() => {
         if (sortBy !== props.sortBy) setSortBy(props.sortBy);
@@ -30,24 +29,20 @@ const PublicationsListSorting = props => {
 
     const pageSizeChanged = event => {
         setPageSize(event.target.value);
-        setExportPublicationsFormat(null);
         props.onPageSizeChanged(event.target.value);
     };
 
     const orderDirectionsChanged = event => {
         setSortDirection(event.target.value);
-        setExportPublicationsFormat(null);
         props.onSortByChanged(sortBy, event.target.value);
     };
 
     const sortByChanged = event => {
         setSortBy(event.target.value);
-        setExportPublicationsFormat(null);
         props.onSortByChanged(event.target.value, sortDirection);
     };
 
     const exportPublicationsFormatChanged = value => {
-        setExportPublicationsFormat(value);
         props.onExportPublications({ exportPublicationsFormat: value });
     };
 
@@ -112,11 +107,7 @@ const PublicationsListSorting = props => {
             {props.canUseExport && (
                 <Hidden xsDown>
                     <Grid item sm={6} md={3}>
-                        <ExportPublications
-                            format={exportPublicationsFormat}
-                            onChange={exportPublicationsFormatChanged}
-                            disabled={props.disabled}
-                        />
+                        <ExportPublications onChange={exportPublicationsFormatChanged} disabled={props.disabled} />
                     </Grid>
                 </Hidden>
             )}
