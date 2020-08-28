@@ -117,10 +117,7 @@ export default {
     ],
 };
 
-export const validateDesign = (
-    { bibliographicSection: bs, authorsSection: as },
-    { validationErrorsSummary: summary },
-) => ({
+export const validateDesign = ({ bibliographicSection: bs }, { validationErrorsSummary: summary }) => ({
     bibliographicSection: {
         ...((bs.hasOwnProperty('fez_record_search_key_publisher') &&
             !((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
@@ -136,10 +133,5 @@ export const validateDesign = (
                 },
             }) ||
             {}),
-    },
-    authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
-            authors: summary.authors,
-        }),
     },
 });
