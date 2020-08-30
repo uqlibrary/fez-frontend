@@ -29,10 +29,6 @@ const txt = {
     alertProps: pagesLocale.pages.edit.alerts,
 };
 
-export const getErrorMessage = () => {
-    return {};
-};
-
 const renderTitle = record => {
     const prefixTxt = componentsLocale.components.changeDisplayType.title;
     const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
@@ -67,7 +63,6 @@ export const ChangeDisplayType = ({
         // Load record if it hasn't
         !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
         return () => {
-            // Clear form status
             resetSubType();
         };
     }, [loadRecordToView, pidParam, record, resetSubType]);
@@ -75,7 +70,6 @@ export const ChangeDisplayType = ({
     const alertProps = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
-        // formErrors,
         alertLocale: txt.alertProps,
     });
 
@@ -125,9 +119,6 @@ export const ChangeDisplayType = ({
                   )),
               ]
             : [];
-
-    // Look for possible issues
-    const { errorMessage } = getErrorMessage(record);
 
     const navigateToViewPage = pid => {
         if (!!pid && validation.isValidPid(pid)) {
@@ -232,7 +223,7 @@ export const ChangeDisplayType = ({
                                         color="primary"
                                         fullWidth
                                         onClick={() => handleSubmit(formValues, record)}
-                                        disabled={disableSubmit || !!errorMessage}
+                                        disabled={disableSubmit}
                                     >
                                         {txt.submit}
                                     </Button>

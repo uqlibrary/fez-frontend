@@ -10,15 +10,17 @@ import {
     SubmissionError,
 } from 'redux-form/immutable';
 import Immutable from 'immutable';
+
 import ChangeDisplayType from '../components/ChangeDisplayType';
-import * as actions from 'actions';
-import { adminUpdate } from 'actions';
-import { general, publicationTypes } from 'config';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
+
+import * as actions from 'actions';
+import { publicationTypes } from 'config';
 import {
     DOCTYPE_SUBTYPE_MAPPING,
     NEW_DOCTYPES_OPTIONS,
     NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPES,
     PUBLICATION_TYPE_DESIGN,
 } from 'config/general';
 
@@ -42,7 +44,7 @@ export const onSubmit = (newData, recordToView, dispatch) => {
         },
     };
 
-    return dispatch(adminUpdate(requestObject)).catch(error => {
+    return dispatch(actions.adminUpdate(requestObject)).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };
@@ -58,10 +60,7 @@ const selector = formValueSelector(FORM_NAME);
 const mapStateToProps = state => {
     const { recordToView: record, loadingRecordToView } = state.get('viewRecordReducer') || {};
 
-    /* from Publication Form */
-
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
 
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
@@ -96,23 +95,15 @@ const mapStateToProps = state => {
         disableSubmit: disableSubmit,
         publicationSubtypeItems:
             (!!publicationSubtype &&
-                general.NTRO_SUBTYPES.includes(publicationSubtype) &&
+                NTRO_SUBTYPES.includes(publicationSubtype) &&
                 !!publicationSubtypeItems &&
                 publicationSubtypeItems.length > 0 &&
-                publicationSubtypeItems.filter(type => general.NTRO_SUBTYPES.includes(type))) ||
+                publicationSubtypeItems.filter(type => NTRO_SUBTYPES.includes(type))) ||
             publicationSubtypeItems,
         subtype: publicationSubtype,
         formComponent:
             (!hasSubtypes && formComponent) || (hasSubtypes && !!publicationSubtype && formComponent) || null,
-        isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
         docTypeSubTypeCombo: docTypeSubTypeCombo,
-        isAuthorSelected:
-            (!!formValues &&
-                formValues.get('authors') &&
-                formValues.get('authors').some(object => {
-                    return object.selected === true;
-                })) ||
-            false,
         loadingRecordToView,
         record,
     };
