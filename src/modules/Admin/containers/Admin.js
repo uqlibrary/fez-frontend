@@ -17,7 +17,7 @@ import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 import { onSubmit } from '../submitHandler';
-import { identifiersParams, bibliographicParams } from 'modules/Admin/helpers';
+import { identifiersParams, bibliographicParams, authorsParams } from 'modules/Admin/helpers';
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
@@ -73,7 +73,8 @@ const getInitialFormValues = (recordToView, recordType) => {
                 (recordType === RECORD_TYPE_RECORD &&
                     getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
                 {},
-            authorsSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors')) || {},
+            authorsSection:
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors', authorsParams)) || {},
             adminSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'admin')) || {},
             ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
             grantInformationSection:
