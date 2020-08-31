@@ -106,6 +106,7 @@ const mapStateToProps = state => {
         docTypeSubTypeCombo: docTypeSubTypeCombo,
         loadingRecordToView,
         record,
+        ...{ ...state.get('changeDisplayTypeReducer') },
     };
 };
 
