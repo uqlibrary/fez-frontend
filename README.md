@@ -1,6 +1,7 @@
 # Fez frontend
 
 [![Codeship Status for uqlibrary/fez-frontend](https://app.codeship.com/projects/5f018a50-f4f8-0134-5dd6-4eabb52e4bf9/status?branch=master)](https://app.codeship.com/projects/210111)
+[![AWS Codepipeline Status for uqlibrary/fez-frontend](https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend-master/view?region=ap-southeast-2)](https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines)
 [![Dependency Status](https://david-dm.org/uqlibrary/fez-frontend.svg)](https://david-dm.org/uqlibrary/fez-frontend)
 [![Dev Dependency Status](https://david-dm.org/uqlibrary/fez-frontend/dev-status.svg)](https://david-dm.org/uqlibrary/fez-frontend)
 
