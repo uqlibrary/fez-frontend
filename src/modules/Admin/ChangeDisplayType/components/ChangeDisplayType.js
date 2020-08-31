@@ -121,13 +121,13 @@ export const ChangeDisplayType = ({
               ]
             : [];
 
-    const navigateToViewPage = pid => {
+    const navigateToViewPage = () => {
         if (!!pid && validation.isValidPid(pid)) {
             history.push(routes.pathConfig.records.view(pid));
         }
     };
 
-    const navigateToEditRecord = pid => {
+    const navigateToEditRecord = () => {
         if (!!pid && validation.isValidPid(pid)) {
             history.push(routes.pathConfig.admin.edit(pid));
         }
@@ -154,9 +154,9 @@ export const ChangeDisplayType = ({
                         <ConfirmationBox
                             confirmationBoxId="changeDisplayTypeDone"
                             isOpen={isOpen}
-                            onAction={() => navigateToEditRecord(record.rek_pid)}
+                            onAction={navigateToEditRecord}
                             locale={txt.workflowConfirmation}
-                            onCancelAction={() => navigateToViewPage(record.rek_pid)}
+                            onCancelAction={navigateToViewPage}
                             onClose={hideConfirmation}
                         />
                         <Grid item xs={12}>
@@ -213,7 +213,7 @@ export const ChangeDisplayType = ({
                                         disabled={saveRequesting}
                                         variant="contained"
                                         fullWidth
-                                        onClick={() => navigateToViewPage(record.rek_pid)}
+                                        onClick={navigateToViewPage}
                                     >
                                         {txt.cancelButtonLabel}
                                     </Button>
