@@ -49,6 +49,7 @@ export const ChangeDisplayType = ({
     disableSubmit,
     formValues,
     handleSubmit,
+    history,
     loadingRecordToView,
     loadRecordToView,
     publicationSubtype,
@@ -212,7 +213,7 @@ export const ChangeDisplayType = ({
                                         disabled={saveRequesting}
                                         variant="contained"
                                         fullWidth
-                                        onClick={navigateToViewPage}
+                                        onClick={() => navigateToViewPage(record.rek_pid)}
                                     >
                                         {txt.cancelButtonLabel}
                                     </Button>
@@ -243,6 +244,7 @@ export const ChangeDisplayType = ({
 ChangeDisplayType.propTypes = {
     disableSubmit: PropTypes.bool,
     formValues: PropTypes.object,
+    history: PropTypes.object,
     handleSubmit: PropTypes.func,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
