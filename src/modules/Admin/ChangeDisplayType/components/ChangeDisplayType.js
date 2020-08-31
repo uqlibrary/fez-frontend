@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { useParams } from 'react-router';
 import { Field } from 'redux-form/immutable';
+import { useConfirmationState } from 'hooks';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -21,7 +22,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
-import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 const txt = {
     ...componentsLocale.components.changeDisplayType,
@@ -54,8 +55,10 @@ export const ChangeDisplayType = ({
     publicationSubtypeItems,
     record,
     resetSubType,
+    saveRequesting,
+    saveUpdated,
+    saveFailed,
     selectedPublicationType,
-    submitSucceeded,
     submitting,
 }) => {
     const { pid: pidParam } = useParams();
@@ -67,23 +70,20 @@ export const ChangeDisplayType = ({
         };
     }, [loadRecordToView, pidParam, record, resetSubType]);
 
-    const alertProps = validation.getErrorAlertProps({
-        submitting,
-        submitSucceeded,
-        alertLocale: txt.alertProps,
-    });
-
-    const successConfirmationRef = useRef();
-
-    useEffect(() => {
-        if (!submitting && submitSucceeded && successConfirmationRef.current) {
-            successConfirmationRef.current.showConfirmation();
+    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    /* istanbul ignore next */
+    React.useEffect(() => {
+        if (saveUpdated) {
+            showConfirmation();
         }
-    }, [submitting, submitSucceeded]);
+    }, [showConfirmation, saveUpdated]);
 
-    const setSuccessConfirmationRef = React.useCallback(node => {
-        successConfirmationRef.current = node; // TODO: Add check that this worked
-    }, []);
+    const alertProps = validation.getErrorAlertProps({
+        alertLocale: txt.alertProps,
+        error: saveFailed,
+        submitSucceeded: saveUpdated,
+        submitting: saveRequesting,
+    });
 
     if (!!pidParam && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -92,7 +92,7 @@ export const ChangeDisplayType = ({
     // Record not found
     const pid = !!record && record.rek_pid;
     if (!!pidParam && !pid) {
-        return <div className="empty" />;
+        return <div className="ChangeDisplayType empty" />;
     }
 
     const allPublicationTypes = Object.values(publicationTypes());
@@ -150,11 +150,13 @@ export const ChangeDisplayType = ({
                                 hideContentIndicators
                             />
                         </Grid>
-                        <ConfirmDialogBox
-                            onRef={setSuccessConfirmationRef}
+                        <ConfirmationBox
+                            confirmationBoxId="changeDisplayTypeDone"
+                            isOpen={isOpen}
                             onAction={() => navigateToEditRecord(record.rek_pid)}
                             locale={txt.workflowConfirmation}
                             onCancelAction={() => navigateToViewPage(record.rek_pid)}
+                            onClose={hideConfirmation}
                         />
                         <Grid item xs={12}>
                             <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
@@ -207,6 +209,7 @@ export const ChangeDisplayType = ({
                                     <Button
                                         id="rek-changeDisplayType-cancel"
                                         data-testid="rek-changeDisplayType-cancel"
+                                        disabled={saveRequesting}
                                         variant="contained"
                                         fullWidth
                                         onClick={navigateToViewPage}
@@ -223,7 +226,7 @@ export const ChangeDisplayType = ({
                                         color="primary"
                                         fullWidth
                                         onClick={() => handleSubmit(formValues, record)}
-                                        disabled={disableSubmit}
+                                        disabled={disableSubmit || saveRequesting}
                                     >
                                         {txt.submit}
                                     </Button>
@@ -248,6 +251,9 @@ ChangeDisplayType.propTypes = {
     publicationTypeItems: PropTypes.array,
     record: PropTypes.object,
     resetSubType: PropTypes.func,
+    saveFailed: PropTypes.bool,
+    saveRequesting: PropTypes.bool,
+    saveUpdated: PropTypes.bool,
     selectedPublicationType: PropTypes.object,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
