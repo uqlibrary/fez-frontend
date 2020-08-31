@@ -1,14 +1,9 @@
 version: 0.2
 
 env:
-  variables:
-    CI_BUILD_NUMBER: "#{codepipeline.PipelineExecutionId}"
-    CI_COMMIT_ID: "#{SourceVariables.CommitId}"
-    CI_BRANCH: "#{SourceVariables.BranchName}"
-    COMMIT_INFO_BRANCH: "#{SourceVariables.BranchName}"
-    COMMIT_INFO_SHA: "#{SourceVariables.CommitId}"
-    COMMIT_INFO_REMOTE: "#{SourceVariables.CommitUrl}"
-    COMMIT_INFO_TIMESTAMP: "#{SourceVariables.CommitterDate}"
+  #variables:
+    # key: "value"
+    # key: "value"
   parameter-store:
     GITHUB_URL: "/CodeBuild/fez-frontend/GITHUB_URL"
     PT_PROJECT: "/CodeBuild/fez-frontend/PT_PROJECT"
