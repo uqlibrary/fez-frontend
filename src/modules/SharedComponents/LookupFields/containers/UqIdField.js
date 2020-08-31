@@ -16,7 +16,7 @@ const mapStateToProps = (state, props) => {
         useExtendedSearch: true,
         ignoreLocation: false,
         ignoreFieldNorm: false,
-        keys: ['aut_id', 'aut_display_name', 'aut_org_username', 'aut_student_username', 'aut_ref_num'],
+        keys: ['id', 'aut_id', 'aut_display_name', 'aut_org_username', 'aut_student_username', 'aut_ref_num'],
     };
     return {
         autoCompleteAsynchronousFieldId: props.uqIdFieldId || 'aut-id',
@@ -24,7 +24,8 @@ const mapStateToProps = (state, props) => {
             ? state
                   .get('authorsReducer')
                   .authorsList.filter(
-                      item => !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num,
+                      item =>
+                          !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num || !item.aut_id,
                   )
                   .map(item => ({
                       value: `${item.aut_title} ${item.aut_display_name}${getUqUsername(item)}`,
