@@ -165,6 +165,7 @@
         "keycode": "^2.2.0",
         "load-script": "^1.0.0",
         "match-sorter": "^4.0.2",
+        "material-table": "^1.69.0",
         "moment": "^2.22.1",
         "moment-timezone": "^0.5.16",
         "number-to-words": "^1.2.4",
