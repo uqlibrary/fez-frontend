@@ -10,6 +10,7 @@ context('Claim possible work', () => {
             cy.get('[data-testid*="publication-action-"]').should('have.length', 16);
             cy.get('[data-testid=publication-action-UQ641272-primary]').click();
             cy.url().should('equal', `${baseUrl}/records/claim`);
+            cy.get('[data-testid="page-title"]').should('exist');
         });
     };
 
@@ -116,12 +117,7 @@ context('Claim possible work', () => {
     it('will allow upload of files', () => {
         navToFirstClaim();
         const fileName = 'test.jpg';
-        cy.fixture(fileName).then(fileContent => {
-            cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
-            );
-        });
+        cy.get('[data-testid="fez-datastream-info-input"]').attachFile(fileName, { subjectType: 'drag-n-drop' });
         cy.contains('.StandardCard', claimFormLocale.fileUpload.title)
             .should('contain', fileUploaderLocale.successMessage.replace('[numberOfFiles]', '1'))
             .contains(fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.initialValue)
