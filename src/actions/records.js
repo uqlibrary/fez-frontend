@@ -259,9 +259,13 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
             if (recordCreated) {
                 const record = getRecord(true);
                 Raven.captureException(error);
-                return post(RECORDS_ISSUES_API({ pid: record.rek_pid }), {
-                    issue: `The submitter had issues uploading files on this record: ${record.rek_pid}`,
-                });
+
+                // Do not report retry failures to Eventum
+                if (!preCreatedRecord.rek_pid) {
+                    return post(RECORDS_ISSUES_API({ pid: record.rek_pid }), {
+                        issue: `The submitter had issues uploading files on this record: ${record.rek_pid}`,
+                    });
+                }
             }
 
             // Otherwise, it's the rejection from record creation failure. Pass it on.
