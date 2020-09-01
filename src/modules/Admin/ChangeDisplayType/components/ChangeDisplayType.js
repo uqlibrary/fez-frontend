@@ -33,7 +33,7 @@ const txt = {
 const renderTitle = record => {
     const prefixTxt = componentsLocale.components.changeDisplayType.title;
     const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
-    const pageTitle = ReactHtmlParser(`${prefixTxt} ${record.rek_display_type_lookup}${subtypeSuffix}`);
+    const pageTitle = ReactHtmlParser(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="changeDisplayType-page-title">
             {pageTitle}
@@ -49,7 +49,6 @@ export const ChangeDisplayType = ({
     disableSubmit,
     formValues,
     handleSubmit,
-    history,
     loadingRecordToView,
     loadRecordToView,
     publicationSubtype,
@@ -66,10 +65,7 @@ export const ChangeDisplayType = ({
     useEffect(() => {
         // Load record if it hasn't
         !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
-        return () => {
-            resetSubType();
-        };
-    }, [loadRecordToView, pidParam, record, resetSubType]);
+    }, [loadRecordToView, pidParam, record]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     /* istanbul ignore next */
@@ -123,13 +119,13 @@ export const ChangeDisplayType = ({
 
     const navigateToViewPage = () => {
         if (!!pid && validation.isValidPid(pid)) {
-            history.push(routes.pathConfig.records.view(pid));
+            window.location.assign(routes.pathConfig.records.view(pid, true));
         }
     };
 
     const navigateToEditRecord = () => {
         if (!!pid && validation.isValidPid(pid)) {
-            history.push(routes.pathConfig.admin.edit(pid));
+            window.location.assign(routes.pathConfig.admin.edit(pid));
         }
     };
 
@@ -244,7 +240,6 @@ export const ChangeDisplayType = ({
 ChangeDisplayType.propTypes = {
     disableSubmit: PropTypes.bool,
     formValues: PropTypes.object,
-    history: PropTypes.object,
     handleSubmit: PropTypes.func,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
