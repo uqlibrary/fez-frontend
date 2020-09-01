@@ -4,6 +4,7 @@ import React from 'react';
 export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
 export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
 export const BatchImport = React.lazy(() => import('modules/BatchImport/containers/BatchImport'));
+export const BulkUpdates = React.lazy(() => import('modules/BulkUpdates'));
 export const ClaimRecord = React.lazy(() => import('modules/ClaimRecord/containers/ClaimRecord'));
 export const CollectionForm = React.lazy(() => import('modules/Admin/CollectionForm/containers/CollectionForm'));
 export const CommunityForm = React.lazy(() => import('modules/Admin/CommunityForm/containers/CommunityForm'));

@@ -24,7 +24,7 @@ configure(config => ({
     testIdAttribute: 'id',
 }));
 
-const AllTheProviders = props => {
+export const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>
             <MuiPickersUtilsProvider utils={MomentUtils}>{props.children}</MuiPickersUtilsProvider>
@@ -96,4 +96,5 @@ module.exports = {
     withRouter,
     WithRedux,
     RenderWithRouter,
+    AllTheProviders,
 };

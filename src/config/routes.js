@@ -133,6 +133,7 @@ export const pathConfig = {
     },
     admin: {
         add: '/admin/add',
+        bulkUpdates: '/admin/bulk-updates',
         collection: '/admin/collection',
         community: '/admin/community',
         delete: pid => `/admin/delete/${pid}`,
@@ -145,7 +146,6 @@ export const pathConfig = {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',
-        bulkUpdates: '/admin/bulk-updates',
     },
     authorIdentifiers: {
         orcid: {
@@ -474,6 +474,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.bulkUpdates,
+                      component: components.BulkUpdates,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.bulkUpdates.title,
                   },
               ]
             : []),

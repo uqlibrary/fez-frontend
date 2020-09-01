@@ -1,4 +1,4 @@
-import { loadBulkUpdatesList } from './BulkUpdates';
+import { loadBulkUpdatesList } from './bulkUpdates';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data/testing/bulkUpdates';
@@ -34,11 +34,7 @@ describe('bulkUpdates actions', () => {
                 actions.BULK_UPDATES_LIST_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(loadBulkUpdatesList())).rejects.toEqual({
-                status: 500,
-                message:
-                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-            });
+            await mockActionsStore.dispatch(loadBulkUpdatesList());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

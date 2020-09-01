@@ -20,7 +20,7 @@ export function loadBulkUpdatesList() {
                 payload: e,
             });
 
-            return Promise.reject(e);
+            return false;
         }
     };
 }
