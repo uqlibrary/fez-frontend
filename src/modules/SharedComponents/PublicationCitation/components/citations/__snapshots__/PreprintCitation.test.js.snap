@@ -1122,7 +1122,6 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -1818,7 +1817,6 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -1828,7 +1826,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Asmussen, S."
                     >
                       <span
@@ -1836,9 +1834,9 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                         data-testid="rek-author-0"
                       >
                         Asmussen, S.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
@@ -1854,11 +1852,13 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                         Kroese, D. P.
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Rubinstein, R. Y."
                     >
@@ -1866,7 +1866,6 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
                         className="citationAuthor"
                         data-testid="rek-author-2"
                       >
-                         and 
                         Rubinstein, R. Y.
                       </span>
                     </CitationView>
@@ -2375,7 +2374,6 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -2741,7 +2739,6 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

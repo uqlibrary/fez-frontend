@@ -11,7 +11,7 @@ import { useParams } from 'react-router';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
-    useParams: jest.fn(() => 'UQ:123456'),
+    useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
     useHistory: jest.fn(() => ({ push: jest.fn() })),
     useLocation: jest.fn(() => ({})),
 }));

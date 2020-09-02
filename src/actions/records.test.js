@@ -102,8 +102,9 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -124,9 +125,11 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@test.txt',
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
+                actions.APP_ALERT_SHOW,
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -153,31 +156,6 @@ describe('Record action creators', () => {
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
-        });
-
-        it('dispatches expected actions if patch record fails', async () => {
-            mockApi
-                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
-                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
-                .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, { data: {} })
-                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
-                .reply(200, { data: '' })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(500);
-
-            const expectedActions = [
-                actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
-                actions.APP_ALERT_SHOW,
-                actions.CREATE_RECORD_SUCCESS,
-            ];
-
-            await mockActionsStore.dispatch(recordActions.createNewRecord(testInput));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatches expected actions on issues api posts comments successfully', async () => {
@@ -433,8 +411,6 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record, rek_pid: '' } })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
@@ -452,8 +428,6 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(500, { rek_pid: pidRequest.pid })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
@@ -478,20 +452,17 @@ describe('Record action creators', () => {
                 ...testInput,
                 comments: 'Test',
             };
-            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(0);
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOADED_FAILED@Test.png',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -506,8 +477,6 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(500)
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
@@ -515,9 +484,9 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@Test.png',
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -532,8 +501,6 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: pidRequest.pid }).apiUrl, '.*')
                 .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
@@ -543,8 +510,8 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOADED_FAILED@Test.png',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -555,7 +522,7 @@ describe('Record action creators', () => {
             }
         });
 
-        it('dispatches expected actions where are no files to upload', async () => {
+        it('dispatches expected actions when there are no files to upload', async () => {
             const testInput1 = {
                 ...testInput,
                 files: {
@@ -566,8 +533,6 @@ describe('Record action creators', () => {
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
@@ -584,8 +549,6 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
@@ -593,12 +556,32 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@Test.png',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@Test.png`,
+                `${actions.FILE_UPLOAD_COMPLETE}@Test.png`,
+                actions.FILE_UPLOAD_COMPLETE,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
             await mockActionsStore.dispatch(recordActions.submitThesis(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on upload retry', async () => {
+            mockApi
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', {})
+                .reply(200, { data: { ...record } });
+
+            const expectedActions = [
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@Test.png`,
+                `${actions.FILE_UPLOAD_COMPLETE}@Test.png`,
+                actions.FILE_UPLOAD_COMPLETE,
+            ];
+
+            await mockActionsStore.dispatch(recordActions.submitThesis(testInput, { ...record }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
@@ -718,8 +701,9 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.ADMIN_UPDATE_WORK_PROCESSING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.ADMIN_UPDATE_WORK_SUCCESS,
             ];
 
@@ -826,8 +810,9 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.ADMIN_CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.ADMIN_CREATE_RECORD_SUCCESS,
             ];
 
@@ -835,7 +820,7 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on create record successfully with file upload', async () => {
+        it('dispatches expected actions on create record successfully with failed file upload', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
@@ -848,9 +833,11 @@ describe('Record action creators', () => {
 
             const expectedActions = [
                 actions.ADMIN_CREATE_RECORD_SAVING,
-                'FILE_UPLOAD_STARTED',
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
-                'FILE_UPLOADED_FAILED@test.txt',
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
+                actions.APP_ALERT_SHOW,
+                `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.ADMIN_CREATE_RECORD_SUCCESS,
             ];
 

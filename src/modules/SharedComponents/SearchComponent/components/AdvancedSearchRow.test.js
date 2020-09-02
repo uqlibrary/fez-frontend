@@ -1,6 +1,5 @@
 import React from 'react';
 import AdvancedSearchRow from './AdvancedSearchRow';
-import { isSame } from './AdvancedSearchRow';
 import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
 const getProps = (testProps = {}) => ({

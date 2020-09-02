@@ -7191,6 +7191,20 @@ exports[`Application component should render app for account with fez author wit
           "access": Array [
             "admin",
           ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit record",
+          "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
           "exact": true,
           "pageTitle": "Unpublished buffer",
           "path": "/admin/unpublished",
@@ -8016,8 +8030,27 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_26"
+            pageTitle="Edit record"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            exact={true}
+            key="route_27"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -8037,7 +8070,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -8055,19 +8088,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_30"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -8082,7 +8115,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_31"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -8096,14 +8129,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_33"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -8116,7 +8149,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_34"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -9331,6 +9364,20 @@ exports[`Application component should render app for account with fez author wit
           "access": Array [
             "admin",
           ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit record",
+          "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
           "exact": true,
           "pageTitle": "Unpublished buffer",
           "path": "/admin/unpublished",
@@ -10192,8 +10239,27 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_26"
+            pageTitle="Edit record"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            exact={true}
+            key="route_27"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -10213,7 +10279,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -10231,19 +10297,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_30"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -10258,7 +10324,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_31"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -10272,14 +10338,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_33"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -10292,7 +10358,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_34"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -10620,6 +10686,20 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Favourite searches",
           "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit record",
+          "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -11450,8 +11530,27 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_26"
+            pageTitle="Edit record"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            exact={true}
+            key="route_27"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -11471,7 +11570,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -11489,19 +11588,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_30"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -11516,7 +11615,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_31"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -11530,14 +11629,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_33"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -11550,7 +11649,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_34"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -11878,6 +11977,20 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Favourite searches",
           "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit record",
+          "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -12744,8 +12857,27 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_26"
+            pageTitle="Edit record"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            exact={true}
+            key="route_27"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -12765,7 +12897,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -12783,19 +12915,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_30"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -12810,7 +12942,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_31"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -12824,14 +12956,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_33"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -12844,7 +12976,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_34"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -18273,6 +18405,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadVocabulariesList": [Function],
                                                             "logout": [Function],
                                                             "requestOrcidSync": [Function],
+                                                            "resetDoi": [Function],
                                                             "resetSavingAuthorState": [Function],
                                                             "searchAuthorPublications": [Function],
                                                             "searchAuthors": [Function],
@@ -18295,6 +18428,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "updateCollection": [Function],
                                                             "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
+                                                            "updateDoi": [Function],
                                                             "updateFavouriteSearchListItem": [Function],
                                                             "updateIncompleteRecord": [Function],
                                                           }
@@ -20595,6 +20729,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadVocabulariesList": [Function],
                                 "logout": [Function],
                                 "requestOrcidSync": [Function],
+                                "resetDoi": [Function],
                                 "resetSavingAuthorState": [Function],
                                 "searchAuthorPublications": [Function],
                                 "searchAuthors": [Function],
@@ -20617,6 +20752,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "updateCollection": [Function],
                                 "updateCommunity": [Function],
                                 "updateCurrentAuthor": [Function],
+                                "updateDoi": [Function],
                                 "updateFavouriteSearchListItem": [Function],
                                 "updateIncompleteRecord": [Function],
                               }
@@ -22225,6 +22361,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
                                                                             "requestOrcidSync": [Function],
+                                                                            "resetDoi": [Function],
                                                                             "resetSavingAuthorState": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
@@ -22247,6 +22384,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateCollection": [Function],
                                                                             "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
+                                                                            "updateDoi": [Function],
                                                                             "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
                                                                           }
@@ -22361,6 +22499,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadVocabulariesList": [Function],
                                                                               "logout": [Function],
                                                                               "requestOrcidSync": [Function],
+                                                                              "resetDoi": [Function],
                                                                               "resetSavingAuthorState": [Function],
                                                                               "searchAuthorPublications": [Function],
                                                                               "searchAuthors": [Function],
@@ -22383,6 +22522,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "updateCollection": [Function],
                                                                               "updateCommunity": [Function],
                                                                               "updateCurrentAuthor": [Function],
+                                                                              "updateDoi": [Function],
                                                                               "updateFavouriteSearchListItem": [Function],
                                                                               "updateIncompleteRecord": [Function],
                                                                             }
@@ -23631,6 +23771,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
                                                                                       "requestOrcidSync": [Function],
+                                                                                      "resetDoi": [Function],
                                                                                       "resetSavingAuthorState": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
@@ -23653,6 +23794,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateCollection": [Function],
                                                                                       "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
+                                                                                      "updateDoi": [Function],
                                                                                       "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
                                                                                     }
@@ -23721,6 +23863,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "loadVocabulariesList": [Function],
                                                                                         "logout": [Function],
                                                                                         "requestOrcidSync": [Function],
+                                                                                        "resetDoi": [Function],
                                                                                         "resetSavingAuthorState": [Function],
                                                                                         "searchAuthorPublications": [Function],
                                                                                         "searchAuthors": [Function],
@@ -23743,6 +23886,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "updateCollection": [Function],
                                                                                         "updateCommunity": [Function],
                                                                                         "updateCurrentAuthor": [Function],
+                                                                                        "updateDoi": [Function],
                                                                                         "updateFavouriteSearchListItem": [Function],
                                                                                         "updateIncompleteRecord": [Function],
                                                                                       }

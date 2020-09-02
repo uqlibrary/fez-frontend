@@ -66,6 +66,9 @@ export const USER_IDS_WITH_LEGACY_LINK = [
     'uqayeate',
     'uqcokeef',
     'uqchesle',
+    'uqswils5',
+    'uqealvey',
+    'uqbibsen',
 
     // eSpace Devs
     'uqamartl',
@@ -75,7 +78,6 @@ export const USER_IDS_WITH_LEGACY_LINK = [
     'uqmmoise',
     'uqclien1',
     'uqawil42',
-    'uqswils5',
 ];
 
 export default {

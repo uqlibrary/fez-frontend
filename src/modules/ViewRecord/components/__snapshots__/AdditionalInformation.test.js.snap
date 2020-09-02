@@ -4938,7 +4938,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 className="MuiTypography-root MuiTypography-body2"
                                                               >
                                                                 <WithStyles(AuthorsCitationView)
-                                                                  initialNumberOfAuthors={9}
+                                                                  citationStyle="all"
                                                                   key="additional-information-authors"
                                                                   prefix=""
                                                                   publication={
@@ -5933,6 +5933,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                   suffix=""
                                                                 >
                                                                   <AuthorsCitationView
+                                                                    citationStyle="all"
                                                                     className="citationAuthors"
                                                                     classes={
                                                                       Object {
@@ -5947,7 +5948,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         "idSubkey": "rek_author_id",
                                                                       }
                                                                     }
-                                                                    initialNumberOfAuthors={9}
                                                                     prefix=""
                                                                     publication={
                                                                       Object {
@@ -7300,7 +7300,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         Symbol(mui.nested): false,
                                                                       }
                                                                     }
-                                                                    thresholdNumberOfAuthors={3}
                                                                   >
                                                                     <span
                                                                       className="citationAuthors"
@@ -7328,7 +7327,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_1"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Azimi, Iman"
                                                                             >
                                                                               <span
@@ -7336,12 +7335,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-0"
                                                                               >
                                                                                 Azimi, Iman
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="authorNameLink"
                                                                         data-testid="rek-author-1-link"
@@ -7365,7 +7364,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_2"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Milevskiy, Michael J. G."
                                                                             >
                                                                               <span
@@ -7373,12 +7372,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-1"
                                                                               >
                                                                                 Milevskiy, Michael J. G.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-2-link"
@@ -7402,7 +7401,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_3"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Kaemmerer, Elke"
                                                                             >
                                                                               <span
@@ -7410,12 +7409,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-2"
                                                                               >
                                                                                 Kaemmerer, Elke
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-3-link"
@@ -7439,7 +7438,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_4"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Turner, Dane"
                                                                             >
                                                                               <span
@@ -7447,12 +7446,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-3"
                                                                               >
                                                                                 Turner, Dane
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-4-link"
@@ -7476,7 +7475,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_5"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Yapa, Kunsala T. D. S."
                                                                             >
                                                                               <span
@@ -7484,12 +7483,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-4"
                                                                               >
                                                                                 Yapa, Kunsala T. D. S.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-5-link"
@@ -7513,7 +7512,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_6"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Brown, Melissa A."
                                                                             >
                                                                               <span
@@ -7521,12 +7520,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-5"
                                                                               >
                                                                                 Brown, Melissa A.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="authorNameLink"
                                                                         data-testid="rek-author-6-link"
@@ -7550,7 +7549,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_7"
                                                                               prefix=""
-                                                                              suffix=", "
+                                                                              suffix=""
                                                                               value="Thompson, Erik W."
                                                                             >
                                                                               <span
@@ -7558,12 +7557,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 data-testid="rek-author-6"
                                                                               >
                                                                                 Thompson, Erik W.
-                                                                                , 
                                                                               </span>
                                                                             </CitationView>
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-7-link"
@@ -7600,6 +7599,8 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                           </a>
                                                                         </LinkAnchor>
                                                                       </Link>
+                                                                      , 
+                                                                       and 
                                                                       <Link
                                                                         className="AuthorsCitationView-authorIdLink-177"
                                                                         data-testid="rek-author-8-link"
@@ -7622,7 +7623,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                               citationId="rek-author-8"
                                                                               className="citationAuthor"
                                                                               key="citationAuthor_9"
-                                                                              prefix=", "
+                                                                              prefix=""
                                                                               suffix=""
                                                                               value="Monteith, Gregory R."
                                                                             >
@@ -7630,7 +7631,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 className="citationAuthor"
                                                                                 data-testid="rek-author-8"
                                                                               >
-                                                                                , 
                                                                                 Monteith, Gregory R.
                                                                               </span>
                                                                             </CitationView>
@@ -20210,7 +20210,7 @@ exports[`Additional Information Component  should render component with audio do
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -20866,58 +20866,6 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Type"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-genre-label"
-            variant="body2"
-          >
-            Type
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span
-              data-testid="rek-genre"
-            >
-              CD-ROM
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="21"
       style={
         Object {
@@ -21278,7 +21226,7 @@ exports[`Additional Information Component  should render component with book 1`]
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={4}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -22138,6 +22086,7 @@ exports[`Additional Information Component  should render component with book 1`]
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={3}
               key="additional-information-editors"
               prefix=""
@@ -22566,7 +22515,7 @@ exports[`Additional Information Component  should render component with book cha
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -23630,6 +23579,7 @@ exports[`Additional Information Component  should render component with book cha
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={3}
               key="additional-information-editors"
               prefix=""
@@ -24602,7 +24552,7 @@ exports[`Additional Information Component  should render component with conferen
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={14}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -26629,6 +26579,7 @@ exports[`Additional Information Component  should render component with conferen
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
@@ -28104,7 +28055,7 @@ exports[`Additional Information Component  should render component with creative
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -29167,6 +29118,7 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
@@ -30042,7 +29994,7 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -32825,6 +32777,7 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
@@ -33435,7 +33388,7 @@ exports[`Additional Information Component  should render component with data col
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -35074,7 +35027,7 @@ exports[`Additional Information Component  should render component with design d
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={2}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -36046,7 +35999,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -36089,6 +36042,7 @@ exports[`Additional Information Component  should render component with design d
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={9}
               key="additional-information-editors"
               prefix=""
@@ -36515,7 +36469,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -36591,7 +36545,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -36965,7 +36919,7 @@ exports[`Additional Information Component  should render component with digilib 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -37502,7 +37456,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -37560,7 +37514,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -37618,7 +37572,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -37682,7 +37636,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -38155,7 +38109,7 @@ exports[`Additional Information Component  should render component with generic 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -38680,6 +38634,7 @@ exports[`Additional Information Component  should render component with generic 
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
@@ -39379,6 +39334,7 @@ exports[`Additional Information Component  should render component with journal 
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
@@ -39947,7 +39903,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -39997,7 +39953,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -40049,7 +40005,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -40102,7 +40058,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -40160,7 +40116,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -40218,7 +40174,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -40345,7 +40301,7 @@ exports[`Additional Information Component  should render component with journal 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={9}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -43407,7 +43363,7 @@ exports[`Additional Information Component  should render component with manuscri
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -44197,6 +44153,7 @@ exports[`Additional Information Component  should render component with manuscri
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
@@ -44717,58 +44674,6 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Type"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-genre-label"
-            variant="body2"
-          >
-            Type
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span
-              data-testid="rek-genre"
-            >
-              text/tiff
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="12"
       style={
         Object {
@@ -45188,7 +45093,7 @@ exports[`Additional Information Component  should render component with newspape
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={5}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -45991,6 +45896,7 @@ exports[`Additional Information Component  should render component with newspape
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
@@ -46786,7 +46692,7 @@ exports[`Additional Information Component  should render component with patent 1
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={4}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -47922,7 +47828,7 @@ exports[`Additional Information Component  should render component with preprint
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={3}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -48532,7 +48438,7 @@ exports[`Additional Information Component  should render component with proceedi
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={3}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -50932,7 +50838,7 @@ exports[`Additional Information Component  should render component with referenc
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -51531,6 +51437,7 @@ exports[`Additional Information Component  should render component with referenc
             variant="body2"
           >
             <EditorsCitationView
+              citationStyle="all"
               initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
@@ -52309,7 +52216,7 @@ exports[`Additional Information Component  should render component with rek_herd
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={9}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -55530,7 +55437,7 @@ exports[`Additional Information Component  should render component with rek_star
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -56607,7 +56514,7 @@ exports[`Additional Information Component  should render component with research
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -57068,6 +56975,57 @@ exports[`Additional Information Component  should render component with research
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-DOI"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-doi-label"
+            variant="body2"
+          >
+            DOI
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <DoiCitationView
+              doi="10.129839/sometext"
+              key="additional-information-doi"
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="8"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-ISBN"
         spacing={2}
       >
@@ -57121,7 +57079,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -57174,7 +57132,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
       style={
         Object {
           "padding": 8,
@@ -57226,7 +57184,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -57278,7 +57236,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -57381,7 +57339,7 @@ exports[`Additional Information Component  should render component with thesis 1
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -58336,7 +58294,7 @@ exports[`Additional Information Component  should render component with video do
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -58853,58 +58811,6 @@ exports[`Additional Information Component  should render component with video do
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Type"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-genre-label"
-            variant="body2"
-          >
-            Type
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span
-              data-testid="rek-genre"
-            >
-              Generic Document
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="14"
       style={
         Object {
@@ -59180,7 +59086,7 @@ exports[`Additional Information Component  should render component with working 
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={2}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={
@@ -59630,7 +59536,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="5"
+      key="6"
       style={
         Object {
           "padding": 8,
@@ -59683,7 +59589,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -59735,7 +59641,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -59785,7 +59691,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
@@ -59838,7 +59744,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
       style={
         Object {
           "padding": 8,
@@ -59890,7 +59796,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
       style={
         Object {
           "padding": 8,
@@ -59950,7 +59856,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
       style={
         Object {
           "padding": 8,
@@ -60001,7 +59907,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
       style={
         Object {
           "padding": 8,
@@ -60054,7 +59960,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
       style={
         Object {
           "padding": 8,
@@ -60106,7 +60012,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
       style={
         Object {
           "padding": 8,
@@ -60158,7 +60064,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -60210,7 +60116,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
       style={
         Object {
           "padding": 8,
@@ -60268,7 +60174,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
       style={
         Object {
           "padding": 8,
@@ -60332,7 +60238,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
       style={
         Object {
           "padding": 8,
@@ -60424,7 +60330,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -60527,7 +60433,7 @@ exports[`Additional Information Component  should render oa status value link in
             variant="body2"
           >
             <WithStyles(AuthorsCitationView)
-              initialNumberOfAuthors={1}
+              citationStyle="all"
               key="additional-information-authors"
               prefix=""
               publication={

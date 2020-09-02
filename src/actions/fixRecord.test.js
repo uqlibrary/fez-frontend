@@ -211,8 +211,9 @@ describe('Fix record actions', () => {
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
-                'FILE_UPLOAD_STARTED',
-                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
                 actions.FIX_RECORD_SUCCESS,
             ];
 

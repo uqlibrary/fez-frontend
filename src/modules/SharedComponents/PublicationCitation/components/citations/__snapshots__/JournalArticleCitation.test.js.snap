@@ -2434,7 +2434,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -3786,7 +3785,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -3796,7 +3794,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Azimi, Iman"
                     >
                       <span
@@ -3804,15 +3802,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-0"
                       >
                         Azimi, Iman
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Milevskiy, Michael J. G."
                     >
                       <span
@@ -3820,15 +3818,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-1"
                       >
                         Milevskiy, Michael J. G.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Kaemmerer, Elke"
                     >
                       <span
@@ -3836,15 +3834,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-2"
                       >
                         Kaemmerer, Elke
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
                       key="citationAuthor_4"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Turner, Dane"
                     >
                       <span
@@ -3852,15 +3850,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-3"
                       >
                         Turner, Dane
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Yapa, Kunsala T. D. S."
                     >
                       <span
@@ -3868,15 +3866,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-4"
                       >
                         Yapa, Kunsala T. D. S.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-5"
                       className="citationAuthor"
                       key="citationAuthor_6"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Brown, Melissa A."
                     >
                       <span
@@ -3884,15 +3882,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-5"
                       >
                         Brown, Melissa A.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-6"
                       className="citationAuthor"
                       key="citationAuthor_7"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Thompson, Erik W."
                     >
                       <span
@@ -3900,9 +3898,9 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-6"
                       >
                         Thompson, Erik W.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-7"
                       className="citationAuthor"
@@ -3918,11 +3916,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         Roberts-Thomson, Sarah J.
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-8"
                       className="citationAuthor"
                       key="citationAuthor_9"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Monteith, Gregory R."
                     >
@@ -3930,7 +3930,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         className="citationAuthor"
                         data-testid="rek-author-8"
                       >
-                         and 
                         Monteith, Gregory R.
                       </span>
                     </CitationView>
@@ -7943,7 +7942,6 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -8309,7 +8307,6 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

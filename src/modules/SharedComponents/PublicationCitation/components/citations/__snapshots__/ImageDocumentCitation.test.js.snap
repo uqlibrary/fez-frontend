@@ -908,7 +908,6 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_acknowledgements": null,
@@ -1497,7 +1496,6 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"
@@ -2019,7 +2017,6 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -2385,7 +2382,6 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

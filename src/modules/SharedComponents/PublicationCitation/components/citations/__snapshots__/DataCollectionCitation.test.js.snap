@@ -1995,7 +1995,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -3127,7 +3126,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -3137,7 +3135,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Parks, Donovan H."
                     >
                       <span
@@ -3145,15 +3143,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-0"
                       >
                         Parks, Donovan H.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Imelfort, Michael"
                     >
                       <span
@@ -3161,15 +3159,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-1"
                       >
                         Imelfort, Michael
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Skennerton, Connor T."
                     >
                       <span
@@ -3177,9 +3175,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         data-testid="rek-author-2"
                       >
                         Skennerton, Connor T.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -3195,11 +3193,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         Hugenholtz, Philip
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tyson, Gene W."
                     >
@@ -3207,7 +3207,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Tyson, Gene W.
                       </span>
                     </CitationView>
@@ -5707,7 +5706,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -6839,7 +6837,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -6849,7 +6846,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Parks, Donovan H."
                     >
                       <span
@@ -6857,15 +6854,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-0"
                       >
                         Parks, Donovan H.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Imelfort, Michael"
                     >
                       <span
@@ -6873,15 +6870,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-1"
                       >
                         Imelfort, Michael
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Skennerton, Connor T."
                     >
                       <span
@@ -6889,9 +6886,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-2"
                       >
                         Skennerton, Connor T.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -6907,11 +6904,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         Hugenholtz, Philip
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tyson, Gene W."
                     >
@@ -6919,7 +6918,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Tyson, Gene W.
                       </span>
                     </CitationView>
@@ -9415,7 +9413,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -10547,7 +10544,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -10557,7 +10553,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Parks, Donovan H."
                     >
                       <span
@@ -10565,15 +10561,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-0"
                       >
                         Parks, Donovan H.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Imelfort, Michael"
                     >
                       <span
@@ -10581,15 +10577,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-1"
                       >
                         Imelfort, Michael
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Skennerton, Connor T."
                     >
                       <span
@@ -10597,9 +10593,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-2"
                       >
                         Skennerton, Connor T.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -10615,11 +10611,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         Hugenholtz, Philip
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tyson, Gene W."
                     >
@@ -10627,7 +10625,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Tyson, Gene W.
                       </span>
                     </CitationView>
@@ -13051,7 +13048,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -14147,7 +14143,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"
@@ -16647,7 +16642,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -17779,7 +17773,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -17789,7 +17782,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Parks, Donovan H."
                     >
                       <span
@@ -17797,15 +17790,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-0"
                       >
                         Parks, Donovan H.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Imelfort, Michael"
                     >
                       <span
@@ -17813,15 +17806,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-1"
                       >
                         Imelfort, Michael
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Skennerton, Connor T."
                     >
                       <span
@@ -17829,9 +17822,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-2"
                       >
                         Skennerton, Connor T.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -17847,11 +17840,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         Hugenholtz, Philip
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tyson, Gene W."
                     >
@@ -17859,7 +17854,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Tyson, Gene W.
                       </span>
                     </CitationView>
@@ -20345,7 +20339,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -21472,7 +21465,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -21482,7 +21474,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Parks, Donovan H."
                     >
                       <span
@@ -21490,15 +21482,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-0"
                       >
                         Parks, Donovan H.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Imelfort, Michael"
                     >
                       <span
@@ -21506,15 +21498,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-1"
                       >
                         Imelfort, Michael
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Skennerton, Connor T."
                     >
                       <span
@@ -21522,9 +21514,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-2"
                       >
                         Skennerton, Connor T.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -21540,11 +21532,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         Hugenholtz, Philip
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tyson, Gene W."
                     >
@@ -21552,7 +21546,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Tyson, Gene W.
                       </span>
                     </CitationView>
@@ -23618,7 +23611,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -24745,7 +24737,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -24755,7 +24746,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Parks, Donovan H."
                     >
                       <span
@@ -24763,15 +24754,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-0"
                       >
                         Parks, Donovan H.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Imelfort, Michael"
                     >
                       <span
@@ -24779,15 +24770,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-1"
                       >
                         Imelfort, Michael
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Skennerton, Connor T."
                     >
                       <span
@@ -24795,9 +24786,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         data-testid="rek-author-2"
                       >
                         Skennerton, Connor T.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -24813,11 +24804,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         Hugenholtz, Philip
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Tyson, Gene W."
                     >
@@ -24825,7 +24818,6 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Tyson, Gene W.
                       </span>
                     </CitationView>
@@ -25789,7 +25781,6 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -26155,7 +26146,6 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

@@ -9,6 +9,7 @@ export const CollectionForm = React.lazy(() => import('modules/Admin/CollectionF
 export const CommunityForm = React.lazy(() => import('modules/Admin/CommunityForm/containers/CommunityForm'));
 export const Dashboard = React.lazy(() => import('modules/Dashboard/containers/Dashboard'));
 export const DeleteRecord = React.lazy(() => import('modules/DeleteRecord/containers/DeleteRecord'));
+export const Doi = React.lazy(() => import('modules/Admin/Doi/containers/Doi'));
 export const FavouriteSearch = React.lazy(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch'));
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
 export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
@@ -27,6 +28,6 @@ export const ThirdPartyLookupTool = React.lazy(() =>
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
 export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
-export { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-export { SearchRecords } from 'modules/SearchRecords';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
+export { SearchRecords } from 'modules/SearchRecords';
+export { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';

@@ -1204,7 +1204,6 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -1941,7 +1940,6 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -1951,7 +1949,7 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Shutter, Leigh"
                     >
                       <span
@@ -1959,15 +1957,15 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                         data-testid="rek-author-0"
                       >
                         Shutter, Leigh
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Arthurs, Andy"
                     >
                       <span
@@ -1975,15 +1973,15 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                         data-testid="rek-author-1"
                       >
                         Arthurs, Andy
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Bamford, Greg"
                     >
                       <span
@@ -1991,9 +1989,9 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                         data-testid="rek-author-2"
                       >
                         Bamford, Greg
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -2009,11 +2007,13 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                         McColl, Mary Rose
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Skinner, Peter R."
                     >
@@ -2021,7 +2021,6 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Skinner, Peter R.
                       </span>
                     </CitationView>
@@ -3302,7 +3301,6 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -4039,7 +4037,6 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -4049,7 +4046,7 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Shutter, Leigh"
                     >
                       <span
@@ -4057,15 +4054,15 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                         data-testid="rek-author-0"
                       >
                         Shutter, Leigh
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Arthurs, Andy"
                     >
                       <span
@@ -4073,15 +4070,15 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                         data-testid="rek-author-1"
                       >
                         Arthurs, Andy
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Bamford, Greg"
                     >
                       <span
@@ -4089,9 +4086,9 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                         data-testid="rek-author-2"
                       >
                         Bamford, Greg
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -4107,11 +4104,13 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                         McColl, Mary Rose
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Skinner, Peter R."
                     >
@@ -4119,7 +4118,6 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Skinner, Peter R.
                       </span>
                     </CitationView>
@@ -4656,7 +4654,6 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -5022,7 +5019,6 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

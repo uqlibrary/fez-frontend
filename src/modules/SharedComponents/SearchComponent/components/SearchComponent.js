@@ -20,7 +20,6 @@ export default class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
         activeFacets: PropTypes.any,
-        facetsChanged: PropTypes.func,
         updateFacetExcludesFromSearchFields: PropTypes.func,
         searchLoading: PropTypes.bool,
 

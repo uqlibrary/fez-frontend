@@ -1294,7 +1294,6 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_record_search_key_access_conditions": null,
@@ -2076,7 +2075,6 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -2086,7 +2084,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                       className="citationAuthor"
                       key="citationAuthor_1"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Sandhu, Gurveen K."
                     >
                       <span
@@ -2094,15 +2092,15 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         data-testid="rek-author-0"
                       >
                         Sandhu, Gurveen K.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-1"
                       className="citationAuthor"
                       key="citationAuthor_2"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Milevskiy, Michael J.G."
                     >
                       <span
@@ -2110,15 +2108,15 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         data-testid="rek-author-1"
                       >
                         Milevskiy, Michael J.G.
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-2"
                       className="citationAuthor"
                       key="citationAuthor_3"
                       prefix=""
-                      suffix=", "
+                      suffix=""
                       value="Wilson, Wesley"
                     >
                       <span
@@ -2126,9 +2124,9 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         data-testid="rek-author-2"
                       >
                         Wilson, Wesley
-                        , 
                       </span>
                     </CitationView>
+                    , 
                     <CitationView
                       citationId="rek-author-3"
                       className="citationAuthor"
@@ -2144,11 +2142,13 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         Shewan, Annette M.
                       </span>
                     </CitationView>
+                    , 
+                     and 
                     <CitationView
                       citationId="rek-author-4"
                       className="citationAuthor"
                       key="citationAuthor_5"
-                      prefix=" and "
+                      prefix=""
                       suffix=""
                       value="Brown, Melissa A."
                     >
@@ -2156,7 +2156,6 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         className="citationAuthor"
                         data-testid="rek-author-4"
                       >
-                         and 
                         Brown, Melissa A.
                       </span>
                     </CitationView>
@@ -2637,7 +2636,6 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=" Edited by "
                   publication={
                     Object {
@@ -3082,7 +3080,6 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=" Edited by "
                     publication={
                       Object {
@@ -3865,7 +3862,6 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors"
@@ -3876,7 +3872,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         className="citationAuthor"
                         key="citationAuthor_1"
                         prefix=""
-                        suffix=", "
+                        suffix=""
                         value="Smith, A"
                       >
                         <span
@@ -3884,38 +3880,38 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                           data-testid="rek-contributor-0"
                         >
                           Smith, A
-                          , 
                         </span>
                       </CitationView>
+                      , 
                       <CitationView
                         citationId="rek-contributor-1"
                         className="citationAuthor"
                         key="citationAuthor_2"
                         prefix=""
                         suffix=""
-                        value="Smith, C"
+                        value="Smith, B"
                       >
                         <span
                           className="citationAuthor"
                           data-testid="rek-contributor-1"
                         >
-                          Smith, C
+                          Smith, B
                         </span>
                       </CitationView>
+                      , 
                       <CitationView
                         citationId="rek-contributor-2"
                         className="citationAuthor"
                         key="citationAuthor_3"
-                        prefix=" and "
+                        prefix=""
                         suffix=""
-                        value="Smith, B"
+                        value="Smith, C"
                       >
                         <span
                           className="citationAuthor"
                           data-testid="rek-contributor-2"
                         >
-                           and 
-                          Smith, B
+                          Smith, C
                         </span>
                       </CitationView>
                       . 
@@ -6158,7 +6154,6 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -6524,7 +6519,6 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"
@@ -6574,7 +6568,6 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_contributor_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   prefix=" Edited by "
                   publication={Object {}}
                   searchKey={
@@ -6603,7 +6596,6 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
                         "idSubkey": "rek_contributor_id",
                       }
                     }
-                    initialNumberOfAuthors={10}
                     prefix=" Edited by "
                     publication={Object {}}
                     searchKey={
@@ -6970,7 +6962,6 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
                         Symbol(mui.nested): false,
                       }
                     }
-                    thresholdNumberOfAuthors={3}
                   >
                     <span
                       className="citationEditors empty"

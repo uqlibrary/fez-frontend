@@ -6,7 +6,7 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 export const TitleOrPidOptionTemplate = ({ option: item }) => {
     return (
         <Fragment>
-            <PublicationCitation publication={item} hideCitationCounts hideLinks />
+            <PublicationCitation publication={item} hideCitationCounts hideLinks citationStyle={'list'} />
             <Typography variant="body2" color="textSecondary">
                 {item.rek_pid}
             </Typography>

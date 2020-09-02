@@ -78,6 +78,7 @@ export const styles = theme => ({
 export class PublicationCitation extends PureComponent {
     static propTypes = {
         actions: PropTypes.object.isRequired,
+        citationStyle: PropTypes.string,
         className: PropTypes.string,
         classes: PropTypes.object,
         customActions: PropTypes.array,
@@ -103,6 +104,7 @@ export class PublicationCitation extends PureComponent {
     };
 
     static defaultProps = {
+        citationStyle: 'notset',
         className: '',
         hideCitationCounts: false,
         hideContentIndicators: false,
@@ -180,7 +182,7 @@ export class PublicationCitation extends PureComponent {
     };
 
     renderCitation = publicationTypeId => {
-        const { publication, hideLinks } = this.props;
+        const { publication, hideLinks, citationStyle } = this.props;
         const filteredPublicationType = publicationTypeId
             ? publicationTypes(this.citationComponents)[publicationTypeId]
             : null;
@@ -189,6 +191,7 @@ export class PublicationCitation extends PureComponent {
             React.createElement(filteredPublicationType.citationComponent, {
                 publication: publication,
                 hideDoiLink: hideLinks,
+                citationStyle: citationStyle,
             })
         ) : (
             <div>Citation display not available for {publicationTypeId}</div>
@@ -398,17 +401,12 @@ export class PublicationCitation extends PureComponent {
                                         {!!showAdminActions && (
                                             <Grid item>
                                                 <AdminActions
-                                                    pid={publication.rek_pid}
+                                                    publication={publication}
+                                                    isRecordDeleted={isPublicationDeleted}
                                                     navigatedFrom={
                                                         (location.hash && location.hash.replace('#', '')) ||
                                                         `${location.pathname}${location.search}`
                                                     }
-                                                    recordType={
-                                                        (publication.rek_object_type_lookup &&
-                                                            publication.rek_object_type_lookup.toLowerCase()) ||
-                                                        ''
-                                                    }
-                                                    isRecordDeleted={isPublicationDeleted}
                                                     {...{ userHasNewAdminEdit }}
                                                 />
                                             </Grid>

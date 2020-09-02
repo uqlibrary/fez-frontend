@@ -167,7 +167,7 @@ export const fileUploadNotRequiredForMediated = (value, values) => {
 };
 
 export const isValidIssn = subject => {
-    const regex = /^([ep]{0,1}ISSN |)[\d]{4}(\-|)[\d]{3}(\d|\S){1}$/;
+    const regex = /^\d{4}-?\d{3}[\dX]$/;
     if (subject.trim().length === 0 || regex.test(subject)) {
         return '';
     } else {
@@ -178,7 +178,8 @@ export const isValidIssn = subject => {
 export const isValidIsbn = subject => {
     // Checks for ISBN-10 or ISBN-13 format
     // https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s13.html
-    const regex = /^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
+    // Edited to remove "ISBN" / "ISBN-10" / "ISBN-13" prefix.
+    const regex = /^(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
@@ -335,7 +336,7 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEd
     return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
 };
 
-export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
+export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, allowOnlyEditor = false) => {
     const errors = {};
     if (
         (!data.authors && !data.editors) ||
@@ -351,8 +352,15 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
             data.editors.length !== 0 &&
             data.editors.filter(item => item.selected).length === 0)
     ) {
-        errors.authors = locale.validationErrors.authorRequired;
-        errors.editors = locale.validationErrors.editorRequired;
+        if (!allowOnlyEditor) {
+            errors.authors = isAdmin
+                ? locale.validationErrors.authorRequiredAdmin
+                : locale.validationErrors.authorRequired;
+        }
+        errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
+    } else if (allowOnlyOne && data.authors && data.authors.length > 0 && data.editors && data.editors.length > 0) {
+        errors.authors = locale.validationErrors.onlyOneOfAuthorOrEditor;
+        errors.editors = locale.validationErrors.onlyOneOfAuthorOrEditor;
     }
 
     return errors;

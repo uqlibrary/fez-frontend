@@ -51,20 +51,21 @@ export const pathConfig = {
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {
-        mine: '/records/mine',
-        possible: '/records/possible',
-        incomplete: '/records/incomplete',
-        incompleteFix: pid => `/records/${pid}/incomplete`,
-        claim: '/records/claim',
-        search: '/records/search',
-        view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
-        view_new: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view_new/${pid}`, //  temporary for MM to view pids without being redirected to legacy
-        fix: pid => `/records/${pid}/fix`,
         add: {
+            // the ordering below should not be changed. It's used in AddMissingRecord::getStepperIndex
             find: '/records/add/find',
             results: '/records/add/results',
             new: '/records/add/new',
         },
+        claim: '/records/claim',
+        fix: pid => `/records/${pid}/fix`,
+        incomplete: '/records/incomplete',
+        incompleteFix: pid => `/records/${pid}/incomplete`,
+        mine: '/records/mine',
+        possible: '/records/possible',
+        search: '/records/search',
+        view_new: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view_new/${pid}`, //  temporary for MM to view pids without being redirected to legacy
+        view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
     },
     dataset: {
         mine: '/data-collections/mine',
@@ -130,19 +131,20 @@ export const pathConfig = {
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
-        community: '/admin/community',
-        collection: '/admin/collection',
-        masquerade: '/admin/masquerade',
-        thirdPartyTools: '/tool/lookup',
-        legacyEspace: `${fullPath}/my_upo_tools.php`,
-        unpublished: '/admin/unpublished',
-        edit: pid => `/admin/edit/${pid}`,
-        delete: pid => `/admin/delete/${pid}`,
         add: '/admin/add',
-        editCommunity: pid => `/communities/${pid}/edit`,
+        collection: '/admin/collection',
+        community: '/admin/community',
+        delete: pid => `/admin/delete/${pid}`,
+        doi: pid => `/admin/doi/${pid}`,
+        edit: pid => `/admin/edit/${pid}`,
         editCollection: pid => `/collections/${pid}/edit`,
+        editCommunity: pid => `/communities/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
         favouriteSearch: '/admin/favourite-search',
+        legacyEspace: `${fullPath}/my_upo_tools.php`,
+        masquerade: '/admin/masquerade',
+        thirdPartyTools: '/tool/lookup',
+        unpublished: '/admin/unpublished',
     },
     authorIdentifiers: {
         orcid: {
@@ -168,7 +170,7 @@ export const pathConfig = {
 
 // a duplicate list of routes for
 export const flattedPathConfig = [
-    '/',
+    '/admin/add',
     '/admin/collection',
     '/admin/community',
     '/admin/masquerade',
@@ -196,8 +198,15 @@ export const flattedPathConfig = [
     '/records/incomplete',
     '/records/claim',
     '/records/add/find',
-    '/records/add/results',
     '/records/add/new',
+    '/records/add/results',
+    '/records/claim',
+    '/records/incomplete',
+    '/records/mine',
+    '/records/possible',
+    '/records/search',
+    '/rhdsubmission',
+    '/sbslodge_new',
     '/view',
 ];
 
@@ -474,6 +483,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.favouriteSearch.title,
+                  },
+                  {
+                      path: pathConfig.admin.doi(pid),
+                      component: components.Doi,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.record.title,
                   },
               ]
             : []),

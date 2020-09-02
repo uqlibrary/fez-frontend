@@ -1264,7 +1264,6 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={
                     Object {
                       "fez_datastream_info": Array [
@@ -2031,7 +2030,6 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors"
@@ -2584,7 +2582,6 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                       "idSubkey": "rek_author_id",
                     }
                   }
-                  initialNumberOfAuthors={10}
                   publication={Object {}}
                   searchKey={
                     Object {
@@ -2950,7 +2947,6 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                       Symbol(mui.nested): false,
                     }
                   }
-                  thresholdNumberOfAuthors={3}
                 >
                   <span
                     className="citationAuthors empty"

@@ -1914,6 +1914,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadVocabulariesList": [Function],
                                                         "logout": [Function],
                                                         "requestOrcidSync": [Function],
+                                                        "resetDoi": [Function],
                                                         "resetSavingAuthorState": [Function],
                                                         "searchAuthorPublications": [Function],
                                                         "searchAuthors": [Function],
@@ -1936,6 +1937,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "updateCollection": [Function],
                                                         "updateCommunity": [Function],
                                                         "updateCurrentAuthor": [Function],
+                                                        "updateDoi": [Function],
                                                         "updateFavouriteSearchListItem": [Function],
                                                         "updateIncompleteRecord": [Function],
                                                       }
@@ -2050,6 +2052,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
                                                           "requestOrcidSync": [Function],
+                                                          "resetDoi": [Function],
                                                           "resetSavingAuthorState": [Function],
                                                           "searchAuthorPublications": [Function],
                                                           "searchAuthors": [Function],
@@ -2072,6 +2075,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "updateCollection": [Function],
                                                           "updateCommunity": [Function],
                                                           "updateCurrentAuthor": [Function],
+                                                          "updateDoi": [Function],
                                                           "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
                                                         }
@@ -3320,6 +3324,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadVocabulariesList": [Function],
                                                                   "logout": [Function],
                                                                   "requestOrcidSync": [Function],
+                                                                  "resetDoi": [Function],
                                                                   "resetSavingAuthorState": [Function],
                                                                   "searchAuthorPublications": [Function],
                                                                   "searchAuthors": [Function],
@@ -3342,6 +3347,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "updateCollection": [Function],
                                                                   "updateCommunity": [Function],
                                                                   "updateCurrentAuthor": [Function],
+                                                                  "updateDoi": [Function],
                                                                   "updateFavouriteSearchListItem": [Function],
                                                                   "updateIncompleteRecord": [Function],
                                                                 }
@@ -3410,6 +3416,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadVocabulariesList": [Function],
                                                                     "logout": [Function],
                                                                     "requestOrcidSync": [Function],
+                                                                    "resetDoi": [Function],
                                                                     "resetSavingAuthorState": [Function],
                                                                     "searchAuthorPublications": [Function],
                                                                     "searchAuthors": [Function],
@@ -3432,6 +3439,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "updateCollection": [Function],
                                                                     "updateCommunity": [Function],
                                                                     "updateCurrentAuthor": [Function],
+                                                                    "updateDoi": [Function],
                                                                     "updateFavouriteSearchListItem": [Function],
                                                                     "updateIncompleteRecord": [Function],
                                                                   }
