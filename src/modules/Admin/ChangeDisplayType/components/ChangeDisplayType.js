@@ -10,11 +10,11 @@ import Grid from '@material-ui/core/Grid';
 import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 
-import viewRecordLocale from 'locale/viewRecord';
 import { DOCUMENT_TYPES_EDIT_ONLY, publicationTypes } from 'config/general';
 import { routes, validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
-import { default as pagesLocale } from 'locale/pages';
+import { default as publicationLocale } from 'locale/publicationForm';
+import viewRecordLocale from 'locale/viewRecord';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -27,7 +27,12 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 const txt = {
     ...componentsLocale.components.changeDisplayType,
     headings: viewRecordLocale.viewRecord.headings,
-    alertProps: pagesLocale.pages.edit.alerts,
+    alertProps: {
+        errorAlert: { ...publicationLocale.errorAlert },
+        successAlert: { ...componentsLocale.components.changeDisplayType.successAlert },
+        progressAlert: { ...componentsLocale.components.changeDisplayType.progressAlert },
+        validationAlert: { ...publicationLocale.validationAlert },
+    },
 };
 
 const renderTitle = record => {
@@ -196,7 +201,11 @@ export const ChangeDisplayType = ({
                         </Grid>
                         {alertProps && (
                             <Grid item xs={12}>
-                                <Alert testId="rek-changeDisplayType-submit-status" {...alertProps} />
+                                <Alert
+                                    testId="changeDisplayType-submit-status"
+                                    alertId="changeDisplayType-submit-status"
+                                    {...alertProps}
+                                />
                             </Grid>
                         )}
                         <Grid item xs={12}>
@@ -217,8 +226,8 @@ export const ChangeDisplayType = ({
 
                                 <Grid item xs={12} sm="auto">
                                     <Button
-                                        id="rek-changeDisplayType-submit"
-                                        data-testid="rek-changeDisplayType-submit"
+                                        id="changeDisplayType-submit"
+                                        data-testid="changeDisplayType-submit"
                                         variant="contained"
                                         color="primary"
                                         fullWidth
