@@ -1,27 +1,11 @@
 import ChangeDisplayType from './ChangeDisplayType';
-import Immutable from 'immutable';
 import { act } from '@testing-library/react';
-// import { createMemoryHistory } from 'history';
 
-// import publicationTypeListConferencePaper from 'mock/data/records/publicationTypeListConferencePaper';
 import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
 import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
 import publicationTypeListAudio from 'mock/data/records/publicationTypeListAudio';
-// import { default as formLocale } from '../../../../locale/publicationForm';
 import { default as componentsLocale } from 'locale/components';
-// import { routes } from '../../../../config';
-// import collectionRecord from 'mock/data/records/collectionRecord';
 
-// const confPaperRecord = {
-//     ...publicationTypeListConferencePaper.data[0],
-//     fez_record_search_key_doi: {
-//         rek_doi: DOI_ORG_PREFIX,
-//     },
-//     fez_record_search_key_publisher: {
-//         rek_publisher: 'The University of Queensland',
-//     },
-// };
-// const journalArticleRecord = publicationTypeListJournalArticle.data[0];
 const mockRecord = {
     ...publicationTypeListResearchReport.data[0],
     fez_record_search_key_publisher: {
@@ -35,43 +19,6 @@ jest.mock('react-router', () => ({
 
 const setup = (testProps = {}, args = { isShallow: true }) => {
     const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        handleSubmit: jest.fn(),
-        history: { push: jest.fn() },
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        // common immutable props above
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        submitting: testProps.submitting || false, // : PropTypes.bool
-        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
-        invalid: testProps.invalid || false, // : PropTypes.bool
-        pristine: testProps.pristine || false, // : PropTypes.bool
-        actions: {
-            logout: jest.fn(),
-            checkSession: jest.fn(),
-            clearSessionExpiredFlag: jest.fn(),
-        },
         resetSubType: jest.fn(),
         record: mockRecord,
         ...testProps,
@@ -111,16 +58,12 @@ describe('ChangeDisplayType form', () => {
     });
 
     it('should render form loaded with submit button disabled', () => {
-        // const wrapper = setup({ record: mockRecord }, { isShallow: false });
         const wrapper = setup({ record: mockRecord });
         expect(toJson(wrapper)).toMatchSnapshot();
-        // console.log(wrapper.find('Field').debug());
         expect(wrapper.find('Field').length).toEqual(1);
-        // expect(wrapper.find('#rek-changeDisplayType-submit').props().disabled).toEqual(true);
     });
 
     it('should have an enabled submit button when user has selected a work type WITHOUT subtypes', () => {
-        // const wrapper = setup({ record: { ...publicationTypeListAudio.data[0] } }, { isShallow: false });
         const wrapper = setup({ record: { ...publicationTypeListAudio.data[0] } });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -128,11 +71,9 @@ describe('ChangeDisplayType form', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
-        // expect(wrapper.find('#rek-changeDisplayType-submit').props().disabled).toEqual(false);
     });
 
     it('should have an enabled submit button when user has selected subtype for a work type WITH subtypes', () => {
-        // const wrapper = setup({ record: { ...publicationTypeListJournalArticle.data[0] } }, { isShallow: false });
         const wrapper = setup({ record: { ...publicationTypeListJournalArticle.data[0] } });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -147,11 +88,9 @@ describe('ChangeDisplayType form', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
-        // expect(wrapper.find('#rek-changeDisplayType-submit').props().disabled).toEqual(false);
     });
 
     it('should have an disabled submit button when user has not yet selected subtype for a work type WITH subtypes', () => {
-        // const wrapper = setup({ record: { ...publicationTypeListJournalArticle.data[0] } }, { isShallow: false });
         const wrapper = setup({ record: { ...publicationTypeListJournalArticle.data[0] } });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -161,7 +100,6 @@ describe('ChangeDisplayType form', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
-        // expect(wrapper.find('#rek-changeDisplayType-submit').props().disabled).toEqual(true);
     });
 
     it('should render lightbox upon submit', () => {
@@ -217,23 +155,6 @@ describe('Change Display Type form - redirections', () => {
         window.location = location;
     });
 
-    // it('should redirect to admin edit page on button click', () => {
-    //     const testFn = jest.fn();
-    //     const record = {
-    //         rek_pid: 'UQ:1234567',
-    //         rek_display_type: 174,
-    //     };
-    //     const wrapper = setup({
-    //         handleSubmit: testFn,
-    //         record,
-    //     });
-    //     wrapper
-    //         .find('#rek-changeDisplayType-submit')
-    //         .props()
-    //         .onClick();
-    //     expect(testFn).toHaveBeenCalledWith(record);
-    // });
-
     it('should fire the correct submit function on button click', () => {
         const mockRecord1 = { ...publicationTypeListAudio.data[0] };
         const testFn = jest.fn();
@@ -252,7 +173,6 @@ describe('Change Display Type form - redirections', () => {
             }
         });
         (!!submitButton && submitButton.props().onClick()) || false;
-        // expect(testFn).toHaveBeenCalledWith(mockRecord1);
     });
 
     it('should fire the correct cancel function on button click', () => {});

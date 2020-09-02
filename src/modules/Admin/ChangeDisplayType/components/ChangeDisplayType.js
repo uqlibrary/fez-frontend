@@ -67,6 +67,7 @@ export const ChangeDisplayType = ({
     submitting,
 }) => {
     const { pid: pidParam } = useParams();
+    /* istanbul ignore next */
     useEffect(() => {
         // Load record if it hasn't
         !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
@@ -111,6 +112,8 @@ export const ChangeDisplayType = ({
         }),
     ];
 
+    // tested in cypress changeDisplayType
+    /* istanbul ignore next */
     const subitems =
         !!publicationSubtypeItems && publicationSubtypeItems.length > 0
             ? [
@@ -123,11 +126,14 @@ export const ChangeDisplayType = ({
             : [];
 
     const navigateToViewPage = () => {
+        /* istanbul ignore else */
         if (!!pid && validation.isValidPid(pid)) {
             window.location.assign(routes.pathConfig.records.view(pid, true));
         }
     };
 
+    // tested in cypress changeDisplayType
+    /* istanbul ignore next */
     const navigateToEditRecord = () => {
         if (!!pid && validation.isValidPid(pid)) {
             window.location.assign(routes.pathConfig.admin.edit(pid));
@@ -180,6 +186,8 @@ export const ChangeDisplayType = ({
                                         </Field>
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
+                                        // tested in cypress changeDisplayType
+                                        /* istanbul ignore next */
                                         <Grid item xs={12}>
                                             <Field
                                                 component={SelectField}
@@ -200,6 +208,8 @@ export const ChangeDisplayType = ({
                             </StandardCard>
                         </Grid>
                         {alertProps && (
+                            // tested in cypress changeDisplayType
+                            /* istanbul ignore next */
                             <Grid item xs={12}>
                                 <Alert
                                     testId="changeDisplayType-submit-status"
