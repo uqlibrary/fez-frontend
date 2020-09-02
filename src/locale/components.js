@@ -2722,5 +2722,36 @@ export default {
         audienceSizeField: {
             label: 'Audience size',
         },
+        changeDisplayType: {
+            title: 'Change display type from ',
+            publicationType: {
+                inputLabelText: 'New Work type',
+                hintText: 'Select a Work type from the dropdown list',
+            },
+            publicationSubtype: {
+                inputLabelText: 'New Work subtype',
+                hintText: 'Select a work subtype from the dropdown list',
+            },
+            submit: 'Change display type',
+            cancelButtonLabel: 'Cancel',
+            loadingMessage: 'Loading work',
+            workflowConfirmation: {
+                confirmationTitle: 'Change Display type',
+                confirmationMessage: 'Display type has been changed',
+                cancelButtonLabel: 'View record',
+                confirmButtonLabel: 'Edit full record',
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Changing Display type is in progress.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Display type has been changed successfully.',
+            },
+        },
     },
 };

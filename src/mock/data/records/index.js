@@ -19,6 +19,7 @@ export { default as possibleUnclaimedList } from './possibleUnclaimedList';
 export { default as publicationTypeListAudio } from './publicationTypeListAudio';
 export { default as publicationTypeListBook } from './publicationTypeListBook';
 export { default as publicationTypeListBookChapter } from './publicationTypeListBookChapter';
+export { default as publicationTypeListBookEdited } from './publicationTypeListBookEdited';
 export { default as publicationTypeListConferencePaper } from './publicationTypeListConferencePaper';
 export { default as publicationTypeListConferenceProceedings } from './publicationTypeListConferenceProceedings';
 export { default as publicationTypeListCreativeWork } from './publicationTypeListCreativeWork';

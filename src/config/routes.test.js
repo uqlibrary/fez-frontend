@@ -188,7 +188,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(36);
+        expect(testRoutes.length).toEqual(37);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {

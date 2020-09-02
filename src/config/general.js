@@ -1121,6 +1121,7 @@ export const LANGUAGE = [
 
 export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
 
+export const CHANGE_DISPLAY_MENU_ID = 'changeDisplayTypeMenuItem';
 export const RECORD_ACTION_URLS = [
     {
         label: 'Edit selected record',
@@ -1165,6 +1166,14 @@ export const RECORD_ACTION_URLS = [
         inApp: false,
         showInDeleted: true,
         options: 'menubar=no,location=no,width=300,height=300,resizable=yes,scrollbars=yes,status=no',
+    },
+    {
+        label: 'Change display type',
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/changeDisplayType/${pid}`,
+        inApp: true,
+        showInDeleted: false,
+        options: null,
+        id: CHANGE_DISPLAY_MENU_ID,
     },
     {
         label: 'More options',
