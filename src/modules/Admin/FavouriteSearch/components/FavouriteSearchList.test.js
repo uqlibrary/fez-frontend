@@ -121,8 +121,8 @@ describe('FavouriteSearchList', () => {
         });
         let listItem = getByTestId('favourite-search-list-item-0');
 
-        expect(getByTestId('fvs-description', listItem)).toHaveTextContent('test');
-        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
 
         fireEvent.click(getByTestId('favourite-search-list-item-edit'));
 
@@ -135,8 +135,8 @@ describe('FavouriteSearchList', () => {
 
         listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
-        expect(getByTestId('fvs-description', listItem)).toHaveTextContent('testing');
-        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('testing-testing');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('testing-testing');
     });
 
     it('should render previous info if handleRowUpdate throws exception', async () => {
@@ -153,8 +153,8 @@ describe('FavouriteSearchList', () => {
         });
         let listItem = getByTestId('favourite-search-list-item-0');
 
-        expect(getByTestId('fvs-description', listItem)).toHaveTextContent('test');
-        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
 
         fireEvent.click(getByTestId('favourite-search-list-item-edit'));
 
@@ -167,8 +167,8 @@ describe('FavouriteSearchList', () => {
 
         listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
-        expect(getByTestId('fvs-description', listItem)).toHaveTextContent('test');
-        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
     });
 
     it('should delete favourite search item', async () => {
@@ -201,7 +201,7 @@ describe('FavouriteSearchList', () => {
 
         const listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
-        expect(getByTestId('fvs-description', listItem)).toHaveTextContent('testing');
-        expect(getByTestId('fvs-alias', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('testing');
     });
 });

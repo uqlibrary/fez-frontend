@@ -102,7 +102,7 @@ describe('FavouriteSearch', () => {
         });
         await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
-        expect(getAllByTestId('fvs-alias')[0]).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-0')).toHaveTextContent('test');
         expect(getByText('Alias "testing" has been taken')).toBeInTheDocument();
     });
 
