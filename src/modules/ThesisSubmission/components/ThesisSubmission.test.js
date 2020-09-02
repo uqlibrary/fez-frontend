@@ -2,6 +2,7 @@ import React from 'react';
 import ThesisSubmission, { afterSubmit, cancelSubmit, getFormSubmitAlertProps } from './ThesisSubmission';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
+import { THESIS_UPLOAD_RETRIES } from 'config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -216,6 +217,17 @@ describe('ThesisSubmission', () => {
             submitSucceeded: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('it should show file upload retry failure alert', () => {
+        const mockUseState = jest.spyOn(React, 'useState');
+        mockUseState.mockImplementation(() => [THESIS_UPLOAD_RETRIES, jest.fn()]);
+        const wrapper = setup({
+            author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
+            newRecordFileUploadingOrIssueError: true,
+            submitSucceeded: true,
+        });
+        expect(wrapper.find('Alert').props().message).toMatchSnapshot();
     });
 
     it('should have a helper to generate alert props', () => {
