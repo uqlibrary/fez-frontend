@@ -20,7 +20,7 @@ import { validation } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { THESIS_SUBMISSION_SUBTYPES } from 'config/general';
+import { THESIS_SUBMISSION_SUBTYPES, THESIS_UPLOAD_RETRIES } from 'config/general';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -34,14 +34,16 @@ export const afterSubmit = () => {
     window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
 };
 
-export const getfileUploadAlertProps = (locale, author) => {
+export const getfileUploadAlertProps = (locale, author, showRetries) => {
     const { actionButtonLabel, type, title } = locale;
     const emailSubject = locale.emailSubject
         .replace('[studentFullName]', `${author.aut_fname} ${author.aut_lname}`)
         .replace('[studentNumber]', author.aut_org_student_id);
     const mailtoUri = `mailto:${locale.emailRecipient}?subject=${encodeURIComponent(emailSubject)}`;
     const message = ReactHtmlParser(
-        locale.message.replace('[linkStart]', `<a href="${mailtoUri}">`).replace('[linkEnd]', '</a>'),
+        (showRetries ? locale.messageWithRetry : locale.message)
+            .replace('[linkStart]', `<a href="${mailtoUri}">`)
+            .replace('[linkEnd]', '</a>'),
     );
     return { actionButtonLabel, type, title, message };
 };
@@ -87,8 +89,11 @@ export const ThesisSubmission = ({
         actions.checkSession();
     };
 
+    const [retries, setRetries] = React.useState(0);
+
     /* istanbul ignore next */
     const _retryUpload = () => {
+        setRetries(retries + 1);
         retryUpload(formValues, newRecord, fullyUploadedFiles);
     };
 
@@ -136,8 +141,12 @@ export const ThesisSubmission = ({
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <Alert
-                                {...getfileUploadAlertProps(thesisLocale.fileUpload.failedAlertLocale, author)}
-                                action={_retryUpload}
+                                {...getfileUploadAlertProps(
+                                    thesisLocale.fileUpload.failedAlertLocale,
+                                    author,
+                                    retries < THESIS_UPLOAD_RETRIES,
+                                )}
+                                action={(retries < THESIS_UPLOAD_RETRIES && _retryUpload) || undefined}
                             />
                         </Grid>
                     </Grid>

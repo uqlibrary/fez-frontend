@@ -92,9 +92,7 @@ const mapDispatchToProps = dispatch => ({
                     },
                 });
             })
-            .catch(error => {
-                throw new SubmissionError({ _error: error });
-            }),
+            .catch(() => {}),
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);

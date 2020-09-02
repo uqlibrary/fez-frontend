@@ -1467,3 +1467,5 @@ export const AFFILIATION_TYPE_UQ = 'UQ';
 export const UQ_DOI_PREFIX = '10.14264/';
 
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
+
+export const THESIS_UPLOAD_RETRIES = 5;

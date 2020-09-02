@@ -522,6 +522,32 @@ describe('Record action creators', () => {
             }
         });
 
+        it('dispatches expected actions on failed retry of file uploads', async () => {
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: pidRequest.pid }).apiUrl, '.*')
+                .reply(200, { data: { ...record } })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(500, '')
+                .onAny()
+                .reply(0);
+
+            const expectedActions = [
+                actions.FILE_UPLOAD_STARTED,
+                actions.APP_ALERT_SHOW,
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
+                actions.APP_ALERT_SHOW,
+                `${actions.FILE_UPLOAD_FAILED}@Test.png`,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.submitThesis(testInput, { ...record }));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
         it('dispatches expected actions when there are no files to upload', async () => {
             const testInput1 = {
                 ...testInput,

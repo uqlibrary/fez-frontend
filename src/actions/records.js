@@ -284,7 +284,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
                     payload: error.message,
                 });
             }
-            return (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
+            return (recordCreated && !preCreatedRecord.rek_pid && Promise.resolve(newRecord)) || Promise.reject(error);
         };
 
         return submission
