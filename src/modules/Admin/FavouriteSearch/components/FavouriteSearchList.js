@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
+import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'material-table';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -145,6 +145,27 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                         data-testid={`favourite-search-list-edit-item-${props.data.tableData.id}`}
                     />
                 ),
+                Action: props => {
+                    console.log(props);
+                    const { icon: Icon, tooltip, ...restAction } =
+                        (typeof props.action === 'function' && props.action(props.data)) || props.action;
+                    return (
+                        <MTableAction
+                            {...props}
+                            action={{
+                                ...restAction,
+                                tooltip,
+                                icon: () => (
+                                    <Icon
+                                        data-testid={`favourite-search-list-item-${
+                                            props.data.tableData.id
+                                        }-${tooltip.toLowerCase()}`}
+                                    />
+                                ),
+                            }}
+                        />
+                    );
+                },
             }}
             data={data}
             icons={tableIcons}
