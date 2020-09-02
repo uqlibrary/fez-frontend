@@ -68,10 +68,10 @@ exports[`SimpleSearchComponent should render default view 1`] = `
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(TextField))
-          error={null}
+        <TextField
+          data-testid={true}
+          errorText={null}
           fullWidth={true}
-          id="simpleSearchField"
           inputProps={
             Object {
               "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -81,6 +81,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder="Enter your search query to search all fields in eSpace"
+          textFieldId="simple-search"
           type="search"
           value=""
         />
@@ -93,6 +94,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
         <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
+          data-testid="simple-search-button"
           disabled={false}
           fullWidth={true}
           id="simpleSearchButton"
@@ -110,6 +112,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
         <WithStyles(ForwardRef(Button))
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
+          data-testid="show-advanced-search"
           fullWidth={true}
           id="showAdvancedSearchButton"
           onClick={[Function]}
@@ -158,10 +161,10 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(TextField))
-          error={null}
+        <TextField
+          data-testid={true}
+          errorText={null}
           fullWidth={true}
-          id="simpleSearchField"
           inputProps={
             Object {
               "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -171,6 +174,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder="Enter your search query to search all fields in eSpace"
+          textFieldId="simple-search"
           type="search"
           value=""
         />
@@ -183,6 +187,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
         <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
+          data-testid="simple-search-button"
           disabled={false}
           fullWidth={true}
           id="simpleSearchButton"
@@ -200,6 +205,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
         <WithStyles(ForwardRef(Button))
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
+          data-testid="show-advanced-search"
           fullWidth={true}
           id="showAdvancedSearchButton"
           onClick={[Function]}
@@ -238,25 +244,20 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
           item={true}
           xs={true}
         >
-          <WithStyles(ForwardRef(TextField))
+          <TextField
             InputProps={
               Object {
                 "disableUnderline": true,
               }
             }
             autoComplete="search"
-            error={null}
+            errorText={null}
             fullWidth={true}
-            id="simpleSearchField"
-            inputProps={
-              Object {
-                "aria-label": "Enter your search query to search eSpace and then press Enter",
-              }
-            }
             label={false}
             onChange={[Function]}
             onKeyPress={[Function]}
             placeholder="Search eSpace"
+            textFieldId="simple-search"
             type="search"
             value=""
           />
@@ -320,10 +321,10 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(TextField))
-          error={null}
+        <TextField
+          data-testid={true}
+          errorText={null}
           fullWidth={true}
-          id="simpleSearchField"
           inputProps={
             Object {
               "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -333,6 +334,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder="Enter your search query to search all fields in eSpace"
+          textFieldId="simple-search"
           type="search"
           value="i feel lucky"
         />
@@ -345,6 +347,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
         <WithStyles(ForwardRef(Button))
           aria-label="Click to search eSpace"
           color="primary"
+          data-testid="simple-search-button"
           disabled={false}
           fullWidth={true}
           id="simpleSearchButton"
@@ -362,6 +365,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
         <WithStyles(ForwardRef(Button))
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
+          data-testid="show-advanced-search"
           fullWidth={true}
           id="showAdvancedSearchButton"
           onClick={[Function]}

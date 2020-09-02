@@ -226,19 +226,14 @@ describe('favouriteSearch actions', () => {
                 actions.FAVOURITE_SEARCH_ADD_FAILED,
             ];
 
-            await expect(
-                mockActionsStore.dispatch(
-                    addFavouriteSearch({
-                        fvs_description: 'test',
-                        fvs_search_parameters: 'test',
-                        fvs_username: 'uqtest',
-                    }),
-                ),
-            ).rejects.toEqual({
-                status: 500,
-                message:
-                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-            });
+            await mockActionsStore.dispatch(
+                addFavouriteSearch({
+                    fvs_description: 'test',
+                    fvs_search_parameters: 'test',
+                    fvs_username: 'uqtest',
+                }),
+            );
+
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

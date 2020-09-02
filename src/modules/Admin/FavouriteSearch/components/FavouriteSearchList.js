@@ -146,7 +146,6 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                     />
                 ),
                 Action: props => {
-                    console.log(props);
                     const { icon: Icon, tooltip, ...restAction } =
                         (typeof props.action === 'function' && props.action(props.data)) || props.action;
                     return (
