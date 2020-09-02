@@ -5736,15 +5736,14 @@ exports[`Component PublicationForm should render component with HDR Thesis 1`] =
         >
           <Alert
             action={[Function]}
-            actionButtonLabel="Visit now"
+            actionButtonLabel="Upload your thesis"
             allowDismiss={false}
             customIcon={null}
             customType={null}
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
-            message="HDR theses cannot be submitted via 'Add a missing work' - use the official submission link to upload your thesis"
+            message="For HDR thesis submissions, click"
             showLoader={false}
-            title="Redirect"
             type="info"
             wiggle={null}
           />

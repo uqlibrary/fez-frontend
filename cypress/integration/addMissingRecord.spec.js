@@ -144,7 +144,7 @@ context('RHD adding a Thesis', () => {
         // we see the amber warning bar
         cy.get('[data-testid=standard-card-thesis-information-content]').get('#info-icon');
         cy.get('[data-testid=standard-card-thesis-information-content]')
-            .contains('Visit now')
+            .contains('Upload your thesis')
             .get('#action-button')
             .should('be.enabled')
             .click();
@@ -178,7 +178,7 @@ context('Non RHD adding a Thesis', () => {
         // we see the blue info bar
         cy.get('[data-testid=standard-card-thesis-information-content]').get('#warning-icon');
         cy.get('[data-testid=standard-card-thesis-information-content]')
-            .contains('Visit now')
+            .contains('Upload your thesis')
             .get('#action-button')
             .should('be.enabled')
             .click();
