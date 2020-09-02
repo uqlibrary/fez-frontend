@@ -2722,5 +2722,31 @@ export default {
         audienceSizeField: {
             label: 'Audience size',
         },
+        bulkUpdatesList: {
+            tableTitle: '',
+            columns: {
+                started: {
+                    title: 'Started',
+                },
+                user: {
+                    title: 'User',
+                },
+                name: {
+                    title: 'Name',
+                },
+                progress: {
+                    title: 'Progress',
+                },
+                message: {
+                    title: 'Message',
+                },
+                lastHeartbeat: {
+                    title: 'Last Heartbeat',
+                },
+                status: {
+                    title: 'Status',
+                },
+            },
+        },
     },
 };
