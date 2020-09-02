@@ -488,12 +488,10 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                   }
                   title="Remove this file"
                 >
-                  <WithStyles(ForwardRef(IconButton))
+                  <span
                     aria-describedby={null}
                     className=""
-                    data-testid="undefined-delete"
                     onBlur={[Function]}
-                    onClick={[MockFunction]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
@@ -501,187 +499,168 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                     onTouchStart={[Function]}
                     title="Remove this file"
                   >
-                    <ForwardRef(IconButton)
-                      aria-describedby={null}
-                      className=""
-                      classes={
-                        Object {
-                          "colorInherit": "MuiIconButton-colorInherit",
-                          "colorPrimary": "MuiIconButton-colorPrimary",
-                          "colorSecondary": "MuiIconButton-colorSecondary",
-                          "disabled": "Mui-disabled",
-                          "edgeEnd": "MuiIconButton-edgeEnd",
-                          "edgeStart": "MuiIconButton-edgeStart",
-                          "label": "MuiIconButton-label",
-                          "root": "MuiIconButton-root",
-                          "sizeSmall": "MuiIconButton-sizeSmall",
-                        }
-                      }
+                    <WithStyles(ForwardRef(IconButton))
                       data-testid="undefined-delete"
-                      onBlur={[Function]}
                       onClick={[MockFunction]}
-                      onFocus={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseOver={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchStart={[Function]}
-                      title="Remove this file"
                     >
-                      <WithStyles(ForwardRef(ButtonBase))
-                        aria-describedby={null}
-                        centerRipple={true}
-                        className="MuiIconButton-root"
+                      <ForwardRef(IconButton)
+                        classes={
+                          Object {
+                            "colorInherit": "MuiIconButton-colorInherit",
+                            "colorPrimary": "MuiIconButton-colorPrimary",
+                            "colorSecondary": "MuiIconButton-colorSecondary",
+                            "disabled": "Mui-disabled",
+                            "edgeEnd": "MuiIconButton-edgeEnd",
+                            "edgeStart": "MuiIconButton-edgeStart",
+                            "label": "MuiIconButton-label",
+                            "root": "MuiIconButton-root",
+                            "sizeSmall": "MuiIconButton-sizeSmall",
+                          }
+                        }
                         data-testid="undefined-delete"
-                        disabled={false}
-                        focusRipple={true}
-                        onBlur={[Function]}
                         onClick={[MockFunction]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
-                        title="Remove this file"
                       >
-                        <ForwardRef(ButtonBase)
-                          aria-describedby={null}
+                        <WithStyles(ForwardRef(ButtonBase))
                           centerRipple={true}
                           className="MuiIconButton-root"
-                          classes={
-                            Object {
-                              "disabled": "Mui-disabled",
-                              "focusVisible": "Mui-focusVisible",
-                              "root": "MuiButtonBase-root",
-                            }
-                          }
                           data-testid="undefined-delete"
                           disabled={false}
                           focusRipple={true}
-                          onBlur={[Function]}
                           onClick={[MockFunction]}
-                          onFocus={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseOver={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchStart={[Function]}
-                          title="Remove this file"
                         >
-                          <button
-                            aria-describedby={null}
-                            className="MuiButtonBase-root MuiIconButton-root"
+                          <ForwardRef(ButtonBase)
+                            centerRipple={true}
+                            className="MuiIconButton-root"
+                            classes={
+                              Object {
+                                "disabled": "Mui-disabled",
+                                "focusVisible": "Mui-focusVisible",
+                                "root": "MuiButtonBase-root",
+                              }
+                            }
                             data-testid="undefined-delete"
                             disabled={false}
-                            onBlur={[Function]}
+                            focusRipple={true}
                             onClick={[MockFunction]}
-                            onDragLeave={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseOver={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            tabIndex={0}
-                            title="Remove this file"
-                            type="button"
                           >
-                            <span
-                              className="MuiIconButton-label"
+                            <button
+                              className="MuiButtonBase-root MuiIconButton-root"
+                              data-testid="undefined-delete"
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[MockFunction]}
+                              onDragLeave={[Function]}
+                              onFocus={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyUp={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              tabIndex={0}
+                              type="button"
                             >
-                              <ForwardRef>
-                                <WithStyles(ForwardRef(SvgIcon))>
-                                  <ForwardRef(SvgIcon)
-                                    classes={
-                                      Object {
-                                        "colorAction": "MuiSvgIcon-colorAction",
-                                        "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                        "colorError": "MuiSvgIcon-colorError",
-                                        "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                        "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                        "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                        "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                        "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                        "root": "MuiSvgIcon-root",
-                                      }
-                                    }
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      className="MuiSvgIcon-root"
-                                      focusable="false"
-                                      viewBox="0 0 24 24"
-                                    >
-                                      <path
-                                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                      />
-                                    </svg>
-                                  </ForwardRef(SvgIcon)>
-                                </WithStyles(ForwardRef(SvgIcon))>
-                              </ForwardRef>
-                            </span>
-                            <WithStyles(memo)
-                              center={true}
-                            >
-                              <ForwardRef(TouchRipple)
-                                center={true}
-                                classes={
-                                  Object {
-                                    "child": "MuiTouchRipple-child",
-                                    "childLeaving": "MuiTouchRipple-childLeaving",
-                                    "childPulsate": "MuiTouchRipple-childPulsate",
-                                    "ripple": "MuiTouchRipple-ripple",
-                                    "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                    "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                    "root": "MuiTouchRipple-root",
-                                  }
-                                }
+                              <span
+                                className="MuiIconButton-label"
                               >
-                                <span
-                                  className="MuiTouchRipple-root"
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon)
+                                      classes={
+                                        Object {
+                                          "colorAction": "MuiSvgIcon-colorAction",
+                                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                          "colorError": "MuiSvgIcon-colorError",
+                                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                          "root": "MuiSvgIcon-root",
+                                        }
+                                      }
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        className="MuiSvgIcon-root"
+                                        focusable="false"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                                        />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo)
+                                center={true}
+                              >
+                                <ForwardRef(TouchRipple)
+                                  center={true}
+                                  classes={
+                                    Object {
+                                      "child": "MuiTouchRipple-child",
+                                      "childLeaving": "MuiTouchRipple-childLeaving",
+                                      "childPulsate": "MuiTouchRipple-childPulsate",
+                                      "ripple": "MuiTouchRipple-ripple",
+                                      "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                      "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                      "root": "MuiTouchRipple-root",
+                                    }
+                                  }
                                 >
-                                  <TransitionGroup
-                                    childFactory={[Function]}
-                                    component={null}
-                                    exit={true}
-                                  />
-                                </span>
-                              </ForwardRef(TouchRipple)>
-                            </WithStyles(memo)>
-                          </button>
-                        </ForwardRef(ButtonBase)>
-                      </WithStyles(ForwardRef(ButtonBase))>
-                    </ForwardRef(IconButton)>
-                  </WithStyles(ForwardRef(IconButton))>
+                                  <span
+                                    className="MuiTouchRipple-root"
+                                  >
+                                    <TransitionGroup
+                                      childFactory={[Function]}
+                                      component={null}
+                                      exit={true}
+                                    />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </span>
                   <ForwardRef(Popper)
                     anchorEl={
-                      <button
-                        class="MuiButtonBase-root MuiIconButton-root"
-                        data-testid="undefined-delete"
-                        tabindex="0"
+                      <span
+                        class=""
                         title="Remove this file"
-                        type="button"
                       >
-                        <span
-                          class="MuiIconButton-label"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root"
+                          data-testid="undefined-delete"
+                          tabindex="0"
+                          type="button"
                         >
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root"
-                            focusable="false"
-                            viewBox="0 0 24 24"
+                          <span
+                            class="MuiIconButton-label"
                           >
-                            <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                            />
-                          </svg>
-                        </span>
-                        <span
-                          class="MuiTouchRipple-root"
-                        />
-                      </button>
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </span>
                     }
                     className="MuiTooltip-popper"
                     id={null}
@@ -732,12 +711,14 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
   <WithStyles(ForwardRef(Tooltip))
     title="Remove this file"
   >
-    <WithStyles(ForwardRef(IconButton))
-      data-testid="undefined-delete"
-      onClick={[MockFunction]}
-    >
-      <DeleteIcon />
-    </WithStyles(ForwardRef(IconButton))>
+    <span>
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="undefined-delete"
+        onClick={[MockFunction]}
+      >
+        <DeleteIcon />
+      </WithStyles(ForwardRef(IconButton))>
+    </span>
   </WithStyles(ForwardRef(Tooltip))>
 </Fragment>
 `;
@@ -747,13 +728,15 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
   <WithStyles(ForwardRef(Tooltip))
     title="Remove this file"
   >
-    <WithStyles(ForwardRef(IconButton))
-      data-testid="undefined-delete"
-      disabled={true}
-      onClick={[MockFunction]}
-    >
-      <DeleteIcon />
-    </WithStyles(ForwardRef(IconButton))>
+    <span>
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="undefined-delete"
+        disabled={true}
+        onClick={[MockFunction]}
+      >
+        <DeleteIcon />
+      </WithStyles(ForwardRef(IconButton))>
+    </span>
   </WithStyles(ForwardRef(Tooltip))>
 </Fragment>
 `;
@@ -786,12 +769,14 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
   <WithStyles(ForwardRef(Tooltip))
     title="Remove this file"
   >
-    <WithStyles(ForwardRef(IconButton))
-      data-testid="undefined-delete"
-      onClick={[MockFunction]}
-    >
-      <DeleteIcon />
-    </WithStyles(ForwardRef(IconButton))>
+    <span>
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="undefined-delete"
+        onClick={[MockFunction]}
+      >
+        <DeleteIcon />
+      </WithStyles(ForwardRef(IconButton))>
+    </span>
   </WithStyles(ForwardRef(Tooltip))>
 </Fragment>
 `;
