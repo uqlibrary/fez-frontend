@@ -60,7 +60,7 @@ context('Search', () => {
             .contains('Please select a field to search');
         cy.contains('Select a field').click();
         // Select author from the field dropdown
-        cy.contains('#menu-field-type-selector li', 'Author Name').click();
+        cy.contains('#field-type-options li', 'Author Name').click();
         cy.get('button#advancedSearchButton')
             .should('be.disabled')
             .should('have.text', 'Search');
@@ -69,7 +69,7 @@ context('Search', () => {
         // Add a set of collections to search from
         cy.contains('button', 'Add another field').click();
         cy.contains('Select a field').click();
-        cy.contains('#menu-field-type-selector li', 'Collection').click();
+        cy.contains('#field-type-options li', 'Collection').click();
         cy.get('button#advancedSearchButton').should('be.disabled');
         cy.get('[data-testid=rek-ismemberof-input]').click();
         cy.contains(
@@ -98,7 +98,7 @@ context('Search', () => {
 
         cy.get('button#showAdvancedSearchButton').click();
         cy.contains('Select a field').click();
-        cy.contains('#menu-field-type-selector li', 'PID').click();
+        cy.contains('#field-type-options li', 'PID').click();
         cy.get('#rek-pid-helper-text')
             .as('helpText')
             .should('contain', 'This field is required');
