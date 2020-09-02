@@ -2786,6 +2786,17 @@ export default {
                 cancelButtonLabel: 'View record',
                 confirmButtonLabel: 'Edit full record',
             },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Changing Display type is in progress.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Display type has been changed successfully.',
+            },
         },
     },
 };

@@ -1,10 +1,10 @@
 export default {
-    "total": 2,
+    "total": 1,
     "took": 1,
     "per_page": 999,
     "current_page": 1,
     "from": 1,
-    "to": 2,
+    "to": 1,
     "data": [
         {
             "rek_pid": "UQ:603315",
