@@ -46,9 +46,8 @@ export default class ThesisForm extends Component {
                             <Grid item xs={12}>
                                 <Alert
                                     action={this._visitHdrSubmissionPage}
-                                    actionButtonLabel={txt.information.hdrRedirectActionButtonLabel}
-                                    message={txt.information.nonHdrWarningMessage}
-                                    // title={txt.information.hdrRedirectAlertTitle}
+                                    actionButtonLabel={txt.information.actionButtonLabel}
+                                    message={txt.information.message}
                                     type="warning"
                                 />
                             </Grid>
