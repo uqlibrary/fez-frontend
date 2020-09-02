@@ -1464,6 +1464,6 @@ export const ANDS_COLLECTION_TYPE_DATASET = 453616;
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
 
-export const UQDOIPrefix = '10.14264/';
+export const UQ_DOI_PREFIX = '10.14264/';
 
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
