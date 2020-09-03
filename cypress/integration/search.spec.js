@@ -11,7 +11,7 @@ context('Search', () => {
 
     it('Doing a basic search to advanced search', () => {
         // Perform a basic search
-        cy.get('#simpleSearchField')
+        cy.get('#simple-search-input')
             .should(
                 'have.attr',
                 'aria-label',
@@ -21,7 +21,7 @@ context('Search', () => {
             .closest('[class*="MuiFormControl-root"]')
             // .contains('label', searchLocale.searchBoxPlaceholder);
             .contains('label', 'Search eSpace');
-        cy.get('#simpleSearchField').type('cats and dogs{enter}');
+        cy.get('#simple-search-input').type('cats and dogs{enter}');
         cy.get('[data-testid="standard-card-content"]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
         cy.get('.StandardPage > div > div > div:nth-of-type(4) h6').should('contain', 'Refine results');
 
@@ -174,7 +174,7 @@ context('Search', () => {
     //     it('should issue and handle API calls as expected when searching from homepage header', () => {
     //         cy.visit('/');
 
-    //         cy.get('#simpleSearchField')
+    //         cy.get('#simple-search-input')
     //             .type('test1{enter}');
 
     //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
@@ -197,7 +197,7 @@ context('Search', () => {
     //     it('should issue and handle API calls as expected when changing the search query', () => {
     //         cy.visit('/#/records/search');
 
-    //         cy.get('#simpleSearchField')
+    //         cy.get('#simple-search-input')
     //             .type('vaccination{enter}');
 
     //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
