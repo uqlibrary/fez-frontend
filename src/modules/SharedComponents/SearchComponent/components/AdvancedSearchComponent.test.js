@@ -123,8 +123,8 @@ describe('AdvancedSearchComponent', () => {
             onAdvancedSearchRowChange: testFn,
         });
 
-        fireEvent.mouseDown(getByTestId('field-type-selector'));
-        const list = await waitFor(() => getByTestId('menu-field-type-selector'));
+        fireEvent.mouseDown(getByTestId('field-type-select'));
+        const list = await waitFor(() => getByTestId('field-type-options'));
         fireEvent.click(getByText(/any field/i, list));
         expect(testFn).toHaveBeenCalledWith(0, { searchField: 'all', value: '', label: '' });
     });

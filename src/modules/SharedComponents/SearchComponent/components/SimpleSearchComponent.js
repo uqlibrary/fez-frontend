@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -187,19 +187,18 @@ export class SimpleSearchComponent extends PureComponent {
                                     )}
                                     <Grid item xs>
                                         <TextField
+                                            textFieldId="simple-search"
                                             type="search"
                                             autoComplete={'search'}
                                             fullWidth
-                                            id="simpleSearchField"
                                             autoFocus={this.props.autoFocus}
                                             label={false}
                                             placeholder={txt.searchBoxPlaceholder}
-                                            inputProps={ariaLabel}
                                             onChange={this._handleSearchTextChange}
                                             onKeyPress={this._handleSearch}
                                             value={this.props.searchText}
                                             InputProps={{ disableUnderline: true }}
-                                            error={this.searchTextValidationMessage(this.props.searchText)}
+                                            errorText={this.searchTextValidationMessage(this.props.searchText)}
                                         />
                                     </Grid>
                                 </Grid>
@@ -269,8 +268,9 @@ export class SimpleSearchComponent extends PureComponent {
                             <Grid container spacing={2} alignItems={'center'}>
                                 <Grid item xs>
                                     <TextField
+                                        textFieldId="simple-search"
                                         type="search"
-                                        id="simpleSearchField"
+                                        data-testid
                                         fullWidth
                                         label={!this.props.isInHeader && txt.searchBoxPlaceholder}
                                         placeholder={txt.searchBoxHint}
@@ -278,7 +278,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         onChange={this._handleSearchTextChange}
                                         onKeyPress={this._handleSearch}
                                         value={this.props.searchText}
-                                        error={this.searchTextValidationMessage(this.props.searchText)}
+                                        errorText={this.searchTextValidationMessage(this.props.searchText)}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={'auto'}>
@@ -291,6 +291,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         onClick={this._handleSearch}
                                         fullWidth
                                         id="simpleSearchButton"
+                                        data-testid="simple-search-button"
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={'auto'}>
@@ -302,6 +303,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         className="advancedButton"
                                         fullWidth
                                         id="showAdvancedSearchButton"
+                                        data-testid="show-advanced-search"
                                     />
                                 </Grid>
                             </Grid>

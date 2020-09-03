@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
+import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'material-table';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -35,7 +35,12 @@ export const getColumns = classes => {
                     href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_search_parameters.replace('/', '')}`}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
-                    {favouriteSearchList.columns.realLink.cellText}
+                    <span
+                        data-testid={`fvs-search-parameters-${rowData.tableData.id}-link`}
+                        id={`fvs-search-parameters-${rowData.tableData.id}-link`}
+                    >
+                        {favouriteSearchList.columns.realLink.cellText}
+                    </span>
                 </ExternalLink>
             ),
         },
@@ -43,7 +48,11 @@ export const getColumns = classes => {
             title: favouriteSearchList.columns.description.title,
             field: 'fvs_description',
             render: rowData => (
-                <Typography data-testid="fvs-description" id="fvs-description" className={classes.text}>
+                <Typography
+                    data-testid={`fvs-description-${rowData.tableData.id}`}
+                    id={`fvs-description-${rowData.tableData.id}`}
+                    className={classes.text}
+                >
                     {rowData.fvs_description}
                 </Typography>
             ),
@@ -76,7 +85,9 @@ export const getColumns = classes => {
                     href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_alias}`}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
-                    <span className={classes.text}>{rowData.fvs_alias}</span>
+                    <span className={classes.text} data-testid={`fvs-alias-${rowData.tableData.id}-link`}>
+                        {rowData.fvs_alias}
+                    </span>
                 </ExternalLink>
             ),
         },
@@ -84,8 +95,14 @@ export const getColumns = classes => {
             title: favouriteSearchList.columns.alias.title,
             field: 'fvs_alias',
             render: rowData => (
-                <Typography data-testid="fvs-alias" id="fvs-alias">
-                    <span className={classes.text}>{rowData.fvs_alias}</span>
+                <Typography>
+                    <span
+                        className={classes.text}
+                        data-testid={`fvs-alias-${rowData.tableData.id}`}
+                        id={`fvs-alias-${rowData.tableData.id}`}
+                    >
+                        {rowData.fvs_alias}
+                    </span>
                 </Typography>
             ),
             editComponent: props => (
@@ -145,6 +162,26 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                         data-testid={`favourite-search-list-edit-item-${props.data.tableData.id}`}
                     />
                 ),
+                Action: props => {
+                    const { icon: Icon, tooltip, ...restAction } =
+                        (typeof props.action === 'function' && props.action(props.data)) || props.action;
+                    return (
+                        <MTableAction
+                            {...props}
+                            action={{
+                                ...restAction,
+                                tooltip,
+                                icon: () => (
+                                    <Icon
+                                        data-testid={`favourite-search-list-item-${
+                                            props.data.tableData.id
+                                        }-${tooltip.toLowerCase()}`}
+                                    />
+                                ),
+                            }}
+                        />
+                    );
+                },
             }}
             data={data}
             icons={tableIcons}

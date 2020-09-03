@@ -170,7 +170,7 @@ export function addFavouriteSearch(data) {
                 payload: e,
             });
 
-            return Promise.reject(e);
+            return false;
         }
     };
 }

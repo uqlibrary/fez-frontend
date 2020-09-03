@@ -251,12 +251,14 @@ export const AdvancedSearchComponent = ({
                                     disabled={!canAddAnotherField}
                                     onClick={_addAdvancedSearchRow}
                                     id="add-another-search-row"
+                                    data-testid="advanced-search-row-add"
                                     fullWidth
                                 />
                             </Grid>
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     id="reset-advanced-search"
+                                    data-testid="advanced-search-reset"
                                     variant={'contained'}
                                     children={txt.advancedSearch.reset.title}
                                     aria-label={txt.advancedSearch.reset.aria}
@@ -267,6 +269,7 @@ export const AdvancedSearchComponent = ({
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     id="toggle-to-simple-search-mode"
+                                    data-testid="toggle-to-simple-search"
                                     children={txt.advancedSearch.simpleSearch.title}
                                     aria-label={txt.advancedSearch.simpleSearch.aria}
                                     onClick={_toggleSearchMode}
@@ -287,6 +290,7 @@ export const AdvancedSearchComponent = ({
                                     onClick={_handleAdvancedSearch}
                                     disabled={!haveAllAdvancedSearchFieldsValidated(fieldRows)}
                                     id="advancedSearchButton"
+                                    data-testid="advanced-search"
                                 />
                             </Grid>
                         </Grid>

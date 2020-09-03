@@ -1738,6 +1738,7 @@ export default {
                         hint: 'Add a book title',
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a book title to search for',
+                        id: 'rek-book-title',
                     },
                     rek_pid: {
                         order: 9,
@@ -1851,6 +1852,7 @@ export default {
                         multiple: true,
                         validation: ['required'],
                         ariaLabel: 'Select multiple thesis types to search for',
+                        id: 'rek-genre-type',
                     },
                     rek_author_id: {
                         order: 4,
@@ -1861,6 +1863,7 @@ export default {
                         hint: 'Type an author name to search',
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list',
+                        id: 'rek-author-id',
                     },
                     rek_contributor_id: {
                         order: 6,
@@ -1871,6 +1874,7 @@ export default {
                         hint: 'Add a contributor id',
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an contributor ID to select an author from the list',
+                        id: 'rek-contributor-id',
                     },
                     rek_org_unit_name: {
                         order: 15,
@@ -1880,6 +1884,7 @@ export default {
                         type: 'OrgUnitLookup',
                         hint: 'Add a school, centre or institute',
                         validation: ['required'],
+                        id: 'rek-org-unit-name',
                         ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list',
                     },
                     rek_display_type: {
@@ -1890,6 +1895,7 @@ export default {
                         type: null,
                         hint: 'Select document types',
                         validation: [],
+                        id: 'rek-display-type',
                         ariaLabel: 'Select multiple publications types to search on',
                     },
                     facet_year_range: {

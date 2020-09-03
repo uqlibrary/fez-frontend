@@ -132,7 +132,7 @@ const handlers = {
     }),
 };
 
-export default function exportPublicationsReducer(state = initialState, action) {
+export default function favouriteSearchReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

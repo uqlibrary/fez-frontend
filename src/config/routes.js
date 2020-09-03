@@ -165,12 +165,10 @@ export const pathConfig = {
 
 // a duplicate list of routes for
 export const flattedPathConfig = [
-    '/',
     '/admin/add',
     '/admin/collection',
     '/admin/community',
     '/admin/delete',
-    '/admin/doi',
     '/admin/edit',
     '/admin/favourite-search',
     '/admin/masquerade',
