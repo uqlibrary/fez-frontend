@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { useParams } from 'react-router';
@@ -68,10 +68,12 @@ export const ChangeDisplayType = ({
 }) => {
     const { pid: pidParam } = useParams();
     /* istanbul ignore next */
-    useEffect(() => {
+    React.useEffect(() => {
         // Load record if it hasn't
-        !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
-    }, [loadRecordToView, pidParam, record]);
+        if (saveRequesting === null) {
+            !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
+        }
+    }, [loadRecordToView, pidParam, record, saveRequesting]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     /* istanbul ignore next */
