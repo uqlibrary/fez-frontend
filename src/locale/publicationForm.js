@@ -1572,8 +1572,8 @@ export default {
                 title: 'Dataset details',
                 fieldLabels: {
                     typeOfData: {
-                        label: 'Describe type of data',
-                        placeholder: 'Type of data represented in the dataset e.g. excel file, images, video',
+                        label: 'Describe type',
+                        placeholder: 'Type represented in the dataset e.g. excel file, images, video',
                     },
                     softwareRequired: {
                         label: 'Software required',

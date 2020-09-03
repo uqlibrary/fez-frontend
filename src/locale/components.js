@@ -480,8 +480,8 @@ export default {
             field: {
                 form: {
                     locale: {
-                        inputFieldLabel: 'Type of data',
-                        inputFieldHint: 'Type type of data',
+                        inputFieldLabel: 'Type',
+                        inputFieldHint: 'Enter type',
                         addButtonLabel: 'Add',
                         editButtonLabel: 'Update',
                         id: 'type-of-data-input',
@@ -489,12 +489,12 @@ export default {
                 },
                 header: {
                     locale: {
-                        nameColumn: 'Type of data',
-                        reorderColumn: 'Reorder type of data',
-                        deleteAll: 'Remove all type of data',
+                        nameColumn: 'Type',
+                        reorderColumn: 'Reorder type',
+                        deleteAll: 'Remove all types',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
-                            confirmationMessage: 'Are you sure you want to delete all type of data?',
+                            confirmationMessage: 'Are you sure you want to delete all types?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
@@ -502,13 +502,13 @@ export default {
                 },
                 row: {
                     locale: {
-                        moveUpHint: 'Move type of data up the order',
-                        moveDownHint: 'Move type of data down the order',
-                        deleteHint: 'Remove this type of data',
-                        editHint: 'Edit this type of data',
+                        moveUpHint: 'Move type up the order',
+                        moveDownHint: 'Move type down the order',
+                        deleteHint: 'Remove this type',
+                        editHint: 'Edit this type',
                         deleteRecordConfirmation: {
-                            confirmationTitle: 'Delete type of data',
-                            confirmationMessage: 'Are you sure you want to delete this type of data?',
+                            confirmationTitle: 'Delete type',
+                            confirmationMessage: 'Are you sure you want to delete this type?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },

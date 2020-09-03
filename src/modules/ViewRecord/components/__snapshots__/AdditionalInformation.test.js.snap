@@ -31713,7 +31713,7 @@ exports[`Additional Information Component  should render component with data col
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Type of data"
+        key="additional-info-Type"
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
@@ -31731,7 +31731,7 @@ exports[`Additional Information Component  should render component with data col
             data-testid="rek-type-of-data-label"
             variant="body2"
           >
-            Type of data
+            Type
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -34318,7 +34318,7 @@ exports[`Additional Information Component  should render component with data col
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Type of data"
+        key="additional-info-Type"
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
@@ -34336,7 +34336,7 @@ exports[`Additional Information Component  should render component with data col
             data-testid="rek-type-of-data-label"
             variant="body2"
           >
-            Type of data
+            Type
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
