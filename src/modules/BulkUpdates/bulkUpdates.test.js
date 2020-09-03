@@ -1,7 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 import BulkUpdates from './index';
-import { render, WithRedux, AllTheProviders, waitForElementToBeRemoved, act } from 'test-utils';
+import { render, WithRedux, AllTheProviders, waitForElementToBeRemoved } from 'test-utils';
 import * as routes from 'repositories/routes';
 import * as BulkUpdatesActions from 'actions/bulkUpdates';
 

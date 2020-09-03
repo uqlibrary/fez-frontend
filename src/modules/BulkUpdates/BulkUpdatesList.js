@@ -23,62 +23,32 @@ export const getColumns = classes => {
     } = componentsLocale;
     return [
         {
-            title: bulkUpdatesList.columns.started.title,
-            field: 'buj_started',
+            title: bulkUpdatesList.columns.createdAt.title,
+            field: 'buj_created_at',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-started" id="buj-started" className={classes.text}>
-                    {rowData.buj_started}
+                <Typography data-testid="buj-created-at" id="buj-created-at" className={classes.text}>
+                    {rowData.buj_created_at}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.user.title,
-            field: 'buj_user',
+            title: bulkUpdatesList.columns.startedAt.title,
+            field: 'buj_started_at',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-user" id="buj-user" className={classes.text}>
-                    {rowData.buj_user}
+                <Typography data-testid="buj-started-at" id="buj-started-at" className={classes.text}>
+                    {rowData.buj_started_at}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.name.title,
-            field: 'buj_name',
+            title: bulkUpdatesList.columns.finishedAt.title,
+            field: 'buj_finished_at',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="buj-name" id="buj-name" className={classes.text}>
-                    {rowData.buj_name}
-                </Typography>
-            ),
-        },
-        {
-            title: bulkUpdatesList.columns.progress.title,
-            field: 'buj_progress',
-            editable: 'never',
-            render: rowData => (
-                <Typography data-testid="buj-progress" id="buj-progress" className={classes.text}>
-                    {rowData.buj_progress}
-                </Typography>
-            ),
-        },
-        {
-            title: bulkUpdatesList.columns.message.title,
-            field: 'buj_message',
-            editable: 'never',
-            render: rowData => (
-                <Typography data-testid="buj-message" id="buj-message" className={classes.text}>
-                    {rowData.buj_message}
-                </Typography>
-            ),
-        },
-        {
-            title: bulkUpdatesList.columns.lastHeartbeat.title,
-            field: 'buj_last_heartbeat',
-            editable: 'never',
-            render: rowData => (
-                <Typography data-testid="buj-last-heartbeat" id="buj-last-heartbeat" className={classes.text}>
-                    {rowData.buj_last_heartbeat}
+                <Typography data-testid="buj-finished-at" id="buj-finished-at" className={classes.text}>
+                    {rowData.buj_finished_at}
                 </Typography>
             ),
         },
@@ -89,6 +59,36 @@ export const getColumns = classes => {
             render: rowData => (
                 <Typography data-testid="buj-status" id="buj-status" className={classes.text}>
                     {rowData.buj_status}
+                </Typography>
+            ),
+        },
+        {
+            title: bulkUpdatesList.columns.failedRecords.title,
+            field: 'buj_failed_records',
+            editable: 'never',
+            render: rowData => (
+                <Typography data-testid="buj-failed-records" id="buj-failed-records" className={classes.text}>
+                    {rowData.buj_failed_records}
+                </Typography>
+            ),
+        },
+        {
+            title: bulkUpdatesList.columns.processedCount.title,
+            field: 'buj_processed_count',
+            editable: 'never',
+            render: rowData => (
+                <Typography data-testid="buj-processed-count" id="buj-processed-count" className={classes.text}>
+                    {rowData.buj_processed_count}
+                </Typography>
+            ),
+        },
+        {
+            title: bulkUpdatesList.columns.totalCount.title,
+            field: 'buj_total_count',
+            editable: 'never',
+            render: rowData => (
+                <Typography data-testid="buj-total-count" id="buj-total-count" className={classes.text}>
+                    {rowData.buj_total_count}
                 </Typography>
             ),
         },
@@ -108,55 +108,57 @@ export const BulkUpdatesList = ({ list }) => {
     const [data] = React.useState(list);
 
     return (
-        <MaterialTable
-            id="bulk-updates-list"
-            tableRef={materialTableRef}
-            columns={columns.current}
-            components={{
-                Container: props => <Paper {...props} style={{ padding: 16 }} />,
-                Row: props => (
-                    <MTableBodyRow
-                        {...props}
-                        className={classes.text}
-                        id={`bulk-updates-list-item-${props.index}`}
-                        data-testid={`bulk-updates-list-item-${props.index}`}
-                    />
-                ),
-                Action: props => {
-                    const { icon: Icon, tooltip, ...restAction } =
-                        (typeof props.action === 'function' && props.action(props.data)) || props.action;
-                    return (
-                        <MTableAction
+        <div id="bulk-updates-list" data-testid="bulk-updates-list">
+            <MaterialTable
+                tableRef={materialTableRef}
+                columns={columns.current}
+                components={{
+                    Container: props => <Paper {...props} style={{ padding: 16 }} />,
+                    Row: props => (
+                        <MTableBodyRow
                             {...props}
-                            action={{
-                                ...restAction,
-                                tooltip,
-                                icon: () => (
-                                    <Icon
-                                        id={`bulk-updates-list-item-${
-                                            props.data.tableData.id
-                                        }-${tooltip.toLowerCase()}`}
-                                        data-testid={`bulk-updates-list-item-${
-                                            props.data.tableData.id
-                                        }-${tooltip.toLowerCase()}`}
-                                    />
-                                ),
-                            }}
+                            className={classes.text}
+                            id={`bulk-updates-list-item-${props.index}`}
+                            data-testid={`bulk-updates-list-item-${props.index}`}
                         />
-                    );
-                },
-            }}
-            data={data}
-            icons={tableIcons}
-            title={bulkUpdatesList.tableTitle}
-            options={{
-                actionsColumnIndex: -1,
-                grouping: false,
-                draggable: false,
-                paging: false,
-                search: false,
-            }}
-        />
+                    ),
+                    Action: props => {
+                        const { icon: Icon, tooltip, ...restAction } =
+                            (typeof props.action === 'function' && props.action(props.data)) || props.action;
+                        return (
+                            <MTableAction
+                                {...props}
+                                action={{
+                                    ...restAction,
+                                    tooltip,
+                                    icon: () => (
+                                        <Icon
+                                            id={`bulk-updates-list-item-${
+                                                props.data.tableData.id
+                                            }-${tooltip.toLowerCase()}`}
+                                            data-testid={`bulk-updates-list-item-${
+                                                props.data.tableData.id
+                                            }-${tooltip.toLowerCase()}`}
+                                        />
+                                    ),
+                                }}
+                            />
+                        );
+                    },
+                }}
+                data={data}
+                icons={tableIcons}
+                title={bulkUpdatesList.tableTitle}
+                options={{
+                    actionsColumnIndex: -1,
+                    grouping: false,
+                    draggable: false,
+                    paging: false,
+                    search: false,
+                    toolbar: false,
+                }}
+            />
+        </div>
     );
 };
 

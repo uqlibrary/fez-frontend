@@ -2725,26 +2725,41 @@ export default {
         bulkUpdatesList: {
             tableTitle: '',
             columns: {
-                started: {
-                    title: 'Started',
+                startedAt: {
+                    title: 'Started at',
                 },
-                user: {
-                    title: 'User',
+                createdAt: {
+                    title: 'Created at',
                 },
-                name: {
-                    title: 'Name',
+                finishedAt: {
+                    title: 'Finished at',
                 },
-                progress: {
-                    title: 'Progress',
-                },
-                message: {
-                    title: 'Message',
-                },
-                lastHeartbeat: {
-                    title: 'Last Heartbeat',
-                },
+                // user: {
+                //     title: 'User',
+                // },
+                // name: {
+                //     title: 'Name',
+                // },
+                // progress: {
+                //     title: 'Progress',
+                // },
+                // message: {
+                //     title: 'Message',
+                // },
+                // lastHeartbeat: {
+                //     title: 'Last Heartbeat',
+                // },
                 status: {
                     title: 'Status',
+                },
+                failedRecords: {
+                    title: 'Failed records',
+                },
+                processedCount: {
+                    title: 'Processed count',
+                },
+                totalCount: {
+                    title: 'Total count',
                 },
             },
         },
