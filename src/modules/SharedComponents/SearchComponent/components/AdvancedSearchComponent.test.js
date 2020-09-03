@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -18,7 +18,13 @@ function setup(testProps = {}) {
         onAdvancedSearchRowChange: jest.fn(),
         ...testProps,
     };
-    return rtlRender(<AdvancedSearchComponent {...props} />);
+    return render(
+        <WithRouter>
+            <WithReduxStore>
+                <AdvancedSearchComponent {...props} />
+            </WithReduxStore>
+        </WithRouter>,
+    );
 }
 
 describe('AdvancedSearchComponent', () => {
@@ -117,8 +123,8 @@ describe('AdvancedSearchComponent', () => {
             onAdvancedSearchRowChange: testFn,
         });
 
-        fireEvent.mouseDown(getByTestId('field-type-selector'));
-        const list = await waitFor(() => getByTestId('menu-field-type-selector'));
+        fireEvent.mouseDown(getByTestId('field-type-select'));
+        const list = await waitFor(() => getByTestId('field-type-options'));
         fireEvent.click(getByText(/any field/i, list));
         expect(testFn).toHaveBeenCalledWith(0, { searchField: 'all', value: '', label: '' });
     });

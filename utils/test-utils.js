@@ -49,11 +49,7 @@ export const renderWithRouter = (
     );
 };
 
-export const RenderWithRouter = ({
-    children,
-    route = '/',
-    history = createMemoryHistory({ initialEntries: [route] }),
-}) => (
+export const WithRouter = ({ children, route = '/', history = createMemoryHistory({ initialEntries: [route] }) }) => (
     <AllTheProviders>
         <Router history={history}>{children}</Router>
     </AllTheProviders>
@@ -82,8 +78,10 @@ export const withRedux = (initialState = Immutable.Map()) => WrappedComponent =>
 };
 
 // eslint-disable-next-line react/prop-types
-export const WithRedux = ({ initialState = Immutable.Map(), children }) => (
-    <Provider store={getStore(initialState)}>{children}</Provider>
+export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => (
+    <Provider store={getStore(initialState)}>
+        <AllTheProviders>{children}</AllTheProviders>
+    </Provider>
 );
 
 module.exports = {
@@ -94,6 +92,6 @@ module.exports = {
     renderWithRedux,
     withRedux,
     withRouter,
-    WithRedux,
-    RenderWithRouter,
+    WithReduxStore,
+    WithRouter,
 };
