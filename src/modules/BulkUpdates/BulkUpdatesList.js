@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
+import MaterialTable, { MTableBodyRow, MTableAction } from 'material-table';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -24,71 +24,71 @@ export const getColumns = classes => {
     return [
         {
             title: bulkUpdatesList.columns.started.title,
-            field: 'bul_started',
+            field: 'buj_started',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="bul-started" id="bul-started" className={classes.text}>
-                    {rowData.bul_started}
+                <Typography data-testid="buj-started" id="buj-started" className={classes.text}>
+                    {rowData.buj_started}
                 </Typography>
             ),
         },
         {
             title: bulkUpdatesList.columns.user.title,
-            field: 'bul_user',
+            field: 'buj_user',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="bul-user" id="bul-user" className={classes.text}>
-                    {rowData.bul_user}
+                <Typography data-testid="buj-user" id="buj-user" className={classes.text}>
+                    {rowData.buj_user}
                 </Typography>
             ),
         },
         {
             title: bulkUpdatesList.columns.name.title,
-            field: 'bul_name',
+            field: 'buj_name',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="bul-name" id="bul-name" className={classes.text}>
-                    {rowData.bul_name}
+                <Typography data-testid="buj-name" id="buj-name" className={classes.text}>
+                    {rowData.buj_name}
                 </Typography>
             ),
         },
         {
             title: bulkUpdatesList.columns.progress.title,
-            field: 'bul_progress',
+            field: 'buj_progress',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="bul-progress" id="bul-progress" className={classes.text}>
-                    {rowData.bul_progress}
+                <Typography data-testid="buj-progress" id="buj-progress" className={classes.text}>
+                    {rowData.buj_progress}
                 </Typography>
             ),
         },
         {
             title: bulkUpdatesList.columns.message.title,
-            field: 'bul_message',
+            field: 'buj_message',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="bul-message" id="bul-message" className={classes.text}>
-                    {rowData.bul_message}
+                <Typography data-testid="buj-message" id="buj-message" className={classes.text}>
+                    {rowData.buj_message}
                 </Typography>
             ),
         },
         {
             title: bulkUpdatesList.columns.lastHeartbeat.title,
-            field: 'bul_last_heartbeat',
+            field: 'buj_last_heartbeat',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="bul-last-heartbeat" id="bul-last-heartbeat" className={classes.text}>
-                    {rowData.bul_last_heartbeat}
+                <Typography data-testid="buj-last-heartbeat" id="buj-last-heartbeat" className={classes.text}>
+                    {rowData.buj_last_heartbeat}
                 </Typography>
             ),
         },
         {
             title: bulkUpdatesList.columns.status.title,
-            field: 'bul_status',
+            field: 'buj_status',
             editable: 'never',
             render: rowData => (
-                <Typography data-testid="bul-status" id="bul-status" className={classes.text}>
-                    {rowData.bul_status}
+                <Typography data-testid="buj-status" id="buj-status" className={classes.text}>
+                    {rowData.buj_status}
                 </Typography>
             ),
         },
@@ -122,6 +122,29 @@ export const BulkUpdatesList = ({ list }) => {
                         data-testid={`bulk-updates-list-item-${props.index}`}
                     />
                 ),
+                Action: props => {
+                    const { icon: Icon, tooltip, ...restAction } =
+                        (typeof props.action === 'function' && props.action(props.data)) || props.action;
+                    return (
+                        <MTableAction
+                            {...props}
+                            action={{
+                                ...restAction,
+                                tooltip,
+                                icon: () => (
+                                    <Icon
+                                        id={`bulk-updates-list-item-${
+                                            props.data.tableData.id
+                                        }-${tooltip.toLowerCase()}`}
+                                        data-testid={`bulk-updates-list-item-${
+                                            props.data.tableData.id
+                                        }-${tooltip.toLowerCase()}`}
+                                    />
+                                ),
+                            }}
+                        />
+                    );
+                },
             }}
             data={data}
             icons={tableIcons}
