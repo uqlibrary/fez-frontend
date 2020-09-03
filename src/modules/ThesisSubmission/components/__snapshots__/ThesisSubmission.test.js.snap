@@ -1240,7 +1240,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
         allowDismiss={false}
         customIcon={null}
         customType={null}
-        disableAlertClick={false}
+        disableAlertClick={true}
         dismissTitle="Click to dismiss this alert"
         message={
           Array [

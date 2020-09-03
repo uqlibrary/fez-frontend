@@ -13180,6 +13180,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         >
                                                           <WithStyles(ForwardRef(Button))
                                                             className="action alert-button"
+                                                            disabled={false}
                                                             fullWidth={true}
                                                             id="action-button"
                                                             onClick={[Function]}
@@ -13220,6 +13221,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                   "textSizeSmall": "MuiButton-textSizeSmall",
                                                                 }
                                                               }
+                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="action-button"
                                                               onClick={[Function]}
