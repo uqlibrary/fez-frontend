@@ -51,4 +51,11 @@ describe('Component TopCitedPublications', () => {
         wrapper.instance().handleTabChange(null, test);
         expect(wrapper.state().topCitedTab).toBe(test);
     });
+
+    it('should select first loaded tab as default if preferred has not loaded', () => {
+        const wrapper = setup({
+            topCitedPublicationsList: [{ key: 'test', order: 1 }],
+        });
+        expect(wrapper.state().topCitedTab).toBe('test');
+    });
 });
