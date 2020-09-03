@@ -8,9 +8,8 @@ import { routes } from 'config';
 
 const mapStateToProps = state => {
     return {
+        authorDetails: state.get('accountReducer').authorDetails || {},
         accountLoading: state.get('accountReducer').accountLoading,
-        ...state.get('accountReducer'),
-        authorDetails: { ...state.get('accountReducer').authorDetails },
         ...state.get('publicationsReducer').mine,
         ...state.get('exportPublicationsReducer'),
         localePages: locale.pages.myResearch,
