@@ -79,6 +79,7 @@ export const ThesisSubmission = ({
     handleSubmit,
     isHdrThesis,
     isSessionValid,
+    isUploadInProgress,
     newRecord,
     newRecordFileUploadingOrIssueError,
     retryUpload,
@@ -146,7 +147,9 @@ export const ThesisSubmission = ({
                                     author,
                                     retries < THESIS_UPLOAD_RETRIES,
                                 )}
+                                disableAlertClick
                                 action={(retries < THESIS_UPLOAD_RETRIES && _retryUpload) || undefined}
+                                showLoader={isUploadInProgress}
                             />
                         </Grid>
                     </Grid>
@@ -365,6 +368,7 @@ ThesisSubmission.propTypes = {
     handleSubmit: PropTypes.func,
     isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
     isSessionValid: PropTypes.bool,
+    isUploadInProgress: PropTypes.bool,
     newRecord: PropTypes.object,
     newRecordFileUploadingOrIssueError: PropTypes.bool,
     retryUpload: PropTypes.func,

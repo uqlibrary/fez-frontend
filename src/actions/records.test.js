@@ -128,6 +128,7 @@ describe('Record action creators', () => {
                 actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@test.txt`,
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.CREATE_RECORD_SUCCESS,
@@ -537,6 +538,7 @@ describe('Record action creators', () => {
                 actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@Test.png`,
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@Test.png`,
             ];
@@ -862,6 +864,7 @@ describe('Record action creators', () => {
                 actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@test.txt`,
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@test.txt`,
                 actions.ADMIN_CREATE_RECORD_SUCCESS,
