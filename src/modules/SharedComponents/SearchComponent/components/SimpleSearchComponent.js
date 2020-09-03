@@ -192,7 +192,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             autoComplete={'search'}
                                             fullWidth
                                             autoFocus={this.props.autoFocus}
-                                            label={false}
+                                            label={''}
                                             placeholder={txt.searchBoxPlaceholder}
                                             onChange={this._handleSearchTextChange}
                                             onKeyPress={this._handleSearch}
@@ -246,8 +246,9 @@ export class SimpleSearchComponent extends PureComponent {
                                                     className={classes.mobileSearchInput}
                                                     type="search"
                                                     id="mobileSearchField"
+                                                    textFieldId="mobile-search"
                                                     fullWidth
-                                                    label={false}
+                                                    label={''}
                                                     placeholder={txt.searchBoxPlaceholder}
                                                     inputProps={ariaLabel}
                                                     onChange={this._handleSearchTextChange}
@@ -272,7 +273,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         type="search"
                                         data-testid
                                         fullWidth
-                                        label={!this.props.isInHeader && txt.searchBoxPlaceholder}
+                                        label={txt.searchBoxPlaceholder}
                                         placeholder={txt.searchBoxHint}
                                         inputProps={ariaLabel}
                                         onChange={this._handleSearchTextChange}
