@@ -22,13 +22,13 @@ exports[`ThesisForm  should render component 1`] = `
         >
           <Alert
             action={[Function]}
-            actionButtonLabel="Visit now"
+            actionButtonLabel="Upload your thesis"
             allowDismiss={false}
             customIcon={null}
             customType={null}
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
-            message="If you are trying to submit your UQ HDR thesis, please use the HDR submission form"
+            message="For HDR thesis submissions, click"
             showLoader={false}
             type="warning"
             wiggle={null}

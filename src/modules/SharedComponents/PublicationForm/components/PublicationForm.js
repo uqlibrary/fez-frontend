@@ -171,9 +171,8 @@ export default class PublicationForm extends Component {
                                 <StandardCard title={txt.thesis.information.title} help={txt.thesis.information.help}>
                                     <Alert
                                         action={this._visitHdrSubmissionPage}
-                                        actionButtonLabel={txt.thesis.information.hdrRedirectActionButtonLabel}
-                                        message={txt.thesis.information.hdrRedirectMessage}
-                                        title={txt.thesis.information.hdrRedirectAlertTitle}
+                                        actionButtonLabel={txt.thesis.information.actionButtonLabel}
+                                        message={txt.thesis.information.message}
                                         type="info"
                                     />
                                 </StandardCard>

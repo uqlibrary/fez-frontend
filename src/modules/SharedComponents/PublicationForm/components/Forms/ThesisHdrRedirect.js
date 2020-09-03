@@ -31,9 +31,9 @@ export default class ThesisHdrRedirect extends Component {
                         <Grid container spacing={2}>
                             <Alert
                                 action={this._handleAction}
-                                actionButtonLabel={txt.information.hdrRedirectActionButtonLabel}
-                                message={txt.information.hdrRedirectMessage}
-                                title={txt.information.hdrRedirectAlertTitle}
+                                actionButtonLabel={txt.information.actionButtonLabel}
+                                message={txt.information.message}
+                                title={txt.information.title}
                                 type="info"
                             />
                         </Grid>
