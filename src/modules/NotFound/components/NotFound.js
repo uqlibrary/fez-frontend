@@ -20,9 +20,10 @@ export const NotFound = () => {
 
     const isValidRoute = flattedPathConfig.indexOf(location.pathname) >= 0;
     const isValidFileRoute = fileRegexConfig.test(location.pathname);
+    const hasNoSlash = location.pathname.slice(1).indexOf('/') === -1;
 
     React.useEffect(() => {
-        if (!!account && !isValidRoute && !isValidFileRoute && !existingAlias) {
+        if (!!account && !isValidRoute && !isValidFileRoute && hasNoSlash && !existingAlias) {
             dispatch(getFavouriteSearchAlias({ fvs_alias: location.pathname.slice(1) }));
         }
 

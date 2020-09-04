@@ -96,6 +96,30 @@ describe('NotFound page component', () => {
         done();
     });
 
+    it('should render not found page for path containing more than one slash', async done => {
+        useLocationHook.mockImplementation(() => ({ pathname: '/abcd/test.pdf' }));
+        useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
+
+        const { getByText } = setup();
+
+        await waitFor(() => getByText('Page not found'));
+
+        expect(getByText('Page not found')).toBeInTheDocument();
+        expect(getByText('The requested page could not be found.')).toBeInTheDocument();
+        expect(getByText("Sorry about that, but here's what you can do next:")).toBeInTheDocument();
+        expect(
+            getByText('Try re-typing the address, checking for spelling, capitalisation and/or punctuation.'),
+        ).toBeInTheDocument();
+        expect(getByText('Start again at the home page.')).toBeInTheDocument();
+        expect(
+            getByText('If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.'),
+        ).toBeInTheDocument();
+
+        expect(getFavouriteSearchAlias).not.toBeCalled();
+
+        done();
+    });
+
     it('should redirect to records search page if alias found', async done => {
         mockApi.onGet(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 'abcd' }).apiUrl).reply(200, {
             data: { fvs_id: 1, fvs_alias: 'abcd', fvs_search_parameters: '/records/search?test=parameters' },
