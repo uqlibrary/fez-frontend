@@ -1,4 +1,4 @@
-import { PublicationsListSorting } from './PublicationsListSorting';
+import PublicationsListSorting from './PublicationsListSorting';
 
 jest.mock('locale', () => ({
     locale: {
