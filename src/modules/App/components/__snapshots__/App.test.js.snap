@@ -189,7 +189,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -797,7 +797,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -1637,7 +1637,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -2295,7 +2295,7 @@ exports[`Application component should not show orcid alert for a student without
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -2683,7 +2683,7 @@ exports[`Application component should redirect to login page with correct return
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -3287,7 +3287,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -4131,7 +4131,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -4814,7 +4814,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -5480,7 +5480,7 @@ exports[`Application component should render app for account with author account
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -6395,7 +6395,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -7428,7 +7428,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -8083,7 +8083,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -8103,7 +8103,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -8121,19 +8121,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -8148,7 +8148,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -8162,14 +8162,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_34"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_35"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -8182,7 +8182,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_35"
+            key="route_36"
             pageTitle="Page not found"
           />
         </Switch>
@@ -8565,7 +8565,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -9634,7 +9634,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -10994,7 +10994,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -12318,7 +12318,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -13449,7 +13449,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -14202,7 +14202,7 @@ exports[`Application component should render application with routing for the us
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -14506,7 +14506,7 @@ exports[`Application component should render for anon user 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -14872,7 +14872,7 @@ exports[`Application component should render thesis submission for HDR without m
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -15227,7 +15227,7 @@ exports[`Application component should show orcid alert for a student without an 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace
+                  UQ eSpace 
                 </a>
               </WithStyles(ForwardRef(Typography))>
             </WithStyles(ForwardRef(Grid))>
@@ -18282,7 +18282,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       }
                                                                       title="Click to return to the eSpace home page"
                                                                     >
-                                                                      UQ eSpace
+                                                                      UQ eSpace 
                                                                     </a>
                                                                   </h1>
                                                                 </ForwardRef(Typography)>

@@ -686,6 +686,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -1591,6 +1592,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -2574,6 +2576,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -3557,6 +3560,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -4279,6 +4283,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -5001,6 +5006,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -5984,6 +5990,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -6967,6 +6974,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -7950,6 +7958,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -8861,6 +8870,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -9766,6 +9776,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
         onCancelAction={[Function]}
         onClose={[Function]}
         showAlternateActionButton={false}
+        showInputForm={false}
       />
       <WithStyles(ForwardRef(Grid))
         item={true}
