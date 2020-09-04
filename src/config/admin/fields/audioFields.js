@@ -30,7 +30,7 @@ export default {
                 ['rek_description'],
                 ['fez_record_search_key_type_of_data'],
                 ['fez_record_search_key_acknowledgements'],
-                ['fez_record_search_key_length', 'rek_genre'],
+                ['fez_record_search_key_length'],
                 ['fez_record_search_key_original_format'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],

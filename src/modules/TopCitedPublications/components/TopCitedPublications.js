@@ -52,7 +52,7 @@ export class TopCitedPublicationsClass extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            topCitedTab: 'altmetric',
+            tabClicked: false,
         };
     }
 
@@ -65,6 +65,7 @@ export class TopCitedPublicationsClass extends PureComponent {
     handleTabChange = (event, value) => {
         this.setState({
             topCitedTab: value,
+            tabClicked: true,
         });
     };
 
@@ -86,6 +87,19 @@ export class TopCitedPublicationsClass extends PureComponent {
         const reorderedItems = this.props.topCitedPublicationsList.sort(
             (source1, source2) => txt[source1.key].order - txt[source2.key].order,
         );
+
+        if (!this.state.tabClicked) {
+            reorderedItems.forEach(item => {
+                if (item.key === 'altmetric') {
+                    this.state.topCitedTab = 'altmetric';
+                }
+            });
+
+            if (!this.state.topCitedTab && reorderedItems.length > 0) {
+                this.state.topCitedTab = reorderedItems[0].key;
+            }
+        }
+
         return (
             <React.Fragment>
                 {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0 ? (

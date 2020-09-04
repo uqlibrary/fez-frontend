@@ -253,7 +253,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
             autoComplete="search"
             errorText={null}
             fullWidth={true}
-            label={false}
+            label=""
             onChange={[Function]}
             onKeyPress={[Function]}
             placeholder="Search eSpace"
