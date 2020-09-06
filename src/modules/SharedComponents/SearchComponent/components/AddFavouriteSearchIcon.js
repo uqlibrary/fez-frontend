@@ -72,7 +72,7 @@ export const AddFavouriteSearchIcon = () => {
                     )}
                 />
             )}
-            {!!publicationsListLoaded && !favouriteSearchAddSuccess && (
+            {!!publicationsListLoaded && !favouriteSearchAddSuccess && !redirectedFromNotFound && (
                 <Tooltip title={txt.favouriteSearchHint}>
                     <span>
                         <IconButton
@@ -87,7 +87,11 @@ export const AddFavouriteSearchIcon = () => {
             )}
             {((!!publicationsListLoaded && favouriteSearchAddSuccess) || redirectedFromNotFound) && (
                 <Tooltip title={txt.favouriteSearchSaved}>
-                    <StarIcon id="favourite-search-saved" data-testid="favourite-search-saved" color="primary" />
+                    <span>
+                        <IconButton id="favourite-search-saved" data-testid="favourite-search-saved" disabled>
+                            <StarIcon color="primary" />
+                        </IconButton>
+                    </span>
                 </Tooltip>
             )}
         </div>
