@@ -2175,6 +2175,11 @@ export default {
                         placeholder: 'Select a document type',
                         ariaLabel: 'Select a document type',
                     },
+                    subType: {
+                        label: 'Select a document subtype',
+                        placeholder: 'Select a document subtype',
+                        ariaLabel: 'Select a document subtype',
+                    },
                     directory: {
                         label: 'Select folder where CSV and datastream files are located',
                         placeholder: 'Select folder where CSV and datastream files are located',
