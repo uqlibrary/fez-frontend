@@ -9,6 +9,8 @@ import BatchImport, { FORM_NAME } from '../components/BatchImport';
 
 import * as actions from 'actions';
 import { FormErrorsContext } from 'context';
+import { PUBLICATION_TYPE_DESIGN } from 'config/general';
+import { publicationTypes } from 'config';
 
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
@@ -49,9 +51,14 @@ BatchImportContainer = reduxForm({
 const mapStateToProps = state => {
     const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
     const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
+    const isDesignType = formValues.get('doc_type_id') === PUBLICATION_TYPE_DESIGN;
+
+    const designSubtypes = isDesignType ? publicationTypes()[PUBLICATION_TYPE_DESIGN].subtypes : null;
 
     return {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        isDesignType,
+        designSubtypes,
         formErrors,
         formValues,
     };
