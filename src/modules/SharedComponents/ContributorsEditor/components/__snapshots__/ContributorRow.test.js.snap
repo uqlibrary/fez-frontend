@@ -17,6 +17,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -148,6 +149,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -279,6 +281,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
@@ -381,6 +384,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
@@ -483,6 +487,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -662,6 +667,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -765,6 +771,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -868,6 +875,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -999,6 +1007,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -1103,6 +1112,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -1207,6 +1217,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (test) to assign it to you"
@@ -1313,6 +1324,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (test) to assign it to you"
@@ -1419,6 +1431,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
@@ -1545,6 +1558,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (undefined) to assign it to you"
@@ -1651,6 +1665,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (Test) to assign it to you"
@@ -1757,6 +1772,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     onAction={[Function]}
     onClose={[Function]}
     showAlternateActionButton={false}
+    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label=""

@@ -155,7 +155,7 @@ export const DOCUMENT_TYPES_LOOKUP = {
     [PUBLICATION_TYPE_WORKING_PAPER]: DOCUMENT_TYPE_WORKING_PAPER,
 };
 
-export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
+export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 2000;
 
 export const NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK = 'Creative Work - Design/Architectural';
 export const NTRO_SUBTYPE_CW_TEXTUAL_WORK = 'Creative Work - Textual';

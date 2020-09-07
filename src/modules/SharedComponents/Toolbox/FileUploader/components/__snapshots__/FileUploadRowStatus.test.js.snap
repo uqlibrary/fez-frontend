@@ -159,6 +159,11 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {

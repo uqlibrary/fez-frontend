@@ -55,8 +55,13 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -397,9 +402,16 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -651,8 +663,13 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -1229,9 +1246,16 @@ exports[`Application component should determine if it has incomplete works from 
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -1479,8 +1503,13 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2057,9 +2086,16 @@ exports[`Application component should determine if it has incomplete works from 
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -2125,8 +2161,13 @@ exports[`Application component should not show orcid alert for a student without
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2433,9 +2474,16 @@ exports[`Application component should not show orcid alert for a student without
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -2501,8 +2549,13 @@ exports[`Application component should redirect to login page with correct return
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2843,9 +2896,16 @@ exports[`Application component should redirect to login page with correct return
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -3093,8 +3153,13 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -3675,9 +3740,16 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -3925,8 +3997,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -4524,9 +4601,16 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -5262,8 +5346,13 @@ exports[`Application component should render app for account with author account
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -5915,9 +6004,16 @@ exports[`Application component should render app for account with author account
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -6165,8 +6261,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -6749,9 +6850,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -7076,6 +7184,20 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
           "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
@@ -7172,8 +7294,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -7421,6 +7548,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -7904,6 +8035,25 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_26"
             pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
@@ -7922,7 +8072,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_26"
+            key="route_27"
             pageTitle="Bulk updates"
             path="/admin/bulk-updates"
           />
@@ -7933,7 +8083,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -7953,7 +8103,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -7971,19 +8121,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -7998,7 +8148,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -8012,21 +8162,28 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_34"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_35"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_35"
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            key="route_36"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -8274,8 +8431,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -8894,9 +9056,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -9221,6 +9390,20 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
           "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
@@ -9317,8 +9500,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -9566,6 +9754,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -10085,6 +10277,25 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_26"
             pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
@@ -10103,7 +10314,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_26"
+            key="route_27"
             pageTitle="Bulk updates"
             path="/admin/bulk-updates"
           />
@@ -10114,7 +10325,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -10134,7 +10345,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -10152,19 +10363,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -10179,7 +10390,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -10193,21 +10404,28 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_34"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_35"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_35"
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            key="route_36"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -10532,6 +10750,20 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
           "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
@@ -10628,8 +10860,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -10877,6 +11114,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -11360,6 +11601,25 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_26"
             pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
@@ -11378,7 +11638,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_26"
+            key="route_27"
             pageTitle="Bulk updates"
             path="/admin/bulk-updates"
           />
@@ -11389,7 +11649,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -11409,7 +11669,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -11427,19 +11687,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -11454,7 +11714,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -11468,21 +11728,28 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_34"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_35"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_35"
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            key="route_36"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -11807,6 +12074,20 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
           "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
@@ -11903,8 +12184,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -12152,6 +12438,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -12671,6 +12961,25 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_26"
             pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
@@ -12689,7 +12998,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_26"
+            key="route_27"
             pageTitle="Bulk updates"
             path="/admin/bulk-updates"
           />
@@ -12700,7 +13009,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -12720,7 +13029,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -12738,19 +13047,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -12765,7 +13074,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
@@ -12779,21 +13088,28 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_34"
             path="/view_new/:pid(UQ:[a-z0-9]+)"
             regExPath="/view_new/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_35"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_35"
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            key="route_36"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -13041,8 +13357,13 @@ exports[`Application component should render app for account with fez author wit
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -13490,9 +13811,16 @@ exports[`Application component should render app for account with fez author wit
             path="/records/search"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -13740,8 +14068,13 @@ exports[`Application component should render application with routing for the us
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -14039,8 +14372,13 @@ exports[`Application component should render for anon user 1`] = `
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -14345,9 +14683,16 @@ exports[`Application component should render for anon user 1`] = `
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -14748,8 +15093,13 @@ exports[`Application component should show orcid alert for a student without an 
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -15083,9 +15433,16 @@ exports[`Application component should show orcid alert for a student without an 
             path="/dashboard"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -15350,6 +15707,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -16143,8 +16505,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/records/search",
                             },
                             Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_ctor": [Function],
+                                "_result": null,
+                                "_status": -1,
+                              },
                               "pageTitle": "Page not found",
-                              "render": [Function],
                             },
                           ]
                         }
@@ -16428,8 +16795,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/records/search",
                               },
                               Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_ctor": [Function],
+                                  "_result": null,
+                                  "_status": -1,
+                                },
                                 "pageTitle": "Page not found",
-                                "render": [Function],
                               },
                             ]
                           }
@@ -16714,8 +17086,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   "path": "/records/search",
                                 },
                                 Object {
+                                  "component": Object {
+                                    "$$typeof": Symbol(react.lazy),
+                                    "_ctor": [Function],
+                                    "_result": null,
+                                    "_status": -1,
+                                  },
                                   "pageTitle": "Page not found",
-                                  "render": [Function],
                                 },
                               ]
                             }
@@ -18100,9 +18477,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       <SearchComponent
                                                         actions={
                                                           Object {
+                                                            "addFavouriteSearch": [Function],
                                                             "adminCreate": [Function],
                                                             "adminReset": [Function],
                                                             "adminUpdate": [Function],
+                                                            "checkForExistingFavouriteSearchAlias": [Function],
                                                             "checkSession": [Function],
                                                             "claimPublication": [Function],
                                                             "clearAuthorsSuggestions": [Function],
@@ -18124,6 +18503,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "createNewRecord": [Function],
                                                             "createSearchPromise": [Function],
                                                             "deleteAttachedFile": [Function],
+                                                            "deleteFavouriteSearchListItem": [Function],
                                                             "deleteRecord": [Function],
                                                             "dismissAppAlert": [Function],
                                                             "exportAuthorPublications": [Function],
@@ -18132,6 +18512,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "fixRecord": [Function],
                                                             "getBatchImportDirectories": [Function],
                                                             "getCollectionsListAPI": [Function],
+                                                            "getFavouriteSearchAlias": [Function],
                                                             "getSearchLookupApi": [Function],
                                                             "getSherpaFromIssn": [Function],
                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -18144,6 +18525,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadBulkUpdatesList": [Function],
                                                             "loadCollectionsList": [Function],
                                                             "loadCurrentAccount": [Function],
+                                                            "loadFavouriteSearchList": [Function],
                                                             "loadFullRecordToClaim": [Function],
                                                             "loadNewsFeed": [Function],
                                                             "loadOrcidSyncStatus": [Function],
@@ -18180,6 +18562,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                             "updateDoi": [Function],
+                                                            "updateFavouriteSearchListItem": [Function],
                                                             "updateIncompleteRecord": [Function],
                                                           }
                                                         }
@@ -18339,6 +18722,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       "textOverflow": "ellipsis",
                                                                       "whiteSpace": "nowrap",
                                                                       "width": "100%",
+                                                                    },
+                                                                  },
+                                                                  "MuiIconButton": Object {
+                                                                    "colorInherit": Object {
+                                                                      "color": "none",
                                                                     },
                                                                   },
                                                                   "MuiMenuItem": Object {
@@ -19317,6 +19705,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "textOverflow": "ellipsis",
                                     "whiteSpace": "nowrap",
                                     "width": "100%",
+                                  },
+                                },
+                                "MuiIconButton": Object {
+                                  "colorInherit": Object {
+                                    "color": "none",
                                   },
                                 },
                                 "MuiMenuItem": Object {
@@ -20409,9 +20802,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           <AppAlert
                             actions={
                               Object {
+                                "addFavouriteSearch": [Function],
                                 "adminCreate": [Function],
                                 "adminReset": [Function],
                                 "adminUpdate": [Function],
+                                "checkForExistingFavouriteSearchAlias": [Function],
                                 "checkSession": [Function],
                                 "claimPublication": [Function],
                                 "clearAuthorsSuggestions": [Function],
@@ -20433,6 +20828,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "createNewRecord": [Function],
                                 "createSearchPromise": [Function],
                                 "deleteAttachedFile": [Function],
+                                "deleteFavouriteSearchListItem": [Function],
                                 "deleteRecord": [Function],
                                 "dismissAppAlert": [Function],
                                 "exportAuthorPublications": [Function],
@@ -20441,6 +20837,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "fixRecord": [Function],
                                 "getBatchImportDirectories": [Function],
                                 "getCollectionsListAPI": [Function],
+                                "getFavouriteSearchAlias": [Function],
                                 "getSearchLookupApi": [Function],
                                 "getSherpaFromIssn": [Function],
                                 "getThirdPartyLookupApiUrl": [Function],
@@ -20453,6 +20850,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadBulkUpdatesList": [Function],
                                 "loadCollectionsList": [Function],
                                 "loadCurrentAccount": [Function],
+                                "loadFavouriteSearchList": [Function],
                                 "loadFullRecordToClaim": [Function],
                                 "loadNewsFeed": [Function],
                                 "loadOrcidSyncStatus": [Function],
@@ -20489,6 +20887,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "updateCommunity": [Function],
                                 "updateCurrentAuthor": [Function],
                                 "updateDoi": [Function],
+                                "updateFavouriteSearchListItem": [Function],
                                 "updateIncompleteRecord": [Function],
                               }
                             }
@@ -20730,6 +21129,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                               "textOverflow": "ellipsis",
                                               "whiteSpace": "nowrap",
                                               "width": "100%",
+                                            },
+                                          },
+                                          "MuiIconButton": Object {
+                                            "colorInherit": Object {
+                                              "color": "none",
                                             },
                                           },
                                           "MuiMenuItem": Object {
@@ -21090,6 +21494,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                     "textOverflow": "ellipsis",
                                                     "whiteSpace": "nowrap",
                                                     "width": "100%",
+                                                  },
+                                                },
+                                                "MuiIconButton": Object {
+                                                  "colorInherit": Object {
+                                                    "color": "none",
                                                   },
                                                 },
                                                 "MuiMenuItem": Object {
@@ -22026,9 +22435,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       <WithStyles(WithWidth(TopCitedPublicationsClass))
                                                                         actions={
                                                                           Object {
+                                                                            "addFavouriteSearch": [Function],
                                                                             "adminCreate": [Function],
                                                                             "adminReset": [Function],
                                                                             "adminUpdate": [Function],
+                                                                            "checkForExistingFavouriteSearchAlias": [Function],
                                                                             "checkSession": [Function],
                                                                             "claimPublication": [Function],
                                                                             "clearAuthorsSuggestions": [Function],
@@ -22050,6 +22461,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "createNewRecord": [Function],
                                                                             "createSearchPromise": [Function],
                                                                             "deleteAttachedFile": [Function],
+                                                                            "deleteFavouriteSearchListItem": [Function],
                                                                             "deleteRecord": [Function],
                                                                             "dismissAppAlert": [Function],
                                                                             "exportAuthorPublications": [Function],
@@ -22058,6 +22470,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "fixRecord": [Function],
                                                                             "getBatchImportDirectories": [Function],
                                                                             "getCollectionsListAPI": [Function],
+                                                                            "getFavouriteSearchAlias": [Function],
                                                                             "getSearchLookupApi": [Function],
                                                                             "getSherpaFromIssn": [Function],
                                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -22070,6 +22483,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadBulkUpdatesList": [Function],
                                                                             "loadCollectionsList": [Function],
                                                                             "loadCurrentAccount": [Function],
+                                                                            "loadFavouriteSearchList": [Function],
                                                                             "loadFullRecordToClaim": [Function],
                                                                             "loadNewsFeed": [Function],
                                                                             "loadOrcidSyncStatus": [Function],
@@ -22106,6 +22520,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
                                                                             "updateDoi": [Function],
+                                                                            "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
                                                                           }
                                                                         }
@@ -22159,9 +22574,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         <WithWidth(TopCitedPublicationsClass)
                                                                           actions={
                                                                             Object {
+                                                                              "addFavouriteSearch": [Function],
                                                                               "adminCreate": [Function],
                                                                               "adminReset": [Function],
                                                                               "adminUpdate": [Function],
+                                                                              "checkForExistingFavouriteSearchAlias": [Function],
                                                                               "checkSession": [Function],
                                                                               "claimPublication": [Function],
                                                                               "clearAuthorsSuggestions": [Function],
@@ -22183,6 +22600,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "createNewRecord": [Function],
                                                                               "createSearchPromise": [Function],
                                                                               "deleteAttachedFile": [Function],
+                                                                              "deleteFavouriteSearchListItem": [Function],
                                                                               "deleteRecord": [Function],
                                                                               "dismissAppAlert": [Function],
                                                                               "exportAuthorPublications": [Function],
@@ -22191,6 +22609,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "fixRecord": [Function],
                                                                               "getBatchImportDirectories": [Function],
                                                                               "getCollectionsListAPI": [Function],
+                                                                              "getFavouriteSearchAlias": [Function],
                                                                               "getSearchLookupApi": [Function],
                                                                               "getSherpaFromIssn": [Function],
                                                                               "getThirdPartyLookupApiUrl": [Function],
@@ -22203,6 +22622,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadBulkUpdatesList": [Function],
                                                                               "loadCollectionsList": [Function],
                                                                               "loadCurrentAccount": [Function],
+                                                                              "loadFavouriteSearchList": [Function],
                                                                               "loadFullRecordToClaim": [Function],
                                                                               "loadNewsFeed": [Function],
                                                                               "loadOrcidSyncStatus": [Function],
@@ -22239,6 +22659,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "updateCommunity": [Function],
                                                                               "updateCurrentAuthor": [Function],
                                                                               "updateDoi": [Function],
+                                                                              "updateFavouriteSearchListItem": [Function],
                                                                               "updateIncompleteRecord": [Function],
                                                                             }
                                                                           }
@@ -22738,6 +23159,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                 "textOverflow": "ellipsis",
                                                                                                 "whiteSpace": "nowrap",
                                                                                                 "width": "100%",
+                                                                                              },
+                                                                                            },
+                                                                                            "MuiIconButton": Object {
+                                                                                              "colorInherit": Object {
+                                                                                                "color": "none",
                                                                                               },
                                                                                             },
                                                                                             "MuiMenuItem": Object {
@@ -23421,9 +23847,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 <WithStyles(NewsFeed)
                                                                                   actions={
                                                                                     Object {
+                                                                                      "addFavouriteSearch": [Function],
                                                                                       "adminCreate": [Function],
                                                                                       "adminReset": [Function],
                                                                                       "adminUpdate": [Function],
+                                                                                      "checkForExistingFavouriteSearchAlias": [Function],
                                                                                       "checkSession": [Function],
                                                                                       "claimPublication": [Function],
                                                                                       "clearAuthorsSuggestions": [Function],
@@ -23445,6 +23873,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "createNewRecord": [Function],
                                                                                       "createSearchPromise": [Function],
                                                                                       "deleteAttachedFile": [Function],
+                                                                                      "deleteFavouriteSearchListItem": [Function],
                                                                                       "deleteRecord": [Function],
                                                                                       "dismissAppAlert": [Function],
                                                                                       "exportAuthorPublications": [Function],
@@ -23453,6 +23882,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "fixRecord": [Function],
                                                                                       "getBatchImportDirectories": [Function],
                                                                                       "getCollectionsListAPI": [Function],
+                                                                                      "getFavouriteSearchAlias": [Function],
                                                                                       "getSearchLookupApi": [Function],
                                                                                       "getSherpaFromIssn": [Function],
                                                                                       "getThirdPartyLookupApiUrl": [Function],
@@ -23465,6 +23895,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadBulkUpdatesList": [Function],
                                                                                       "loadCollectionsList": [Function],
                                                                                       "loadCurrentAccount": [Function],
+                                                                                      "loadFavouriteSearchList": [Function],
                                                                                       "loadFullRecordToClaim": [Function],
                                                                                       "loadNewsFeed": [Function],
                                                                                       "loadOrcidSyncStatus": [Function],
@@ -23501,6 +23932,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
                                                                                       "updateDoi": [Function],
+                                                                                      "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
                                                                                     }
                                                                                   }
@@ -23508,9 +23940,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <NewsFeed
                                                                                     actions={
                                                                                       Object {
+                                                                                        "addFavouriteSearch": [Function],
                                                                                         "adminCreate": [Function],
                                                                                         "adminReset": [Function],
                                                                                         "adminUpdate": [Function],
+                                                                                        "checkForExistingFavouriteSearchAlias": [Function],
                                                                                         "checkSession": [Function],
                                                                                         "claimPublication": [Function],
                                                                                         "clearAuthorsSuggestions": [Function],
@@ -23532,6 +23966,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "createNewRecord": [Function],
                                                                                         "createSearchPromise": [Function],
                                                                                         "deleteAttachedFile": [Function],
+                                                                                        "deleteFavouriteSearchListItem": [Function],
                                                                                         "deleteRecord": [Function],
                                                                                         "dismissAppAlert": [Function],
                                                                                         "exportAuthorPublications": [Function],
@@ -23540,6 +23975,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "fixRecord": [Function],
                                                                                         "getBatchImportDirectories": [Function],
                                                                                         "getCollectionsListAPI": [Function],
+                                                                                        "getFavouriteSearchAlias": [Function],
                                                                                         "getSearchLookupApi": [Function],
                                                                                         "getSherpaFromIssn": [Function],
                                                                                         "getThirdPartyLookupApiUrl": [Function],
@@ -23552,6 +23988,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "loadBulkUpdatesList": [Function],
                                                                                         "loadCollectionsList": [Function],
                                                                                         "loadCurrentAccount": [Function],
+                                                                                        "loadFavouriteSearchList": [Function],
                                                                                         "loadFullRecordToClaim": [Function],
                                                                                         "loadNewsFeed": [Function],
                                                                                         "loadOrcidSyncStatus": [Function],
@@ -23588,6 +24025,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "updateCommunity": [Function],
                                                                                         "updateCurrentAuthor": [Function],
                                                                                         "updateDoi": [Function],
+                                                                                        "updateFavouriteSearchListItem": [Function],
                                                                                         "updateIncompleteRecord": [Function],
                                                                                       }
                                                                                     }
@@ -23659,6 +24097,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               "textOverflow": "ellipsis",
                                                                                               "whiteSpace": "nowrap",
                                                                                               "width": "100%",
+                                                                                            },
+                                                                                          },
+                                                                                          "MuiIconButton": Object {
+                                                                                            "colorInherit": Object {
+                                                                                              "color": "none",
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {
@@ -24058,6 +24501,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
+                                    },
+                                  },
+                                  "MuiIconButton": Object {
+                                    "colorInherit": Object {
+                                      "color": "none",
                                     },
                                   },
                                   "MuiMenuItem": Object {
@@ -24781,6 +25229,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "textOverflow": "ellipsis",
                                     "whiteSpace": "nowrap",
                                     "width": "100%",
+                                  },
+                                },
+                                "MuiIconButton": Object {
+                                  "colorInherit": Object {
+                                    "color": "none",
                                   },
                                 },
                                 "MuiMenuItem": Object {

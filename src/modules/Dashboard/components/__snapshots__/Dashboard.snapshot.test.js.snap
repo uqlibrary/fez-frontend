@@ -5954,6 +5954,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -6492,6 +6497,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
                           },
                         },
                         "MuiMenuItem": Object {
@@ -7540,6 +7550,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         "width": "100%",
                                                       },
                                                     },
+                                                    "MuiIconButton": Object {
+                                                      "colorInherit": Object {
+                                                        "color": "none",
+                                                      },
+                                                    },
                                                     "MuiMenuItem": Object {
                                                       "root": Object {
                                                         "&$selected": Object {
@@ -8431,6 +8446,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               "textOverflow": "ellipsis",
                                                                                               "whiteSpace": "nowrap",
                                                                                               "width": "100%",
+                                                                                            },
+                                                                                          },
+                                                                                          "MuiIconButton": Object {
+                                                                                            "colorInherit": Object {
+                                                                                              "color": "none",
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {
@@ -9358,6 +9378,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               "width": "100%",
                                                                                             },
                                                                                           },
+                                                                                          "MuiIconButton": Object {
+                                                                                            "colorInherit": Object {
+                                                                                              "color": "none",
+                                                                                            },
+                                                                                          },
                                                                                           "MuiMenuItem": Object {
                                                                                             "root": Object {
                                                                                               "&$selected": Object {
@@ -9988,6 +10013,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": "100%",
                                                                                                             },
                                                                                                           },
+                                                                                                          "MuiIconButton": Object {
+                                                                                                            "colorInherit": Object {
+                                                                                                              "color": "none",
+                                                                                                            },
+                                                                                                          },
                                                                                                           "MuiMenuItem": Object {
                                                                                                             "root": Object {
                                                                                                               "&$selected": Object {
@@ -10551,6 +10581,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "textOverflow": "ellipsis",
                                                                                                               "whiteSpace": "nowrap",
                                                                                                               "width": "100%",
+                                                                                                            },
+                                                                                                          },
+                                                                                                          "MuiIconButton": Object {
+                                                                                                            "colorInherit": Object {
+                                                                                                              "color": "none",
                                                                                                             },
                                                                                                           },
                                                                                                           "MuiMenuItem": Object {
@@ -11118,6 +11153,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": "100%",
                                                                                                             },
                                                                                                           },
+                                                                                                          "MuiIconButton": Object {
+                                                                                                            "colorInherit": Object {
+                                                                                                              "color": "none",
+                                                                                                            },
+                                                                                                          },
                                                                                                           "MuiMenuItem": Object {
                                                                                                             "root": Object {
                                                                                                               "&$selected": Object {
@@ -11681,6 +11721,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "textOverflow": "ellipsis",
                                                                                                               "whiteSpace": "nowrap",
                                                                                                               "width": "100%",
+                                                                                                            },
+                                                                                                          },
+                                                                                                          "MuiIconButton": Object {
+                                                                                                            "colorInherit": Object {
+                                                                                                              "color": "none",
                                                                                                             },
                                                                                                           },
                                                                                                           "MuiMenuItem": Object {

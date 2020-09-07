@@ -1,160 +1,190 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
+import { makeStyles } from '@material-ui/core/styles';
+
 import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 import { locale } from 'locale';
-import { withStyles } from '@material-ui/core/styles';
+import { userIsAdmin } from 'hooks';
 
-const styles = theme => ({
-    and: {
-        ...theme.typography.caption,
-    },
-    title: {
-        ...theme.typography.caption,
-    },
-    combiner: {
-        ...theme.typography.caption,
-        fontStyle: 'italic',
-    },
-    value: {
-        ...theme.typography.caption,
-        fontWeight: 'bold',
-    },
-});
+import AddFavouriteSearchIcon from './AddFavouriteSearchIcon';
 
-export class AdvancedSearchCaption extends PureComponent {
-    static propTypes = {
-        className: PropTypes.string,
-        fieldRows: PropTypes.array,
-        docTypes: PropTypes.array,
-        yearFilter: PropTypes.object,
-        isOpenAccess: PropTypes.bool,
-        classes: PropTypes.object,
-    };
-
-    static defaultProps = {
-        fieldRows: [
-            {
-                searchField: '0',
-                value: '',
-                label: '',
-            },
-        ],
-        yearFilter: {
-            from: null,
-            to: null,
-            invalid: true,
+const useStyles = makeStyles(
+    theme => ({
+        and: {
+            ...theme.typography.caption,
+            marginLeft: 4,
+            marginRight: 4,
         },
-        isOpenAccess: false,
-    };
+        title: {
+            ...theme.typography.caption,
+            marginRight: 2,
+        },
+        combiner: {
+            ...theme.typography.caption,
+            fontStyle: 'italic',
+            marginLeft: 2,
+            marginRight: 2,
+        },
+        value: {
+            ...theme.typography.caption,
+            fontWeight: 'bold',
+            marginLeft: 2,
+        },
+    }),
+    { withTheme: true },
+);
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            captionData: this.updateStateData(props),
-        };
+const getCleanValue = item => {
+    // Receives an object in format {title: string, combiner: string, value: string||array}
+    if (Array.isArray(item.value)) {
+        const values = [...item.value];
+        const lastValue = values.pop();
+        return { ...item, value: values.length > 0 ? `${values.join(', ')} or ${lastValue}` : lastValue };
     }
-
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        this.setState({
-            captionData: this.updateStateData(nextProps),
-        });
+    if (item.title === 'Any field' && item.value === '') {
+        return { ...item, value: 'anything' };
+    } else {
+        return item;
     }
+};
 
-    getCleanValue = item => {
-        // Receives an object in format {title: string, combiner: string, value: string||array}
-        if (Array.isArray(item.value)) {
-            const values = [...item.value];
-            const lastValue = values.pop();
-            return { ...item, value: values.length > 0 ? `${values.join(', ')} or ${lastValue}` : lastValue };
-        }
-        if (item.title === 'Any field' && item.value === '') {
-            return { ...item, value: 'anything' };
-        } else {
-            return item;
-        }
-    };
-
-    getSearchFieldData = fieldRows => {
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const rows = fieldRows
-            .filter(item => item.searchField !== 'rek_display_type')
-            .map(item => {
-                if (!!txt[item.searchField].captionFn) {
-                    return txt[item.searchField].captionFn(item.value);
-                } else {
-                    return this.getCleanValue({
-                        title: txt[item.searchField].title,
-                        combiner: txt[item.searchField].combiner,
-                        value: item.value,
-                    });
-                }
-            });
-        return rows;
-    };
-
-    getDocTypeData = docTypes => {
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const converteddocTypes = docTypes.map(item => DOCUMENT_TYPES_LOOKUP[item]);
-        const lastItem = converteddocTypes.pop();
-        const docsString = converteddocTypes.length > 0 ? `${converteddocTypes.join(', ')} or ${lastItem}` : lastItem;
-        return this.getCleanValue({
-            title: txt.rek_display_type.title,
-            combiner: txt.rek_display_type.combiner,
-            value: docsString,
+const getSearchFieldData = fieldRows => {
+    const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+    const rows = fieldRows
+        .filter(item => item.searchField !== 'rek_display_type')
+        .map(item => {
+            if (!!txt[item.searchField].captionFn) {
+                return txt[item.searchField].captionFn(item.value);
+            } else {
+                return getCleanValue({
+                    field: item.searchField,
+                    title: txt[item.searchField].title,
+                    combiner: txt[item.searchField].combiner,
+                    value: item.value,
+                });
+            }
         });
-    };
+    return rows;
+};
 
-    getOpenAccessData = isOpenAccess => {
-        const txt = locale.components.searchComponent.advancedSearch.openAccess;
-        return isOpenAccess ? { title: '', combiner: txt.combiner, value: txt.captionText } : null;
-    };
+const getDocTypeData = docTypes => {
+    const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+    const converteddocTypes = docTypes.map(item => DOCUMENT_TYPES_LOOKUP[item]);
+    const lastItem = converteddocTypes.pop();
+    const docsString = converteddocTypes.length > 0 ? `${converteddocTypes.join(', ')} or ${lastItem}` : lastItem;
+    return getCleanValue({
+        field: 'rek_display_type',
+        title: txt.rek_display_type.title,
+        combiner: txt.rek_display_type.combiner,
+        value: docsString,
+    });
+};
 
-    getYearFilterData = yearFilter => {
-        const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return yearFilter.from && yearFilter.to
-            ? {
-                  title: txt.facet_year_range.captionTitle,
-                  combiner: txt.facet_year_range.combiner,
-                  value: `${yearFilter.from} to ${yearFilter.to}`,
-              }
-            : null;
-    };
+const getOpenAccessData = isOpenAccess => {
+    const txt = locale.components.searchComponent.advancedSearch.openAccess;
+    return isOpenAccess ? { field: 'open_access', title: '', combiner: txt.combiner, value: txt.captionText } : null;
+};
 
-    updateStateData = props => {
-        return [
-            ...this.getSearchFieldData(props.fieldRows),
-            this.getDocTypeData(props.docTypes),
-            this.getOpenAccessData(props.isOpenAccess),
-            this.getYearFilterData(props.yearFilter),
-        ];
-    };
+const getYearFilterData = yearFilter => {
+    const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
+    return yearFilter.from && yearFilter.to
+        ? {
+              field: 'facet_year_range',
+              title: txt.facet_year_range.captionTitle,
+              combiner: txt.facet_year_range.combiner,
+              value: `${yearFilter.from} to ${yearFilter.to}`,
+          }
+        : null;
+};
 
-    renderCaptions = items => {
-        const { classes } = this.props;
+const updateStateData = ({ fieldRows, docTypes, isOpenAccess, yearFilter }) => {
+    return [
+        ...getSearchFieldData(fieldRows),
+        getDocTypeData(docTypes),
+        getOpenAccessData(isOpenAccess),
+        getYearFilterData(yearFilter),
+    ];
+};
+
+export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenAccess }) => {
+    const classes = useStyles();
+    const isUserAdmin = userIsAdmin();
+    const [captionData, setCaptionData] = React.useState(
+        updateStateData({ fieldRows, docTypes, yearFilter, isOpenAccess }),
+    );
+    React.useEffect(() => {
+        setCaptionData(updateStateData({ fieldRows, docTypes, yearFilter, isOpenAccess }));
+    }, [fieldRows, docTypes, yearFilter, isOpenAccess]);
+
+    const renderCaptions = items => {
         return items
             .filter(item => item !== null) // Dont render nulls
             .filter(item => item.title !== 'Select a field') // Dont render caption for select a field
             .filter(item => !!item.value) // Dont render caption until it has a value
             .map((item, index) => {
+                const fieldId = item.field.replace(/_/g, '-');
                 return (
-                    <span key={index}>
-                        <span className={classes.and}> {index !== 0 && ' AND '} </span>
-                        <span className={classes.title}>{item.title} </span>
-                        <span className={classes.combiner}> {item.combiner} </span>
-                        <span className={classes.value}> {item.value}</span>
+                    <span key={index} data-testid={`${fieldId}-caption`}>
+                        {index !== 0 && <span className={classes.and}>{'AND'}</span>}
+                        {item.title !== '' && (
+                            <span
+                                data-testid={`${fieldId}-caption-title`}
+                                id={`${fieldId}-caption-title`}
+                                className={classes.title}
+                            >
+                                {item.title}
+                            </span>
+                        )}
+                        <span
+                            data-testid={`${fieldId}-caption-combiner`}
+                            id={`${fieldId}-caption-combiner`}
+                            className={classes.combiner}
+                        >
+                            {item.combiner}
+                        </span>
+                        <span
+                            data-testid={`${fieldId}-caption-value`}
+                            id={`${fieldId}-caption-value`}
+                            className={classes.value}
+                        >
+                            {item.value}
+                        </span>
                     </span>
                 );
             });
     };
 
-    render() {
-        return (
-            <div className={`${this.props.className} searchQueryCaption`}>
-                {this.renderCaptions(this.state.captionData)}
-            </div>
-        );
-    }
-}
+    const captions = renderCaptions(captionData);
+    return (
+        <div data-testid="advanced-search-caption">
+            {captions}
+            {!!isUserAdmin && captions.length > 0 && <AddFavouriteSearchIcon />}
+        </div>
+    );
+};
 
-export default withStyles(styles, { withTheme: true })(AdvancedSearchCaption);
+AdvancedSearchCaption.propTypes = {
+    fieldRows: PropTypes.array,
+    docTypes: PropTypes.array,
+    yearFilter: PropTypes.object,
+    isOpenAccess: PropTypes.bool,
+};
+
+AdvancedSearchCaption.defaultProps = {
+    fieldRows: [
+        {
+            searchField: '0',
+            value: '',
+            label: '',
+        },
+    ],
+    yearFilter: {
+        from: null,
+        to: null,
+        invalid: true,
+    },
+    isOpenAccess: false,
+};
+
+export default React.memo(AdvancedSearchCaption);

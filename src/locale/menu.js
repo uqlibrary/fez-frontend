@@ -70,6 +70,9 @@ export default {
         bulkUpdates: {
             primaryText: 'Bulk updates',
         },
+        favouriteSearch: {
+            primaryText: 'Favourite searches',
+        },
     },
     footer: {
         cricos: {

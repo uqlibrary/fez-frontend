@@ -9,6 +9,7 @@ export * from './controlledVocabularies';
 export * from './deleteRecord';
 export * from './doi';
 export * from './exportPublications';
+export * from './favouriteSearch';
 export * from './fixRecord';
 export * from './incompleteRecords';
 export * from './issnLinks';

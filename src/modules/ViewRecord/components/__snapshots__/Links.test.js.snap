@@ -142,6 +142,11 @@ exports[`Component Links  Full mount render 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -3000,6 +3005,11 @@ exports[`Component Links  Full mount render 1`] = `
                           "width": "100%",
                         },
                       },
+                      "MuiIconButton": Object {
+                        "colorInherit": Object {
+                          "color": "none",
+                        },
+                      },
                       "MuiMenuItem": Object {
                         "root": Object {
                           "&$selected": Object {
@@ -3482,6 +3492,11 @@ exports[`Component Links  Full mount render 1`] = `
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
+                                    },
+                                  },
+                                  "MuiIconButton": Object {
+                                    "colorInherit": Object {
+                                      "color": "none",
                                     },
                                   },
                                   "MuiMenuItem": Object {
@@ -4371,6 +4386,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                                                 "textOverflow": "ellipsis",
                                                                                 "whiteSpace": "nowrap",
                                                                                 "width": "100%",
+                                                                              },
+                                                                            },
+                                                                            "MuiIconButton": Object {
+                                                                              "colorInherit": Object {
+                                                                                "color": "none",
                                                                               },
                                                                             },
                                                                             "MuiMenuItem": Object {
@@ -5538,6 +5558,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                                                   "width": "100%",
                                                                                 },
                                                                               },
+                                                                              "MuiIconButton": Object {
+                                                                                "colorInherit": Object {
+                                                                                  "color": "none",
+                                                                                },
+                                                                              },
                                                                               "MuiMenuItem": Object {
                                                                                 "root": Object {
                                                                                   "&$selected": Object {
@@ -6606,6 +6631,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                                               "width": "100%",
                                                                             },
                                                                           },
+                                                                          "MuiIconButton": Object {
+                                                                            "colorInherit": Object {
+                                                                              "color": "none",
+                                                                            },
+                                                                          },
                                                                           "MuiMenuItem": Object {
                                                                             "root": Object {
                                                                               "&$selected": Object {
@@ -7669,6 +7699,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                                               "textOverflow": "ellipsis",
                                                                               "whiteSpace": "nowrap",
                                                                               "width": "100%",
+                                                                            },
+                                                                          },
+                                                                          "MuiIconButton": Object {
+                                                                            "colorInherit": Object {
+                                                                              "color": "none",
                                                                             },
                                                                           },
                                                                           "MuiMenuItem": Object {
@@ -8834,6 +8869,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -9400,6 +9440,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiIconButton": Object {
+                                "colorInherit": Object {
+                                  "color": "none",
                                 },
                               },
                               "MuiMenuItem": Object {
@@ -10289,6 +10334,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                             "textOverflow": "ellipsis",
                                                                             "whiteSpace": "nowrap",
                                                                             "width": "100%",
+                                                                          },
+                                                                        },
+                                                                        "MuiIconButton": Object {
+                                                                          "colorInherit": Object {
+                                                                            "color": "none",
                                                                           },
                                                                         },
                                                                         "MuiMenuItem": Object {
@@ -11458,6 +11508,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                               "textOverflow": "ellipsis",
                                                                               "whiteSpace": "nowrap",
                                                                               "width": "100%",
+                                                                            },
+                                                                          },
+                                                                          "MuiIconButton": Object {
+                                                                            "colorInherit": Object {
+                                                                              "color": "none",
                                                                             },
                                                                           },
                                                                           "MuiMenuItem": Object {
@@ -12619,6 +12674,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -13680,6 +13740,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
                                                                           "width": "100%",
+                                                                        },
+                                                                      },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
@@ -14745,6 +14810,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -15720,6 +15790,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -16280,6 +16355,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiIconButton": Object {
+                                "colorInherit": Object {
+                                  "color": "none",
                                 },
                               },
                               "MuiMenuItem": Object {
@@ -17169,6 +17249,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                             "textOverflow": "ellipsis",
                                                                             "whiteSpace": "nowrap",
                                                                             "width": "100%",
+                                                                          },
+                                                                        },
+                                                                        "MuiIconButton": Object {
+                                                                          "colorInherit": Object {
+                                                                            "color": "none",
                                                                           },
                                                                         },
                                                                         "MuiMenuItem": Object {
@@ -18329,6 +18414,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -19390,6 +19480,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
                                                                           "width": "100%",
+                                                                        },
+                                                                      },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
@@ -20455,6 +20550,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -21297,6 +21397,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -21863,6 +21968,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiIconButton": Object {
+                                "colorInherit": Object {
+                                  "color": "none",
                                 },
                               },
                               "MuiMenuItem": Object {
@@ -22752,6 +22862,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                             "textOverflow": "ellipsis",
                                                                             "whiteSpace": "nowrap",
                                                                             "width": "100%",
+                                                                          },
+                                                                        },
+                                                                        "MuiIconButton": Object {
+                                                                          "colorInherit": Object {
+                                                                            "color": "none",
                                                                           },
                                                                         },
                                                                         "MuiMenuItem": Object {
@@ -23915,6 +24030,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                               "textOverflow": "ellipsis",
                                                                               "whiteSpace": "nowrap",
                                                                               "width": "100%",
+                                                                            },
+                                                                          },
+                                                                          "MuiIconButton": Object {
+                                                                            "colorInherit": Object {
+                                                                              "color": "none",
                                                                             },
                                                                           },
                                                                           "MuiMenuItem": Object {
@@ -24983,6 +25103,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -26044,6 +26169,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
                                                                           "width": "100%",
+                                                                        },
+                                                                      },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
@@ -27109,6 +27239,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -28084,6 +28219,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -28644,6 +28784,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiIconButton": Object {
+                                "colorInherit": Object {
+                                  "color": "none",
                                 },
                               },
                               "MuiMenuItem": Object {
@@ -29536,6 +29681,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                               "textOverflow": "ellipsis",
                                                                               "whiteSpace": "nowrap",
                                                                               "width": "100%",
+                                                                            },
+                                                                          },
+                                                                          "MuiIconButton": Object {
+                                                                            "colorInherit": Object {
+                                                                              "color": "none",
                                                                             },
                                                                           },
                                                                           "MuiMenuItem": Object {
@@ -30783,6 +30933,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -31846,6 +32001,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                           "width": "100%",
                                                                         },
                                                                       },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
+                                                                        },
+                                                                      },
                                                                       "MuiMenuItem": Object {
                                                                         "root": Object {
                                                                           "&$selected": Object {
@@ -32907,6 +33067,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
                                                                           "width": "100%",
+                                                                        },
+                                                                      },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {

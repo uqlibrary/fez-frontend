@@ -846,6 +846,15 @@ export default {
         prototype: {
             title: 'Admin prototype',
         },
+        favouriteSearch: {
+            title: 'Favourite searches',
+            loadingMessage: 'Loading list of favourite searches',
+            aliasExistsAlert: {
+                type: 'error',
+                message: 'Alias "[alias]" has been taken',
+                title: 'Alias check',
+            },
+        },
         doi: {
             loadingMessage: 'Loading work',
             pageTitle: ({ doi, displayTypeLookup, title, pid }) =>

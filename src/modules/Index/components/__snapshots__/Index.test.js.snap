@@ -188,6 +188,11 @@ exports[`Index page should render placeholders 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -543,6 +548,11 @@ exports[`Index page should render placeholders 1`] = `
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
                           "width": "100%",
+                        },
+                      },
+                      "MuiIconButton": Object {
+                        "colorInherit": Object {
+                          "color": "none",
                         },
                       },
                       "MuiMenuItem": Object {
@@ -903,6 +913,11 @@ exports[`Index page should render placeholders 1`] = `
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
                                 "width": "100%",
+                              },
+                            },
+                            "MuiIconButton": Object {
+                              "colorInherit": Object {
+                                "color": "none",
                               },
                             },
                             "MuiMenuItem": Object {
@@ -1839,9 +1854,11 @@ exports[`Index page should render placeholders 1`] = `
                                                   <WithStyles(WithWidth(TopCitedPublicationsClass))
                                                     actions={
                                                       Object {
+                                                        "addFavouriteSearch": [Function],
                                                         "adminCreate": [Function],
                                                         "adminReset": [Function],
                                                         "adminUpdate": [Function],
+                                                        "checkForExistingFavouriteSearchAlias": [Function],
                                                         "checkSession": [Function],
                                                         "claimPublication": [Function],
                                                         "clearAuthorsSuggestions": [Function],
@@ -1863,6 +1880,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "createNewRecord": [Function],
                                                         "createSearchPromise": [Function],
                                                         "deleteAttachedFile": [Function],
+                                                        "deleteFavouriteSearchListItem": [Function],
                                                         "deleteRecord": [Function],
                                                         "dismissAppAlert": [Function],
                                                         "exportAuthorPublications": [Function],
@@ -1871,6 +1889,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "fixRecord": [Function],
                                                         "getBatchImportDirectories": [Function],
                                                         "getCollectionsListAPI": [Function],
+                                                        "getFavouriteSearchAlias": [Function],
                                                         "getSearchLookupApi": [Function],
                                                         "getSherpaFromIssn": [Function],
                                                         "getThirdPartyLookupApiUrl": [Function],
@@ -1883,6 +1902,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadBulkUpdatesList": [Function],
                                                         "loadCollectionsList": [Function],
                                                         "loadCurrentAccount": [Function],
+                                                        "loadFavouriteSearchList": [Function],
                                                         "loadFullRecordToClaim": [Function],
                                                         "loadNewsFeed": [Function],
                                                         "loadOrcidSyncStatus": [Function],
@@ -1919,6 +1939,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "updateCommunity": [Function],
                                                         "updateCurrentAuthor": [Function],
                                                         "updateDoi": [Function],
+                                                        "updateFavouriteSearchListItem": [Function],
                                                         "updateIncompleteRecord": [Function],
                                                       }
                                                     }
@@ -1972,9 +1993,11 @@ exports[`Index page should render placeholders 1`] = `
                                                     <WithWidth(TopCitedPublicationsClass)
                                                       actions={
                                                         Object {
+                                                          "addFavouriteSearch": [Function],
                                                           "adminCreate": [Function],
                                                           "adminReset": [Function],
                                                           "adminUpdate": [Function],
+                                                          "checkForExistingFavouriteSearchAlias": [Function],
                                                           "checkSession": [Function],
                                                           "claimPublication": [Function],
                                                           "clearAuthorsSuggestions": [Function],
@@ -1996,6 +2019,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "createNewRecord": [Function],
                                                           "createSearchPromise": [Function],
                                                           "deleteAttachedFile": [Function],
+                                                          "deleteFavouriteSearchListItem": [Function],
                                                           "deleteRecord": [Function],
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
@@ -2004,6 +2028,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "fixRecord": [Function],
                                                           "getBatchImportDirectories": [Function],
                                                           "getCollectionsListAPI": [Function],
+                                                          "getFavouriteSearchAlias": [Function],
                                                           "getSearchLookupApi": [Function],
                                                           "getSherpaFromIssn": [Function],
                                                           "getThirdPartyLookupApiUrl": [Function],
@@ -2016,6 +2041,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadBulkUpdatesList": [Function],
                                                           "loadCollectionsList": [Function],
                                                           "loadCurrentAccount": [Function],
+                                                          "loadFavouriteSearchList": [Function],
                                                           "loadFullRecordToClaim": [Function],
                                                           "loadNewsFeed": [Function],
                                                           "loadOrcidSyncStatus": [Function],
@@ -2052,6 +2078,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "updateCommunity": [Function],
                                                           "updateCurrentAuthor": [Function],
                                                           "updateDoi": [Function],
+                                                          "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
                                                         }
                                                       }
@@ -2551,6 +2578,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                             "textOverflow": "ellipsis",
                                                                             "whiteSpace": "nowrap",
                                                                             "width": "100%",
+                                                                          },
+                                                                        },
+                                                                        "MuiIconButton": Object {
+                                                                          "colorInherit": Object {
+                                                                            "color": "none",
                                                                           },
                                                                         },
                                                                         "MuiMenuItem": Object {
@@ -3234,9 +3266,11 @@ exports[`Index page should render placeholders 1`] = `
                                                             <WithStyles(NewsFeed)
                                                               actions={
                                                                 Object {
+                                                                  "addFavouriteSearch": [Function],
                                                                   "adminCreate": [Function],
                                                                   "adminReset": [Function],
                                                                   "adminUpdate": [Function],
+                                                                  "checkForExistingFavouriteSearchAlias": [Function],
                                                                   "checkSession": [Function],
                                                                   "claimPublication": [Function],
                                                                   "clearAuthorsSuggestions": [Function],
@@ -3258,6 +3292,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "createNewRecord": [Function],
                                                                   "createSearchPromise": [Function],
                                                                   "deleteAttachedFile": [Function],
+                                                                  "deleteFavouriteSearchListItem": [Function],
                                                                   "deleteRecord": [Function],
                                                                   "dismissAppAlert": [Function],
                                                                   "exportAuthorPublications": [Function],
@@ -3266,6 +3301,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "fixRecord": [Function],
                                                                   "getBatchImportDirectories": [Function],
                                                                   "getCollectionsListAPI": [Function],
+                                                                  "getFavouriteSearchAlias": [Function],
                                                                   "getSearchLookupApi": [Function],
                                                                   "getSherpaFromIssn": [Function],
                                                                   "getThirdPartyLookupApiUrl": [Function],
@@ -3278,6 +3314,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadBulkUpdatesList": [Function],
                                                                   "loadCollectionsList": [Function],
                                                                   "loadCurrentAccount": [Function],
+                                                                  "loadFavouriteSearchList": [Function],
                                                                   "loadFullRecordToClaim": [Function],
                                                                   "loadNewsFeed": [Function],
                                                                   "loadOrcidSyncStatus": [Function],
@@ -3314,6 +3351,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "updateCommunity": [Function],
                                                                   "updateCurrentAuthor": [Function],
                                                                   "updateDoi": [Function],
+                                                                  "updateFavouriteSearchListItem": [Function],
                                                                   "updateIncompleteRecord": [Function],
                                                                 }
                                                               }
@@ -3321,9 +3359,11 @@ exports[`Index page should render placeholders 1`] = `
                                                               <NewsFeed
                                                                 actions={
                                                                   Object {
+                                                                    "addFavouriteSearch": [Function],
                                                                     "adminCreate": [Function],
                                                                     "adminReset": [Function],
                                                                     "adminUpdate": [Function],
+                                                                    "checkForExistingFavouriteSearchAlias": [Function],
                                                                     "checkSession": [Function],
                                                                     "claimPublication": [Function],
                                                                     "clearAuthorsSuggestions": [Function],
@@ -3345,6 +3385,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "createNewRecord": [Function],
                                                                     "createSearchPromise": [Function],
                                                                     "deleteAttachedFile": [Function],
+                                                                    "deleteFavouriteSearchListItem": [Function],
                                                                     "deleteRecord": [Function],
                                                                     "dismissAppAlert": [Function],
                                                                     "exportAuthorPublications": [Function],
@@ -3353,6 +3394,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "fixRecord": [Function],
                                                                     "getBatchImportDirectories": [Function],
                                                                     "getCollectionsListAPI": [Function],
+                                                                    "getFavouriteSearchAlias": [Function],
                                                                     "getSearchLookupApi": [Function],
                                                                     "getSherpaFromIssn": [Function],
                                                                     "getThirdPartyLookupApiUrl": [Function],
@@ -3365,6 +3407,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadBulkUpdatesList": [Function],
                                                                     "loadCollectionsList": [Function],
                                                                     "loadCurrentAccount": [Function],
+                                                                    "loadFavouriteSearchList": [Function],
                                                                     "loadFullRecordToClaim": [Function],
                                                                     "loadNewsFeed": [Function],
                                                                     "loadOrcidSyncStatus": [Function],
@@ -3401,6 +3444,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "updateCommunity": [Function],
                                                                     "updateCurrentAuthor": [Function],
                                                                     "updateDoi": [Function],
+                                                                    "updateFavouriteSearchListItem": [Function],
                                                                     "updateIncompleteRecord": [Function],
                                                                   }
                                                                 }
@@ -3472,6 +3516,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
                                                                           "width": "100%",
+                                                                        },
+                                                                      },
+                                                                      "MuiIconButton": Object {
+                                                                        "colorInherit": Object {
+                                                                          "color": "none",
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {

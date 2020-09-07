@@ -817,4 +817,10 @@ describe('Backend routes method', () => {
             apiUrl: `records/${pid}/unlock`,
         });
     });
+
+    it('should construct url for favourite search list api', () => {
+        expect(routes.FAVOURITE_SEARCH_LIST_API()).toEqual({
+            apiUrl: 'favourite_search',
+        });
+    });
 });

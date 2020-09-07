@@ -1692,7 +1692,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add some text to search all fields with',
                         captionValue: 'anything',
-                        validation: ['maxLength500'],
+                        validation: ['maxLength2000'],
                         ariaLabel: 'Type a value to search all fields for',
                     },
                     rek_title: {
@@ -1715,6 +1715,7 @@ export default {
                         hint: 'Add a book title',
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a book title to search for',
+                        id: 'rek-book-title',
                     },
                     rek_pid: {
                         order: 9,
@@ -1828,6 +1829,7 @@ export default {
                         multiple: true,
                         validation: ['required'],
                         ariaLabel: 'Select multiple thesis types to search for',
+                        id: 'rek-genre-type',
                     },
                     rek_author_id: {
                         order: 4,
@@ -1838,6 +1840,7 @@ export default {
                         hint: 'Type an author name to search',
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list',
+                        id: 'rek-author-id',
                     },
                     rek_contributor_id: {
                         order: 6,
@@ -1848,6 +1851,7 @@ export default {
                         hint: 'Add a contributor id',
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an contributor ID to select an author from the list',
+                        id: 'rek-contributor-id',
                     },
                     rek_org_unit_name: {
                         order: 15,
@@ -1857,6 +1861,7 @@ export default {
                         type: 'OrgUnitLookup',
                         hint: 'Add a school, centre or institute',
                         validation: ['required'],
+                        id: 'rek-org-unit-name',
                         ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list',
                     },
                     rek_display_type: {
@@ -1867,6 +1872,7 @@ export default {
                         type: null,
                         hint: 'Select document types',
                         validation: [],
+                        id: 'rek-display-type',
                         ariaLabel: 'Select multiple publications types to search on',
                     },
                     facet_year_range: {
@@ -1907,6 +1913,7 @@ export default {
                             (value.from &&
                                 value.to &&
                                 value.from.isBefore(value.to) && {
+                                    field: 'rek_created_date',
                                     title: 'Created',
                                     combiner: 'between',
                                     value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
@@ -1928,6 +1935,7 @@ export default {
                             (value.from &&
                                 value.to &&
                                 value.from.isBefore(value.to) && {
+                                    field: 'rek_updated_date',
                                     title: 'Updated',
                                     combiner: 'between',
                                     value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
@@ -1954,6 +1962,15 @@ export default {
                 simpleSearch: {
                     title: 'Simple search',
                     aria: 'Click to return to the simple search',
+                },
+                favouriteSearch: {
+                    inputForm: {
+                        confirmationTitle: 'Please add description',
+                        confirmButtonLabel: 'Save favourite search',
+                        cancelButtonLabel: 'Cancel',
+                    },
+                    favouriteSearchHint: 'Click to save favourite search',
+                    favouriteSearchSaved: 'Saved as a favourite search',
                 },
             },
         },
@@ -2760,6 +2777,34 @@ export default {
                 },
                 totalCount: {
                     title: 'Total count',
+                },
+            },
+        },
+        favouriteSearchList: {
+            tableTitle: '',
+            columns: {
+                realLink: {
+                    title: 'Real link',
+                    cellText: 'Link',
+                },
+                description: {
+                    title: 'Description',
+                    placeholderText: 'Description',
+                    validationMessage: {
+                        empty: 'This field is required',
+                    },
+                },
+                aliasedLink: {
+                    title: 'Aliased link',
+                },
+                alias: {
+                    title: 'Alias',
+                    placeholderText: 'Alias',
+                    validationMessage: {
+                        empty: 'This field is required',
+                        invalid: 'Alias is not valid',
+                    },
+                    regex: /^[a-z0-9]+[a-z0-9-]*$/gi,
                 },
             },
         },
