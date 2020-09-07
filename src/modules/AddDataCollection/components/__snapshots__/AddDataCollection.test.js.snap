@@ -813,21 +813,21 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "type-of-data-input",
-                          "inputFieldHint": "Type type of data",
+                          "inputFieldHint": "Enter type of data",
                           "inputFieldLabel": "Type of data",
                         },
                       },
                       "header": Object {
                         "locale": Object {
-                          "deleteAll": "Remove all type of data",
+                          "deleteAll": "Remove all types of data",
                           "deleteAllConfirmation": Object {
                             "cancelButtonLabel": "No",
                             "confirmButtonLabel": "Yes",
-                            "confirmationMessage": "Are you sure you want to delete all type of data?",
+                            "confirmationMessage": "Are you sure you want to delete all types of data?",
                             "confirmationTitle": "Delete all",
                           },
                           "nameColumn": "Type of data",
-                          "reorderColumn": "Reorder type of data",
+                          "reorderColumn": "Reorder types of data",
                         },
                       },
                       "row": Object {
@@ -2159,21 +2159,21 @@ exports[`AddDataCollection test should render component with a valid collection 
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "type-of-data-input",
-                          "inputFieldHint": "Type type of data",
+                          "inputFieldHint": "Enter type of data",
                           "inputFieldLabel": "Type of data",
                         },
                       },
                       "header": Object {
                         "locale": Object {
-                          "deleteAll": "Remove all type of data",
+                          "deleteAll": "Remove all types of data",
                           "deleteAllConfirmation": Object {
                             "cancelButtonLabel": "No",
                             "confirmButtonLabel": "Yes",
-                            "confirmationMessage": "Are you sure you want to delete all type of data?",
+                            "confirmationMessage": "Are you sure you want to delete all types of data?",
                             "confirmationTitle": "Delete all",
                           },
                           "nameColumn": "Type of data",
-                          "reorderColumn": "Reorder type of data",
+                          "reorderColumn": "Reorder types of data",
                         },
                       },
                       "row": Object {
@@ -3501,21 +3501,21 @@ exports[`AddDataCollection test should render component with an invalid collecti
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "type-of-data-input",
-                          "inputFieldHint": "Type type of data",
+                          "inputFieldHint": "Enter type of data",
                           "inputFieldLabel": "Type of data",
                         },
                       },
                       "header": Object {
                         "locale": Object {
-                          "deleteAll": "Remove all type of data",
+                          "deleteAll": "Remove all types of data",
                           "deleteAllConfirmation": Object {
                             "cancelButtonLabel": "No",
                             "confirmButtonLabel": "Yes",
-                            "confirmationMessage": "Are you sure you want to delete all type of data?",
+                            "confirmationMessage": "Are you sure you want to delete all types of data?",
                             "confirmationTitle": "Delete all",
                           },
                           "nameColumn": "Type of data",
-                          "reorderColumn": "Reorder type of data",
+                          "reorderColumn": "Reorder types of data",
                         },
                       },
                       "row": Object {
@@ -4843,21 +4843,21 @@ exports[`AddDataCollection test should render data set form 1`] = `
                           "addButtonLabel": "Add",
                           "editButtonLabel": "Update",
                           "id": "type-of-data-input",
-                          "inputFieldHint": "Type type of data",
+                          "inputFieldHint": "Enter type of data",
                           "inputFieldLabel": "Type of data",
                         },
                       },
                       "header": Object {
                         "locale": Object {
-                          "deleteAll": "Remove all type of data",
+                          "deleteAll": "Remove all types of data",
                           "deleteAllConfirmation": Object {
                             "cancelButtonLabel": "No",
                             "confirmButtonLabel": "Yes",
-                            "confirmationMessage": "Are you sure you want to delete all type of data?",
+                            "confirmationMessage": "Are you sure you want to delete all types of data?",
                             "confirmationTitle": "Delete all",
                           },
                           "nameColumn": "Type of data",
-                          "reorderColumn": "Reorder type of data",
+                          "reorderColumn": "Reorder types of data",
                         },
                       },
                       "row": Object {

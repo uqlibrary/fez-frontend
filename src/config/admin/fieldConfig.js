@@ -1975,6 +1975,9 @@ export default {
                 name: 'adminSection.fez_record_search_key_license.rek_license',
                 validate: [validation.required],
             }),
+            fez_record_search_key_type_of_data: () => ({
+                locale: locale.components.typeOfDataForm.fieldDataset,
+            }),
         },
         [PUBLICATION_TYPE_DESIGN]: {
             fez_record_search_key_original_format: ({ isNonNtro = false }) => ({

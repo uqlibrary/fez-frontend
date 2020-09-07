@@ -480,8 +480,46 @@ export default {
             field: {
                 form: {
                     locale: {
+                        inputFieldLabel: 'Type',
+                        inputFieldHint: 'Enter type',
+                        addButtonLabel: 'Add',
+                        editButtonLabel: 'Update',
+                        id: 'type-of-data-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Type',
+                        reorderColumn: 'Reorder type',
+                        deleteAll: 'Remove all types',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all types?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move type up the order',
+                        moveDownHint: 'Move type down the order',
+                        deleteHint: 'Remove this type',
+                        editHint: 'Edit this type',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete type',
+                            confirmationMessage: 'Are you sure you want to delete this type?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+            fieldDataset: {
+                form: {
+                    locale: {
                         inputFieldLabel: 'Type of data',
-                        inputFieldHint: 'Type type of data',
+                        inputFieldHint: 'Enter type of data',
                         addButtonLabel: 'Add',
                         editButtonLabel: 'Update',
                         id: 'type-of-data-input',
@@ -490,11 +528,11 @@ export default {
                 header: {
                     locale: {
                         nameColumn: 'Type of data',
-                        reorderColumn: 'Reorder type of data',
-                        deleteAll: 'Remove all type of data',
+                        reorderColumn: 'Reorder types of data',
+                        deleteAll: 'Remove all types of data',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
-                            confirmationMessage: 'Are you sure you want to delete all type of data?',
+                            confirmationMessage: 'Are you sure you want to delete all types of data?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
