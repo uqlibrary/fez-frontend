@@ -1,7 +1,7 @@
 import React from 'react';
-import AdminActions, { navigateToUrl, getLegacyEditUrl } from './AdminActions';
+import AdminActions, { navigateToUrl } from './AdminActions';
 import { rtlRender, fireEvent, cleanup } from 'test-utils';
-import { PUBLICATION_TYPE_WORKING_PAPER, RECORD_ACTION_URLS as defaultActions, STAGING_URL } from 'config/general';
+import { PUBLICATION_TYPE_WORKING_PAPER, RECORD_ACTION_URLS as defaultActions } from 'config/general';
 import { APP_URL } from '../../../../../../config';
 
 function setup(testProps = {}) {
@@ -48,17 +48,13 @@ describe('AdminActions component', () => {
 
         const expectedActions = defaultActions.map(action => ({
             ...action,
-            url: action.url('UQ:111111'),
-            inApp: action.inApp,
-            options: action.options,
         }));
-        expectedActions[0].url = legacyEditUrl;
 
         expectedActions.map(action => {
             fireEvent.click(getByText(action.isDoi ? action.label(false) : action.label, menu));
             expect(global.window.open).toHaveBeenCalledTimes(1);
             expect(global.window.open).toHaveBeenCalledWith(
-                action.url,
+                `${action.url('UQ:111111')}${!action.isRecordEdit ? '' : '?navigatedFrom=test'}`,
                 action.inApp ? '_self' : '_blank',
                 action.options,
             );
@@ -145,7 +141,11 @@ describe('AdminActions component', () => {
 
         fireEvent.click(getByText(/edit selected record/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith(legacyEditUrl, '_blank', null);
+        expect(global.window.open).toHaveBeenCalledWith(
+            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111',
+            '_blank',
+            null,
+        );
     });
 
     it('should have helper to append referral URL', () => {
@@ -184,7 +184,6 @@ describe('AdminActions component', () => {
     it('should open the new edit url if user is whitelisted', () => {
         const { getByTestId, getByText } = setup({
             navigatedFrom: 'test',
-            userHasNewAdminEdit: true,
         });
 
         fireEvent.click(getByTestId('admin-actions-button'));
@@ -198,18 +197,6 @@ describe('AdminActions component', () => {
             `${APP_URL}admin/edit/UQ:111111?navigatedFrom=test`,
             '_self',
             null,
-        );
-    });
-
-    it('should have helper to create legacy edit URL for other object types', () => {
-        const urlPrefixProd = 'https://espace.library.uq.edu.au/';
-        const urlPrefixDev = 'http://development.library.uq.edu.au/espace/feature-example/#/';
-        const pid = 'UQ:111111';
-        expect(getLegacyEditUrl(pid, 'community', urlPrefixProd)).toBe(
-            `${urlPrefixProd}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=11&wft_id=291&href=%2Fcommunity%2FUQ%3A111111`,
-        );
-        expect(getLegacyEditUrl(pid, 'collection', urlPrefixDev)).toBe(
-            `${STAGING_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=9&wft_id=290&href=%2Fcollection%2FUQ%3A111111`,
         );
     });
 });
