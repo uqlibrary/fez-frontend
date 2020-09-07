@@ -102,7 +102,13 @@ const editorsGetValue = record => {
 };
 
 export const deleteKey = (record, searchKey) => {
-    const skipDeleteForKeys = ['rek_date', 'rek_title', 'rek_subtype', 'fez_record_search_key_oa_status'];
+    const skipDeleteForKeys = [
+        'rek_date',
+        'rek_title',
+        'rek_subtype',
+        'fez_record_search_key_oa_status',
+        'fez_record_search_key_language',
+    ];
     !skipDeleteForKeys.includes(searchKey) && delete (record || {})[searchKey];
 };
 
