@@ -53,7 +53,7 @@ const mapStateToProps = state => {
     const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
     const isDesignType = formValues.get('doc_type_id') === PUBLICATION_TYPE_DESIGN;
 
-    const designSubtypes = isDesignType ? publicationTypes()[PUBLICATION_TYPE_DESIGN].subtypes : null;
+    const designSubtypes = isDesignType ? publicationTypes(null, true)[PUBLICATION_TYPE_DESIGN].subtypes : null;
 
     return {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
