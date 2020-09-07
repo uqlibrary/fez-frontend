@@ -165,12 +165,12 @@ describe('Routes getMenuConfig method', () => {
 describe('Routes getRoutesConfig method', () => {
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: null });
-        expect(testRoutes.length).toEqual(7);
+        expect(testRoutes.length).toEqual(6);
     });
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqresearcher });
-        expect(testRoutes.length).toEqual(23);
+        expect(testRoutes.length).toEqual(22);
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
@@ -179,7 +179,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqmasquerade,
             authorDetails: authorDetails.uqmasquerade,
         });
-        expect(testRoutes.length).toEqual(24);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should return a list of routes for user who has admin (uqstaff)', () => {
@@ -188,7 +188,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(37);
+        expect(testRoutes.length).toEqual(36);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -198,7 +198,7 @@ describe('Routes getRoutesConfig method', () => {
             forceOrcidRegistration: true,
             isHdrStudent: true,
         });
-        expect(testRoutes.length).toEqual(8);
+        expect(testRoutes.length).toEqual(7);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
@@ -208,7 +208,7 @@ describe('Routes getRoutesConfig method', () => {
             forceOrcidRegistration: false,
             isHdrStudent: true,
         });
-        expect(testRoutes.length).toEqual(23);
+        expect(testRoutes.length).toEqual(22);
     });
 });
 
