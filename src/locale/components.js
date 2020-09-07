@@ -516,6 +516,44 @@ export default {
                     },
                 },
             },
+            fieldDataset: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Type of data',
+                        inputFieldHint: 'Enter type of data',
+                        addButtonLabel: 'Add',
+                        editButtonLabel: 'Update',
+                        id: 'type-of-data-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Type of data',
+                        reorderColumn: 'Reorder types of data',
+                        deleteAll: 'Remove all types of data',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all types of data?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move type of data up the order',
+                        moveDownHint: 'Move type of data down the order',
+                        deleteHint: 'Remove this type of data',
+                        editHint: 'Edit this type of data',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete type of data',
+                            confirmationMessage: 'Are you sure you want to delete this type of data?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         softwareRequiredForm: {
             field: {
