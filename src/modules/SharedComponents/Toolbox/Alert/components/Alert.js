@@ -301,7 +301,7 @@ export const Alert = ({
                 alignContent="center"
                 data-testid={alertId}
             >
-                <Grid item xs={12} sm className={action && !disableAlertClick && classes.linked}>
+                <Grid item xs={12} sm className={(action && !disableAlertClick && classes.linked) || ''}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
                         <Grid
                             item
