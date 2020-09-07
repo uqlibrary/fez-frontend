@@ -219,7 +219,7 @@ describe('ThesisSubmission', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('it should show file upload retry failure alert', () => {
+    it('should show file upload retry failure alert', () => {
         const mockUseState = jest.spyOn(React, 'useState');
         mockUseState.mockImplementation(() => [THESIS_UPLOAD_RETRIES, jest.fn()]);
         const wrapper = setup({
@@ -228,6 +228,17 @@ describe('ThesisSubmission', () => {
             submitSucceeded: true,
         });
         expect(wrapper.find('Alert').props().message).toMatchSnapshot();
+    });
+
+    it('should show file upload retry success alert', () => {
+        const mockUseState = jest.spyOn(React, 'useState');
+        mockUseState.mockImplementation(() => [1, jest.fn()]);
+        const wrapper = setup({
+            author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
+            newRecordFileUploadingOrIssueError: false,
+            submitSucceeded: true,
+        });
+        expect(wrapper.find('Alert').props().message).toBe('File upload retry succeeded.');
     });
 
     it('should have a helper to generate alert props', () => {

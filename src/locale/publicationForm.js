@@ -1293,6 +1293,11 @@ export default {
                 emailSubject: 'Problem with Submission to UQ eSpace - [studentFullName], [studentNumber]',
                 actionButtonLabel: 'Retry upload',
             },
+            retrySuccessLocale: {
+                type: 'done',
+                title: 'FILE UPLOAD SUCCESS',
+                message: 'File upload retry succeeded.',
+            },
             locale: {
                 instructions: '',
                 accessTermsAndConditions:

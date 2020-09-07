@@ -138,19 +138,24 @@ export const ThesisSubmission = ({
                         </StandardCard>
                     </Grid>
                 </Grid>
-                {newRecordFileUploadingOrIssueError && (
+                {(newRecordFileUploadingOrIssueError || retries > 0) && (
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
-                            <Alert
-                                {...getfileUploadAlertProps(
-                                    thesisLocale.fileUpload.failedAlertLocale,
-                                    author,
-                                    retries < THESIS_UPLOAD_RETRIES,
-                                )}
-                                disableAlertClick
-                                action={(retries < THESIS_UPLOAD_RETRIES && _retryUpload) || undefined}
-                                showLoader={isUploadInProgress}
-                            />
+                            {newRecordFileUploadingOrIssueError && (
+                                <Alert
+                                    {...getfileUploadAlertProps(
+                                        thesisLocale.fileUpload.failedAlertLocale,
+                                        author,
+                                        retries < THESIS_UPLOAD_RETRIES,
+                                    )}
+                                    disableAlertClick
+                                    action={(retries < THESIS_UPLOAD_RETRIES && _retryUpload) || undefined}
+                                    showLoader={isUploadInProgress}
+                                />
+                            )}
+                            {!newRecordFileUploadingOrIssueError && retries > 0 && (
+                                <Alert {...thesisLocale.fileUpload.retrySuccessLocale} />
+                            )}
                         </Grid>
                     </Grid>
                 )}
