@@ -1195,6 +1195,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
 </StandardPage>
 `;
 
+exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
+Array [
+  "Not all files were uploaded. Please contact ",
+  <a
+    href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
+  >
+    the Graduate School
+  </a>,
+  " for assistance.",
+]
+`;
+
 exports[`ThesisSubmission should show the file upload failure alert 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
