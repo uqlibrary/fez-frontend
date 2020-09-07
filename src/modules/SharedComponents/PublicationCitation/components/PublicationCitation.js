@@ -100,7 +100,6 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         showSources: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
-        userHasNewAdminEdit: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -118,7 +117,6 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: false,
         showSources: false,
         showUnpublishedBufferFields: false,
-        userHasNewAdminEdit: false,
         isPublicationDeleted: false,
     };
 
@@ -307,7 +305,6 @@ export class PublicationCitation extends PureComponent {
             showSourceCountIcon,
             showSources,
             showUnpublishedBufferFields,
-            userHasNewAdminEdit,
             isPublicationDeleted,
         } = this.props;
         const txt = locale.components.publicationCitation;
@@ -407,7 +404,6 @@ export class PublicationCitation extends PureComponent {
                                                         (location.hash && location.hash.replace('#', '')) ||
                                                         `${location.pathname}${location.search}`
                                                     }
-                                                    {...{ userHasNewAdminEdit }}
                                                 />
                                             </Grid>
                                         )}
