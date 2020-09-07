@@ -451,6 +451,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                 "tabIndicator": "tabindicator",
               }
             }
+            formValues={
+              Immutable.Map {
+                "rek_subtype": "Original Journal Article",
+              }
+            }
             handleSubmit={
               [MockFunction] {
                 "calls": Array [
@@ -4753,14 +4758,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     primaryHeader={true}
                                                     smallTitle={true}
                                                     squareTop={true}
-                                                    standardCardId="author details-section"
+                                                    standardCardId="author-details-section"
                                                     title="Author details"
                                                   >
                                                     <WithStyles(Cards)
                                                       primaryHeader={true}
                                                       smallTitle={true}
                                                       squareTop={true}
-                                                      standardCardId="author details-section"
+                                                      standardCardId="author-details-section"
                                                       title="Author details"
                                                     >
                                                       <Cards
@@ -4776,7 +4781,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         primaryHeader={true}
                                                         smallTitle={true}
                                                         squareTop={true}
-                                                        standardCardId="author details-section"
+                                                        standardCardId="author-details-section"
                                                         theme={
                                                           Object {
                                                             "breakpoints": Object {
@@ -5135,7 +5140,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       >
                                                         <WithStyles(ForwardRef(Card))
                                                           className="Cards-card-159 StandardCard"
-                                                          data-testid="author details-section"
+                                                          data-testid="author-details-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
@@ -5145,12 +5150,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 "root": "MuiCard-root",
                                                               }
                                                             }
-                                                            data-testid="author details-section"
+                                                            data-testid="author-details-section"
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
                                                               className="MuiCard-root Cards-card-159 StandardCard"
-                                                              data-testid="author details-section"
+                                                              data-testid="author-details-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
@@ -5188,13 +5193,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "rounded": "MuiPaper-rounded",
                                                                   }
                                                                 }
-                                                                data-testid="author details-section"
+                                                                data-testid="author-details-section"
                                                                 elevation={1}
                                                                 style={Object {}}
                                                               >
                                                                 <div
                                                                   className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
-                                                                  data-testid="author details-section"
+                                                                  data-testid="author-details-section"
                                                                   style={Object {}}
                                                                 >
                                                                   <WithStyles(ForwardRef(CardHeader))
@@ -5215,7 +5220,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "data-testid": "author details-section-header",
+                                                                        "data-testid": "author-details-section-header",
                                                                         "variant": "h6",
                                                                       }
                                                                     }
@@ -5243,7 +5248,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         Object {
                                                                           "color": "inherit",
                                                                           "component": "h3",
-                                                                          "data-testid": "author details-section-header",
+                                                                          "data-testid": "author-details-section-header",
                                                                           "variant": "h6",
                                                                         }
                                                                       }
@@ -5264,7 +5269,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             className="MuiCardHeader-title"
                                                                             color="inherit"
                                                                             component="h3"
-                                                                            data-testid="author details-section-header"
+                                                                            data-testid="author-details-section-header"
                                                                             display="block"
                                                                             variant="h6"
                                                                           >
@@ -5306,13 +5311,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               }
                                                                               color="inherit"
                                                                               component="h3"
-                                                                              data-testid="author details-section-header"
+                                                                              data-testid="author-details-section-header"
                                                                               display="block"
                                                                               variant="h6"
                                                                             >
                                                                               <h3
                                                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h6 MuiTypography-colorInherit MuiTypography-displayBlock"
-                                                                                data-testid="author details-section-header"
+                                                                                data-testid="author-details-section-header"
                                                                               >
                                                                                 Author details
                                                                               </h3>
@@ -5324,7 +5329,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   </WithStyles(ForwardRef(CardHeader))>
                                                                   <WithStyles(ForwardRef(CardContent))
                                                                     className=""
-                                                                    data-testid="author details-section-content"
+                                                                    data-testid="author-details-section-content"
                                                                   >
                                                                     <ForwardRef(CardContent)
                                                                       className=""
@@ -5333,11 +5338,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "root": "MuiCardContent-root",
                                                                         }
                                                                       }
-                                                                      data-testid="author details-section-content"
+                                                                      data-testid="author-details-section-content"
                                                                     >
                                                                       <div
                                                                         className="MuiCardContent-root"
-                                                                        data-testid="author details-section-content"
+                                                                        data-testid="author-details-section-content"
                                                                       >
                                                                         <Field
                                                                           component={
@@ -6243,14 +6248,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     primaryHeader={true}
                                                     smallTitle={true}
                                                     squareTop={true}
-                                                    standardCardId="grant information-section"
+                                                    standardCardId="grant-information-section"
                                                     title="Grant information"
                                                   >
                                                     <WithStyles(Cards)
                                                       primaryHeader={true}
                                                       smallTitle={true}
                                                       squareTop={true}
-                                                      standardCardId="grant information-section"
+                                                      standardCardId="grant-information-section"
                                                       title="Grant information"
                                                     >
                                                       <Cards
@@ -6266,7 +6271,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         primaryHeader={true}
                                                         smallTitle={true}
                                                         squareTop={true}
-                                                        standardCardId="grant information-section"
+                                                        standardCardId="grant-information-section"
                                                         theme={
                                                           Object {
                                                             "breakpoints": Object {
@@ -6625,7 +6630,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       >
                                                         <WithStyles(ForwardRef(Card))
                                                           className="Cards-card-159 StandardCard"
-                                                          data-testid="grant information-section"
+                                                          data-testid="grant-information-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
@@ -6635,12 +6640,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 "root": "MuiCard-root",
                                                               }
                                                             }
-                                                            data-testid="grant information-section"
+                                                            data-testid="grant-information-section"
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
                                                               className="MuiCard-root Cards-card-159 StandardCard"
-                                                              data-testid="grant information-section"
+                                                              data-testid="grant-information-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
@@ -6678,13 +6683,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "rounded": "MuiPaper-rounded",
                                                                   }
                                                                 }
-                                                                data-testid="grant information-section"
+                                                                data-testid="grant-information-section"
                                                                 elevation={1}
                                                                 style={Object {}}
                                                               >
                                                                 <div
                                                                   className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
-                                                                  data-testid="grant information-section"
+                                                                  data-testid="grant-information-section"
                                                                   style={Object {}}
                                                                 >
                                                                   <WithStyles(ForwardRef(CardHeader))
@@ -6705,7 +6710,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "data-testid": "grant information-section-header",
+                                                                        "data-testid": "grant-information-section-header",
                                                                         "variant": "h6",
                                                                       }
                                                                     }
@@ -6733,7 +6738,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         Object {
                                                                           "color": "inherit",
                                                                           "component": "h3",
-                                                                          "data-testid": "grant information-section-header",
+                                                                          "data-testid": "grant-information-section-header",
                                                                           "variant": "h6",
                                                                         }
                                                                       }
@@ -6754,7 +6759,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             className="MuiCardHeader-title"
                                                                             color="inherit"
                                                                             component="h3"
-                                                                            data-testid="grant information-section-header"
+                                                                            data-testid="grant-information-section-header"
                                                                             display="block"
                                                                             variant="h6"
                                                                           >
@@ -6796,13 +6801,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               }
                                                                               color="inherit"
                                                                               component="h3"
-                                                                              data-testid="grant information-section-header"
+                                                                              data-testid="grant-information-section-header"
                                                                               display="block"
                                                                               variant="h6"
                                                                             >
                                                                               <h3
                                                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h6 MuiTypography-colorInherit MuiTypography-displayBlock"
-                                                                                data-testid="grant information-section-header"
+                                                                                data-testid="grant-information-section-header"
                                                                               >
                                                                                 Grant information
                                                                               </h3>
@@ -6814,7 +6819,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   </WithStyles(ForwardRef(CardHeader))>
                                                                   <WithStyles(ForwardRef(CardContent))
                                                                     className=""
-                                                                    data-testid="grant information-section-content"
+                                                                    data-testid="grant-information-section-content"
                                                                   >
                                                                     <ForwardRef(CardContent)
                                                                       className=""
@@ -6823,11 +6828,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "root": "MuiCardContent-root",
                                                                         }
                                                                       }
-                                                                      data-testid="grant information-section-content"
+                                                                      data-testid="grant-information-section-content"
                                                                     >
                                                                       <div
                                                                         className="MuiCardContent-root"
-                                                                        data-testid="grant information-section-content"
+                                                                        data-testid="grant-information-section-content"
                                                                       >
                                                                         <Field
                                                                           component={

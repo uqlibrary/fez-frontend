@@ -72,8 +72,31 @@ describe('NtroSection component', () => {
                         },
                     },
                 ],
-                rek_display_type: 313,
+                rek_display_type: 316,
                 rek_subtype: 'Creative Work - Design/Architectural',
+            },
+        }));
+
+        const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not render ismn field for Book - Creative Work - Musical Composition', () => {
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_object_type_lookup: 'Record',
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof: 'Test collection',
+                        parent: {
+                            rek_security_policy: 2,
+                            rek_datastream_policy: 1,
+                        },
+                    },
+                ],
+                rek_display_type: 174,
+                rek_subtype: 'Creative Work - Musical Composition',
             },
         }));
 

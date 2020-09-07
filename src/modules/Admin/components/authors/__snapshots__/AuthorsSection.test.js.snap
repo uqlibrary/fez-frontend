@@ -1,24 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AuthorsSection component should render default view 1`] = `
-<Section
-  cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
-            "authors",
-          ],
-        ],
-        "title": "Authors",
-      },
-    ]
-  }
-  disabled={false}
-/>
-`;
-
-exports[`AuthorsSection component should render design form fields 1`] = `
+exports[`AuthorsSection component should render NTRO design form fields 1`] = `
 <Section
   cards={
     Array [
@@ -45,6 +27,24 @@ exports[`AuthorsSection component should render design form fields 1`] = `
           ],
         ],
         "title": "Creators",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`AuthorsSection component should render default view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "authors",
+          ],
+        ],
+        "title": "Authors",
       },
     ]
   }
@@ -81,6 +81,32 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
           ],
         ],
         "title": "Editors",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`AuthorsSection component should render non-NTRO design form fields 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "authors",
+          ],
+        ],
+        "title": "Designers",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "editors",
+          ],
+        ],
+        "title": "Contributors",
       },
     ]
   }
