@@ -52,34 +52,6 @@ import {
     workingPaperFields,
 } from './fields';
 
-export const USER_IDS_WITH_LEGACY_LINK = [
-    // Test accounts
-    'uqstaff',
-    'admin_test',
-
-    // eSpace Admins
-    'uqaheath',
-    'uqmmarr1',
-    'uqmfeen1',
-    'uqdstew1',
-    'uqfyu',
-    'uqayeate',
-    'uqcokeef',
-    'uqchesle',
-    'uqswils5',
-    'uqealvey',
-    'uqbibsen',
-
-    // eSpace Devs
-    'uqamartl',
-    'uqldegro',
-    'uqklane1',
-    'uqvasai',
-    'uqmmoise',
-    'uqclien1',
-    'uqawil42',
-];
-
 export default {
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: audioFields,
     [PUBLICATION_TYPE_BOOK]: bookFields,

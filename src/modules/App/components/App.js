@@ -191,8 +191,7 @@ export class AppClass extends PureComponent {
         return (
             menuItems.filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public).length >
                 0 ||
-            new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname) ||
-            new RegExp(routes.pathConfig.records.view_new(`(${routes.pidRegExp})`)).test(this.props.location.pathname)
+            new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname)
         );
     };
 

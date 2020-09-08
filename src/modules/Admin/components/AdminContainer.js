@@ -5,7 +5,6 @@ import Immutable from 'immutable';
 
 import locale from 'locale/pages';
 import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS, SUBTYPE_NON_NTRO } from 'config/general';
-import { USER_IDS_WITH_LEGACY_LINK } from 'config/admin/adminInterface';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
@@ -146,11 +145,7 @@ export const AdminContainer = ({
 
     const isActivated = () => {
         if (recordToView && recordToView.rek_object_type_lookup) {
-            return (
-                recordToView &&
-                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                USER_IDS_WITH_LEGACY_LINK.includes(authorDetails.username)
-            );
+            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
         }
         return false;
     };

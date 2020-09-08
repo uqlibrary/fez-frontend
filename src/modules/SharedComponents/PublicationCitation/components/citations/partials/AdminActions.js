@@ -5,44 +5,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-import {
-    APP_URL,
-    PATH_PREFIX,
-    PUBLICATION_TYPES_WITH_DOI,
-    RECORD_ACTION_URLS as defaultActions,
-    STAGING_URL,
-} from 'config/general';
+import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions } from 'config/general';
 import { DOI_ORG_PREFIX } from 'config/doi';
-
-export const getLegacyEditUrl = (pid, type, urlPrefix) => {
-    let wftID;
-    let xdisID;
-    let viewSlug;
-
-    switch (type) {
-        case 'community':
-            wftID = 291;
-            xdisID = 11;
-            viewSlug = 'community';
-            break;
-        case 'collection':
-            wftID = 290;
-            xdisID = 9;
-            viewSlug = 'collection';
-            break;
-        default:
-            wftID = 289;
-            xdisID = 179;
-            viewSlug = 'view';
-            break;
-    }
-
-    // Use staging URL for non-prod sites
-    const prefix = urlPrefix.indexOf('https://espace.') === 0 ? urlPrefix : STAGING_URL;
-
-    const href = encodeURIComponent(`/${viewSlug}/${pid}`);
-    return `${prefix}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=${xdisID}&wft_id=${wftID}&href=${href}`;
-};
 
 export const navigateToUrl = (uri, target, navigatedFrom, options) => () => {
     let fullUri = uri;
@@ -58,7 +22,6 @@ export const AdminActions = ({
     isRecordDeleted = false,
     navigatedFrom = '',
     publication,
-    userHasNewAdminEdit = false,
 }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -89,16 +52,8 @@ export const AdminActions = ({
     const menuOptions = filteredActions.map(action => {
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
-        const url =
-            !!action.isRecordEdit && !userHasNewAdminEdit
-                ? getLegacyEditUrl(pid, recordType, `${APP_URL}${PATH_PREFIX}`)
-                : action.url(pid);
-        const clickHandler = navigateToUrl(
-            url,
-            linkTarget,
-            !!action.isRecordEdit && userHasNewAdminEdit && navigatedFrom,
-            options,
-        );
+        const url = action.url(pid);
+        const clickHandler = navigateToUrl(url, linkTarget, !!action.isRecordEdit && navigatedFrom, options);
 
         const label = action.isDoi ? action.label(!!doi) : action.label;
         return {
@@ -127,7 +82,6 @@ AdminActions.propTypes = {
     isRecordDeleted: PropTypes.bool,
     navigatedFrom: PropTypes.string,
     publication: PropTypes.object,
-    userHasNewAdminEdit: PropTypes.bool,
 };
 
 export default React.memo(AdminActions);
