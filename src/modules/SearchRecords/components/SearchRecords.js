@@ -320,9 +320,9 @@ class SearchRecords extends PureComponent {
                                         />
                                     </Grid>
                                     {isLoadingOrExporting && (
-                                        <Grid item>
+                                        <Grid item xs={12}>
                                             <Grid container justify={'center'}>
-                                                <Grid item>
+                                                <Grid item xs={12}>
                                                     <InlineLoader
                                                         message={
                                                             this.props.searchLoading
@@ -337,7 +337,7 @@ class SearchRecords extends PureComponent {
                                     {!isLoadingOrExporting &&
                                         this.props.publicationsList &&
                                         this.props.publicationsList.length > 0 && (
-                                            <Grid item>
+                                            <Grid item xs={12}>
                                                 <PublicationsList
                                                     showAdminActions={
                                                         this.props.isAdmin || this.props.isUnpublishedBufferPage
@@ -347,7 +347,7 @@ class SearchRecords extends PureComponent {
                                                 />
                                             </Grid>
                                         )}
-                                    <Grid item>
+                                    <Grid item xs={12}>
                                         <PublicationsListPaging
                                             loading={isLoadingOrExporting}
                                             pagingData={pagingData}

@@ -214,6 +214,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
+            xs={12}
           >
             <WithStyles(ForwardRef(Grid))
               container={true}
@@ -221,6 +222,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
             >
               <WithStyles(ForwardRef(Grid))
                 item={true}
+                xs={12}
               >
                 <WithStyles(InlineLoader)
                   message="Exporting search results"
@@ -230,6 +232,7 @@ exports[`SearchRecords page should render loading screen while export publicatio
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
+            xs={12}
           >
             <WithStyles(PublicationsListPaging)
               disabled={true}
@@ -330,6 +333,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
+            xs={12}
           >
             <WithStyles(ForwardRef(Grid))
               container={true}
@@ -337,6 +341,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
             >
               <WithStyles(ForwardRef(Grid))
                 item={true}
+                xs={12}
               >
                 <WithStyles(InlineLoader)
                   message="Searching for works"
@@ -346,6 +351,7 @@ exports[`SearchRecords page should render loading screen while loading publicati
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
+            xs={12}
           >
             <WithStyles(PublicationsListPaging)
               disabled={true}
@@ -582,6 +588,7 @@ exports[`SearchRecords page should render when paging 1`] = `
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
+            xs={12}
           >
             <PublicationsList
               hideCountDiff={false}
@@ -603,6 +610,7 @@ exports[`SearchRecords page should render when paging 1`] = `
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
+            xs={12}
           >
             <WithStyles(PublicationsListPaging)
               disabled={false}
