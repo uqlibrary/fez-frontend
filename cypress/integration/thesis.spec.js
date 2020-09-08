@@ -205,7 +205,7 @@ context('Thesis', () => {
 
         uploadFile('test.jpg');
 
-        cy.get('button[title="Remove this file"]').click();
+        cy.get('[data-testid="dsi-dsid-0-delete"]').click();
         cy.get('button')
             .contains('Yes')
             .click();

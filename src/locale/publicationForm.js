@@ -1285,11 +1285,18 @@ export default {
             failedAlertLocale: {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
-                message:
+                messageWithRetry:
                     "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact [linkStart]the Graduate School[linkEnd].",
+                message:
+                    'Not all files were uploaded. Please contact [linkStart]the Graduate School[linkEnd] for assistance.',
                 emailRecipient: 'thesis@gradschool.uq.edu.au',
                 emailSubject: 'Problem with Submission to UQ eSpace - [studentFullName], [studentNumber]',
                 actionButtonLabel: 'Retry upload',
+            },
+            retrySuccessLocale: {
+                type: 'done',
+                title: 'FILE UPLOAD SUCCESS',
+                message: 'File upload retry succeeded.',
             },
             locale: {
                 instructions: '',
