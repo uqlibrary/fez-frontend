@@ -36,6 +36,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                     autoFocus
                                     disabled={this.props.submitting}
                                     name="rek_title"
+                                    textFieldId="rek-title"
                                     required
                                     type="text"
                                     fullWidth
@@ -96,6 +97,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                     component={TextField}
                                     disabled={this.props.submitting}
                                     name="rek_description"
+                                    textFieldId="rek-description"
                                     type="text"
                                     fullWidth
                                     multiline
@@ -128,6 +130,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 <Field
                                     component={TextField}
                                     name="comments"
+                                    textFieldId="comments"
                                     type="text"
                                     disabled={this.props.submitting}
                                     fullWidth
@@ -139,6 +142,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                 <Field
                                     component={TextField}
                                     name="rek_link"
+                                    textFieldId="rek-link"
                                     type="text"
                                     disabled={this.props.submitting}
                                     fullWidth

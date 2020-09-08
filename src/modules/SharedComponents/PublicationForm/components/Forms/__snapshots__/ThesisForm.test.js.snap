@@ -54,6 +54,7 @@ exports[`ThesisForm  should render component 1`] = `
             placeholder="Thesis title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -189,6 +190,7 @@ exports[`ThesisForm  should render component 1`] = `
             placeholder=""
             required={true}
             rows={1}
+            textFieldId="rek-author-0"
             type="text"
             validate={
               Array [
@@ -376,6 +378,7 @@ exports[`ThesisForm  should render component 1`] = `
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -397,6 +400,7 @@ exports[`ThesisForm  should render component 1`] = `
             name="fez_record_search_key_total_pages.rek_total_pages"
             normalize={[Function]}
             placeholder=""
+            textFieldId="rek-total-pages"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -412,6 +416,7 @@ exports[`ThesisForm  should render component 1`] = `
             multiline={true}
             name="fez_record_search_key_description.rek_description"
             placeholder="Provide an abstract or summary of the work"
+            textFieldId="rek-description"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -427,6 +432,7 @@ exports[`ThesisForm  should render component 1`] = `
             multiline={true}
             name="comments"
             placeholder="Provide any additional information"
+            textFieldId="comments"
             title="Additional notes"
             type="text"
           />
