@@ -423,6 +423,20 @@ export class PublicationCitation extends PureComponent {
                             )}
                         </Grid>
                     </Grid>
+                    {!hideContentIndicators &&
+                        publication.fez_record_search_key_content_indicator &&
+                        publication.fez_record_search_key_content_indicator.length > 0 && (
+                            <Grid item xs={12}>
+                                <Typography variant="caption">
+                                    <span className={classes.contentIndicatorTitle}>
+                                        {locale.components.contentIndicators.label}:
+                                    </span>
+                                    {publication.fez_record_search_key_content_indicator
+                                        .map(item => item.rek_content_indicator_lookup)
+                                        .join(locale.components.contentIndicators.divider)}
+                                </Typography>
+                            </Grid>
+                        )}
                 </Grid>
                 {(showDefaultActions || customActions) && (
                     <Grid container spacing={1} className={classes.buttonMargin}>
@@ -433,20 +447,6 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 )}
                 <Divider className={classes.divider} />
-                {!hideContentIndicators &&
-                    publication.fez_record_search_key_content_indicator &&
-                    publication.fez_record_search_key_content_indicator.length > 0 && (
-                        <Grid item xs={12}>
-                            <Typography gutterBottom variant="caption">
-                                <span className={classes.contentIndicatorTitle}>
-                                    {locale.components.contentIndicators.label}:
-                                </span>
-                                {publication.fez_record_search_key_content_indicator
-                                    .map(item => item.rek_content_indicator_lookup)
-                                    .join(locale.components.contentIndicators.divider)}
-                            </Typography>
-                        </Grid>
-                    )}
             </div>
         );
     }

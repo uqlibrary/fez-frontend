@@ -212,24 +212,32 @@ exports[`SearchRecords page should render loading screen while export publicatio
               onPageChanged={[Function]}
             />
           </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          justify="center"
-        >
           <WithStyles(ForwardRef(Grid))
             item={true}
           >
-            <WithStyles(InlineLoader)
-              message="Exporting search results"
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              justify="center"
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+              >
+                <WithStyles(InlineLoader)
+                  message="Exporting search results"
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
-        <WithStyles(PublicationsListPaging)
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-        />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -320,24 +328,32 @@ exports[`SearchRecords page should render loading screen while loading publicati
               onPageChanged={[Function]}
             />
           </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          justify="center"
-        >
           <WithStyles(ForwardRef(Grid))
             item={true}
           >
-            <WithStyles(InlineLoader)
-              message="Searching for works"
+            <WithStyles(ForwardRef(Grid))
+              container={true}
+              justify="center"
+            >
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+              >
+                <WithStyles(InlineLoader)
+                  message="Searching for works"
+                />
+              </WithStyles(ForwardRef(Grid))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
-        <WithStyles(PublicationsListPaging)
-          disabled={true}
-          loading={true}
-          onPageChanged={[Function]}
-        />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -564,44 +580,44 @@ exports[`SearchRecords page should render when paging 1`] = `
               }
             />
           </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+          >
+            <PublicationsList
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showAdminActions={false}
+              showDefaultActions={false}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              showUnpublishedBufferFields={false}
+              subsetCustomActions={Array []}
+            />
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "from": 10,
+                  "to": 20,
+                  "total": 100,
+                }
+              }
+            />
+          </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
-        <div
-          style={
-            Object {
-              "marginTop": 16,
-            }
-          }
-        >
-          <PublicationsList
-            hideCountDiff={false}
-            publicationsList={
-              Array [
-                1,
-                2,
-              ]
-            }
-            publicationsListSubset={Array []}
-            showAdminActions={false}
-            showDefaultActions={false}
-            showMetrics={false}
-            showSourceCountIcon={false}
-            showSources={false}
-            showUnpublishedBufferFields={false}
-            subsetCustomActions={Array []}
-          />
-        </div>
-        <WithStyles(PublicationsListPaging)
-          disabled={false}
-          loading={false}
-          onPageChanged={[Function]}
-          pagingData={
-            Object {
-              "from": 10,
-              "to": 20,
-              "total": 100,
-            }
-          }
-        />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>

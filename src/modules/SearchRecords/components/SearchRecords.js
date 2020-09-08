@@ -319,39 +319,43 @@ class SearchRecords extends PureComponent {
                                             disabled={isLoadingOrExporting}
                                         />
                                     </Grid>
-                                </Grid>
-                                {isLoadingOrExporting && (
-                                    <Grid container justify={'center'}>
+                                    {isLoadingOrExporting && (
                                         <Grid item>
-                                            <InlineLoader
-                                                message={
-                                                    this.props.searchLoading
-                                                        ? txt.loadingPagingMessage
-                                                        : txt.exportPublicationsLoadingMessage
-                                                }
-                                            />
+                                            <Grid container justify={'center'}>
+                                                <Grid item>
+                                                    <InlineLoader
+                                                        message={
+                                                            this.props.searchLoading
+                                                                ? txt.loadingPagingMessage
+                                                                : txt.exportPublicationsLoadingMessage
+                                                        }
+                                                    />
+                                                </Grid>
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
-                                )}
-                                {!isLoadingOrExporting &&
-                                    this.props.publicationsList &&
-                                    this.props.publicationsList.length > 0 && (
-                                        <div style={{ marginTop: 16 }}>
-                                            <PublicationsList
-                                                showAdminActions={
-                                                    this.props.isAdmin || this.props.isUnpublishedBufferPage
-                                                }
-                                                showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
-                                                publicationsList={this.props.publicationsList}
-                                            />
-                                        </div>
                                     )}
-                                <PublicationsListPaging
-                                    loading={isLoadingOrExporting}
-                                    pagingData={pagingData}
-                                    onPageChanged={this.pageChanged}
-                                    disabled={isLoadingOrExporting}
-                                />
+                                    {!isLoadingOrExporting &&
+                                        this.props.publicationsList &&
+                                        this.props.publicationsList.length > 0 && (
+                                            <Grid item>
+                                                <PublicationsList
+                                                    showAdminActions={
+                                                        this.props.isAdmin || this.props.isUnpublishedBufferPage
+                                                    }
+                                                    showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
+                                                    publicationsList={this.props.publicationsList}
+                                                />
+                                            </Grid>
+                                        )}
+                                    <Grid item>
+                                        <PublicationsListPaging
+                                            loading={isLoadingOrExporting}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={isLoadingOrExporting}
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     )}

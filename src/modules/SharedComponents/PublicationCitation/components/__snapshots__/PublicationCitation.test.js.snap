@@ -927,6 +927,20 @@ exports[`PublicationCitation  should render button disabled with spinners on act
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -1050,21 +1064,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -1960,23 +1959,22 @@ exports[`PublicationCitation  should render component with content indicators 1`
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        a content indicator, another content indicator
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      a content indicator, another content indicator
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -2870,6 +2868,20 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -2908,21 +2920,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -3816,23 +3813,22 @@ exports[`PublicationCitation  should render component with default item 1`] = `
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -4722,23 +4718,22 @@ exports[`PublicationCitation  should render component with default item without 
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -5632,23 +5627,22 @@ exports[`PublicationCitation  should render component with default list hiding t
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -6542,23 +6536,22 @@ exports[`PublicationCitation  should render component with default list hiding t
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -7483,23 +7476,22 @@ exports[`PublicationCitation  should render component with publication from mult
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -8408,23 +8400,22 @@ exports[`PublicationCitation  should render component without a title 1`] = `
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -9801,23 +9792,22 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Typography))
+        variant="caption"
+      >
+        <span>
+          Content Indicators
+          :
+        </span>
+        Scholarship of Teaching and Learning, Protocol
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Divider)) />
-  <WithStyles(ForwardRef(Grid))
-    item={true}
-    xs={12}
-  >
-    <WithStyles(ForwardRef(Typography))
-      gutterBottom={true}
-      variant="caption"
-    >
-      <span>
-        Content Indicators
-        :
-      </span>
-      Scholarship of Teaching and Learning, Protocol
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
