@@ -53,7 +53,8 @@ export const AdminActions = ({
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
         const url = action.url(pid);
-        const clickHandler = navigateToUrl(url, linkTarget, !!action.isRecordEdit && navigatedFrom, options);
+        const clickHandler = (forceNewTab = false) =>
+            navigateToUrl(url, forceNewTab ? '_blank' : linkTarget, !!action.isRecordEdit && navigatedFrom, options);
 
         const label = action.isDoi ? action.label(!!doi) : action.label;
         return {
@@ -68,7 +69,7 @@ export const AdminActions = ({
             </IconButton>
             <Menu id="admin-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
                 {menuOptions.map((option, index) => (
-                    <MenuItem key={index} onClick={option.clickHandler}>
+                    <MenuItem key={index} onClick={option.clickHandler()} onAuxClick={option.clickHandler(true)}>
                         {option.label}
                     </MenuItem>
                 ))}
