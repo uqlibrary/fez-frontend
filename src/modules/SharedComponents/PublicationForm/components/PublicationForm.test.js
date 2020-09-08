@@ -1,8 +1,8 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
 import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm } from './Forms';
-import { validation } from 'config';
-import { routes } from 'config';
+import { validation, routes } from 'config';
+import { PUBLICATION_TYPE_THESIS } from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -300,10 +300,13 @@ describe('Component PublicationForm', () => {
             history: {
                 push: pushFn,
             },
+            isHdrStudent: true,
         });
-
-        wrapper.instance()._visitHdrSubmissionPage();
-
+        wrapper.setProps({
+            formValues: Immutable.Map({
+                rek_display_type: PUBLICATION_TYPE_THESIS,
+            }),
+        });
         expect(pushFn).toHaveBeenCalledWith(routes.pathConfig.hdrSubmission);
     });
 });

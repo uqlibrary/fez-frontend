@@ -31,6 +31,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             placeholder="Title of report"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -173,6 +174,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             name="rek_description"
             placeholder="Provide an abstract or summary of the work."
             rows={3}
+            textFieldId="rek-description"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -324,6 +326,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             multiline={true}
             name="comments"
             placeholder="Add any additional information here"
+            textFieldId="comments"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -338,6 +341,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
             label="Link"
             name="rek_link"
             placeholder="Type URL for this work"
+            textFieldId="rek-link"
             type="text"
             validate={
               Array [
