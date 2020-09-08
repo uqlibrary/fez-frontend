@@ -5727,27 +5727,28 @@ exports[`Component PublicationForm should render component with HDR Thesis 1`] =
           </WithStyles(ForwardRef(Grid))>
         </StandardCard>
       </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      spacing={3}
+    >
       <WithStyles(ForwardRef(Grid))
         item={true}
+        xs={true}
+      />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        sm="auto"
         xs={12}
       >
-        <StandardCard
-          title="Thesis information"
+        <WithStyles(ForwardRef(Button))
+          color="secondary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[MockFunction]}
         >
-          <Alert
-            action={[Function]}
-            actionButtonLabel="Upload your thesis"
-            allowDismiss={false}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="For HDR thesis submissions, click"
-            showLoader={false}
-            type="info"
-            wiggle={null}
-          />
-        </StandardCard>
+          Abandon and search again
+        </WithStyles(ForwardRef(Button))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
   </form>

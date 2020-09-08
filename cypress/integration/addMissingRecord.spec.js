@@ -140,17 +140,7 @@ context('RHD adding a Thesis', () => {
             .contains('Thesis')
             .eq(0)
             .click();
-        cy.get('#submit-work').should('not.exist');
-        // we see the amber warning bar
-        cy.get('[data-testid=standard-card-thesis-information-content]').get('#info-icon');
-        cy.get('[data-testid=standard-card-thesis-information-content]')
-            .contains('Upload your thesis')
-            .get('#action-button')
-            .should('be.enabled')
-            .click();
-        cy.get('[data-testid=confirm-dialog-box]').click();
         cy.url().should('equal', `${baseUrl}/rhdsubmission`);
-        // and they are on the correct form to submit their thesis
         cy.contains('Higher degree by research thesis deposit');
     });
 });
@@ -178,7 +168,7 @@ context('Non RHD adding a Thesis', () => {
         // we see the blue info bar
         cy.get('[data-testid=standard-card-thesis-information-content]').get('#warning-icon');
         cy.get('[data-testid=standard-card-thesis-information-content]')
-            .contains('Upload your thesis')
+            .contains('Upload HDR thesis')
             .get('#action-button')
             .should('be.enabled')
             .click();

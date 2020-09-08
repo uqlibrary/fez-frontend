@@ -517,8 +517,16 @@ export default {
     thesis: {
         information: {
             title: 'Thesis information',
-            actionButtonLabel: 'Upload your thesis',
-            message: 'For HDR thesis submissions, click',
+            actionButtonLabel: 'Upload HDR thesis',
+            message: (
+                <React.Fragment>
+                    <p>
+                        Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS
+                        button to submit.
+                    </p>
+                    <p> To deposit another thesis type, use the form below.</p>
+                </React.Fragment>
+            ),
             // help: {
             //     title: 'Thesis information',
             //     text: 'Some help',

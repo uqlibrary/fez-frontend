@@ -22,13 +22,22 @@ exports[`ThesisForm  should render component 1`] = `
         >
           <Alert
             action={[Function]}
-            actionButtonLabel="Upload your thesis"
+            actionButtonLabel="Upload HDR thesis"
             allowDismiss={false}
             customIcon={null}
             customType={null}
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
-            message="For HDR thesis submissions, click"
+            message={
+              <React.Fragment>
+                <p>
+                  Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS button to submit.
+                </p>
+                <p>
+                   To deposit another thesis type, use the form below.
+                </p>
+              </React.Fragment>
+            }
             showLoader={false}
             type="warning"
             wiggle={null}
