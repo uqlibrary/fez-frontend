@@ -24,8 +24,7 @@ import Typography from '@material-ui/core/Typography';
 import * as recordForms from './Forms';
 import { publicationTypes, validation } from 'config';
 import { default as txt } from 'locale/publicationForm';
-import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS, PUBLICATION_TYPE_THESIS } from 'config/general';
-import { pathConfig } from 'config/routes';
+import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS } from 'config/general';
 
 export default class PublicationForm extends Component {
     static propTypes = {
@@ -88,12 +87,6 @@ export default class PublicationForm extends Component {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
         } else {
-            // a HDR student who tries to use this form to submit their thesis should be diverted to the correct page
-            const isThesis = nextProps.formValues.get('rek_display_type') === PUBLICATION_TYPE_THESIS;
-            if (isThesis && nextProps.isHdrStudent) {
-                nextProps.history.push(pathConfig.hdrSubmission);
-            }
-
             if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
                 this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
                     <MenuItem value={item} key={index}>

@@ -281,32 +281,4 @@ describe('Component PublicationForm', () => {
             validation.validFileUpload,
         ]);
     });
-
-    it('should render component with HDR Thesis', () => {
-        const wrapper = setup({
-            initialValues: {
-                rek_display_type: 187,
-            },
-            isHdrStudent: true,
-            hasSubtypes: true,
-            subtypeVocabId: 2222,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should redirect to Thesis submission page for HDR student', () => {
-        const pushFn = jest.fn();
-        const wrapper = setup({
-            history: {
-                push: pushFn,
-            },
-            isHdrStudent: true,
-        });
-        wrapper.setProps({
-            formValues: Immutable.Map({
-                rek_display_type: PUBLICATION_TYPE_THESIS,
-            }),
-        });
-        expect(pushFn).toHaveBeenCalledWith(routes.pathConfig.hdrSubmission);
-    });
 });
