@@ -121,30 +121,6 @@ context('Add missing record', () => {
     });
 });
 
-// a rhd student cannot submit their thesis via Add a Missing Work
-context('RHD adding a Thesis', () => {
-    const baseUrl = Cypress.config('baseUrl');
-    beforeEach(() => {
-        cy.visit('http://localhost:3000/records/add/new?user=s2222222');
-        cy.wait(2000);
-    });
-
-    afterEach(() => {
-        cy.killWindowUnloadHandler();
-    });
-
-    it('gets a redirect on selection of Thesis', () => {
-        cy.get('[data-testid=rek-display-type-select]').click();
-        cy.get('[data-testid=rek-display-type-options]')
-            .find('li[role=option]')
-            .contains('Thesis')
-            .eq(0)
-            .click();
-        cy.url().should('equal', `${baseUrl}/rhdsubmission`);
-        cy.contains('Higher degree by research thesis deposit');
-    });
-});
-
 // a NON RHD student is prompted in case they have a student account
 context('Non RHD adding a Thesis', () => {
     const baseUrl = Cypress.config('baseUrl');
