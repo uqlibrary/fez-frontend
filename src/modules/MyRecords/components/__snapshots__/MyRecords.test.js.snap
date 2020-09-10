@@ -81,7 +81,6 @@ exports[`MyRecords test component has displayable facets 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -187,7 +186,6 @@ exports[`MyRecords test renders active filters 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -705,7 +703,6 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -1215,7 +1212,6 @@ exports[`MyRecords test should handle export publications 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }

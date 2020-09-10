@@ -371,7 +371,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             isMyDataSetPage={true}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
