@@ -20,7 +20,6 @@ export default {
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
             renameFacetsList: { 'Display type': 'Work type', Subtype: 'Work subtype' },
             lookupFacetsList: {
-                Author: 'Author (lookup)',
                 Collection: 'Collection (lookup)',
                 Subject: 'Subject (lookup)',
             },

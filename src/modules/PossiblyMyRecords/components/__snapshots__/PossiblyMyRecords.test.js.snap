@@ -62,7 +62,6 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             facetsData={Object {}}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -304,7 +303,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             }
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
