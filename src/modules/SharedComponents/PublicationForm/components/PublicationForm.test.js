@@ -1,8 +1,8 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
 import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm } from './Forms';
-import { validation } from 'config';
-import { routes } from 'config';
+import { validation, routes } from 'config';
+import { PUBLICATION_TYPE_THESIS } from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -280,30 +280,5 @@ describe('Component PublicationForm', () => {
             validation.fileUploadRequired,
             validation.validFileUpload,
         ]);
-    });
-
-    it('should render component with HDR Thesis', () => {
-        const wrapper = setup({
-            initialValues: {
-                rek_display_type: 187,
-            },
-            isHdrStudent: true,
-            hasSubtypes: true,
-            subtypeVocabId: 2222,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should redirect to Thesis submission page for HDR student', () => {
-        const pushFn = jest.fn();
-        const wrapper = setup({
-            history: {
-                push: pushFn,
-            },
-        });
-
-        wrapper.instance()._visitHdrSubmissionPage();
-
-        expect(pushFn).toHaveBeenCalledWith(routes.pathConfig.hdrSubmission);
     });
 });
