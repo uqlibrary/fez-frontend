@@ -141,4 +141,4 @@ ConfirmationBox.defaultProps = {
     showInputForm: false,
 };
 
-export default ConfirmationBox;
+export default React.memo(ConfirmationBox);

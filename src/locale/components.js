@@ -2772,5 +2772,20 @@ export default {
                 },
             },
         },
+        bulkUpdates: {
+            inputForm: action => ({
+                confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
+                confirmButtonLabel: 'bulk update',
+                cancelButtonLabel: 'Cancel',
+            }),
+            bulkUpdatesForms: {
+                changeDisplayTypeForm: {
+                    title: 'Bulk change display type',
+                    message:
+                        'Change a list of display types from a search or ad-hoc query to a different display type.  This will cause data loss where the display types don`t overlap next time the pid is updated.',
+                    type: 'info',
+                },
+            },
+        },
     },
 };

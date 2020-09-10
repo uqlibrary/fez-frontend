@@ -22,6 +22,7 @@ import {
 } from 'modules/SharedComponents/PublicationsList';
 
 import { locale } from 'locale';
+import { RecordsSelectorContext } from 'context';
 
 class SearchRecords extends PureComponent {
     static propTypes = {
@@ -338,13 +339,19 @@ class SearchRecords extends PureComponent {
                                         this.props.publicationsList &&
                                         this.props.publicationsList.length > 0 && (
                                             <Grid item xs={12}>
-                                                <PublicationsList
-                                                    showAdminActions={
-                                                        this.props.isAdmin || this.props.isUnpublishedBufferPage
-                                                    }
-                                                    showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
-                                                    publicationsList={this.props.publicationsList}
-                                                />
+                                                <RecordsSelectorContext.Provider
+                                                    value={{
+                                                        records: this.props.publicationsList,
+                                                    }}
+                                                >
+                                                    <PublicationsList
+                                                        showAdminActions={
+                                                            this.props.isAdmin || this.props.isUnpublishedBufferPage
+                                                        }
+                                                        showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
+                                                        publicationsList={this.props.publicationsList}
+                                                    />
+                                                </RecordsSelectorContext.Provider>
                                             </Grid>
                                         )}
                                     <Grid item xs={12}>
