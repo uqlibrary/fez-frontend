@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import { formValueSelector, getFormSyncErrors, change, Field, reduxForm } from 'redux-form/immutable';
+import { formValueSelector, getFormSyncErrors, change, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { DocumentTypeSingleField, PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
@@ -18,7 +18,9 @@ const FORM_NAME = 'ChaneDisplayTypeForm';
 const selector = formValueSelector(FORM_NAME);
 
 const onSubmit = (values, dispatch, props) => {
-    dispatch(changeDisplayType(Object.values(props.recordsSelected), values.toJS()));
+    return dispatch(changeDisplayType(Object.values(props.recordsSelected), values.toJS())).catch(error => {
+        throw new SubmissionError({ _error: error.message });
+    });
 };
 
 const onChange = (values, dispatch, props, prevValues) => {
@@ -27,7 +29,7 @@ const onChange = (values, dispatch, props, prevValues) => {
     }
 };
 
-export const ChangeDisplayTypeForm = ({ handleSubmit, submitting, onCancel }) => {
+export const ChangeDisplayTypeForm = ({ handleSubmit, submitting, submitSucceeded, onCancel }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
     const displayType = useSelector(state => selector(state, 'rek_display_type'));
     const subtypes = usePublicationSubtype(displayType || null, true);
@@ -89,6 +91,24 @@ export const ChangeDisplayTypeForm = ({ handleSubmit, submitting, onCancel }) =>
                         variant="contained"
                     />
                 </Grid>
+                {!!submitting && (
+                    <Grid item xs={12}>
+                        <Alert
+                            alertId="alert-info-change-display-type"
+                            {...txt.changeDisplayTypeForm.submittingAlert}
+                        />
+                    </Grid>
+                )}
+                {!!submitSucceeded && (
+                    <Grid item xs={12}>
+                        <Alert alertId="alert-info-change-display-type" {...txt.changeDisplayTypeForm.successAlert} />
+                    </Grid>
+                )}
+                {!!error && (
+                    <Grid item xs={12}>
+                        <Alert alertId="alert-info-change-display-type" {...txt.changeDisplayTypeForm.successAlert} />
+                    </Grid>
+                )}
             </Grid>
         </form>
     );
@@ -98,6 +118,7 @@ ChangeDisplayTypeForm.propTypes = {
     handleSubmit: PropTypes.func,
     onCancel: PropTypes.func,
     submitting: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
 };
 
 const ChangeDisplayTypeReduxForm = reduxForm({

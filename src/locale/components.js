@@ -2792,6 +2792,20 @@ export default {
                             'Change a list of display types from a search or ad-hoc query to a different display type.  This will cause data loss where the display types don`t overlap next time the pid is updated.',
                         type: 'info',
                     },
+                    submittingAlert: {
+                        title: 'Bulk update - change display type',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change display type',
+                        message: 'Bulk update job created successfully',
+                        type: 'success',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change display type',
+                        type: 'error',
+                    },
                 },
             },
         },
