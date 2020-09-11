@@ -1,5 +1,7 @@
+import React from 'react';
 import PublicationsList from './PublicationsList';
 import { myRecordsList } from 'mock/data';
+import { render, WithRouter, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -8,30 +10,33 @@ function setup(testProps = {}) {
         showDefaultActions: testProps.showDefaultActions || false, // : PropTypes.bool
         ...testProps,
     };
-    return getElement(PublicationsList, props);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <PublicationsList {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('PublicationsList', () => {
     it('renders empty component', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { asFragment } = setup();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('renders component with items', () => {
-        const wrapper = setup({ publicationsList: myRecordsList.data });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { asFragment } = setup({ publicationsList: myRecordsList.data });
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('renders component with custom subset actions', () => {
         const test = [];
-        const wrapper = setup({
-            publicationsListSubset: ['test'],
+        const { asFragment } = setup({
+            publication: { rek_pid: 'UQ:111111' },
+            publicationsListSubset: ['UQ:222222'],
             subsetCustomActions: test,
         });
-        expect(
-            wrapper.instance().renderPublicationCitation(0, {
-                rek_pid: 'test',
-            }).props.customActions,
-        ).toBe(test);
+        expect(asFragment()).toMatchSnapshot();
     });
 });

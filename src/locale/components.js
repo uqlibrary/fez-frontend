@@ -2780,10 +2780,18 @@ export default {
             }),
             bulkUpdatesForms: {
                 changeDisplayTypeForm: {
-                    title: 'Bulk change display type',
-                    message:
-                        'Change a list of display types from a search or ad-hoc query to a different display type.  This will cause data loss where the display types don`t overlap next time the pid is updated.',
-                    type: 'info',
+                    formLabels: {
+                        displayType: 'New display type',
+                        subtype: 'New subtype',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: {
+                        title: 'Bulk change display type',
+                        message:
+                            'Change a list of display types from a search or ad-hoc query to a different display type.  This will cause data loss where the display types don`t overlap next time the pid is updated.',
+                        type: 'info',
+                    },
                 },
             },
         },

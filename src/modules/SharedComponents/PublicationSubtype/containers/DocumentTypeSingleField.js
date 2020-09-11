@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { publicationTypes } from 'config';
 
@@ -11,23 +10,6 @@ const documentTypeList = () => {
         };
     });
 };
-const mapStateToProps = (state, props) => {
-    return {
-        value: (!!props.input && props.input.value) || props.value || '',
-        itemsList: documentTypeList() || [],
-        itemsLoadingHint: props.loadingHint || 'Loading..',
-    };
-};
-
-function mapDispatchToProps() {
-    return {};
-}
-
-const SingleDocumentTypeList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
-
-const _onChange = fieldProps => {
-    return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
-};
 
 /**
  * provide a drop down that returns a Single Document Type (Publication type)
@@ -38,6 +20,17 @@ const _onChange = fieldProps => {
  */
 export default function DocumentTypeSingleField(fieldProps) {
     return (
-        <SingleDocumentTypeList onChange={_onChange(fieldProps)} genericSelectFieldId="doc-type-id" {...fieldProps} />
+        <GenericSelectField
+            error={!!fieldProps.meta && fieldProps.meta.error}
+            errorText={!!fieldProps.meta && fieldProps.meta.error}
+            genericSelectFieldId="doc-type-id"
+            itemsList={documentTypeList() || []}
+            itemsLoadingHint={fieldProps.loadingHint || 'Loading..'}
+            onChange={
+                (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
+            }
+            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || ''}
+            {...fieldProps}
+        />
     );
 }

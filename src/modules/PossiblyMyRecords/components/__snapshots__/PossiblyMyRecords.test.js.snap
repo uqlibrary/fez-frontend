@@ -176,7 +176,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             item={true}
             xs={true}
           >
-            <PublicationsList
+            <Memo(PublicationsList)
               customActions={
                 Array [
                   Object {
@@ -190,7 +190,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   },
                 ]
               }
-              hideCountDiff={false}
               publicationsList={
                 Array [
                   1,
@@ -198,14 +197,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   3,
                 ]
               }
-              publicationsListSubset={Array []}
               publicationsLoading={false}
-              showAdminActions={false}
-              showDefaultActions={false}
-              showMetrics={false}
-              showSourceCountIcon={false}
-              showSources={false}
-              showUnpublishedBufferFields={false}
               subsetCustomActions={
                 Array [
                   Object {

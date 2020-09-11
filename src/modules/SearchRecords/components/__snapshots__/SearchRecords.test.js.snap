@@ -590,23 +590,27 @@ exports[`SearchRecords page should render when paging 1`] = `
             item={true}
             xs={12}
           >
-            <PublicationsList
-              hideCountDiff={false}
-              publicationsList={
-                Array [
-                  1,
-                  2,
-                ]
+            <ContextProvider
+              value={
+                Object {
+                  "records": Array [
+                    1,
+                    2,
+                  ],
+                }
               }
-              publicationsListSubset={Array []}
-              showAdminActions={false}
-              showDefaultActions={false}
-              showMetrics={false}
-              showSourceCountIcon={false}
-              showSources={false}
-              showUnpublishedBufferFields={false}
-              subsetCustomActions={Array []}
-            />
+            >
+              <Memo(PublicationsList)
+                publicationsList={
+                  Array [
+                    1,
+                    2,
+                  ]
+                }
+                showAdminActions={false}
+                showUnpublishedBufferFields={false}
+              />
+            </ContextProvider>
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}

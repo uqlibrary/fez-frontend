@@ -636,3 +636,32 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
             });
     };
 };
+
+export const changeDisplayType = (records = [], data) => {
+    const changeDisplayTypeRequest = records.map(record => ({
+        rek_pid: record.rek_pid,
+        ...data,
+    }));
+
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_DISPLAY_TYPE_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), changeDisplayTypeRequest);
+            dispatch({
+                type: actions.CHANGE_DISPLAY_TYPE_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_DISPLAY_TYPE_FAILED,
+                payload: e,
+            });
+
+            return false;
+        }
+    };
+};

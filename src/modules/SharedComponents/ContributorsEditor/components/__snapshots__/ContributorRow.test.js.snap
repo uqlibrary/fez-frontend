@@ -2,9 +2,8 @@
 
 exports[`Component ContributorRow Row should be clickable when showContributorAssignment set to true 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -16,8 +15,6 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -134,9 +131,8 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
 
 exports[`Component ContributorRow Row should not be clickable when showContributorAssignment set to false 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -148,8 +144,6 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -266,9 +260,8 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
 
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -280,8 +273,6 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
@@ -369,9 +360,8 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -383,8 +373,6 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
@@ -472,9 +460,8 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 
 exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment & delete button 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -486,8 +473,6 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -652,9 +637,8 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -666,8 +650,6 @@ exports[`Component ContributorRow a row with index and contributor with author d
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -756,9 +738,8 @@ exports[`Component ContributorRow a row with index and contributor with author d
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected for mobile view 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -770,8 +751,6 @@ exports[`Component ContributorRow a row with index and contributor with author d
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -860,9 +839,8 @@ exports[`Component ContributorRow a row with index and contributor with author d
 
 exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details & delete button 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -874,8 +852,6 @@ exports[`Component ContributorRow a row with index and contributor with author d
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -992,9 +968,8 @@ exports[`Component ContributorRow a row with index and contributor with author d
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1006,8 +981,6 @@ exports[`Component ContributorRow a row with index and creator with creator role
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -1097,9 +1070,8 @@ exports[`Component ContributorRow a row with index and creator with creator role
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected for mobile view 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1111,8 +1083,6 @@ exports[`Component ContributorRow a row with index and creator with creator role
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (J. Smith) to assign it to you"
@@ -1202,9 +1172,8 @@ exports[`Component ContributorRow a row with index and creator with creator role
 
 exports[`Component ContributorRow should assign contributor 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1216,8 +1185,6 @@ exports[`Component ContributorRow should assign contributor 1`] = `
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (test) to assign it to you"
@@ -1309,9 +1276,8 @@ exports[`Component ContributorRow should assign contributor 1`] = `
 
 exports[`Component ContributorRow should call callback functions on ListItem 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1323,8 +1289,6 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (test) to assign it to you"
@@ -1416,9 +1380,8 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
 
 exports[`Component ContributorRow should handle edits 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-2-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1430,8 +1393,6 @@ exports[`Component ContributorRow should handle edits 1`] = `
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (A. Smith) to assign it to you"
@@ -1543,9 +1504,8 @@ exports[`Component ContributorRow should handle edits 1`] = `
 
 exports[`Component ContributorRow should render a row with a disabled contributor 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1557,8 +1517,6 @@ exports[`Component ContributorRow should render a row with a disabled contributo
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (undefined) to assign it to you"
@@ -1650,9 +1608,8 @@ exports[`Component ContributorRow should render a row with a disabled contributo
 
 exports[`Component ContributorRow should render row as required 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1664,8 +1621,6 @@ exports[`Component ContributorRow should render row as required 1`] = `
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (Test) to assign it to you"
@@ -1756,23 +1711,11 @@ exports[`Component ContributorRow should render row as required 1`] = `
 
 exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
-    locale={
-      Object {
-        "alternateActionButtonLabel": "Cancel",
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label=""

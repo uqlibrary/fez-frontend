@@ -110,7 +110,7 @@ export const PublicationsList = ({
             </Grid>
             <Grid item xs={12}>
                 {publicationsList.map((publication, index) => (
-                    <Grid container spacing={0} alignContent="justify">
+                    <Grid container spacing={0} alignItems="flex-start" key={`publication-${index}`}>
                         <Grid item xs={1}>
                             <Checkbox
                                 onChange={handleChange(publication)}
