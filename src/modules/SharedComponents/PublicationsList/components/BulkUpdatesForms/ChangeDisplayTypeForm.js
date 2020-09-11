@@ -29,7 +29,7 @@ const onChange = (values, dispatch, props, prevValues) => {
     }
 };
 
-export const ChangeDisplayTypeForm = ({ handleSubmit, submitting, submitSucceeded, onCancel }) => {
+export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitSucceeded, onCancel }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
     const displayType = useSelector(state => selector(state, 'rek_display_type'));
     const subtypes = usePublicationSubtype(displayType || null, true);
@@ -106,7 +106,7 @@ export const ChangeDisplayTypeForm = ({ handleSubmit, submitting, submitSucceede
                 )}
                 {!!error && (
                     <Grid item xs={12}>
-                        <Alert alertId="alert-info-change-display-type" {...txt.changeDisplayTypeForm.successAlert} />
+                        <Alert alertId="alert-info-change-display-type" {...txt.changeDisplayTypeForm.errorAlert} />
                     </Grid>
                 )}
             </Grid>
@@ -115,6 +115,7 @@ export const ChangeDisplayTypeForm = ({ handleSubmit, submitting, submitSucceede
 };
 
 ChangeDisplayTypeForm.propTypes = {
+    error: PropTypes.string,
     handleSubmit: PropTypes.func,
     onCancel: PropTypes.func,
     submitting: PropTypes.bool,
