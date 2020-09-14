@@ -20,7 +20,7 @@ context('Change display type', () => {
 
     it('should work as expected when changing to a record type with subtypes', () => {
         const pid = 'UQ:603315';
-        cy.visit(`/admin/changeDisplayType/${pid}?user=uqstaff`).then(() => {
+        cy.visit(`/admin/change-display-type/${pid}?user=uqstaff`).then(() => {
             cy.get('h2')
                 .should('have.length', 1)
                 .should('contain', changeDisplayTypeLocale.title)
@@ -69,7 +69,7 @@ context('Change display type', () => {
 
     it('should work as expected when changing to a record type withOUT subtypes', () => {
         const pid = 'UQ:134700';
-        cy.visit(`/admin/changeDisplayType/${pid}?user=uqstaff`).then(() => {
+        cy.visit(`/admin/change-display-type/${pid}?user=uqstaff`).then(() => {
             cy.get('h2')
                 .should('have.length', 1)
                 .should('contain', changeDisplayTypeLocale.title)

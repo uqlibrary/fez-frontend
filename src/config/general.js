@@ -1171,7 +1171,7 @@ export const RECORD_ACTION_URLS = [
     },
     {
         label: 'Change display type',
-        url: pid => `${APP_URL}${PATH_PREFIX}admin/changeDisplayType/${pid}`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/change-display-type/${pid}`,
         inApp: true,
         showInDeleted: false,
         options: null,

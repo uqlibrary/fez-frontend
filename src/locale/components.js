@@ -15,7 +15,7 @@ export default {
             },
             openAccessFilter: {
                 displayTitle: 'Open access status',
-                activeFilter: 'Show only open access records',
+                activeFilter: 'Show only open access works',
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
             renameFacetsList: { 'Display type': 'Work type', Subtype: 'Work subtype' },
@@ -1591,15 +1591,15 @@ export default {
             nextPage: 'Next',
             previousPage: 'Previous',
             maxPagesToShow: 5,
-            pageSize: 'Records per page',
+            pageSize: 'Works per page',
             pageOf: 'Page [currentPage] of [totalPages]',
-            totalRecords: '([total] records)',
+            totalRecords: '([total] works)',
             pagingBracket: 3,
             pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
             firstLastSeparator: '...',
         },
         sorting: {
-            pageSize: 'Records per page',
+            pageSize: 'Works per page',
             sortLabel: 'Sort results by',
             sortDirectionLabel: 'Sort order',
             sortBy: [
@@ -2825,8 +2825,8 @@ export default {
             workflowConfirmation: {
                 confirmationTitle: 'Change Display type',
                 confirmationMessage: 'Display type has been changed',
-                cancelButtonLabel: 'View record',
-                confirmButtonLabel: 'Edit full record',
+                cancelButtonLabel: 'View work',
+                confirmButtonLabel: 'Edit full work',
             },
             progressAlert: {
                 type: 'info_outline',

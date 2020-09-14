@@ -676,8 +676,8 @@ exports[`ChangeDisplayType form should display confirmation box after successful
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -1582,8 +1582,8 @@ exports[`ChangeDisplayType form should display confirmation box after successful
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -2566,8 +2566,8 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -3550,8 +3550,8 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -4273,8 +4273,8 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -4996,8 +4996,8 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -5980,8 +5980,8 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -6964,8 +6964,8 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -7948,8 +7948,8 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -8860,8 +8860,8 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
@@ -9766,8 +9766,8 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
         isOpen={false}
         locale={
           Object {
-            "cancelButtonLabel": "View record",
-            "confirmButtonLabel": "Edit full record",
+            "cancelButtonLabel": "View work",
+            "confirmButtonLabel": "Edit full work",
             "confirmationMessage": "Display type has been changed",
             "confirmationTitle": "Change Display type",
           }
