@@ -5,9 +5,9 @@ import { publicationTypes } from 'config';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-export const usePublicationSubtype = (displayType = null) => {
+export const usePublicationSubtype = (displayType = null, isAdmin = false) => {
     const { record } = useRecordContext();
-    return publicationTypes()[displayType || record.rek_display_type].subtypes || [];
+    return publicationTypes({}, isAdmin)[displayType || record.rek_display_type].subtypes || [];
 };
 
 export const userIsAdmin = () => {

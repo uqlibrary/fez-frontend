@@ -3,7 +3,7 @@ import { isAuthorOrEditorSelected } from 'config/validation';
 
 export default {
     ...commonFields,
-    bibliographic: (isLote = false) => [
+    bibliographic: ({ isLote = false }) => [
         {
             title: 'Book title',
             groups: [
@@ -116,10 +116,6 @@ export default {
         {
             title: 'Scale/Significance of work & Creator research statement',
             groups: [['significanceAndContributionStatement']],
-        },
-        {
-            title: 'ISMN',
-            groups: [['fez_record_search_key_ismn']],
         },
         {
             title: 'Quality indicators',

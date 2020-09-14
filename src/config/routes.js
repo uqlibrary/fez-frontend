@@ -64,7 +64,6 @@ export const pathConfig = {
         mine: '/records/mine',
         possible: '/records/possible',
         search: '/records/search',
-        view_new: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view_new/${pid}`, //  temporary for MM to view pids without being redirected to legacy
         view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
     },
     dataset: {
@@ -247,13 +246,6 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`),
-        },
-        {
-            path: pathConfig.records.view_new(pid),
-            component: components.NewViewRecord,
-            exact: true,
-            pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view_new(`(${pidRegExp})`),
         },
         {
             path: pathConfig.records.search,

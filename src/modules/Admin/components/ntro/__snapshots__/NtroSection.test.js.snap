@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NtroSection component should render default view 1`] = `
+exports[`NtroSection component should not render ismn field for Book - Creative Work - Musical Composition 1`] = `
 <Section
   cards={
     Array [
@@ -15,10 +15,28 @@ exports[`NtroSection component should render default view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "fez_record_search_key_ismn",
+            "qualityIndicators",
           ],
         ],
-        "title": "ISMN",
+        "title": "Quality indicators",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`NtroSection component should render default view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "significanceAndContributionStatement",
+          ],
+        ],
+        "title": "Scale/Significance of work & Creator research statement",
       },
       Object {
         "groups": Array [
@@ -71,14 +89,6 @@ exports[`NtroSection component should render disabled view 1`] = `
           ],
         ],
         "title": "Scale/Significance of work & Creator research statement",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "fez_record_search_key_ismn",
-          ],
-        ],
-        "title": "ISMN",
       },
       Object {
         "groups": Array [

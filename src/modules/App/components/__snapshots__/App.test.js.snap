@@ -31,18 +31,6 @@ exports[`Application component Should display mobile correctly 1`] = `
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -374,30 +362,16 @@ exports[`Application component Should display mobile correctly 1`] = `
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_5"
+            key="route_4"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -410,7 +384,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 "_status": -1,
               }
             }
-            key="route_6"
+            key="route_5"
             pageTitle="Page not found"
           />
         </Switch>
@@ -645,18 +619,6 @@ exports[`Application component should determine if it has incomplete works from 
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -1225,23 +1187,9 @@ exports[`Application component should determine if it has incomplete works from 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -1254,7 +1202,7 @@ exports[`Application component should determine if it has incomplete works from 
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1485,18 +1433,6 @@ exports[`Application component should determine if it has incomplete works from 
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -2065,23 +2001,9 @@ exports[`Application component should determine if it has incomplete works from 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -2094,7 +2016,7 @@ exports[`Application component should determine if it has incomplete works from 
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2135,18 +2057,6 @@ exports[`Application component should not show orcid alert for a student without
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2446,30 +2356,16 @@ exports[`Application component should not show orcid alert for a student without
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_5"
+            key="route_4"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -2482,7 +2378,7 @@ exports[`Application component should not show orcid alert for a student without
                 "_status": -1,
               }
             }
-            key="route_6"
+            key="route_5"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2523,18 +2419,6 @@ exports[`Application component should redirect to login page with correct return
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2868,30 +2752,16 @@ exports[`Application component should redirect to login page with correct return
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_5"
+            key="route_4"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -2904,7 +2774,7 @@ exports[`Application component should redirect to login page with correct return
                 "_status": -1,
               }
             }
-            key="route_6"
+            key="route_5"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3133,18 +3003,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -3719,23 +3577,9 @@ exports[`Application component should render alert if user is not fez author 1`]
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -3748,7 +3592,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3977,18 +3821,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -4580,23 +4412,9 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -4609,7 +4427,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4650,18 +4468,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -5056,34 +4862,20 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_5"
+            key="route_4"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_6"
+            key="route_5"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -5097,7 +4889,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                 "_status": -1,
               }
             }
-            key="route_7"
+            key="route_6"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -5326,18 +5118,6 @@ exports[`Application component should render app for account with author account
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -5983,23 +5763,9 @@ exports[`Application component should render app for account with author account
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -6012,7 +5778,7 @@ exports[`Application component should render app for account with author account
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6241,18 +6007,6 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -6829,23 +6583,9 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -6858,7 +6598,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -7276,18 +7016,6 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -8153,23 +7881,9 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_34"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_35"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -8182,7 +7896,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_36"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -8411,18 +8125,6 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -9035,23 +8737,9 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -9064,7 +8752,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -9482,18 +9170,6 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -10395,23 +10071,9 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_34"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_35"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -10424,7 +10086,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_36"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -10840,18 +10502,6 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -11719,23 +11369,9 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_34"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_35"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -11748,7 +11384,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_36"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -12164,18 +11800,6 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -13079,23 +12703,9 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_34"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_35"
+            key="route_34"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -13108,7 +12718,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_36"
+            key="route_35"
             pageTitle="Page not found"
           />
         </Switch>
@@ -13337,18 +12947,6 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -13790,23 +13388,9 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_20"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -13819,7 +13403,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Page not found"
           />
         </Switch>
@@ -14048,18 +13632,6 @@ exports[`Application component should render application with routing for the us
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -14346,18 +13918,6 @@ exports[`Application component should render for anon user 1`] = `
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -14655,30 +14215,16 @@ exports[`Application component should render for anon user 1`] = `
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_5"
+            key="route_4"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -14691,7 +14237,7 @@ exports[`Application component should render for anon user 1`] = `
                 "_status": -1,
               }
             }
-            key="route_6"
+            key="route_5"
             pageTitle="Page not found"
           />
         </Switch>
@@ -14750,18 +14296,6 @@ exports[`Application component should render thesis submission for HDR without m
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -14985,34 +14519,20 @@ exports[`Application component should render thesis submission for HDR without m
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_5"
+            key="route_4"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_6"
+            key="route_5"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -15026,7 +14546,7 @@ exports[`Application component should render thesis submission for HDR without m
                 "_status": -1,
               }
             }
-            key="route_7"
+            key="route_6"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -15067,18 +14587,6 @@ exports[`Application component should show orcid alert for a student without an 
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -15405,30 +14913,16 @@ exports[`Application component should show orcid alert for a student without an 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_5"
+            key="route_4"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -15441,7 +14935,7 @@ exports[`Application component should show orcid alert for a student without an 
                 "_status": -1,
               }
             }
-            key="route_6"
+            key="route_5"
             pageTitle="Page not found"
           />
         </Switch>
@@ -16487,18 +15981,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "regExPath": "/view/(UQ:[a-z0-9]+)",
                             },
                             Object {
-                              "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
-                              },
-                              "exact": true,
-                              "pageTitle": undefined,
-                              "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-                              "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-                            },
-                            Object {
                               "component": [Function],
                               "exact": true,
                               "pageTitle": "eSpace search",
@@ -16775,18 +16257,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "pageTitle": undefined,
                                 "path": "/view/:pid(UQ:[a-z0-9]+)",
                                 "regExPath": "/view/(UQ:[a-z0-9]+)",
-                              },
-                              Object {
-                                "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
-                                },
-                                "exact": true,
-                                "pageTitle": undefined,
-                                "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-                                "regExPath": "/view_new/(UQ:[a-z0-9]+)",
                               },
                               Object {
                                 "component": [Function],
@@ -17066,18 +16536,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   "pageTitle": undefined,
                                   "path": "/view/:pid(UQ:[a-z0-9]+)",
                                   "regExPath": "/view/(UQ:[a-z0-9]+)",
-                                },
-                                Object {
-                                  "component": Object {
-                                    "$$typeof": Symbol(react.lazy),
-                                    "_ctor": [Function],
-                                    "_result": null,
-                                    "_status": -1,
-                                  },
-                                  "exact": true,
-                                  "pageTitle": undefined,
-                                  "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-                                  "regExPath": "/view_new/(UQ:[a-z0-9]+)",
                                 },
                                 Object {
                                   "component": [Function],

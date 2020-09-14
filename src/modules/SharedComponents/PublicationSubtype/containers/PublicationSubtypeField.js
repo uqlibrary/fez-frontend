@@ -3,7 +3,7 @@ import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField'
 import { usePublicationSubtype } from 'hooks';
 
 export const PublicationSubtypeField = fieldProps => {
-    const subtypes = usePublicationSubtype();
+    const subtypes = usePublicationSubtype(null, true);
     return (
         <GenericSelectField
             onChange={fieldProps.input.onChange}

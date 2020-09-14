@@ -391,13 +391,15 @@ export const AttachedFiles = ({
                                                 </Grid>
                                                 <Grid item xs style={{ textAlign: 'right' }}>
                                                     <Tooltip title={deleteHint}>
-                                                        <IconButton
-                                                            id={`delete-file-${index}`}
-                                                            onClick={onFileDelete(index)}
-                                                            disabled={disabled}
-                                                        >
-                                                            <Delete />
-                                                        </IconButton>
+                                                        <span>
+                                                            <IconButton
+                                                                id={`delete-file-${index}`}
+                                                                onClick={onFileDelete(index)}
+                                                                disabled={disabled}
+                                                            >
+                                                                <Delete />
+                                                            </IconButton>
+                                                        </span>
                                                     </Tooltip>
                                                 </Grid>
                                             </React.Fragment>

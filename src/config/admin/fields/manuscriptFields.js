@@ -2,7 +2,7 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    bibliographic: (isLote = false) => [
+    bibliographic: ({ isLote = false }) => [
         {
             title: 'Title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
@@ -22,7 +22,7 @@ export default {
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
                 ['rek_description'],
-                ['rek_genre'],
+                ['fez_record_search_key_type_of_data'],
                 ['fez_record_search_key_original_format'],
             ],
         },
