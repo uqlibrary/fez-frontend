@@ -5,20 +5,21 @@ import Immutable from 'immutable';
 import { formValueSelector, getFormSyncErrors, change, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { DocumentTypeSingleField, PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { GenericSelectField } from 'modules/SharedComponents/Toolbox/GenericSelectField';
+import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 import { locale } from 'locale';
 import { validation } from 'config';
 import { usePublicationSubtype } from 'hooks';
-import { changeDisplayType } from 'actions';
+import { changeSearchKeyValue } from 'actions';
 
-const FORM_NAME = 'ChangeDisplayTypeForm';
+const FORM_NAME = 'ChangeSearchKeyValueForm';
 const selector = formValueSelector(FORM_NAME);
 
 const onSubmit = (values, dispatch, props) => {
-    return dispatch(changeDisplayType(Object.values(props.recordsSelected), values.toJS())).catch(error => {
+    return dispatch(changeSearchKeyValue(Object.values(props.recordsSelected), values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error.message });
     });
 };
@@ -29,7 +30,7 @@ const onChange = (values, dispatch, props, prevValues) => {
     }
 };
 
-export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitSucceeded, onCancel }) => {
+export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, submitSucceeded, onCancel }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
     const displayType = useSelector(state => selector(state, 'rek_display_type'));
     const subtypes = usePublicationSubtype(displayType || null, true);
@@ -37,18 +38,15 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
 
     return (
-        <form data-testid="change-display-type-form" id="change-display-type-form">
+        <form data-testid="change-search-key-value-form" id="change-search-key-value-form">
             <Grid container spacing={2}>
                 <Grid item xs={12}>
-                    <Alert alertId="alert-info-change-display-type" {...txt.changeDisplayTypeForm.alert} />
-                </Grid>
-                <Grid item xs={12}>
                     <Field
-                        component={DocumentTypeSingleField}
+                        component={GenericSelectField}
                         disabled={submitting || submitSucceeded}
-                        genericSelectFieldId="rek-display-type"
-                        label={txt.changeDisplayTypeForm.formLabels.displayType}
-                        name="rek_display_type"
+                        genericSelectFieldId="search-key"
+                        label={txt.changeSearchKeyValueForm.formLabels.displayType}
+                        name="search-key"
                         required
                         validate={[validation.required]}
                     />
@@ -59,7 +57,7 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                             component={PublicationSubtypeField}
                             displayType={!!displayType && displayType}
                             disabled={submitting || submitSucceeded}
-                            label={txt.changeDisplayTypeForm.formLabels.subtype}
+                            label={txt.changeSearchKeyValueForm.formLabels.subtype}
                             name="rek_subtype"
                             required
                             validate={[validation.required]}
@@ -68,25 +66,25 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                 )}
                 <Grid item xs={6}>
                     <Button
-                        aria-label={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
-                        children={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
-                        data-testid="change-display-type-cancel"
+                        aria-label={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
+                        children={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
+                        data-testid="change-search-key-value-cancel"
                         disabled={submitting}
                         fullWidth
-                        id="change-display-type-cancel"
+                        id="change-search-key-value-cancel"
                         onClick={onCancel}
                         variant="contained"
                     />
                 </Grid>
                 <Grid item xs={6}>
                     <Button
-                        aria-label={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
-                        children={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
+                        aria-label={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}
+                        children={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}
                         color="primary"
-                        data-testid="change-display-type-submit"
+                        data-testid="change-search-key-value-submit"
                         disabled={submitting || disableSubmit || submitSucceeded}
                         fullWidth
-                        id="change-display-type-submit"
+                        id="change-search-key-value-submit"
                         onClick={handleSubmit}
                         variant="contained"
                     />
@@ -94,15 +92,21 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                 <Grid item xs={12}>
                     {!!submitting && (
                         <Alert
-                            alertId="alert-info-change-display-type"
-                            {...txt.changeDisplayTypeForm.submittingAlert}
+                            alertId="alert-info-change-search-key-value"
+                            {...txt.changeSearchKeyValueForm.submittingAlert}
                         />
                     )}
                     {!!submitSucceeded && (
-                        <Alert alertId="alert-done-change-display-type" {...txt.changeDisplayTypeForm.successAlert} />
+                        <Alert
+                            alertId="alert-done-change-search-key-value"
+                            {...txt.changeSearchKeyValueForm.successAlert}
+                        />
                     )}
                     {!!error && (
-                        <Alert alertId="alert-error-change-display-type" {...txt.changeDisplayTypeForm.errorAlert} />
+                        <Alert
+                            alertId="alert-error-change-search-key-value"
+                            {...txt.changeSearchKeyValueForm.errorAlert}
+                        />
                     )}
                 </Grid>
             </Grid>
@@ -110,7 +114,7 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
     );
 };
 
-ChangeDisplayTypeForm.propTypes = {
+ChangeSearchKeyValueForm.propTypes = {
     error: PropTypes.string,
     handleSubmit: PropTypes.func,
     onCancel: PropTypes.func,
@@ -118,10 +122,10 @@ ChangeDisplayTypeForm.propTypes = {
     submitSucceeded: PropTypes.bool,
 };
 
-const ChangeDisplayTypeReduxForm = reduxForm({
+const ChangeSearchKeyValueReduxForm = reduxForm({
     form: FORM_NAME,
     onChange,
     onSubmit,
-})(ChangeDisplayTypeForm);
+})(ChangeSearchKeyValueForm);
 
-export default React.memo(ChangeDisplayTypeReduxForm);
+export default React.memo(ChangeSearchKeyValueReduxForm);

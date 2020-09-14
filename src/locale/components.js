@@ -2800,10 +2800,38 @@ export default {
                     successAlert: {
                         title: 'Bulk update - change display type',
                         message: 'Bulk update job created successfully',
-                        type: 'success',
+                        type: 'done',
                     },
                     errorAlert: {
                         title: 'Bulk update - change display type',
+                        type: 'error',
+                    },
+                },
+                changeSearchKeyValueForm: {
+                    formLabels: {
+                        searchKey: 'Search key',
+                        searchKeyValue: 'Search key value',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    searchKeys: {
+                        rek_oa_status: {
+                            text: 'OA Status',
+                            value: 'rek_oa_status',
+                        },
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change search key value',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change search key value',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change search key value',
                         type: 'error',
                     },
                 },
