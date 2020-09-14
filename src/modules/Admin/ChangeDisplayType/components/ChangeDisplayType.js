@@ -52,18 +52,15 @@ const _handleDefaultSubmit = event => {
 
 export const ChangeDisplayType = ({
     disableSubmit,
-    formValues,
     handleSubmit,
     loadingRecordToView,
     loadRecordToView,
-    publicationSubtype,
     publicationSubtypeItems,
     record,
     resetSubType,
     saveRequesting,
     saveUpdated,
     saveFailed,
-    selectedPublicationType,
     submitting,
 }) => {
     const { pid: pidParam } = useParams();
@@ -177,7 +174,6 @@ export const ChangeDisplayType = ({
                                             disabled={submitting}
                                             name="rek_display_type"
                                             id="rek-display-type"
-                                            value={selectedPublicationType}
                                             label={txt.publicationType.inputLabelText}
                                             required
                                             placeholder={txt.publicationType.hintText}
@@ -196,7 +192,6 @@ export const ChangeDisplayType = ({
                                                 disabled={submitting}
                                                 id="rek-subtype"
                                                 name="rek_subtype"
-                                                value={publicationSubtype}
                                                 label={txt.publicationSubtype.inputLabelText}
                                                 required
                                                 placeholder={txt.publicationSubtype.hintText}
@@ -243,7 +238,7 @@ export const ChangeDisplayType = ({
                                         variant="contained"
                                         color="primary"
                                         fullWidth
-                                        onClick={() => handleSubmit(formValues, record)}
+                                        onClick={handleSubmit}
                                         disabled={disableSubmit || saveRequesting}
                                     >
                                         {txt.submit}
@@ -260,11 +255,9 @@ export const ChangeDisplayType = ({
 
 ChangeDisplayType.propTypes = {
     disableSubmit: PropTypes.bool,
-    formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
-    publicationSubtype: PropTypes.array,
     publicationSubtypeItems: PropTypes.array,
     publicationTypeItems: PropTypes.array,
     record: PropTypes.object,
@@ -272,10 +265,7 @@ ChangeDisplayType.propTypes = {
     saveFailed: PropTypes.bool,
     saveRequesting: PropTypes.bool,
     saveUpdated: PropTypes.bool,
-    selectedPublicationType: PropTypes.object,
-    submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
-    subtypes: PropTypes.array,
 };
 
 ChangeDisplayType.defaultProps = {
