@@ -640,3 +640,42 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
             });
     };
 };
+
+/**
+ * Change display type action
+ *
+ * @param {array} records
+ * @param {object} data
+ * @param {bool} isBulkUpdate
+ */
+export const changeDisplayType = (records, data, isBulkUpdate = false) => {
+    const changeDisplayTypeRequest = records.map(record => ({
+        rek_pid: record.rek_pid,
+        ...data,
+    }));
+
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_DISPLAY_TYPE_INPROGRESS,
+        });
+        try {
+            const response = await patch(
+                isBulkUpdate ? NEW_RECORD_API() : EXISTING_RECORD_API({ pid: records[0].rek_pid }),
+                changeDisplayTypeRequest,
+            );
+            dispatch({
+                type: actions.CHANGE_DISPLAY_TYPE_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_DISPLAY_TYPE_FAILED,
+                payload: e,
+            });
+
+            return false;
+        }
+    };
+};
