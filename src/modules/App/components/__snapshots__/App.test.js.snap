@@ -7213,7 +7213,7 @@ exports[`Application component should render app for account with fez author wit
           },
           "exact": true,
           "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -8074,7 +8074,7 @@ exports[`Application component should render app for account with fez author wit
             exact={true}
             key="route_27"
             pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={
@@ -9419,7 +9419,7 @@ exports[`Application component should render app for account with fez author wit
           },
           "exact": true,
           "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -10316,7 +10316,7 @@ exports[`Application component should render app for account with fez author wit
             exact={true}
             key="route_27"
             pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={
@@ -10779,7 +10779,7 @@ exports[`Application component should render app for account with fez author wit
           },
           "exact": true,
           "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -11640,7 +11640,7 @@ exports[`Application component should render app for account with fez author wit
             exact={true}
             key="route_27"
             pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={
@@ -12103,7 +12103,7 @@ exports[`Application component should render app for account with fez author wit
           },
           "exact": true,
           "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -13000,7 +13000,7 @@ exports[`Application component should render app for account with fez author wit
             exact={true}
             key="route_27"
             pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={

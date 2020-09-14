@@ -132,7 +132,7 @@ export const pathConfig = {
     },
     admin: {
         add: '/admin/add',
-        changeDisplayType: pid => `/admin/changeDisplayType/${pid}`,
+        changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         collection: '/admin/collection',
         community: '/admin/community',
         delete: pid => `/admin/delete/${pid}`,
@@ -172,7 +172,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 export const flattedPathConfig = [
     '/admin/add',
-    '/admin/changeDisplayType',
+    '/admin/change-display-type',
     '/admin/collection',
     '/admin/community',
     '/admin/masquerade',
