@@ -25,7 +25,7 @@ describe('changeDisplayType reducer', () => {
     };
 
     it('returns that the change is saving', () => {
-        const test = changeDisplayTypeReducer(initialState, { type: actions.ADMIN_UPDATE_WORK_PROCESSING });
+        const test = changeDisplayTypeReducer(initialState, { type: actions.CHANGE_DISPLAY_TYPE_INPROGRESS });
         expect(test).toEqual({
             ...initialState,
             saveRequesting: true,
@@ -34,7 +34,7 @@ describe('changeDisplayType reducer', () => {
     });
 
     it('returns that the change failed', () => {
-        const test = changeDisplayTypeReducer(initialState, { type: actions.ADMIN_UPDATE_WORK_FAILED });
+        const test = changeDisplayTypeReducer(initialState, { type: actions.CHANGE_DISPLAY_TYPE_FAILED });
         expect(test).toEqual({
             ...initialState,
             saveFailed: true,
@@ -44,7 +44,7 @@ describe('changeDisplayType reducer', () => {
 
     it('returns that the change has saved', () => {
         const test = changeDisplayTypeReducer(initialState, {
-            type: actions.ADMIN_UPDATE_WORK_SUCCESS,
+            type: actions.CHANGE_DISPLAY_TYPE_SUCCESS,
             payload: mockRecord,
         });
         expect(test).toEqual({
