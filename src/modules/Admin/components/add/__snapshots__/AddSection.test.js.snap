@@ -3,7 +3,7 @@
 exports[`AddSection component should render default view 1`] = `
 <form>
   <StandardPage
-    title="Add a new work"
+    title="Add a new record"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -14,7 +14,7 @@ exports[`AddSection component should render default view 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Identify your new work"
+          title="Identify your new record"
         >
           <WithStyles(ForwardRef(Grid))
             container={true}
@@ -258,7 +258,7 @@ exports[`AddSection component should render default view 1`] = `
                     id="submit-work"
                     variant="contained"
                   >
-                    Create work
+                    Create record
                   </WithStyles(ForwardRef(Button))>
                 </WithStyles(ForwardRef(Grid))>
               </WithStyles(ForwardRef(Grid))>
@@ -274,7 +274,7 @@ exports[`AddSection component should render default view 1`] = `
 exports[`AddSection component should render with subtypes 1`] = `
 <form>
   <StandardPage
-    title="Add a new work"
+    title="Add a new record"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -285,7 +285,7 @@ exports[`AddSection component should render with subtypes 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Identify your new work"
+          title="Identify your new record"
         >
           <WithStyles(ForwardRef(Grid))
             container={true}
@@ -550,7 +550,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                     id="submit-work"
                     variant="contained"
                   >
-                    Create work
+                    Create record
                   </WithStyles(ForwardRef(Button))>
                 </WithStyles(ForwardRef(Grid))>
               </WithStyles(ForwardRef(Grid))>

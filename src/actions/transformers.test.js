@@ -388,7 +388,7 @@ describe('getClaimIssueRequest test', () => {
         input.rek_link = 'http://www.test.com';
 
         const expected = [
-            'Notes from creator of a claimed work:',
+            'Notes from creator of a claimed record:',
             'Some comments...',
             'Added files:',
             '1.jpg, 2.jpg',

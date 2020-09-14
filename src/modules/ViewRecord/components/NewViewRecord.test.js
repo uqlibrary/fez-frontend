@@ -86,9 +86,7 @@ describe('NewViewRecord', () => {
         const { getByText } = setup({ isDeleted: true, recordToView: record });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();
         expect(
-            getByText(
-                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
-            ),
+            getByText('Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer'),
         ).toBeInTheDocument();
     });
 

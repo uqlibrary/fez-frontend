@@ -14,7 +14,7 @@ context('As an admin,', () => {
 
         // Apply selections
         cy.get('button')
-            .contains('Create work')
+            .contains('Create record')
             .should('exist')
             .click();
 

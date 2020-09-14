@@ -6838,7 +6838,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new work",
+          "pageTitle": "Add a new record",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -6853,7 +6853,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -6867,7 +6867,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete work",
+          "pageTitle": "Delete record",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -6910,7 +6910,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -6938,22 +6938,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": "Edit work",
-          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -7258,7 +7244,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new work",
+          "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -7647,7 +7633,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new work"
+            pageTitle="Add a new record"
             path="/admin/add"
             render={[Function]}
           />
@@ -7667,7 +7653,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -7686,7 +7672,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete work"
+            pageTitle="Delete record"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -7744,7 +7730,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -7782,7 +7768,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -7791,27 +7777,8 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
             exact={true}
             key="route_27"
-            pageTitle="Edit work"
-            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
-          />
-          <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            exact={true}
-            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -7831,7 +7798,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -7849,19 +7816,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_30"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_31"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_32"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -7876,14 +7843,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_33"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -7896,7 +7863,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_35"
+            key="route_34"
             pageTitle="Page not found"
           />
         </Switch>
@@ -8992,7 +8959,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new work",
+          "pageTitle": "Add a new record",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -9007,7 +8974,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -9021,7 +8988,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete work",
+          "pageTitle": "Delete record",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -9064,7 +9031,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -9092,22 +9059,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": "Edit work",
-          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -9412,7 +9365,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new work",
+          "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -9837,7 +9790,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new work"
+            pageTitle="Add a new record"
             path="/admin/add"
             render={[Function]}
           />
@@ -9857,7 +9810,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -9876,7 +9829,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete work"
+            pageTitle="Delete record"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -9934,7 +9887,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -9972,7 +9925,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -9981,27 +9934,8 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
             exact={true}
             key="route_27"
-            pageTitle="Edit work"
-            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
-          />
-          <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            exact={true}
-            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -10021,7 +9955,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -10039,19 +9973,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_30"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_31"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_32"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -10066,14 +10000,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_33"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -10086,7 +10020,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_35"
+            key="route_34"
             pageTitle="Page not found"
           />
         </Switch>
@@ -10326,7 +10260,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new work",
+          "pageTitle": "Add a new record",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -10341,7 +10275,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -10355,7 +10289,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete work",
+          "pageTitle": "Delete record",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -10398,7 +10332,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -10426,22 +10360,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": "Edit work",
-          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -10746,7 +10666,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new work",
+          "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -11135,7 +11055,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new work"
+            pageTitle="Add a new record"
             path="/admin/add"
             render={[Function]}
           />
@@ -11155,7 +11075,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -11174,7 +11094,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete work"
+            pageTitle="Delete record"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -11232,7 +11152,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -11270,7 +11190,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -11279,27 +11199,8 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
             exact={true}
             key="route_27"
-            pageTitle="Edit work"
-            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
-          />
-          <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            exact={true}
-            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -11319,7 +11220,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -11337,19 +11238,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_30"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_31"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_32"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -11364,14 +11265,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_33"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -11384,7 +11285,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_35"
+            key="route_34"
             pageTitle="Page not found"
           />
         </Switch>
@@ -11624,7 +11525,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new work",
+          "pageTitle": "Add a new record",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -11639,7 +11540,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -11653,7 +11554,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete work",
+          "pageTitle": "Delete record",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -11696,7 +11597,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -11724,22 +11625,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit work",
+          "pageTitle": "Edit record",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": "Edit work",
-          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -12044,7 +11931,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new work",
+          "primaryText": "Add a new record",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -12469,7 +12356,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new work"
+            pageTitle="Add a new record"
             path="/admin/add"
             render={[Function]}
           />
@@ -12489,7 +12376,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -12508,7 +12395,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete work"
+            pageTitle="Delete record"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -12566,7 +12453,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -12604,7 +12491,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit work"
+            pageTitle="Edit record"
             path="/admin/doi/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -12613,27 +12500,8 @@ exports[`Application component should render app for account with fez author wit
                 "admin",
               ]
             }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
             exact={true}
             key="route_27"
-            pageTitle="Edit work"
-            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
-          />
-          <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            exact={true}
-            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -12653,7 +12521,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_28"
             path="/tool/lookup"
           />
           <Route
@@ -12671,19 +12539,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_30"
+            key="route_29"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_31"
+            key="route_30"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_32"
+            key="route_31"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -12698,14 +12566,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_33"
+            key="route_32"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_34"
+            key="route_33"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -12718,7 +12586,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_35"
+            key="route_34"
             pageTitle="Page not found"
           />
         </Switch>

@@ -941,7 +941,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           5
            
-           work(s)
+           record(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -968,7 +968,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           0
            
-           work(s)
+           record(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -995,7 +995,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           0
            
-           work(s)
+           record(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1022,7 +1022,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           0
            
-           work(s)
+           record(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1245,7 +1245,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           5
            
-           work(s)
+           record(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1272,7 +1272,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           4
            
-           work(s)
+           record(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1299,7 +1299,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           12
            
-           work(s)
+           record(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>

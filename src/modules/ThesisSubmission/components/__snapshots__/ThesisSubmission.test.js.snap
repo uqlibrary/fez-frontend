@@ -534,7 +534,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
@@ -1086,7 +1086,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>

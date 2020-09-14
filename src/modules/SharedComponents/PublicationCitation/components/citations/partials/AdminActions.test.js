@@ -84,27 +84,6 @@ describe('AdminActions component', () => {
         expect(queryByText('Dont show in deleted records', menu)).toBeNull();
     });
 
-    it('should include DOI item if supported type has existing UQ DOI', () => {
-        const { getByTestId, queryByText } = setup({
-            navigatedFrom: 'test',
-            publication: {
-                rek_pid: 'UQ:111111',
-                rek_object_type_lookup: 'Record',
-                fez_record_search_key_doi: {
-                    rek_doi: '10.14264/111111',
-                },
-                rek_display_type: 174,
-            },
-        });
-
-        fireEvent.click(getByTestId('admin-actions-button'));
-
-        const menu = getByTestId('admin-actions-menu');
-        const doiAction = defaultActions.find(action => !!action.isDoi);
-
-        expect(queryByText(doiAction.label(true), menu)).not.toBeNull();
-    });
-
     it('should not include DOI item for communities and collections', () => {
         const { getByTestId, queryByText } = setup({
             navigatedFrom: 'test',

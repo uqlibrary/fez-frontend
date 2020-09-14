@@ -1319,7 +1319,8 @@ export default {
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 delayNotice: 'Notice',
-                delayMessage: 'During peak times, there may be a delay before newly uploaded files appear on the work.',
+                delayMessage:
+                    'During peak times, there may be a delay before newly uploaded files appear on the record.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
@@ -1410,7 +1411,8 @@ export default {
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 delayNotice: 'Notice',
-                delayMessage: 'During peak times, there may be a delay before newly uploaded files appear on the work.',
+                delayMessage:
+                    'During peak times, there may be a delay before newly uploaded files appear on the record.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (

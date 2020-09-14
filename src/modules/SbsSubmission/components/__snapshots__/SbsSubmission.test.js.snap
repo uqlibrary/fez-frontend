@@ -522,7 +522,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
               disabled={false}
               locale={
                 Object {
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
@@ -1084,7 +1084,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
               disabled={false}
               locale={
                 Object {
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>

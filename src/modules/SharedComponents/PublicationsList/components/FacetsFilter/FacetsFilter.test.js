@@ -66,7 +66,7 @@ describe('FacetsFilter', () => {
         expect(onFacetsChangedFn).toHaveBeenCalledTimes(5);
 
         fireEvent.click(getByTestId('facet-category-open-access'));
-        fireEvent.click(getByText('Show only open access works'));
+        fireEvent.click(getByText('Show only open access records'));
         expect(onFacetsChangedFn).toHaveBeenCalledTimes(6);
 
         fireEvent.click(getByTestId('clear-facet-filter-nested-item-date-range'));
