@@ -52,6 +52,7 @@ export const AdminActions = ({
 
     // Restrict DOI option to restricted types
     const isDoiType = isTypeRecord && PUBLICATION_TYPES_WITH_DOI.includes(displayType);
+    // istanbul ignore next
     filteredActions = filteredActions.filter(action => !action.isDoi || (isDoiType && (!doi || hasUQDoi)));
 
     const menuOptions = filteredActions.map(action => {
