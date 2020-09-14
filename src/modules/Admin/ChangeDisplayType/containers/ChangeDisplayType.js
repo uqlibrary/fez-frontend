@@ -23,29 +23,13 @@ import {
     NTRO_SUBTYPES,
     PUBLICATION_TYPE_DESIGN,
 } from 'config/general';
+import { changeDisplayType } from 'actions';
 
 const FORM_NAME = 'ChangeDisplayTypeForm';
 
-export const onSubmit = (newData, recordToView, dispatch) => {
-    const cleanValues = newData.toJS();
-
-    // build an object structure that can be processed by adminUpdate
-    const requestObject = {
-        ...recordToView,
-        rek_display_type: cleanValues.rek_display_type,
-        adminSection: {
-            rek_subtype: cleanValues.rek_subtype,
-        },
-        filesSection: {
-            files: false,
-        },
-        publication: {
-            rek_pid: recordToView.rek_pid,
-        },
-    };
-
-    return dispatch(actions.adminUpdate(requestObject)).catch(error => {
-        throw new SubmissionError({ _error: error });
+const onSubmit = (values, dispatch, props) => {
+    return dispatch(changeDisplayType([props.recordToView], values.toJS())).catch(error => {
+        throw new SubmissionError({ _error: error.message });
     });
 };
 
