@@ -5696,7 +5696,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
         customType={null}
         disableAlertClick={false}
         dismissTitle="Click to dismiss this alert"
-        message="We have found 5 record(s) that could possibly be your works."
+        message="We have found 5 work(s) that could possibly be your works."
         showLoader={false}
         title="Claim now!"
         type="info_outline"

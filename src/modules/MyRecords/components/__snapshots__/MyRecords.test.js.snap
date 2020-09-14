@@ -223,7 +223,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -359,7 +359,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -504,7 +504,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -1013,7 +1013,7 @@ exports[`MyRecords test should handle export publications 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}

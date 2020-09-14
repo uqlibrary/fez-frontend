@@ -2377,7 +2377,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       <WithStyles(ConfirmDialogBox)
                                         locale={
                                           Object {
-                                            "cancelButtonLabel": "View updated record",
+                                            "cancelButtonLabel": "View updated work",
                                             "confirmButtonLabel": "Edit another work",
                                             "confirmationMessage": "Work has been updated",
                                             "confirmationTitle": "Work has been updated",
@@ -2397,7 +2397,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                           hideCancelButton={false}
                                           locale={
                                             Object {
-                                              "cancelButtonLabel": "View updated record",
+                                              "cancelButtonLabel": "View updated work",
                                               "confirmButtonLabel": "Edit another work",
                                               "confirmationMessage": "Work has been updated",
                                               "confirmationTitle": "Work has been updated",
@@ -10859,7 +10859,7 @@ exports[`AdminContainer component should render empty div if record is not loade
 
 exports[`AdminContainer component should render loading record view 1`] = `
 <WithStyles(InlineLoader)
-  message="Loading record"
+  message="Loading work"
 />
 `;
 

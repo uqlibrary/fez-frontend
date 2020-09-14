@@ -929,8 +929,8 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -947,7 +947,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -1870,8 +1870,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -1888,7 +1888,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -3031,8 +3031,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -3049,7 +3049,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -4008,8 +4008,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -4026,7 +4026,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -5229,8 +5229,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -5247,7 +5247,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -6618,8 +6618,8 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -6636,7 +6636,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -8007,8 +8007,8 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -8025,7 +8025,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -9396,8 +9396,8 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -9414,7 +9414,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -11771,8 +11771,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -11789,7 +11789,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       customType={null}
                       disableAlertClick={false}
                       dismissTitle="Click to dismiss this alert"
-                      message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
+                      message="Retry via \\"Fix work\\" screen or contact eSpace administrators."
                       pushToTop={true}
                       showLoader={false}
                       title="File upload and/or edits/changes/comments post failed"
@@ -11811,7 +11811,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -13182,8 +13182,8 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -13200,7 +13200,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -14571,8 +14571,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -14589,7 +14589,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -15979,8 +15979,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -15997,7 +15997,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -17386,8 +17386,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -17404,7 +17404,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -18794,8 +18794,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -18812,7 +18812,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -19235,8 +19235,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -19253,7 +19253,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },
@@ -19509,8 +19509,8 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
-              "addRecordButtonLabel": "Add another missing record",
-              "alternateActionButtonLabel": "Fix record",
+              "addRecordButtonLabel": "Add another missing work",
+              "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
               "confirmButtonLabel": "Go to my research",
               "confirmationMessage": <React.Fragment>
@@ -19527,7 +19527,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               </React.Fragment>,
               "confirmationTitle": "Claim has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload and/or edits/changes/comments post failed",
                 "type": "warning",
               },

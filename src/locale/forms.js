@@ -98,13 +98,13 @@ export default {
                 ),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or edits/changes/comments post failed',
-                    message: 'Retry via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry via "Fix work" screen or contact eSpace administrators.',
                     type: 'warning',
                 },
                 cancelButtonLabel: 'Claim more publications',
-                addRecordButtonLabel: 'Add another missing record',
+                addRecordButtonLabel: 'Add another missing work',
                 confirmButtonLabel: 'Go to my research',
-                alternateActionButtonLabel: 'Fix record',
+                alternateActionButtonLabel: 'Fix work',
             },
             validationAlert: {
                 type: 'warning',
@@ -147,12 +147,12 @@ export default {
             title: 'Remove this work from my profile',
             description: '',
             // help: {
-            //     title: 'Unclaim a record',
+            //     title: 'Unclaim a work',
             //     text: 'Enter the text that will help people here',
             //     buttonLabel: 'CLOSE'
             // },
             successWorkflowConfirmation: {
-                confirmationTitle: 'Unclaim a record',
+                confirmationTitle: 'Unclaim a work',
                 confirmationMessage: 'You have unclaimed this work successfully',
                 cancelButtonLabel: 'Go to my dashboard',
                 confirmButtonLabel: 'Go to my research',
@@ -197,7 +197,7 @@ export default {
                 //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
-                    comments: 'Describe the problem with this record, eg work is a duplicate, or suggested changes',
+                    comments: 'Describe the problem with this work, eg work is a duplicate, or suggested changes',
                     url: 'Link (URL)',
                 },
             },
@@ -225,7 +225,7 @@ export default {
                 ),
                 fileFailConfirmationAlert: {
                     title: 'File upload failed',
-                    message: 'Retry via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry via "Fix work" screen or contact eSpace administrators.',
                     type: 'info',
                 },
                 cancelButtonLabel: 'Go to my dashboard',
@@ -256,14 +256,14 @@ export default {
         },
         deleteRecordForm: {
             reason: {
-                title: 'Describe the reason to delete this record',
+                title: 'Describe the reason to delete this work',
                 fieldLabels: {
-                    reason: 'Please enter a reason why you are deleting this record',
+                    reason: 'Please enter a reason why you are deleting this work',
                 },
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel delete',
-                confirmationMessage: 'Are you sure you want to cancel delete this record?',
+                confirmationMessage: 'Are you sure you want to cancel delete this work?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes',
             },
