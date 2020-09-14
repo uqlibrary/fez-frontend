@@ -5,7 +5,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions } from 'config/general';
+import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions, RECORD_TYPE_RECORD } from 'config/general';
 import { DOI_ORG_PREFIX } from 'config/doi';
 
 export const navigateToUrl = (uri, target, navigatedFrom, options) => () => {
@@ -29,6 +29,7 @@ export const AdminActions = ({
     const pid = publication.rek_pid;
     const displayType = publication.rek_display_type;
     const recordType = (publication.rek_object_type_lookup && publication.rek_object_type_lookup.toLowerCase()) || '';
+    const isTypeRecord = recordType === RECORD_TYPE_RECORD;
     const doi = !!publication.fez_record_search_key_doi && publication.fez_record_search_key_doi.rek_doi;
     const hasUQDoi = !!doi && doi.indexOf(DOI_ORG_PREFIX) === 0;
 
@@ -44,9 +45,14 @@ export const AdminActions = ({
     // Remove actions which should not be shown for deleted records, if specified
     let filteredActions = isRecordDeleted ? adminActions.filter(action => action.showInDeleted) : adminActions;
 
+    // 'change display type' only applies to Record types
+    filteredActions = filteredActions.filter(action => {
+        return !action.isChangeDisplayMenu || isTypeRecord;
+    });
+
     // Restrict DOI option to restricted types
-    const isRecord = !['community', 'collection'].includes(recordType);
-    const isDoiType = isRecord && PUBLICATION_TYPES_WITH_DOI.includes(displayType);
+    const isDoiType = isTypeRecord && PUBLICATION_TYPES_WITH_DOI.includes(displayType);
+    // istanbul ignore next
     filteredActions = filteredActions.filter(action => !action.isDoi || (isDoiType && (!doi || hasUQDoi)));
 
     const menuOptions = filteredActions.map(action => {
