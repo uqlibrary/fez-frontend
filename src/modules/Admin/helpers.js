@@ -70,12 +70,15 @@ export const identifiersParams = record => ({
         ].includes(record.rek_subtype),
 });
 
-export const bibliographicParams = record => ({
+export const bibliographicParams = (record, formValues) => ({
     isLote:
-        record.fez_record_search_key_language &&
-        (record.fez_record_search_key_language.length > 1 ||
-            (record.fez_record_search_key_language.length === 1 &&
-                record.fez_record_search_key_language[0].rek_language !== 'eng')),
+        (record.fez_record_search_key_language &&
+            (record.fez_record_search_key_language.length > 1 ||
+                (record.fez_record_search_key_language.length === 1 &&
+                    record.fez_record_search_key_language[0].rek_language !== 'eng'))) ||
+        (!!formValues &&
+            (formValues.languages.length > 1 ||
+                (formValues.languages.length === 1 && formValues.languages[0] !== 'eng'))),
     displayEndDate: [
         NTRO_SUBTYPE_LP_MUSIC,
         NTRO_SUBTYPE_LP_DANCE,
