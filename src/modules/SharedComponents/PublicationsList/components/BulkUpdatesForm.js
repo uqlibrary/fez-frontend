@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ChangeDisplayTypeForm, ChangeSearchKeyValueForm } from './BulkUpdatesForms';
-import { BUA_CHANGE_DISPLAY_TYPE, BUA_CHANGE_SEARCHKEY_VALUE } from 'config/general';
+import { BUA_CHANGE_DISPLAY_TYPE, BUA_CHANGE_SEARCHKEY_VALUE } from 'config/bulkUpdates';
 
 export const BulkUpdatesForm = ({ selectedAction, recordsSelected, onCancel }) => {
     switch (selectedAction) {

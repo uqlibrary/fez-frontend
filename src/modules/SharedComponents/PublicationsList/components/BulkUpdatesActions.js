@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
-import { BULK_UPDATES_ACTIONS } from 'config/general';
+import { BULK_UPDATES_ACTIONS } from 'config/bulkUpdates';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 

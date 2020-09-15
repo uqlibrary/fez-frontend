@@ -2,17 +2,15 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import { formValueSelector, getFormSyncErrors, change, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
+import { formValueSelector, getFormSyncErrors, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { GenericSelectField } from 'modules/SharedComponents/Toolbox/GenericSelectField';
-import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { SearchKeyField } from './SearchKeyField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 import { locale } from 'locale';
 import { validation } from 'config';
-import { usePublicationSubtype } from 'hooks';
 import { changeSearchKeyValue } from 'actions';
 
 const FORM_NAME = 'ChangeSearchKeyValueForm';
@@ -24,16 +22,10 @@ const onSubmit = (values, dispatch, props) => {
     });
 };
 
-const onChange = (values, dispatch, props, prevValues) => {
-    if (values.get('rek_display_type') !== prevValues.get('rek_display_type')) {
-        dispatch(change(FORM_NAME, 'rek_subtype', null));
-    }
-};
-
 export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, submitSucceeded, onCancel }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
-    const displayType = useSelector(state => selector(state, 'rek_display_type'));
-    const subtypes = usePublicationSubtype(displayType || null, true);
+    const searchKey = useSelector(state => selector(state, 'search_key'));
+    console.log(searchKey);
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
 
@@ -42,28 +34,27 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Field
-                        component={GenericSelectField}
+                        component={SearchKeyField}
                         disabled={submitting || submitSucceeded}
                         genericSelectFieldId="search-key"
-                        label={txt.changeSearchKeyValueForm.formLabels.displayType}
-                        name="search-key"
+                        label={txt.changeSearchKeyValueForm.formLabels.searchKey}
+                        name="search_key"
                         required
                         validate={[validation.required]}
                     />
                 </Grid>
-                {!!displayType && subtypes.length > 0 && (
-                    <Grid item xs={12}>
-                        <Field
-                            component={PublicationSubtypeField}
-                            displayType={!!displayType && displayType}
-                            disabled={submitting || submitSucceeded}
-                            label={txt.changeSearchKeyValueForm.formLabels.subtype}
-                            name="rek_subtype"
-                            required
-                            validate={[validation.required]}
-                        />
-                    </Grid>
-                )}
+                <Grid item xs={12}>
+                    <Field
+                        component={SearchKeyValueField}
+                        searchKey={searchKey}
+                        disabled={submitting || submitSucceeded}
+                        label={txt.changeSearchKeyValueForm.formLabels.searchKey}
+                        name="search_key_value"
+                        required
+                        validate={[validation.required]}
+                        searchKeyValueFieldId="search-key-value"
+                    />
+                </Grid>
                 <Grid item xs={6}>
                     <Button
                         aria-label={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
@@ -124,7 +115,6 @@ ChangeSearchKeyValueForm.propTypes = {
 
 const ChangeSearchKeyValueReduxForm = reduxForm({
     form: FORM_NAME,
-    onChange,
     onSubmit,
 })(ChangeSearchKeyValueForm);
 
