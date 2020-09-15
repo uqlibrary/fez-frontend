@@ -77,6 +77,7 @@ export const bibliographicParams = (record, formValues) => ({
                 (record.fez_record_search_key_language.length === 1 &&
                     record.fez_record_search_key_language[0].rek_language !== 'eng'))) ||
         (!!formValues &&
+            !!formValues.languages &&
             (formValues.languages.length > 1 ||
                 (formValues.languages.length === 1 && formValues.languages[0] !== 'eng'))),
     displayEndDate: [
