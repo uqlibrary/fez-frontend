@@ -5,25 +5,11 @@ import { Section } from '../common/Section';
 import { useRecordContext, useFormValuesContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
-// import {
-//     PUBLICATION_TYPE_CREATIVE_WORK,
-//     PUBLICATION_TYPE_DESIGN,
-//     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-// } from 'config/general';
 
 export const AdminSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
-    /*
-     *  Disbale below line in favour of #171299373
-     */
-    // const displayType =
-    //     record.rek_display_type === PUBLICATION_TYPE_CREATIVE_WORK &&
-    //     !!record.rek_subtype &&
-    //     record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
-    //         ? PUBLICATION_TYPE_DESIGN
-    //         : record.rek_display_type;
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].admin(
             formValues.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
