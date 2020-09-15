@@ -661,7 +661,7 @@ export const changeDisplayType = (records, data, isBulkUpdate = false) => {
         try {
             const response = await patch(
                 isBulkUpdate ? NEW_RECORD_API() : EXISTING_RECORD_API({ pid: records[0].rek_pid }),
-                changeDisplayTypeRequest,
+                isBulkUpdate ? changeDisplayTypeRequest : changeDisplayTypeRequest[0],
             );
             dispatch({
                 type: actions.CHANGE_DISPLAY_TYPE_SUCCESS,
