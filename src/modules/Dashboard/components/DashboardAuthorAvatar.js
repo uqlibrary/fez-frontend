@@ -7,7 +7,7 @@ const DashboardAuthorAvatar = ({ values }) => {
     const txt = locale.pages.dashboard.header.dashboardAuthorAvatar;
     return (
         <Avatar
-            src={`https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${values.uqr_id}.jpg`}
+            src={`https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_${values.uqr_id}.jpg`}
             style={{
                 backgroundSize: 'cover, cover',
                 backgroundColor: 'rgba(0,0,0,0.3)',
