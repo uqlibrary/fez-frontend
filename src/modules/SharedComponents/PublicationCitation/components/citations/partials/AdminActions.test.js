@@ -1,8 +1,7 @@
 import React from 'react';
 import AdminActions, { navigateToUrl } from './AdminActions';
 import { rtlRender, fireEvent, cleanup } from 'test-utils';
-import { PUBLICATION_TYPE_WORKING_PAPER, RECORD_ACTION_URLS as defaultActions } from 'config/general';
-import { APP_URL } from '../../../../../../config';
+import { APP_URL, PUBLICATION_TYPE_WORKING_PAPER, RECORD_ACTION_URLS as defaultActions } from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -17,7 +16,6 @@ function setup(testProps = {}) {
 
 describe('AdminActions component', () => {
     let windowOpenSpy;
-    const legacyEditUrl = `${APP_URL}workflow/update.php?pid=UQ:111111&cat=select_workflow&xdis_id=179&wft_id=289&href=%2Fview%2FUQ%3A111111`;
 
     beforeAll(() => {
         windowOpenSpy = jest.spyOn(global.window, 'open').mockImplementation(() => {});
@@ -140,6 +138,21 @@ describe('AdminActions component', () => {
         const menu = getByTestId('admin-actions-menu');
 
         fireEvent.click(getByText(/edit selected record/i, menu));
+        expect(global.window.open).toHaveBeenCalledTimes(1);
+        expect(global.window.open).toHaveBeenCalledWith(
+            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111',
+            '_blank',
+            null,
+        );
+    });
+
+    it('should handle alternate click events', () => {
+        const { getByTestId, getByText } = setup({});
+        fireEvent.click(getByTestId('admin-actions-button'));
+
+        const menu = getByTestId('admin-actions-menu');
+
+        fireEvent.contextMenu(getByText(/edit selected record/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
         expect(global.window.open).toHaveBeenCalledWith(
             'https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111',

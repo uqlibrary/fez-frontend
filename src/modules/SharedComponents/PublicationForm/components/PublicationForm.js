@@ -24,8 +24,7 @@ import Typography from '@material-ui/core/Typography';
 import * as recordForms from './Forms';
 import { publicationTypes, validation } from 'config';
 import { default as txt } from 'locale/publicationForm';
-import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS, PUBLICATION_TYPE_THESIS } from 'config/general';
-import { pathConfig } from 'config/routes';
+import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS } from 'config/general';
 
 export default class PublicationForm extends Component {
     static propTypes = {
@@ -108,16 +107,6 @@ export default class PublicationForm extends Component {
         !!event && event.preventDefault();
     };
 
-    // a HDR student who tries to use this form to submit their thesis should be diverted to the correct page
-    _alertHDRStudentOnThesisSubmission = displayType => {
-        const isThesis = displayType === PUBLICATION_TYPE_THESIS;
-        return isThesis && this.props.isHdrStudent;
-    };
-
-    _visitHdrSubmissionPage = () => {
-        this.props.history.push(pathConfig.hdrSubmission);
-    };
-
     render() {
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         return (
@@ -166,112 +155,95 @@ export default class PublicationForm extends Component {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        {this._alertHDRStudentOnThesisSubmission(this.props.formValues.get('rek_display_type')) && (
-                            <Grid item xs={12}>
-                                <StandardCard title={txt.thesis.information.title} help={txt.thesis.information.help}>
-                                    <Alert
-                                        action={this._visitHdrSubmissionPage}
-                                        actionButtonLabel={txt.thesis.information.actionButtonLabel}
-                                        message={txt.thesis.information.message}
-                                        type="info"
+                        {!!this.props.formComponent && (
+                            <React.Fragment>
+                                {!!this.props.isNtro && <NtroHeader />}
+                                <Grid item xs={12}>
+                                    <this.props.formComponent
+                                        formValues={this.props.formValues}
+                                        subtype={this.props.subtype}
+                                        isNtro={this.props.isNtro}
+                                        isAuthorSelected={this.props.isAuthorSelected}
+                                        submitting={this.props.submitting}
+                                        history={this.props.history}
                                     />
-                                </StandardCard>
-                            </Grid>
-                        )}
-                        {!this._alertHDRStudentOnThesisSubmission(this.props.formValues.get('rek_display_type')) &&
-                            !!this.props.formComponent && (
-                                <React.Fragment>
-                                    {!!this.props.isNtro && <NtroHeader />}
+                                </Grid>
+                                {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
                                     <Grid item xs={12}>
-                                        <this.props.formComponent
-                                            formValues={this.props.formValues}
-                                            subtype={this.props.subtype}
-                                            isNtro={this.props.isNtro}
-                                            isAuthorSelected={this.props.isAuthorSelected}
-                                            submitting={this.props.submitting}
-                                            history={this.props.history}
-                                        />
-                                    </Grid>
-                                    {showContentIndicatorsField(
-                                        this.props.formValues && this.props.formValues.toJS(),
-                                    ) && (
-                                        <Grid item xs={12}>
-                                            <StandardCard
-                                                title={txt.contentIndicators.title}
-                                                help={txt.contentIndicators.help}
-                                            >
-                                                <Grid container spacing={3}>
-                                                    <Grid item xs={12}>
-                                                        <Typography>{txt.contentIndicators.description}</Typography>
-                                                        <Field
-                                                            component={ContentIndicatorsField}
-                                                            disabled={this.props.submitting}
-                                                            id="content-indicators"
-                                                            name="contentIndicators"
-                                                            label={txt.contentIndicators.fieldLabels.label}
-                                                            multiple
-                                                            fullWidth
-                                                        />
-                                                    </Grid>
+                                        <StandardCard
+                                            title={txt.contentIndicators.title}
+                                            help={txt.contentIndicators.help}
+                                        >
+                                            <Grid container spacing={3}>
+                                                <Grid item xs={12}>
+                                                    <Typography>{txt.contentIndicators.description}</Typography>
+                                                    <Field
+                                                        component={ContentIndicatorsField}
+                                                        disabled={this.props.submitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txt.contentIndicators.fieldLabels.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
                                                 </Grid>
-                                            </StandardCard>
-                                        </Grid>
-                                    )}
-                                    <Grid item xs={12}>
-                                        <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                            <Field
-                                                name="files"
-                                                component={FileUploadField}
-                                                disabled={this.props.submitting}
-                                                requireOpenAccessStatus
-                                                validate={
-                                                    this.props.isNtro
-                                                        ? [validation.fileUploadRequired, validation.validFileUpload]
-                                                        : [validation.validFileUpload]
-                                                }
-                                                isNtro={this.props.isNtro}
-                                            />
+                                            </Grid>
                                         </StandardCard>
                                     </Grid>
-                                </React.Fragment>
-                            )}
+                                )}
+                                <Grid item xs={12}>
+                                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                        <Field
+                                            name="files"
+                                            component={FileUploadField}
+                                            disabled={this.props.submitting}
+                                            requireOpenAccessStatus
+                                            validate={
+                                                this.props.isNtro
+                                                    ? [validation.fileUploadRequired, validation.validFileUpload]
+                                                    : [validation.validFileUpload]
+                                            }
+                                            isNtro={this.props.isNtro}
+                                        />
+                                    </StandardCard>
+                                </Grid>
+                            </React.Fragment>
+                        )}
                         {!!this.props.formComponent && alertProps && (
                             <Grid item xs={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
-                    {!this._alertHDRStudentOnThesisSubmission(this.props.formValues.get('rek_display_type')) && (
-                        <Grid container spacing={3}>
-                            <Grid item xs />
+                    <Grid container spacing={3}>
+                        <Grid item xs />
+                        <Grid item xs={12} sm="auto">
+                            <Button
+                                color="secondary"
+                                fullWidth
+                                children={txt.cancel}
+                                disabled={this.props.submitting}
+                                onClick={this.props.onFormCancel}
+                            />
+                        </Grid>
+                        {((this.props.formValues.get('rek_display_type') > 0 && !this.props.hasSubtypes) ||
+                            (this.props.hasSubtypes &&
+                                this.props.formValues.get('rek_subtype') &&
+                                this.props.formValues.get('rek_subtype').length > 0)) && (
                             <Grid item xs={12} sm="auto">
                                 <Button
-                                    color="secondary"
+                                    style={{ whiteSpace: 'nowrap' }}
+                                    id="submit-work"
+                                    variant="contained"
+                                    color="primary"
                                     fullWidth
-                                    children={txt.cancel}
-                                    disabled={this.props.submitting}
-                                    onClick={this.props.onFormCancel}
+                                    children={txt.submit}
+                                    onClick={this.props.handleSubmit}
+                                    disabled={this.props.submitting || this.props.disableSubmit}
                                 />
                             </Grid>
-                            {((this.props.formValues.get('rek_display_type') > 0 && !this.props.hasSubtypes) ||
-                                (this.props.hasSubtypes &&
-                                    this.props.formValues.get('rek_subtype') &&
-                                    this.props.formValues.get('rek_subtype').length > 0)) && (
-                                <Grid item xs={12} sm="auto">
-                                    <Button
-                                        style={{ whiteSpace: 'nowrap' }}
-                                        id="submit-work"
-                                        variant="contained"
-                                        color="primary"
-                                        fullWidth
-                                        children={txt.submit}
-                                        onClick={this.props.handleSubmit}
-                                        disabled={this.props.submitting || this.props.disableSubmit}
-                                    />
-                                </Grid>
-                            )}
-                        </Grid>
-                    )}
+                        )}
+                    </Grid>
                 </form>
             </ConfirmDiscardFormChanges>
         );

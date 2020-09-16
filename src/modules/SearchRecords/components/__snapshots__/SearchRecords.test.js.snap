@@ -1195,7 +1195,6 @@ exports[`SearchRecords page should show available filters or selected filters if
             }
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -1320,7 +1319,6 @@ exports[`SearchRecords page should show available filters or selected filters if
             }
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }

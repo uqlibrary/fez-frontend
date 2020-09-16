@@ -91,4 +91,15 @@ context('Batch import', () => {
             cy.get('[data-testid=batch-import-submit]').should('be.disabled');
         });
     });
+
+    it('should display subtype selector if Design type is selected', () => {
+        cy.get('[data-testid=doc-type-id-select]').click();
+        cy.waitUntil(() => cy.get('[data-testid=doc-type-id-options]').should('exist'));
+        cy.get('[data-testid=doc-type-id-options]')
+            .contains('Design')
+
+            .click();
+
+        cy.waitUntil(() => cy.get('[data-testid=subtype-select]').should('exist'));
+    });
 });

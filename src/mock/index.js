@@ -260,6 +260,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListAudio.data,
             ...mockData.publicationTypeListBook.data,
             ...mockData.publicationTypeListBookChapter.data,
+            ...mockData.publicationTypeListBookEdited.data,
             ...mockData.publicationTypeListConferencePaper.data,
             ...mockData.publicationTypeListConferenceProceedings.data,
             ...mockData.publicationTypeListCreativeWork.data,
@@ -379,7 +380,12 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
         return [200, { data: { ...mockData.favouriteSearchItem } }];
     });
 
-mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' })).reply(200, { data: {} });
+mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }))
+    .reply(200, { data: {} })
+    .onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
+    .reply(200, {
+        data: 'Record deleted',
+    });
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))

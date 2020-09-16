@@ -22,13 +22,22 @@ exports[`ThesisForm  should render component 1`] = `
         >
           <Alert
             action={[Function]}
-            actionButtonLabel="Upload your thesis"
+            actionButtonLabel="Upload HDR thesis"
             allowDismiss={false}
             customIcon={null}
             customType={null}
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
-            message="For HDR thesis submissions, click"
+            message={
+              <React.Fragment>
+                <p>
+                  Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS button to submit.
+                </p>
+                <p>
+                   To deposit another thesis type, use the form below.
+                </p>
+              </React.Fragment>
+            }
             showLoader={false}
             type="warning"
             wiggle={null}
@@ -54,6 +63,7 @@ exports[`ThesisForm  should render component 1`] = `
             placeholder="Thesis title"
             required={true}
             rows={1}
+            textFieldId="rek-title"
             type="text"
             validate={
               Array [
@@ -189,6 +199,7 @@ exports[`ThesisForm  should render component 1`] = `
             placeholder=""
             required={true}
             rows={1}
+            textFieldId="rek-author-0"
             type="text"
             validate={
               Array [
@@ -376,6 +387,7 @@ exports[`ThesisForm  should render component 1`] = `
             label="DOI"
             name="fez_record_search_key_doi.rek_doi"
             placeholder="Enter a valid DOI (eg. 10.4324/9780203118214)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -397,6 +409,7 @@ exports[`ThesisForm  should render component 1`] = `
             name="fez_record_search_key_total_pages.rek_total_pages"
             normalize={[Function]}
             placeholder=""
+            textFieldId="rek-total-pages"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -412,6 +425,7 @@ exports[`ThesisForm  should render component 1`] = `
             multiline={true}
             name="fez_record_search_key_description.rek_description"
             placeholder="Provide an abstract or summary of the work"
+            textFieldId="rek-description"
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -427,6 +441,7 @@ exports[`ThesisForm  should render component 1`] = `
             multiline={true}
             name="comments"
             placeholder="Provide any additional information"
+            textFieldId="comments"
             title="Additional notes"
             type="text"
           />

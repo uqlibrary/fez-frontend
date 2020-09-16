@@ -42,7 +42,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               Your dataset has been saved.
               <br />
               <br />
-              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
               "alertId": "alert-warning",
@@ -1389,7 +1389,7 @@ exports[`AddDataCollection test should render component with a valid collection 
               Your dataset has been saved.
               <br />
               <br />
-              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
               "alertId": "alert-warning",
@@ -2732,7 +2732,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
               Your dataset has been saved.
               <br />
               <br />
-              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
               "alertId": "alert-warning",
@@ -4075,7 +4075,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               Your dataset has been saved.
               <br />
               <br />
-              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+              Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
               "alertId": "alert-warning",
