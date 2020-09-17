@@ -175,7 +175,7 @@ export class GrantListEditorFormClass extends PureComponent {
                             placeholder={grantIdHint}
                             value={grantId}
                             onChange={this._onIDChanged}
-                            disabled={disabled || grantAgencyName.trim().length === 0}
+                            disabled={disabled || !grantAgencyName || grantAgencyName.trim().length === 0}
                             required={required}
                         />
                     </Grid>
@@ -183,8 +183,12 @@ export class GrantListEditorFormClass extends PureComponent {
                         <Grid item xs={12} sm={12} md={3}>
                             <FormControl
                                 fullWidth
-                                required={required || grantAgencyName.trim().length > 0}
-                                error={grantAgencyName.trim().length > 0 && grantAgencyType.trim().length === 0}
+                                required={required || (!!grantAgencyName && grantAgencyName.trim().length > 0)}
+                                error={
+                                    !!grantAgencyName &&
+                                    grantAgencyName.trim().length > 0 &&
+                                    grantAgencyType.trim().length === 0
+                                }
                             >
                                 <Typography variant="caption" color="secondary" style={{ marginBottom: -3 }}>
                                     {!!grantAgencyType ? grantAgencyTypeLabel : ' '}&nbsp;
