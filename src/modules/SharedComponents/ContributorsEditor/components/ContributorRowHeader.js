@@ -133,7 +133,7 @@ export class ContributorRowHeader extends PureComponent {
                             />
                         </Hidden>
                     </ListItemSecondaryAction>
-                    <ListItemSecondaryAction classes={{ root: isInfinite ? classes.paddingRight14 : '' }}>
+                    <ListItemSecondaryAction>
                         <Tooltip
                             title={deleteAll}
                             disableFocusListener={disabled || hideDelete}
@@ -170,9 +170,6 @@ export const styles = () => ({
     },
     paddingRight36: {
         paddingRight: 36,
-    },
-    paddingRight14: {
-        paddingRight: 14,
     },
 });
 
