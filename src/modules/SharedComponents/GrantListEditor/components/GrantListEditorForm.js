@@ -187,7 +187,7 @@ export class GrantListEditorFormClass extends PureComponent {
                                 error={
                                     !!grantAgencyName &&
                                     grantAgencyName.trim().length > 0 &&
-                                    grantAgencyType.trim().length === 0
+                                    (!grantAgencyType || grantAgencyType.trim().length === 0)
                                 }
                             >
                                 <Typography variant="caption" color="secondary" style={{ marginBottom: -3 }}>
@@ -212,7 +212,7 @@ export class GrantListEditorFormClass extends PureComponent {
                                     displayEmpty
                                     value={grantAgencyType}
                                     onChange={this._onTypeChanged}
-                                    disabled={disabled || grantAgencyName.trim().length === 0}
+                                    disabled={disabled || !grantAgencyName || grantAgencyName.trim().length === 0}
                                 >
                                     <MenuItem value="" disabled>
                                         {grantAgencyTypeHint}
@@ -225,9 +225,11 @@ export class GrantListEditorFormClass extends PureComponent {
                                         ) : null;
                                     })}
                                 </Select>
-                                {grantAgencyName.trim().length > 0 && grantAgencyType.trim().length === 0 && (
-                                    <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
-                                )}
+                                {!!grantAgencyName &&
+                                    grantAgencyName.trim().length > 0 &&
+                                    (!grantAgencyType || grantAgencyType.trim().length === 0) && (
+                                        <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
+                                    )}
                             </FormControl>
                         </Grid>
                     )}
@@ -240,8 +242,9 @@ export class GrantListEditorFormClass extends PureComponent {
                             color="primary"
                             disabled={
                                 disabled ||
+                                !grantAgencyName ||
                                 grantAgencyName.trim().length === 0 ||
-                                (!hideType && grantAgencyType.trim().length === 0)
+                                (!hideType && (!grantAgencyType || grantAgencyType.trim().length === 0))
                             }
                             onClick={this._addGrant}
                         >
