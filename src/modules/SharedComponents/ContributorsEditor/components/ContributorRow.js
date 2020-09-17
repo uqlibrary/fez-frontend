@@ -97,29 +97,33 @@ export const ContributorRow = ({
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
-    const _onDelete = () => {
+    const _onDelete = React.useCallback(() => {
         if (!disabled && onDelete) {
             onDelete(contributor, index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [contributor, index]);
 
-    const _onMoveUp = () => {
+    const _onMoveUp = React.useCallback(() => {
         if (!disabled && onMoveUp) {
             onMoveUp(contributor, index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [contributor, index]);
 
-    const _onMoveDown = () => {
+    const _onMoveDown = React.useCallback(() => {
         if (!disabled && onMoveDown) {
             onMoveDown(contributor, index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [contributor, index]);
 
-    const _select = () => {
+    const _select = React.useCallback(() => {
         if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [index]);
 
     const _onSelectKeyboard = event => {
         if (event.key === 'Enter') {
@@ -127,14 +131,19 @@ export const ContributorRow = ({
         }
     };
 
-    const _onSelect = event => {
-        _select();
-        event && event.currentTarget.blur();
-    };
+    const _onSelect = React.useCallback(
+        event => {
+            _select();
+            event && event.currentTarget.blur();
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [index],
+    );
 
-    const _handleEdit = () => {
+    const _handleEdit = React.useCallback(() => {
         canEdit && !!onEdit && onEdit(index);
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [index]);
 
     const getRowIcon = () => {
         if (parseInt(contributor.uqIdentifier, 10)) {
@@ -326,4 +335,12 @@ ContributorRow.defaultProps = {
     required: false,
     enableSelect: false,
 };
-export default React.memo(ContributorRow);
+export default React.memo(ContributorRow, (pp, np) => {
+    return (
+        pp.disabled === np.disabled &&
+        pp.index === np.index &&
+        !np.contributor.selected &&
+        !pp.contributor.selected &&
+        pp.contributor.nameAsPublished === np.contributor.nameAsPublished
+    );
+});
