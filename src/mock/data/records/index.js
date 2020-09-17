@@ -43,6 +43,7 @@ export { default as publicationTypeListWorkingPaper } from './publicationTypeLis
 export { default as record } from './record';
 export { default as recordsTypeList } from './recordsTypeList';
 export { default as recordWithDatastreams } from './recordWithDatastreams';
+export { default as recordWithLotOfAuthors } from './recordWithLotOfAuthors';
 export { default as recordWithoutAuthorIds } from './recordWithoutAuthorIds';
 export { default as recordWithTiffAndThumbnail } from './recordWithTiffAndThumbnail';
 export { default as unpublishedSearchList } from './unpublishedSearchList';

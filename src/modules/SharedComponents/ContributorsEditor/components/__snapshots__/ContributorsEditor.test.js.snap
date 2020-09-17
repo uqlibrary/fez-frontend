@@ -1012,7 +1012,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
       >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
-          isInfinite={true}
+          isInfinite={false}
           isNtro={false}
           onDeleteAll={[Function]}
           showContributorAssignment={false}
