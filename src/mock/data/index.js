@@ -46,6 +46,7 @@ export {
     record,
     recordsTypeList,
     recordWithDatastreams,
+    recordWithLotOfAuthors,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
     unpublishedSearchList,
