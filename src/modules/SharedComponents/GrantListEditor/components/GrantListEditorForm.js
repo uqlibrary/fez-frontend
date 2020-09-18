@@ -184,11 +184,7 @@ export class GrantListEditorFormClass extends PureComponent {
                             <FormControl
                                 fullWidth
                                 required={required || (!!grantAgencyName && grantAgencyName.trim().length > 0)}
-                                error={
-                                    !!grantAgencyName &&
-                                    grantAgencyName.trim().length > 0 &&
-                                    (!grantAgencyType || grantAgencyType.trim().length === 0)
-                                }
+                                error={!!grantAgencyName && grantAgencyName.trim().length > 0 && !grantAgencyType}
                             >
                                 <Typography variant="caption" color="secondary" style={{ marginBottom: -3 }}>
                                     {!!grantAgencyType ? grantAgencyTypeLabel : ' '}&nbsp;
@@ -225,11 +221,9 @@ export class GrantListEditorFormClass extends PureComponent {
                                         ) : null;
                                     })}
                                 </Select>
-                                {!!grantAgencyName &&
-                                    grantAgencyName.trim().length > 0 &&
-                                    (!grantAgencyType || grantAgencyType.trim().length === 0) && (
-                                        <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
-                                    )}
+                                {!!grantAgencyName && grantAgencyName.trim().length > 0 && !grantAgencyType && (
+                                    <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
+                                )}
                             </FormControl>
                         </Grid>
                     )}
@@ -244,7 +238,7 @@ export class GrantListEditorFormClass extends PureComponent {
                                 disabled ||
                                 !grantAgencyName ||
                                 grantAgencyName.trim().length === 0 ||
-                                (!hideType && (!grantAgencyType || grantAgencyType.trim().length === 0))
+                                (!hideType && !grantAgencyType)
                             }
                             onClick={this._addGrant}
                         >
