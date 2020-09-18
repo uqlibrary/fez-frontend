@@ -1255,7 +1255,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             style={
               Object {
                 "marginBottom": 8,
-                "marginTop": 4,
               }
             }
           >
@@ -1434,8 +1433,15 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                       Array [
                         [Function],
                       ],
+                      Array [
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1554,6 +1560,103 @@ exports[`AdminInterface component should render default view as a full form view
               Object {
                 "marginBottom": 8,
                 "marginTop": 4,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel-top"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin-top"
+                fullWidth={true}
+                id="admin-work-publish-top"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin-top"
+                fullWidth={true}
+                id="admin-work-submit-top"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginBottom": 8,
               }
             }
           >
@@ -1764,6 +1867,9 @@ exports[`AdminInterface component should render default view as a full form view
                 onClick={
                   [MockFunction] {
                     "calls": Array [
+                      Array [
+                        [Function],
+                      ],
                       Array [
                         [Function],
                       ],

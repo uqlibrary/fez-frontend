@@ -355,14 +355,16 @@ export const AdminInterface = ({
                 </Grid>
                 <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
                     <form>
-                        <Grid container spacing={1}>
-                            {renderSaveStatusAlert}
-                            <Grid item xs={12}>
-                                <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
-                                    {renderButtonBar('top')}
+                        {!tabbed && (
+                            <Grid container spacing={1}>
+                                {renderSaveStatusAlert}
+                                <Grid item xs={12}>
+                                    <Grid container spacing={1} style={{ marginBottom: 8 }}>
+                                        {renderButtonBar('top')}
+                                    </Grid>
                                 </Grid>
                             </Grid>
-                        </Grid>
+                        )}
                         <Grid container spacing={0}>
                             {!tabbed
                                 ? Object.keys(tabs)
