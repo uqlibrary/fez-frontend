@@ -9,6 +9,11 @@ exports[`WoSDocTypesField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
+      Object {
         "text": "None",
         "value": "None",
       },
@@ -159,7 +164,7 @@ exports[`WoSDocTypesField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={Array []}
+  value={-1}
 />
 `;
 
@@ -180,6 +185,11 @@ exports[`WoSDocTypesField component should render immutable list as selected val
   }
   itemsList={
     Array [
+      Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
       Object {
         "text": "None",
         "value": "None",
@@ -357,6 +367,11 @@ exports[`WoSDocTypesField component should render when given a default value fie
   hideLabel={false}
   itemsList={
     Array [
+      Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
       Object {
         "text": "None",
         "value": "None",
@@ -536,6 +551,11 @@ exports[`WoSDocTypesField component should render with given field props 1`] = `
   itemsList={
     Array [
       Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
+      Object {
         "text": "None",
         "value": "None",
       },
@@ -694,11 +714,6 @@ exports[`WoSDocTypesField component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  value={
-    Array [
-      "One",
-      "Two",
-    ]
-  }
+  value={-1}
 />
 `;

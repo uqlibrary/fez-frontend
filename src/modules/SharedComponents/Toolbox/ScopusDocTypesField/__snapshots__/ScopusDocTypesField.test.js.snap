@@ -9,6 +9,11 @@ exports[`ScopusDocTypesField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
+      Object {
         "text": "None",
         "value": "None",
       },
@@ -83,7 +88,7 @@ exports[`ScopusDocTypesField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={Array []}
+  value={-1}
 />
 `;
 
@@ -104,6 +109,11 @@ exports[`ScopusDocTypesField component should render immutable list as selected 
   }
   itemsList={
     Array [
+      Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
       Object {
         "text": "None",
         "value": "None",
@@ -205,6 +215,11 @@ exports[`ScopusDocTypesField component should render when given a default value 
   hideLabel={false}
   itemsList={
     Array [
+      Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
       Object {
         "text": "None",
         "value": "None",
@@ -308,6 +323,11 @@ exports[`ScopusDocTypesField component should render with given field props 1`] 
   itemsList={
     Array [
       Object {
+        "disabled": true,
+        "text": "Please choose an option",
+        "value": -1,
+      },
+      Object {
         "text": "None",
         "value": "None",
       },
@@ -390,11 +410,6 @@ exports[`ScopusDocTypesField component should render with given field props 1`] 
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  value={
-    Array [
-      "One",
-      "Two",
-    ]
-  }
+  value={-1}
 />
 `;

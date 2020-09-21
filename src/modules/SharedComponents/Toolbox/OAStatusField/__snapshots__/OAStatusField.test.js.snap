@@ -10,8 +10,9 @@ exports[`OAStatus component should render default view 1`] = `
   itemsList={
     Array [
       Object {
+        "disabled": true,
         "text": "Please choose an option",
-        "value": null,
+        "value": -1,
       },
       Object {
         "text": "Not yet assessed",
@@ -68,7 +69,7 @@ exports[`OAStatus component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={Array []}
+  value={-1}
 />
 `;
 
@@ -91,8 +92,9 @@ exports[`OAStatus component should render immutable list as selected value with 
   itemsList={
     Array [
       Object {
+        "disabled": true,
         "text": "Please choose an option",
-        "value": null,
+        "value": -1,
       },
       Object {
         "text": "Not yet assessed",
@@ -177,8 +179,9 @@ exports[`OAStatus component should render when given a default value field props
   itemsList={
     Array [
       Object {
+        "disabled": true,
         "text": "Please choose an option",
-        "value": null,
+        "value": -1,
       },
       Object {
         "text": "Not yet assessed",
@@ -264,8 +267,9 @@ exports[`OAStatus component should render with given field props 1`] = `
   itemsList={
     Array [
       Object {
+        "disabled": true,
         "text": "Please choose an option",
-        "value": null,
+        "value": -1,
       },
       Object {
         "text": "Not yet assessed",
@@ -330,11 +334,6 @@ exports[`OAStatus component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  value={
-    Array [
-      "One",
-      "Two",
-    ]
-  }
+  value={-1}
 />
 `;
