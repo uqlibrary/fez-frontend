@@ -439,6 +439,39 @@ export default {
                 },
             },
         },
+        grants: {
+            locale: {
+                form: {
+                    locale: {
+                        grantAgencyNameLabel: 'Funder/Sponsor name',
+                        grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                        grantIdLabel: 'Grant ID',
+                        grantIdHint: 'Enter grant number for this work, if available',
+                        grantAgencyTypeLabel: 'Funder/Sponsor type',
+                        grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                        addButton: 'Add grant',
+                        editButton: 'Edit grant',
+                        description:
+                            "Add the grant's name, ID and type - then click the ADD GRANT button to add each to the list",
+                    },
+                },
+                header: {
+                    locale: {
+                        GrantAgencyName: 'Funder/Sponsor name',
+                        GrantID: 'Grant ID',
+                        GrantAgencyType: 'Funder/Sponsor type',
+                        reorderColumn: 'Reorder entries',
+                        deleteAll: 'Remove all entries',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all entries?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         thirdPartyLookupTools: {
             display: {
                 title: 'Lookup Tools - view raw output from APIs',
