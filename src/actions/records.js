@@ -665,3 +665,36 @@ export const changeDisplayType = (records = [], data) => {
         }
     };
 };
+
+export const changeSearchKeyValue = (records = [], data) => {
+    const { searchKey, searchKeyValue } = data;
+    const changeSearchKeyValueRequest = records.map(({ rek_pid: pid, [searchKey]: item }) => ({
+        rek_pid: pid,
+        [searchKey]: {
+            ...item,
+            ...searchKeyValue,
+        },
+    }));
+
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_SEARCH_KEY_VALUE_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), changeSearchKeyValueRequest);
+            dispatch({
+                type: actions.CHANGE_SEARCH_KEY_VALUE_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_SEARCH_KEY_VALUE_FAILED,
+                payload: e,
+            });
+
+            return false;
+        }
+    };
+};
