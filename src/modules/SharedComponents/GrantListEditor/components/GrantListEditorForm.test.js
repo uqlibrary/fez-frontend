@@ -1,234 +1,114 @@
-import { GrantListEditorFormClass } from './GrantListEditorForm';
+import React from 'react';
 import GrantListEditorForm from './GrantListEditorForm';
+import { render, fireEvent } from 'test-utils';
 
-function setup(testProps = {}, args = {}) {
+function setup(testProps = {}) {
     const props = {
         onAdd: jest.fn(),
         errorText: null,
-        locale: { addButton: 'Button' },
         disabled: false,
         required: true,
         hideType: false,
-        classes: {},
-        theme: {},
-        isPopulated: testProps.isPopulated || undefined,
+        isPopulated: testProps.isPopulated || jest.fn(),
         ...testProps,
     };
-    return getElement(GrantListEditorFormClass, props, args);
+    return render(<GrantListEditorForm {...props} />);
 }
 
 describe('GrantListEditorForm', () => {
     it('should render default view', () => {
-        const wrapper = getElement(
-            GrantListEditorForm,
-            {
-                onAdd: jest.fn(),
-                errorText: null,
-                locale: { addButton: 'Test' },
-                disabled: false,
-                required: true,
-                hideType: false,
-                classes: {},
-                theme: {},
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+        const { getByTestId, getByText } = setup();
+        expect(
+            getByText(
+                "Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list",
+            ),
+        ).toBeInTheDocument();
 
-    it('should render default view', () => {
-        const wrapper = setup({}, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(getByTestId('rek-grant-type-select')).toBeInTheDocument();
     });
 
     it('should hide grant agency type input', () => {
-        const wrapper = setup({ hideType: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(FormControl)').length).toEqual(0);
+        const { queryByTestId } = setup({ hideType: true });
+        expect(queryByTestId('rek-grant-type-select')).not.toBeInTheDocument();
     });
 
     it('should set grant agency type as a required input if agency name is set', () => {
-        const wrapper = setup({ required: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(ForwardRef(FormControl))').props().required).toBeFalsy();
-
-        wrapper.setState({
-            grantAgencyName: 'test',
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(ForwardRef(FormControl))').props().required).toBeTruthy();
-
-        wrapper.setState({
-            grantId: '1234',
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(ForwardRef(FormHelperText))').length).toEqual(1);
+        const { getByTestId, getByText } = setup({ required: false });
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { value: 'test' } });
+        expect(getByTestId('rek-grant-agency-helper-text')).toBeInTheDocument();
+        expect(getByText('This field is required')).toBeInTheDocument();
     });
 
     it('should add grant and pass isPopulated info', () => {
         const onAddFn = jest.fn();
         const isPopulated = jest.fn();
-        const wrapper = setup({
+        const { getByTestId, getByText } = setup({
             onAdd: onAddFn,
             isPopulated: isPopulated,
         });
 
-        wrapper.setState({
-            grantAgencyName: 'test',
-            grantId: '123',
-            grantAgencyType: 'Government',
-        });
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: 'test' } });
+        fireEvent.change(getByTestId('rek-grant-id-input'), { target: { name: 'grantId', value: '123' } });
 
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._addGrant({ key: 'Enter' });
-
-        expect(onAddFn).toHaveBeenCalledWith({
-            grantAgencyName: 'test',
-            grantId: '123',
-            grantAgencyType: 'Government',
-        });
-
-        expect(setState).toHaveBeenCalledWith({
-            grantAgencyName: '',
-            grantId: '',
-            grantAgencyType: '',
-        });
-        expect(isPopulated).toHaveBeenCalled();
-    });
-
-    it('should add grant and not pass isPopulated info', () => {
-        const onAddFn = jest.fn();
-        const isPopulated = jest.fn();
-        const wrapper = setup({
-            onAdd: onAddFn,
-            isPopulated: null,
-        });
-
-        wrapper.setState({
-            grantAgencyName: 'test',
-            grantId: '123',
-            grantAgencyType: 'Government',
-        });
-
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._addGrant({ key: 'Enter' });
-
-        expect(onAddFn).toHaveBeenCalledWith({
-            grantAgencyName: 'test',
-            grantId: '123',
-            grantAgencyType: 'Government',
-        });
-
-        expect(setState).toHaveBeenCalledWith({
-            grantAgencyName: '',
-            grantId: '',
-            grantAgencyType: '',
-        });
-        expect(isPopulated).not.toHaveBeenCalled();
-    });
-
-    it('should not add grant if form has value but Enter key is not pressed', () => {
-        const onAddFn = jest.fn();
-        const wrapper = setup({ onAdd: onAddFn });
-
-        wrapper.setState({
-            grantAgencyName: 'test',
-            grantId: '123',
-            grantAgencyType: 'Government',
-        });
-
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._addGrant({ key: 'Esc' });
-
-        expect(onAddFn).not.toBeCalled();
-        expect(setState).not.toBeCalled();
-    });
-
-    it('should not add grant if grant agency name is empty string and enter is pressed', () => {
-        const onAddFn = jest.fn();
-        const wrapper = setup({ onAdd: onAddFn });
-
-        wrapper.setState({
-            grantAgencyName: '',
-            grantId: '123',
-            grantAgencyType: 'Government',
-        });
-
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._addGrant({ key: 'Enter' });
-
-        expect(onAddFn).not.toBeCalled();
-        expect(setState).not.toBeCalled();
-    });
-
-    it('should not add grant if form is disabled', () => {
-        const onAddFn = jest.fn();
-        const wrapper = setup({ onAdd: onAddFn, disabled: true });
-
-        wrapper.setState({
-            grantAgencyName: 'test',
-            grantId: '123',
-            grantAgencyType: 'Government',
-        });
-
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._addGrant({ key: 'Enter' });
-
-        expect(onAddFn).not.toBeCalled();
-        expect(setState).not.toBeCalled();
-    });
-
-    it('should set correct state on name changed', () => {
-        const isPopulated = jest.fn();
-        const wrapper = setup({ isPopulated: isPopulated });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._onNameChanged({ target: { value: 'test' } });
-        expect(setState).toHaveBeenCalled();
+        expect(isPopulated).toHaveBeenCalledTimes(2);
         expect(isPopulated).toHaveBeenCalledWith(true);
+
+        fireEvent.mouseDown(getByTestId('rek-grant-type-select'));
+        fireEvent.click(getByText('Government'));
+
+        fireEvent.click(getByTestId('rek-grant-add'));
+
+        expect(onAddFn).toHaveBeenCalledWith({
+            grantAgencyName: 'test',
+            grantId: '123',
+            grantAgencyType: '453985',
+        });
+
+        expect(isPopulated).toHaveBeenCalledWith(false);
     });
 
-    it('should set correct state on id changed', () => {
-        const isPopulated = jest.fn();
-        const wrapper = setup({ isPopulated: isPopulated });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._onIDChanged({ target: { value: 'test' } });
-        expect(setState).toHaveBeenCalled();
-        expect(isPopulated).toHaveBeenCalled();
+    it('should not add grant if form state is not valid or any other key is pressed', () => {
+        const onAddFn = jest.fn();
+        const { getByTestId } = setup({ onAdd: onAddFn });
+
+        fireEvent.change(getByTestId('rek-grant-id-input'), { target: { name: 'grantId', value: '123' } });
+        fireEvent.keyDown(getByTestId('rek-grant-id-input'), { key: 'Enter', code: 13 });
+        expect(onAddFn).not.toBeCalled();
+
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: 'test' } });
+
+        fireEvent.keyDown(getByTestId('rek-grant-id-input'), { key: 'Enter', code: 13 });
+        expect(onAddFn).not.toBeCalled();
+
+        fireEvent.keyDown(getByTestId('rek-grant-id-input'), { key: 'Esc', code: 27 });
+        expect(onAddFn).not.toBeCalled();
     });
 
-    it('should set correct state on type changed', () => {
-        const wrapper = setup({ isPopulated: jest.fn() });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._onTypeChanged({ target: { value: 'test' } });
-        expect(setState).toHaveBeenCalled();
-    });
-
-    it('should set correct name on type changed without isPopulated function', () => {
-        const isPopulated = null;
-        const wrapper = setup({ isPopulated: isPopulated });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._onNameChanged({ target: { value: 'test' } });
-        expect(setState).toHaveBeenCalled();
-    });
-
-    it('should set correct id on change without isPopulated function', () => {
-        const isPopulated = null;
-        const wrapper = setup({ isPopulated: isPopulated });
-        const setState = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()._onIDChanged({ target: { value: 'test' } });
-        expect(setState).toHaveBeenCalled();
-    });
-
-    it('should reload form with grant information data on props change', () => {
-        const wrapper = setup();
-        wrapper.setProps({
+    it('should load form with selected grant information', () => {
+        const { getByTestId } = setup({
             grantSelectedToEdit: {
                 grantAgencyName: 'test',
                 grantId: '123',
-                grantAgencyType: 'Government',
+                grantAgencyType: '453985',
             },
         });
 
-        expect(wrapper.instance().state.grantAgencyName).toEqual('test');
+        expect(getByTestId('rek-grant-agency-input')).toHaveAttribute('value', 'test');
+        expect(getByTestId('rek-grant-id-input')).toHaveAttribute('value', '123');
+        expect(getByTestId('rek-grant-type-input')).toHaveAttribute('value', '453985');
+    });
+
+    it('should load form with selected grant information', () => {
+        const { getByTestId } = setup({
+            grantSelectedToEdit: {
+                grantAgencyName: 'test',
+                grantId: '123',
+                grantAgencyType: '454045',
+            },
+        });
+
+        expect(getByTestId('rek-grant-agency-input')).toHaveAttribute('value', 'test');
+        expect(getByTestId('rek-grant-id-input')).toHaveAttribute('value', '123');
+        expect(getByTestId('rek-grant-type-input')).toHaveAttribute('value', '');
     });
 });
