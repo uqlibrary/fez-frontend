@@ -11,7 +11,7 @@ context('Search', () => {
 
     it('Doing a basic search to advanced search', () => {
         // Perform a basic search
-        cy.get('#simpleSearchField')
+        cy.get('#simple-search-input')
             .should(
                 'have.attr',
                 'aria-label',
@@ -21,7 +21,7 @@ context('Search', () => {
             .closest('[class*="MuiFormControl-root"]')
             // .contains('label', searchLocale.searchBoxPlaceholder);
             .contains('label', 'Search eSpace');
-        cy.get('#simpleSearchField').type('cats and dogs{enter}');
+        cy.get('#simple-search-input').type('cats and dogs{enter}');
         cy.get('.StandardPage > div > div > div:nth-of-type(2) .StandardCard').should(
             'contain',
             'Displaying works 1 to 7 of 7 total works.',
@@ -60,7 +60,7 @@ context('Search', () => {
             .contains('Please select a field to search');
         cy.contains('Select a field').click();
         // Select author from the field dropdown
-        cy.contains('#menu-field-type-selector li', 'Author Name').click();
+        cy.contains('#field-type-options li', 'Author Name').click();
         cy.get('button#advancedSearchButton')
             .should('be.disabled')
             .should('have.text', 'Search');
@@ -69,7 +69,7 @@ context('Search', () => {
         // Add a set of collections to search from
         cy.contains('button', 'Add another field').click();
         cy.contains('Select a field').click();
-        cy.contains('#menu-field-type-selector li', 'Collection').click();
+        cy.contains('#field-type-options li', 'Collection').click();
         cy.get('button#advancedSearchButton').should('be.disabled');
         cy.get('[data-testid=rek-ismemberof-input]').click();
         cy.contains(
@@ -80,10 +80,9 @@ context('Search', () => {
         cy.contains('[data-testid=rek-ismemberof-options] li', 'Adaptive Interactive Profit Expectations').click();
         cy.get('[data-testid=rek-ismemberof-input]').click();
         cy.contains('[data-testid=rek-ismemberof-options] li', 'Admin only - CHRC').click();
-        cy.get('#advancedSearchForm .searchQueryCaption').should($caption => {
+        cy.get('[data-testid=advanced-search-caption]').should($caption => {
             expect(cleanExtraSpaces($caption.text())).to.equal(
-                "Any field contains it's raining cats and dogs AND Author Name contains Ky Lane AND Collection" +
-                    ' is one of UQ:131735, UQ:131375 or UQ:292807 AND is open access/full text',
+                "Any fieldcontainsit's raining cats and dogsANDAuthor NamecontainsKy LaneANDCollectionis one ofUQ:131735, UQ:131375 or UQ:292807ANDisopen access/full text",
             );
         });
         cy.get('button#advancedSearchButton')
@@ -99,7 +98,7 @@ context('Search', () => {
 
         cy.get('button#showAdvancedSearchButton').click();
         cy.contains('Select a field').click();
-        cy.contains('#menu-field-type-selector li', 'PID').click();
+        cy.contains('#field-type-options li', 'PID').click();
         cy.get('#rek-pid-helper-text')
             .as('helpText')
             .should('contain', 'This field is required');
@@ -125,8 +124,8 @@ context('Search', () => {
         cy.get('@searchButton').should('not.be.disabled');
         cy.get('@helpText').should('not.exist');
 
-        cy.get('#advancedSearchForm .searchQueryCaption').should($caption => {
-            expect(cleanExtraSpaces($caption.text())).to.equal('PID is uq:123');
+        cy.get('[data-testid=advanced-search-caption]').should($caption => {
+            expect(cleanExtraSpaces($caption.text())).to.equal('PIDisuq:123');
         });
     });
 
@@ -178,7 +177,7 @@ context('Search', () => {
     //     it('should issue and handle API calls as expected when searching from homepage header', () => {
     //         cy.visit('/');
 
-    //         cy.get('#simpleSearchField')
+    //         cy.get('#simple-search-input')
     //             .type('test1{enter}');
 
     //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
@@ -201,7 +200,7 @@ context('Search', () => {
     //     it('should issue and handle API calls as expected when changing the search query', () => {
     //         cy.visit('/#/records/search');
 
-    //         cy.get('#simpleSearchField')
+    //         cy.get('#simple-search-input')
     //             .type('vaccination{enter}');
 
     //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')

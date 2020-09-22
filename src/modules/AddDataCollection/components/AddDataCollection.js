@@ -444,7 +444,7 @@ export default class AddDataCollection extends Component {
                                                     value: 'rek_type_of_data',
                                                     order: 'rek_type_of_data_order',
                                                 }}
-                                                locale={locale.components.typeOfDataForm.field}
+                                                locale={locale.components.typeOfDataForm.fieldDataset}
                                                 disabled={this.props.submitting}
                                             />
                                         </Grid>

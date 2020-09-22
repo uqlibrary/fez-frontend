@@ -41,7 +41,7 @@ exports[`Search record results should render a single claimable item with no aut
           searchDashboard={
             Object {
               "ariaCircularProgressLabelSuffix": "loading",
-              "recordSuffix": " record(s)",
+              "recordSuffix": " work(s)",
               "repositories": Array [
                 Object {
                   "id": "espace",
@@ -67,7 +67,7 @@ exports[`Search record results should render a single claimable item with no aut
               "title": "Repository search",
             }
           }
-          text="Claim a matching work below, refine your search or create a new eSpace record."
+          text="Claim a matching work below, refine your search or create a new eSpace work."
           title="Possible matches found"
         >
           <WithStyles(ForwardRef(Grid))
@@ -79,7 +79,7 @@ exports[`Search record results should render a single claimable item with no aut
               xs={12}
             >
               Top 1 potential match(es) displayed for "undefined".
-              Claim a matching work below, refine your search or create a new eSpace record.
+              Claim a matching work below, refine your search or create a new eSpace work.
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
@@ -450,7 +450,7 @@ exports[`Search record results should render a single claimable item with no aut
               onClick={[Function]}
               variant="contained"
             >
-              Create a new eSpace record
+              Create a new eSpace work
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -526,7 +526,7 @@ exports[`Search record results should render a single unclaimable item with no a
           searchDashboard={
             Object {
               "ariaCircularProgressLabelSuffix": "loading",
-              "recordSuffix": " record(s)",
+              "recordSuffix": " work(s)",
               "repositories": Array [
                 Object {
                   "id": "espace",
@@ -552,7 +552,7 @@ exports[`Search record results should render a single unclaimable item with no a
               "title": "Repository search",
             }
           }
-          text="Claim a matching work below, refine your search or create a new eSpace record."
+          text="Claim a matching work below, refine your search or create a new eSpace work."
           title="Possible matches found"
         >
           <WithStyles(ForwardRef(Grid))
@@ -564,7 +564,7 @@ exports[`Search record results should render a single unclaimable item with no a
               xs={12}
             >
               Top 1 potential match(es) displayed for "undefined".
-              Claim a matching work below, refine your search or create a new eSpace record.
+              Claim a matching work below, refine your search or create a new eSpace work.
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
@@ -708,7 +708,7 @@ exports[`Search record results should render a single unclaimable item with no a
               onClick={[Function]}
               variant="contained"
             >
-              Create a new eSpace record
+              Create a new eSpace work
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -883,6 +883,11 @@ exports[`Search record results should render a single unclaimable item with no a
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -1639,7 +1644,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 searchDashboard={
                                   Object {
                                     "ariaCircularProgressLabelSuffix": "loading",
-                                    "recordSuffix": " record(s)",
+                                    "recordSuffix": " work(s)",
                                     "repositories": Array [
                                       Object {
                                         "id": "espace",
@@ -1665,7 +1670,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                     "title": "Repository search",
                                   }
                                 }
-                                text="Claim a matching work below, refine your search or create a new eSpace record."
+                                text="Claim a matching work below, refine your search or create a new eSpace work."
                                 title="Possible matches found"
                               >
                                 <WithStyles(Cards)
@@ -1673,7 +1678,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                   searchDashboard={
                                     Object {
                                       "ariaCircularProgressLabelSuffix": "loading",
-                                      "recordSuffix": " record(s)",
+                                      "recordSuffix": " work(s)",
                                       "repositories": Array [
                                         Object {
                                           "id": "espace",
@@ -1699,7 +1704,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                       "title": "Repository search",
                                     }
                                   }
-                                  text="Claim a matching work below, refine your search or create a new eSpace record."
+                                  text="Claim a matching work below, refine your search or create a new eSpace work."
                                   title="Possible matches found"
                                 >
                                   <Cards
@@ -1716,7 +1721,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                     searchDashboard={
                                       Object {
                                         "ariaCircularProgressLabelSuffix": "loading",
-                                        "recordSuffix": " record(s)",
+                                        "recordSuffix": " work(s)",
                                         "repositories": Array [
                                           Object {
                                             "id": "espace",
@@ -1742,7 +1747,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                         "title": "Repository search",
                                       }
                                     }
-                                    text="Claim a matching work below, refine your search or create a new eSpace record."
+                                    text="Claim a matching work below, refine your search or create a new eSpace work."
                                     theme={
                                       Object {
                                         "breakpoints": Object {
@@ -1803,6 +1808,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                               "textOverflow": "ellipsis",
                                               "whiteSpace": "nowrap",
                                               "width": "100%",
+                                            },
+                                          },
+                                          "MuiIconButton": Object {
+                                            "colorInherit": Object {
+                                              "color": "none",
                                             },
                                           },
                                           "MuiMenuItem": Object {
@@ -2522,7 +2532,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                 className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                               >
                                                                 Top 1 potential match(es) displayed for "undefined".
-                                                                Claim a matching work below, refine your search or create a new eSpace record.
+                                                                Claim a matching work below, refine your search or create a new eSpace work.
                                                               </div>
                                                             </ForwardRef(Grid)>
                                                           </WithStyles(ForwardRef(Grid))>
@@ -3506,7 +3516,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     <span
                                                       className="MuiButton-label"
                                                     >
-                                                      Create a new eSpace record
+                                                      Create a new eSpace work
                                                     </span>
                                                     <WithStyles(memo)
                                                       center={false}
@@ -3621,7 +3631,7 @@ exports[`Search record results should render publications list with one publicat
           searchDashboard={
             Object {
               "ariaCircularProgressLabelSuffix": "loading",
-              "recordSuffix": " record(s)",
+              "recordSuffix": " work(s)",
               "repositories": Array [
                 Object {
                   "id": "espace",
@@ -3647,7 +3657,7 @@ exports[`Search record results should render publications list with one publicat
               "title": "Repository search",
             }
           }
-          text="Claim a matching work below, refine your search or create a new eSpace record."
+          text="Claim a matching work below, refine your search or create a new eSpace work."
           title="Possible matches found"
         >
           <WithStyles(ForwardRef(Grid))
@@ -3659,7 +3669,7 @@ exports[`Search record results should render publications list with one publicat
               xs={12}
             >
               Top 1 potential match(es) displayed for "undefined".
-              Claim a matching work below, refine your search or create a new eSpace record.
+              Claim a matching work below, refine your search or create a new eSpace work.
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
@@ -3783,7 +3793,7 @@ exports[`Search record results should render publications list with one publicat
               onClick={[Function]}
               variant="contained"
             >
-              Create a new eSpace record
+              Create a new eSpace work
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -3920,10 +3930,10 @@ exports[`Search record results should render stepper and no results 1`] = `
         sm={12}
       >
         <StandardCard
-          text="We were unable to match any results to your search criteria. Please search again or create a new eSpace record."
+          text="We were unable to match any results to your search criteria. Please search again or create a new eSpace work."
           title="No matching works found"
         >
-          We were unable to match any results to your search criteria. Please search again or create a new eSpace record.
+          We were unable to match any results to your search criteria. Please search again or create a new eSpace work.
         </StandardCard>
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
@@ -3967,7 +3977,7 @@ exports[`Search record results should render stepper and no results 1`] = `
               onClick={[Function]}
               variant="contained"
             >
-              Create a new eSpace record
+              Create a new eSpace work
             </WithStyles(ForwardRef(Button))>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>

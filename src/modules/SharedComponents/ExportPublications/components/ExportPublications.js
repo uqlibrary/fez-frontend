@@ -8,7 +8,6 @@ import FormControl from '@material-ui/core/FormControl';
 
 export default class ExportPublications extends PureComponent {
     static propTypes = {
-        format: PropTypes.string,
         disabled: PropTypes.bool,
         onChange: PropTypes.func,
     };
@@ -26,7 +25,7 @@ export default class ExportPublications extends PureComponent {
                     id="exportPublicationsFormat"
                     onChange={this.formatChanged}
                     disabled={this.props.disabled}
-                    value={this.props.format || -1}
+                    value={-1}
                     displayEmpty
                 >
                     <MenuItem key={-1} value={-1} disabled>

@@ -200,17 +200,12 @@ context('Thesis', () => {
 
         // Files?
         const uploadFile = fileName => {
-            cy.fixture(fileName).then(fileContent => {
-                cy.get('div#FileUploadDropZone').upload(
-                    { fileContent, fileName, mimeType: 'image/jpg' },
-                    { subjectType: 'drag-n-drop' },
-                );
-            });
+            cy.get('[data-testid="fez-datastream-info-input"]').attachFile(fileName, { subjectType: 'drag-n-drop' });
         };
 
         uploadFile('test.jpg');
 
-        cy.get('button[title="Remove this file"]').click();
+        cy.get('[data-testid="dsi-dsid-0-delete"]').click();
         cy.get('button')
             .contains('Yes')
             .click();

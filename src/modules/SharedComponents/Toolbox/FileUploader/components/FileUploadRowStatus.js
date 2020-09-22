@@ -36,13 +36,15 @@ export class FileUploadRowStatus extends PureComponent {
             <Fragment>
                 {!isUploadInProgress && (
                     <Tooltip title={deleteHint}>
-                        <IconButton
-                            onClick={this.props.onDelete}
-                            disabled={disabled}
-                            data-testid={`${this.props.fileUploadRowStatusId}-delete`}
-                        >
-                            <Delete />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={this.props.onDelete}
+                                disabled={disabled}
+                                data-testid={`${this.props.fileUploadRowStatusId}-delete`}
+                            >
+                                <Delete />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 )}
                 {isUploadInProgress && progress !== 100 && (

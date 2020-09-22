@@ -713,11 +713,16 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-        expect(wrapper.find('#admin-work-unpublish').length).toEqual(1);
-        wrapper.find('#admin-work-unpublish').simulate('click');
 
-        expect(handleSubmit).toHaveBeenCalledTimes(1);
-        expect(onSubmit).toHaveBeenCalledTimes(1);
+        expect(wrapper.find('#admin-work-unpublish-top').length).toEqual(1);
+        wrapper.find('#admin-work-unpublish-top').simulate('click');
+        expect(handleSubmit).toHaveBeenCalledTimes(2);
+        expect(onSubmit).toHaveBeenCalledTimes(2);
+
+        expect(wrapper.find('#admin-work-unpublish-bottom').length).toEqual(1);
+        wrapper.find('#admin-work-unpublish-bottom').simulate('click');
+        expect(handleSubmit).toHaveBeenCalledTimes(2);
+        expect(onSubmit).toHaveBeenCalledTimes(2);
     });
 
     it('should render publish button for unpublished record', () => {
@@ -739,7 +744,8 @@ describe('AdminInterface component', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({ record }));
         const wrapper = setup({ tabs });
-        expect(wrapper.find('#admin-work-publish').length).toEqual(1);
+        expect(wrapper.find('#admin-work-publish-top').length).toEqual(1);
+        expect(wrapper.find('#admin-work-publish-bottom').length).toEqual(1);
         useRecordContext.mockReset();
 
         useRecordContext.mockImplementation(() => ({
@@ -749,6 +755,6 @@ describe('AdminInterface component', () => {
             },
         }));
         const wrapper2 = setup({ tabs });
-        expect(wrapper2.find('#admin-work-publish').length).toEqual(1);
+        expect(wrapper2.find('#admin-work-publish-bottom').length).toEqual(1);
     });
 });

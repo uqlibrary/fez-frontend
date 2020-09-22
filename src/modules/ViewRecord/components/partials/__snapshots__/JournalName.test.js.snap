@@ -142,6 +142,11 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -585,6 +590,11 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -1978,6 +1988,11 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                               "width": "100%",
                             },
                           },
+                          "MuiIconButton": Object {
+                            "colorInherit": Object {
+                              "color": "none",
+                            },
+                          },
                           "MuiMenuItem": Object {
                             "root": Object {
                               "&$selected": Object {
@@ -2464,6 +2479,11 @@ exports[`Journal Name Component test  should render without era journal listed 1
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -3833,6 +3853,11 @@ exports[`Journal Name Component test  should render without era journal listed 1
                               "width": "100%",
                             },
                           },
+                          "MuiIconButton": Object {
+                            "colorInherit": Object {
+                              "color": "none",
+                            },
+                          },
                           "MuiMenuItem": Object {
                             "root": Object {
                               "&$selected": Object {
@@ -4319,6 +4344,11 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {

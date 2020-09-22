@@ -45,9 +45,7 @@ export const AutoCompleteAsynchronousField = ({
             if (reason === 'reset' && prefilledSearch && !!newInputValue) {
                 setInputValue(newInputValue);
                 setOpen(true);
-            } else if (reason === 'clear') {
-                onClear();
-            } else if (!newInputValue && reason === 'input') {
+            } else if (!!event && event.type === 'click' && reason === 'clear') {
                 onClear();
             } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
                 onChange({ value: newInputValue });

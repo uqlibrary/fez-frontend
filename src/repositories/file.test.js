@@ -36,6 +36,7 @@ describe('File repository tests ', () => {
         const expectedActions = [
             'APP_ALERT_SHOW',
             `${actions.FILE_UPLOAD_FAILED}@a.txt`,
+            actions.FILE_UPLOAD_STARTED,
             'APP_ALERT_SHOW',
             `${actions.FILE_UPLOAD_FAILED}@a.txt`,
         ];

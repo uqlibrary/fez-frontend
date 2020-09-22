@@ -1,4 +1,4 @@
-import { NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK } from 'config/general';
+import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 
 jest.dontMock('./DesignForm');
 
@@ -42,7 +42,7 @@ describe('DesignForm renders ', () => {
 
     it('should show architectural content correctly', () => {
         const testProps = {
-            subtype: NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
+            subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
             isNtro: true,
         };
         const wrapper = setup(testProps);

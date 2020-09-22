@@ -7,7 +7,7 @@ exports[`Add new record should render alert about file uploading or issue error 
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
-        "alternateActionButtonLabel": "Fix record",
+        "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
@@ -24,7 +24,7 @@ exports[`Add new record should render alert about file uploading or issue error 
               customType={null}
               disableAlertClick={false}
               dismissTitle="Click to dismiss this alert"
-              message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
+              message="Retry via \\"Fix work\\" screen or contact eSpace administrators."
               showLoader={false}
               title="File upload and/or notes post failed"
               type="warning"
@@ -34,13 +34,13 @@ exports[`Add new record should render alert about file uploading or issue error 
               Your work has been saved.
               <br />
               <br />
-              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
             </p>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -48,7 +48,7 @@ exports[`Add new record should render alert about file uploading or issue error 
           Your work has been saved.
           <br />
           <br />
-          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
         </p>,
       }
     }
@@ -82,7 +82,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
-        "alternateActionButtonLabel": "Fix record",
+        "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
@@ -97,13 +97,13 @@ exports[`Add new record should render stepper and a publication form 1`] = `
               Your work has been saved.
               <br />
               <br />
-              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
             </p>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -111,7 +111,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
           Your work has been saved.
           <br />
           <br />
-          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
         </p>,
       }
     }
@@ -143,7 +143,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
 <WithStyles(ConfirmDialogBox)
   locale={
     Object {
-      "alternateActionButtonLabel": "Fix record",
+      "alternateActionButtonLabel": "Fix work",
       "cancelButtonLabel": "Add another missing work",
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <WithStyles(ForwardRef(Grid))
@@ -158,13 +158,13 @@ exports[`Add new record should render the confirm dialog with an alert for faile
             Your work has been saved.
             <br />
             <br />
-            Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+            Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
           </p>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>,
       "confirmationTitle": "Your work has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+        "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
         "title": "File upload and/or notes post failed",
         "type": "warning",
       },
@@ -172,7 +172,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
         Your work has been saved.
         <br />
         <br />
-        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
       </p>,
     }
   }
@@ -191,7 +191,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
     hideCancelButton={false}
     locale={
       Object {
-        "alternateActionButtonLabel": "Fix record",
+        "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
@@ -206,13 +206,13 @@ exports[`Add new record should render the confirm dialog with an alert for faile
               Your work has been saved.
               <br />
               <br />
-              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
             </p>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -220,7 +220,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           Your work has been saved.
           <br />
           <br />
-          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
         </p>,
       }
     }
@@ -610,7 +610,7 @@ exports[`Add new record should render the confirm dialog without an alert for a 
 <WithStyles(ConfirmDialogBox)
   locale={
     Object {
-      "alternateActionButtonLabel": "Fix record",
+      "alternateActionButtonLabel": "Fix work",
       "cancelButtonLabel": "Add another missing work",
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <WithStyles(ForwardRef(Grid))
@@ -625,13 +625,13 @@ exports[`Add new record should render the confirm dialog without an alert for a 
             Your work has been saved.
             <br />
             <br />
-            Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+            Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
           </p>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>,
       "confirmationTitle": "Your work has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+        "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
         "title": "File upload and/or notes post failed",
         "type": "warning",
       },
@@ -639,7 +639,7 @@ exports[`Add new record should render the confirm dialog without an alert for a 
         Your work has been saved.
         <br />
         <br />
-        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+        Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
       </p>,
     }
   }
@@ -655,7 +655,7 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
   <WithStyles(ConfirmDialogBox)
     locale={
       Object {
-        "alternateActionButtonLabel": "Fix record",
+        "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
@@ -672,7 +672,7 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
               customType={null}
               disableAlertClick={false}
               dismissTitle="Click to dismiss this alert"
-              message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
+              message="Retry via \\"Fix work\\" screen or contact eSpace administrators."
               showLoader={false}
               title="File upload and/or notes post failed"
               type="warning"
@@ -682,13 +682,13 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
               Your work has been saved.
               <br />
               <br />
-              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
             </p>
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -696,7 +696,7 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
           Your work has been saved.
           <br />
           <br />
-          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the work.
         </p>,
       }
     }

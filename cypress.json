@@ -7,13 +7,14 @@
   "defaultCommandTimeout": 10000,
   "videoUploadOnPasses": false,
   "projectId": "mvfnrv",
-  "blacklistHosts": ["www.googletagmanager.com"],
+  "blockHosts": ["www.googletagmanager.com"],
   "firefoxGcInterval": {
     "runMode": 1,
     "openMode": 1
   },
   "numTestsKeptInMemory": 1,
-  "env": {
-    "RETRIES": 5
+  "retries": {
+    "openMode": 0,
+    "runMode": 2
   }
 }

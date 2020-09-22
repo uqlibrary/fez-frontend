@@ -8,7 +8,7 @@ import {
     DELETE_RECORD_SUCCESS,
     DELETE_RECORD_FAILED,
 } from './actionTypes';
-import { get, destory } from 'repositories/generic';
+import { get, destroy } from 'repositories/generic';
 import { EXISTING_RECORD_API } from 'repositories/routes';
 
 /**
@@ -74,7 +74,7 @@ export function deleteRecord(data) {
     return dispatch => {
         dispatch({ type: DELETE_RECORD_PROCESSING });
         return Promise.resolve([])
-            .then(() => destory(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), reason))
+            .then(() => destroy(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), reason))
             .then(responses => {
                 dispatch({
                     type: DELETE_RECORD_SUCCESS,

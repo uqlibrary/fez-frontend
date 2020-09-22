@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 const initialState = {
-    saveRequesting: false,
+    saveRequesting: null,
     saveUpdated: false,
     saveFailed: false,
 };

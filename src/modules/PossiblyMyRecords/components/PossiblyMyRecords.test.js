@@ -319,9 +319,7 @@ describe('Component PossiblyMyRecords', () => {
         wrapper.setState({
             hasPublications: true,
         });
-        expect(
-            wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) WithStyles(PublicationsListSorting)').length,
-        ).toBe(1);
+        expect(wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) PublicationsListSorting').length).toBe(1);
         expect(
             wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) WithStyles(PublicationsListPaging)').length,
         ).toBe(2);

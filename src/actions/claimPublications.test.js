@@ -611,6 +611,7 @@ describe('Claim publication actions tests ', () => {
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
                 actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
+                actions.FILE_UPLOAD_STARTED,
                 `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
             ];
@@ -653,6 +654,7 @@ describe('Claim publication actions tests ', () => {
                 actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
+                actions.FILE_UPLOAD_STARTED,
                 actions.APP_ALERT_SHOW,
                 `${actions.FILE_UPLOAD_FAILED}@test.jpg`,
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED,

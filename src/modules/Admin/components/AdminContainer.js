@@ -4,8 +4,7 @@ import Cookies from 'js-cookie';
 import Immutable from 'immutable';
 
 import locale from 'locale/pages';
-import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
-import { USER_IDS_WITH_LEGACY_LINK } from 'config/admin/adminInterface';
+import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS, SUBTYPE_NON_NTRO } from 'config/general';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
@@ -63,15 +62,16 @@ export const AdminContainer = ({
     dirty,
     disableSubmit,
     formErrors,
+    formValues,
     handleSubmit,
     history,
+    isDeleted,
     loadingRecordToView,
     loadRecordToView,
-    recordToViewError,
     locked,
     match,
     recordToView,
-    isDeleted,
+    recordToViewError,
     submitSucceeded,
     submitting,
     unlockRecord,
@@ -145,11 +145,7 @@ export const AdminContainer = ({
 
     const isActivated = () => {
         if (recordToView && recordToView.rek_object_type_lookup) {
-            return (
-                recordToView &&
-                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                USER_IDS_WITH_LEGACY_LINK.includes(authorDetails.username)
-            );
+            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
         }
         return false;
     };
@@ -212,15 +208,22 @@ export const AdminContainer = ({
                                     component: NtroSection,
                                     activated:
                                         isActivated() &&
-                                        NTRO_SUBTYPES.includes(recordToView && recordToView.rek_subtype),
+                                        NTRO_SUBTYPES.includes(
+                                            !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
+                                        ),
                                 },
                                 grantInformation: {
                                     component: GrantInformationSection,
                                     activated:
                                         isActivated() &&
                                         // Blacklist types without grant info
-                                        ![PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                            recordToView && recordToView.rek_display_type,
+                                        !(
+                                            [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
+                                                recordToView && recordToView.rek_display_type,
+                                            ) ||
+                                            [SUBTYPE_NON_NTRO].includes(
+                                                !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
+                                            )
                                         ),
                                 },
                                 files: {
@@ -250,6 +253,7 @@ AdminContainer.propTypes = {
     dirty: PropTypes.bool,
     disableSubmit: PropTypes.any,
     formErrors: PropTypes.object,
+    formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
@@ -272,7 +276,8 @@ export function isSame(prevProps, nextProps) {
         prevProps.submitSucceeded === nextProps.submitSucceeded &&
         (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
         (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
-        (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
+        ((prevProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype ===
+            ((nextProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype &&
         prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
         prevProps.showAddForm === nextProps.showAddForm &&
         prevProps.formErrors === nextProps.formErrors &&

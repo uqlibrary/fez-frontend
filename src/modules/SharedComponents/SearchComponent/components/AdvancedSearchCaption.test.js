@@ -1,269 +1,146 @@
-import { AdvancedSearchCaption } from './AdvancedSearchCaption';
-import AdvancedSearchCaptionWithStyles from './AdvancedSearchCaption';
 import React from 'react';
+import AdvancedSearchCaption from './AdvancedSearchCaption';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 import moment from 'moment';
-
-const getProps = (testProps = {}) => ({
-    classes: {},
-    fieldRows: [
-        { searchField: 'all', value: '', label: '' },
-        { searchField: 'rek_ismemberof', value: ['UQ:120743', 'UQ:217419', 'UQ:217422'], label: '' },
-        { searchField: 'rek_author_id', value: '570', label: '570 (Ashkanasy, Neal M.)' },
-    ],
-    docTypes: [263, 174],
-    yearFilter: { from: '1991', to: '2012', invalid: false },
-    isOpenAccess: true,
-    ...testProps,
-});
+import * as Hooks from 'hooks';
 
 function setup(testProps = {}) {
-    return getElement(AdvancedSearchCaption, getProps(testProps));
+    const props = {
+        fieldRows: [
+            { searchField: 'all', value: '', label: '' },
+            { searchField: 'rek_ismemberof', value: ['UQ:120743', 'UQ:217419', 'UQ:217422'], label: '' },
+            { searchField: 'rek_author_id', value: '570', label: '570 (Ashkanasy, Neal M.)' },
+        ],
+        docTypes: [263, 174],
+        yearFilter: { from: '1991', to: '2012', invalid: false },
+        isOpenAccess: true,
+        showInputForm: false,
+        InputForm: null,
+        ...testProps,
+    };
+    return render(
+        <WithRouter>
+            <WithReduxStore>
+                <AdvancedSearchCaption {...props} />
+            </WithReduxStore>
+        </WithRouter>,
+    );
 }
 
 describe('Component AdvancedSearchCaption', () => {
     it('should render as expected with no props', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { getByTestId } = setup();
+
+        expect(getByTestId('all-caption-title')).toHaveTextContent('Any field');
+        expect(getByTestId('all-caption-combiner')).toHaveTextContent('contains');
+        expect(getByTestId('all-caption-value')).toHaveTextContent('anything');
+
+        expect(getByTestId('rek-ismemberof-caption-title')).toHaveTextContent('Collection');
+        expect(getByTestId('rek-ismemberof-caption-combiner')).toHaveTextContent('is one of');
+        expect(getByTestId('rek-ismemberof-caption-value')).toHaveTextContent('UQ:120743, UQ:217419 or UQ:217422');
+
+        expect(getByTestId('rek-author-id-caption-title')).toHaveTextContent('Author ID');
+        expect(getByTestId('rek-author-id-caption-combiner')).toHaveTextContent('is');
+        expect(getByTestId('rek-author-id-caption-value')).toHaveTextContent('570');
+
+        expect(getByTestId('rek-display-type-caption-title')).toHaveTextContent('Work type');
+        expect(getByTestId('rek-display-type-caption-combiner')).toHaveTextContent('is one of');
+        expect(getByTestId('rek-display-type-caption-value')).toHaveTextContent('Audio Document or Book');
+
+        expect(getByTestId('facet-year-range-caption-title')).toHaveTextContent('Published');
+        expect(getByTestId('facet-year-range-caption-combiner')).toHaveTextContent('between');
+        expect(getByTestId('facet-year-range-caption-value')).toHaveTextContent('1991 to 2012');
+
+        expect(getByTestId('open-access-caption-combiner')).toHaveTextContent('is');
+        expect(getByTestId('open-access-caption-value')).toHaveTextContent('open access/full text');
     });
 
-    it('should render as default with styles', () => {
-        const wrapper = getElement(AdvancedSearchCaptionWithStyles, getProps());
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('renderCaptions should return expected with props', () => {
-        const wrapper = setup();
-        const test = [
-            { title: 'Title', value: 'value', combiner: 'combiner' },
-            { title: 'Title 2', value: 'value 2', combiner: 'combiner 2' },
-        ];
-        const result = JSON.stringify([
-            {
-                type: 'span',
-                key: '0',
-                ref: null,
-                props: {
-                    children: [
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: [' ', false, ' '],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: ['Title', ' '],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: [' ', 'combiner', ' '],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: [' ', 'value'],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                    ],
-                },
-                _owner: null,
-                _store: {},
-            },
-            {
-                type: 'span',
-                key: '1',
-                ref: null,
-                props: {
-                    children: [
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: [' ', ' AND ', ' '],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: ['Title 2', ' '],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: [' ', 'combiner 2', ' '],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                        {
-                            type: 'span',
-                            key: null,
-                            ref: null,
-                            props: {
-                                children: [' ', 'value 2'],
-                            },
-                            _owner: null,
-                            _store: {},
-                        },
-                    ],
-                },
-                _owner: null,
-                _store: {},
-            },
-        ]);
-        expect(JSON.stringify(wrapper.instance().renderCaptions(test))).toEqual(result);
-    });
-
-    it('getCleanValue should return expected with props', () => {
-        const wrapper = setup();
-        const test = {
-            title: 'Thesis type',
-            combiner: 'is one of',
-            value: ['B.A. Thesis', 'B.Sc Thesis', "Bachelor's Thesis"],
-        };
-        const result = {
-            combiner: 'is one of',
-            title: 'Thesis type',
-            value: "B.A. Thesis, B.Sc Thesis or Bachelor's Thesis",
-        };
-        expect(wrapper.instance().getCleanValue(test)).toEqual(result);
-        expect(wrapper.instance().getCleanValue({ value: ['test'] })).toEqual({
-            value: 'test',
-        });
-    });
-
-    it('getSearchFieldData should return expected with props', () => {
-        const wrapper = setup();
-        const test = [
-            {
-                searchField: 'rek_genre_type',
-                value: ['B.A. Thesis', 'B.Sc Thesis', "Bachelor's Thesis"],
-                label: ['B.A. Thesis', 'B.Sc Thesis', "Bachelor's Thesis"],
-            },
-            {
-                searchField: 'rek_created_date',
-                value: {
-                    from: moment('01/01/2010', 'DD/MM/YYYY'),
-                    to: moment('02/02/2010', 'DD/MM/YYYY'),
-                },
-            },
-        ];
-        const result = [
-            {
-                combiner: 'is one of',
-                title: 'Thesis type',
-                value: "B.A. Thesis, B.Sc Thesis or Bachelor's Thesis",
-            },
-            {
-                combiner: 'between',
-                title: 'Created',
-                value: '1st January, 2010 and 2nd February, 2010',
-            },
-        ];
-        expect(wrapper.instance().getSearchFieldData(test)).toEqual(result);
-    });
-
-    it('getOpenAccessData should return expected with props', () => {
-        const wrapper = setup();
-        const test = true;
-        const result = { combiner: 'is', title: '', value: <span className="value">open access/full text</span> };
-        expect(wrapper.instance().getOpenAccessData(test)).toEqual(result);
-    });
-
-    it('getYearFilterData should return expected with props', () => {
-        const wrapper = setup();
-        const test = { from: 100, to: 200, invalid: false };
-        const result = { combiner: 'between', title: 'Published', value: '100 to 200' };
-        expect(wrapper.instance().getYearFilterData(test)).toEqual(result);
-    });
-
-    it('updateStateData should return expected with props', () => {
-        const wrapper = setup();
-        const test = {
+    it('should render caption data correctly', () => {
+        const { getByTestId } = setup({
             fieldRows: [
                 { searchField: 'all', value: '', label: '' },
-                { searchField: 'rek_ismemberof', value: ['UQ:120743', 'UQ:217419', 'UQ:217422'], label: '' },
+                { searchField: 'rek_ismemberof', value: ['UQ:120743'], label: '' },
                 { searchField: 'rek_author_id', value: '570', label: '570 (Ashkanasy, Neal M.)' },
             ],
-            docTypes: [263, 174],
+            docTypes: [263],
             yearFilter: { from: '1991', to: '2012', invalid: false },
             isOpenAccess: true,
-        };
-        const result = {
-            captionData: [
-                { combiner: 'contains', title: 'Any field', value: 'anything' },
-                { combiner: 'is one of', title: 'Collection', value: 'UQ:120743, UQ:217419 or UQ:217422' },
-                { combiner: 'is', title: 'Author ID', value: '570' },
-                { combiner: 'is one of', title: 'Work type', value: 'Audio Document or Book' },
-                { combiner: 'is', title: '', value: <span className="value">open access/full text</span> },
-                { combiner: 'between', title: 'Published', value: '1991 to 2012' },
-            ],
-        };
-        wrapper.instance().updateStateData(test);
-        wrapper.update();
-        expect(wrapper.state()).toEqual(result);
+        });
+
+        expect(getByTestId('all-caption-title')).toHaveTextContent('Any field');
+        expect(getByTestId('all-caption-combiner')).toHaveTextContent('contains');
+        expect(getByTestId('all-caption-value')).toHaveTextContent('anything');
+
+        expect(getByTestId('rek-ismemberof-caption-title')).toHaveTextContent('Collection');
+        expect(getByTestId('rek-ismemberof-caption-combiner')).toHaveTextContent('is one of');
+        expect(getByTestId('rek-ismemberof-caption-value')).toHaveTextContent('UQ:120743');
+
+        expect(getByTestId('rek-author-id-caption-title')).toHaveTextContent('Author ID');
+        expect(getByTestId('rek-author-id-caption-combiner')).toHaveTextContent('is');
+        expect(getByTestId('rek-author-id-caption-value')).toHaveTextContent('570');
+
+        expect(getByTestId('rek-display-type-caption-title')).toHaveTextContent('Work type');
+        expect(getByTestId('rek-display-type-caption-combiner')).toHaveTextContent('is one of');
+        expect(getByTestId('rek-display-type-caption-value')).toHaveTextContent('Audio Document');
+
+        expect(getByTestId('facet-year-range-caption-title')).toHaveTextContent('Published');
+        expect(getByTestId('facet-year-range-caption-combiner')).toHaveTextContent('between');
+        expect(getByTestId('facet-year-range-caption-value')).toHaveTextContent('1991 to 2012');
+
+        expect(getByTestId('open-access-caption-combiner')).toHaveTextContent('is');
+        expect(getByTestId('open-access-caption-value')).toHaveTextContent('open access/full text');
     });
 
-    it('updateStateData should return expected with props when props change', () => {
-        const initialProps = {
+    it('should render caption data correctly for unpublished buffer', () => {
+        const { getByTestId } = setup({
             fieldRows: [
-                { searchField: 'all', value: 'sdsdfsdfgsdfg', label: '' },
-                { searchField: 'rek_ismemberof', value: ['UQ:120743', 'UQ:217419', 'UQ:217422'], label: '' },
-                { searchField: 'rek_author_id', value: '81861', label: '81861 (Medland, Sarah E.)' },
+                {
+                    searchField: 'rek_genre_type',
+                    value: ['B.A. Thesis', 'B.Sc Thesis', "Bachelor's Thesis"],
+                    label: ['B.A. Thesis', 'B.Sc Thesis', "Bachelor's Thesis"],
+                },
+                {
+                    searchField: 'rek_created_date',
+                    value: {
+                        from: moment('01/01/2010', 'DD/MM/YYYY'),
+                        to: moment('02/02/2010', 'DD/MM/YYYY'),
+                    },
+                    label: '',
+                },
             ],
-            isMinimised: false,
-            isOpenAccess: false,
-            docTypes: [],
             yearFilter: {},
-            className: 'search-body',
-            isLoading: false,
-        };
-        const wrapper = setup(initialProps);
-        expect(toJson(wrapper)).toMatchSnapshot();
-        const newProps = {
+            isOpenAccess: false,
+        });
+
+        expect(getByTestId('rek-genre-type-caption-title')).toHaveTextContent('Thesis type');
+        expect(getByTestId('rek-genre-type-caption-combiner')).toHaveTextContent('is one of');
+        expect(getByTestId('rek-genre-type-caption-value')).toHaveTextContent(
+            "B.A. Thesis, B.Sc Thesis or Bachelor's Thesis",
+        );
+
+        expect(getByTestId('rek-created-date-caption-title')).toHaveTextContent('Created');
+        expect(getByTestId('rek-created-date-caption-combiner')).toHaveTextContent('between');
+        expect(getByTestId('rek-created-date-caption-value')).toHaveTextContent(
+            '1st January, 2010 and 2nd February, 2010',
+        );
+    });
+
+    it('should render star icon to save favourite search', () => {
+        const userIsAdminHook = jest.spyOn(Hooks, 'userIsAdmin');
+
+        userIsAdminHook.mockImplementation(() => true);
+
+        const { getByTestId } = setup({
             fieldRows: [
-                { searchField: 'all', value: 'hello', label: '' },
-                { searchField: 'rek_ismemberof', value: ['UQ:120743', 'UQ:217423'], label: '' },
-                { searchField: 'rek_author_id', value: 2917705, label: '2917705 (Baumeister, Roy F.)' },
+                { searchField: 'all', value: '', label: '' },
+                { searchField: 'rek_ismemberof', value: ['UQ:120743'], label: '' },
+                { searchField: 'rek_author_id', value: '570', label: '570 (Ashkanasy, Neal M.)' },
             ],
-            isMinimised: false,
-            isOpenAccess: false,
-            docTypes: [],
-            yearFilter: {},
-            className: 'search-body',
-            isLoading: false,
-        };
-        wrapper.instance().UNSAFE_componentWillReceiveProps({ ...newProps });
-        expect(toJson(wrapper)).toMatchSnapshot();
+            docTypes: [263],
+            yearFilter: { from: '1991', to: '2012', invalid: false },
+            isOpenAccess: true,
+        });
+
+        expect(getByTestId('add-favourite-search')).toBeInTheDocument();
     });
 });

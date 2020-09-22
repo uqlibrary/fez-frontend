@@ -2,7 +2,7 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    bibliographic: (isLote = false) => [
+    bibliographic: ({ isLote = false }) => [
         {
             title: 'Patent title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],

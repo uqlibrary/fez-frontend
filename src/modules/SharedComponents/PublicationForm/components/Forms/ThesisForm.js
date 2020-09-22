@@ -46,9 +46,8 @@ export default class ThesisForm extends Component {
                             <Grid item xs={12}>
                                 <Alert
                                     action={this._visitHdrSubmissionPage}
-                                    actionButtonLabel={txt.information.hdrRedirectActionButtonLabel}
-                                    message={txt.information.nonHdrWarningMessage}
-                                    // title={txt.information.hdrRedirectAlertTitle}
+                                    actionButtonLabel={txt.information.actionButtonLabel}
+                                    message={txt.information.message}
                                     type="warning"
                                 />
                             </Grid>
@@ -60,6 +59,7 @@ export default class ThesisForm extends Component {
                                     disabled={this.props.submitting}
                                     autoFocus
                                     name="rek_title"
+                                    textFieldId="rek-title"
                                     type="text"
                                     fullWidth
                                     multiline
@@ -118,6 +118,7 @@ export default class ThesisForm extends Component {
                                     component={TextField}
                                     disabled={this.props.submitting}
                                     name="currentAuthor.0.nameAsPublished"
+                                    textFieldId="rek-author-0"
                                     type="text"
                                     fullWidth
                                     rows={1}
@@ -164,6 +165,7 @@ export default class ThesisForm extends Component {
                                     component={TextField}
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_doi.rek_doi"
+                                    textFieldId="rek-doi"
                                     type="text"
                                     validate={[validation.doi]}
                                     fullWidth
@@ -175,6 +177,7 @@ export default class ThesisForm extends Component {
                                     component={TextField}
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_total_pages.rek_total_pages"
+                                    textFieldId="rek-total-pages"
                                     type="text"
                                     fullWidth
                                     normalize={this.getNumbersOnly}
@@ -185,6 +188,7 @@ export default class ThesisForm extends Component {
                                 <Field
                                     component={TextField}
                                     name="fez_record_search_key_description.rek_description"
+                                    textFieldId="rek-description"
                                     type="text"
                                     disabled={this.props.submitting}
                                     fullWidth
@@ -196,6 +200,7 @@ export default class ThesisForm extends Component {
                                 <Field
                                     component={TextField}
                                     name="comments"
+                                    textFieldId="comments"
                                     type="text"
                                     disabled={this.props.submitting}
                                     fullWidth

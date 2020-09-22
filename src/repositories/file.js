@@ -59,6 +59,9 @@ export function putUploadFile(pid, file, dispatch, formName) {
                     return Promise.reject(error);
                 } else {
                     retried = true;
+                    if (fileUploadActions) {
+                        dispatch(fileUploadActions.startFileUpload());
+                    }
                     return uploadFile();
                 }
             });

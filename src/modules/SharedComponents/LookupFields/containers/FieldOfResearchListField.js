@@ -5,6 +5,7 @@ import { FieldOfResearchField, FilteredFieldOfResearchField } from './FieldOfRes
 export const FieldOfResearchListField = fieldProps => {
     return (
         <LookupListEditor
+            listEditorId="field-of-research"
             inputField={FieldOfResearchField}
             errorText={fieldProps.meta ? fieldProps.meta.error : null}
             onChange={fieldProps.input.onChange}

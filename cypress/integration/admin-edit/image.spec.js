@@ -33,7 +33,6 @@ context('Image admin edit', () => {
                     .within(() => {
                         cy.get('h4').should('contain', 'Bibliographic');
 
-                        cy.get('[data-testid=rek-genre-input]').should('have.value', record.rek_genre);
                         cy.get('[data-testid=rek-original-format-input]').should(
                             'have.value',
                             record.fez_record_search_key_original_format.rek_original_format,

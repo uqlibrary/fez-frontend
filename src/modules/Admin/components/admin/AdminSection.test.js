@@ -1,7 +1,7 @@
 import AdminSection from './AdminSection';
 
 jest.mock('../../../../context');
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
@@ -28,6 +28,12 @@ describe('AdminSection component', () => {
                 ],
                 rek_display_type: 179,
                 fez_record_search_key_language: [{ rek_language: 'eng' }],
+            },
+        }));
+
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                rek_subtype: 'Creative Work - Design/Architectural',
             },
         }));
     });

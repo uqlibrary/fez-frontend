@@ -19,6 +19,11 @@ const styles = theme => ({
         padding: 0,
         margin: 0,
     },
+    contentIndicator: {
+        '& + &::before': {
+            content: `"${componentLocale.components.contentIndicators.divider}"`,
+        },
+    },
 });
 
 export class PublicationDetailsClass extends PureComponent {
@@ -78,14 +83,14 @@ export class PublicationDetailsClass extends PureComponent {
                             <this.ViewRecordRow
                                 heading={componentLocale.components.contentIndicators.label}
                                 data={this.props.publication.fez_record_search_key_content_indicator.map(
-                                    (item, index, fsrkciArray) => (
-                                        <React.Fragment>
-                                            <span data-testid={`rek-content-indicator-${index}`}>
-                                                {item.rek_content_indicator_lookup}
-                                            </span>
-                                            {index < fsrkciArray.length - 1 &&
-                                                componentLocale.components.contentIndicators.divider}
-                                        </React.Fragment>
+                                    (item, index) => (
+                                        <span
+                                            key={index}
+                                            data-testid={`rek-content-indicator-${index}`}
+                                            className={this.props.classes.contentIndicator}
+                                        >
+                                            {item.rek_content_indicator_lookup}
+                                        </span>
                                     ),
                                 )}
                                 rowId="rek-content-indicator"

@@ -100,17 +100,22 @@ export const AdvancedSearchRow = props => {
                     {/* Select and combiner */}
                     <Grid container spacing={2}>
                         <Grid item className={classes.autoWidth} style={{ minWidth: 200 }}>
-                            <FormControl fullWidth error={!!selectFieldValidation()} id="field-type-selector-label">
+                            <FormControl fullWidth error={!!selectFieldValidation()} id="field-type-select-label">
                                 <Select
                                     value={searchField}
-                                    name="field-type-selector"
+                                    name="field-type-select"
                                     onChange={_handleSearchFieldChange}
                                     aria-label={txt.selectAria.replace(
                                         '[current_selection]',
                                         txt.fieldTypes[searchField].title,
                                     )}
                                     SelectDisplayProps={{
-                                        id: 'field-type-selector',
+                                        id: 'field-type-select',
+                                        'data-testid': 'field-type-select',
+                                    }}
+                                    MenuProps={{
+                                        id: 'field-type-options',
+                                        'data-testid': 'field-type-options',
                                     }}
                                 >
                                     {Object.keys(txt.fieldTypes)
@@ -132,6 +137,7 @@ export const AdvancedSearchRow = props => {
                                                     value={item}
                                                     children={txt.fieldTypes[item].title}
                                                     disabled={index === 0 || disabledFields.indexOf(item) > -1}
+                                                    data-testid={`field-type-option-${index}`}
                                                 />
                                             );
                                         })}

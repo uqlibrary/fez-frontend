@@ -142,6 +142,11 @@ exports[`Search Dashboard test Full render 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -547,6 +552,11 @@ exports[`Search Dashboard test Full render 1`] = `
                           "width": "100%",
                         },
                       },
+                      "MuiIconButton": Object {
+                        "colorInherit": Object {
+                          "color": "none",
+                        },
+                      },
                       "MuiMenuItem": Object {
                         "root": Object {
                           "&$selected": Object {
@@ -931,7 +941,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           5
            
-           record(s)
+           work(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -958,7 +968,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           0
            
-           record(s)
+           work(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -985,7 +995,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           0
            
-           record(s)
+           work(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1012,7 +1022,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         >
           0
            
-           record(s)
+           work(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1235,7 +1245,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           5
            
-           record(s)
+           work(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1262,7 +1272,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           4
            
-           record(s)
+           work(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1289,7 +1299,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         >
           12
            
-           record(s)
+           work(s)
         </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>

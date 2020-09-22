@@ -270,7 +270,7 @@ describe('MyRecords test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper
-            .find('WithStyles(PublicationsListSorting)')
+            .find('PublicationsListSorting')
             .props()
             .onExportPublications({ exportFormat: 'csv' });
         expect(exportAuthorPublicationsFn).toHaveBeenCalled();

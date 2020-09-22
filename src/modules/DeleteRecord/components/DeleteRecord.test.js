@@ -1,7 +1,7 @@
 import DeleteRecord from './DeleteRecord';
-import { mockRecordToDelete, mockRecordToFix } from 'mock/data/testing/records';
+import { mockRecordToDelete } from 'mock/data/testing/records';
 import Immutable from 'immutable';
-import { UQDOIPrefix } from 'config/general';
+import { UQ_DOI_PREFIX } from 'config/general';
 
 function setup(testProps) {
     const props = {
@@ -66,7 +66,7 @@ describe('Component DeleteRecord', () => {
 
     it('should display alert and disable delete button on records with UQ DOIs', () => {
         const wrapper = setup({
-            recordToDelete: { ...mockRecordToDelete, fez_record_search_key_doi: { rek_doi: `${UQDOIPrefix}12345` } },
+            recordToDelete: { ...mockRecordToDelete, fez_record_search_key_doi: { rek_doi: `${UQ_DOI_PREFIX}12345` } },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);

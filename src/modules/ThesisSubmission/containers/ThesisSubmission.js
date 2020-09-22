@@ -39,6 +39,7 @@ const mapStateToProps = (state, props) => {
         state && state.get('fileUploadReducer') && state.get('fileUploadReducer')[FORM_NAME]
             ? state.get('fileUploadReducer')[FORM_NAME].completedUploads
             : [];
+    const isUploadInProgress = state && state.get('fileUpload') && state.get('fileUpload').isUploadInProgress;
 
     // eslint-disable-next-line no-unused-vars
     const { files, ...locallyStoredValues } =
@@ -76,6 +77,7 @@ const mapStateToProps = (state, props) => {
         newRecord,
         isSessionValid,
         fullyUploadedFiles,
+        isUploadInProgress,
     };
 };
 
@@ -92,9 +94,7 @@ const mapDispatchToProps = dispatch => ({
                     },
                 });
             })
-            .catch(error => {
-                throw new SubmissionError({ _error: error });
-            }),
+            .catch(() => {}),
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);

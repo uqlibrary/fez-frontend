@@ -142,6 +142,11 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -1568,6 +1573,11 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                             "width": "100%",
                           },
                         },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
+                          },
+                        },
                         "MuiMenuItem": Object {
                           "root": Object {
                             "&$selected": Object {
@@ -2158,6 +2168,11 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -3592,6 +3607,11 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                             "width": "100%",
                           },
                         },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
+                          },
+                        },
                         "MuiMenuItem": Object {
                           "root": Object {
                             "&$selected": Object {
@@ -4184,6 +4204,11 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -4570,6 +4595,11 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiIconButton": Object {
+                          "colorInherit": Object {
+                            "color": "none",
                           },
                         },
                         "MuiMenuItem": Object {

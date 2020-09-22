@@ -4,9 +4,11 @@ import { Field } from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -22,10 +24,12 @@ import { default as publicationLocale } from 'locale/publicationForm';
 export const FORM_NAME = 'BatchImport';
 export const BatchImport = ({
     communityID,
+    designSubtypes,
     dirty,
     disableSubmit,
     handleSubmit,
     history,
+    isDesignType,
     loadItemsList,
     reset,
     resetCollectionField,
@@ -115,24 +119,45 @@ export const BatchImport = ({
                                             />
                                         </Grid>
                                     )}
-                                </Grid>
-
-                                <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={DocumentTypeSingleField}
                                             disabled={submitting}
                                             error={formErrors.doc_type_id}
-                                            id="doctypePID"
+                                            id="doctypeID"
                                             name="doc_type_id"
                                             required
                                             validate={[validation.required]}
                                             {...batchImportTxt.formLabels.docType}
                                         />
                                     </Grid>
-                                </Grid>
-
-                                <Grid container spacing={3}>
+                                    {!!isDesignType && (
+                                        // Branch tested in cypress
+                                        /* istanbul ignore next */
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={SelectField}
+                                                disabled={submitting}
+                                                error={formErrors.subtype}
+                                                id="subtype"
+                                                selectFieldId="subtype"
+                                                name="subtype"
+                                                required
+                                                validate={[validation.required]}
+                                                {...batchImportTxt.formLabels.subType}
+                                            >
+                                                {designSubtypes.map(
+                                                    /* istanbul ignore next */ (item, index) => {
+                                                        return (
+                                                            <MenuItem value={item} key={'subtype_' + index}>
+                                                                {item}
+                                                            </MenuItem>
+                                                        );
+                                                    },
+                                                )}
+                                            </Field>
+                                        </Grid>
+                                    )}
                                     <Grid item xs={12}>
                                         <Field
                                             component={DirectorySelectField}
@@ -193,10 +218,12 @@ export const BatchImport = ({
 BatchImport.propTypes = {
     collectionsList: PropTypes.array,
     communityID: PropTypes.string,
+    designSubtypes: PropTypes.array,
     dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
+    isDesignType: PropTypes.bool,
     loadItemsList: PropTypes.func,
     reset: PropTypes.func,
     resetCollectionField: PropTypes.func,

@@ -63,7 +63,6 @@ context('Audio admin edit', () => {
                     'have.value',
                     record.fez_record_search_key_length.rek_length,
                 );
-                cy.get('[data-testid=rek-genre-input]').should('have.value', record.rek_genre);
                 cy.get('[data-testid=rek-source-input]').should(
                     'have.text',
                     record.fez_record_search_key_source.rek_source,

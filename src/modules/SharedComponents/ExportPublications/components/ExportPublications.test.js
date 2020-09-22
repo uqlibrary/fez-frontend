@@ -9,33 +9,26 @@ function setup(testProps = {}) {
     return getElement(ExportPublications, props);
 }
 
-describe('Export Publications renders', () => {
-    it('component with all fields enabled', () => {
+describe('ExportPublications component', () => {
+    it('renders with expected fields', () => {
         const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('SelectField').length).toBe(1);
+        expect(wrapper.find('WithStyles(ForwardRef(Select))').length).toBe(1);
+        expect(wrapper.find('WithStyles(ForwardRef(MenuItem))').length).toBe(3);
+        [-1, ...Object.keys(EXPORT_FORMAT_TO_EXTENSION)].forEach((value, index) => {
+            expect(wrapper.find('WithStyles(ForwardRef(MenuItem))').get(index).props.value).toBe(value);
+        });
     });
 
-    it('component with rendered field selected', () => {
-        const expected = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
-        const wrapper = setup({ format: expected });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('SelectField').props().value).toEqual(expected);
-    });
-
-    it('component with field selected', () => {
+    it('calls callback when selection changes', () => {
         const expected = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const mockOnChange = jest.fn();
         const wrapper = setup({ onChange: mockOnChange });
-        expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('WithStyles(ForwardRef(Select))').simulate('change', { target: { value: expected } });
         expect(mockOnChange.mock.calls.length).toBe(1);
     });
 
-    it('component with all fields disabled', () => {
+    it('renders with disabled fields', () => {
         const wrapper = setup({ disabled: true });
-        wrapper.find('SelectField').forEach(option => {
-            expect(option.props().disabled).toEqual(true);
-        });
+        expect(wrapper.find('WithStyles(ForwardRef(Select))').props().disabled).toEqual(true);
     });
 });

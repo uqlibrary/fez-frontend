@@ -44,6 +44,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
             search: '',
         },
         handleSubmit: jest.fn(),
+        formValues: Immutable.Map({ rek_subtype: 'Original Journal Article' }),
         ...testProps,
     };
 

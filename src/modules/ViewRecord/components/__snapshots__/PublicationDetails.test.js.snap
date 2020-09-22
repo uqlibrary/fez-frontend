@@ -142,6 +142,11 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                   "width": "100%",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiMenuItem": Object {
                 "root": Object {
                   "&$selected": Object {
@@ -3956,6 +3961,7 @@ exports[`Publication Details Component  Renders full mount 1`] = `
               <PublicationDetailsClass
                 classes={
                   Object {
+                    "contentIndicator": "PublicationDetailsClass-contentIndicator-3",
                     "gridRow": "PublicationDetailsClass-gridRow-1",
                     "ul": "PublicationDetailsClass-ul-2",
                   }
@@ -5780,6 +5786,11 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                           "width": "100%",
                         },
                       },
+                      "MuiIconButton": Object {
+                        "colorInherit": Object {
+                          "color": "none",
+                        },
+                      },
                       "MuiMenuItem": Object {
                         "root": Object {
                           "&$selected": Object {
@@ -6104,21 +6115,16 @@ exports[`Publication Details Component  should render component 1`] = `
     <Component
       data={
         Array [
-          <React.Fragment>
-            <span
-              data-testid="rek-content-indicator-0"
-            >
-              Scholarship of Teaching and Learning
-            </span>
-            , 
-          </React.Fragment>,
-          <React.Fragment>
-            <span
-              data-testid="rek-content-indicator-1"
-            >
-              Protocol
-            </span>
-          </React.Fragment>,
+          <span
+            data-testid="rek-content-indicator-0"
+          >
+            Scholarship of Teaching and Learning
+          </span>,
+          <span
+            data-testid="rek-content-indicator-1"
+          >
+            Protocol
+          </span>,
         ]
       }
       heading="Content Indicators"
@@ -6208,21 +6214,16 @@ exports[`Publication Details Component  should render with publication without c
     <Component
       data={
         Array [
-          <React.Fragment>
-            <span
-              data-testid="rek-content-indicator-0"
-            >
-              Scholarship of Teaching and Learning
-            </span>
-            , 
-          </React.Fragment>,
-          <React.Fragment>
-            <span
-              data-testid="rek-content-indicator-1"
-            >
-              Protocol
-            </span>
-          </React.Fragment>,
+          <span
+            data-testid="rek-content-indicator-0"
+          >
+            Scholarship of Teaching and Learning
+          </span>,
+          <span
+            data-testid="rek-content-indicator-1"
+          >
+            Protocol
+          </span>,
         ]
       }
       heading="Content Indicators"
@@ -6248,21 +6249,16 @@ exports[`Publication Details Component  should render with publication without s
     <Component
       data={
         Array [
-          <React.Fragment>
-            <span
-              data-testid="rek-content-indicator-0"
-            >
-              Scholarship of Teaching and Learning
-            </span>
-            , 
-          </React.Fragment>,
-          <React.Fragment>
-            <span
-              data-testid="rek-content-indicator-1"
-            >
-              Protocol
-            </span>
-          </React.Fragment>,
+          <span
+            data-testid="rek-content-indicator-0"
+          >
+            Scholarship of Teaching and Learning
+          </span>,
+          <span
+            data-testid="rek-content-indicator-1"
+          >
+            Protocol
+          </span>,
         ]
       }
       heading="Content Indicators"

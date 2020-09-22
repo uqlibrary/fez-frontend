@@ -123,7 +123,7 @@ exports[`PublicationsListSorting renders  component will set state on receiving 
       <WithStyles(ForwardRef(InputLabel))
         shrink={true}
       >
-        Records per page
+        Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
         disabled={false}
@@ -284,7 +284,7 @@ exports[`PublicationsListSorting renders  component will set state on receiving 
       <WithStyles(ForwardRef(InputLabel))
         shrink={true}
       >
-        Records per page
+        Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
         disabled={false}
@@ -451,7 +451,7 @@ exports[`PublicationsListSorting renders  component with export dropdown for adm
       <WithStyles(ForwardRef(InputLabel))
         shrink={true}
       >
-        Records per page
+        Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
         disabled={false}
@@ -620,7 +620,7 @@ exports[`PublicationsListSorting renders  component with export dropdown hidden 
       <WithStyles(ForwardRef(InputLabel))
         shrink={true}
       >
-        Records per page
+        Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
         disabled={false}
@@ -775,7 +775,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       <WithStyles(ForwardRef(InputLabel))
         shrink={true}
       >
-        Records per page
+        Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
         disabled={false}

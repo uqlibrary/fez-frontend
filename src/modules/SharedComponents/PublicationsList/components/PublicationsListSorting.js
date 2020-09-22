@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import Select from '@material-ui/core/Select';
@@ -8,171 +8,130 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
-import { withStyles } from '@material-ui/core/styles';
 
-const styles = {};
+const PublicationsListSorting = props => {
+    const [sortBy, setSortBy] = React.useState(
+        props.sortBy || locale.components.sorting.sortBy[0].value || 'published_date',
+    );
+    const [sortDirection, setSortDirection] = React.useState(
+        props.sortDirection || locale.components.sorting.sortDirection[0] || 'Desc',
+    );
+    const [pageSize, setPageSize] = React.useState(
+        props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20),
+    );
 
-export class PublicationsListSorting extends PureComponent {
-    static propTypes = {
-        sortBy: PropTypes.string,
-        sortDirection: PropTypes.string,
-        pageSize: PropTypes.number,
-        initPageLength: PropTypes.number,
-        onPageSizeChanged: PropTypes.func,
-        onSortByChanged: PropTypes.func,
-        pagingData: PropTypes.shape({
-            from: PropTypes.number,
-            to: PropTypes.number,
-            total: PropTypes.number,
-            per_page: PropTypes.number,
-            current_page: PropTypes.number,
-        }),
-        disabled: PropTypes.bool,
-        onExportPublications: PropTypes.func,
-        canUseExport: PropTypes.bool,
+    React.useEffect(() => {
+        if (sortBy !== props.sortBy) setSortBy(props.sortBy);
+        if (sortDirection !== props.sortDirection) setSortDirection(props.sortDirection);
+        if (pageSize !== props.pageSize) setPageSize(props.pageSize);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [props.sortBy, props.sortDirection, props.pageSize]);
+
+    const pageSizeChanged = event => {
+        setPageSize(event.target.value);
+        props.onPageSizeChanged(event.target.value);
     };
 
-    constructor(props) {
-        super(props);
+    const orderDirectionsChanged = event => {
+        setSortDirection(event.target.value);
+        props.onSortByChanged(sortBy, event.target.value);
+    };
 
-        this.state = {
-            sortBy: props.sortBy || locale.components.sorting.sortBy[0].value || 'published_date',
-            sortDirection: props.sortDirection || locale.components.sorting.sortDirection[0] || 'Desc',
-            pageSize:
-                props.pageSize || (props.pagingData && props.pagingData.per_page) ? props.pagingData.per_page : 20,
-        };
+    const sortByChanged = event => {
+        setSortBy(event.target.value);
+        props.onSortByChanged(event.target.value, sortDirection);
+    };
+
+    const exportPublicationsFormatChanged = value => {
+        props.onExportPublications({ exportPublicationsFormat: value });
+    };
+
+    if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
+        return <span className="publicationsListSorting empty" />;
     }
-
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        this.setState({
-            sortBy: nextProps.sortBy,
-            sortDirection: nextProps.sortDirection,
-            pageSize: nextProps.pageSize,
-            ...nextProps.pagingData,
-        });
+    const txt = locale.components.sorting;
+    const pageLength = txt.recordsPerPage;
+    if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
+        pageLength.push(props.initPageLength);
+        pageLength.sort((a, b) => a - b);
     }
-
-    pageSizeChanged = event => {
-        this.setState({
-            pageSize: event.target.value,
-            exportPublicationsFormat: null,
-        });
-        this.props.onPageSizeChanged(event.target.value);
-    };
-
-    orderDirectionsChanged = event => {
-        this.setState({
-            sortDirection: event.target.value,
-            exportPublicationsFormat: null,
-        });
-        this.props.onSortByChanged(this.state.sortBy, event.target.value);
-    };
-
-    sortByChanged = event => {
-        this.setState({
-            sortBy: event.target.value,
-            exportPublicationsFormat: null,
-        });
-        this.props.onSortByChanged(event.target.value, this.state.sortDirection);
-    };
-
-    exportPublicationsFormatChanged = value => {
-        this.setState({
-            exportPublicationsFormat: value,
-        });
-        this.props.onExportPublications({ exportPublicationsFormat: value });
-    };
-
-    render() {
-        if (
-            !this.props.pagingData ||
-            this.props.pagingData.total === 0 ||
-            !this.state.sortBy ||
-            !this.state.sortDirection ||
-            !this.state.pageSize
-        ) {
-            return <span className="publicationsListSorting empty" />;
-        }
-        const txt = locale.components.sorting;
-        const pageLength = txt.recordsPerPage;
-        if (this.props.initPageLength && pageLength.indexOf(this.props.initPageLength) === -1) {
-            pageLength.push(this.props.initPageLength);
-            pageLength.sort((a, b) => a - b);
-        }
-        return (
-            <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={this.props.canUseExport ? 3 : 4}>
-                    <FormControl fullWidth>
-                        <InputLabel shrink>{txt.sortLabel}</InputLabel>
-                        <Select
-                            id="sortBy"
-                            onChange={this.sortByChanged}
-                            value={this.state.sortBy}
-                            disabled={this.props.disabled}
-                        >
-                            {txt.sortBy.map((item, index) => {
-                                return (
-                                    <MenuItem key={index} value={item.value}>
-                                        {item.label}
-                                    </MenuItem>
-                                );
-                            })}
-                        </Select>
-                    </FormControl>
-                </Grid>
-                <Grid item xs={12} sm={6} md={this.props.canUseExport ? 3 : 4}>
-                    <FormControl fullWidth>
-                        <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
-                        <Select
-                            id="sortOrder"
-                            onChange={this.orderDirectionsChanged}
-                            value={this.state.sortDirection}
-                            disabled={this.props.disabled}
-                        >
-                            {txt.sortDirection.map((item, index) => {
-                                return (
-                                    <MenuItem key={index} value={item}>
-                                        {item}
-                                    </MenuItem>
-                                );
-                            })}
-                        </Select>
-                    </FormControl>
-                </Grid>
-                <Grid item xs={12} sm={this.props.canUseExport ? 6 : 12} md={this.props.canUseExport ? 3 : 4}>
-                    <FormControl fullWidth>
-                        <InputLabel shrink>{txt.pageSize}</InputLabel>
-                        <Select
-                            id="pageSize"
-                            value={this.state.pageSize}
-                            disabled={this.props.disabled}
-                            onChange={this.pageSizeChanged}
-                        >
-                            {pageLength.map(number => {
-                                return (
-                                    <MenuItem key={`records-per-page-${number}`} value={number}>
-                                        {number}
-                                    </MenuItem>
-                                );
-                            })}
-                        </Select>
-                    </FormControl>
-                </Grid>
-                {this.props.canUseExport && (
-                    <Hidden xsDown>
-                        <Grid item sm={6} md={3}>
-                            <ExportPublications
-                                format={this.state.exportPublicationsFormat}
-                                onChange={this.exportPublicationsFormatChanged}
-                                disabled={this.props.disabled}
-                            />
-                        </Grid>
-                    </Hidden>
-                )}
+    return (
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={props.canUseExport ? 3 : 4}>
+                <FormControl fullWidth>
+                    <InputLabel shrink>{txt.sortLabel}</InputLabel>
+                    <Select id="sortBy" onChange={sortByChanged} value={sortBy} disabled={props.disabled}>
+                        {txt.sortBy.map((item, index) => {
+                            return (
+                                <MenuItem key={index} value={item.value}>
+                                    {item.label}
+                                </MenuItem>
+                            );
+                        })}
+                    </Select>
+                </FormControl>
             </Grid>
-        );
-    }
-}
+            <Grid item xs={12} sm={6} md={props.canUseExport ? 3 : 4}>
+                <FormControl fullWidth>
+                    <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
+                    <Select
+                        id="sortOrder"
+                        onChange={orderDirectionsChanged}
+                        value={sortDirection}
+                        disabled={props.disabled}
+                    >
+                        {txt.sortDirection.map((item, index) => {
+                            return (
+                                <MenuItem key={index} value={item}>
+                                    {item}
+                                </MenuItem>
+                            );
+                        })}
+                    </Select>
+                </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={props.canUseExport ? 6 : 12} md={props.canUseExport ? 3 : 4}>
+                <FormControl fullWidth>
+                    <InputLabel shrink>{txt.pageSize}</InputLabel>
+                    <Select id="pageSize" value={pageSize} disabled={props.disabled} onChange={pageSizeChanged}>
+                        {pageLength.map(number => {
+                            return (
+                                <MenuItem key={`records-per-page-${number}`} value={number}>
+                                    {number}
+                                </MenuItem>
+                            );
+                        })}
+                    </Select>
+                </FormControl>
+            </Grid>
+            {props.canUseExport && (
+                <Hidden xsDown>
+                    <Grid item sm={6} md={3}>
+                        <ExportPublications onChange={exportPublicationsFormatChanged} disabled={props.disabled} />
+                    </Grid>
+                </Hidden>
+            )}
+        </Grid>
+    );
+};
 
-export default withStyles(styles, { withTheme: true })(PublicationsListSorting);
+PublicationsListSorting.propTypes = {
+    canUseExport: PropTypes.bool,
+    disabled: PropTypes.bool,
+    initPageLength: PropTypes.number,
+    onExportPublications: PropTypes.func,
+    onPageSizeChanged: PropTypes.func,
+    onSortByChanged: PropTypes.func,
+    pageSize: PropTypes.number,
+    pagingData: PropTypes.shape({
+        from: PropTypes.number,
+        to: PropTypes.number,
+        total: PropTypes.number,
+        per_page: PropTypes.number,
+        current_page: PropTypes.number,
+    }),
+    sortBy: PropTypes.string,
+    sortDirection: PropTypes.string,
+};
+
+export default PublicationsListSorting;

@@ -21,7 +21,11 @@ export const useStyles = makeStyles(theme => ({
 }));
 
 export const ConfirmationBox = ({
+    actionButtonColor,
+    actionButtonVariant,
+    cancelButtonColor,
     confirmationBoxId,
+    InputForm,
     hideCancelButton,
     isOpen,
     locale,
@@ -30,6 +34,7 @@ export const ConfirmationBox = ({
     onCancelAction,
     onClose,
     showAlternateActionButton,
+    showInputForm,
 }) => {
     const classes = useStyles();
 
@@ -53,6 +58,7 @@ export const ConfirmationBox = ({
             <DialogTitle>{locale.confirmationTitle}</DialogTitle>
             <DialogContent>
                 <DialogContentText>{locale.confirmationMessage}</DialogContentText>
+                {!!showInputForm && <InputForm />}
             </DialogContent>
             <DialogActions>
                 <Grid container spacing={1}>
@@ -61,9 +67,10 @@ export const ConfirmationBox = ({
                     </Hidden>
                     <Grid item xs={12} sm={'auto'}>
                         <Button
+                            {...(!!actionButtonVariant ? { variant: actionButtonVariant } : {})}
                             children={locale.confirmButtonLabel}
                             autoFocus
-                            color={'primary'}
+                            color={actionButtonColor || 'primary'}
                             fullWidth
                             onClick={_onAction}
                             id="confirm-action"
@@ -88,7 +95,7 @@ export const ConfirmationBox = ({
                         <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
-                                color={'primary'}
+                                color={cancelButtonColor || 'primary'}
                                 children={locale.cancelButtonLabel}
                                 fullWidth
                                 onClick={_onCancelAction}
@@ -104,8 +111,12 @@ export const ConfirmationBox = ({
 };
 
 ConfirmationBox.propTypes = {
+    actionButtonColor: PropTypes.string,
+    actionButtonVariant: PropTypes.string,
+    cancelButtonColor: PropTypes.string,
     confirmationBoxId: PropTypes.string.isRequired,
     hideCancelButton: PropTypes.bool,
+    InputForm: PropTypes.func,
     isOpen: PropTypes.bool,
     locale: PropTypes.object,
     onAction: PropTypes.func,
@@ -113,6 +124,7 @@ ConfirmationBox.propTypes = {
     onAlternateAction: PropTypes.func,
     onClose: PropTypes.func,
     showAlternateActionButton: PropTypes.bool,
+    showInputForm: PropTypes.bool,
 };
 
 ConfirmationBox.defaultProps = {
@@ -126,6 +138,7 @@ ConfirmationBox.defaultProps = {
         alternateActionButtonLabel: 'Cancel',
     },
     showAlternateActionButton: false,
+    showInputForm: false,
 };
 
 export default ConfirmationBox;

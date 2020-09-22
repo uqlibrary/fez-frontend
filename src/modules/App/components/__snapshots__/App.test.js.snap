@@ -31,18 +31,6 @@ exports[`Application component Should display mobile correctly 1`] = `
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -55,8 +43,13 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -369,6 +362,20 @@ exports[`Application component Should display mobile correctly 1`] = `
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_3"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_4"
+            pageTitle="eSpace"
+            path="/dashboard"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -377,29 +384,8 @@ exports[`Application component Should display mobile correctly 1`] = `
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_4"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_5"
-            pageTitle="eSpace"
-            path="/dashboard"
-          />
-          <Route
-            key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -633,26 +619,19 @@ exports[`Application component should determine if it has incomplete works from 
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -1208,6 +1187,13 @@ exports[`Application component should determine if it has incomplete works from 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -1216,22 +1202,8 @@ exports[`Application component should determine if it has incomplete works from 
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -1461,26 +1433,19 @@ exports[`Application component should determine if it has incomplete works from 
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2036,6 +2001,13 @@ exports[`Application component should determine if it has incomplete works from 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -2044,22 +2016,8 @@ exports[`Application component should determine if it has incomplete works from 
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -2101,18 +2059,6 @@ exports[`Application component should not show orcid alert for a student without
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -2125,8 +2071,13 @@ exports[`Application component should not show orcid alert for a student without
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2405,6 +2356,20 @@ exports[`Application component should not show orcid alert for a student without
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_3"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_4"
+            pageTitle="eSpace"
+            path="/dashboard"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -2413,29 +2378,8 @@ exports[`Application component should not show orcid alert for a student without
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_4"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_5"
-            pageTitle="eSpace"
-            path="/dashboard"
-          />
-          <Route
-            key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -2477,18 +2421,6 @@ exports[`Application component should redirect to login page with correct return
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -2501,8 +2433,13 @@ exports[`Application component should redirect to login page with correct return
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -2815,6 +2752,20 @@ exports[`Application component should redirect to login page with correct return
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_3"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_4"
+            pageTitle="eSpace"
+            path="/dashboard"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -2823,29 +2774,8 @@ exports[`Application component should redirect to login page with correct return
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_4"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_5"
-            pageTitle="eSpace"
-            path="/dashboard"
-          />
-          <Route
-            key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -3075,26 +3005,19 @@ exports[`Application component should render alert if user is not fez author 1`]
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -3654,6 +3577,13 @@ exports[`Application component should render alert if user is not fez author 1`]
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -3662,22 +3592,8 @@ exports[`Application component should render alert if user is not fez author 1`]
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -3907,26 +3823,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -4503,6 +4412,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -4511,22 +4427,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -4566,18 +4468,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -4972,34 +4862,20 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_5"
+            key="route_4"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_6"
+            key="route_5"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -5013,7 +4889,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                 "_status": -1,
               }
             }
-            key="route_7"
+            key="route_6"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -5244,26 +5120,19 @@ exports[`Application component should render app for account with author account
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -5894,6 +5763,13 @@ exports[`Application component should render app for account with author account
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -5902,22 +5778,8 @@ exports[`Application component should render app for account with author account
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -6147,26 +6009,19 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -6728,6 +6583,13 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -6736,22 +6598,8 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -6990,7 +6838,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new record",
+          "pageTitle": "Add a new work",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -7005,7 +6853,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -7019,7 +6867,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete record",
+          "pageTitle": "Delete work",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -7062,7 +6910,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -7076,7 +6924,21 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit work",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -7090,8 +6952,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "pageTitle": "Edit work",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -7154,26 +7016,19 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -7403,7 +7258,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new record",
+          "primaryText": "Add a new work",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -7421,6 +7276,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -7788,7 +7647,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new record"
+            pageTitle="Add a new work"
             path="/admin/add"
             render={[Function]}
           />
@@ -7808,7 +7667,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -7827,7 +7686,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete record"
+            pageTitle="Delete work"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -7885,7 +7744,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -7904,8 +7763,8 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
-            pageTitle="Edit record"
-            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
           />
           <Route
             access={
@@ -7923,8 +7782,27 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Edit work"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_27"
+            pageTitle="Edit work"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={
@@ -7933,7 +7811,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -7953,7 +7831,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -7971,19 +7849,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -7998,9 +7876,16 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_34"
+            pageTitle="eSpace search"
+            path="/records/search"
           />
           <Route
             component={
@@ -8011,22 +7896,8 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_33"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_34"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
             key="route_35"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -8256,26 +8127,19 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -8873,6 +8737,13 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -8881,22 +8752,8 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -9135,7 +8992,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new record",
+          "pageTitle": "Add a new work",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -9150,7 +9007,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -9164,7 +9021,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete record",
+          "pageTitle": "Delete work",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -9207,7 +9064,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -9221,7 +9078,21 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit work",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -9235,8 +9106,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "pageTitle": "Edit work",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -9299,26 +9170,19 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -9548,7 +9412,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new record",
+          "primaryText": "Add a new work",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -9566,6 +9430,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -9969,7 +9837,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new record"
+            pageTitle="Add a new work"
             path="/admin/add"
             render={[Function]}
           />
@@ -9989,7 +9857,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -10008,7 +9876,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete record"
+            pageTitle="Delete work"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -10066,7 +9934,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -10085,8 +9953,8 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
-            pageTitle="Edit record"
-            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
           />
           <Route
             access={
@@ -10104,8 +9972,27 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Edit work"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_27"
+            pageTitle="Edit work"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={
@@ -10114,7 +10001,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -10134,7 +10021,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -10152,19 +10039,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -10179,9 +10066,16 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_34"
+            pageTitle="eSpace search"
+            path="/records/search"
           />
           <Route
             component={
@@ -10192,22 +10086,8 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_33"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_34"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
             key="route_35"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -10446,7 +10326,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new record",
+          "pageTitle": "Add a new work",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -10461,7 +10341,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -10475,7 +10355,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete record",
+          "pageTitle": "Delete work",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -10518,7 +10398,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -10532,7 +10412,21 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit work",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -10546,8 +10440,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "pageTitle": "Edit work",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -10610,26 +10504,19 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -10859,7 +10746,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new record",
+          "primaryText": "Add a new work",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -10877,6 +10764,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -11244,7 +11135,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new record"
+            pageTitle="Add a new work"
             path="/admin/add"
             render={[Function]}
           />
@@ -11264,7 +11155,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -11283,7 +11174,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete record"
+            pageTitle="Delete work"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -11341,7 +11232,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -11360,8 +11251,8 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
-            pageTitle="Edit record"
-            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
           />
           <Route
             access={
@@ -11379,8 +11270,27 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Edit work"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_27"
+            pageTitle="Edit work"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={
@@ -11389,7 +11299,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -11409,7 +11319,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -11427,19 +11337,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -11454,9 +11364,16 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_34"
+            pageTitle="eSpace search"
+            path="/records/search"
           />
           <Route
             component={
@@ -11467,22 +11384,8 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_33"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_34"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
             key="route_35"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -11721,7 +11624,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Add a new record",
+          "pageTitle": "Add a new work",
           "path": "/admin/add",
           "render": [Function],
         },
@@ -11736,7 +11639,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/admin/edit/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -11750,7 +11653,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Delete record",
+          "pageTitle": "Delete work",
           "path": "/admin/delete/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/admin/delete/(UQ:[a-z0-9]+)",
         },
@@ -11793,7 +11696,7 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Edit work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/edit",
         },
         Object {
@@ -11807,7 +11710,21 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
+          "pageTitle": "Favourite searches",
+          "path": "/admin/favourite-search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "Edit work",
           "path": "/admin/doi/:pid(UQ:[a-z0-9]+)",
         },
         Object {
@@ -11821,8 +11738,8 @@ exports[`Application component should render app for account with fez author wit
             "_status": -1,
           },
           "exact": true,
-          "pageTitle": "Edit record",
-          "path": "/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)",
+          "pageTitle": "Edit work",
+          "path": "/admin/change-display-type/:pid(UQ:[a-z0-9]+)",
         },
         Object {
           "access": Array [
@@ -11885,26 +11802,19 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -12134,7 +12044,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/admin/add",
-          "primaryText": "Add a new record",
+          "primaryText": "Add a new work",
           "secondaryText": "as an admin user",
         },
         Object {
@@ -12152,6 +12062,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/batch-import",
           "primaryText": "CSV ingest",
+        },
+        Object {
+          "linkTo": "/admin/favourite-search",
+          "primaryText": "Favourite searches",
         },
         Object {
           "divider": true,
@@ -12555,7 +12469,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_19"
-            pageTitle="Add a new record"
+            pageTitle="Add a new work"
             path="/admin/add"
             render={[Function]}
           />
@@ -12575,7 +12489,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_20"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/admin/edit/:pid(UQ:[a-z0-9]+)"
           />
           <Route
@@ -12594,7 +12508,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_21"
-            pageTitle="Delete record"
+            pageTitle="Delete work"
             path="/admin/delete/:pid(UQ:[a-z0-9]+)"
             regExPath="/admin/delete/(UQ:[a-z0-9]+)"
           />
@@ -12652,7 +12566,7 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_24"
-            pageTitle="Edit record"
+            pageTitle="Edit work"
             path="/records/:pid(UQ:[a-z0-9]+)/edit"
           />
           <Route
@@ -12671,8 +12585,8 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_25"
-            pageTitle="Edit record"
-            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Favourite searches"
+            path="/admin/favourite-search"
           />
           <Route
             access={
@@ -12690,8 +12604,27 @@ exports[`Application component should render app for account with fez author wit
             }
             exact={true}
             key="route_26"
-            pageTitle="Edit record"
-            path="/admin/changeDisplayType/:pid(UQ:[a-z0-9]+)"
+            pageTitle="Edit work"
+            path="/admin/doi/:pid(UQ:[a-z0-9]+)"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
+            exact={true}
+            key="route_27"
+            pageTitle="Edit work"
+            path="/admin/change-display-type/:pid(UQ:[a-z0-9]+)"
           />
           <Route
             access={
@@ -12700,7 +12633,7 @@ exports[`Application component should render app for account with fez author wit
               ]
             }
             exact={true}
-            key="route_27"
+            key="route_28"
             pageTitle="Unpublished buffer"
             path="/admin/unpublished"
             render={[Function]}
@@ -12720,7 +12653,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_28"
+            key="route_29"
             path="/tool/lookup"
           />
           <Route
@@ -12738,19 +12671,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_29"
+            key="route_30"
             pageTitle="CSV ingest"
             path="/batch-import"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_30"
+            key="route_31"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_31"
+            key="route_32"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -12765,9 +12698,16 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_32"
+            key="route_33"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_34"
+            pageTitle="eSpace search"
+            path="/records/search"
           />
           <Route
             component={
@@ -12778,22 +12718,8 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_33"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_34"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
             key="route_35"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -13023,26 +12949,19 @@ exports[`Application component should render app for account with fez author wit
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -13469,6 +13388,13 @@ exports[`Application component should render app for account with fez author wit
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_20"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -13477,22 +13403,8 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_20"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_21"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            key="route_22"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -13722,26 +13634,19 @@ exports[`Application component should render application with routing for the us
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -14015,18 +13920,6 @@ exports[`Application component should render for anon user 1`] = `
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -14039,8 +13932,13 @@ exports[`Application component should render for anon user 1`] = `
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -14317,6 +14215,20 @@ exports[`Application component should render for anon user 1`] = `
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_3"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_4"
+            pageTitle="eSpace"
+            path="/dashboard"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -14325,29 +14237,8 @@ exports[`Application component should render for anon user 1`] = `
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_4"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_5"
-            pageTitle="eSpace"
-            path="/dashboard"
-          />
-          <Route
-            key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -14405,18 +14296,6 @@ exports[`Application component should render thesis submission for HDR without m
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -14640,34 +14519,20 @@ exports[`Application component should render thesis submission for HDR without m
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
-              }
-            }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_3"
             pageTitle="eSpace search"
             path="/records/search"
           />
           <Route
-            key="route_5"
+            key="route_4"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_6"
+            key="route_5"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -14681,7 +14546,7 @@ exports[`Application component should render thesis submission for HDR without m
                 "_status": -1,
               }
             }
-            key="route_7"
+            key="route_6"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -14724,18 +14589,6 @@ exports[`Application component should show orcid alert for a student without an 
           "regExPath": "/view/(UQ:[a-z0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
-          },
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace search",
@@ -14748,8 +14601,13 @@ exports[`Application component should show orcid alert for a student without an 
           "path": "/dashboard",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
           "pageTitle": "Page not found",
-          "render": [Function],
         },
       ]
     }
@@ -15055,6 +14913,20 @@ exports[`Application component should show orcid alert for a student without an 
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            key="route_3"
+            pageTitle="eSpace search"
+            path="/records/search"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_4"
+            pageTitle="eSpace"
+            path="/dashboard"
+          />
+          <Route
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -15063,29 +14935,8 @@ exports[`Application component should show orcid alert for a student without an 
                 "_status": -1,
               }
             }
-            exact={true}
-            key="route_3"
-            path="/view_new/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view_new/(UQ:[a-z0-9]+)"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
-            key="route_4"
-            pageTitle="eSpace search"
-            path="/records/search"
-          />
-          <Route
-            component={[Function]}
-            exact={true}
             key="route_5"
-            pageTitle="eSpace"
-            path="/dashboard"
-          />
-          <Route
-            key="route_6"
             pageTitle="Page not found"
-            render={[Function]}
           />
         </Switch>
       </Suspense>
@@ -15350,6 +15201,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
                 },
               },
               "MuiMenuItem": Object {
@@ -16125,26 +15981,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "regExPath": "/view/(UQ:[a-z0-9]+)",
                             },
                             Object {
-                              "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
-                              },
-                              "exact": true,
-                              "pageTitle": undefined,
-                              "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-                              "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-                            },
-                            Object {
                               "component": [Function],
                               "exact": true,
                               "pageTitle": "eSpace search",
                               "path": "/records/search",
                             },
                             Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_ctor": [Function],
+                                "_result": null,
+                                "_status": -1,
+                              },
                               "pageTitle": "Page not found",
-                              "render": [Function],
                             },
                           ]
                         }
@@ -16410,26 +16259,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "regExPath": "/view/(UQ:[a-z0-9]+)",
                               },
                               Object {
-                                "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
-                                },
-                                "exact": true,
-                                "pageTitle": undefined,
-                                "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-                                "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-                              },
-                              Object {
                                 "component": [Function],
                                 "exact": true,
                                 "pageTitle": "eSpace search",
                                 "path": "/records/search",
                               },
                               Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_ctor": [Function],
+                                  "_result": null,
+                                  "_status": -1,
+                                },
                                 "pageTitle": "Page not found",
-                                "render": [Function],
                               },
                             ]
                           }
@@ -16696,26 +16538,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   "regExPath": "/view/(UQ:[a-z0-9]+)",
                                 },
                                 Object {
-                                  "component": Object {
-                                    "$$typeof": Symbol(react.lazy),
-                                    "_ctor": [Function],
-                                    "_result": null,
-                                    "_status": -1,
-                                  },
-                                  "exact": true,
-                                  "pageTitle": undefined,
-                                  "path": "/view_new/:pid(UQ:[a-z0-9]+)",
-                                  "regExPath": "/view_new/(UQ:[a-z0-9]+)",
-                                },
-                                Object {
                                   "component": [Function],
                                   "exact": true,
                                   "pageTitle": "eSpace search",
                                   "path": "/records/search",
                                 },
                                 Object {
+                                  "component": Object {
+                                    "$$typeof": Symbol(react.lazy),
+                                    "_ctor": [Function],
+                                    "_result": null,
+                                    "_status": -1,
+                                  },
                                   "pageTitle": "Page not found",
-                                  "render": [Function],
                                 },
                               ]
                             }
@@ -18100,9 +17935,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       <SearchComponent
                                                         actions={
                                                           Object {
+                                                            "addFavouriteSearch": [Function],
                                                             "adminCreate": [Function],
                                                             "adminReset": [Function],
                                                             "adminUpdate": [Function],
+                                                            "checkForExistingFavouriteSearchAlias": [Function],
                                                             "checkSession": [Function],
                                                             "claimPublication": [Function],
                                                             "clearAuthorsSuggestions": [Function],
@@ -18124,6 +17961,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "createNewRecord": [Function],
                                                             "createSearchPromise": [Function],
                                                             "deleteAttachedFile": [Function],
+                                                            "deleteFavouriteSearchListItem": [Function],
                                                             "deleteRecord": [Function],
                                                             "dismissAppAlert": [Function],
                                                             "exportAuthorPublications": [Function],
@@ -18132,6 +17970,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "fixRecord": [Function],
                                                             "getBatchImportDirectories": [Function],
                                                             "getCollectionsListAPI": [Function],
+                                                            "getFavouriteSearchAlias": [Function],
                                                             "getSearchLookupApi": [Function],
                                                             "getSherpaFromIssn": [Function],
                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -18143,6 +17982,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "loadAuthorPublicationsStats": [Function],
                                                             "loadCollectionsList": [Function],
                                                             "loadCurrentAccount": [Function],
+                                                            "loadFavouriteSearchList": [Function],
                                                             "loadFullRecordToClaim": [Function],
                                                             "loadNewsFeed": [Function],
                                                             "loadOrcidSyncStatus": [Function],
@@ -18179,6 +18019,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "updateCommunity": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                             "updateDoi": [Function],
+                                                            "updateFavouriteSearchListItem": [Function],
                                                             "updateIncompleteRecord": [Function],
                                                           }
                                                         }
@@ -18338,6 +18179,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       "textOverflow": "ellipsis",
                                                                       "whiteSpace": "nowrap",
                                                                       "width": "100%",
+                                                                    },
+                                                                  },
+                                                                  "MuiIconButton": Object {
+                                                                    "colorInherit": Object {
+                                                                      "color": "none",
                                                                     },
                                                                   },
                                                                   "MuiMenuItem": Object {
@@ -19316,6 +19162,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "textOverflow": "ellipsis",
                                     "whiteSpace": "nowrap",
                                     "width": "100%",
+                                  },
+                                },
+                                "MuiIconButton": Object {
+                                  "colorInherit": Object {
+                                    "color": "none",
                                   },
                                 },
                                 "MuiMenuItem": Object {
@@ -20408,9 +20259,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           <AppAlert
                             actions={
                               Object {
+                                "addFavouriteSearch": [Function],
                                 "adminCreate": [Function],
                                 "adminReset": [Function],
                                 "adminUpdate": [Function],
+                                "checkForExistingFavouriteSearchAlias": [Function],
                                 "checkSession": [Function],
                                 "claimPublication": [Function],
                                 "clearAuthorsSuggestions": [Function],
@@ -20432,6 +20285,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "createNewRecord": [Function],
                                 "createSearchPromise": [Function],
                                 "deleteAttachedFile": [Function],
+                                "deleteFavouriteSearchListItem": [Function],
                                 "deleteRecord": [Function],
                                 "dismissAppAlert": [Function],
                                 "exportAuthorPublications": [Function],
@@ -20440,6 +20294,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "fixRecord": [Function],
                                 "getBatchImportDirectories": [Function],
                                 "getCollectionsListAPI": [Function],
+                                "getFavouriteSearchAlias": [Function],
                                 "getSearchLookupApi": [Function],
                                 "getSherpaFromIssn": [Function],
                                 "getThirdPartyLookupApiUrl": [Function],
@@ -20451,6 +20306,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadAuthorPublicationsStats": [Function],
                                 "loadCollectionsList": [Function],
                                 "loadCurrentAccount": [Function],
+                                "loadFavouriteSearchList": [Function],
                                 "loadFullRecordToClaim": [Function],
                                 "loadNewsFeed": [Function],
                                 "loadOrcidSyncStatus": [Function],
@@ -20487,6 +20343,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "updateCommunity": [Function],
                                 "updateCurrentAuthor": [Function],
                                 "updateDoi": [Function],
+                                "updateFavouriteSearchListItem": [Function],
                                 "updateIncompleteRecord": [Function],
                               }
                             }
@@ -20728,6 +20585,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                               "textOverflow": "ellipsis",
                                               "whiteSpace": "nowrap",
                                               "width": "100%",
+                                            },
+                                          },
+                                          "MuiIconButton": Object {
+                                            "colorInherit": Object {
+                                              "color": "none",
                                             },
                                           },
                                           "MuiMenuItem": Object {
@@ -21088,6 +20950,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                     "textOverflow": "ellipsis",
                                                     "whiteSpace": "nowrap",
                                                     "width": "100%",
+                                                  },
+                                                },
+                                                "MuiIconButton": Object {
+                                                  "colorInherit": Object {
+                                                    "color": "none",
                                                   },
                                                 },
                                                 "MuiMenuItem": Object {
@@ -22024,9 +21891,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       <WithStyles(WithWidth(TopCitedPublicationsClass))
                                                                         actions={
                                                                           Object {
+                                                                            "addFavouriteSearch": [Function],
                                                                             "adminCreate": [Function],
                                                                             "adminReset": [Function],
                                                                             "adminUpdate": [Function],
+                                                                            "checkForExistingFavouriteSearchAlias": [Function],
                                                                             "checkSession": [Function],
                                                                             "claimPublication": [Function],
                                                                             "clearAuthorsSuggestions": [Function],
@@ -22048,6 +21917,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "createNewRecord": [Function],
                                                                             "createSearchPromise": [Function],
                                                                             "deleteAttachedFile": [Function],
+                                                                            "deleteFavouriteSearchListItem": [Function],
                                                                             "deleteRecord": [Function],
                                                                             "dismissAppAlert": [Function],
                                                                             "exportAuthorPublications": [Function],
@@ -22056,6 +21926,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "fixRecord": [Function],
                                                                             "getBatchImportDirectories": [Function],
                                                                             "getCollectionsListAPI": [Function],
+                                                                            "getFavouriteSearchAlias": [Function],
                                                                             "getSearchLookupApi": [Function],
                                                                             "getSherpaFromIssn": [Function],
                                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -22067,6 +21938,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadAuthorPublicationsStats": [Function],
                                                                             "loadCollectionsList": [Function],
                                                                             "loadCurrentAccount": [Function],
+                                                                            "loadFavouriteSearchList": [Function],
                                                                             "loadFullRecordToClaim": [Function],
                                                                             "loadNewsFeed": [Function],
                                                                             "loadOrcidSyncStatus": [Function],
@@ -22103,6 +21975,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
                                                                             "updateDoi": [Function],
+                                                                            "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
                                                                           }
                                                                         }
@@ -22156,9 +22029,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         <WithWidth(TopCitedPublicationsClass)
                                                                           actions={
                                                                             Object {
+                                                                              "addFavouriteSearch": [Function],
                                                                               "adminCreate": [Function],
                                                                               "adminReset": [Function],
                                                                               "adminUpdate": [Function],
+                                                                              "checkForExistingFavouriteSearchAlias": [Function],
                                                                               "checkSession": [Function],
                                                                               "claimPublication": [Function],
                                                                               "clearAuthorsSuggestions": [Function],
@@ -22180,6 +22055,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "createNewRecord": [Function],
                                                                               "createSearchPromise": [Function],
                                                                               "deleteAttachedFile": [Function],
+                                                                              "deleteFavouriteSearchListItem": [Function],
                                                                               "deleteRecord": [Function],
                                                                               "dismissAppAlert": [Function],
                                                                               "exportAuthorPublications": [Function],
@@ -22188,6 +22064,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "fixRecord": [Function],
                                                                               "getBatchImportDirectories": [Function],
                                                                               "getCollectionsListAPI": [Function],
+                                                                              "getFavouriteSearchAlias": [Function],
                                                                               "getSearchLookupApi": [Function],
                                                                               "getSherpaFromIssn": [Function],
                                                                               "getThirdPartyLookupApiUrl": [Function],
@@ -22199,6 +22076,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadAuthorPublicationsStats": [Function],
                                                                               "loadCollectionsList": [Function],
                                                                               "loadCurrentAccount": [Function],
+                                                                              "loadFavouriteSearchList": [Function],
                                                                               "loadFullRecordToClaim": [Function],
                                                                               "loadNewsFeed": [Function],
                                                                               "loadOrcidSyncStatus": [Function],
@@ -22235,6 +22113,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "updateCommunity": [Function],
                                                                               "updateCurrentAuthor": [Function],
                                                                               "updateDoi": [Function],
+                                                                              "updateFavouriteSearchListItem": [Function],
                                                                               "updateIncompleteRecord": [Function],
                                                                             }
                                                                           }
@@ -22734,6 +22613,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                 "textOverflow": "ellipsis",
                                                                                                 "whiteSpace": "nowrap",
                                                                                                 "width": "100%",
+                                                                                              },
+                                                                                            },
+                                                                                            "MuiIconButton": Object {
+                                                                                              "colorInherit": Object {
+                                                                                                "color": "none",
                                                                                               },
                                                                                             },
                                                                                             "MuiMenuItem": Object {
@@ -23417,9 +23301,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 <WithStyles(NewsFeed)
                                                                                   actions={
                                                                                     Object {
+                                                                                      "addFavouriteSearch": [Function],
                                                                                       "adminCreate": [Function],
                                                                                       "adminReset": [Function],
                                                                                       "adminUpdate": [Function],
+                                                                                      "checkForExistingFavouriteSearchAlias": [Function],
                                                                                       "checkSession": [Function],
                                                                                       "claimPublication": [Function],
                                                                                       "clearAuthorsSuggestions": [Function],
@@ -23441,6 +23327,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "createNewRecord": [Function],
                                                                                       "createSearchPromise": [Function],
                                                                                       "deleteAttachedFile": [Function],
+                                                                                      "deleteFavouriteSearchListItem": [Function],
                                                                                       "deleteRecord": [Function],
                                                                                       "dismissAppAlert": [Function],
                                                                                       "exportAuthorPublications": [Function],
@@ -23449,6 +23336,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "fixRecord": [Function],
                                                                                       "getBatchImportDirectories": [Function],
                                                                                       "getCollectionsListAPI": [Function],
+                                                                                      "getFavouriteSearchAlias": [Function],
                                                                                       "getSearchLookupApi": [Function],
                                                                                       "getSherpaFromIssn": [Function],
                                                                                       "getThirdPartyLookupApiUrl": [Function],
@@ -23460,6 +23348,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadAuthorPublicationsStats": [Function],
                                                                                       "loadCollectionsList": [Function],
                                                                                       "loadCurrentAccount": [Function],
+                                                                                      "loadFavouriteSearchList": [Function],
                                                                                       "loadFullRecordToClaim": [Function],
                                                                                       "loadNewsFeed": [Function],
                                                                                       "loadOrcidSyncStatus": [Function],
@@ -23496,6 +23385,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
                                                                                       "updateDoi": [Function],
+                                                                                      "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
                                                                                     }
                                                                                   }
@@ -23503,9 +23393,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <NewsFeed
                                                                                     actions={
                                                                                       Object {
+                                                                                        "addFavouriteSearch": [Function],
                                                                                         "adminCreate": [Function],
                                                                                         "adminReset": [Function],
                                                                                         "adminUpdate": [Function],
+                                                                                        "checkForExistingFavouriteSearchAlias": [Function],
                                                                                         "checkSession": [Function],
                                                                                         "claimPublication": [Function],
                                                                                         "clearAuthorsSuggestions": [Function],
@@ -23527,6 +23419,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "createNewRecord": [Function],
                                                                                         "createSearchPromise": [Function],
                                                                                         "deleteAttachedFile": [Function],
+                                                                                        "deleteFavouriteSearchListItem": [Function],
                                                                                         "deleteRecord": [Function],
                                                                                         "dismissAppAlert": [Function],
                                                                                         "exportAuthorPublications": [Function],
@@ -23535,6 +23428,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "fixRecord": [Function],
                                                                                         "getBatchImportDirectories": [Function],
                                                                                         "getCollectionsListAPI": [Function],
+                                                                                        "getFavouriteSearchAlias": [Function],
                                                                                         "getSearchLookupApi": [Function],
                                                                                         "getSherpaFromIssn": [Function],
                                                                                         "getThirdPartyLookupApiUrl": [Function],
@@ -23546,6 +23440,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "loadAuthorPublicationsStats": [Function],
                                                                                         "loadCollectionsList": [Function],
                                                                                         "loadCurrentAccount": [Function],
+                                                                                        "loadFavouriteSearchList": [Function],
                                                                                         "loadFullRecordToClaim": [Function],
                                                                                         "loadNewsFeed": [Function],
                                                                                         "loadOrcidSyncStatus": [Function],
@@ -23582,6 +23477,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "updateCommunity": [Function],
                                                                                         "updateCurrentAuthor": [Function],
                                                                                         "updateDoi": [Function],
+                                                                                        "updateFavouriteSearchListItem": [Function],
                                                                                         "updateIncompleteRecord": [Function],
                                                                                       }
                                                                                     }
@@ -23653,6 +23549,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               "textOverflow": "ellipsis",
                                                                                               "whiteSpace": "nowrap",
                                                                                               "width": "100%",
+                                                                                            },
+                                                                                          },
+                                                                                          "MuiIconButton": Object {
+                                                                                            "colorInherit": Object {
+                                                                                              "color": "none",
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {
@@ -24052,6 +23953,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
+                                    },
+                                  },
+                                  "MuiIconButton": Object {
+                                    "colorInherit": Object {
+                                      "color": "none",
                                     },
                                   },
                                   "MuiMenuItem": Object {
@@ -24775,6 +24681,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "textOverflow": "ellipsis",
                                     "whiteSpace": "nowrap",
                                     "width": "100%",
+                                  },
+                                },
+                                "MuiIconButton": Object {
+                                  "colorInherit": Object {
+                                    "color": "none",
                                   },
                                 },
                                 "MuiMenuItem": Object {

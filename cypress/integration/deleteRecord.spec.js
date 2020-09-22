@@ -4,27 +4,27 @@ import { myRecordsList, myDatasetList } from '../../src/mock/data/records';
 const record = myRecordsList.data[0];
 const uqDoiRecord = myDatasetList.data[1];
 
-context('Delete record form', () => {
+context('Delete work form', () => {
     const baseUrl = Cypress.config('baseUrl');
     const deleteFormLocale = formsLocale.forms.deleteRecordForm;
 
     it('should render as expected', () => {
         cy.visit(`/admin/delete/${record.rek_pid}/?user=uqstaff`);
-        cy.contains('h2', 'Delete record');
+        cy.contains('h2', 'Delete work');
         cy.get('.StandardCard')
             .should('have.length', 2)
             // .contains('h3', fixPageLocale.subTitle);
             .contains('h3', 'Work to be deleted');
         cy.contains('.StandardCard .publicationCitation h6 a', myRecordsList.data[0].rek_title);
         cy.get('[class*="PublicationCitation-divider"] + div').contains('Scholarship of Teaching and Learning');
-        cy.contains('Describe the reason to delete this record');
+        cy.contains('Describe the reason to delete this work');
         cy.contains('button', 'Cancel');
         cy.contains('button', 'Delete').should('not.be.disabled');
     });
 
     it('can submit the form', () => {
         cy.visit(`/admin/delete/${record.rek_pid}/?user=uqstaff`);
-        cy.contains('h2', 'Delete record');
+        cy.contains('h2', 'Delete work');
         cy.get('button#submit-delete-record')
             .should('not.be.disabled')
             .click();

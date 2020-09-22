@@ -81,6 +81,11 @@ export const mui1theme = createMuiTheme({
                 },
             },
         },
+        MuiIconButton: {
+            colorInherit: {
+                color: 'none',
+            },
+        },
         MUIDataTable: {
             paper: {
                 boxShadow: 'none',
