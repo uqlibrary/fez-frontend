@@ -1706,40 +1706,7 @@ export default {
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
-            grants: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            grantAgencyNameLabel: 'Funder/Sponsor name',
-                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
-                            grantIdLabel: 'Grant ID',
-                            grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Funder/Sponsor type',
-                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
-                            addButton: 'Add grant',
-                            editButton: 'Edit grant',
-                            description:
-                                "Add the grant's name, ID and type - " +
-                                'then click the ADD GRANT button to add each to the list',
-                        },
-                    },
-                    header: {
-                        locale: {
-                            GrantAgencyName: 'Funder/Sponsor name',
-                            GrantID: 'Grant ID',
-                            GrantAgencyType: 'Funder/Sponsor type',
-                            reorderColumn: 'Reorder entries',
-                            deleteAll: 'Remove all entries',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all entries?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
+            grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_BOOK_CHAPTER]: {
             fez_record_search_key_publisher: () => ({
@@ -1806,76 +1773,11 @@ export default {
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
-            grants: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            grantAgencyNameLabel: 'Funder/Sponsor name',
-                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
-                            grantIdLabel: 'Grant ID',
-                            grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Funder/Sponsor type',
-                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
-                            addButton: 'Add grant',
-                            editButton: 'Edit grant',
-                            description:
-                                "Add the grant's name, ID and type - " +
-                                'then click the ADD GRANT button to add each to the list',
-                        },
-                    },
-                    header: {
-                        locale: {
-                            GrantAgencyName: 'Funder/Sponsor name',
-                            GrantID: 'Grant ID',
-                            GrantAgencyType: 'Funder/Sponsor type',
-                            reorderColumn: 'Reorder entries',
-                            deleteAll: 'Remove all entries',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all entries?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
+
+            grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_CREATIVE_WORK]: {
-            grants: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            grantAgencyNameLabel: 'Funder/Sponsor name',
-                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
-                            grantIdLabel: 'Grant ID',
-                            grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Funder/Sponsor type',
-                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
-                            addButton: 'Add grant',
-                            editButton: 'Edit grant',
-                            description:
-                                "Add the grant's name, ID and type - " +
-                                'then click the ADD GRANT button to add each to the list',
-                        },
-                    },
-                    header: {
-                        locale: {
-                            GrantAgencyName: 'Funder/Sponsor name',
-                            GrantID: 'Grant ID',
-                            GrantAgencyType: 'Funder/Sponsor type',
-                            reorderColumn: 'Reorder entries',
-                            deleteAll: 'Remove all entries',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all entries?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
+            grants: () => ({ ...locale.components.grants }),
             significanceAndContributionStatement: () => ({
                 locale: {
                     form: {
@@ -2043,40 +1945,7 @@ export default {
             fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),
-            grants: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            grantAgencyNameLabel: 'Funder/Sponsor name',
-                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
-                            grantIdLabel: 'Grant ID',
-                            grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Funder/Sponsor type',
-                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
-                            addButton: 'Add grant',
-                            editButton: 'Edit grant',
-                            description:
-                                "Add the grant's name, ID and type - " +
-                                'then click the ADD GRANT button to add each to the list',
-                        },
-                    },
-                    header: {
-                        locale: {
-                            GrantAgencyName: 'Funder/Sponsor name',
-                            GrantID: 'Grant ID',
-                            GrantAgencyType: 'Funder/Sponsor type',
-                            reorderColumn: 'Reorder entries',
-                            deleteAll: 'Remove all entries',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all entries?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
+            grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
             authors: () => ({
@@ -2141,40 +2010,7 @@ export default {
                     },
                 },
             }),
-            grants: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            grantAgencyNameLabel: 'Funder/Sponsor name',
-                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
-                            grantIdLabel: 'Grant ID',
-                            grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Funder/Sponsor type',
-                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
-                            addButton: 'Add grant',
-                            editButton: 'Edit grant',
-                            description:
-                                "Add the grant's name, ID and type - " +
-                                'then click the ADD GRANT button to add each to the list',
-                        },
-                    },
-                    header: {
-                        locale: {
-                            GrantAgencyName: 'Funder/Sponsor name',
-                            GrantID: 'Grant ID',
-                            GrantAgencyType: 'Funder/Sponsor type',
-                            reorderColumn: 'Reorder entries',
-                            deleteAll: 'Remove all entries',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all entries?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
+            grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_MANUSCRIPT]: {
             rek_date: () => ({
@@ -2251,40 +2087,7 @@ export default {
             fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),
-            grants: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            grantAgencyNameLabel: 'Funder/Sponsor name',
-                            grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
-                            grantIdLabel: 'Grant ID',
-                            grantIdHint: 'Enter grant number for this work, if available',
-                            grantAgencyTypeLabel: 'Funder/Sponsor type',
-                            grantAgencyTypeHint: 'Select Funder/Sponsor type',
-                            addButton: 'Add grant',
-                            editButton: 'Edit grant',
-                            description:
-                                "Add the grant's name, ID and type - " +
-                                'then click the ADD GRANT button to add each to the list',
-                        },
-                    },
-                    header: {
-                        locale: {
-                            GrantAgencyName: 'Funder/Sponsor name',
-                            GrantID: 'Grant ID',
-                            GrantAgencyType: 'Funder/Sponsor type',
-                            reorderColumn: 'Reorder entries',
-                            deleteAll: 'Remove all entries',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all entries?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
+            grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_THESIS]: {
             fez_record_search_key_org_unit_name: () => ({
