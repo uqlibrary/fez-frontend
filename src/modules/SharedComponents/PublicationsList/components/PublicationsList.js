@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/styles';
 
 import BulkUpdatesActions from './BulkUpdatesActions';
+import locale from 'locale/components';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -90,14 +91,22 @@ export const PublicationsList = ({
                             }}
                             control={
                                 <Checkbox
+                                    inputProps={{
+                                        'data-testid': 'select-all-publications-input',
+                                        id: 'select-all-publications-input',
+                                    }}
                                     onChange={handleSelectAll}
-                                    name="select-all-records"
+                                    name="select-all-publications"
                                     color="primary"
                                     checked={allSelected}
                                     indeterminate={!allSelected && Object.keys(recordsSelected).length > 0}
                                 />
                             }
-                            label={<Typography variant="caption">{'Select all'}</Typography>}
+                            label={
+                                <Typography variant="caption">
+                                    {locale.components.publicationsList.selectAllText}
+                                </Typography>
+                            }
                         />
                     </Box>
                     <Box alignSelf="center">
@@ -113,6 +122,11 @@ export const PublicationsList = ({
                     <Grid container spacing={0} alignItems="flex-start" key={`publication-${index}`}>
                         <Grid item xs={1}>
                             <Checkbox
+                                inputProps={{
+                                    'data-testid': `select-publication-${index}-input`,
+                                    id: `select-publication-${index}-input`,
+                                }}
+                                name={`select-publication-${index}-input`}
                                 onChange={handleChange(publication)}
                                 color="primary"
                                 checked={recordsSelected.hasOwnProperty(publication.rek_pid)}

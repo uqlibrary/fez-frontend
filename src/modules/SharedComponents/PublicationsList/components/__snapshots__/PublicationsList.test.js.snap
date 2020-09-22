@@ -1,6 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PublicationsList renders component with custom subset actions 1`] = `<DocumentFragment />`;
+exports[`PublicationsList renders component with custom subset actions 1`] = `
+<DocumentFragment>
+  <div
+    class="publicationCitation"
+  >
+    <div
+      class="MuiGrid-root-173 MuiGrid-container-174"
+    >
+      <div
+        class="MuiGrid-root-173 MuiGrid-item-175 MuiGrid-grid-xs-true-207"
+      >
+        <div
+          class="MuiGrid-root-173 MuiGrid-container-174"
+        >
+          <div
+            class="MuiGrid-root-173 MuiGrid-item-175 MuiGrid-grid-xs-true-207"
+            style="min-width: 1px;"
+          >
+            <h6
+              class="MuiTypography-root-276 PublicationCitation-citationTitle-168 MuiTypography-h6-286"
+            >
+              <a
+                href="/view/UQ:111111"
+              />
+            </h6>
+          </div>
+          <div
+            class="MuiGrid-root-173 PublicationCitation-citationText-169 MuiGrid-item-175 MuiGrid-grid-xs-12-219"
+          >
+            <div>
+              Citation display not available for 
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root-173 MuiGrid-item-175 MuiGrid-grid-xs-12-219"
+          >
+            <div
+              class="MuiGrid-root-173 MuiGrid-container-174 MuiGrid-align-items-xs-center-182"
+            >
+              <div
+                class="MuiGrid-root-173 PublicationCitation-citationCounts-170 MuiGrid-item-175 MuiGrid-grid-xs-auto-206"
+                style="flex-grow: 1;"
+              >
+                <div
+                  class="MuiGrid-root-173 MuiGrid-container-174"
+                >
+                  <div
+                    class="MuiGrid-root-173 MuiGrid-item-175 MuiGrid-grid-xs-12-219 MuiGrid-grid-sm-auto-220"
+                  >
+                    <a
+                      aria-label="Full citation in Google scholar will open in a new window"
+                      class="googleCitationCount CitationCountView-citationCount-307 ExternalLink-externalLink-309"
+                      href="https://scholar.google.com/scholar?q=intitle:undefined"
+                      rel="noopener noreferrer"
+                      tabindex="0"
+                      target="_blank"
+                      title="Full citation in Google scholar will open in a new window"
+                    >
+                      <span
+                        class="fez-icon google large"
+                      />
+                    </a>
+                    <span
+                      class="noOaIcon"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root-173 MuiGrid-item-175"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root-173 PublicationCitation-buttonMargin-171 MuiGrid-container-174 MuiGrid-spacing-xs-1-196"
+    />
+    <hr
+      class="MuiDivider-root-313 PublicationCitation-divider-167"
+    />
+  </div>
+</DocumentFragment>
+`;
 
 exports[`PublicationsList renders component with items 1`] = `
 <DocumentFragment>
@@ -243,6 +327,8 @@ exports[`PublicationsList renders component with items 1`] = `
       >
         <span
           class="MuiTypography-root-112 MuiTypography-caption-115"
+          data-testid="rek-content-indicator"
+          id="rek-content-indicator"
         >
           <span
             class="PublicationCitation-contentIndicatorTitle-8"

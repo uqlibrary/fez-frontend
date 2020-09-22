@@ -18,7 +18,7 @@ const FORM_NAME = 'ChangeDisplayTypeForm';
 const selector = formValueSelector(FORM_NAME);
 
 const onSubmit = (values, dispatch, props) => {
-    return dispatch(changeDisplayType(Object.values(props.recordsSelected), values.toJS())).catch(error => {
+    return dispatch(changeDisplayType(Object.values(props.recordsSelected), values.toJS(), true)).catch(error => {
         throw new SubmissionError({ _error: error.message });
     });
 };

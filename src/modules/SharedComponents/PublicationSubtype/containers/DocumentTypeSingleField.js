@@ -1,14 +1,21 @@
 import React from 'react';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { publicationTypes } from 'config';
 
 const documentTypeList = () => {
-    return Object.values(publicationTypes(false)).map(item => {
-        return {
-            value: item.id,
-            text: item.name,
-        };
-    });
+    return [
+        {
+            value: '-1',
+            text: 'Please select a display type',
+            disabled: true,
+        },
+        ...Object.values(publicationTypes(false)).map(item => {
+            return {
+                value: item.id,
+                text: item.name,
+            };
+        }),
+    ];
 };
 
 /**
@@ -20,16 +27,15 @@ const documentTypeList = () => {
  */
 export default function DocumentTypeSingleField(fieldProps) {
     return (
-        <GenericSelectField
+        <NewGenericSelectField
             error={!!fieldProps.meta && fieldProps.meta.error}
             errorText={!!fieldProps.meta && fieldProps.meta.error}
             genericSelectFieldId="doc-type-id"
             itemsList={documentTypeList() || []}
-            itemsLoadingHint={fieldProps.loadingHint || 'Loading..'}
             onChange={
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
-            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || ''}
+            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || -1}
             {...fieldProps}
         />
     );

@@ -1,10 +1,10 @@
 import React from 'react';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { BULK_UPDATE_SEARCH_KEYS } from 'config/bulkUpdates';
 
 export const SearchKeyField = fieldProps => {
     return (
-        <GenericSelectField
+        <NewGenericSelectField
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
             itemsList={Object.values(BULK_UPDATE_SEARCH_KEYS)}

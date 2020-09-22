@@ -637,18 +637,27 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
     };
 };
 
-export const changeDisplayType = (records = [], data) => {
+/**
+ * Change display type action
+ *
+ * @param {array} records
+ * @param {object} data
+ * @param {bool} isBulkUpdate
+ */
+export const changeDisplayType = (records, data, isBulkUpdate = false) => {
     const changeDisplayTypeRequest = records.map(record => ({
         rek_pid: record.rek_pid,
         ...data,
     }));
-
     return async dispatch => {
         dispatch({
             type: actions.CHANGE_DISPLAY_TYPE_INPROGRESS,
         });
         try {
-            const response = await patch(NEW_RECORD_API(), changeDisplayTypeRequest);
+            const response = await patch(
+                isBulkUpdate ? NEW_RECORD_API() : EXISTING_RECORD_API({ pid: records[0].rek_pid }),
+                isBulkUpdate ? changeDisplayTypeRequest : changeDisplayTypeRequest[0],
+            );
             dispatch({
                 type: actions.CHANGE_DISPLAY_TYPE_SUCCESS,
                 payload: response,
@@ -661,12 +670,12 @@ export const changeDisplayType = (records = [], data) => {
                 payload: e,
             });
 
-            return false;
+            return Promise.reject(e);
         }
     };
 };
 
-export const changeSearchKeyValue = (records = [], data) => {
+export const changeSearchKeyValue = (records, data) => {
     const { searchKey, searchKeyValue } = data;
     const changeSearchKeyValueRequest = records.map(({ rek_pid: pid, [searchKey]: item }) => ({
         rek_pid: pid,
@@ -694,7 +703,7 @@ export const changeSearchKeyValue = (records = [], data) => {
                 payload: e,
             });
 
-            return false;
+            return Promise.reject(e);
         }
     };
 };

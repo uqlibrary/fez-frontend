@@ -714,6 +714,11 @@ exports[`WoSDocTypesField component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  value={-1}
+  value={
+    Array [
+      "One",
+      "Two",
+    ]
+  }
 />
 `;

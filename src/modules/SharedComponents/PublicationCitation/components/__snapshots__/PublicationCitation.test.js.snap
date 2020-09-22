@@ -932,6 +932,8 @@ exports[`PublicationCitation  should render button disabled with spinners on act
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -1964,6 +1966,8 @@ exports[`PublicationCitation  should render component with content indicators 1`
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -2873,6 +2877,8 @@ exports[`PublicationCitation  should render component with default actions 1`] =
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -3818,6 +3824,8 @@ exports[`PublicationCitation  should render component with default item 1`] = `
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -4723,6 +4731,8 @@ exports[`PublicationCitation  should render component with default item without 
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -5632,6 +5642,8 @@ exports[`PublicationCitation  should render component with default list hiding t
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -6541,6 +6553,8 @@ exports[`PublicationCitation  should render component with default list hiding t
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -7481,6 +7495,8 @@ exports[`PublicationCitation  should render component with publication from mult
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -8405,6 +8421,8 @@ exports[`PublicationCitation  should render component without a title 1`] = `
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>
@@ -9797,6 +9815,8 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
+        data-testid="rek-content-indicator"
+        id="rek-content-indicator"
         variant="caption"
       >
         <span>

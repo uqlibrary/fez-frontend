@@ -1,7 +1,8 @@
 import React from 'react';
 import PublicationsList from './PublicationsList';
 import { myRecordsList } from 'mock/data';
-import { render, WithRouter, WithReduxStore } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
+import * as Context from 'context';
 
 function setup(testProps = {}) {
     const props = {
@@ -33,10 +34,54 @@ describe('PublicationsList', () => {
     it('renders component with custom subset actions', () => {
         const test = [];
         const { asFragment } = setup({
-            publication: { rek_pid: 'UQ:111111' },
+            publicationsList: [{ rek_pid: 'UQ:111111' }],
             publicationsListSubset: ['UQ:222222'],
             subsetCustomActions: test,
         });
         expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should render checkbox for each publication and render bulk updates actions on selecting records', () => {
+        const useRecordsSelectorContext = jest.spyOn(Context, 'useRecordsSelectorContext');
+        useRecordsSelectorContext.mockImplementation(() => ({
+            records: myRecordsList.data,
+        }));
+        const { getByTestId, queryByTestId } = setup({ publicationsList: myRecordsList.data });
+        expect(queryByTestId('bulk-updates-actions-select')).not.toBeInTheDocument();
+        expect(getByTestId('select-all-publications-input')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-publications-input'));
+        // waitFor(() => getByTestId('bulk-updates-actions-select'));
+        expect(getByTestId('bulk-updates-actions-select')).toBeInTheDocument();
+    });
+
+    it('should render change display type form', () => {
+        const useRecordsSelectorContext = jest.spyOn(Context, 'useRecordsSelectorContext');
+        useRecordsSelectorContext.mockImplementation(() => ({
+            records: myRecordsList.data,
+        }));
+
+        const { getByTestId, getByText } = setup({ publicationsList: myRecordsList.data });
+
+        fireEvent.click(getByTestId('select-publication-0-input'));
+        fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
+        fireEvent.click(getByText('Change display type'));
+
+        expect(getByTestId('change-display-type-form')).toBeInTheDocument();
+    });
+
+    it('should render change search key value form', () => {
+        const useRecordsSelectorContext = jest.spyOn(Context, 'useRecordsSelectorContext');
+        useRecordsSelectorContext.mockImplementation(() => ({
+            records: myRecordsList.data,
+        }));
+
+        const { getByTestId, getByText } = setup({ publicationsList: myRecordsList.data });
+
+        fireEvent.click(getByTestId('select-publication-0-input'));
+        fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
+        fireEvent.click(getByText('Change searchkey value'));
+
+        expect(getByTestId('change-search-key-value-form')).toBeInTheDocument();
     });
 });

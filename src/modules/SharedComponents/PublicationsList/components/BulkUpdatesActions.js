@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 import { BULK_UPDATES_ACTIONS } from 'config/bulkUpdates';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -51,7 +51,7 @@ export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
                     />
                 )}
             />
-            <GenericSelectField
+            <NewGenericSelectField
                 hideLabel
                 fullWidth
                 onChange={handleChange}

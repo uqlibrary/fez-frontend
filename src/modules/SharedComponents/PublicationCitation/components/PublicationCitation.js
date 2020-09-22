@@ -427,7 +427,11 @@ export class PublicationCitation extends PureComponent {
                         publication.fez_record_search_key_content_indicator &&
                         publication.fez_record_search_key_content_indicator.length > 0 && (
                             <Grid item xs={12}>
-                                <Typography variant="caption">
+                                <Typography
+                                    variant="caption"
+                                    id="rek-content-indicator"
+                                    data-testid="rek-content-indicator"
+                                >
                                     <span className={classes.contentIndicatorTitle}>
                                         {locale.components.contentIndicators.label}:
                                     </span>

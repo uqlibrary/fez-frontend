@@ -3,6 +3,9 @@ import React from 'react';
 
 export default {
     components: {
+        publicationsList: {
+            selectAllText: 'Select all',
+        },
         facetsFilter: {
             title: 'Refine results',
             resetButtonText: 'Reset',

@@ -1090,4 +1090,121 @@ describe('Record action creators', () => {
             }
         });
     });
+
+    describe('changeDisplayType()', () => {
+        it('dispatches expected actions on success', async () => {
+            const pid = 'UQ:123456';
+
+            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl).reply(200, {});
+            const expectedActions = [actions.CHANGE_DISPLAY_TYPE_INPROGRESS, actions.CHANGE_DISPLAY_TYPE_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.changeDisplayType([{ rek_pid: 'UQ:123456' }], {}));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure', async () => {
+            const pid = 'UQ:123456';
+            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_DISPLAY_TYPE_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_DISPLAY_TYPE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.changeDisplayType([{ rek_pid: 'UQ:123456' }], {}));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions on success for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [actions.CHANGE_DISPLAY_TYPE_INPROGRESS, actions.CHANGE_DISPLAY_TYPE_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.changeDisplayType([{ rek_pid: 'UQ:123456' }], {}, true));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_DISPLAY_TYPE_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_DISPLAY_TYPE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.changeDisplayType([{ rek_pid: 'UQ:123456' }], {}, true));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
+    describe('changeSearchKeyValue()', () => {
+        it('dispatches expected actions on success for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [
+                actions.CHANGE_SEARCH_KEY_VALUE_INPROGRESS,
+                actions.CHANGE_SEARCH_KEY_VALUE_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(
+                recordActions.changeSearchKeyValue(
+                    [
+                        {
+                            rek_pid: 'UQ:123456',
+                            fez_record_search_key_oa_status: {
+                                rek_oa_status: 'test',
+                            },
+                        },
+                    ],
+                    {
+                        searchKey: 'rek_oa_status',
+                        searchKeyValue: {
+                            fez_record_search_key_oa_status: {
+                                rek_oa_status: '453692',
+                            },
+                        },
+                    },
+                ),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_SEARCH_KEY_VALUE_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_SEARCH_KEY_VALUE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.changeSearchKeyValue(
+                        [
+                            {
+                                rek_pid: 'UQ:123456',
+                                fez_record_search_key_oa_status: {
+                                    rek_oa_status: 'test',
+                                },
+                            },
+                        ],
+                        {
+                            searchKey: 'rek_oa_status',
+                            searchKeyValue: {
+                                fez_record_search_key_oa_status: {
+                                    rek_oa_status: '453692',
+                                },
+                            },
+                        },
+                    ),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
 });

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OAStatus component should render default view 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   error={false}
   errorText=""
@@ -74,7 +74,7 @@ exports[`OAStatus component should render default view 1`] = `
 `;
 
 exports[`OAStatus component should render immutable list as selected value with given field props 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   error={true}
   errorText="Test error"
@@ -169,7 +169,7 @@ exports[`OAStatus component should render immutable list as selected value with 
 `;
 
 exports[`OAStatus component should render when given a default value field props 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   defaultValue="afr"
   error={false}
@@ -249,7 +249,7 @@ exports[`OAStatus component should render when given a default value field props
 `;
 
 exports[`OAStatus component should render with given field props 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   error={true}
   errorText="Test error"
@@ -334,6 +334,11 @@ exports[`OAStatus component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
-  value={-1}
+  value={
+    Array [
+      "One",
+      "Two",
+    ]
+  }
 />
 `;
