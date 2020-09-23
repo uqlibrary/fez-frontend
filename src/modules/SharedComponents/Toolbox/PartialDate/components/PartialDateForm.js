@@ -97,7 +97,10 @@ export class PartialDateForm extends Component {
 
     constructor(props) {
         super(props);
-        const dateValue = (props.meta && props.meta.initial && moment(props.meta.initial)) || null;
+        const dateValue =
+            (props.input && props.input.value && moment(props.input.value)) ||
+            (props.meta && props.meta.initial && moment(props.meta.initial)) ||
+            null;
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_DATE)) {
             this.state = {
                 day: dateValue.date(),
