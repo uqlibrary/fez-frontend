@@ -50,9 +50,7 @@ describe('Grant Information Component ', () => {
             .shallow();
 
         expect(grantRow.find('[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
-        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe(
-            publication.fez_record_search_key_grant_text[0].rek_grant_text,
-        );
+        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe('');
     });
 
     it('should not render empty grant ids', () => {
@@ -70,7 +68,7 @@ describe('Grant Information Component ', () => {
             .shallow();
 
         expect(grantRow.find('[data-testid="rek-grant-label-0"]').text()).toBe('Grant agency');
-        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe('testing rek_grant_text');
+        expect(grantRow.find('[data-testid="rek-grant-text-0"]').text()).toBe('');
     });
 
     it('should not break if grant text is not in the record', () => {
