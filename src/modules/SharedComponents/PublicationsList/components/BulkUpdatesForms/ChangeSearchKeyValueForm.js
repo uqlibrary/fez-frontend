@@ -2,14 +2,13 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import { formValueSelector, getFormSyncErrors, change, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
+import { formValueSelector, getFormSyncErrors, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import SearchKeyField from './SearchKeyField';
-import SearchKeyValueField from './SearchKeyValueField';
+import SearchKeyField, { getSearchKeyValueField } from './SearchKeyField';
 
 import { locale } from 'locale';
 import { validation } from 'config';
@@ -22,12 +21,6 @@ const onSubmit = (values, dispatch, props) => {
     return dispatch(changeSearchKeyValue(Object.values(props.recordsSelected), values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error.message });
     });
-};
-
-const onChange = (values, dispatch, props, prevValues) => {
-    if (values.get('search_key') !== prevValues.get('search_key')) {
-        dispatch(change(FORM_NAME, 'search_key_value', null));
-    }
 };
 
 export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, submitSucceeded, onCancel }) => {
@@ -53,14 +46,14 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                 {!!searchKey && (
                     <Grid item xs={12}>
                         <Field
-                            component={SearchKeyValueField}
+                            component={getSearchKeyValueField(searchKey).component}
                             searchKey={searchKey}
                             disabled={submitting || submitSucceeded}
                             label={txt.changeSearchKeyValueForm.formLabels.searchKeyValue}
-                            name="search_key_value"
+                            name={searchKey}
                             required
                             validate={[validation.required]}
-                            searchKeyValueFieldId="search-key-value"
+                            {...getSearchKeyValueField(searchKey).componentProps}
                         />
                     </Grid>
                 )}
@@ -125,7 +118,6 @@ ChangeSearchKeyValueForm.propTypes = {
 const ChangeSearchKeyValueReduxForm = reduxForm({
     form: FORM_NAME,
     onSubmit,
-    onChange,
 })(ChangeSearchKeyValueForm);
 
 export default React.memo(ChangeSearchKeyValueReduxForm);

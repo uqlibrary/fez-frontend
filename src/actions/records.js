@@ -676,13 +676,11 @@ export const changeDisplayType = (records, data, isBulkUpdate = false) => {
 };
 
 export const changeSearchKeyValue = (records, data) => {
-    const { searchKey, searchKeyValue } = data;
-    const changeSearchKeyValueRequest = records.map(({ rek_pid: pid, [searchKey]: item }) => ({
+    const { search_key: searchKey } = data;
+    const [primaryKey, subKey] = searchKey.split('.');
+    const changeSearchKeyValueRequest = records.map(({ rek_pid: pid, [primaryKey]: item }) => ({
         rek_pid: pid,
-        [searchKey]: {
-            ...item,
-            ...searchKeyValue,
-        },
+        [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
     }));
 
     return async dispatch => {

@@ -1,6 +1,104 @@
 import React from 'react';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { BULK_UPDATE_SEARCH_KEYS } from 'config/bulkUpdates';
+import {
+    BULK_UPDATE_SEARCH_KEYS,
+    BULK_UPDATE_SEARCH_KEY_ADDITIONAL_NOTES,
+    BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT,
+    BULK_UPDATE_SEARCH_KEY_OA_STATUS,
+    BULK_UPDATE_SEARCH_KEY_ORG_UNIT_NAME,
+    BULK_UPDATE_SEARCH_KEY_RIGHTS,
+    BULK_UPDATE_SEARCH_KEY_SCOPUS_DOC_TYPE,
+    BULK_UPDATE_SEARCH_KEY_SERIES,
+    BULK_UPDATE_SEARCH_KEY_WOK_DOC_TYPE,
+} from 'config/bulkUpdates';
+
+import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
+import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
+import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
+import { OrgUnitNameField, SeriesField } from 'modules/SharedComponents/LookupFields';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
+
+export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
+    [BULK_UPDATE_SEARCH_KEY_OA_STATUS]: {
+        component: OAStatusField,
+        componentProps: {
+            genericSelectFieldId: 'search-key-value',
+            normalize: value => parseInt(value, 10),
+        },
+    },
+    [BULK_UPDATE_SEARCH_KEY_SCOPUS_DOC_TYPE]: {
+        component: ScopusDocTypesField,
+        componentProps: {
+            genericSelectFieldId: 'search-key-value',
+        },
+    },
+    [BULK_UPDATE_SEARCH_KEY_WOK_DOC_TYPE]: {
+        component: WoSDocTypesField,
+        componentProps: {
+            genericSelectFieldId: 'search-key-value',
+            normalize: value => parseInt(value, 10),
+        },
+    },
+    [BULK_UPDATE_SEARCH_KEY_ORG_UNIT_NAME]: {
+        component: OrgUnitNameField,
+        componentProps: {
+            fullWidth: true,
+            floatingLabelText: 'Search key value',
+            showClear: true,
+            orgUnitNameFieldId: 'search-key-value',
+        },
+    },
+    [BULK_UPDATE_SEARCH_KEY_ADDITIONAL_NOTES]: {
+        component: RichEditorField,
+        componentProps: {
+            title: 'Search key value',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            normalize: value => (!!value && value.hasOwnProperty('htmlText') ? value.htmlText : null),
+        },
+    },
+    [BULK_UPDATE_SEARCH_KEY_SERIES]: {
+        component: SeriesField,
+        componentProps: {
+            fullWidth: true,
+            floatingLabelText: 'Search key value',
+            showClear: true,
+            seriesFieldId: 'search-key-value',
+        },
+    },
+    [BULK_UPDATE_SEARCH_KEY_RIGHTS]: {
+        component: GenericTextField,
+        componentProps: {
+            textFieldId: 'search-key-value',
+            fullWidth: true,
+            placeholder: '',
+        },
+    },
+    [BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT]: {
+        component: RichEditorField,
+        componentProps: {
+            title: 'Search key value',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            normalize: value => (!!value && value.hasOwnProperty('htmlText') ? value.htmlText : null),
+        },
+    },
+};
+
+export const getSearchKeyValueField = searchKey => {
+    return BULK_UPDATES_SEARCH_KEY_COMPONENTS[searchKey];
+};
 
 export const SearchKeyField = fieldProps => {
     return (

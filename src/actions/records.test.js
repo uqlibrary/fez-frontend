@@ -1161,11 +1161,9 @@ describe('Record action creators', () => {
                         },
                     ],
                     {
-                        searchKey: 'rek_oa_status',
-                        searchKeyValue: {
-                            fez_record_search_key_oa_status: {
-                                rek_oa_status: '453692',
-                            },
+                        search_key: 'fez_record_search_key_oa_status.rek_oa_status',
+                        fez_record_search_key_oa_status: {
+                            rek_oa_status: '453692',
                         },
                     },
                 ),
@@ -1193,11 +1191,9 @@ describe('Record action creators', () => {
                             },
                         ],
                         {
-                            searchKey: 'rek_oa_status',
-                            searchKeyValue: {
-                                fez_record_search_key_oa_status: {
-                                    rek_oa_status: '453692',
-                                },
+                            search_key: 'fez_record_search_key_oa_status.rek_oa_status',
+                            fez_record_search_key_oa_status: {
+                                rek_oa_status: '453692',
                             },
                         },
                     ),

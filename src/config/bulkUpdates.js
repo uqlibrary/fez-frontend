@@ -46,14 +46,15 @@ export const BULK_UPDATES_ACTIONS = {
 };
 
 // Bulk updates search key options values
-export const BULK_UPDATE_SEARCH_KEY_OA_STATUS = 'rek_oa_status';
+export const BULK_UPDATE_SEARCH_KEY_OA_STATUS = 'fez_record_search_key_oa_status.rek_oa_status';
 export const BULK_UPDATE_SEARCH_KEY_SCOPUS_DOC_TYPE = 'rek_scopus_doc_type';
 export const BULK_UPDATE_SEARCH_KEY_WOK_DOC_TYPE = 'rek_wok_doc_type';
-export const BULK_UPDATE_SEARCH_KEY_ORG_UNIT_NAME = 'rek_org_unit_name';
-export const BULK_UPDATE_SEARCH_KEY_ADDITIONAL_NOTES = 'rek_notes';
-export const BULK_UPDATE_SEARCH_KEY_SERIES = 'rek_series';
-export const BULK_UPDATE_SEARCH_KEY_RIGHTS = 'rek_rights';
-export const BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT = 'rek_advisory_statement';
+export const BULK_UPDATE_SEARCH_KEY_ORG_UNIT_NAME = 'fez_record_search_key_org_unit_name.rek_org_unit_name';
+export const BULK_UPDATE_SEARCH_KEY_ADDITIONAL_NOTES = 'fez_record_search_key_notes.rek_notes';
+export const BULK_UPDATE_SEARCH_KEY_SERIES = 'fez_record_search_key_series.rek_series';
+export const BULK_UPDATE_SEARCH_KEY_RIGHTS = 'fez_record_search_key_rights.rek_rights';
+export const BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT =
+    'fez_record_search_key_advisory_statement.rek_advisory_statement';
 
 export const BULK_UPDATE_SEARCH_KEYS = {
     0: {
