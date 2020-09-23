@@ -3278,6 +3278,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   style={
                                                     Object {
                                                       "marginBottom": 8,
+                                                      "marginTop": 4,
                                                     }
                                                   }
                                                 >
@@ -3394,6 +3395,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     style={
                                                       Object {
                                                         "marginBottom": 8,
+                                                        "marginTop": 4,
                                                       }
                                                     }
                                                   >
@@ -3402,6 +3404,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       style={
                                                         Object {
                                                           "marginBottom": 8,
+                                                          "marginTop": 4,
                                                         }
                                                       }
                                                     >
