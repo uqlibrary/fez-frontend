@@ -893,7 +893,6 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -1799,7 +1798,6 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -2783,7 +2781,6 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -3767,7 +3764,6 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -4490,7 +4486,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -5213,7 +5208,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -6197,7 +6191,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -7181,7 +7174,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -8165,7 +8157,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -9077,7 +9068,6 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type
@@ -9983,7 +9973,6 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
               data-testid="changeDisplayType-submit"
               fullWidth={true}
               id="changeDisplayType-submit"
-              onClick={[Function]}
               variant="contained"
             >
               Change display type

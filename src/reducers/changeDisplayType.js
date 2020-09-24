@@ -7,19 +7,19 @@ const initialState = {
 };
 
 const handlers = {
-    [actions.ADMIN_UPDATE_WORK_PROCESSING]: state => ({
+    [actions.CHANGE_DISPLAY_TYPE_INPROGRESS]: state => ({
         ...state,
         saveRequesting: true,
         saveFailed: false,
     }),
 
-    [actions.ADMIN_UPDATE_WORK_SUCCESS]: state => ({
+    [actions.CHANGE_DISPLAY_TYPE_SUCCESS]: state => ({
         ...state,
         saveRequesting: false,
         saveUpdated: true,
     }),
 
-    [actions.ADMIN_UPDATE_WORK_FAILED]: state => ({
+    [actions.CHANGE_DISPLAY_TYPE_FAILED]: state => ({
         ...state,
         saveFailed: true,
         saveRequesting: false,
