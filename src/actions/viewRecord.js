@@ -11,7 +11,7 @@ export function loadRecordToView(pid, isEdit = false) {
     return dispatch => {
         dispatch({ type: actions.VIEW_RECORD_LOADING });
 
-        return get(EXISTING_RECORD_API({ pid: pid.toUpperCase(), isEdit }))
+        return get(EXISTING_RECORD_API({ pid: pid.replace('uq:', 'UQ:'), isEdit }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
