@@ -92,6 +92,7 @@ describe('Application component', () => {
             account: account.s3333333,
             author: currentAuthor.s3333333.data,
             location: { pathname: '/' },
+            authorDetails: {},
         });
         expect(wrapper.find('[alertId*="orcid"]').length).toBe(0);
     });
@@ -369,6 +370,7 @@ describe('Application component', () => {
                 ...author,
                 aut_orcid_id: null,
             },
+            authorDetails: {},
         });
         wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(wrapper.find('[alertId*="orcid"]').length).toBe(0);
