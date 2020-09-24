@@ -4,7 +4,6 @@ import { OA_STATUS } from 'config/general';
 import Immutable from 'immutable';
 
 export default function OAStatusField(fieldProps) {
-    console.log(fieldProps);
     const input = !!fieldProps.input && fieldProps.input.value;
     return (
         <NewGenericSelectField
