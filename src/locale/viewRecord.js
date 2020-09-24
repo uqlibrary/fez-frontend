@@ -2681,6 +2681,10 @@ export default {
                     field: 'fez_record_search_key_license',
                     order: 19,
                 },
+                {
+                    field: 'fez_record_search_key_advisory_statement',
+                    order: 20,
+                },
             ],
             'Working Paper': [
                 {
