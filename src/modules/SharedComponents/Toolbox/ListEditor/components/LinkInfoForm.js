@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -6,51 +6,51 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { url } from 'config/validation';
 
-export const handleChangeCallback = (linkAndDescription, setErrorText) => {
-    const callback = event => {
-        const { name, value } = event.target;
-        linkAndDescription[name] = value;
-        setErrorText(url(linkAndDescription.key));
-    };
-    return [callback, [linkAndDescription]];
-};
+export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) => {
+    const [link, setLink] = React.useState(null);
+    const [description, setDescription] = React.useState(null);
+    const [errorText, setErrorText] = React.useState(null);
+    const linkInput = React.useRef(null);
+    const descriptionInput = React.useRef(null);
 
-export const resetFormCallbackFactory = (linkInput, descriptionInput, linkAndDescription) => {
-    const callback = () => {
-        linkAndDescription.key = null;
-        linkAndDescription.value = null;
+    React.useEffect(() => {
+        if (!!itemSelectedToEdit && !!itemSelectedToEdit.key) {
+            setLink(itemSelectedToEdit.key);
+            setDescription(itemSelectedToEdit.value);
+        }
+    }, [itemSelectedToEdit]);
+
+    const resetForm = () => {
+        setLink(null);
+        setDescription(null);
         linkInput.current.value = null;
         descriptionInput.current.value = null;
     };
-    return [callback, [linkInput, descriptionInput, linkAndDescription]];
-};
 
-export const addItemCallbackFactory = (linkInput, disabled, errorText, linkAndDescription, onAdd, resetForm) => {
-    const callback = event => {
-        // add item if user hits 'enter' key on input field
-        if (disabled || errorText || !linkAndDescription.key || (event && event.key && event.key !== 'Enter')) {
-            return;
+    const handleChange = React.useCallback(event => {
+        const { name, value } = event.target;
+
+        if (name === 'link') {
+            setLink(value);
+            setErrorText(url(value));
         }
-        // pass on the selected item
-        onAdd({ ...linkAndDescription });
-        resetForm();
 
-        // move focus to name as published text field after item was added
-        linkInput.current.focus();
-    };
-    return [callback, [linkInput, disabled, linkAndDescription, onAdd, resetForm, errorText]];
-};
+        if (name === 'description') {
+            setDescription(value);
+        }
+    }, []);
 
-export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) => {
-    const linkAndDescription = useRef(itemSelectedToEdit || { key: null, value: null });
-    const [errorText, setErrorText] = useState(null);
-    const linkInput = useRef(null);
-    const descriptionInput = useRef(null);
-
-    const handleChange = useCallback(...handleChangeCallback(linkAndDescription.current, setErrorText));
-    const resetForm = useCallback(...resetFormCallbackFactory(linkInput, descriptionInput, linkAndDescription.current));
-    const addItem = useCallback(
-        ...addItemCallbackFactory(linkInput, disabled, errorText, linkAndDescription.current, onAdd, resetForm),
+    const handleSubmit = React.useCallback(
+        event => {
+            if (disabled || errorText || !link || (event && event.key && event.key !== 'Enter')) {
+                return;
+            }
+            onAdd({ key: link, value: description });
+            resetForm();
+            linkInput.current.focus();
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [link, description],
     );
 
     const {
@@ -66,36 +66,38 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
         <Grid container spacing={2} display="row" alignItems="center">
             <Grid item style={{ flexGrow: 1 }} xs={12} sm={6} md={5}>
                 <TextField
+                    key={(itemSelectedToEdit || {}).key}
                     fullWidth
-                    name="key"
+                    name="link"
                     textFieldId="rek-link"
                     label={linkInputFieldLabel}
                     placeholder={linkInputFieldHint}
                     onChange={handleChange}
-                    onKeyDown={addItem}
+                    onKeyDown={handleSubmit}
                     error={!!errorText}
                     errorText={errorText}
                     disabled={disabled}
                     inputProps={{
                         ref: linkInput,
                     }}
-                    defaultValue={linkAndDescription.current.key || (itemSelectedToEdit || {}).key || ''}
+                    defaultValue={(itemSelectedToEdit || {}).key || ''}
                 />
             </Grid>
             <Grid item xs={12} sm={6} md={5}>
                 <TextField
+                    key={(itemSelectedToEdit || {}).value}
                     fullWidth
-                    name="value"
+                    name="description"
                     textFieldId="rek-link-description"
                     label={descriptionInputFieldLabel}
                     placeholder={descriptionInputFieldHint}
                     onChange={handleChange}
-                    onKeyDown={addItem}
+                    onKeyDown={handleSubmit}
                     disabled={disabled}
                     inputProps={{
                         ref: descriptionInput,
                     }}
-                    defaultValue={linkAndDescription.current.value || (itemSelectedToEdit || {}).value || ''}
+                    defaultValue={(itemSelectedToEdit || {}).value || ''}
                 />
             </Grid>
             <Grid item xs={12} md={2}>
@@ -106,8 +108,8 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}
-                    disabled={disabled || !!errorText || !linkAndDescription.current.key}
-                    onClick={addItem}
+                    disabled={disabled || !!errorText || !link}
+                    onClick={handleSubmit}
                 />
             </Grid>
         </Grid>
