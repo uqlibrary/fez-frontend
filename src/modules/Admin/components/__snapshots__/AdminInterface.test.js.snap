@@ -16,7 +16,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -292,7 +292,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -538,7 +538,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -784,7 +784,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -989,7 +989,7 @@ exports[`AdminInterface component should render default view as a full form view
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -1218,7 +1218,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -1445,7 +1445,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View new record",
+          "cancelButtonLabel": "View new work",
           "confirmButtonLabel": "Add another work",
           "confirmationMessage": "Your new work has been added to eSpace.",
           "confirmationTitle": "Work has been added",
@@ -1648,7 +1648,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -1886,7 +1886,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
@@ -2124,7 +2124,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
+          "cancelButtonLabel": "View updated work",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",

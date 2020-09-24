@@ -60,7 +60,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records. 
+          Displaying works 1 to 2 of 2 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -177,7 +177,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records. 
+          Displaying works 1 to 2 of 2 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -357,7 +357,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             isMyDataSetPage={true}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }

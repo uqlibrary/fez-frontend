@@ -1494,7 +1494,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
               </React.Fragment>,
               "confirmationTitle": "Your request has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload failed",
                 "type": "info",
               },
@@ -1523,7 +1523,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
-                  label="Describe the problem with this record, eg work is a duplicate, or suggested changes"
+                  label="Describe the problem with this work, eg work is a duplicate, or suggested changes"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -2666,7 +2666,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   customType={null}
                   disableAlertClick={false}
                   dismissTitle="Click to dismiss this alert"
-                  message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
+                  message="Retry via \\"Fix work\\" screen or contact eSpace administrators."
                   showLoader={false}
                   title="File upload failed"
                   type="info"
@@ -2685,7 +2685,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               </React.Fragment>,
               "confirmationTitle": "Your request has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload failed",
                 "type": "info",
               },
@@ -2714,7 +2714,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
-                  label="Describe the problem with this record, eg work is a duplicate, or suggested changes"
+                  label="Describe the problem with this work, eg work is a duplicate, or suggested changes"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -3357,7 +3357,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               </React.Fragment>,
               "confirmationTitle": "Your request has been submitted",
               "fileFailConfirmationAlert": Object {
-                "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+                "message": "Retry via \\"Fix work\\" screen or contact eSpace administrators.",
                 "title": "File upload failed",
                 "type": "info",
               },
@@ -3386,7 +3386,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                   component={[Function]}
                   disabled={false}
                   fullWidth={true}
-                  label="Describe the problem with this record, eg work is a duplicate, or suggested changes"
+                  label="Describe the problem with this work, eg work is a duplicate, or suggested changes"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -4024,7 +4024,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                   "cancelButtonLabel": "Go to my dashboard",
                   "confirmButtonLabel": "Go to my research",
                   "confirmationMessage": "You have unclaimed this work successfully",
-                  "confirmationTitle": "Unclaim a record",
+                  "confirmationTitle": "Unclaim a work",
                 }
               }
               onAction={[Function]}

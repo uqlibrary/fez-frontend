@@ -124,6 +124,7 @@ describe('AttachedFiles component', () => {
         expect(onDeleteFn).toHaveBeenCalledWith(3);
 
         fireEvent.change(getByTestId('dsi-label-2-input'), { target: { value: 'test file description' } });
+        fireEvent.blur(getByTestId('dsi-label-2-input'));
         expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
     });
 

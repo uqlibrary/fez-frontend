@@ -27,7 +27,7 @@ export default {
                 ['rek_date'],
                 ['fez_record_search_key_date_available'],
                 ['rek_description'],
-                ['rek_genre'],
+                ['fez_record_search_key_type_of_data'],
                 ['fez_record_search_key_original_format'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],

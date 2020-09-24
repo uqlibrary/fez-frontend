@@ -64,7 +64,6 @@ export const pathConfig = {
         mine: '/records/mine',
         possible: '/records/possible',
         search: '/records/search',
-        view_new: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view_new/${pid}`, //  temporary for MM to view pids without being redirected to legacy
         view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
     },
     dataset: {
@@ -132,6 +131,7 @@ export const pathConfig = {
     },
     admin: {
         add: '/admin/add',
+        changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         collection: '/admin/collection',
         community: '/admin/community',
         delete: pid => `/admin/delete/${pid}`,
@@ -171,6 +171,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 export const flattedPathConfig = [
     '/admin/add',
+    '/admin/change-display-type',
     '/admin/collection',
     '/admin/community',
     '/admin/masquerade',
@@ -245,13 +246,6 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`),
-        },
-        {
-            path: pathConfig.records.view_new(pid),
-            component: components.NewViewRecord,
-            exact: true,
-            pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view_new(`(${pidRegExp})`),
         },
         {
             path: pathConfig.records.search,
@@ -487,6 +481,13 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.admin.doi(pid),
                       component: components.Doi,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.changeDisplayType(pid),
+                      component: components.ChangeDisplayType,
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,

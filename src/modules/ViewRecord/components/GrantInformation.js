@@ -103,7 +103,7 @@ export const GrantInformation = ({ publication }) => {
                         {fundingText}
                     </Typography>
                 )}
-                {publication.fez_record_search_key_grant_agency && renderGrants(publication, !!fundingText)}
+                {publication.fez_record_search_key_grant_agency && renderGrants(publication, !fundingText)}
             </StandardCard>
         </Grid>
     );

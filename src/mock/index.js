@@ -243,6 +243,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListAudio.data,
             ...mockData.publicationTypeListBook.data,
             ...mockData.publicationTypeListBookChapter.data,
+            ...mockData.publicationTypeListBookEdited.data,
             ...mockData.publicationTypeListConferencePaper.data,
             ...mockData.publicationTypeListConferenceProceedings.data,
             ...mockData.publicationTypeListCreativeWork.data,
@@ -302,8 +303,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.orcidSyncStatus)
     .onGet(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)
     .reply(200, mockData.favouriteSearchList)
-    .onGet(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*'}).apiUrl)))
-    .reply(200, { ...mockData.favouriteSearchItem})
+    .onGet(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.favouriteSearchItem })
     // .reply(404)
     .onGet(new RegExp(escapeRegExp(routes.ISSN_LINKS_API({ type: 'sherpa-romeo', issn: '.*' }).apiUrl)))
     .reply(config => {
@@ -345,17 +346,38 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         return [200, { data }];
     });
 
-mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
-// .reply(500, { message: ['error - failed PUT FILE_UPLOAD_S3'] });
-mock.onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*'}).apiUrl)))
+// let uploadTryCount = 1;
+mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
+    .reply(() => {
+        // if (uploadTryCount < 3) {
+        //     console.log(`Failing try ${uploadTryCount}`);
+        //     uploadTryCount++;
+        //     return [500, { message: ['error - failed PUT FILE_UPLOAD_S3'] }];
+        // }
+        // console.log('Successful upload');
+        return [200, { data: {} }];
+        // return [500, { message: ['error - failed PUT FILE_UPLOAD_S3'] }];
+    })
+    .onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        return [200, { data: { ...mockData.favouriteSearchItem}}]
+        return [200, { data: { ...mockData.favouriteSearchItem } }];
     });
 
-mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API( { id: '.*'}))
-    .reply(200, {data: {}});
+mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' })).reply(200, { data: {} });
 
-mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
+// let retried = false;
+mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
+    // .reply(() => {
+    //     if (retried) {
+    //         return [200, ['s3-ap-southeast-2.amazonaws.com']];
+    //     } else {
+    //         retried = true;
+    //         return [500, { message: ['error - failed FILE_UPLOAD_API'] }];
+    //     }
+    // })
+    .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
+    // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
+    .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: '' })
     // .reply(500, { message: ['error - failed POST RECORDS_ISSUES_API'] })
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
@@ -376,7 +398,7 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
     .reply(() => [200, { data: mockData.communityRecord }])
     .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
-    .reply(200, { data: { ...mockData.favouriteSearchItem}});
+    .reply(200, { data: { ...mockData.favouriteSearchItem } });
 
 mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {
     data: 'Record deleted',

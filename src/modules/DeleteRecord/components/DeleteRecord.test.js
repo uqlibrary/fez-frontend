@@ -1,5 +1,5 @@
 import DeleteRecord from './DeleteRecord';
-import { mockRecordToDelete, mockRecordToFix } from 'mock/data/testing/records';
+import { mockRecordToDelete } from 'mock/data/testing/records';
 import Immutable from 'immutable';
 import { UQ_DOI_PREFIX } from 'config/general';
 

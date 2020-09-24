@@ -5696,7 +5696,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
         customType={null}
         disableAlertClick={false}
         dismissTitle="Click to dismiss this alert"
-        message="We have found 5 record(s) that could possibly be your works."
+        message="We have found 5 work(s) that could possibly be your works."
         showLoader={false}
         title="Claim now!"
         type="info_outline"
@@ -13225,6 +13225,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         >
                                                           <WithStyles(ForwardRef(Button))
                                                             className="action alert-button"
+                                                            disabled={false}
                                                             fullWidth={true}
                                                             id="action-button"
                                                             onClick={[Function]}
@@ -13265,6 +13266,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                   "textSizeSmall": "MuiButton-textSizeSmall",
                                                                 }
                                                               }
+                                                              disabled={false}
                                                               fullWidth={true}
                                                               id="action-button"
                                                               onClick={[Function]}

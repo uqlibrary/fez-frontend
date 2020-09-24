@@ -302,13 +302,13 @@ export const Alert = ({
                 id={alertId}
                 data-testid={alertId}
             >
-                <Grid item xs={12} sm className={action && !disableAlertClick && classes.linked}>
+                <Grid item xs={12} sm className={(action && !disableAlertClick && classes.linked) || ''}>
                     <Grid container justify="center" alignItems="flex-start" alignContent="center">
                         <Grid
                             item
                             className={`${classes.icon} alert-icon ${wiggle ? classes.wiggler : ''}`}
-                            onClick={!disableAlertClick && action}
-                            onKeyDown={!disableAlertClick && action}
+                            onClick={(!disableAlertClick && action) || undefined}
+                            onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             {showLoader ? (
                                 <CircularProgress id="spinner" className="spinner" size={38} thickness={3} />
@@ -320,8 +320,8 @@ export const Alert = ({
                             item
                             xs
                             className={`${classes.text} alert-text`}
-                            onClick={!disableAlertClick && action}
-                            onKeyDown={!disableAlertClick && action}
+                            onClick={(!disableAlertClick && action) || undefined}
+                            onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             <b>{title && `${title} - `}</b>
                             {message}
@@ -351,6 +351,7 @@ export const Alert = ({
                             fullWidth
                             className="action alert-button"
                             id="action-button"
+                            disabled={showLoader}
                         />
                     </Grid>
                 )}

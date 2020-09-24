@@ -18,12 +18,11 @@ export default {
             },
             openAccessFilter: {
                 displayTitle: 'Open access status',
-                activeFilter: 'Show only open access records',
+                activeFilter: 'Show only open access works',
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
             renameFacetsList: { 'Display type': 'Work type', Subtype: 'Work subtype' },
             lookupFacetsList: {
-                Author: 'Author (lookup)',
                 Collection: 'Collection (lookup)',
                 Subject: 'Subject (lookup)',
             },
@@ -442,6 +441,39 @@ export default {
                 },
             },
         },
+        grants: {
+            locale: {
+                form: {
+                    locale: {
+                        grantAgencyNameLabel: 'Funder/Sponsor name',
+                        grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                        grantIdLabel: 'Grant ID',
+                        grantIdHint: 'Enter grant number for this work, if available',
+                        grantAgencyTypeLabel: 'Funder/Sponsor type',
+                        grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                        addButton: 'Add grant',
+                        editButton: 'Edit grant',
+                        description:
+                            "Add the grant's name, ID and type - then click the ADD GRANT button to add each to the list",
+                    },
+                },
+                header: {
+                    locale: {
+                        GrantAgencyName: 'Funder/Sponsor name',
+                        GrantID: 'Grant ID',
+                        GrantAgencyType: 'Funder/Sponsor type',
+                        reorderColumn: 'Reorder entries',
+                        deleteAll: 'Remove all entries',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all entries?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         thirdPartyLookupTools: {
             display: {
                 title: 'Lookup Tools - view raw output from APIs',
@@ -483,8 +515,46 @@ export default {
             field: {
                 form: {
                     locale: {
+                        inputFieldLabel: 'Type',
+                        inputFieldHint: 'Enter type',
+                        addButtonLabel: 'Add',
+                        editButtonLabel: 'Update',
+                        id: 'type-of-data-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Type',
+                        reorderColumn: 'Reorder type',
+                        deleteAll: 'Remove all types',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all types?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move type up the order',
+                        moveDownHint: 'Move type down the order',
+                        deleteHint: 'Remove this type',
+                        editHint: 'Edit this type',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete type',
+                            confirmationMessage: 'Are you sure you want to delete this type?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+            fieldDataset: {
+                form: {
+                    locale: {
                         inputFieldLabel: 'Type of data',
-                        inputFieldHint: 'Type type of data',
+                        inputFieldHint: 'Enter type of data',
                         addButtonLabel: 'Add',
                         editButtonLabel: 'Update',
                         id: 'type-of-data-input',
@@ -493,11 +563,11 @@ export default {
                 header: {
                     locale: {
                         nameColumn: 'Type of data',
-                        reorderColumn: 'Reorder type of data',
-                        deleteAll: 'Remove all type of data',
+                        reorderColumn: 'Reorder types of data',
+                        deleteAll: 'Remove all types of data',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
-                            confirmationMessage: 'Are you sure you want to delete all type of data?',
+                            confirmationMessage: 'Are you sure you want to delete all types of data?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
@@ -1557,15 +1627,15 @@ export default {
             nextPage: 'Next',
             previousPage: 'Previous',
             maxPagesToShow: 5,
-            pageSize: 'Records per page',
+            pageSize: 'Works per page',
             pageOf: 'Page [currentPage] of [totalPages]',
-            totalRecords: '([total] records)',
+            totalRecords: '([total] works)',
             pagingBracket: 3,
             pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
             firstLastSeparator: '...',
         },
         sorting: {
-            pageSize: 'Records per page',
+            pageSize: 'Works per page',
             sortLabel: 'Sort results by',
             sortDirectionLabel: 'Sort order',
             sortBy: [
@@ -2838,6 +2908,37 @@ export default {
                         type: 'error',
                     },
                 },
+            },
+        },
+        changeDisplayType: {
+            title: 'Change display type from ',
+            publicationType: {
+                inputLabelText: 'New Work type',
+                hintText: 'Select a Work type from the dropdown list',
+            },
+            publicationSubtype: {
+                inputLabelText: 'New Work subtype',
+                hintText: 'Select a work subtype from the dropdown list',
+            },
+            submit: 'Change display type',
+            cancelButtonLabel: 'Cancel',
+            loadingMessage: 'Loading work',
+            workflowConfirmation: {
+                confirmationTitle: 'Change Display type',
+                confirmationMessage: 'Display type has been changed',
+                cancelButtonLabel: 'View work',
+                confirmButtonLabel: 'Edit full work',
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Changing Display type is in progress.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Display type has been changed successfully.',
             },
         },
     },

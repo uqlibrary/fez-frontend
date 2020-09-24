@@ -534,7 +534,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
@@ -1086,7 +1086,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the work.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
@@ -1183,6 +1183,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
 </StandardPage>
 `;
 
+exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
+Array [
+  "Not all files were uploaded. Please contact ",
+  <a
+    href="mailto:thesis@gradschool.uq.edu.au?subject=Problem%20with%20Submission%20to%20UQ%20eSpace%20-%20First%20Last%2C%201234567"
+  >
+    the Graduate School
+  </a>,
+  " for assistance.",
+]
+`;
+
 exports[`ThesisSubmission should show the file upload failure alert 1`] = `
 <StandardPage
   title="Professional doctorate deposit"
@@ -1228,7 +1240,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
         allowDismiss={false}
         customIcon={null}
         customType={null}
-        disableAlertClick={false}
+        disableAlertClick={true}
         dismissTitle="Click to dismiss this alert"
         message={
           Array [

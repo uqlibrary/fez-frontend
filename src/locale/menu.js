@@ -33,7 +33,7 @@ export default {
             secondaryText: 'as another user',
         },
         adminAdd: {
-            primaryText: 'Add a new record',
+            primaryText: 'Add a new work',
             secondaryText: 'as an admin user',
         },
         search: {

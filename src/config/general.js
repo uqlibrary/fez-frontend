@@ -1170,6 +1170,14 @@ export const RECORD_ACTION_URLS = [
         options: 'menubar=no,location=no,width=300,height=300,resizable=yes,scrollbars=yes,status=no',
     },
     {
+        label: 'Change display type',
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/change-display-type/${pid}`,
+        inApp: true,
+        showInDeleted: false,
+        options: null,
+        isChangeDisplayMenu: true,
+    },
+    {
         label: 'More options',
         url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
         inApp: true,
@@ -1472,3 +1480,5 @@ export const AFFILIATION_TYPE_UQ = 'UQ';
 export const UQ_DOI_PREFIX = '10.14264/';
 
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
+
+export const THESIS_UPLOAD_RETRIES = 5;

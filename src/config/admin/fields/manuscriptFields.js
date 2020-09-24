@@ -22,7 +22,7 @@ export default {
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
                 ['rek_description'],
-                ['rek_genre'],
+                ['fez_record_search_key_type_of_data'],
                 ['fez_record_search_key_original_format'],
             ],
         },
