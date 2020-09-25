@@ -87,6 +87,7 @@ export default {
                 format: value => Immutable.Map(value),
                 validate: [validation.required],
                 required: true,
+                richEditorId: 'rek-title',
             },
         },
         rek_herdc_notes: {
@@ -103,6 +104,7 @@ export default {
                 },
                 height: 100,
                 format: value => Immutable.Map(value),
+                richEditorId: 'rek-herdc-notes',
             },
         },
         internalNotes: {
@@ -118,6 +120,7 @@ export default {
                 },
                 height: 100,
                 format: value => Immutable.Map(value),
+                richEditorId: 'ain-detail-input',
             },
         },
         fez_record_search_key_isi_loc: {
@@ -208,6 +211,7 @@ export default {
                 },
                 height: 100,
                 format: value => Immutable.Map(value),
+                richEditorId: 'rek-description',
             },
         },
         rek_date: {
@@ -871,6 +875,7 @@ export default {
                 },
                 height: 100,
                 format: value => Immutable.Map(value),
+                richEditorId: 'rek-notes',
             },
         },
         advisoryStatement: {
@@ -886,6 +891,7 @@ export default {
                 },
                 height: 100,
                 format: value => Immutable.Map(value),
+                richEditorId: 'rek-advisory-statement',
             },
         },
         fez_record_search_key_transcript: {
@@ -901,6 +907,7 @@ export default {
                 },
                 height: 100,
                 format: value => Immutable.Map(value),
+                richEditorId: 'rek-transcript',
             },
         },
         significanceAndContributionStatement: {
@@ -1177,6 +1184,7 @@ export default {
                     },
                 },
                 format: value => Immutable.Map(value),
+                richEditorId: 'rek-related-datasets',
             },
         },
         fez_record_search_key_related_publications: {
@@ -1191,6 +1199,7 @@ export default {
                     },
                 },
                 format: value => Immutable.Map(value),
+                richEditorId: 'rek-related-publications',
             },
         },
         fez_record_search_key_isdatasetof: {

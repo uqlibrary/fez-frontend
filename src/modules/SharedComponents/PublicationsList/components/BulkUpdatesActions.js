@@ -22,6 +22,7 @@ export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
     const handleHideConfirmation = () => {
         hideConfirmation();
         setSelectedAction(null);
+        window.location.reload();
     };
 
     const txt = locale.components.bulkUpdates;
@@ -36,21 +37,23 @@ export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
 
     return (
         <React.Fragment>
-            <ConfirmationBox
-                hideActionButton
-                hideCancelButton
-                confirmationBoxId={`bulk-updates-action-${selectedAction}`}
-                isOpen={isOpen}
-                locale={txt.inputForm(BULK_UPDATES_ACTIONS[selectedAction])}
-                showInputForm={!!selectedAction}
-                InputForm={() => (
-                    <BulkUpdatesForm
-                        selectedAction={selectedAction}
-                        recordsSelected={recordsSelected}
-                        onCancel={handleHideConfirmation}
-                    />
-                )}
-            />
+            {!!selectedAction && (
+                <ConfirmationBox
+                    hideActionButton
+                    hideCancelButton
+                    confirmationBoxId={`bulk-updates-action-${selectedAction}`}
+                    isOpen={isOpen}
+                    locale={txt.inputForm(BULK_UPDATES_ACTIONS[selectedAction])}
+                    showInputForm={!!selectedAction}
+                    InputForm={() => (
+                        <BulkUpdatesForm
+                            selectedAction={selectedAction}
+                            recordsSelected={recordsSelected}
+                            onCancel={handleHideConfirmation}
+                        />
+                    )}
+                />
+            )}
             <NewGenericSelectField
                 hideLabel
                 fullWidth

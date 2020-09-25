@@ -3,6 +3,7 @@ import PublicationsList from './PublicationsList';
 import { myRecordsList } from 'mock/data';
 import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 import * as Context from 'context';
+import * as Hooks from 'hooks/userIsAdmin';
 
 function setup(testProps = {}) {
     const props = {
@@ -43,9 +44,11 @@ describe('PublicationsList', () => {
 
     it('should render checkbox for each publication and render bulk updates actions on selecting records', () => {
         const useRecordsSelectorContext = jest.spyOn(Context, 'useRecordsSelectorContext');
+        const userIsAdmin = jest.spyOn(Hooks, 'userIsAdmin');
         useRecordsSelectorContext.mockImplementation(() => ({
             records: myRecordsList.data,
         }));
+        userIsAdmin.mockImplementation(() => true);
         const { getByTestId, queryByTestId } = setup({ publicationsList: myRecordsList.data });
         expect(queryByTestId('bulk-updates-actions-select')).not.toBeInTheDocument();
         expect(getByTestId('select-all-publications-input')).toBeInTheDocument();
@@ -56,10 +59,12 @@ describe('PublicationsList', () => {
     });
 
     it('should render change display type form', () => {
+        const userIsAdmin = jest.spyOn(Hooks, 'userIsAdmin');
         const useRecordsSelectorContext = jest.spyOn(Context, 'useRecordsSelectorContext');
         useRecordsSelectorContext.mockImplementation(() => ({
             records: myRecordsList.data,
         }));
+        userIsAdmin.mockImplementation(() => true);
 
         const { getByTestId, getByText } = setup({ publicationsList: myRecordsList.data });
 
@@ -71,10 +76,12 @@ describe('PublicationsList', () => {
     });
 
     it('should render change search key value form', () => {
+        const userIsAdmin = jest.spyOn(Hooks, 'userIsAdmin');
         const useRecordsSelectorContext = jest.spyOn(Context, 'useRecordsSelectorContext');
         useRecordsSelectorContext.mockImplementation(() => ({
             records: myRecordsList.data,
         }));
+        userIsAdmin.mockImplementation(() => true);
 
         const { getByTestId, getByText } = setup({ publicationsList: myRecordsList.data });
 

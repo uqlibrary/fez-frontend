@@ -19,25 +19,27 @@ import { OrgUnitNameField, SeriesField } from 'modules/SharedComponents/LookupFi
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
+// istanbul ignore next
+const normalizeFn = value => (!!value && value.hasOwnProperty('htmlText') ? value.htmlText : null);
+
 export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
     [BULK_UPDATE_SEARCH_KEY_OA_STATUS]: {
         component: OAStatusField,
         componentProps: {
-            genericSelectFieldId: 'search-key-value',
+            genericSelectFieldId: 'rek-oa-status',
             normalize: value => parseInt(value, 10),
         },
     },
     [BULK_UPDATE_SEARCH_KEY_SCOPUS_DOC_TYPE]: {
         component: ScopusDocTypesField,
         componentProps: {
-            genericSelectFieldId: 'search-key-value',
+            genericSelectFieldId: 'rek-scopus-doc-type',
         },
     },
     [BULK_UPDATE_SEARCH_KEY_WOK_DOC_TYPE]: {
         component: WoSDocTypesField,
         componentProps: {
-            genericSelectFieldId: 'search-key-value',
-            normalize: value => parseInt(value, 10),
+            genericSelectFieldId: 'rek-wok-doc-type',
         },
     },
     [BULK_UPDATE_SEARCH_KEY_ORG_UNIT_NAME]: {
@@ -46,7 +48,7 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
             fullWidth: true,
             floatingLabelText: 'Search key value',
             showClear: true,
-            orgUnitNameFieldId: 'search-key-value',
+            orgUnitNameFieldId: 'rek-org-unit-name',
         },
     },
     [BULK_UPDATE_SEARCH_KEY_ADDITIONAL_NOTES]: {
@@ -60,7 +62,8 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
                 },
             },
             height: 100,
-            normalize: value => (!!value && value.hasOwnProperty('htmlText') ? value.htmlText : null),
+            normalize: normalizeFn,
+            richEditorId: 'rek-notes',
         },
     },
     [BULK_UPDATE_SEARCH_KEY_SERIES]: {
@@ -69,13 +72,13 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
             fullWidth: true,
             floatingLabelText: 'Search key value',
             showClear: true,
-            seriesFieldId: 'search-key-value',
+            seriesFieldId: 'rek-series',
         },
     },
     [BULK_UPDATE_SEARCH_KEY_RIGHTS]: {
         component: GenericTextField,
         componentProps: {
-            textFieldId: 'search-key-value',
+            textFieldId: 'rek-rights',
             fullWidth: true,
             placeholder: '',
         },
@@ -91,7 +94,8 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
                 },
             },
             height: 100,
-            normalize: value => (!!value && value.hasOwnProperty('htmlText') ? value.htmlText : null),
+            normalize: normalizeFn,
+            richEditorId: 'rek-advisory-statement',
         },
     },
 };

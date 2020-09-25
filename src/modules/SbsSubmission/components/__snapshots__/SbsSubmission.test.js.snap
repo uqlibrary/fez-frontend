@@ -113,6 +113,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   height={50}
                   name="thesisTitle"
                   required={true}
+                  richEditorId="rek-title"
                   title="Thesis title"
                   validate={
                     Array [
@@ -284,6 +285,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   disabled={false}
                   name="thesisAbstract"
                   required={true}
+                  richEditorId="rek-abstract"
                   title="Abstract"
                   validate={
                     Array [
@@ -675,6 +677,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   height={50}
                   name="thesisTitle"
                   required={true}
+                  richEditorId="rek-title"
                   title="Thesis title"
                   validate={
                     Array [
@@ -846,6 +849,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   disabled={false}
                   name="thesisAbstract"
                   required={true}
+                  richEditorId="rek-abstract"
                   title="Abstract"
                   validate={
                     Array [

@@ -255,6 +255,7 @@ export default class NtroFields extends React.PureComponent {
                                             required
                                             disabled={this.props.submitting}
                                             validate={[validation.required, validation.maxListEditorTextLength2000]}
+                                            richEditorId="rek-creator-contribution-statement"
                                         />
                                     </Grid>
                                 )}
@@ -289,6 +290,7 @@ export default class NtroFields extends React.PureComponent {
                                             maxValue={800}
                                             disabled={this.props.submitting}
                                             validate={[validation.required, validation.maxListEditorTextLength800]}
+                                            richEditorId="rek-abstract"
                                         />
                                     )}
                                 </Grid>

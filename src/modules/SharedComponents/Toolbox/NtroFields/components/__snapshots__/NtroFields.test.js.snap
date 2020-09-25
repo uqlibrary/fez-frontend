@@ -217,6 +217,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             maxValue={2000}
             name="impactStatement"
             required={true}
+            richEditorId="rek-creator-contribution-statement"
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
@@ -292,6 +293,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-abstract"
             title={
               <span>
                 Abstract/Description* 
@@ -795,6 +797,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             maxValue={2000}
             name="impactStatement"
             required={true}
+            richEditorId="rek-creator-contribution-statement"
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
@@ -870,6 +873,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-abstract"
             title={
               <span>
                 Abstract/Description* 
@@ -1321,6 +1325,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-abstract"
             title={
               <span>
                 Abstract/Description* 
@@ -1824,6 +1829,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             maxValue={2000}
             name="impactStatement"
             required={true}
+            richEditorId="rek-creator-contribution-statement"
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
@@ -1899,6 +1905,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-abstract"
             title={
               <span>
                 Abstract/Description* 
@@ -2418,6 +2425,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-abstract"
             title={
               <span>
                 Abstract/Description* 

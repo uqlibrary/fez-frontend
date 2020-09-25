@@ -151,6 +151,7 @@ export default class SbsSubmission extends Component {
                                                 title={txt.information.fieldLabels.documentTitle.placeholder}
                                                 required
                                                 validate={[validation.required]}
+                                                richEditorId="rek-title"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
@@ -220,6 +221,7 @@ export default class SbsSubmission extends Component {
                                                 title={txt.optional.fieldLabels.abstract.label}
                                                 required
                                                 validate={[validation.required]}
+                                                richEditorId="rek-abstract"
                                             />
                                         </Grid>
                                     </Grid>

@@ -452,6 +452,8 @@ exports[`RichEditor should render component 1`] = `
             instanceRef={
               Object {
                 "current": Object {
+                  "id": "undefined-editor",
+                  "name": "undefined-editor",
                   "on": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -462,8 +464,16 @@ exports[`RichEditor should render component 1`] = `
                         "change",
                         [Function],
                       ],
+                      Array [
+                        "contentDom",
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -948,6 +958,8 @@ exports[`RichEditor should render error as one child 1`] = `
             instanceRef={
               Object {
                 "current": Object {
+                  "id": "undefined-editor",
+                  "name": "undefined-editor",
                   "on": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -958,8 +970,16 @@ exports[`RichEditor should render error as one child 1`] = `
                         "change",
                         [Function],
                       ],
+                      Array [
+                        "contentDom",
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1608,6 +1628,8 @@ exports[`RichEditor should render error as react children 1`] = `
             instanceRef={
               Object {
                 "current": Object {
+                  "id": "undefined-editor",
+                  "name": "undefined-editor",
                   "on": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -1618,8 +1640,16 @@ exports[`RichEditor should render error as react children 1`] = `
                         "change",
                         [Function],
                       ],
+                      Array [
+                        "contentDom",
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2274,6 +2304,8 @@ exports[`RichEditor should render error showing input length 1`] = `
             instanceRef={
               Object {
                 "current": Object {
+                  "id": "undefined-editor",
+                  "name": "undefined-editor",
                   "on": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -2284,8 +2316,16 @@ exports[`RichEditor should render error showing input length 1`] = `
                         "change",
                         [Function],
                       ],
+                      Array [
+                        "contentDom",
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2932,6 +2972,8 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
             instanceRef={
               Object {
                 "current": Object {
+                  "id": "undefined-editor",
+                  "name": "undefined-editor",
                   "on": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -2942,8 +2984,16 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
                         "change",
                         [Function],
                       ],
+                      Array [
+                        "contentDom",
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3578,6 +3628,8 @@ exports[`RichEditor should render given title and description 1`] = `
             instanceRef={
               Object {
                 "current": Object {
+                  "id": "undefined-editor",
+                  "name": "undefined-editor",
                   "on": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -3588,8 +3640,16 @@ exports[`RichEditor should render given title and description 1`] = `
                         "change",
                         [Function],
                       ],
+                      Array [
+                        "contentDom",
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -4168,6 +4228,8 @@ exports[`RichEditor should render given title and description with error 1`] = `
             instanceRef={
               Object {
                 "current": Object {
+                  "id": "undefined-editor",
+                  "name": "undefined-editor",
                   "on": [MockFunction] {
                     "calls": Array [
                       Array [
@@ -4178,8 +4240,16 @@ exports[`RichEditor should render given title and description with error 1`] = `
                         "change",
                         [Function],
                       ],
+                      Array [
+                        "contentDom",
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,

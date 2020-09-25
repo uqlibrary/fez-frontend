@@ -207,6 +207,7 @@ export const ThesisSubmission = ({
                                             height={50}
                                             required
                                             validate={[validation.required]}
+                                            richEditorId="rek-title"
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
@@ -253,6 +254,7 @@ export const ThesisSubmission = ({
                                             name="thesisAbstract"
                                             required
                                             validate={[validation.required]}
+                                            richEditorId="rek-abstract"
                                         />
                                     </Grid>
                                 </Grid>
