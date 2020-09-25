@@ -66,6 +66,7 @@ export default {
             message: 'Login to UQ eSpace for full search results and more services.',
             type: 'info_outline',
             actionButtonLabel: 'Click to login',
+            alertId: 'login',
         },
         errorMessages: {
             401: {
@@ -109,17 +110,20 @@ export default {
             title: 'You are not registered in UQ eSpace as an author',
             message: 'Please contact the UQ eSpace administrator to resolve this.',
             type: 'info_outline',
+            alertId: 'not-registered-author',
         },
         noOrcidAlert: {
             title: 'ORCID ID REQUIRED',
             message: 'You do not have an ORCID ID linked to your UQ eSpace.',
             type: 'warning',
             actionButtonLabel: 'Click here to link or register',
+            alertId: 'orcid-optional',
         },
         forceOrcidLinkAlert: {
             title: 'ORCID ID REQUIRED',
             message: 'Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID.',
             type: 'error_outline',
+            alertId: 'orcid-required',
         },
         discardFormChangesConfirmation: {
             confirmationTitle: 'Discard changes?',
