@@ -4467,13 +4467,19 @@ describe('getChangeSearchKeyValues', () => {
                         fez_record_search_key_oa_status: {
                             rek_oa_status: 222222,
                         },
+                        edit_reason: 'test reason',
                     },
                 ),
             ).toEqual([
-                { rek_pid: 'UQ:111111', fez_record_search_key_oa_status: { rek_oa_status: 222222 } },
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_oa_status: { rek_oa_status: 222222 },
+                    edit_reason: 'test reason',
+                },
                 {
                     rek_pid: 'UQ:222222',
                     fez_record_search_key_oa_status: { rek_oa_status: 222222, rek_oa_status_id: 99999 },
+                    edit_reason: 'test reason',
                 },
             ]);
         });
@@ -4491,11 +4497,12 @@ describe('getChangeSearchKeyValues', () => {
                     {
                         search_key: 'rek_scopus_doc_type',
                         rek_scopus_doc_type: 'ar',
+                        edit_reason: 'test reason',
                     },
                 ),
             ).toEqual([
-                { rek_pid: 'UQ:111111', rek_scopus_doc_type: 'ar' },
-                { rek_pid: 'UQ:222222', rek_scopus_doc_type: 'ar' },
+                { rek_pid: 'UQ:111111', rek_scopus_doc_type: 'ar', edit_reason: 'test reason' },
+                { rek_pid: 'UQ:222222', rek_scopus_doc_type: 'ar', edit_reason: 'test reason' },
             ]);
         });
 
@@ -4512,11 +4519,12 @@ describe('getChangeSearchKeyValues', () => {
                     {
                         search_key: 'rek_wok_doc_type',
                         rek_wok_doc_type: '@',
+                        edit_reason: 'test reason',
                     },
                 ),
             ).toEqual([
-                { rek_pid: 'UQ:111111', rek_wok_doc_type: '@' },
-                { rek_pid: 'UQ:222222', rek_wok_doc_type: '@' },
+                { rek_pid: 'UQ:111111', rek_wok_doc_type: '@', edit_reason: 'test reason' },
+                { rek_pid: 'UQ:222222', rek_wok_doc_type: '@', edit_reason: 'test reason' },
             ]);
         });
 
@@ -4538,12 +4546,14 @@ describe('getChangeSearchKeyValues', () => {
                         fez_record_search_key_org_unit_name: {
                             rek_org_unit_name: 'School of science',
                         },
+                        edit_reason: 'test reason',
                     },
                 ),
             ).toEqual([
                 {
                     rek_pid: 'UQ:111111',
                     fez_record_search_key_org_unit_name: { rek_org_unit_name: 'School of science' },
+                    edit_reason: 'test reason',
                 },
                 {
                     rek_pid: 'UQ:222222',
@@ -4551,6 +4561,7 @@ describe('getChangeSearchKeyValues', () => {
                         rek_org_unit_name: 'School of science',
                         rek_org_unit_name_id: 99999,
                     },
+                    edit_reason: 'test reason',
                 },
             ]);
         });
@@ -4573,12 +4584,14 @@ describe('getChangeSearchKeyValues', () => {
                         fez_record_search_key_notes: {
                             rek_notes: '<p>initial notes</p>',
                         },
+                        edit_reason: 'test reason',
                     },
                 ),
             ).toEqual([
                 {
                     rek_pid: 'UQ:111111',
                     fez_record_search_key_notes: { rek_notes: '<p>initial notes</p>' },
+                    edit_reason: 'test reason',
                 },
                 {
                     rek_pid: 'UQ:222222',
@@ -4586,6 +4599,7 @@ describe('getChangeSearchKeyValues', () => {
                         rek_notes: '<p>initial notes</p><p>initial notes</p>',
                         rek_notes_id: 99999,
                     },
+                    edit_reason: 'test reason',
                 },
             ]);
         });
@@ -4605,13 +4619,19 @@ describe('getChangeSearchKeyValues', () => {
                         fez_record_search_key_series: {
                             rek_series: 'Testing series',
                         },
+                        edit_reason: 'test reason',
                     },
                 ),
             ).toEqual([
-                { rek_pid: 'UQ:111111', fez_record_search_key_series: { rek_series: 'Testing series' } },
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_series: { rek_series: 'Testing series' },
+                    edit_reason: 'test reason',
+                },
                 {
                     rek_pid: 'UQ:222222',
                     fez_record_search_key_series: { rek_series: 'Testing series', rek_series_id: 99999 },
+                    edit_reason: 'test reason',
                 },
             ]);
         });
@@ -4631,13 +4651,19 @@ describe('getChangeSearchKeyValues', () => {
                         fez_record_search_key_rights: {
                             rek_rights: 'Testing',
                         },
+                        edit_reason: 'test reason',
                     },
                 ),
             ).toEqual([
-                { rek_pid: 'UQ:111111', fez_record_search_key_rights: { rek_rights: 'Testing' } },
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_rights: { rek_rights: 'Testing' },
+                    edit_reason: 'test reason',
+                },
                 {
                     rek_pid: 'UQ:222222',
                     fez_record_search_key_rights: { rek_rights: 'Testing', rek_rights_id: 99999 },
+                    edit_reason: 'test reason',
                 },
             ]);
         });

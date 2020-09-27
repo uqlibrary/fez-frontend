@@ -88,7 +88,7 @@ export const BULK_UPDATE_SEARCH_KEYS = {
     },
     [BULK_UPDATE_SEARCH_KEY_RIGHTS]: {
         value: BULK_UPDATE_SEARCH_KEY_RIGHTS,
-        text: 'Rights',
+        text: 'Copyright notice',
     },
     [BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT]: {
         value: BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT,

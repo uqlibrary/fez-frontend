@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import SearchKeyField, { getSearchKeyValueField } from './SearchKeyField';
 
 import { locale } from 'locale';
@@ -44,18 +45,30 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                     />
                 </Grid>
                 {!!searchKey && (
-                    <Grid item xs={12}>
-                        <Field
-                            component={getSearchKeyValueField(searchKey).component}
-                            searchKey={searchKey}
-                            disabled={submitting || submitSucceeded}
-                            label={txt.changeSearchKeyValueForm.formLabels.searchKeyValue}
-                            name={searchKey}
-                            required
-                            validate={[validation.required]}
-                            {...getSearchKeyValueField(searchKey).componentProps}
-                        />
-                    </Grid>
+                    <React.Fragment>
+                        <Grid item xs={12}>
+                            <Field
+                                component={getSearchKeyValueField(searchKey).component}
+                                searchKey={searchKey}
+                                disabled={submitting || submitSucceeded}
+                                label={txt.changeSearchKeyValueForm.formLabels.searchKeyValue}
+                                name={searchKey}
+                                required
+                                validate={[validation.required]}
+                                {...getSearchKeyValueField(searchKey).componentProps}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Field
+                                component={TextField}
+                                fullWidth
+                                textFieldId="edit-reason"
+                                disabled={submitting || submitSucceeded}
+                                label={txt.changeSearchKeyValueForm.formLabels.editNotes}
+                                name="edit_reason"
+                            />
+                        </Grid>
+                    </React.Fragment>
                 )}
                 <Grid item xs={6}>
                     <Button

@@ -48,6 +48,8 @@ describe('ChangeSearchKeyValueForm', () => {
         expect(queryByTestId('rek-oa-status-helper-text')).not.toBeInTheDocument();
         expect(getByTestId('change-search-key-value-submit')).not.toHaveAttribute('disabled');
 
+        fireEvent.change(getByTestId('edit-reason-input'), { target: { value: 'test edit reason' } });
+
         // submit form
         act(() => {
             fireEvent.click(getByTestId('change-search-key-value-submit'));
@@ -129,7 +131,7 @@ describe('ChangeSearchKeyValueForm', () => {
         expect(getByTestId('rek-series-input')).toBeInTheDocument();
 
         fireEvent.mouseDown(getByTestId('search-key-select'));
-        fireEvent.click(getByText('Rights'));
+        fireEvent.click(getByText('Copyright notice'));
 
         expect(getByTestId('rek-rights-input')).toBeInTheDocument();
 

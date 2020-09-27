@@ -2884,14 +2884,9 @@ export default {
                     formLabels: {
                         searchKey: 'Search key',
                         searchKeyValue: 'Search key value',
+                        editNotes: 'Edit notes',
                         cancelButtonLabel: 'Cancel',
                         submitButtonLabel: 'Bulk update',
-                    },
-                    searchKeys: {
-                        rek_oa_status: {
-                            text: 'OA Status',
-                            value: 'rek_oa_status',
-                        },
                     },
                     submittingAlert: {
                         title: 'Bulk update - change search key value',

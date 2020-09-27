@@ -1234,5 +1234,6 @@ export const getChangeSearchKeyValues = (records, data) => {
             : {
                   [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
               }),
+        edit_reason: data.edit_reason || '',
     }));
 };
