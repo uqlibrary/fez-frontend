@@ -189,7 +189,7 @@ describe('AdminActions component', () => {
             '_blank',
             '/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
             null,
-        )();
+        );
         expect(global.window.open).toHaveBeenCalledTimes(1);
         expect(global.window.open).toHaveBeenCalledWith(
             `${APP_URL}admin/edit/UQ:111111?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc`,
@@ -199,7 +199,7 @@ describe('AdminActions component', () => {
         windowOpenSpy.mockClear();
 
         // has existing query parameters
-        navigateToUrl(`${APP_URL}admin/edit/UQ:111111?tab=security`, '_blank', '/records/mine')();
+        navigateToUrl(`${APP_URL}admin/edit/UQ:111111?tab=security`, '_blank', '/records/mine');
         expect(global.window.open).toHaveBeenCalledTimes(1);
         expect(global.window.open).toHaveBeenCalledWith(
             `${APP_URL}admin/edit/UQ:111111?tab=security&navigatedFrom=%2Frecords%2Fmine`,
@@ -210,7 +210,7 @@ describe('AdminActions component', () => {
 
         // missing referral
         const legacyUrl = `${APP_URL}workflow/update.php?pid=UQ:3A111111&cat=select_workflow&xdis_id=11&wft_id=291&href=%2Fcommunity%2FUQ%3A111111`;
-        navigateToUrl(legacyUrl, '_self', false)();
+        navigateToUrl(legacyUrl, '_self', false);
         expect(global.window.open).toHaveBeenCalledTimes(1);
         expect(global.window.open).toHaveBeenCalledWith(legacyUrl, '_self', undefined);
     });
