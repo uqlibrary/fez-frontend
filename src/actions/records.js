@@ -680,12 +680,7 @@ export const changeDisplayType = (records, data, isBulkUpdate = false) => {
 };
 
 export const changeSearchKeyValue = (records, data) => {
-    const { search_key: searchKey } = data;
-    const [primaryKey, subKey] = searchKey.split('.');
-    const changeSearchKeyValueRequest = records.map(({ rek_pid: pid, [primaryKey]: item }) => ({
-        rek_pid: pid,
-        [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
-    }));
+    const changeSearchKeyValueRequest = transformers.getChangeSearchKeyValues(records, data);
 
     return async dispatch => {
         dispatch({

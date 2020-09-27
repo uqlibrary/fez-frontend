@@ -1218,3 +1218,21 @@ export const getDatastreamInfo = (
         },
     };
 };
+
+export const getChangeSearchKeyValues = (records, data) => {
+    const { search_key: searchKey } = data;
+    const [primaryKey, subKey] = searchKey.split('.');
+    return records.map(({ rek_pid: pid, [primaryKey]: item }) => ({
+        rek_pid: pid,
+        ...(primaryKey === 'fez_record_search_key_notes'
+            ? {
+                  [primaryKey]: {
+                      ...item,
+                      [subKey]: `${(!!item && item[subKey]) || ''}${data[primaryKey][subKey]}`,
+                  },
+              }
+            : {
+                  [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
+              }),
+    }));
+};

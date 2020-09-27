@@ -10,6 +10,7 @@ export const BulkUpdatesForm = ({ selectedAction, recordsSelected, onCancel }) =
             return <ChangeDisplayTypeForm recordsSelected={recordsSelected} onCancel={onCancel} />;
         case BUA_CHANGE_SEARCHKEY_VALUE:
             return <ChangeSearchKeyValueForm recordsSelected={recordsSelected} onCancel={onCancel} />;
+        // istanbul ignore next
         default:
             return null;
     }

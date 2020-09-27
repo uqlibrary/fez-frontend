@@ -4449,3 +4449,197 @@ describe('getRecordIsDatasetOfSearchKey', () => {
         });
     });
 });
+
+describe('getChangeSearchKeyValues', () => {
+    describe('should correcty transform search key values for search key', () => {
+        it('fez_record_search_key_oa_status.rek_oa_status', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_oa_status: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_oa_status: { rek_oa_status: 123456, rek_oa_status_id: 99999 },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_oa_status.rek_oa_status',
+                        fez_record_search_key_oa_status: {
+                            rek_oa_status: 222222,
+                        },
+                    },
+                ),
+            ).toEqual([
+                { rek_pid: 'UQ:111111', fez_record_search_key_oa_status: { rek_oa_status: 222222 } },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_oa_status: { rek_oa_status: 222222, rek_oa_status_id: 99999 },
+                },
+            ]);
+        });
+
+        it('rek_scopus_doc_type', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', rek_scopus_doc_type: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_scopus_doc_type: 'ab',
+                        },
+                    ],
+                    {
+                        search_key: 'rek_scopus_doc_type',
+                        rek_scopus_doc_type: 'ar',
+                    },
+                ),
+            ).toEqual([
+                { rek_pid: 'UQ:111111', rek_scopus_doc_type: 'ar' },
+                { rek_pid: 'UQ:222222', rek_scopus_doc_type: 'ar' },
+            ]);
+        });
+
+        it('rek_wok_doc_type', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', rek_wok_doc_type: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_wok_doc_type: 'A',
+                        },
+                    ],
+                    {
+                        search_key: 'rek_wok_doc_type',
+                        rek_wok_doc_type: '@',
+                    },
+                ),
+            ).toEqual([
+                { rek_pid: 'UQ:111111', rek_wok_doc_type: '@' },
+                { rek_pid: 'UQ:222222', rek_wok_doc_type: '@' },
+            ]);
+        });
+
+        it('fez_record_search_key_org_unit_name.rek_org_unit_name', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_org_unit_name: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_org_unit_name: {
+                                rek_org_unit_name: 'School of economics',
+                                rek_org_unit_name_id: 99999,
+                            },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_org_unit_name.rek_org_unit_name',
+                        fez_record_search_key_org_unit_name: {
+                            rek_org_unit_name: 'School of science',
+                        },
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_org_unit_name: { rek_org_unit_name: 'School of science' },
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_org_unit_name: {
+                        rek_org_unit_name: 'School of science',
+                        rek_org_unit_name_id: 99999,
+                    },
+                },
+            ]);
+        });
+
+        it('fez_record_search_key_notes.rek_notes', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_notes: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_notes: {
+                                rek_notes: '<p>initial notes</p>',
+                                rek_notes_id: 99999,
+                            },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_notes.rek_notes',
+                        fez_record_search_key_notes: {
+                            rek_notes: '<p>initial notes</p>',
+                        },
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_notes: { rek_notes: '<p>initial notes</p>' },
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_notes: {
+                        rek_notes: '<p>initial notes</p><p>initial notes</p>',
+                        rek_notes_id: 99999,
+                    },
+                },
+            ]);
+        });
+
+        it('fez_record_search_key_series.rek_series', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_series: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_series: { rek_series: 'Test series', rek_series_id: 99999 },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_series.rek_series',
+                        fez_record_search_key_series: {
+                            rek_series: 'Testing series',
+                        },
+                    },
+                ),
+            ).toEqual([
+                { rek_pid: 'UQ:111111', fez_record_search_key_series: { rek_series: 'Testing series' } },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_series: { rek_series: 'Testing series', rek_series_id: 99999 },
+                },
+            ]);
+        });
+
+        it('fez_record_search_key_rights.rek_rights', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_rights: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_rights: { rek_rights: 'Test', rek_rights_id: 99999 },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_rights.rek_rights',
+                        fez_record_search_key_rights: {
+                            rek_rights: 'Testing',
+                        },
+                    },
+                ),
+            ).toEqual([
+                { rek_pid: 'UQ:111111', fez_record_search_key_rights: { rek_rights: 'Testing' } },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_rights: { rek_rights: 'Testing', rek_rights_id: 99999 },
+                },
+            ]);
+        });
+    });
+});

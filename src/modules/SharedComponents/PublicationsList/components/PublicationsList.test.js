@@ -36,7 +36,7 @@ describe('PublicationsList', () => {
         const test = [];
         const { asFragment } = setup({
             publicationsList: [{ rek_pid: 'UQ:111111' }],
-            publicationsListSubset: ['UQ:222222'],
+            publicationsListSubset: ['UQ:111111'],
             subsetCustomActions: test,
         });
         expect(asFragment()).toMatchSnapshot();
