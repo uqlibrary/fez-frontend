@@ -462,8 +462,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                   Array [
                     [Function],
                   ],
+                  Array [
+                    [Function],
+                  ],
                 ],
                 "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
                   Object {
                     "type": "return",
                     "value": undefined,
@@ -1369,8 +1376,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     Array [
                       [Function],
                     ],
+                    Array [
+                      [Function],
+                    ],
                   ],
                   "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
                     Object {
                       "type": "return",
                       "value": undefined,
@@ -3024,6 +3038,1309 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                   <form>
                                     <WithStyles(ForwardRef(Grid))
                                       container={true}
+                                      spacing={1}
+                                    >
+                                      <ForwardRef(Grid)
+                                        classes={
+                                          Object {
+                                            "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                            "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                            "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                            "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                            "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                            "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                            "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                            "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                            "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                            "container": "MuiGrid-container",
+                                            "direction-xs-column": "MuiGrid-direction-xs-column",
+                                            "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                            "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                            "grid-lg-1": "MuiGrid-grid-lg-1",
+                                            "grid-lg-10": "MuiGrid-grid-lg-10",
+                                            "grid-lg-11": "MuiGrid-grid-lg-11",
+                                            "grid-lg-12": "MuiGrid-grid-lg-12",
+                                            "grid-lg-2": "MuiGrid-grid-lg-2",
+                                            "grid-lg-3": "MuiGrid-grid-lg-3",
+                                            "grid-lg-4": "MuiGrid-grid-lg-4",
+                                            "grid-lg-5": "MuiGrid-grid-lg-5",
+                                            "grid-lg-6": "MuiGrid-grid-lg-6",
+                                            "grid-lg-7": "MuiGrid-grid-lg-7",
+                                            "grid-lg-8": "MuiGrid-grid-lg-8",
+                                            "grid-lg-9": "MuiGrid-grid-lg-9",
+                                            "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                            "grid-lg-true": "MuiGrid-grid-lg-true",
+                                            "grid-md-1": "MuiGrid-grid-md-1",
+                                            "grid-md-10": "MuiGrid-grid-md-10",
+                                            "grid-md-11": "MuiGrid-grid-md-11",
+                                            "grid-md-12": "MuiGrid-grid-md-12",
+                                            "grid-md-2": "MuiGrid-grid-md-2",
+                                            "grid-md-3": "MuiGrid-grid-md-3",
+                                            "grid-md-4": "MuiGrid-grid-md-4",
+                                            "grid-md-5": "MuiGrid-grid-md-5",
+                                            "grid-md-6": "MuiGrid-grid-md-6",
+                                            "grid-md-7": "MuiGrid-grid-md-7",
+                                            "grid-md-8": "MuiGrid-grid-md-8",
+                                            "grid-md-9": "MuiGrid-grid-md-9",
+                                            "grid-md-auto": "MuiGrid-grid-md-auto",
+                                            "grid-md-true": "MuiGrid-grid-md-true",
+                                            "grid-sm-1": "MuiGrid-grid-sm-1",
+                                            "grid-sm-10": "MuiGrid-grid-sm-10",
+                                            "grid-sm-11": "MuiGrid-grid-sm-11",
+                                            "grid-sm-12": "MuiGrid-grid-sm-12",
+                                            "grid-sm-2": "MuiGrid-grid-sm-2",
+                                            "grid-sm-3": "MuiGrid-grid-sm-3",
+                                            "grid-sm-4": "MuiGrid-grid-sm-4",
+                                            "grid-sm-5": "MuiGrid-grid-sm-5",
+                                            "grid-sm-6": "MuiGrid-grid-sm-6",
+                                            "grid-sm-7": "MuiGrid-grid-sm-7",
+                                            "grid-sm-8": "MuiGrid-grid-sm-8",
+                                            "grid-sm-9": "MuiGrid-grid-sm-9",
+                                            "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                            "grid-sm-true": "MuiGrid-grid-sm-true",
+                                            "grid-xl-1": "MuiGrid-grid-xl-1",
+                                            "grid-xl-10": "MuiGrid-grid-xl-10",
+                                            "grid-xl-11": "MuiGrid-grid-xl-11",
+                                            "grid-xl-12": "MuiGrid-grid-xl-12",
+                                            "grid-xl-2": "MuiGrid-grid-xl-2",
+                                            "grid-xl-3": "MuiGrid-grid-xl-3",
+                                            "grid-xl-4": "MuiGrid-grid-xl-4",
+                                            "grid-xl-5": "MuiGrid-grid-xl-5",
+                                            "grid-xl-6": "MuiGrid-grid-xl-6",
+                                            "grid-xl-7": "MuiGrid-grid-xl-7",
+                                            "grid-xl-8": "MuiGrid-grid-xl-8",
+                                            "grid-xl-9": "MuiGrid-grid-xl-9",
+                                            "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                            "grid-xl-true": "MuiGrid-grid-xl-true",
+                                            "grid-xs-1": "MuiGrid-grid-xs-1",
+                                            "grid-xs-10": "MuiGrid-grid-xs-10",
+                                            "grid-xs-11": "MuiGrid-grid-xs-11",
+                                            "grid-xs-12": "MuiGrid-grid-xs-12",
+                                            "grid-xs-2": "MuiGrid-grid-xs-2",
+                                            "grid-xs-3": "MuiGrid-grid-xs-3",
+                                            "grid-xs-4": "MuiGrid-grid-xs-4",
+                                            "grid-xs-5": "MuiGrid-grid-xs-5",
+                                            "grid-xs-6": "MuiGrid-grid-xs-6",
+                                            "grid-xs-7": "MuiGrid-grid-xs-7",
+                                            "grid-xs-8": "MuiGrid-grid-xs-8",
+                                            "grid-xs-9": "MuiGrid-grid-xs-9",
+                                            "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                            "grid-xs-true": "MuiGrid-grid-xs-true",
+                                            "item": "MuiGrid-item",
+                                            "justify-xs-center": "MuiGrid-justify-xs-center",
+                                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
+                                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
+                                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
+                                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                            "root": "MuiGrid-root",
+                                            "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                            "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                            "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                            "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                            "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                            "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                            "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                            "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                            "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                            "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                            "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                            "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                            "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                          }
+                                        }
+                                        container={true}
+                                        spacing={1}
+                                      >
+                                        <div
+                                          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
+                                        >
+                                          <WithStyles(ForwardRef(Grid))
+                                            item={true}
+                                            xs={12}
+                                          >
+                                            <ForwardRef(Grid)
+                                              classes={
+                                                Object {
+                                                  "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                  "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                  "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                  "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                  "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                  "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                  "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                  "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                  "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                  "container": "MuiGrid-container",
+                                                  "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                  "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                  "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                  "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                  "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                  "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                  "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                  "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                  "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                  "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                  "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                  "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                  "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                  "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                  "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                  "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                  "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                  "grid-md-1": "MuiGrid-grid-md-1",
+                                                  "grid-md-10": "MuiGrid-grid-md-10",
+                                                  "grid-md-11": "MuiGrid-grid-md-11",
+                                                  "grid-md-12": "MuiGrid-grid-md-12",
+                                                  "grid-md-2": "MuiGrid-grid-md-2",
+                                                  "grid-md-3": "MuiGrid-grid-md-3",
+                                                  "grid-md-4": "MuiGrid-grid-md-4",
+                                                  "grid-md-5": "MuiGrid-grid-md-5",
+                                                  "grid-md-6": "MuiGrid-grid-md-6",
+                                                  "grid-md-7": "MuiGrid-grid-md-7",
+                                                  "grid-md-8": "MuiGrid-grid-md-8",
+                                                  "grid-md-9": "MuiGrid-grid-md-9",
+                                                  "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                  "grid-md-true": "MuiGrid-grid-md-true",
+                                                  "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                  "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                  "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                  "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                  "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                  "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                  "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                  "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                  "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                  "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                  "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                  "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                  "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                  "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                  "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                  "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                  "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                  "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                  "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                  "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                  "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                  "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                  "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                  "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                  "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                  "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                  "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                  "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                  "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                  "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                  "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                  "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                  "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                  "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                  "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                  "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                  "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                  "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                  "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                  "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                  "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                  "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                  "item": "MuiGrid-item",
+                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
+                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
+                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
+                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
+                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                  "root": "MuiGrid-root",
+                                                  "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                  "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                  "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                  "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                  "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                  "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                  "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                  "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                  "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                  "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                  "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                  "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                  "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                }
+                                              }
+                                              item={true}
+                                              xs={12}
+                                            >
+                                              <div
+                                                className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+                                              >
+                                                <WithStyles(ForwardRef(Grid))
+                                                  container={true}
+                                                  spacing={1}
+                                                  style={
+                                                    Object {
+                                                      "marginBottom": 8,
+                                                      "marginTop": 4,
+                                                    }
+                                                  }
+                                                >
+                                                  <ForwardRef(Grid)
+                                                    classes={
+                                                      Object {
+                                                        "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                        "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                        "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                        "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                        "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                        "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                        "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                        "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                        "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                        "container": "MuiGrid-container",
+                                                        "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                        "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                        "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                        "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                        "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                        "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                        "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                        "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                        "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                        "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                        "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                        "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                        "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                        "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                        "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                        "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                        "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                        "grid-md-1": "MuiGrid-grid-md-1",
+                                                        "grid-md-10": "MuiGrid-grid-md-10",
+                                                        "grid-md-11": "MuiGrid-grid-md-11",
+                                                        "grid-md-12": "MuiGrid-grid-md-12",
+                                                        "grid-md-2": "MuiGrid-grid-md-2",
+                                                        "grid-md-3": "MuiGrid-grid-md-3",
+                                                        "grid-md-4": "MuiGrid-grid-md-4",
+                                                        "grid-md-5": "MuiGrid-grid-md-5",
+                                                        "grid-md-6": "MuiGrid-grid-md-6",
+                                                        "grid-md-7": "MuiGrid-grid-md-7",
+                                                        "grid-md-8": "MuiGrid-grid-md-8",
+                                                        "grid-md-9": "MuiGrid-grid-md-9",
+                                                        "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                        "grid-md-true": "MuiGrid-grid-md-true",
+                                                        "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                        "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                        "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                        "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                        "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                        "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                        "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                        "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                        "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                        "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                        "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                        "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                        "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                        "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                        "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                        "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                        "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                        "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                        "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                        "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                        "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                        "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                        "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                        "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                        "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                        "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                        "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                        "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                        "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                        "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                        "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                        "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                        "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                        "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                        "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                        "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                        "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                        "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                        "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                        "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                        "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                        "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                        "item": "MuiGrid-item",
+                                                        "justify-xs-center": "MuiGrid-justify-xs-center",
+                                                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
+                                                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
+                                                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
+                                                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                        "root": "MuiGrid-root",
+                                                        "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                        "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                        "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                        "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                        "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                        "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                        "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                        "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                        "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                        "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                        "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                        "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                        "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                      }
+                                                    }
+                                                    container={true}
+                                                    spacing={1}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": 8,
+                                                        "marginTop": 4,
+                                                      }
+                                                    }
+                                                  >
+                                                    <div
+                                                      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
+                                                      style={
+                                                        Object {
+                                                          "marginBottom": 8,
+                                                          "marginTop": 4,
+                                                        }
+                                                      }
+                                                    >
+                                                      <WithStyles(ForwardRef(Grid))
+                                                        item={true}
+                                                        sm={2}
+                                                        xs={12}
+                                                      >
+                                                        <ForwardRef(Grid)
+                                                          classes={
+                                                            Object {
+                                                              "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                              "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                              "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                              "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                              "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                              "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                              "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                              "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                              "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                              "container": "MuiGrid-container",
+                                                              "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                              "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                              "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                              "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                              "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                              "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                              "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                              "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                              "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                              "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                              "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                              "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                              "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                              "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                              "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                              "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                              "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                              "grid-md-1": "MuiGrid-grid-md-1",
+                                                              "grid-md-10": "MuiGrid-grid-md-10",
+                                                              "grid-md-11": "MuiGrid-grid-md-11",
+                                                              "grid-md-12": "MuiGrid-grid-md-12",
+                                                              "grid-md-2": "MuiGrid-grid-md-2",
+                                                              "grid-md-3": "MuiGrid-grid-md-3",
+                                                              "grid-md-4": "MuiGrid-grid-md-4",
+                                                              "grid-md-5": "MuiGrid-grid-md-5",
+                                                              "grid-md-6": "MuiGrid-grid-md-6",
+                                                              "grid-md-7": "MuiGrid-grid-md-7",
+                                                              "grid-md-8": "MuiGrid-grid-md-8",
+                                                              "grid-md-9": "MuiGrid-grid-md-9",
+                                                              "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                              "grid-md-true": "MuiGrid-grid-md-true",
+                                                              "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                              "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                              "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                              "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                              "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                              "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                              "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                              "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                              "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                              "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                              "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                              "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                              "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                              "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                              "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                              "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                              "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                              "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                              "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                              "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                              "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                              "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                              "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                              "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                              "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                              "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                              "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                              "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                              "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                              "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                              "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                              "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                              "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                              "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                              "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                              "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                              "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                              "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                              "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                              "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                              "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                              "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                              "item": "MuiGrid-item",
+                                                              "justify-xs-center": "MuiGrid-justify-xs-center",
+                                                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
+                                                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
+                                                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
+                                                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                              "root": "MuiGrid-root",
+                                                              "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                              "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                              "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                              "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                              "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                              "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                              "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                              "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                              "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                              "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                              "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                              "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                              "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                            }
+                                                          }
+                                                          item={true}
+                                                          sm={2}
+                                                          xs={12}
+                                                        >
+                                                          <div
+                                                            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2"
+                                                          >
+                                                            <WithStyles(ForwardRef(Button))
+                                                              color="secondary"
+                                                              fullWidth={true}
+                                                              id="admin-work-cancel-top"
+                                                              onClick={[Function]}
+                                                              style={
+                                                                Object {
+                                                                  "whiteSpace": "nowrap",
+                                                                }
+                                                              }
+                                                              variant="contained"
+                                                            >
+                                                              <ForwardRef(Button)
+                                                                classes={
+                                                                  Object {
+                                                                    "colorInherit": "MuiButton-colorInherit",
+                                                                    "contained": "MuiButton-contained",
+                                                                    "containedPrimary": "MuiButton-containedPrimary",
+                                                                    "containedSecondary": "MuiButton-containedSecondary",
+                                                                    "containedSizeLarge": "MuiButton-containedSizeLarge",
+                                                                    "containedSizeSmall": "MuiButton-containedSizeSmall",
+                                                                    "disableElevation": "MuiButton-disableElevation",
+                                                                    "disabled": "Mui-disabled",
+                                                                    "endIcon": "MuiButton-endIcon",
+                                                                    "focusVisible": "Mui-focusVisible",
+                                                                    "fullWidth": "MuiButton-fullWidth",
+                                                                    "iconSizeLarge": "MuiButton-iconSizeLarge",
+                                                                    "iconSizeMedium": "MuiButton-iconSizeMedium",
+                                                                    "iconSizeSmall": "MuiButton-iconSizeSmall",
+                                                                    "label": "MuiButton-label",
+                                                                    "outlined": "MuiButton-outlined",
+                                                                    "outlinedPrimary": "MuiButton-outlinedPrimary",
+                                                                    "outlinedSecondary": "MuiButton-outlinedSecondary",
+                                                                    "outlinedSizeLarge": "MuiButton-outlinedSizeLarge",
+                                                                    "outlinedSizeSmall": "MuiButton-outlinedSizeSmall",
+                                                                    "root": "MuiButton-root",
+                                                                    "sizeLarge": "MuiButton-sizeLarge",
+                                                                    "sizeSmall": "MuiButton-sizeSmall",
+                                                                    "startIcon": "MuiButton-startIcon",
+                                                                    "text": "MuiButton-text",
+                                                                    "textPrimary": "MuiButton-textPrimary",
+                                                                    "textSecondary": "MuiButton-textSecondary",
+                                                                    "textSizeLarge": "MuiButton-textSizeLarge",
+                                                                    "textSizeSmall": "MuiButton-textSizeSmall",
+                                                                  }
+                                                                }
+                                                                color="secondary"
+                                                                fullWidth={true}
+                                                                id="admin-work-cancel-top"
+                                                                onClick={[Function]}
+                                                                style={
+                                                                  Object {
+                                                                    "whiteSpace": "nowrap",
+                                                                  }
+                                                                }
+                                                                variant="contained"
+                                                              >
+                                                                <WithStyles(ForwardRef(ButtonBase))
+                                                                  className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
+                                                                  component="button"
+                                                                  disabled={false}
+                                                                  focusRipple={true}
+                                                                  focusVisibleClassName="Mui-focusVisible"
+                                                                  id="admin-work-cancel-top"
+                                                                  onClick={[Function]}
+                                                                  style={
+                                                                    Object {
+                                                                      "whiteSpace": "nowrap",
+                                                                    }
+                                                                  }
+                                                                  type="button"
+                                                                >
+                                                                  <ForwardRef(ButtonBase)
+                                                                    className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
+                                                                    classes={
+                                                                      Object {
+                                                                        "disabled": "Mui-disabled",
+                                                                        "focusVisible": "Mui-focusVisible",
+                                                                        "root": "MuiButtonBase-root",
+                                                                      }
+                                                                    }
+                                                                    component="button"
+                                                                    disabled={false}
+                                                                    focusRipple={true}
+                                                                    focusVisibleClassName="Mui-focusVisible"
+                                                                    id="admin-work-cancel-top"
+                                                                    onClick={[Function]}
+                                                                    style={
+                                                                      Object {
+                                                                        "whiteSpace": "nowrap",
+                                                                      }
+                                                                    }
+                                                                    type="button"
+                                                                  >
+                                                                    <button
+                                                                      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
+                                                                      disabled={false}
+                                                                      id="admin-work-cancel-top"
+                                                                      onBlur={[Function]}
+                                                                      onClick={[Function]}
+                                                                      onDragLeave={[Function]}
+                                                                      onFocus={[Function]}
+                                                                      onKeyDown={[Function]}
+                                                                      onKeyUp={[Function]}
+                                                                      onMouseDown={[Function]}
+                                                                      onMouseLeave={[Function]}
+                                                                      onMouseUp={[Function]}
+                                                                      onTouchEnd={[Function]}
+                                                                      onTouchMove={[Function]}
+                                                                      onTouchStart={[Function]}
+                                                                      style={
+                                                                        Object {
+                                                                          "whiteSpace": "nowrap",
+                                                                        }
+                                                                      }
+                                                                      tabIndex={0}
+                                                                      type="button"
+                                                                    >
+                                                                      <span
+                                                                        className="MuiButton-label"
+                                                                      >
+                                                                        Cancel
+                                                                      </span>
+                                                                      <WithStyles(memo)
+                                                                        center={false}
+                                                                      >
+                                                                        <ForwardRef(TouchRipple)
+                                                                          center={false}
+                                                                          classes={
+                                                                            Object {
+                                                                              "child": "MuiTouchRipple-child",
+                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                              "ripple": "MuiTouchRipple-ripple",
+                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                              "root": "MuiTouchRipple-root",
+                                                                            }
+                                                                          }
+                                                                        >
+                                                                          <span
+                                                                            className="MuiTouchRipple-root"
+                                                                          >
+                                                                            <TransitionGroup
+                                                                              childFactory={[Function]}
+                                                                              component={null}
+                                                                              exit={true}
+                                                                            />
+                                                                          </span>
+                                                                        </ForwardRef(TouchRipple)>
+                                                                      </WithStyles(memo)>
+                                                                    </button>
+                                                                  </ForwardRef(ButtonBase)>
+                                                                </WithStyles(ForwardRef(ButtonBase))>
+                                                              </ForwardRef(Button)>
+                                                            </WithStyles(ForwardRef(Button))>
+                                                          </div>
+                                                        </ForwardRef(Grid)>
+                                                      </WithStyles(ForwardRef(Grid))>
+                                                      <WithStyles(ForwardRef(Grid))
+                                                        item={true}
+                                                        sm={3}
+                                                        xs={12}
+                                                      >
+                                                        <ForwardRef(Grid)
+                                                          classes={
+                                                            Object {
+                                                              "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                              "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                              "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                              "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                              "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                              "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                              "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                              "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                              "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                              "container": "MuiGrid-container",
+                                                              "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                              "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                              "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                              "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                              "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                              "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                              "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                              "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                              "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                              "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                              "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                              "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                              "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                              "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                              "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                              "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                              "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                              "grid-md-1": "MuiGrid-grid-md-1",
+                                                              "grid-md-10": "MuiGrid-grid-md-10",
+                                                              "grid-md-11": "MuiGrid-grid-md-11",
+                                                              "grid-md-12": "MuiGrid-grid-md-12",
+                                                              "grid-md-2": "MuiGrid-grid-md-2",
+                                                              "grid-md-3": "MuiGrid-grid-md-3",
+                                                              "grid-md-4": "MuiGrid-grid-md-4",
+                                                              "grid-md-5": "MuiGrid-grid-md-5",
+                                                              "grid-md-6": "MuiGrid-grid-md-6",
+                                                              "grid-md-7": "MuiGrid-grid-md-7",
+                                                              "grid-md-8": "MuiGrid-grid-md-8",
+                                                              "grid-md-9": "MuiGrid-grid-md-9",
+                                                              "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                              "grid-md-true": "MuiGrid-grid-md-true",
+                                                              "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                              "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                              "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                              "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                              "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                              "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                              "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                              "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                              "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                              "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                              "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                              "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                              "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                              "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                              "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                              "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                              "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                              "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                              "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                              "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                              "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                              "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                              "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                              "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                              "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                              "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                              "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                              "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                              "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                              "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                              "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                              "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                              "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                              "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                              "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                              "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                              "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                              "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                              "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                              "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                              "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                              "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                              "item": "MuiGrid-item",
+                                                              "justify-xs-center": "MuiGrid-justify-xs-center",
+                                                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
+                                                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
+                                                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
+                                                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                              "root": "MuiGrid-root",
+                                                              "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                              "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                              "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                              "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                              "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                              "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                              "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                              "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                              "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                              "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                              "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                              "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                              "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                            }
+                                                          }
+                                                          item={true}
+                                                          sm={3}
+                                                          xs={12}
+                                                        >
+                                                          <div
+                                                            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                          >
+                                                            <WithStyles(ForwardRef(Button))
+                                                              color="secondary"
+                                                              data-testid="unpublish-admin-top"
+                                                              fullWidth={true}
+                                                              id="admin-work-unpublish-top"
+                                                              variant="contained"
+                                                            >
+                                                              <ForwardRef(Button)
+                                                                classes={
+                                                                  Object {
+                                                                    "colorInherit": "MuiButton-colorInherit",
+                                                                    "contained": "MuiButton-contained",
+                                                                    "containedPrimary": "MuiButton-containedPrimary",
+                                                                    "containedSecondary": "MuiButton-containedSecondary",
+                                                                    "containedSizeLarge": "MuiButton-containedSizeLarge",
+                                                                    "containedSizeSmall": "MuiButton-containedSizeSmall",
+                                                                    "disableElevation": "MuiButton-disableElevation",
+                                                                    "disabled": "Mui-disabled",
+                                                                    "endIcon": "MuiButton-endIcon",
+                                                                    "focusVisible": "Mui-focusVisible",
+                                                                    "fullWidth": "MuiButton-fullWidth",
+                                                                    "iconSizeLarge": "MuiButton-iconSizeLarge",
+                                                                    "iconSizeMedium": "MuiButton-iconSizeMedium",
+                                                                    "iconSizeSmall": "MuiButton-iconSizeSmall",
+                                                                    "label": "MuiButton-label",
+                                                                    "outlined": "MuiButton-outlined",
+                                                                    "outlinedPrimary": "MuiButton-outlinedPrimary",
+                                                                    "outlinedSecondary": "MuiButton-outlinedSecondary",
+                                                                    "outlinedSizeLarge": "MuiButton-outlinedSizeLarge",
+                                                                    "outlinedSizeSmall": "MuiButton-outlinedSizeSmall",
+                                                                    "root": "MuiButton-root",
+                                                                    "sizeLarge": "MuiButton-sizeLarge",
+                                                                    "sizeSmall": "MuiButton-sizeSmall",
+                                                                    "startIcon": "MuiButton-startIcon",
+                                                                    "text": "MuiButton-text",
+                                                                    "textPrimary": "MuiButton-textPrimary",
+                                                                    "textSecondary": "MuiButton-textSecondary",
+                                                                    "textSizeLarge": "MuiButton-textSizeLarge",
+                                                                    "textSizeSmall": "MuiButton-textSizeSmall",
+                                                                  }
+                                                                }
+                                                                color="secondary"
+                                                                data-testid="unpublish-admin-top"
+                                                                fullWidth={true}
+                                                                id="admin-work-unpublish-top"
+                                                                variant="contained"
+                                                              >
+                                                                <WithStyles(ForwardRef(ButtonBase))
+                                                                  className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
+                                                                  component="button"
+                                                                  data-testid="unpublish-admin-top"
+                                                                  disabled={false}
+                                                                  focusRipple={true}
+                                                                  focusVisibleClassName="Mui-focusVisible"
+                                                                  id="admin-work-unpublish-top"
+                                                                  type="button"
+                                                                >
+                                                                  <ForwardRef(ButtonBase)
+                                                                    className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
+                                                                    classes={
+                                                                      Object {
+                                                                        "disabled": "Mui-disabled",
+                                                                        "focusVisible": "Mui-focusVisible",
+                                                                        "root": "MuiButtonBase-root",
+                                                                      }
+                                                                    }
+                                                                    component="button"
+                                                                    data-testid="unpublish-admin-top"
+                                                                    disabled={false}
+                                                                    focusRipple={true}
+                                                                    focusVisibleClassName="Mui-focusVisible"
+                                                                    id="admin-work-unpublish-top"
+                                                                    type="button"
+                                                                  >
+                                                                    <button
+                                                                      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
+                                                                      data-testid="unpublish-admin-top"
+                                                                      disabled={false}
+                                                                      id="admin-work-unpublish-top"
+                                                                      onBlur={[Function]}
+                                                                      onDragLeave={[Function]}
+                                                                      onFocus={[Function]}
+                                                                      onKeyDown={[Function]}
+                                                                      onKeyUp={[Function]}
+                                                                      onMouseDown={[Function]}
+                                                                      onMouseLeave={[Function]}
+                                                                      onMouseUp={[Function]}
+                                                                      onTouchEnd={[Function]}
+                                                                      onTouchMove={[Function]}
+                                                                      onTouchStart={[Function]}
+                                                                      tabIndex={0}
+                                                                      type="button"
+                                                                    >
+                                                                      <span
+                                                                        className="MuiButton-label"
+                                                                      >
+                                                                        Unpublish
+                                                                      </span>
+                                                                      <WithStyles(memo)
+                                                                        center={false}
+                                                                      >
+                                                                        <ForwardRef(TouchRipple)
+                                                                          center={false}
+                                                                          classes={
+                                                                            Object {
+                                                                              "child": "MuiTouchRipple-child",
+                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                              "ripple": "MuiTouchRipple-ripple",
+                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                              "root": "MuiTouchRipple-root",
+                                                                            }
+                                                                          }
+                                                                        >
+                                                                          <span
+                                                                            className="MuiTouchRipple-root"
+                                                                          >
+                                                                            <TransitionGroup
+                                                                              childFactory={[Function]}
+                                                                              component={null}
+                                                                              exit={true}
+                                                                            />
+                                                                          </span>
+                                                                        </ForwardRef(TouchRipple)>
+                                                                      </WithStyles(memo)>
+                                                                    </button>
+                                                                  </ForwardRef(ButtonBase)>
+                                                                </WithStyles(ForwardRef(ButtonBase))>
+                                                              </ForwardRef(Button)>
+                                                            </WithStyles(ForwardRef(Button))>
+                                                          </div>
+                                                        </ForwardRef(Grid)>
+                                                      </WithStyles(ForwardRef(Grid))>
+                                                      <WithStyles(ForwardRef(Grid))
+                                                        item={true}
+                                                        sm={7}
+                                                        xs={12}
+                                                      >
+                                                        <ForwardRef(Grid)
+                                                          classes={
+                                                            Object {
+                                                              "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                              "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                              "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                              "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                              "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                              "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                              "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                              "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                              "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                              "container": "MuiGrid-container",
+                                                              "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                              "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                              "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                              "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                              "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                              "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                              "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                              "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                              "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                              "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                              "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                              "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                              "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                              "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                              "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                              "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                              "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                              "grid-md-1": "MuiGrid-grid-md-1",
+                                                              "grid-md-10": "MuiGrid-grid-md-10",
+                                                              "grid-md-11": "MuiGrid-grid-md-11",
+                                                              "grid-md-12": "MuiGrid-grid-md-12",
+                                                              "grid-md-2": "MuiGrid-grid-md-2",
+                                                              "grid-md-3": "MuiGrid-grid-md-3",
+                                                              "grid-md-4": "MuiGrid-grid-md-4",
+                                                              "grid-md-5": "MuiGrid-grid-md-5",
+                                                              "grid-md-6": "MuiGrid-grid-md-6",
+                                                              "grid-md-7": "MuiGrid-grid-md-7",
+                                                              "grid-md-8": "MuiGrid-grid-md-8",
+                                                              "grid-md-9": "MuiGrid-grid-md-9",
+                                                              "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                              "grid-md-true": "MuiGrid-grid-md-true",
+                                                              "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                              "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                              "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                              "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                              "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                              "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                              "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                              "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                              "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                              "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                              "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                              "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                              "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                              "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                              "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                              "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                              "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                              "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                              "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                              "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                              "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                              "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                              "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                              "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                              "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                              "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                              "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                              "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                              "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                              "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                              "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                              "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                              "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                              "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                              "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                              "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                              "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                              "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                              "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                              "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                              "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                              "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                              "item": "MuiGrid-item",
+                                                              "justify-xs-center": "MuiGrid-justify-xs-center",
+                                                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
+                                                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
+                                                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
+                                                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                              "root": "MuiGrid-root",
+                                                              "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                              "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                              "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                              "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                              "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                              "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                              "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                              "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                              "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                              "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                              "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                              "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                              "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                            }
+                                                          }
+                                                          item={true}
+                                                          sm={7}
+                                                          xs={12}
+                                                        >
+                                                          <div
+                                                            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7"
+                                                          >
+                                                            <WithStyles(ForwardRef(Button))
+                                                              color="primary"
+                                                              data-testid="submit-admin-top"
+                                                              fullWidth={true}
+                                                              id="admin-work-submit-top"
+                                                              onClick={
+                                                                [MockFunction] {
+                                                                  "calls": Array [
+                                                                    Array [
+                                                                      [Function],
+                                                                    ],
+                                                                    Array [
+                                                                      [Function],
+                                                                    ],
+                                                                  ],
+                                                                  "results": Array [
+                                                                    Object {
+                                                                      "type": "return",
+                                                                      "value": undefined,
+                                                                    },
+                                                                    Object {
+                                                                      "type": "return",
+                                                                      "value": undefined,
+                                                                    },
+                                                                  ],
+                                                                }
+                                                              }
+                                                              style={
+                                                                Object {
+                                                                  "whiteSpace": "nowrap",
+                                                                }
+                                                              }
+                                                              variant="contained"
+                                                            >
+                                                              <ForwardRef(Button)
+                                                                classes={
+                                                                  Object {
+                                                                    "colorInherit": "MuiButton-colorInherit",
+                                                                    "contained": "MuiButton-contained",
+                                                                    "containedPrimary": "MuiButton-containedPrimary",
+                                                                    "containedSecondary": "MuiButton-containedSecondary",
+                                                                    "containedSizeLarge": "MuiButton-containedSizeLarge",
+                                                                    "containedSizeSmall": "MuiButton-containedSizeSmall",
+                                                                    "disableElevation": "MuiButton-disableElevation",
+                                                                    "disabled": "Mui-disabled",
+                                                                    "endIcon": "MuiButton-endIcon",
+                                                                    "focusVisible": "Mui-focusVisible",
+                                                                    "fullWidth": "MuiButton-fullWidth",
+                                                                    "iconSizeLarge": "MuiButton-iconSizeLarge",
+                                                                    "iconSizeMedium": "MuiButton-iconSizeMedium",
+                                                                    "iconSizeSmall": "MuiButton-iconSizeSmall",
+                                                                    "label": "MuiButton-label",
+                                                                    "outlined": "MuiButton-outlined",
+                                                                    "outlinedPrimary": "MuiButton-outlinedPrimary",
+                                                                    "outlinedSecondary": "MuiButton-outlinedSecondary",
+                                                                    "outlinedSizeLarge": "MuiButton-outlinedSizeLarge",
+                                                                    "outlinedSizeSmall": "MuiButton-outlinedSizeSmall",
+                                                                    "root": "MuiButton-root",
+                                                                    "sizeLarge": "MuiButton-sizeLarge",
+                                                                    "sizeSmall": "MuiButton-sizeSmall",
+                                                                    "startIcon": "MuiButton-startIcon",
+                                                                    "text": "MuiButton-text",
+                                                                    "textPrimary": "MuiButton-textPrimary",
+                                                                    "textSecondary": "MuiButton-textSecondary",
+                                                                    "textSizeLarge": "MuiButton-textSizeLarge",
+                                                                    "textSizeSmall": "MuiButton-textSizeSmall",
+                                                                  }
+                                                                }
+                                                                color="primary"
+                                                                data-testid="submit-admin-top"
+                                                                fullWidth={true}
+                                                                id="admin-work-submit-top"
+                                                                onClick={
+                                                                  [MockFunction] {
+                                                                    "calls": Array [
+                                                                      Array [
+                                                                        [Function],
+                                                                      ],
+                                                                      Array [
+                                                                        [Function],
+                                                                      ],
+                                                                    ],
+                                                                    "results": Array [
+                                                                      Object {
+                                                                        "type": "return",
+                                                                        "value": undefined,
+                                                                      },
+                                                                      Object {
+                                                                        "type": "return",
+                                                                        "value": undefined,
+                                                                      },
+                                                                    ],
+                                                                  }
+                                                                }
+                                                                style={
+                                                                  Object {
+                                                                    "whiteSpace": "nowrap",
+                                                                  }
+                                                                }
+                                                                variant="contained"
+                                                              >
+                                                                <WithStyles(ForwardRef(ButtonBase))
+                                                                  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                                                                  component="button"
+                                                                  data-testid="submit-admin-top"
+                                                                  disabled={false}
+                                                                  focusRipple={true}
+                                                                  focusVisibleClassName="Mui-focusVisible"
+                                                                  id="admin-work-submit-top"
+                                                                  onClick={
+                                                                    [MockFunction] {
+                                                                      "calls": Array [
+                                                                        Array [
+                                                                          [Function],
+                                                                        ],
+                                                                        Array [
+                                                                          [Function],
+                                                                        ],
+                                                                      ],
+                                                                      "results": Array [
+                                                                        Object {
+                                                                          "type": "return",
+                                                                          "value": undefined,
+                                                                        },
+                                                                        Object {
+                                                                          "type": "return",
+                                                                          "value": undefined,
+                                                                        },
+                                                                      ],
+                                                                    }
+                                                                  }
+                                                                  style={
+                                                                    Object {
+                                                                      "whiteSpace": "nowrap",
+                                                                    }
+                                                                  }
+                                                                  type="button"
+                                                                >
+                                                                  <ForwardRef(ButtonBase)
+                                                                    className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                                                                    classes={
+                                                                      Object {
+                                                                        "disabled": "Mui-disabled",
+                                                                        "focusVisible": "Mui-focusVisible",
+                                                                        "root": "MuiButtonBase-root",
+                                                                      }
+                                                                    }
+                                                                    component="button"
+                                                                    data-testid="submit-admin-top"
+                                                                    disabled={false}
+                                                                    focusRipple={true}
+                                                                    focusVisibleClassName="Mui-focusVisible"
+                                                                    id="admin-work-submit-top"
+                                                                    onClick={
+                                                                      [MockFunction] {
+                                                                        "calls": Array [
+                                                                          Array [
+                                                                            [Function],
+                                                                          ],
+                                                                          Array [
+                                                                            [Function],
+                                                                          ],
+                                                                        ],
+                                                                        "results": Array [
+                                                                          Object {
+                                                                            "type": "return",
+                                                                            "value": undefined,
+                                                                          },
+                                                                          Object {
+                                                                            "type": "return",
+                                                                            "value": undefined,
+                                                                          },
+                                                                        ],
+                                                                      }
+                                                                    }
+                                                                    style={
+                                                                      Object {
+                                                                        "whiteSpace": "nowrap",
+                                                                      }
+                                                                    }
+                                                                    type="button"
+                                                                  >
+                                                                    <button
+                                                                      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+                                                                      data-testid="submit-admin-top"
+                                                                      disabled={false}
+                                                                      id="admin-work-submit-top"
+                                                                      onBlur={[Function]}
+                                                                      onClick={
+                                                                        [MockFunction] {
+                                                                          "calls": Array [
+                                                                            Array [
+                                                                              [Function],
+                                                                            ],
+                                                                            Array [
+                                                                              [Function],
+                                                                            ],
+                                                                          ],
+                                                                          "results": Array [
+                                                                            Object {
+                                                                              "type": "return",
+                                                                              "value": undefined,
+                                                                            },
+                                                                            Object {
+                                                                              "type": "return",
+                                                                              "value": undefined,
+                                                                            },
+                                                                          ],
+                                                                        }
+                                                                      }
+                                                                      onDragLeave={[Function]}
+                                                                      onFocus={[Function]}
+                                                                      onKeyDown={[Function]}
+                                                                      onKeyUp={[Function]}
+                                                                      onMouseDown={[Function]}
+                                                                      onMouseLeave={[Function]}
+                                                                      onMouseUp={[Function]}
+                                                                      onTouchEnd={[Function]}
+                                                                      onTouchMove={[Function]}
+                                                                      onTouchStart={[Function]}
+                                                                      style={
+                                                                        Object {
+                                                                          "whiteSpace": "nowrap",
+                                                                        }
+                                                                      }
+                                                                      tabIndex={0}
+                                                                      type="button"
+                                                                    >
+                                                                      <span
+                                                                        className="MuiButton-label"
+                                                                      >
+                                                                        Save
+                                                                      </span>
+                                                                      <WithStyles(memo)
+                                                                        center={false}
+                                                                      >
+                                                                        <ForwardRef(TouchRipple)
+                                                                          center={false}
+                                                                          classes={
+                                                                            Object {
+                                                                              "child": "MuiTouchRipple-child",
+                                                                              "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                              "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                              "ripple": "MuiTouchRipple-ripple",
+                                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                              "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                              "root": "MuiTouchRipple-root",
+                                                                            }
+                                                                          }
+                                                                        >
+                                                                          <span
+                                                                            className="MuiTouchRipple-root"
+                                                                          >
+                                                                            <TransitionGroup
+                                                                              childFactory={[Function]}
+                                                                              component={null}
+                                                                              exit={true}
+                                                                            />
+                                                                          </span>
+                                                                        </ForwardRef(TouchRipple)>
+                                                                      </WithStyles(memo)>
+                                                                    </button>
+                                                                  </ForwardRef(ButtonBase)>
+                                                                </WithStyles(ForwardRef(ButtonBase))>
+                                                              </ForwardRef(Button)>
+                                                            </WithStyles(ForwardRef(Button))>
+                                                          </div>
+                                                        </ForwardRef(Grid)>
+                                                      </WithStyles(ForwardRef(Grid))>
+                                                    </div>
+                                                  </ForwardRef(Grid)>
+                                                </WithStyles(ForwardRef(Grid))>
+                                              </div>
+                                            </ForwardRef(Grid)>
+                                          </WithStyles(ForwardRef(Grid))>
+                                        </div>
+                                      </ForwardRef(Grid)>
+                                    </WithStyles(ForwardRef(Grid))>
+                                    <WithStyles(ForwardRef(Grid))
+                                      container={true}
                                       spacing={0}
                                     >
                                       <ForwardRef(Grid)
@@ -3281,11 +4598,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       <Cards
                                                         classes={
                                                           Object {
-                                                            "card": "Cards-card-159",
-                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-160",
-                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-162",
-                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-161",
-                                                            "fullHeight": "Cards-fullHeight-163",
+                                                            "card": "Cards-card-191",
+                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-192",
+                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-194",
+                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-193",
+                                                            "fullHeight": "Cards-fullHeight-195",
                                                           }
                                                         }
                                                         primaryHeader={true}
@@ -3649,12 +4966,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         title="Identifiers"
                                                       >
                                                         <WithStyles(ForwardRef(Card))
-                                                          className="Cards-card-159 StandardCard"
+                                                          className="Cards-card-191 StandardCard"
                                                           data-testid="identifiers-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
-                                                            className="Cards-card-159 StandardCard"
+                                                            className="Cards-card-191 StandardCard"
                                                             classes={
                                                               Object {
                                                                 "root": "MuiCard-root",
@@ -3664,13 +4981,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
-                                                              className="MuiCard-root Cards-card-159 StandardCard"
+                                                              className="MuiCard-root Cards-card-191 StandardCard"
                                                               data-testid="identifiers-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
                                                               <ForwardRef(Paper)
-                                                                className="MuiCard-root Cards-card-159 StandardCard"
+                                                                className="MuiCard-root Cards-card-191 StandardCard"
                                                                 classes={
                                                                   Object {
                                                                     "elevation0": "MuiPaper-elevation0",
@@ -3708,7 +5025,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <div
-                                                                  className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                  className="MuiPaper-root MuiCard-root Cards-card-191 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                   data-testid="identifiers-section"
                                                                   style={Object {}}
                                                                 >
@@ -3716,7 +5033,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "root": "Cards-cardHeaderPrimary-161",
+                                                                        "root": "Cards-cardHeaderPrimary-193",
                                                                       }
                                                                     }
                                                                     style={
@@ -3742,7 +5059,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "action": "MuiCardHeader-action",
                                                                           "avatar": "MuiCardHeader-avatar",
                                                                           "content": "MuiCardHeader-content",
-                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-161",
+                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-193",
                                                                           "subheader": "MuiCardHeader-subheader",
                                                                           "title": "MuiCardHeader-title",
                                                                         }
@@ -3764,7 +5081,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-161"
+                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-193"
                                                                         style={
                                                                           Object {
                                                                             "borderTopLeftRadius": 0,
@@ -4026,11 +5343,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       <Cards
                                                         classes={
                                                           Object {
-                                                            "card": "Cards-card-159",
-                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-160",
-                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-162",
-                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-161",
-                                                            "fullHeight": "Cards-fullHeight-163",
+                                                            "card": "Cards-card-191",
+                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-192",
+                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-194",
+                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-193",
+                                                            "fullHeight": "Cards-fullHeight-195",
                                                           }
                                                         }
                                                         primaryHeader={true}
@@ -4394,12 +5711,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         title="Bibliographic"
                                                       >
                                                         <WithStyles(ForwardRef(Card))
-                                                          className="Cards-card-159 StandardCard"
+                                                          className="Cards-card-191 StandardCard"
                                                           data-testid="bibliographic-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
-                                                            className="Cards-card-159 StandardCard"
+                                                            className="Cards-card-191 StandardCard"
                                                             classes={
                                                               Object {
                                                                 "root": "MuiCard-root",
@@ -4409,13 +5726,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
-                                                              className="MuiCard-root Cards-card-159 StandardCard"
+                                                              className="MuiCard-root Cards-card-191 StandardCard"
                                                               data-testid="bibliographic-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
                                                               <ForwardRef(Paper)
-                                                                className="MuiCard-root Cards-card-159 StandardCard"
+                                                                className="MuiCard-root Cards-card-191 StandardCard"
                                                                 classes={
                                                                   Object {
                                                                     "elevation0": "MuiPaper-elevation0",
@@ -4453,7 +5770,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <div
-                                                                  className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                  className="MuiPaper-root MuiCard-root Cards-card-191 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                   data-testid="bibliographic-section"
                                                                   style={Object {}}
                                                                 >
@@ -4461,7 +5778,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "root": "Cards-cardHeaderPrimary-161",
+                                                                        "root": "Cards-cardHeaderPrimary-193",
                                                                       }
                                                                     }
                                                                     style={
@@ -4487,7 +5804,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "action": "MuiCardHeader-action",
                                                                           "avatar": "MuiCardHeader-avatar",
                                                                           "content": "MuiCardHeader-content",
-                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-161",
+                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-193",
                                                                           "subheader": "MuiCardHeader-subheader",
                                                                           "title": "MuiCardHeader-title",
                                                                         }
@@ -4509,7 +5826,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-161"
+                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-193"
                                                                         style={
                                                                           Object {
                                                                             "borderTopLeftRadius": 0,
@@ -4771,11 +6088,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       <Cards
                                                         classes={
                                                           Object {
-                                                            "card": "Cards-card-159",
-                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-160",
-                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-162",
-                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-161",
-                                                            "fullHeight": "Cards-fullHeight-163",
+                                                            "card": "Cards-card-191",
+                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-192",
+                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-194",
+                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-193",
+                                                            "fullHeight": "Cards-fullHeight-195",
                                                           }
                                                         }
                                                         primaryHeader={true}
@@ -5139,12 +6456,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         title="Author details"
                                                       >
                                                         <WithStyles(ForwardRef(Card))
-                                                          className="Cards-card-159 StandardCard"
+                                                          className="Cards-card-191 StandardCard"
                                                           data-testid="author-details-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
-                                                            className="Cards-card-159 StandardCard"
+                                                            className="Cards-card-191 StandardCard"
                                                             classes={
                                                               Object {
                                                                 "root": "MuiCard-root",
@@ -5154,13 +6471,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
-                                                              className="MuiCard-root Cards-card-159 StandardCard"
+                                                              className="MuiCard-root Cards-card-191 StandardCard"
                                                               data-testid="author-details-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
                                                               <ForwardRef(Paper)
-                                                                className="MuiCard-root Cards-card-159 StandardCard"
+                                                                className="MuiCard-root Cards-card-191 StandardCard"
                                                                 classes={
                                                                   Object {
                                                                     "elevation0": "MuiPaper-elevation0",
@@ -5198,7 +6515,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <div
-                                                                  className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                  className="MuiPaper-root MuiCard-root Cards-card-191 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                   data-testid="author-details-section"
                                                                   style={Object {}}
                                                                 >
@@ -5206,7 +6523,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "root": "Cards-cardHeaderPrimary-161",
+                                                                        "root": "Cards-cardHeaderPrimary-193",
                                                                       }
                                                                     }
                                                                     style={
@@ -5232,7 +6549,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "action": "MuiCardHeader-action",
                                                                           "avatar": "MuiCardHeader-avatar",
                                                                           "content": "MuiCardHeader-content",
-                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-161",
+                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-193",
                                                                           "subheader": "MuiCardHeader-subheader",
                                                                           "title": "MuiCardHeader-title",
                                                                         }
@@ -5254,7 +6571,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-161"
+                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-193"
                                                                         style={
                                                                           Object {
                                                                             "borderTopLeftRadius": 0,
@@ -5516,11 +6833,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       <Cards
                                                         classes={
                                                           Object {
-                                                            "card": "Cards-card-159",
-                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-160",
-                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-162",
-                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-161",
-                                                            "fullHeight": "Cards-fullHeight-163",
+                                                            "card": "Cards-card-191",
+                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-192",
+                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-194",
+                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-193",
+                                                            "fullHeight": "Cards-fullHeight-195",
                                                           }
                                                         }
                                                         primaryHeader={true}
@@ -5884,12 +7201,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         title="Admin"
                                                       >
                                                         <WithStyles(ForwardRef(Card))
-                                                          className="Cards-card-159 StandardCard"
+                                                          className="Cards-card-191 StandardCard"
                                                           data-testid="admin-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
-                                                            className="Cards-card-159 StandardCard"
+                                                            className="Cards-card-191 StandardCard"
                                                             classes={
                                                               Object {
                                                                 "root": "MuiCard-root",
@@ -5899,13 +7216,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
-                                                              className="MuiCard-root Cards-card-159 StandardCard"
+                                                              className="MuiCard-root Cards-card-191 StandardCard"
                                                               data-testid="admin-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
                                                               <ForwardRef(Paper)
-                                                                className="MuiCard-root Cards-card-159 StandardCard"
+                                                                className="MuiCard-root Cards-card-191 StandardCard"
                                                                 classes={
                                                                   Object {
                                                                     "elevation0": "MuiPaper-elevation0",
@@ -5943,7 +7260,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <div
-                                                                  className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                  className="MuiPaper-root MuiCard-root Cards-card-191 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                   data-testid="admin-section"
                                                                   style={Object {}}
                                                                 >
@@ -5951,7 +7268,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "root": "Cards-cardHeaderPrimary-161",
+                                                                        "root": "Cards-cardHeaderPrimary-193",
                                                                       }
                                                                     }
                                                                     style={
@@ -5977,7 +7294,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "action": "MuiCardHeader-action",
                                                                           "avatar": "MuiCardHeader-avatar",
                                                                           "content": "MuiCardHeader-content",
-                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-161",
+                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-193",
                                                                           "subheader": "MuiCardHeader-subheader",
                                                                           "title": "MuiCardHeader-title",
                                                                         }
@@ -5999,7 +7316,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-161"
+                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-193"
                                                                         style={
                                                                           Object {
                                                                             "borderTopLeftRadius": 0,
@@ -6261,11 +7578,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       <Cards
                                                         classes={
                                                           Object {
-                                                            "card": "Cards-card-159",
-                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-160",
-                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-162",
-                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-161",
-                                                            "fullHeight": "Cards-fullHeight-163",
+                                                            "card": "Cards-card-191",
+                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-192",
+                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-194",
+                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-193",
+                                                            "fullHeight": "Cards-fullHeight-195",
                                                           }
                                                         }
                                                         primaryHeader={true}
@@ -6629,12 +7946,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         title="Grant information"
                                                       >
                                                         <WithStyles(ForwardRef(Card))
-                                                          className="Cards-card-159 StandardCard"
+                                                          className="Cards-card-191 StandardCard"
                                                           data-testid="grant-information-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
-                                                            className="Cards-card-159 StandardCard"
+                                                            className="Cards-card-191 StandardCard"
                                                             classes={
                                                               Object {
                                                                 "root": "MuiCard-root",
@@ -6644,13 +7961,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
-                                                              className="MuiCard-root Cards-card-159 StandardCard"
+                                                              className="MuiCard-root Cards-card-191 StandardCard"
                                                               data-testid="grant-information-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
                                                               <ForwardRef(Paper)
-                                                                className="MuiCard-root Cards-card-159 StandardCard"
+                                                                className="MuiCard-root Cards-card-191 StandardCard"
                                                                 classes={
                                                                   Object {
                                                                     "elevation0": "MuiPaper-elevation0",
@@ -6688,7 +8005,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <div
-                                                                  className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                  className="MuiPaper-root MuiCard-root Cards-card-191 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                   data-testid="grant-information-section"
                                                                   style={Object {}}
                                                                 >
@@ -6696,7 +8013,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "root": "Cards-cardHeaderPrimary-161",
+                                                                        "root": "Cards-cardHeaderPrimary-193",
                                                                       }
                                                                     }
                                                                     style={
@@ -6722,7 +8039,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "action": "MuiCardHeader-action",
                                                                           "avatar": "MuiCardHeader-avatar",
                                                                           "content": "MuiCardHeader-content",
-                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-161",
+                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-193",
                                                                           "subheader": "MuiCardHeader-subheader",
                                                                           "title": "MuiCardHeader-title",
                                                                         }
@@ -6744,7 +8061,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-161"
+                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-193"
                                                                         style={
                                                                           Object {
                                                                             "borderTopLeftRadius": 0,
@@ -7006,11 +8323,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       <Cards
                                                         classes={
                                                           Object {
-                                                            "card": "Cards-card-159",
-                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-160",
-                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-162",
-                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-161",
-                                                            "fullHeight": "Cards-fullHeight-163",
+                                                            "card": "Cards-card-191",
+                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-192",
+                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-194",
+                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-193",
+                                                            "fullHeight": "Cards-fullHeight-195",
                                                           }
                                                         }
                                                         primaryHeader={true}
@@ -7374,12 +8691,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         title="Files"
                                                       >
                                                         <WithStyles(ForwardRef(Card))
-                                                          className="Cards-card-159 StandardCard"
+                                                          className="Cards-card-191 StandardCard"
                                                           data-testid="files-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
-                                                            className="Cards-card-159 StandardCard"
+                                                            className="Cards-card-191 StandardCard"
                                                             classes={
                                                               Object {
                                                                 "root": "MuiCard-root",
@@ -7389,13 +8706,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
-                                                              className="MuiCard-root Cards-card-159 StandardCard"
+                                                              className="MuiCard-root Cards-card-191 StandardCard"
                                                               data-testid="files-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
                                                               <ForwardRef(Paper)
-                                                                className="MuiCard-root Cards-card-159 StandardCard"
+                                                                className="MuiCard-root Cards-card-191 StandardCard"
                                                                 classes={
                                                                   Object {
                                                                     "elevation0": "MuiPaper-elevation0",
@@ -7433,7 +8750,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <div
-                                                                  className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                  className="MuiPaper-root MuiCard-root Cards-card-191 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                   data-testid="files-section"
                                                                   style={Object {}}
                                                                 >
@@ -7441,7 +8758,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "root": "Cards-cardHeaderPrimary-161",
+                                                                        "root": "Cards-cardHeaderPrimary-193",
                                                                       }
                                                                     }
                                                                     style={
@@ -7467,7 +8784,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "action": "MuiCardHeader-action",
                                                                           "avatar": "MuiCardHeader-avatar",
                                                                           "content": "MuiCardHeader-content",
-                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-161",
+                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-193",
                                                                           "subheader": "MuiCardHeader-subheader",
                                                                           "title": "MuiCardHeader-title",
                                                                         }
@@ -7489,7 +8806,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-161"
+                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-193"
                                                                         style={
                                                                           Object {
                                                                             "borderTopLeftRadius": 0,
@@ -7751,11 +9068,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       <Cards
                                                         classes={
                                                           Object {
-                                                            "card": "Cards-card-159",
-                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-160",
-                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-162",
-                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-161",
-                                                            "fullHeight": "Cards-fullHeight-163",
+                                                            "card": "Cards-card-191",
+                                                            "cardContentNoPadding": "Cards-cardContentNoPadding-192",
+                                                            "cardHeaderAccent": "Cards-cardHeaderAccent-194",
+                                                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-193",
+                                                            "fullHeight": "Cards-fullHeight-195",
                                                           }
                                                         }
                                                         primaryHeader={true}
@@ -8119,12 +9436,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         title="Security"
                                                       >
                                                         <WithStyles(ForwardRef(Card))
-                                                          className="Cards-card-159 StandardCard"
+                                                          className="Cards-card-191 StandardCard"
                                                           data-testid="security-section"
                                                           style={Object {}}
                                                         >
                                                           <ForwardRef(Card)
-                                                            className="Cards-card-159 StandardCard"
+                                                            className="Cards-card-191 StandardCard"
                                                             classes={
                                                               Object {
                                                                 "root": "MuiCard-root",
@@ -8134,13 +9451,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <WithStyles(ForwardRef(Paper))
-                                                              className="MuiCard-root Cards-card-159 StandardCard"
+                                                              className="MuiCard-root Cards-card-191 StandardCard"
                                                               data-testid="security-section"
                                                               elevation={1}
                                                               style={Object {}}
                                                             >
                                                               <ForwardRef(Paper)
-                                                                className="MuiCard-root Cards-card-159 StandardCard"
+                                                                className="MuiCard-root Cards-card-191 StandardCard"
                                                                 classes={
                                                                   Object {
                                                                     "elevation0": "MuiPaper-elevation0",
@@ -8178,7 +9495,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <div
-                                                                  className="MuiPaper-root MuiCard-root Cards-card-159 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                  className="MuiPaper-root MuiCard-root Cards-card-191 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                   data-testid="security-section"
                                                                   style={Object {}}
                                                                 >
@@ -8186,7 +9503,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "root": "Cards-cardHeaderPrimary-161",
+                                                                        "root": "Cards-cardHeaderPrimary-193",
                                                                       }
                                                                     }
                                                                     style={
@@ -8212,7 +9529,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           "action": "MuiCardHeader-action",
                                                                           "avatar": "MuiCardHeader-avatar",
                                                                           "content": "MuiCardHeader-content",
-                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-161",
+                                                                          "root": "MuiCardHeader-root Cards-cardHeaderPrimary-193",
                                                                           "subheader": "MuiCardHeader-subheader",
                                                                           "title": "MuiCardHeader-title",
                                                                         }
@@ -8234,7 +9551,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-161"
+                                                                        className="MuiCardHeader-root Cards-cardHeaderPrimary-193"
                                                                         style={
                                                                           Object {
                                                                             "borderTopLeftRadius": 0,
@@ -8850,7 +10167,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                             <WithStyles(ForwardRef(Button))
                                                               color="secondary"
                                                               fullWidth={true}
-                                                              id="admin-work-cancel"
+                                                              id="admin-work-cancel-bottom"
                                                               onClick={[Function]}
                                                               style={
                                                                 Object {
@@ -8895,7 +10212,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 }
                                                                 color="secondary"
                                                                 fullWidth={true}
-                                                                id="admin-work-cancel"
+                                                                id="admin-work-cancel-bottom"
                                                                 onClick={[Function]}
                                                                 style={
                                                                   Object {
@@ -8910,7 +10227,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
-                                                                  id="admin-work-cancel"
+                                                                  id="admin-work-cancel-bottom"
                                                                   onClick={[Function]}
                                                                   style={
                                                                     Object {
@@ -8932,7 +10249,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
-                                                                    id="admin-work-cancel"
+                                                                    id="admin-work-cancel-bottom"
                                                                     onClick={[Function]}
                                                                     style={
                                                                       Object {
@@ -8944,7 +10261,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     <button
                                                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
                                                                       disabled={false}
-                                                                      id="admin-work-cancel"
+                                                                      id="admin-work-cancel-bottom"
                                                                       onBlur={[Function]}
                                                                       onClick={[Function]}
                                                                       onDragLeave={[Function]}
@@ -9128,9 +10445,9 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Button))
                                                               color="secondary"
-                                                              data-testid="unpublish-admin"
+                                                              data-testid="unpublish-admin-bottom"
                                                               fullWidth={true}
-                                                              id="admin-work-unpublish"
+                                                              id="admin-work-unpublish-bottom"
                                                               variant="contained"
                                                             >
                                                               <ForwardRef(Button)
@@ -9168,19 +10485,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   }
                                                                 }
                                                                 color="secondary"
-                                                                data-testid="unpublish-admin"
+                                                                data-testid="unpublish-admin-bottom"
                                                                 fullWidth={true}
-                                                                id="admin-work-unpublish"
+                                                                id="admin-work-unpublish-bottom"
                                                                 variant="contained"
                                                               >
                                                                 <WithStyles(ForwardRef(ButtonBase))
                                                                   className="MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
                                                                   component="button"
-                                                                  data-testid="unpublish-admin"
+                                                                  data-testid="unpublish-admin-bottom"
                                                                   disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
-                                                                  id="admin-work-unpublish"
+                                                                  id="admin-work-unpublish-bottom"
                                                                   type="button"
                                                                 >
                                                                   <ForwardRef(ButtonBase)
@@ -9193,18 +10510,18 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     }
                                                                     component="button"
-                                                                    data-testid="unpublish-admin"
+                                                                    data-testid="unpublish-admin-bottom"
                                                                     disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
-                                                                    id="admin-work-unpublish"
+                                                                    id="admin-work-unpublish-bottom"
                                                                     type="button"
                                                                   >
                                                                     <button
                                                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-fullWidth"
-                                                                      data-testid="unpublish-admin"
+                                                                      data-testid="unpublish-admin-bottom"
                                                                       disabled={false}
-                                                                      id="admin-work-unpublish"
+                                                                      id="admin-work-unpublish-bottom"
                                                                       onBlur={[Function]}
                                                                       onDragLeave={[Function]}
                                                                       onFocus={[Function]}
@@ -9382,17 +10699,24 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(Button))
                                                               color="primary"
-                                                              data-testid="submit-admin"
+                                                              data-testid="submit-admin-bottom"
                                                               fullWidth={true}
-                                                              id="admin-work-submit"
+                                                              id="admin-work-submit-bottom"
                                                               onClick={
                                                                 [MockFunction] {
                                                                   "calls": Array [
                                                                     Array [
                                                                       [Function],
                                                                     ],
+                                                                    Array [
+                                                                      [Function],
+                                                                    ],
                                                                   ],
                                                                   "results": Array [
+                                                                    Object {
+                                                                      "type": "return",
+                                                                      "value": undefined,
+                                                                    },
                                                                     Object {
                                                                       "type": "return",
                                                                       "value": undefined,
@@ -9442,17 +10766,24 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   }
                                                                 }
                                                                 color="primary"
-                                                                data-testid="submit-admin"
+                                                                data-testid="submit-admin-bottom"
                                                                 fullWidth={true}
-                                                                id="admin-work-submit"
+                                                                id="admin-work-submit-bottom"
                                                                 onClick={
                                                                   [MockFunction] {
                                                                     "calls": Array [
                                                                       Array [
                                                                         [Function],
                                                                       ],
+                                                                      Array [
+                                                                        [Function],
+                                                                      ],
                                                                     ],
                                                                     "results": Array [
+                                                                      Object {
+                                                                        "type": "return",
+                                                                        "value": undefined,
+                                                                      },
                                                                       Object {
                                                                         "type": "return",
                                                                         "value": undefined,
@@ -9470,19 +10801,26 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 <WithStyles(ForwardRef(ButtonBase))
                                                                   className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
                                                                   component="button"
-                                                                  data-testid="submit-admin"
+                                                                  data-testid="submit-admin-bottom"
                                                                   disabled={false}
                                                                   focusRipple={true}
                                                                   focusVisibleClassName="Mui-focusVisible"
-                                                                  id="admin-work-submit"
+                                                                  id="admin-work-submit-bottom"
                                                                   onClick={
                                                                     [MockFunction] {
                                                                       "calls": Array [
                                                                         Array [
                                                                           [Function],
                                                                         ],
+                                                                        Array [
+                                                                          [Function],
+                                                                        ],
                                                                       ],
                                                                       "results": Array [
+                                                                        Object {
+                                                                          "type": "return",
+                                                                          "value": undefined,
+                                                                        },
                                                                         Object {
                                                                           "type": "return",
                                                                           "value": undefined,
@@ -9507,19 +10845,26 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       }
                                                                     }
                                                                     component="button"
-                                                                    data-testid="submit-admin"
+                                                                    data-testid="submit-admin-bottom"
                                                                     disabled={false}
                                                                     focusRipple={true}
                                                                     focusVisibleClassName="Mui-focusVisible"
-                                                                    id="admin-work-submit"
+                                                                    id="admin-work-submit-bottom"
                                                                     onClick={
                                                                       [MockFunction] {
                                                                         "calls": Array [
                                                                           Array [
                                                                             [Function],
                                                                           ],
+                                                                          Array [
+                                                                            [Function],
+                                                                          ],
                                                                         ],
                                                                         "results": Array [
+                                                                          Object {
+                                                                            "type": "return",
+                                                                            "value": undefined,
+                                                                          },
                                                                           Object {
                                                                             "type": "return",
                                                                             "value": undefined,
@@ -9536,9 +10881,9 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   >
                                                                     <button
                                                                       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
-                                                                      data-testid="submit-admin"
+                                                                      data-testid="submit-admin-bottom"
                                                                       disabled={false}
-                                                                      id="admin-work-submit"
+                                                                      id="admin-work-submit-bottom"
                                                                       onBlur={[Function]}
                                                                       onClick={
                                                                         [MockFunction] {
@@ -9546,8 +10891,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             Array [
                                                                               [Function],
                                                                             ],
+                                                                            Array [
+                                                                              [Function],
+                                                                            ],
                                                                           ],
                                                                           "results": Array [
+                                                                            Object {
+                                                                              "type": "return",
+                                                                              "value": undefined,
+                                                                            },
                                                                             Object {
                                                                               "type": "return",
                                                                               "value": undefined,

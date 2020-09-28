@@ -19,17 +19,17 @@ Cypress.Commands.add('adminEditCountCards', count => {
 });
 
 Cypress.Commands.add('adminEditNoAlerts', () => {
-    cy.get('.StandardPage form > div:nth-child(2)').within(() => {
+    cy.get('.StandardPage form > div:first-child').within(() => {
         cy.get('.Alert').should('not.exist');
     });
 
-    cy.get('#admin-work-submit')
+    cy.get('#admin-work-submit-bottom')
         .should('exist')
         .should('be.enabled');
 });
 
 Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
-    cy.get('.StandardPage form > div:nth-child(2)').within(() => {
+    cy.get('.StandardPage form > div:first-child').within(() => {
         cy.get('.Alert')
             .should('exist')
             .find('.alert-text')
@@ -42,7 +42,7 @@ Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
         });
     });
 
-    cy.get('#admin-work-submit')
+    cy.get('#admin-work-submit-bottom')
         .should('exist')
         .should('be.disabled');
 });
