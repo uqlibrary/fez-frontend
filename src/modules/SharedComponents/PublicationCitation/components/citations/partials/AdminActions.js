@@ -4,11 +4,12 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { debounce } from 'throttle-debounce';
 
 import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions, RECORD_TYPE_RECORD } from 'config/general';
 import { DOI_ORG_PREFIX } from 'config/doi';
 
-export const navigateToUrl = (uri, target, navigatedFrom, options) => () => {
+export const navigateToUrl = (uri, target, navigatedFrom, options) => {
     let fullUri = uri;
     if (navigatedFrom) {
         const queryStringGlue = uri.indexOf('?') > -1 ? '&' : '?';
@@ -58,20 +59,22 @@ export const AdminActions = ({
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
         const url = action.url(pid);
-        const clickHandler = (forceNewTab = false) => event =>
-            navigateToUrl(
-                url,
-                event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
-                !!action.isRecordEdit && navigatedFrom,
-                options,
-            )();
-
+        const clickHandler = (forceNewTab = false) =>
+            debounce(300, true, event => {
+                navigateToUrl(
+                    url,
+                    event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
+                    !!action.isRecordEdit && navigatedFrom,
+                    options,
+                );
+            });
         const label = action.isDoi ? action.label(!!doi) : action.label;
         return {
             label,
             clickHandler,
         };
     });
+
     return (
         <React.Fragment>
             <IconButton id="admin-actions-button" aria-label="More" aria-haspopup="true" onClick={handleClick}>
