@@ -23,7 +23,7 @@ Cypress.Commands.add('adminEditNoAlerts', () => {
         cy.get('.Alert').should('not.exist');
     });
 
-    cy.get('#admin-work-submit-bottom')
+    cy.get('#admin-work-submit')
         .should('exist')
         .should('be.enabled');
 });
@@ -42,7 +42,7 @@ Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
         });
     });
 
-    cy.get('#admin-work-submit-bottom')
+    cy.get('#admin-work-submit')
         .should('exist')
         .should('be.disabled');
 });

@@ -187,11 +187,11 @@ export const AdminInterface = ({
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
         );
 
-    const renderButtonBar = placement => (
+    const renderButtonBar = (placement = '') => (
         <React.Fragment>
             <Grid item xs={12} sm={2}>
                 <Button
-                    id={`admin-work-cancel-${placement}`}
+                    id={`admin-work-cancel${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
                     variant="contained"
                     color="secondary"
@@ -203,8 +203,8 @@ export const AdminInterface = ({
             {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status !== PUBLISHED && !isDeleted && (
                 <Grid item xs={12} sm={3}>
                     <Button
-                        id={`admin-work-publish-${placement}`}
-                        data-testid={`publish-admin-${placement}`}
+                        id={`admin-work-publish${placement}`}
+                        data-testid={`publish-admin${placement}`}
                         disabled={
                             !!submitting ||
                             !!disableSubmit ||
@@ -221,8 +221,8 @@ export const AdminInterface = ({
             {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status === PUBLISHED && !isDeleted && (
                 <Grid item xs={12} sm={3}>
                     <Button
-                        id={`admin-work-unpublish-${placement}`}
-                        data-testid={`unpublish-admin-${placement}`}
+                        id={`admin-work-unpublish${placement}`}
+                        data-testid={`unpublish-admin${placement}`}
                         disabled={
                             !!submitting ||
                             !!disableSubmit ||
@@ -238,8 +238,8 @@ export const AdminInterface = ({
             )}
             <Grid item xs={12} sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted ? 7 : 10}>
                 <Button
-                    id={`admin-work-submit-${placement}`}
-                    data-testid={`submit-admin-${placement}`}
+                    id={`admin-work-submit${placement}`}
+                    data-testid={`submit-admin${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
                     disabled={
                         !!submitting ||
@@ -359,7 +359,7 @@ export const AdminInterface = ({
                             {renderSaveStatusAlert}
                             <Grid item xs={12}>
                                 <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
-                                    {renderButtonBar('top')}
+                                    {renderButtonBar('-top')}
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -374,7 +374,7 @@ export const AdminInterface = ({
                             {renderSaveStatusAlert}
                             <Grid item xs={12}>
                                 <Grid container spacing={1} style={{ marginTop: 8 }}>
-                                    {renderButtonBar('bottom')}
+                                    {renderButtonBar()}
                                 </Grid>
                             </Grid>
                         </Grid>

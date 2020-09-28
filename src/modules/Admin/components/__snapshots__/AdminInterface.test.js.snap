@@ -303,7 +303,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -322,10 +322,10 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="publish-admin-bottom"
+                data-testid="publish-admin"
                 disabled={true}
                 fullWidth={true}
-                id="admin-work-publish-bottom"
+                id="admin-work-publish"
                 variant="contained"
               >
                 Publish
@@ -338,10 +338,10 @@ exports[`AdminInterface component should disabled button and render alert for fo
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 disabled={true}
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -709,7 +709,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -728,9 +728,9 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="publish-admin-bottom"
+                data-testid="publish-admin"
                 fullWidth={true}
-                id="admin-work-publish-bottom"
+                id="admin-work-publish"
                 variant="contained"
               >
                 Publish
@@ -743,9 +743,9 @@ exports[`AdminInterface component should display successful alert 1`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -1086,7 +1086,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -1105,9 +1105,9 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="publish-admin-bottom"
+                data-testid="publish-admin"
                 fullWidth={true}
-                id="admin-work-publish-bottom"
+                id="admin-work-publish"
                 variant="contained"
               >
                 Publish
@@ -1120,9 +1120,9 @@ exports[`AdminInterface component should display successful alert 2`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -1394,7 +1394,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -1413,9 +1413,9 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="publish-admin-bottom"
+                data-testid="publish-admin"
                 fullWidth={true}
-                id="admin-work-publish-bottom"
+                id="admin-work-publish"
                 variant="contained"
               >
                 Publish
@@ -1428,9 +1428,9 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -1730,7 +1730,7 @@ exports[`AdminInterface component should render default view as a full form view
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -1749,9 +1749,9 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="publish-admin-bottom"
+                data-testid="publish-admin"
                 fullWidth={true}
-                id="admin-work-publish-bottom"
+                id="admin-work-publish"
                 variant="contained"
               >
                 Publish
@@ -1764,9 +1764,9 @@ exports[`AdminInterface component should render default view as a full form view
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -2062,7 +2062,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -2081,9 +2081,9 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="publish-admin-bottom"
+                data-testid="publish-admin"
                 fullWidth={true}
-                id="admin-work-publish-bottom"
+                id="admin-work-publish"
                 variant="contained"
               >
                 Publish
@@ -2096,9 +2096,9 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -2363,7 +2363,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -2382,9 +2382,9 @@ exports[`AdminInterface component should render in create mode 1`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={[MockFunction]}
                 style={
                   Object {
@@ -2670,7 +2670,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -2689,10 +2689,10 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="unpublish-admin-bottom"
+                data-testid="unpublish-admin"
                 disabled={true}
                 fullWidth={true}
-                id="admin-work-unpublish-bottom"
+                id="admin-work-unpublish"
                 variant="contained"
               >
                 Unpublish
@@ -2705,10 +2705,10 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 disabled={true}
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -3015,7 +3015,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -3034,10 +3034,10 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="secondary"
-                data-testid="publish-admin-bottom"
+                data-testid="publish-admin"
                 disabled={false}
                 fullWidth={true}
-                id="admin-work-publish-bottom"
+                id="admin-work-publish"
                 variant="contained"
               >
                 Publish
@@ -3050,10 +3050,10 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 disabled={false}
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={
                   [MockFunction] {
                     "calls": Array [
@@ -3308,7 +3308,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               <WithStyles(ForwardRef(Button))
                 color="secondary"
                 fullWidth={true}
-                id="admin-work-cancel-bottom"
+                id="admin-work-cancel"
                 onClick={[Function]}
                 style={
                   Object {
@@ -3327,9 +3327,9 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             >
               <WithStyles(ForwardRef(Button))
                 color="primary"
-                data-testid="submit-admin-bottom"
+                data-testid="submit-admin"
                 fullWidth={true}
-                id="admin-work-submit-bottom"
+                id="admin-work-submit"
                 onClick={[MockFunction]}
                 style={
                   Object {
