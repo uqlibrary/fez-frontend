@@ -27,7 +27,7 @@ context('As an admin,', () => {
         cy.get('[data-testid=rek-copyright-input]').click();
 
         // Submit form
-        cy.get('#admin-work-submit-bottom')
+        cy.get('#admin-work-submit')
             .should('contain', 'Save')
             .click();
 
