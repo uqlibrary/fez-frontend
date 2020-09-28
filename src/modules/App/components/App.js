@@ -219,6 +219,9 @@ export class AppClass extends PureComponent {
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isAuthorDetailsLoading = this.props.accountLoading || this.props.accountAuthorDetailsLoading;
         const isOrcidRequired =
+            this.props.authorDetails &&
+            this.props.authorDetails.is_administrator !== 1 &&
+            this.props.authorDetails.is_super_administrator !== 1 &&
             this.props.author &&
             Object.keys(this.props.author).length > 1 &&
             !this.props.author.aut_orcid_id &&
