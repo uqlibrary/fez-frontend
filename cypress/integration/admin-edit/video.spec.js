@@ -43,7 +43,7 @@ context('Video admin edit', () => {
 
     it('should submit successfully', () => {
         const baseUrl = Cypress.config('baseUrl');
-        cy.typeCKEditor('editor2', 'some description'); // description
+        cy.typeCKEditor('rek-description', 'some description'); // description
         cy.get('#admin-work-submit').click();
 
         // Confirmation message

@@ -74,8 +74,8 @@ context('Audio admin edit', () => {
                 cy.get('div:nth-child(14) span span')
                     .eq(0)
                     .should('have.text', 'Transcript');
-                cy.get('#cke_editor3').should('exist');
-                cy.readCKEditor('editor3').should(text => {
+                cy.get('#cke_rek-transcript-editor').should('exist');
+                cy.readCKEditor('rek-transcript').should(text => {
                     expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                 });
                 cy.get('[data-testid=rek-alternate-genre-input]')
@@ -150,8 +150,8 @@ context('Audio admin edit', () => {
                 cy.get('span span')
                     .eq(0)
                     .should('contain', 'Advisory statement');
-                cy.get('#cke_editor7').should('exist');
-                cy.readCKEditor('editor7').should(text => {
+                cy.get('#cke_rek-advisory-statement-editor').should('exist');
+                cy.readCKEditor('rek-advisory-statement').should(text => {
                     // prettier-ignore
                     expect(text).to.contain(
                             'Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities. The University of Queensland has approval from traditional owners and or descendants of the people who participated in the Queensland Speech Survey by Elwyn Flint in the 1960s.'

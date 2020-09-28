@@ -37,16 +37,12 @@ export default class RichEditor extends PureComponent {
     componentDidMount() {
         this.editorInstance =
             !!window.CKEDITOR &&
-            window.CKEDITOR.appendTo(
-                this.props.inputRef.current,
-                {
-                    bodyId: `${this.props.richEditorId}-input`,
-                    removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
-                    height: this.props.height,
-                    pasteFilter: 'semantic-content',
-                },
-                (!!this.props.value && this.props.value.get('htmlText')) || null,
-            );
+            window.CKEDITOR.replace(this.props.inputRef.current, {
+                bodyId: `${this.props.richEditorId}-input`,
+                removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
+                height: this.props.height,
+                pasteFilter: 'semantic-content',
+            });
 
         !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
         !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);
@@ -65,6 +61,7 @@ export default class RichEditor extends PureComponent {
     }
 
     onInstanceReady = () => {
+        !!this.props.value && this.editorInstance.setData(this.props.value.get('htmlText'));
         this.editorInstance.setReadOnly(!!this.props.disabled);
     };
 
