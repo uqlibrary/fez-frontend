@@ -12,6 +12,7 @@ exports[`FieldGridItem should render default view 1`] = `
     height={100}
     name="bibliographicSection.rek_title"
     required={true}
+    richEditorId="rek-title"
     title="Formatted title"
     titleProps={
       Object {
@@ -42,6 +43,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
     height={100}
     name="bibliographicSection.rek_title"
     required={true}
+    richEditorId="rek-title"
     title="Formatted title"
     titleProps={
       Object {
