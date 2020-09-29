@@ -2852,6 +2852,34 @@ export default {
                 cancelButtonLabel: 'Cancel',
             }),
             bulkUpdatesForms: {
+                changeAuthorIdForm: {
+                    formLabels: {
+                        authorName: 'Author Name',
+                        authorId: 'Author Id',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: {
+                        title: 'Bulk change author ID',
+                        message:
+                            'This will find all authors for each record that match author name string and update the author id with the value selected in author ID. It is case sensitive and will fail if multiple authors are matched. Such as Lee matching Lee and Leep',
+                        type: 'info',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change author ID',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change author ID',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change author ID',
+                        type: 'error',
+                    },
+                },
                 changeDisplayTypeForm: {
                     formLabels: {
                         displayType: 'New display type',

@@ -642,6 +642,37 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
 };
 
 /**
+ * Change author ID action
+ *
+ * @param {array} records
+ * @param {object} data
+ */
+export const changeAuthorId = (records, data) => {
+    const changeAuthorIdRequest = transformers.getChangeAuthorIdValues(records, data);
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_AUTHOR_ID_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), changeAuthorIdRequest);
+            dispatch({
+                type: actions.CHANGE_AUTHOR_ID_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_AUTHOR_ID_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};
+
+/**
  * Change display type action
  *
  * @param {array} records

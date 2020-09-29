@@ -1222,18 +1222,40 @@ export const getDatastreamInfo = (
 export const getChangeSearchKeyValues = (records, data) => {
     const { search_key: searchKey } = data;
     const [primaryKey, subKey] = searchKey.split('.');
+    const getSearchKeyValue = (primaryKey, subKey, item) => {
+        switch (primaryKey) {
+            case 'fez_record_search_key_notes':
+                return {
+                    [primaryKey]: {
+                        ...item,
+                        [subKey]: `${(!!item && item[subKey]) || ''}${data[primaryKey][subKey]}`,
+                    },
+                };
+            default:
+                return {
+                    [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
+                };
+        }
+    };
     return records.map(({ rek_pid: pid, [primaryKey]: item }) => ({
         rek_pid: pid,
-        ...(primaryKey === 'fez_record_search_key_notes'
-            ? {
-                  [primaryKey]: {
-                      ...item,
-                      [subKey]: `${(!!item && item[subKey]) || ''}${data[primaryKey][subKey]}`,
-                  },
-              }
-            : {
-                  [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
-              }),
+        ...getSearchKeyValue(primaryKey, subKey, item),
         edit_reason: data.edit_reason || '',
     }));
+};
+
+export const getChangeAuthorIdValues = (records, data) => {
+    return records.map(record => {
+        const [author] = record.fez_record_search_key_author.filter(author => author.rek_author === data.rek_author);
+
+        return {
+            rek_pid: record.rek_pid,
+            fez_record_search_key_author_id: record.fez_record_search_key_author_id.map((authorId, index) => ({
+                ...authorId,
+                ...(index + 1 === author.rek_author_order
+                    ? { rek_author_id: data.rek_author_id, rek_author_id_order: index + 1 }
+                    : {}),
+            })),
+        };
+    });
 };

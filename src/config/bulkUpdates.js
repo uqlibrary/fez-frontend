@@ -1,4 +1,5 @@
 // Bulk updates action values for dropdown
+export const BUA_CHANGE_AUTHOR_ID = 'change-author-id';
 export const BUA_CHANGE_DISPLAY_TYPE = 'change-display-type';
 export const BUA_COPY_TO_COLLECTION = 'copy-to-collection';
 export const BUA_REMOVE_FROM_COLLECTION = 'remove-from-collection';
@@ -6,6 +7,11 @@ export const BUA_CHANGE_SEARCHKEY_VALUE = 'change-searchkey-value';
 export const BUA_UPDATE_SECURITY = 'update-security';
 
 // Bulk updates action options
+export const BUA_CHANGE_AUTHOR_ID_OPTION = {
+    value: BUA_CHANGE_AUTHOR_ID,
+    text: 'Change Author ID',
+};
+
 export const BUA_CHANGE_DISPLAY_TYPE_OPTION = {
     value: BUA_CHANGE_DISPLAY_TYPE,
     text: 'Change display type',
@@ -38,6 +44,7 @@ export const BULK_UPDATES_ACTIONS = {
         text: 'Please choose an action',
         disabled: true,
     },
+    [BUA_CHANGE_AUTHOR_ID]: BUA_CHANGE_AUTHOR_ID_OPTION,
     [BUA_CHANGE_DISPLAY_TYPE]: BUA_CHANGE_DISPLAY_TYPE_OPTION,
     [BUA_COPY_TO_COLLECTION]: BUA_COPY_TO_COLLECTION_OPTION,
     [BUA_REMOVE_FROM_COLLECTION]: BUA_REMOVE_FROM_COLLECTION_OPTION,
