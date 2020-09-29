@@ -183,7 +183,7 @@ export default {
                 fez_record_search_key_geographic_area: 'Geographic area',
                 fez_record_search_key_rights: 'Copyright notice',
                 fez_record_search_key_software_required: 'Software required',
-                fez_record_search_key_type_of_data: 'Type of data',
+                fez_record_search_key_type_of_data: 'Type',
                 fez_record_search_key_original_format: 'Original format',
                 fez_record_search_key_job_number: 'Job number',
                 fez_record_search_key_scale: 'Scale',
@@ -280,6 +280,7 @@ export default {
                 fez_record_search_key_contributor: 'Contact(s) name',
                 fez_record_search_key_author_role: 'Creator(s) role',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
+                fez_record_search_key_type_of_data: 'Type of data',
                 fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
                 fez_record_search_key_related_publications: 'Additional related publication(s)',
@@ -293,8 +294,9 @@ export default {
                 fez_record_search_key_end_date: 'End date',
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
-                fez_record_search_key_contributor: 'Consultant(s)',
+                fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_original_format: 'Physical description',
+                fez_record_search_key_rights: 'Rights',
             },
             'Digilib Image': {
                 fez_record_search_key_author: 'Photographer(s)',
@@ -448,7 +450,7 @@ export default {
                     order: 15,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 16,
                 },
                 {
@@ -1314,6 +1316,10 @@ export default {
                     order: 9,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 9.5,
+                },
+                {
                     field: 'fez_record_search_key_start_page',
                     order: 10,
                 },
@@ -1431,10 +1437,10 @@ export default {
                     field: 'fez_record_search_key_location',
                     order: 15,
                 },
-                // {
-                //     field: 'rek_genre',
-                //     order: 16,
-                // },
+                {
+                    field: 'fez_record_search_key_type_of_data',
+                    order: 16,
+                },
                 {
                     field: 'fez_record_search_key_contributor',
                     order: 17,
@@ -1447,10 +1453,10 @@ export default {
                     field: 'fez_record_search_key_subject',
                     order: 18,
                 },
-                // {
-                //     field: 'fez_record_search_key_rights',
-                //     order: 19,
-                // },
+                {
+                    field: 'fez_record_search_key_rights',
+                    order: 19,
+                },
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 20,
@@ -1459,34 +1465,34 @@ export default {
                     field: 'fez_record_search_key_series',
                     order: 21,
                 },
-                // {
-                //     field: 'fez_record_search_key_job_number',
-                //     order: 22,
-                // },
-                // {
-                //     field: 'fez_record_search_key_source',
-                //     order: 23,
-                // },
+                {
+                    field: 'fez_record_search_key_job_number',
+                    order: 22,
+                },
+                {
+                    field: 'fez_record_search_key_source',
+                    order: 23,
+                },
                 {
                     field: 'fez_record_search_key_original_format',
                     order: 24,
                 },
-                // {
-                //     field: 'fez_record_search_key_scale',
-                //     order: 25,
-                // },
+                {
+                    field: 'fez_record_search_key_scale',
+                    order: 25,
+                },
                 {
                     field: 'fez_record_search_key_creator_name',
                     order: 26,
                 },
-                // {
-                //     field: 'fez_record_search_key_geographic_area',
-                //     order: 27,
-                // },
-                // {
-                //     field: 'fez_record_search_key_acknowledgements',
-                //     order: 28,
-                // },
+                {
+                    field: 'fez_record_search_key_geographic_area',
+                    order: 27,
+                },
+                {
+                    field: 'fez_record_search_key_acknowledgements',
+                    order: 28,
+                },
             ],
             'Digilib Image': [
                 {
@@ -1564,6 +1570,10 @@ export default {
                 {
                     field: 'fez_record_search_key_style',
                     order: 16,
+                },
+                {
+                    field: 'fez_record_search_key_type_of_data',
+                    order: 16.5,
                 },
                 {
                     field: 'fez_record_search_key_condition',
@@ -1698,7 +1708,7 @@ export default {
                     order: 11,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 12,
                 },
                 {
@@ -1782,6 +1792,10 @@ export default {
                 {
                     field: 'fez_record_search_key_start_page',
                     order: 10,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 10.5,
                 },
                 {
                     field: 'fez_record_search_key_oa_status',
@@ -1988,7 +2002,7 @@ export default {
                     order: 8,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 9,
                 },
                 {
@@ -2232,6 +2246,10 @@ export default {
                 {
                     field: 'rek_date',
                     order: 6,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 6.5,
                 },
                 {
                     field: 'fez_record_search_key_isbn',
@@ -2632,7 +2650,7 @@ export default {
                     order: 11,
                 },
                 {
-                    field: 'rek_genre',
+                    field: 'fez_record_search_key_type_of_data',
                     order: 12,
                 },
                 {
@@ -2662,6 +2680,10 @@ export default {
                 {
                     field: 'fez_record_search_key_license',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_advisory_statement',
+                    order: 20,
                 },
             ],
             'Working Paper': [

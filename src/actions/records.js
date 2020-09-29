@@ -173,79 +173,23 @@ const prepareThesisSubmission = data => {
 };
 
 /**
- * Submit thesis involves four steps: create record - get signed url to upload files - upload files - patch record.
+ * Thesis submission involves four steps:
+ *  1. create record,
+ *  2. upload files (involves generation of signed URL and actual upload; done elsewhere),
+ *  3. log and report if upload failed, and
+ *  4. log if reporting failed.
  * @param {object} data to be posted, refer to backend API
+ * @param {object} preCreatedRecord If present, the newly created record from a previous attempt.
+ * @param {string} formName the name of the form being submitted
+ * @param {Array} fullyUploadedFiles List of names of files which have been uploaded already to the server
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
-export function submitThesis(data) {
+export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUploadedFiles = []) {
     return dispatch => {
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         let newRecord = null;
         let recordCreated = false;
-        let fileUploadFailed = false;
-
-        const onRecordCreationSuccess = response => {
-            // save new record response for issue reporting
-            newRecord = response.data;
-            recordCreated = !!newRecord && !!newRecord.rek_pid;
-            if (!recordCreated) {
-                throw new Error('API did not return valid PID');
-            }
-            return (hasFilesToUpload && putUploadFiles(response.data.rek_pid, data.files.queue, dispatch)) || response;
-        };
-        const onRecordCreationFailure = error => {
-            Raven.captureException(error);
-            return Promise.reject(error);
-        };
-
-        const onFileUploadSuccess = response =>
-            (hasFilesToUpload && patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch)) || response;
-        const onFileUploadFailure = error => {
-            fileUploadFailed = true;
-            return Promise.reject(error);
-        };
-
-        const onRecordPatchSuccess = response => {
-            if (hasFilesToUpload) {
-                newRecord = response.data;
-            }
-            dispatch({
-                type: actions.CREATE_RECORD_SUCCESS,
-                payload: {
-                    newRecord,
-                    fileUploadOrIssueFailed: fileUploadFailed,
-                },
-            });
-            return Promise.resolve(newRecord);
-        };
-        const onRecordPatchFailure = error => {
-            if (recordCreated) {
-                dispatch({
-                    type: actions.CREATE_RECORD_SUCCESS,
-                    payload: {
-                        newRecord: newRecord,
-                        fileUploadOrIssueFailed: true,
-                    },
-                });
-                Raven.captureException(error);
-                return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
-                    issue: `The submitter had issues uploading files on this record: ${newRecord.rek_pid}`,
-                });
-            }
-            dispatch({
-                type: actions.CREATE_RECORD_FAILED,
-                payload: error.message,
-            });
-            return onRecordCreationFailure(error);
-        };
-
-        const onIssueReportSuccess = () => recordCreated && Promise.resolve(newRecord);
-        const onIssueReportFailure = error => {
-            Raven.captureException(error);
-            return (recordCreated && Promise.resolve(newRecord)) || Promise.reject(error);
-        };
 
         const createRecord = recordData => {
             const recordRequest = prepareThesisSubmission(recordData);
@@ -253,12 +197,99 @@ export function submitThesis(data) {
             return post(NEW_RECORD_API(), recordRequest);
         };
 
-        const submission = createRecord(data);
+        // Helper to dispatch successful record creation with or without file upload issues
+        // and return the new record
+        const getRecord = fileUploadOrIssueFailed => {
+            !preCreatedRecord.rek_pid &&
+                dispatch({
+                    type: actions.CREATE_RECORD_SUCCESS,
+                    payload: {
+                        newRecord,
+                        fileUploadOrIssueFailed,
+                    },
+                });
+            return newRecord;
+        };
+
+        /**
+         * Step 1. Create new promise chain from record from earlier attempt or from POST-ing form values
+         */
+        const submission = !!preCreatedRecord.rek_pid
+            ? Promise.resolve({ data: preCreatedRecord })
+            : createRecord(data);
+
+        /**
+         * Steps 2. If creation succeeded, upload files. Otherwise, reject promise after recording in Sentry.
+         * Throws exception is PID is not found
+         */
+        const onRecordCreationSuccess = response => {
+            // save new record response for issue reporting
+            newRecord = response.data;
+            recordCreated = !!newRecord && !!newRecord.rek_pid;
+            if (!recordCreated) {
+                return Promise.reject({ message: 'API did not return valid PID' });
+            }
+            return (
+                (hasFilesToUpload &&
+                    putUploadFiles(
+                        response.data.rek_pid,
+                        data.files.queue.filter(file => !fullyUploadedFiles.includes(file.name)),
+                        dispatch,
+                        formName,
+                    )) ||
+                Promise.resolve(getRecord(false))
+            );
+        };
+        const onRecordCreationFailure = error => {
+            Raven.captureException(error);
+            return Promise.reject(error);
+        };
+
+        /**
+         * Step 3. Dispatch success if uploads succeeded. Otherwise, report issue.
+         */
+        const onFileUploadSuccess = response => {
+            // Signal the successful upload
+            hasFilesToUpload && dispatch({ type: actions.FILE_UPLOAD_COMPLETE });
+
+            return (hasFilesToUpload && getRecord(false)) || Promise.resolve(response);
+        };
+        const onFileUploadFailure = error => {
+            // If created record exists, it means only upload failed.
+            if (recordCreated) {
+                const record = getRecord(true);
+                Raven.captureException(error);
+
+                // Do not report retry failures to Eventum
+                if (!preCreatedRecord.rek_pid) {
+                    return post(RECORDS_ISSUES_API({ pid: record.rek_pid }), {
+                        issue: `The submitter had issues uploading files on this record: ${record.rek_pid}`,
+                    });
+                }
+            }
+
+            // Otherwise, it's the rejection from record creation failure. Pass it on.
+            return Promise.reject(error);
+        };
+
+        /**
+         * Step 4. Log if issue reporting failed
+         */
+        const onIssueReportSuccess = () => Promise.resolve(newRecord);
+        const onIssueReportFailure = error => {
+            Raven.captureException(error);
+            if (!recordCreated) {
+                dispatch({
+                    type: actions.CREATE_RECORD_FAILED,
+                    payload: error.message,
+                });
+            }
+            return (recordCreated && !preCreatedRecord.rek_pid && Promise.resolve(newRecord)) || Promise.reject(error);
+        };
 
         return submission
             .then(onRecordCreationSuccess, onRecordCreationFailure)
             .then(onFileUploadSuccess, onFileUploadFailure)
-            .then(onRecordPatchSuccess, onRecordPatchFailure)
             .then(onIssueReportSuccess, onIssueReportFailure);
     };
 }
@@ -607,5 +638,44 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
                 });
                 return Promise.reject(false);
             });
+    };
+};
+
+/**
+ * Change display type action
+ *
+ * @param {array} records
+ * @param {object} data
+ * @param {bool} isBulkUpdate
+ */
+export const changeDisplayType = (records, data, isBulkUpdate = false) => {
+    const changeDisplayTypeRequest = records.map(record => ({
+        rek_pid: record.rek_pid,
+        ...data,
+    }));
+
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_DISPLAY_TYPE_INPROGRESS,
+        });
+        try {
+            const response = await patch(
+                isBulkUpdate ? NEW_RECORD_API() : EXISTING_RECORD_API({ pid: records[0].rek_pid }),
+                isBulkUpdate ? changeDisplayTypeRequest : changeDisplayTypeRequest[0],
+            );
+            dispatch({
+                type: actions.CHANGE_DISPLAY_TYPE_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_DISPLAY_TYPE_FAILED,
+                payload: e,
+            });
+
+            return false;
+        }
     };
 };

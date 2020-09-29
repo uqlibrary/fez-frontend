@@ -81,7 +81,6 @@ exports[`MyRecords test component has displayable facets 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -187,7 +186,6 @@ exports[`MyRecords test renders active filters 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -225,7 +223,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -256,7 +254,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -361,7 +359,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -392,7 +390,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -506,7 +504,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -537,7 +535,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -705,7 +703,6 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -771,7 +768,7 @@ exports[`MyRecords test renders loading screen while export publications loading
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -891,7 +888,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -1016,7 +1013,7 @@ exports[`MyRecords test should handle export publications 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 20 of 147 total records. 
+          Displaying works 1 to 20 of 147 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -1047,7 +1044,7 @@ exports[`MyRecords test should handle export publications 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               disabled={false}
               initPageLength={20}
               onExportPublications={[Function]}
@@ -1215,7 +1212,6 @@ exports[`MyRecords test should handle export publications 1`] = `
             isMyDataSetPage={false}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }

@@ -30,12 +30,23 @@ export default {
                 Please <b>provide a list as described</b> and <b>select one</b> as you
             </span>
         ),
+        authorRequiredAdmin: (
+            <span>
+                Please <b>provide a list as described</b>
+            </span>
+        ),
         editorRequired: (
             <span>
                 Please <b>provide a list of editors/contributors</b> of the work and{' '}
                 <b>select an editor/contributor or author/creator</b> as you
             </span>
         ),
+        editorRequiredAdmin: (
+            <span>
+                Please <b>provide a list of editors/contributors</b> of the work
+            </span>
+        ),
+        onlyOneOfAuthorOrEditor: <span>Please provide either authors/creators or editors/contributors, not both.</span>,
         supervisorRequired: 'Please provide a list of supervisors',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',

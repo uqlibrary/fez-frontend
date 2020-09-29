@@ -19,7 +19,7 @@ Cypress.Commands.add('adminEditCountCards', count => {
 });
 
 Cypress.Commands.add('adminEditNoAlerts', () => {
-    cy.get('.StandardPage form > div:nth-child(2)').within(() => {
+    cy.get('.StandardPage form > div:first-child').within(() => {
         cy.get('.Alert').should('not.exist');
     });
 
@@ -29,7 +29,7 @@ Cypress.Commands.add('adminEditNoAlerts', () => {
 });
 
 Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
-    cy.get('.StandardPage form > div:nth-child(2)').within(() => {
+    cy.get('.StandardPage form > div:first-child').within(() => {
         cy.get('.Alert')
             .should('exist')
             .find('.alert-text')

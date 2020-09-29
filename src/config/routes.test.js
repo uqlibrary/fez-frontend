@@ -40,7 +40,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(21);
+        expect(testRoutes.length).toEqual(22);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -51,7 +51,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(22);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -86,7 +86,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(21);
+        expect(testRoutes.length).toEqual(22);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -97,7 +97,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(22);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -165,12 +165,12 @@ describe('Routes getMenuConfig method', () => {
 describe('Routes getRoutesConfig method', () => {
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: null });
-        expect(testRoutes.length).toEqual(7);
+        expect(testRoutes.length).toEqual(6);
     });
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqresearcher });
-        expect(testRoutes.length).toEqual(23);
+        expect(testRoutes.length).toEqual(22);
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
@@ -179,7 +179,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqmasquerade,
             authorDetails: authorDetails.uqmasquerade,
         });
-        expect(testRoutes.length).toEqual(24);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should return a list of routes for user who has admin (uqstaff)', () => {
@@ -188,7 +188,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(36);
+        expect(testRoutes.length).toEqual(37);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -198,7 +198,7 @@ describe('Routes getRoutesConfig method', () => {
             forceOrcidRegistration: true,
             isHdrStudent: true,
         });
-        expect(testRoutes.length).toEqual(8);
+        expect(testRoutes.length).toEqual(7);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
@@ -208,80 +208,7 @@ describe('Routes getRoutesConfig method', () => {
             forceOrcidRegistration: false,
             isHdrStudent: true,
         });
-        expect(testRoutes.length).toEqual(23);
-    });
-
-    it('should render auth required page', () => {
-        const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({
-            components: { StandardPage: testComponent },
-            account: null,
-            authorDetails: null,
-            accountAuthorDetailsLoading: false,
-            forceOrcidRegistration: false,
-            isHdrStudent: false,
-        });
-        const renderPage = routesConfig[routesConfig.length - 1].render;
-        const props = {
-            location: {
-                pathname: routes.pathConfig.contact,
-            },
-            accountAuthorDetailsLoading: false,
-        };
-        renderPage(props);
-        expect(testComponent).toHaveBeenCalledWith(locale.pages.authenticationRequired);
-    });
-
-    it('should render permissions denied page', () => {
-        const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({
-            components: { StandardPage: testComponent },
-            account: accounts.uqresearcher,
-            authorDetails: authorDetails.uqresearcher,
-            accountAuthorDetailsLoading: false,
-        });
-        const renderPage = routesConfig[routesConfig.length - 1].render;
-        const props = {
-            location: {
-                pathname: routes.pathConfig.admin.masquerade,
-            },
-        };
-        renderPage(props);
-        expect(testComponent).toHaveBeenCalledWith(locale.pages.permissionDenied);
-    });
-
-    it('should render permissions denied or not found page', () => {
-        const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({
-            components: { StandardPage: testComponent },
-            account: accounts.uqresearcher,
-            authorDetails: authorDetails.uqresearcher,
-            accountAuthorDetailsLoading: false,
-        });
-        const renderPage = routesConfig[routesConfig.length - 1].render;
-        const props = {
-            location: {
-                pathname: '/view/UQ:1/test.pdf',
-            },
-        };
-        renderPage(props);
-        expect(testComponent).toHaveBeenCalledWith(locale.pages.permissionDenied);
-    });
-
-    it('should render not found page', () => {
-        const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({
-            components: { StandardPage: testComponent },
-            accountAuthorDetailsLoading: false,
-        });
-        const renderPage = routesConfig[routesConfig.length - 1].render;
-        const props = {
-            location: {
-                pathname: '/abc/abac/aba',
-            },
-        };
-        renderPage(props);
-        expect(testComponent).toHaveBeenCalledWith(locale.pages.notFound);
+        expect(testRoutes.length).toEqual(22);
     });
 });
 

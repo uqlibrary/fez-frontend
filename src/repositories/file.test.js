@@ -1,6 +1,7 @@
 import { putUploadFile } from './file';
 import * as repositories from 'repositories';
 import { locale } from 'locale';
+import * as actions from 'actions/actionTypes';
 
 describe('File repository tests ', () => {
     beforeEach(() => {
@@ -32,7 +33,13 @@ describe('File repository tests ', () => {
             .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
             .reply(500);
 
-        const expectedActions = ['APP_ALERT_SHOW', 'FILE_UPLOADED_FAILED@a.txt'];
+        const expectedActions = [
+            'APP_ALERT_SHOW',
+            `${actions.FILE_UPLOAD_FAILED}@a.txt`,
+            actions.FILE_UPLOAD_STARTED,
+            'APP_ALERT_SHOW',
+            `${actions.FILE_UPLOAD_FAILED}@a.txt`,
+        ];
 
         await expect(putUploadFile('PID:111111', { name: 'a.txt' }, mockActionsStore.dispatch)).rejects.toEqual(
             locale.global.errorMessages[500],

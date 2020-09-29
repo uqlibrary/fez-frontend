@@ -3,7 +3,6 @@ import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
-import { AUTH_URL_LOGIN } from 'config';
 import { createHash } from 'crypto';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
@@ -65,7 +64,6 @@ export const pathConfig = {
         mine: '/records/mine',
         possible: '/records/possible',
         search: '/records/search',
-        view_new: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view_new/${pid}`, //  temporary for MM to view pids without being redirected to legacy
         view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
     },
     dataset: {
@@ -133,6 +131,7 @@ export const pathConfig = {
     },
     admin: {
         add: '/admin/add',
+        changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         collection: '/admin/collection',
         community: '/admin/community',
         delete: pid => `/admin/delete/${pid}`,
@@ -141,6 +140,7 @@ export const pathConfig = {
         editCollection: pid => `/collections/${pid}/edit`,
         editCommunity: pid => `/communities/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
+        favouriteSearch: '/admin/favourite-search',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
@@ -168,23 +168,36 @@ export const pathConfig = {
     },
 };
 
-// a duplicate list of routes for checking valid routes
-const flattedPathConfig = [
-    '/',
+// a duplicate list of routes for
+export const flattedPathConfig = [
     '/admin/add',
+    '/admin/change-display-type',
     '/admin/collection',
     '/admin/community',
-    '/admin/delete',
-    '/admin/doi',
-    '/admin/edit',
     '/admin/masquerade',
-    '/admin/thirdPartyTools',
+    '/admin/unpublished',
+    '/admin/add',
+    '/admin/edit',
+    '/admin/delete',
+    '/admin/favourite-search',
+    '/admin/masquerade',
     '/admin/unpublished',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
     '/batch-import',
     '/contact',
     '/dashboard',
+    '/data-collections/add',
+    '/data-collections/mine',
+    '/contact',
+    '/rhdsubmission',
+    '/sbslodge_new',
+    '/tool/lookup',
+    '/records/search',
+    '/records/mine',
+    '/records/possible',
+    '/records/incomplete',
+    '/records/claim',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',
@@ -198,7 +211,7 @@ const flattedPathConfig = [
     '/view',
 ];
 
-const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
+export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
 
 // TODO: will we even have roles?
 export const roles = {
@@ -211,7 +224,6 @@ export const getRoutesConfig = ({
     components = {},
     account = null,
     authorDetails = null,
-    accountAuthorDetailsLoading = true,
     forceOrcidRegistration = false,
     isHdrStudent = false,
 }) => {
@@ -234,13 +246,6 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`),
-        },
-        {
-            path: pathConfig.records.view_new(pid),
-            component: components.NewViewRecord,
-            exact: true,
-            pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view_new(`(${pidRegExp})`),
         },
         {
             path: pathConfig.records.search,
@@ -467,8 +472,22 @@ export const getRoutesConfig = ({
                       pageTitle: locale.pages.edit.record.title,
                   },
                   {
+                      path: pathConfig.admin.favouriteSearch,
+                      component: components.FavouriteSearch,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.favouriteSearch.title,
+                  },
+                  {
                       path: pathConfig.admin.doi(pid),
                       component: components.Doi,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.changeDisplayType(pid),
+                      component: components.ChangeDisplayType,
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
@@ -513,28 +532,7 @@ export const getRoutesConfig = ({
             : []),
         ...publicPages,
         {
-            render: childProps => {
-                const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
-                const isValidFileRoute = fileRegexConfig.test(childProps.location.pathname);
-                if (!accountAuthorDetailsLoading) {
-                    if ((isValidRoute || isValidFileRoute) && account && !accountAuthorDetailsLoading) {
-                        return components.StandardPage({ ...locale.pages.permissionDenied });
-                    }
-                    if ((isValidRoute || isValidFileRoute) && !account && !accountAuthorDetailsLoading) {
-                        if (
-                            process.env.NODE_ENV !== 'test' &&
-                            process.env.NODE_ENV !== 'cc' &&
-                            process.env.NODE_ENV !== 'development'
-                        ) {
-                            window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
-                        }
-                        return components.StandardPage({ ...locale.pages.authenticationRequired });
-                    }
-                    return components.StandardPage({ ...locale.pages.notFound });
-                } else {
-                    return null;
-                }
-            },
+            component: components.NotFound,
             pageTitle: locale.pages.notFound.title,
         },
     ];
@@ -680,6 +678,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.digiteam.batchImport,
                       ...locale.menu.digiteam.batchImport,
+                  },
+                  {
+                      linkTo: pathConfig.admin.favouriteSearch,
+                      ...locale.menu.favouriteSearch,
                   },
               ]
             : []),

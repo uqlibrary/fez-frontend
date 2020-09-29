@@ -517,11 +517,16 @@ export default {
     thesis: {
         information: {
             title: 'Thesis information',
-            hdrRedirectActionButtonLabel: 'Visit now',
-            nonHdrWarningMessage: 'If you are trying to submit your UQ HDR thesis, please use the HDR submission form',
-            hdrRedirectMessage:
-                "HDR theses cannot be submitted via 'Add a missing work' - use the official submission link to upload your thesis",
-            hdrRedirectAlertTitle: 'Redirect',
+            actionButtonLabel: 'Upload HDR thesis',
+            message: (
+                <React.Fragment>
+                    <p>
+                        Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS
+                        button to submit.
+                    </p>
+                    <p> To deposit another thesis type, use the form below.</p>
+                </React.Fragment>
+            ),
             // help: {
             //     title: 'Thesis information',
             //     text: 'Some help',
@@ -1285,10 +1290,18 @@ export default {
             failedAlertLocale: {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
+                messageWithRetry:
+                    "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact [linkStart]the Graduate School[linkEnd].",
                 message:
-                    'There was an issue uploading your thesis files. Please contact [linkStart]the Graduate School[linkEnd].',
+                    'Not all files were uploaded. Please contact [linkStart]the Graduate School[linkEnd] for assistance.',
                 emailRecipient: 'thesis@gradschool.uq.edu.au',
                 emailSubject: 'Problem with Submission to UQ eSpace - [studentFullName], [studentNumber]',
+                actionButtonLabel: 'Retry upload',
+            },
+            retrySuccessLocale: {
+                type: 'done',
+                title: 'FILE UPLOAD SUCCESS',
+                message: 'File upload retry succeeded.',
             },
             locale: {
                 instructions: '',
@@ -1306,8 +1319,7 @@ export default {
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 delayNotice: 'Notice',
-                delayMessage:
-                    'During peak times, there may be a delay before newly uploaded files appear on the record.',
+                delayMessage: 'During peak times, there may be a delay before newly uploaded files appear on the work.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
@@ -1398,8 +1410,7 @@ export default {
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 delayNotice: 'Notice',
-                delayMessage:
-                    'During peak times, there may be a delay before newly uploaded files appear on the record.',
+                delayMessage: 'During peak times, there may be a delay before newly uploaded files appear on the work.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
@@ -1571,8 +1582,8 @@ export default {
                 title: 'Dataset details',
                 fieldLabels: {
                     typeOfData: {
-                        label: 'Describe type of data',
-                        placeholder: 'Type of data represented in the dataset e.g. excel file, images, video',
+                        label: 'Describe type',
+                        placeholder: 'Type represented in the dataset e.g. excel file, images, video',
                     },
                     softwareRequired: {
                         label: 'Software required',

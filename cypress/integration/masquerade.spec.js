@@ -1,7 +1,7 @@
 context('Masquerade', () => {
     it('unprivileged users cant masquerade', () => {
-        cy.visit('/admin/masquerade/?user=s1111111');
-        cy.get('body').contains('The requested page could not be found.');
+        cy.visit('/admin/masquerade');
+        cy.get('body').contains('The requested page is available to authorised users only.');
     });
 
     it('privileged users can masquerade', () => {

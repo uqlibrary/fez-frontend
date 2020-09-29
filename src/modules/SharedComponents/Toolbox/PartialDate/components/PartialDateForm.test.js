@@ -7,6 +7,7 @@ function setup(testProps, isShallow = true) {
         classes: testProps.classes || {
             hideLabel: 'hidden',
         },
+        partialDateFieldId: 'test',
     };
     return getElement(PartialDateForm, props, isShallow);
 }
@@ -63,6 +64,18 @@ describe('PartialDateForm component', () => {
             onChange: jest.fn(),
             meta: {
                 initial: '2020-02-02',
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should load existing values from input value', () => {
+        const wrapper = setup({
+            floatingTitleRequired: true,
+            allowPartial: true,
+            onChange: jest.fn(),
+            input: {
+                value: '2020-02-02',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

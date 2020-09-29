@@ -4,21 +4,11 @@ import PropTypes from 'prop-types';
 import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
-import {
-    PUBLICATION_TYPE_CREATIVE_WORK,
-    PUBLICATION_TYPE_DESIGN,
-    NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK,
-} from 'config/general';
+import { authorsParams } from 'modules/Admin/helpers';
 
 export const AuthorsSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    const displayType =
-        record.rek_display_type === PUBLICATION_TYPE_CREATIVE_WORK &&
-        !!record.rek_subtype &&
-        record.rek_subtype === NTRO_SUBTYPE_DESIGN_CW_ARCHITECTURAL_WORK
-            ? PUBLICATION_TYPE_DESIGN
-            : record.rek_display_type;
-    const cards = useRef(adminInterfaceConfig[displayType].authors());
+    const cards = useRef(adminInterfaceConfig[record.rek_display_type].authors(authorsParams(record)));
 
     return <Section cards={cards.current} disabled={disabled} />;
 };

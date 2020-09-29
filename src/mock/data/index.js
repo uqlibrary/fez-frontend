@@ -21,6 +21,7 @@ export {
     publicationTypeListAudio,
     publicationTypeListBook,
     publicationTypeListBookChapter,
+    publicationTypeListBookEdited,
     publicationTypeListConferencePaper,
     publicationTypeListConferenceProceedings,
     publicationTypeListCreativeWork,
@@ -61,3 +62,7 @@ export { batchImportDirectories } from './batchImportDirectories';
 export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
 export { mockRecordToFix } from './testing/records';
+
+// Favourite search mock data
+export { default as favouriteSearchList } from './favouriteSearch/favouriteSearchList';
+export { default as favouriteSearchItem } from './favouriteSearch/favouriteSearchItem';

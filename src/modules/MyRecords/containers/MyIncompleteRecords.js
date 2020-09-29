@@ -8,8 +8,8 @@ import { routes } from 'config';
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        authorDetails: state.get('accountReducer').authorDetails || {},
         accountLoading: state.get('accountReducer').accountLoading,
-        ...state.get('accountReducer'),
         ...state.get('publicationsReducer').incomplete,
         localePages: locale.pages.incompletePublications,
         thisUrl: routes.pathConfig.records.incomplete,

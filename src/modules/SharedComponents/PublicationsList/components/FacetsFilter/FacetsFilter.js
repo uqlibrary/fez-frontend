@@ -110,6 +110,7 @@ export const FacetsFilter = ({
     showOpenAccessFilter,
     onFacetsChanged,
 }) => {
+    const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
     const [activeFacetsFilters, setActiveFacetsFilters] = useState({
         ...activeFacets.filters,
         ...((initialFacets || {}).filters || {}),
@@ -124,12 +125,24 @@ export const FacetsFilter = ({
     const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
     useEffect(() => {
-        onFacetsChanged({
-            filters: activeFacetsFilters,
-            ranges: activeFacetsRanges,
-            showOpenAccessOnly: showOpenAccessOnly,
+        setActiveFacetsFilters({
+            ...activeFacets.filters,
+            ...((initialFacets || {}).filters || {}),
         });
-    }, [activeFacetsFilters, activeFacetsRanges, showOpenAccessOnly, onFacetsChanged]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeFacets.filters]);
+
+    useEffect(() => {
+        if (isFacetFilterClicked) {
+            onFacetsChanged({
+                filters: activeFacetsFilters,
+                ranges: activeFacetsRanges,
+                showOpenAccessOnly: showOpenAccessOnly,
+            });
+        }
+
+        return () => setIsFacetFilterClicked(false);
+    }, [isFacetFilterClicked, activeFacetsFilters, activeFacetsRanges, showOpenAccessOnly, onFacetsChanged]);
 
     const {
         yearPublishedCategory,
@@ -155,7 +168,7 @@ export const FacetsFilter = ({
         } else {
             newActiveFacetsFilters[category] = facet;
         }
-
+        setIsFacetFilterClicked(true);
         setActiveFacetsFilters(newActiveFacetsFilters);
         setHasActiveFilters(
             getHasActiveFilters(newActiveFacetsFilters, activeFacetsRanges, showOpenAccessOnly, excludeFacetsList),
@@ -163,6 +176,7 @@ export const FacetsFilter = ({
     };
 
     const _handleOpenAccessFilter = isActive => {
+        setIsFacetFilterClicked(true);
         setShowOpenAccessOnly(!!isActive);
         setHasActiveFilters(
             getHasActiveFilters(activeFacetsFilters, activeFacetsRanges, !!isActive, excludeFacetsList),
@@ -178,6 +192,7 @@ export const FacetsFilter = ({
             newActiveFacetsRanges[category] = range;
         }
 
+        setIsFacetFilterClicked(true);
         setActiveFacetsRanges(newActiveFacetsRanges);
         setHasActiveFilters(
             getHasActiveFilters(activeFacetsFilters, newActiveFacetsRanges, !!showOpenAccessOnly, excludeFacetsList),
@@ -188,6 +203,7 @@ export const FacetsFilter = ({
         setActiveFacetsFilters({
             ...((initialFacets || {}).filters || {}),
         });
+        setIsFacetFilterClicked(true);
         setActiveFacetsRanges({});
         setShowOpenAccessOnly(false);
         setHasActiveFilters(false);

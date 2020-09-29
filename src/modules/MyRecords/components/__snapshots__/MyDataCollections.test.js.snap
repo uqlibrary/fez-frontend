@@ -60,7 +60,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records. 
+          Displaying works 1 to 2 of 2 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -84,7 +84,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -184,7 +184,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         noHeader={true}
       >
         <span>
-          Displaying records 1 to 2 of 2 total records. 
+          Displaying works 1 to 2 of 2 total works. 
         </span>
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -208,7 +208,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -371,7 +371,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
             isMyDataSetPage={true}
             lookupFacetsList={
               Object {
-                "Author": "Author (lookup)",
                 "Collection": "Collection (lookup)",
                 "Subject": "Subject (lookup)",
               }
@@ -447,7 +446,7 @@ exports[`myDatasets test renders loading screen while loading publications while
             item={true}
             xs={12}
           >
-            <WithStyles(PublicationsListSorting)
+            <PublicationsListSorting
               disabled={true}
               initPageLength={20}
               onExportPublications={[Function]}

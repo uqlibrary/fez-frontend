@@ -5,18 +5,30 @@ import {
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_JOURNAL,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CPEE_FESTIVAL,
+    NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+    NTRO_SUBTYPE_CPEE_OTHER,
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    NTRO_SUBTYPE_LP_MUSIC,
+    NTRO_SUBTYPE_LP_DANCE,
+    NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+    NTRO_SUBTYPE_LP_INTERARTS,
+    NTRO_SUBTYPE_LP_OTHER,
     NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
     NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
     NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
     NTRO_SUBTYPE_RRW_INTERARTS,
     NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
     NTRO_SUBTYPE_RRW_OTHER,
-    NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    SUBTYPE_EDITED_BOOK,
 } from 'config/general';
 
 export const identifiersParams = record => ({
@@ -45,13 +57,44 @@ export const identifiersParams = record => ({
         PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
     ].includes(record.rek_display_type),
     displayPubmedCentral: record.rek_display_type === PUBLICATION_TYPE_JOURNAL_ARTICLE,
-    displayIsmn: [NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION].includes(record.rek_subtype),
-    displayIsrc: [
-        NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
-        NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
-        NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
-        NTRO_SUBTYPE_RRW_INTERARTS,
-        NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
-        NTRO_SUBTYPE_RRW_OTHER,
+    displayIsmn: record.rek_subtype === NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
+    displayIsrc:
+        record.rek_display_type === PUBLICATION_TYPE_CREATIVE_WORK &&
+        [
+            NTRO_SUBTYPE_RRW_MUSIC_DANCE_THEATRE,
+            NTRO_SUBTYPE_RRW_AUDIO_VISUAL_RECORDING,
+            NTRO_SUBTYPE_RRW_DIGITAL_CREATIVE_WORKS,
+            NTRO_SUBTYPE_RRW_INTERARTS,
+            NTRO_SUBTYPE_RRW_WEBSITE_EXHIBITION,
+            NTRO_SUBTYPE_RRW_OTHER,
+        ].includes(record.rek_subtype),
+});
+
+export const bibliographicParams = (record, formValues) => ({
+    isLote:
+        (record.fez_record_search_key_language &&
+            (record.fez_record_search_key_language.length > 1 ||
+                (record.fez_record_search_key_language.length === 1 &&
+                    record.fez_record_search_key_language[0].rek_language !== 'eng'))) ||
+        (!!formValues &&
+            !!formValues.languages &&
+            (formValues.languages.length > 1 ||
+                (formValues.languages.length === 1 && formValues.languages[0] !== 'eng'))),
+    displayEndDate: [
+        NTRO_SUBTYPE_LP_MUSIC,
+        NTRO_SUBTYPE_LP_DANCE,
+        NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+        NTRO_SUBTYPE_LP_INTERARTS,
+        NTRO_SUBTYPE_LP_OTHER,
+        NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+        NTRO_SUBTYPE_CPEE_FESTIVAL,
+        NTRO_SUBTYPE_CPEE_WEB_BASED_EXHIBITION,
+        NTRO_SUBTYPE_CPEE_OTHER,
     ].includes(record.rek_subtype),
+    isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+});
+
+export const authorsParams = record => ({
+    isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    onlyEditors: record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK,
 });

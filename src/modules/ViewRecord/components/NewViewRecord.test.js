@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { render, RenderWithRouter, WithRedux, fireEvent } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -36,11 +36,11 @@ const setup = (testProps = {}, renderer = render) => {
         ...testProps,
     };
     return renderer(
-        <RenderWithRouter>
-            <WithRedux>
+        <WithRouter>
+            <WithReduxStore>
                 <NewViewRecord {...props} />
-            </WithRedux>
-        </RenderWithRouter>,
+            </WithReduxStore>
+        </WithRouter>,
     );
 };
 
@@ -50,7 +50,6 @@ describe('NewViewRecord', () => {
     });
 
     beforeEach(() => {
-        mockActionsStore = setupStoreForActions();
         userIsAdmin.mockImplementation(() => false);
         userIsAuthor.mockImplementation(() => true);
     });
@@ -87,7 +86,9 @@ describe('NewViewRecord', () => {
         const { getByText } = setup({ isDeleted: true, recordToView: record });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();
         expect(
-            getByText('Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer'),
+            getByText(
+                'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer (default record)',
+            ),
         ).toBeInTheDocument();
     });
 

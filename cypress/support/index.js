@@ -18,7 +18,6 @@ import 'cypress-file-upload';
 import 'cypress-plugin-tab';
 import '@cypress/code-coverage/support';
 import 'cypress-wait-until';
-import 'cypress-plugin-retries';
 
 // Custom
 import './adminEdit';

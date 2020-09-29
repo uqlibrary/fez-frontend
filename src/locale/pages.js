@@ -241,7 +241,7 @@ export default {
             },
             possiblePublicationsLure: {
                 title: 'Claim now!',
-                message: 'We have found [count] record(s) that could possibly be your works.',
+                message: 'We have found [count] work(s) that could possibly be your works.',
                 type: 'info_outline',
                 actionButtonLabel: 'Claim your works now',
             },
@@ -267,7 +267,7 @@ export default {
         },
         myResearch: {
             pageTitle: 'My research',
-            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             text: (
                 <span>
                     Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
@@ -291,7 +291,7 @@ export default {
         },
         myDatasets: {
             pageTitle: 'My research data',
-            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             text: (
                 <span>
                     Add to this list by <a href={`${pathConfig.dataset.add}`}>adding a missing dataset</a>.
@@ -325,7 +325,7 @@ export default {
                         <br />
                         <br />
                         Your item will be published immediately and an UQ eSpace Research Outputs Officer will review
-                        the record.
+                        the work.
                     </p>
                 ),
                 fileFailConfirmationAlert: {
@@ -348,7 +348,7 @@ export default {
                     </div>
                 ),
                 // help: {
-                //     title: 'No matching records found',
+                //     title: 'No matching works found',
                 //     text: 'Why search didn\'t return any items....',
                 //     buttonLabel: 'CLOSE'
                 // }
@@ -408,9 +408,9 @@ export default {
                 noResultsFound: {
                     title: 'No matching works found',
                     text:
-                        'We were unable to match any results to your search criteria. Please search again or create a new eSpace record.',
+                        'We were unable to match any results to your search criteria. Please search again or create a new eSpace work.',
                     // help: {
-                    //     title: 'No matching records found',
+                    //     title: 'No matching works found',
                     //     text: 'Why search didn\'t return any items....',
                     //     buttonLabel: 'CLOSE'
                     // }
@@ -418,7 +418,7 @@ export default {
                 searchResults: {
                     title: 'Possible matches found',
                     resultsText: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]".',
-                    text: 'Claim a matching work below, refine your search or create a new eSpace record.',
+                    text: 'Claim a matching work below, refine your search or create a new eSpace work.',
                     // help: {
                     //     title: 'Possible matches found',
                     //     text: 'Why search displays these items....',
@@ -426,7 +426,7 @@ export default {
                     // },
                     searchDashboard: {
                         title: 'Repository search',
-                        recordSuffix: ' record(s)',
+                        recordSuffix: ' work(s)',
                         ariaCircularProgressLabelSuffix: 'loading',
                         repositories: [
                             {
@@ -454,7 +454,7 @@ export default {
                 },
                 loadingMessage: 'Searching for works',
                 cancel: 'Abandon and search again',
-                submit: 'Create a new eSpace record',
+                submit: 'Create a new eSpace work',
                 claim: 'Claim this work',
                 unclaimable: 'All authors have been assigned',
             },
@@ -469,17 +469,17 @@ export default {
                         <br />
                         <br />
                         Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the
-                        record.
+                        work.
                     </p>
                 ),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or notes post failed',
-                    message: 'Retry via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry via "Fix work" screen or contact eSpace administrators.',
                     type: 'warning',
                 },
                 cancelButtonLabel: 'Add another missing work',
                 confirmButtonLabel: 'Go to my research',
-                alternateActionButtonLabel: 'Fix record',
+                alternateActionButtonLabel: 'Fix work',
             },
         },
         fixRecord: {
@@ -713,7 +713,7 @@ export default {
                             and your professional activities ensuring that your work is recognised.
                         </p>
                         <p>
-                            ORCID records hold only non-sensitive information such as name, email, organisation and
+                            ORCID works hold only non-sensitive information such as name, email, organisation and
                             research activities. Plus, you can control who sees information in your ORCID iD via{' '}
                             <a
                                 href="http://support.orcid.org/knowledgebase/articles/124518-orcid-privacy-settings"
@@ -773,7 +773,7 @@ export default {
                         <p>
                             Simply provide your ORCID iD when accepting a peer review assignment and upon completion the
                             organisation* you have done the peer review for will post an acknowledgement of this
-                            activity to your ORCID record, if you have granted this permission.
+                            activity to your ORCID work, if you have granted this permission.
                         </p>
                         <p>
                             <em>* The organisation needs to be participating in the ORCID peer review program.</em>
@@ -790,7 +790,7 @@ export default {
                         <p>
                             Because ORCID identifiers are designed to be persistent, obsolete iDs will be deprecated,
                             not deleted. The work associated with a deprecated iD will contain a pointer to the primary
-                            record
+                            work
                         </p>
                     </div>
                 ),
@@ -845,6 +845,15 @@ export default {
         },
         prototype: {
             title: 'Admin prototype',
+        },
+        favouriteSearch: {
+            title: 'Favourite searches',
+            loadingMessage: 'Loading list of favourite searches',
+            aliasExistsAlert: {
+                type: 'error',
+                message: 'Alias "[alias]" has been taken',
+                title: 'Alias check',
+            },
         },
         doi: {
             loadingMessage: 'Loading work',
@@ -959,7 +968,7 @@ export default {
                 ),
                 buttonLabel: 'Got it',
             },
-            loadingMessage: 'Loading record',
+            loadingMessage: 'Loading work',
             notSupportedMessage: 'Editing of [pubType] is not yet supported.',
             retractedMessage: 'This article has been retracted',
             community: {
@@ -971,19 +980,19 @@ export default {
                 loadingMessage: 'Loading collection',
             },
             record: {
-                title: 'Edit record',
-                loadingMessage: 'Loading record',
+                title: 'Edit work',
+                loadingMessage: 'Loading work',
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Work has been updated',
                 confirmationMessage: 'Work has been updated',
-                cancelButtonLabel: 'View updated record',
+                cancelButtonLabel: 'View updated work',
                 confirmButtonLabel: 'Edit another work',
             },
             successAddWorkflowConfirmation: {
                 confirmationTitle: 'Work has been added',
                 confirmationMessage: 'Your new work has been added to eSpace.',
-                cancelButtonLabel: 'View new record',
+                cancelButtonLabel: 'View new work',
                 confirmButtonLabel: 'Add another work',
             },
             alerts: {
@@ -1032,15 +1041,15 @@ export default {
         },
         deleteRecord: {
             loadingMessage: 'Loading work',
-            title: 'Delete record',
+            title: 'Delete work',
             subTitle: 'Work to be deleted',
             cancel: 'Cancel',
             submit: 'Delete',
         },
         adminAdd: {
-            title: 'Add a new record',
-            step1: 'Identify your new record',
-            buttonLabel: 'Create record',
+            title: 'Add a new work',
+            step1: 'Identify your new work',
+            buttonLabel: 'Create work',
             cancelLabel: 'Cancel',
             submitFailed: 'Failed to assign details to the administrator add form',
             formLabels: {
