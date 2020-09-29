@@ -66,6 +66,8 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                                 disabled={submitting || submitSucceeded}
                                 label={txt.changeSearchKeyValueForm.formLabels.editNotes}
                                 name="edit_reason"
+                                multiline
+                                rows={3}
                             />
                         </Grid>
                     </React.Fragment>
