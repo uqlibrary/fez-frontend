@@ -20,6 +20,7 @@ function setup(testProps = {}, args = {}) {
     const props = {
         onChange: jest.fn(), // PropTypes.func.isRequired,
         disabled: false,
+        richEditorId: 'rek-test',
         inputRef: {
             current: <div />,
         },
