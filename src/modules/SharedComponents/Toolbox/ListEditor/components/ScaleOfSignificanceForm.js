@@ -86,6 +86,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
             <Grid item xs={12}>
                 <RichEditor
                     fullWidth
+                    richEditorId="rek-creator-contribution-statement"
                     name="value"
                     id={(!!id && id) || ''}
                     onChange={handleContributionStatement}
