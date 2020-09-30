@@ -46,10 +46,10 @@ export default class RichEditor extends PureComponent {
 
         !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
         !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);
+        !!this.editorInstance && !!this.props.value && this.editorInstance.setData(this.props.value.get('htmlText'));
 
         !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
         !!this.editorInstance && this.editorInstance.on('change', this.onChange);
-        !!this.editorInstance && this.editorInstance.on('contentDom', this.onContentDom);
         this.props.instanceRef.current = this.editorInstance;
     }
 
@@ -61,12 +61,7 @@ export default class RichEditor extends PureComponent {
     }
 
     onInstanceReady = () => {
-        !!this.props.value && this.editorInstance.setData(this.props.value.get('htmlText'));
         this.editorInstance.setReadOnly(!!this.props.disabled);
-    };
-
-    onContentDom = e => {
-        e.editor.document.getBody().setAttribute('data-testid', `${this.props.richEditorId}-input`);
     };
 
     onChange = evt => {
