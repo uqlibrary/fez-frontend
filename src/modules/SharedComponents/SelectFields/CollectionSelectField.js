@@ -22,7 +22,6 @@ export default function CollectionSelectField(fieldProps) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [communityId]);
 
-    console.log(fieldProps);
     return (
         <NewGenericSelectField
             disabled={itemsLoading || fieldProps.disabled}

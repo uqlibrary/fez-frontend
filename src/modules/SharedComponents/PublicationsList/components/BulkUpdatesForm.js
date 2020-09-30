@@ -29,7 +29,7 @@ export const BulkUpdatesForm = ({ selectedAction, recordsSelected, onCancel }) =
         <BulkUpdateForm
             recordsSelected={recordsSelected}
             onCancel={onCancel}
-            {...(BUA_REMOVE_FROM_COLLECTION ? { isRemoveFrom: true } : {})}
+            {...(selectedAction === BUA_REMOVE_FROM_COLLECTION ? { isRemoveFrom: true } : {})}
         />
     );
 };
