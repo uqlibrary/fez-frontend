@@ -61,7 +61,6 @@ export default class RichEditor extends PureComponent {
     }
 
     onInstanceReady = () => {
-        !!this.props.value && this.editorInstance.setData(this.props.value.get('htmlText'));
         this.editorInstance.setReadOnly(!!this.props.disabled);
     };
 
