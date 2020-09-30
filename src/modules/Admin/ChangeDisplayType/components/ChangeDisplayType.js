@@ -40,7 +40,7 @@ const renderTitle = record => {
     const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
     const pageTitle = ReactHtmlParser(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
     return (
-        <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="changeDisplayType-page-title">
+        <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="change-display-type-page-title">
             {pageTitle}
         </Typography>
     );
@@ -209,8 +209,8 @@ export const ChangeDisplayType = ({
                             /* istanbul ignore next */
                             <Grid item xs={12}>
                                 <Alert
-                                    testId="changeDisplayType-submit-status"
-                                    alertId="changeDisplayType-submit-status"
+                                    testId="change-display-type-submit-status"
+                                    alertId="change-display-type-submit-status"
                                     {...alertProps}
                                 />
                             </Grid>
@@ -220,8 +220,8 @@ export const ChangeDisplayType = ({
                                 <Grid item xs={false} sm />
                                 <Grid item xs={12} sm="auto">
                                     <Button
-                                        id="rek-changeDisplayType-cancel"
-                                        data-testid="rek-changeDisplayType-cancel"
+                                        id="rek-change-display-type-cancel"
+                                        data-testid="rek-change-display-type-cancel"
                                         disabled={saveRequesting}
                                         variant="contained"
                                         fullWidth
@@ -233,8 +233,8 @@ export const ChangeDisplayType = ({
 
                                 <Grid item xs={12} sm="auto">
                                     <Button
-                                        id="changeDisplayType-submit"
-                                        data-testid="changeDisplayType-submit"
+                                        id="change-display-type-submit"
+                                        data-testid="change-display-type-submit"
                                         variant="contained"
                                         color="primary"
                                         fullWidth
