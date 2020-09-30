@@ -735,3 +735,37 @@ export const changeSearchKeyValue = (records, data) => {
         }
     };
 };
+
+/**
+ * Change display type action
+ *
+ * @param {array} records
+ * @param {object} data
+ * @param {bool} isRemoveFrom
+ */
+export const copyToOrRemoveFromCollection = (records, data, isRemoveFrom = false) => {
+    const copyToOrRemoveFromCollectionRequest = isRemoveFrom
+        ? transformers.getRemoveFromCollectionData(records, data)
+        : transformers.getCopyToCollectionData(records, data);
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_COLLECTIONS_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), copyToOrRemoveFromCollectionRequest);
+            dispatch({
+                type: actions.CHANGE_COLLECTIONS_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_COLLECTIONS_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};

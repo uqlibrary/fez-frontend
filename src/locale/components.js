@@ -2848,10 +2848,36 @@ export default {
         bulkUpdates: {
             inputForm: action => ({
                 confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
-                confirmButtonLabel: 'bulk update',
-                cancelButtonLabel: 'Cancel',
             }),
             bulkUpdatesForms: {
+                copyToOrRemoveFromCollectionForm: {
+                    formLabels: {
+                        community: 'Parent community',
+                        collection: 'Collection',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: (isRemoveFrom = false) => ({
+                        title: `Bulk ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message:
+                            'Select destination collection if moving or copying to a collection, source collection if removing from a collection',
+                        type: 'info',
+                    }),
+                    submittingAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    }),
+                    successAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    }),
+                    errorAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        type: 'error',
+                    }),
+                },
                 changeAuthorIdForm: {
                     formLabels: {
                         authorName: 'Author Name',
