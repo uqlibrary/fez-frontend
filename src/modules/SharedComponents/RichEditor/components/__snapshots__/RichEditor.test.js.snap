@@ -464,16 +464,8 @@ exports[`RichEditor should render component 1`] = `
                         "change",
                         [Function],
                       ],
-                      Array [
-                        "contentDom",
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -971,9 +963,31 @@ exports[`RichEditor should render error as one child 1`] = `
                         "change",
                         [Function],
                       ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setData": [MockFunction] {
+                    "calls": Array [
                       Array [
-                        "contentDom",
-                        [Function],
+                        "This is test value",
+                      ],
+                      Array [
+                        undefined,
+                      ],
+                      Array [
+                        undefined,
+                      ],
+                      Array [
+                        undefined,
                       ],
                     ],
                     "results": Array [
@@ -989,9 +1003,12 @@ exports[`RichEditor should render error as one child 1`] = `
                         "type": "return",
                         "value": undefined,
                       },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                     ],
                   },
-                  "setData": [MockFunction],
                   "setReadOnly": [MockFunction],
                 },
               }
@@ -1011,7 +1028,19 @@ exports[`RichEditor should render error as one child 1`] = `
             titleProps={Object {}}
             value={
               Object {
-                "get": [MockFunction],
+                "get": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      "htmlText",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                },
                 "plainText": "This is test value",
               }
             }
@@ -1630,9 +1659,28 @@ exports[`RichEditor should render error as react children 1`] = `
                         "change",
                         [Function],
                       ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setData": [MockFunction] {
+                    "calls": Array [
                       Array [
-                        "contentDom",
-                        [Function],
+                        "This is test value",
+                      ],
+                      Array [
+                        undefined,
+                      ],
+                      Array [
+                        undefined,
                       ],
                     ],
                     "results": Array [
@@ -1650,7 +1698,6 @@ exports[`RichEditor should render error as react children 1`] = `
                       },
                     ],
                   },
-                  "setData": [MockFunction],
                   "setReadOnly": [MockFunction],
                 },
               }
@@ -1672,7 +1719,19 @@ exports[`RichEditor should render error as react children 1`] = `
             titleProps={Object {}}
             value={
               Object {
-                "get": [MockFunction],
+                "get": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      "htmlText",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                },
                 "plainText": "This is test value",
               }
             }
@@ -2295,9 +2354,25 @@ exports[`RichEditor should render error showing input length 1`] = `
                         "change",
                         [Function],
                       ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setData": [MockFunction] {
+                    "calls": Array [
                       Array [
-                        "contentDom",
-                        [Function],
+                        "This is test value",
+                      ],
+                      Array [
+                        undefined,
                       ],
                     ],
                     "results": Array [
@@ -2309,13 +2384,8 @@ exports[`RichEditor should render error showing input length 1`] = `
                         "type": "return",
                         "value": undefined,
                       },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                     ],
                   },
-                  "setData": [MockFunction],
                   "setReadOnly": [MockFunction],
                 },
               }
@@ -2333,7 +2403,19 @@ exports[`RichEditor should render error showing input length 1`] = `
             titleProps={Object {}}
             value={
               Object {
-                "get": [MockFunction],
+                "get": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      "htmlText",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                },
                 "plainText": "This is test value",
               }
             }
@@ -2952,10 +3034,6 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
                         "change",
                         [Function],
                       ],
-                      Array [
-                        "contentDom",
-                        [Function],
-                      ],
                     ],
                     "results": Array [
                       Object {
@@ -2966,13 +3044,21 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
                         "type": "return",
                         "value": undefined,
                       },
+                    ],
+                  },
+                  "setData": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "This is test value",
+                      ],
+                    ],
+                    "results": Array [
                       Object {
                         "type": "return",
                         "value": undefined,
                       },
                     ],
                   },
-                  "setData": [MockFunction],
                   "setReadOnly": [MockFunction],
                 },
               }
@@ -3609,16 +3695,8 @@ exports[`RichEditor should render given title and description 1`] = `
                         "change",
                         [Function],
                       ],
-                      Array [
-                        "contentDom",
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -4210,16 +4288,8 @@ exports[`RichEditor should render given title and description with error 1`] = `
                         "change",
                         [Function],
                       ],
-                      Array [
-                        "contentDom",
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
