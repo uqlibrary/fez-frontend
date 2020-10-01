@@ -254,7 +254,7 @@ export const ThesisSubmission = ({
                                             name="thesisAbstract"
                                             required
                                             validate={[validation.required]}
-                                            richEditorId="rek-abstract"
+                                            richEditorId="rek-description"
                                         />
                                     </Grid>
                                 </Grid>

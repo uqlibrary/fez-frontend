@@ -221,7 +221,7 @@ export default class SbsSubmission extends Component {
                                                 title={txt.optional.fieldLabels.abstract.label}
                                                 required
                                                 validate={[validation.required]}
-                                                richEditorId="rek-abstract"
+                                                richEditorId="rek-description"
                                             />
                                         </Grid>
                                     </Grid>

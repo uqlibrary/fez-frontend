@@ -120,7 +120,7 @@ export default {
                 },
                 height: 100,
                 format: value => Immutable.Map(value),
-                richEditorId: 'ain-detail-input',
+                richEditorId: 'ain-notes',
             },
         },
         fez_record_search_key_isi_loc: {

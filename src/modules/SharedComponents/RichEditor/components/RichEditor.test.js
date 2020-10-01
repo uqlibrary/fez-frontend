@@ -4,9 +4,11 @@ import 'ckeditor';
 import Immutable from 'immutable';
 
 const setReadOnlyFn = jest.fn();
+const setDataFn = jest.fn();
 window.CKEDITOR = {
-    appendTo: () => ({
+    replace: () => ({
         setReadOnly: setReadOnlyFn,
+        setData: setDataFn,
         on: jest.fn(),
     }),
 };
@@ -18,6 +20,7 @@ function setup(testProps = {}, args = {}) {
     const props = {
         onChange: jest.fn(), // PropTypes.func.isRequired,
         disabled: false,
+        richEditorId: 'rek-test',
         inputRef: {
             current: <div />,
         },
@@ -157,9 +160,10 @@ describe('RichEditor', () => {
     });
 
     it('should set CKEditor as read only', () => {
-        const wrapper = setup({ disabled: true });
+        const wrapper = setup({ disabled: true, value: { get: () => '<p>test</p>' } });
         wrapper.instance().onInstanceReady();
         expect(setReadOnlyFn).toHaveBeenCalledWith(true);
+        expect(setDataFn).toHaveBeenCalled();
     });
 
     it('should set data attribute', () => {

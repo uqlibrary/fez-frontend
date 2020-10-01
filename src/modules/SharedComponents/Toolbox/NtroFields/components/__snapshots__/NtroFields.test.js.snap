@@ -293,7 +293,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
-            richEditorId="rek-abstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -873,7 +873,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
-            richEditorId="rek-abstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -1325,7 +1325,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
-            richEditorId="rek-abstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -1905,7 +1905,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
-            richEditorId="rek-abstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -2425,7 +2425,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
-            richEditorId="rek-abstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
