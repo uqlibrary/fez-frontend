@@ -30,20 +30,33 @@ export const NewGenericSelectField = ({
     error,
     errorText,
     hideLabel,
-    hintText,
     itemsList,
     itemsLoading,
     label,
-    loadingHint,
     loadItemsList,
+    loadingHint,
     multiple,
     onChange,
     required,
     value,
     style,
+    selectPrompt,
     genericSelectFieldId,
 }) => {
     const classes = useStyles();
+
+    const promptMenuItem = {
+        value: -1,
+        text: selectPrompt,
+        disabled: true,
+    };
+
+    const loadingMenuItem = {
+        value: -1,
+        text: loadingHint,
+        disabled: true,
+    };
+
     React.useEffect(() => {
         if (itemsList.length === 0 && loadItemsList) {
             loadItemsList();
@@ -51,55 +64,24 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const _itemSelected = event => {
-        let value = event.target.value;
-        if (value[0] === -1) {
-            if (value.length === 1) {
-                value = '';
-            }
-            if (value.length > 1) {
-                value.shift();
-            }
-        }
-        onChange(value);
-    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const handleChange = React.useCallback(event => onChange(event.target.value), []);
 
-    const newValue = () => {
-        if (multiple) {
-            if (hideLabel) {
-                return (value && value.length > 0 && value) || [-1];
-            } else {
-                return (value && value.length > 0 && value) || [];
-            }
-        } else {
-            if (hideLabel) {
-                return (value && value.length > 0 && value) || '-1';
-            } else {
-                return value || '-1';
-            }
-        }
-    };
-
-    const renderMenuItems = () => {
+    const renderMenuItems = itemsList => {
         return [
-            hideLabel && (
-                <MenuItem value={-1} key={0} style={{ display: 'block' }} disabled>
-                    {itemsLoading ? loadingHint : hintText}
-                </MenuItem>
-            ),
-            ...itemsList.map((item, index) => {
+            itemsList.map((item, index) => {
                 return (
                     <MenuItem
                         classes={{ selected: classes.selectedMenuItem }}
                         style={{ display: 'block' }}
-                        selected={(multiple && value.includes(item.value || item)) || undefined}
-                        value={item.value || item}
+                        selected={(multiple && value.includes(item.value)) || undefined}
+                        value={item.value}
                         key={index + 1}
                         disabled={item && ((!canUnselect && !item.value) || !!item.disabled)}
-                        aria-label={item.text || item.value || item}
+                        aria-label={item.text}
                         data-testid={`${genericSelectFieldId}-option-${index}`}
                     >
-                        {item.text || item.value || item}
+                        {item.text}
                     </MenuItem>
                 );
             }),
@@ -116,7 +98,7 @@ export const NewGenericSelectField = ({
                 {label}
             </InputLabel>
             <Select
-                disabled={disabled || !!itemsLoading}
+                disabled={disabled}
                 displayEmpty={displayEmpty}
                 inputProps={{
                     'aria-labelledby': `${genericSelectFieldId}-label`,
@@ -128,15 +110,15 @@ export const NewGenericSelectField = ({
                     id: `${genericSelectFieldId}-options`,
                     'data-testid': `${genericSelectFieldId}-options`,
                 }}
-                onChange={_itemSelected}
+                onChange={handleChange}
                 style={style}
                 SelectDisplayProps={{
                     id: `${genericSelectFieldId}-select`,
                     'data-testid': `${genericSelectFieldId}-select`,
                 }}
-                value={newValue()}
+                value={value}
             >
-                {renderMenuItems()}
+                {itemsLoading ? renderMenuItems([loadingMenuItem]) : renderMenuItems([promptMenuItem, ...itemsList])}
             </Select>
             {!!error && (
                 <FormHelperText
@@ -159,8 +141,13 @@ NewGenericSelectField.propTypes = {
     errorText: PropTypes.string,
     genericSelectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
-    hintText: PropTypes.string,
-    itemsList: PropTypes.array,
+    itemsList: PropTypes.arrayOf(
+        PropTypes.shape({
+            text: PropTypes.string.isRequired,
+            value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+            disabled: PropTypes.bool,
+        }),
+    ),
     itemsLoading: PropTypes.bool,
     label: PropTypes.string,
     loadingHint: PropTypes.string,
@@ -168,6 +155,7 @@ NewGenericSelectField.propTypes = {
     multiple: PropTypes.bool,
     onChange: PropTypes.func,
     required: PropTypes.bool,
+    selectPrompt: PropTypes.string,
     style: PropTypes.object,
     value: PropTypes.any,
 };
@@ -175,8 +163,9 @@ NewGenericSelectField.propTypes = {
 NewGenericSelectField.defaultProps = {
     itemsList: [],
     canUnselect: false,
-    hintText: null,
     multiple: false,
+    selectPrompt: 'Please select an option',
+    loadingHint: 'Loading items...',
 };
 
 export default React.memo(NewGenericSelectField);

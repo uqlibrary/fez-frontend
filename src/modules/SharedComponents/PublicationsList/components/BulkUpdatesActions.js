@@ -61,6 +61,8 @@ export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
                 itemsList={Object.values(BULK_UPDATES_ACTIONS)}
                 genericSelectFieldId="bulk-updates-actions"
                 style={{ marginTop: -8 }}
+                selectPrompt={txt.selectPrompt}
+                value={-1}
             />
         </React.Fragment>
     );

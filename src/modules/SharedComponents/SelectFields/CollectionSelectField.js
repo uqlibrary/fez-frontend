@@ -16,9 +16,7 @@ export default function CollectionSelectField(fieldProps) {
     const itemsLoading = useSelector(state => state.get('collectionsReducer').itemsLoading);
 
     React.useEffect(() => {
-        if (communityId) {
-            dispatch(actions.collectionsList(communityId));
-        }
+        !!communityId && dispatch(actions.collectionsList(communityId));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [communityId]);
 
@@ -27,13 +25,10 @@ export default function CollectionSelectField(fieldProps) {
             disabled={itemsLoading || fieldProps.disabled}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
-            itemsList={
-                itemsLoading
-                    ? [{ text: 'Loading...', value: -1, disabled: -1 }]
-                    : [{ text: 'Please select a collection', value: -1, disabled: true }, ...itemsList]
-            }
+            itemsList={itemsList}
+            itemsLoading={itemsLoading}
             onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value}
+            value={fieldProps.input.value || -1}
             {...fieldProps}
         />
     );

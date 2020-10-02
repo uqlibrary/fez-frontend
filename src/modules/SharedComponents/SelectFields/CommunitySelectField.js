@@ -30,13 +30,10 @@ export default function CommunitySelectField(fieldProps) {
             disabled={itemsLoading || fieldProps.disabled}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
-            itemsList={
-                itemsLoading
-                    ? [{ text: 'Loading...', value: -1, disabled: true }]
-                    : [{ text: 'Please select a community', value: -1, disabled: true }, ...translatedItemList]
-            }
+            itemsList={translatedItemList}
+            itemsLoading={itemsLoading}
             onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value}
+            value={fieldProps.input.value || -1}
             {...fieldProps}
         />
     );

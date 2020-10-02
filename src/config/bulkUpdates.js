@@ -39,11 +39,6 @@ export const BUA_UPDATE_SECURITY_OPTION = {
 
 // Bulk updates actions for dropdown
 export const BULK_UPDATES_ACTIONS = {
-    0: {
-        value: '-1',
-        text: 'Please choose an action',
-        disabled: true,
-    },
     [BUA_CHANGE_AUTHOR_ID]: BUA_CHANGE_AUTHOR_ID_OPTION,
     [BUA_CHANGE_DISPLAY_TYPE]: BUA_CHANGE_DISPLAY_TYPE_OPTION,
     [BUA_COPY_TO_COLLECTION]: BUA_COPY_TO_COLLECTION_OPTION,

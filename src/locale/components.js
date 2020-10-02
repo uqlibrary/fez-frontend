@@ -2846,6 +2846,7 @@ export default {
             },
         },
         bulkUpdates: {
+            selectPrompt: 'Please select an action',
             inputForm: action => ({
                 confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
             }),
@@ -2988,6 +2989,16 @@ export default {
                 type: 'done',
                 title: 'Success',
                 message: 'Display type has been changed successfully.',
+            },
+        },
+        selectField: {
+            community: {
+                loadingHint: 'Loading communities...',
+                selectPrompt: 'Please select a community',
+            },
+            collection: {
+                loadingHint: 'Loading collections...',
+                selectPrompt: 'Please select a collection',
             },
         },
     },

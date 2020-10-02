@@ -51,4 +51,26 @@ describe('BulkUpdatesActions', () => {
         expect(window.location.reload).toHaveBeenCalled();
         window.location = location;
     });
+
+    it('should render confirmation box on action selected', async () => {
+        const { location } = window;
+        delete window.location;
+        window.location = { reload: jest.fn() };
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
+        act(() => {
+            fireEvent.click(getByText('Remove from collection'));
+        });
+
+        expect(getByTestId('remove-from-collection-form')).toBeInTheDocument();
+
+        await waitFor(() => getByTestId('remove-from-collection-cancel'));
+        fireEvent.click(getByTestId('remove-from-collection-cancel'));
+
+        expect(queryByTestId('remove-from-collection-form')).not.toBeInTheDocument();
+        expect(window.location.reload).toHaveBeenCalled();
+        window.location = location;
+    });
 });

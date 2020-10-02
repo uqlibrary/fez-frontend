@@ -61,6 +61,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         name="community_pid"
                         required
                         validate={[validation.required]}
+                        {...locale.components.selectField.community}
                     />
                 </Grid>
                 {!!communityId && (
@@ -74,6 +75,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                             name="rek_ismemberof"
                             required
                             validate={[validation.required]}
+                            {...locale.components.selectField.collection}
                         />
                     </Grid>
                 )}
