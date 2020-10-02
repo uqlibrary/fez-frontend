@@ -2,7 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 const initState = {
     itemsList: [],
-    itemsLoading: false,
+    itemsLoading: true,
     itemsLoadingError: false,
 };
 

@@ -7,12 +7,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export const usePublicationSubtype = (displayType = null, isAdmin = false) => {
     const { record } = useRecordContext();
-    return publicationTypes({}, isAdmin)[displayType || record.rek_display_type].subtypes || [];
-};
-
-export const userIsAdmin = () => {
-    const { account } = useAccountContext();
-    return !!account.is_administrator;
+    return (publicationTypes({}, isAdmin)[displayType || record.rek_display_type] || {}).subtypes || [];
 };
 
 export const userIsResearcher = () => {
@@ -58,3 +53,6 @@ export const useWidth = () => {
         }, null) || 'xs'
     );
 };
+
+export { userIsAdmin } from './userIsAdmin';
+export { useRecordsSelector } from './useRecordsSelector';

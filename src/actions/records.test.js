@@ -1170,4 +1170,300 @@ describe('Record action creators', () => {
             }
         });
     });
+
+    describe('changeSearchKeyValue()', () => {
+        it('dispatches expected actions on success for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [
+                actions.CHANGE_SEARCH_KEY_VALUE_INPROGRESS,
+                actions.CHANGE_SEARCH_KEY_VALUE_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(
+                recordActions.changeSearchKeyValue(
+                    [
+                        {
+                            rek_pid: 'UQ:123456',
+                            fez_record_search_key_oa_status: {
+                                rek_oa_status: 'test',
+                            },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_oa_status.rek_oa_status',
+                        fez_record_search_key_oa_status: {
+                            rek_oa_status: '453692',
+                        },
+                    },
+                ),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on success for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [
+                actions.CHANGE_SEARCH_KEY_VALUE_INPROGRESS,
+                actions.CHANGE_SEARCH_KEY_VALUE_SUCCESS,
+            ];
+
+            await mockActionsStore.dispatch(
+                recordActions.changeSearchKeyValue(
+                    [
+                        {
+                            rek_pid: 'UQ:123456',
+                            rek_scopus_doc_type: 'ab',
+                        },
+                    ],
+                    {
+                        search_key: 'rek_scopus_doc_type',
+                        rek_scopus_doc_type: 'ab',
+                    },
+                ),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_SEARCH_KEY_VALUE_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_SEARCH_KEY_VALUE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.changeSearchKeyValue(
+                        [
+                            {
+                                rek_pid: 'UQ:123456',
+                                fez_record_search_key_oa_status: {
+                                    rek_oa_status: 'test',
+                                },
+                            },
+                        ],
+                        {
+                            search_key: 'fez_record_search_key_oa_status.rek_oa_status',
+                            fez_record_search_key_oa_status: {
+                                rek_oa_status: '453692',
+                            },
+                        },
+                    ),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
+    describe('changeAuthorId()', () => {
+        it('dispatches expected actions on success for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [actions.CHANGE_AUTHOR_ID_INPROGRESS, actions.CHANGE_AUTHOR_ID_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                recordActions.changeAuthorId(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_author: [
+                                {
+                                    rek_author: 'Test',
+                                    rek_author_order: 1,
+                                },
+                                {
+                                    rek_author: 'Testing',
+                                    rek_author_order: 2,
+                                },
+                            ],
+                            fez_record_search_key_author_id: [
+                                {
+                                    rek_author_id: null,
+                                },
+                                {
+                                    rek_author_id: null,
+                                },
+                            ],
+                        },
+                        {
+                            rek_pid: 'UQ:22222',
+                            fez_record_search_key_author: [
+                                {
+                                    rek_author: 'Testing',
+                                    rek_author_order: 1,
+                                },
+                            ],
+                            fez_record_search_key_author_id: [
+                                {
+                                    rek_author_id: 123,
+                                    rek_author_id_order: 1,
+                                    rek_author_id_id: 999,
+                                },
+                            ],
+                        },
+                        {
+                            rek_pid: 'UQ:33333',
+                            fez_record_search_key_author: [
+                                {
+                                    rek_author: 'Test',
+                                    rek_author_order: 1,
+                                },
+                            ],
+
+                            fez_record_search_key_author_id: [
+                                {
+                                    rek_author_id: null,
+                                },
+                            ],
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_author_id.rek_author_id',
+                        rek_author: 'Testing',
+                        rek_author_id: 1234,
+                    },
+                ),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_AUTHOR_ID_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_AUTHOR_ID_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.changeAuthorId(
+                        [
+                            {
+                                rek_pid: 'UQ:11111',
+                                fez_record_search_key_author: [
+                                    {
+                                        rek_author: 'Test',
+                                        rek_author_order: 1,
+                                    },
+                                    {
+                                        rek_author: 'Testing',
+                                        rek_author_order: 2,
+                                    },
+                                ],
+                                fez_record_search_key_author_id: [
+                                    {
+                                        rek_author_id: null,
+                                    },
+                                    {
+                                        rek_author_id: null,
+                                    },
+                                ],
+                            },
+                            {
+                                rek_pid: 'UQ:22222',
+                                fez_record_search_key_author: [
+                                    {
+                                        rek_author: 'Testing',
+                                        rek_author_order: 1,
+                                    },
+                                ],
+                                fez_record_search_key_author_id: [
+                                    {
+                                        rek_author_id: 123,
+                                        rek_author_id_order: 1,
+                                        rek_author_id_id: 999,
+                                    },
+                                ],
+                            },
+                            {
+                                rek_pid: 'UQ:33333',
+                                fez_record_search_key_author: [
+                                    {
+                                        rek_author: 'Test',
+                                        rek_author_order: 1,
+                                    },
+                                ],
+
+                                fez_record_search_key_author_id: [
+                                    {
+                                        rek_author_id: null,
+                                    },
+                                ],
+                            },
+                        ],
+                        {
+                            search_key: 'fez_record_search_key_author_id.rek_author_id',
+                            rek_author: 'Testing',
+                            rek_author_id: 1234,
+                        },
+                    ),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
+    describe('copyToOrRemoveFromCollection', () => {
+        it('dispatches expected actions on success for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [actions.CHANGE_COLLECTIONS_INPROGRESS, actions.CHANGE_COLLECTIONS_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                recordActions.copyToOrRemoveFromCollection(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [
+                                {
+                                    rek_ismemberof: 'UQ:1111',
+                                    rek_author_order: 1,
+                                },
+                            ],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        rek_ismemberof: 'UQ:1234',
+                    },
+                ),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_COLLECTIONS_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_COLLECTIONS_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.copyToOrRemoveFromCollection(
+                        [
+                            {
+                                rek_pid: 'UQ:11111',
+                                fez_record_search_key_ismemberof: [
+                                    {
+                                        rek_ismemberof: 'UQ:1234',
+                                    },
+                                ],
+                            },
+                        ],
+                        {
+                            search_key: 'rek_ismemberof',
+                            rek_ismemberof: 'UQ:1234',
+                        },
+                        true,
+                    ),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
 });

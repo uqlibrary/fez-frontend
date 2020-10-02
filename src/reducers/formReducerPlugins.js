@@ -4,6 +4,10 @@ import { ADMIN_DELETE_ATTACHED_FILE } from 'actions/actionTypes';
 export const resetValue = (state, action) => {
     switch (action.type) {
         case actionTypes.UNREGISTER_FIELD:
+            if (!action.payload.name) {
+                return state;
+            }
+
             const key = action.payload.name.split('.').shift();
 
             if (state && state.hasIn(['initial', key])) {

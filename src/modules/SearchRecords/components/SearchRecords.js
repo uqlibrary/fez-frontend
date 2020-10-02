@@ -24,6 +24,7 @@ import {
 } from 'modules/SharedComponents/PublicationsList';
 
 import { locale } from 'locale';
+import { RecordsSelectorContext } from 'context';
 
 class SearchRecords extends PureComponent {
     static propTypes = {
@@ -363,39 +364,49 @@ class SearchRecords extends PureComponent {
                                             disabled={isLoadingOrExporting}
                                         />
                                     </Grid>
-                                </Grid>
-                                {isLoadingOrExporting && (
-                                    <Grid container justify={'center'}>
-                                        <Grid item>
-                                            <InlineLoader
-                                                message={
-                                                    this.props.searchLoading
-                                                        ? txt.loadingPagingMessage
-                                                        : txt.exportPublicationsLoadingMessage
-                                                }
-                                            />
+                                    {isLoadingOrExporting && (
+                                        <Grid item xs={12}>
+                                            <Grid container justify={'center'}>
+                                                <Grid item xs={12}>
+                                                    <InlineLoader
+                                                        message={
+                                                            this.props.searchLoading
+                                                                ? txt.loadingPagingMessage
+                                                                : txt.exportPublicationsLoadingMessage
+                                                        }
+                                                    />
+                                                </Grid>
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
-                                )}
-                                {!isLoadingOrExporting &&
-                                    this.props.publicationsList &&
-                                    this.props.publicationsList.length > 0 && (
-                                        <div style={{ marginTop: 16 }}>
-                                            <PublicationsList
-                                                showAdminActions={
-                                                    this.props.isAdmin || this.props.isUnpublishedBufferPage
-                                                }
-                                                showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
-                                                publicationsList={this.props.publicationsList}
-                                            />
-                                        </div>
                                     )}
-                                <PublicationsListPaging
-                                    loading={isLoadingOrExporting}
-                                    pagingData={pagingData}
-                                    onPageChanged={this.pageChanged}
-                                    disabled={isLoadingOrExporting}
-                                />
+                                    {!isLoadingOrExporting &&
+                                        this.props.publicationsList &&
+                                        this.props.publicationsList.length > 0 && (
+                                            <Grid item xs={12}>
+                                                <RecordsSelectorContext.Provider
+                                                    value={{
+                                                        records: this.props.publicationsList,
+                                                    }}
+                                                >
+                                                    <PublicationsList
+                                                        showAdminActions={
+                                                            this.props.isAdmin || this.props.isUnpublishedBufferPage
+                                                        }
+                                                        showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
+                                                        publicationsList={this.props.publicationsList}
+                                                    />
+                                                </RecordsSelectorContext.Provider>
+                                            </Grid>
+                                        )}
+                                    <Grid item xs={12}>
+                                        <PublicationsListPaging
+                                            loading={isLoadingOrExporting}
+                                            pagingData={pagingData}
+                                            onPageChanged={this.pageChanged}
+                                            disabled={isLoadingOrExporting}
+                                        />
+                                    </Grid>
+                                </Grid>
                             </StandardCard>
                         </Grid>
                     )}

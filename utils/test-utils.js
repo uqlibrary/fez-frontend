@@ -94,4 +94,5 @@ module.exports = {
     withRouter,
     WithReduxStore,
     WithRouter,
+    AllTheProviders,
 };

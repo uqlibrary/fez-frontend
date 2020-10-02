@@ -16,7 +16,7 @@ context('Delete work form', () => {
             // .contains('h3', fixPageLocale.subTitle);
             .contains('h3', 'Work to be deleted');
         cy.contains('.StandardCard .publicationCitation h6 a', myRecordsList.data[0].rek_title);
-        cy.get('[class*="PublicationCitation-divider"] + div').contains('Scholarship of Teaching and Learning');
+        cy.get('[data-testid=rek-content-indicator]').contains('Scholarship of Teaching and Learning');
         cy.contains('Describe the reason to delete this work');
         cy.contains('button', 'Cancel');
         cy.contains('button', 'Delete').should('not.be.disabled');

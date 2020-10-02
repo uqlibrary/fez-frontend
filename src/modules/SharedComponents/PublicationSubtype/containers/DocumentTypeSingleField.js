@@ -1,32 +1,21 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { publicationTypes } from 'config';
 
 const documentTypeList = () => {
-    return Object.values(publicationTypes(false)).map(item => {
-        return {
-            value: item.id,
-            text: item.name,
-        };
-    });
-};
-const mapStateToProps = (state, props) => {
-    return {
-        value: props.input.value || '',
-        itemsList: documentTypeList() || [],
-        itemsLoadingHint: props.loadingHint || 'Loading..',
-    };
-};
-
-function mapDispatchToProps() {
-    return {};
-}
-
-const SingleDocumentTypeList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
-
-const _onChange = fieldProps => {
-    return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
+    return [
+        {
+            value: '-1',
+            text: 'Please select a display type',
+            disabled: true,
+        },
+        ...Object.values(publicationTypes(false)).map(item => {
+            return {
+                value: item.id,
+                text: item.name,
+            };
+        }),
+    ];
 };
 
 /**
@@ -38,6 +27,16 @@ const _onChange = fieldProps => {
  */
 export default function DocumentTypeSingleField(fieldProps) {
     return (
-        <SingleDocumentTypeList onChange={_onChange(fieldProps)} genericSelectFieldId="doc-type-id" {...fieldProps} />
+        <NewGenericSelectField
+            error={!!fieldProps.meta && fieldProps.meta.error}
+            errorText={!!fieldProps.meta && fieldProps.meta.error}
+            genericSelectFieldId="doc-type-id"
+            itemsList={documentTypeList() || []}
+            onChange={
+                (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
+            }
+            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || -1}
+            {...fieldProps}
+        />
     );
 }

@@ -1039,7 +1039,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             id="rek-status-label"
                           >
                             <WithStyles(ForwardRef(FormLabel))
-                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                               classes={
                                 Object {
                                   "asterisk": "MuiInputLabel-asterisk",
@@ -1049,13 +1049,13 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   "required": "Mui-required",
                                 }
                               }
-                              data-shrink={false}
+                              data-shrink={true}
                               data-testid="rek-status-label"
                               hidden={false}
                               id="rek-status-label"
                             >
                               <ForwardRef(FormLabel)
-                                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                                 classes={
                                   Object {
                                     "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
@@ -1068,14 +1068,14 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     "root": "MuiFormLabel-root",
                                   }
                                 }
-                                data-shrink={false}
+                                data-shrink={true}
                                 data-testid="rek-status-label"
                                 hidden={false}
                                 id="rek-status-label"
                               >
                                 <label
-                                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                                  data-shrink={false}
+                                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                                  data-shrink={true}
                                   data-testid="rek-status-label"
                                   hidden={false}
                                   id="rek-status-label"
@@ -1108,7 +1108,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                           }
                           multiple={false}
                           onChange={[Function]}
-                          value=""
+                          value="-1"
                         >
                           <ForwardRef(Select)
                             MenuProps={
@@ -1148,7 +1148,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             }
                             multiple={false}
                             onChange={[Function]}
-                            value=""
+                            value="-1"
                           >
                             <WithStyles(ForwardRef(Input))
                               disabled={false}
@@ -1366,7 +1366,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 }
                               }
                               onChange={[Function]}
-                              value=""
+                              value="-1"
                             >
                               <ForwardRef(Input)
                                 classes={
@@ -1602,7 +1602,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   }
                                 }
                                 onChange={[Function]}
-                                value=""
+                                value="-1"
                               >
                                 <WithStyles(ForwardRef(InputBase))
                                   classes={
@@ -1841,7 +1841,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   multiline={false}
                                   onChange={[Function]}
                                   type="text"
-                                  value=""
+                                  value="-1"
                                 >
                                   <ForwardRef(InputBase)
                                     classes={
@@ -2084,7 +2084,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     multiline={false}
                                     onChange={[Function]}
                                     type="text"
-                                    value=""
+                                    value="-1"
                                   >
                                     <div
                                       className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
@@ -2144,7 +2144,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         onChange={[Function]}
                                         onFocus={[Function]}
                                         required={false}
-                                        value=""
+                                        value="-1"
                                         variant="standard"
                                       >
                                         <div
@@ -2174,7 +2174,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           id="rek-status-input"
                                           onAnimationStart={[Function]}
                                           type="hidden"
-                                          value=""
+                                          value="-1"
                                         />
                                         <ForwardRef
                                           className="MuiSelect-icon"
@@ -3439,7 +3439,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                             id="rek-status-label"
                           >
                             <WithStyles(ForwardRef(FormLabel))
-                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                               classes={
                                 Object {
                                   "asterisk": "MuiInputLabel-asterisk",
@@ -3449,13 +3449,13 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   "required": "Mui-required",
                                 }
                               }
-                              data-shrink={false}
+                              data-shrink={true}
                               data-testid="rek-status-label"
                               hidden={false}
                               id="rek-status-label"
                             >
                               <ForwardRef(FormLabel)
-                                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                                 classes={
                                   Object {
                                     "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
@@ -3468,14 +3468,14 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     "root": "MuiFormLabel-root",
                                   }
                                 }
-                                data-shrink={false}
+                                data-shrink={true}
                                 data-testid="rek-status-label"
                                 hidden={false}
                                 id="rek-status-label"
                               >
                                 <label
-                                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-error Mui-error"
-                                  data-shrink={false}
+                                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-error Mui-error MuiFormLabel-filled"
+                                  data-shrink={true}
                                   data-testid="rek-status-label"
                                   hidden={false}
                                   id="rek-status-label"
@@ -3508,7 +3508,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                           }
                           multiple={false}
                           onChange={[Function]}
-                          value=""
+                          value="-1"
                         >
                           <ForwardRef(Select)
                             MenuProps={
@@ -3548,7 +3548,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                             }
                             multiple={false}
                             onChange={[Function]}
-                            value=""
+                            value="-1"
                           >
                             <WithStyles(ForwardRef(Input))
                               disabled={false}
@@ -3766,7 +3766,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 }
                               }
                               onChange={[Function]}
-                              value=""
+                              value="-1"
                             >
                               <ForwardRef(Input)
                                 classes={
@@ -4002,7 +4002,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   }
                                 }
                                 onChange={[Function]}
-                                value=""
+                                value="-1"
                               >
                                 <WithStyles(ForwardRef(InputBase))
                                   classes={
@@ -4241,7 +4241,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   multiline={false}
                                   onChange={[Function]}
                                   type="text"
-                                  value=""
+                                  value="-1"
                                 >
                                   <ForwardRef(InputBase)
                                     classes={
@@ -4484,7 +4484,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     multiline={false}
                                     onChange={[Function]}
                                     type="text"
-                                    value=""
+                                    value="-1"
                                   >
                                     <div
                                       className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-formControl MuiInput-formControl"
@@ -4544,7 +4544,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         onChange={[Function]}
                                         onFocus={[Function]}
                                         required={false}
-                                        value=""
+                                        value="-1"
                                         variant="standard"
                                       >
                                         <div
@@ -4574,7 +4574,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           id="rek-status-input"
                                           onAnimationStart={[Function]}
                                           type="hidden"
-                                          value=""
+                                          value="-1"
                                         />
                                         <ForwardRef
                                           className="MuiSelect-icon"
@@ -4829,7 +4829,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                             error={true}
                           >
                             <p
-                              className="MuiFormHelperText-root Mui-error"
+                              className="MuiFormHelperText-root Mui-error MuiFormHelperText-filled"
                             >
                               This field is required
                             </p>
@@ -5845,7 +5845,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             id="rek-status-label"
                           >
                             <WithStyles(ForwardRef(FormLabel))
-                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                               classes={
                                 Object {
                                   "asterisk": "MuiInputLabel-asterisk",
@@ -5855,13 +5855,13 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   "required": "Mui-required",
                                 }
                               }
-                              data-shrink={false}
+                              data-shrink={true}
                               data-testid="rek-status-label"
                               hidden={false}
                               id="rek-status-label"
                             >
                               <ForwardRef(FormLabel)
-                                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                                className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                                 classes={
                                   Object {
                                     "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
@@ -5874,14 +5874,14 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     "root": "MuiFormLabel-root",
                                   }
                                 }
-                                data-shrink={false}
+                                data-shrink={true}
                                 data-testid="rek-status-label"
                                 hidden={false}
                                 id="rek-status-label"
                               >
                                 <label
-                                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                                  data-shrink={false}
+                                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                                  data-shrink={true}
                                   data-testid="rek-status-label"
                                   hidden={false}
                                   id="rek-status-label"
@@ -5914,7 +5914,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                           }
                           multiple={false}
                           onChange={[Function]}
-                          value=""
+                          value="-1"
                         >
                           <ForwardRef(Select)
                             MenuProps={
@@ -5954,7 +5954,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             }
                             multiple={false}
                             onChange={[Function]}
-                            value=""
+                            value="-1"
                           >
                             <WithStyles(ForwardRef(Input))
                               disabled={false}
@@ -6172,7 +6172,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 }
                               }
                               onChange={[Function]}
-                              value=""
+                              value="-1"
                             >
                               <ForwardRef(Input)
                                 classes={
@@ -6408,7 +6408,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   }
                                 }
                                 onChange={[Function]}
-                                value=""
+                                value="-1"
                               >
                                 <WithStyles(ForwardRef(InputBase))
                                   classes={
@@ -6647,7 +6647,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   multiline={false}
                                   onChange={[Function]}
                                   type="text"
-                                  value=""
+                                  value="-1"
                                 >
                                   <ForwardRef(InputBase)
                                     classes={
@@ -6890,7 +6890,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     multiline={false}
                                     onChange={[Function]}
                                     type="text"
-                                    value=""
+                                    value="-1"
                                   >
                                     <div
                                       className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
@@ -6950,7 +6950,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         onChange={[Function]}
                                         onFocus={[Function]}
                                         required={false}
-                                        value=""
+                                        value="-1"
                                         variant="standard"
                                       >
                                         <div
@@ -6980,7 +6980,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           id="rek-status-input"
                                           onAnimationStart={[Function]}
                                           type="hidden"
-                                          value=""
+                                          value="-1"
                                         />
                                         <ForwardRef
                                           className="MuiSelect-icon"
