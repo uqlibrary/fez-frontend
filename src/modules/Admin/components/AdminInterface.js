@@ -177,7 +177,7 @@ export const AdminInterface = ({
 
     const saveConfirmationLocale = createMode
         ? txt.current.successAddWorkflowConfirmation
-        : (isJobCreated && txt.current.successWorkflowConfirmation) || txt.current.successJobCreatedConfirmation;
+        : (!isJobCreated && txt.current.successWorkflowConfirmation) || txt.current.successJobCreatedConfirmation;
 
     const pageTitlePrefix = !isDeleted ? 'Edit' : 'Undelete';
 
@@ -363,13 +363,6 @@ export const AdminInterface = ({
                     </Hidden>
                 </Grid>
                 <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
-                    <Grid container spacing={1}>
-                        <Grid item xs={12}>
-                            <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
-                                {renderButtonBar('-top')}
-                            </Grid>
-                        </Grid>
-                    </Grid>
                     <Grid container spacing={0}>
                         {!tabbed
                             ? Object.keys(tabs)

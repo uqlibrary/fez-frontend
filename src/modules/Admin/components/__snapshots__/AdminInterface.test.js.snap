@@ -17,10 +17,10 @@ exports[`AdminInterface component should disabled button and render alert for fo
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -156,15 +156,8 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -234,113 +227,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="publish-admin-top"
-                disabled={true}
-                fullWidth={true}
-                id="admin-work-publish-top"
-                variant="contained"
-              >
-                Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                disabled={true}
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -463,15 +349,8 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -528,7 +407,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
 
 exports[`AdminInterface component should display badges on tabs for erroring fields 1`] = `null`;
 
-exports[`AdminInterface component should display successful alert 1`] = `
+exports[`AdminInterface component should display job created alert 1`] = `
 <StandardPage>
   <form>
     <WithStyles(ForwardRef(Grid))
@@ -682,15 +561,8 @@ exports[`AdminInterface component should display successful alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -760,111 +632,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
       dirty={false}
       submitSucceeded={true}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="publish-admin-top"
-                fullWidth={true}
-                id="admin-work-publish-top"
-                variant="contained"
-              >
-                Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -984,6 +751,188 @@ exports[`AdminInterface component should display successful alert 1`] = `
                       Array [
                         [Function],
                       ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </ConfirmDiscardFormChanges>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should display job created alert 2`] = `
+<StandardPage>
+  <form>
+    <WithStyles(ForwardRef(Grid))
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
+      style={
+        Object {
+          "marginTop": -24,
+        }
+      }
+    >
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "Return to view page",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
+            "confirmationTitle": "Work is now updating",
+          }
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
+      >
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs="auto"
+        >
+          <Memo() />
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginBottom": 8,
+                "marginTop": 4,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel-top"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin-top"
+                fullWidth={true}
+                id="admin-work-publish-top"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin-top"
+                fullWidth={true}
+                id="admin-work-submit-top"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
                       Array [
                         [Function],
                       ],
@@ -993,6 +942,567 @@ exports[`AdminInterface component should display successful alert 1`] = `
                         "type": "return",
                         "value": undefined,
                       },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            standardCardId="bibliographic-section"
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin"
+                fullWidth={true}
+                id="admin-work-publish"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin"
+                fullWidth={true}
+                id="admin-work-submit"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </ConfirmDiscardFormChanges>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should display successful alert 1`] = `
+<StandardPage>
+  <form>
+    <WithStyles(ForwardRef(Grid))
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
+      style={
+        Object {
+          "marginTop": -24,
+        }
+      }
+    >
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
+          }
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
+      >
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs="auto"
+        >
+          <Memo() />
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginBottom": 8,
+                "marginTop": 4,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel-top"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin-top"
+                fullWidth={true}
+                id="admin-work-publish-top"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin-top"
+                fullWidth={true}
+                id="admin-work-submit-top"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            standardCardId="bibliographic-section"
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin"
+                fullWidth={true}
+                id="admin-work-publish"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin"
+                fullWidth={true}
+                id="admin-work-submit"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1039,10 +1549,10 @@ exports[`AdminInterface component should display successful alert 2`] = `
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -1176,15 +1686,8 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1254,111 +1757,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
       dirty={false}
       submitSucceeded={true}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="publish-admin-top"
-                fullWidth={true}
-                id="admin-work-publish-top"
-                variant="contained"
-              >
-                Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -1478,15 +1876,8 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1533,10 +1924,10 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -1658,15 +2049,8 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1705,111 +2089,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="publish-admin-top"
-                fullWidth={true}
-                id="admin-work-publish-top"
-                variant="contained"
-              >
-                Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -1905,15 +2184,8 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1962,10 +2234,10 @@ exports[`AdminInterface component should render default view as a full form view
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -2075,15 +2347,8 @@ exports[`AdminInterface component should render default view as a full form view
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2122,111 +2387,6 @@ exports[`AdminInterface component should render default view as a full form view
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="publish-admin-top"
-                fullWidth={true}
-                id="admin-work-publish-top"
-                variant="contained"
-              >
-                Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -2360,15 +2520,8 @@ exports[`AdminInterface component should render default view as a full form view
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2415,10 +2568,10 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -2528,15 +2681,8 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2611,111 +2757,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="publish-admin-top"
-                fullWidth={true}
-                id="admin-work-publish-top"
-                variant="contained"
-              >
-                Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -2811,15 +2852,8 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3026,68 +3060,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={10}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={[MockFunction]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        container={true}
         spacing={0}
       >
         <TabContainer
@@ -3193,10 +3165,10 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -3311,15 +3283,8 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3399,113 +3364,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="unpublish-admin-top"
-                disabled={true}
-                fullWidth={true}
-                id="admin-work-unpublish-top"
-                variant="contained"
-              >
-                Unpublish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                disabled={true}
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -3604,15 +3462,8 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3659,10 +3510,10 @@ exports[`AdminInterface component should render locked info alert 1`] = `
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -3777,15 +3628,8 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3865,113 +3709,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={3}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                data-testid="publish-admin-top"
-                disabled={false}
-                fullWidth={true}
-                id="admin-work-publish-top"
-                variant="contained"
-              >
-                Publish
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={7}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                disabled={false}
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Save
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -4070,15 +3807,8 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -4125,10 +3855,10 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
       <WithStyles(ConfirmDialogBox)
         locale={
           Object {
-            "cancelButtonLabel": "Return to view page",
+            "cancelButtonLabel": "View updated work",
             "confirmButtonLabel": "Edit another work",
-            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
-            "confirmationTitle": "Work is now updating",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
         onAction={[Function]}
@@ -4273,68 +4003,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
       dirty={false}
       submitSucceeded={false}
     >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        spacing={1}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-            spacing={1}
-            style={
-              Object {
-                "marginBottom": 8,
-                "marginTop": 4,
-              }
-            }
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={2}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="secondary"
-                fullWidth={true}
-                id="admin-work-cancel-top"
-                onClick={[Function]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Cancel
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              sm={10}
-              xs={12}
-            >
-              <WithStyles(ForwardRef(Button))
-                color="primary"
-                data-testid="submit-admin-top"
-                fullWidth={true}
-                id="admin-work-submit-top"
-                onClick={[MockFunction]}
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
-                variant="contained"
-              >
-                Undelete
-              </WithStyles(ForwardRef(Button))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}

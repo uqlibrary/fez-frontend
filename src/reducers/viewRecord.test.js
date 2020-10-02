@@ -131,4 +131,16 @@ describe('viewRecord reducer', () => {
             },
         });
     });
+
+    it('should set isJobCreated flag to true', () => {
+        const test = viewRecordReducer(initialState, {
+            type: actions.ADMIN_UPDATE_WORK_JOB_CREATED,
+            payload: { data: 'Job has been created' },
+        });
+
+        expect(test).toEqual({
+            ...initialState,
+            isJobCreated: true,
+        });
+    });
 });
