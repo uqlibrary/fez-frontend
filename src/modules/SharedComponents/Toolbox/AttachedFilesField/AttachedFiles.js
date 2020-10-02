@@ -343,7 +343,7 @@ export const AttachedFiles = ({
                                                 {isAdmin && canEdit ? (
                                                     <TextField
                                                         fullWidth
-                                                        onChange={onFileDescriptionChange(index)}
+                                                        onBlur={onFileDescriptionChange(index)}
                                                         name="fileDescription"
                                                         defaultValue={item.description}
                                                         id={`file-description-input-${index}`}

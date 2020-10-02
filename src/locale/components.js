@@ -15,7 +15,7 @@ export default {
             },
             openAccessFilter: {
                 displayTitle: 'Open access status',
-                activeFilter: 'Show only open access records',
+                activeFilter: 'Show only open access works',
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
             renameFacetsList: { 'Display type': 'Work type', Subtype: 'Work subtype' },
@@ -431,6 +431,39 @@ export default {
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete grant ID',
                             confirmationMessage: 'Are you sure you want to delete this grant ID?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        grants: {
+            locale: {
+                form: {
+                    locale: {
+                        grantAgencyNameLabel: 'Funder/Sponsor name',
+                        grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                        grantIdLabel: 'Grant ID',
+                        grantIdHint: 'Enter grant number for this work, if available',
+                        grantAgencyTypeLabel: 'Funder/Sponsor type',
+                        grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                        addButton: 'Add grant',
+                        editButton: 'Edit grant',
+                        description:
+                            "Add the grant's name, ID and type - then click the ADD GRANT button to add each to the list",
+                    },
+                },
+                header: {
+                    locale: {
+                        GrantAgencyName: 'Funder/Sponsor name',
+                        GrantID: 'Grant ID',
+                        GrantAgencyType: 'Funder/Sponsor type',
+                        reorderColumn: 'Reorder entries',
+                        deleteAll: 'Remove all entries',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all entries?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
@@ -1591,15 +1624,15 @@ export default {
             nextPage: 'Next',
             previousPage: 'Previous',
             maxPagesToShow: 5,
-            pageSize: 'Records per page',
+            pageSize: 'Works per page',
             pageOf: 'Page [currentPage] of [totalPages]',
-            totalRecords: '([total] records)',
+            totalRecords: '([total] works)',
             pagingBracket: 3,
             pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
             firstLastSeparator: '...',
         },
         sorting: {
-            pageSize: 'Records per page',
+            pageSize: 'Works per page',
             sortLabel: 'Sort results by',
             sortDirectionLabel: 'Sort order',
             sortBy: [
@@ -2807,6 +2840,37 @@ export default {
                     },
                     regex: /^[a-z0-9]+[a-z0-9-]*$/gi,
                 },
+            },
+        },
+        changeDisplayType: {
+            title: 'Change display type from ',
+            publicationType: {
+                inputLabelText: 'New Work type',
+                hintText: 'Select a Work type from the dropdown list',
+            },
+            publicationSubtype: {
+                inputLabelText: 'New Work subtype',
+                hintText: 'Select a work subtype from the dropdown list',
+            },
+            submit: 'Change display type',
+            cancelButtonLabel: 'Cancel',
+            loadingMessage: 'Loading work',
+            workflowConfirmation: {
+                confirmationTitle: 'Change Display type',
+                confirmationMessage: 'Display type has been changed',
+                cancelButtonLabel: 'View work',
+                confirmButtonLabel: 'Edit full work',
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Changing Display type is in progress.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Display type has been changed successfully.',
             },
         },
     },

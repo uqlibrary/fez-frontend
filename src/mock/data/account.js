@@ -648,7 +648,7 @@ export const currentAuthor = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": "s2222222",
+            "aut_student_username": "s1111111",
         },
     },
     s2222222: {
