@@ -18,6 +18,7 @@ describe('viewRecord reducer', () => {
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: false,
+            isJobCreated: false,
         };
         expect(testState).toEqual(expectedState);
     });
@@ -33,6 +34,7 @@ describe('viewRecord reducer', () => {
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: true,
+            isJobCreated: false,
         };
         expect(testState).toEqual(expectedState);
     });
