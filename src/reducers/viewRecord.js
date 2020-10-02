@@ -55,7 +55,7 @@ const handlers = {
         isRecordLocked: false,
     }),
 
-    [actions.ADMIN_UPDATE_JOB_CREATED]: state => ({
+    [actions.ADMIN_UPDATE_WORK_JOB_CREATED]: state => ({
         ...state,
         isJobCreated: true,
     }),
