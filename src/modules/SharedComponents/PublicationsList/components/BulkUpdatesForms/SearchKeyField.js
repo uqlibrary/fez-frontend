@@ -111,7 +111,8 @@ export const SearchKeyField = fieldProps => {
             errorText={fieldProps.meta.error}
             itemsList={Object.values(BULK_UPDATE_SEARCH_KEYS)}
             onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value}
+            value={fieldProps.input.value || -1}
+            selectPrompt="Please select a search key"
             {...fieldProps}
         />
     );

@@ -1448,7 +1448,6 @@ export const ALTERNATE_GENRE = [
 ];
 
 export const OA_STATUS = [
-    { value: -1, text: 'Please choose an option', disabled: true },
     { value: '453692', text: 'Not yet assessed' },
     { value: '453693', text: 'DOI' },
     { value: '453694', text: 'Link (no DOI)' },

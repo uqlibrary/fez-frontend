@@ -59,11 +59,6 @@ export const BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT =
     'fez_record_search_key_advisory_statement.rek_advisory_statement';
 
 export const BULK_UPDATE_SEARCH_KEYS = {
-    0: {
-        value: '-1',
-        text: 'Please choose a search key',
-        disabled: true,
-    },
     [BULK_UPDATE_SEARCH_KEY_OA_STATUS]: {
         value: BULK_UPDATE_SEARCH_KEY_OA_STATUS,
         text: 'OA status',

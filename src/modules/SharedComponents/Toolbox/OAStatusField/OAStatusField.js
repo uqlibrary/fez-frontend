@@ -20,6 +20,7 @@ export default function OAStatusField(fieldProps) {
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
             genericSelectFieldId="rek-oa-status"
+            selectPrompt="Please select an option"
             {...fieldProps}
         />
     );
