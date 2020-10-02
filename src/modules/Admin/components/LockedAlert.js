@@ -19,6 +19,10 @@ export const LockedAlert = ({ handleCancel }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleAction = React.useCallback(() => dispatch(unlockRecordToView()), []);
 
+    if (selfLocked) {
+        return null;
+    }
+
     return (
         <Grid container style={{ marginTop: 12, marginBottom: 12 }}>
             <Grid item xs={12}>
