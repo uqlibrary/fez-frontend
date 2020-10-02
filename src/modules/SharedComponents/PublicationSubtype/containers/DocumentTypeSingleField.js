@@ -4,11 +4,6 @@ import { publicationTypes } from 'config';
 
 const documentTypeList = () => {
     return [
-        {
-            value: '-1',
-            text: 'Please select a display type',
-            disabled: true,
-        },
         ...Object.values(publicationTypes(false)).map(item => {
             return {
                 value: item.id,
@@ -35,6 +30,7 @@ export default function DocumentTypeSingleField(fieldProps) {
             onChange={
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
+            selectPrompt="Please select a display type"
             value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || -1}
             {...fieldProps}
         />
