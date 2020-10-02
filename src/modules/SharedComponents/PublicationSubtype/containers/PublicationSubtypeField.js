@@ -10,11 +10,9 @@ export const PublicationSubtypeField = fieldProps => {
             error={!!fieldProps.meta && fieldProps.meta.error}
             errorText={!!fieldProps.meta && fieldProps.meta.error}
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || fieldProps.onChange}
-            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value}
-            itemsList={[
-                { value: -1, text: 'Select a document subtype', disabled: true },
-                ...subtypes.map(type => ({ value: type, text: type })),
-            ]}
+            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || -1}
+            itemsList={[...subtypes.map(type => ({ value: type, text: type }))]}
+            selectPrompt="Select a document subtype"
             genericSelectFieldId="rek-subtype"
             {...fieldProps}
         />

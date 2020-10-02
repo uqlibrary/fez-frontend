@@ -10,11 +10,6 @@ exports[`OAStatus component should render default view 1`] = `
   itemsList={
     Array [
       Object {
-        "disabled": true,
-        "text": "Please choose an option",
-        "value": -1,
-      },
-      Object {
         "text": "Not yet assessed",
         "value": "453692",
       },
@@ -69,6 +64,7 @@ exports[`OAStatus component should render default view 1`] = `
       "label": undefined,
     }
   }
+  selectPrompt="Please select an option"
   value={-1}
 />
 `;
@@ -91,11 +87,6 @@ exports[`OAStatus component should render immutable list as selected value with 
   }
   itemsList={
     Array [
-      Object {
-        "disabled": true,
-        "text": "Please choose an option",
-        "value": -1,
-      },
       Object {
         "text": "Not yet assessed",
         "value": "453692",
@@ -159,6 +150,7 @@ exports[`OAStatus component should render immutable list as selected value with 
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
+  selectPrompt="Please select an option"
   value={
     Array [
       "One",
@@ -178,11 +170,6 @@ exports[`OAStatus component should render when given a default value field props
   hideLabel={false}
   itemsList={
     Array [
-      Object {
-        "disabled": true,
-        "text": "Please choose an option",
-        "value": -1,
-      },
       Object {
         "text": "Not yet assessed",
         "value": "453692",
@@ -240,6 +227,7 @@ exports[`OAStatus component should render when given a default value field props
     }
   }
   placeholder="Test placeholder"
+  selectPrompt="Please select an option"
   value={
     Array [
       "afr",
@@ -267,11 +255,6 @@ exports[`OAStatus component should render with given field props 1`] = `
   itemsList={
     Array [
       Object {
-        "disabled": true,
-        "text": "Please choose an option",
-        "value": -1,
-      },
-      Object {
         "text": "Not yet assessed",
         "value": "453692",
       },
@@ -334,6 +317,7 @@ exports[`OAStatus component should render with given field props 1`] = `
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
+  selectPrompt="Please select an option"
   value={
     Array [
       "One",
