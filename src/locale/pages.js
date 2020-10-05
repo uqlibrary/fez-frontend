@@ -1006,6 +1006,13 @@ export default {
                 cancelButtonLabel: 'View new work',
                 confirmButtonLabel: 'Add another work',
             },
+            successJobCreatedConfirmation: {
+                confirmationTitle: 'Work is now updating',
+                confirmationMessage:
+                    'This work requires additional time to fully process.  You will receive a status update via email soon.',
+                cancelButtonLabel: 'Return to view page',
+                confirmButtonLabel: 'Edit another work',
+            },
             alerts: {
                 errorAlert: {
                     type: 'error_outline',

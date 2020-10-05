@@ -66,6 +66,7 @@ export const AdminContainer = ({
     handleSubmit,
     history,
     isDeleted,
+    isJobCreated,
     loadingRecordToView,
     loadRecordToView,
     locked,
@@ -179,6 +180,7 @@ export const AdminContainer = ({
                             location={location}
                             createMode={createMode}
                             isDeleted={isDeleted}
+                            isJobCreated={isJobCreated}
                             formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
                             locked={locked}
@@ -263,6 +265,7 @@ AdminContainer.propTypes = {
     match: PropTypes.object,
     recordToView: PropTypes.object,
     isDeleted: PropTypes.bool,
+    isJobCreated: PropTypes.bool,
     showAddForm: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,

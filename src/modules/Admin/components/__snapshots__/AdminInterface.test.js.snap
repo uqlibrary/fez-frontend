@@ -2,107 +2,62 @@
 
 exports[`AdminInterface component should disabled button and render alert for form submitting 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -228,6 +183,51 @@ exports[`AdminInterface component should disabled button and render alert for fo
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -377,8 +377,8 @@ exports[`AdminInterface component should disabled button and render alert for fo
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
@@ -409,109 +409,64 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
 
 exports[`AdminInterface component should display badges on tabs for erroring fields 1`] = `null`;
 
-exports[`AdminInterface component should display successful alert 1`] = `
+exports[`AdminInterface component should display job created alert 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "Return to view page",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
+            "confirmationTitle": "Work is now updating",
           }
         }
-        variant="h2"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={true}
-  >
-    <form>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -635,6 +590,51 @@ exports[`AdminInterface component should display successful alert 1`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={true}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -781,114 +781,821 @@ exports[`AdminInterface component should display successful alert 1`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should display job created alert 2`] = `
+<StandardPage>
+  <form>
+    <WithStyles(ForwardRef(Grid))
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
+      style={
+        Object {
+          "marginTop": -24,
+        }
+      }
+    >
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "Return to view page",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "This work requires additional time to fully process.  You will receive a status update via email soon.",
+            "confirmationTitle": "Work is now updating",
+          }
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
+      >
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs="auto"
+        >
+          <Memo() />
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-done"
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginBottom": 8,
+                "marginTop": 4,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel-top"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin-top"
+                fullWidth={true}
+                id="admin-work-publish-top"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin-top"
+                fullWidth={true}
+                id="admin-work-submit-top"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            standardCardId="bibliographic-section"
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-done"
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin"
+                fullWidth={true}
+                id="admin-work-publish"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin"
+                fullWidth={true}
+                id="admin-work-submit"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </ConfirmDiscardFormChanges>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should display successful alert 1`] = `
+<StandardPage>
+  <form>
+    <WithStyles(ForwardRef(Grid))
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
+      style={
+        Object {
+          "marginTop": -24,
+        }
+      }
+    >
+      <WithStyles(ConfirmDialogBox)
+        locale={
+          Object {
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
+          }
+        }
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
+      >
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs="auto"
+        >
+          <Memo() />
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginBottom": 8,
+                "marginTop": 4,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel-top"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin-top"
+                fullWidth={true}
+                id="admin-work-publish-top"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin-top"
+                fullWidth={true}
+                id="admin-work-submit-top"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={0}
+      >
+        <TabContainer
+          currentTab="bibliographic"
+          key="bibliographic"
+          tabbed={true}
+          value="bibliographic"
+        >
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            standardCardId="bibliographic-section"
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </TabContainer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={1}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            allowDismiss={true}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Work has been saved successfully"
+            showLoader={false}
+            title="Success"
+            type="done"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+            spacing={1}
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={2}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                fullWidth={true}
+                id="admin-work-cancel"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Cancel
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={3}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="secondary"
+                data-testid="publish-admin"
+                fullWidth={true}
+                id="admin-work-publish"
+                variant="contained"
+              >
+                Publish
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              sm={7}
+              xs={12}
+            >
+              <WithStyles(ForwardRef(Button))
+                color="primary"
+                data-testid="submit-admin"
+                fullWidth={true}
+                id="admin-work-submit"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        [Function],
+                      ],
+                      Array [
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
+                variant="contained"
+              >
+                Save
+              </WithStyles(ForwardRef(Button))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
 exports[`AdminInterface component should display successful alert 2`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={true}
-  >
-    <form>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -905,7 +1612,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
             }
           />
           <Alert
-            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1012,6 +1718,51 @@ exports[`AdminInterface component should display successful alert 2`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={true}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -1052,7 +1803,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
             }
           />
           <Alert
-            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1158,95 +1908,81 @@ exports[`AdminInterface component should display successful alert 2`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
 exports[`AdminInterface component should render a title with html correctly 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Edit Journal Article - Cost analysis: outsourcing radiofrequency ablution for massiv
-        <sub
-          key="1"
-        >
-          e
-        </sub>
-         renal m
-        <sup
-          key="3"
-        >
-          a
-        </sup>
-        sses ™ ♦: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - Cost analysis: outsourcing radiofrequency ablution for massiv
+          <sub
+            key="1"
+          >
+            e
+          </sub>
+           renal m
+          <sup
+            key="3"
+          >
+            a
+          </sup>
+          sses ™ ♦: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
-      />
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs="auto"
+        >
+          <Memo() />
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -1345,6 +2081,20 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        />
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -1466,8 +2216,8 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
@@ -1475,76 +2225,62 @@ exports[`AdminInterface component should render alert message for retracted reco
 
 exports[`AdminInterface component should render default view as a full form view 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
-      />
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs="auto"
+        >
+          <Memo() />
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -1643,6 +2379,20 @@ exports[`AdminInterface component should render default view as a full form view
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        />
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -1802,119 +2552,69 @@ exports[`AdminInterface component should render default view as a full form view
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
 exports[`AdminInterface component should render default view as a tabbed form view 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit Journal Article - This is test record: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-            <WithStyles(ForwardRef(Tab))
-              key="security"
-              label="Security"
-              value="security"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -2013,6 +2713,56 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+              <WithStyles(ForwardRef(Tab))
+                key="security"
+                label="Security"
+                value="security"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -2134,124 +2884,69 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
 exports[`AdminInterface component should render in create mode 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View new work",
-          "confirmButtonLabel": "Add another work",
-          "confirmationMessage": "Your new work has been added to eSpace.",
-          "confirmationTitle": "Work has been added",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View new work",
+            "confirmButtonLabel": "Add another work",
+            "confirmationMessage": "Your new work has been added to eSpace.",
+            "confirmationTitle": "Work has been added",
           }
         }
-        variant="h2"
-      >
-        Add a new Thesis
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Add a new Thesis
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-            <WithStyles(ForwardRef(Tab))
-              key="files"
-              label="Files"
-              value="files"
-            />
-            <WithStyles(ForwardRef(Tab))
-              key="security"
-              label="Security"
-              value="security"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -2314,6 +3009,61 @@ exports[`AdminInterface component should render in create mode 1`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+              <WithStyles(ForwardRef(Tab))
+                key="files"
+                label="Files"
+                value="files"
+              />
+              <WithStyles(ForwardRef(Tab))
+                key="security"
+                label="Security"
+                value="security"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -2399,127 +3149,72 @@ exports[`AdminInterface component should render in create mode 1`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
 exports[`AdminInterface component should render locked alert in edit mode 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Edit undefined - undefined: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit undefined - undefined: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <LockedAlert
-      handleCancel={[Function]}
-    />
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-            <WithStyles(ForwardRef(Tab))
-              key="files"
-              label="Files"
-              value="files"
-            />
-            <WithStyles(ForwardRef(Tab))
-              key="security"
-              label="Security"
-              value="security"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      </Hidden>
+      <LockedAlert
+        handleCancel={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -2620,6 +3315,61 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+              <WithStyles(ForwardRef(Tab))
+                key="files"
+                label="Files"
+                value="files"
+              />
+              <WithStyles(ForwardRef(Tab))
+                key="security"
+                label="Security"
+                value="security"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -2744,127 +3494,72 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
 exports[`AdminInterface component should render locked info alert 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Edit undefined - undefined: UQ:123456
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Edit undefined - undefined: UQ:123456
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <LockedAlert
-      handleCancel={[Function]}
-    />
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-            <WithStyles(ForwardRef(Tab))
-              key="files"
-              label="Files"
-              value="files"
-            />
-            <WithStyles(ForwardRef(Tab))
-              key="security"
-              label="Security"
-              value="security"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      </Hidden>
+      <LockedAlert
+        handleCancel={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -2965,6 +3660,61 @@ exports[`AdminInterface component should render locked info alert 1`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+              <WithStyles(ForwardRef(Tab))
+                key="files"
+                label="Files"
+                value="files"
+              />
+              <WithStyles(ForwardRef(Tab))
+                key="security"
+                label="Security"
+                value="security"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -3089,114 +3839,69 @@ exports[`AdminInterface component should render locked info alert 1`] = `
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 
 exports[`AdminInterface component should render undelete title and button 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
-    alignItems="center"
-    container={true}
-    direction="row"
-    spacing={0}
-    style={
-      Object {
-        "marginTop": -24,
-      }
-    }
-  >
-    <WithStyles(ConfirmDialogBox)
-      locale={
-        Object {
-          "cancelButtonLabel": "View updated work",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
-        }
-      }
-      onAction={[Function]}
-      onCancelAction={[Function]}
-      onRef={[Function]}
-    />
+  <form>
     <WithStyles(ForwardRef(Grid))
-      item={true}
+      alignItems="center"
+      container={true}
+      direction="row"
+      spacing={0}
       style={
         Object {
-          "marginBottom": 12,
+          "marginTop": -24,
         }
       }
-      xs={true}
     >
-      <WithStyles(ForwardRef(Typography))
-        color="primary"
-        style={
+      <WithStyles(ConfirmDialogBox)
+        locale={
           Object {
-            "fontSize": 24,
+            "cancelButtonLabel": "View updated work",
+            "confirmButtonLabel": "Edit another work",
+            "confirmationMessage": "Work has been updated",
+            "confirmationTitle": "Work has been updated",
           }
         }
-        variant="h2"
-      >
-        Undelete undefined - undefined: undefined
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      xsDown={true}
-    >
+        onAction={[Function]}
+        onCancelAction={[Function]}
+        onRef={[Function]}
+      />
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs="auto"
+        style={
+          Object {
+            "marginBottom": 12,
+          }
+        }
+        xs={true}
       >
-        <Memo() />
+        <WithStyles(ForwardRef(Typography))
+          color="primary"
+          style={
+            Object {
+              "fontSize": 24,
+            }
+          }
+          variant="h2"
+        >
+          Undelete undefined - undefined: undefined
+        </WithStyles(ForwardRef(Typography))>
       </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(Grid))
-        container={true}
-        direction="row"
-        spacing={0}
+      <Hidden
+        xsDown={true}
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={12}
+          xs="auto"
         >
-          <WithStyles(ForwardRef(Tabs))
-            classes={
-              Object {
-                "indicator": "tabindicator",
-              }
-            }
-            indicatorColor="primary"
-            onChange={[Function]}
-            scrollButtons="on"
-            style={
-              Object {
-                "marginLeft": -40,
-                "marginRight": -40,
-              }
-            }
-            textColor="primary"
-            value="bibliographic"
-            variant="scrollable"
-          >
-            <WithStyles(ForwardRef(Tab))
-              key="bibliographic"
-              label="Bibliographic"
-              value="bibliographic"
-            />
-          </WithStyles(ForwardRef(Tabs))>
+          <Memo() />
         </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-  <ConfirmDiscardFormChanges
-    dirty={false}
-    submitSucceeded={false}
-  >
-    <form>
+      </Hidden>
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -3259,6 +3964,51 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={12}
+          >
+            <WithStyles(ForwardRef(Tabs))
+              classes={
+                Object {
+                  "indicator": "tabindicator",
+                }
+              }
+              indicatorColor="primary"
+              onChange={[Function]}
+              scrollButtons="on"
+              style={
+                Object {
+                  "marginLeft": -40,
+                  "marginRight": -40,
+                }
+              }
+              textColor="primary"
+              value="bibliographic"
+              variant="scrollable"
+            >
+              <WithStyles(ForwardRef(Tab))
+                key="bibliographic"
+                label="Bibliographic"
+                value="bibliographic"
+              />
+            </WithStyles(ForwardRef(Tabs))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </Hidden>
+    </WithStyles(ForwardRef(Grid))>
+    <ConfirmDiscardFormChanges
+      dirty={false}
+      submitSucceeded={false}
+    >
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={0}
@@ -3344,8 +4094,8 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
-    </form>
-  </ConfirmDiscardFormChanges>
+    </ConfirmDiscardFormChanges>
+  </form>
 </StandardPage>
 `;
 

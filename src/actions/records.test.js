@@ -660,6 +660,30 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
+        it('dispatches expected actions on successful job created', async () => {
+            const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
+
+            mockApi.onPut(url).reply(201, { data: record });
+
+            const expectedActions = [actions.ADMIN_UPDATE_WORK_PROCESSING, actions.ADMIN_UPDATE_WORK_JOB_CREATED];
+
+            await mockActionsStore.dispatch(
+                recordActions.adminUpdate({
+                    rek_display_type: 174,
+                    adminSection: {
+                        rek_subtype: 'Textbook',
+                    },
+                    publication: {
+                        rek_pid: 'UQ:396321',
+                    },
+                    securitySection: {
+                        rek_security_policy: 2,
+                    },
+                }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
         it('dispatches expected actions on missing data in response', async () => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
             mockApi.onPut(url).reply(200, {});
