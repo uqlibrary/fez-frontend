@@ -16,13 +16,13 @@ context('Thesis', () => {
             .should('have.length', 8);
 
         // Title
-        cy.typeCKEditor('editor1', '<p>This is a thesis title</p>');
+        cy.typeCKEditor('rek-title', '<p>This is a thesis title</p>');
         cy.get('.Alert')
             .find('ul')
             .children()
             .should('have.length', 7);
         // Abstract
-        cy.typeCKEditor('editor2', '<p>This is the thesis abstract</p>');
+        cy.typeCKEditor('rek-description', '<p>This is the thesis abstract</p>');
         cy.get('.Alert')
             .find('ul')
             .children()

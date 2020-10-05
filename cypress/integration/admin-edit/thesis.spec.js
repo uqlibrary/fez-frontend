@@ -35,8 +35,8 @@ context('Thesis admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.get('#cke_editor1').should('exist');
-                        cy.readCKEditor('editor1').should(text => {
+                        cy.get('#cke_rek-title-editor').should('exist');
+                        cy.readCKEditor('rek-title').should(text => {
                             expect(text).to.contain(record.rek_title);
                         });
                     });
@@ -197,8 +197,8 @@ context('Thesis admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Additional notes');
-                        cy.get('#cke_editor3').should('exist');
-                        cy.readCKEditor('editor3').should(text => {
+                        cy.get('#cke_rek-notes-editor').should('exist');
+                        cy.readCKEditor('rek-notes').should(text => {
                             expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                         });
                         cy.get('[data-testid=rek-license-input]')
