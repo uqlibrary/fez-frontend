@@ -3216,9 +3216,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
           <Memo() />
         </WithStyles(ForwardRef(Grid))>
       </Hidden>
-      <LockedAlert
-        handleCancel={[Function]}
-      />
+      <LockedAlert />
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}
@@ -3561,9 +3559,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
           <Memo() />
         </WithStyles(ForwardRef(Grid))>
       </Hidden>
-      <LockedAlert
-        handleCancel={[Function]}
-      />
+      <LockedAlert />
       <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={1}

@@ -41,23 +41,15 @@ describe('LockedAlert', () => {
         ).toBeInTheDocument();
     });
 
-    it('should render info alert as expected', () => {
+    it('should not render alert for the first editing user', () => {
         useAccountContext.mockImplementation(() => ({
             account: {
                 id: 'uqtest',
             },
         }));
-        const handleCancelFn = jest.fn();
-        const { getByText, getByTestId } = setup({ handleCancel: handleCancelFn });
+        const { getByTestId } = setup();
 
-        expect(
-            getByText(
-                'You currently have this work locked (uqtest). Complete your changes and submit, or cancel your changes so others may access this work.',
-            ),
-        ).toBeInTheDocument();
-
-        fireEvent.click(getByTestId('action-button'));
-        expect(handleCancelFn).toBeCalled();
+        expect(getByTestId('no-alert')).toBeInTheDocument();
     });
 
     it('should call alert action to unlock record', () => {

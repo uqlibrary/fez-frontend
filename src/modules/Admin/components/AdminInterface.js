@@ -306,7 +306,7 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && <LockedAlert handleCancel={handleCancel} />}
+                    {!!locked && <LockedAlert />}
                     <Grid container spacing={1}>
                         {renderSaveStatusAlert}
                         <Grid item xs={12}>
