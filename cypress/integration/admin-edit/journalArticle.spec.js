@@ -30,15 +30,15 @@ context('Journal Article admin edit', () => {
             .eq(3)
             .within(() => {
                 cy.get('h3').should('have.text', 'Admin');
-                cy.get('#cke_editor3').should('exist');
-                cy.get('#cke_editor4').should('exist');
-                cy.get('#cke_editor5').should('exist');
+                cy.get('#cke_rek-notes-editor').should('exist');
+                cy.get('#cke_ain-notes-editor').should('exist');
+                cy.get('#cke_rek-herdc-notes-editor').should('exist');
             });
 
-        cy.readCKEditor('editor4').should(text => {
+        cy.readCKEditor('ain-notes').should(text => {
             expect(text).to.contain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13
         });
-        cy.readCKEditor('editor5').should(text => {
+        cy.readCKEditor('rek-herdc-notes').should(text => {
             expect(text).to.contain(record.rek_herdc_notes); // 12/1/12 Amended ID at author request #886821
         });
 
@@ -116,8 +116,8 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.get('#cke_editor1').should('exist');
-                        cy.readCKEditor('editor1').should(text => {
+                        cy.get('#cke_rek-title-editor').should('exist');
+                        cy.readCKEditor('rek-title').should(text => {
                             expect(text).to.contain(record.rek_title);
                         });
                     });
@@ -216,8 +216,8 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Abstract / Description');
-                        cy.get('#cke_editor2').should('exist');
-                        cy.readCKEditor('editor2').should(text => {
+                        cy.get('#cke_rek-description-editor').should('exist');
+                        cy.readCKEditor('rek-description').should(text => {
                             expect(text).to.contain(record.rek_description);
                         });
                     });
@@ -388,8 +388,8 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Additional notes');
-                        cy.get('#cke_editor3').should('exist');
-                        cy.readCKEditor('editor3').should(text => {
+                        cy.get('#cke_rek-notes-editor').should('exist');
+                        cy.readCKEditor('rek-notes').should(text => {
                             expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                         });
                     });

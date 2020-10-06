@@ -52,7 +52,7 @@ describe('ChangeDisplayType form', () => {
                 },
             },
         });
-        expect(wrapper.find('[data-testid="changeDisplayType-page-title"]').text()).toBe(
+        expect(wrapper.find('[data-testid="change-display-type-page-title"]').text()).toBe(
             `Change display type from ${mockRecord.rek_display_type_lookup} - ${mockRecord.rek_subtype}`,
         );
     });
@@ -147,7 +147,7 @@ describe('Change Display Type form - redirections', () => {
 
         const wrapper = setup({});
         wrapper
-            .find('#rek-changeDisplayType-cancel')
+            .find('#rek-change-display-type-cancel')
             .props()
             .onClick();
         expect(window.location.assign).toBeCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);

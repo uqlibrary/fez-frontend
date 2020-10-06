@@ -12,8 +12,8 @@ context('Incomplete record form', () => {
     };
 
     const checkResearchStatement = statement => {
-        cy.typeCKEditor('editor1', statement);
-        cy.readCKEditor('editor1').then(text => {
+        cy.typeCKEditor('rek-creator-contribution-statement', statement);
+        cy.readCKEditor('rek-creator-contribution-statement').then(text => {
             cy.wrap(text).should('eq', statement);
         });
     };
