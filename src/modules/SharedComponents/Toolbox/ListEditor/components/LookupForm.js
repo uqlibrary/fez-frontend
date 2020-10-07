@@ -7,6 +7,7 @@ export default class LookupForm extends Component {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         inputField: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+        error: PropTypes.bool,
         errorText: PropTypes.string,
         category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         required: PropTypes.bool,
@@ -47,6 +48,7 @@ export default class LookupForm extends Component {
                         floatingLabelText={this.props.locale.inputFieldLabel}
                         hintText={this.props.locale.inputFieldHint}
                         disabled={this.props.disabled}
+                        error={this.props.error}
                         errorText={this.props.errorText}
                         category={this.props.category}
                         required={this.props.required}

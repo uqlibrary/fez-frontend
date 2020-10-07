@@ -520,11 +520,11 @@ export default {
                 scrollListHeight: 250,
                 scrollList: true,
                 name: 'bibliographicSection.fez_record_search_key_keywords',
-                maxInputLength: 111,
                 searchKey: {
                     value: 'rek_keywords',
                     order: 'rek_keywords_order',
                 },
+                isValid: validation.isValidKeyword(111),
                 listEditorId: 'rek-keywords',
                 locale: locale.components.keywordsForm.field,
                 canEdit: true,
