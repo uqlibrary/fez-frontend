@@ -689,6 +689,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.digiteam.batchImport,
                   },
                   {
+                      linkTo: pathConfig.admin.bulkUpdates,
+                      ...locale.menu.bulkUpdates,
+                  },
+                  {
                       linkTo: pathConfig.admin.favouriteSearch,
                       ...locale.menu.favouriteSearch,
                   },
