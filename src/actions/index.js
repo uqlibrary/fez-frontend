@@ -3,6 +3,7 @@ export * from './account';
 export * from './app';
 export * from './authors';
 export * from './batchImport';
+export * from './bulkUpdates';
 export * from './claimPublications';
 export * from './controlledVocabularies';
 export * from './deleteRecord';

@@ -2817,6 +2817,47 @@ export default {
         audienceSizeField: {
             label: 'Audience size',
         },
+        bulkUpdatesList: {
+            tableTitle: '',
+            columns: {
+                startedAt: {
+                    title: 'Started at',
+                },
+                createdAt: {
+                    title: 'Created at',
+                },
+                finishedAt: {
+                    title: 'Finished at',
+                },
+                // user: {
+                //     title: 'User',
+                // },
+                // name: {
+                //     title: 'Name',
+                // },
+                // progress: {
+                //     title: 'Progress',
+                // },
+                // message: {
+                //     title: 'Message',
+                // },
+                // lastHeartbeat: {
+                //     title: 'Last Heartbeat',
+                // },
+                status: {
+                    title: 'Status',
+                },
+                failedRecords: {
+                    title: 'Failed records',
+                },
+                processedCount: {
+                    title: 'Processed count',
+                },
+                totalCount: {
+                    title: 'Total count',
+                },
+            },
+        },
         favouriteSearchList: {
             tableTitle: '',
             columns: {
