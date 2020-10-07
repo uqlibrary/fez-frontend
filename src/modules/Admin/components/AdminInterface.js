@@ -187,6 +187,86 @@ export const AdminInterface = ({
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
         );
 
+    const renderButtonBar = (placement = '') => (
+        <React.Fragment>
+            <Grid item xs={12} sm={2}>
+                <Button
+                    id={`admin-work-cancel${placement}`}
+                    style={{ whiteSpace: 'nowrap' }}
+                    variant="contained"
+                    color="secondary"
+                    fullWidth
+                    children="Cancel"
+                    onClick={handleCancel}
+                />
+            </Grid>
+            {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status !== PUBLISHED && !isDeleted && (
+                <Grid item xs={12} sm={3}>
+                    <Button
+                        id={`admin-work-publish${placement}`}
+                        data-testid={`publish-admin${placement}`}
+                        disabled={
+                            !!submitting ||
+                            !!disableSubmit ||
+                            (locked && record.rek_editing_user !== authorDetails.username)
+                        }
+                        variant="contained"
+                        color="secondary"
+                        fullWidth
+                        children="Publish"
+                        onClick={setPublicationStatusAndSubmit(PUBLISHED)}
+                    />
+                </Grid>
+            )}
+            {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status === PUBLISHED && !isDeleted && (
+                <Grid item xs={12} sm={3}>
+                    <Button
+                        id={`admin-work-unpublish${placement}`}
+                        data-testid={`unpublish-admin${placement}`}
+                        disabled={
+                            !!submitting ||
+                            !!disableSubmit ||
+                            (locked && record.rek_editing_user !== authorDetails.username)
+                        }
+                        variant="contained"
+                        color="secondary"
+                        fullWidth
+                        children="Unpublish"
+                        onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
+                    />
+                </Grid>
+            )}
+            <Grid item xs={12} sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted ? 7 : 10}>
+                <Button
+                    id={`admin-work-submit${placement}`}
+                    data-testid={`submit-admin${placement}`}
+                    style={{ whiteSpace: 'nowrap' }}
+                    disabled={
+                        !!submitting ||
+                        !!disableSubmit ||
+                        (locked && record.rek_editing_user !== authorDetails.username)
+                    }
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    children={submitButtonTxt}
+                    onClick={handleSubmit}
+                />
+            </Grid>
+        </React.Fragment>
+    );
+
+    const renderSaveStatusAlert = (
+        <React.Fragment>
+            {alertProps.current && (
+                <Grid item xs={12}>
+                    <div style={{ height: 16 }} />
+                    <Alert {...alertProps.current} />
+                </Grid>
+            )}
+        </React.Fragment>
+    );
+
     return (
         <StandardPage>
             <React.Fragment>
@@ -225,7 +305,7 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && <LockedAlert handleCancel={handleCancel} />}
+                    {!!locked && <LockedAlert />}
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
@@ -275,6 +355,14 @@ export const AdminInterface = ({
                 </Grid>
                 <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
                     <form>
+                        <Grid container spacing={1}>
+                            {renderSaveStatusAlert}
+                            <Grid item xs={12}>
+                                <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
+                                    {renderButtonBar('-top')}
+                                </Grid>
+                            </Grid>
+                        </Grid>
                         <Grid container spacing={0}>
                             {!tabbed
                                 ? Object.keys(tabs)
@@ -283,90 +371,10 @@ export const AdminInterface = ({
                                 : renderTabContainer(currentTabValue)}
                         </Grid>
                         <Grid container spacing={1}>
-                            {alertProps.current && (
-                                <Grid item xs={12}>
-                                    <div style={{ height: 16 }} />
-                                    <Alert {...alertProps.current} />
-                                </Grid>
-                            )}
+                            {renderSaveStatusAlert}
                             <Grid item xs={12}>
                                 <Grid container spacing={1} style={{ marginTop: 8 }}>
-                                    <Grid item xs={12} sm={2}>
-                                        <Button
-                                            id="admin-work-cancel"
-                                            style={{ whiteSpace: 'nowrap' }}
-                                            variant="contained"
-                                            color="secondary"
-                                            fullWidth
-                                            children="Cancel"
-                                            onClick={handleCancel}
-                                        />
-                                    </Grid>
-                                    {!!record.rek_pid &&
-                                        objectType === RECORD_TYPE_RECORD &&
-                                        record.rek_status !== PUBLISHED &&
-                                        !isDeleted && (
-                                            <Grid item xs={12} sm={3}>
-                                                <Button
-                                                    id="admin-work-publish"
-                                                    data-testid="publish-admin"
-                                                    disabled={
-                                                        !!submitting ||
-                                                        !!disableSubmit ||
-                                                        (locked && record.rek_editing_user !== authorDetails.username)
-                                                    }
-                                                    variant="contained"
-                                                    color="secondary"
-                                                    fullWidth
-                                                    children="Publish"
-                                                    onClick={setPublicationStatusAndSubmit(PUBLISHED)}
-                                                />
-                                            </Grid>
-                                        )}
-                                    {!!record.rek_pid &&
-                                        objectType === RECORD_TYPE_RECORD &&
-                                        record.rek_status === PUBLISHED &&
-                                        !isDeleted && (
-                                            <Grid item xs={12} sm={3}>
-                                                <Button
-                                                    id="admin-work-unpublish"
-                                                    data-testid="unpublish-admin"
-                                                    disabled={
-                                                        !!submitting ||
-                                                        !!disableSubmit ||
-                                                        (locked && record.rek_editing_user !== authorDetails.username)
-                                                    }
-                                                    variant="contained"
-                                                    color="secondary"
-                                                    fullWidth
-                                                    children="Unpublish"
-                                                    onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
-                                                />
-                                            </Grid>
-                                        )}
-                                    <Grid
-                                        item
-                                        xs={12}
-                                        sm={
-                                            !!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted ? 7 : 10
-                                        }
-                                    >
-                                        <Button
-                                            id="admin-work-submit"
-                                            data-testid="submit-admin"
-                                            style={{ whiteSpace: 'nowrap' }}
-                                            disabled={
-                                                !!submitting ||
-                                                !!disableSubmit ||
-                                                (locked && record.rek_editing_user !== authorDetails.username)
-                                            }
-                                            variant="contained"
-                                            color="primary"
-                                            fullWidth
-                                            children={submitButtonTxt}
-                                            onClick={handleSubmit}
-                                        />
-                                    </Grid>
+                                    {renderButtonBar()}
                                 </Grid>
                             </Grid>
                         </Grid>

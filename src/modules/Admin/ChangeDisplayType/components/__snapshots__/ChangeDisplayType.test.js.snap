@@ -15,7 +15,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -871,9 +871,9 @@ exports[`ChangeDisplayType form should display confirmation box after successful
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -887,9 +887,9 @@ exports[`ChangeDisplayType form should display confirmation box after successful
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -917,7 +917,7 @@ exports[`ChangeDisplayType form should display confirmation box after successful
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -1773,9 +1773,9 @@ exports[`ChangeDisplayType form should display confirmation box after successful
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -1789,9 +1789,9 @@ exports[`ChangeDisplayType form should display confirmation box after successful
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -1819,7 +1819,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -2753,9 +2753,9 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -2769,9 +2769,9 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -2799,7 +2799,7 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -3733,9 +3733,9 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -3749,9 +3749,9 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -3779,7 +3779,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -4452,9 +4452,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -4468,9 +4468,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -4498,7 +4498,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -5171,9 +5171,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -5187,9 +5187,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -5217,7 +5217,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -6151,9 +6151,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -6167,9 +6167,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -6197,7 +6197,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -7131,9 +7131,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -7147,9 +7147,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -7177,7 +7177,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -8111,9 +8111,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -8127,9 +8127,9 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -8163,7 +8163,7 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -9019,9 +9019,9 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -9035,9 +9035,9 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type
@@ -9065,7 +9065,7 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
       >
         <WithStyles(ForwardRef(Typography))
           color="primary"
-          data-testid="changeDisplayType-page-title"
+          data-testid="change-display-type-page-title"
           style={
             Object {
               "fontSize": 24,
@@ -9921,9 +9921,9 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
-              data-testid="rek-changeDisplayType-cancel"
+              data-testid="rek-change-display-type-cancel"
               fullWidth={true}
-              id="rek-changeDisplayType-cancel"
+              id="rek-change-display-type-cancel"
               onClick={[Function]}
               variant="contained"
             >
@@ -9937,9 +9937,9 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
           >
             <WithStyles(ForwardRef(Button))
               color="primary"
-              data-testid="changeDisplayType-submit"
+              data-testid="change-display-type-submit"
               fullWidth={true}
-              id="changeDisplayType-submit"
+              id="change-display-type-submit"
               variant="contained"
             >
               Change display type

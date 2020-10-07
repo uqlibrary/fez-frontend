@@ -33,18 +33,18 @@ context('Change display type', () => {
             selectItem('rek-display-type', 'Conference Paper');
 
             // select Conference Paper, as it has subtypes, so the second dropdown will appear
-            cy.get('[data-testid=changeDisplayType-submit]').should('be.disabled');
+            cy.get('[data-testid=change-display-type-submit]').should('be.disabled');
 
             // select subtype
             selectItem('rek-subtype', 'Fully published paper');
-            cy.get('[data-testid=changeDisplayType-submit]').should('not.be.disabled');
+            cy.get('[data-testid=change-display-type-submit]').should('not.be.disabled');
 
-            cy.get('[data-testid=changeDisplayType-submit]')
+            cy.get('[data-testid=change-display-type-submit]')
                 .should('have.text', changeDisplayTypeLocale.submit)
                 .click();
 
             // form submitted and the green 'all good' message appears, with 'view' and 'edit' buttons
-            cy.get('[data-testid=changeDisplayType-submit-status]')
+            cy.get('[data-testid=change-display-type-submit-status]')
                 .should('contain', changeDisplayTypeLocale.successAlert.title)
                 .should('contain', changeDisplayTypeLocale.successAlert.message);
 
@@ -82,14 +82,14 @@ context('Change display type', () => {
 
             // The Image type does not have subtypes, so the second dropdown will not appear
             // and the submit button is enabled immediately
-            cy.get('[data-testid=changeDisplayType-submit]').should('not.be.disabled');
+            cy.get('[data-testid=change-display-type-submit]').should('not.be.disabled');
 
-            cy.get('[data-testid=changeDisplayType-submit]')
+            cy.get('[data-testid=change-display-type-submit]')
                 .should('have.text', changeDisplayTypeLocale.submit)
                 .click();
 
             // form submitted and the green 'all good' message appears, with 'view' and 'edit' buttons
-            cy.get('[data-testid=changeDisplayType-submit-status]')
+            cy.get('[data-testid=change-display-type-submit-status]')
                 .should('contain', changeDisplayTypeLocale.successAlert.title)
                 .should('contain', changeDisplayTypeLocale.successAlert.message);
 

@@ -1019,15 +1019,6 @@ export default {
                     title: 'Validation',
                     message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
                 },
-                selfLockedAlert: {
-                    type: 'custom',
-                    title: 'THIS WORK IS LOCKED',
-                    message:
-                        'You currently have this work locked ([username]). Complete your changes and submit, or cancel your changes so others may access this work.',
-                    actionButtonLabel: 'UNLOCK WORK',
-                    customIcon: <LockIcon id="locked-icon" className="icon" />,
-                    customType: 'info',
-                },
                 lockedAlert: {
                     type: 'custom',
                     title: 'THIS WORK IS LOCKED',
