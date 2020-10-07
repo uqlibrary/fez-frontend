@@ -58,6 +58,7 @@ export default {
         authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
+        keywords: 'Limited to [max] characters',
     },
     validationErrorsSummary: {
         // appears in footer error block

@@ -86,6 +86,7 @@ exports[`Community form should display successfull submission screen 1`] = `
                   <Field
                     component={[Function]}
                     disabled={false}
+                    isValid={[Function]}
                     listEditorId="rek-keywords"
                     locale={
                       Object {
@@ -126,7 +127,6 @@ exports[`Community form should display successfull submission screen 1`] = `
                       }
                     }
                     maxCount={10}
-                    maxInputLength={111}
                     name="fez_record_search_key_keywords"
                     searchKey={
                       Object {
@@ -289,6 +289,7 @@ exports[`Community form should render form 1`] = `
                   <Field
                     component={[Function]}
                     disabled={false}
+                    isValid={[Function]}
                     listEditorId="rek-keywords"
                     locale={
                       Object {
@@ -329,7 +330,6 @@ exports[`Community form should render form 1`] = `
                       }
                     }
                     maxCount={10}
-                    maxInputLength={111}
                     name="fez_record_search_key_keywords"
                     searchKey={
                       Object {

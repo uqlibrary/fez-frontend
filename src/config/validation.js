@@ -183,6 +183,13 @@ export const isValidIsbn = subject => {
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
+export const isValidKeyword = maxKeywordLength => subject => {
+    const keywords = subject.split('|');
+
+    return keywords.some(keyword => keyword.length > maxKeywordLength)
+        ? locale.validationErrors.keywords.replace('[max]', maxKeywordLength)
+        : undefined;
+};
 export const checkDigit = subject => {
     const check =
         subject &&
