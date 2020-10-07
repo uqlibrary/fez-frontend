@@ -1,7 +1,7 @@
 import React from 'react';
 import FreeTextForm from './FreeTextForm';
 import { rtlRender, fireEvent } from 'test-utils';
-import { isValidIsbn } from 'config/validation';
+import { isValidIsbn, isValidKeyword } from 'config/validation';
 
 describe('FreeTextForm behaviour tests', () => {
     it('should display input field with add button disabled and it should be enabled as soon as user has entered valid value in text field', () => {
@@ -27,7 +27,7 @@ describe('FreeTextForm behaviour tests', () => {
     });
 
     it('should display error message for ISBN if not valid, and it should enable add button only if valid ISBN is entered', () => {
-        const { getByTestId, getByText } = rtlRender(
+        const { getByTestId, getByText, queryByText } = rtlRender(
             <FreeTextForm
                 onAdd={jest.fn()}
                 locale={{
@@ -52,15 +52,11 @@ describe('FreeTextForm behaviour tests', () => {
         fireEvent.change(getByTestId('free-text-isbn-input'), { target: { value: '1234567897' } });
 
         expect(getByTestId('add-test')).not.toHaveAttribute('disabled', '');
-        try {
-            getByText('ISBN value is not valid');
-        } catch (e) {
-            expect(e.message).toContain('Unable to find an element with the text: ISBN value is not valid.');
-        }
+        expect(queryByText('ISBN value is not valid')).not.toBeInTheDocument();
     });
 
     it('should display maximum input length error message, and it should enable add button only if valid value is entered', () => {
-        const { getByTestId, getByText } = rtlRender(
+        const { getByTestId, getByText, queryByText } = rtlRender(
             <FreeTextForm
                 onAdd={jest.fn()}
                 locale={{
@@ -70,26 +66,55 @@ describe('FreeTextForm behaviour tests', () => {
                     addButtonLabel: 'Add',
                 }}
                 listEditorId="test"
-                maxInputLength={5}
+                isValid={isValidKeyword(5)}
                 normalize={jest.fn(value => value)}
             />,
         );
 
-        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('free-text-input'), { target: { value: 'testing' } });
 
-        expect(getByTestId('add-test')).toHaveAttribute('disabled', '');
+        expect(getByTestId('add-test')).toHaveAttribute('disabled');
         expect(getByText('Limited to 5 characters')).toBeVisible();
 
         fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
 
-        expect(getByTestId('add-test')).not.toHaveAttribute('disabled', '');
-        try {
-            getByText('Limited to 5 characters');
-        } catch (e) {
-            expect(e.message).toContain('Unable to find an element with the text: Limited to 5 characters.');
-        }
+        expect(getByTestId('add-test')).not.toHaveAttribute('disabled');
+
+        expect(queryByText('Limited to 5 characters')).not.toBeInTheDocument();
+    });
+
+    it('should display maximum input length error message for piped keywords individually, and it should enable add button only if valid value is entered', () => {
+        const { getByTestId, getByText, queryByText } = rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                }}
+                listEditorId="test"
+                isValid={isValidKeyword(5)}
+                normalize={jest.fn(value => value)}
+            />,
+        );
+
+        expect(getByTestId('add-test')).toHaveAttribute('disabled');
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'testing|test|tested' } });
+
+        expect(getByTestId('add-test')).toHaveAttribute('disabled');
+        expect(getByText('Limited to 5 characters')).toBeVisible();
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test|tst|tested' } });
+        expect(getByTestId('add-test')).toHaveAttribute('disabled');
+        expect(getByText('Limited to 5 characters')).toBeVisible();
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test|tst|teste' } });
+        expect(getByTestId('add-test')).not.toHaveAttribute('disabled');
+        expect(queryByText('Limited to 5 characters')).not.toBeInTheDocument();
     });
 
     it('should add item and clear input field', () => {
@@ -203,10 +228,11 @@ describe('FreeTextForm behaviour tests', () => {
         expect(getByText('Please click "Add" button to add item to the list')).toBeVisible();
     });
 
-    it('should display error message with text length message', () => {
-        const { getByTestId, getByText } = rtlRender(
+    it('should display error state for the input form', () => {
+        const { getByTestId } = rtlRender(
             <FreeTextForm
                 onAdd={jest.fn()}
+                error
                 locale={{
                     id: 'free-text-input',
                     inputFieldLabel: 'Item name',
@@ -217,13 +243,13 @@ describe('FreeTextForm behaviour tests', () => {
                 }}
                 listEditorId="test"
                 normalize={value => value}
-                errorText="Some error text"
+                remindToAdd
                 isValid={jest.fn(() => undefined)}
-                maxInputLength={5}
             />,
         );
 
-        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'testing' } });
-        expect(getByText('Some error text - Limited to 5 characters')).toBeVisible();
+        expect(getByTestId('free-text-input')).toHaveAttribute('aria-invalid', 'true');
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
+        expect(getByTestId('free-text-input')).toHaveAttribute('aria-invalid', 'false');
     });
 });

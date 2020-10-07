@@ -10,7 +10,6 @@ export default function IssnListEditorField(fieldProps) {
             error={fieldProps.meta && fieldProps.meta.error}
             onChange={fieldProps.input.onChange}
             remindToAdd={fieldProps.remindToAdd}
-            maxInputLength={fieldProps.maxInputLength}
             {...fieldProps}
         />
     );
