@@ -4870,7 +4870,7 @@ describe('getCopyToCollectionData', () => {
                 ],
                 {
                     search_key: 'rek_ismemberof',
-                    rek_ismemberof: 'UQ:234',
+                    collections: ['UQ:234'],
                 },
             ),
         ).toEqual([
@@ -4903,7 +4903,7 @@ describe('getRemoveFromCollectionData', () => {
                 ],
                 {
                     search_key: 'rek_ismemberof',
-                    rek_ismemberof: 'UQ:234',
+                    collections: ['UQ:234'],
                 },
             ),
         ).toEqual([

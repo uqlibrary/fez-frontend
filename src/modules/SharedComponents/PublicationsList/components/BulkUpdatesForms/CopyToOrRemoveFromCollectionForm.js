@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import { formValueSelector, getFormSyncErrors, change, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
+import { getFormSyncErrors, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { CommunitySelectField, CollectionSelectField } from 'modules/SharedComponents/SelectFields';
+import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
@@ -14,7 +14,6 @@ import { validation } from 'config';
 import { copyToOrRemoveFromCollection } from 'actions';
 
 const FORM_NAME = 'CopyToOrRemoveFromCollectionForm';
-const selector = formValueSelector(FORM_NAME);
 
 const onSubmit = (values, dispatch, props) => {
     return dispatch(
@@ -22,12 +21,6 @@ const onSubmit = (values, dispatch, props) => {
     ).catch(error => {
         throw new SubmissionError({ _error: error.message });
     });
-};
-
-const onChange = (values, dispatch, props, prevValues) => {
-    if (values.get('community_pid') !== prevValues.get('community_pid')) {
-        dispatch(change(FORM_NAME, 'rek_ismemberof', null));
-    }
 };
 
 export const CopyToOrRemoveFromCollectionForm = ({
@@ -39,7 +32,6 @@ export const CopyToOrRemoveFromCollectionForm = ({
     submitSucceeded,
 }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
-    const communityId = useSelector(state => selector(state, 'community_pid'));
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
     const idText = isRemoveFrom ? 'remove-from' : 'copy-to';
@@ -54,31 +46,17 @@ export const CopyToOrRemoveFromCollectionForm = ({
                 </Grid>
                 <Grid item xs={12}>
                     <Field
-                        component={CommunitySelectField}
+                        component={CollectionField}
+                        collectionFieldId="rek-ismemberof"
                         disabled={submitting || submitSucceeded}
-                        genericSelectFieldId="community-pid"
-                        label={txt.copyToOrRemoveFromCollectionForm.formLabels.community}
-                        name="community_pid"
+                        floatingLabelText={txt.copyToOrRemoveFromCollectionForm.formLabels.collection}
+                        fullwidth
+                        name="collections"
                         required
-                        validate={[validation.required]}
-                        {...locale.components.selectField.community}
+                        validate={[validation.requiredList]}
+                        {...locale.components.selectField.collection}
                     />
                 </Grid>
-                {!!communityId && (
-                    <Grid item xs={12}>
-                        <Field
-                            component={CollectionSelectField}
-                            communityId={!!communityId && communityId}
-                            disabled={submitting || submitSucceeded}
-                            genericSelectFieldId="rek-ismemberof"
-                            label={txt.copyToOrRemoveFromCollectionForm.formLabels.collection}
-                            name="rek_ismemberof"
-                            required
-                            validate={[validation.required]}
-                            {...locale.components.selectField.collection}
-                        />
-                    </Grid>
-                )}
                 <Grid item xs={6}>
                     <Button
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
@@ -140,7 +118,6 @@ CopyToOrRemoveFromCollectionForm.propTypes = {
 
 const CopyToOrRemoveFromCollectionReduxForm = reduxForm({
     form: FORM_NAME,
-    onChange,
     onSubmit,
 })(CopyToOrRemoveFromCollectionForm);
 

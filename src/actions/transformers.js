@@ -1272,7 +1272,7 @@ export const getRemoveFromCollectionData = (records, data) => {
     return records.map(record => ({
         rek_pid: record.rek_pid,
         fez_record_search_key_ismemberof: record.fez_record_search_key_ismemberof.filter(
-            collection => collection.rek_ismemberof !== data.rek_ismemberof,
+            collection => !data.collections.includes(collection.rek_ismemberof),
         ),
     }));
 };
@@ -1282,10 +1282,10 @@ export const getCopyToCollectionData = (records, data) => {
         rek_pid: record.rek_pid,
         fez_record_search_key_ismemberof: [
             ...record.fez_record_search_key_ismemberof,
-            {
-                rek_ismemberof: data.rek_ismemberof,
-                rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + 1,
-            },
+            ...data.collections.map((collection, index) => ({
+                rek_ismemberof: collection,
+                rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
+            })),
         ],
     }));
 };

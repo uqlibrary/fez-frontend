@@ -1450,7 +1450,7 @@ describe('Record action creators', () => {
                     ],
                     {
                         search_key: 'rek_ismemberof',
-                        rek_ismemberof: 'UQ:1234',
+                        collections: ['UQ:1234'],
                     },
                 ),
             );
@@ -1480,7 +1480,7 @@ describe('Record action creators', () => {
                         ],
                         {
                             search_key: 'rek_ismemberof',
-                            rek_ismemberof: 'UQ:1234',
+                            collections: ['UQ:1234'],
                         },
                         true,
                     ),
