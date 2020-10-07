@@ -2853,8 +2853,7 @@ export default {
             bulkUpdatesForms: {
                 copyToOrRemoveFromCollectionForm: {
                     formLabels: {
-                        community: 'Parent community',
-                        collection: 'Collection',
+                        collection: 'Collection(s)',
                         cancelButtonLabel: 'Cancel',
                         submitButtonLabel: 'Bulk update',
                     },
