@@ -307,7 +307,7 @@ export const AttachedFiles = ({
                                                             value={item.openAccessStatus.embargoDate}
                                                             onChange={onEmbargoDateChange(index)}
                                                             disabled={disabled}
-                                                            canBeCleared
+                                                            // canBeCleared
                                                         />
                                                     )}
                                                 </Grid>
