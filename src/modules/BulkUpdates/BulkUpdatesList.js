@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MaterialTable, { MTableBodyRow, MTableAction } from 'material-table';
+import MaterialTable, { MTableBodyRow } from 'material-table';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -49,6 +49,26 @@ export const getColumns = classes => {
             render: rowData => (
                 <Typography data-testid="buj-finished-at" id="buj-finished-at" className={classes.text}>
                     {rowData.buj_finished_at}
+                </Typography>
+            ),
+        },
+        {
+            title: bulkUpdatesList.columns.user.title,
+            field: 'fez_user',
+            editable: 'never',
+            render: rowData => (
+                <Typography data-testid="fez-user-username" id="fez-user-username" className={classes.text}>
+                    {rowData.fez_user.usr_username}
+                </Typography>
+            ),
+        },
+        {
+            title: bulkUpdatesList.columns.name.title,
+            field: 'fez_user',
+            editable: 'never',
+            render: rowData => (
+                <Typography data-testid="fez-user-fullname" id="fez-user-fullname" className={classes.text}>
+                    {rowData.fez_user.usr_full_name}
                 </Typography>
             ),
         },
@@ -122,29 +142,6 @@ export const BulkUpdatesList = ({ list }) => {
                             data-testid={`bulk-updates-list-item-${props.index}`}
                         />
                     ),
-                    Action: props => {
-                        const { icon: Icon, tooltip, ...restAction } =
-                            (typeof props.action === 'function' && props.action(props.data)) || props.action;
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    tooltip,
-                                    icon: () => (
-                                        <Icon
-                                            id={`bulk-updates-list-item-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase()}`}
-                                            data-testid={`bulk-updates-list-item-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase()}`}
-                                        />
-                                    ),
-                                }}
-                            />
-                        );
-                    },
                 }}
                 data={data}
                 icons={tableIcons}

@@ -2829,21 +2829,12 @@ export default {
                 finishedAt: {
                     title: 'Finished at',
                 },
-                // user: {
-                //     title: 'User',
-                // },
-                // name: {
-                //     title: 'Name',
-                // },
-                // progress: {
-                //     title: 'Progress',
-                // },
-                // message: {
-                //     title: 'Message',
-                // },
-                // lastHeartbeat: {
-                //     title: 'Last Heartbeat',
-                // },
+                user: {
+                    title: 'User',
+                },
+                name: {
+                    title: 'Name',
+                },
                 status: {
                     title: 'Status',
                 },
