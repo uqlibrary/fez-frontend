@@ -48,7 +48,7 @@ context('Homepage', () => {
 
     it('Has expected menu items for an admin', () => {
         cy.visit('/?user=uqstaff');
-        checkMenuItemCount(21);
+        checkMenuItemCount(22);
     });
 
     it('Has expected menu items for a student without an author account', () => {
