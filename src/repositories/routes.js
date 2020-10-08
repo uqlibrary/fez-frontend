@@ -336,6 +336,10 @@ export const UNLOCK_RECORD_API = ({ pid }) => ({
     apiUrl: `records/${pid}/unlock`,
 });
 
+export const BULK_UPDATES_API = () => ({
+    apiUrl: 'records/bulk-updates',
+});
+
 export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
 });

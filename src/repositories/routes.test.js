@@ -834,6 +834,12 @@ describe('Backend routes method', () => {
         });
     });
 
+    it('should construct url for BULK_UPDATES_API', () => {
+        expect(routes.BULK_UPDATES_API()).toEqual({
+            apiUrl: 'records/bulk-updates',
+        });
+    });
+
     it('should construct url for UNLOCK_RECORD_API', () => {
         const pid = 'UQ:123456';
         expect(routes.UNLOCK_RECORD_API({ pid })).toEqual({
