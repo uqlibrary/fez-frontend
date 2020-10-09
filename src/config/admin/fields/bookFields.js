@@ -45,7 +45,7 @@ export default {
                 ['rek_date'],
                 ['fez_record_search_key_date_available'],
                 ['rek_description'],
-                [],
+                ['fez_record_search_key_original_format'],
             ],
         },
         {
