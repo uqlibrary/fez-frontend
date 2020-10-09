@@ -16,8 +16,9 @@ function setup(testProps = {}) {
         actions: testProps.actions || {
             loadCurrentAccount: jest.fn(),
             searchAuthorPublications: jest.fn(),
+            getFavouriteSearchAlias: jest.fn(),
         },
-        location: testProps.location || {},
+        location: testProps.location || { pathname: '/' },
         history: testProps.history || { location: {} },
     };
 
@@ -263,6 +264,7 @@ describe('Application component', () => {
         const wrapper = setup({
             account: account,
             author: null,
+            location: { pathname: '/dashboard' },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -283,6 +285,7 @@ describe('Application component', () => {
                 ...author,
                 aut_orcid_id: null,
             },
+            location: { pathname: '/dashboard' },
             authorDetails: {},
         });
         wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
@@ -300,6 +303,7 @@ describe('Application component', () => {
                 is_administrator: 1,
                 is_super_administrator: 0,
             },
+            location: { pathname: '/dashboard' },
         });
         wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(wrapper.find('[alertId*="orcid"]').length).toBe(0);
@@ -355,6 +359,7 @@ describe('Application component', () => {
                 aut_orcid_id: null,
             },
             authorDetails: authorDetails.uqresearcher,
+            location: { pathname: '/dashboard' },
         });
         wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(wrapper.find('[alertId="orcid-optional"]').length).toBe(1);
@@ -389,6 +394,7 @@ describe('Application component', () => {
                 is_administrator: 0,
                 is_super_administrator: 0,
             },
+            location: { pathname: '/dashboard' },
         });
         wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(wrapper.find('[alertId="orcid-required"]').length).toBe(1);
@@ -536,6 +542,7 @@ describe('Application component', () => {
             actions: {
                 loadCurrentAccount: jest.fn(),
                 searchAuthorPublications: testMethod,
+                getFavouriteSearchAlias: jest.fn(),
             },
         });
         wrapper.update();
@@ -550,6 +557,7 @@ describe('Application component', () => {
             actions: {
                 loadCurrentAccount: jest.fn(),
                 searchAuthorPublications: jest.fn(),
+                getFavouriteSearchAlias: jest.fn(),
             },
             incompleteRecordList: {
                 incomplete: {
@@ -558,6 +566,7 @@ describe('Application component', () => {
                     },
                 },
             },
+            location: { pathname: '/dashboard' },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -569,6 +578,7 @@ describe('Application component', () => {
             actions: {
                 loadCurrentAccount: jest.fn(),
                 searchAuthorPublications: jest.fn(),
+                getFavouriteSearchAlias: jest.fn(),
             },
             incompleteRecordList: {
                 incomplete: {
@@ -577,6 +587,7 @@ describe('Application component', () => {
                     },
                 },
             },
+            location: { pathname: '/dashboard' },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -593,6 +604,7 @@ describe('Testing wrapped App component', () => {
             actions: {
                 logout: jest.fn(),
                 loadCurrentAccount: jest.fn(),
+                getFavouriteSearchAlias: jest.fn(),
             },
             account: { name: 'Ky' },
             location: { pathname: '/' },

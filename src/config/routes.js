@@ -212,6 +212,8 @@ export const getRoutesConfig = ({
     authorDetails = null,
     forceOrcidRegistration = false,
     isHdrStudent = false,
+    isExistingAlias = false,
+    existingAlias = {},
 }) => {
     const pid = `:pid(${pidRegExp})`;
     const publicPages = [
@@ -524,10 +526,22 @@ export const getRoutesConfig = ({
               ]
             : []),
         ...publicPages,
-        {
-            component: components.NotFound,
-            pageTitle: locale.pages.notFound.title,
-        },
+        ...(isExistingAlias
+            ? [
+                  {
+                      path: `/${existingAlias.fvs_alias}`,
+                      render: props => components.SearchRecords({ ...props, existingAlias: existingAlias }),
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: existingAlias.fvs_description,
+                  },
+              ]
+            : [
+                  {
+                      component: components.NotFound,
+                      pageTitle: locale.pages.notFound.title,
+                  },
+              ]),
     ];
 };
 
