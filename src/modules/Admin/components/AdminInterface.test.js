@@ -497,6 +497,27 @@ describe('AdminInterface component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should display job created alert', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        const wrapper = setup({
+            isJobCreated: true,
+            submitSucceeded: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper
+            .find('WithStyles(ConfirmDialogBox)')
+            .props()
+            .onAction();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render a title with html correctly', () => {
         const rekTitle =
             'Cost analysis: outsourcing radiofrequency ablution for massiv<sub>e</sub>&nbsp;' +

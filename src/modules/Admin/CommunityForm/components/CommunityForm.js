@@ -144,7 +144,7 @@ export default class CommunityForm extends Component {
                                                     component={ListEditorField}
                                                     name="fez_record_search_key_keywords"
                                                     maxCount={10}
-                                                    maxInputLength={111}
+                                                    isValid={validation.isValidKeyword(111)}
                                                     searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                                     listEditorId="rek-keywords"
                                                     locale={txt.formLabels.keywords.field}

@@ -299,11 +299,11 @@ export const ThesisSubmission = ({
                                     required
                                     maxCount={10}
                                     validate={[validation.requiredList]}
-                                    maxInputLength={111}
                                     searchKey={{
                                         value: 'rek_keywords',
                                         order: 'rek_keywords_order',
                                     }}
+                                    isValid={validation.isValidKeyword(111)}
                                     listEditorId="rek-keywords"
                                     locale={locale.components.keywordsForm.field}
                                     disabled={submitting}

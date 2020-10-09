@@ -7,6 +7,7 @@ export const initialState = {
     hideCulturalSensitivityStatement: false,
     isRecordLocked: false,
     isDeleted: false,
+    isJobCreated: false,
 };
 
 const handlers = {
@@ -52,6 +53,11 @@ const handlers = {
     [actions.VIEW_RECORD_UNLOCK]: state => ({
         ...state,
         isRecordLocked: false,
+    }),
+
+    [actions.ADMIN_UPDATE_WORK_JOB_CREATED]: state => ({
+        ...state,
+        isJobCreated: true,
     }),
 };
 

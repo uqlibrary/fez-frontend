@@ -32,9 +32,7 @@ context('Creative Work admin edit', () => {
                     item => item.rek_isderivationof_lookup
                 );
                 pubList.forEach((pub, index) => {
-                    cy.get('p')
-                        .eq(index + 1)
-                        .should('have.text', pub);
+                    cy.get(`[data-testid=rek-isderivationof-list-row-${index}]`).should('have.text', pub);
                 });
             });
 

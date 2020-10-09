@@ -514,13 +514,23 @@ export function adminUpdate(data) {
                     : put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
             .then(response => {
-                dispatch({
-                    type: actions.ADMIN_UPDATE_WORK_SUCCESS,
-                    payload: {
-                        pid: response.data,
-                    },
-                });
-                return Promise.resolve(response);
+                if (response.status === 201) {
+                    dispatch({
+                        type: actions.ADMIN_UPDATE_WORK_JOB_CREATED,
+                        payload: {
+                            pid: response,
+                        },
+                    });
+                    return Promise.resolve(response);
+                } else {
+                    dispatch({
+                        type: actions.ADMIN_UPDATE_WORK_SUCCESS,
+                        payload: {
+                            pid: response.data,
+                        },
+                    });
+                    return Promise.resolve(response);
+                }
             })
             .catch(error => {
                 dispatch({

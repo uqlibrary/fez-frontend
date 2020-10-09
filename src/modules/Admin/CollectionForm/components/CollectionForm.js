@@ -165,11 +165,11 @@ export default class CollectionForm extends Component {
                                                         name="fez_record_search_key_keywords"
                                                         maxCount={10}
                                                         // validate={[validation.requiredList]}
-                                                        maxInputLength={111}
                                                         searchKey={{
                                                             value: 'rek_keywords',
                                                             order: 'rek_keywords_order',
                                                         }}
+                                                        isValid={validation.isValidKeyword(111)}
                                                         listEditorId="rek-keywords"
                                                         locale={txt.formLabels.keywords.field}
                                                         disabled={this.props.submitting}
