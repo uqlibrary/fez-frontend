@@ -769,6 +769,7 @@ describe('SearchRecords page', () => {
                 showOpenAccessOnly: false,
             },
             advancedSearchFields: [],
+            bulkExportSelected: false,
         });
     });
 });
