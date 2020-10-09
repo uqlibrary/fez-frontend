@@ -87,7 +87,7 @@ describe('PublicationsList', () => {
 
         fireEvent.click(getByTestId('select-publication-0-input'));
         fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
-        fireEvent.click(getByText('Change searchkey value'));
+        fireEvent.click(getByText('Change search key value'));
 
         expect(getByTestId('change-search-key-value-form')).toBeInTheDocument();
     });

@@ -3,8 +3,7 @@ export const BUA_CHANGE_AUTHOR_ID = 'change-author-id';
 export const BUA_CHANGE_DISPLAY_TYPE = 'change-display-type';
 export const BUA_COPY_TO_COLLECTION = 'copy-to-collection';
 export const BUA_REMOVE_FROM_COLLECTION = 'remove-from-collection';
-export const BUA_CHANGE_SEARCHKEY_VALUE = 'change-searchkey-value';
-export const BUA_UPDATE_SECURITY = 'update-security';
+export const BUA_CHANGE_SEARCHKEY_VALUE = 'change-search-key-value';
 
 // Bulk updates action options
 export const BUA_CHANGE_AUTHOR_ID_OPTION = {
@@ -29,12 +28,7 @@ export const BUA_REMOVE_FROM_COLLECTION_OPTION = {
 
 export const BUA_CHANGE_SEARCHKEY_VALUE_OPTION = {
     value: BUA_CHANGE_SEARCHKEY_VALUE,
-    text: 'Change searchkey value',
-};
-
-export const BUA_UPDATE_SECURITY_OPTION = {
-    value: BUA_UPDATE_SECURITY,
-    text: 'Update security',
+    text: 'Change search key value',
 };
 
 // Bulk updates actions for dropdown
@@ -44,7 +38,6 @@ export const BULK_UPDATES_ACTIONS = {
     [BUA_COPY_TO_COLLECTION]: BUA_COPY_TO_COLLECTION_OPTION,
     [BUA_REMOVE_FROM_COLLECTION]: BUA_REMOVE_FROM_COLLECTION_OPTION,
     [BUA_CHANGE_SEARCHKEY_VALUE]: BUA_CHANGE_SEARCHKEY_VALUE_OPTION,
-    [BUA_UPDATE_SECURITY]: BUA_UPDATE_SECURITY_OPTION,
 };
 
 // Bulk updates search key options values
