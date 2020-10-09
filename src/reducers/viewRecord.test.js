@@ -18,6 +18,7 @@ describe('viewRecord reducer', () => {
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: false,
+            isJobCreated: false,
         };
         expect(testState).toEqual(expectedState);
     });
@@ -33,6 +34,7 @@ describe('viewRecord reducer', () => {
             recordToView: null,
             recordToViewError: null,
             hideCulturalSensitivityStatement: true,
+            isJobCreated: false,
         };
         expect(testState).toEqual(expectedState);
     });
@@ -127,6 +129,18 @@ describe('viewRecord reducer', () => {
                 rek_description: 'This is a description.',
                 rek_editing_user: 'uqtest',
             },
+        });
+    });
+
+    it('should set isJobCreated flag to true', () => {
+        const test = viewRecordReducer(initialState, {
+            type: actions.ADMIN_UPDATE_WORK_JOB_CREATED,
+            payload: { data: 'Job has been created' },
+        });
+
+        expect(test).toEqual({
+            ...initialState,
+            isJobCreated: true,
         });
     });
 });

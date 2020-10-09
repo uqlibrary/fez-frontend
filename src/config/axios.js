@@ -89,7 +89,7 @@ const reportToSentry = error => {
 api.interceptors.response.use(
     response => {
         if (!isGet) {
-            return cache.store.clear().then(() => Promise.resolve(response.data));
+            return cache.store.clear().then(() => Promise.resolve(response.status === 201 ? response : response.data));
         }
         return Promise.resolve(response.data);
     },

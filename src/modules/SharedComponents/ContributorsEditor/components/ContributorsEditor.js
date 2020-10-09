@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
 
+import Infinite from 'react-infinite';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
@@ -306,7 +307,7 @@ export class ContributorsEditor extends PureComponent {
                                     {...(this.props.locale.header || {})}
                                     disabled={disabled}
                                     hideDelete={hideDelete}
-                                    isInfinite={contributors.length > 3}
+                                    isInfinite={contributors.length > 20}
                                     isNtro={isNtro}
                                     onDeleteAll={this.deleteAllContributors}
                                     showContributorAssignment={showContributorAssignment}
@@ -323,7 +324,14 @@ export class ContributorsEditor extends PureComponent {
                                     }`,
                                 }}
                             >
-                                {this.renderContributorRows()}
+                                {// istanbul ignore next
+                                contributors.length > 20 ? (
+                                    <Infinite containerHeight={200} elementHeight={73} infiniteLoadBeginEdgeOffset={50}>
+                                        {this.renderContributorRows()}
+                                    </Infinite>
+                                ) : (
+                                    this.renderContributorRows()
+                                )}
                             </List>
                             {editMode && contributorIndexSelectedToEdit !== null && (
                                 <div style={{ marginTop: 24 }}>

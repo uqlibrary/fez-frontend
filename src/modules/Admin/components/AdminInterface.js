@@ -61,6 +61,7 @@ export const AdminInterface = ({
     classes,
     createMode,
     isDeleted,
+    isJobCreated,
     destroy,
     dirty,
     disableSubmit,
@@ -176,7 +177,7 @@ export const AdminInterface = ({
 
     const saveConfirmationLocale = createMode
         ? txt.current.successAddWorkflowConfirmation
-        : txt.current.successWorkflowConfirmation;
+        : (!isJobCreated && txt.current.successWorkflowConfirmation) || txt.current.successJobCreatedConfirmation;
 
     const pageTitlePrefix = !isDeleted ? 'Edit' : 'Undelete';
 
@@ -269,7 +270,7 @@ export const AdminInterface = ({
 
     return (
         <StandardPage>
-            <React.Fragment>
+            <form>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
@@ -306,6 +307,14 @@ export const AdminInterface = ({
                     )}
                     {/* Admin lock alert */}
                     {!!locked && <LockedAlert />}
+                    <Grid container spacing={1}>
+                        {renderSaveStatusAlert}
+                        <Grid item xs={12}>
+                            <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
+                                {renderButtonBar('-top')}
+                            </Grid>
+                        </Grid>
+                    </Grid>
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
@@ -354,33 +363,23 @@ export const AdminInterface = ({
                     </Hidden>
                 </Grid>
                 <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
-                    <form>
-                        <Grid container spacing={1}>
-                            {renderSaveStatusAlert}
-                            <Grid item xs={12}>
-                                <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
-                                    {renderButtonBar('-top')}
-                                </Grid>
+                    <Grid container spacing={0}>
+                        {!tabbed
+                            ? Object.keys(tabs)
+                                  .filter(tab => tabs[tab].activated)
+                                  .map(renderTabContainer)
+                            : renderTabContainer(currentTabValue)}
+                    </Grid>
+                    <Grid container spacing={1}>
+                        {renderSaveStatusAlert}
+                        <Grid item xs={12}>
+                            <Grid container spacing={1} style={{ marginTop: 8 }}>
+                                {renderButtonBar()}
                             </Grid>
                         </Grid>
-                        <Grid container spacing={0}>
-                            {!tabbed
-                                ? Object.keys(tabs)
-                                      .filter(tab => tabs[tab].activated)
-                                      .map(renderTabContainer)
-                                : renderTabContainer(currentTabValue)}
-                        </Grid>
-                        <Grid container spacing={1}>
-                            {renderSaveStatusAlert}
-                            <Grid item xs={12}>
-                                <Grid container spacing={1} style={{ marginTop: 8 }}>
-                                    {renderButtonBar()}
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </form>
+                    </Grid>
                 </ConfirmDiscardFormChanges>
-            </React.Fragment>
+            </form>
         </StandardPage>
     );
 };
@@ -390,6 +389,7 @@ AdminInterface.propTypes = {
     classes: PropTypes.object,
     createMode: PropTypes.bool,
     isDeleted: PropTypes.bool,
+    isJobCreated: PropTypes.bool,
     destroy: PropTypes.func,
     dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,
