@@ -731,10 +731,9 @@ describe('SearchRecords page', () => {
                     expect(showConfirmation).toHaveBeenCalledTimes(1);
                     done();
                 });
-            });
         });
     });
-    
+
     it('should call updateSearch if existing alias is provided to search page', () => {
         const searchEspacePublications = jest.fn();
 
