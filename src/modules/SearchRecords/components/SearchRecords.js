@@ -29,6 +29,7 @@ class SearchRecords extends PureComponent {
         publicationsList: PropTypes.array,
         publicationsListFacets: PropTypes.object,
         publicationsListPagingData: PropTypes.object,
+        existingAlias: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
         canUseExport: PropTypes.bool,
         searchLoading: PropTypes.bool,
@@ -71,9 +72,13 @@ class SearchRecords extends PureComponent {
     }
 
     componentDidMount() {
-        const { searchQueryParams } = this.state;
-        if (!!searchQueryParams) {
-            this.updateSearch();
+        if (!!this.props.existingAlias) {
+            const searchQuery = this.props.existingAlias.fvs_search_parameters.split('?')[1];
+            const providedSearchQuery = this.parseSearchQueryStringFromUrl(searchQuery);
+            this.updateSearch({ ...providedSearchQuery });
+        } else {
+            const { searchQueryParams } = this.state;
+            !!searchQueryParams && this.updateSearch();
         }
     }
 
@@ -203,8 +208,12 @@ class SearchRecords extends PureComponent {
         this.updateSearch();
     };
 
-    updateSearch = () => {
-        this.props.actions.searchEspacePublications({ ...this.props.searchQuery, ...this.state });
+    updateSearch = (providedSearchQuery = {}) => {
+        this.props.actions.searchEspacePublications({
+            ...this.props.searchQuery,
+            ...this.state,
+            ...providedSearchQuery,
+        });
     };
 
     handleExportPublications = exportFormat => {

@@ -5,6 +5,7 @@ import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
 import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
 import browserUpdate from 'browser-update';
+import { flattedPathConfig } from 'config/routes';
 
 browserUpdate({
     required: {
@@ -97,6 +98,8 @@ export class AppClass extends PureComponent {
         accountLoading: PropTypes.bool,
         accountAuthorLoading: PropTypes.bool,
         accountAuthorDetailsLoading: PropTypes.bool,
+        existingAlias: PropTypes.object,
+        existingAliasChecking: PropTypes.bool,
         isSessionExpired: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
@@ -145,7 +148,16 @@ export class AppClass extends PureComponent {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
+
+        const isValidRoute = flattedPathConfig.indexOf(this.props.location.pathname) >= 0;
+        const isValidFileUrl = isFileUrl(this.props.location.pathname);
+        const hasNoSlash = this.props.location.pathname.slice(1).indexOf('/') === -1;
+
+        if (!!this.props.account && !isValidRoute && !isValidFileUrl && hasNoSlash) {
+            this.props.actions.getFavouriteSearchAlias({ fvs_alias: this.props.location.pathname.slice(1) });
+        }
     }
+
     // eslint-disable-next-line camelcase
     UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.isSessionExpired) {
@@ -294,6 +306,8 @@ export class AppClass extends PureComponent {
             account: this.props.account,
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent,
+            isExistingAlias: !!this.props.existingAlias,
+            existingAlias: this.props.existingAlias,
         });
         const titleStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 284 } : { paddingLeft: 0 };
         const isIndex = this.props.history.location.pathname === '/';

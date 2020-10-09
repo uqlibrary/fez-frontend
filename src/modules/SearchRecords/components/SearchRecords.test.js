@@ -665,4 +665,42 @@ describe('SearchRecords page', () => {
         expect(componentWillUnmount).toHaveBeenCalled();
         expect(clearSearchQueryFn).toHaveBeenCalled();
     });
+
+    it('should call updateSearch if existing alias is provided to search page', () => {
+        const searchEspacePublications = jest.fn();
+
+        const wrapper = setup({
+            actions: {
+                searchEspacePublications: searchEspacePublications,
+            },
+            existingAlias: {
+                fvs_id: 1,
+                fvs_search_parameters:
+                    '/records/search?page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
+            },
+        });
+
+        wrapper.instance().componentDidMount();
+
+        expect(searchEspacePublications).toHaveBeenCalledWith({
+            page: '1',
+            pageSize: 100,
+            sortBy: 'published_date',
+            sortDirection: 'Asc',
+            searchQueryParams: {
+                title: 'some test data',
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023',
+                    },
+                },
+                showOpenAccessOnly: false,
+            },
+            advancedSearchFields: [],
+        });
+    });
 });

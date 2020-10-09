@@ -282,43 +282,6 @@ exports[`Application component Should display mobile correctly 1`] = `
       }
       onRef={[Function]}
     />
-    <WithStyles(ForwardRef(Grid))
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <Alert
-          action={[Function]}
-          actionButtonLabel="Click to login"
-          alertId="login"
-          allowDismiss={false}
-          customIcon={null}
-          customType={null}
-          disableAlertClick={false}
-          dismissTitle="Click to dismiss this alert"
-          message="Login to UQ eSpace for full search results and more services."
-          showLoader={false}
-          title="You are not logged in"
-          type="info_outline"
-          wiggle={null}
-        />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
     <Connect(AppAlert) />
     <ContextProvider
       value={
@@ -2313,43 +2276,6 @@ exports[`Application component should redirect to login page with correct return
       }
       onRef={[Function]}
     />
-    <WithStyles(ForwardRef(Grid))
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <Alert
-          action={[Function]}
-          actionButtonLabel="Click to login"
-          alertId="login"
-          allowDismiss={false}
-          customIcon={null}
-          customType={null}
-          disableAlertClick={false}
-          dismissTitle="Click to dismiss this alert"
-          message="Login to UQ eSpace for full search results and more services."
-          showLoader={false}
-          title="You are not logged in"
-          type="info_outline"
-          wiggle={null}
-        />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
     <Connect(AppAlert) />
     <ContextProvider
       value={
@@ -6605,6 +6531,21 @@ exports[`Testing wrapped App component Mounts 1`] = `
             }
             actions={
               Object {
+                "getFavouriteSearchAlias": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "fvs_alias": "",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                },
                 "loadCurrentAccount": [MockFunction] {
                   "calls": Array [
                     Array [],
@@ -6652,6 +6593,21 @@ exports[`Testing wrapped App component Mounts 1`] = `
               }
               actions={
                 Object {
+                  "getFavouriteSearchAlias": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "fvs_alias": "",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
                   "loadCurrentAccount": [MockFunction] {
                     "calls": Array [
                       Array [],
@@ -6699,6 +6655,21 @@ exports[`Testing wrapped App component Mounts 1`] = `
                 }
                 actions={
                   Object {
+                    "getFavouriteSearchAlias": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "fvs_alias": "",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "type": "return",
+                          "value": undefined,
+                        },
+                      ],
+                    },
                     "loadCurrentAccount": [MockFunction] {
                       "calls": Array [
                         Array [],
