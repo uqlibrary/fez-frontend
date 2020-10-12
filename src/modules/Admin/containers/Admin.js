@@ -15,13 +15,11 @@ import {
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
-import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 import { onSubmit } from '../submitHandler';
 import { identifiersParams, bibliographicParams, authorsParams } from 'modules/Admin/helpers';
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
-    displayAdvisoryStatement: publicationTypeHasAdvisoryStatement(record),
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
