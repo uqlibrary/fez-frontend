@@ -1462,6 +1462,102 @@ exports[`Meta Component  should render component with journal 1`] = `
 />
 `;
 
+exports[`Meta Component  should render component with journal with custom title for edit route 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+  link={
+    Array [
+      Object {
+        "href": "http://purl.org/DC/elements/1.0/",
+        "rel": "schema.DC",
+      },
+    ]
+  }
+  meta={
+    Array [
+      Object {
+        "content": "http://localhost/view/UQ:186337",
+        "key": "DC.Identifier-0",
+        "name": "DC.Identifier",
+        "scheme": "URI",
+      },
+      Object {
+        "content": 452815,
+        "key": "DC.Subject-1",
+        "name": "DC.Subject",
+      },
+      Object {
+        "content": "Management international review",
+        "key": "DC.Title-2",
+        "name": "DC.Title",
+      },
+      Object {
+        "content": "Management international review",
+        "key": "citation_title-3",
+        "name": "citation_title",
+      },
+      Object {
+        "content": "Hakanson, Lars",
+        "key": "DC.Contributor-4",
+        "name": "DC.Contributor",
+      },
+      Object {
+        "content": "0025-181X",
+        "key": "citation_issn-5",
+        "name": "citation_issn",
+      },
+      Object {
+        "content": "0938-8249",
+        "key": "citation_issn-6",
+        "name": "citation_issn",
+      },
+      Object {
+        "content": "2005-01-01",
+        "key": "DC.Date-7",
+        "name": "DC.Date",
+      },
+      Object {
+        "content": "2005/01/01",
+        "key": "citation_date-8",
+        "name": "citation_date",
+      },
+      Object {
+        "content": "45",
+        "key": "citation_volume-9",
+        "name": "citation_volume",
+      },
+      Object {
+        "content": "1, Special issue",
+        "key": "citation_issue-10",
+        "name": "citation_issue",
+      },
+      Object {
+        "content": "Betriebswirtschaftlicher Verlag T. Gabler",
+        "key": "DC.Publisher-11",
+        "name": "DC.Publisher",
+      },
+      Object {
+        "content": "Betriebswirtschaftlicher Verlag T. Gabler",
+        "key": "citation_publisher-12",
+        "name": "citation_publisher",
+      },
+      Object {
+        "content": "eng",
+        "key": "citation_language-13",
+        "name": "citation_language",
+      },
+      Object {
+        "content": "Knowledge; Multinational corporations",
+        "key": "citation_keywords-14",
+        "name": "citation_keywords",
+      },
+    ]
+  }
+  title="Edit Journal - Management international review - UQ eSpace "
+/>
+`;
+
 exports[`Meta Component  should render component with manuscript 1`] = `
 <HelmetWrapper
   defer={true}

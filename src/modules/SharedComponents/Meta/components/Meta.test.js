@@ -30,6 +30,20 @@ describe('Meta Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with journal with custom title for edit route', () => {
+        const wrapper = setup({
+            publication: records.journal,
+            routesConfig: [
+                {
+                    path: routes.pathConfig.admin.edit,
+                    pageTitle: 'Test',
+                },
+            ],
+            location: { pathname: '/admin/edit/UQ:123456' },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with data collection', () => {
         const wrapper = setup({ publication: records.dataCollection });
         expect(toJson(wrapper)).toMatchSnapshot();
