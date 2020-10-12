@@ -248,6 +248,7 @@ export default {
             },
             Book: {
                 rek_date: 'Publication year',
+                fez_record_search_key_original_format: 'Physical description',
             },
             'Book Chapter': {
                 rek_date: 'Publication year',
@@ -594,6 +595,10 @@ export default {
                 {
                     field: 'fez_record_search_key_total_pages',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_original_format',
+                    order: 19.5,
                 },
                 {
                     field: 'fez_record_search_key_date_available',
