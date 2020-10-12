@@ -1782,7 +1782,6 @@ export default {
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
-
             grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_CREATIVE_WORK]: {
