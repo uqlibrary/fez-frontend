@@ -10,9 +10,9 @@ import { deleteAttachedFile } from 'actions/records';
 
 import FilesSection from './FilesSection';
 
-export const FilesSectionContainer = ({ disabled, formValues, onDeleteAttachedFile }) => {
+export const FilesSectionContainer = ({ disabled, formValues, onDeleteAttachedFile, openAccessStatusId }) => {
     return (
-        <FormValuesContext.Provider value={{ formValues: formValues.toJS(), onDeleteAttachedFile }}>
+        <FormValuesContext.Provider value={{ formValues: formValues.toJS(), onDeleteAttachedFile, openAccessStatusId }}>
             <FilesSection disabled={disabled} />
         </FormValuesContext.Provider>
     );
@@ -22,13 +22,20 @@ FilesSectionContainer.propTypes = {
     disabled: PropTypes.bool,
     formValues: PropTypes.object,
     onDeleteAttachedFile: PropTypes.func,
+    openAccessStatusId: PropTypes.number,
 };
 
 export const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
+    const openAccessStatusId = parseInt(
+        ((formValues.get('adminSection') || Immutable.Map({})).toJS().fez_record_search_key_oa_status || {})
+            .rek_oa_status,
+        10,
+    );
     return {
         disabled: ownProps.disabled,
         formValues: formValues.get('filesSection') || Immutable.Map({}),
+        openAccessStatusId,
     };
 };
 
