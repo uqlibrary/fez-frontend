@@ -299,7 +299,6 @@ export const AttachedFiles = ({
                                                         onChange={onEmbargoDateChange(index)}
                                                         disabled={disabled}
                                                         fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
-                                                        // canBeCleared
                                                     />
                                                 </Grid>
                                                 <Grid item xs style={{ textAlign: 'right' }}>

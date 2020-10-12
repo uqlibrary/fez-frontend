@@ -1,7 +1,9 @@
 import React from 'react';
-import AttachedFiles from './AttachedFiles';
+import AttachedFiles, { getFileOpenAccessStatus } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
 import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+
+import { openAccessConfig } from 'config';
 
 import mediaQuery from 'css-mediaquery';
 
@@ -17,7 +19,7 @@ jest.mock('hooks');
 import { userIsAdmin } from 'hooks';
 
 jest.mock('context');
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -32,11 +34,14 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('AttachedFiles component', () => {
-    beforeEach(() => {
+    beforeAll(() => {
         window.matchMedia = createMatchMedia(window.innerWidth);
 
         useRecordContext.mockImplementation(() => ({
             record: recordWithDatastreams,
+        }));
+        useFormValuesContext.mockImplementation(() => ({
+            openAccessStatusId: 0,
         }));
     });
 
@@ -158,9 +163,8 @@ describe('AttachedFiles component', () => {
             fireEvent.click(getAllByRole('button')[0]);
         });
         const calendar = await waitFor(() => getAllByRole('presentation')[0]);
-
-        fireEvent.click(getByText('28', calendar));
-        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-28', 0);
+        fireEvent.click(getByText('26', calendar));
+        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2017-06-26', 0);
     });
 
     it('should show alert for advisory statement', () => {
@@ -290,5 +294,23 @@ describe('AttachedFiles component', () => {
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
         done();
+    });
+
+    it('should have helper to get the open access status of a file', () => {
+        const testDate = '2040-09-09';
+        const openAccessStatusId = openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION;
+        const expected1 = {
+            isOpenAccess: false,
+            embargoDate: testDate,
+            openAccessStatusId,
+            securityStatus: true,
+        };
+        const expected2 = {
+            isOpenAccess: true,
+            embargoDate: null,
+            openAccessStatusId,
+        };
+        expect(getFileOpenAccessStatus(openAccessStatusId, { dsi_embargo_date: testDate })).toEqual(expected1);
+        expect(getFileOpenAccessStatus(openAccessStatusId, { dsi_embargo_date: '1920-09-09' })).toEqual(expected2);
     });
 });
