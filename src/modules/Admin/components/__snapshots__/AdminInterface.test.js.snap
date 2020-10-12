@@ -66,31 +66,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            alertId="alert-info"
-            allowDismiss={false}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Request is being processed."
-            showLoader={true}
-            title="Saving"
-            type="info_outline"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -475,31 +450,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            alertId="alert-done"
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -848,31 +798,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            alertId="alert-done"
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
@@ -1229,31 +1154,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            alertId="alert-done"
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -1602,31 +1502,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            alertId="alert-done"
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
