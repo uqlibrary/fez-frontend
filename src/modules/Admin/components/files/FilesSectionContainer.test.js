@@ -7,6 +7,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
             toJS: jest.fn(() => ({})),
         },
         onDeleteAttachedFile: jest.fn(),
+        openAccessStatusId: 0,
         ...testProps,
     };
 
@@ -21,7 +22,9 @@ describe('FilesSectionContainer component', () => {
 
     it('should map state to props', () => {
         expect(mapStateToProps({}, {})).toEqual({
+            disabled: undefined,
             formValues: Immutable.Map({}),
+            openAccessStatusId: NaN,
         });
     });
 });
