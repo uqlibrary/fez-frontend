@@ -31,6 +31,13 @@ import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 import { adminInterfaceConfig } from 'config/admin';
 import { onSubmit } from '../submitHandler';
+import { withStyles } from '@material-ui/core/styles';
+
+const AdminTab = withStyles({
+    root: {
+        minWidth: 100,
+    },
+})(Tab);
 
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
@@ -321,24 +328,17 @@ export const AdminInterface = ({
                                 <Grid item xs={12}>
                                     <Tabs
                                         value={currentTabValue}
-                                        variant="fullWidth"
-                                        style={{
-                                            marginRight: -40,
-                                            marginLeft: -40,
-                                        }}
                                         classes={{
                                             indicator: classes.tabIndicator,
                                         }}
                                         onChange={handleTabChange}
-                                        variant="scrollable"
-                                        scrollButtons="on"
                                         indicatorColor="primary"
                                         textColor="primary"
                                     >
                                         {Object.keys(tabs)
                                             .filter(tab => tabs[tab].activated)
                                             .map(tab => (
-                                                <Tab
+                                                <AdminTab
                                                     key={tab}
                                                     value={tab}
                                                     label={
