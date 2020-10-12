@@ -14,7 +14,7 @@ import WarningIcon from '@material-ui/icons/Warning';
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import { isFileValid } from 'config/validation';
@@ -76,31 +76,23 @@ const usePreview = initialPreviewState => {
 
 export const getUrl = (pid, fileName) => fileName && routes.pathConfig.file.url(pid, fileName);
 
-const getSecurityAccess = () => {
-    // const { isAdmin, isAuthor } = this.props;
-    return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
-};
-
-export const getFileOpenAccessStatus = (publication, dataStream) => {
+export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
     const embargoDate = dataStream.dsi_embargo_date;
-    const openAccessStatusId =
-        (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
-        null;
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
-        return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
+        return { isOpenAccess: false, embargoDate: null, openAccessStatusId };
     }
     if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
             isOpenAccess: false,
-            embargoDate: embargoDate,
-            openAccessStatusId: openAccessStatusId,
-            securityStatus: getSecurityAccess(),
+            embargoDate,
+            openAccessStatusId,
+            securityStatus: true,
         };
     }
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
 };
 
-export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
+export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
               const pid = dataStream.dsi_pid;
@@ -111,8 +103,7 @@ export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
               const previewFileName = checkForPreview(fileName, dataStreams);
               const webFileName = checkForWeb(fileName, dataStreams);
 
-              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
-              const securityAccess = getSecurityAccess(dataStream);
+              const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
 
               return {
                   pid,
@@ -130,13 +121,13 @@ export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
                       previewFileName,
                       allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
                       webFileName,
-                      securityAccess,
+                      securityAccess: true,
                   },
                   openAccessStatus,
                   previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
                   webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
                   mediaUrl: getUrl(pid, fileName),
-                  securityStatus: getSecurityAccess(dataStream),
+                  securityStatus: true,
                   embargoDate: dataStream.dsi_embargo_date,
               };
           })
@@ -163,9 +154,10 @@ export const AttachedFiles = ({
     const { record } = useRecordContext();
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
+    const { openAccessStatusId } = useFormValuesContext();
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-    const fileData = getFileData(record, dataStreams, isAdmin, isAuthor);
+    const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
 
     // tested in cypress
@@ -302,14 +294,13 @@ export const AttachedFiles = ({
                                                     xs={2}
                                                     id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                 >
-                                                    {!!item.openAccessStatus.embargoDate && (
-                                                        <FileUploadEmbargoDate
-                                                            value={item.openAccessStatus.embargoDate}
-                                                            onChange={onEmbargoDateChange(index)}
-                                                            disabled={disabled}
-                                                            // canBeCleared
-                                                        />
-                                                    )}
+                                                    <FileUploadEmbargoDate
+                                                        value={item.openAccessStatus.embargoDate}
+                                                        onChange={onEmbargoDateChange(index)}
+                                                        disabled={disabled}
+                                                        fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                        // canBeCleared
+                                                    />
                                                 </Grid>
                                                 <Grid item xs style={{ textAlign: 'right' }}>
                                                     <Tooltip title={deleteHint}>
