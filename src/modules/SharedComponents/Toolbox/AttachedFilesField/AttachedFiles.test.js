@@ -138,6 +138,9 @@ describe('AttachedFiles component', () => {
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
         }));
+        useFormValuesContext.mockImplementation(() => ({
+            openAccessStatusId: 453695,
+        }));
         const onDateChangeFn = jest.fn();
         const { getByText, getAllByRole } = setup({
             canEdit: true,
@@ -164,7 +167,7 @@ describe('AttachedFiles component', () => {
         });
         const calendar = await waitFor(() => getAllByRole('presentation')[0]);
         fireEvent.click(getByText('26', calendar));
-        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2017-06-26', 0);
+        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-26', 0);
     });
 
     it('should show alert for advisory statement', () => {
