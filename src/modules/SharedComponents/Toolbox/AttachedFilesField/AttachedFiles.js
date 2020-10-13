@@ -294,12 +294,14 @@ export const AttachedFiles = ({
                                                     xs={2}
                                                     id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                 >
-                                                    <FileUploadEmbargoDate
-                                                        value={item.openAccessStatus.embargoDate}
-                                                        onChange={onEmbargoDateChange(index)}
-                                                        disabled={disabled}
-                                                        fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
-                                                    />
+                                                    {openAccessConfig.openAccessFiles.includes(openAccessStatusId) && (
+                                                        <FileUploadEmbargoDate
+                                                            value={item.openAccessStatus.embargoDate}
+                                                            onChange={onEmbargoDateChange(index)}
+                                                            disabled={disabled}
+                                                            fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                        />
+                                                    )}
                                                 </Grid>
                                                 <Grid item xs style={{ textAlign: 'right' }}>
                                                     <Tooltip title={deleteHint}>
