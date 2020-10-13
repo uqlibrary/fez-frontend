@@ -74,6 +74,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             }
           />
           <Alert
+            alertId="alert-info"
             allowDismiss={false}
             customIcon={null}
             customType={null}
@@ -859,6 +860,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1050,6 +1052,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1234,6 +1237,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1425,6 +1429,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1609,6 +1614,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1800,6 +1806,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
