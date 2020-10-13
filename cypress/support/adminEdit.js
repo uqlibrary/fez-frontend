@@ -29,7 +29,7 @@ Cypress.Commands.add('adminEditNoAlerts', () => {
 });
 
 Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
-    cy.get('[data-testid=form-validation-warning]').within(() => {
+    cy.get('[data-testid=alert-warning]').within(() => {
         cy.get('.alert-text')
             .should('contain', 'Validation -')
             .find('li')
