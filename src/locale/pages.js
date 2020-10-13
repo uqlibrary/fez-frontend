@@ -933,10 +933,10 @@ export default {
                     title: 'Bibliographic',
                 },
                 grantInformation: {
-                    title: 'Grant information',
+                    title: 'Grants',
                 },
                 authorDetails: {
-                    title: 'Author details',
+                    title: 'Authors',
                 },
                 admin: {
                     title: 'Admin',

@@ -25,8 +25,8 @@ context('Design admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('[data-testid=author-details-section-header]').contains('Author details');
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-header]').contains('Authors');
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(0)
                 .should('contain', 'Designers');
@@ -36,7 +36,7 @@ context('Design admin edit', () => {
             });
         });
 
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(1)
                 .should('contain', 'Consultants');
@@ -46,7 +46,7 @@ context('Design admin edit', () => {
             });
         });
 
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(2)
                 .should('contain', 'Creators');
@@ -58,7 +58,7 @@ context('Design admin edit', () => {
 
         // ----------------------------------------- GRANT INFORMATION TAB ---------------------------------------------
         cy.log('Grant information tab');
-        cy.get('[data-testid=grant-information-section-header]').contains('Grant information');
+        cy.get('[data-testid=grants-section-header]').contains('Grants');
     });
 
     it('should render different sections as expected for non-NTRO subtype', () => {
@@ -73,8 +73,8 @@ context('Design admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('[data-testid=author-details-section-header]').contains('Author details');
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-header]').contains('Authors');
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(0)
                 .should('contain', 'Designers');
@@ -84,7 +84,7 @@ context('Design admin edit', () => {
             });
         });
 
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(1)
                 .should('contain', 'Contributors');
