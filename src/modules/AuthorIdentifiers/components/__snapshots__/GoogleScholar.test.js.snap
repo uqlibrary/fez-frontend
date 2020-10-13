@@ -96,6 +96,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
         xs={12}
       >
         <Alert
+          alertId="alert-error"
           allowDismiss={false}
           customIcon={null}
           customType={null}
@@ -252,6 +253,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
         xs={12}
       >
         <Alert
+          alertId="alert-info"
           allowDismiss={false}
           customIcon={null}
           customType={null}

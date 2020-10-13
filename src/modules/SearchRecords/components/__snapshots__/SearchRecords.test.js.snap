@@ -36,6 +36,7 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
       xs={12}
     >
       <Alert
+        alertId="alert-error"
         allowDismiss={false}
         customIcon={null}
         customType={null}

@@ -1515,6 +1515,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
 exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
 <Fragment>
   <Alert
+    alertId="alert-error"
     allowDismiss={false}
     customIcon={null}
     customType={null}
