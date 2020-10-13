@@ -133,7 +133,7 @@ context('Conference Paper admin edit', () => {
             cy.get('@bibliographicTab')
                 .find(selector)
                 .clear();
-            cy.get('[data-testid=form-validation-warning]').should('contain', errorMessages[index]);
+            cy.get('[data-testid=alert-warning]').should('contain', errorMessages[index]);
         });
     });
 });
