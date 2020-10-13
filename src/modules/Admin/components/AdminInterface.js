@@ -35,7 +35,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const AdminTab = withStyles({
     root: {
-        minWidth: 100,
+        minWidth: 84,
     },
 })(Tab);
 
