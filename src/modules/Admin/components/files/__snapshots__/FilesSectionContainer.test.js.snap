@@ -6,6 +6,7 @@ exports[`FilesSectionContainer component should render default view 1`] = `
     Object {
       "formValues": Object {},
       "onDeleteAttachedFile": [MockFunction],
+      "openAccessStatusId": 0,
     }
   }
 >
