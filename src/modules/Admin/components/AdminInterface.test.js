@@ -290,7 +290,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(4);
+        expect(wrapper.find('WithStyles(WithStyles(ForwardRef(Tab)))')).toHaveLength(4);
         expect(wrapper.find('TabContainer')).toHaveLength(1);
     });
 
@@ -322,7 +322,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(0);
+        expect(wrapper.find('WithStyles(AdminTab)')).toHaveLength(0);
         expect(wrapper.find('TabContainer')).toHaveLength(3);
     });
 
@@ -357,7 +357,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(5);
+        expect(wrapper.find('WithStyles(WithStyles(ForwardRef(Tab)))')).toHaveLength(5);
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
     });
 
@@ -404,7 +404,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(toJson(wrapper.find('WithStyles(Tab)'))).toMatchSnapshot();
+        expect(toJson(wrapper.find('WithStyles(AdminTab)'))).toMatchSnapshot();
     });
 
     it('should switch the tab', () => {

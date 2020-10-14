@@ -89,7 +89,7 @@ context('Research Report admin edit', () => {
         cy.get('.StandardPage form .StandardCard')
             .eq(5)
             .within(() => {
-                cy.get('h3').should('have.text', 'Grant information');
+                cy.get('h3').should('have.text', 'Grants');
 
                 cy.get('.AdminCard')
                     .eq(0)

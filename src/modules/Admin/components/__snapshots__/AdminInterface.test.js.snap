@@ -203,18 +203,10 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -610,18 +602,10 @@ exports[`AdminInterface component should display job created alert 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -987,18 +971,10 @@ exports[`AdminInterface component should display job created alert 2`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -1364,18 +1340,10 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -1741,18 +1709,10 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -2737,23 +2697,15 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3033,28 +2985,20 @@ exports[`AdminInterface component should render in create mode 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="files"
                 label="Files"
                 value="files"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3337,28 +3281,20 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="files"
                 label="Files"
                 value="files"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3680,28 +3616,20 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="files"
                 label="Files"
                 value="files"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3984,18 +3912,10 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"

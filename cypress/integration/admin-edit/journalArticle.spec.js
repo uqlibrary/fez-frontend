@@ -273,7 +273,7 @@ context('Journal Article admin edit', () => {
             .get('.StandardCard')
             .eq(2)
             .within(() => {
-                cy.get('h3').should('have.text', 'Author details');
+                cy.get('h3').should('have.text', 'Authors');
 
                 cy.get('.AdminCard')
                     .eq(0)
@@ -414,7 +414,7 @@ context('Journal Article admin edit', () => {
             .get('.StandardCard')
             .eq(4)
             .within(() => {
-                cy.get('h3').should('have.text', 'Grant information');
+                cy.get('h3').should('have.text', 'Grants');
 
                 cy.get('.AdminCard')
                     .eq(0)
