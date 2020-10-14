@@ -20,14 +20,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
         ],
         "title": "Consultants",
       },
-      Object {
-        "groups": Array [
-          Array [
-            "creators",
-          ],
-        ],
-        "title": "Creators",
-      },
     ]
   }
   disabled={false}

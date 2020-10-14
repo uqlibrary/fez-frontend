@@ -46,16 +46,6 @@ context('Design admin edit', () => {
             });
         });
 
-        cy.get('[data-testid=authors-section-content]').within(() => {
-            cy.get('h4')
-                .eq(2)
-                .should('contain', 'Creators');
-            const creators = record.fez_record_search_key_creator_name.map(item => item.rek_creator_name);
-            creators.forEach((creator, index) => {
-                cy.get(`[id=rek-creator-name-list-row-${index}-name-as-published]`).should('contain', creator);
-            });
-        });
-
         // ----------------------------------------- GRANT INFORMATION TAB ---------------------------------------------
         cy.log('Grant information tab');
         cy.get('[data-testid=grants-section-header]').contains('Grants');
