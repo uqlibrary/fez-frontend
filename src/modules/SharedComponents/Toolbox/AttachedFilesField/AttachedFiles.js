@@ -2,29 +2,32 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import globalLocale from 'locale/global';
-
-import viewRecordLocale from 'locale/viewRecord';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { makeStyles } from '@material-ui/styles';
-import { useRecordContext } from 'context';
-import { userIsAdmin, userIsAuthor } from 'hooks';
-
-import { mui1theme, openAccessConfig, routes, viewRecordsConfig } from 'config';
+import Delete from '@material-ui/icons/Delete';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
-import Delete from '@material-ui/icons/Delete';
+import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
 import WarningIcon from '@material-ui/icons/Warning';
+
+import globalLocale from 'locale/global';
+import viewRecordLocale from 'locale/viewRecord';
+
+import { useRecordContext, useFormValuesContext } from 'context';
+import { userIsAdmin, userIsAuthor } from 'hooks';
+
 import { isFileValid } from 'config/validation';
-import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
+import { mui1theme, openAccessConfig, routes, viewRecordsConfig } from 'config';
+
 import FileName from 'modules/ViewRecord/components/partials/FileName';
-import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
+import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
 import { stripHtml } from 'helpers/general';
@@ -73,112 +76,23 @@ const usePreview = initialPreviewState => {
 
 export const getUrl = (pid, fileName) => fileName && routes.pathConfig.file.url(pid, fileName);
 
-export const formatBytes = bytes => {
-    if (bytes === 0) {
-        return '0 Bytes';
-    }
-    const k = 1024;
-    const decimals = 2;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const index = Math.floor(Math.log(bytes) / Math.log(k));
-
-    return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
-};
-
-const getSecurityAccess = () => {
-    // const { isAdmin, isAuthor } = this.props;
-    return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
-};
-
-export const getFileOpenAccessStatus = (publication, dataStream) => {
+export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
     const embargoDate = dataStream.dsi_embargo_date;
-    const openAccessStatusId =
-        (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
-        null;
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
-        return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
+        return { isOpenAccess: false, embargoDate: null, openAccessStatusId };
     }
     if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
             isOpenAccess: false,
-            embargoDate: embargoDate,
-            openAccessStatusId: openAccessStatusId,
-            securityStatus: getSecurityAccess(),
+            embargoDate,
+            openAccessStatusId,
+            securityStatus: true,
         };
     }
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
 };
 
-const checkArrayForObjectValue = (value, dataStreams) => {
-    let resolvedFilename = null;
-    for (let i = 0; i < dataStreams.length; i++) {
-        if (dataStreams[i].dsi_dsid === value) {
-            resolvedFilename = dataStreams[i].dsi_dsid;
-        }
-    }
-    return resolvedFilename;
-};
-
-export const untranscodedItem = filename => {
-    let file = null;
-    if (filename.indexOf('_xt') >= 0) {
-        file = filename
-            .replace('_xt', '')
-            .split('.')
-            .slice(0, -1)
-            .join('.');
-    } else {
-        file = filename
-            .split('.')
-            .slice(0, -1)
-            .join('.');
-    }
-    return file;
-};
-
-const checkForThumbnail = (filename, dataStreams) => {
-    const file = untranscodedItem(filename);
-    return (
-        checkArrayForObjectValue(`thumbnail_${file}_compressed_t.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`thumbnail_${file}_t.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`thumbnail_${file}.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`${file}_t.jpg`, dataStreams) ||
-        null
-    );
-};
-
-const checkForPreview = (filename, dataStreams) => {
-    const file = untranscodedItem(filename);
-    return (
-        checkArrayForObjectValue(`preview_${file}_compressed_t.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`preview_${file}_t.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`preview_${file}.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`${file}_t.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`preview_${file}_compressed_t.mp4`, dataStreams) ||
-        checkArrayForObjectValue(`preview_${file}_t.mp4`, dataStreams) ||
-        checkArrayForObjectValue(`${file}_t.mp4`, dataStreams) ||
-        checkArrayForObjectValue(`preview_${file}_compressed_t.mp3`, dataStreams) ||
-        checkArrayForObjectValue(`preview_${file}_t.mp3`, dataStreams) ||
-        checkArrayForObjectValue(`${file}_t.mp3`, dataStreams) ||
-        null
-    );
-};
-
-const checkForWeb = (filename, dataStreams) => {
-    const file = untranscodedItem(filename);
-    return (
-        checkArrayForObjectValue(`web_${file}_compressed_t.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`web_${file}_t.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`web_${file}.jpg`, dataStreams) ||
-        checkArrayForObjectValue(`web_${file}_compressed_t.mp4`, dataStreams) ||
-        checkArrayForObjectValue(`web_${file}_t.mp4`, dataStreams) ||
-        checkArrayForObjectValue(`web_${file}_compressed_t.mp3`, dataStreams) ||
-        checkArrayForObjectValue(`web_${file}_t.mp3`, dataStreams) ||
-        null
-    );
-};
-
-export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
+export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
               const pid = dataStream.dsi_pid;
@@ -189,8 +103,7 @@ export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
               const previewFileName = checkForPreview(fileName, dataStreams);
               const webFileName = checkForWeb(fileName, dataStreams);
 
-              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
-              const securityAccess = getSecurityAccess(dataStream);
+              const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
 
               return {
                   pid,
@@ -208,13 +121,13 @@ export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
                       previewFileName,
                       allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
                       webFileName,
-                      securityAccess,
+                      securityAccess: true,
                   },
                   openAccessStatus,
                   previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
                   webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
                   mediaUrl: getUrl(pid, fileName),
-                  securityStatus: getSecurityAccess(dataStream),
+                  securityStatus: true,
                   embargoDate: dataStream.dsi_embargo_date,
               };
           })
@@ -241,9 +154,10 @@ export const AttachedFiles = ({
     const { record } = useRecordContext();
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
+    const { openAccessStatusId } = useFormValuesContext();
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-    const fileData = getFileData(record, dataStreams, isAdmin, isAuthor);
+    const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
 
     // tested in cypress
@@ -380,12 +294,12 @@ export const AttachedFiles = ({
                                                     xs={2}
                                                     id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                 >
-                                                    {!!item.openAccessStatus.embargoDate && (
+                                                    {openAccessConfig.openAccessFiles.includes(openAccessStatusId) && (
                                                         <FileUploadEmbargoDate
                                                             value={item.openAccessStatus.embargoDate}
                                                             onChange={onEmbargoDateChange(index)}
                                                             disabled={disabled}
-                                                            canBeCleared
+                                                            fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
                                                         />
                                                     )}
                                                 </Grid>

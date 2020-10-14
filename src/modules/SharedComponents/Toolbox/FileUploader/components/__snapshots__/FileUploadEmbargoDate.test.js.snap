@@ -12,7 +12,6 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
   }
   allowKeyboardControl={true}
   autoOk={true}
-  clearable={true}
   data-testid="undefined-input"
   format="DD/MM/YYYY"
   invalidDateMessage="Invalid Date Format"
@@ -100,7 +99,6 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
 
 exports[`Component FileUploadEmbargoDate should render with default setup with styles 1`] = `
 <FileUploadEmbargoDate
-  canBeCleared={false}
   classes={
     Object {
       "input": "FileUploadEmbargoDate-input-1",
