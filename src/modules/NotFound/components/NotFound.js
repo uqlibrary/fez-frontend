@@ -32,11 +32,11 @@ export const NotFound = () => {
         return <StandardPage standardPageId="authentication-required" {...locale.pages.authenticationRequired} />;
     }
 
-    if (!!account.id && !isValidFileRoute && !isValidRoute) {
-        return <StandardPage standardPageId="not-found" {...locale.pages.notFound} />;
-    }
-
-    return <div id="empty" />;
+    return (
+        !!account.id &&
+        !isValidFileRoute &&
+        !isValidRoute && <StandardPage standardPageId="not-found" {...locale.pages.notFound} />
+    );
 };
 
 export default React.memo(NotFound);
