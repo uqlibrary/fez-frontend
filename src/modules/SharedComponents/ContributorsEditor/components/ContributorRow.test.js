@@ -4,7 +4,7 @@ import { authorsSearch } from 'mock/data';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 import mediaQuery from 'css-mediaquery';
 import { act } from '@testing-library/react';
-import * as Hooks from 'hooks';
+import * as Hooks from 'hooks/userIsAdmin';
 
 function createMatchMedia(width) {
     return query => ({
