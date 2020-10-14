@@ -315,7 +315,6 @@ export const AdminInterface = ({
                     {/* Admin lock alert */}
                     {!!locked && <LockedAlert />}
                     <Grid container spacing={1}>
-                        {renderSaveStatusAlert}
                         <Grid item xs={12}>
                             <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
                                 {renderButtonBar('-top')}
