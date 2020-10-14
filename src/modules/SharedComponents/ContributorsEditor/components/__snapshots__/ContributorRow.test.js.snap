@@ -49,6 +49,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -181,6 +182,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -313,6 +315,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -416,6 +419,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -519,6 +523,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -699,6 +704,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -803,6 +809,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -907,6 +914,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1039,6 +1047,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1144,6 +1153,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1249,6 +1259,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1356,6 +1367,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1463,6 +1475,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
       canEdit={true}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1594,6 +1607,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1609,6 +1623,114 @@ exports[`Component ContributorRow should render a row with a disabled contributo
       contributor={
         Object {
           "disabled": true,
+        }
+      }
+      contributorRowId="test-list-row-0"
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="xs"
+    />
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Remove this record"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Remove this record"
+            data-testid="test-list-row-0-delete"
+            disabled={false}
+            id="test-list-row-delete-0"
+            onClick={[Function]}
+          >
+            <DeleteIcon
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</Fragment>
+`;
+
+exports[`Component ContributorRow should render contributor row linked class for admin users 1`] = `
+<Fragment>
+  <ConfirmationBox
+    confirmationBoxId="test-list-row-0-delete"
+    hideCancelButton={false}
+    isOpen={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onClose={[Function]}
+    showAlternateActionButton={false}
+    showInputForm={false}
+  />
+  <WithStyles(ForwardRef(ListItem))
+    aria-label="Select this record (Test) to assign it to you"
+    classes={
+      Object {
+        "root": "makeStyles-listItem-2 makeStyles-highlighted-4  makeStyles-disabledListItem-3 makeStyles-contributorLinked-11",
+      }
+    }
+    divider={true}
+    id="test-list-row-0"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <HowToRegIcon />
+      </WithStyles(ForwardRef(ListItemIcon))>
+    </Hidden>
+    <ContributorRowText
+      canEdit={false}
+      classes={
+        Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
+          "disabledListItem": "makeStyles-disabledListItem-3",
+          "hideIcon": "makeStyles-hideIcon-7",
+          "highlighted": "makeStyles-highlighted-4",
+          "identifierName": "makeStyles-identifierName-9",
+          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+          "listContainer": "makeStyles-listContainer-1",
+          "listItem": "makeStyles-listItem-2",
+          "primary": "makeStyles-primary-8",
+          "rowSelected": "makeStyles-rowSelected-5",
+          "selected": "makeStyles-selected-6",
+        }
+      }
+      contributor={
+        Object {
+          "affilication": "NotUQ",
+          "nameAsPublished": "Test",
+          "orgaff": "Test",
+          "orgtype": "NGO",
+          "uqIdentifier": "123456",
         }
       }
       contributorRowId="test-list-row-0"
@@ -1697,6 +1819,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",
@@ -1804,6 +1927,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
       canEdit={false}
       classes={
         Object {
+          "contributorLinked": "makeStyles-contributorLinked-11",
           "disabledListItem": "makeStyles-disabledListItem-3",
           "hideIcon": "makeStyles-hideIcon-7",
           "highlighted": "makeStyles-highlighted-4",

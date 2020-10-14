@@ -4,6 +4,7 @@ import { authorsSearch } from 'mock/data';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 import mediaQuery from 'css-mediaquery';
 import { act } from '@testing-library/react';
+import * as Hooks from 'hooks';
 
 function createMatchMedia(width) {
     return query => ({
@@ -465,10 +466,6 @@ describe('Component ContributorRow', () => {
                 orgtype: '453983',
             },
             width: 'xs',
-            classes: {
-                identifierName: 'test-class-1',
-                identifierSubtitle: 'test-class-2',
-            },
         });
 
         wrapper
@@ -490,8 +487,23 @@ describe('Component ContributorRow', () => {
                 affilication: AFFILIATION_TYPE_NOT_UQ,
                 orgtype: 'NGO',
             },
-            classes: {
-                highlighted: 'highlighted',
+            required: true,
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render contributor row linked class for admin users', () => {
+        const userIsAdmin = jest.spyOn(Hooks, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
+
+        const wrapper = setup({
+            contributor: {
+                nameAsPublished: 'Test',
+                orgaff: 'Test',
+                affilication: AFFILIATION_TYPE_NOT_UQ,
+                orgtype: 'NGO',
+                uqIdentifier: '123456',
             },
             required: true,
         });

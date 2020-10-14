@@ -1404,6 +1404,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                         "fontWeight": 400,
                       },
                     },
+                    "makeStyles": Object {
+                      "contributorLinked": Object {
+                        "backgroundColor": "red",
+                      },
+                    },
                   },
                   "palette": Object {
                     "accent": Object {
@@ -1916,6 +1921,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                             "MuiInputBase": Object {
                               "root": Object {
                                 "fontWeight": 400,
+                              },
+                            },
+                            "makeStyles": Object {
+                              "contributorLinked": Object {
+                                "backgroundColor": "red",
                               },
                             },
                           },
@@ -4970,6 +4980,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "fontWeight": 400,
                                                                   },
                                                                 },
+                                                                "makeStyles": Object {
+                                                                  "contributorLinked": Object {
+                                                                    "backgroundColor": "red",
+                                                                  },
+                                                                },
                                                               },
                                                               "palette": Object {
                                                                 "accent": Object {
@@ -5693,6 +5708,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
+                                                                  },
+                                                                },
+                                                                "makeStyles": Object {
+                                                                  "contributorLinked": Object {
+                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -6420,6 +6440,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "fontWeight": 400,
                                                                   },
                                                                 },
+                                                                "makeStyles": Object {
+                                                                  "contributorLinked": Object {
+                                                                    "backgroundColor": "red",
+                                                                  },
+                                                                },
                                                               },
                                                               "palette": Object {
                                                                 "accent": Object {
@@ -7143,6 +7168,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
+                                                                  },
+                                                                },
+                                                                "makeStyles": Object {
+                                                                  "contributorLinked": Object {
+                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -7870,6 +7900,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "fontWeight": 400,
                                                                   },
                                                                 },
+                                                                "makeStyles": Object {
+                                                                  "contributorLinked": Object {
+                                                                    "backgroundColor": "red",
+                                                                  },
+                                                                },
                                                               },
                                                               "palette": Object {
                                                                 "accent": Object {
@@ -8595,6 +8630,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "fontWeight": 400,
                                                                   },
                                                                 },
+                                                                "makeStyles": Object {
+                                                                  "contributorLinked": Object {
+                                                                    "backgroundColor": "red",
+                                                                  },
+                                                                },
                                                               },
                                                               "palette": Object {
                                                                 "accent": Object {
@@ -9318,6 +9358,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
+                                                                  },
+                                                                },
+                                                                "makeStyles": Object {
+                                                                  "contributorLinked": Object {
+                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -11231,6 +11276,11 @@ exports[`AdminContainer component should not render non-security errors for comm
                   "fontWeight": 400,
                 },
               },
+              "makeStyles": Object {
+                "contributorLinked": Object {
+                  "backgroundColor": "red",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -12578,6 +12628,11 @@ exports[`AdminContainer component should render default view 1`] = `
               "MuiInputBase": Object {
                 "root": Object {
                   "fontWeight": 400,
+                },
+              },
+              "makeStyles": Object {
+                "contributorLinked": Object {
+                  "backgroundColor": "red",
                 },
               },
             },
@@ -13934,6 +13989,11 @@ exports[`AdminContainer component should render memoized component with styles 1
                   "fontWeight": 400,
                 },
               },
+              "makeStyles": Object {
+                "contributorLinked": Object {
+                  "backgroundColor": "red",
+                },
+              },
             },
             "palette": Object {
               "accent": Object {
@@ -15273,6 +15333,11 @@ exports[`AdminContainer component should render mobile view 1`] = `
               "MuiInputBase": Object {
                 "root": Object {
                   "fontWeight": 400,
+                },
+              },
+              "makeStyles": Object {
+                "contributorLinked": Object {
+                  "backgroundColor": "red",
                 },
               },
             },

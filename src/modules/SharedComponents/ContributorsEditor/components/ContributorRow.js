@@ -18,7 +18,7 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
 import { ContributorRowText } from './ContributorRowText';
-import { useWidth, useConfirmationState } from 'hooks';
+import { useWidth, useConfirmationState, userIsAdmin } from 'hooks';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const useStyles = makeStyles(theme => ({
@@ -44,6 +44,9 @@ export const useStyles = makeStyles(theme => ({
     },
     rowSelected: {
         backgroundColor: (theme.palette.accent || {}).main,
+        '& svg': {
+            color: 'white !important',
+        },
     },
     selected: {
         color: 'white !important',
@@ -61,6 +64,15 @@ export const useStyles = makeStyles(theme => ({
     },
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
+    },
+    contributorLinked: {
+        color: theme.palette.primary.main,
+        '& p': {
+            fontWeight: 500,
+        },
+        '& svg': {
+            color: theme.palette.primary.main,
+        },
     },
 }));
 
@@ -95,6 +107,7 @@ export const ContributorRow = ({
 }) => {
     const classes = useStyles();
     const width = useWidth();
+    const isAdmin = userIsAdmin();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const _onDelete = React.useCallback(() => {
@@ -185,7 +198,10 @@ export const ContributorRow = ({
                 classes={{
                     root: `${classes.listItem} ${(required && classes.highlighted) || ''} ${(contributor.selected &&
                         classes.rowSelected) ||
-                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''}`.trim(),
+                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''} ${(isAdmin &&
+                        parseInt(contributor.uqIdentifier, 10) &&
+                        classes.contributorLinked) ||
+                        ''}`.trim(),
                 }}
                 onClick={_onSelect}
                 tabIndex={contributor.disabled || disabled ? -1 : 0}
