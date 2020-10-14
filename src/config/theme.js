@@ -3,56 +3,58 @@ import red from '@material-ui/core/colors/red';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import createPalette from '@material-ui/core/styles/createPalette';
 
-export const mui1theme = createMuiTheme({
-    palette: createPalette({
-        primary: {
-            light: '#962A8B',
-            main: '#51247A',
-            dark: '#3b1a59',
-            gradient: {
-                horizontal: {
-                    background: 'linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
-                    filter:
-                        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
-                        'endColorstr="#962a8b",GradientType=1 )',
-                },
-                diagonal: {
-                    background: 'linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
-                    filter:
-                        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
-                        'endColorstr="#962a8b",GradientType=1 )',
-                },
+const palette = createPalette({
+    primary: {
+        light: '#962A8B',
+        main: '#51247A',
+        dark: '#3b1a59',
+        gradient: {
+            horizontal: {
+                background: 'linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
+                filter:
+                    'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
+                    'endColorstr="#962a8b",GradientType=1 )',
+            },
+            diagonal: {
+                background: 'linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
+                filter:
+                    'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
+                    'endColorstr="#962a8b",GradientType=1 )',
             },
         },
-        secondary: {
-            light: '#f2f2f2',
-            main: '#595959',
-            dark: '#333333',
-        },
-        accent: {
-            light: '#54acff',
-            main: '#316799',
-            dark: '#2a557d',
-        },
-        white: {
-            main: '#FFFFFF',
-        },
-        warning: {
-            light: '#ff9a57',
-            main: '#bf5000',
-            dark: '#542400',
-        },
-        success: {
-            light: '#00a700',
-            main: '#007200',
-            dark: '#005000',
-        },
-        error: {
-            light: '#ff0000',
-            main: '#c80000',
-            dark: '#790000',
-        },
-    }),
+    },
+    secondary: {
+        light: '#f2f2f2',
+        main: '#595959',
+        dark: '#333333',
+    },
+    accent: {
+        light: '#54acff',
+        main: '#316799',
+        dark: '#2a557d',
+    },
+    white: {
+        main: '#FFFFFF',
+    },
+    warning: {
+        light: '#ff9a57',
+        main: '#bf5000',
+        dark: '#542400',
+    },
+    success: {
+        light: '#00a700',
+        main: '#007200',
+        dark: '#005000',
+    },
+    error: {
+        light: '#ff0000',
+        main: '#c80000',
+        dark: '#790000',
+    },
+});
+
+export const mui1theme = createMuiTheme({
+    palette: palette,
     status: {
         danger: red[500],
         warning: orange[500],
@@ -114,5 +116,21 @@ export const mui1theme = createMuiTheme({
         } else {
             return 'rgb(' + r + ', ' + g + ', ' + b + ')';
         }
+    },
+});
+
+export const adminTheme = createMuiTheme({
+    palette: palette,
+    overrides: {
+        MuiFormLabel: {
+            root: {
+                color: '#4085C6',
+            },
+        },
+        MuiInputBase: {
+            root: {
+                fontWeight: 400,
+            },
+        },
     },
 });
