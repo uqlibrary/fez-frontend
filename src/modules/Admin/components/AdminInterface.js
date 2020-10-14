@@ -31,6 +31,13 @@ import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 import { adminInterfaceConfig } from 'config/admin';
 import { onSubmit } from '../submitHandler';
+import { withStyles } from '@material-ui/core/styles';
+
+const AdminTab = withStyles({
+    root: {
+        minWidth: 84,
+    },
+})(Tab);
 
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
@@ -308,7 +315,6 @@ export const AdminInterface = ({
                     {/* Admin lock alert */}
                     {!!locked && <LockedAlert />}
                     <Grid container spacing={1}>
-                        {renderSaveStatusAlert}
                         <Grid item xs={12}>
                             <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
                                 {renderButtonBar('-top')}
@@ -321,24 +327,17 @@ export const AdminInterface = ({
                                 <Grid item xs={12}>
                                     <Tabs
                                         value={currentTabValue}
-                                        variant="fullWidth"
-                                        style={{
-                                            marginRight: -40,
-                                            marginLeft: -40,
-                                        }}
                                         classes={{
                                             indicator: classes.tabIndicator,
                                         }}
                                         onChange={handleTabChange}
-                                        variant="scrollable"
-                                        scrollButtons="on"
                                         indicatorColor="primary"
                                         textColor="primary"
                                     >
                                         {Object.keys(tabs)
                                             .filter(tab => tabs[tab].activated)
                                             .map(tab => (
-                                                <Tab
+                                                <AdminTab
                                                     key={tab}
                                                     value={tab}
                                                     label={

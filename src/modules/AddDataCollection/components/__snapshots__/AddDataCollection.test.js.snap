@@ -23,6 +23,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Alert
+                  alertId="alert-warning"
                   allowDismiss={false}
                   customIcon={null}
                   customType={null}
@@ -44,6 +45,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
+              "alertId": "alert-warning",
               "message": "lorem ipsum",
               "title": "File upload and/or notes post failed",
               "type": "warning",
@@ -1390,6 +1392,7 @@ exports[`AddDataCollection test should render component with a valid collection 
               Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
+              "alertId": "alert-warning",
               "message": "lorem ipsum",
               "title": "File upload and/or notes post failed",
               "type": "warning",
@@ -2732,6 +2735,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
               Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
+              "alertId": "alert-warning",
               "message": "lorem ipsum",
               "title": "File upload and/or notes post failed",
               "type": "warning",
@@ -4074,6 +4078,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the work.
             </p>,
             "fileFailConfirmationAlert": Object {
+              "alertId": "alert-warning",
               "message": "lorem ipsum",
               "title": "File upload and/or notes post failed",
               "type": "warning",

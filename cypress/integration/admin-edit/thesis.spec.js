@@ -124,7 +124,7 @@ context('Thesis admin edit', () => {
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
-                cy.get('h3').should('have.text', 'Author details');
+                cy.get('h3').should('have.text', 'Authors');
 
                 cy.get('.AdminCard')
                     .as('cards')

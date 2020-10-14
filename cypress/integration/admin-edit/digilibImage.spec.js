@@ -235,7 +235,7 @@ context('Digilib Image admin edit', () => {
             .eq(2)
             .as('authorDetailsTab')
             .within(() => {
-                cy.get('h3').should('have.text', 'Author details');
+                cy.get('h3').should('have.text', 'Authors');
 
                 cy.get('.AdminCard')
                     .as('cards')

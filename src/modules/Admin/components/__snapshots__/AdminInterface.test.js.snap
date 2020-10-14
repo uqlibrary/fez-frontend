@@ -66,30 +66,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            allowDismiss={false}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Request is being processed."
-            showLoader={true}
-            title="Saving"
-            type="info_outline"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -202,18 +178,10 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -268,6 +236,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             }
           />
           <Alert
+            alertId="alert-info"
             allowDismiss={false}
             customIcon={null}
             customType={null}
@@ -473,30 +442,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -607,18 +552,10 @@ exports[`AdminInterface component should display job created alert 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -672,6 +609,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -848,30 +786,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -982,18 +896,10 @@ exports[`AdminInterface component should display job created alert 2`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -1047,6 +953,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1223,30 +1130,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -1357,18 +1240,10 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -1422,6 +1297,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -1598,30 +1474,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
           item={true}
           xs={12}
         >
-          <div
-            style={
-              Object {
-                "height": 16,
-              }
-            }
-          />
-          <Alert
-            allowDismiss={true}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message="Work has been saved successfully"
-            showLoader={false}
-            title="Success"
-            type="done"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -1732,18 +1584,10 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
@@ -1797,6 +1641,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             }
           />
           <Alert
+            alertId="alert-done"
             allowDismiss={true}
             customIcon={null}
             customType={null}
@@ -2727,23 +2572,15 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3023,28 +2860,20 @@ exports[`AdminInterface component should render in create mode 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="files"
                 label="Files"
                 value="files"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3327,28 +3156,20 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="files"
                 label="Files"
                 value="files"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3670,28 +3491,20 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="files"
                 label="Files"
                 value="files"
               />
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="security"
                 label="Security"
                 value="security"
@@ -3974,18 +3787,10 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               }
               indicatorColor="primary"
               onChange={[Function]}
-              scrollButtons="on"
-              style={
-                Object {
-                  "marginLeft": -40,
-                  "marginRight": -40,
-                }
-              }
               textColor="primary"
               value="bibliographic"
-              variant="scrollable"
             >
-              <WithStyles(ForwardRef(Tab))
+              <WithStyles(WithStyles(ForwardRef(Tab)))
                 key="bibliographic"
                 label="Bibliographic"
                 value="bibliographic"

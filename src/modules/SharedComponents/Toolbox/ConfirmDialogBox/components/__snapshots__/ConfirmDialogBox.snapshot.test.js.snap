@@ -9,11 +9,15 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
     }
   }
 >
-  <WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogTitle))
+    data-testid="message-title"
+  >
     ENG: Confirmation
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))>
-    <WithStyles(ForwardRef(DialogContentText))>
+    <WithStyles(ForwardRef(DialogContentText))
+      data-testid="message-content"
+    >
       ENG: Are you sure?
     </WithStyles(ForwardRef(DialogContentText))>
   </WithStyles(ForwardRef(DialogContent))>
@@ -88,11 +92,15 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
     }
   }
 >
-  <WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogTitle))
+    data-testid="message-title"
+  >
     Confirmation
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))>
-    <WithStyles(ForwardRef(DialogContentText))>
+    <WithStyles(ForwardRef(DialogContentText))
+      data-testid="message-content"
+    >
       Are you sure?
     </WithStyles(ForwardRef(DialogContentText))>
   </WithStyles(ForwardRef(DialogContent))>
@@ -138,11 +146,15 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
     }
   }
 >
-  <WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogTitle))
+    data-testid="message-title"
+  >
     Confirmation
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))>
-    <WithStyles(ForwardRef(DialogContentText))>
+    <WithStyles(ForwardRef(DialogContentText))
+      data-testid="message-content"
+    >
       Are you sure?
     </WithStyles(ForwardRef(DialogContentText))>
   </WithStyles(ForwardRef(DialogContent))>
@@ -203,11 +215,15 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
     }
   }
 >
-  <WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogTitle))
+    data-testid="message-title"
+  >
     Confirmation
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))>
-    <WithStyles(ForwardRef(DialogContentText))>
+    <WithStyles(ForwardRef(DialogContentText))
+      data-testid="message-content"
+    >
       Are you sure?
     </WithStyles(ForwardRef(DialogContentText))>
   </WithStyles(ForwardRef(DialogContent))>
@@ -318,11 +334,15 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
     }
   }
 >
-  <WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogTitle))
+    data-testid="message-title"
+  >
     Confirmation
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))>
-    <WithStyles(ForwardRef(DialogContentText))>
+    <WithStyles(ForwardRef(DialogContentText))
+      data-testid="message-content"
+    >
       Are you sure?
     </WithStyles(ForwardRef(DialogContentText))>
   </WithStyles(ForwardRef(DialogContent))>
@@ -383,11 +403,15 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
     }
   }
 >
-  <WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogTitle))
+    data-testid="message-title"
+  >
     Confirmation
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))>
-    <WithStyles(ForwardRef(DialogContentText))>
+    <WithStyles(ForwardRef(DialogContentText))
+      data-testid="message-content"
+    >
       Are you sure?
     </WithStyles(ForwardRef(DialogContentText))>
   </WithStyles(ForwardRef(DialogContent))>
