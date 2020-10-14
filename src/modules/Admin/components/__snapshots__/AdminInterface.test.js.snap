@@ -40,7 +40,8 @@ exports[`AdminInterface component should disabled button and render alert for fo
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -416,7 +417,8 @@ exports[`AdminInterface component should display job created alert 1`] = `
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -760,7 +762,8 @@ exports[`AdminInterface component should display job created alert 2`] = `
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -1104,7 +1107,8 @@ exports[`AdminInterface component should display successful alert 1`] = `
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -1448,7 +1452,8 @@ exports[`AdminInterface component should display successful alert 2`] = `
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -1792,7 +1797,8 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -2102,7 +2108,8 @@ exports[`AdminInterface component should render default view as a full form view
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -2436,7 +2443,8 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -2760,7 +2768,8 @@ exports[`AdminInterface component should render in create mode 1`] = `
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -3017,7 +3026,8 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -3352,7 +3362,8 @@ exports[`AdminInterface component should render locked info alert 1`] = `
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"
@@ -3687,7 +3698,8 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
           color="primary"
           style={
             Object {
-              "fontSize": 24,
+              "fontSize": 18,
+              "fontWeight": 400,
             }
           }
           variant="h2"

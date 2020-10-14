@@ -23,6 +23,6 @@ export { default as incompleteRecord } from './incompleteRecord';
 export { viewRecordsConfig } from './viewRecord';
 export { trendingPublicationsConfig } from './trendingPublications';
 export { claimRecordConfig } from './claimRecord';
-export { mui1theme } from './theme';
+export { mui1theme, adminTheme } from './theme';
 export { history } from './history';
 export * as BULK_UPDATES from './bulkUpdates';
