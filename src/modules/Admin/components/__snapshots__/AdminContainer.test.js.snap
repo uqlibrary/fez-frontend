@@ -2934,7 +2934,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 color="primary"
                                                 style={
                                                   Object {
-                                                    "fontSize": 24,
+                                                    "fontSize": 18,
+                                                    "fontWeight": 400,
                                                   }
                                                 }
                                                 variant="h2"
@@ -2977,7 +2978,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   color="primary"
                                                   style={
                                                     Object {
-                                                      "fontSize": 24,
+                                                      "fontSize": 18,
+                                                      "fontWeight": 400,
                                                     }
                                                   }
                                                   variant="h2"
@@ -2986,7 +2988,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     className="MuiTypography-root MuiTypography-h2 MuiTypography-colorPrimary"
                                                     style={
                                                       Object {
-                                                        "fontSize": 24,
+                                                        "fontSize": 18,
+                                                        "fontWeight": 400,
                                                       }
                                                     }
                                                   >
