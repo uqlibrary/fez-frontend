@@ -5,13 +5,11 @@ import * as routes from 'config/routes';
 
 import { accounts } from 'mock/data/account';
 
-import { render, WithReduxStore, WithRouter, act } from 'test-utils';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 import Immutable from 'immutable';
 import * as ReactRouterHooks from 'react-router';
 import * as Context from 'context';
-import * as FavouriteSearchAction from 'actions/favouriteSearch';
 
-import * as repositories from 'repositories';
 import { waitForElementToBeRemoved, waitFor } from '@testing-library/dom';
 
 jest.mock('react-router');
@@ -29,12 +27,10 @@ function setup(state = {}, renderer = render) {
 describe('NotFound page component', () => {
     let useLocationHook;
     let useAccountContext;
-    let getFavouriteSearchAlias;
 
     beforeEach(() => {
         useLocationHook = jest.spyOn(ReactRouterHooks, 'useLocation');
         useAccountContext = jest.spyOn(Context, 'useAccountContext');
-        getFavouriteSearchAlias = jest.spyOn(FavouriteSearchAction, 'getFavouriteSearchAlias');
     });
 
     afterEach(() => {
@@ -76,9 +72,7 @@ describe('NotFound page component', () => {
         useLocationHook.mockImplementation(() => ({ pathname: '/abcd' }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
-        const { getByText, getByTestId } = setup();
-
-        await waitForElementToBeRemoved(() => getByTestId('empty'));
+        const { getByText } = setup();
 
         await waitFor(() => getByText('Page not found'));
 
@@ -115,30 +109,6 @@ describe('NotFound page component', () => {
             getByText('If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.'),
         ).toBeInTheDocument();
 
-        expect(getFavouriteSearchAlias).not.toBeCalled();
-
-        done();
-    });
-
-    it('should redirect to records search page if alias found', async done => {
-        mockApi.onGet(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 'abcd' }).apiUrl).reply(200, {
-            data: { fvs_id: 1, fvs_alias: 'abcd', fvs_search_parameters: '/records/search?test=parameters' },
-        });
-        useLocationHook.mockImplementation(() => ({ pathname: '/abcd' }));
-        useAccountContext.mockImplementation(() => ({ account: accounts.uqstaff }));
-
-        const { getByTestId } = setup({
-            favouriteSearchReducer: {
-                existingAliasChecking: false,
-                existingAlias: null,
-            },
-        });
-
-        act(() => {
-            expect(getFavouriteSearchAlias).toHaveBeenCalledWith({ fvs_alias: 'abcd' });
-        });
-
-        await waitForElementToBeRemoved(() => getByTestId('empty'));
         done();
     });
 });
