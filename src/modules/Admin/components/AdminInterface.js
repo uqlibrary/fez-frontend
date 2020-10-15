@@ -286,7 +286,7 @@ export const AdminInterface = ({
                         onCancelAction={() => navigateToViewRecord(record.rek_pid)}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
-                        <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
+                        <Typography variant="h2" color="primary" style={{ fontSize: 18, fontWeight: 400 }}>
                             {!createMode
                                 ? ReactHtmlParser(
                                       `${pageTitlePrefix} ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
