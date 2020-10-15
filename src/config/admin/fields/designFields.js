@@ -119,12 +119,19 @@ export default {
     ],
 };
 
-export const validateDesign = ({ bibliographicSection: bs }, { validationErrorsSummary: summary }) => ({
+export const validateDesign = ({ bibliographicSection: bs }, { validationErrorsSummary: summary }, isNtro) => ({
     bibliographicSection: {
-        ...((bs.hasOwnProperty('fez_record_search_key_publisher') &&
+        ...((isNtro &&
             !((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
                 fez_record_search_key_publisher: {
                     rek_publisher: summary.rek_publisher,
+                },
+            }) ||
+            {}),
+        ...((isNtro &&
+            !((bs || {}).fez_record_search_key_place_of_publication || {}).rek_place_of_publication && {
+                fez_record_search_key_place_of_publication: {
+                    rek_place_of_publication: summary.rek_place_of_publication,
                 },
             }) ||
             {}),

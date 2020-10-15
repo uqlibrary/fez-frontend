@@ -126,7 +126,7 @@ export default values => {
             errors = deepmerge(errors, departmentTechnicalReportErrors);
             break;
         case PUBLICATION_TYPE_DESIGN:
-            const designErrors = validateDesign(data, locale);
+            const designErrors = validateDesign(data, locale, isNtro);
             errors = deepmerge(errors, designErrors);
             break;
         case PUBLICATION_TYPE_DIGILIB_IMAGE:
