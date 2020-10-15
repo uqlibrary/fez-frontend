@@ -18,7 +18,7 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
 import { ContributorRowText } from './ContributorRowText';
-import { useWidth, useConfirmationState, userIsAdmin } from 'hooks';
+import { useWidth, useConfirmationState } from 'hooks';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const useStyles = makeStyles(theme => ({
@@ -107,7 +107,6 @@ export const ContributorRow = ({
 }) => {
     const classes = useStyles();
     const width = useWidth();
-    const isAdmin = userIsAdmin();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const _onDelete = React.useCallback(() => {
@@ -198,7 +197,7 @@ export const ContributorRow = ({
                 classes={{
                     root: `${classes.listItem} ${(required && classes.highlighted) || ''} ${(contributor.selected &&
                         classes.rowSelected) ||
-                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''} ${(isAdmin &&
+                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''} ${(canEdit &&
                         parseInt(contributor.uqIdentifier, 10) &&
                         classes.contributorLinked) ||
                         ''}`.trim(),

@@ -1666,7 +1666,7 @@ exports[`Component ContributorRow should render contributor row linked class for
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
-      canEdit={false}
+      canEdit={true}
       classes={
         Object {
           "contributorLinked": "makeStyles-contributorLinked-11",
@@ -1699,6 +1699,30 @@ exports[`Component ContributorRow should render contributor row linked class for
       width="xs"
     />
     <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Edit this record"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Edit this record"
+            data-testid="test-list-row-0-edit"
+            disabled={false}
+            id="test-list-row-edit-0"
+            onClick={[Function]}
+          >
+            <EditIcon
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
       <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
