@@ -394,6 +394,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -453,6 +454,24 @@ exports[`ConferencePaperForm renders  component 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",

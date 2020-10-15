@@ -88,4 +88,17 @@ describe('ResearchReportForm renders ', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should normalize the issn input value', () => {
+        const testProps = {
+            formValues: {
+                get: jest.fn(),
+            },
+            isNtro: true,
+        };
+        const wrapper = setup(testProps);
+        expect(wrapper.instance().normalizeIssn('12345678')).toEqual('1234-5678');
+        expect(wrapper.instance().normalizeIssn('1234-5678')).toEqual('1234-5678');
+        expect(wrapper.instance().normalizeIssn('1234')).toEqual('1234');
+    });
 });

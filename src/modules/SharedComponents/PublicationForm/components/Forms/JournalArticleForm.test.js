@@ -48,4 +48,11 @@ describe('JournalArticleForm renders ', () => {
                 .find('Field').length,
         ).toEqual(6);
     });
+
+    it('should normalize the issn input value', () => {
+        const wrapper = setup();
+        expect(wrapper.instance().normalizeIssn('12345678')).toEqual('1234-5678');
+        expect(wrapper.instance().normalizeIssn('1234-5678')).toEqual('1234-5678');
+        expect(wrapper.instance().normalizeIssn('1234')).toEqual('1234');
+    });
 });

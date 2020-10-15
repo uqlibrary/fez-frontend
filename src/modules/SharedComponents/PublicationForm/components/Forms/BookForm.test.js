@@ -81,4 +81,11 @@ describe('BookForm renders ', () => {
         const wrapper = setup({ isNtro: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should normalize the issn input value', () => {
+        const wrapper = setup();
+        expect(wrapper.instance().normalizeIssn('12345678')).toEqual('1234-5678');
+        expect(wrapper.instance().normalizeIssn('1234-5678')).toEqual('1234-5678');
+        expect(wrapper.instance().normalizeIssn('1234')).toEqual('1234');
+    });
 });

@@ -10,7 +10,7 @@ import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
 import { locale } from 'locale';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { IssnListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -25,6 +25,11 @@ export default class JournalArticleForm extends Component {
     constructor(props) {
         super(props);
     }
+
+    normalizeIssn = value => {
+        const newValue = value.replace('-', '');
+        return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
+    };
 
     render() {
         // path to the locale data for each of the sections
@@ -119,7 +124,7 @@ export default class JournalArticleForm extends Component {
                     <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                         <Typography>{locale.components.issnForm.text}</Typography>
                         <Field
-                            component={ListEditorField}
+                            component={IssnListEditorField}
                             remindToAdd
                             isValid={validation.isValidIssn}
                             name="fez_record_search_key_issn"
@@ -128,6 +133,8 @@ export default class JournalArticleForm extends Component {
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                             listEditorId="issn"
                             disabled={this.props.submitting}
+                            inputNormalizer={this.normalizeIssn}
+                            rowItemTemplate={IssnRowItemTemplate}
                         />
                     </StandardCard>
                 </Grid>
