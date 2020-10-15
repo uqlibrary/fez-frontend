@@ -16,20 +16,17 @@ context('Digilib Image admin edit', () => {
         cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1);
-        cy.adminEditCheckTabErrorBadge(5);
+        cy.adminEditCheckTabErrorBadge('bibliographic');
+        cy.adminEditCheckTabErrorBadge('files');
     });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-header]').should('have.text', 'Bibliographic');
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
-                cy.get('h3').should('have.text', 'Bibliographic');
-
                 cy.get('h4').should('contain', 'Bibliographic');
 
                 cy.get('[data-testid=rek-rights-input]').should(
@@ -230,13 +227,10 @@ context('Digilib Image admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form >div >div')
-            .get('.StandardCard')
-            .eq(2)
+        cy.get('[data-testid=authors-section-header]').should('have.text', 'Authors');
+        cy.get('[data-testid=authors-section-content]')
             .as('authorDetailsTab')
             .within(() => {
-                cy.get('h3').should('have.text', 'Authors');
-
                 cy.get('.AdminCard')
                     .as('cards')
                     .eq(0)

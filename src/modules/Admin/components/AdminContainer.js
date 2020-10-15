@@ -187,6 +187,11 @@ export const AdminContainer = ({
                             disabled
                             unlockRecord={unlockRecord}
                             tabs={{
+                                admin: {
+                                    component: AdminSection,
+                                    activated: isActivated(),
+                                    numberOfErrors: tabErrors.current.adminSection || null,
+                                },
                                 identifiers: {
                                     component: IdentifiersSection,
                                     activated: isActivated(),
@@ -196,15 +201,10 @@ export const AdminContainer = ({
                                     activated: isActivated(),
                                     numberOfErrors: tabErrors.current.bibliographicSection || null,
                                 },
-                                authorDetails: {
+                                authors: {
                                     component: AuthorsSection,
                                     activated: isActivated(),
                                     numberOfErrors: tabErrors.current.authorsSection || null,
-                                },
-                                admin: {
-                                    component: AdminSection,
-                                    activated: isActivated(),
-                                    numberOfErrors: tabErrors.current.adminSection || null,
                                 },
                                 ntro: {
                                     component: NtroSection,
@@ -214,7 +214,7 @@ export const AdminContainer = ({
                                             !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
                                         ),
                                 },
-                                grantInformation: {
+                                grants: {
                                     component: GrantInformationSection,
                                     activated:
                                         isActivated() &&

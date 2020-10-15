@@ -17,7 +17,7 @@ context('Data Collection admin edit', () => {
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1);
+        cy.adminEditCheckTabErrorBadge('bibliographic');
 
         cy.log('Finished testing tabs'); // This makes the test suite a bit more stable. It's magic :p
     });
@@ -25,19 +25,15 @@ context('Data Collection admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Dataset name');
             });
 
-        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
-        cy.log('Additional Information tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(3)
+        // -------------------------------------- ADMIN TAB -----------------------------------------
+        cy.log('Admin tab');
+        cy.get('[data-testid=admin-section-content]')
             .as('additionalInformationTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Additional information');

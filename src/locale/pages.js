@@ -932,10 +932,10 @@ export default {
                 bibliographic: {
                     title: 'Bibliographic',
                 },
-                grantInformation: {
+                grants: {
                     title: 'Grants',
                 },
-                authorDetails: {
+                authors: {
                     title: 'Authors',
                 },
                 admin: {
