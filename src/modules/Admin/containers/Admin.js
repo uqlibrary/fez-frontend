@@ -81,6 +81,7 @@ const getInitialFormValues = (recordToView, recordType) => {
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
             filesSection:
                 (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
+            notesSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'notes')) || {},
         },
     };
 };

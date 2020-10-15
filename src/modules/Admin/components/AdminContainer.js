@@ -15,15 +15,16 @@ import AdminInterface from './AdminInterface';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import SecuritySection from './security/SecuritySectionContainer';
-import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
-import BibliographicSection from './bibliographic/BibliographicSectionContainer';
-import AdminSection from './admin/AdminSectionContainer';
 import AddSection from './add/AddSectionContainer';
-import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
-import FilesSection from './files/FilesSectionContainer';
-import NtroSection from './ntro/NtroSectionContainer';
+import AdminSection from './admin/AdminSectionContainer';
 import AuthorsSection from './authors/AuthorsSectionContainer';
+import BibliographicSection from './bibliographic/BibliographicSectionContainer';
+import FilesSection from './files/FilesSectionContainer';
+import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
+import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
+import NotesSection from './notes/NotesSection';
+import NtroSection from './ntro/NtroSectionContainer';
+import SecuritySection from './security/SecuritySectionContainer';
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY, RECORD_TYPE_RECORD } from 'config/general';
 import { StandardPage } from '../../SharedComponents/Toolbox/StandardPage';
@@ -227,6 +228,10 @@ export const AdminContainer = ({
                                                 !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
                                             )
                                         ),
+                                },
+                                notes: {
+                                    component: NotesSection,
+                                    activated: isActivated(),
                                 },
                                 files: {
                                     component: FilesSection,

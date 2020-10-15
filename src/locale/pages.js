@@ -944,6 +944,9 @@ export default {
                 ntro: {
                     title: 'NTRO',
                 },
+                notes: {
+                    title: 'Notes',
+                },
                 files: {
                     title: 'Files',
                 },

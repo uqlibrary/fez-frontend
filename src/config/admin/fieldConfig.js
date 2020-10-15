@@ -93,7 +93,7 @@ export default {
         rek_herdc_notes: {
             component: RichEditorField,
             componentProps: {
-                name: 'adminSection.rek_herdc_notes',
+                name: 'notesSection.rek_herdc_notes',
                 title: 'HERDC notes',
                 disabled: true,
                 titleProps: {
@@ -110,7 +110,7 @@ export default {
         internalNotes: {
             component: RichEditorField,
             componentProps: {
-                name: 'adminSection.internalNotes',
+                name: 'notesSection.internalNotes',
                 title: 'Internal notes',
                 titleProps: {
                     variant: 'caption',
@@ -865,7 +865,7 @@ export default {
         additionalNotes: {
             component: RichEditorField,
             componentProps: {
-                name: 'adminSection.additionalNotes',
+                name: 'notesSection.additionalNotes',
                 title: 'Additional notes',
                 titleProps: {
                     variant: 'caption',
