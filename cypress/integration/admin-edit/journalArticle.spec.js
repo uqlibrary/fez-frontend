@@ -492,6 +492,9 @@ context('Journal Article admin edit', () => {
         cy.get('[data-testid=files-section-content]').within(() => {
             cy.get('h4')
                 .eq(2)
+                .should('contain', 'Advisory statement');
+            cy.get('h4')
+                .eq(3)
                 .should('contain', 'Copyright agreement');
             cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
                 if (record.rek_copyright === 'on') {

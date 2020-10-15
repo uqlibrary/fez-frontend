@@ -228,6 +228,11 @@ context('Thesis admin edit', () => {
                 cy.get('@cards')
                     .eq(1)
                     .within(() => {
+                        cy.get('h4').should('contain', 'Advisory statement');
+                    });
+                cy.get('@cards')
+                    .eq(2)
+                    .within(() => {
                         cy.get('h4').should('contain', 'Copyright agreement');
                         cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
                             if (record.rek_copyright === 'on') {

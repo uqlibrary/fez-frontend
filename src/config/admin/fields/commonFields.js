@@ -1,5 +1,5 @@
 export default {
-    files: ({ isDataset, displayAdvisoryStatement } = { isDataset: false, displayAdvisoryStatement: false }) => [
+    files: ({ isDataset } = { isDataset: false }) => [
         {
             groups: [['fez_datastream_info']],
         },
@@ -7,14 +7,10 @@ export default {
             title: 'Files',
             groups: [['files']],
         },
-        ...(displayAdvisoryStatement
-            ? [
-                  {
-                      title: 'Advisory statement',
-                      groups: [['advisoryStatement']],
-                  },
-              ]
-            : []),
+        {
+            title: 'Advisory statement',
+            groups: [['advisoryStatement']],
+        },
         {
             title: isDataset ? 'Deposit agreement' : 'Copyright agreement',
             groups: [['rek_copyright']],
