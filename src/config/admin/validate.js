@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { locale } from 'locale';
 import { dateTimeYear } from 'config/validation';
 
@@ -26,6 +27,7 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
+    NTRO_SUBTYPES,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -66,11 +68,16 @@ export default values => {
 
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
 
-    dateTimeYear(
-        ((data.bibliographicSection || {}).fez_record_search_key_project_date_start || {}).rek_project_date_start,
-    ) &&
-        (errors.bibliographicSection.fez_record_search_key_project_date_start = {
-            rek_project_date_start: summary.rek_project_date_start,
+    const isNtro =
+        !!data.adminSection &&
+        !!data.adminSection.rek_subtype &&
+        !!NTRO_SUBTYPES.includes(!!data.adminSection.rek_subtype);
+    const projectStartDate = ((data.bibliographicSection || {}).fez_record_search_key_project_start_date || {})
+        .rek_project_start_date;
+
+    ((isNtro && !projectStartDate) || !moment(projectStartDate).isValid()) &&
+        (errors.bibliographicSection.fez_record_search_key_project_start_date = {
+            rek_project_start_date: summary.rek_project_start_date,
         });
 
     dateTimeYear(((data.bibliographicSection || {}).fez_record_search_key_date_available || {}).rek_date_available) &&

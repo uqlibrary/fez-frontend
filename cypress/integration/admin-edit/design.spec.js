@@ -14,7 +14,7 @@ context('Design admin edit', () => {
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1, '1');
+        cy.adminEditCheckTabErrorBadge(1, '2');
     });
 
     it('should render the different sections as expected', () => {

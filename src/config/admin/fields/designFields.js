@@ -128,7 +128,7 @@ export const validateDesign = ({ bibliographicSection: bs }, { validationErrorsS
                 },
             }) ||
             {}),
-        ...((bs.hasOwnProperty('fez_record_search_key_project_start_date') &&
+        ...((isNtro &&
             !((bs || {}).fez_record_search_key_project_start_date || {}).rek_project_start_date && {
                 fez_record_search_key_project_start_date: {
                     rek_project_start_date: summary.rek_project_start_date,

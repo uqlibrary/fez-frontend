@@ -1899,6 +1899,9 @@ export default {
             fez_record_search_key_project_name: () => ({
                 name: 'bibliographicSection.fez_record_search_key_project_name.rek_project_name',
             }),
+            fez_record_search_key_project_start_date: () => ({
+                validate: [validation.required],
+            }),
             authors: ({ isNtro }) => ({
                 isNtro,
                 locale: { ...locale.components.designers.field },
