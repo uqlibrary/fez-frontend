@@ -72,10 +72,11 @@ export default values => {
         !!data.adminSection &&
         !!data.adminSection.rek_subtype &&
         !!NTRO_SUBTYPES.includes(!!data.adminSection.rek_subtype);
+
     const projectStartDate = ((data.bibliographicSection || {}).fez_record_search_key_project_start_date || {})
         .rek_project_start_date;
-
-    ((isNtro && !projectStartDate) || !moment(projectStartDate).isValid()) &&
+    !!projectStartDate &&
+        !moment(projectStartDate).isValid() &&
         (errors.bibliographicSection.fez_record_search_key_project_start_date = {
             rek_project_start_date: summary.rek_project_start_date,
         });
