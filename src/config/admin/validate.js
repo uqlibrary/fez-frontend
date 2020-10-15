@@ -27,7 +27,6 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
-    NTRO_SUBTYPES,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -67,11 +66,6 @@ export default values => {
     };
 
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
-
-    const isNtro =
-        !!data.adminSection &&
-        !!data.adminSection.rek_subtype &&
-        !!NTRO_SUBTYPES.includes(!!data.adminSection.rek_subtype);
 
     const projectStartDate = ((data.bibliographicSection || {}).fez_record_search_key_project_start_date || {})
         .rek_project_start_date;
@@ -127,7 +121,7 @@ export default values => {
             errors = deepmerge(errors, departmentTechnicalReportErrors);
             break;
         case PUBLICATION_TYPE_DESIGN:
-            const designErrors = validateDesign(data, locale, isNtro);
+            const designErrors = validateDesign(data, locale);
             errors = deepmerge(errors, designErrors);
             break;
         case PUBLICATION_TYPE_DIGILIB_IMAGE:

@@ -1,4 +1,5 @@
 import commonFields from './commonFields';
+import { NTRO_SUBTYPES } from 'config/general';
 
 export default {
     ...commonFields,
@@ -119,28 +120,34 @@ export default {
     ],
 };
 
-export const validateDesign = ({ bibliographicSection: bs }, { validationErrorsSummary: summary }, isNtro) => ({
-    bibliographicSection: {
-        ...((isNtro &&
-            !((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
-                fez_record_search_key_publisher: {
-                    rek_publisher: summary.rek_publisher,
-                },
-            }) ||
-            {}),
-        ...((isNtro &&
-            !((bs || {}).fez_record_search_key_place_of_publication || {}).rek_place_of_publication && {
-                fez_record_search_key_place_of_publication: {
-                    rek_place_of_publication: summary.rek_place_of_publication,
-                },
-            }) ||
-            {}),
-        ...((isNtro &&
-            !((bs || {}).fez_record_search_key_project_start_date || {}).rek_project_start_date && {
-                fez_record_search_key_project_start_date: {
-                    rek_project_start_date: summary.rek_project_start_date,
-                },
-            }) ||
-            {}),
-    },
-});
+export const validateDesign = (
+    { bibliographicSection: bs, adminSection: as },
+    { validationErrorsSummary: summary },
+) => {
+    const isNtro = !!as && !!as.rek_subtype && !!NTRO_SUBTYPES.includes(!!as.rek_subtype);
+    return {
+        bibliographicSection: {
+            ...((isNtro &&
+                !((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
+                    fez_record_search_key_publisher: {
+                        rek_publisher: summary.rek_publisher,
+                    },
+                }) ||
+                {}),
+            ...((isNtro &&
+                !((bs || {}).fez_record_search_key_place_of_publication || {}).rek_place_of_publication && {
+                    fez_record_search_key_place_of_publication: {
+                        rek_place_of_publication: summary.rek_place_of_publication,
+                    },
+                }) ||
+                {}),
+            ...((isNtro &&
+                !((bs || {}).fez_record_search_key_project_start_date || {}).rek_project_start_date && {
+                    fez_record_search_key_project_start_date: {
+                        rek_project_start_date: summary.rek_project_start_date,
+                    },
+                }) ||
+                {}),
+        },
+    };
+};
