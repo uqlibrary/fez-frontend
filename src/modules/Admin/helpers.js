@@ -56,7 +56,9 @@ export const identifiersParams = record => ({
         PUBLICATION_TYPE_REFERENCE_ENTRY,
         PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
     ].includes(record.rek_display_type),
-    displayPubmedCentral: record.rek_display_type === PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    displayPubmedCentral: [PUBLICATION_TYPE_JOURNAL_ARTICLE, PUBLICATION_TYPE_CONFERENCE_PAPER].includes(
+        record.rek_display_type,
+    ),
     displayIsmn: record.rek_subtype === NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     displayIsrc:
         record.rek_display_type === PUBLICATION_TYPE_CREATIVE_WORK &&
