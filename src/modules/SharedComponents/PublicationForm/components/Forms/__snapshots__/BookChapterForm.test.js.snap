@@ -514,6 +514,7 @@ exports[`BookChapterForm renders  component 1`] = `
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -1142,6 +1143,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>

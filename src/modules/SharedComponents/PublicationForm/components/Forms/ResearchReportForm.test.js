@@ -103,7 +103,13 @@ describe('ResearchReportForm renders ', () => {
     });
 
     it('should transform the issn output value', () => {
-        const wrapper = setup();
+        const testProps = {
+            formValues: {
+                get: jest.fn(),
+            },
+            isNtro: true,
+        };
+        const wrapper = setup(testProps);
         expect(
             wrapper.instance().transformIssn({ value: 'rek_issn', order: 'rek_issn_order' }, { key: '1234-5678' }, 3),
         ).toEqual({ rek_issn: '1234-5678', rek_issn_order: 3 });

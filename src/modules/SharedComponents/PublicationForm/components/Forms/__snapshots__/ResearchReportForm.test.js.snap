@@ -477,6 +477,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -1034,6 +1035,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>

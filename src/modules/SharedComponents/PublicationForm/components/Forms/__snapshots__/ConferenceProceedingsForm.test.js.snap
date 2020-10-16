@@ -449,6 +449,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
