@@ -55,4 +55,11 @@ describe('JournalArticleForm renders ', () => {
         expect(wrapper.instance().normalizeIssn('1234-5678')).toEqual('1234-5678');
         expect(wrapper.instance().normalizeIssn('1234')).toEqual('1234');
     });
+
+    it('should transform the issn output value', () => {
+        const wrapper = setup();
+        expect(
+            wrapper.instance().transformIssn({ value: 'rek_issn', order: 'rek_issn_order' }, { key: '1234-5678' }, 3),
+        ).toEqual({ rek_issn: '1234-5678', rek_issn_order: 3 });
+    });
 });

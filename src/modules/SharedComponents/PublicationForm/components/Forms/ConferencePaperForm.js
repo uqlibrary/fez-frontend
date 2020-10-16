@@ -29,6 +29,11 @@ export default class ConferencePaperForm extends Component {
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
     };
 
+    transformIssn = (searchKey, item, index) => ({
+        [searchKey.value]: item.key,
+        [searchKey.order]: index,
+    });
+
     render() {
         const txt = formLocale.conferencePaper;
         return (
@@ -190,6 +195,7 @@ export default class ConferencePaperForm extends Component {
                             disabled={this.props.submitting}
                             inputNormalizer={this.normalizeIssn}
                             rowItemTemplate={IssnRowItemTemplate}
+                            transformFunction={this.transformIssn}
                         />
                     </StandardCard>
                 </Grid>
