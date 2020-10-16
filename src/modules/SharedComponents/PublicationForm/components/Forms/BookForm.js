@@ -36,6 +36,11 @@ export default class BookForm extends Component {
         super(props);
     }
 
+    transformIssn = (searchKey, item, index) => ({
+        [searchKey.value]: item.key,
+        [searchKey.order]: index,
+    });
+
     normalizeIssn = value => {
         const newValue = value.replace('-', '');
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
@@ -217,6 +222,7 @@ export default class BookForm extends Component {
                             disabled={this.props.submitting}
                             inputNormalizer={this.normalizeIssn}
                             rowItemTemplate={IssnRowItemTemplate}
+                            transformFunction={this.transformIssn}
                         />
                     </StandardCard>
                 </Grid>

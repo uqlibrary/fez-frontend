@@ -41,6 +41,11 @@ export default class ResearchReportForm extends Component {
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
     };
 
+    transformIssn = (searchKey, item, index) => ({
+        [searchKey.value]: item.key,
+        [searchKey.order]: index,
+    });
+
     getNumbersOnly = value => {
         return value.replace(/[^\d]/g, '');
     };

@@ -31,6 +31,11 @@ export default class JournalArticleForm extends Component {
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
     };
 
+    transformIssn = (searchKey, item, index) => ({
+        [searchKey.value]: item.key,
+        [searchKey.order]: index,
+    });
+
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.journalArticle;

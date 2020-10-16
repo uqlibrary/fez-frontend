@@ -35,6 +35,11 @@ export default class BookChapterForm extends Component {
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
     };
 
+    transformIssn = (searchKey, item, index) => ({
+        [searchKey.value]: item.key,
+        [searchKey.order]: index,
+    });
+
     render() {
         const txt = formLocale.bookChapter;
         const formValues = this.props.formValues && this.props.formValues.toJS();
