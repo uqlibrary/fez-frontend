@@ -12,7 +12,7 @@ context('Creative Work admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(9);
         cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');

@@ -12,7 +12,7 @@ context('Image admin edit', () => {
     });
 
     it('should load with specified elements', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');

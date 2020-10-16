@@ -12,7 +12,7 @@ context('Conference Paper admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();

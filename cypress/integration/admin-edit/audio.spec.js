@@ -12,7 +12,7 @@ context('Audio admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditVerifyAlerts(1, ['Publication date is required']);
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');

@@ -12,7 +12,7 @@ context('Thesis admin edit', () => {
     });
 
     it('should load the nav bar', () => {
-        cy.adminEditCountCards(6);
+        cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -185,6 +185,22 @@ context('Thesis admin edit', () => {
                         .should('have.value', record.fez_record_search_key_oa_status.rek_oa_status.toString())
                         .get('[data-testid=rek-oa-status-select]')
                         .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
+                    cy.get('[data-testid=rek-license-input]')
+                        .should('have.value', record.fez_record_search_key_license.rek_license.toString())
+                        .siblings('[role=button]')
+                        .invoke('text')
+                        .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
+                });
+        });
+
+        // ----------------------------------------------- NOTES TAB -------------------------------------------------
+        cy.log('----------------Admin tab----------------');
+        cy.get('[data-testid=notes-section-header]').should('have.text', 'Notes');
+        cy.get('[data-testid=notes-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .as('cards')
+                .eq(0)
+                .within(() => {
                     cy.get('span span')
                         .eq(0)
                         .should('have.text', 'Additional notes');
@@ -192,11 +208,6 @@ context('Thesis admin edit', () => {
                     cy.readCKEditor('rek-notes').should(text => {
                         expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                     });
-                    cy.get('[data-testid=rek-license-input]')
-                        .should('have.value', record.fez_record_search_key_license.rek_license.toString())
-                        .siblings('[role=button]')
-                        .invoke('text')
-                        .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
                 });
         });
 
@@ -227,50 +238,43 @@ context('Thesis admin edit', () => {
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
         cy.log('----------------Security tab----------------');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(6)
-            .within(() => {
-                cy.root()
-                    .children('div')
-                    .children('div')
-                    .children('h3')
-                    .should('have.text', 'Security');
-
-                cy.get('div:nth-child(1) > .StandardCard').within(() => {
-                    cy.get('h4').should('have.text', `Work level security - ${record.rek_pid}`);
+        cy.get('[data-testid=security-section-header]').should('have.text', 'Security');
+        cy.get('[data-testid=security-section-content]').within(() => {
+            cy.get('div:nth-child(1) > .StandardCard').within(() => {
+                cy.get('h4').should('have.text', `Work level security - ${record.rek_pid}`);
+                cy.get('h6')
+                    .eq(0)
+                    .should('have.text', 'Inherited security policy details');
+                record.fez_record_search_key_ismemberof.forEach((collection, index) => {
                     cy.get('h6')
-                        .eq(0)
-                        .should('have.text', 'Inherited security policy details');
-                    record.fez_record_search_key_ismemberof.forEach((collection, index) => {
-                        cy.get('h6')
-                            .eq(2 * index + 1)
-                            .should('have.text', collection.rek_ismemberof);
-                        cy.get('h6')
-                            .eq(2 * index + 2)
-                            .should('have.text', collection.rek_ismemberof_lookup);
-                        cy.get('p')
-                            .eq(index)
-                            .should('have.text', `Public (${collection.parent.rek_security_policy})`);
-                    });
-                    if (record.rek_security_inherited) {
-                        cy.get('label')
-                            .contains('Override inherited security (detailed below)')
-                            .parent()
-                            .find('input')
-                            .should('not.be.checked');
-                    }
+                        .eq(2 * index + 1)
+                        .should('have.text', collection.rek_ismemberof);
+                    cy.get('h6')
+                        .eq(2 * index + 2)
+                        .should('have.text', collection.rek_ismemberof_lookup);
+                    cy.get('p')
+                        .eq(index)
+                        .should('have.text', `Public (${collection.parent.rek_security_policy})`);
                 });
-                cy.viewport(1024, 2000);
-                cy.get('div:nth-child(2) > .StandardCard').within(() => {
-                    cy.get('h4').should('have.text', `Datastream level security - ${record.rek_pid}`);
-                    cy.get('h6')
-                        .eq(0)
-                        .should('have.text', 'Inherited datastream security policy details');
-                    cy.get('h6')
-                        .eq(5)
-                        .should('have.text', 'Override datastream security policy details');
-                    cy.get('a').should('have.length', 9); // only non-derivatives are displayed
-                });
+                if (record.rek_security_inherited) {
+                    cy.get('label')
+                        .contains('Override inherited security (detailed below)')
+                        .parent()
+                        .find('input')
+                        .should('not.be.checked');
+                }
             });
+            cy.viewport(1024, 2000);
+            cy.get('div:nth-child(2) > .StandardCard').within(() => {
+                cy.get('h4').should('have.text', `Datastream level security - ${record.rek_pid}`);
+                cy.get('h6')
+                    .eq(0)
+                    .should('have.text', 'Inherited datastream security policy details');
+                cy.get('h6')
+                    .eq(5)
+                    .should('have.text', 'Override datastream security policy details');
+                cy.get('a').should('have.length', 9); // only non-derivatives are displayed
+            });
+        });
     });
 });

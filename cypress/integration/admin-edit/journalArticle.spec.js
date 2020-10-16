@@ -11,7 +11,7 @@ context('Journal Article admin edit', () => {
 
         // cy.get('button[title="Learn about keyboard shortcuts"]').should('exist');
 
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -23,10 +23,10 @@ context('Journal Article admin edit', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.viewport(1000, 1000);
 
-        // ---------------------------------------------- ADMIN TAB --------------------------------------------------
-        cy.log('Admin tab');
-        cy.get('[data-testid=admin-section-header]').should('have.text', 'Admin');
-        cy.get('[data-testid=admin-section-content]').within(() => {
+        // ---------------------------------------------- NOTES TAB --------------------------------------------------
+        cy.log('Notes tab');
+        cy.get('[data-testid=notes-section-header]').should('have.text', 'Notes');
+        cy.get('[data-testid=notes-section-content]').within(() => {
             cy.get('#cke_rek-notes-editor').should('exist');
             cy.get('#cke_ain-notes-editor').should('exist');
             cy.get('#cke_rek-herdc-notes-editor').should('exist');
@@ -361,6 +361,15 @@ context('Journal Article admin edit', () => {
                         .should('have.text', record.fez_record_search_key_oa_status_type.rek_oa_status_type_lookup);
                     // No content indicators selected in mock
                     // No licence selected in mock
+                });
+        });
+
+        cy.get('[data-testid=notes-section-header]').should('have.text', 'Notes');
+        cy.get('[data-testid=notes-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .as('cards')
+                .eq(0)
+                .within(() => {
                     cy.get('span span')
                         .eq(0)
                         .should('have.text', 'Additional notes');

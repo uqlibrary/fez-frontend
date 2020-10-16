@@ -12,7 +12,7 @@ context('Research Report admin edit', () => {
     });
 
     it('should load with specified elements', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(9);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();

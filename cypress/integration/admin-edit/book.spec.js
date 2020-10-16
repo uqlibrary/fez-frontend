@@ -6,14 +6,14 @@ context('Book admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
 
         cy.adminEditTabbedView(false);
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditCleanup();
     });
 

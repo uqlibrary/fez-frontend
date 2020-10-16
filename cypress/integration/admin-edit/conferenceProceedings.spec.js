@@ -17,7 +17,7 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditVerifyAlerts(1, ['Editor/contributor names are required']);
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
