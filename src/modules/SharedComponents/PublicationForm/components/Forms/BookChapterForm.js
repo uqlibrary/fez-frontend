@@ -200,6 +200,7 @@ export default class BookChapterForm extends Component {
                             disabled={this.props.submitting}
                             inputNormalizer={this.normalizeIssn}
                             rowItemTemplate={IssnRowItemTemplate}
+                            transformFunction={this.transformIssn}
                         />
                     </StandardCard>
                 </Grid>
