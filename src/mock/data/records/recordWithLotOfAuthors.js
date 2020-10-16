@@ -21072,7 +21072,9 @@ export default {
        ],
        "fez_record_search_key_native_script_journal_name":null,
        "fez_record_search_key_native_script_title":null,
-       "fez_record_search_key_notes":null,
+       "fez_record_search_key_notes":{
+          "rek_notes": "Sample additional notes",
+       },
        "fez_record_search_key_oa_embargo_days":null,
        "fez_record_search_key_oa_notes":null,
        "fez_record_search_key_oa_status":{
@@ -21223,11 +21225,13 @@ export default {
        "rek_scopus_doc_type_lookup":"Article (original research)",
        "rek_status_lookup":"Published",
        "rek_wok_doc_type_lookup":"Abstract of Published Item",
-       "rek_herdc_notes":null,
+       "rek_herdc_notes":"Test herdc notes",
        "rek_editing_user":"uqvasai",
        "rek_editing_user_lookup":"Vish Asai",
        "rek_editing_start_date":"2020-09-15 23:34:54",
-       "fez_internal_notes":null,
+       "fez_internal_notes":{
+          "ain_detail": "Sample internal notes",
+       },
        "fez_record_search_key_audience_size":null,
        "fez_record_search_key_author_affiliation_id":[
           

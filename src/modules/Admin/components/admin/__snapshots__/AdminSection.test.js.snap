@@ -33,22 +33,8 @@ exports[`AdminSection component should render default view 1`] = `
           Array [
             "fez_record_search_key_license",
           ],
-          Array [
-            "additionalNotes",
-          ],
         ],
         "title": "Additional information",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "internalNotes",
-          ],
-          Array [
-            "rek_herdc_notes",
-          ],
-        ],
-        "title": "Notes",
       },
     ]
   }
@@ -89,22 +75,8 @@ exports[`AdminSection component should render design form fields 1`] = `
           Array [
             "fez_record_search_key_license",
           ],
-          Array [
-            "additionalNotes",
-          ],
         ],
         "title": "Additional information",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "internalNotes",
-          ],
-          Array [
-            "rek_herdc_notes",
-          ],
-        ],
-        "title": "Notes",
       },
     ]
   }
@@ -145,22 +117,8 @@ exports[`AdminSection component should render disabled view 1`] = `
           Array [
             "fez_record_search_key_license",
           ],
-          Array [
-            "additionalNotes",
-          ],
         ],
         "title": "Additional information",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "internalNotes",
-          ],
-          Array [
-            "rek_herdc_notes",
-          ],
-        ],
-        "title": "Notes",
       },
     ]
   }

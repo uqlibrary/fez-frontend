@@ -78,4 +78,18 @@ export default {
               ]
             : []),
     ],
+    notes: () => [
+        {
+            title: 'Additional notes',
+            groups: [['additionalNotes']],
+        },
+        {
+            title: 'Internal notes',
+            groups: [['internalNotes']],
+        },
+        {
+            title: 'HERDC notes',
+            groups: [['rek_herdc_notes']],
+        },
+    ],
 };

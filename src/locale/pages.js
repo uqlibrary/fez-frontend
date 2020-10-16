@@ -932,10 +932,10 @@ export default {
                 bibliographic: {
                     title: 'Bibliographic',
                 },
-                grantInformation: {
+                grants: {
                     title: 'Grants',
                 },
-                authorDetails: {
+                authors: {
                     title: 'Authors',
                 },
                 admin: {
@@ -943,6 +943,9 @@ export default {
                 },
                 ntro: {
                     title: 'NTRO',
+                },
+                notes: {
+                    title: 'Notes',
                 },
                 files: {
                     title: 'Files',

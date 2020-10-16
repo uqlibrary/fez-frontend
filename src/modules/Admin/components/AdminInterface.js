@@ -340,6 +340,7 @@ export const AdminInterface = ({
                                                 <AdminTab
                                                     key={tab}
                                                     value={tab}
+                                                    data-testid={`${tab}-tab`}
                                                     label={
                                                         !!tabs[tab].numberOfErrors ? (
                                                             <Badge

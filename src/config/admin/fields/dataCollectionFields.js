@@ -77,7 +77,6 @@ export default {
                 ['fez_record_search_key_end_date'],
                 ['fez_record_search_key_time_period_start_date'],
                 ['fez_record_search_key_time_period_end_date'],
-                ['additionalNotes'],
             ],
         },
         {
@@ -87,10 +86,6 @@ export default {
                 ['fez_record_search_key_project_description'],
                 ['fez_record_search_key_project_id'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],

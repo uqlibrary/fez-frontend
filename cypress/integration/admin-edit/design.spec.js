@@ -10,11 +10,11 @@ context('Design admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(9);
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1, '1');
+        cy.adminEditCheckTabErrorBadge('bibliographic', '1');
     });
 
     it('should render the different sections as expected', () => {
