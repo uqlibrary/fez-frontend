@@ -60,6 +60,6 @@ describe('JournalArticleForm renders ', () => {
         const wrapper = setup();
         expect(
             wrapper.instance().transformIssn({ value: 'rek_issn', order: 'rek_issn_order' }, { key: '1234-5678' }, 3),
-        ).toEqual({ rek_issn: '1234-5678', rek_issn_order: 3 });
+        ).toEqual({ rek_issn: '1234-5678', rek_issn_order: 4 });
     });
 });
