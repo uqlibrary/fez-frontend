@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
 import ReactHtmlParser from 'react-html-parser';
+import queryString from 'query-string';
+
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
@@ -10,28 +12,26 @@ import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import Badge from '@material-ui/core/Badge';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
-import { useTabbedContext, useRecordContext } from 'context';
-
-import pageLocale from 'locale/pages';
-import queryString from 'query-string';
-import { validation, publicationTypes } from 'config';
-import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
-import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 import { FORM_NAME } from '../constants';
-import { routes } from 'config';
-import { adminInterfaceConfig } from 'config/admin';
 import { onSubmit } from '../submitHandler';
-import { withStyles } from '@material-ui/core/styles';
+
+import { useTabbedContext, useRecordContext } from 'context';
+import pageLocale from 'locale/pages';
+import { routes, validation, publicationTypes } from 'config';
+import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
+import { adminInterfaceConfig } from 'config/admin';
 
 const AdminTab = withStyles({
     root: {
