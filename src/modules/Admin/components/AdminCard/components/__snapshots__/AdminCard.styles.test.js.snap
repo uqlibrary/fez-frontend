@@ -13,8 +13,11 @@ Object {
   "title": Object {
     "color": "test3",
     "fontSize": undefined,
+    "fontWeight": 500,
+    "opacity": 0.85,
+  },
+  "titlePortion": Object {
     "marginLeft": -4,
-    "opacity": 0.66,
   },
 }
 `;

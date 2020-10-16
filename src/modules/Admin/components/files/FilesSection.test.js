@@ -1,9 +1,5 @@
 import { FilesSection } from './FilesSection';
-import {
-    PUBLICATION_TYPE_DATA_COLLECTION,
-    PUBLICATION_TYPE_AUDIO_DOCUMENT,
-    PUBLICATION_TYPE_JOURNAL,
-} from 'config/general';
+import { PUBLICATION_TYPE_DATA_COLLECTION, PUBLICATION_TYPE_AUDIO_DOCUMENT } from 'config/general';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
@@ -25,17 +21,6 @@ describe('FilesSection component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_display_type: PUBLICATION_TYPE_AUDIO_DOCUMENT,
-            },
-        }));
-
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render default view for Files on a publication type that does NOT show advisory statement', () => {
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_display_type: PUBLICATION_TYPE_JOURNAL,
             },
         }));
 

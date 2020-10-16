@@ -44,6 +44,9 @@ export const useStyles = makeStyles(theme => ({
     },
     rowSelected: {
         backgroundColor: (theme.palette.accent || {}).main,
+        '& svg': {
+            color: 'white !important',
+        },
     },
     selected: {
         color: 'white !important',
@@ -61,6 +64,15 @@ export const useStyles = makeStyles(theme => ({
     },
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
+    },
+    contributorLinked: {
+        color: theme.palette.primary.main,
+        '& p': {
+            fontWeight: 500,
+        },
+        '& svg': {
+            color: theme.palette.primary.main,
+        },
     },
 }));
 
@@ -185,7 +197,10 @@ export const ContributorRow = ({
                 classes={{
                     root: `${classes.listItem} ${(required && classes.highlighted) || ''} ${(contributor.selected &&
                         classes.rowSelected) ||
-                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''}`.trim(),
+                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''} ${(canEdit &&
+                        parseInt(contributor.uqIdentifier, 10) &&
+                        classes.contributorLinked) ||
+                        ''}`.trim(),
                 }}
                 onClick={_onSelect}
                 tabIndex={contributor.disabled || disabled ? -1 : 0}
