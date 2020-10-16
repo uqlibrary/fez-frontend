@@ -9,7 +9,7 @@ context('Journal Article admin edit', () => {
             .should('have.length', 1)
             .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
 
-        // cy.get('button[title="Learn about keyboard shortcuts"]').should('exist');
+        cy.get('button[title="Learn about keyboard shortcuts"]').should('exist');
 
         cy.adminEditCountCards(7);
         cy.adminEditNoAlerts();
