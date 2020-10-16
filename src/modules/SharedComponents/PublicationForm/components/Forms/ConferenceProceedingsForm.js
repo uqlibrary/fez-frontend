@@ -31,7 +31,7 @@ export default class ConferenceProceedingsForm extends Component {
 
     transformIssn = (searchKey, item, index) => ({
         [searchKey.value]: item.key,
-        [searchKey.order]: index,
+        [searchKey.order]: index + 1,
     });
 
     render() {

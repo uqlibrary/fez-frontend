@@ -37,7 +37,7 @@ export default class BookChapterForm extends Component {
 
     transformIssn = (searchKey, item, index) => ({
         [searchKey.value]: item.key,
-        [searchKey.order]: index,
+        [searchKey.order]: index + 1,
     });
 
     render() {
