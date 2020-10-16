@@ -63,6 +63,8 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
     }
 };
 
+const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
+
 export const AdminInterface = ({
     authorDetails,
     classes,
@@ -83,11 +85,12 @@ export const AdminInterface = ({
     unlockRecord,
 }) => {
     const { record } = useRecordContext();
-    const { tabbed } = useTabbedContext();
+    const { tabbed, toggleTabbed } = useTabbedContext();
     const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
     const defaultTab = objectType === RECORD_TYPE_RECORD ? 'bibliographic' : 'security';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
+    const activeTabNames = React.useRef(getActiveTabs(tabs));
     const successConfirmationRef = React.useRef();
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
@@ -98,6 +101,10 @@ export const AdminInterface = ({
         formErrors,
         alertLocale: txt.current.alerts,
     });
+
+    React.useEffect(() => {
+        activeTabNames.current = getActiveTabs(tabs);
+    }, [tabs]);
 
     React.useEffect(() => {
         return () => {
@@ -116,6 +123,27 @@ export const AdminInterface = ({
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
+
+    const keyHandler = React.useCallback(
+        event => {
+            if (!!event && event.ctrlKey && event.key !== 'Control') {
+                ((event.key === 'ArrowUp' && !tabbed) || (event.key === 'ArrowDown' && tabbed)) && toggleTabbed();
+                const activeTabIndex = activeTabNames.current.indexOf(currentTabValue);
+                if (event.key === 'ArrowLeft' && activeTabIndex > 0) {
+                    setCurrentTabValue(activeTabNames.current[activeTabIndex - 1]);
+                }
+                if (event.key === 'ArrowRight' && activeTabIndex < activeTabNames.current.length - 1) {
+                    setCurrentTabValue(activeTabNames.current[activeTabIndex + 1]);
+                }
+            }
+        },
+        [tabbed, toggleTabbed, currentTabValue],
+    );
+
+    React.useEffect(() => {
+        window.addEventListener('keydown', keyHandler);
+        return () => window.removeEventListener('keydown', keyHandler);
+    });
 
     const handleCancel = event => {
         event.preventDefault();
@@ -334,27 +362,25 @@ export const AdminInterface = ({
                                         indicatorColor="primary"
                                         textColor="primary"
                                     >
-                                        {Object.keys(tabs)
-                                            .filter(tab => tabs[tab].activated)
-                                            .map(tab => (
-                                                <AdminTab
-                                                    key={tab}
-                                                    value={tab}
-                                                    label={
-                                                        !!tabs[tab].numberOfErrors ? (
-                                                            <Badge
-                                                                className={classes.padding}
-                                                                color="error"
-                                                                badgeContent={tabs[tab].numberOfErrors}
-                                                            >
-                                                                {txt.current.sections[tab].title}
-                                                            </Badge>
-                                                        ) : (
-                                                            txt.current.sections[tab].title
-                                                        )
-                                                    }
-                                                />
-                                            ))}
+                                        {activeTabNames.current.map(tab => (
+                                            <AdminTab
+                                                key={tab}
+                                                value={tab}
+                                                label={
+                                                    !!tabs[tab].numberOfErrors ? (
+                                                        <Badge
+                                                            className={classes.padding}
+                                                            color="error"
+                                                            badgeContent={tabs[tab].numberOfErrors}
+                                                        >
+                                                            {txt.current.sections[tab].title}
+                                                        </Badge>
+                                                    ) : (
+                                                        txt.current.sections[tab].title
+                                                    )
+                                                }
+                                            />
+                                        ))}
                                     </Tabs>
                                 </Grid>
                             )}
@@ -363,11 +389,7 @@ export const AdminInterface = ({
                 </Grid>
                 <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
                     <Grid container spacing={0}>
-                        {!tabbed
-                            ? Object.keys(tabs)
-                                  .filter(tab => tabs[tab].activated)
-                                  .map(renderTabContainer)
-                            : renderTabContainer(currentTabValue)}
+                        {!tabbed ? activeTabNames.current.map(renderTabContainer) : renderTabContainer(currentTabValue)}
                     </Grid>
                     <Grid container spacing={1}>
                         {renderSaveStatusAlert}
