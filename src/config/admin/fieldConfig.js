@@ -869,8 +869,9 @@ export default {
                 title: 'Additional notes',
                 titleProps: {
                     variant: 'caption',
+                    color: 'primary',
                     style: {
-                        opacity: 0.666,
+                        fontWeight: 600,
                     },
                 },
                 height: 100,
