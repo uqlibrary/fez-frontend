@@ -958,9 +958,15 @@ export default {
                     <div>
                         <br />
                         <h3>Tab navigation</h3>
-                        <p>To navigate tabs while in tabbed mode, hold CTRL and use the LEFT and RIGHT arrow keys.</p>
+                        <p>
+                            To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow
+                            keys.
+                        </p>
                         <h3>Form style</h3>
-                        <p>To switch between tabbed or full form mode, hold CTRL and use the UP and DOWN arrow keys.</p>
+                        <p>
+                            To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN
+                            arrow keys.
+                        </p>
                         <p>
                             Your preference is saved as a cookie on this browser and it will remember your preference.
                         </p>
