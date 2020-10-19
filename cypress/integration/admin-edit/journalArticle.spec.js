@@ -372,7 +372,7 @@ context('Journal Article admin edit', () => {
                 .within(() => {
                     cy.get('span span')
                         .eq(0)
-                        .should('have.text', 'Additional notes');
+                        .should('have.text', 'Additional notes (public)');
                     cy.get('#cke_rek-notes-editor').should('exist');
                     cy.readCKEditor('rek-notes').should(text => {
                         expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
