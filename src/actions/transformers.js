@@ -1114,12 +1114,10 @@ export const getOpenAccessStatusSearchKey = record => {
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
-        additionalNotes,
         contentIndicators,
         contactName,
         contactNameId,
         contactEmail,
-        internalNotes,
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
@@ -1127,15 +1125,11 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
         fez_record_search_key_end_date: endDate,
-        rek_herdc_notes: herdcNotes,
         ...rest
     } = data;
 
     return {
         ...getRecordIsMemberOfSearchKey(collections),
-        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
-            ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
-            : {}),
         ...getContentIndicatorSearchKey(contentIndicators),
         ...(!!contactName && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
@@ -1146,10 +1140,6 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
         ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
-        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
-            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
-            : { fez_internal_notes: null }),
-        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...rest,
     };
@@ -1288,4 +1278,17 @@ export const getCopyToCollectionData = (records, data) => {
             })),
         ],
     }));
+};
+
+export const getNotesSectionSearchKeys = (data = {}) => {
+    const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes } = data;
+    return {
+        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
+            ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
+            : {}),
+        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
+            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
+            : { fez_internal_notes: null }),
+        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
+    };
 };
