@@ -1,10 +1,11 @@
 import React from 'react';
-import locale from 'locale/validationErrors';
-import { isAdded } from 'helpers/datastreams';
+import moment from 'moment';
 import Immutable from 'immutable';
+
+import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
 
-const moment = require('moment');
+import { isAdded } from 'helpers/datastreams';
 
 // Max Length
 export const maxLength = max => value =>

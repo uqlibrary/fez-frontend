@@ -138,19 +138,18 @@ context('Book admin edit', () => {
             cy.get('@issnBlock')
                 .find('input')
                 .type('33333333{enter}');
+            cy.get('#rek-issn-list-row-3').within(row => {
+                checkIssnLinks(row, '3333-3333');
+                cy.get('span > a')
+                    .eq(1)
+                    .should('have.attr', 'title', 'Lecture Notes in Computer Science')
+                    .should(
+                        'have.attr',
+                        'aria-label',
+                        'Source publisher name/place and alternate ISSNs in a new window',
+                    );
+            });
             cy.get('#rek-issn-list-row-3')
-                .within(row => {
-                    checkIssnLinks(row, '3333-3333');
-                    cy.get('span > a')
-                        .eq(1)
-                        .should('have.attr', 'title', 'Lecture Notes in Computer Science')
-                        .should(
-                            'have.attr',
-                            'aria-label',
-                            'Source publisher name/place and alternate ISSNs in a new window',
-                        );
-                })
-                .parents('#rek-issn-list-row-3')
                 .find('button[aria-label="Edit this item"]')
                 .click();
             cy.log('Edit the 4th entry');
