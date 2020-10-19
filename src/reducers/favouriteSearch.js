@@ -11,6 +11,7 @@ export const initialState = {
     favouriteSearchListItemDeleteError: null,
     existingAlias: null,
     existingAliasChecking: false,
+    existingAliasCheckComplete: false,
     existingAliasCheckError: false,
     favouriteSearchAdding: false,
     favouriteSearchAddSuccess: false,
@@ -94,12 +95,14 @@ const handlers = {
     [actions.EXISTING_ALIAS_CHECK_IN_PROGRESS]: state => ({
         ...state,
         existingAliasChecking: true,
+        existingAliasCheckComplete: false,
     }),
 
     [actions.EXISTING_ALIAS_FOUND]: (state, action) => ({
         ...state,
         existingAlias: action.payload,
         existingAliasChecking: false,
+        existingAliasCheckComplete: true,
         existingAliasCheckError: {
             ...locale.pages.favouriteSearch.aliasExistsAlert,
             message: locale.pages.favouriteSearch.aliasExistsAlert.message.replace('[alias]', action.payload.fvs_alias),
@@ -110,6 +113,7 @@ const handlers = {
         ...state,
         existingAlias: null,
         existingAliasChecking: false,
+        existingAliasCheckComplete: true,
         existingAliasCheckError: null,
     }),
 

@@ -163,7 +163,16 @@ export class AppClass extends PureComponent {
         const isValidFileUrl = isFileUrl(this.props.location.pathname);
         const hasNoSlash = this.props.location.pathname.slice(1).indexOf('/') === -1;
 
-        if (!!nextProps.account && !isValidRoute && !isValidFileUrl && hasNoSlash && !nextProps.existingAlias) {
+        if (
+            !!nextProps.account &&
+            !!nextProps.author &&
+            !!nextProps.author.is_administrator &&
+            !isValidRoute &&
+            !isValidFileUrl &&
+            hasNoSlash &&
+            !nextProps.existingAlias &&
+            !nextProps.existingAliasCheckComplete
+        ) {
             this.props.actions.getFavouriteSearchAlias({ fvs_alias: this.props.location.pathname.slice(1) });
         }
     }

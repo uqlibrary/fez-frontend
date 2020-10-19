@@ -591,6 +591,28 @@ describe('Application component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('Should show confirmation when the session expires', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            isSessionExpired: false,
+            actions: {
+                getFavouriteSearchAlias: testFn,
+                loadCurrentAccount: jest.fn(),
+                searchAuthorPublications: jest.fn(),
+            },
+        });
+        wrapper.update();
+        expect(testFn).not.toHaveBeenCalled();
+        wrapper.setProps({
+            account: {},
+            author: { is_administrator: true },
+            existingAlias: null,
+            existingAliasCheckComplete: false,
+            location: { pathname: '/SomeAlias' },
+        });
+        expect(testFn).toHaveBeenCalled();
+    });
 });
 
 describe('Testing wrapped App component', () => {
