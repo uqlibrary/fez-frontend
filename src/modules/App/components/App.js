@@ -148,14 +148,6 @@ export class AppClass extends PureComponent {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
-
-        const isValidRoute = flattedPathConfig.indexOf(this.props.location.pathname) >= 0;
-        const isValidFileUrl = isFileUrl(this.props.location.pathname);
-        const hasNoSlash = this.props.location.pathname.slice(1).indexOf('/') === -1;
-
-        if (!!this.props.account && !isValidRoute && !isValidFileUrl && hasNoSlash) {
-            this.props.actions.getFavouriteSearchAlias({ fvs_alias: this.props.location.pathname.slice(1) });
-        }
     }
 
     // eslint-disable-next-line camelcase
@@ -165,6 +157,14 @@ export class AppClass extends PureComponent {
         }
         if (nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
             this.props.actions.searchAuthorPublications({}, 'incomplete');
+        }
+
+        const isValidRoute = flattedPathConfig.indexOf(this.props.location.pathname) >= 0;
+        const isValidFileUrl = isFileUrl(this.props.location.pathname);
+        const hasNoSlash = this.props.location.pathname.slice(1).indexOf('/') === -1;
+
+        if (!!nextProps.account && !isValidRoute && !isValidFileUrl && hasNoSlash && !nextProps.existingAlias) {
+            this.props.actions.getFavouriteSearchAlias({ fvs_alias: this.props.location.pathname.slice(1) });
         }
     }
 
