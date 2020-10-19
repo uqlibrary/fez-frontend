@@ -5,7 +5,7 @@ import { Field } from 'redux-form/immutable';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { IssnListEditorField, ListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { SeriesField } from 'modules/SharedComponents/LookupFields';
@@ -35,6 +35,16 @@ export default class ResearchReportForm extends Component {
     constructor(props) {
         super(props);
     }
+
+    normalizeIssn = value => {
+        const newValue = value.replace('-', '');
+        return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
+    };
+
+    transformIssn = (searchKey, item, index) => ({
+        [searchKey.value]: item.key,
+        [searchKey.order]: index + 1,
+    });
 
     getNumbersOnly = value => {
         return value.replace(/[^\d]/g, '');
@@ -206,7 +216,7 @@ export default class ResearchReportForm extends Component {
                     <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                         <Typography>{locale.components.issnForm.text}</Typography>
                         <Field
-                            component={ListEditorField}
+                            component={IssnListEditorField}
                             remindToAdd
                             isValid={validation.isValidIssn}
                             name="fez_record_search_key_issn"
@@ -215,6 +225,9 @@ export default class ResearchReportForm extends Component {
                             listEditorId="issn"
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                             disabled={this.props.submitting}
+                            inputNormalizer={this.normalizeIssn}
+                            rowItemTemplate={IssnRowItemTemplate}
+                            transformFunction={this.transformIssn}
                         />
                     </StandardCard>
                 </Grid>
