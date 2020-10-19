@@ -451,6 +451,7 @@ exports[`BookForm renders  component 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -510,12 +511,31 @@ exports[`BookForm renders  component 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -810,6 +830,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -869,12 +890,31 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -1380,6 +1420,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -1439,12 +1480,31 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -2077,6 +2137,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -2136,12 +2197,31 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -2532,6 +2612,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -2591,12 +2672,31 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -3102,6 +3202,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -3161,12 +3262,31 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
