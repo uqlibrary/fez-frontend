@@ -161,6 +161,7 @@
         "immutable": "^3.8.2",
         "ipinfo": "^1.3.9",
         "js-cookie": "^2.2.0",
+        "jss": "^9.8.7",
         "jss-global": "^3.0.0",
         "jss-nested": "^6.0.1",
         "keycode": "^2.2.0",

@@ -361,6 +361,73 @@ describe('AdminInterface component', () => {
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
     });
 
+    it('should respond to keyboard shortcuts', () => {
+        const toggleTabbed = jest.fn();
+        useTabbedContext.mockImplementation(() => ({
+            tabbed: false,
+            toggleTabbed,
+        }));
+
+        const setTab = jest.fn();
+        const mockUseState = jest.spyOn(React, 'useState');
+        mockUseState.mockImplementation(() => ['bibliographic', setTab]);
+
+        const mockUseCallback = jest.spyOn(React, 'useCallback');
+        mockUseCallback.mockImplementation(f => f);
+
+        const map = {};
+        window.addEventListener = jest.fn((event, cb) => {
+            map[event] = cb;
+        });
+
+        const createWrapper = () => {
+            setup({
+                createMode: true,
+                tabs: {
+                    bibliographic: {
+                        activated: true,
+                        component: () => 'BibliographySectionComponent',
+                    },
+                    files: {
+                        activated: true,
+                        component: () => 'FilesSectionComponent',
+                    },
+                    security: {
+                        activated: true,
+                        component: () => 'SecuritySectionComponent',
+                    },
+                },
+            });
+        };
+
+        createWrapper();
+        expect(toggleTabbed).toHaveBeenCalledTimes(0);
+        map.keydown({ key: 'ArrowUp', ctrlKey: true });
+        expect(toggleTabbed).toHaveBeenCalledTimes(1);
+        toggleTabbed.mockClear();
+
+        useTabbedContext.mockImplementation(() => ({
+            tabbed: true,
+            toggleTabbed,
+        }));
+
+        createWrapper();
+        map.keydown({ key: 'ArrowDown', ctrlKey: true });
+        expect(toggleTabbed).toHaveBeenCalledTimes(1);
+
+        map.keydown({ key: 'ArrowRight', ctrlKey: true });
+        expect(setTab).toHaveBeenCalledWith('files');
+        setTab.mockClear();
+
+        mockUseState.mockImplementation(() => ['files', setTab]);
+        createWrapper();
+
+        map.keydown({ key: 'ArrowLeft', ctrlKey: true });
+        expect(setTab).toHaveBeenCalledWith('bibliographic');
+
+        mockUseState.mockRestore();
+    });
+
     it('should render alert message for retracted records', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({
@@ -600,7 +667,7 @@ describe('AdminInterface component', () => {
         expect(pushFn).toHaveBeenCalledWith('/admin/add');
     });
 
-    it('should call method through reference', () => {
+    it('should call method to show submit confirmation', () => {
         const mockUseRef = jest.spyOn(React, 'useRef');
         const testFn = jest.fn();
         mockUseRef.mockImplementation(() => ({
@@ -609,7 +676,7 @@ describe('AdminInterface component', () => {
             },
         }));
         const mockUseCallback = jest.spyOn(React, 'useCallback');
-        mockUseCallback.mockImplementationOnce(f => f());
+        mockUseCallback.mockImplementation(f => f());
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({}));
 
@@ -617,7 +684,6 @@ describe('AdminInterface component', () => {
             submitSucceeded: true,
         });
         expect(testFn).toHaveBeenCalledTimes(1);
-        expect(mockUseCallback).toHaveBeenCalledTimes(1);
 
         mockUseRef.mockRestore();
         mockUseCallback.mockRestore();

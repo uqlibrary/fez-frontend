@@ -462,6 +462,4 @@ export class AppClass extends PureComponent {
     }
 }
 
-const StyledApp = withStyles(styles, { withTheme: true })(AppClass);
-const App = props => <StyledApp {...props} />;
-export default App;
+export default withStyles(styles, { withTheme: true })(AppClass);
