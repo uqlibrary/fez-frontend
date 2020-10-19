@@ -111,7 +111,7 @@ export default {
             component: RichEditorField,
             componentProps: {
                 name: 'notesSection.internalNotes',
-                title: 'Internal notes',
+                title: 'Internal notes (admin)',
                 titleProps: {
                     variant: 'caption',
                     style: {
@@ -866,7 +866,7 @@ export default {
             component: RichEditorField,
             componentProps: {
                 name: 'notesSection.additionalNotes',
-                title: 'Additional notes',
+                title: 'Additional notes (public)',
                 titleProps: {
                     variant: 'caption',
                     color: 'primary',
