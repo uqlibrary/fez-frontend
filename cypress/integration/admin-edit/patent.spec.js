@@ -12,7 +12,7 @@ context('Data Collection admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
@@ -23,9 +23,7 @@ context('Data Collection admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
                 cy.get('[data-testid=rek-genre-input]').should('have.value', record.rek_genre);

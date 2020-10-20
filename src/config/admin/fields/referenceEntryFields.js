@@ -73,12 +73,7 @@ export default {
                 ],
                 ['fez_record_search_key_refereed_source', 'contentIndicators'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],

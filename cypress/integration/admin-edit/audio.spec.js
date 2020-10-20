@@ -12,42 +12,36 @@ context('Audio admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditVerifyAlerts(1, ['Publication date is required']);
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1);
+        cy.adminEditCheckTabErrorBadge('bibliographic');
     });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         cy.log('Identifiers tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(0)
-            .as('identifiersCard')
-            .within(() => {
-                cy.get('h4').should('contain', 'Manage links');
-                const links = [
-                    {
-                        url: record.fez_record_search_key_link[0].rek_link,
-                        description: record.fez_record_search_key_link_description[0].rek_link_description,
-                    },
-                ];
-                links.forEach((link, index) => {
-                    cy.get(`[data-testid=rek-link-list-row-${index}]`)
-                        .find('p')
-                        .should('have.text', `Link: ${link.url}`)
-                        .siblings('span')
-                        .should('have.text', `Description: ${link.description}`);
-                });
+        cy.get('[data-testid=identifiers-section-content]').within(() => {
+            cy.get('h4').should('contain', 'Manage links');
+            const links = [
+                {
+                    url: record.fez_record_search_key_link[0].rek_link,
+                    description: record.fez_record_search_key_link_description[0].rek_link_description,
+                },
+            ];
+            links.forEach((link, index) => {
+                cy.get(`[data-testid=rek-link-list-row-${index}]`)
+                    .find('p')
+                    .should('have.text', `Link: ${link.url}`)
+                    .siblings('span')
+                    .should('have.text', `Description: ${link.description}`);
             });
+        });
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicCard')
             .within(() => {
                 cy.get('h4').should('contain', 'Bibliographic');
@@ -112,10 +106,7 @@ context('Audio admin edit', () => {
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
         cy.log('Files tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(5)
-            .as('filesTab');
+        cy.get('[data-testid=files-section-content]').as('filesTab');
 
         // start: check embargo date can be cleared
         cy.get('@filesTab')

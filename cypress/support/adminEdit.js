@@ -65,9 +65,8 @@ Cypress.Commands.add('adminEditCheckDefaultTab', tabTitle => {
         .should('have.text', tabTitle);
 });
 
-Cypress.Commands.add('adminEditCheckTabErrorBadge', (tabIndex, value = '1') => {
-    cy.get('[role="tab"]')
-        .eq(tabIndex)
+Cypress.Commands.add('adminEditCheckTabErrorBadge', (tab, value = '1') => {
+    cy.get(`[data-testid=${tab}-tab]`)
         .find('[class*="MuiBadge-colorError"]')
         .should('have.text', value);
 });
