@@ -17,19 +17,17 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditVerifyAlerts(1, ['Editor/contributor names are required']);
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(2);
+        cy.adminEditCheckTabErrorBadge('authors');
     });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('biblographicTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Title of proceedings');
@@ -37,9 +35,7 @@ context('Conference Proceedings admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(2)
+        cy.get('[data-testid=authors-section-content]')
             .as('editorDetailsTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Editors');
@@ -49,12 +45,12 @@ context('Conference Proceedings admin edit', () => {
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
         cy.log('Files tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(6)
+        cy.get('[data-testid=files-section-content]')
             .as('filesTab')
             .within(() => {
-                cy.get('h4').should('have.text', 'Attached files');
+                cy.get('h4')
+                    .eq(0)
+                    .should('have.text', 'Attached files');
 
                 cy.get('[class*=MuiCardContent-root] > div').within(() => {
                     cy.get(`a[title="${visibleFilename}"]`).should('have.length', 1);
@@ -69,9 +65,7 @@ context('Conference Proceedings admin edit', () => {
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
         cy.log('Security tab');
-        cy.get('.StandardPage form >div>div')
-            .get('.StandardCard')
-            .eq(7)
+        cy.get('[data-testid=security-section-content]')
             .as('securityTab')
             .within(() => {
                 cy.get('h4')

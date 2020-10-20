@@ -105,8 +105,8 @@ export default class RichEditor extends PureComponent {
                 <span>
                     {this.props.title && (
                         <Typography
-                            {...this.props.titleProps}
                             color={this.props.meta && this.props.meta.error && 'error'}
+                            {...this.props.titleProps}
                         >
                             {this.props.title}
                             {this.props.required && <span> *</span>}

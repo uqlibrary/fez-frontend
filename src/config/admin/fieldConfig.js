@@ -93,7 +93,7 @@ export default {
         rek_herdc_notes: {
             component: RichEditorField,
             componentProps: {
-                name: 'adminSection.rek_herdc_notes',
+                name: 'notesSection.rek_herdc_notes',
                 title: 'HERDC notes',
                 disabled: true,
                 titleProps: {
@@ -110,8 +110,8 @@ export default {
         internalNotes: {
             component: RichEditorField,
             componentProps: {
-                name: 'adminSection.internalNotes',
-                title: 'Internal notes',
+                name: 'notesSection.internalNotes',
+                title: 'Internal notes (admin)',
                 titleProps: {
                     variant: 'caption',
                     style: {
@@ -865,12 +865,13 @@ export default {
         additionalNotes: {
             component: RichEditorField,
             componentProps: {
-                name: 'adminSection.additionalNotes',
-                title: 'Additional notes',
+                name: 'notesSection.additionalNotes',
+                title: 'Additional notes (public)',
                 titleProps: {
                     variant: 'caption',
+                    color: 'primary',
                     style: {
-                        opacity: 0.666,
+                        fontWeight: 600,
                     },
                 },
                 height: 100,
@@ -1898,6 +1899,15 @@ export default {
             }),
             fez_record_search_key_project_name: () => ({
                 name: 'bibliographicSection.fez_record_search_key_project_name.rek_project_name',
+            }),
+            fez_record_search_key_publisher: () => ({
+                validate: [validation.required],
+            }),
+            fez_record_search_key_place_of_publication: () => ({
+                validate: [validation.required],
+            }),
+            fez_record_search_key_project_start_date: () => ({
+                validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({
                 isNtro,

@@ -12,7 +12,7 @@ context('Video admin edit', () => {
     });
 
     it('should load with specified elements', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -22,23 +22,20 @@ context('Video admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form .StandardCard')
-            .eq(1)
-            .within(() => {
-                cy.get('h3').should('have.text', 'Bibliographic');
+        cy.get('[data-testid=bibliographic-section-header]').should('have.text', 'Bibliographic');
+        cy.get('[data-testid=bibliographic-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .eq(4)
+                .within(() => {
+                    cy.get('h4').should('contain', 'Bibliographic');
 
-                cy.get('.AdminCard')
-                    .eq(4)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Bibliographic');
-
-                        // Video record includes the owner's Rights
-                        cy.get('[data-testid=rek-rights-input]').should(
-                            'have.value',
-                            record.fez_record_search_key_rights.rek_rights,
-                        );
-                    });
-            });
+                    // Video record includes the owner's Rights
+                    cy.get('[data-testid=rek-rights-input]').should(
+                        'have.value',
+                        record.fez_record_search_key_rights.rek_rights,
+                    );
+                });
+        });
     });
 
     it('should submit successfully', () => {

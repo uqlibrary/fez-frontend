@@ -2339,39 +2339,13 @@ describe('getDatastreamInfo', () => {
 });
 
 describe('getAdminSectionSearchKeys', () => {
-    it('should get search key for any internal notes entered', () => {
-        const expected = {
-            fez_internal_notes: {
-                ain_detail: '<p>This is test internal note</p>',
-            },
-            rek_herdc_notes: 'This is test herdc notes',
-        };
-
-        expect(
-            transformers.getAdminSectionSearchKeys({
-                internalNotes: {
-                    htmlText: '<p>This is test internal note</p>',
-                    plainText: 'This is test internal note',
-                },
-                rek_herdc_notes: {
-                    htmlText: 'This is test herdc notes',
-                    plainText: 'This is test herdc notes',
-                },
-            }),
-        ).toEqual(expected);
-    });
-
-    it('should get search key for any internal notes entered', () => {
-        expect(transformers.getAdminSectionSearchKeys()).toEqual({ fez_internal_notes: null });
+    it('should get correct object', () => {
+        expect(transformers.getAdminSectionSearchKeys()).toEqual({});
     });
 
     it('should transform all search keys for additional information section', () => {
         const data = {
             collections: [12344, 22343],
-            additionalNotes: {
-                htmlText: '<p>Test additional notes</p>',
-                plainText: 'Test additional notes',
-            },
             contentIndicators: [123, 234],
             contactName: 'Test',
             contactEmail: 'test@email.com',
@@ -2405,7 +2379,6 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: 12344,
@@ -2416,9 +2389,6 @@ describe('getAdminSectionSearchKeys', () => {
                     rek_ismemberof_order: 2,
                 },
             ],
-            fez_record_search_key_notes: {
-                rek_notes: '<p>Test additional notes</p>',
-            },
             fez_record_search_key_content_indicator: [
                 {
                     rek_content_indicator: 123,
@@ -2471,10 +2441,6 @@ describe('getAdminSectionSearchKeys', () => {
     it('should transform all search keys for additional information section correctly', () => {
         const data = {
             collections: [{ id: 12344 }, { id: 22343 }],
-            additionalNotes: {
-                htmlText: '<p>Test additional notes</p>',
-                plainText: 'Test additional notes',
-            },
             contentIndicators: [123, 234],
             contactName: 'Test',
             contactEmail: 'test@email.com',
@@ -2513,7 +2479,6 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: 12344,
@@ -2524,9 +2489,6 @@ describe('getAdminSectionSearchKeys', () => {
                     rek_ismemberof_order: 2,
                 },
             ],
-            fez_record_search_key_notes: {
-                rek_notes: '<p>Test additional notes</p>',
-            },
             fez_record_search_key_content_indicator: [
                 {
                     rek_content_indicator: 123,
@@ -2624,7 +2586,6 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2684,7 +2645,6 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2703,7 +2663,7 @@ describe('getAdminSectionSearchKeys', () => {
             contentIndicators: [],
         };
 
-        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({ fez_internal_notes: null });
+        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({});
     });
 });
 
@@ -4447,5 +4407,56 @@ describe('getRecordIsDatasetOfSearchKey', () => {
                 },
             ],
         });
+    });
+});
+
+describe('getNotesSectionSearchKeys', () => {
+    it('should get search key for any internal notes entered', () => {
+        const expected = {
+            fez_internal_notes: {
+                ain_detail: '<p>This is test internal note</p>',
+            },
+            rek_herdc_notes: 'This is test herdc notes',
+        };
+
+        expect(
+            transformers.getNotesSectionSearchKeys({
+                internalNotes: {
+                    htmlText: '<p>This is test internal note</p>',
+                    plainText: 'This is test internal note',
+                },
+                rek_herdc_notes: {
+                    htmlText: 'This is test herdc notes',
+                    plainText: 'This is test herdc notes',
+                },
+            }),
+        ).toEqual(expected);
+    });
+
+    it('should get search key for any internal notes entered', () => {
+        expect(transformers.getNotesSectionSearchKeys()).toEqual({ fez_internal_notes: null });
+    });
+
+    it('should get search key for any additional notes entered', () => {
+        const expected = {
+            fez_record_search_key_notes: {
+                rek_notes: '<p>This is test additional note</p>',
+            },
+            rek_herdc_notes: 'This is test herdc notes',
+            fez_internal_notes: null,
+        };
+
+        expect(
+            transformers.getNotesSectionSearchKeys({
+                additionalNotes: {
+                    htmlText: '<p>This is test additional note</p>',
+                    plainText: 'This is test additional note',
+                },
+                rek_herdc_notes: {
+                    htmlText: 'This is test herdc notes',
+                    plainText: 'This is test herdc notes',
+                },
+            }),
+        ).toEqual(expected);
     });
 });
