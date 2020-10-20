@@ -1622,9 +1622,8 @@ exports[`Component ContributorRow should render a row with a disabled contributo
 
 exports[`Component ContributorRow should render contributor row linked class for admin users 1`] = `
 <Fragment>
-  <ConfirmationBox
+  <Memo(ConfirmationBox)
     confirmationBoxId="test-list-row-0-delete"
-    hideCancelButton={false}
     isOpen={false}
     locale={
       Object {
@@ -1636,8 +1635,6 @@ exports[`Component ContributorRow should render contributor row linked class for
     }
     onAction={[Function]}
     onClose={[Function]}
-    showAlternateActionButton={false}
-    showInputForm={false}
   />
   <WithStyles(ForwardRef(ListItem))
     aria-label="Select this record (Test) to assign it to you"
