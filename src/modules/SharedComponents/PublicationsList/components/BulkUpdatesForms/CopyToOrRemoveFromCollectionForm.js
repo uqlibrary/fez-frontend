@@ -49,8 +49,9 @@ export const CopyToOrRemoveFromCollectionForm = ({
         if (isRemoveFrom) {
             const collectionsSet = Immutable.Set(collections);
             setAlertUser(
-                records.current.filter(recordCollections => collectionsSet.isSuperset(Immutable.Set(recordCollections)))
-                    .length > 0,
+                records.current.filter(recordCollections =>
+                    collectionsSet.isSuperset(Immutable.Set(recordCollections).sort()),
+                ).length > 0,
             );
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
