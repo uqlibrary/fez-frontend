@@ -32,10 +32,7 @@ export const useStyles = makeStyles(theme => ({
         margin: '0',
     },
     disabledListItem: {
-        width: '100%',
-        margin: '0',
-        outline: 'none !important',
-        '&:focus': {
+        '&, &:focus': {
             outline: 'none !important',
         },
     },
@@ -183,6 +180,12 @@ export const ContributorRow = ({
                 ''}`.trim()) ||
         '';
 
+    const listClasses = [classes.listItem];
+    required && listClasses.push(classes.highlighted);
+    contributor.selected && listClasses.push(classes.rowSelected);
+    contributor.disabled && listClasses.push(classes.disabledListItem);
+    canEdit && parseInt(contributor.uqIdentifier, 10) && listClasses.push(classes.contributorLinked);
+
     return (
         <Fragment>
             <ConfirmationBox
@@ -195,12 +198,7 @@ export const ContributorRow = ({
             <ListItem
                 divider
                 classes={{
-                    root: `${classes.listItem} ${(required && classes.highlighted) || ''} ${(contributor.selected &&
-                        classes.rowSelected) ||
-                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''} ${(canEdit &&
-                        parseInt(contributor.uqIdentifier, 10) &&
-                        classes.contributorLinked) ||
-                        ''}`.trim(),
+                    root: listClasses.join(' '),
                 }}
                 onClick={_onSelect}
                 tabIndex={contributor.disabled || disabled ? -1 : 0}
