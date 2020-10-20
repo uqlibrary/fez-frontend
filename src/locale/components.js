@@ -2914,6 +2914,11 @@ export default {
                         title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
                         type: 'error',
                     }),
+                    warningAlert: {
+                        title: 'Note',
+                        message: 'Please retain membership of at least one collection',
+                        type: 'warning',
+                    },
                 },
                 changeAuthorIdForm: {
                     formLabels: {
