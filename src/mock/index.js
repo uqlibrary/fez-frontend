@@ -219,6 +219,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ),
     )
     .reply(200, mockData.lookupToolIncites)
+    .onGet(new RegExp(routes.BULK_UPDATES_API().apiUrl))
+    .reply(200, { ...mockData.bulkUpdatesList})
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })

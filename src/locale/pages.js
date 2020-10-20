@@ -1106,5 +1106,9 @@ export default {
         incompletePublication: {
             title: 'Complete my work',
         },
+        bulkUpdates: {
+            title: 'Bulk updates',
+            loadingMessage: 'Loading bulk updates',
+        },
     },
 };

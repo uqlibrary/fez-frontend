@@ -94,8 +94,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         item={true}
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           publicationsList={
             Array [
               Object {
@@ -705,14 +704,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -779,8 +771,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         item={true}
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           publicationsList={
             Array [
               Object {
@@ -1513,14 +1504,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1587,8 +1571,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         item={true}
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           publicationsList={
             Array [
               Object {
@@ -2198,14 +2181,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>

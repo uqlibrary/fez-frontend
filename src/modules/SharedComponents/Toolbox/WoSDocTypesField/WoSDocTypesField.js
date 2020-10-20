@@ -13,7 +13,7 @@ export default function WoSDocTypesField(fieldProps) {
             value={
                 input instanceof Immutable.List
                     ? input.toJS()
-                    : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []
+                    : input || (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || -1
             }
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}

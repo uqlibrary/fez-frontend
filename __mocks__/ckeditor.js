@@ -1,4 +1,4 @@
 window.CKEDITOR = {
-    appendTo: jest.fn(),
+    replace: jest.fn(),
 };
 module.exports = {};

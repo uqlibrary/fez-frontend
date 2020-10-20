@@ -28,7 +28,7 @@ context('Batch import', () => {
         const selectFirstItem = (field, validationMessage) => {
             cy.get(`[data-testid=${field}-select]`).click();
             cy.waitUntil(() => cy.get(`[data-testid=${field}-options]`).should('exist'));
-            cy.get(`[data-testid=${field}-option-0]`).click();
+            cy.get(`[data-testid=${field}-option-1]`).click();
 
             cy.get('[data-testid=batch-import-validation]').should('not.contain', validationMessage);
         };
