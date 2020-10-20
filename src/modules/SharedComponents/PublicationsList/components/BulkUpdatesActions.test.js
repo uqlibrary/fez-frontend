@@ -57,7 +57,14 @@ describe('BulkUpdatesActions', () => {
         delete window.location;
         window.location = { reload: jest.fn() };
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText, queryByTestId } = setup({
+            recordsSelected: {
+                'UQ:123456': {
+                    rek_pid: 'UQ:123456',
+                    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:11111' }],
+                },
+            },
+        });
 
         fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
         act(() => {

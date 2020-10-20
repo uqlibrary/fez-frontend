@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import { getFormSyncErrors, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
+import { getFormSyncErrors, Field, reduxForm, SubmissionError, formValueSelector } from 'redux-form/immutable';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
@@ -23,18 +23,39 @@ const onSubmit = (values, dispatch, props) => {
     });
 };
 
+const selector = formValueSelector(FORM_NAME);
+
 export const CopyToOrRemoveFromCollectionForm = ({
     error,
     handleSubmit,
     isRemoveFrom,
     onCancel,
+    recordsSelected,
     submitting,
     submitSucceeded,
 }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
+    const records = React.createRef(null);
+    const [alertUser, setAlertUser] = React.useState(null);
+    records.current = Object.values(recordsSelected).map(record =>
+        record.fez_record_search_key_ismemberof.map(collection => collection.rek_ismemberof),
+    );
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
+    const collections = useSelector(state => selector(state, 'collections'));
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
     const idText = isRemoveFrom ? 'remove-from' : 'copy-to';
+
+    React.useEffect(() => {
+        if (isRemoveFrom) {
+            const collectionsSet = Immutable.Set(collections);
+            setAlertUser(
+                records.current.filter(recordCollections => collectionsSet.isSuperset(Immutable.Set(recordCollections)))
+                    .length > 0,
+            );
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [collections]);
+
     return (
         <form data-testid={`${idText}-collection-form`} id={`${idText}-collection-form`}>
             <Grid container spacing={2}>
@@ -44,6 +65,14 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         {...txt.copyToOrRemoveFromCollectionForm.alert(isRemoveFrom)}
                     />
                 </Grid>
+                {!!alertUser && (
+                    <Grid item xs={12}>
+                        <Alert
+                            alertId={`alert-warning-${idText}-collection`}
+                            {...txt.copyToOrRemoveFromCollectionForm.warningAlert}
+                        />
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <Field
                         component={CollectionField}
@@ -112,6 +141,7 @@ CopyToOrRemoveFromCollectionForm.propTypes = {
     handleSubmit: PropTypes.func,
     isRemoveFrom: PropTypes.bool,
     onCancel: PropTypes.func,
+    recordsSelected: PropTypes.object,
     submitting: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
 };

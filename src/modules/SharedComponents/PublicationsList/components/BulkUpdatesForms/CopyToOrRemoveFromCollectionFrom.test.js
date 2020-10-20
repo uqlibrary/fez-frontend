@@ -182,4 +182,29 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
         await waitFor(() => getByTestId('alert-error-remove-from-collection'));
         expect(getByTestId('alert-error-remove-from-collection')).toBeInTheDocument();
     });
+
+    it('should display warning alert to user if work is being removed from all collections', async () => {
+        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
+        mockApi
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
+            )
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:123', rek_title: 'Testing collection' },
+                    { rek_pid: 'UQ:333', rek_title: 'Test collection' },
+                ],
+            });
+
+        const { getByTestId, getByText, queryByTestId } = setup({ isRemoveFrom: true });
+
+        expect(queryByTestId('alert-warning-remove-from-collection')).not.toBeInTheDocument();
+
+        // interact with the form
+        fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
+        await waitFor(() => getByTestId('rek-ismemberof-options'));
+        fireEvent.click(getByText('Testing collection'));
+
+        expect(getByTestId('alert-warning-remove-from-collection')).toBeInTheDocument();
+    });
 });
