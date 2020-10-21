@@ -15,6 +15,7 @@ const rootReducer = combineReducers({
         PublicationForm: plugins.resetValue,
         AdminWorkForm: plugins.deleteFileFromSecuritySection,
         ChangeSearchKeyValueForm: plugins.resetValue,
+        ChangeAuthorIdForm: plugins.resetValue,
     }),
     helpDrawer: helpDrawerReducer,
     fileUpload: fileUploadReducer,

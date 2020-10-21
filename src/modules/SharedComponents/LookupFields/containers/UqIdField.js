@@ -52,7 +52,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
     clearSuggestions: () => dispatch(actions.clearAuthorsSuggestions()),
     onChange: (!!props.input && props.input.onChange) || props.onChange,
-    onClear: !!props.value ? props.onClear : () => {},
+    onClear: !!props.value || (!!props.input && !!props.input.value) ? props.onClear : () => {},
 });
 
 // prettier-ignore

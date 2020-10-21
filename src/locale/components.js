@@ -2921,8 +2921,11 @@ export default {
                     },
                 },
                 changeAuthorIdForm: {
+                    selectPrompt: 'Please select an option to search author by',
                     formLabels: {
-                        authorName: 'Author Name',
+                        searchBy: 'Search author by',
+                        searchByAuthorName: 'Search by Author Name',
+                        searchByAuthorId: 'Search by Author Id',
                         authorId: 'Author Id',
                         cancelButtonLabel: 'Cancel',
                         submitButtonLabel: 'Bulk update',

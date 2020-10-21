@@ -4729,8 +4729,10 @@ describe('getChangeAuthorIdValues', () => {
                     },
                 ],
                 {
-                    search_key: 'fez_record_search_key_author_id.rek_author_id',
-                    rek_author: 'Testing',
+                    search_author_by: 'author',
+                    search_author: {
+                        author: 'Testing',
+                    },
                     rek_author_id: 1234,
                 },
             ),
@@ -4823,8 +4825,10 @@ describe('getChangeAuthorIdValues', () => {
                     },
                 ],
                 {
-                    search_key: 'fez_record_search_key_author_id.rek_author_id',
-                    rek_author: 'Testing',
+                    search_author_by: 'author',
+                    search_author: {
+                        author: 'Testing',
+                    },
                     rek_author_id: 1234,
                 },
             ),

@@ -1244,16 +1244,33 @@ export const getChangeSearchKeyValues = (records, data) => {
     }));
 };
 
+/**
+ *
+ * @param {array} records records that needs to be bulk updated
+ * @param {array} data form data in the form of the object
+ *
+ * data = {
+ *      search_author_by: 'author' || 'author_id',
+ *      search_author: {
+ *          author: 'Test, User',
+ *          author_id: 123455,
+ *      },
+ *      rek_author_id: 222222,
+ * }
+ */
 export const getChangeAuthorIdValues = (records, data) => {
+    const { search_author_by: searchAuthorBy } = data;
     return records.map(record => {
-        const [author] = record.fez_record_search_key_author.filter(author => author.rek_author === data.rek_author);
+        const [item] = record[`fez_record_search_key_${searchAuthorBy}`].filter(
+            author => author[`rek_${searchAuthorBy}`] === data.search_author[searchAuthorBy],
+        );
 
-        if (!!author) {
+        if (!!item) {
             return {
                 rek_pid: record.rek_pid,
                 fez_record_search_key_author_id: record.fez_record_search_key_author_id.map((authorId, index) => ({
                     ...authorId,
-                    ...(index + 1 === author.rek_author_order
+                    ...(index + 1 === item[`rek_${searchAuthorBy}_order`]
                         ? { rek_author_id: data.rek_author_id, rek_author_id_order: index + 1 }
                         : {}),
                 })),
