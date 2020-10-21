@@ -211,16 +211,17 @@ export const MyIncompleteRecord = props => {
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
-                                    style={{ marginTop: -24 }}
                                     component={TextField}
-                                    name="comments"
-                                    type="text"
                                     disabled={submitting}
                                     fullWidth
-                                    multiline
-                                    rows={5}
                                     label={txt.fields.notes.label}
+                                    multiline
+                                    name="comments"
                                     placeholder={txt.fields.notes.placeholder}
+                                    rows={5}
+                                    style={{ marginTop: -24 }}
+                                    textFieldId="comments"
+                                    type="text"
                                 />
                             </StandardCard>
                         </Grid>
