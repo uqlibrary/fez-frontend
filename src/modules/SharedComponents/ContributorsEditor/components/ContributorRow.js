@@ -40,7 +40,7 @@ export const useStyles = makeStyles(theme => ({
         borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: (theme.palette.accent || {}).main,
+        backgroundColor: `${(theme.palette.accent || {}).main} !important`,
         '& svg': {
             color: 'white !important',
         },
@@ -64,6 +64,7 @@ export const useStyles = makeStyles(theme => ({
     },
     contributorLinked: {
         color: theme.palette.primary.main,
+        backgroundColor: theme.palette.secondary.light,
         '& p': {
             fontWeight: 500,
         },
