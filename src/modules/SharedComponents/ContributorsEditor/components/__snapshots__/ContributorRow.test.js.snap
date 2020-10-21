@@ -20,7 +20,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
@@ -150,7 +150,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
@@ -280,7 +280,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
@@ -381,7 +381,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
@@ -482,7 +482,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
@@ -660,7 +660,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2 makeStyles-rowSelected-5",
       }
     }
     divider={true}
@@ -762,7 +762,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2 makeStyles-rowSelected-5",
       }
     }
     divider={true}
@@ -864,7 +864,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
@@ -994,7 +994,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2 makeStyles-rowSelected-5",
       }
     }
     divider={true}
@@ -1097,7 +1097,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2 makeStyles-rowSelected-5",
       }
     }
     divider={true}
@@ -1200,7 +1200,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
     aria-label="Select this record (test) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2 makeStyles-rowSelected-5",
       }
     }
     divider={true}
@@ -1305,7 +1305,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     aria-label="Select this record (test) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2  makeStyles-rowSelected-5 makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2 makeStyles-rowSelected-5",
       }
     }
     divider={true}
@@ -1410,7 +1410,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
     aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
@@ -1535,7 +1535,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
     aria-label="Select this record (undefined) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2",
+        "root": "makeStyles-listItem-2 makeStyles-disabledListItem-3",
       }
     }
     divider={true}
@@ -1640,7 +1640,7 @@ exports[`Component ContributorRow should render contributor row linked class for
     aria-label="Select this record (Test) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2 makeStyles-highlighted-4  makeStyles-disabledListItem-3 makeStyles-contributorLinked-11",
+        "root": "makeStyles-listItem-2 makeStyles-highlighted-4 makeStyles-contributorLinked-11",
       }
     }
     divider={true}
@@ -1769,7 +1769,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
     aria-label="Select this record (Test) to assign it to you"
     classes={
       Object {
-        "root": "makeStyles-listItem-2 makeStyles-highlighted-4  makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2 makeStyles-highlighted-4",
       }
     }
     divider={true}
@@ -1865,7 +1865,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     aria-label=""
     classes={
       Object {
-        "root": "makeStyles-listItem-2   makeStyles-disabledListItem-3",
+        "root": "makeStyles-listItem-2",
       }
     }
     divider={true}
