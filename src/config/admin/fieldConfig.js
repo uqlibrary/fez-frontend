@@ -590,6 +590,7 @@ export default {
                 },
                 locale: locale.components.isrcForm.field,
                 canEdit: true,
+                listEditorId: 'rek-isrc',
             },
         },
         fez_record_search_key_edition: {
