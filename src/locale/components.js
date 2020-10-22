@@ -2942,8 +2942,11 @@ export default {
                     },
                 },
                 changeAuthorIdForm: {
+                    selectPrompt: 'Please select an option to search author by',
                     formLabels: {
-                        authorName: 'Author Name',
+                        searchBy: 'Search author by',
+                        searchByAuthorName: 'Search by Author Name',
+                        searchByAuthorId: 'Search by Author Id',
                         authorId: 'Author Id',
                         cancelButtonLabel: 'Cancel',
                         submitButtonLabel: 'Bulk update',
@@ -2967,6 +2970,12 @@ export default {
                     errorAlert: {
                         title: 'Bulk update - change author ID',
                         type: 'error',
+                    },
+                    warningAlert: {
+                        title: 'Note',
+                        message:
+                            '[authorNameNoMatchCount] of the [numberOfSelectedWorks] works you have selected do not match and will not be updated',
+                        type: 'warning',
                     },
                 },
                 changeDisplayTypeForm: {

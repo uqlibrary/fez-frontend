@@ -85,3 +85,17 @@ export const BULK_UPDATE_SEARCH_KEYS = {
         text: 'Advisory statement',
     },
 };
+
+export const SEARCH_BY_AUTHOR_NAME = 'author';
+export const SEARCH_BY_AUTHOR_ID = 'author_id';
+
+export const SEARCH_AUTHOR_BY = {
+    [SEARCH_BY_AUTHOR_NAME]: {
+        value: SEARCH_BY_AUTHOR_NAME,
+        text: 'Author name',
+    },
+    [SEARCH_BY_AUTHOR_ID]: {
+        value: SEARCH_BY_AUTHOR_ID,
+        text: 'Author ID',
+    },
+};
