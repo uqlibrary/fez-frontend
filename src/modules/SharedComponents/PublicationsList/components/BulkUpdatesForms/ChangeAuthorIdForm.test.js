@@ -86,6 +86,10 @@ describe('ChangeAuthorIdForm', () => {
         // assert next state of the form
         expect(queryByTestId('search-by-rek-author-helper-text')).not.toBeInTheDocument();
 
+        expect(getByTestId('alert-warning-change-author-id')).toHaveTextContent(
+            '1 of the 3 works you have selected do not match and will not be updated',
+        );
+
         act(() => {
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });

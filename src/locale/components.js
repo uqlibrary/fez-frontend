@@ -2950,6 +2950,12 @@ export default {
                         title: 'Bulk update - change author ID',
                         type: 'error',
                     },
+                    warningAlert: {
+                        title: 'Note',
+                        message:
+                            '[authorNameNoMatchCount] of the [numberOfSelectedWorks] works you have selected do not match and will not be updated',
+                        type: 'warning',
+                    },
                 },
                 changeDisplayTypeForm: {
                     formLabels: {
