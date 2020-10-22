@@ -105,7 +105,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}
                         color="primary"
                         data-testid={`${idText}-collection-submit`}
-                        disabled={submitting || disableSubmit || submitSucceeded}
+                        disabled={submitting || disableSubmit || submitSucceeded || !!alertUser}
                         fullWidth
                         id={`${idText}-collection-submit`}
                         onClick={handleSubmit}
