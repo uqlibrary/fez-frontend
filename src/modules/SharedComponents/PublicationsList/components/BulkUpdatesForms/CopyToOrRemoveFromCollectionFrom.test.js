@@ -206,5 +206,6 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
         fireEvent.click(getByText('Testing collection'));
 
         expect(getByTestId('alert-warning-remove-from-collection')).toBeInTheDocument();
+        expect(getByTestId('remove-from-collection-submit')).toHaveAttribute('disabled');
     });
 });
