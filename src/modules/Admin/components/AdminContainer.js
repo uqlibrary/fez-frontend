@@ -196,10 +196,6 @@ export const AdminContainer = ({
                                         activated: isActivated(),
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
-                                    identifiers: {
-                                        component: IdentifiersSection,
-                                        activated: isActivated(),
-                                    },
                                     bibliographic: {
                                         component: BibliographicSection,
                                         activated: isActivated(),
@@ -209,6 +205,10 @@ export const AdminContainer = ({
                                         component: AuthorsSection,
                                         activated: isActivated(),
                                         numberOfErrors: tabErrors.current.authorsSection || null,
+                                    },
+                                    identifiers: {
+                                        component: IdentifiersSection,
+                                        activated: isActivated(),
                                     },
                                     ntro: {
                                         component: NtroSection,
