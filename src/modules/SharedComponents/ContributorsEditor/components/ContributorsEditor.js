@@ -114,9 +114,9 @@ export class ContributorsEditor extends PureComponent {
                     ...contributor,
                     disabled:
                         this.props.editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
-                    selected: isContributorACurrentAuthor,
+                    selected: !this.props.editMode && isContributorACurrentAuthor,
                     authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
-                    required: false,
+                    required: contributor.required || false,
                 },
                 ...this.state.contributors.slice(index + 1),
             ],

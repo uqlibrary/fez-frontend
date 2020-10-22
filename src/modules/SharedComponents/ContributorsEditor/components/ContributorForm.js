@@ -82,6 +82,7 @@ export const ContributorForm = ({
                 orgaff:
                     (contributor.affiliation === AFFILIATION_TYPE_UQ && globalLocale.global.orgTitle) ||
                     contributor.orgaff,
+                required: false,
             });
 
             // reset internal state
