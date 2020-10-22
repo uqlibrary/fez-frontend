@@ -83,6 +83,7 @@ describe('Component ContributorForm', () => {
             creatorRole: '',
             uqIdentifier: '',
             uqUsername: '',
+            required: false,
         });
     });
 
@@ -104,6 +105,7 @@ describe('Component ContributorForm', () => {
             orgtype: '',
             uqIdentifier: '',
             uqUsername: '',
+            required: false,
         });
     });
 
@@ -277,6 +279,7 @@ describe('Component ContributorForm', () => {
             aut_publons_id: null,
             aut_student_username: null,
             uqUsername: 'mdcmar - 553',
+            required: false,
         });
     });
 
@@ -333,6 +336,7 @@ describe('Component ContributorForm', () => {
             aut_publons_id: null,
             aut_student_username: null,
             uqUsername: 'mdcmar - 553',
+            required: false,
         });
     });
 
@@ -421,6 +425,7 @@ describe('Component ContributorForm', () => {
             aut_publons_id: null,
             aut_student_username: 'smdcmar',
             uqUsername: 'smdcmar - 553',
+            required: false,
         });
     });
 
@@ -574,6 +579,7 @@ describe('Component ContributorForm', () => {
             aut_publons_id: null,
             aut_student_username: null,
             uqUsername: '123456 - 553',
+            required: false,
         });
     });
 
@@ -598,6 +604,7 @@ describe('Component ContributorForm', () => {
             orgtype: '',
             uqIdentifier: '0',
             uqUsername: 'Test',
+            required: false,
         });
     });
 
