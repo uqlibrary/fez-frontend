@@ -941,7 +941,11 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
+        ...{
+            fez_record_search_key_license: {
+                ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),
+            },
+        },
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),

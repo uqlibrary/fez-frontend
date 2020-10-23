@@ -2,6 +2,7 @@
 
 exports[`LicenceSelectorField component should render default view 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-license"
@@ -66,6 +67,7 @@ exports[`LicenceSelectorField component should render default view 1`] = `
 
 exports[`LicenceSelectorField component should render error and error message 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-license"
@@ -135,6 +137,7 @@ exports[`LicenceSelectorField component should render error and error message 1`
 
 exports[`LicenceSelectorField component should render with deprecated list 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-license"
@@ -151,6 +154,10 @@ exports[`LicenceSelectorField component should render with deprecated list 1`] =
   isAdmin={true}
   itemsList={
     Array [
+      Object {
+        "text": "None",
+        "value": -1,
+      },
       Object {
         "text": "Permitted Re-use with Acknowledgement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 453701,

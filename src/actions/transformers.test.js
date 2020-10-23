@@ -2813,6 +2813,7 @@ describe('Sanitising empty data', () => {
                     rek_language_order: 1,
                 },
             ],
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2833,6 +2834,7 @@ describe('Sanitising empty data', () => {
                 },
             ],
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2853,6 +2855,7 @@ describe('Sanitising empty data', () => {
                 },
             ],
             fez_record_search_key_volume_number: { rek_volume_number: '17' },
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2874,6 +2877,7 @@ describe('Sanitising empty data', () => {
                 },
             ],
             locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2895,6 +2899,7 @@ describe('Sanitising empty data', () => {
                 },
             ],
             locations: [{ rek_location: 'Biloela', rek_location_order: 1 }],
+            fez_record_search_key_license: {},
         });
     });
 });
@@ -3074,6 +3079,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_related_publications: {
                     rek_related_publications: '<p>A related publication</p>',
                 },
+                fez_record_search_key_license: {},
             });
         });
 
@@ -3088,6 +3094,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
     });
@@ -3252,6 +3259,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
     });
@@ -3288,6 +3296,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
 
@@ -3315,6 +3324,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     { rek_issn: '1212-1212', rek_issn_order: 1 },
                     { rek_issn: '2323-2323', rek_issn_order: 2 },
                 ],
+                fez_record_search_key_license: {},
             });
 
             expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
@@ -3328,6 +3338,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
+                fez_record_search_key_license: {},
             });
 
             const dataEmpty = {};
@@ -3341,6 +3352,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
 
@@ -3360,6 +3372,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_isderivationof: [],
+                fez_record_search_key_license: {},
             });
         });
 
@@ -3379,6 +3392,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_isderivationof: [],
+                fez_record_search_key_license: {},
             });
         });
     });
@@ -3428,6 +3442,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     { rek_issn: '1212-1212', rek_issn_order: 1 },
                     { rek_issn: '2323-2323', rek_issn_order: 2 },
                 ],
+                fez_record_search_key_license: {},
             });
         });
     });
@@ -3465,6 +3480,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_of_journal_name_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
     });
@@ -3638,6 +3654,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_subject_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
 
@@ -3674,6 +3691,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_project_start_date: {
                     rek_project_start_date: '2017-01-01',
                 },
+                fez_record_search_key_license: {},
             });
         });
     });
@@ -3708,6 +3726,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_isderivationof_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
 
             const data2 = {
@@ -3735,6 +3754,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_isderivationof_order: 1,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
     });
