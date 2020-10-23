@@ -2340,7 +2340,7 @@ describe('getDatastreamInfo', () => {
 
 describe('getAdminSectionSearchKeys', () => {
     it('should get correct object', () => {
-        expect(transformers.getAdminSectionSearchKeys()).toEqual({});
+        expect(transformers.getAdminSectionSearchKeys()).toEqual({ fez_record_search_key_license: {} });
     });
 
     it('should transform all search keys for additional information section', () => {
@@ -2595,6 +2595,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
             fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2654,6 +2655,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
             fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2663,7 +2665,7 @@ describe('getAdminSectionSearchKeys', () => {
             contentIndicators: [],
         };
 
-        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({});
+        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({ fez_record_search_key_license: {} });
     });
 });
 
@@ -3028,7 +3030,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
-                fez_record_search_key_license: {},
                 fez_record_search_key_related_datasets: {
                     plainText: 'A related dataset',
                     htmlText: '<p>A related dataset</p>',
