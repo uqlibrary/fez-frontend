@@ -849,7 +849,6 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_date_recorded: dateRecorded,
         fez_record_search_key_end_date: endDate,
         fez_record_search_key_isderivationof: relatedPubs,
-        fez_record_search_key_license: license,
         fez_record_search_key_location: location,
         fez_record_search_key_isdatasetof: datasets,
         fez_record_search_key_related_datasets: relatedDatasets,
@@ -857,7 +856,6 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         issnField,
         ...rest
     } = data;
-
     return {
         ...cleanBlankEntries(rest),
         ...(!!relatedDatasets && relatedDatasets.hasOwnProperty('htmlText')
@@ -941,11 +939,6 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...{
-            fez_record_search_key_license: {
-                ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),
-            },
-        },
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),
@@ -1141,7 +1134,11 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
-        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
+        ...{
+            fez_record_search_key_license: {
+                ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),
+            },
+        },
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...rest,
     };
