@@ -7,12 +7,16 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
+import Edit from '@material-ui/icons/Edit';
 import People from '@material-ui/icons/People';
 import Person from '@material-ui/icons/Person';
 import PersonOutlined from '@material-ui/icons/PersonOutlined';
 import HowToRegIcon from '@material-ui/icons/HowToReg';
 import Tooltip from '@material-ui/core/Tooltip';
 import Lock from '@material-ui/icons/Lock';
+import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
+import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
+import Delete from '@material-ui/icons/Delete';
 
 import { tableIcons } from './AuthorsListIcons';
 import Typography from '@material-ui/core/Typography';
@@ -108,7 +112,9 @@ export const AuthorsList = ({ list, contributorEditorId }) => {
                                         data-testid={`${contributorEditorId}-list-row-${
                                             props.data.tableData.id
                                         }-${tooltip.replace(/ /g, '-').toLowerCase()}`}
-                                    />
+                                    >
+                                        {props.action.icon}
+                                    </Icon>
                                 ),
                             }}
                         />
@@ -117,23 +123,26 @@ export const AuthorsList = ({ list, contributorEditorId }) => {
             }}
             actions={[
                 {
-                    icon: 'edit',
-                    tooltip: 'Edit',
-                    onClick: () => {},
-                },
-                {
-                    icon: 'delete',
-                    tooltip: 'Delete',
-                    onClick: () => {},
-                },
-                {
-                    icon: 'chevron_up',
+                    icon: KeyboardArrowUp,
                     tooltip: 'Move up',
                     onClick: () => {},
                 },
                 {
-                    icon: 'chevron_down',
+                    icon: KeyboardArrowDown,
                     tooltip: 'Move down',
+                    onClick: () => {},
+                },
+                {
+                    icon: Edit,
+                    iconProps: {
+                        id: 'testing',
+                    },
+                    tooltip: 'Edit',
+                    onClick: () => {},
+                },
+                {
+                    icon: Delete,
+                    tooltip: 'Delete',
                     onClick: () => {},
                 },
             ]}
