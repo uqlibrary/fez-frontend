@@ -13,6 +13,7 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -333,6 +334,7 @@ export class ContributorsEditor extends PureComponent {
                                     this.renderContributorRows()
                                 )}
                             </List>
+                            <AuthorsList list={contributors} contributorEditorId={contributorEditorId} />
                             {editMode && contributorIndexSelectedToEdit !== null && (
                                 <div style={{ marginTop: 24 }}>
                                     {this.renderContributorForm({
