@@ -28,44 +28,66 @@ export const useStyles = makeStyles(() => ({
     },
 }));
 
+const getIcon = rowData => {
+    if (parseInt(rowData.uqIdentifier, 10)) {
+        return <HowToRegIcon color="secondary" />;
+    } else if (rowData.selected) {
+        return <Person color="secondary" />;
+    } else if ((rowData.disabled || rowData.disabled) && !rowData.enableSelect) {
+        return rowData.lockedTooltip ? (
+            <Tooltip title={rowData.lockedTooltip}>
+                <Lock color="secondary" />
+            </Tooltip>
+        ) : (
+            <Lock color="secondary" />
+        );
+    } else {
+        return <PersonOutlined color="secondary" />;
+    }
+};
+
+export const NameAsPublished = React.memo(({ icon, text }) => (
+    <Grid container spacing={2}>
+        <Hidden xsDown>
+            <Grid item style={{ alignSelf: 'center' }}>
+                {icon}
+            </Grid>
+        </Hidden>
+        <Grid item>{text}</Grid>
+    </Grid>
+));
+
+NameAsPublished.propTypes = {
+    icon: PropTypes.element,
+    text: PropTypes.element,
+};
+
 export const getColumns = suffix => {
     return [
         {
             title: (
-                <Hidden xsDown>
-                    <People />
-                </Hidden>
+                <NameAsPublished
+                    icon={<People color="secondary" />}
+                    text={
+                        <Typography variant="caption" color="secondary">
+                            {"Author's name as published"}
+                        </Typography>
+                    }
+                />
             ),
-            field: 'author_status',
-            editable: 'never',
-            render: rowData => {
-                if (parseInt(rowData.uqIdentifier, 10)) {
-                    return <HowToRegIcon />;
-                } else if (rowData.selected) {
-                    return <Person />;
-                } else if ((rowData.disabled || rowData.disabled) && !rowData.enableSelect) {
-                    return rowData.lockedTooltip ? (
-                        <Tooltip title={rowData.lockedTooltip}>
-                            <Lock />
-                        </Tooltip>
-                    ) : (
-                        <Lock />
-                    );
-                } else {
-                    return <PersonOutlined />;
-                }
-            },
-        },
-        {
-            title: "Author's name as published",
             field: 'nameAsPublished',
             render: rowData => (
-                <React.Fragment>
-                    <Typography variant="body1">{rowData.nameAsPublished}</Typography>
-                    <Typography variant="caption">{`${numberToWords(
-                        rowData.tableData.id + 1,
-                    )} listed ${suffix}`}</Typography>
-                </React.Fragment>
+                <NameAsPublished
+                    icon={getIcon(rowData)}
+                    text={
+                        <React.Fragment>
+                            <Typography variant="body1">{rowData.nameAsPublished}</Typography>
+                            <Typography variant="caption">{`${numberToWords(
+                                rowData.tableData.id + 1,
+                            )} listed ${suffix}`}</Typography>
+                        </React.Fragment>
+                    }
+                />
             ),
         },
     ];
@@ -129,7 +151,7 @@ export const AuthorsList = ({
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
                     },
                     tooltip: moveUpHint,
-                    hidden: rowData.tableData.id === 0,
+                    disabled: rowData.tableData.id === 0,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index - 1];
@@ -144,7 +166,7 @@ export const AuthorsList = ({
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
                     },
                     tooltip: moveDownHint,
-                    hidden: rowData.tableData.id === data.length - 1,
+                    disabled: rowData.tableData.id === data.length - 1,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index + 1];
@@ -192,6 +214,7 @@ export const AuthorsList = ({
 AuthorsList.propTypes = {
     contributorEditorId: PropTypes.string,
     list: PropTypes.array,
+    locale: PropTypes.object,
 };
 
 export default React.memo(AuthorsList);
