@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableAction } from 'material-table';
+import MaterialTable, { MTableBodyRow } from 'material-table';
 // import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
+import { numberToWords } from 'config';
 
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
@@ -27,7 +28,7 @@ export const useStyles = makeStyles(() => ({
     },
 }));
 
-export const getColumns = () => {
+export const getColumns = suffix => {
     return [
         {
             title: (
@@ -58,11 +59,18 @@ export const getColumns = () => {
         {
             title: "Author's name as published",
             field: 'nameAsPublished',
+            render: rowData => (
+                <React.Fragment>
+                    <Typography variant="body1">{rowData.nameAsPublished}</Typography>
+                    <Typography variant="caption">{`${numberToWords(
+                        rowData.tableData.id + 1,
+                    )} listed ${suffix}`}</Typography>
+                </React.Fragment>
+            ),
         },
     ];
 };
 
-import { numberToWords } from 'config';
 export const AuthorDetail = rowData => {
     console.log(rowData);
     return (
@@ -75,21 +83,35 @@ export const AuthorDetail = rowData => {
     );
 };
 
-export const AuthorsList = ({ list, contributorEditorId }) => {
+export const AuthorsList = ({
+    contributorEditorId,
+    list,
+    locale: {
+        // deleteRecordConfirmation,
+        moveUpHint,
+        moveDownHint,
+        deleteHint,
+        editHint,
+        // selectHint,
+        // lockedTooltip,
+        suffix,
+    },
+}) => {
     const classes = useStyles();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns(classes);
+    columns.current = getColumns(suffix);
 
-    const [data] = React.useState(list);
+    const [data, setData] = React.useState(list);
 
-    console.log('test');
     return (
         <MaterialTable
             tableRef={materialTableRef}
             columns={columns.current}
             components={{
-                Container: props => <div {...props} />,
+                Container: props => (
+                    <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
+                ),
                 Row: props => (
                     <MTableBodyRow
                         {...props}
@@ -98,53 +120,55 @@ export const AuthorsList = ({ list, contributorEditorId }) => {
                         data-testid={`${contributorEditorId}-list-row-${props.index}`}
                     />
                 ),
-                Action: props => {
-                    const { icon: Icon, tooltip, ...restAction } =
-                        (typeof props.action === 'function' && props.action(props.data)) || props.action;
-                    return (
-                        <MTableAction
-                            {...props}
-                            action={{
-                                ...restAction,
-                                tooltip,
-                                icon: () => (
-                                    <Icon
-                                        data-testid={`${contributorEditorId}-list-row-${
-                                            props.data.tableData.id
-                                        }-${tooltip.replace(/ /g, '-').toLowerCase()}`}
-                                    >
-                                        {props.action.icon}
-                                    </Icon>
-                                ),
-                            }}
-                        />
-                    );
-                },
             }}
             actions={[
-                {
-                    icon: KeyboardArrowUp,
-                    tooltip: 'Move up',
-                    onClick: () => {},
-                },
-                {
-                    icon: KeyboardArrowDown,
-                    tooltip: 'Move down',
-                    onClick: () => {},
-                },
-                {
-                    icon: Edit,
+                rowData => ({
+                    icon: props => <KeyboardArrowUp {...props} />,
                     iconProps: {
-                        id: 'testing',
+                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
+                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
                     },
-                    tooltip: 'Edit',
+                    tooltip: moveUpHint,
+                    hidden: rowData.tableData.id === 0,
+                    onClick: () => {
+                        const index = rowData.tableData.id;
+                        const nextContributor = data[index - 1];
+                        console.log(materialTableRef.current.scrollTop);
+                        setData([...data.slice(0, index - 1), rowData, nextContributor, ...data.slice(index + 1)]);
+                    },
+                }),
+                rowData => ({
+                    icon: props => <KeyboardArrowDown {...props} />,
+                    iconProps: {
+                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
+                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
+                    },
+                    tooltip: moveDownHint,
+                    hidden: rowData.tableData.id === data.length - 1,
+                    onClick: () => {
+                        const index = rowData.tableData.id;
+                        const nextContributor = data[index + 1];
+                        setData([...data.slice(0, index), nextContributor, rowData, ...data.slice(index + 2)]);
+                    },
+                }),
+                rowData => ({
+                    icon: props => <Edit {...props} />,
+                    iconProps: {
+                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
+                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
+                    },
+                    tooltip: editHint,
                     onClick: () => {},
-                },
-                {
-                    icon: Delete,
-                    tooltip: 'Delete',
+                }),
+                rowData => ({
+                    icon: props => <Delete {...props} />,
+                    iconProps: {
+                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
+                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
+                    },
+                    tooltip: deleteHint,
                     onClick: () => {},
-                },
+                }),
             ]}
             data={data}
             icons={tableIcons}
@@ -156,7 +180,10 @@ export const AuthorsList = ({ list, contributorEditorId }) => {
                 draggable: false,
                 search: true,
                 maxBodyHeight: 400,
-                pageSizeOptions: [50, 100, 200, 500],
+                minBodyHeight: 200,
+                pageSize: 50,
+                pageSizeOptions: [5, 50, 100, 200, 500],
+                padding: 'dense',
             }}
         />
     );

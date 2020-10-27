@@ -213,7 +213,6 @@ export class ContributorsEditor extends PureComponent {
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 contributor={contributor}
-                contributorSuffix={locale.contributorSuffix}
                 disabled={disabled}
                 hideDelete={hideDelete}
                 hideReorder={hideReorder}
@@ -334,7 +333,11 @@ export class ContributorsEditor extends PureComponent {
                                     this.renderContributorRows()
                                 )}
                             </List>
-                            <AuthorsList list={contributors} contributorEditorId={contributorEditorId} />
+                            <AuthorsList
+                                list={contributors}
+                                contributorEditorId={contributorEditorId}
+                                {...(this.props.locale.row || {})}
+                            />
                             {editMode && contributorIndexSelectedToEdit !== null && (
                                 <div style={{ marginTop: 24 }}>
                                     {this.renderContributorForm({
