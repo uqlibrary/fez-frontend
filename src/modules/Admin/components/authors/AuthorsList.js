@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow } from 'material-table';
 // import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { numberToWords } from 'config';
 
 import Hidden from '@material-ui/core/Hidden';
@@ -26,11 +26,14 @@ export const useStyles = makeStyles(() => ({
     text: {
         fontSize: 13,
     },
+    linked: {
+        fontWeight: 500,
+    },
 }));
 
 const getIcon = rowData => {
     if (parseInt(rowData.uqIdentifier, 10)) {
-        return <HowToRegIcon color="secondary" />;
+        return <HowToRegIcon color="primary" />;
     } else if (rowData.selected) {
         return <Person color="secondary" />;
     } else if ((rowData.disabled || rowData.disabled) && !rowData.enableSelect) {
@@ -46,23 +49,29 @@ const getIcon = rowData => {
     }
 };
 
-export const NameAsPublished = React.memo(({ icon, text }) => (
-    <Grid container spacing={2}>
-        <Hidden xsDown>
-            <Grid item style={{ alignSelf: 'center' }}>
-                {icon}
+export const NameAsPublished = React.memo(({ icon, text, linked }) => {
+    const classes = useStyles();
+    return (
+        <Grid container spacing={2}>
+            <Hidden xsDown>
+                <Grid item style={{ alignSelf: 'center' }}>
+                    {icon}
+                </Grid>
+            </Hidden>
+            <Grid item className={linked ? classes.linked : ''}>
+                {text}
             </Grid>
-        </Hidden>
-        <Grid item>{text}</Grid>
-    </Grid>
-));
+        </Grid>
+    );
+});
 
 NameAsPublished.propTypes = {
     icon: PropTypes.element,
     text: PropTypes.element,
 };
 
-export const getColumns = suffix => {
+export const getColumns = (suffix, classes) => {
+    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
     return [
         {
             title: (
@@ -81,20 +90,40 @@ export const getColumns = suffix => {
                     icon={getIcon(rowData)}
                     text={
                         <React.Fragment>
-                            <Typography variant="body1">{rowData.nameAsPublished}</Typography>
-                            <Typography variant="caption">{`${numberToWords(
+                            <Typography variant="body2" className={linkedClass(rowData)}>
+                                {rowData.nameAsPublished}
+                            </Typography>
+                            <Typography variant="caption" className={linkedClass(rowData)}>{`${numberToWords(
                                 rowData.tableData.id + 1,
-                            )} listed ${suffix}`}</Typography>
+                            )} ${suffix}`}</Typography>
                         </React.Fragment>
                     }
+                    linked={!!rowData.aut_id}
                 />
             ),
+        },
+        {
+            title: (
+                <Typography variant="caption" color="secondary">
+                    {'UQ Identifier'}
+                </Typography>
+            ),
+            field: 'uqIdentifier',
+            render: rowData => (
+                <Typography variant="body2" className={linkedClass(rowData)}>
+                    {rowData.aut_id
+                        ? `${rowData.aut_org_username || rowData.aut_student_username || rowData.aut_ref_num} - ${
+                              rowData.aut_id
+                          }`
+                        : ''}
+                </Typography>
+            ),
+            searchable: true,
         },
     ];
 };
 
 export const AuthorDetail = rowData => {
-    console.log(rowData);
     return (
         <Grid container>
             <Grid item xs={12}>
@@ -120,9 +149,10 @@ export const AuthorsList = ({
     },
 }) => {
     const classes = useStyles();
+    const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns(suffix);
+    columns.current = getColumns(suffix, classes);
 
     const [data, setData] = React.useState(list);
 
@@ -137,7 +167,6 @@ export const AuthorsList = ({
                 Row: props => (
                     <MTableBodyRow
                         {...props}
-                        className={classes.text}
                         id={`${contributorEditorId}-list-row-${props.index}`}
                         data-testid={`${contributorEditorId}-list-row-${props.index}`}
                     />
@@ -194,7 +223,7 @@ export const AuthorsList = ({
             ]}
             data={data}
             icons={tableIcons}
-            title="Testing"
+            title=""
             detailPanel={AuthorDetail}
             options={{
                 actionsColumnIndex: -1,
@@ -206,6 +235,16 @@ export const AuthorsList = ({
                 pageSize: 50,
                 pageSizeOptions: [5, 50, 100, 200, 500],
                 padding: 'dense',
+                rowStyle: rowData => {
+                    if (!!rowData.aut_id) {
+                        return {
+                            backgroundColor: theme.palette.secondary.light,
+                            color: theme.palette.primary.main,
+                        };
+                    } else {
+                        return {};
+                    }
+                },
             }}
         />
     );
