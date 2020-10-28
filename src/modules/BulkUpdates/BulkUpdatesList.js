@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import MaterialTable, { MTableBodyRow } from 'material-table';
 import Paper from '@material-ui/core/Paper';
@@ -28,7 +29,10 @@ export const getColumns = classes => {
             editable: 'never',
             render: rowData => (
                 <Typography data-testid="buj-created-at" id="buj-created-at" className={classes.text}>
-                    {rowData.buj_created_at}
+                    {moment
+                        .utc(rowData.buj_created_at, 'YYYY-MM-DD HH:mm:ss')
+                        .local()
+                        .format('YYYY-MM-DD HH:mm:ss')}
                 </Typography>
             ),
         },
@@ -38,7 +42,10 @@ export const getColumns = classes => {
             editable: 'never',
             render: rowData => (
                 <Typography data-testid="buj-started-at" id="buj-started-at" className={classes.text}>
-                    {rowData.buj_started_at}
+                    {moment
+                        .utc(rowData.buj_started_at, 'YYYY-MM-DD HH:mm:ss')
+                        .local()
+                        .format('YYYY-MM-DD HH:mm:ss')}
                 </Typography>
             ),
         },
@@ -48,7 +55,10 @@ export const getColumns = classes => {
             editable: 'never',
             render: rowData => (
                 <Typography data-testid="buj-finished-at" id="buj-finished-at" className={classes.text}>
-                    {rowData.buj_finished_at}
+                    {moment
+                        .utc(rowData.buj_finished_at, 'YYYY-MM-DD HH:mm:ss')
+                        .local()
+                        .format('YYYY-MM-DD HH:mm:ss')}
                 </Typography>
             ),
         },
