@@ -48,6 +48,7 @@ export const MIME_TYPE_WHITELIST = {
     mp4: 'video/mp4',
     mp4v: 'video/mp4',
     mp3: 'audio/mp3',
+    mxf: 'application/mxf',
     wav: 'audio/wav',
     mpe: 'video/mpeg',
     mpeg: 'video/mpeg',
