@@ -1954,9 +1954,12 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
           "help": Object {
             "buttonLabel": "CLOSE",
             "text": <React.Fragment>
-              <h3>
+              <WithStyles(ForwardRef(Typography))
+                component="h4"
+                variant="h6"
+              >
                 Creator research statement
-              </h3>
+              </WithStyles(ForwardRef(Typography))>
               <p>
                 For more information about the research statement, click
                 <b>

@@ -628,9 +628,12 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
           "help": Object {
             "buttonLabel": "CLOSE",
             "text": <React.Fragment>
-              <h3>
+              <WithStyles(ForwardRef(Typography))
+                component="h4"
+                variant="h6"
+              >
                 Creator research statement
-              </h3>
+              </WithStyles(ForwardRef(Typography))>
               <p>
                 For more information about the research statement, click
                 <b>
@@ -1078,9 +1081,12 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
           "help": Object {
             "buttonLabel": "CLOSE",
             "text": <React.Fragment>
-              <h3>
+              <WithStyles(ForwardRef(Typography))
+                component="h4"
+                variant="h6"
+              >
                 Creator research statement
-              </h3>
+              </WithStyles(ForwardRef(Typography))>
               <p>
                 For more information about the research statement, click
                 <b>

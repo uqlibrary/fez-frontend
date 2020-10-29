@@ -89,7 +89,9 @@ export default class NtroFields extends React.PureComponent {
                     title: 'Author/Creator research statement',
                     text: (
                         <React.Fragment>
-                            <h3>Creator research statement</h3>
+                            <Typography component="h4" variant="h6">
+                                Creator research statement
+                            </Typography>
                             <p>
                                 For more information about the research statement, click
                                 <b>

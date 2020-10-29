@@ -27,7 +27,7 @@ export default {
     help: {
         title: 'Add more information to an existing NTRO',
         text: (
-            <div>
+            <p>
                 For help, click{' '}
                 <a
                     href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
@@ -36,7 +36,7 @@ export default {
                     here
                 </a>
                 .
-            </div>
+            </p>
         ),
         buttonLabel: 'CLOSE',
     },
