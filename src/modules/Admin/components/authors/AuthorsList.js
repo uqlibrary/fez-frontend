@@ -313,9 +313,9 @@ export const AuthorsList = ({
                 grouping: false,
                 draggable: false,
                 search: true,
-                maxBodyHeight: 500,
-                minBodyHeight: 200,
-                pageSize: 50,
+                ...(list.length > 10 ? { maxBodyHeight: 550 } : {}),
+                ...(list.length > 10 ? { paging: true } : { paging: false }),
+                ...(list.length > 100 ? { pageSize: list.length > 100 ? 50 : 5 } : {}),
                 pageSizeOptions: [5, 50, 100, 200, 500],
                 padding: 'dense',
                 rowStyle: rowData => {
@@ -332,6 +332,7 @@ export const AuthorsList = ({
                         return {};
                     }
                 },
+                overflowY: list.length > 10 ? 'auto' : 'none',
             }}
         />
     );
