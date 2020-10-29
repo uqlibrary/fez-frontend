@@ -260,6 +260,12 @@ export class ContributorsEditor extends PureComponent {
         );
     };
 
+    handleAuthorsListChange = contributors => {
+        this.setState({
+            contributors,
+        });
+    };
+
     render() {
         const {
             classes,
@@ -337,6 +343,7 @@ export class ContributorsEditor extends PureComponent {
                                 contributorEditorId={contributorEditorId}
                                 disabled={disabled}
                                 list={contributors}
+                                onChange={this.handleAuthorsListChange}
                                 {...(this.props.locale.row || {})}
                             />
                             {editMode && contributorIndexSelectedToEdit !== null && (

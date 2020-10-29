@@ -206,6 +206,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
             },
           ]
         }
+        onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -349,6 +350,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
             },
           ]
         }
+        onChange={[Function]}
       />
       <div
         style={
@@ -565,6 +567,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
             },
           ]
         }
+        onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -708,6 +711,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
             },
           ]
         }
+        onChange={[Function]}
       />
       <div
         style={
@@ -995,6 +999,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
             },
           ]
         }
+        onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -1236,6 +1241,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
             },
           ]
         }
+        onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -1320,6 +1326,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
             },
           ]
         }
+        onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -9067,6 +9074,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             },
           ]
         }
+        onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -9266,6 +9274,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             },
           ]
         }
+        onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>

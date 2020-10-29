@@ -123,7 +123,6 @@ export const getColumns = (disabled, suffix, classes) => {
                 </Typography>
             ),
             editComponent: props => {
-                console.log(props);
                 const { rowData: contributor } = props;
                 const prefilledSearch = contributor.uqIdentifier === '0';
                 if (prefilledSearch) {
@@ -196,6 +195,7 @@ export const AuthorsList = ({
         // lockedTooltip,
         suffix,
     },
+    onChange,
 }) => {
     const classes = useStyles();
     const theme = useTheme();
@@ -204,11 +204,13 @@ export const AuthorsList = ({
     columns.current = getColumns(disabled, suffix, classes);
 
     const [data, setData] = React.useState(list);
+
     const handleAuthorUpdate = (action, newData, oldData) => {
-        const materialTable = materialTableRef.current;
-        materialTable.dataManager.changeRowEditing(oldData);
-        setData([...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]);
+        const newList = [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)];
+        setData(newList);
+        onChange(newList);
     };
+
     return (
         <MaterialTable
             tableRef={materialTableRef}
@@ -246,7 +248,14 @@ export const AuthorsList = ({
                         const index = rowData.tableData.id;
                         const nextContributor = data[index - 1];
                         console.log(materialTableRef.current.scrollTop);
-                        setData([...data.slice(0, index - 1), rowData, nextContributor, ...data.slice(index + 1)]);
+                        const newList = [
+                            ...data.slice(0, index - 1),
+                            rowData,
+                            nextContributor,
+                            ...data.slice(index + 1),
+                        ];
+                        setData(newList);
+                        onChange(newList);
                     },
                 }),
                 rowData => ({
@@ -260,7 +269,9 @@ export const AuthorsList = ({
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index + 1];
-                        setData([...data.slice(0, index), nextContributor, rowData, ...data.slice(index + 2)]);
+                        const newList = [...data.slice(0, index), nextContributor, rowData, ...data.slice(index + 2)];
+                        setData(newList);
+                        onChange(newList);
                     },
                 }),
                 rowData => ({
@@ -331,6 +342,7 @@ AuthorsList.propTypes = {
     disabled: PropTypes.bool,
     list: PropTypes.array,
     locale: PropTypes.object,
+    onChange: PropTypes.func,
 };
 
 export default React.memo(AuthorsList);
