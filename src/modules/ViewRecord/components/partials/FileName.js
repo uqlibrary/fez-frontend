@@ -35,7 +35,7 @@ export class FileName extends PureComponent {
     };
 
     isVideo = mimeType => {
-        return mimeType.indexOf('video') >= 0;
+        return mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf';
     };
 
     isImage = mimeType => {
