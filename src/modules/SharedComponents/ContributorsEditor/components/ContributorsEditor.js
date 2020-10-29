@@ -27,6 +27,7 @@ export class ContributorsEditor extends PureComponent {
         hideReorder: PropTypes.bool,
         input: PropTypes.object,
         isNtro: PropTypes.bool,
+        isAdmin: PropTypes.bool,
         locale: PropTypes.object,
         meta: PropTypes.object,
         onChange: PropTypes.func,
@@ -274,6 +275,7 @@ export class ContributorsEditor extends PureComponent {
             editMode,
             hideDelete,
             isNtro,
+            isAdmin,
             meta,
             showContributorAssignment,
             showIdentifierLookup,
@@ -289,6 +291,18 @@ export class ContributorsEditor extends PureComponent {
                 React.Children.map(meta.error.props.children, (child, index) => {
                     return child.type ? React.cloneElement(child, { key: index }) : child;
                 });
+        }
+
+        if (isAdmin) {
+            return (
+                <AuthorsList
+                    contributorEditorId={contributorEditorId}
+                    disabled={disabled}
+                    list={contributors}
+                    onChange={this.handleAuthorsListChange}
+                    {...(this.props.locale.row || {})}
+                />
+            );
         }
 
         return (
@@ -339,13 +353,6 @@ export class ContributorsEditor extends PureComponent {
                                     this.renderContributorRows()
                                 )}
                             </List>
-                            <AuthorsList
-                                contributorEditorId={contributorEditorId}
-                                disabled={disabled}
-                                list={contributors}
-                                onChange={this.handleAuthorsListChange}
-                                {...(this.props.locale.row || {})}
-                            />
                             {editMode && contributorIndexSelectedToEdit !== null && (
                                 <div style={{ marginTop: 24 }}>
                                     {this.renderContributorForm({

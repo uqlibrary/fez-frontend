@@ -188,26 +188,6 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "nameAsPublished": "test1",
-              "selected": false,
-            },
-            Object {
-              "nameAsPublished": "test2",
-              "selected": false,
-            },
-            Object {
-              "nameAsPublished": "test3",
-              "selected": false,
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>
@@ -332,26 +312,6 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "nameAsPublished": "test1",
-              "selected": false,
-            },
-            Object {
-              "nameAsPublished": "test2",
-              "selected": true,
-            },
-            Object {
-              "nameAsPublished": "test3",
-              "selected": false,
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
       <div
         style={
           Object {
@@ -549,26 +509,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "nameAsPublished": "test1",
-              "selected": false,
-            },
-            Object {
-              "nameAsPublished": "test2",
-              "selected": false,
-            },
-            Object {
-              "nameAsPublished": "test3",
-              "selected": false,
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>
@@ -693,26 +633,6 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "nameAsPublished": "test1",
-              "selected": false,
-            },
-            Object {
-              "nameAsPublished": "test2",
-              "selected": true,
-            },
-            Object {
-              "nameAsPublished": "test3",
-              "selected": false,
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
       <div
         style={
           Object {
@@ -984,23 +904,6 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "nameAsPublished": 1,
-            },
-            Object {
-              "nameAsPublished": 2,
-            },
-            Object {
-              "nameAsPublished": 3,
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>
@@ -1223,26 +1126,6 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "displayName": 1,
-            },
-            Object {
-              "displayName": 2,
-            },
-            Object {
-              "displayName": 3,
-            },
-            Object {
-              "displayName": 4,
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>
@@ -1317,17 +1200,6 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "selected": true,
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>
@@ -9062,20 +8934,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "displayName": "test 1",
-            },
-            Object {
-              "displayName": "test 2",
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>
@@ -9262,20 +9120,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           showRoleInput={false}
         />
       </WithStyles(ForwardRef(List))>
-      <Memo(AuthorsList)
-        contributorEditorId="test"
-        list={
-          Array [
-            Object {
-              "displayName": "test 1",
-            },
-            Object {
-              "displayName": "test 2",
-            },
-          ]
-        }
-        onChange={[Function]}
-      />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>

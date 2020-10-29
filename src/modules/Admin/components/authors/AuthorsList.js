@@ -7,6 +7,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { numberToWords } from 'config';
 
 import Hidden from '@material-ui/core/Hidden';
+import AddBox from '@material-ui/icons/AddBox';
 import Grid from '@material-ui/core/Grid';
 import Edit from '@material-ui/icons/Edit';
 import People from '@material-ui/icons/People';
@@ -206,7 +207,17 @@ export const AuthorsList = ({
     const [data, setData] = React.useState(list);
 
     const handleAuthorUpdate = (action, newData, oldData) => {
-        const newList = [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)];
+        const materialTable = materialTableRef.current;
+
+        materialTable.setState({
+            ...materialTable.dataManager.getRenderState(),
+            showAddRow: false,
+        });
+
+        const newList =
+            action === 'update'
+                ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
+                : [...data, newData];
         setData(newList);
         onChange(newList);
     };
@@ -300,6 +311,22 @@ export const AuthorsList = ({
                     tooltip: deleteHint,
                     onClick: () => {},
                 }),
+                {
+                    icon: props => <AddBox {...props} />,
+                    iconProps: {
+                        id: `${contributorEditorId}-add`,
+                        'data-testid': `${contributorEditorId}-add`,
+                    },
+                    isFreeAction: true,
+                    onClick: () => {
+                        const materialTable = materialTableRef.current;
+                        materialTable.dataManager.changeRowEditing();
+                        materialTable.setState({
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: true,
+                        });
+                    },
+                },
             ]}
             data={data}
             icons={tableIcons}

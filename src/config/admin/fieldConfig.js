@@ -799,6 +799,7 @@ export default {
                 locale: formLocale.journalArticle.authors.field,
                 canEdit: true,
                 contributorEditorId: 'rek-author',
+                isAdmin: true,
             },
         },
         editors: {
