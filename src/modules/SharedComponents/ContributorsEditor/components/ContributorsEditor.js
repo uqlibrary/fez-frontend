@@ -334,8 +334,9 @@ export class ContributorsEditor extends PureComponent {
                                 )}
                             </List>
                             <AuthorsList
-                                list={contributors}
                                 contributorEditorId={contributorEditorId}
+                                disabled={disabled}
+                                list={contributors}
                                 {...(this.props.locale.row || {})}
                             />
                             {editMode && contributorIndexSelectedToEdit !== null && (

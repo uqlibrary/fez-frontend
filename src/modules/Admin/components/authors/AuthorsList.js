@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow } from 'material-table';
+import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
 // import Paper from '@material-ui/core/Paper';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { numberToWords } from 'config';
@@ -21,6 +21,10 @@ import Delete from '@material-ui/icons/Delete';
 
 import { tableIcons } from './AuthorsListIcons';
 import Typography from '@material-ui/core/Typography';
+import { UqIdField } from 'modules/SharedComponents/LookupFields';
+
+import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY } from 'config/general';
+import { default as globalLocale } from 'locale/global';
 
 export const useStyles = makeStyles(() => ({
     text: {
@@ -70,7 +74,7 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-export const getColumns = (suffix, classes) => {
+export const getColumns = (disabled, suffix, classes) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
     return [
         {
@@ -87,7 +91,7 @@ export const getColumns = (suffix, classes) => {
             field: 'nameAsPublished',
             render: rowData => (
                 <NameAsPublished
-                    icon={getIcon(rowData)}
+                    icon={getIcon({ ...rowData, disabled })}
                     text={
                         <React.Fragment>
                             <Typography variant="body2" className={linkedClass(rowData)}>
@@ -118,6 +122,50 @@ export const getColumns = (suffix, classes) => {
                         : ''}
                 </Typography>
             ),
+            editComponent: props => {
+                console.log(props);
+                const { rowData: contributor } = props;
+                const prefilledSearch = contributor.uqIdentifier === '0';
+                if (prefilledSearch) {
+                    contributor.uqUsername = contributor.nameAsPublished;
+                }
+                const onChange = selectedItem => {
+                    const newValue = {
+                        ...selectedItem,
+                        nameAsPublished:
+                            contributor.nameAsPublished ||
+                            (selectedItem &&
+                                selectedItem.aut_lname &&
+                                `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
+                        uqIdentifier: `${selectedItem.aut_id}`,
+                        orgaff:
+                            (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
+                            contributor.orgaff,
+                        orgtype:
+                            (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
+                            contributor.orgtype,
+                        uqUsername: `${selectedItem.aut_org_username ||
+                            selectedItem.aut_student_username ||
+                            selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
+                    };
+                    props.onRowDataChange({ ...contributor, ...newValue });
+                };
+
+                return (
+                    <UqIdField
+                        {...props}
+                        // disabled={disabled}
+                        hideLabel
+                        hintText="Type UQ author name to search"
+                        uqIdFieldId={'rek-author-aut-id'}
+                        key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
+                        onChange={onChange}
+                        // onClear={_onUQIdentifierCleared}
+                        value={contributor.uqUsername || contributor.uqIdentifier || ''}
+                        prefilledSearch={prefilledSearch}
+                    />
+                );
+            },
             searchable: true,
         },
     ];
@@ -136,6 +184,7 @@ export const AuthorDetail = rowData => {
 
 export const AuthorsList = ({
     contributorEditorId,
+    disabled,
     list,
     locale: {
         // deleteRecordConfirmation,
@@ -152,10 +201,14 @@ export const AuthorsList = ({
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns(suffix, classes);
+    columns.current = getColumns(disabled, suffix, classes);
 
     const [data, setData] = React.useState(list);
-
+    const handleAuthorUpdate = (action, newData, oldData) => {
+        const materialTable = materialTableRef.current;
+        materialTable.dataManager.changeRowEditing(oldData);
+        setData([...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]);
+    };
     return (
         <MaterialTable
             tableRef={materialTableRef}
@@ -171,6 +224,14 @@ export const AuthorsList = ({
                         data-testid={`${contributorEditorId}-list-row-${props.index}`}
                     />
                 ),
+                EditRow: props => (
+                    <MTableEditRow
+                        {...props}
+                        id={`${contributorEditorId}-list-edit-row-${props.index}`}
+                        data-testid={`${contributorEditorId}-list-edit-row-${props.index}`}
+                        onEditingApproved={handleAuthorUpdate}
+                    />
+                ),
             }}
             actions={[
                 rowData => ({
@@ -180,7 +241,7 @@ export const AuthorsList = ({
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
                     },
                     tooltip: moveUpHint,
-                    disabled: rowData.tableData.id === 0,
+                    disabled: disabled || rowData.tableData.id === 0,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index - 1];
@@ -195,7 +256,7 @@ export const AuthorsList = ({
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
                     },
                     tooltip: moveDownHint,
-                    disabled: rowData.tableData.id === data.length - 1,
+                    disabled: disabled || rowData.tableData.id === data.length - 1,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index + 1];
@@ -208,8 +269,15 @@ export const AuthorsList = ({
                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
                     },
+                    disabled: disabled,
                     tooltip: editHint,
-                    onClick: () => {},
+                    onClick: (event, rowData) => {
+                        const materialTable = materialTableRef.current;
+                        materialTable.dataManager.changeRowEditing(rowData, 'update');
+                        materialTable.setState({
+                            ...materialTable.dataManager.getRenderState(),
+                        });
+                    },
                 }),
                 rowData => ({
                     icon: props => <Delete {...props} />,
@@ -217,6 +285,7 @@ export const AuthorsList = ({
                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
                     },
+                    disabled: disabled,
                     tooltip: deleteHint,
                     onClick: () => {},
                 }),
@@ -225,18 +294,25 @@ export const AuthorsList = ({
             icons={tableIcons}
             title=""
             detailPanel={AuthorDetail}
+            editable={{
+                onRowUpdateCancelled: () => {},
+            }}
             options={{
                 actionsColumnIndex: -1,
                 grouping: false,
                 draggable: false,
                 search: true,
-                maxBodyHeight: 400,
+                maxBodyHeight: 500,
                 minBodyHeight: 200,
                 pageSize: 50,
                 pageSizeOptions: [5, 50, 100, 200, 500],
                 padding: 'dense',
                 rowStyle: rowData => {
-                    if (!!rowData.aut_id) {
+                    if (!!rowData.selected) {
+                        return {
+                            backgroundColor: theme.palette.accent.main,
+                        };
+                    } else if (!!rowData.aut_id) {
                         return {
                             backgroundColor: theme.palette.secondary.light,
                             color: theme.palette.primary.main,
@@ -252,6 +328,7 @@ export const AuthorsList = ({
 
 AuthorsList.propTypes = {
     contributorEditorId: PropTypes.string,
+    disabled: PropTypes.bool,
     list: PropTypes.array,
     locale: PropTypes.object,
 };
