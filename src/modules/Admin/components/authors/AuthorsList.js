@@ -153,7 +153,8 @@ export const getColumns = (disabled, suffix, classes) => {
 
                 const onClear = () => {
                     props.onRowDataChange({
-                        ...contributor,
+                        nameAsPublished: contributor.nameAsPublished,
+                        creatorRole: contributor.creatorRole,
                         orgaff: 'Missing',
                         orgtype: '',
                         uqIdentifier: '0',
