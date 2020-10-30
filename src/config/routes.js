@@ -132,6 +132,7 @@ export const pathConfig = {
     admin: {
         add: '/admin/add',
         changeDisplayType: pid => `/admin/change-display-type/${pid}`,
+        bulkUpdates: '/admin/bulk-updates',
         collection: '/admin/collection',
         community: '/admin/community',
         delete: pid => `/admin/delete/${pid}`,
@@ -171,6 +172,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 export const flattedPathConfig = [
     '/admin/add',
+    '/admin/bulk-updates',
     '/admin/change-display-type',
     '/admin/collection',
     '/admin/community',
@@ -492,6 +494,13 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
                   },
+                  {
+                      path: pathConfig.admin.bulkUpdates,
+                      component: components.BulkUpdates,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.bulkUpdates.title,
+                  },
               ]
             : []),
         ...(account && account.canMasquerade
@@ -678,6 +687,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.digiteam.batchImport,
                       ...locale.menu.digiteam.batchImport,
+                  },
+                  {
+                      linkTo: pathConfig.admin.bulkUpdates,
+                      ...locale.menu.bulkUpdates,
                   },
                   {
                       linkTo: pathConfig.admin.favouriteSearch,

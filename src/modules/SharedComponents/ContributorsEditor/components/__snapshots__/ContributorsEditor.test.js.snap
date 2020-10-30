@@ -2770,6 +2770,8 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             clearSuggestions={[Function]}
                                             defaultValue=""
                                             disabled={false}
+                                            error={false}
+                                            errorText="Type UQ author name to search"
                                             filterOptions={[Function]}
                                             floatingLabelText="UQ Author ID"
                                             getOptionLabel={[Function]}
@@ -2909,6 +2911,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                       }
                                                     }
                                                     disabled={false}
+                                                    error={false}
                                                     fullWidth={true}
                                                     helperText=""
                                                     id="test-aut-id"
@@ -2994,6 +2997,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                         }
                                                       }
                                                       disabled={false}
+                                                      error={false}
                                                       fullWidth={true}
                                                       helperText=""
                                                       id="test-aut-id"
@@ -7085,6 +7089,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             clearSuggestions={[Function]}
                                             defaultValue=""
                                             disabled={true}
+                                            error={false}
+                                            errorText="Type UQ author name to search"
                                             filterOptions={[Function]}
                                             floatingLabelText="UQ Author ID"
                                             getOptionLabel={[Function]}
@@ -7213,6 +7219,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       }
                                                     }
                                                     disabled={true}
+                                                    error={false}
                                                     fullWidth={true}
                                                     helperText=""
                                                     id="test-aut-id"
@@ -7288,6 +7295,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         }
                                                       }
                                                       disabled={true}
+                                                      error={false}
                                                       fullWidth={true}
                                                       helperText=""
                                                       id="test-aut-id"

@@ -25,3 +25,4 @@ export { trendingPublicationsConfig } from './trendingPublications';
 export { claimRecordConfig } from './claimRecord';
 export { mui1theme, adminTheme } from './theme';
 export { history } from './history';
+export * as BULK_UPDATES from './bulkUpdates';

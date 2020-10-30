@@ -133,8 +133,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
         }
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           hideCountTotal={true}
           key="altmetric"
           publicationsList={
@@ -746,14 +745,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -884,8 +876,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           hideCountTotal={true}
           key="altmetric"
           publicationsList={
@@ -1497,14 +1488,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>

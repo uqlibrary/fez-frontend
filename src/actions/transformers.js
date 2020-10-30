@@ -1221,3 +1221,89 @@ export const getNotesSectionSearchKeys = (data = {}) => {
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
     };
 };
+
+export const getChangeSearchKeyValues = (records, data) => {
+    const { search_key: searchKey } = data;
+    const [primaryKey, subKey] = searchKey.split('.');
+    const getSearchKeyValue = (primaryKey, subKey, item) => {
+        switch (primaryKey) {
+            case 'fez_record_search_key_notes':
+                return {
+                    [primaryKey]: {
+                        ...item,
+                        [subKey]: `${(!!item && item[subKey]) || ''}${data[primaryKey][subKey]}`,
+                    },
+                };
+            default:
+                return {
+                    [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
+                };
+        }
+    };
+    return records.map(({ rek_pid: pid, [primaryKey]: item }) => ({
+        rek_pid: pid,
+        ...getSearchKeyValue(primaryKey, subKey, item),
+        edit_reason: data.edit_reason || '',
+    }));
+};
+
+/**
+ *
+ * @param {array} records records that needs to be bulk updated
+ * @param {array} data form data in the form of the object
+ *
+ * data = {
+ *      search_author_by: 'author' || 'author_id',
+ *      search_author: {
+ *          author: 'Test, User',
+ *          author_id: 123455,
+ *      },
+ *      rek_author_id: 222222,
+ * }
+ */
+export const getChangeAuthorIdValues = (records, data) => {
+    const { search_author_by: searchAuthorBy } = data;
+    return records.map(record => {
+        const [item] = record[`fez_record_search_key_${searchAuthorBy}`].filter(
+            author => author[`rek_${searchAuthorBy}`] === data.search_author[searchAuthorBy],
+        );
+
+        if (!!item) {
+            return {
+                rek_pid: record.rek_pid,
+                fez_record_search_key_author_id: record.fez_record_search_key_author_id.map((authorId, index) => ({
+                    ...authorId,
+                    ...(index + 1 === item[`rek_${searchAuthorBy}_order`]
+                        ? { rek_author_id: data.rek_author_id, rek_author_id_order: index + 1 }
+                        : {}),
+                })),
+            };
+        } else {
+            return {
+                rek_pid: record.rek_pid,
+            };
+        }
+    });
+};
+
+export const getRemoveFromCollectionData = (records, data) => {
+    return records.map(record => ({
+        rek_pid: record.rek_pid,
+        fez_record_search_key_ismemberof: record.fez_record_search_key_ismemberof.filter(
+            collection => !data.collections.includes(collection.rek_ismemberof),
+        ),
+    }));
+};
+
+export const getCopyToCollectionData = (records, data) => {
+    return records.map(record => ({
+        rek_pid: record.rek_pid,
+        fez_record_search_key_ismemberof: [
+            ...record.fez_record_search_key_ismemberof,
+            ...data.collections.map((collection, index) => ({
+                rek_ismemberof: collection,
+                rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
+            })),
+        ],
+    }));
+};

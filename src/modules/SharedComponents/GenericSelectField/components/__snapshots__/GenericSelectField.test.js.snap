@@ -911,7 +911,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                           id="generic-test-label"
                         >
                           <WithStyles(ForwardRef(FormLabel))
-                            className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                            className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                             classes={
                               Object {
                                 "asterisk": "MuiInputLabel-asterisk",
@@ -921,12 +921,12 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                 "required": "Mui-required",
                               }
                             }
-                            data-shrink={false}
+                            data-shrink={true}
                             data-testid="generic-test-label"
                             id="generic-test-label"
                           >
                             <ForwardRef(FormLabel)
-                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                              className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
                               classes={
                                 Object {
                                   "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
@@ -939,13 +939,13 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                   "root": "MuiFormLabel-root",
                                 }
                               }
-                              data-shrink={false}
+                              data-shrink={true}
                               data-testid="generic-test-label"
                               id="generic-test-label"
                             >
                               <label
-                                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-                                data-shrink={false}
+                                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                                data-shrink={true}
                                 data-testid="generic-test-label"
                                 id="generic-test-label"
                               />
@@ -977,7 +977,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                         }
                         multiple={false}
                         onChange={[Function]}
-                        value=""
+                        value="-1"
                       >
                         <ForwardRef(Select)
                           MenuProps={
@@ -1017,7 +1017,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                           }
                           multiple={false}
                           onChange={[Function]}
-                          value=""
+                          value="-1"
                         >
                           <WithStyles(ForwardRef(Input))
                             disabled={false}
@@ -1109,7 +1109,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                               }
                             }
                             onChange={[Function]}
-                            value=""
+                            value="-1"
                           >
                             <ForwardRef(Input)
                               classes={
@@ -1219,7 +1219,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                 }
                               }
                               onChange={[Function]}
-                              value=""
+                              value="-1"
                             >
                               <WithStyles(ForwardRef(InputBase))
                                 classes={
@@ -1332,7 +1332,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                 multiline={false}
                                 onChange={[Function]}
                                 type="text"
-                                value=""
+                                value="-1"
                               >
                                 <ForwardRef(InputBase)
                                   classes={
@@ -1449,7 +1449,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                   multiline={false}
                                   onChange={[Function]}
                                   type="text"
-                                  value=""
+                                  value="-1"
                                 >
                                   <div
                                     className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
@@ -1509,7 +1509,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       onChange={[Function]}
                                       onFocus={[Function]}
                                       required={false}
-                                      value=""
+                                      value="-1"
                                       variant="standard"
                                     >
                                       <div
@@ -1539,7 +1539,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         id="generic-test-input"
                                         onAnimationStart={[Function]}
                                         type="hidden"
-                                        value=""
+                                        value="-1"
                                       />
                                       <ForwardRef
                                         className="MuiSelect-icon"
@@ -1822,7 +1822,7 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
     }
     multiple={false}
     onChange={[Function]}
-    value=""
+    value="-1"
   >
     <WithStyles(ForwardRef(MenuItem))
       aria-label={1}
@@ -2170,7 +2170,7 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
     }
     multiple={false}
     onChange={[Function]}
-    value=""
+    value="-1"
   >
     <WithStyles(ForwardRef(MenuItem))
       aria-label="Item 1"
@@ -2373,7 +2373,7 @@ exports[`GenericSelectField should render snapshots for no items 1`] = `
     }
     multiple={false}
     onChange={[Function]}
-    value=""
+    value="-1"
   />
 </WithStyles(ForwardRef(FormControl))>
 `;
@@ -2411,7 +2411,7 @@ exports[`GenericSelectField should render snapshots for one item 1`] = `
     }
     multiple={false}
     onChange={[Function]}
-    value=""
+    value="-1"
   >
     <WithStyles(ForwardRef(MenuItem))
       aria-label="Item 1"
