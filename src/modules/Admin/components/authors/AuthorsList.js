@@ -23,14 +23,12 @@ import Delete from '@material-ui/icons/Delete';
 import { tableIcons } from './AuthorsListIcons';
 import Typography from '@material-ui/core/Typography';
 import { UqIdField } from 'modules/SharedComponents/LookupFields';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 
 export const useStyles = makeStyles(() => ({
-    text: {
-        fontSize: 13,
-    },
     linked: {
         fontWeight: 500,
     },
@@ -106,6 +104,24 @@ export const getColumns = (disabled, suffix, classes) => {
                     linked={!!rowData.aut_id}
                 />
             ),
+            editComponent: props => (
+                <Grid container spacing={2}>
+                    <Hidden xsDown>
+                        <Grid item style={{ alignSelf: 'center' }}>
+                            <PersonOutlined color="secondary" />
+                        </Grid>
+                    </Hidden>
+                    <Grid item>
+                        <TextField
+                            value={props.value}
+                            onChange={e => props.onChange(e.target.value)}
+                            textFieldId="rek-author"
+                            errorText={props.helperText}
+                            fullWidth
+                        />
+                    </Grid>
+                </Grid>
+            ),
         },
         {
             title: (
@@ -166,6 +182,7 @@ export const getColumns = (disabled, suffix, classes) => {
                 return (
                     <UqIdField
                         {...props}
+                        clearOnInputClear
                         hideLabel
                         hintText="Type UQ author name to search"
                         uqIdFieldId={'rek-author-aut-id'}
