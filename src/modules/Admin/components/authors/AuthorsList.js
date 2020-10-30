@@ -116,19 +116,19 @@ export const getColumns = (disabled, suffix, classes) => {
             field: 'uqIdentifier',
             render: rowData => (
                 <Typography variant="body2" className={linkedClass(rowData)}>
-                    {rowData.aut_id
-                        ? `${rowData.aut_org_username || rowData.aut_student_username || rowData.aut_ref_num} - ${
-                              rowData.aut_id
-                          }`
-                        : ''}
+                    {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
+                        (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
+                        ''}
                 </Typography>
             ),
             editComponent: props => {
                 const { rowData: contributor } = props;
                 const prefilledSearch = contributor.uqIdentifier === '0';
-                if (prefilledSearch) {
-                    contributor.uqUsername = contributor.nameAsPublished;
-                }
+                const value =
+                    (prefilledSearch && contributor.nameAsPublished) ||
+                    (!!contributor.uqUsername && `${contributor.uqUsername} - ${contributor.uqIdentifier}`) ||
+                    contributor.uqIdentifier;
+
                 const onChange = selectedItem => {
                     const newValue = {
                         ...selectedItem,
@@ -146,22 +146,32 @@ export const getColumns = (disabled, suffix, classes) => {
                             contributor.orgtype,
                         uqUsername: `${selectedItem.aut_org_username ||
                             selectedItem.aut_student_username ||
-                            selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
+                            selectedItem.aut_ref_num}`,
                     };
                     props.onRowDataChange({ ...contributor, ...newValue });
+                };
+
+                const onClear = () => {
+                    props.onRowDataChange({
+                        ...contributor,
+                        orgaff: 'Missing',
+                        orgtype: '',
+                        uqIdentifier: '0',
+                        uqUsername: '',
+                        affiliation: '',
+                    });
                 };
 
                 return (
                     <UqIdField
                         {...props}
-                        // disabled={disabled}
                         hideLabel
                         hintText="Type UQ author name to search"
                         uqIdFieldId={'rek-author-aut-id'}
                         key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
                         onChange={onChange}
-                        // onClear={_onUQIdentifierCleared}
-                        value={contributor.uqUsername || contributor.uqIdentifier || ''}
+                        onClear={onClear}
+                        value={value}
                         prefilledSearch={prefilledSearch}
                     />
                 );
@@ -359,7 +369,7 @@ export const AuthorsList = ({
                         return {};
                     }
                 },
-                overflowY: list.length > 10 ? 'auto' : 'none',
+                overflowY: list.length > 10 ? 'auto' : 'hidden',
             }}
         />
     );
