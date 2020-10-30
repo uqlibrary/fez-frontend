@@ -49,6 +49,8 @@ export const AutoCompleteAsynchronousField = ({
                 onClear();
             } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
                 onChange({ value: newInputValue });
+            } else if (!newInputValue && reason === 'input') {
+                onClear();
             }
         },
         [allowFreeText, prefilledSearch, onChange, onClear],
