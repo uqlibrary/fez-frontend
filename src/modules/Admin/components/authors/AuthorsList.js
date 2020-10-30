@@ -237,17 +237,20 @@ export const AuthorsList = ({
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
 
-        materialTable.setState({
-            ...materialTable.dataManager.getRenderState(),
-            showAddRow: false,
-        });
-
         const newList =
             action === 'update'
                 ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
                 : [...data, newData];
-        setData(newList);
+
         onChange(newList);
+        setData(newList);
+
+        materialTable.dataManager.changePaging(newList.length > 10);
+
+        materialTable.setState({
+            ...materialTable.dataManager.getRenderState(),
+            showAddRow: false,
+        });
     };
 
     return (
@@ -368,9 +371,11 @@ export const AuthorsList = ({
                 grouping: false,
                 draggable: false,
                 search: true,
-                ...(list.length > 10 ? { maxBodyHeight: 550 } : {}),
-                ...(list.length > 10 ? { paging: true } : { paging: false }),
-                ...(list.length > 100 ? { pageSize: list.length > 100 ? 50 : 5 } : {}),
+                addRowPosition: 'first',
+                emptyRowsWhenPaging: true,
+                ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
+                ...(data.length > 10 ? { paging: true } : { paging: false }),
+                ...(data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
                 pageSizeOptions: [5, 50, 100, 200, 500],
                 padding: 'dense',
                 rowStyle: rowData => {
