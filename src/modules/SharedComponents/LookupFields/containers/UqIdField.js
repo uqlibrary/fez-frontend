@@ -35,13 +35,14 @@ const mapStateToProps = (state, props) => {
             : [],
         itemsLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
         defaultValue: (!!props.value && { value: props.value }) || '',
-        getOptionLabel: option => option.value || '',
+        getOptionLabel: (!!props.getOptionLabel && props.getOptionLabel) || (option => option.value) || '',
         filterOptions: (options, { inputValue }) => {
             const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
             return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
         },
+        error: !!props.meta && !!props.meta.error,
+        errorText: (!!props.meta && props.meta.error) || props.hintText || 'Enter a value to search',
         floatingLabelText: props.floatingLabelText || 'UQ Identifier',
-        hintText: props.hintText || 'Enter a value to search',
         OptionTemplate: GenericOptionTemplate,
         disabled: props.disabled,
     };
@@ -50,8 +51,8 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
     clearSuggestions: () => dispatch(actions.clearAuthorsSuggestions()),
-    onChange: props.onChange,
-    onClear: !!props.value ? props.onClear : () => {},
+    onChange: (!!props.input && props.input.onChange) || props.onChange,
+    onClear: !!props.value || (!!props.input && !!props.input.value) ? props.onClear : () => {},
 });
 
 // prettier-ignore

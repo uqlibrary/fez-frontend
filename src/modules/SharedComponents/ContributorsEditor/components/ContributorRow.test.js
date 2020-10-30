@@ -389,7 +389,7 @@ describe('Component ContributorRow', () => {
         wrapper.update();
 
         wrapper
-            .find('ConfirmationBox')
+            .find('Memo(ConfirmationBox)')
             .props()
             .onAction();
         expect(onDeleteFn).toBeCalled();
@@ -418,7 +418,7 @@ describe('Component ContributorRow', () => {
 
         wrapper.find('#test-list-row-delete-0').simulate('click');
         wrapper
-            .find('ConfirmationBox')
+            .find('Memo(ConfirmationBox)')
             .props()
             .onAction();
         expect(onDeleteFn).not.toBeCalled();

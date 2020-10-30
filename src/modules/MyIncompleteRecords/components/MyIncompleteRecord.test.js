@@ -146,13 +146,13 @@ describe('Component MyIncompleteRecord', () => {
         });
 
         wrapper
-            .find('ConfirmationBox')
+            .find('Memo(ConfirmationBox)')
             .props()
             .onCancelAction();
         expect(testFn).toBeCalledWith(routes.pathConfig.records.incomplete);
 
         wrapper
-            .find('ConfirmationBox')
+            .find('Memo(ConfirmationBox)')
             .props()
             .onAction();
         expect(testFn).toBeCalledWith(routes.pathConfig.dashboard);
