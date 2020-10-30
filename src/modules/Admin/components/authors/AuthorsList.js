@@ -236,11 +236,17 @@ export const AuthorsList = ({
 
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
+        let newList = data;
 
-        const newList =
-            action === 'update'
-                ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
-                : [...data, newData];
+        if (
+            !!newData.aut_id &&
+            !data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
+        ) {
+            newList =
+                action === 'update'
+                    ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
+                    : [...data, newData];
+        }
 
         onChange(newList);
         setData(newList);
