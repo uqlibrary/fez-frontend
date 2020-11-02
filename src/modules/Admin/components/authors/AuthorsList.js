@@ -6,8 +6,9 @@ import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { numberToWords } from 'config';
 
+import Fab from '@material-ui/core/Fab';
 import Hidden from '@material-ui/core/Hidden';
-import AddBox from '@material-ui/icons/AddBox';
+import AddIcon from '@material-ui/icons/Add';
 import Grid from '@material-ui/core/Grid';
 import Edit from '@material-ui/icons/Edit';
 import People from '@material-ui/icons/People';
@@ -123,6 +124,7 @@ export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale })
                         </Hidden>
                         <Grid item style={{ flexGrow: '1' }}>
                             <TextField
+                                autoFocus
                                 value={props.value}
                                 onChange={e => props.onChange(e.target.value)}
                                 textFieldId="rek-author"
@@ -411,7 +413,11 @@ export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onCha
                     onClick: () => {},
                 }),
                 {
-                    icon: props => <AddBox {...props} />,
+                    icon: props => (
+                        <Fab size="medium" color="primary" aria-label="add">
+                            <AddIcon {...props} />
+                        </Fab>
+                    ),
                     iconProps: {
                         id: `${contributorEditorId}-add`,
                         'data-testid': `${contributorEditorId}-add`,
@@ -438,8 +444,9 @@ export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onCha
                 actionsColumnIndex: -1,
                 grouping: false,
                 draggable: false,
-                search: true,
+                search: false,
                 addRowPosition: 'first',
+                filtering: data.length > 10,
                 emptyRowsWhenPaging: true,
                 ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
                 ...(data.length > 10 ? { paging: true } : { paging: false }),
