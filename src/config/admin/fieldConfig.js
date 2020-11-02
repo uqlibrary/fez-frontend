@@ -1865,7 +1865,7 @@ export default {
             }),
             authors: () => ({
                 showRoleInput: true,
-                locale: locale.components.creators.field,
+                locale: locale.components.creatorsList.field,
             }),
             rek_description: () => ({
                 required: true,

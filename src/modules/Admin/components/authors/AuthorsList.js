@@ -22,7 +22,7 @@ import Delete from '@material-ui/icons/Delete';
 
 import { tableIcons } from './AuthorsListIcons';
 import Typography from '@material-ui/core/Typography';
-import { UqIdField } from 'modules/SharedComponents/LookupFields';
+import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY } from 'config/general';
@@ -73,8 +73,16 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-export const getColumns = (disabled, suffix, classes) => {
+export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
+    const {
+        header: {
+            locale: { nameColumn, roleColumn, identifierColumn },
+        },
+        form: {
+            locale: { creatorRoleLabel, creatorRoleHint, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
+        },
+    } = locale;
     return [
         {
             title: (
@@ -82,7 +90,7 @@ export const getColumns = (disabled, suffix, classes) => {
                     icon={<People color="secondary" />}
                     text={
                         <Typography variant="caption" color="secondary">
-                            {"Author's name as published"}
+                            {nameColumn}
                         </Typography>
                     }
                 />
@@ -104,29 +112,35 @@ export const getColumns = (disabled, suffix, classes) => {
                     linked={!!rowData.aut_id}
                 />
             ),
-            editComponent: props => (
-                <Grid container spacing={2}>
-                    <Hidden xsDown>
-                        <Grid item style={{ alignSelf: 'center' }}>
-                            <PersonOutlined color="secondary" />
+            editComponent: props => {
+                const { rowData: contributor } = props;
+                return (
+                    <Grid container spacing={2}>
+                        <Hidden xsDown>
+                            <Grid item style={{ alignSelf: 'center' }}>
+                                <PersonOutlined color="secondary" />
+                            </Grid>
+                        </Hidden>
+                        <Grid item style={{ flexGrow: '1' }}>
+                            <TextField
+                                value={props.value}
+                                onChange={e => props.onChange(e.target.value)}
+                                textFieldId="rek-author"
+                                error={(contributor.nameAsPublished || '').length === 0}
+                                label={nameAsPublishedLabel}
+                                placeholder={nameAsPublishedHint}
+                                required
+                                fullWidth
+                            />
                         </Grid>
-                    </Hidden>
-                    <Grid item>
-                        <TextField
-                            value={props.value}
-                            onChange={e => props.onChange(e.target.value)}
-                            textFieldId="rek-author"
-                            errorText={props.helperText}
-                            fullWidth
-                        />
                     </Grid>
-                </Grid>
-            ),
+                );
+            },
         },
         {
             title: (
                 <Typography variant="caption" color="secondary">
-                    {'UQ Identifier'}
+                    {identifierColumn}
                 </Typography>
             ),
             field: 'uqIdentifier',
@@ -145,7 +159,7 @@ export const getColumns = (disabled, suffix, classes) => {
                     (!!contributor.uqUsername && `${contributor.uqUsername} - ${contributor.uqIdentifier}`) ||
                     contributor.uqIdentifier;
 
-                const onChange = selectedItem => {
+                const handleChange = selectedItem => {
                     const newValue = {
                         ...selectedItem,
                         nameAsPublished:
@@ -167,7 +181,7 @@ export const getColumns = (disabled, suffix, classes) => {
                     props.onRowDataChange({ ...contributor, ...newValue });
                 };
 
-                const onClear = () => {
+                const handleClear = () => {
                     props.onRowDataChange({
                         nameAsPublished: contributor.nameAsPublished,
                         creatorRole: contributor.creatorRole,
@@ -183,12 +197,12 @@ export const getColumns = (disabled, suffix, classes) => {
                     <UqIdField
                         {...props}
                         clearOnInputClear
-                        hideLabel
+                        floatingLabelText={identifierLabel}
                         hintText="Type UQ author name to search"
                         uqIdFieldId={'rek-author-aut-id'}
                         key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
-                        onChange={onChange}
-                        onClear={onClear}
+                        onChange={handleChange}
+                        onClear={handleClear}
                         value={value}
                         prefilledSearch={prefilledSearch}
                     />
@@ -196,6 +210,53 @@ export const getColumns = (disabled, suffix, classes) => {
             },
             searchable: true,
         },
+        ...(showRoleInput
+            ? [
+                  {
+                      title: (
+                          <Typography variant="caption" color="secondary">
+                              {roleColumn}
+                          </Typography>
+                      ),
+                      field: 'creatorRole',
+                      render: rowData => (
+                          <Typography variant="body2" className={linkedClass(rowData)}>
+                              {rowData.creatorRole}
+                          </Typography>
+                      ),
+                      editComponent: props => {
+                          const { rowData: contributor } = props;
+                          const handleChange = selectedItem => {
+                              const newValue = {
+                                  ...contributor,
+                                  creatorRole: selectedItem,
+                              };
+                              props.onRowDataChange({ ...contributor, ...newValue });
+                          };
+                          return (
+                              <RoleField
+                                  {...props}
+                                  fullWidth
+                                  key={`role-input-${(contributor.nameAsPublished || '').trim().length === 0}`}
+                                  id="creator-role-field"
+                                  floatingLabelText={creatorRoleLabel}
+                                  hintText={creatorRoleHint}
+                                  onChange={handleChange}
+                                  disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
+                                  required
+                                  autoComplete="off"
+                                  error={
+                                      (contributor.nameAsPublished || '').trim().length === 0
+                                          ? false
+                                          : (contributor.creatorRole || '').trim().length === 0
+                                  }
+                                  value={contributor.creatorRole}
+                              />
+                          );
+                      },
+                  },
+              ]
+            : []),
     ];
 };
 
@@ -210,27 +271,26 @@ export const AuthorDetail = rowData => {
     );
 };
 
-export const AuthorsList = ({
-    contributorEditorId,
-    disabled,
-    list,
-    locale: {
-        // deleteRecordConfirmation,
-        moveUpHint,
-        moveDownHint,
-        deleteHint,
-        editHint,
-        // selectHint,
-        // lockedTooltip,
-        suffix,
-    },
-    onChange,
-}) => {
+export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onChange, showRoleInput }) => {
+    const {
+        row: {
+            locale: {
+                // deleteRecordConfirmation,
+                moveUpHint,
+                moveDownHint,
+                deleteHint,
+                editHint,
+                // selectHint,
+                // lockedTooltip,
+                suffix,
+            },
+        },
+    } = locale;
     const classes = useStyles();
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns(disabled, suffix, classes);
+    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale });
 
     const [data, setData] = React.useState(list);
 
@@ -240,8 +300,10 @@ export const AuthorsList = ({
 
         if (
             !!newData.aut_id &&
-            !data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
+            data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
         ) {
+            newList = data;
+        } else {
             newList =
                 action === 'update'
                     ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
@@ -410,6 +472,7 @@ AuthorsList.propTypes = {
     list: PropTypes.array,
     locale: PropTypes.object,
     onChange: PropTypes.func,
+    showRoleInput: PropTypes.bool,
 };
 
 export default React.memo(AuthorsList);

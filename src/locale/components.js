@@ -1169,6 +1169,65 @@ export default {
                 },
             },
         },
+        creatorsList: {
+            title: 'Creators',
+            // help: {
+            //     title: 'Creators',
+            //     text: 'some help',
+            //     buttonLabel: 'CLOSE'
+            // },
+            description:
+                'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
+            descriptionCreatorOrContributor:
+                'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
+            field: {
+                form: {
+                    locale: {
+                        nameAsPublishedLabel: "Enter creator's name as published",
+                        nameAsPublishedHint: 'Type the name exactly as published',
+                        creatorRoleLabel: "Enter creator's role",
+                        creatorRoleHint:
+                            'Select role from list or type the role of the creator in relation to the dataset',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add creator',
+                        nameAsPublishedFieldId: 'creators-name-as-published-field',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: "Creator's name as published",
+                        roleColumn: "Creator's role",
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        suffix: ' listed creator',
+                        unselectedHint: 'Select this to confirm this creator is you',
+                        selectedHint: 'This is you',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        selectHint: 'Select this creator ([name]) to assign it as you',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         designers: {
             title: 'Designer name',
             description: 'Please provide a list of designers and then select your name from the list.',

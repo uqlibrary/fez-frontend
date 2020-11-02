@@ -300,7 +300,8 @@ export class ContributorsEditor extends PureComponent {
                     disabled={disabled}
                     list={contributors}
                     onChange={this.handleAuthorsListChange}
-                    {...(this.props.locale.row || {})}
+                    showRoleInput={showRoleInput}
+                    locale={this.props.locale}
                 />
             );
         }
