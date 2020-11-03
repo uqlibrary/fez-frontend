@@ -1030,8 +1030,8 @@ export default {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
-                        identifierColumn: 'UQ identifier',
-                        organisationColumn: 'Organisation',
+                        identifierColumn: 'UQ identifiers',
+                        organisationColumn: 'Organisation/Organisation type',
                     },
                 },
                 row: {

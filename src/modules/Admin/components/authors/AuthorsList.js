@@ -313,7 +313,6 @@ export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale, i
                                       <OrgAffiliationTypeSelector
                                           affiliation={contributor.affiliation}
                                           onAffiliationChange={handleAffiliationChange}
-                                          error={!contributor.affiliation}
                                           disabled={disabled}
                                       />
                                   )}
@@ -326,8 +325,7 @@ export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale, i
                                           onOrgTypeChange={handleOrgTypeChange}
                                           disableAffiliationEdit={disabled}
                                           disableOrgTypeEdit={disabled}
-                                          orgAffiliationError={contributor.orgaff === ''}
-                                          orgAffiliationTypeError={contributor.orgtype === ''}
+                                          fullWidthFields
                                       />
                                   )}
                               </React.Fragment>
