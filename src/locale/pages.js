@@ -1,9 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import LockIcon from '@material-ui/icons/Lock';
-import { pathConfig } from 'config/routes';
+import Typography from '@material-ui/core/Typography';
+
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+
 import locale from 'locale/components';
+
+import { pathConfig } from 'config/routes';
 import { DOI_ORG_PREFIX } from 'config/doi';
 /*
 
@@ -98,9 +102,13 @@ export default {
                 title: 'Browse eSpace help',
                 text: (
                     <div>
-                        <h3>Browse</h3>
+                        <Typography component="h4" variant="h6">
+                            Browse
+                        </Typography>
                         <p>Latest articles....</p>
-                        <h3>Browse collections</h3>
+                        <Typography component="h4" variant="h6">
+                            Browse collections
+                        </Typography>
                         <p>Latest collections....</p>
                     </div>
                 ),
@@ -600,7 +608,9 @@ export default {
                 title: 'About Google Scholar',
                 text: (
                     <div>
-                        <h3>How to create Google Scholar profile?</h3>
+                        <Typography component="h4" variant="h6">
+                            How to create Google Scholar profile?
+                        </Typography>
                         <ol>
                             <li>Sign to your Google account, or create one if you don't have one.</li>
                             <li>
@@ -959,13 +969,16 @@ export default {
                 title: 'Keyboard shortcuts',
                 text: (
                     <div>
-                        <br />
-                        <h3>Tab navigation</h3>
+                        <Typography component="h4" variant="h6">
+                            Tab navigation
+                        </Typography>
                         <p>
                             To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow
                             keys.
                         </p>
-                        <h3>Form style</h3>
+                        <Typography component="h4" variant="h6">
+                            Form style
+                        </Typography>
                         <p>
                             To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN
                             arrow keys.
@@ -973,7 +986,9 @@ export default {
                         <p>
                             Your preference is saved as a cookie on this browser and it will remember your preference.
                         </p>
-                        <h3>Page zoom</h3>
+                        <Typography component="h4" variant="h6">
+                            Page zoom
+                        </Typography>
                         <p>
                             Using <b>CTRL</b> & <b>+/-</b> will zoom the page in/out further for more screen real
                             estate.

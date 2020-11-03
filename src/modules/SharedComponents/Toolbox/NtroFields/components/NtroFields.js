@@ -89,18 +89,18 @@ export default class NtroFields extends React.PureComponent {
                     title: 'Author/Creator research statement',
                     text: (
                         <React.Fragment>
-                            <h3>Creator research statement</h3>
+                            <Typography component="h4" variant="h6">
+                                Creator research statement
+                            </Typography>
                             <p>
-                                For more information about the research statement, click
-                                <b>
-                                    <a
-                                        style={{ fontWeight: 700 }}
-                                        target="_blank"
-                                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                                    >
-                                        here
-                                    </a>
-                                </b>
+                                For more information about the research statement, click{' '}
+                                <a
+                                    style={{ fontWeight: 700 }}
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                                >
+                                    here
+                                </a>
                             </p>
                         </React.Fragment>
                     ),

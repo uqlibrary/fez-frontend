@@ -41,7 +41,7 @@ export const FileIcon = ({
         return <PictureAsPdf className={classes.fileIcon} color="secondary" />;
     } else if (mimeType.indexOf('image') >= 0) {
         return <Image className={classes.fileIcon} color="secondary" />;
-    } else if (mimeType.indexOf('video') >= 0) {
+    } else if (mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf') {
         return <Videocam className={classes.fileIcon} color="secondary" />;
     } else {
         return <InsertDriveFile className={classes.fileIcon} color="secondary" />;

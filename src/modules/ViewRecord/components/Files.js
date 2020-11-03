@@ -210,7 +210,7 @@ export class FilesClass extends Component {
             return <PictureAsPdf className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('image') >= 0) {
             return <Image className={this.props.classes.fileIcon} color={'secondary'} />;
-        } else if (mimeType.indexOf('video') >= 0) {
+        } else if (mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf') {
             return <Videocam className={this.props.classes.fileIcon} color={'secondary'} />;
         } else {
             return <InsertDriveFile className={this.props.classes.fileIcon} color={'secondary'} />;

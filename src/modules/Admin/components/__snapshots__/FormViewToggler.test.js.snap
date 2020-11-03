@@ -39,25 +39,33 @@ exports[`FormViewToggler component should render default view 1`] = `
       buttonLabel="Got it"
       text={
         <div>
-          <br />
-          <h3>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
             Tab navigation
-          </h3>
+          </WithStyles(ForwardRef(Typography))>
           <p>
             To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.
           </p>
-          <h3>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
             Form style
-          </h3>
+          </WithStyles(ForwardRef(Typography))>
           <p>
             To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.
           </p>
           <p>
             Your preference is saved as a cookie on this browser and it will remember your preference.
           </p>
-          <h3>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
             Page zoom
-          </h3>
+          </WithStyles(ForwardRef(Typography))>
           <p>
             Using 
             <b>
@@ -117,25 +125,33 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
       buttonLabel="Got it"
       text={
         <div>
-          <br />
-          <h3>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
             Tab navigation
-          </h3>
+          </WithStyles(ForwardRef(Typography))>
           <p>
             To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.
           </p>
-          <h3>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
             Form style
-          </h3>
+          </WithStyles(ForwardRef(Typography))>
           <p>
             To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.
           </p>
           <p>
             Your preference is saved as a cookie on this browser and it will remember your preference.
           </p>
-          <h3>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
             Page zoom
-          </h3>
+          </WithStyles(ForwardRef(Typography))>
           <p>
             Using 
             <b>

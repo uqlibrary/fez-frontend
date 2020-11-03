@@ -21,7 +21,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
-        component="span"
+        component="h3"
         data-testid="help-drawer-title"
         id="help-drawer-title"
         key="title"
@@ -78,7 +78,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
-        component="span"
+        component="h3"
         data-testid="help-drawer-title"
         id="help-drawer-title"
         key="title"
@@ -139,7 +139,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
       xs={12}
     >
       <WithStyles(ForwardRef(Typography))
-        component="span"
+        component="h3"
         data-testid="help-drawer-title"
         id="help-drawer-title"
         key="title"
