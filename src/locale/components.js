@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
-
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 export default {
     components: {
         publicationsList: {
@@ -1013,55 +1015,36 @@ export default {
                 },
             },
         },
-        authorsList: {
-            title: 'Authors',
+        authorsList: suffix => ({
+            title: `${capitalizeFirstLetter(suffix)}s`,
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: "Enter each author's name as published (eg. Smith, John)",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add author',
-                        nameAsPublishedFieldId: 'authors-name-as-published-field',
+                        addButton: `Add ${suffix}`,
                     },
                 },
                 header: {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: "Author's name as published",
+                        nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
                         identifierColumn: 'UQ identifier',
-                        reorderColumn: 'Reorder items',
                         organisationColumn: 'Organisation',
-                        deleteAll: 'Remove all items',
-                        deleteAllConfirmation: {
-                            confirmationTitle: 'Delete all',
-                            confirmationMessage: 'Are you sure you want to delete all items?',
-                            cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes',
-                        },
                     },
                 },
                 row: {
                     locale: {
-                        lockedTooltip: 'You are not able to edit this row',
-                        suffix: ' listed author',
-                        unselectedHint: 'Select this to confirm [identifier] is you',
-                        selectedHint: 'This is you',
+                        suffix: ` listed ${suffix}`,
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         editHint: 'Edit this item',
-                        selectHint: 'Select this author ([name]) to assign it as you',
-                        deleteRecordConfirmation: {
-                            confirmationTitle: 'Delete item',
-                            confirmationMessage: 'Are you sure you want to delete this item?',
-                            cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes',
-                        },
                     },
                 },
             },
-        },
+        }),
         editors: {
             title: 'Editors',
             description: 'Please provide a list of editors and then select your name from the list.',
@@ -1222,66 +1205,6 @@ export default {
                 },
             },
         },
-        creatorsList: {
-            title: 'Creators',
-            // help: {
-            //     title: 'Creators',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
-            description:
-                'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
-            descriptionCreatorOrContributor:
-                'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
-            field: {
-                form: {
-                    locale: {
-                        nameAsPublishedLabel: "Enter creator's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
-                        creatorRoleLabel: "Enter creator's role",
-                        creatorRoleHint:
-                            'Select role from list or type the role of the creator in relation to the dataset',
-                        identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add creator',
-                        nameAsPublishedFieldId: 'creators-name-as-published-field',
-                    },
-                },
-                header: {
-                    locale: {
-                        nameColumn: "Creator's name as published",
-                        roleColumn: "Creator's role",
-                        identifierColumn: 'UQ identifier',
-                        reorderColumn: 'Reorder items',
-                        deleteAll: 'Remove all items',
-                        organisationColumn: 'Organisation',
-                        deleteAllConfirmation: {
-                            confirmationTitle: 'Delete all',
-                            confirmationMessage: 'Are you sure you want to delete all items?',
-                            cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes',
-                        },
-                    },
-                },
-                row: {
-                    locale: {
-                        suffix: ' listed creator',
-                        unselectedHint: 'Select this to confirm this creator is you',
-                        selectedHint: 'This is you',
-                        moveUpHint: 'Move item up the order',
-                        moveDownHint: 'Move item down the order',
-                        deleteHint: 'Remove this item',
-                        editHint: 'Edit this item',
-                        selectHint: 'Select this creator ([name]) to assign it as you',
-                        deleteRecordConfirmation: {
-                            confirmationTitle: 'Delete item',
-                            confirmationMessage: 'Are you sure you want to delete this item?',
-                            cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes',
-                        },
-                    },
-                },
-            },
-        },
         designers: {
             title: 'Designer name',
             description: 'Please provide a list of designers and then select your name from the list.',
@@ -1340,70 +1263,6 @@ export default {
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
-                        deleteAllConfirmation: {
-                            confirmationTitle: 'Delete all',
-                            confirmationMessage: 'Are you sure you want to delete all items?',
-                            cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes',
-                        },
-                    },
-                },
-                row: {
-                    locale: {
-                        suffix: ' listed designer',
-                        unselectedHint: 'Select this to confirm this designer is you',
-                        selectedHint: 'This is you',
-                        moveUpHint: 'Move item up the order',
-                        moveDownHint: 'Move item down the order',
-                        deleteHint: 'Remove this item',
-                        editHint: 'Edit this item',
-                        selectHint: 'Select this designer ([name]) to assign it as you',
-                        deleteRecordConfirmation: {
-                            confirmationTitle: 'Delete item',
-                            confirmationMessage: 'Are you sure you want to delete this item?',
-                            cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes',
-                        },
-                    },
-                },
-            },
-        },
-        designersList: {
-            title: 'Designer name',
-            description: 'Please provide a list of designers and then select your name from the list.',
-            help: {
-                title: 'Designers',
-                text: (
-                    <p>
-                        For more information about identification of author/creator/designer, click{' '}
-                        <a
-                            target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
-                        >
-                            here
-                        </a>
-                    </p>
-                ),
-                buttonLabel: 'CLOSE',
-            },
-            field: {
-                form: {
-                    locale: {
-                        nameAsPublishedLabel: "Designer's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
-                        identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add designer',
-                        nameAsPublishedFieldId: 'designers-name-as-published-field',
-                    },
-                },
-                header: {
-                    locale: {
-                        contributorAssignmentColumn: 'Select your name',
-                        nameColumn: 'Designers name as published',
-                        identifierColumn: 'UQ identifier',
-                        reorderColumn: 'Reorder items',
-                        deleteAll: 'Remove all items',
-                        organisationColumn: 'Organisation',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
