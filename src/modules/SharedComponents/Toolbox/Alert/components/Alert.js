@@ -299,6 +299,7 @@ export const Alert = ({
                 justify="center"
                 alignItems="flex-start"
                 alignContent="center"
+                id={alertId}
                 data-testid={alertId}
             >
                 <Grid item xs={12} sm className={(action && !disableAlertClick && classes.linked) || ''}>

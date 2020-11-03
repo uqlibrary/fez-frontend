@@ -3,6 +3,9 @@ import React from 'react';
 
 export default {
     components: {
+        publicationsList: {
+            selectAllText: 'Select all',
+        },
         facetsFilter: {
             title: 'Refine results',
             resetButtonText: 'Reset',
@@ -2993,6 +2996,38 @@ export default {
         audienceSizeField: {
             label: 'Audience size',
         },
+        bulkUpdatesList: {
+            tableTitle: '',
+            columns: {
+                startedAt: {
+                    title: 'Started at',
+                },
+                createdAt: {
+                    title: 'Created at',
+                },
+                finishedAt: {
+                    title: 'Finished at',
+                },
+                user: {
+                    title: 'User',
+                },
+                name: {
+                    title: 'Name',
+                },
+                status: {
+                    title: 'Status',
+                },
+                failedRecords: {
+                    title: 'Failed records',
+                },
+                processedCount: {
+                    title: 'Processed count',
+                },
+                totalCount: {
+                    title: 'Total count',
+                },
+            },
+        },
         favouriteSearchList: {
             tableTitle: '',
             columns: {
@@ -3018,6 +3053,134 @@ export default {
                         invalid: 'Alias is not valid',
                     },
                     regex: /^[a-z0-9]+[a-z0-9-]*$/gi,
+                },
+            },
+        },
+        bulkUpdates: {
+            selectPrompt: 'Please select an action',
+            inputForm: action => ({
+                confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
+            }),
+            bulkUpdatesForms: {
+                copyToOrRemoveFromCollectionForm: {
+                    formLabels: {
+                        collection: 'Collection(s)',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: (isRemoveFrom = false) => ({
+                        title: `Bulk ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message:
+                            'Select destination collection if moving or copying to a collection, source collection if removing from a collection',
+                        type: 'info',
+                    }),
+                    submittingAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    }),
+                    successAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    }),
+                    errorAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        type: 'error',
+                    }),
+                    warningAlert: {
+                        title: 'Note',
+                        message: 'Please retain membership of at least one collection',
+                        type: 'warning',
+                    },
+                },
+                changeAuthorIdForm: {
+                    selectPrompt: 'Please select an option to search author by',
+                    formLabels: {
+                        searchBy: 'Search author by',
+                        searchByAuthorName: 'Search by Author Name',
+                        searchByAuthorId: 'Search by Author Id',
+                        authorId: 'Author Id',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: {
+                        title: 'Bulk change author ID',
+                        message:
+                            'This will find all authors for each record that match author name string and update the author id with the value selected in author ID. It is case sensitive and will fail if multiple authors are matched. Such as Lee matching Lee and Leep',
+                        type: 'info',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change author ID',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change author ID',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change author ID',
+                        type: 'error',
+                    },
+                    warningAlert: {
+                        title: 'Note',
+                        message:
+                            '[authorNameNoMatchCount] of the [numberOfSelectedWorks] works you have selected do not match and will not be updated',
+                        type: 'warning',
+                    },
+                },
+                changeDisplayTypeForm: {
+                    formLabels: {
+                        displayType: 'New display type',
+                        subtype: 'New subtype',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: {
+                        title: 'Bulk change display type',
+                        message:
+                            'Change a list of display types from a search or ad-hoc query to a different display type.  This will cause data loss where the display types don`t overlap next time the pid is updated.',
+                        type: 'info',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change display type',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change display type',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change display type',
+                        type: 'error',
+                    },
+                },
+                changeSearchKeyValueForm: {
+                    formLabels: {
+                        searchKey: 'Search key',
+                        searchKeyValue: 'Search key value',
+                        editNotes: 'Edit notes',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change search key value',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change search key value',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change search key value',
+                        type: 'error',
+                    },
                 },
             },
         },
@@ -3050,6 +3213,16 @@ export default {
                 type: 'done',
                 title: 'Success',
                 message: 'Display type has been changed successfully.',
+            },
+        },
+        selectField: {
+            community: {
+                loadingHint: 'Loading communities...',
+                selectPrompt: 'Please select a community',
+            },
+            collection: {
+                loadingHint: 'Loading collections...',
+                selectPrompt: 'Please select a collection',
             },
         },
     },

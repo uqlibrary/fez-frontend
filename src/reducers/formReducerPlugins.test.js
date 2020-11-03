@@ -11,7 +11,20 @@ describe('Form reducer plugin', () => {
                 const nextState = plugins.resetValue(falsy, {
                     type: actionTypes.UNREGISTER_FIELD,
                     payload: {
-                        name: '',
+                        name: 'test',
+                    },
+                });
+                expect(nextState).toBeNull;
+            });
+        });
+
+        it('returns state if name is undefined', () => {
+            const falsies = [false, null, undefined, ''];
+            falsies.forEach(falsy => {
+                const nextState = plugins.resetValue(falsy, {
+                    type: actionTypes.UNREGISTER_FIELD,
+                    payload: {
+                        name: undefined,
                     },
                 });
                 expect(nextState).toBeNull;

@@ -166,6 +166,14 @@ describe('RichEditor', () => {
         expect(setDataFn).toHaveBeenCalled();
     });
 
+    it('should set data attribute', () => {
+        const wrapper = setup({ disabled: true, richEditorId: 'test-id' });
+        const setAttributeFn = jest.fn();
+        const e = { editor: { document: { getBody: () => ({ setAttribute: setAttributeFn }) } } };
+        wrapper.instance().onContentDom(e);
+        expect(setAttributeFn).toHaveBeenCalledWith('data-testid', 'test-id-input');
+    });
+
     it('should call onChange function passed in props with value', () => {
         const onChangeFn = jest.fn();
         const wrapper = setup({ onChange: onChangeFn });

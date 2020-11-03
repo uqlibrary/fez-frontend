@@ -64,6 +64,8 @@ export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
 export { mockRecordToFix } from './testing/records';
 
+export { bulkUpdatesList } from './bulkUpdates';
+
 // Favourite search mock data
 export { default as favouriteSearchList } from './favouriteSearch/favouriteSearchList';
 export { default as favouriteSearchItem } from './favouriteSearch/favouriteSearchItem';
