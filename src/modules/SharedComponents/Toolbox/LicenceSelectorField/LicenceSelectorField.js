@@ -6,6 +6,10 @@ export default function LicenceSelectorField(fieldProps) {
     let licences = CURRENT_LICENCES;
     if (!!fieldProps.isAdmin) {
         licences = [
+            {
+                value: -1,
+                text: 'None',
+            },
             ...CURRENT_LICENCES.map(licence => {
                 return {
                     value: licence.value,
@@ -17,6 +21,7 @@ export default function LicenceSelectorField(fieldProps) {
     }
     return (
         <GenericSelectField
+            canUnselect
             hideLabel={false}
             locale={{ label: fieldProps.label }}
             value={fieldProps.input.value}
