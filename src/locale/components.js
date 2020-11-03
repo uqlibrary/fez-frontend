@@ -979,6 +979,56 @@ export default {
                         nameColumn: "Author's name as published",
                         identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
+                        organisationColumn: 'Organisation',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        lockedTooltip: 'You are not able to edit this row',
+                        suffix: ' listed author',
+                        unselectedHint: 'Select this to confirm [identifier] is you',
+                        selectedHint: 'This is you',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        selectHint: 'Select this author ([name]) to assign it as you',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        authorsList: {
+            title: 'Authors',
+            field: {
+                form: {
+                    locale: {
+                        nameAsPublishedLabel: "Enter each author's name as published (eg. Smith, John)",
+                        nameAsPublishedHint: 'Type the name exactly as published',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add author',
+                        nameAsPublishedFieldId: 'authors-name-as-published-field',
+                    },
+                },
+                header: {
+                    locale: {
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: "Author's name as published",
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        organisationColumn: 'Organisation',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
@@ -1200,6 +1250,7 @@ export default {
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
+                        organisationColumn: 'Organisation',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
@@ -1286,6 +1337,70 @@ export default {
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        suffix: ' listed designer',
+                        unselectedHint: 'Select this to confirm this designer is you',
+                        selectedHint: 'This is you',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        selectHint: 'Select this designer ([name]) to assign it as you',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        designersList: {
+            title: 'Designer name',
+            description: 'Please provide a list of designers and then select your name from the list.',
+            help: {
+                title: 'Designers',
+                text: (
+                    <p>
+                        For more information about identification of author/creator/designer, click{' '}
+                        <a
+                            target="_blank"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                        >
+                            here
+                        </a>
+                    </p>
+                ),
+                buttonLabel: 'CLOSE',
+            },
+            field: {
+                form: {
+                    locale: {
+                        nameAsPublishedLabel: "Designer's name as published",
+                        nameAsPublishedHint: 'Type the name exactly as published',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add designer',
+                        nameAsPublishedFieldId: 'designers-name-as-published-field',
+                    },
+                },
+                header: {
+                    locale: {
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: 'Designers name as published',
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        organisationColumn: 'Organisation',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',

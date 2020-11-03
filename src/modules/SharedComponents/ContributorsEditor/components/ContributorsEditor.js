@@ -302,6 +302,7 @@ export class ContributorsEditor extends PureComponent {
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
                     locale={this.props.locale}
+                    isNtro={isNtro}
                 />
             );
         }

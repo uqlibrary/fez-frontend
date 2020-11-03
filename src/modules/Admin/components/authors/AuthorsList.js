@@ -5,10 +5,8 @@ import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
 // import Paper from '@material-ui/core/Paper';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { numberToWords } from 'config';
-
-import Fab from '@material-ui/core/Fab';
 import Hidden from '@material-ui/core/Hidden';
-import AddIcon from '@material-ui/icons/Add';
+import AddCircle from '@material-ui/icons/AddCircle';
 import Grid from '@material-ui/core/Grid';
 import Edit from '@material-ui/icons/Edit';
 import People from '@material-ui/icons/People';
@@ -22,11 +20,13 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Delete from '@material-ui/icons/Delete';
 
 import { tableIcons } from './AuthorsListIcons';
+import OrgAffiliationTypeSelector from 'modules/SharedComponents/ContributorsEditor/components/OrgAffiliationTypeSelector';
+import NonUqOrgAffiliationFormSection from 'modules/SharedComponents/ContributorsEditor/components/NonUqOrgAffiliationFormSection';
 import Typography from '@material-ui/core/Typography';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
-import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY } from 'config/general';
+import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 
 export const useStyles = makeStyles(() => ({
@@ -74,11 +74,11 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale }) => {
+export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
     const {
         header: {
-            locale: { nameColumn, roleColumn, identifierColumn },
+            locale: { nameColumn, roleColumn, identifierColumn, organisationColumn },
         },
         form: {
             locale: { creatorRoleLabel, creatorRoleHint, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
@@ -259,21 +259,106 @@ export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale })
                   },
               ]
             : []),
+        ...(isNtro
+            ? [
+                  {
+                      title: (
+                          <Typography variant="caption" color="secondary">
+                              {organisationColumn}
+                          </Typography>
+                      ),
+                      field: 'orgaff',
+                      render: rowData => (
+                          <Grid container>
+                              <Grid item xs={12}>
+                                  <Typography variant="body2" className={linkedClass(rowData)}>
+                                      {rowData.orgaff}
+                                  </Typography>
+                              </Grid>
+                              <Grid item xs={12}>
+                                  <Typography variant="caption" className={linkedClass(rowData)}>
+                                      {`${(!!rowData.orgtype &&
+                                          !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
+                                          `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
+                                          ''}`}
+                                  </Typography>
+                              </Grid>
+                          </Grid>
+                      ),
+                      editComponent: props => {
+                          const { rowData: contributor } = props;
+
+                          const handleOrgAffliationChange = event => {
+                              props.onRowDataChange({ ...contributor, orgaff: event.target.value });
+                          };
+                          const handleOrgTypeChange = event => {
+                              props.onRowDataChange({ ...contributor, orgtype: event.target.value });
+                          };
+                          const handleAffiliationChange = event => {
+                              const affiliation = event.target.value;
+                              props.onRowDataChange({
+                                  ...contributor,
+                                  affiliation: affiliation,
+                                  orgaff:
+                                      (affiliation === AFFILIATION_TYPE_UQ && globalLocale.global.orgTitle) ||
+                                      contributor.orgaff,
+                                  orgtype:
+                                      (affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) ||
+                                      contributor.orgtype,
+                              });
+                          };
+                          return (
+                              <React.Fragment>
+                                  {isNtro && (
+                                      <OrgAffiliationTypeSelector
+                                          affiliation={contributor.affiliation}
+                                          onAffiliationChange={handleAffiliationChange}
+                                          error={!contributor.affiliation}
+                                          disabled={disabled}
+                                      />
+                                  )}
+                                  {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
+                                      <NonUqOrgAffiliationFormSection
+                                          {...props}
+                                          orgAffiliation={contributor.orgaff || ''}
+                                          orgType={contributor.orgtype || ''}
+                                          onOrgAffiliationChange={handleOrgAffliationChange}
+                                          onOrgTypeChange={handleOrgTypeChange}
+                                          disableAffiliationEdit={disabled}
+                                          disableOrgTypeEdit={disabled}
+                                          orgAffiliationError={contributor.orgaff === ''}
+                                          orgAffiliationTypeError={contributor.orgtype === ''}
+                                      />
+                                  )}
+                              </React.Fragment>
+                          );
+                      },
+                  },
+              ]
+            : []),
     ];
 };
 
 export const AuthorDetail = rowData => {
     return (
-        <Grid container>
-            <Grid item xs={12}>
-                <Typography variant="body1">{rowData.nameAsPublished}</Typography>
-                <Typography variant="caption">{`${numberToWords(rowData.tableData.id + 1)}`}</Typography>
+        <Grid container item xs={12} style={{ padding: 16 }}>
+            <Grid item xs={2}>
+                <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
+            </Grid>
+            <Grid item xs={10}>
+                <Typography variant="body2">{rowData.orgaff}</Typography>
+            </Grid>
+            <Grid item xs={2}>
+                <Typography variant="subtitle2">{'Organisation type'}</Typography>
+            </Grid>
+            <Grid item xs={10}>
+                <Typography variant="body2">{rowData.orgtype}</Typography>
             </Grid>
         </Grid>
     );
 };
 
-export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onChange, showRoleInput }) => {
+export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, locale, onChange, showRoleInput }) => {
     const {
         row: {
             locale: {
@@ -292,7 +377,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onCha
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale });
+    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro });
 
     const [data, setData] = React.useState(list);
 
@@ -300,8 +385,18 @@ export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onCha
         const materialTable = materialTableRef.current;
         let newList = data;
 
+        console.log(action, newList, newData, oldData);
+
         if (
-            !!newData.aut_id &&
+            action === 'update' &&
+            data.filter(
+                (contributor, index) =>
+                    index !== oldData.tableData.id && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
+            ).length > 0
+        ) {
+            newList = data;
+        } else if (
+            action === 'add' &&
             data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
         ) {
             newList = data;
@@ -413,11 +508,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onCha
                     onClick: () => {},
                 }),
                 {
-                    icon: props => (
-                        <Fab size="medium" color="primary" aria-label="add">
-                            <AddIcon {...props} />
-                        </Fab>
-                    ),
+                    icon: props => <AddCircle {...props} color="primary" fontSize="large" />,
                     iconProps: {
                         id: `${contributorEditorId}-add`,
                         'data-testid': `${contributorEditorId}-add`,
@@ -436,7 +527,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onCha
             data={data}
             icons={tableIcons}
             title=""
-            detailPanel={AuthorDetail}
+            {...(!isNtro ? { detailPanel: AuthorDetail } : {})}
             editable={{
                 onRowUpdateCancelled: () => {},
             }}
@@ -476,6 +567,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, list, locale, onCha
 AuthorsList.propTypes = {
     contributorEditorId: PropTypes.string,
     disabled: PropTypes.bool,
+    isNtro: PropTypes.bool,
     list: PropTypes.array,
     locale: PropTypes.object,
     onChange: PropTypes.func,

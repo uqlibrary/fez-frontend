@@ -1913,7 +1913,7 @@ export default {
             }),
             authors: ({ isNtro }) => ({
                 isNtro,
-                locale: { ...locale.components.designers.field },
+                locale: { ...locale.components.designersList.field },
             }),
             editors: () => ({
                 locale: { ...locale.components.contributors.field },
