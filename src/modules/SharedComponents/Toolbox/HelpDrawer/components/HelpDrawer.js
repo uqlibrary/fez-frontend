@@ -55,7 +55,7 @@ export class HelpDrawer extends Component {
                     <Grid item xs={12}>
                         <Typography
                             className={classes.title}
-                            component={'span'}
+                            component={'h3'}
                             data-testid="help-drawer-title"
                             id="help-drawer-title"
                             key={'title'}
