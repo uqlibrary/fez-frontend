@@ -177,7 +177,7 @@ export const AttachedFiles = ({
         );
     };
 
-    const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1);
+    const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1 || item.mimeType === 'application/mxf');
 
     const onFileDelete = index => () => onDelete(index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);

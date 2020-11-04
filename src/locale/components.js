@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 export default {
     components: {
@@ -1692,7 +1693,9 @@ export default {
                     title: 'NTRO data',
                     text: (
                         <React.Fragment>
-                            <h3>Quality indicators</h3>
+                            <Typography component="h4" variant="h6">
+                                Quality indicators
+                            </Typography>
                             <p>
                                 For more information about each quality indicator option, click{' '}
                                 <b>

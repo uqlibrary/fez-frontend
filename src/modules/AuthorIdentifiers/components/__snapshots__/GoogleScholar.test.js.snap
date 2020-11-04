@@ -20,9 +20,12 @@ exports[`Component GoogleScholar  should display submission error if saving fail
             Object {
               "buttonLabel": "CLOSE",
               "text": <div>
-                <h3>
+                <WithStyles(ForwardRef(Typography))
+                  component="h4"
+                  variant="h6"
+                >
                   How to create Google Scholar profile?
-                </h3>
+                </WithStyles(ForwardRef(Typography))>
                 <ol>
                   <li>
                     Sign to your Google account, or create one if you don't have one.
@@ -177,9 +180,12 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
             Object {
               "buttonLabel": "CLOSE",
               "text": <div>
-                <h3>
+                <WithStyles(ForwardRef(Typography))
+                  component="h4"
+                  variant="h6"
+                >
                   How to create Google Scholar profile?
-                </h3>
+                </WithStyles(ForwardRef(Typography))>
                 <ol>
                   <li>
                     Sign to your Google account, or create one if you don't have one.
@@ -1987,9 +1993,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                 Object {
                                                   "buttonLabel": "CLOSE",
                                                   "text": <div>
-                                                    <h3>
+                                                    <WithStyles(ForwardRef(Typography))
+                                                      component="h4"
+                                                      variant="h6"
+                                                    >
                                                       How to create Google Scholar profile?
-                                                    </h3>
+                                                    </WithStyles(ForwardRef(Typography))>
                                                     <ol>
                                                       <li>
                                                         Sign to your Google account, or create one if you don't have one.
@@ -2018,9 +2027,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                   Object {
                                                     "buttonLabel": "CLOSE",
                                                     "text": <div>
-                                                      <h3>
+                                                      <WithStyles(ForwardRef(Typography))
+                                                        component="h4"
+                                                        variant="h6"
+                                                      >
                                                         How to create Google Scholar profile?
-                                                      </h3>
+                                                      </WithStyles(ForwardRef(Typography))>
                                                       <ol>
                                                         <li>
                                                           Sign to your Google account, or create one if you don't have one.
@@ -2058,9 +2070,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                     Object {
                                                       "buttonLabel": "CLOSE",
                                                       "text": <div>
-                                                        <h3>
+                                                        <WithStyles(ForwardRef(Typography))
+                                                          component="h4"
+                                                          variant="h6"
+                                                        >
                                                           How to create Google Scholar profile?
-                                                        </h3>
+                                                        </WithStyles(ForwardRef(Typography))>
                                                         <ol>
                                                           <li>
                                                             Sign to your Google account, or create one if you don't have one.
@@ -2508,9 +2523,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                   buttonLabel="CLOSE"
                                                                   text={
                                                                     <div>
-                                                                      <h3>
+                                                                      <WithStyles(ForwardRef(Typography))
+                                                                        component="h4"
+                                                                        variant="h6"
+                                                                      >
                                                                         How to create Google Scholar profile?
-                                                                      </h3>
+                                                                      </WithStyles(ForwardRef(Typography))>
                                                                       <ol>
                                                                         <li>
                                                                           Sign to your Google account, or create one if you don't have one.
@@ -2555,9 +2573,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                     buttonLabel="CLOSE"
                                                                     text={
                                                                       <div>
-                                                                        <h3>
+                                                                        <WithStyles(ForwardRef(Typography))
+                                                                          component="h4"
+                                                                          variant="h6"
+                                                                        >
                                                                           How to create Google Scholar profile?
-                                                                        </h3>
+                                                                        </WithStyles(ForwardRef(Typography))>
                                                                         <ol>
                                                                           <li>
                                                                             Sign to your Google account, or create one if you don't have one.
@@ -2674,9 +2695,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                       buttonLabel="CLOSE"
                                                                       text={
                                                                         <div>
-                                                                          <h3>
+                                                                          <WithStyles(ForwardRef(Typography))
+                                                                            component="h4"
+                                                                            variant="h6"
+                                                                          >
                                                                             How to create Google Scholar profile?
-                                                                          </h3>
+                                                                          </WithStyles(ForwardRef(Typography))>
                                                                           <ol>
                                                                             <li>
                                                                               Sign to your Google account, or create one if you don't have one.
@@ -2715,9 +2739,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                         onClick={[Function]}
                                                                         text={
                                                                           <div>
-                                                                            <h3>
+                                                                            <WithStyles(ForwardRef(Typography))
+                                                                              component="h4"
+                                                                              variant="h6"
+                                                                            >
                                                                               How to create Google Scholar profile?
-                                                                            </h3>
+                                                                            </WithStyles(ForwardRef(Typography))>
                                                                             <ol>
                                                                               <li>
                                                                                 Sign to your Google account, or create one if you don't have one.
@@ -4136,9 +4163,12 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
             Object {
               "buttonLabel": "CLOSE",
               "text": <div>
-                <h3>
+                <WithStyles(ForwardRef(Typography))
+                  component="h4"
+                  variant="h6"
+                >
                   How to create Google Scholar profile?
-                </h3>
+                </WithStyles(ForwardRef(Typography))>
                 <ol>
                   <li>
                     Sign to your Google account, or create one if you don't have one.
@@ -4279,9 +4309,12 @@ exports[`Component GoogleScholar  should render form if author has google schola
             Object {
               "buttonLabel": "CLOSE",
               "text": <div>
-                <h3>
+                <WithStyles(ForwardRef(Typography))
+                  component="h4"
+                  variant="h6"
+                >
                   How to create Google Scholar profile?
-                </h3>
+                </WithStyles(ForwardRef(Typography))>
                 <ol>
                   <li>
                     Sign to your Google account, or create one if you don't have one.

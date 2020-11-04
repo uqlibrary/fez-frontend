@@ -70,12 +70,12 @@ context('Homepage', () => {
     it('Shows help panel as expected', () => {
         cy.visit('/?user=uqresearcher');
         cy.get('button#help-icon').click();
-        cy.get('span#help-drawer-title').should('be.visible');
-        cy.get('span#help-drawer-title').contains('About these metrics');
-        cy.get('div#help-drawer-button')
-            .find('button')
+        cy.get('[data-testid=help-drawer-title]')
+            .should('be.visible')
+            .contains('About these metrics');
+        cy.get('[data-testid=help-drawer-close]')
             .contains('CLOSE')
             .click();
-        cy.get('span#help-drawer-title').should('not.be.visible');
+        cy.get('[data-testid=help-drawer-title]').should('not.be.visible');
     });
 });

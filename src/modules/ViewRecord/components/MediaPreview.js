@@ -87,7 +87,7 @@ export const MediaPreview = ({ ...props }) => {
     const mediaPreviewRef = React.useRef();
 
     const { videoTitle, imageTitle, videoLoadingMessage } = locale.viewRecord.sections.files.preview;
-    const isVideo = mimeType.indexOf('video') >= 0;
+    const isVideo = mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf';
     const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
     const title = isVideo ? videoTitle : imageTitle;
 

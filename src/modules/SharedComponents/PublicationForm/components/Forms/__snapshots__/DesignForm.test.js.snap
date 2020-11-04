@@ -660,24 +660,26 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
           "help": Object {
             "buttonLabel": "CLOSE",
             "text": <React.Fragment>
-              <h3>
+              <WithStyles(ForwardRef(Typography))
+                component="h4"
+                variant="h6"
+              >
                 Creator research statement
-              </h3>
+              </WithStyles(ForwardRef(Typography))>
               <p>
                 For more information about the research statement, click
-                <b>
-                  <a
-                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                    style={
-                      Object {
-                        "fontWeight": 700,
-                      }
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                  style={
+                    Object {
+                      "fontWeight": 700,
                     }
-                    target="_blank"
-                  >
-                    here
-                  </a>
-                </b>
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
               </p>
             </React.Fragment>,
             "title": "Author/Creator research statement",
