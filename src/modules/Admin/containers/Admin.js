@@ -1,6 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { destroy, reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
+import { destroy, reduxForm, getFormValues, getFormSyncErrors, change } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { withRouter } from 'react-router';
@@ -10,6 +10,7 @@ import { isFileValid } from 'config/validation';
 import {
     DOCUMENT_TYPES_LOOKUP,
     PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_THESIS,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
 } from 'config/general';
@@ -84,9 +85,23 @@ const getInitialFormValues = (recordToView, recordType) => {
     };
 };
 
+const onChange = (values, dispatch) => {
+    if (
+        !!values.get('rek_display_type') &&
+        values.get('rek_display_type') === PUBLICATION_TYPE_THESIS &&
+        !!values.get('adminSection').get('rek_subtype') &&
+        !values.get('bibliographicSection').get('rek_genre_type')
+    ) {
+        dispatch(
+            change(FORM_NAME, 'bibliographicSection.rek_genre_type', values.get('adminSection').get('rek_subtype')),
+        );
+    }
+};
+
 const PrototypeContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
+    onChange,
     validate,
     destroyOnUnmount: false,
 })(AdminContainer);
