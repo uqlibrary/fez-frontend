@@ -3077,20 +3077,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                 },
             });
         });
-
-        it('should use default parameter value', () => {
-            expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
-            });
-        });
     });
 
     describe('Audio document', () => {
@@ -3262,7 +3248,7 @@ describe('getBibliographicSectionSearchKeys', () => {
         // also useful for swapping search key names in to check they are properly handled
 
         it('should only save the supplied key for a one-to-one search key', () => {
-            let data = {
+            const data = {
                 fez_record_search_key_license: { rek_license: 123 },
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -3270,19 +3256,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_license: { rek_license: 123 },
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
-            });
-
-            data = {};
-            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3329,38 +3302,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
-            });
-
-            const dataEmpty = {};
-            expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
-            });
-        });
-
-        it('should be able to delete search key', () => {
-            const data = {
-                fez_record_search_key_isderivationof: [],
-            };
-
-            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
-                fez_record_search_key_isderivationof: [],
             });
         });
 
@@ -4928,5 +4869,27 @@ describe('getNotesSectionSearchKeys', () => {
                 },
             }),
         ).toEqual(expected);
+    });
+});
+
+describe('getBibliographicSection for thesis', () => {
+    it('should correctly transform data for thesis rek_subtype and rek_genre_type', () => {
+        const data = {
+            rek_genre_type: 'B.A. Thesis',
+        };
+
+        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+            rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
+            rek_subtype: 'B.A. Thesis',
+            rek_genre_type: 'B.A. Thesis',
+        });
     });
 });

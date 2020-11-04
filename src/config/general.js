@@ -262,6 +262,57 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5',
 };
 
+export const THESIS_SUBTYPES = [
+    {
+        value: 'B.A. Thesis',
+        label: 'B.A. Thesis',
+    },
+    {
+        value: 'B.Sc Thesis',
+        label: 'B.Sc Thesis',
+    },
+    {
+        value: "Bachelor's Thesis",
+        label: "Bachelor's Thesis",
+    },
+    {
+        value: 'Higher Doctorate',
+        label: 'Higher Doctorate',
+    },
+    {
+        value: 'Honours Thesis',
+        label: 'Honours Thesis',
+    },
+    {
+        value: 'M.A. Thesis',
+        label: 'M.A. Thesis',
+    },
+    {
+        value: 'M.Sc Thesis',
+        label: 'M.Sc Thesis',
+    },
+    {
+        value: "Master's Thesis",
+        label: "Master's Thesis",
+    },
+    {
+        value: 'MPhil Thesis',
+        label: 'MPhil Thesis',
+    },
+    {
+        value: 'Other',
+        label: 'Other',
+    },
+    {
+        value: 'PhD Thesis',
+        label: 'PhD Thesis',
+    },
+    {
+        value: 'Professional Doctorate',
+        label: 'Professional Doctorate',
+    },
+];
+
 export const publicationTypes = (components, isAdmin = false) => ({
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
@@ -468,7 +519,7 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.ThesisForm : null,
         citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true,
-        formComponentAlternate: components ? components.ThesisHdrRedirect : null,
+        ...(isAdmin ? { subtypes: THESIS_SUBTYPES.map(type => type.value) } : {}),
     },
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
@@ -502,57 +553,6 @@ export const QUICK_TEMPLATES = {
     CLOSED_ACCESS_ID: 8,
     OPEN_ACCESS_ID: 9,
 };
-
-export const THESIS_SUBTYPES = [
-    {
-        value: 'B.A. Thesis',
-        label: 'B.A. Thesis',
-    },
-    {
-        value: 'B.Sc Thesis',
-        label: 'B.Sc Thesis',
-    },
-    {
-        value: "Bachelor's Thesis",
-        label: "Bachelor's Thesis",
-    },
-    {
-        value: 'Higher Doctorate',
-        label: 'Higher Doctorate',
-    },
-    {
-        value: 'Honours Thesis',
-        label: 'Honours Thesis',
-    },
-    {
-        value: 'M.A. Thesis',
-        label: 'M.A. Thesis',
-    },
-    {
-        value: 'M.Sc Thesis',
-        label: 'M.Sc Thesis',
-    },
-    {
-        value: "Master's Thesis",
-        label: "Master's Thesis",
-    },
-    {
-        value: 'MPhil Thesis',
-        label: 'MPhil Thesis',
-    },
-    {
-        value: 'Other',
-        label: 'Other',
-    },
-    {
-        value: 'PhD Thesis',
-        label: 'PhD Thesis',
-    },
-    {
-        value: 'Professional Doctorate',
-        label: 'Professional Doctorate',
-    },
-];
 
 export const THESIS_SUBMISSION_SUBTYPES = [
     {

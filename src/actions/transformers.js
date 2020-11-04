@@ -878,6 +878,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             !data.rek_date || !moment(data.rek_date).isValid()
                 ? '1000-01-01 00:00:00'
                 : moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
+        ...(!!data.rek_genre_type ? { rek_subtype: data.rek_genre_type } : {}),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
         ...{
