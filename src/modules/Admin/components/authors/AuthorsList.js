@@ -74,7 +74,7 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
+export const getColumns = ({ contributorEditorId, disabled, suffix, classes, showRoleInput, locale, isNtro }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : '');
     const {
         header: {
@@ -102,7 +102,12 @@ export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale, i
                     icon={getIcon({ ...rowData, disabled })}
                     text={
                         <React.Fragment>
-                            <Typography variant="body2" className={linkedClass(rowData)}>
+                            <Typography
+                                variant="body2"
+                                className={linkedClass(rowData)}
+                                id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
+                                data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
+                            >
                                 {rowData.nameAsPublished}
                             </Typography>
                             <Typography variant="caption" className={linkedClass(rowData)}>{`${numberToWords(
@@ -127,7 +132,7 @@ export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale, i
                                 autoFocus
                                 value={props.value}
                                 onChange={e => props.onChange(e.target.value)}
-                                textFieldId="rek-author"
+                                textFieldId={contributorEditorId}
                                 error={(contributor.nameAsPublished || '').length === 0}
                                 label={nameAsPublishedLabel}
                                 placeholder={nameAsPublishedHint}
@@ -201,7 +206,7 @@ export const getColumns = ({ disabled, suffix, classes, showRoleInput, locale, i
                         clearOnInputClear
                         floatingLabelText={identifierLabel}
                         hintText="Type UQ author name to search"
-                        uqIdFieldId={'rek-author-aut-id'}
+                        uqIdFieldId={`${contributorEditorId}-id`}
                         key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
                         onChange={handleChange}
                         onClear={handleClear}
@@ -378,7 +383,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro });
+    columns.current = getColumns({ disabled, suffix, classes, showRoleInput, locale, isNtro, contributorEditorId });
 
     const [data, setData] = React.useState(list);
 
