@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow } from 'material-table';
+import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'material-table';
 // import Paper from '@material-ui/core/Paper';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { numberToWords } from 'config';
@@ -433,6 +433,27 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                 Container: props => (
                     <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
                 ),
+                Action: props => {
+                    if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
+                        const { icon: Icon, tooltip, ...restAction } = props.action;
+                        return (
+                            <MTableAction
+                                {...props}
+                                action={{
+                                    ...restAction,
+                                    icon: () => (
+                                        <Icon
+                                            id={`${contributorEditorId}-${tooltip.toLowerCase()}`}
+                                            data-testid={`${contributorEditorId}-${tooltip.toLowerCase()}`}
+                                        />
+                                    ),
+                                }}
+                            />
+                        );
+                    } else {
+                        return <MTableAction {...props} />;
+                    }
+                },
                 Row: props => (
                     <MTableBodyRow
                         {...props}
@@ -446,10 +467,6 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         id={`${contributorEditorId}-list-edit-row-${props.index}`}
                         data-testid={`${contributorEditorId}-list-edit-row-${props.index}`}
                         onEditingApproved={handleAuthorUpdate}
-                        localization={{
-                            saveTooltip: `Save ${suffix}`,
-                            cancelTooltip: 'Cancel edits',
-                        }}
                     />
                 ),
             }}
