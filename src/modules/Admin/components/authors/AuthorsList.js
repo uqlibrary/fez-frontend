@@ -370,6 +370,9 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                 suffix,
             },
         },
+        form: {
+            locale: { addButton },
+        },
     } = locale;
     const classes = useStyles();
     const theme = useTheme();
@@ -383,9 +386,10 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
         const materialTable = materialTableRef.current;
         let newList = data;
 
-        console.log(action, newList, newData, oldData);
-
-        if (
+        if (action === 'delete') {
+            const index = oldData.tableData.id;
+            newList = [...data.slice(0, index), ...data.slice(index + 1)];
+        } else if (
             action === 'update' &&
             data.filter(
                 (contributor, index) =>
@@ -437,6 +441,10 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         id={`${contributorEditorId}-list-edit-row-${props.index}`}
                         data-testid={`${contributorEditorId}-list-edit-row-${props.index}`}
                         onEditingApproved={handleAuthorUpdate}
+                        localization={{
+                            saveTooltip: `Save ${suffix}`,
+                            cancelTooltip: 'Cancel edits',
+                        }}
                     />
                 ),
             }}
@@ -503,7 +511,13 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                     },
                     disabled: disabled,
                     tooltip: deleteHint,
-                    onClick: () => {},
+                    onClick: (event, rowData) => {
+                        const materialTable = materialTableRef.current;
+                        materialTable.dataManager.changeRowEditing(rowData, 'delete');
+                        materialTable.setState({
+                            ...materialTable.dataManager.getRenderState(),
+                        });
+                    },
                 }),
                 {
                     icon: props => <AddCircle {...props} color="primary" fontSize="large" />,
@@ -512,6 +526,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         'data-testid': `${contributorEditorId}-add`,
                     },
                     isFreeAction: true,
+                    tooltip: addButton,
                     onClick: () => {
                         const materialTable = materialTableRef.current;
                         materialTable.dataManager.changeRowEditing();
