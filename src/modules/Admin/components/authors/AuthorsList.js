@@ -37,19 +37,19 @@ export const useStyles = makeStyles(() => ({
 
 const getIcon = rowData => {
     if (parseInt(rowData.uqIdentifier, 10)) {
-        return <HowToRegIcon color="primary" />;
+        return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
     } else if (rowData.selected) {
-        return <Person color="secondary" />;
+        return <Person color="secondary" id={`contributor-selected-${rowData.tableData.id}`} />;
     } else if ((rowData.disabled || rowData.disabled) && !rowData.enableSelect) {
         return rowData.lockedTooltip ? (
             <Tooltip title={rowData.lockedTooltip}>
-                <Lock color="secondary" />
+                <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />
             </Tooltip>
         ) : (
-            <Lock color="secondary" />
+            <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />
         );
     } else {
-        return <PersonOutlined color="secondary" />;
+        return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
     }
 };
 
@@ -143,6 +143,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                     </Grid>
                 );
             },
+            validate: rowData => rowData.nameAsPublished !== '',
         },
         {
             title: (
