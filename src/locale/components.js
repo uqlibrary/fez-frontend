@@ -1024,6 +1024,9 @@ export default {
                         nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: `Add ${suffix}`,
+                        creatorRoleLabel: "Enter creator's role",
+                        creatorRoleHint:
+                            'Select role from list or type the role of the creator in relation to the dataset',
                     },
                 },
                 header: {
@@ -1032,6 +1035,7 @@ export default {
                         nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
                         identifierColumn: 'UQ identifiers',
                         organisationColumn: 'Organisation/Organisation type',
+                        roleColumn: 'Creator role',
                     },
                 },
                 row: {

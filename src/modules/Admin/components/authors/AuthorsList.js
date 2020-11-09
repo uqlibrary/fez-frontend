@@ -10,10 +10,8 @@ import AddCircle from '@material-ui/icons/AddCircle';
 import Grid from '@material-ui/core/Grid';
 import Edit from '@material-ui/icons/Edit';
 import People from '@material-ui/icons/People';
-import Person from '@material-ui/icons/Person';
 import PersonOutlined from '@material-ui/icons/PersonOutlined';
 import HowToRegIcon from '@material-ui/icons/HowToReg';
-import Tooltip from '@material-ui/core/Tooltip';
 import Lock from '@material-ui/icons/Lock';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
@@ -38,16 +36,8 @@ export const useStyles = makeStyles(() => ({
 const getIcon = rowData => {
     if (parseInt(rowData.uqIdentifier, 10)) {
         return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
-    } else if (rowData.selected) {
-        return <Person color="secondary" id={`contributor-selected-${rowData.tableData.id}`} />;
-    } else if ((rowData.disabled || rowData.disabled) && !rowData.enableSelect) {
-        return rowData.lockedTooltip ? (
-            <Tooltip title={rowData.lockedTooltip}>
-                <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />
-            </Tooltip>
-        ) : (
-            <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />
-        );
+    } else if (rowData.disabled) {
+        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
     } else {
         return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
     }
@@ -153,7 +143,12 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             field: 'uqIdentifier',
             render: rowData => (
-                <Typography variant="body2" className={linkedClass(rowData)}>
+                <Typography
+                    variant="body2"
+                    className={linkedClass(rowData)}
+                    id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
+                    data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
+                >
                     {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
                         (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
                         ''}
@@ -161,7 +156,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             ),
             editComponent: props => {
                 const { rowData: contributor } = props;
-                const prefilledSearch = contributor.uqIdentifier === '0';
+                const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
                 const value =
                     (prefilledSearch && contributor.nameAsPublished) ||
                     (!!contributor.uqUsername && `${contributor.uqUsername} - ${contributor.uqIdentifier}`) ||
@@ -228,7 +223,12 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                       ),
                       field: 'creatorRole',
                       render: rowData => (
-                          <Typography variant="body2" className={linkedClass(rowData)}>
+                          <Typography
+                              variant="body2"
+                              className={linkedClass(rowData)}
+                              id={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
+                              data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
+                          >
                               {rowData.creatorRole}
                           </Typography>
                       ),
@@ -444,8 +444,12 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                                     ...restAction,
                                     icon: () => (
                                         <Icon
-                                            id={`${contributorEditorId}-${tooltip.toLowerCase()}`}
-                                            data-testid={`${contributorEditorId}-${tooltip.toLowerCase()}`}
+                                            id={`${contributorEditorId}-${(!!props.data.tableData &&
+                                                props.data.tableData.editing) ||
+                                                'add'}-${tooltip.toLowerCase()}`}
+                                            data-testid={`${contributorEditorId}-${(!!props.data.tableData &&
+                                                props.data.tableData.editing) ||
+                                                'add'}-${tooltip.toLowerCase()}`}
                                         />
                                     ),
                                 }}
@@ -581,11 +585,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                 pageSizeOptions: [5, 50, 100, 200, 500],
                 padding: 'dense',
                 rowStyle: rowData => {
-                    if (!!rowData.selected) {
-                        return {
-                            backgroundColor: theme.palette.accent.main,
-                        };
-                    } else if (!!rowData.aut_id) {
+                    if (!!rowData.aut_id) {
                         return {
                             backgroundColor: theme.palette.secondary.light,
                             color: theme.palette.primary.main,

@@ -2,6 +2,7 @@ import { ContributorsEditor, mapStateToProps, styles } from './ContributorsEdito
 import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
+import locale from 'locale/components';
 
 function setup(testProps = {}, args = {}) {
     const props = {
@@ -34,6 +35,11 @@ describe('ContributorsEditor', () => {
 
     it('renders full component with NTRO fields', () => {
         const wrapper = setup({ isNtro: true }, { isShallow: false });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('render authors list component for admin interface', () => {
+        const wrapper = setup({ isAdmin: true, locale: locale.components.authorsList('rek-author').field });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -475,6 +481,19 @@ describe('ContributorsEditor', () => {
         wrapper.update();
 
         expect(onChangeFn).toHaveBeenCalledWith([{ displayName: 'test 1' }, { displayName: 'test 2' }]);
+    });
+
+    it('should update component from the authors list change', () => {
+        const onChangeFn = jest.fn();
+        const wrapper = setup({
+            onChange: onChangeFn,
+            isAdmin: true,
+        });
+        wrapper.instance().handleAuthorsListChange([{ nameAsPublished: 'test 1' }, { nameAsPublished: 'test 2' }]);
+
+        wrapper.update();
+
+        expect(onChangeFn).toHaveBeenCalledWith([{ nameAsPublished: 'test 1' }, { nameAsPublished: 'test 2' }]);
     });
 
     it('should get contributors from props and input value set as an array', () => {
