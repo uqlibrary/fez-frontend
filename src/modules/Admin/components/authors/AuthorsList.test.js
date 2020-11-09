@@ -35,7 +35,7 @@ describe('AuthorsList', () => {
     });
 
     it('should render default list view', () => {
-        const { getByTestId, getByText, asFragment } = setup();
+        const { getByTestId, getByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
         expect(getByTestId('rek-author-add')).toBeInTheDocument();
     });
@@ -79,6 +79,51 @@ describe('AuthorsList', () => {
 
         expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
         expect(getByTestId('rek-author-list-row-9')).toBeInTheDocument();
+    });
+
+    it('should render a list of upto 10 contributors and should not show paging or filtering options', () => {
+        const { getByTestId, queryByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                },
+                {
+                    nameAsPublished: 'test 3',
+                },
+                {
+                    nameAsPublished: 'test 4',
+                },
+                {
+                    nameAsPublished: 'test 5',
+                },
+                {
+                    nameAsPublished: 'test 6',
+                },
+                {
+                    nameAsPublished: 'test 7',
+                },
+                {
+                    nameAsPublished: 'test 8',
+                },
+                {
+                    nameAsPublished: 'test 9',
+                },
+                {
+                    nameAsPublished: 'test 10',
+                },
+                {
+                    nameAsPublished: 'test 11',
+                },
+            ],
+        });
+
+        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('rek-author-list-row-4')).toBeInTheDocument();
+        expect(queryByTestId('rek-author-list-row-5')).not.toBeInTheDocument();
     });
 
     it('should render disabled row', () => {
@@ -304,12 +349,6 @@ describe('AuthorsList', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
-        act(() => {
-            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
-        });
-        await waitFor(() => getByTestId('rek-author-id-options'));
-        fireEvent.click(getByText('Testing'));
-
         fireEvent.mouseDown(getByTestId('org-affiliation-select'));
         fireEvent.click(getByText('Not UQ'));
 
@@ -318,6 +357,13 @@ describe('AuthorsList', () => {
         fireEvent.click(getByText('Government'));
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
+
+        act(() => {
+            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
+        });
+        await waitFor(() => getByTestId('rek-author-id-options'));
+        fireEvent.click(getByText('Testing'));
+
         expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('rek-author-update-save'));
@@ -325,6 +371,66 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
         expect(getByTestId('rek-author-list-row-0-affiliation')).toHaveTextContent('Test org');
         expect(getByTestId('rek-author-list-row-0-affiliation-type')).toHaveTextContent('Government');
+    });
+
+    it('should render a list and user should be able to edit for NTRO 2', async () => {
+        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
+            data: [
+                {
+                    id: 111,
+                    value: 'Testing',
+                    aut_id: 111,
+                    aut_org_username: 'uqtest',
+                    aut_fname: 'UQ',
+                    aut_lname: 'Test',
+                },
+            ],
+        });
+        const { getByTestId, getByText } = setup({
+            isNtro: true,
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    uqIdentifier: '0',
+                    orgaff: '',
+                    orgtype: '',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                },
+            ],
+        });
+
+        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test');
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
+        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+
+        act(() => {
+            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
+        });
+        await waitFor(() => getByTestId('rek-author-id-options'));
+        fireEvent.click(getByText('Testing'));
+
+        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
+        fireEvent.click(getByText('UQ'));
+
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
+        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
+        expect(getByTestId('rek-author-list-row-0-affiliation')).toHaveTextContent('The University of Queensland');
+        expect(getByTestId('rek-author-list-row-0-affiliation-type')).toHaveTextContent('University');
     });
 
     it('should display role column and input field while editing', () => {
@@ -394,5 +500,50 @@ describe('AuthorsList', () => {
         });
         fireEvent.click(getByTestId('rek-author-list-row-0-delete'));
         fireEvent.click(getByTestId('rek-author-delete-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 2');
+    });
+
+    it('should clear uq identifier column', () => {
+        const { getByTestId, getByTitle } = setup({
+            showRoleInput: true,
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                    aut_id: 1234,
+                },
+            ],
+        });
+        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
+        fireEvent.click(getByTitle('Clear'));
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-1-uq-identifiers')).toHaveTextContent('');
+    });
+
+    it('should handle row update cancelled; show error for creator role correctly', () => {
+        const { getByTestId } = setup({
+            showRoleInput: true,
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+            ],
+        });
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.click(getByTestId('rek-author-update-cancel'));
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
+
+        expect(getByTestId('rek-author-label')).toHaveClass('Mui-error');
+        expect(getByTestId('rek-author-role-label')).toHaveClass('Mui-disabled');
+
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        expect(getByTestId('rek-author-role-label')).toHaveClass('Mui-error');
     });
 });

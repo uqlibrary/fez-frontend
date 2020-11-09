@@ -335,8 +335,8 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                                   {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
                                       <NonUqOrgAffiliationFormSection
                                           {...props}
-                                          orgAffiliation={contributor.orgaff || ''}
-                                          orgType={contributor.orgtype || ''}
+                                          orgAffiliation={contributor.orgaff}
+                                          orgType={contributor.orgtype}
                                           onOrgAffiliationChange={handleOrgAffliationChange}
                                           onOrgTypeChange={handleOrgTypeChange}
                                           disableAffiliationEdit={disabled}
@@ -353,6 +353,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
     ];
 };
 
+/* istanbul ignore next */
 export const AuthorDetail = rowData => {
     return (
         <Grid container item xs={12} style={{ padding: 16 }}>
