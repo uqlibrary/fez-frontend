@@ -338,7 +338,7 @@ describe('AuthorsList', () => {
     });
 
     it('should clear uq identifier', async () => {
-        const { getByTestId, getByText } = setup({
+        const { getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
