@@ -277,12 +277,22 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                       render: rowData => (
                           <Grid container>
                               <Grid item xs={12}>
-                                  <Typography variant="body2" className={linkedClass(rowData)}>
+                                  <Typography
+                                      variant="body2"
+                                      className={linkedClass(rowData)}
+                                      id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
+                                      data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
+                                  >
                                       {rowData.orgaff}
                                   </Typography>
                               </Grid>
                               <Grid item xs={12}>
-                                  <Typography variant="caption" className={linkedClass(rowData)}>
+                                  <Typography
+                                      variant="caption"
+                                      className={linkedClass(rowData)}
+                                      id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
+                                      data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
+                                  >
                                       {`${(!!rowData.orgtype &&
                                           !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
                                           `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
@@ -390,7 +400,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
 
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
-        let newList = data;
+        let newList = [...data];
 
         if (action === 'delete') {
             const index = oldData.tableData.id;
@@ -402,12 +412,12 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                     index !== oldData.tableData.id && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
             ).length > 0
         ) {
-            newList = data;
+            newList = [...data];
         } else if (
             action === 'add' &&
             data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
         ) {
-            newList = data;
+            newList = [...data];
         } else {
             newList =
                 action === 'update'
