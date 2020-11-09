@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'material-table';
-// import Paper from '@material-ui/core/Paper';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { numberToWords } from 'config';
 import Hidden from '@material-ui/core/Hidden';
@@ -498,7 +497,6 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = data[index - 1];
-                        console.log(materialTableRef.current.scrollTop);
                         const newList = [
                             ...data.slice(0, index - 1),
                             rowData,
@@ -586,13 +584,12 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                 actionsColumnIndex: -1,
                 grouping: false,
                 draggable: false,
-                search: false,
                 addRowPosition: 'first',
-                filtering: data.length > 10,
+                search: data.length > 10,
                 emptyRowsWhenPaging: true,
                 ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
                 ...(data.length > 10 ? { paging: true } : { paging: false }),
-                ...(data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
+                .../* istanbul ignore next */ (data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
                 pageSizeOptions: [5, 50, 100, 200, 500],
                 padding: 'dense',
                 rowStyle: rowData => {

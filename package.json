@@ -74,6 +74,7 @@
         "babel-plugin-istanbul": "^6.0.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "browser-update": "^3.3.13",
+        "canvas": "^2.6.1",
         "chalk": "2.4.1",
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",

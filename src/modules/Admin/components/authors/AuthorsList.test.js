@@ -81,7 +81,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-list-row-9')).toBeInTheDocument();
     });
 
-    it('should render a list of upto 10 contributors and should not show paging or filtering options', () => {
+    it('should render a list of upto 10 contributors and should not show paging and searching options', () => {
         const { getByTestId, queryByTestId } = setup({
             list: [
                 {
@@ -227,6 +227,155 @@ describe('AuthorsList', () => {
 
         // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
+    });
+
+    it('should render a list and should render student username after edit', async () => {
+        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
+            data: [
+                {
+                    id: 111,
+                    value: 'Testing',
+                    aut_id: 111,
+                    aut_student_username: 'uqtest',
+                    aut_fname: 'UQ',
+                    aut_lname: 'Test',
+                },
+            ],
+        });
+        const { getByTestId, getByText } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    uqIdentifier: '0',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                },
+            ],
+        });
+
+        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test');
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
+        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+
+        act(() => {
+            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
+        });
+        await waitFor(() => getByTestId('rek-author-id-options'));
+        fireEvent.click(getByText('Testing'));
+
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
+        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
+        expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
+    });
+
+    it('should render a list and should render ref num after edit', async () => {
+        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
+            data: [
+                {
+                    id: 111,
+                    value: 'Testing',
+                    aut_id: 111,
+                    aut_ref_num: '123456',
+                    aut_fname: 'UQ',
+                    aut_lname: 'Test',
+                },
+            ],
+        });
+        const { getByTestId, getByText } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    uqIdentifier: '123',
+                    uqUsername: 'uqtesting',
+                    aut_id: 123,
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                },
+            ],
+        });
+
+        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test');
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
+        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+
+        act(() => {
+            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: '123456' } });
+        });
+        await waitFor(() => getByTestId('rek-author-id-options'));
+        fireEvent.click(getByText('Testing'));
+
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
+        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
+        expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('123456 - 111');
+    });
+
+    it('should clear uq identifier', async () => {
+        const { getByTestId, getByText } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    uqIdentifier: '123',
+                    uqUsername: 'uqtesting',
+                    aut_id: 123,
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                },
+            ],
+        });
+
+        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test');
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
+        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+
+        act(() => {
+            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: '' } });
+        });
+
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
+        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
+        expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('');
     });
 
     it('should render the same list if a new user with the same uq id has been added', async () => {
