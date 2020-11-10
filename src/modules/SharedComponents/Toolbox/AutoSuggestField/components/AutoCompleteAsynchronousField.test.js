@@ -159,4 +159,22 @@ describe('AutoCompleteAsynchronousField component', () => {
 
         expect(getByText('Please select some value')).toBeInTheDocument();
     });
+
+    it('should clear the input value on deleting input value by keyboard', () => {
+        const onClearFn = jest.fn();
+        const { getByTestId } = setup({
+            clearOnInputClear: true,
+            onClear: onClearFn,
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
+        });
+
+        expect(onClearFn).toBeCalled();
+    });
 });
