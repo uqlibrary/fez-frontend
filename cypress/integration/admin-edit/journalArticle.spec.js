@@ -271,34 +271,36 @@ context('Journal Article admin edit', () => {
                     const authorUsernames = record.fez_record_search_key_author_id.map(
                         item => item.author.aut_org_username,
                     );
-                    const authorNames = record.fez_record_search_key_author_id.map(item => item.rek_author_id_lookup);
+                    // const authorNames = record.fez_record_search_key_author_id.map(item => item.rek_author_id_lookup);
                     const authorIDs = record.fez_record_search_key_author_id.map(item => item.rek_author_id);
-                    const authorAffs = record.fez_record_search_key_author_affiliation_name.map(
-                        item => item.rek_author_affiliation_name,
-                    );
+                    // const authorAffs = record.fez_record_search_key_author_affiliation_name.map(
+                    //     item => item.rek_author_affiliation_name,
+                    // );
                     authors.forEach((author, index) => {
-                        cy.get(`#rek-author-list-row-${index}-name-as-published`).should('contain.text', author);
-                        cy.get(`#rek-author-list-row-${index}-uq-details p`).should('contain.text', authorNames[index]);
-                        cy.get(`#rek-author-list-row-${index}-uq-details span`).should(
+                        cy.get(`[data-testid=rek-author-list-row-${index}-name-as-published]`).should(
                             'contain.text',
-                            `${authorAffs[index]} (${authorUsernames[index]} - ${authorIDs[index]})`,
+                            author,
+                        );
+                        cy.get(`[data-testid=rek-author-list-row-${index}-uq-identifiers]`).should(
+                            'contain.text',
+                            `${authorUsernames[index]} - ${authorIDs[index]}`,
                         );
                     });
                 });
         });
 
-        cy.get('@authorsCard')
-            .find('button[aria-label="Remove all items"]')
-            .click();
-        cy.get('body > div[role=presentation]')
-            .contains('Yes')
-            .click();
-        cy.get('@authorsCard')
-            .find('span[class*="colorError-"]')
-            .should('have.length', 1)
-            .should('have.text', 'Author/creator names are required');
+        // cy.get('@authorsCard')
+        //     .find('button[aria-label="Remove all items"]')
+        //     .click();
+        // cy.get('body > div[role=presentation]')
+        //     .contains('Yes')
+        //     .click();
+        // cy.get('@authorsCard')
+        //     .find('span[class*="colorError-"]')
+        //     .should('have.length', 1)
+        //     .should('have.text', 'Author/creator names are required');
 
-        cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
+        // cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
 
         // -------------------------------------- ADMIN TAB -----------------------------------------
         cy.log('Admin tab');
@@ -391,7 +393,7 @@ context('Journal Article admin edit', () => {
                 .should('have.text', 'This field is required');
         });
 
-        cy.adminEditVerifyAlerts(2, ['You must select atleast one collection']);
+        cy.adminEditVerifyAlerts(1, ['You must select atleast one collection']);
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
         cy.log('Grant Information tab');

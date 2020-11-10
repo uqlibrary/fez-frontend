@@ -711,6 +711,48 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
 </div>
 `;
 
+exports[`ContributorsEditor render authors list component for admin interface 1`] = `
+<Memo(AuthorsList)
+  contributorEditorId="test"
+  isNtro={false}
+  list={Array []}
+  locale={
+    Object {
+      "form": Object {
+        "locale": Object {
+          "addButton": "Add rek-author",
+          "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
+          "creatorRoleLabel": "Enter creator's role",
+          "identifierLabel": "UQ identifier (if available)",
+          "nameAsPublishedHint": "Type the name exactly as published (eg. Smith, John)",
+          "nameAsPublishedLabel": "Rek-author's name as published",
+        },
+      },
+      "header": Object {
+        "locale": Object {
+          "contributorAssignmentColumn": "Select your name",
+          "identifierColumn": "UQ identifiers",
+          "nameColumn": "Rek-author's name as published",
+          "organisationColumn": "Organisation/Organisation type",
+          "roleColumn": "Creator role",
+        },
+      },
+      "row": Object {
+        "locale": Object {
+          "deleteHint": "Remove this item",
+          "editHint": "Edit this item",
+          "moveDownHint": "Move item down the order",
+          "moveUpHint": "Move item up the order",
+          "suffix": " listed rek-author",
+        },
+      },
+    }
+  }
+  onChange={[Function]}
+  showRoleInput={false}
+/>
+`;
+
 exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1`] = `
 <div
   className="contributorEditor"

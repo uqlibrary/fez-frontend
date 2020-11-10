@@ -2,6 +2,9 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 export default {
     components: {
         publicationsList: {
@@ -983,6 +986,7 @@ export default {
                         nameColumn: "Author's name as published",
                         identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
+                        organisationColumn: 'Organisation',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
@@ -1013,6 +1017,40 @@ export default {
                 },
             },
         },
+        authorsList: suffix => ({
+            title: `${capitalizeFirstLetter(suffix)}s`,
+            field: {
+                form: {
+                    locale: {
+                        nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: `Add ${suffix}`,
+                        creatorRoleLabel: "Enter creator's role",
+                        creatorRoleHint:
+                            'Select role from list or type the role of the creator in relation to the dataset',
+                    },
+                },
+                header: {
+                    locale: {
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        identifierColumn: 'UQ identifiers',
+                        organisationColumn: 'Organisation/Organisation type',
+                        roleColumn: 'Creator role',
+                    },
+                },
+                row: {
+                    locale: {
+                        suffix: ` listed ${suffix}`,
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                    },
+                },
+            },
+        }),
         editors: {
             title: 'Editors',
             description: 'Please provide a list of editors and then select your name from the list.',

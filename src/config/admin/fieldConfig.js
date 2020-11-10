@@ -796,9 +796,9 @@ export default {
             componentProps: {
                 name: 'authorsSection.authors',
                 showIdentifierLookup: true,
-                locale: formLocale.journalArticle.authors.field,
-                canEdit: true,
+                locale: locale.components.authorsList('author').field,
                 contributorEditorId: 'rek-author',
+                isAdmin: true,
             },
         },
         editors: {
@@ -806,8 +806,8 @@ export default {
             componentProps: {
                 name: 'authorsSection.editors',
                 showIdentifierLookup: true,
-                locale: formLocale.book.editors.field,
-                canEdit: true,
+                locale: locale.components.authorsList('editor').field,
+                isAdmin: true,
                 contributorEditorId: 'rek-contributor',
             },
         },
@@ -1615,8 +1615,8 @@ export default {
             componentProps: {
                 name: 'authorsSection.architects',
                 showIdentifierLookup: true,
-                locale: locale.components.architects.field,
-                canEdit: true,
+                locale: locale.components.authorsList('architect').field,
+                isAdmin: true,
                 contributorEditorId: 'rek-architect-name',
             },
         },
@@ -1625,8 +1625,8 @@ export default {
             componentProps: {
                 name: 'authorsSection.creators',
                 showIdentifierLookup: true,
-                locale: locale.components.designCreators.field,
-                canEdit: true,
+                locale: locale.components.authorsList('creator').field,
+                isAdmin: true,
                 contributorEditorId: 'rek-creator-name',
             },
         },
@@ -1635,8 +1635,8 @@ export default {
             componentProps: {
                 name: 'authorsSection.supervisors',
                 showIdentifierLookup: true,
-                locale: locale.components.supervisors.field,
-                canEdit: true,
+                locale: locale.components.authorsList('supervisor').field,
+                isAdmin: true,
                 contributorEditorId: 'rek-supervisor',
             },
         },
@@ -1864,7 +1864,7 @@ export default {
             }),
             authors: () => ({
                 showRoleInput: true,
-                locale: locale.components.creators.field,
+                locale: locale.components.authorsList('creator').field,
             }),
             rek_description: () => ({
                 required: true,
@@ -1912,10 +1912,10 @@ export default {
             }),
             authors: ({ isNtro }) => ({
                 isNtro,
-                locale: { ...locale.components.designers.field },
+                locale: { ...locale.components.authorsList('designer').field },
             }),
             editors: () => ({
-                locale: { ...locale.components.contributors.field },
+                locale: { ...locale.components.authorsList('contributor').field },
             }),
             significanceAndContributionStatement: () => ({
                 locale: {
@@ -1968,7 +1968,7 @@ export default {
         },
         [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
             authors: () => ({
-                locale: locale.components.photographers.field,
+                locale: locale.components.authorsList('photographer').field,
             }),
         },
         [PUBLICATION_TYPE_GENERIC_DOCUMENT]: {

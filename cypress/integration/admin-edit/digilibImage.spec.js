@@ -241,9 +241,10 @@ context('Digilib Image admin edit', () => {
                             item => item.rek_architect_name
                         );
                         architects.forEach((author, index) => {
-                            cy.get('p')
-                                .eq(index)
-                                .should('have.text', author);
+                            cy.get(`[data-testid=rek-architect-name-list-row-${index}-name-as-published]`).should(
+                                'have.text',
+                                author,
+                            );
                         });
                     });
 
@@ -253,9 +254,10 @@ context('Digilib Image admin edit', () => {
                         cy.get('h4').should('contain', 'Photographers');
                         const authors = record.fez_record_search_key_author.map(item => item.rek_author);
                         authors.forEach((author, index) => {
-                            cy.get('p')
-                                .eq(index)
-                                .should('have.text', author);
+                            cy.get(`[data-testid=rek-author-list-row-${index}-name-as-published]`).should(
+                                'have.text',
+                                author,
+                            );
                         });
                     });
 
@@ -265,9 +267,10 @@ context('Digilib Image admin edit', () => {
                         cy.get('h4').should('contain', 'Other contributors');
                         const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
                         contributors.forEach((contributor, index) => {
-                            cy.get('p')
-                                .eq(index)
-                                .should('have.text', contributor);
+                            cy.get(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`).should(
+                                'have.text',
+                                contributor,
+                            );
                         });
                     });
             });
