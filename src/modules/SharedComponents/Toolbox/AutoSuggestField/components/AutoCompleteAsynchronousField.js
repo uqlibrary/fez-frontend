@@ -54,7 +54,7 @@ export const AutoCompleteAsynchronousField = ({
                 onClear();
             }
         },
-        [allowFreeText, prefilledSearch, onChange, onClear],
+        [allowFreeText, prefilledSearch, onChange, onClear, clearOnInputClear],
     );
 
     const handleChange = useCallback(
