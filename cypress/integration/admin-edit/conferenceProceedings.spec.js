@@ -39,6 +39,7 @@ context('Conference Proceedings admin edit', () => {
             .as('editorDetailsTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Editors');
+                cy.get('[data-testid=rek-contributor-add]').click();
                 cy.get('[data-testid=rek-contributor-input]').type('Editor{enter}');
             });
         cy.adminEditNoAlerts();
