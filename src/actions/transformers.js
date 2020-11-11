@@ -78,8 +78,8 @@ export const getRecordLinkSearchKey = data => {
 export const getRecordFileAttachmentSearchKey = (files, record) => {
     if (!files || files.length === 0) return {};
 
-    const OPEN_ACCESS_ID = 9;
-    const CLOSED_ACCESS_ID = 8;
+    const FILE_ACCESS_CONDITION_OPEN = 5;
+    const FILE_ACCESS_CONDITION_CLOSED = 1;
 
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount =
@@ -104,8 +104,8 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
             return {
                 rek_file_attachment_access_condition:
-                    item.access_condition_id === OPEN_ACCESS_ID && item.date && moment(item.date).isAfter()
-                        ? CLOSED_ACCESS_ID
+                    item.access_condition_id === FILE_ACCESS_CONDITION_OPEN && item.date && moment(item.date).isAfter()
+                        ? FILE_ACCESS_CONDITION_CLOSED
                         : item.access_condition_id,
                 rek_file_attachment_access_condition_order: initialCount + index + 1,
             };

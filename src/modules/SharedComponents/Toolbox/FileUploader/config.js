@@ -1,5 +1,5 @@
-export const CLOSED_ACCESS_ID = 8;
-export const OPEN_ACCESS_ID = 9;
+export const FILE_ACCESS_CONDITION_CLOSED = 1;
+export const FILE_ACCESS_CONDITION_OPEN = 5;
 export const SIZE_BASE = 1000;
 
 export const DEFAULT_FILE_UPLOAD_LIMIT = 10;

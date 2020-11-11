@@ -1,7 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { default as txt } from './components';
-import { fileUploaderLocale, CLOSED_ACCESS_ID } from 'modules/SharedComponents/Toolbox/FileUploader';
+import {
+    fileUploaderLocale,
+    FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_CLOSED,
+} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 export default {
     cancel: 'Abandon and search again',
@@ -1672,10 +1676,10 @@ export default {
                     ...fileUploaderLocale.fileUploadRow,
                     fileUploadRowAccessSelector: {
                         ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector,
-                        accessSelectOptionsText: {
-                            ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.accessSelectOptionsText,
-                            [CLOSED_ACCESS_ID]: 'Mediated Access',
-                        },
+                        options: [
+                            { text: 'Open Access', value: FILE_ACCESS_CONDITION_OPEN },
+                            { text: 'Mediated Access', value: FILE_ACCESS_CONDITION_CLOSED },
+                        ],
                     },
                 },
             },

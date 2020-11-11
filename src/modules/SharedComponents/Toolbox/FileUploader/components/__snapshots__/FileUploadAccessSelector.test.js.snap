@@ -447,75 +447,84 @@ exports[`Component FileUploadAccessSelector should render access condition disab
             disabled={true}
             locale={
               Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
                 "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
+                "options": Array [
+                  Object {
+                    "text": "Open access",
+                    "value": 5,
+                  },
+                  Object {
+                    "text": "Closed access",
+                    "value": 1,
+                  },
+                ],
+                "selectPrompt": "Select access conditions",
               }
             }
             value=""
           >
-            <WithStyles(ForwardRef(FormControl))
+            <NewGenericSelectField
+              disabled={true}
               error={true}
-              fullWidth={true}
-              required={true}
-            >
-              <ForwardRef(FormControl)
-                classes={
-                  Object {
-                    "fullWidth": "MuiFormControl-fullWidth",
-                    "marginDense": "MuiFormControl-marginDense",
-                    "marginNormal": "MuiFormControl-marginNormal",
-                    "root": "MuiFormControl-root",
-                  }
+              errorText="This field is required"
+              formHelperTextProps={
+                Object {
+                  "className": undefined,
                 }
+              }
+              hideLabel={true}
+              itemsList={
+                Array [
+                  Object {
+                    "text": "Open access",
+                    "value": 5,
+                  },
+                  Object {
+                    "text": "Closed access",
+                    "value": 1,
+                  },
+                ]
+              }
+              onChange={[Function]}
+              required={true}
+              selectPrompt="Select access conditions"
+              selectProps={
+                Object {
+                  "className": "",
+                  "input": <WithStyles(ForwardRef(Input))
+                    classes={
+                      Object {
+                        "root": undefined,
+                      }
+                    }
+                    disableUnderline={true}
+                  />,
+                }
+              }
+              value={-1}
+            >
+              <WithStyles(ForwardRef(FormControl))
                 error={true}
                 fullWidth={true}
                 required={true}
               >
-                <div
-                  className="MuiFormControl-root MuiFormControl-fullWidth"
+                <ForwardRef(FormControl)
+                  classes={
+                    Object {
+                      "fullWidth": "MuiFormControl-fullWidth",
+                      "marginDense": "MuiFormControl-marginDense",
+                      "marginNormal": "MuiFormControl-marginNormal",
+                      "root": "MuiFormControl-root",
+                    }
+                  }
+                  error={true}
+                  fullWidth={true}
+                  required={true}
                 >
-                  <WithStyles(ForwardRef(Select))
-                    MenuProps={
-                      Object {
-                        "data-testid": "undefined-options",
-                        "id": "undefined-options",
-                      }
-                    }
-                    SelectDisplayProps={
-                      Object {
-                        "data-testid": "undefined-select",
-                        "id": "undefined-select",
-                      }
-                    }
-                    className=""
-                    disabled={true}
-                    displayEmpty={true}
-                    input={
-                      <WithStyles(ForwardRef(Input))
-                        classes={
-                          Object {
-                            "root": undefined,
-                          }
-                        }
-                        disableUnderline={true}
-                        id="access-condition"
-                        name="accessCondition"
-                      />
-                    }
-                    inputProps={
-                      Object {
-                        "data-testid": "undefined-input",
-                        "id": "undefined-input",
-                      }
-                    }
-                    onChange={[Function]}
-                    value=""
+                  <div
+                    className="MuiFormControl-root MuiFormControl-fullWidth"
                   >
-                    <ForwardRef(Select)
+                    <WithStyles(ForwardRef(Select))
                       MenuProps={
                         Object {
                           "data-testid": "undefined-options",
@@ -529,22 +538,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         }
                       }
                       className=""
-                      classes={
-                        Object {
-                          "disabled": "Mui-disabled",
-                          "filled": "MuiSelect-filled",
-                          "icon": "MuiSelect-icon",
-                          "iconFilled": "MuiSelect-iconFilled",
-                          "iconOpen": "MuiSelect-iconOpen",
-                          "iconOutlined": "MuiSelect-iconOutlined",
-                          "outlined": "MuiSelect-outlined",
-                          "root": "MuiSelect-root",
-                          "select": "MuiSelect-select",
-                          "selectMenu": "MuiSelect-selectMenu",
-                        }
-                      }
                       disabled={true}
-                      displayEmpty={true}
                       input={
                         <WithStyles(ForwardRef(Input))
                           classes={
@@ -553,159 +547,78 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                             }
                           }
                           disableUnderline={true}
-                          id="access-condition"
-                          name="accessCondition"
                         />
                       }
                       inputProps={
                         Object {
+                          "aria-labelledby": "undefined-label",
                           "data-testid": "undefined-input",
                           "id": "undefined-input",
                         }
                       }
+                      multiple={false}
                       onChange={[Function]}
-                      value=""
+                      value={-1}
                     >
-                      <WithStyles(ForwardRef(Input))
+                      <ForwardRef(Select)
+                        MenuProps={
+                          Object {
+                            "data-testid": "undefined-options",
+                            "id": "undefined-options",
+                          }
+                        }
+                        SelectDisplayProps={
+                          Object {
+                            "data-testid": "undefined-select",
+                            "id": "undefined-select",
+                          }
+                        }
                         className=""
                         classes={
                           Object {
-                            "root": undefined,
+                            "disabled": "Mui-disabled",
+                            "filled": "MuiSelect-filled",
+                            "icon": "MuiSelect-icon",
+                            "iconFilled": "MuiSelect-iconFilled",
+                            "iconOpen": "MuiSelect-iconOpen",
+                            "iconOutlined": "MuiSelect-iconOutlined",
+                            "outlined": "MuiSelect-outlined",
+                            "root": "MuiSelect-root",
+                            "select": "MuiSelect-select",
+                            "selectMenu": "MuiSelect-selectMenu",
                           }
                         }
-                        disableUnderline={true}
                         disabled={true}
-                        id="access-condition"
-                        inputComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "propTypes": Object {
-                              "IconComponent": [Function],
-                              "MenuProps": [Function],
-                              "SelectDisplayProps": [Function],
-                              "aria-label": [Function],
-                              "autoFocus": [Function],
-                              "autoWidth": [Function],
-                              "children": [Function],
-                              "className": [Function],
-                              "classes": [Function],
-                              "defaultValue": [Function],
-                              "disabled": [Function],
-                              "displayEmpty": [Function],
-                              "inputRef": [Function],
-                              "labelId": [Function],
-                              "multiple": [Function],
-                              "name": [Function],
-                              "onBlur": [Function],
-                              "onChange": [Function],
-                              "onClose": [Function],
-                              "onFocus": [Function],
-                              "onOpen": [Function],
-                              "open": [Function],
-                              "readOnly": [Function],
-                              "renderValue": [Function],
-                              "required": [Function],
-                              "tabIndex": [Function],
-                              "type": [Function],
-                              "value": [Function],
-                              "variant": [Function],
-                            },
-                            "render": [Function],
-                          }
+                        input={
+                          <WithStyles(ForwardRef(Input))
+                            classes={
+                              Object {
+                                "root": undefined,
+                              }
+                            }
+                            disableUnderline={true}
+                          />
                         }
                         inputProps={
                           Object {
-                            "IconComponent": Object {
-                              "$$typeof": Symbol(react.memo),
-                              "compare": null,
-                              "displayName": "ArrowDropDownIcon",
-                              "muiName": "SvgIcon",
-                              "type": Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "render": [Function],
-                              },
-                            },
-                            "MenuProps": Object {
-                              "data-testid": "undefined-options",
-                              "id": "undefined-options",
-                            },
-                            "SelectDisplayProps": Object {
-                              "data-testid": "undefined-select",
-                              "id": "undefined-select",
-                            },
-                            "autoWidth": false,
-                            "children": Array [
-                              <WithStyles(ForwardRef(MenuItem))
-                                disabled={true}
-                                value=""
-                              >
-                                Select access conditions
-                              </WithStyles(ForwardRef(MenuItem))>,
-                              Array [
-                                <WithStyles(ForwardRef(MenuItem))
-                                  value={9}
-                                >
-                                  Open Access
-                                </WithStyles(ForwardRef(MenuItem))>,
-                                <WithStyles(ForwardRef(MenuItem))
-                                  value={8}
-                                >
-                                  Closed Access
-                                </WithStyles(ForwardRef(MenuItem))>,
-                              ],
-                            ],
-                            "classes": Object {
-                              "disabled": "Mui-disabled",
-                              "filled": "MuiSelect-filled",
-                              "icon": "MuiSelect-icon",
-                              "iconFilled": "MuiSelect-iconFilled",
-                              "iconOpen": "MuiSelect-iconOpen",
-                              "iconOutlined": "MuiSelect-iconOutlined",
-                              "outlined": "MuiSelect-outlined",
-                              "root": "MuiSelect-root",
-                              "select": "MuiSelect-select",
-                              "selectMenu": "MuiSelect-selectMenu",
-                            },
+                            "aria-labelledby": "undefined-label",
                             "data-testid": "undefined-input",
-                            "displayEmpty": true,
                             "id": "undefined-input",
-                            "labelId": undefined,
-                            "multiple": false,
-                            "onClose": undefined,
-                            "onOpen": undefined,
-                            "open": undefined,
-                            "renderValue": undefined,
-                            "type": undefined,
-                            "variant": "standard",
                           }
                         }
-                        name="accessCondition"
+                        multiple={false}
                         onChange={[Function]}
-                        value=""
+                        value={-1}
                       >
-                        <ForwardRef(Input)
+                        <WithStyles(ForwardRef(Input))
                           className=""
                           classes={
                             Object {
-                              "colorSecondary": "MuiInput-colorSecondary",
-                              "disabled": "Mui-disabled",
-                              "error": "Mui-error",
-                              "focused": "Mui-focused",
-                              "formControl": "MuiInput-formControl",
-                              "fullWidth": "MuiInput-fullWidth",
-                              "input": "MuiInput-input",
-                              "inputMarginDense": "MuiInput-inputMarginDense",
-                              "inputMultiline": "MuiInput-inputMultiline",
-                              "inputTypeSearch": "MuiInput-inputTypeSearch",
-                              "marginDense": "MuiInput-marginDense",
-                              "multiline": "MuiInput-multiline",
-                              "root": "MuiInput-root",
-                              "underline": "MuiInput-underline",
+                              "root": undefined,
                             }
                           }
                           disableUnderline={true}
                           disabled={true}
-                          id="access-condition"
                           inputComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -763,24 +676,63 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "data-testid": "undefined-select",
                                 "id": "undefined-select",
                               },
+                              "aria-labelledby": "undefined-label",
                               "autoWidth": false,
                               "children": Array [
-                                <WithStyles(ForwardRef(MenuItem))
-                                  disabled={true}
-                                  value=""
-                                >
-                                  Select access conditions
-                                </WithStyles(ForwardRef(MenuItem))>,
                                 Array [
                                   <WithStyles(ForwardRef(MenuItem))
-                                    value={9}
+                                    aria-label="Select access conditions"
+                                    classes={
+                                      Object {
+                                        "selected": "makeStyles-selectedMenuItem-1",
+                                      }
+                                    }
+                                    data-testid="undefined-option-0"
+                                    disabled={true}
+                                    style={
+                                      Object {
+                                        "display": "block",
+                                      }
+                                    }
+                                    value={-1}
                                   >
-                                    Open Access
+                                    Select access conditions
                                   </WithStyles(ForwardRef(MenuItem))>,
                                   <WithStyles(ForwardRef(MenuItem))
-                                    value={8}
+                                    aria-label="Open access"
+                                    classes={
+                                      Object {
+                                        "selected": "makeStyles-selectedMenuItem-1",
+                                      }
+                                    }
+                                    data-testid="undefined-option-1"
+                                    disabled={false}
+                                    style={
+                                      Object {
+                                        "display": "block",
+                                      }
+                                    }
+                                    value={5}
                                   >
-                                    Closed Access
+                                    Open access
+                                  </WithStyles(ForwardRef(MenuItem))>,
+                                  <WithStyles(ForwardRef(MenuItem))
+                                    aria-label="Closed access"
+                                    classes={
+                                      Object {
+                                        "selected": "makeStyles-selectedMenuItem-1",
+                                      }
+                                    }
+                                    data-testid="undefined-option-2"
+                                    disabled={false}
+                                    style={
+                                      Object {
+                                        "display": "block",
+                                      }
+                                    }
+                                    value={1}
+                                  >
+                                    Closed access
                                   </WithStyles(ForwardRef(MenuItem))>,
                                 ],
                               ],
@@ -797,7 +749,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "selectMenu": "MuiSelect-selectMenu",
                               },
                               "data-testid": "undefined-input",
-                              "displayEmpty": true,
+                              "displayEmpty": false,
                               "id": "undefined-input",
                               "labelId": undefined,
                               "multiple": false,
@@ -809,11 +761,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               "variant": "standard",
                             }
                           }
-                          name="accessCondition"
                           onChange={[Function]}
-                          value=""
+                          value={-1}
                         >
-                          <WithStyles(ForwardRef(InputBase))
+                          <ForwardRef(Input)
                             className=""
                             classes={
                               Object {
@@ -830,12 +781,11 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "marginDense": "MuiInput-marginDense",
                                 "multiline": "MuiInput-multiline",
                                 "root": "MuiInput-root",
-                                "underline": null,
+                                "underline": "MuiInput-underline",
                               }
                             }
+                            disableUnderline={true}
                             disabled={true}
-                            fullWidth={false}
-                            id="access-condition"
                             inputComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -893,24 +843,63 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "data-testid": "undefined-select",
                                   "id": "undefined-select",
                                 },
+                                "aria-labelledby": "undefined-label",
                                 "autoWidth": false,
                                 "children": Array [
-                                  <WithStyles(ForwardRef(MenuItem))
-                                    disabled={true}
-                                    value=""
-                                  >
-                                    Select access conditions
-                                  </WithStyles(ForwardRef(MenuItem))>,
                                   Array [
                                     <WithStyles(ForwardRef(MenuItem))
-                                      value={9}
+                                      aria-label="Select access conditions"
+                                      classes={
+                                        Object {
+                                          "selected": "makeStyles-selectedMenuItem-1",
+                                        }
+                                      }
+                                      data-testid="undefined-option-0"
+                                      disabled={true}
+                                      style={
+                                        Object {
+                                          "display": "block",
+                                        }
+                                      }
+                                      value={-1}
                                     >
-                                      Open Access
+                                      Select access conditions
                                     </WithStyles(ForwardRef(MenuItem))>,
                                     <WithStyles(ForwardRef(MenuItem))
-                                      value={8}
+                                      aria-label="Open access"
+                                      classes={
+                                        Object {
+                                          "selected": "makeStyles-selectedMenuItem-1",
+                                        }
+                                      }
+                                      data-testid="undefined-option-1"
+                                      disabled={false}
+                                      style={
+                                        Object {
+                                          "display": "block",
+                                        }
+                                      }
+                                      value={5}
                                     >
-                                      Closed Access
+                                      Open access
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
+                                      aria-label="Closed access"
+                                      classes={
+                                        Object {
+                                          "selected": "makeStyles-selectedMenuItem-1",
+                                        }
+                                      }
+                                      data-testid="undefined-option-2"
+                                      disabled={false}
+                                      style={
+                                        Object {
+                                          "display": "block",
+                                        }
+                                      }
+                                      value={1}
+                                    >
+                                      Closed access
                                     </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                 ],
@@ -927,7 +916,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "selectMenu": "MuiSelect-selectMenu",
                                 },
                                 "data-testid": "undefined-input",
-                                "displayEmpty": true,
+                                "displayEmpty": false,
                                 "id": "undefined-input",
                                 "labelId": undefined,
                                 "multiple": false,
@@ -939,39 +928,31 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "variant": "standard",
                               }
                             }
-                            multiline={false}
-                            name="accessCondition"
                             onChange={[Function]}
-                            type="text"
-                            value=""
+                            value={-1}
                           >
-                            <ForwardRef(InputBase)
+                            <WithStyles(ForwardRef(InputBase))
                               className=""
                               classes={
                                 Object {
-                                  "adornedEnd": "MuiInputBase-adornedEnd",
-                                  "adornedStart": "MuiInputBase-adornedStart",
-                                  "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
-                                  "disabled": "Mui-disabled Mui-disabled",
-                                  "error": "Mui-error Mui-error",
-                                  "focused": "Mui-focused Mui-focused",
-                                  "formControl": "MuiInputBase-formControl MuiInput-formControl",
-                                  "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
-                                  "input": "MuiInputBase-input MuiInput-input",
-                                  "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
-                                  "inputAdornedStart": "MuiInputBase-inputAdornedStart",
-                                  "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
-                                  "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
-                                  "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
-                                  "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
-                                  "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
-                                  "multiline": "MuiInputBase-multiline MuiInput-multiline",
-                                  "root": "MuiInputBase-root MuiInput-root",
+                                  "colorSecondary": "MuiInput-colorSecondary",
+                                  "disabled": "Mui-disabled",
+                                  "error": "Mui-error",
+                                  "focused": "Mui-focused",
+                                  "formControl": "MuiInput-formControl",
+                                  "fullWidth": "MuiInput-fullWidth",
+                                  "input": "MuiInput-input",
+                                  "inputMarginDense": "MuiInput-inputMarginDense",
+                                  "inputMultiline": "MuiInput-inputMultiline",
+                                  "inputTypeSearch": "MuiInput-inputTypeSearch",
+                                  "marginDense": "MuiInput-marginDense",
+                                  "multiline": "MuiInput-multiline",
+                                  "root": "MuiInput-root",
+                                  "underline": null,
                                 }
                               }
                               disabled={true}
                               fullWidth={false}
-                              id="access-condition"
                               inputComponent={
                                 Object {
                                   "$$typeof": Symbol(react.forward_ref),
@@ -1029,24 +1010,63 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "data-testid": "undefined-select",
                                     "id": "undefined-select",
                                   },
+                                  "aria-labelledby": "undefined-label",
                                   "autoWidth": false,
                                   "children": Array [
-                                    <WithStyles(ForwardRef(MenuItem))
-                                      disabled={true}
-                                      value=""
-                                    >
-                                      Select access conditions
-                                    </WithStyles(ForwardRef(MenuItem))>,
                                     Array [
                                       <WithStyles(ForwardRef(MenuItem))
-                                        value={9}
+                                        aria-label="Select access conditions"
+                                        classes={
+                                          Object {
+                                            "selected": "makeStyles-selectedMenuItem-1",
+                                          }
+                                        }
+                                        data-testid="undefined-option-0"
+                                        disabled={true}
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        value={-1}
                                       >
-                                        Open Access
+                                        Select access conditions
                                       </WithStyles(ForwardRef(MenuItem))>,
                                       <WithStyles(ForwardRef(MenuItem))
-                                        value={8}
+                                        aria-label="Open access"
+                                        classes={
+                                          Object {
+                                            "selected": "makeStyles-selectedMenuItem-1",
+                                          }
+                                        }
+                                        data-testid="undefined-option-1"
+                                        disabled={false}
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        value={5}
                                       >
-                                        Closed Access
+                                        Open access
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
+                                        aria-label="Closed access"
+                                        classes={
+                                          Object {
+                                            "selected": "makeStyles-selectedMenuItem-1",
+                                          }
+                                        }
+                                        data-testid="undefined-option-2"
+                                        disabled={false}
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        value={1}
+                                      >
+                                        Closed access
                                       </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                   ],
@@ -1063,7 +1083,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
                                   "data-testid": "undefined-input",
-                                  "displayEmpty": true,
+                                  "displayEmpty": false,
                                   "id": "undefined-input",
                                   "labelId": undefined,
                                   "multiple": false,
@@ -1076,18 +1096,76 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 }
                               }
                               multiline={false}
-                              name="accessCondition"
                               onChange={[Function]}
                               type="text"
-                              value=""
+                              value={-1}
                             >
-                              <div
-                                className="MuiInputBase-root MuiInput-root Mui-disabled Mui-disabled Mui-error Mui-error MuiInputBase-formControl MuiInput-formControl"
-                                onClick={[Function]}
-                              >
-                                <ForwardRef(SelectInput)
-                                  IconComponent={
-                                    Object {
+                              <ForwardRef(InputBase)
+                                className=""
+                                classes={
+                                  Object {
+                                    "adornedEnd": "MuiInputBase-adornedEnd",
+                                    "adornedStart": "MuiInputBase-adornedStart",
+                                    "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
+                                    "disabled": "Mui-disabled Mui-disabled",
+                                    "error": "Mui-error Mui-error",
+                                    "focused": "Mui-focused Mui-focused",
+                                    "formControl": "MuiInputBase-formControl MuiInput-formControl",
+                                    "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
+                                    "input": "MuiInputBase-input MuiInput-input",
+                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
+                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart",
+                                    "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                    "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
+                                    "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
+                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
+                                    "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
+                                    "multiline": "MuiInputBase-multiline MuiInput-multiline",
+                                    "root": "MuiInputBase-root MuiInput-root",
+                                  }
+                                }
+                                disabled={true}
+                                fullWidth={false}
+                                inputComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "propTypes": Object {
+                                      "IconComponent": [Function],
+                                      "MenuProps": [Function],
+                                      "SelectDisplayProps": [Function],
+                                      "aria-label": [Function],
+                                      "autoFocus": [Function],
+                                      "autoWidth": [Function],
+                                      "children": [Function],
+                                      "className": [Function],
+                                      "classes": [Function],
+                                      "defaultValue": [Function],
+                                      "disabled": [Function],
+                                      "displayEmpty": [Function],
+                                      "inputRef": [Function],
+                                      "labelId": [Function],
+                                      "multiple": [Function],
+                                      "name": [Function],
+                                      "onBlur": [Function],
+                                      "onChange": [Function],
+                                      "onClose": [Function],
+                                      "onFocus": [Function],
+                                      "onOpen": [Function],
+                                      "open": [Function],
+                                      "readOnly": [Function],
+                                      "renderValue": [Function],
+                                      "required": [Function],
+                                      "tabIndex": [Function],
+                                      "type": [Function],
+                                      "value": [Function],
+                                      "variant": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                inputProps={
+                                  Object {
+                                    "IconComponent": Object {
                                       "$$typeof": Symbol(react.memo),
                                       "compare": null,
                                       "displayName": "ArrowDropDownIcon",
@@ -1096,25 +1174,76 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                         "$$typeof": Symbol(react.forward_ref),
                                         "render": [Function],
                                       },
-                                    }
-                                  }
-                                  MenuProps={
-                                    Object {
+                                    },
+                                    "MenuProps": Object {
                                       "data-testid": "undefined-options",
                                       "id": "undefined-options",
-                                    }
-                                  }
-                                  SelectDisplayProps={
-                                    Object {
+                                    },
+                                    "SelectDisplayProps": Object {
                                       "data-testid": "undefined-select",
                                       "id": "undefined-select",
-                                    }
-                                  }
-                                  aria-invalid={true}
-                                  autoWidth={false}
-                                  className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
-                                  classes={
-                                    Object {
+                                    },
+                                    "aria-labelledby": "undefined-label",
+                                    "autoWidth": false,
+                                    "children": Array [
+                                      Array [
+                                        <WithStyles(ForwardRef(MenuItem))
+                                          aria-label="Select access conditions"
+                                          classes={
+                                            Object {
+                                              "selected": "makeStyles-selectedMenuItem-1",
+                                            }
+                                          }
+                                          data-testid="undefined-option-0"
+                                          disabled={true}
+                                          style={
+                                            Object {
+                                              "display": "block",
+                                            }
+                                          }
+                                          value={-1}
+                                        >
+                                          Select access conditions
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
+                                          aria-label="Open access"
+                                          classes={
+                                            Object {
+                                              "selected": "makeStyles-selectedMenuItem-1",
+                                            }
+                                          }
+                                          data-testid="undefined-option-1"
+                                          disabled={false}
+                                          style={
+                                            Object {
+                                              "display": "block",
+                                            }
+                                          }
+                                          value={5}
+                                        >
+                                          Open access
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
+                                          aria-label="Closed access"
+                                          classes={
+                                            Object {
+                                              "selected": "makeStyles-selectedMenuItem-1",
+                                            }
+                                          }
+                                          data-testid="undefined-option-2"
+                                          disabled={false}
+                                          style={
+                                            Object {
+                                              "display": "block",
+                                            }
+                                          }
+                                          value={1}
+                                        >
+                                          Closed access
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                      ],
+                                    ],
+                                    "classes": Object {
                                       "disabled": "Mui-disabled",
                                       "filled": "MuiSelect-filled",
                                       "icon": "MuiSelect-icon",
@@ -1125,116 +1254,146 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "root": "MuiSelect-root",
                                       "select": "MuiSelect-select",
                                       "selectMenu": "MuiSelect-selectMenu",
-                                    }
+                                    },
+                                    "data-testid": "undefined-input",
+                                    "displayEmpty": false,
+                                    "id": "undefined-input",
+                                    "labelId": undefined,
+                                    "multiple": false,
+                                    "onClose": undefined,
+                                    "onOpen": undefined,
+                                    "open": undefined,
+                                    "renderValue": undefined,
+                                    "type": undefined,
+                                    "variant": "standard",
                                   }
-                                  data-testid="undefined-input"
-                                  disabled={true}
-                                  displayEmpty={true}
-                                  id="undefined-input"
-                                  inputRef={[Function]}
-                                  multiple={false}
-                                  name="accessCondition"
-                                  onAnimationStart={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  required={true}
-                                  value=""
-                                  variant="standard"
+                                }
+                                multiline={false}
+                                onChange={[Function]}
+                                type="text"
+                                value={-1}
+                              >
+                                <div
+                                  className="MuiInputBase-root MuiInput-root Mui-disabled Mui-disabled Mui-error Mui-error MuiInputBase-formControl MuiInput-formControl"
+                                  onClick={[Function]}
                                 >
-                                  <div
-                                    aria-disabled="true"
-                                    aria-haspopup="listbox"
-                                    aria-labelledby="undefined-select"
-                                    className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                    data-testid="undefined-select"
-                                    id="undefined-select"
-                                    onBlur={[Function]}
-                                    onFocus={[Function]}
-                                    onKeyDown={[Function]}
-                                    onMouseDown={null}
-                                    role="button"
-                                    tabIndex={null}
-                                  >
-                                    Select access conditions
-                                  </div>
-                                  <input
-                                    data-testid="undefined-input"
-                                    id="undefined-input"
-                                    name="accessCondition"
-                                    onAnimationStart={[Function]}
-                                    type="hidden"
-                                    value=""
-                                  />
-                                  <ForwardRef
-                                    className="MuiSelect-icon Mui-disabled"
-                                  >
-                                    <WithStyles(ForwardRef(SvgIcon))
-                                      className="MuiSelect-icon Mui-disabled"
-                                    >
-                                      <ForwardRef(SvgIcon)
-                                        className="MuiSelect-icon Mui-disabled"
-                                        classes={
-                                          Object {
-                                            "colorAction": "MuiSvgIcon-colorAction",
-                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                            "colorError": "MuiSvgIcon-colorError",
-                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                            "root": "MuiSvgIcon-root",
-                                          }
-                                        }
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          className="MuiSvgIcon-root MuiSelect-icon Mui-disabled"
-                                          focusable="false"
-                                          viewBox="0 0 24 24"
-                                        >
-                                          <path
-                                            d="M7 10l5 5 5-5z"
-                                          />
-                                        </svg>
-                                      </ForwardRef(SvgIcon)>
-                                    </WithStyles(ForwardRef(SvgIcon))>
-                                  </ForwardRef>
-                                  <WithStyles(ForwardRef(Menu))
-                                    MenuListProps={
+                                  <ForwardRef(SelectInput)
+                                    IconComponent={
                                       Object {
-                                        "aria-labelledby": undefined,
-                                        "disableListWrap": true,
-                                        "role": "listbox",
-                                      }
-                                    }
-                                    PaperProps={
-                                      Object {
-                                        "style": Object {
-                                          "minWidth": undefined,
+                                        "$$typeof": Symbol(react.memo),
+                                        "compare": null,
+                                        "displayName": "ArrowDropDownIcon",
+                                        "muiName": "SvgIcon",
+                                        "type": Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "render": [Function],
                                         },
                                       }
                                     }
-                                    anchorEl={
-                                      <div
-                                        aria-disabled="true"
-                                        aria-haspopup="listbox"
-                                        aria-labelledby="undefined-select"
-                                        class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                        data-testid="undefined-select"
-                                        id="undefined-select"
-                                        role="button"
-                                      >
-                                        Select access conditions
-                                      </div>
+                                    MenuProps={
+                                      Object {
+                                        "data-testid": "undefined-options",
+                                        "id": "undefined-options",
+                                      }
                                     }
-                                    data-testid="undefined-options"
-                                    id="undefined-options"
-                                    onClose={[Function]}
-                                    open={false}
+                                    SelectDisplayProps={
+                                      Object {
+                                        "data-testid": "undefined-select",
+                                        "id": "undefined-select",
+                                      }
+                                    }
+                                    aria-invalid={true}
+                                    aria-labelledby="undefined-label"
+                                    autoWidth={false}
+                                    className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
+                                    classes={
+                                      Object {
+                                        "disabled": "Mui-disabled",
+                                        "filled": "MuiSelect-filled",
+                                        "icon": "MuiSelect-icon",
+                                        "iconFilled": "MuiSelect-iconFilled",
+                                        "iconOpen": "MuiSelect-iconOpen",
+                                        "iconOutlined": "MuiSelect-iconOutlined",
+                                        "outlined": "MuiSelect-outlined",
+                                        "root": "MuiSelect-root",
+                                        "select": "MuiSelect-select",
+                                        "selectMenu": "MuiSelect-selectMenu",
+                                      }
+                                    }
+                                    data-testid="undefined-input"
+                                    disabled={true}
+                                    displayEmpty={false}
+                                    id="undefined-input"
+                                    inputRef={[Function]}
+                                    multiple={false}
+                                    onAnimationStart={[Function]}
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onFocus={[Function]}
+                                    required={true}
+                                    value={-1}
+                                    variant="standard"
                                   >
-                                    <ForwardRef(Menu)
+                                    <div
+                                      aria-disabled="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="undefined-select"
+                                      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                      data-testid="undefined-select"
+                                      id="undefined-select"
+                                      onBlur={[Function]}
+                                      onFocus={[Function]}
+                                      onKeyDown={[Function]}
+                                      onMouseDown={null}
+                                      role="button"
+                                      tabIndex={null}
+                                    >
+                                      Select access conditions
+                                    </div>
+                                    <input
+                                      aria-labelledby="undefined-label"
+                                      data-testid="undefined-input"
+                                      id="undefined-input"
+                                      onAnimationStart={[Function]}
+                                      type="hidden"
+                                      value={-1}
+                                    />
+                                    <ForwardRef
+                                      className="MuiSelect-icon Mui-disabled"
+                                    >
+                                      <WithStyles(ForwardRef(SvgIcon))
+                                        className="MuiSelect-icon Mui-disabled"
+                                      >
+                                        <ForwardRef(SvgIcon)
+                                          className="MuiSelect-icon Mui-disabled"
+                                          classes={
+                                            Object {
+                                              "colorAction": "MuiSvgIcon-colorAction",
+                                              "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                              "colorError": "MuiSvgIcon-colorError",
+                                              "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                              "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                              "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                              "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                              "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                              "root": "MuiSvgIcon-root",
+                                            }
+                                          }
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            className="MuiSvgIcon-root MuiSelect-icon Mui-disabled"
+                                            focusable="false"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 10l5 5 5-5z"
+                                            />
+                                          </svg>
+                                        </ForwardRef(SvgIcon)>
+                                      </WithStyles(ForwardRef(SvgIcon))>
+                                    </ForwardRef>
+                                    <WithStyles(ForwardRef(Menu))
                                       MenuListProps={
                                         Object {
                                           "aria-labelledby": undefined,
@@ -1262,23 +1421,21 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           Select access conditions
                                         </div>
                                       }
-                                      classes={
-                                        Object {
-                                          "list": "MuiMenu-list",
-                                          "paper": "MuiMenu-paper",
-                                        }
-                                      }
                                       data-testid="undefined-options"
                                       id="undefined-options"
                                       onClose={[Function]}
                                       open={false}
                                     >
-                                      <WithStyles(ForwardRef(Popover))
+                                      <ForwardRef(Menu)
+                                        MenuListProps={
+                                          Object {
+                                            "aria-labelledby": undefined,
+                                            "disableListWrap": true,
+                                            "role": "listbox",
+                                          }
+                                        }
                                         PaperProps={
                                           Object {
-                                            "classes": Object {
-                                              "root": "MuiMenu-paper",
-                                            },
                                             "style": Object {
                                               "minWidth": undefined,
                                             },
@@ -1297,27 +1454,18 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             Select access conditions
                                           </div>
                                         }
-                                        anchorOrigin={
+                                        classes={
                                           Object {
-                                            "horizontal": "left",
-                                            "vertical": "top",
+                                            "list": "MuiMenu-list",
+                                            "paper": "MuiMenu-paper",
                                           }
                                         }
                                         data-testid="undefined-options"
-                                        getContentAnchorEl={[Function]}
                                         id="undefined-options"
                                         onClose={[Function]}
-                                        onEntering={[Function]}
                                         open={false}
-                                        transformOrigin={
-                                          Object {
-                                            "horizontal": "left",
-                                            "vertical": "top",
-                                          }
-                                        }
-                                        transitionDuration="auto"
                                       >
-                                        <ForwardRef(Popover)
+                                        <WithStyles(ForwardRef(Popover))
                                           PaperProps={
                                             Object {
                                               "classes": Object {
@@ -1347,12 +1495,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                               "vertical": "top",
                                             }
                                           }
-                                          classes={
-                                            Object {
-                                              "paper": "MuiPopover-paper",
-                                              "root": "MuiPopover-root",
-                                            }
-                                          }
                                           data-testid="undefined-options"
                                           getContentAnchorEl={[Function]}
                                           id="undefined-options"
@@ -1367,56 +1509,116 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           }
                                           transitionDuration="auto"
                                         >
-                                          <ForwardRef(Modal)
-                                            BackdropProps={
+                                          <ForwardRef(Popover)
+                                            PaperProps={
                                               Object {
-                                                "invisible": true,
+                                                "classes": Object {
+                                                  "root": "MuiMenu-paper",
+                                                },
+                                                "style": Object {
+                                                  "minWidth": undefined,
+                                                },
                                               }
                                             }
-                                            className="MuiPopover-root"
-                                            container={<body />}
+                                            anchorEl={
+                                              <div
+                                                aria-disabled="true"
+                                                aria-haspopup="listbox"
+                                                aria-labelledby="undefined-select"
+                                                class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                data-testid="undefined-select"
+                                                id="undefined-select"
+                                                role="button"
+                                              >
+                                                Select access conditions
+                                              </div>
+                                            }
+                                            anchorOrigin={
+                                              Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                                            }
+                                            classes={
+                                              Object {
+                                                "paper": "MuiPopover-paper",
+                                                "root": "MuiPopover-root",
+                                              }
+                                            }
                                             data-testid="undefined-options"
+                                            getContentAnchorEl={[Function]}
                                             id="undefined-options"
                                             onClose={[Function]}
+                                            onEntering={[Function]}
                                             open={false}
-                                          />
-                                        </ForwardRef(Popover)>
-                                      </WithStyles(ForwardRef(Popover))>
-                                    </ForwardRef(Menu)>
-                                  </WithStyles(ForwardRef(Menu))>
-                                </ForwardRef(SelectInput)>
-                              </div>
-                            </ForwardRef(InputBase)>
-                          </WithStyles(ForwardRef(InputBase))>
-                        </ForwardRef(Input)>
-                      </WithStyles(ForwardRef(Input))>
-                    </ForwardRef(Select)>
-                  </WithStyles(ForwardRef(Select))>
-                  <WithStyles(ForwardRef(FormHelperText))>
-                    <ForwardRef(FormHelperText)
-                      classes={
-                        Object {
-                          "contained": "MuiFormHelperText-contained",
-                          "disabled": "Mui-disabled",
-                          "error": "Mui-error",
-                          "filled": "MuiFormHelperText-filled",
-                          "focused": "Mui-focused",
-                          "marginDense": "MuiFormHelperText-marginDense",
-                          "required": "Mui-required",
-                          "root": "MuiFormHelperText-root",
-                        }
-                      }
+                                            transformOrigin={
+                                              Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                                            }
+                                            transitionDuration="auto"
+                                          >
+                                            <ForwardRef(Modal)
+                                              BackdropProps={
+                                                Object {
+                                                  "invisible": true,
+                                                }
+                                              }
+                                              className="MuiPopover-root"
+                                              container={<body />}
+                                              data-testid="undefined-options"
+                                              id="undefined-options"
+                                              onClose={[Function]}
+                                              open={false}
+                                            />
+                                          </ForwardRef(Popover)>
+                                        </WithStyles(ForwardRef(Popover))>
+                                      </ForwardRef(Menu)>
+                                    </WithStyles(ForwardRef(Menu))>
+                                  </ForwardRef(SelectInput)>
+                                </div>
+                              </ForwardRef(InputBase)>
+                            </WithStyles(ForwardRef(InputBase))>
+                          </ForwardRef(Input)>
+                        </WithStyles(ForwardRef(Input))>
+                      </ForwardRef(Select)>
+                    </WithStyles(ForwardRef(Select))>
+                    <WithStyles(ForwardRef(FormHelperText))
+                      data-testid="undefined-helper-text"
+                      error={true}
+                      id="undefined-helper-text"
                     >
-                      <p
-                        className="MuiFormHelperText-root Mui-error Mui-required"
+                      <ForwardRef(FormHelperText)
+                        classes={
+                          Object {
+                            "contained": "MuiFormHelperText-contained",
+                            "disabled": "Mui-disabled",
+                            "error": "Mui-error",
+                            "filled": "MuiFormHelperText-filled",
+                            "focused": "Mui-focused",
+                            "marginDense": "MuiFormHelperText-marginDense",
+                            "required": "Mui-required",
+                            "root": "MuiFormHelperText-root",
+                          }
+                        }
+                        data-testid="undefined-helper-text"
+                        error={true}
+                        id="undefined-helper-text"
                       >
-                        This field is required
-                      </p>
-                    </ForwardRef(FormHelperText)>
-                  </WithStyles(ForwardRef(FormHelperText))>
-                </div>
-              </ForwardRef(FormControl)>
-            </WithStyles(ForwardRef(FormControl))>
+                        <p
+                          className="MuiFormHelperText-root Mui-error MuiFormHelperText-filled Mui-required"
+                          data-testid="undefined-helper-text"
+                          id="undefined-helper-text"
+                        >
+                          This field is required
+                        </p>
+                      </ForwardRef(FormHelperText)>
+                    </WithStyles(ForwardRef(FormHelperText))>
+                  </div>
+                </ForwardRef(FormControl)>
+              </WithStyles(ForwardRef(FormControl))>
+            </NewGenericSelectField>
           </FileUploadAccessSelector>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
@@ -1872,73 +2074,84 @@ exports[`Component FileUploadAccessSelector should render access condition disab
             disabled={true}
             locale={
               Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
                 "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
+                "options": Array [
+                  Object {
+                    "text": "Open access",
+                    "value": 5,
+                  },
+                  Object {
+                    "text": "Closed access",
+                    "value": 1,
+                  },
+                ],
+                "selectPrompt": "Select access conditions",
               }
             }
-            value={8}
+            value={1}
           >
-            <WithStyles(ForwardRef(FormControl))
-              fullWidth={true}
-              required={true}
-            >
-              <ForwardRef(FormControl)
-                classes={
-                  Object {
-                    "fullWidth": "MuiFormControl-fullWidth",
-                    "marginDense": "MuiFormControl-marginDense",
-                    "marginNormal": "MuiFormControl-marginNormal",
-                    "root": "MuiFormControl-root",
-                  }
+            <NewGenericSelectField
+              disabled={true}
+              error={false}
+              errorText="This field is required"
+              formHelperTextProps={
+                Object {
+                  "className": undefined,
                 }
+              }
+              hideLabel={true}
+              itemsList={
+                Array [
+                  Object {
+                    "text": "Open access",
+                    "value": 5,
+                  },
+                  Object {
+                    "text": "Closed access",
+                    "value": 1,
+                  },
+                ]
+              }
+              onChange={[Function]}
+              required={true}
+              selectPrompt="Select access conditions"
+              selectProps={
+                Object {
+                  "className": "",
+                  "input": <WithStyles(ForwardRef(Input))
+                    classes={
+                      Object {
+                        "root": undefined,
+                      }
+                    }
+                    disableUnderline={true}
+                  />,
+                }
+              }
+              value={1}
+            >
+              <WithStyles(ForwardRef(FormControl))
+                error={false}
                 fullWidth={true}
                 required={true}
               >
-                <div
-                  className="MuiFormControl-root MuiFormControl-fullWidth"
+                <ForwardRef(FormControl)
+                  classes={
+                    Object {
+                      "fullWidth": "MuiFormControl-fullWidth",
+                      "marginDense": "MuiFormControl-marginDense",
+                      "marginNormal": "MuiFormControl-marginNormal",
+                      "root": "MuiFormControl-root",
+                    }
+                  }
+                  error={false}
+                  fullWidth={true}
+                  required={true}
                 >
-                  <WithStyles(ForwardRef(Select))
-                    MenuProps={
-                      Object {
-                        "data-testid": "undefined-options",
-                        "id": "undefined-options",
-                      }
-                    }
-                    SelectDisplayProps={
-                      Object {
-                        "data-testid": "undefined-select",
-                        "id": "undefined-select",
-                      }
-                    }
-                    className=""
-                    disabled={true}
-                    displayEmpty={true}
-                    input={
-                      <WithStyles(ForwardRef(Input))
-                        classes={
-                          Object {
-                            "root": undefined,
-                          }
-                        }
-                        disableUnderline={true}
-                        id="access-condition"
-                        name="accessCondition"
-                      />
-                    }
-                    inputProps={
-                      Object {
-                        "data-testid": "undefined-input",
-                        "id": "undefined-input",
-                      }
-                    }
-                    onChange={[Function]}
-                    value={8}
+                  <div
+                    className="MuiFormControl-root MuiFormControl-fullWidth"
                   >
-                    <ForwardRef(Select)
+                    <WithStyles(ForwardRef(Select))
                       MenuProps={
                         Object {
                           "data-testid": "undefined-options",
@@ -1952,22 +2165,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         }
                       }
                       className=""
-                      classes={
-                        Object {
-                          "disabled": "Mui-disabled",
-                          "filled": "MuiSelect-filled",
-                          "icon": "MuiSelect-icon",
-                          "iconFilled": "MuiSelect-iconFilled",
-                          "iconOpen": "MuiSelect-iconOpen",
-                          "iconOutlined": "MuiSelect-iconOutlined",
-                          "outlined": "MuiSelect-outlined",
-                          "root": "MuiSelect-root",
-                          "select": "MuiSelect-select",
-                          "selectMenu": "MuiSelect-selectMenu",
-                        }
-                      }
                       disabled={true}
-                      displayEmpty={true}
                       input={
                         <WithStyles(ForwardRef(Input))
                           classes={
@@ -1976,159 +2174,78 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                             }
                           }
                           disableUnderline={true}
-                          id="access-condition"
-                          name="accessCondition"
                         />
                       }
                       inputProps={
                         Object {
+                          "aria-labelledby": "undefined-label",
                           "data-testid": "undefined-input",
                           "id": "undefined-input",
                         }
                       }
+                      multiple={false}
                       onChange={[Function]}
-                      value={8}
+                      value={1}
                     >
-                      <WithStyles(ForwardRef(Input))
+                      <ForwardRef(Select)
+                        MenuProps={
+                          Object {
+                            "data-testid": "undefined-options",
+                            "id": "undefined-options",
+                          }
+                        }
+                        SelectDisplayProps={
+                          Object {
+                            "data-testid": "undefined-select",
+                            "id": "undefined-select",
+                          }
+                        }
                         className=""
                         classes={
                           Object {
-                            "root": undefined,
+                            "disabled": "Mui-disabled",
+                            "filled": "MuiSelect-filled",
+                            "icon": "MuiSelect-icon",
+                            "iconFilled": "MuiSelect-iconFilled",
+                            "iconOpen": "MuiSelect-iconOpen",
+                            "iconOutlined": "MuiSelect-iconOutlined",
+                            "outlined": "MuiSelect-outlined",
+                            "root": "MuiSelect-root",
+                            "select": "MuiSelect-select",
+                            "selectMenu": "MuiSelect-selectMenu",
                           }
                         }
-                        disableUnderline={true}
                         disabled={true}
-                        id="access-condition"
-                        inputComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "propTypes": Object {
-                              "IconComponent": [Function],
-                              "MenuProps": [Function],
-                              "SelectDisplayProps": [Function],
-                              "aria-label": [Function],
-                              "autoFocus": [Function],
-                              "autoWidth": [Function],
-                              "children": [Function],
-                              "className": [Function],
-                              "classes": [Function],
-                              "defaultValue": [Function],
-                              "disabled": [Function],
-                              "displayEmpty": [Function],
-                              "inputRef": [Function],
-                              "labelId": [Function],
-                              "multiple": [Function],
-                              "name": [Function],
-                              "onBlur": [Function],
-                              "onChange": [Function],
-                              "onClose": [Function],
-                              "onFocus": [Function],
-                              "onOpen": [Function],
-                              "open": [Function],
-                              "readOnly": [Function],
-                              "renderValue": [Function],
-                              "required": [Function],
-                              "tabIndex": [Function],
-                              "type": [Function],
-                              "value": [Function],
-                              "variant": [Function],
-                            },
-                            "render": [Function],
-                          }
+                        input={
+                          <WithStyles(ForwardRef(Input))
+                            classes={
+                              Object {
+                                "root": undefined,
+                              }
+                            }
+                            disableUnderline={true}
+                          />
                         }
                         inputProps={
                           Object {
-                            "IconComponent": Object {
-                              "$$typeof": Symbol(react.memo),
-                              "compare": null,
-                              "displayName": "ArrowDropDownIcon",
-                              "muiName": "SvgIcon",
-                              "type": Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "render": [Function],
-                              },
-                            },
-                            "MenuProps": Object {
-                              "data-testid": "undefined-options",
-                              "id": "undefined-options",
-                            },
-                            "SelectDisplayProps": Object {
-                              "data-testid": "undefined-select",
-                              "id": "undefined-select",
-                            },
-                            "autoWidth": false,
-                            "children": Array [
-                              <WithStyles(ForwardRef(MenuItem))
-                                disabled={true}
-                                value=""
-                              >
-                                Select access conditions
-                              </WithStyles(ForwardRef(MenuItem))>,
-                              Array [
-                                <WithStyles(ForwardRef(MenuItem))
-                                  value={9}
-                                >
-                                  Open Access
-                                </WithStyles(ForwardRef(MenuItem))>,
-                                <WithStyles(ForwardRef(MenuItem))
-                                  value={8}
-                                >
-                                  Closed Access
-                                </WithStyles(ForwardRef(MenuItem))>,
-                              ],
-                            ],
-                            "classes": Object {
-                              "disabled": "Mui-disabled",
-                              "filled": "MuiSelect-filled",
-                              "icon": "MuiSelect-icon",
-                              "iconFilled": "MuiSelect-iconFilled",
-                              "iconOpen": "MuiSelect-iconOpen",
-                              "iconOutlined": "MuiSelect-iconOutlined",
-                              "outlined": "MuiSelect-outlined",
-                              "root": "MuiSelect-root",
-                              "select": "MuiSelect-select",
-                              "selectMenu": "MuiSelect-selectMenu",
-                            },
+                            "aria-labelledby": "undefined-label",
                             "data-testid": "undefined-input",
-                            "displayEmpty": true,
                             "id": "undefined-input",
-                            "labelId": undefined,
-                            "multiple": false,
-                            "onClose": undefined,
-                            "onOpen": undefined,
-                            "open": undefined,
-                            "renderValue": undefined,
-                            "type": undefined,
-                            "variant": "standard",
                           }
                         }
-                        name="accessCondition"
+                        multiple={false}
                         onChange={[Function]}
-                        value={8}
+                        value={1}
                       >
-                        <ForwardRef(Input)
+                        <WithStyles(ForwardRef(Input))
                           className=""
                           classes={
                             Object {
-                              "colorSecondary": "MuiInput-colorSecondary",
-                              "disabled": "Mui-disabled",
-                              "error": "Mui-error",
-                              "focused": "Mui-focused",
-                              "formControl": "MuiInput-formControl",
-                              "fullWidth": "MuiInput-fullWidth",
-                              "input": "MuiInput-input",
-                              "inputMarginDense": "MuiInput-inputMarginDense",
-                              "inputMultiline": "MuiInput-inputMultiline",
-                              "inputTypeSearch": "MuiInput-inputTypeSearch",
-                              "marginDense": "MuiInput-marginDense",
-                              "multiline": "MuiInput-multiline",
-                              "root": "MuiInput-root",
-                              "underline": "MuiInput-underline",
+                              "root": undefined,
                             }
                           }
                           disableUnderline={true}
                           disabled={true}
-                          id="access-condition"
                           inputComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -2186,24 +2303,63 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "data-testid": "undefined-select",
                                 "id": "undefined-select",
                               },
+                              "aria-labelledby": "undefined-label",
                               "autoWidth": false,
                               "children": Array [
-                                <WithStyles(ForwardRef(MenuItem))
-                                  disabled={true}
-                                  value=""
-                                >
-                                  Select access conditions
-                                </WithStyles(ForwardRef(MenuItem))>,
                                 Array [
                                   <WithStyles(ForwardRef(MenuItem))
-                                    value={9}
+                                    aria-label="Select access conditions"
+                                    classes={
+                                      Object {
+                                        "selected": "makeStyles-selectedMenuItem-1",
+                                      }
+                                    }
+                                    data-testid="undefined-option-0"
+                                    disabled={true}
+                                    style={
+                                      Object {
+                                        "display": "block",
+                                      }
+                                    }
+                                    value={-1}
                                   >
-                                    Open Access
+                                    Select access conditions
                                   </WithStyles(ForwardRef(MenuItem))>,
                                   <WithStyles(ForwardRef(MenuItem))
-                                    value={8}
+                                    aria-label="Open access"
+                                    classes={
+                                      Object {
+                                        "selected": "makeStyles-selectedMenuItem-1",
+                                      }
+                                    }
+                                    data-testid="undefined-option-1"
+                                    disabled={false}
+                                    style={
+                                      Object {
+                                        "display": "block",
+                                      }
+                                    }
+                                    value={5}
                                   >
-                                    Closed Access
+                                    Open access
+                                  </WithStyles(ForwardRef(MenuItem))>,
+                                  <WithStyles(ForwardRef(MenuItem))
+                                    aria-label="Closed access"
+                                    classes={
+                                      Object {
+                                        "selected": "makeStyles-selectedMenuItem-1",
+                                      }
+                                    }
+                                    data-testid="undefined-option-2"
+                                    disabled={false}
+                                    style={
+                                      Object {
+                                        "display": "block",
+                                      }
+                                    }
+                                    value={1}
+                                  >
+                                    Closed access
                                   </WithStyles(ForwardRef(MenuItem))>,
                                 ],
                               ],
@@ -2220,7 +2376,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "selectMenu": "MuiSelect-selectMenu",
                               },
                               "data-testid": "undefined-input",
-                              "displayEmpty": true,
+                              "displayEmpty": false,
                               "id": "undefined-input",
                               "labelId": undefined,
                               "multiple": false,
@@ -2232,11 +2388,10 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               "variant": "standard",
                             }
                           }
-                          name="accessCondition"
                           onChange={[Function]}
-                          value={8}
+                          value={1}
                         >
-                          <WithStyles(ForwardRef(InputBase))
+                          <ForwardRef(Input)
                             className=""
                             classes={
                               Object {
@@ -2253,12 +2408,11 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "marginDense": "MuiInput-marginDense",
                                 "multiline": "MuiInput-multiline",
                                 "root": "MuiInput-root",
-                                "underline": null,
+                                "underline": "MuiInput-underline",
                               }
                             }
+                            disableUnderline={true}
                             disabled={true}
-                            fullWidth={false}
-                            id="access-condition"
                             inputComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -2316,24 +2470,63 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "data-testid": "undefined-select",
                                   "id": "undefined-select",
                                 },
+                                "aria-labelledby": "undefined-label",
                                 "autoWidth": false,
                                 "children": Array [
-                                  <WithStyles(ForwardRef(MenuItem))
-                                    disabled={true}
-                                    value=""
-                                  >
-                                    Select access conditions
-                                  </WithStyles(ForwardRef(MenuItem))>,
                                   Array [
                                     <WithStyles(ForwardRef(MenuItem))
-                                      value={9}
+                                      aria-label="Select access conditions"
+                                      classes={
+                                        Object {
+                                          "selected": "makeStyles-selectedMenuItem-1",
+                                        }
+                                      }
+                                      data-testid="undefined-option-0"
+                                      disabled={true}
+                                      style={
+                                        Object {
+                                          "display": "block",
+                                        }
+                                      }
+                                      value={-1}
                                     >
-                                      Open Access
+                                      Select access conditions
                                     </WithStyles(ForwardRef(MenuItem))>,
                                     <WithStyles(ForwardRef(MenuItem))
-                                      value={8}
+                                      aria-label="Open access"
+                                      classes={
+                                        Object {
+                                          "selected": "makeStyles-selectedMenuItem-1",
+                                        }
+                                      }
+                                      data-testid="undefined-option-1"
+                                      disabled={false}
+                                      style={
+                                        Object {
+                                          "display": "block",
+                                        }
+                                      }
+                                      value={5}
                                     >
-                                      Closed Access
+                                      Open access
+                                    </WithStyles(ForwardRef(MenuItem))>,
+                                    <WithStyles(ForwardRef(MenuItem))
+                                      aria-label="Closed access"
+                                      classes={
+                                        Object {
+                                          "selected": "makeStyles-selectedMenuItem-1",
+                                        }
+                                      }
+                                      data-testid="undefined-option-2"
+                                      disabled={false}
+                                      style={
+                                        Object {
+                                          "display": "block",
+                                        }
+                                      }
+                                      value={1}
+                                    >
+                                      Closed access
                                     </WithStyles(ForwardRef(MenuItem))>,
                                   ],
                                 ],
@@ -2350,7 +2543,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "selectMenu": "MuiSelect-selectMenu",
                                 },
                                 "data-testid": "undefined-input",
-                                "displayEmpty": true,
+                                "displayEmpty": false,
                                 "id": "undefined-input",
                                 "labelId": undefined,
                                 "multiple": false,
@@ -2362,39 +2555,31 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "variant": "standard",
                               }
                             }
-                            multiline={false}
-                            name="accessCondition"
                             onChange={[Function]}
-                            type="text"
-                            value={8}
+                            value={1}
                           >
-                            <ForwardRef(InputBase)
+                            <WithStyles(ForwardRef(InputBase))
                               className=""
                               classes={
                                 Object {
-                                  "adornedEnd": "MuiInputBase-adornedEnd",
-                                  "adornedStart": "MuiInputBase-adornedStart",
-                                  "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
-                                  "disabled": "Mui-disabled Mui-disabled",
-                                  "error": "Mui-error Mui-error",
-                                  "focused": "Mui-focused Mui-focused",
-                                  "formControl": "MuiInputBase-formControl MuiInput-formControl",
-                                  "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
-                                  "input": "MuiInputBase-input MuiInput-input",
-                                  "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
-                                  "inputAdornedStart": "MuiInputBase-inputAdornedStart",
-                                  "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
-                                  "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
-                                  "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
-                                  "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
-                                  "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
-                                  "multiline": "MuiInputBase-multiline MuiInput-multiline",
-                                  "root": "MuiInputBase-root MuiInput-root",
+                                  "colorSecondary": "MuiInput-colorSecondary",
+                                  "disabled": "Mui-disabled",
+                                  "error": "Mui-error",
+                                  "focused": "Mui-focused",
+                                  "formControl": "MuiInput-formControl",
+                                  "fullWidth": "MuiInput-fullWidth",
+                                  "input": "MuiInput-input",
+                                  "inputMarginDense": "MuiInput-inputMarginDense",
+                                  "inputMultiline": "MuiInput-inputMultiline",
+                                  "inputTypeSearch": "MuiInput-inputTypeSearch",
+                                  "marginDense": "MuiInput-marginDense",
+                                  "multiline": "MuiInput-multiline",
+                                  "root": "MuiInput-root",
+                                  "underline": null,
                                 }
                               }
                               disabled={true}
                               fullWidth={false}
-                              id="access-condition"
                               inputComponent={
                                 Object {
                                   "$$typeof": Symbol(react.forward_ref),
@@ -2452,24 +2637,63 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "data-testid": "undefined-select",
                                     "id": "undefined-select",
                                   },
+                                  "aria-labelledby": "undefined-label",
                                   "autoWidth": false,
                                   "children": Array [
-                                    <WithStyles(ForwardRef(MenuItem))
-                                      disabled={true}
-                                      value=""
-                                    >
-                                      Select access conditions
-                                    </WithStyles(ForwardRef(MenuItem))>,
                                     Array [
                                       <WithStyles(ForwardRef(MenuItem))
-                                        value={9}
+                                        aria-label="Select access conditions"
+                                        classes={
+                                          Object {
+                                            "selected": "makeStyles-selectedMenuItem-1",
+                                          }
+                                        }
+                                        data-testid="undefined-option-0"
+                                        disabled={true}
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        value={-1}
                                       >
-                                        Open Access
+                                        Select access conditions
                                       </WithStyles(ForwardRef(MenuItem))>,
                                       <WithStyles(ForwardRef(MenuItem))
-                                        value={8}
+                                        aria-label="Open access"
+                                        classes={
+                                          Object {
+                                            "selected": "makeStyles-selectedMenuItem-1",
+                                          }
+                                        }
+                                        data-testid="undefined-option-1"
+                                        disabled={false}
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        value={5}
                                       >
-                                        Closed Access
+                                        Open access
+                                      </WithStyles(ForwardRef(MenuItem))>,
+                                      <WithStyles(ForwardRef(MenuItem))
+                                        aria-label="Closed access"
+                                        classes={
+                                          Object {
+                                            "selected": "makeStyles-selectedMenuItem-1",
+                                          }
+                                        }
+                                        data-testid="undefined-option-2"
+                                        disabled={false}
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        value={1}
+                                      >
+                                        Closed access
                                       </WithStyles(ForwardRef(MenuItem))>,
                                     ],
                                   ],
@@ -2486,7 +2710,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
                                   "data-testid": "undefined-input",
-                                  "displayEmpty": true,
+                                  "displayEmpty": false,
                                   "id": "undefined-input",
                                   "labelId": undefined,
                                   "multiple": false,
@@ -2499,18 +2723,76 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 }
                               }
                               multiline={false}
-                              name="accessCondition"
                               onChange={[Function]}
                               type="text"
-                              value={8}
+                              value={1}
                             >
-                              <div
-                                className="MuiInputBase-root MuiInput-root Mui-disabled Mui-disabled MuiInputBase-formControl MuiInput-formControl"
-                                onClick={[Function]}
-                              >
-                                <ForwardRef(SelectInput)
-                                  IconComponent={
-                                    Object {
+                              <ForwardRef(InputBase)
+                                className=""
+                                classes={
+                                  Object {
+                                    "adornedEnd": "MuiInputBase-adornedEnd",
+                                    "adornedStart": "MuiInputBase-adornedStart",
+                                    "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
+                                    "disabled": "Mui-disabled Mui-disabled",
+                                    "error": "Mui-error Mui-error",
+                                    "focused": "Mui-focused Mui-focused",
+                                    "formControl": "MuiInputBase-formControl MuiInput-formControl",
+                                    "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
+                                    "input": "MuiInputBase-input MuiInput-input",
+                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
+                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart",
+                                    "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                                    "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
+                                    "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
+                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
+                                    "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
+                                    "multiline": "MuiInputBase-multiline MuiInput-multiline",
+                                    "root": "MuiInputBase-root MuiInput-root",
+                                  }
+                                }
+                                disabled={true}
+                                fullWidth={false}
+                                inputComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "propTypes": Object {
+                                      "IconComponent": [Function],
+                                      "MenuProps": [Function],
+                                      "SelectDisplayProps": [Function],
+                                      "aria-label": [Function],
+                                      "autoFocus": [Function],
+                                      "autoWidth": [Function],
+                                      "children": [Function],
+                                      "className": [Function],
+                                      "classes": [Function],
+                                      "defaultValue": [Function],
+                                      "disabled": [Function],
+                                      "displayEmpty": [Function],
+                                      "inputRef": [Function],
+                                      "labelId": [Function],
+                                      "multiple": [Function],
+                                      "name": [Function],
+                                      "onBlur": [Function],
+                                      "onChange": [Function],
+                                      "onClose": [Function],
+                                      "onFocus": [Function],
+                                      "onOpen": [Function],
+                                      "open": [Function],
+                                      "readOnly": [Function],
+                                      "renderValue": [Function],
+                                      "required": [Function],
+                                      "tabIndex": [Function],
+                                      "type": [Function],
+                                      "value": [Function],
+                                      "variant": [Function],
+                                    },
+                                    "render": [Function],
+                                  }
+                                }
+                                inputProps={
+                                  Object {
+                                    "IconComponent": Object {
                                       "$$typeof": Symbol(react.memo),
                                       "compare": null,
                                       "displayName": "ArrowDropDownIcon",
@@ -2519,25 +2801,76 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                         "$$typeof": Symbol(react.forward_ref),
                                         "render": [Function],
                                       },
-                                    }
-                                  }
-                                  MenuProps={
-                                    Object {
+                                    },
+                                    "MenuProps": Object {
                                       "data-testid": "undefined-options",
                                       "id": "undefined-options",
-                                    }
-                                  }
-                                  SelectDisplayProps={
-                                    Object {
+                                    },
+                                    "SelectDisplayProps": Object {
                                       "data-testid": "undefined-select",
                                       "id": "undefined-select",
-                                    }
-                                  }
-                                  aria-invalid={false}
-                                  autoWidth={false}
-                                  className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
-                                  classes={
-                                    Object {
+                                    },
+                                    "aria-labelledby": "undefined-label",
+                                    "autoWidth": false,
+                                    "children": Array [
+                                      Array [
+                                        <WithStyles(ForwardRef(MenuItem))
+                                          aria-label="Select access conditions"
+                                          classes={
+                                            Object {
+                                              "selected": "makeStyles-selectedMenuItem-1",
+                                            }
+                                          }
+                                          data-testid="undefined-option-0"
+                                          disabled={true}
+                                          style={
+                                            Object {
+                                              "display": "block",
+                                            }
+                                          }
+                                          value={-1}
+                                        >
+                                          Select access conditions
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
+                                          aria-label="Open access"
+                                          classes={
+                                            Object {
+                                              "selected": "makeStyles-selectedMenuItem-1",
+                                            }
+                                          }
+                                          data-testid="undefined-option-1"
+                                          disabled={false}
+                                          style={
+                                            Object {
+                                              "display": "block",
+                                            }
+                                          }
+                                          value={5}
+                                        >
+                                          Open access
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                        <WithStyles(ForwardRef(MenuItem))
+                                          aria-label="Closed access"
+                                          classes={
+                                            Object {
+                                              "selected": "makeStyles-selectedMenuItem-1",
+                                            }
+                                          }
+                                          data-testid="undefined-option-2"
+                                          disabled={false}
+                                          style={
+                                            Object {
+                                              "display": "block",
+                                            }
+                                          }
+                                          value={1}
+                                        >
+                                          Closed access
+                                        </WithStyles(ForwardRef(MenuItem))>,
+                                      ],
+                                    ],
+                                    "classes": Object {
                                       "disabled": "Mui-disabled",
                                       "filled": "MuiSelect-filled",
                                       "icon": "MuiSelect-icon",
@@ -2548,116 +2881,146 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "root": "MuiSelect-root",
                                       "select": "MuiSelect-select",
                                       "selectMenu": "MuiSelect-selectMenu",
-                                    }
+                                    },
+                                    "data-testid": "undefined-input",
+                                    "displayEmpty": false,
+                                    "id": "undefined-input",
+                                    "labelId": undefined,
+                                    "multiple": false,
+                                    "onClose": undefined,
+                                    "onOpen": undefined,
+                                    "open": undefined,
+                                    "renderValue": undefined,
+                                    "type": undefined,
+                                    "variant": "standard",
                                   }
-                                  data-testid="undefined-input"
-                                  disabled={true}
-                                  displayEmpty={true}
-                                  id="undefined-input"
-                                  inputRef={[Function]}
-                                  multiple={false}
-                                  name="accessCondition"
-                                  onAnimationStart={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  required={true}
-                                  value={8}
-                                  variant="standard"
+                                }
+                                multiline={false}
+                                onChange={[Function]}
+                                type="text"
+                                value={1}
+                              >
+                                <div
+                                  className="MuiInputBase-root MuiInput-root Mui-disabled Mui-disabled MuiInputBase-formControl MuiInput-formControl"
+                                  onClick={[Function]}
                                 >
-                                  <div
-                                    aria-disabled="true"
-                                    aria-haspopup="listbox"
-                                    aria-labelledby="undefined-select"
-                                    className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                    data-testid="undefined-select"
-                                    id="undefined-select"
-                                    onBlur={[Function]}
-                                    onFocus={[Function]}
-                                    onKeyDown={[Function]}
-                                    onMouseDown={null}
-                                    role="button"
-                                    tabIndex={null}
-                                  >
-                                    Closed Access
-                                  </div>
-                                  <input
-                                    data-testid="undefined-input"
-                                    id="undefined-input"
-                                    name="accessCondition"
-                                    onAnimationStart={[Function]}
-                                    type="hidden"
-                                    value={8}
-                                  />
-                                  <ForwardRef
-                                    className="MuiSelect-icon Mui-disabled"
-                                  >
-                                    <WithStyles(ForwardRef(SvgIcon))
-                                      className="MuiSelect-icon Mui-disabled"
-                                    >
-                                      <ForwardRef(SvgIcon)
-                                        className="MuiSelect-icon Mui-disabled"
-                                        classes={
-                                          Object {
-                                            "colorAction": "MuiSvgIcon-colorAction",
-                                            "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                            "colorError": "MuiSvgIcon-colorError",
-                                            "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                            "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                            "root": "MuiSvgIcon-root",
-                                          }
-                                        }
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          className="MuiSvgIcon-root MuiSelect-icon Mui-disabled"
-                                          focusable="false"
-                                          viewBox="0 0 24 24"
-                                        >
-                                          <path
-                                            d="M7 10l5 5 5-5z"
-                                          />
-                                        </svg>
-                                      </ForwardRef(SvgIcon)>
-                                    </WithStyles(ForwardRef(SvgIcon))>
-                                  </ForwardRef>
-                                  <WithStyles(ForwardRef(Menu))
-                                    MenuListProps={
+                                  <ForwardRef(SelectInput)
+                                    IconComponent={
                                       Object {
-                                        "aria-labelledby": undefined,
-                                        "disableListWrap": true,
-                                        "role": "listbox",
-                                      }
-                                    }
-                                    PaperProps={
-                                      Object {
-                                        "style": Object {
-                                          "minWidth": undefined,
+                                        "$$typeof": Symbol(react.memo),
+                                        "compare": null,
+                                        "displayName": "ArrowDropDownIcon",
+                                        "muiName": "SvgIcon",
+                                        "type": Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "render": [Function],
                                         },
                                       }
                                     }
-                                    anchorEl={
-                                      <div
-                                        aria-disabled="true"
-                                        aria-haspopup="listbox"
-                                        aria-labelledby="undefined-select"
-                                        class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
-                                        data-testid="undefined-select"
-                                        id="undefined-select"
-                                        role="button"
-                                      >
-                                        Closed Access
-                                      </div>
+                                    MenuProps={
+                                      Object {
+                                        "data-testid": "undefined-options",
+                                        "id": "undefined-options",
+                                      }
                                     }
-                                    data-testid="undefined-options"
-                                    id="undefined-options"
-                                    onClose={[Function]}
-                                    open={false}
+                                    SelectDisplayProps={
+                                      Object {
+                                        "data-testid": "undefined-select",
+                                        "id": "undefined-select",
+                                      }
+                                    }
+                                    aria-invalid={false}
+                                    aria-labelledby="undefined-label"
+                                    autoWidth={false}
+                                    className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
+                                    classes={
+                                      Object {
+                                        "disabled": "Mui-disabled",
+                                        "filled": "MuiSelect-filled",
+                                        "icon": "MuiSelect-icon",
+                                        "iconFilled": "MuiSelect-iconFilled",
+                                        "iconOpen": "MuiSelect-iconOpen",
+                                        "iconOutlined": "MuiSelect-iconOutlined",
+                                        "outlined": "MuiSelect-outlined",
+                                        "root": "MuiSelect-root",
+                                        "select": "MuiSelect-select",
+                                        "selectMenu": "MuiSelect-selectMenu",
+                                      }
+                                    }
+                                    data-testid="undefined-input"
+                                    disabled={true}
+                                    displayEmpty={false}
+                                    id="undefined-input"
+                                    inputRef={[Function]}
+                                    multiple={false}
+                                    onAnimationStart={[Function]}
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onFocus={[Function]}
+                                    required={true}
+                                    value={1}
+                                    variant="standard"
                                   >
-                                    <ForwardRef(Menu)
+                                    <div
+                                      aria-disabled="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="undefined-select"
+                                      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                      data-testid="undefined-select"
+                                      id="undefined-select"
+                                      onBlur={[Function]}
+                                      onFocus={[Function]}
+                                      onKeyDown={[Function]}
+                                      onMouseDown={null}
+                                      role="button"
+                                      tabIndex={null}
+                                    >
+                                      Closed access
+                                    </div>
+                                    <input
+                                      aria-labelledby="undefined-label"
+                                      data-testid="undefined-input"
+                                      id="undefined-input"
+                                      onAnimationStart={[Function]}
+                                      type="hidden"
+                                      value={1}
+                                    />
+                                    <ForwardRef
+                                      className="MuiSelect-icon Mui-disabled"
+                                    >
+                                      <WithStyles(ForwardRef(SvgIcon))
+                                        className="MuiSelect-icon Mui-disabled"
+                                      >
+                                        <ForwardRef(SvgIcon)
+                                          className="MuiSelect-icon Mui-disabled"
+                                          classes={
+                                            Object {
+                                              "colorAction": "MuiSvgIcon-colorAction",
+                                              "colorDisabled": "MuiSvgIcon-colorDisabled",
+                                              "colorError": "MuiSvgIcon-colorError",
+                                              "colorPrimary": "MuiSvgIcon-colorPrimary",
+                                              "colorSecondary": "MuiSvgIcon-colorSecondary",
+                                              "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                                              "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                                              "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                                              "root": "MuiSvgIcon-root",
+                                            }
+                                          }
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            className="MuiSvgIcon-root MuiSelect-icon Mui-disabled"
+                                            focusable="false"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 10l5 5 5-5z"
+                                            />
+                                          </svg>
+                                        </ForwardRef(SvgIcon)>
+                                      </WithStyles(ForwardRef(SvgIcon))>
+                                    </ForwardRef>
+                                    <WithStyles(ForwardRef(Menu))
                                       MenuListProps={
                                         Object {
                                           "aria-labelledby": undefined,
@@ -2682,26 +3045,24 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           id="undefined-select"
                                           role="button"
                                         >
-                                          Closed Access
+                                          Closed access
                                         </div>
-                                      }
-                                      classes={
-                                        Object {
-                                          "list": "MuiMenu-list",
-                                          "paper": "MuiMenu-paper",
-                                        }
                                       }
                                       data-testid="undefined-options"
                                       id="undefined-options"
                                       onClose={[Function]}
                                       open={false}
                                     >
-                                      <WithStyles(ForwardRef(Popover))
+                                      <ForwardRef(Menu)
+                                        MenuListProps={
+                                          Object {
+                                            "aria-labelledby": undefined,
+                                            "disableListWrap": true,
+                                            "role": "listbox",
+                                          }
+                                        }
                                         PaperProps={
                                           Object {
-                                            "classes": Object {
-                                              "root": "MuiMenu-paper",
-                                            },
                                             "style": Object {
                                               "minWidth": undefined,
                                             },
@@ -2717,30 +3078,21 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             id="undefined-select"
                                             role="button"
                                           >
-                                            Closed Access
+                                            Closed access
                                           </div>
                                         }
-                                        anchorOrigin={
+                                        classes={
                                           Object {
-                                            "horizontal": "left",
-                                            "vertical": "top",
+                                            "list": "MuiMenu-list",
+                                            "paper": "MuiMenu-paper",
                                           }
                                         }
                                         data-testid="undefined-options"
-                                        getContentAnchorEl={[Function]}
                                         id="undefined-options"
                                         onClose={[Function]}
-                                        onEntering={[Function]}
                                         open={false}
-                                        transformOrigin={
-                                          Object {
-                                            "horizontal": "left",
-                                            "vertical": "top",
-                                          }
-                                        }
-                                        transitionDuration="auto"
                                       >
-                                        <ForwardRef(Popover)
+                                        <WithStyles(ForwardRef(Popover))
                                           PaperProps={
                                             Object {
                                               "classes": Object {
@@ -2761,19 +3113,13 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                               id="undefined-select"
                                               role="button"
                                             >
-                                              Closed Access
+                                              Closed access
                                             </div>
                                           }
                                           anchorOrigin={
                                             Object {
                                               "horizontal": "left",
                                               "vertical": "top",
-                                            }
-                                          }
-                                          classes={
-                                            Object {
-                                              "paper": "MuiPopover-paper",
-                                              "root": "MuiPopover-root",
                                             }
                                           }
                                           data-testid="undefined-options"
@@ -2790,34 +3136,85 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           }
                                           transitionDuration="auto"
                                         >
-                                          <ForwardRef(Modal)
-                                            BackdropProps={
+                                          <ForwardRef(Popover)
+                                            PaperProps={
                                               Object {
-                                                "invisible": true,
+                                                "classes": Object {
+                                                  "root": "MuiMenu-paper",
+                                                },
+                                                "style": Object {
+                                                  "minWidth": undefined,
+                                                },
                                               }
                                             }
-                                            className="MuiPopover-root"
-                                            container={<body />}
+                                            anchorEl={
+                                              <div
+                                                aria-disabled="true"
+                                                aria-haspopup="listbox"
+                                                aria-labelledby="undefined-select"
+                                                class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled Mui-disabled"
+                                                data-testid="undefined-select"
+                                                id="undefined-select"
+                                                role="button"
+                                              >
+                                                Closed access
+                                              </div>
+                                            }
+                                            anchorOrigin={
+                                              Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                                            }
+                                            classes={
+                                              Object {
+                                                "paper": "MuiPopover-paper",
+                                                "root": "MuiPopover-root",
+                                              }
+                                            }
                                             data-testid="undefined-options"
+                                            getContentAnchorEl={[Function]}
                                             id="undefined-options"
                                             onClose={[Function]}
+                                            onEntering={[Function]}
                                             open={false}
-                                          />
-                                        </ForwardRef(Popover)>
-                                      </WithStyles(ForwardRef(Popover))>
-                                    </ForwardRef(Menu)>
-                                  </WithStyles(ForwardRef(Menu))>
-                                </ForwardRef(SelectInput)>
-                              </div>
-                            </ForwardRef(InputBase)>
-                          </WithStyles(ForwardRef(InputBase))>
-                        </ForwardRef(Input)>
-                      </WithStyles(ForwardRef(Input))>
-                    </ForwardRef(Select)>
-                  </WithStyles(ForwardRef(Select))>
-                </div>
-              </ForwardRef(FormControl)>
-            </WithStyles(ForwardRef(FormControl))>
+                                            transformOrigin={
+                                              Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                                            }
+                                            transitionDuration="auto"
+                                          >
+                                            <ForwardRef(Modal)
+                                              BackdropProps={
+                                                Object {
+                                                  "invisible": true,
+                                                }
+                                              }
+                                              className="MuiPopover-root"
+                                              container={<body />}
+                                              data-testid="undefined-options"
+                                              id="undefined-options"
+                                              onClose={[Function]}
+                                              open={false}
+                                            />
+                                          </ForwardRef(Popover)>
+                                        </WithStyles(ForwardRef(Popover))>
+                                      </ForwardRef(Menu)>
+                                    </WithStyles(ForwardRef(Menu))>
+                                  </ForwardRef(SelectInput)>
+                                </div>
+                              </ForwardRef(InputBase)>
+                            </WithStyles(ForwardRef(InputBase))>
+                          </ForwardRef(Input)>
+                        </WithStyles(ForwardRef(Input))>
+                      </ForwardRef(Select)>
+                    </WithStyles(ForwardRef(Select))>
+                  </div>
+                </ForwardRef(FormControl)>
+              </WithStyles(ForwardRef(FormControl))>
+            </NewGenericSelectField>
           </FileUploadAccessSelector>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
@@ -2827,90 +3224,71 @@ exports[`Component FileUploadAccessSelector should render access condition disab
 `;
 
 exports[`Component FileUploadAccessSelector should render with default setup 1`] = `
-<WithStyles(ForwardRef(FormControl))
+<Memo(NewGenericSelectField)
   error={true}
-  fullWidth={true}
+  errorText="This field is required"
+  formHelperTextProps={
+    Object {
+      "className": undefined,
+    }
+  }
+  hideLabel={true}
+  itemsList={
+    Array [
+      Object {
+        "text": "Open access",
+        "value": 5,
+      },
+      Object {
+        "text": "Closed access",
+        "value": 1,
+      },
+    ]
+  }
+  onChange={[Function]}
   required={true}
->
-  <WithStyles(ForwardRef(Select))
-    MenuProps={
-      Object {
-        "data-testid": "undefined-options",
-        "id": "undefined-options",
-      }
-    }
-    SelectDisplayProps={
-      Object {
-        "data-testid": "undefined-select",
-        "id": "undefined-select",
-      }
-    }
-    className=""
-    displayEmpty={true}
-    input={
-      <WithStyles(ForwardRef(Input))
+  selectPrompt="Select access conditions"
+  selectProps={
+    Object {
+      "className": "",
+      "input": <WithStyles(ForwardRef(Input))
         classes={
           Object {
             "root": undefined,
           }
         }
         disableUnderline={true}
-        id="access-condition"
-        name="accessCondition"
-      />
+      />,
     }
-    inputProps={
-      Object {
-        "data-testid": "undefined-input",
-        "id": "undefined-input",
-      }
-    }
-    onChange={[Function]}
-    value=""
-  >
-    <WithStyles(ForwardRef(MenuItem))
-      disabled={true}
-      value=""
-    >
-      Select access conditions
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
-      key="access_option_key_0"
-      value={9}
-    >
-      Open Access
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
-      key="access_option_key_1"
-      value={8}
-    >
-      Closed Access
-    </WithStyles(ForwardRef(MenuItem))>
-  </WithStyles(ForwardRef(Select))>
-  <WithStyles(ForwardRef(FormHelperText))>
-    This field is required
-  </WithStyles(ForwardRef(FormHelperText))>
-</WithStyles(ForwardRef(FormControl))>
+  }
+  value={-1}
+/>
 `;
 
 exports[`Component FileUploadAccessSelector should render with styles 1`] = `
 <FileUploadAccessSelector
   classes={
     Object {
-      "error": "FileUploadAccessSelector-error-71",
-      "placeholder": "FileUploadAccessSelector-placeholder-69",
-      "selected": "FileUploadAccessSelector-selected-70",
-      "selector": "FileUploadAccessSelector-selector-68",
+      "error": "FileUploadAccessSelector-error-72",
+      "placeholder": "FileUploadAccessSelector-placeholder-70",
+      "selected": "FileUploadAccessSelector-selected-71",
+      "selector": "FileUploadAccessSelector-selector-69",
     }
   }
   locale={
     Object {
-      "accessSelectOptionsText": Object {
-        "8": "Closed Access",
-        "9": "Open Access",
-      },
       "errorMessage": "This field is required",
-      "initialValue": "Select access conditions",
+      "options": Array [
+        Object {
+          "text": "Open access",
+          "value": 5,
+        },
+        Object {
+          "text": "Closed access",
+          "value": 1,
+        },
+      ],
+      "selectPrompt": "Select access conditions",
     }
   }
   value=""
@@ -2918,64 +3296,43 @@ exports[`Component FileUploadAccessSelector should render with styles 1`] = `
 `;
 
 exports[`Component FileUploadAccessSelector should render with value 1`] = `
-<WithStyles(ForwardRef(FormControl))
-  fullWidth={true}
+<Memo(NewGenericSelectField)
+  error={false}
+  errorText="This field is required"
+  formHelperTextProps={
+    Object {
+      "className": undefined,
+    }
+  }
+  hideLabel={true}
+  itemsList={
+    Array [
+      Object {
+        "text": "Open access",
+        "value": 5,
+      },
+      Object {
+        "text": "Closed access",
+        "value": 1,
+      },
+    ]
+  }
+  onChange={[Function]}
   required={true}
->
-  <WithStyles(ForwardRef(Select))
-    MenuProps={
-      Object {
-        "data-testid": "undefined-options",
-        "id": "undefined-options",
-      }
-    }
-    SelectDisplayProps={
-      Object {
-        "data-testid": "undefined-select",
-        "id": "undefined-select",
-      }
-    }
-    className=""
-    displayEmpty={true}
-    input={
-      <WithStyles(ForwardRef(Input))
+  selectPrompt="Select access conditions"
+  selectProps={
+    Object {
+      "className": "",
+      "input": <WithStyles(ForwardRef(Input))
         classes={
           Object {
             "root": undefined,
           }
         }
         disableUnderline={true}
-        id="access-condition"
-        name="accessCondition"
-      />
+      />,
     }
-    inputProps={
-      Object {
-        "data-testid": "undefined-input",
-        "id": "undefined-input",
-      }
-    }
-    onChange={[Function]}
-    value={9}
-  >
-    <WithStyles(ForwardRef(MenuItem))
-      disabled={true}
-      value=""
-    >
-      Select access conditions
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
-      key="access_option_key_0"
-      value={9}
-    >
-      Open Access
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
-      key="access_option_key_1"
-      value={8}
-    >
-      Closed Access
-    </WithStyles(ForwardRef(MenuItem))>
-  </WithStyles(ForwardRef(Select))>
-</WithStyles(ForwardRef(FormControl))>
+  }
+  value={1}
+/>
 `;

@@ -83,14 +83,14 @@ describe('getRecordFileAttachmentSearchKey test', () => {
     it('should return request object structure for files with various open access status', () => {
         const files = [
             {
-                access_condition_id: 9, // open access, should stay open
+                access_condition_id: 5, // open access, should stay open
                 name: 'file1.txt',
                 date: moment()
                     .clone()
                     .format('YYYY-MM-DD'), // today
             },
             {
-                access_condition_id: 9, // open access, should be closed 'cause in the future
+                access_condition_id: 5, // open access, should be closed 'cause in the future
                 name: 'file2.txt',
                 date: moment()
                     .clone()
@@ -98,7 +98,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     .format('YYYY-MM-DD'), // future
             },
             {
-                access_condition_id: 9, // open access, should stay open 'cause in the past
+                access_condition_id: 5, // open access, should stay open 'cause in the past
                 name: 'file3.txt',
                 date: moment()
                     .clone()
@@ -106,7 +106,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     .format('YYYY-MM-DD'), // past
             },
             {
-                access_condition_id: 8, // closed access, should stay closed
+                access_condition_id: 1, // closed access, should stay closed
                 name: 'file4.txt',
             },
         ];
@@ -142,19 +142,19 @@ describe('getRecordFileAttachmentSearchKey test', () => {
             ],
             fez_record_search_key_file_attachment_access_condition: [
                 {
-                    rek_file_attachment_access_condition: 9,
+                    rek_file_attachment_access_condition: 5,
                     rek_file_attachment_access_condition_order: 1,
                 },
                 {
-                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition: 1,
                     rek_file_attachment_access_condition_order: 2,
                 },
                 {
-                    rek_file_attachment_access_condition: 9,
+                    rek_file_attachment_access_condition: 5,
                     rek_file_attachment_access_condition_order: 3,
                 },
                 {
-                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition: 1,
                     rek_file_attachment_access_condition_order: 4,
                 },
             ],

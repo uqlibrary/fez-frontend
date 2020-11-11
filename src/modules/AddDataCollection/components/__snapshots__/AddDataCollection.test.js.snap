@@ -1260,12 +1260,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
                       "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
+                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
@@ -2607,12 +2613,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
                       "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
+                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
@@ -3950,12 +3962,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
                       "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
+                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
@@ -5293,12 +5311,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
                       "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
+                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {

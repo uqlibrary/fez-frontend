@@ -116,17 +116,17 @@ describe('Component FileUploader', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._updateFileAccessCondition(fileA, 0, 8);
+        wrapper.instance()._updateFileAccessCondition(fileA, 0, 1);
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._updateFileAccessCondition(fileA, 0, 9);
+        wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        fileA.access_condition_id = 9;
+        fileA.access_condition_id = 5;
         wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment('10/10/2017', 'DD/MM/YYYY'));
         wrapper.update();
 
@@ -206,13 +206,13 @@ describe('Component FileUploader', () => {
         expect(fileDataB.name).toEqual('b.txt');
         expect(fileDataB.lastModified).toEqual(12345678912);
 
-        wrapper.instance()._updateFileAccessCondition(fileA, 0, 9);
+        wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
         wrapper.update();
-        expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(9);
+        expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(5);
 
-        wrapper.instance()._updateFileAccessCondition(fileB, 1, 8);
+        wrapper.instance()._updateFileAccessCondition(fileB, 1, 1);
         wrapper.update();
-        expect(wrapper.instance().state.filesInQueue[1].access_condition_id).toEqual(8);
+        expect(wrapper.instance().state.filesInQueue[1].access_condition_id).toEqual(1);
 
         wrapper.instance()._handleDroppedFiles([fileC, fileD], {});
         wrapper.update();
@@ -239,55 +239,51 @@ describe('Component FileUploader', () => {
             expect(fileData.name).toEqual('a.txt');
             expect(fileData.lastModified).toEqual(12345678912);
 
-            wrapper.instance()._updateFileAccessCondition(fileA, 0, 9);
+            wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
             wrapper.update();
-            expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(9);
+            expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(5);
 
             wrapper.instance()._acceptTermsAndConditions(true);
             wrapper.update();
             expect(wrapper.state().isTermsAndConditionsAccepted).toBeTruthy();
 
-            wrapper.instance()._updateFileAccessCondition(fileA, 0, 8);
+            wrapper.instance()._updateFileAccessCondition(fileA, 0, 1);
             wrapper.update();
-            expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(8);
+            expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(1);
 
             expect(wrapper.state().isTermsAndConditionsAccepted).toBeFalsy();
         },
     );
 
-    it(
-        'should return false if any file has open access with date ' +
-            'selected but the terms and conditions not accepted',
-        () => {
-            const wrapper = setup({ requireOpenAccessStatus: true });
+    it('should return false if any file has open access with date selected but the terms and conditions not accepted', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true });
 
-            const fileA = getMockFile('a.txt');
-            fileA.access_condition_id = 8;
-            const fileB = getMockFile('b.txt');
-            fileB.access_condition_id = 9;
-            fileB.date = '2017-01-01';
-            const fileC = getMockFile('c.txt');
-            fileC.access_condition_id = 8;
-            const fileD = getMockFile('d.txt');
-            fileD.access_condition_id = 8;
+        const fileA = getMockFile('a.txt');
+        fileA.access_condition_id = 1;
+        const fileB = getMockFile('b.txt');
+        fileB.access_condition_id = 5;
+        fileB.date = '2017-01-01';
+        const fileC = getMockFile('c.txt');
+        fileC.access_condition_id = 1;
+        const fileD = getMockFile('d.txt');
+        fileD.access_condition_id = 1;
 
-            wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
-            wrapper.state().isTermsAndConditionsAccepted = false;
-            expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeFalsy();
-        },
-    );
+        wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
+        wrapper.state().isTermsAndConditionsAccepted = false;
+        expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeFalsy();
+    });
 
     it('should return true on if all files are closed access', () => {
         const wrapper = setup({ requireOpenAccessStatus: true });
 
         const fileA = getMockFile('a.txt');
-        fileA.access_condition_id = 8;
+        fileA.access_condition_id = 1;
         const fileB = getMockFile('b.txt');
-        fileB.access_condition_id = 8;
+        fileB.access_condition_id = 1;
         const fileC = getMockFile('c.txt');
-        fileC.access_condition_id = 8;
+        fileC.access_condition_id = 1;
         const fileD = getMockFile('d.txt');
-        fileD.access_condition_id = 8;
+        fileD.access_condition_id = 1;
 
         wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
         wrapper.state().isTermsAndConditionsAccepted = false;
@@ -298,14 +294,14 @@ describe('Component FileUploader', () => {
         const wrapper = setup({ requireOpenAccessStatus: true });
 
         const fileA = getMockFile('a.txt');
-        fileA.access_condition_id = 8;
+        fileA.access_condition_id = 1;
         const fileB = getMockFile('b.txt');
-        fileB.access_condition_id = 9;
+        fileB.access_condition_id = 5;
         fileB.date = '2017-01-01';
         const fileC = getMockFile('c.txt');
-        fileC.access_condition_id = 8;
+        fileC.access_condition_id = 1;
         const fileD = getMockFile('d.txt');
-        fileD.access_condition_id = 8;
+        fileD.access_condition_id = 1;
 
         wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
         wrapper.state().isTermsAndConditionsAccepted = true;
