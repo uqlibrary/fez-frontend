@@ -1,5 +1,12 @@
 export const FILE_ACCESS_CONDITION_CLOSED = 1;
 export const FILE_ACCESS_CONDITION_OPEN = 5;
+export const FILE_ACCESS_CONDITION_INHERIT = 99;
+
+export const INHERIT_OPTION = {
+    text: 'Inherit from parent collection',
+    value: FILE_ACCESS_CONDITION_INHERIT,
+};
+
 export const SIZE_BASE = 1000;
 
 export const DEFAULT_FILE_UPLOAD_LIMIT = 10;

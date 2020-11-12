@@ -3265,6 +3265,52 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
 />
 `;
 
+exports[`Component FileUploadAccessSelector should render with default setup for admin 1`] = `
+<Memo(NewGenericSelectField)
+  error={true}
+  errorText="This field is required"
+  formHelperTextProps={
+    Object {
+      "className": undefined,
+    }
+  }
+  hideLabel={true}
+  itemsList={
+    Array [
+      Object {
+        "text": "Open access",
+        "value": 5,
+      },
+      Object {
+        "text": "Closed access",
+        "value": 1,
+      },
+      Object {
+        "text": "Inherit from parent collection",
+        "value": 99,
+      },
+    ]
+  }
+  onChange={[Function]}
+  required={true}
+  selectPrompt="Select access conditions"
+  selectProps={
+    Object {
+      "className": "",
+      "input": <WithStyles(ForwardRef(Input))
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+        disableUnderline={true}
+      />,
+    }
+  }
+  value={-1}
+/>
+`;
+
 exports[`Component FileUploadAccessSelector should render with styles 1`] = `
 <FileUploadAccessSelector
   classes={

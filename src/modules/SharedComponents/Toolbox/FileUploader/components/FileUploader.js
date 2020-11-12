@@ -25,6 +25,7 @@ export class FileUploader extends PureComponent {
         disabled: PropTypes.bool,
         defaultQuickTemplateId: PropTypes.number,
         isNtro: PropTypes.bool,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -38,6 +39,7 @@ export class FileUploader extends PureComponent {
         },
         requireOpenAccessStatus: false,
         isNtro: false,
+        isAdmin: false,
     };
 
     constructor(props) {
@@ -291,6 +293,7 @@ export class FileUploader extends PureComponent {
                     disabled={disabled}
                     focusOnIndex={this.state.focusOnIndex}
                     locale={this.props.locale.fileUploadRow}
+                    isAdmin={this.props.isAdmin}
                 />
             );
         });

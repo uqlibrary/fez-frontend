@@ -35,6 +35,7 @@ export class FileUploadRowMobileView extends PureComponent {
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -92,6 +93,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
                                     fileUploadAccessSelectorId={`dsi-open-access-${index}`}
+                                    isAdmin={this.props.isAdmin}
                                 />
                             </ListItemText>
                         </ListItem>

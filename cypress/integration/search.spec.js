@@ -77,12 +77,15 @@ context('Search', () => {
             '5th Australasian Congress on Applied Mechanics',
         ).click();
         cy.get('[data-testid=rek-ismemberof-input]').click();
-        cy.contains('[data-testid=rek-ismemberof-options] li', 'Adaptive Interactive Profit Expectations').click();
+        cy.contains(
+            '[data-testid=rek-ismemberof-options] li',
+            'Advanced Computational Modelling Centre Publications',
+        ).click();
         cy.get('[data-testid=rek-ismemberof-input]').click();
-        cy.contains('[data-testid=rek-ismemberof-options] li', 'Admin only - CHRC').click();
+        cy.contains('[data-testid=rek-ismemberof-options] li', 'ERA 2012 Admin Only').click();
         cy.get('[data-testid=advanced-search-caption]').should($caption => {
             expect(cleanExtraSpaces($caption.text())).to.equal(
-                "Any fieldcontainsit's raining cats and dogsANDAuthor NamecontainsKy LaneANDCollectionis one ofUQ:131735, UQ:131375 or UQ:292807ANDisopen access/full text",
+                "Any fieldcontainsit's raining cats and dogsANDAuthor NamecontainsKy LaneANDCollectionis one ofUQ:131735, UQ:7557 or UQ:254105ANDisopen access/full text",
             );
         });
         cy.get('button#advancedSearchButton')

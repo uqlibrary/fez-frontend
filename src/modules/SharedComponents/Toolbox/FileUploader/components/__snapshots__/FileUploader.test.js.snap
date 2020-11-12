@@ -480,6 +480,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 }
               }
               filesInQueue={Array []}
+              isAdmin={false}
               isNtro={true}
               locale={
                 Object {
@@ -3058,6 +3059,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 }
               }
               filesInQueue={Array []}
+              isAdmin={false}
               isNtro={true}
               locale={
                 Object {
@@ -5878,6 +5880,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
@@ -5935,6 +5938,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
@@ -6215,6 +6219,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
@@ -6837,6 +6842,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
@@ -6896,6 +6902,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
@@ -7348,6 +7355,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
@@ -7405,6 +7413,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
@@ -7686,6 +7695,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
@@ -7745,6 +7755,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
@@ -8026,6 +8037,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
@@ -8085,6 +8097,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
@@ -8376,6 +8389,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
@@ -8435,6 +8449,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
@@ -8897,6 +8912,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
@@ -8956,6 +8972,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {

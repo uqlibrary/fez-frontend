@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Input from '@material-ui/core/Input';
-import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_CONDITION_CLOSED } from '../config';
+import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_CONDITION_CLOSED, INHERIT_OPTION } from '../config';
 import { withStyles } from '@material-ui/core/styles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
@@ -14,6 +14,7 @@ export class FileUploadAccessSelector extends PureComponent {
         classes: PropTypes.object,
         autoFocus: PropTypes.bool,
         fileUploadAccessSelectorId: PropTypes.string,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -42,7 +43,7 @@ export class FileUploadAccessSelector extends PureComponent {
                 genericSelectFieldId={this.props.fileUploadAccessSelectorId}
                 onChange={this.handleChange}
                 value={value || -1}
-                itemsList={options}
+                itemsList={this.props.isAdmin ? [...options, INHERIT_OPTION] : options}
                 selectPrompt={selectPrompt}
                 selectProps={{
                     className: classes.selector,

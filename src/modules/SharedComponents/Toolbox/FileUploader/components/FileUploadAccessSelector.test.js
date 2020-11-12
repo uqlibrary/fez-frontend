@@ -24,6 +24,18 @@ describe('Component FileUploadAccessSelector', () => {
         expect(onChangeTestFn).toHaveBeenCalledWith(5);
     });
 
+    it('should render with default setup for admin', () => {
+        const onChangeTestFn = jest.fn();
+        const props = { onChange: onChangeTestFn, isAdmin: true };
+        const wrapper = setup({ ...props });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().handleChange(99);
+        wrapper.update();
+
+        expect(onChangeTestFn).toHaveBeenCalledWith(99);
+    });
+
     it('should render with value', () => {
         const onChangeTestFn = jest.fn();
         const props = { onChange: onChangeTestFn, value: 1 };
