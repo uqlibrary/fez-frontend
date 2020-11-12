@@ -1128,5 +1128,11 @@ export default {
             title: 'Bulk updates',
             loadingMessage: 'Loading bulk updates',
         },
+        journal: {
+            view: {
+                title: 'Journal details',
+                loadingMessage: 'Loading journal data',
+            },
+        },
     },
 };
