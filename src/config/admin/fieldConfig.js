@@ -34,6 +34,7 @@ import {
     AuthorIdField,
     CollectionField,
     FieldOfResearchListField,
+    JournalNameField,
     OrgUnitNameField,
     OrgNameField,
     RelatedDatasetAndPublicationListField,
@@ -269,12 +270,11 @@ export default {
             },
         },
         fez_record_search_key_journal_name: {
-            component: GenericTextField,
+            component: JournalNameField,
             componentProps: {
-                textFieldId: 'rek-journal-name',
                 name: 'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
                 fullWidth: true,
-                label: 'Journal name',
+                floatingLabelText: 'Journal name',
                 placeholder: '',
                 required: true,
                 validate: [validation.required],
