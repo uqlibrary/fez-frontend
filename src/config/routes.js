@@ -8,6 +8,7 @@ import { default as formLocale } from 'locale/publicationForm';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+export const numericIdRegExp = '[0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
 // const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUrl = '/records/search') => {
@@ -193,6 +194,7 @@ export const flattedPathConfig = [
     '/data-collections/add',
     '/data-collections/mine',
     '/contact',
+    '/journal/view',
     '/rhdsubmission',
     '/sbslodge_new',
     '/tool/lookup',
@@ -231,6 +233,7 @@ export const getRoutesConfig = ({
     isHdrStudent = false,
 }) => {
     const pid = `:pid(${pidRegExp})`;
+    const id = `:id(${numericIdRegExp})`;
     const publicPages = [
         {
             path: pathConfig.index,
@@ -501,6 +504,12 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.bulkUpdates.title,
+                  },
+                  {
+                      path: pathConfig.journal.view(id),
+                      component: components.JournalView,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.journal.view.title,
                   },
               ]
             : []),
