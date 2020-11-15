@@ -9,6 +9,7 @@ export const AutoCompleteAsynchronousField = ({
     allowFreeText,
     autoCompleteAsynchronousFieldId,
     clearSuggestions,
+    clearOnInputClear,
     defaultValue,
     disabled,
     error,
@@ -49,9 +50,11 @@ export const AutoCompleteAsynchronousField = ({
                 onClear();
             } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
                 onChange({ value: newInputValue });
+            } else if (!newInputValue && clearOnInputClear && reason === 'input') {
+                onClear();
             }
         },
-        [allowFreeText, prefilledSearch, onChange, onClear],
+        [allowFreeText, prefilledSearch, onChange, onClear, clearOnInputClear],
     );
 
     const handleChange = useCallback(
@@ -149,6 +152,7 @@ AutoCompleteAsynchronousField.propTypes = {
     allowFreeText: PropTypes.bool,
     autoCompleteAsynchronousFieldId: PropTypes.string.isRequired,
     clearSuggestions: PropTypes.func,
+    clearOnInputClear: PropTypes.bool,
     defaultValue: PropTypes.any,
     disabled: PropTypes.bool,
     error: PropTypes.bool,

@@ -223,6 +223,7 @@ exports[`NewspaperArticleForm renders  component 1`] = `
                 </div>,
                 "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
+                "organisationColumn": "Organisation",
                 "reorderColumn": "Reorder items",
               },
             },
