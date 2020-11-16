@@ -1659,8 +1659,12 @@ export default {
                     order: 2.5,
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 3,
+                },
+                {
+                    field: 'fez_record_search_key_publisher',
+                    order: 3.5,
                 },
                 {
                     field: 'fez_record_search_key_series',
