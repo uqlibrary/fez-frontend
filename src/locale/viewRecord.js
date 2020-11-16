@@ -1777,12 +1777,12 @@ export default {
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
-                    order: 18,
+                    field: 'fez_record_search_key_subject',
+                    order: 17.5,
                 },
                 {
-                    field: 'fez_record_search_key_advisory_statement',
-                    order: 18.5,
+                    field: 'fez_record_search_key_keywords',
+                    order: 18,
                 },
                 {
                     field: 'fez_record_search_key_geographic_area',
