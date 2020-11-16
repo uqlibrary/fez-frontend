@@ -18,22 +18,34 @@ describe('Component FileUploadAccessSelector', () => {
         const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._onChange({ target: { value: 8 } });
+        wrapper.instance().handleChange(5);
         wrapper.update();
 
-        expect(onChangeTestFn).toHaveBeenCalledWith(8);
+        expect(onChangeTestFn).toHaveBeenCalledWith(5);
+    });
+
+    it('should render with default setup for admin', () => {
+        const onChangeTestFn = jest.fn();
+        const props = { onChange: onChangeTestFn, isAdmin: true };
+        const wrapper = setup({ ...props });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().handleChange(99);
+        wrapper.update();
+
+        expect(onChangeTestFn).toHaveBeenCalledWith(99);
     });
 
     it('should render with value', () => {
         const onChangeTestFn = jest.fn();
-        const props = { onChange: onChangeTestFn, value: 9 };
+        const props = { onChange: onChangeTestFn, value: 1 };
         const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance()._onChange({ target: { value: 8 } });
+        wrapper.instance().handleChange(5);
         wrapper.update();
 
-        expect(onChangeTestFn).toHaveBeenCalledWith(8);
+        expect(onChangeTestFn).toHaveBeenCalledWith(5);
     });
 
     it('should render access condition disabled if disabled flag is set', () => {
@@ -43,7 +55,7 @@ describe('Component FileUploadAccessSelector', () => {
     });
 
     it('should render access condition disabled if disabled flag is set and with value', () => {
-        const props = { disabled: true, value: 8 };
+        const props = { disabled: true, value: 1 };
         const wrapper = setup({ ...props }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

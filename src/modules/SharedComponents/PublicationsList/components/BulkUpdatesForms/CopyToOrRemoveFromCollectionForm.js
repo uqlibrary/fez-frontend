@@ -47,7 +47,9 @@ export const CopyToOrRemoveFromCollectionForm = ({
 
     React.useEffect(() => {
         if (isRemoveFrom) {
-            const collectionsSet = Immutable.Set(collections);
+            const collectionsSet = Immutable.Set(
+                (!!collections && collections.map(collection => collection.rek_pid)) || [],
+            );
             setAlertUser(
                 records.current.filter(recordCollections =>
                     collectionsSet.isSuperset(Immutable.Set(recordCollections).sort()),

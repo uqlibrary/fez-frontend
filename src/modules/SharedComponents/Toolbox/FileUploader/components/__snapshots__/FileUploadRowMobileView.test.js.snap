@@ -96,7 +96,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         disabled={false}
         fileUploadAccessSelectorId="dsi-open-access-0"
         onChange={[MockFunction]}
-        value={8}
+        value={1}
       />
     </WithStyles(ForwardRef(ListItemText))>
   </WithStyles(ForwardRef(ListItem))>
@@ -348,7 +348,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         disabled={false}
         fileUploadAccessSelectorId="dsi-open-access-0"
         onChange={[MockFunction]}
-        value={9}
+        value={5}
       />
     </WithStyles(ForwardRef(ListItemText))>
   </WithStyles(ForwardRef(ListItem))>

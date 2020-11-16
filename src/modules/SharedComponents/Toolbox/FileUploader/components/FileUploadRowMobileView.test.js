@@ -36,14 +36,14 @@ describe('Component FileUploadRowMobileView', () => {
 
     it('should not render embargo date picker if access condition is set to closed access', () => {
         const wrapper = setup({
-            accessConditionId: 8,
+            accessConditionId: 1,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render embargo date picker if access condition is set to open access', () => {
         const wrapper = setup({
-            accessConditionId: 9,
+            accessConditionId: 5,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

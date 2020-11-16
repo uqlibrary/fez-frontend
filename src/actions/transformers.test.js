@@ -83,14 +83,14 @@ describe('getRecordFileAttachmentSearchKey test', () => {
     it('should return request object structure for files with various open access status', () => {
         const files = [
             {
-                access_condition_id: 9, // open access, should stay open
+                access_condition_id: 5, // open access, should stay open
                 name: 'file1.txt',
                 date: moment()
                     .clone()
                     .format('YYYY-MM-DD'), // today
             },
             {
-                access_condition_id: 9, // open access, should be closed 'cause in the future
+                access_condition_id: 5, // open access, should be closed 'cause in the future
                 name: 'file2.txt',
                 date: moment()
                     .clone()
@@ -98,7 +98,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     .format('YYYY-MM-DD'), // future
             },
             {
-                access_condition_id: 9, // open access, should stay open 'cause in the past
+                access_condition_id: 5, // open access, should stay open 'cause in the past
                 name: 'file3.txt',
                 date: moment()
                     .clone()
@@ -106,7 +106,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     .format('YYYY-MM-DD'), // past
             },
             {
-                access_condition_id: 8, // closed access, should stay closed
+                access_condition_id: 1, // closed access, should stay closed
                 name: 'file4.txt',
             },
         ];
@@ -142,19 +142,19 @@ describe('getRecordFileAttachmentSearchKey test', () => {
             ],
             fez_record_search_key_file_attachment_access_condition: [
                 {
-                    rek_file_attachment_access_condition: 9,
+                    rek_file_attachment_access_condition: 5,
                     rek_file_attachment_access_condition_order: 1,
                 },
                 {
-                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition: 1,
                     rek_file_attachment_access_condition_order: 2,
                 },
                 {
-                    rek_file_attachment_access_condition: 9,
+                    rek_file_attachment_access_condition: 5,
                     rek_file_attachment_access_condition_order: 3,
                 },
                 {
-                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition: 1,
                     rek_file_attachment_access_condition_order: 4,
                 },
             ],
@@ -186,6 +186,45 @@ describe('getRecordFileAttachmentSearchKey test', () => {
             ],
             fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_access_condition: [],
+        };
+        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return request object structure for files with inherit most secure policy from collection', () => {
+        const files = [
+            {
+                name: 'file.txt',
+                access_condition_id: 99,
+            },
+            {
+                name: 'file2.txt',
+                access_condition_id: 5,
+            },
+        ];
+        const record = { collections: [{ rek_datastream_policy: 4 }, { rek_datastream_policy: 5 }] };
+        const expected = {
+            fez_record_search_key_file_attachment_name: [
+                {
+                    rek_file_attachment_name: 'file.txt',
+                    rek_file_attachment_name_order: 1,
+                },
+                {
+                    rek_file_attachment_name: 'file2.txt',
+                    rek_file_attachment_name_order: 2,
+                },
+            ],
+            fez_record_search_key_file_attachment_embargo_date: [],
+            fez_record_search_key_file_attachment_access_condition: [
+                {
+                    rek_file_attachment_access_condition: 4,
+                    rek_file_attachment_access_condition_order: 1,
+                },
+                {
+                    rek_file_attachment_access_condition: 5,
+                    rek_file_attachment_access_condition_order: 2,
+                },
+            ],
         };
         const result = transformers.getRecordFileAttachmentSearchKey(files, record);
         expect(result).toEqual(expected);
@@ -2345,7 +2384,7 @@ describe('getAdminSectionSearchKeys', () => {
 
     it('should transform all search keys for additional information section', () => {
         const data = {
-            collections: [12344, 22343],
+            collections: [{ rek_pid: 'UQ:12344' }, { rek_pid: 'UQ:22343' }],
             contentIndicators: [123, 234],
             contactName: 'Test',
             contactEmail: 'test@email.com',
@@ -2381,11 +2420,11 @@ describe('getAdminSectionSearchKeys', () => {
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
             fez_record_search_key_ismemberof: [
                 {
-                    rek_ismemberof: 12344,
+                    rek_ismemberof: 'UQ:12344',
                     rek_ismemberof_order: 1,
                 },
                 {
-                    rek_ismemberof: 22343,
+                    rek_ismemberof: 'UQ:22343',
                     rek_ismemberof_order: 2,
                 },
             ],
@@ -4776,7 +4815,7 @@ describe('getCopyToCollectionData', () => {
                 ],
                 {
                     search_key: 'rek_ismemberof',
-                    collections: ['UQ:234'],
+                    collections: [{ rek_pid: 'UQ:234' }],
                 },
             ),
         ).toEqual([
@@ -4809,7 +4848,7 @@ describe('getRemoveFromCollectionData', () => {
                 ],
                 {
                     search_key: 'rek_ismemberof',
-                    collections: ['UQ:234'],
+                    collections: [{ rek_pid: 'UQ:234' }],
                 },
             ),
         ).toEqual([
