@@ -74,15 +74,10 @@ context('Book Chapter admin edit', () => {
                 cy.get('h4').should('contain', 'Editors');
             });
         const editors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
-        cy.get('@authorDetailsTab')
-            .get('.contributorEditor')
-            .eq(1)
-            .within(() => {
-                editors.forEach((editor, index) => {
-                    cy.get('p')
-                        .eq(index)
-                        .should('have.text', editor);
-                });
+        cy.get('@authorDetailsTab').within(() => {
+            editors.forEach((editor, index) => {
+                cy.get(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`).should('have.text', editor);
             });
+        });
     });
 });

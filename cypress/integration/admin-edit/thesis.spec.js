@@ -120,42 +120,32 @@ context('Thesis admin edit', () => {
         cy.log('----------------Author Details tab----------------');
         cy.get('[data-testid=authors-section-header]').should('have.text', 'Authors');
         cy.get('[data-testid=authors-section-content]').within(() => {
-            cy.get('.AdminCard')
-                .as('cards')
-                .eq(0)
-                .within(() => {
-                    cy.get('h4').should('contain', 'Authors');
-                    const authors = record.fez_record_search_key_author.map(item => item.rek_author);
-                    authors.forEach((person, index) => {
-                        cy.get('p')
-                            .eq(2 * index)
-                            .should('have.text', person);
-                    });
+            cy.get('[data-testid=rek-author-list]').within(() => {
+                const authors = record.fez_record_search_key_author.map(item => item.rek_author);
+                authors.forEach((person, index) => {
+                    cy.get(`[data-testid=rek-author-list-row-${index}-name-as-published]`).should('have.text', person);
                 });
+            });
 
-            cy.get('@cards')
-                .eq(1)
-                .within(() => {
-                    cy.get('h4').should('contain', 'Editors');
-                    const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
-                    contributors.forEach((person, index) => {
-                        cy.get('p')
-                            .eq(index)
-                            .should('have.text', person);
-                    });
+            cy.get('[data-testid=rek-contributor-list]').within(() => {
+                const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
+                contributors.forEach((person, index) => {
+                    cy.get(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`).should(
+                        'have.text',
+                        person,
+                    );
                 });
+            });
 
-            cy.get('@cards')
-                .eq(2)
-                .within(() => {
-                    cy.get('h4').should('contain', 'Supervisors');
-                    const supervisors = record.fez_record_search_key_supervisor.map(item => item.rek_supervisor);
-                    supervisors.forEach((person, index) => {
-                        cy.get('p')
-                            .eq(index)
-                            .should('have.text', person);
-                    });
+            cy.get('[data-testid=rek-supervisor-list]').within(() => {
+                const supervisors = record.fez_record_search_key_supervisor.map(item => item.rek_supervisor);
+                supervisors.forEach((person, index) => {
+                    cy.get(`[data-testid=rek-supervisor-list-row-${index}-name-as-published]`).should(
+                        'have.text',
+                        person,
+                    );
                 });
+            });
         });
 
         // ----------------------------------------------- ADMIN TAB -------------------------------------------------

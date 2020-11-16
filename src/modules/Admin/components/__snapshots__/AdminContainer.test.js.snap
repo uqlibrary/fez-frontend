@@ -1399,14 +1399,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                         "color": "#4085C6",
                       },
                     },
+                    "MuiIconButton": Object {
+                      "colorInherit": Object {
+                        "color": "none",
+                      },
+                    },
                     "MuiInputBase": Object {
                       "root": Object {
                         "fontWeight": 400,
-                      },
-                    },
-                    "makeStyles": Object {
-                      "contributorLinked": Object {
-                        "backgroundColor": "red",
                       },
                     },
                   },
@@ -1926,14 +1926,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                 "color": "#4085C6",
                               },
                             },
+                            "MuiIconButton": Object {
+                              "colorInherit": Object {
+                                "color": "none",
+                              },
+                            },
                             "MuiInputBase": Object {
                               "root": Object {
                                 "fontWeight": 400,
-                              },
-                            },
-                            "makeStyles": Object {
-                              "contributorLinked": Object {
-                                "backgroundColor": "red",
                               },
                             },
                           },
@@ -4983,14 +4983,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -5713,14 +5713,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -6443,14 +6443,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -7173,14 +7173,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -7903,14 +7903,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -8633,14 +8633,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -9357,14 +9357,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -10087,14 +10087,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     "color": "#4085C6",
                                                                   },
                                                                 },
+                                                                "MuiIconButton": Object {
+                                                                  "colorInherit": Object {
+                                                                    "color": "none",
+                                                                  },
+                                                                },
                                                                 "MuiInputBase": Object {
                                                                   "root": Object {
                                                                     "fontWeight": 400,
-                                                                  },
-                                                                },
-                                                                "makeStyles": Object {
-                                                                  "contributorLinked": Object {
-                                                                    "backgroundColor": "red",
                                                                   },
                                                                 },
                                                               },
@@ -12003,14 +12003,14 @@ exports[`AdminContainer component should not render non-security errors for comm
                   "color": "#4085C6",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiInputBase": Object {
                 "root": Object {
                   "fontWeight": 400,
-                },
-              },
-              "makeStyles": Object {
-                "contributorLinked": Object {
-                  "backgroundColor": "red",
                 },
               },
             },
@@ -13365,14 +13365,14 @@ exports[`AdminContainer component should render default view 1`] = `
                   "color": "#4085C6",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiInputBase": Object {
                 "root": Object {
                   "fontWeight": 400,
-                },
-              },
-              "makeStyles": Object {
-                "contributorLinked": Object {
-                  "backgroundColor": "red",
                 },
               },
             },
@@ -14732,14 +14732,14 @@ exports[`AdminContainer component should render memoized component with styles 1
                   "color": "#4085C6",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiInputBase": Object {
                 "root": Object {
                   "fontWeight": 400,
-                },
-              },
-              "makeStyles": Object {
-                "contributorLinked": Object {
-                  "backgroundColor": "red",
                 },
               },
             },
@@ -16086,14 +16086,14 @@ exports[`AdminContainer component should render mobile view 1`] = `
                   "color": "#4085C6",
                 },
               },
+              "MuiIconButton": Object {
+                "colorInherit": Object {
+                  "color": "none",
+                },
+              },
               "MuiInputBase": Object {
                 "root": Object {
                   "fontWeight": 400,
-                },
-              },
-              "makeStyles": Object {
-                "contributorLinked": Object {
-                  "backgroundColor": "red",
                 },
               },
             },

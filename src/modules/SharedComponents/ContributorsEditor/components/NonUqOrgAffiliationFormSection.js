@@ -19,6 +19,7 @@ export default function NonUqOrgAffiliationFormSection({
     disableOrgTypeEdit,
     orgAffiliationError,
     orgAffiliationTypeError,
+    fullWidthFields,
 }) {
     const options = ORG_AFFILIATION_TYPES.map(option => {
         return option.value !== '454045' ? (
@@ -30,7 +31,7 @@ export default function NonUqOrgAffiliationFormSection({
 
     return (
         <Grid container spacing={1}>
-            <Grid item xs={6}>
+            <Grid item xs={fullWidthFields ? 12 : 6}>
                 <TextField
                     required
                     fullWidth
@@ -43,7 +44,7 @@ export default function NonUqOrgAffiliationFormSection({
                     id="org-affiliation-name"
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={fullWidthFields ? 12 : 6}>
                 <FormControl required fullWidth error={orgAffiliationTypeError}>
                     <InputLabel id="org-affiliation-type-label">{locale.fields.organisationType.inputLabel}</InputLabel>
                     <Select
@@ -75,6 +76,7 @@ NonUqOrgAffiliationFormSection.propTypes = {
     disableOrgTypeEdit: PropTypes.bool,
     orgAffiliationError: PropTypes.bool,
     orgAffiliationTypeError: PropTypes.bool,
+    fullWidthFields: PropTypes.bool,
 };
 
 NonUqOrgAffiliationFormSection.defaultProps = {

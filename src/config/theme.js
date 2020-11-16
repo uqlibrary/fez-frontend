@@ -132,9 +132,9 @@ export const adminTheme = createMuiTheme({
                 fontWeight: 400,
             },
         },
-        makeStyles: {
-            contributorLinked: {
-                backgroundColor: 'red',
+        MuiIconButton: {
+            colorInherit: {
+                color: 'none',
             },
         },
     },

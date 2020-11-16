@@ -42,4 +42,9 @@ describe('NonUqOrgAffiliationFormSection tests ', () => {
         const wrapper = setup({ orgAffiliation: 'Test', orgType: '453987' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render full width input fields', () => {
+        const wrapper = setup({ orgAffiliation: 'Test', orgType: '453987', fullWidthFields: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
