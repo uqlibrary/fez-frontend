@@ -38001,7 +38001,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="6"
+      key="7"
       style={
         Object {
           "padding": 8,
@@ -38061,7 +38061,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="7"
+      key="8"
       style={
         Object {
           "padding": 8,
@@ -38119,7 +38119,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="9"
       style={
         Object {
           "padding": 8,
@@ -38644,7 +38644,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
       style={
         Object {
           "padding": 8,
@@ -39170,7 +39170,7 @@ exports[`Additional Information Component  should render component with generic 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
       style={
         Object {
           "padding": 8,
