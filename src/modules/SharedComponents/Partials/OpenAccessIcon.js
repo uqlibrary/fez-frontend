@@ -31,6 +31,7 @@ export class OpenAccessIcon extends PureComponent {
     };
 
     render() {
+        console.log(this.props.isOpenAccess, !this.props.embargoDate);
         const txt = locale.viewRecord.sections.links;
         const classes = this.props.classes;
         if (!this.props.securityStatus) {
@@ -54,6 +55,7 @@ export class OpenAccessIcon extends PureComponent {
                 this.props.openAccessStatusId !== openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
                     ? txt.openAccessLabel.replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId])
                     : txt.labelOpenAccessNoStatus;
+
             return (
                 <Fragment>
                     <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>

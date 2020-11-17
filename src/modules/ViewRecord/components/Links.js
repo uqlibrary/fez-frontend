@@ -134,6 +134,7 @@ export class LinksClass extends PureComponent {
                 this.props.publication.fez_record_search_key_link_description[index] &&
                 this.props.publication.fez_record_search_key_link_description[index].rek_link_description) ||
             defaultDescription;
+        console.log('isRDM', isRDM);
         const openAccessStatus = isRDM ? this.getRDMLinkOAStatus(this.props.publication) : {};
         return {
             index: index,
@@ -173,7 +174,7 @@ export class LinksClass extends PureComponent {
         const gcOpenAccessStatus = {
             isOpenAccess: true,
             embargoDate: null,
-            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC,
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
         };
 
         const doiOpenAccessStatus =
@@ -194,6 +195,14 @@ export class LinksClass extends PureComponent {
         ) {
             return null;
         }
+        console.log(
+            !!pubmedCentralId,
+            !!doi,
+            openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+                record.fez_record_search_key_link &&
+                record.fez_record_search_key_link.length === 0,
+            hasLinks,
+        );
         return (
             <Grid item xs={12}>
                 <StandardCard title={txt.title}>
