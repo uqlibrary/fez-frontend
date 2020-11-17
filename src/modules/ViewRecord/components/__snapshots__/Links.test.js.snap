@@ -33922,7 +33922,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
         Object {
           "embargoDate": null,
           "isOpenAccess": true,
-          "openAccessStatusId": 453954,
+          "openAccessStatusId": 453694,
         }
       }
     />

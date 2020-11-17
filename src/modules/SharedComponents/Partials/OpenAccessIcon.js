@@ -31,7 +31,6 @@ export class OpenAccessIcon extends PureComponent {
     };
 
     render() {
-        console.log(this.props.isOpenAccess, !this.props.embargoDate);
         const txt = locale.viewRecord.sections.links;
         const classes = this.props.classes;
         if (!this.props.securityStatus) {

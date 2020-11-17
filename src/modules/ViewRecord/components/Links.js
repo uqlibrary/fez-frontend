@@ -195,14 +195,6 @@ export class LinksClass extends PureComponent {
         ) {
             return null;
         }
-        console.log(
-            !!pubmedCentralId,
-            !!doi,
-            openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
-                record.fez_record_search_key_link &&
-                record.fez_record_search_key_link.length === 0,
-            hasLinks,
-        );
         return (
             <Grid item xs={12}>
                 <StandardCard title={txt.title}>
