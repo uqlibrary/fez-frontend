@@ -239,6 +239,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.collectionSearchList.data,
             ...mockData.communitySearchList.data,
             ...mockData.incompleteNTROlist.data,
+            ...mockData.internalTitleSearchList.data,
             ...mockData.mockRecordToFix,
             ...mockData.myRecordsList.data,
             ...mockData.myDatasetList.data,

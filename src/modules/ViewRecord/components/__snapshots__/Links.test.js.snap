@@ -6259,7 +6259,13 @@ exports[`Component Links  Full mount render 1`] = `
                                                 </WithStyles(ExternalLink)>
                                               }
                                               linkId="rek-link-0"
-                                              openAccessStatus={Object {}}
+                                              openAccessStatus={
+                                                Object {
+                                                  "embargoDate": null,
+                                                  "isOpenAccess": true,
+                                                  "openAccessStatusId": 453694,
+                                                }
+                                              }
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"
@@ -7291,7 +7297,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                             }
                                                           }
                                                         >
-                                                          <WithStyles(OpenAccessIcon)>
+                                                          <WithStyles(OpenAccessIcon)
+                                                            embargoDate={null}
+                                                            isOpenAccess={true}
+                                                            openAccessStatusId={453694}
+                                                          >
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
@@ -7300,13 +7310,102 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 }
                                                               }
                                                               embargoDate={null}
-                                                              isOpenAccess={false}
+                                                              isOpenAccess={true}
+                                                              openAccessStatusId={453694}
                                                               securityStatus={true}
                                                               showEmbargoText={false}
                                                             >
-                                                              <span
-                                                                className="noOaIcon"
-                                                              />
+                                                              <WithStyles(ForwardRef(Tooltip))
+                                                                TransitionComponent={
+                                                                  Object {
+                                                                    "$$typeof": Symbol(react.forward_ref),
+                                                                    "propTypes": Object {
+                                                                      "children": [Function],
+                                                                      "in": [Function],
+                                                                      "onEnter": [Function],
+                                                                      "onExit": [Function],
+                                                                      "style": [Function],
+                                                                      "timeout": [Function],
+                                                                    },
+                                                                    "render": [Function],
+                                                                  }
+                                                                }
+                                                                placement="left"
+                                                                title="Open Access - Free to read"
+                                                              >
+                                                                <ForwardRef(Tooltip)
+                                                                  TransitionComponent={
+                                                                    Object {
+                                                                      "$$typeof": Symbol(react.forward_ref),
+                                                                      "propTypes": Object {
+                                                                        "children": [Function],
+                                                                        "in": [Function],
+                                                                        "onEnter": [Function],
+                                                                        "onExit": [Function],
+                                                                        "style": [Function],
+                                                                        "timeout": [Function],
+                                                                      },
+                                                                      "render": [Function],
+                                                                    }
+                                                                  }
+                                                                  classes={
+                                                                    Object {
+                                                                      "arrow": "MuiTooltip-arrow",
+                                                                      "popper": "MuiTooltip-popper",
+                                                                      "popperArrow": "MuiTooltip-popperArrow",
+                                                                      "popperInteractive": "MuiTooltip-popperInteractive",
+                                                                      "tooltip": "MuiTooltip-tooltip",
+                                                                      "tooltipArrow": "MuiTooltip-tooltipArrow",
+                                                                      "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                                                                      "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                                                                      "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                                                                      "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                                                                      "touch": "MuiTooltip-touch",
+                                                                    }
+                                                                  }
+                                                                  placement="left"
+                                                                  title="Open Access - Free to read"
+                                                                >
+                                                                  <span
+                                                                    aria-describedby={null}
+                                                                    aria-label="Open Access - Free to read"
+                                                                    className="fez-icon openAccess large"
+                                                                    onBlur={[Function]}
+                                                                    onFocus={[Function]}
+                                                                    onMouseLeave={[Function]}
+                                                                    onMouseOver={[Function]}
+                                                                    onTouchEnd={[Function]}
+                                                                    onTouchStart={[Function]}
+                                                                    role="img"
+                                                                    title="Open Access - Free to read"
+                                                                  />
+                                                                  <ForwardRef(Popper)
+                                                                    anchorEl={
+                                                                      <span
+                                                                        aria-label="Open Access - Free to read"
+                                                                        class="fez-icon openAccess large"
+                                                                        role="img"
+                                                                        title="Open Access - Free to read"
+                                                                      />
+                                                                    }
+                                                                    className="MuiTooltip-popper"
+                                                                    id={null}
+                                                                    open={false}
+                                                                    placement="left"
+                                                                    popperOptions={
+                                                                      Object {
+                                                                        "modifiers": Object {
+                                                                          "arrow": Object {
+                                                                            "element": null,
+                                                                            "enabled": false,
+                                                                          },
+                                                                        },
+                                                                      }
+                                                                    }
+                                                                    transition={true}
+                                                                  />
+                                                                </ForwardRef(Tooltip)>
+                                                              </WithStyles(ForwardRef(Tooltip))>
                                                             </OpenAccessIcon>
                                                           </WithStyles(OpenAccessIcon)>
                                                         </div>
@@ -7329,7 +7428,13 @@ exports[`Component Links  Full mount render 1`] = `
                                                 </WithStyles(ExternalLink)>
                                               }
                                               linkId="rek-link-1"
-                                              openAccessStatus={Object {}}
+                                              openAccessStatus={
+                                                Object {
+                                                  "embargoDate": null,
+                                                  "isOpenAccess": true,
+                                                  "openAccessStatusId": 453694,
+                                                }
+                                              }
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"
@@ -8361,7 +8466,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                             }
                                                           }
                                                         >
-                                                          <WithStyles(OpenAccessIcon)>
+                                                          <WithStyles(OpenAccessIcon)
+                                                            embargoDate={null}
+                                                            isOpenAccess={true}
+                                                            openAccessStatusId={453694}
+                                                          >
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
@@ -8370,13 +8479,102 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 }
                                                               }
                                                               embargoDate={null}
-                                                              isOpenAccess={false}
+                                                              isOpenAccess={true}
+                                                              openAccessStatusId={453694}
                                                               securityStatus={true}
                                                               showEmbargoText={false}
                                                             >
-                                                              <span
-                                                                className="noOaIcon"
-                                                              />
+                                                              <WithStyles(ForwardRef(Tooltip))
+                                                                TransitionComponent={
+                                                                  Object {
+                                                                    "$$typeof": Symbol(react.forward_ref),
+                                                                    "propTypes": Object {
+                                                                      "children": [Function],
+                                                                      "in": [Function],
+                                                                      "onEnter": [Function],
+                                                                      "onExit": [Function],
+                                                                      "style": [Function],
+                                                                      "timeout": [Function],
+                                                                    },
+                                                                    "render": [Function],
+                                                                  }
+                                                                }
+                                                                placement="left"
+                                                                title="Open Access - Free to read"
+                                                              >
+                                                                <ForwardRef(Tooltip)
+                                                                  TransitionComponent={
+                                                                    Object {
+                                                                      "$$typeof": Symbol(react.forward_ref),
+                                                                      "propTypes": Object {
+                                                                        "children": [Function],
+                                                                        "in": [Function],
+                                                                        "onEnter": [Function],
+                                                                        "onExit": [Function],
+                                                                        "style": [Function],
+                                                                        "timeout": [Function],
+                                                                      },
+                                                                      "render": [Function],
+                                                                    }
+                                                                  }
+                                                                  classes={
+                                                                    Object {
+                                                                      "arrow": "MuiTooltip-arrow",
+                                                                      "popper": "MuiTooltip-popper",
+                                                                      "popperArrow": "MuiTooltip-popperArrow",
+                                                                      "popperInteractive": "MuiTooltip-popperInteractive",
+                                                                      "tooltip": "MuiTooltip-tooltip",
+                                                                      "tooltipArrow": "MuiTooltip-tooltipArrow",
+                                                                      "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                                                                      "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                                                                      "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                                                                      "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                                                                      "touch": "MuiTooltip-touch",
+                                                                    }
+                                                                  }
+                                                                  placement="left"
+                                                                  title="Open Access - Free to read"
+                                                                >
+                                                                  <span
+                                                                    aria-describedby={null}
+                                                                    aria-label="Open Access - Free to read"
+                                                                    className="fez-icon openAccess large"
+                                                                    onBlur={[Function]}
+                                                                    onFocus={[Function]}
+                                                                    onMouseLeave={[Function]}
+                                                                    onMouseOver={[Function]}
+                                                                    onTouchEnd={[Function]}
+                                                                    onTouchStart={[Function]}
+                                                                    role="img"
+                                                                    title="Open Access - Free to read"
+                                                                  />
+                                                                  <ForwardRef(Popper)
+                                                                    anchorEl={
+                                                                      <span
+                                                                        aria-label="Open Access - Free to read"
+                                                                        class="fez-icon openAccess large"
+                                                                        role="img"
+                                                                        title="Open Access - Free to read"
+                                                                      />
+                                                                    }
+                                                                    className="MuiTooltip-popper"
+                                                                    id={null}
+                                                                    open={false}
+                                                                    placement="left"
+                                                                    popperOptions={
+                                                                      Object {
+                                                                        "modifiers": Object {
+                                                                          "arrow": Object {
+                                                                            "element": null,
+                                                                            "enabled": false,
+                                                                          },
+                                                                        },
+                                                                      }
+                                                                    }
+                                                                    transition={true}
+                                                                  />
+                                                                </ForwardRef(Tooltip)>
+                                                              </WithStyles(ForwardRef(Tooltip))>
                                                             </OpenAccessIcon>
                                                           </WithStyles(OpenAccessIcon)>
                                                         </div>
@@ -8691,7 +8889,13 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
         </WithStyles(ExternalLink)>
       }
       linkId="rek-link-0"
-      openAccessStatus={Object {}}
+      openAccessStatus={
+        Object {
+          "embargoDate": null,
+          "isOpenAccess": true,
+          "openAccessStatusId": 453694,
+        }
+      }
     />
     <Component
       description="Another link to publication"
@@ -8706,7 +8910,13 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
         </WithStyles(ExternalLink)>
       }
       linkId="rek-link-1"
-      openAccessStatus={Object {}}
+      openAccessStatus={
+        Object {
+          "embargoDate": null,
+          "isOpenAccess": true,
+          "openAccessStatusId": 453694,
+        }
+      }
     />
     <Component
       description="Click to open link in a new window"
@@ -8721,7 +8931,13 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
         </WithStyles(ExternalLink)>
       }
       linkId="rek-link-2"
-      openAccessStatus={Object {}}
+      openAccessStatus={
+        Object {
+          "embargoDate": null,
+          "isOpenAccess": true,
+          "openAccessStatusId": 453694,
+        }
+      }
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -33812,6 +34028,24 @@ Object {
 }
 `;
 
+exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] = `
+Object {
+  "description": "Click to open link in a new window",
+  "index": 0,
+  "link": <WithStyles(ExternalLink)
+    href="https://google.com"
+    title="Click to open link in a new window"
+  >
+    https://google.com
+  </WithStyles(ExternalLink)>,
+  "openAccessStatus": Object {
+    "embargoDate": null,
+    "isOpenAccess": true,
+    "openAccessStatusId": 453694,
+  },
+}
+`;
+
 exports[`Component Links  should render oa icon for open access rdm link 1`] = `
 Object {
   "description": "Access this dataset",
@@ -33921,7 +34155,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
       openAccessStatus={
         Object {
           "embargoDate": null,
-          "isOpenAccess": true,
+          "isOpenAccess": false,
           "openAccessStatusId": 453954,
         }
       }
