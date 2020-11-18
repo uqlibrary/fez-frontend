@@ -152,6 +152,7 @@ const prepareThesisSubmission = data => {
         rek_formatted_abstract: data.thesisAbstract.htmlText,
         rek_subtype: data.rek_genre_type,
         rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
+        _thesis_submission_type: data.isHdrThesis ? 'hdr' : 'sbs',
     };
 
     // delete extra form values from request object
@@ -486,7 +487,7 @@ const getAdminRecordRequest = data => {
             ),
         },
         hasFilesToUpload,
-        hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(files.queue) : null,
+        hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(files.queue, data.adminSection) : null,
     ];
 };
 

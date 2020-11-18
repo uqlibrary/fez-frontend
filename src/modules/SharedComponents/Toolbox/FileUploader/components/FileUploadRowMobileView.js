@@ -35,6 +35,7 @@ export class FileUploadRowMobileView extends PureComponent {
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -92,6 +93,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
                                     fileUploadAccessSelectorId={`dsi-open-access-${index}`}
+                                    isAdmin={this.props.isAdmin}
                                 />
                             </ListItemText>
                         </ListItem>
@@ -104,12 +106,12 @@ export class FileUploadRowMobileView extends PureComponent {
                                 primaryTypographyProps={{ variant: 'body1' }}
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
-                                {requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID && (
+                                {requireOpenAccessStatus && accessConditionId !== config.FILE_ACCESS_CONDITION_OPEN && (
                                     <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
                                         {embargoDateClosedAccess}
                                     </Typography>
                                 )}
-                                {requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID && (
+                                {requireOpenAccessStatus && accessConditionId === config.FILE_ACCESS_CONDITION_OPEN && (
                                     <FileUploadEmbargoDate
                                         value={embargoDate}
                                         onChange={this.props.onEmbargoDateChange}

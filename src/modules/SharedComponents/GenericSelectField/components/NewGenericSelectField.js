@@ -29,6 +29,8 @@ export const NewGenericSelectField = ({
     displayEmpty,
     error,
     errorText,
+    formHelperTextProps,
+    genericSelectFieldId,
     hideLabel,
     itemsList,
     itemsLoading,
@@ -38,10 +40,10 @@ export const NewGenericSelectField = ({
     multiple,
     onChange,
     required,
-    value,
-    style,
     selectPrompt,
-    genericSelectFieldId,
+    selectProps,
+    style,
+    value,
 }) => {
     const classes = useStyles();
 
@@ -90,13 +92,15 @@ export const NewGenericSelectField = ({
 
     return (
         <FormControl fullWidth required={required} error={!!error}>
-            <InputLabel
-                hidden={hideLabel}
-                data-testid={`${genericSelectFieldId}-label`}
-                id={`${genericSelectFieldId}-label`}
-            >
-                {label}
-            </InputLabel>
+            {!hideLabel && (
+                <InputLabel
+                    hidden={hideLabel}
+                    data-testid={`${genericSelectFieldId}-label`}
+                    id={`${genericSelectFieldId}-label`}
+                >
+                    {label}
+                </InputLabel>
+            )}
             <Select
                 disabled={disabled}
                 displayEmpty={displayEmpty}
@@ -117,6 +121,7 @@ export const NewGenericSelectField = ({
                     'data-testid': `${genericSelectFieldId}-select`,
                 }}
                 value={value}
+                {...(!!selectProps ? { ...selectProps } : {})}
             >
                 {itemsLoading ? renderMenuItems([loadingMenuItem]) : renderMenuItems([promptMenuItem, ...itemsList])}
             </Select>
@@ -125,6 +130,7 @@ export const NewGenericSelectField = ({
                     error={!!error}
                     data-testid={`${genericSelectFieldId}-helper-text`}
                     id={`${genericSelectFieldId}-helper-text`}
+                    {...(!!formHelperTextProps ? { ...formHelperTextProps } : {})}
                 >
                     {errorText}
                 </FormHelperText>
@@ -139,6 +145,7 @@ NewGenericSelectField.propTypes = {
     displayEmpty: PropTypes.bool,
     error: PropTypes.any,
     errorText: PropTypes.string,
+    formHelperTextProps: PropTypes.object,
     genericSelectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
     itemsList: PropTypes.arrayOf(
@@ -158,6 +165,7 @@ NewGenericSelectField.propTypes = {
     selectPrompt: PropTypes.string,
     style: PropTypes.object,
     value: PropTypes.any,
+    selectProps: PropTypes.object,
 };
 
 NewGenericSelectField.defaultProps = {

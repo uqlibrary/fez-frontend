@@ -118,10 +118,11 @@ context('Claim possible work', () => {
         navToFirstClaim();
         const fileName = 'test.jpg';
         cy.get('[data-testid="fez-datastream-info-input"]').attachFile(fileName, { subjectType: 'drag-n-drop' });
-        cy.contains('.StandardCard', claimFormLocale.fileUpload.title)
-            .should('contain', fileUploaderLocale.successMessage.replace('[numberOfFiles]', '1'))
-            .contains(fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.initialValue)
-            .click();
+        cy.contains('.StandardCard', claimFormLocale.fileUpload.title).should(
+            'contain',
+            fileUploaderLocale.successMessage.replace('[numberOfFiles]', '1'),
+        );
+        cy.get('[data-testid=dsi-open-access-0-select]').click();
         cy.get('[data-testid=dsi-open-access-0-options]')
             .contains('Open Access')
             .click();

@@ -36,7 +36,6 @@ function setup(testProps) {
         submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
         invalid: testProps.invalid || false, // : PropTypes.bool
         pristine: testProps.pristine || false, // : PropTypes.bool
-        isHdrThesis: testProps.isHdrThesis || false, // : PropTypes.bool
         fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
         actions: {
             logout: jest.fn(),

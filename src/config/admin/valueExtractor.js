@@ -243,6 +243,8 @@ export default {
     collections: {
         getValue: record => {
             const returnValue = record.fez_record_search_key_ismemberof.map(collection => ({
+                rek_pid: collection.rek_ismemberof,
+                rek_title: collection.rek_ismemberof_lookup,
                 id: collection.rek_ismemberof,
                 value: collection.rek_ismemberof_lookup,
             }));

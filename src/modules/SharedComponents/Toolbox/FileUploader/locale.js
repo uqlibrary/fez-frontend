@@ -1,5 +1,7 @@
 import React from 'react';
-import { OPEN_ACCESS_ID, CLOSED_ACCESS_ID } from './config';
+import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_CONDITION_CLOSED } from './config';
+
+export { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_CONDITION_CLOSED } from './config';
 
 export default {
     instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
@@ -91,12 +93,12 @@ export default {
             embargoDateClosedAccess: 'No date required',
         },
         fileUploadRowAccessSelector: {
-            initialValue: 'Select access conditions',
-            accessSelectOptionsText: {
-                [OPEN_ACCESS_ID]: 'Open Access',
-                [CLOSED_ACCESS_ID]: 'Closed Access',
-            },
+            selectPrompt: 'Select access conditions',
             errorMessage: 'This field is required',
+            options: [
+                { text: 'Open Access', value: FILE_ACCESS_CONDITION_OPEN },
+                { text: 'Closed Access', value: FILE_ACCESS_CONDITION_CLOSED },
+            ],
         },
     },
 };

@@ -21,6 +21,7 @@ export class FileUploadRow extends PureComponent {
         requireOpenAccessStatus: PropTypes.bool.isRequired,
         uploadedFile: PropTypes.object.isRequired,
         width: PropTypes.string,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -95,6 +96,7 @@ export class FileUploadRow extends PureComponent {
                     locale={fileUploadRowLocale}
                     accessConditionLocale={this.props.locale.fileUploadRowAccessSelector}
                     fileUploadRowViewId={this.props.fileUploadRowId}
+                    isAdmin={this.props.isAdmin}
                 />
             </Fragment>
         );

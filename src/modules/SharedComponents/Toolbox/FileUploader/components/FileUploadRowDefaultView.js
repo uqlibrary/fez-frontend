@@ -28,6 +28,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -69,15 +70,16 @@ export class FileUploadRowDefaultView extends PureComponent {
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
                                     fileUploadAccessSelectorId={`dsi-open-access-${index}`}
+                                    isAdmin={this.props.isAdmin}
                                 />
                             </Grid>
                             <Grid item md={2} sm={2}>
-                                {accessConditionId !== config.OPEN_ACCESS_ID && (
+                                {accessConditionId !== config.FILE_ACCESS_CONDITION_OPEN && (
                                     <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
                                         {embargoDateClosedAccess}
                                     </Typography>
                                 )}
-                                {accessConditionId === config.OPEN_ACCESS_ID && (
+                                {accessConditionId === config.FILE_ACCESS_CONDITION_OPEN && (
                                     <FileUploadEmbargoDate
                                         value={embargoDate}
                                         minDate={new Date()}
