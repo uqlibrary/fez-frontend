@@ -3899,6 +3899,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         </span>
                       </CitationView>
                       , 
+                       and 
                       <CitationView
                         citationId="rek-contributor-2"
                         className="citationAuthor"
