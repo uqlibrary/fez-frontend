@@ -358,4 +358,18 @@ describe('Component Links ', () => {
         };
         expect(wrapper.instance().getPublicationLink(link1, 0)).toMatchSnapshot();
     });
+
+    it('should render oa icon for Link (no DOI) for link', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
+                },
+            },
+        });
+        const link1 = {
+            rek_link: 'https://google.com',
+        };
+        expect(wrapper.instance().getPublicationLink(link1, 0, true)).toMatchSnapshot();
+    });
 });
