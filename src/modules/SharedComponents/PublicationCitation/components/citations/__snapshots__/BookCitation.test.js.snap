@@ -3796,7 +3796,6 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                         </span>
                       </CitationView>
                       , 
-                       and 
                       <CitationView
                         citationId="rek-contributor-2"
                         className="citationAuthor"
@@ -6695,7 +6694,6 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                         </span>
                       </CitationView>
                       , 
-                       and 
                       <CitationView
                         citationId="rek-contributor-2"
                         className="citationAuthor"

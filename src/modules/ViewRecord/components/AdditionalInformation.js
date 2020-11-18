@@ -272,6 +272,7 @@ export class AdditionalInformationClass extends PureComponent {
                 prefix={''}
                 suffix={''}
                 separator={', '}
+                initialNumberOfEditors={publication.fez_record_search_key_contributor.length}
                 showLink
             />
         );

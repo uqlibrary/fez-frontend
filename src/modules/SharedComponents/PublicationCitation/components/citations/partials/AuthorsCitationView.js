@@ -52,12 +52,13 @@ export class AuthorsCitationView extends PureComponent {
         const {
             publication,
             searchKey: { key, order, subkey },
+            idSearchKey: { idKey },
         } = props;
 
         // copy authors to separate variable so sorting doesn't change original record
         const publicationAuthors = publication && publication[key] && [...publication[key]];
         this.state = {
-            authorsTotal: publication && publication[key] && publication[key].length,
+            authorsTotal: publication && publication[idKey] && publication[idKey].length,
             authors:
                 publicationAuthors && Array.isArray(publicationAuthors)
                     ? publicationAuthors.map(author => ({

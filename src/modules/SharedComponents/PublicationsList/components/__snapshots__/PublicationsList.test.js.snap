@@ -164,7 +164,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 >
                   Martin, Sally
                 </span>
-                ,  and 
+                , 
                 <span
                   class="citationAuthor"
                   data-testid="rek-author-6"
@@ -2859,7 +2859,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 >
                   Osterman, Andrei
                 </span>
-                 and 2 more 
+                 and 3 more 
               </span>
               <span
                 class="citationDate"

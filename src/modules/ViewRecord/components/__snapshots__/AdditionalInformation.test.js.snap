@@ -22087,6 +22087,7 @@ exports[`Additional Information Component  should render component with book 1`]
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={3}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -23579,6 +23580,7 @@ exports[`Additional Information Component  should render component with book cha
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={3}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -26578,6 +26580,7 @@ exports[`Additional Information Component  should render component with conferen
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -29116,6 +29119,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -32774,6 +32778,7 @@ exports[`Additional Information Component  should render component with data col
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -36038,6 +36043,7 @@ exports[`Additional Information Component  should render component with design d
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={9}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -38682,6 +38688,7 @@ exports[`Additional Information Component  should render component with generic 
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -39381,6 +39388,7 @@ exports[`Additional Information Component  should render component with journal 
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -44199,6 +44207,7 @@ exports[`Additional Information Component  should render component with manuscri
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -45941,6 +45950,7 @@ exports[`Additional Information Component  should render component with newspape
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={1}
               key="additional-information-editors"
               prefix=""
               publication={
@@ -51481,6 +51491,7 @@ exports[`Additional Information Component  should render component with referenc
           >
             <EditorsCitationView
               citationStyle="all"
+              initialNumberOfEditors={2}
               key="additional-information-editors"
               prefix=""
               publication={
