@@ -470,7 +470,7 @@ describe('AuthorsCitationView test ', () => {
             { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(4);
+        expect(wrapper.state().authors.length).toEqual(3);
         expect(wrapper.find('.citationAuthor').length).toEqual(3);
     });
 
@@ -556,7 +556,7 @@ describe('AuthorsCitationView test ', () => {
         const wrapper = setup(
             {
                 publication: testObject,
-                maxAuthorDisplayNumber: 3,
+                maxAuthorDisplayNumber: 2,
                 citationStyle: 'header',
             },
             { isShallow: true },
