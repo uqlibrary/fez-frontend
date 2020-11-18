@@ -317,10 +317,10 @@ context('Journal Article admin edit', () => {
                     cy.get('#rek-ismemberof-label').should('contain', 'Member of collections');
                     cy.get('[class*="MuiAutocomplete-tag-"]')
                         .eq(0)
-                        .should('have.text', 'Official 2013 Collection');
+                        .should('have.text', 'School of Nursing, Midwifery and Social Work Publications');
                     cy.get('[class*="MuiAutocomplete-tag-"]')
                         .eq(1)
-                        .should('have.text', 'School of Nursing, Midwifery and Social Work Publications');
+                        .should('have.text', 'Official 2013 Collection');
                 });
 
             cy.get('@cards')

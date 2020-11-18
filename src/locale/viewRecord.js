@@ -1659,8 +1659,12 @@ export default {
                     order: 2.5,
                 },
                 {
-                    field: 'fez_record_search_key_publisher',
+                    field: 'fez_record_search_key_place_of_publication',
                     order: 3,
+                },
+                {
+                    field: 'fez_record_search_key_publisher',
+                    order: 3.5,
                 },
                 {
                     field: 'fez_record_search_key_series',
@@ -1773,12 +1777,12 @@ export default {
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
-                    order: 18,
+                    field: 'fez_record_search_key_subject',
+                    order: 17.5,
                 },
                 {
-                    field: 'fez_record_search_key_advisory_statement',
-                    order: 18.5,
+                    field: 'fez_record_search_key_keywords',
+                    order: 18,
                 },
                 {
                     field: 'fez_record_search_key_geographic_area',

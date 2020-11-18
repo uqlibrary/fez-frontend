@@ -816,6 +816,7 @@ export default {
             componentProps: {
                 name: 'filesSection.files',
                 requireOpenAccessStatus: true,
+                isAdmin: true,
             },
         },
         contentIndicators: {

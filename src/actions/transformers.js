@@ -1,6 +1,11 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
 import { CONTENT_INDICATORS } from 'config/general';
+import {
+    FILE_ACCESS_CONDITION_CLOSED,
+    FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_INHERIT,
+} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 const moment = require('moment');
 
@@ -78,9 +83,6 @@ export const getRecordLinkSearchKey = data => {
 export const getRecordFileAttachmentSearchKey = (files, record) => {
     if (!files || files.length === 0) return {};
 
-    const OPEN_ACCESS_ID = 9;
-    const CLOSED_ACCESS_ID = 8;
-
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount =
         record && record.fez_record_search_key_file_attachment_name
@@ -102,11 +104,20 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     const attachmentAccessConditions = files
         .map((item, index) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
+            let accessCondition = item.access_condition_id;
+            if (accessCondition === FILE_ACCESS_CONDITION_OPEN && item.date && moment(item.date).isAfter()) {
+                accessCondition = FILE_ACCESS_CONDITION_CLOSED;
+            } else if (accessCondition === FILE_ACCESS_CONDITION_INHERIT) {
+                const parentPolicy = record.collections.reduce(
+                    (policy, collection) =>
+                        collection.rek_datastream_policy < policy ? collection.rek_datastream_policy : policy,
+                    5,
+                );
+                console.log(parentPolicy);
+                accessCondition = parentPolicy;
+            }
             return {
-                rek_file_attachment_access_condition:
-                    item.access_condition_id === OPEN_ACCESS_ID && item.date && moment(item.date).isAfter()
-                        ? CLOSED_ACCESS_ID
-                        : item.access_condition_id,
+                rek_file_attachment_access_condition: accessCondition,
                 rek_file_attachment_access_condition_order: initialCount + index + 1,
             };
         })
@@ -1022,7 +1033,7 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
     return {
         fez_record_search_key_ismemberof: collections.map((collection, index) => ({
-            rek_ismemberof: !!collection.id ? collection.id : collection,
+            rek_ismemberof: !!collection.id ? collection.id : collection.rek_pid,
             rek_ismemberof_order: index + 1,
         })),
     };
@@ -1289,10 +1300,11 @@ export const getChangeAuthorIdValues = (records, data) => {
 };
 
 export const getRemoveFromCollectionData = (records, data) => {
+    const selectedCollections = data.collections.map(collection => collection.rek_pid);
     return records.map(record => ({
         rek_pid: record.rek_pid,
         fez_record_search_key_ismemberof: record.fez_record_search_key_ismemberof.filter(
-            collection => !data.collections.includes(collection.rek_ismemberof),
+            collection => !selectedCollections.includes(collection.rek_ismemberof),
         ),
     }));
 };
@@ -1303,7 +1315,7 @@ export const getCopyToCollectionData = (records, data) => {
         fez_record_search_key_ismemberof: [
             ...record.fez_record_search_key_ismemberof,
             ...data.collections.map((collection, index) => ({
-                rek_ismemberof: collection,
+                rek_ismemberof: collection.rek_pid,
                 rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
             })),
         ],

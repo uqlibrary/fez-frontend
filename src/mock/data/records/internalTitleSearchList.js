@@ -206,6 +206,24 @@ export default {
                 rek_oa_status: 453694,
                 rek_oa_status_lookup: 'link (no DOI)'
             },
+            fez_record_search_key_link: [
+                {
+                    rek_link_id: 3186907,
+                    rek_link_pid: "UQ:795469",
+                    rek_link_xsdmf_id: 9605,
+                    rek_link: "https://www.library.uq.edu.au/fryer-library/indigenous-voices",
+                    rek_link_order: 1
+                }
+            ],
+            fez_record_search_key_link_description: [
+                {
+                    rek_link_description_id: 3186876,
+                    rek_link_description_pid: "UQ:795469",
+                    rek_link_description_xsdmf_id: 9604,
+                    rek_link_description: "Browse Indigenous language resources from this collection online",
+                    rek_link_description_order: 1
+                }
+            ],
             fez_record_search_key_oa_status_type: null,
             rek_altmetric_score_xsdmf_id: null,
             fez_record_search_key_org_name: null,

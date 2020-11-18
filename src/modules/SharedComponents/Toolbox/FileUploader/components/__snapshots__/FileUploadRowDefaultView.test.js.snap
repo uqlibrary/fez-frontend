@@ -90,7 +90,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         disabled={false}
         fileUploadAccessSelectorId="dsi-open-access-0"
         onChange={[MockFunction]}
-        value={8}
+        value={1}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -264,7 +264,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         disabled={false}
         fileUploadAccessSelectorId="dsi-open-access-0"
         onChange={[MockFunction]}
-        value={9}
+        value={5}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))

@@ -405,6 +405,7 @@ describe('Record action creators', () => {
             rek_genre_type: 'MPhil Thesis',
             rek_display_type: 187,
             fez_record_search_key_org_unit_name: { rek_org_unit_name: 'Test' },
+            isHdrThesis: true,
         };
         const pidRequest = { pid: 'UQ:396321' };
 
@@ -557,6 +558,7 @@ describe('Record action creators', () => {
                     ...testInput.files,
                     queue: [],
                 },
+                isHdrThesis: false,
             };
 
             mockApi
