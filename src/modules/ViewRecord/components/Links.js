@@ -124,18 +124,6 @@ export class LinksClass extends PureComponent {
         };
     };
 
-    getLinkNoDoiOAStatus = record => {
-        const openAccessStatusId =
-            record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status
-                ? parseInt(record.fez_record_search_key_oa_status.rek_oa_status, 10)
-                : null;
-        return {
-            isOpenAccess: openAccessStatusId === openAccessConfig.DATASET_OPEN_ACCESS_ID,
-            embargoDate: null,
-            openAccessStatusId: openAccessStatusId,
-        };
-    };
-
     getPublicationLink = (link, index, isLinkNoDoi) => {
         const isRDM = !!link.rek_link.match(/^https?:\/\/[a-z0-9\-]*\.?rdm\.uq\.edu\.au/i);
         const defaultDescription = isRDM
@@ -194,7 +182,7 @@ export class LinksClass extends PureComponent {
         };
 
         const gcOpenAccessStatus = {
-            isOpenAccess: true,
+            isOpenAccess: false,
             embargoDate: null,
             openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC,
         };

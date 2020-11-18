@@ -34028,6 +34028,24 @@ Object {
 }
 `;
 
+exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] = `
+Object {
+  "description": "Click to open link in a new window",
+  "index": 0,
+  "link": <WithStyles(ExternalLink)
+    href="https://google.com"
+    title="Click to open link in a new window"
+  >
+    https://google.com
+  </WithStyles(ExternalLink)>,
+  "openAccessStatus": Object {
+    "embargoDate": null,
+    "isOpenAccess": true,
+    "openAccessStatusId": 453694,
+  },
+}
+`;
+
 exports[`Component Links  should render oa icon for open access rdm link 1`] = `
 Object {
   "description": "Access this dataset",
@@ -34137,7 +34155,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
       openAccessStatus={
         Object {
           "embargoDate": null,
-          "isOpenAccess": true,
+          "isOpenAccess": false,
           "openAccessStatusId": 453954,
         }
       }
