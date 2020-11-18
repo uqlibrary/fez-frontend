@@ -470,7 +470,7 @@ describe('AuthorsCitationView test ', () => {
             { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.state().authors.length).toEqual(3);
+        expect(wrapper.state().authors.length).toEqual(4);
         expect(wrapper.find('.citationAuthor').length).toEqual(3);
     });
 
@@ -563,7 +563,7 @@ describe('AuthorsCitationView test ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(4);
+        expect(wrapper.find('.citationAuthor').length).toEqual(3);
     });
 
     it('should render a header correctly when all authors are provided', () => {
