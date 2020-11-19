@@ -4423,6 +4423,9 @@ describe('getNotesSectionSearchKeys', () => {
             fez_record_search_key_notes: {
                 rek_notes: '<p>This is test additional note</p>',
             },
+            fez_record_search_key_additional_notes: {
+                rek_additional_notes: '<p>This is test additional note</p>',
+            },
             rek_herdc_notes: 'This is test herdc notes',
             fez_internal_notes: null,
         };
