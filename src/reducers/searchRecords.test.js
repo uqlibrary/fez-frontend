@@ -466,4 +466,13 @@ describe('searchRecords reducer', () => {
         );
         expect(searchState.searchLoadingError).toBeFalsy();
     });
+
+    it('should reset rawSearchQuery on clearing new record', () => {
+        const searchState = searchRecordsReducer(
+            { ...initialState, rawSearchQuery: 'testing testing' },
+            { type: actions.CREATE_RECORD_RESET },
+        );
+
+        expect(searchState.rawSearchQuery).toBe('');
+    });
 });
