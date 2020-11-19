@@ -4914,57 +4914,6 @@ describe('getRemoveFromCollectionData', () => {
     });
 });
 
-describe('getNotesSectionSearchKeys', () => {
-    it('should get search key for any internal notes entered', () => {
-        const expected = {
-            fez_internal_notes: {
-                ain_detail: '<p>This is test internal note</p>',
-            },
-            rek_herdc_notes: 'This is test herdc notes',
-        };
-
-        expect(
-            transformers.getNotesSectionSearchKeys({
-                internalNotes: {
-                    htmlText: '<p>This is test internal note</p>',
-                    plainText: 'This is test internal note',
-                },
-                rek_herdc_notes: {
-                    htmlText: 'This is test herdc notes',
-                    plainText: 'This is test herdc notes',
-                },
-            }),
-        ).toEqual(expected);
-    });
-
-    it('should get search key for any internal notes entered', () => {
-        expect(transformers.getNotesSectionSearchKeys()).toEqual({ fez_internal_notes: null });
-    });
-
-    it('should get search key for any additional notes entered', () => {
-        const expected = {
-            fez_record_search_key_notes: {
-                rek_notes: '<p>This is test additional note</p>',
-            },
-            rek_herdc_notes: 'This is test herdc notes',
-            fez_internal_notes: null,
-        };
-
-        expect(
-            transformers.getNotesSectionSearchKeys({
-                additionalNotes: {
-                    htmlText: '<p>This is test additional note</p>',
-                    plainText: 'This is test additional note',
-                },
-                rek_herdc_notes: {
-                    htmlText: 'This is test herdc notes',
-                    plainText: 'This is test herdc notes',
-                },
-            }),
-        ).toEqual(expected);
-    });
-});
-
 describe('getBibliographicSection for thesis', () => {
     it('should correctly transform data for thesis rek_subtype and rek_genre_type', () => {
         const data = {
