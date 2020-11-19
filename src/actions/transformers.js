@@ -1325,16 +1325,3 @@ export const getCopyToCollectionData = (records, data) => {
         ],
     }));
 };
-
-export const getNotesSectionSearchKeys = (data = {}) => {
-    const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes } = data;
-    return {
-        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
-            ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
-            : {}),
-        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
-            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
-            : { fez_internal_notes: null }),
-        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
-    };
-};
