@@ -42,7 +42,7 @@ function setup(testProps = {}) {
                 author: Immutable.Map({ aut_id: 410 }),
             }),
         handleSubmit: testProps.handleSubmit || jest.fn(),
-        actions: testProps.actions || { loadFullRecordToClaim: jest.fn() },
+        actions: testProps.actions || { loadFullRecordToClaim: jest.fn(), clearNewRecord: jest.fn() },
         history: testProps.history || {
             push: jest.fn(),
             go: jest.fn(),
@@ -439,6 +439,7 @@ describe('Component ClaimRecord ', () => {
             history: { push: testMethod, goBack: goBack },
             redirectPath: '/records/add/find',
             actions: {
+                clearNewRecord: jest.fn(),
                 clearRedirectPath: clearRedirectPath,
                 loadFullRecordToClaim: jest.fn(),
             },

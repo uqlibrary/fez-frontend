@@ -262,6 +262,11 @@ const handlers = {
             ...loadingPublicationSources,
         };
     },
+
+    [actions.CREATE_RECORD_RESET]: state => ({
+        ...state,
+        rawSearchQuery: '',
+    }),
 };
 
 export default function searchRecordsReducer(state = initialState, action) {

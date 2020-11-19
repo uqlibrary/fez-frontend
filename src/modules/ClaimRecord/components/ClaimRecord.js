@@ -78,12 +78,14 @@ export default class ClaimRecord extends PureComponent {
     };
 
     _cancelClaim = () => {
+        this.props.actions.clearNewRecord();
         this.props.history.goBack();
     };
 
     _claimAnother = () => {
         if (!!this.props.redirectPath) {
             this.props.history.push(this.props.redirectPath);
+            this.props.actions.clearNewRecord();
             this.props.actions.clearRedirectPath();
         } else {
             this.props.history.goBack();
