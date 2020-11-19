@@ -1,7 +1,6 @@
 import React from 'react';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { DEPRECATED_HERDC_CODES, HERDC_CODES } from 'config/general';
-import Immutable from 'immutable';
 
 /**
  * Supply the list of herdc codes to display as options in the drop down.
@@ -28,16 +27,10 @@ export default function HerdcCodeField(fieldProps) {
     const preselected = !!fieldProps.input && fieldProps.input.value;
 
     return (
-        <GenericSelectField
-            canUnselect
+        <NewGenericSelectField
             itemsList={[..._herdcCodes(preselected)]}
-            hideLabel={false}
             locale={{ label: fieldProps.label }}
-            value={
-                preselected instanceof Immutable.List
-                    ? preselected.toJS()
-                    : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || preselected || []
-            }
+            value={(!!fieldProps.input && fieldProps.input.value) || -1}
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}

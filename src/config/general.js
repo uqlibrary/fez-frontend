@@ -1360,7 +1360,6 @@ export const PUBMED_DOC_TYPES = [
 ];
 
 export const HERDC_CODES = [
-    { value: null, text: 'Please choose an option' },
     { value: '450001', text: 'A1 Authored Book (Research)' },
     { value: '450005', text: 'AX Edited Book; Book (Other Public Output)' },
     { value: '450006', text: 'B1 Book Chapter (Research, Critical Review of Research)' },
@@ -1419,7 +1418,6 @@ export const DEPRECATED_HERDC_CODES = [
 ];
 
 export const HERDC_STATUS = [
-    { value: null, text: 'Please choose an option' },
     { value: '453220', text: 'Provisional Code' },
     { value: '453221', text: 'Confirmed Code' },
 ];
