@@ -139,6 +139,7 @@ export function createNewRecord(data) {
 
 const prepareThesisSubmission = data => {
     // set default values, links
+    console.log(data);
     const recordRequest = {
         ...JSON.parse(JSON.stringify(data)),
         ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
