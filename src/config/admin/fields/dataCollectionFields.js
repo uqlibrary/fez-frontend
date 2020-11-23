@@ -92,7 +92,7 @@ export default {
 };
 
 export const validateDataCollection = (
-    { bibliographicSection: bs, adminSection: ais, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, adminSection: ais, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -134,12 +134,6 @@ export const validateDataCollection = (
             fez_record_search_key_ands_collection_type: {
                 rek_ands_collection_type: summary.rek_ands_collection_type,
             },
-        }) ||
-            {}),
-    },
-    filesSection: {
-        ...(((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
         }) ||
             {}),
     },

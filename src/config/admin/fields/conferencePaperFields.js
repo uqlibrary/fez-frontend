@@ -152,7 +152,7 @@ export default {
 };
 
 export const validateConferencePaper = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -174,11 +174,6 @@ export const validateConferencePaper = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {

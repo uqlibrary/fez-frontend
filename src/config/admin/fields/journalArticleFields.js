@@ -108,7 +108,7 @@ export default {
 };
 
 export const validateJournalArticle = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -118,11 +118,6 @@ export const validateJournalArticle = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {
