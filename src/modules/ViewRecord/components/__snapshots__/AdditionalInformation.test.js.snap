@@ -27949,7 +27949,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="39"
+      key="38"
       style={
         Object {
           "padding": 8,
@@ -32562,54 +32562,6 @@ exports[`Additional Information Component  should render component with data col
             >
               2015, The University of Queensland
             </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="33"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Additional notes"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-additional-notes-label"
-            variant="body2"
-          >
-            Additional notes
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            CheckM is open source software available at http://ecogenomics.github.io/CheckM
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -39225,7 +39177,7 @@ exports[`Additional Information Component  should render component with image 1`
     title="Additional information"
   >
     <div
-      key="1"
+      key="0"
       style={
         Object {
           "padding": 8,
@@ -45033,54 +44985,6 @@ exports[`Additional Information Component  should render component with manuscri
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </div>
-    <div
-      key="21"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Additional notes"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-additional-notes-label"
-            variant="body2"
-          >
-            Additional notes
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection.
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -46632,7 +46536,7 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="24"
+      key="23"
       style={
         Object {
           "padding": 8,
@@ -57278,7 +57182,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="24"
       style={
         Object {
           "padding": 8,
@@ -58233,7 +58137,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="19"
       style={
         Object {
           "padding": 8,
@@ -60372,7 +60276,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
+      key="26"
       style={
         Object {
           "padding": 8,
@@ -61330,7 +61234,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="19"
       style={
         Object {
           "padding": 8,
