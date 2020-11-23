@@ -487,7 +487,12 @@ const getAdminRecordRequest = data => {
             ),
         },
         hasFilesToUpload,
-        hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(files.queue, data.adminSection) : null,
+        hasFilesToUpload
+            ? transformers.getRecordFileAttachmentSearchKey(files.queue, {
+                  ...data.publication,
+                  ...data.adminSection,
+              })
+            : null,
     ];
 };
 
