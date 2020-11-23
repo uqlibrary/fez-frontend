@@ -69,7 +69,7 @@ export default {
 };
 
 export const validateSeminarPaper = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -79,11 +79,6 @@ export const validateSeminarPaper = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {
