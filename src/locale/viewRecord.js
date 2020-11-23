@@ -224,7 +224,6 @@ export default {
                 fez_record_search_key_herdc_code: 'HERDC code',
                 fez_record_search_key_herdc_status: 'HERDC status',
                 fez_record_search_key_institutional_status: 'Institutional status',
-                fez_record_search_key_additional_notes: 'Additional notes',
                 fez_record_search_key_notes: 'Additional notes',
                 grantInformation: {
                     fez_record_search_key_grant_agency: 'Grant agency',
@@ -2889,10 +2888,6 @@ export default {
                 {
                     field: 'fez_record_search_key_institutional_status',
                     order: 52,
-                },
-                {
-                    field: 'fez_record_search_key_additional_notes',
-                    order: 53,
                 },
                 {
                     field: 'fez_record_search_key_notes',
