@@ -12,8 +12,7 @@ import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import DirectorySelectField from '../containers/DirectorySelectField';
-import { CollectionSelectField } from 'modules/SharedComponents/SelectFields';
+import { CollectionSelectField, DirectorySelectField } from 'modules/SharedComponents/SelectFields';
 import { useFormErrorsContext } from 'context';
 
 import { validation } from 'config';
@@ -162,6 +161,7 @@ export const BatchImport = ({
                                     <Grid item xs={12}>
                                         <Field
                                             component={DirectorySelectField}
+                                            genericSelectFieldId="directory"
                                             disabled={submitting}
                                             error={formErrors.directory}
                                             id="directory"
