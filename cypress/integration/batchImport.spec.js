@@ -25,10 +25,10 @@ context('Batch import', () => {
                 .should('have.length', 3);
         };
 
-        const selectFirstItem = (field, validationMessage) => {
+        const selectItem = (field, option, validationMessage) => {
             cy.get(`[data-testid=${field}-select]`).click();
             cy.waitUntil(() => cy.get(`[data-testid=${field}-options]`).should('exist'));
-            cy.get(`[data-testid=${field}-option-1]`).click();
+            cy.get(`[data-testid=${field}-option-${option}]`).click();
 
             cy.get('[data-testid=batch-import-validation]').should('not.contain', validationMessage);
         };
@@ -56,7 +56,7 @@ context('Batch import', () => {
                 .should('be.disabled');
 
             // Select community
-            selectFirstItem('community-pid', validationErrors.communityID);
+            selectItem('community-pid', 1, validationErrors.communityID);
 
             // Make sure collection dropdown appears
             cy.waitUntil(() => Cypress.$('[data-testid=collection-pid-select]').length === 1);
@@ -64,13 +64,13 @@ context('Batch import', () => {
             cy.get('[data-testid=batch-import-validation]').should('contain', validationErrors.collection_pid);
 
             // Select collection
-            selectFirstItem('collection-pid', validationErrors.collection_pid);
+            selectItem('collection-pid', 1, validationErrors.collection_pid);
 
             // Select doctype
-            selectFirstItem('doc-type-id', validationErrors.doc_type_id);
+            selectItem('doc-type-id', 1, validationErrors.doc_type_id);
 
             // Select directory
-            selectFirstItem('directory', validationErrors.directory);
+            selectItem('directory', 1, validationErrors.directory);
 
             cy.get('[data-testid=batch-import-validation]').should('not.exist');
             cy.get('[data-testid=batch-import-submit]').should('not.be.disabled');

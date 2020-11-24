@@ -13,7 +13,7 @@ import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedC
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
-import CollectionSelectField from '../containers/CollectionSelectField';
+import { CollectionSelectField } from 'modules/SharedComponents/SelectFields';
 import { useFormErrorsContext } from 'context';
 
 import { validation } from 'config';
@@ -112,6 +112,7 @@ export const BatchImport = ({
                                                 error={formErrors.collection_pid}
                                                 id="collectionPID"
                                                 name="collection_pid"
+                                                genericSelectFieldId="collection-pid"
                                                 parentPid={communityID}
                                                 required
                                                 validate={[validation.required]}
