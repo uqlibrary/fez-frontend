@@ -64,12 +64,7 @@ export default {
     ntro: () => [],
 };
 
-export const validatePatent = ({ filesSection: fs, authorsSection: as }, { validationErrorsSummary: summary }) => ({
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
-    },
+export const validatePatent = ({ authorsSection: as }, { validationErrorsSummary: summary }) => ({
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {
             authors: summary.authors,

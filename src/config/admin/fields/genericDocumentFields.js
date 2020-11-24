@@ -63,10 +63,4 @@ export default {
     ntro: () => [],
 };
 
-export const validateGenericDocument = ({ filesSection: fs }, { validationErrorsSummary: summary }) => ({
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
-    },
-});
+export const validateGenericDocument = () => ({});
