@@ -120,7 +120,7 @@ export default {
 };
 
 export const validateBookChapter = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -136,11 +136,6 @@ export const validateBookChapter = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: isAuthorOrEditorSelected(as || {}, true),
 });

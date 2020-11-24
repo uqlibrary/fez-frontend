@@ -82,19 +82,10 @@ export default {
     ntro: () => [],
 };
 
-export const validateDepartmentTechnicalReport = (
-    { authorsSection: as, filesSection: fs },
-    { validationErrorsSummary: summary },
-) => ({
+export const validateDepartmentTechnicalReport = ({ authorsSection: as }, { validationErrorsSummary: summary }) => ({
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {
             authors: summary.authors,
         }),
-    },
-    filesSection: {
-        ...(((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }) ||
-            {}),
     },
 });

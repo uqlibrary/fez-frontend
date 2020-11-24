@@ -85,8 +85,12 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
 
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount =
-        record && record.fez_record_search_key_file_attachment_name
-            ? record.fez_record_search_key_file_attachment_name.length
+        record &&
+        record.fez_record_search_key_file_attachment_name &&
+        record.fez_record_search_key_file_attachment_name.length > 0
+            ? record.fez_record_search_key_file_attachment_name[
+                  record.fez_record_search_key_file_attachment_name.length - 1
+              ].rek_file_attachment_name_order
             : 0;
     const attachmentNames = files.map((item, index) => ({
         rek_file_attachment_name: item.name,
