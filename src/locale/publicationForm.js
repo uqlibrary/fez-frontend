@@ -6,6 +6,7 @@ import {
     FILE_ACCESS_CONDITION_OPEN,
     FILE_ACCESS_CONDITION_CLOSED,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { selectFields } from 'locale/selectFields';
 
 export default {
     cancel: 'Abandon and search again',
@@ -1694,8 +1695,8 @@ export default {
         },
         formLabels: {
             ismemberof: {
-                label: 'Select community',
-                placeholder: 'Select a community this collection is a member of',
+                ...selectFields.community,
+                selectPrompt: 'Select a community this collection is a member of',
             },
             title: {
                 label: 'Title of collection',

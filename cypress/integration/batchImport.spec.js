@@ -1,8 +1,6 @@
-import componentsLocale from '../../src/locale/components';
 import validationErrorsLocale from '../../src/locale/validationErrors';
 
 context('Batch import', () => {
-    const locale = componentsLocale.components.digiTeam.batchImport;
     const validationErrors = validationErrorsLocale.validationErrorsSummary;
     const initialFieldIDs = ['community-pid', 'doc-type-id', 'directory'];
 
@@ -37,22 +35,25 @@ context('Batch import', () => {
             // Check for expected elements
             cy.get('h2')
                 .should('have.length', 1)
-                .should('contain', locale.title);
+                .should('contain', 'CSV ingest');
 
             initialFieldIDs.forEach(fieldID => {
                 cy.get(`[data-testid=${fieldID}-select]`).should('exist');
             });
 
-            cy.get('[data-testid=community-pid-label]').should('contain', locale.formLabels.community.label);
-            cy.get('[data-testid=doc-type-id-label]').should('contain', locale.formLabels.docType.label);
-            cy.get('[data-testid=directory-label]').should('contain', locale.formLabels.directory.label);
+            cy.get('[data-testid=community-pid-label]').should('contain', 'Select a community');
+            cy.get('[data-testid=doc-type-id-label]').should('contain', 'Select a document type');
+            cy.get('[data-testid=directory-label]').should(
+                'contain',
+                'Select folder where CSV and datastream files are located',
+            );
 
             confirmInitialValidations();
 
-            cy.get('[data-testid=batch-import-cancel]').should('contain', locale.formLabels.cancelButtonLabel);
+            cy.get('[data-testid=batch-import-cancel]').should('contain', 'Cancel and return to the homepage');
 
             cy.get('[data-testid=batch-import-submit]')
-                .should('contain', locale.formLabels.submitButtonLabel)
+                .should('contain', 'Ingest now')
                 .should('be.disabled');
 
             // Select community
@@ -60,7 +61,7 @@ context('Batch import', () => {
 
             // Make sure collection dropdown appears
             cy.waitUntil(() => Cypress.$('[data-testid=collection-pid-select]').length === 1);
-            cy.get('[data-testid=collection-pid-label]').should('contain', locale.formLabels.collection.label);
+            cy.get('[data-testid=collection-pid-label]').should('contain', 'Select a collection');
             cy.get('[data-testid=batch-import-validation]').should('contain', validationErrors.collection_pid);
 
             // Select collection
@@ -76,14 +77,14 @@ context('Batch import', () => {
             cy.get('[data-testid=batch-import-submit]').should('not.be.disabled');
 
             cy.get('[data-testid=batch-import-submit]')
-                .should('have.text', locale.formLabels.submitButtonLabel)
+                .should('have.text', 'Ingest now')
                 .click();
 
             // form submitted and the green 'all good' message appears, with 'start another' button
             cy.get('[data-testid=batch-import-validation]')
-                .should('contain', locale.submitSuccessAlert.title)
-                .should('contain', locale.submitSuccessAlert.message)
-                .contains('button', locale.postSubmitPrompt.confirmButtonLabel)
+                .should('contain', 'Success')
+                .should('contain', 'The request to batch-import has been submitted successfully.')
+                .contains('button', 'Start another ingest')
                 .click();
 
             // form is ready to go again and the validation errors re-appear

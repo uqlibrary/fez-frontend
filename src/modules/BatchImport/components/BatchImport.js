@@ -9,10 +9,14 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
-import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
+import { DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { CollectionSelectField, DirectorySelectField } from 'modules/SharedComponents/SelectFields';
+import {
+    CollectionSelectField,
+    CommunitySelectField,
+    DirectorySelectField,
+} from 'modules/SharedComponents/SelectFields';
 import { useFormErrorsContext } from 'context';
 
 import { validation } from 'config';
@@ -89,8 +93,8 @@ export const BatchImport = ({
                                 <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <Field
-                                            component={CommunitiesSelectField}
-                                            communitiesSelectFieldId="community-pid"
+                                            component={CommunitySelectField}
+                                            genericSelectFieldId="community-pid"
                                             disabled={submitting}
                                             error={formErrors.communityID}
                                             id="communityPID"

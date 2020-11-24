@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import { selectFields } from 'locale/selectFields';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -2216,18 +2217,10 @@ export default {
                 help: {},
                 formLabels: {
                     community: {
-                        label: 'Select a community',
-                        placeholder: 'Select a community',
-                        ariaLabel: 'Select a community',
-                        selectPrompt: 'Please select a community',
-                        loadingHint: 'Loading communities...',
+                        ...selectFields.community,
                     },
                     collection: {
-                        label: 'Select a collection',
-                        placeholder: 'Select a collection',
-                        ariaLabel: 'Select a collection',
-                        selectPrompt: 'Please select a collection',
-                        loadingHint: 'Loading collections...',
+                        ...selectFields.collection,
                     },
                     docType: {
                         label: 'Select a document type',
@@ -2242,11 +2235,7 @@ export default {
                         selectPrompt: 'Please select a document subtype',
                     },
                     directory: {
-                        label: 'Select folder where CSV and datastream files are located',
-                        placeholder: 'Select folder where CSV and datastream files are located',
-                        ariaLabel: 'Select folder where CSV and datastream files are located',
-                        selectPrompt: 'Please select a directory',
-                        loadingHint: 'Loading directories...',
+                        ...selectFields.directory,
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
                     submitButtonLabel: 'Ingest now',
