@@ -10,8 +10,8 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
-import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { CommunitySelectField } from 'modules/SharedComponents/SelectFields';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -110,14 +110,13 @@ export default class CollectionForm extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={CommunitiesSelectField}
+                                                component={CommunitySelectField}
                                                 disabled={this.props.submitting}
-                                                communitiesSelectFieldId="rek-ismemberof"
+                                                genericSelectFieldId="rek-ismemberof"
                                                 name="fez_record_search_key_ismemberof"
-                                                label={txt.formLabels.ismemberof.label}
-                                                placeholder={txt.formLabels.ismemberof.placeholder}
                                                 required
                                                 validate={[validation.required]}
+                                                {...txt.formLabels.ismemberof}
                                             />
                                         </Grid>
                                     </Grid>
