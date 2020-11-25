@@ -638,7 +638,7 @@ export const HDR_THESIS_DEFAULT_VALUES = {
             rek_language_order: 1,
         },
     ],
-    fileAccessId: 2,
+    // fileAccessId: 2,
 };
 
 export const SBS_THESIS_DEFAULT_VALUES = {
@@ -653,7 +653,7 @@ export const SBS_THESIS_DEFAULT_VALUES = {
         },
     ],
     rek_genre_type: 'Professional Doctorate',
-    fileAccessId: 2,
+    // fileAccessId: 2,
 };
 
 export const DEFAULT_QUERY_PARAMS = {
