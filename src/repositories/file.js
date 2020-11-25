@@ -32,7 +32,7 @@ export function putUploadFile(pid, file, dispatch, formName) {
                               !!file.date &&
                               moment(file.date).isAfter()
                                   ? FILE_ACCESS_CONDITION_CLOSED
-                                  : file.access_condition_id,,
+                                  : file.access_condition_id,
                       }
                     : {}),
                 ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN &&
