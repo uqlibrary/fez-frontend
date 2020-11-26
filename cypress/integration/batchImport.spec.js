@@ -81,7 +81,7 @@ context('Batch import', () => {
                 .click();
 
             // form submitted and the green 'all good' message appears, with 'start another' button
-            cy.get('[data-testid=batch-import-validation]')
+            cy.get('[data-testid=alert-done-batch-import]')
                 .should('contain', 'Success')
                 .should('contain', 'The request to batch-import has been submitted successfully.')
                 .contains('button', 'Start another ingest')

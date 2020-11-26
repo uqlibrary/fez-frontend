@@ -173,7 +173,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                         </Grid>
                         {validationErrors && (
                             <Grid item xs={12}>
-                                <Alert {...validationErrors} />
+                                <Alert alertId="batch-import-validation" {...validationErrors} />
                             </Grid>
                         )}
                         <Grid item xs={false} sm />
