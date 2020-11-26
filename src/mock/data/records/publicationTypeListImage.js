@@ -189,7 +189,7 @@ export default {
                 "rek_oa_status_pid": "UQ:134700",
                 "rek_oa_status_xsdmf_id": 17010,
                 "rek_oa_status": 454127,
-                "rek_oa_status_lookup": "File (Author Pre-print)"
+                "rek_oa_status_lookup": "Preprint"
             },
             "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
