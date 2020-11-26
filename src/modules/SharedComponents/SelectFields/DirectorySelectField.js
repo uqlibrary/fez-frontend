@@ -7,11 +7,10 @@ export default function DirectorySelectField(fieldProps) {
     const dispatch = useDispatch();
     const itemsList = useSelector(
         state =>
-            (!!state.get('batchImportDirectoriesReducer') &&
-                state.get('batchImportDirectoriesReducer').batchImportDirectoryList.map(item => {
-                    return { text: item, value: item };
-                })) ||
-            [],
+            !!state.get('batchImportDirectoriesReducer') &&
+            state.get('batchImportDirectoriesReducer').batchImportDirectoryList.map(item => {
+                return { text: item, value: item };
+            }),
     );
     const itemsLoading = useSelector(
         state =>

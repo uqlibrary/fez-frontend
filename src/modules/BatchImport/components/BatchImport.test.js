@@ -1,0 +1,148 @@
+import React from 'react';
+import { act, fireEvent, render, WithReduxStore, waitFor } from 'test-utils';
+import * as repositories from 'repositories';
+import * as BatchImportActions from 'actions/batchImport';
+
+import BatchImport from './BatchImport';
+
+function setup(testProps = {}) {
+    return render(
+        <WithReduxStore>
+            <BatchImport {...testProps} />
+        </WithReduxStore>,
+    );
+}
+
+describe('BatchImport Component', () => {
+    it('should successfully submit form and display success message', async done => {
+        const createBatchImport = jest.spyOn(BatchImportActions, 'createBatchImport');
+
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                    { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+                ],
+            });
+
+        mockApi
+            .onGet(repositories.routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({ communityPid: 'UQ:111' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:222', rek_title: 'Testing collection', rek_security_policy: 5 },
+                    { rek_pid: 'UQ:333', rek_title: 'Tested collection', rek_security_policy: 1 },
+                ],
+            });
+
+        mockApi.onGet(repositories.routes.BATCH_IMPORT_DIRECTORIES_API({}).apiUrl).replyOnce(200, {
+            data: ['Test directory 1', 'Test directory 2'],
+        });
+
+        mockApi.onPost(repositories.routes.BATCH_IMPORT_API().apiUrl).replyOnce(200, { data: {} });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitFor(() => getByText('Please select a community'));
+
+        fireEvent.mouseDown(getByTestId('community-pid-select'));
+        fireEvent.click(getByText('Testing community'));
+
+        await waitFor(() => getByText('Please select a collection'));
+
+        fireEvent.mouseDown(getByTestId('collection-pid-select'));
+        fireEvent.click(getByText('Tested collection (Administrators)'));
+
+        await waitFor(() => getByText('Please select a directory'));
+
+        fireEvent.mouseDown(getByTestId('doc-type-id-select'));
+        fireEvent.click(getByText('Design'));
+
+        fireEvent.mouseDown(getByTestId('subtype-select'));
+        fireEvent.click(getByText('Non-NTRO'));
+
+        fireEvent.mouseDown(getByTestId('directory-select'));
+        fireEvent.click(getByText('Test directory 1'));
+
+        act(() => {
+            fireEvent.click(getByTestId('submitBatchImport'));
+        });
+
+        await waitFor(() => getByTestId('action-button'));
+
+        expect(getByText('The request to batch-import has been submitted successfully.')).toBeInTheDocument();
+        expect(getByTestId('submitBatchImport')).toHaveAttribute('disabled');
+        expect(createBatchImport).toBeCalled();
+
+        done();
+    });
+
+    it('should submit batch import and display submission error', async done => {
+        const createBatchImport = jest.spyOn(BatchImportActions, 'createBatchImport');
+
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                    { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+                ],
+            });
+
+        mockApi
+            .onGet(repositories.routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({ communityPid: 'UQ:111' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:222', rek_title: 'Testing collection', rek_security_policy: 5 },
+                    { rek_pid: 'UQ:333', rek_title: 'Tested collection', rek_security_policy: 1 },
+                ],
+            });
+
+        mockApi.onGet(repositories.routes.BATCH_IMPORT_DIRECTORIES_API({}).apiUrl).replyOnce(200, {
+            data: ['Test directory 1', 'Test directory 2'],
+        });
+
+        mockApi.onPost(repositories.routes.BATCH_IMPORT_API().apiUrl).replyOnce(500, { data: {} });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitFor(() => getByText('Please select a community'));
+
+        fireEvent.mouseDown(getByTestId('community-pid-select'));
+        fireEvent.click(getByText('Testing community'));
+
+        await waitFor(() => getByText('Please select a collection'));
+
+        fireEvent.mouseDown(getByTestId('collection-pid-select'));
+        fireEvent.click(getByText('Tested collection (Administrators)'));
+
+        await waitFor(() => getByText('Please select a directory'));
+
+        fireEvent.mouseDown(getByTestId('doc-type-id-select'));
+        fireEvent.click(getByText('Design'));
+
+        fireEvent.mouseDown(getByTestId('subtype-select'));
+        fireEvent.click(getByText('Non-NTRO'));
+
+        fireEvent.mouseDown(getByTestId('directory-select'));
+        fireEvent.click(getByText('Test directory 1'));
+
+        act(() => {
+            fireEvent.click(getByTestId('submitBatchImport'));
+        });
+
+        await waitFor(() => getByTestId('alert-error-batch-import'));
+
+        expect(createBatchImport).toBeCalled();
+
+        done();
+    });
+
+    it('navigates to homepage on cancel', async () => {
+        const pushFn = jest.fn();
+        const history = { push: pushFn };
+        const { getByTestId } = setup({ history: history });
+        fireEvent.click(getByTestId('cancelBatchImport'));
+        expect(pushFn).toHaveBeenCalledWith('/');
+    });
+});
