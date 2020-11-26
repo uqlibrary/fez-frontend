@@ -55,7 +55,7 @@ export default {
         {
             title: 'Journal name',
             groups: [
-                ['fez_record_search_key_journal_name'],
+                ['fez_record_search_key_journal_name', 'fez_matched_journals'],
                 ['fez_record_search_key_series'],
                 ...(isLote
                     ? [

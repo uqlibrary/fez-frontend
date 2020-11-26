@@ -3,7 +3,7 @@ export { CollectionField } from './containers/CollectionField';
 export { FieldOfResearchField } from './containers/FieldOfResearchField';
 export { FieldOfResearchListField } from './containers/FieldOfResearchListField';
 export { FilteredFieldOfResearchListField } from './containers/FieldOfResearchListField';
-export { JournalNameField } from './containers/JournalNameField';
+export { JournalIdField } from './containers/JournalIdField';
 export { NewspaperNameField } from './containers/NewspaperNameField';
 export { OrgNameField } from './containers/OrgNameField';
 export { OrgUnitNameField } from './containers/OrgUnitNameField';
