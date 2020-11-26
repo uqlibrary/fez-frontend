@@ -2263,19 +2263,19 @@ export default {
                 },
                 submitProgressAlert: {
                     type: 'info',
-                    alertId: 'alert-info',
+                    alertId: 'alert-info-batch-import',
                     title: 'Requesting CSV ingest',
                     message: 'Waiting for response...',
                 },
                 submitSuccessAlert: {
                     type: 'done',
-                    alertId: 'alert-done',
+                    alertId: 'alert-done-batch-import',
                     title: 'Success',
                     message: 'The request to batch-import has been submitted successfully.',
                 },
                 submitFailureAlert: {
                     type: 'error',
-                    alertId: 'alert-error',
+                    alertId: 'alert-error-batch-import',
                     title: 'Error',
                     message: 'The batch-import request could not be submitted.',
                 },

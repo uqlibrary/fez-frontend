@@ -9,15 +9,14 @@ export default function CommunitySelectField(fieldProps) {
     const dompurify = require('dompurify');
     const translatedItemList = useSelector(
         state =>
-            (!!state.get('communitiesReducer') &&
-                state.get('communitiesReducer').itemsList.map((item, index) => {
-                    return {
-                        text: dompurify.sanitize(item.rek_title, noHtmlConfig),
-                        value: item.rek_pid,
-                        index: index + 1,
-                    };
-                })) ||
-            [],
+            !!state.get('communitiesReducer') &&
+            state.get('communitiesReducer').itemsList.map((item, index) => {
+                return {
+                    text: dompurify.sanitize(item.rek_title, noHtmlConfig),
+                    value: item.rek_pid,
+                    index: index + 1,
+                };
+            }),
     );
     const itemsLoading = useSelector(
         state => !!state.get('communitiesReducer') && state.get('communitiesReducer').itemsLoading,

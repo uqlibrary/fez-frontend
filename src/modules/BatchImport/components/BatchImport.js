@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/lib/immutable';
+import Immutable from 'immutable';
+
+import { Field, change, formValueSelector, reduxForm, SubmissionError, getFormSyncErrors } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 
+import { PUBLICATION_TYPE_DESIGN } from 'config/general';
+import { createBatchImport } from 'actions';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
@@ -17,38 +22,37 @@ import {
     CommunitySelectField,
     DirectorySelectField,
 } from 'modules/SharedComponents/SelectFields';
-import { useFormErrorsContext } from 'context';
 
-import { validation } from 'config';
+import { validation, publicationTypes } from 'config';
 import { pathConfig } from 'config/routes';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'BatchImport';
-export const BatchImport = ({
-    communityID,
-    designSubtypes,
-    dirty,
-    disableSubmit,
-    handleSubmit,
-    history,
-    isDesignType,
-    loadItemsList,
-    reset,
-    resetCollectionField,
-    submitSucceeded,
-    submitting,
-}) => {
+const selector = formValueSelector(FORM_NAME);
+
+const onSubmit = (values, dispatch) => {
+    const data = { ...values.toJS() };
+    return dispatch(createBatchImport(data)).catch(error => {
+        console.log(error);
+        throw new SubmissionError({ _error: error.message });
+    });
+};
+
+const onChange = (values, dispatch, props, prevValues) => {
+    if (values.get('communityID') !== prevValues.get('communityID')) {
+        dispatch(change(FORM_NAME, 'collection_pid', null));
+    }
+};
+
+export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded, submitting, history }) => {
     const [validationErrors, setValidationErrors] = useState(null);
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
-
-    const { formErrors } = useFormErrorsContext();
-
-    useEffect(() => {
-        // Branch tested in cypress
-        /* istanbul ignore next */
-        communityID && loadItemsList(communityID);
-    }, [communityID, loadItemsList]);
+    const communityID = useSelector(state => selector(state, 'communityID'));
+    const isDesignType = useSelector(state => selector(state, 'doc_type_id')) === PUBLICATION_TYPE_DESIGN;
+    const designSubtypes = isDesignType ? publicationTypes(null, true)[PUBLICATION_TYPE_DESIGN].subtypes : null;
+    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
+    const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
 
     useEffect(() => {
         const alertProps = validation.getErrorAlertProps({
@@ -58,11 +62,12 @@ export const BatchImport = ({
                 successAlert: { ...batchImportTxt.submitSuccessAlert },
                 errorAlert: { ...batchImportTxt.submitFailureAlert },
             },
+            error,
             formErrors,
             submitSucceeded,
             submitting,
         });
-        const actionProps = submitSucceeded /* istanbul ignore next */ // Branch tested in cypress
+        const actionProps = submitSucceeded
             ? {
                   actionButtonLabel: batchImportTxt.postSubmitPrompt.confirmButtonLabel,
                   action: reset,
@@ -70,14 +75,14 @@ export const BatchImport = ({
             : {};
 
         setValidationErrors(
-            alertProps /* istanbul ignore next */ // Branch tested in cypress
+            alertProps
                 ? {
                       ...alertProps,
                       ...actionProps,
                   }
                 : null,
         );
-    }, [batchImportTxt, formErrors, reset, submitSucceeded, submitting]);
+    }, [batchImportTxt, error, formErrors, reset, submitSucceeded, submitting]);
 
     const _abandonImport = () => {
         history.push(pathConfig.index);
@@ -96,27 +101,22 @@ export const BatchImport = ({
                                             component={CommunitySelectField}
                                             genericSelectFieldId="community-pid"
                                             disabled={submitting}
-                                            error={formErrors.communityID}
                                             id="communityPID"
                                             name="communityID"
-                                            onChange={resetCollectionField}
                                             required
                                             validate={[validation.required]}
                                             {...batchImportTxt.formLabels.community}
                                         />
                                     </Grid>
                                     {!!communityID && (
-                                        // Branch tested in cypress
-                                        /* istanbul ignore next */
                                         <Grid item xs={12}>
                                             <Field
                                                 component={CollectionSelectField}
                                                 disabled={submitting}
-                                                error={formErrors.collection_pid}
                                                 id="collectionPID"
                                                 name="collection_pid"
                                                 genericSelectFieldId="collection-pid"
-                                                parentPid={communityID}
+                                                communityId={communityID}
                                                 required
                                                 validate={[validation.required]}
                                                 {...batchImportTxt.formLabels.collection}
@@ -127,7 +127,6 @@ export const BatchImport = ({
                                         <Field
                                             component={DocumentTypeSingleField}
                                             disabled={submitting}
-                                            error={formErrors.doc_type_id}
                                             id="doctypeID"
                                             name="doc_type_id"
                                             required
@@ -136,13 +135,10 @@ export const BatchImport = ({
                                         />
                                     </Grid>
                                     {!!isDesignType && (
-                                        // Branch tested in cypress
-                                        /* istanbul ignore next */
                                         <Grid item xs={12}>
                                             <Field
                                                 component={SelectField}
                                                 disabled={submitting}
-                                                error={formErrors.subtype}
                                                 id="subtype"
                                                 selectFieldId="subtype"
                                                 name="subtype"
@@ -150,15 +146,13 @@ export const BatchImport = ({
                                                 validate={[validation.required]}
                                                 {...batchImportTxt.formLabels.subType}
                                             >
-                                                {designSubtypes.map(
-                                                    /* istanbul ignore next */ (item, index) => {
-                                                        return (
-                                                            <MenuItem value={item} key={'subtype_' + index}>
-                                                                {item}
-                                                            </MenuItem>
-                                                        );
-                                                    },
-                                                )}
+                                                {designSubtypes.map((item, index) => {
+                                                    return (
+                                                        <MenuItem value={item} key={'subtype_' + index}>
+                                                            {item}
+                                                        </MenuItem>
+                                                    );
+                                                })}
                                             </Field>
                                         </Grid>
                                     )}
@@ -167,7 +161,6 @@ export const BatchImport = ({
                                             component={DirectorySelectField}
                                             genericSelectFieldId="directory"
                                             disabled={submitting}
-                                            error={formErrors.directory}
                                             id="directory"
                                             name="directory"
                                             required
@@ -178,15 +171,11 @@ export const BatchImport = ({
                                 </Grid>
                             </StandardCard>
                         </Grid>
-
                         {validationErrors && (
-                            // Branch tested in cypress
-                            /* istanbul ignore next */
                             <Grid item xs={12}>
-                                <Alert {...validationErrors} alertId="batch-import-validation" />
+                                <Alert {...validationErrors} />
                             </Grid>
                         )}
-
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm="auto">
                             <Button
@@ -221,19 +210,19 @@ export const BatchImport = ({
 };
 
 BatchImport.propTypes = {
-    collectionsList: PropTypes.array,
-    communityID: PropTypes.string,
-    designSubtypes: PropTypes.array,
     dirty: PropTypes.bool,
-    disableSubmit: PropTypes.bool,
+    error: PropTypes.bool,
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
-    isDesignType: PropTypes.bool,
-    loadItemsList: PropTypes.func,
     reset: PropTypes.func,
-    resetCollectionField: PropTypes.func,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
 };
 
-export default React.memo(BatchImport);
+const BatchImportReduxForm = reduxForm({
+    form: FORM_NAME,
+    onSubmit,
+    onChange,
+})(BatchImport);
+
+export default React.memo(BatchImportReduxForm);
