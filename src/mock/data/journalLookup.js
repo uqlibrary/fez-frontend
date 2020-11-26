@@ -11,16 +11,12 @@ export const journalLookup = {
                 {
                     "jnl_issn_jid": 1,
                     "jnl_issn": "1085-3375",
-                    "jnl_issn_type": 1111,
                     "jnl_issn_order": 1,
-                    "jnl_issn_type_lookup": "Print"
                 },
                 {
                     "jnl_issn_jid": 1,
                     "jnl_issn": "1687-0409",
-                    "jnl_issn_type": 2222,
                     "jnl_issn_order": 2,
-                    "jnl_issn_type_lookup": "Online"
                 },
             ],
         },
@@ -34,9 +30,7 @@ export const journalLookup = {
                 {
                     "jnl_issn_jid": 2,
                     "jnl_issn": "0251-4184",
-                    "jnl_issn_type": 1111,
                     "jnl_issn_order": 1,
-                    "jnl_issn_type_lookup": "Print"
                 },
             ],
         },
@@ -50,16 +44,12 @@ export const journalLookup = {
                 {
                     "jnl_issn_jid": 3,
                     "jnl_issn": "0251-4184",
-                    "jnl_issn_type": 1111,
                     "jnl_issn_order": 1,
-                    "jnl_issn_type_lookup": "Online"
                 },
                 {
                     "jnl_issn_jid": 3,
                     "jnl_issn": "1361-6463",
-                    "jnl_issn_type": 1111,
                     "jnl_issn_order": 1,
-                    "jnl_issn_type_lookup": "Print"
                 },
             ],
         },

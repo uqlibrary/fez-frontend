@@ -3092,7 +3092,7 @@ export default {
                 selectPrompt: 'Please select a collection',
             },
         },
-        journalNameField: {
+        JournalIdField: {
             detailsLink: {
                 title: 'View journal details in a new tab',
                 linkText: 'View details',
