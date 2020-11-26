@@ -10,9 +10,20 @@ const testFn = jest.fn();
 history.push = testFn;
 
 function setup(testProps) {
+    const props = {
+        actions: {
+            loadJournal: jest.fn(),
+        },
+        match: {
+            params: {
+                id: '1',
+            },
+        },
+        ...testProps,
+    };
     return rtlRender(
         <Router initialEntries={[{ pathname: '/journal/view/1' }]} history={history}>
-            <JournalView {...testProps} />
+            <JournalView {...props} />
         </Router>,
     );
 }

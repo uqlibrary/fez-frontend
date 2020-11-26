@@ -17,7 +17,7 @@ export const Doi = React.lazy(() => import('modules/Admin/Doi/containers/Doi'));
 export const FavouriteSearch = React.lazy(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch'));
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
 export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
-export const JournalView = React.lazy(() => import('modules/Journal/components/JournalView'));
+export const JournalView = React.lazy(() => import('modules/Journal/containers/JournalView'));
 export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
 export const NewViewRecord = React.lazy(() => import('modules/ViewRecord/containers/NewViewRecord'));
 export const NotFound = React.lazy(() => import('modules/NotFound/components/NotFound'));

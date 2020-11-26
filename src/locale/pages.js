@@ -1132,6 +1132,11 @@ export default {
             view: {
                 title: 'Journal details',
                 loadingMessage: 'Loading journal data',
+                loadFailureAlert: {
+                    title: 'Loading failed',
+                    message: 'Unable to load journal details',
+                    type: 'error_outline',
+                },
             },
         },
     },
