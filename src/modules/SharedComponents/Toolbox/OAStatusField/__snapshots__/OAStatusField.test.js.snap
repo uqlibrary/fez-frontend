@@ -30,7 +30,7 @@ exports[`OAStatus component should render default view 1`] = `
         "value": "453696",
       },
       Object {
-        "text": "File (Author Pre-print)",
+        "text": "Preprint",
         "value": "454127",
       },
       Object {
@@ -108,7 +108,7 @@ exports[`OAStatus component should render immutable list as selected value with 
         "value": "453696",
       },
       Object {
-        "text": "File (Author Pre-print)",
+        "text": "Preprint",
         "value": "454127",
       },
       Object {
@@ -191,7 +191,7 @@ exports[`OAStatus component should render when given a default value field props
         "value": "453696",
       },
       Object {
-        "text": "File (Author Pre-print)",
+        "text": "Preprint",
         "value": "454127",
       },
       Object {
@@ -275,7 +275,7 @@ exports[`OAStatus component should render with given field props 1`] = `
         "value": "453696",
       },
       Object {
-        "text": "File (Author Pre-print)",
+        "text": "Preprint",
         "value": "454127",
       },
       Object {
