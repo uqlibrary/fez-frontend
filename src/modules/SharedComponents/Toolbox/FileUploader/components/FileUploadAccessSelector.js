@@ -42,7 +42,8 @@ export class FileUploadAccessSelector extends PureComponent {
                 errorText={errorMessage}
                 genericSelectFieldId={this.props.fileUploadAccessSelectorId}
                 onChange={this.handleChange}
-                value={value || -1}
+                value={value || ''}
+                displayEmpty
                 itemsList={this.props.isAdmin ? [...options, INHERIT_OPTION] : options}
                 selectPrompt={selectPrompt}
                 selectProps={{

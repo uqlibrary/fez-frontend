@@ -30,12 +30,13 @@ export default function CommunitySelectField(fieldProps) {
     return (
         <NewGenericSelectField
             disabled={itemsLoading || fieldProps.disabled}
+            displayEmpty={itemsLoading} // display loading prompt while items are loading
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
             itemsList={translatedItemList}
             itemsLoading={itemsLoading}
             onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value || -1}
+            value={fieldProps.input.value || ''}
             {...fieldProps}
         />
     );

@@ -17,4 +17,9 @@ export const selectFields = {
         selectPrompt: 'Please select a directory',
         loadingHint: 'Loading directories...',
     },
+    thesisSubtype: {
+        label: 'Thesis type',
+        ariaLabel: 'Select a thesis type',
+        selectPrompt: 'Please select a thesis type',
+    },
 };

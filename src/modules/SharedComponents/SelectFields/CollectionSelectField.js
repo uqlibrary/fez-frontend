@@ -4,7 +4,7 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
 import * as actions from 'actions';
 
-export default function CollectionSelectField(fieldProps) {
+export const CollectionSelectField = fieldProps => {
     const { communityId } = fieldProps;
     const dispatch = useDispatch();
     const itemsList = useSelector(state =>
@@ -23,13 +23,17 @@ export default function CollectionSelectField(fieldProps) {
     return (
         <NewGenericSelectField
             disabled={itemsLoading || fieldProps.disabled}
+            displayEmpty={itemsLoading} // display loading prompt while items are loading
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
             itemsList={itemsList}
             itemsLoading={itemsLoading}
             onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value || -1}
+            value={fieldProps.input.value || ''}
             {...fieldProps}
         />
     );
-}
+};
+
+CollectionSelectField.displayName = 'CollectionSelectField';
+export default CollectionSelectField;

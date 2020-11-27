@@ -265,51 +265,51 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
 export const THESIS_SUBTYPES = [
     {
         value: 'B.A. Thesis',
-        label: 'B.A. Thesis',
+        text: 'B.A. Thesis',
     },
     {
         value: 'B.Sc Thesis',
-        label: 'B.Sc Thesis',
+        text: 'B.Sc Thesis',
     },
     {
         value: "Bachelor's Thesis",
-        label: "Bachelor's Thesis",
+        text: "Bachelor's Thesis",
     },
     {
         value: 'Higher Doctorate',
-        label: 'Higher Doctorate',
+        text: 'Higher Doctorate',
     },
     {
         value: 'Honours Thesis',
-        label: 'Honours Thesis',
+        text: 'Honours Thesis',
     },
     {
         value: 'M.A. Thesis',
-        label: 'M.A. Thesis',
+        text: 'M.A. Thesis',
     },
     {
         value: 'M.Sc Thesis',
-        label: 'M.Sc Thesis',
+        text: 'M.Sc Thesis',
     },
     {
         value: "Master's Thesis",
-        label: "Master's Thesis",
+        text: "Master's Thesis",
     },
     {
         value: 'MPhil Thesis',
-        label: 'MPhil Thesis',
+        text: 'MPhil Thesis',
     },
     {
         value: 'Other',
-        label: 'Other',
+        text: 'Other',
     },
     {
         value: 'PhD Thesis',
-        label: 'PhD Thesis',
+        text: 'PhD Thesis',
     },
     {
         value: 'Professional Doctorate',
-        label: 'Professional Doctorate',
+        text: 'Professional Doctorate',
     },
 ];
 
@@ -547,10 +547,6 @@ export const publicationTypes = (components, isAdmin = false) => ({
 });
 
 export const THESIS_SUBMISSION_SUBTYPES = [
-    {
-        value: undefined,
-        text: 'Select a thesis type',
-    },
     {
         value: 'MPhil Thesis',
         text: 'MPhil Thesis',

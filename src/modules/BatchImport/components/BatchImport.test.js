@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, waitFor } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, waitForElementToBeRemoved, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
 import * as BatchImportActions from 'actions/batchImport';
 
@@ -43,17 +43,15 @@ describe('BatchImport Component', () => {
 
         const { getByTestId, getByText } = setup();
 
-        await waitFor(() => getByText('Please select a community'));
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
 
         fireEvent.mouseDown(getByTestId('community-pid-select'));
         fireEvent.click(getByText('Testing community'));
 
-        await waitFor(() => getByText('Please select a collection'));
+        await waitForElementToBeRemoved(() => getByText('Loading collections...'));
 
         fireEvent.mouseDown(getByTestId('collection-pid-select'));
         fireEvent.click(getByText('Tested collection (Administrators)'));
-
-        await waitFor(() => getByText('Please select a directory'));
 
         fireEvent.mouseDown(getByTestId('doc-type-id-select'));
         fireEvent.click(getByText('Design'));
@@ -106,17 +104,15 @@ describe('BatchImport Component', () => {
 
         const { getByTestId, getByText } = setup();
 
-        await waitFor(() => getByText('Please select a community'));
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
 
         fireEvent.mouseDown(getByTestId('community-pid-select'));
         fireEvent.click(getByText('Testing community'));
 
-        await waitFor(() => getByText('Please select a collection'));
+        await waitForElementToBeRemoved(() => getByText('Loading collections...'));
 
         fireEvent.mouseDown(getByTestId('collection-pid-select'));
         fireEvent.click(getByText('Tested collection (Administrators)'));
-
-        await waitFor(() => getByText('Please select a directory'));
 
         fireEvent.mouseDown(getByTestId('doc-type-id-select'));
         fireEvent.click(getByText('Design'));

@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OAStatusTypeField component should render default view 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-oa-status-type"
-  hideLabel={false}
   itemsList={
     Array [
       Object {
@@ -36,17 +35,17 @@ exports[`OAStatusTypeField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={null}
+  selectPrompt="Please select an option"
+  value=""
 />
 `;
 
 exports[`OAStatusTypeField component should render immutable list as selected value with given field props 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-oa-status-type"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -93,6 +92,7 @@ exports[`OAStatusTypeField component should render immutable list as selected va
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
+  selectPrompt="Please select an option"
   value={
     Array [
       "One",
@@ -103,13 +103,12 @@ exports[`OAStatusTypeField component should render immutable list as selected va
 `;
 
 exports[`OAStatusTypeField component should render when given a default value field props 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   defaultValue="afr"
   error={false}
   errorText=""
   genericSelectFieldId="rek-oa-status-type"
-  hideLabel={false}
   itemsList={
     Array [
       Object {
@@ -141,6 +140,7 @@ exports[`OAStatusTypeField component should render when given a default value fi
     }
   }
   placeholder="Test placeholder"
+  selectPrompt="Please select an option"
   value={
     Array [
       "afr",
@@ -150,12 +150,11 @@ exports[`OAStatusTypeField component should render when given a default value fi
 `;
 
 exports[`OAStatusTypeField component should render with given field props 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   canUnselect={true}
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-oa-status-type"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -202,6 +201,7 @@ exports[`OAStatusTypeField component should render with given field props 1`] = 
   }
   onChange={[MockFunction]}
   placeholder="Test placeholder"
+  selectPrompt="Please select an option"
   value={
     Array [
       "One",

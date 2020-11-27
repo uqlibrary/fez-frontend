@@ -7,7 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { OrgNameField, OrgUnitNameField, FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 
@@ -91,11 +91,11 @@ export default class ThesisForm extends Component {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
-                                    component={ThesisSubtypeField}
+                                    component={ThesisSubtypeSelectField}
                                     name="rek_genre_type"
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
-                                    locale={txt.information.fieldLabels.thesisType}
+                                    {...txt.information.fieldLabels.thesisType}
                                     required
                                 />
                             </Grid>

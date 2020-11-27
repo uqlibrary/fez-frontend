@@ -9,12 +9,11 @@ export default function OAStatusField(fieldProps) {
         <NewGenericSelectField
             canUnselect
             itemsList={OA_STATUS}
-            hideLabel={false}
             locale={{ label: fieldProps.label }}
             value={
                 input instanceof Immutable.List
                     ? input.toJS()
-                    : input || (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || -1
+                    : input || (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || ''
             }
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
