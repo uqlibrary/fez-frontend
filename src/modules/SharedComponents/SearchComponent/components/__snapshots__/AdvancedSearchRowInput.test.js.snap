@@ -546,11 +546,12 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
     }
   }
 >
-  <Connect(GenericSelectField)
+  <UnpublishedStatusField
     autoWidth={false}
     displayEmpty={false}
     error={true}
     errorText="This field is required"
+    genericSelectFieldId="rek-status"
     hideLabel={true}
     onChange={[Function]}
     selectedValue={null}
@@ -609,11 +610,12 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
     }
   }
 >
-  <Connect(GenericSelectField)
+  <UnpublishedStatusField
     autoWidth={false}
     displayEmpty={false}
     error={true}
     errorText="This field is required"
+    genericSelectFieldId="rek-status"
     hideLabel={true}
     onChange={[Function]}
     selectedValue={null}

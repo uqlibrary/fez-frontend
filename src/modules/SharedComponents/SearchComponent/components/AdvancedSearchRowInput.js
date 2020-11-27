@@ -8,8 +8,7 @@ import {
     OrgUnitNameField,
     CollectionField,
 } from 'modules/SharedComponents/LookupFields';
-import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
-import { UnpublishedStatusField } from './Fields/UnpublishedStatusField';
+import { ThesisSubtypeSelectField, UnpublishedStatusField } from 'modules/SharedComponents/SelectFields';
 
 const runValidationRules = (inputField, value) => {
     const rules = !!inputField.validation && inputField.validation;
@@ -139,6 +138,7 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'StatusLookup':
             return {
                 ...selectDefaultProps,
+                genericSelectFieldId: 'rek-status',
                 autoWidth: false,
                 hideLabel: true,
                 displayEmpty: false,
