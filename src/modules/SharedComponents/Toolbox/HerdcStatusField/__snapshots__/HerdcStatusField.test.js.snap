@@ -22,7 +22,7 @@ exports[`HerdcStatusField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={-1}
+  value=""
 />
 `;
 
@@ -99,7 +99,7 @@ exports[`HerdcStatusField component should render when given a default value fie
     }
   }
   placeholder="Test placeholder"
-  value={-1}
+  value=""
 />
 `;
 

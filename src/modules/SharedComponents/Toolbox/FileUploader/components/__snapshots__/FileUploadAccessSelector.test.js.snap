@@ -465,6 +465,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
           >
             <NewGenericSelectField
               disabled={true}
+              displayEmpty={true}
               error={true}
               errorText="This field is required"
               formHelperTextProps={
@@ -501,7 +502,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   />,
                 }
               }
-              value={-1}
+              value=""
             >
               <WithStyles(ForwardRef(FormControl))
                 error={true}
@@ -539,6 +540,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       }
                       className=""
                       disabled={true}
+                      displayEmpty={true}
                       input={
                         <WithStyles(ForwardRef(Input))
                           classes={
@@ -558,7 +560,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       }
                       multiple={false}
                       onChange={[Function]}
-                      value={-1}
+                      value=""
                     >
                       <ForwardRef(Select)
                         MenuProps={
@@ -589,6 +591,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           }
                         }
                         disabled={true}
+                        displayEmpty={true}
                         input={
                           <WithStyles(ForwardRef(Input))
                             classes={
@@ -608,7 +611,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         }
                         multiple={false}
                         onChange={[Function]}
-                        value={-1}
+                        value=""
                       >
                         <WithStyles(ForwardRef(Input))
                           className=""
@@ -694,7 +697,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                         "display": "block",
                                       }
                                     }
-                                    value={-1}
+                                    value=""
                                   >
                                     Select access conditions
                                   </WithStyles(ForwardRef(MenuItem))>,
@@ -749,7 +752,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "selectMenu": "MuiSelect-selectMenu",
                               },
                               "data-testid": "undefined-input",
-                              "displayEmpty": false,
+                              "displayEmpty": true,
                               "id": "undefined-input",
                               "labelId": undefined,
                               "multiple": false,
@@ -762,7 +765,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                             }
                           }
                           onChange={[Function]}
-                          value={-1}
+                          value=""
                         >
                           <ForwardRef(Input)
                             className=""
@@ -861,7 +864,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           "display": "block",
                                         }
                                       }
-                                      value={-1}
+                                      value=""
                                     >
                                       Select access conditions
                                     </WithStyles(ForwardRef(MenuItem))>,
@@ -916,7 +919,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "selectMenu": "MuiSelect-selectMenu",
                                 },
                                 "data-testid": "undefined-input",
-                                "displayEmpty": false,
+                                "displayEmpty": true,
                                 "id": "undefined-input",
                                 "labelId": undefined,
                                 "multiple": false,
@@ -929,7 +932,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               }
                             }
                             onChange={[Function]}
-                            value={-1}
+                            value=""
                           >
                             <WithStyles(ForwardRef(InputBase))
                               className=""
@@ -1028,7 +1031,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             "display": "block",
                                           }
                                         }
-                                        value={-1}
+                                        value=""
                                       >
                                         Select access conditions
                                       </WithStyles(ForwardRef(MenuItem))>,
@@ -1083,7 +1086,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
                                   "data-testid": "undefined-input",
-                                  "displayEmpty": false,
+                                  "displayEmpty": true,
                                   "id": "undefined-input",
                                   "labelId": undefined,
                                   "multiple": false,
@@ -1098,7 +1101,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                               multiline={false}
                               onChange={[Function]}
                               type="text"
-                              value={-1}
+                              value=""
                             >
                               <ForwardRef(InputBase)
                                 className=""
@@ -1201,7 +1204,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                               "display": "block",
                                             }
                                           }
-                                          value={-1}
+                                          value=""
                                         >
                                           Select access conditions
                                         </WithStyles(ForwardRef(MenuItem))>,
@@ -1256,7 +1259,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "selectMenu": "MuiSelect-selectMenu",
                                     },
                                     "data-testid": "undefined-input",
-                                    "displayEmpty": false,
+                                    "displayEmpty": true,
                                     "id": "undefined-input",
                                     "labelId": undefined,
                                     "multiple": false,
@@ -1271,7 +1274,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 multiline={false}
                                 onChange={[Function]}
                                 type="text"
-                                value={-1}
+                                value=""
                               >
                                 <div
                                   className="MuiInputBase-root MuiInput-root Mui-disabled Mui-disabled Mui-error Mui-error MuiInputBase-formControl MuiInput-formControl"
@@ -1322,7 +1325,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     }
                                     data-testid="undefined-input"
                                     disabled={true}
-                                    displayEmpty={false}
+                                    displayEmpty={true}
                                     id="undefined-input"
                                     inputRef={[Function]}
                                     multiple={false}
@@ -1331,7 +1334,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     onChange={[Function]}
                                     onFocus={[Function]}
                                     required={true}
-                                    value={-1}
+                                    value=""
                                     variant="standard"
                                   >
                                     <div
@@ -1356,7 +1359,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       id="undefined-input"
                                       onAnimationStart={[Function]}
                                       type="hidden"
-                                      value={-1}
+                                      value=""
                                     />
                                     <ForwardRef
                                       className="MuiSelect-icon Mui-disabled"
@@ -1607,7 +1610,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                         id="undefined-helper-text"
                       >
                         <p
-                          className="MuiFormHelperText-root Mui-error MuiFormHelperText-filled Mui-required"
+                          className="MuiFormHelperText-root Mui-error Mui-required"
                           data-testid="undefined-helper-text"
                           id="undefined-helper-text"
                         >
@@ -2092,6 +2095,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
           >
             <NewGenericSelectField
               disabled={true}
+              displayEmpty={true}
               error={false}
               errorText="This field is required"
               formHelperTextProps={
@@ -2166,6 +2170,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       }
                       className=""
                       disabled={true}
+                      displayEmpty={true}
                       input={
                         <WithStyles(ForwardRef(Input))
                           classes={
@@ -2216,6 +2221,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                           }
                         }
                         disabled={true}
+                        displayEmpty={true}
                         input={
                           <WithStyles(ForwardRef(Input))
                             classes={
@@ -2321,7 +2327,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                         "display": "block",
                                       }
                                     }
-                                    value={-1}
+                                    value=""
                                   >
                                     Select access conditions
                                   </WithStyles(ForwardRef(MenuItem))>,
@@ -2376,7 +2382,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                 "selectMenu": "MuiSelect-selectMenu",
                               },
                               "data-testid": "undefined-input",
-                              "displayEmpty": false,
+                              "displayEmpty": true,
                               "id": "undefined-input",
                               "labelId": undefined,
                               "multiple": false,
@@ -2488,7 +2494,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                           "display": "block",
                                         }
                                       }
-                                      value={-1}
+                                      value=""
                                     >
                                       Select access conditions
                                     </WithStyles(ForwardRef(MenuItem))>,
@@ -2543,7 +2549,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                   "selectMenu": "MuiSelect-selectMenu",
                                 },
                                 "data-testid": "undefined-input",
-                                "displayEmpty": false,
+                                "displayEmpty": true,
                                 "id": "undefined-input",
                                 "labelId": undefined,
                                 "multiple": false,
@@ -2655,7 +2661,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                             "display": "block",
                                           }
                                         }
-                                        value={-1}
+                                        value=""
                                       >
                                         Select access conditions
                                       </WithStyles(ForwardRef(MenuItem))>,
@@ -2710,7 +2716,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     "selectMenu": "MuiSelect-selectMenu",
                                   },
                                   "data-testid": "undefined-input",
-                                  "displayEmpty": false,
+                                  "displayEmpty": true,
                                   "id": "undefined-input",
                                   "labelId": undefined,
                                   "multiple": false,
@@ -2828,7 +2834,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                               "display": "block",
                                             }
                                           }
-                                          value={-1}
+                                          value=""
                                         >
                                           Select access conditions
                                         </WithStyles(ForwardRef(MenuItem))>,
@@ -2883,7 +2889,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                       "selectMenu": "MuiSelect-selectMenu",
                                     },
                                     "data-testid": "undefined-input",
-                                    "displayEmpty": false,
+                                    "displayEmpty": true,
                                     "id": "undefined-input",
                                     "labelId": undefined,
                                     "multiple": false,
@@ -2949,7 +2955,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                     }
                                     data-testid="undefined-input"
                                     disabled={true}
-                                    displayEmpty={false}
+                                    displayEmpty={true}
                                     id="undefined-input"
                                     inputRef={[Function]}
                                     multiple={false}
@@ -3225,6 +3231,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
 
 exports[`Component FileUploadAccessSelector should render with default setup 1`] = `
 <Memo(NewGenericSelectField)
+  displayEmpty={true}
   error={true}
   errorText="This field is required"
   formHelperTextProps={
@@ -3261,12 +3268,13 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
       />,
     }
   }
-  value={-1}
+  value=""
 />
 `;
 
 exports[`Component FileUploadAccessSelector should render with default setup for admin 1`] = `
 <Memo(NewGenericSelectField)
+  displayEmpty={true}
   error={true}
   errorText="This field is required"
   formHelperTextProps={
@@ -3307,7 +3315,7 @@ exports[`Component FileUploadAccessSelector should render with default setup for
       />,
     }
   }
-  value={-1}
+  value=""
 />
 `;
 
@@ -3343,6 +3351,7 @@ exports[`Component FileUploadAccessSelector should render with styles 1`] = `
 
 exports[`Component FileUploadAccessSelector should render with value 1`] = `
 <Memo(NewGenericSelectField)
+  displayEmpty={true}
   error={false}
   errorText="This field is required"
   formHelperTextProps={

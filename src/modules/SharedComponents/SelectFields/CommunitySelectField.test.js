@@ -7,6 +7,7 @@ import * as SearchActions from 'actions/search';
 function setup(testProps = {}) {
     const props = {
         genericSelectFieldId: 'community-pid',
+        displayEmpty: true,
         ...testProps,
     };
 

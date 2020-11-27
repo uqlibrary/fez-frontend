@@ -73,7 +73,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                                 error={!!meta.error}
                                 errorText={meta.error}
                                 onChange={input.onChange}
-                                value={input.value || -1}
+                                value={input.value || ''}
                                 {...rest}
                             />
                         )}

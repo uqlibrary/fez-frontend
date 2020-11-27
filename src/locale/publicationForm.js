@@ -557,7 +557,7 @@ export default {
                     year: 'Year',
                 },
                 thesisType: {
-                    label: 'Thesis type',
+                    ...selectFields.thesisSubtype,
                 },
                 author: {
                     label: 'Author name',

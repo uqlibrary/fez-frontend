@@ -48,13 +48,13 @@ export const NewGenericSelectField = ({
     const classes = useStyles();
 
     const promptMenuItem = {
-        value: -1,
+        value: '',
         text: selectPrompt,
         disabled: true,
     };
 
     const loadingMenuItem = {
-        value: -1,
+        value: '',
         text: loadingHint,
         disabled: true,
     };

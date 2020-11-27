@@ -39,6 +39,7 @@ import {
     RelatedDatasetAndPublicationListField,
     SeriesField,
 } from 'modules/SharedComponents/LookupFields';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
@@ -60,7 +61,7 @@ import {
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
 import { OAStatusTypeField } from 'modules/SharedComponents/Toolbox/OAStatusTypeField';
-import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
@@ -1112,13 +1113,14 @@ export default {
             },
         },
         rek_genre_type: {
-            component: ThesisSubtypeField,
+            component: ThesisSubtypeSelectField,
             componentProps: {
                 name: 'bibliographicSection.rek_genre_type',
                 fullWidth: true,
                 label: 'Thesis type',
                 required: true,
                 validate: [validation.required],
+                genericSelectFieldId: 'rek-genre-type',
             },
         },
         geoCoordinates: {

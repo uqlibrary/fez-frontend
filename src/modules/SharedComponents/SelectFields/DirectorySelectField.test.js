@@ -7,6 +7,7 @@ import * as SearchActions from 'actions/batchImport';
 function setup(testProps = {}) {
     const props = {
         genericSelectFieldId: 'directory',
+        displayEmpty: true,
         ...testProps,
     };
 

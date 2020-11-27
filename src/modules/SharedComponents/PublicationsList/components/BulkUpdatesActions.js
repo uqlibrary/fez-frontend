@@ -56,11 +56,12 @@ export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
             )}
             <NewGenericSelectField
                 hideLabel
+                displayEmpty
                 onChange={handleChange}
                 itemsList={Object.values(BULK_UPDATES_ACTIONS)}
                 genericSelectFieldId="bulk-updates-actions"
                 selectPrompt={txt.selectPrompt}
-                value={-1}
+                value={''}
                 selectProps={{
                     style: { marginTop: -8 },
                 }}

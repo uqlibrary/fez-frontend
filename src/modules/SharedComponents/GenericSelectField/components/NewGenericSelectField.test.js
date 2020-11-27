@@ -4,7 +4,7 @@ import NewGenericSelectField from './NewGenericSelectField';
 
 function setup(testProps = {}) {
     const props = {
-        value: testProps.multiple ? [-1] : -1,
+        value: testProps.multiple ? [] : '',
         selectPrompt: 'Please select an option',
         itemsLoading: false,
         loadingHint: 'Loading items...',
@@ -32,23 +32,7 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-        });
-
-        expect(getByTestId('rek-test-select')).toHaveTextContent('Please select an option');
-    });
-
-    it('should render select field and options as plain options', () => {
-        const { getByTestId } = setup({
-            itemsList: [
-                {
-                    text: 'Option 1',
-                    value: 1,
-                },
-                {
-                    text: 'Option 2',
-                    value: 2,
-                },
-            ],
+            displayEmpty: true,
         });
 
         expect(getByTestId('rek-test-select')).toHaveTextContent('Please select an option');
@@ -154,6 +138,7 @@ describe('NewGenericSelectField', () => {
             loadItemsList: loadItemsList,
             itemsLoading: true,
             itemsList: [],
+            displayEmpty: true,
         });
 
         expect(getByTestId('rek-test-select')).toHaveTextContent('Loading items...');

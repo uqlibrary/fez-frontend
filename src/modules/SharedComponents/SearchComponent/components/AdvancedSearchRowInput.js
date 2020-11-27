@@ -8,7 +8,7 @@ import {
     OrgUnitNameField,
     CollectionField,
 } from 'modules/SharedComponents/LookupFields';
-import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { UnpublishedStatusField } from './Fields/UnpublishedStatusField';
 
 const runValidationRules = (inputField, value) => {
@@ -30,7 +30,7 @@ const getInputComponent = type => {
         case 'PublisherLookup':
             return PublisherField;
         case 'ThesisTypeLookup':
-            return ThesisSubtypeField;
+            return ThesisSubtypeSelectField;
         case 'CollectionsLookup':
             return CollectionField;
         case 'AuthorIdLookup':
@@ -114,10 +114,20 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'ThesisTypeLookup':
             return {
                 ...selectDefaultProps,
+                value: value.length > 0 ? value : [],
                 multiple: inputField.multiple,
                 autoWidth: false,
                 hideLabel: true,
-                displayEmpty: true,
+                displayEmpty: value === '' || value.length === 0,
+                genericSelectFieldId: 'rek-genre-type',
+                selectPrompt: inputField.selectPrompt,
+                ...(value === '' || value.length === 0
+                    ? {
+                          selectProps: {
+                              renderValue /* istanbul ignore next */: () => inputField.selectPrompt,
+                          },
+                      }
+                    : {}),
             };
         case 'CollectionsLookup':
             return {

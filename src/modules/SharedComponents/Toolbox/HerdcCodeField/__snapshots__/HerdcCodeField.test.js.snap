@@ -295,7 +295,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={-1}
+  value=""
 />
 `;
 
@@ -460,7 +460,7 @@ exports[`HerdcCodeField component should render when given a default value field
     }
   }
   placeholder="Test placeholder"
-  value={-1}
+  value=""
 />
 `;
 
