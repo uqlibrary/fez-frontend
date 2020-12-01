@@ -1,6 +1,8 @@
 import React from 'react';
 import AccessSelectorField from './AccessSelectorField';
 import { render, fireEvent, WithReduxStore } from 'test-utils';
+import { DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config/general';
+import { FILE_ACCESS_OPTIONS } from 'modules/SharedComponents/Toolbox/FileUploader';
 
 function setup(testProps = {}) {
     const props = {
@@ -16,7 +18,7 @@ function setup(testProps = {}) {
 }
 
 describe('AccessSelectorField', () => {
-    it('should render status select field for redux form', () => {
+    it('should render access condtions for Data collection', () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, getByText, queryByText } = setup({
@@ -26,44 +28,44 @@ describe('AccessSelectorField', () => {
             meta: {
                 error: 'This field is required',
             },
-            selectPrompt: 'Please select a status',
+            selectPrompt: 'Please select a access condition',
+            itemsList: DATASET_ACCESS_CONDITIONS_OPTIONS,
+            formHelperTextProps: {},
         });
 
         expect(getByTestId('rek-file-access-condition-helper-text')).toBeInTheDocument();
         expect(getByTestId('rek-file-access-condition-helper-text')).toHaveTextContent('This field is required');
-        expect(queryByText('Please select a status')).not.toBeInTheDocument();
+        expect(queryByText('Please select a access condition')).not.toBeInTheDocument();
 
         fireEvent.mouseDown(getByTestId('rek-file-access-condition-select'));
-        fireEvent.click(getByText('In Review'));
+        fireEvent.click(getByText('Open Access'));
 
-        expect(onChangeFn).toHaveBeenCalledWith('In Review');
+        expect(onChangeFn).toHaveBeenCalledWith(453619);
     });
 
-    it('should render status select field for advanced search', () => {
+    it('should render access conditions for file uploader', () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, getByText } = setup({
             onChange: onChangeFn,
             error: 'This field is required',
-            selectPrompt: 'Please select a status',
+            selectPrompt: 'Please select a access condition',
             displayEmpty: true,
             hideLabel: true,
-            selectProps: {
-                renderValue: () => 'Please select a status',
-            },
+            itemsList: FILE_ACCESS_OPTIONS,
         });
 
         expect(getByTestId('rek-file-access-condition-helper-text')).toBeInTheDocument();
         expect(getByTestId('rek-file-access-condition-helper-text')).toHaveTextContent('This field is required');
-        expect(getByText('Please select a status')).toBeInTheDocument();
+        expect(getByText('Please select a access condition')).toBeInTheDocument();
 
         fireEvent.mouseDown(getByTestId('rek-file-access-condition-select'));
-        fireEvent.click(getByText('In Review'));
+        fireEvent.click(getByText('Open Access'));
 
-        expect(onChangeFn).toHaveBeenCalledWith('In Review');
+        expect(onChangeFn).toHaveBeenCalledWith(5);
     });
 
-    it('should render given items list as statuss', () => {
+    it('should render given items list as access conditions', () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, getByText, queryByText } = setup({
@@ -73,7 +75,7 @@ describe('AccessSelectorField', () => {
             meta: {
                 error: 'This field is required',
             },
-            selectPrompt: 'Please select a status',
+            selectPrompt: 'Please select a access condition',
             itemsList: [{ value: 'Test 1', text: 'Test 1' }],
         });
 

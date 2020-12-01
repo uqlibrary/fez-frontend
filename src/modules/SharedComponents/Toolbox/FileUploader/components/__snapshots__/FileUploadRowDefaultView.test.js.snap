@@ -100,11 +100,11 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         itemsList={
           Array [
             Object {
-              "text": "Open access",
+              "text": "Open Access",
               "value": 5,
             },
             Object {
-              "text": "Closed access",
+              "text": "Closed Access",
               "value": 1,
             },
           ]
@@ -210,12 +210,126 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         itemsList={
           Array [
             Object {
-              "text": "Open access",
+              "text": "Open Access",
               "value": 5,
             },
             Object {
-              "text": "Closed access",
+              "text": "Closed Access",
               "value": 1,
+            },
+          ]
+        }
+        onChange={[MockFunction]}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value=""
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(ForwardRef(Typography))
+        data-testid="dsi-embargo-date-0"
+        gutterBottom={true}
+        variant="body2"
+      >
+        No date required
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      className=""
+      item={true}
+      xs={1}
+    >
+      <Connect(FileUploadRowStatus)
+        disabled={false}
+        fileUploadRowStatusId="dsi-dsid-0"
+        name="test.pdf"
+        onDelete={[MockFunction]}
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</div>
+`;
+
+exports[`Component FileUploadRowDefaultView should render default view for admin 1`] = `
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 4,
+    }
+  }
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={6}
+      sm={5}
+    >
+      <WithStyles(ForwardRef(Typography))
+        data-testid="dsi-dsid-0"
+        gutterBottom={true}
+        noWrap={true}
+        variant="body2"
+      >
+        test.pdf
+         (
+        100 MB
+        )
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <AccessSelectorField
+        accessSelectorFieldId="dsi-open-access-0"
+        autoFocus={false}
+        disabled={false}
+        displayEmpty={true}
+        error="This field is required"
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+            Object {
+              "text": "Inherit from parent collection",
+              "value": 99,
             },
           ]
         }
@@ -350,11 +464,11 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         itemsList={
           Array [
             Object {
-              "text": "Open access",
+              "text": "Open Access",
               "value": 5,
             },
             Object {
-              "text": "Closed access",
+              "text": "Closed Access",
               "value": 1,
             },
           ]

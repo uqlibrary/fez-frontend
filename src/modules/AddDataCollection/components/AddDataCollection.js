@@ -15,7 +15,7 @@ import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields'
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
+import { AccessSelectorField } from 'modules/SharedComponents/SelectFields';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
