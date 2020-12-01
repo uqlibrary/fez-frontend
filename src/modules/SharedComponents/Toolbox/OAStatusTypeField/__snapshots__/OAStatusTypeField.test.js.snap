@@ -9,10 +9,6 @@ exports[`OAStatusTypeField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
-      Object {
         "text": "Green",
         "value": 454120,
       },
@@ -57,10 +53,6 @@ exports[`OAStatusTypeField component should render immutable list as selected va
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "Green",
         "value": 454120,
@@ -112,10 +104,6 @@ exports[`OAStatusTypeField component should render when given a default value fi
   itemsList={
     Array [
       Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
-      Object {
         "text": "Green",
         "value": 454120,
       },
@@ -166,10 +154,6 @@ exports[`OAStatusTypeField component should render with given field props 1`] = 
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "Green",
         "value": 454120,

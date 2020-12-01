@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import { PublicationSearchForm } from 'modules/SharedComponents/PublicationSearchForm';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
 export default class FindRecords extends PureComponent {

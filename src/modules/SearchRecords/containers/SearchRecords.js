@@ -3,13 +3,13 @@ import { bindActionCreators } from 'redux';
 import SearchRecords from '../components/SearchRecords';
 import * as actions from 'actions';
 import { withRouter } from 'react-router-dom';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 const mapStateToProps = (state, props) => ({
     ...state.get('searchRecordsReducer'),
     ...state.get('exportPublicationsReducer'),
     canUseExport: true,
-    isUnpublishedBufferPage: props.location.pathname === routes.pathConfig.admin.unpublished,
+    isUnpublishedBufferPage: props.location.pathname === pathConfig.admin.unpublished,
     isAdmin:
         !!state &&
         !!state.get('accountReducer') &&

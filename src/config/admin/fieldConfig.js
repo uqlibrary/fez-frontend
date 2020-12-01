@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import Immutable from 'immutable';
-import { validation } from 'config';
+import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import {
@@ -26,7 +26,7 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
-import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
+// import { AccessSelectorField } from 'modules/SharedComponents/SelectFields';
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
@@ -39,7 +39,7 @@ import {
     RelatedDatasetAndPublicationListField,
     SeriesField,
 } from 'modules/SharedComponents/LookupFields';
-import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
+import { AccessSelectorField, ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
@@ -1139,6 +1139,8 @@ export default {
                 id: 'data-collection-access-selector',
                 required: true,
                 validate: [validation.required],
+                itemsList: DATASET_ACCESS_CONDITIONS_OPTIONS,
+                genericSelectFieldId: 'rek-access-conditions',
                 ...formLocale.addDataset.information.accessAndLicensing.fieldLabels.accessConditions,
             },
         },

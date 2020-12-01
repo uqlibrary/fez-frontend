@@ -91,11 +91,47 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         }
       }
     >
-      <WithStyles(FileUploadAccessSelector)
+      <AccessSelectorField
+        accessSelectorFieldId="dsi-open-access-0"
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
         value={1}
       />
     </WithStyles(ForwardRef(ListItemText))>
@@ -202,12 +238,48 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         }
       }
     >
-      <WithStyles(FileUploadAccessSelector)
+      <AccessSelectorField
+        accessSelectorFieldId="dsi-open-access-0"
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error="This field is required"
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={null}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value=""
       />
     </WithStyles(ForwardRef(ListItemText))>
   </WithStyles(ForwardRef(ListItem))>
@@ -343,11 +415,47 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         }
       }
     >
-      <WithStyles(FileUploadAccessSelector)
+      <AccessSelectorField
+        accessSelectorFieldId="dsi-open-access-0"
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
         value={5}
       />
     </WithStyles(ForwardRef(ListItemText))>

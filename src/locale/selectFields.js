@@ -22,4 +22,9 @@ export const selectFields = {
         ariaLabel: 'Select a thesis type',
         selectPrompt: 'Please select a thesis type',
     },
+    accessCondition: {
+        label: 'Access conditions',
+        selectPrompt: 'Select access conditions',
+        errorMessage: 'This field is required',
+    },
 };

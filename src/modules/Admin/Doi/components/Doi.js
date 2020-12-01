@@ -11,7 +11,7 @@ import pagesLocale from 'locale/pages';
 import viewRecordLocale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
 import { validation } from 'config';
 

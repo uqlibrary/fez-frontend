@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 export default class Masquerade extends PureComponent {
     static propTypes = {
@@ -29,7 +29,7 @@ export default class Masquerade extends PureComponent {
             loading: true,
         });
 
-        const redirectUrl = `${window.location.protocol}//${window.location.hostname}${routes.pathConfig.dashboard}`;
+        const redirectUrl = `${window.location.protocol}//${window.location.hostname}${pathConfig.dashboard}`;
         window.location.assign(
             `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`,
         );

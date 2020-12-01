@@ -16,7 +16,7 @@ import { CommunitySelectField } from 'modules/SharedComponents/SelectFields';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 export default class CollectionForm extends Component {
     static propTypes = {

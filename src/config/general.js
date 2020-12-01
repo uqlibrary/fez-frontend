@@ -730,8 +730,6 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
     { value: 'Technician' },
 ];
 
-export const OPEN_ACCESS_ID = 453619;
-export const MEDIATED_ACCESS_ID = 453618;
 export const CURRENT_LICENCES = [
     {
         value: 453701,
@@ -1460,7 +1458,6 @@ export const OA_STATUS = [
 ];
 
 export const OA_STATUS_TYPE = [
-    { value: null, text: 'Please choose an option' },
     { value: 454120, text: 'Green' },
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
@@ -1478,3 +1475,16 @@ export const UQ_DOI_PREFIX = '10.14264/';
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
 
 export const THESIS_UPLOAD_RETRIES = 5;
+
+export const OPEN_ACCESS_ID = 453619;
+export const MEDIATED_ACCESS_ID = 453618;
+export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
+    {
+        value: OPEN_ACCESS_ID,
+        text: 'Open Access',
+    },
+    {
+        value: MEDIATED_ACCESS_ID,
+        text: 'Mediated Access',
+    },
+];

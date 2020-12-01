@@ -12,7 +12,7 @@ import { OrgNameField, OrgUnitNameField, FieldOfResearchListField } from 'module
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 
 import { validation } from 'config';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 

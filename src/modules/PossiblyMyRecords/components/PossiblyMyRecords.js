@@ -15,7 +15,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { locale } from 'locale';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';

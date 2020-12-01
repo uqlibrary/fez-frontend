@@ -15,7 +15,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 export default class CommunityForm extends Component {
     static propTypes = {

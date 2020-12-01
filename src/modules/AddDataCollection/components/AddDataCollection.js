@@ -24,7 +24,7 @@ import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import DepositAgreementField from './DepositAgreementField';
 
-import { routes, validation } from 'config';
+import { pathConfig, validation } from 'config';
 import { CURRENT_LICENCES } from 'config/general';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
@@ -77,7 +77,7 @@ export default class AddDataCollection extends Component {
     _navigateToMyDatasets = () => {
         this.props.resetForm();
         this.props.actions.clearNewRecord();
-        this.props.history.push(routes.pathConfig.dataset.mine);
+        this.props.history.push(pathConfig.dataset.mine);
     };
 
     _restartWorkflow = () => {

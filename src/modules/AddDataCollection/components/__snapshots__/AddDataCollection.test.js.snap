@@ -1247,6 +1247,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -1260,7 +1265,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "errorMessage": "This field is required",
                       "options": Array [
                         Object {
                           "text": "Open Access",
@@ -1271,10 +1275,14 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                           "value": 1,
                         },
                       ],
-                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -2600,6 +2608,11 @@ exports[`AddDataCollection test should render component with a valid collection 
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -2613,7 +2626,6 @@ exports[`AddDataCollection test should render component with a valid collection 
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "errorMessage": "This field is required",
                       "options": Array [
                         Object {
                           "text": "Open Access",
@@ -2624,10 +2636,14 @@ exports[`AddDataCollection test should render component with a valid collection 
                           "value": 1,
                         },
                       ],
-                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -3949,6 +3965,11 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -3962,7 +3983,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "errorMessage": "This field is required",
                       "options": Array [
                         Object {
                           "text": "Open Access",
@@ -3973,10 +3993,14 @@ exports[`AddDataCollection test should render component with an invalid collecti
                           "value": 1,
                         },
                       ],
-                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -5298,6 +5322,11 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -5311,7 +5340,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "errorMessage": "This field is required",
                       "options": Array [
                         Object {
                           "text": "Open Access",
@@ -5322,10 +5350,14 @@ exports[`AddDataCollection test should render data set form 1`] = `
                           "value": 1,
                         },
                       ],
-                      "selectPrompt": "Select access conditions",
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",

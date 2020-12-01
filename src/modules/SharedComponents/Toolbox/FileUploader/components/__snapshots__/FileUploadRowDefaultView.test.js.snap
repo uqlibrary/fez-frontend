@@ -85,11 +85,47 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       md={3}
       sm={4}
     >
-      <WithStyles(FileUploadAccessSelector)
+      <AccessSelectorField
+        accessSelectorFieldId="dsi-open-access-0"
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
         value={1}
       />
     </WithStyles(ForwardRef(Grid))>
@@ -159,12 +195,48 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       md={3}
       sm={4}
     >
-      <WithStyles(FileUploadAccessSelector)
+      <AccessSelectorField
+        accessSelectorFieldId="dsi-open-access-0"
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error="This field is required"
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={null}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value=""
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -201,8 +273,12 @@ exports[`Component FileUploadRowDefaultView should render default view with styl
   accessConditionId={null}
   classes={
     Object {
+      "error": "FileUploadRowDefaultView-error-6",
       "icon": "FileUploadRowDefaultView-icon-1",
+      "placeholder": "FileUploadRowDefaultView-placeholder-4",
       "row": "FileUploadRowDefaultView-row-2",
+      "selected": "FileUploadRowDefaultView-selected-5",
+      "selector": "FileUploadRowDefaultView-selector-3",
     }
   }
   disabled={false}
@@ -259,11 +335,47 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       md={3}
       sm={4}
     >
-      <WithStyles(FileUploadAccessSelector)
+      <AccessSelectorField
+        accessSelectorFieldId="dsi-open-access-0"
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
         value={5}
       />
     </WithStyles(ForwardRef(Grid))>
