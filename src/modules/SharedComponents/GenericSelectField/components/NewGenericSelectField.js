@@ -226,4 +226,6 @@ NewGenericSelectField.defaultProps = {
     loadingHint: 'Loading items...',
 };
 
+NewGenericSelectField.displayName = 'NewGenericSelectField';
+
 export default React.memo(NewGenericSelectField);

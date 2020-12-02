@@ -546,13 +546,45 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
     }
   }
 >
-  <UnpublishedStatusField
+  <Memo(NewGenericSelectField)
     autoWidth={false}
     displayEmpty={false}
     error={true}
     errorText="This field is required"
     genericSelectFieldId="rek-status"
     hideLabel={true}
+    itemsList={
+      Array [
+        Object {
+          "text": "Any unpublished",
+          "value": "Any unpublished",
+        },
+        Object {
+          "text": "In Creation",
+          "value": "In Creation",
+        },
+        Object {
+          "text": "In Draft",
+          "value": "In Draft",
+        },
+        Object {
+          "text": "In Review",
+          "value": "In Review",
+        },
+        Object {
+          "text": "Retracted",
+          "value": "Retracted",
+        },
+        Object {
+          "text": "Submitted for Approval",
+          "value": "Submitted for Approval",
+        },
+        Object {
+          "text": "Unpublished",
+          "value": "Unpublished",
+        },
+      ]
+    }
     onChange={[Function]}
     selectedValue={null}
     style={
@@ -610,13 +642,45 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
     }
   }
 >
-  <UnpublishedStatusField
+  <Memo(NewGenericSelectField)
     autoWidth={false}
     displayEmpty={false}
     error={true}
     errorText="This field is required"
     genericSelectFieldId="rek-status"
     hideLabel={true}
+    itemsList={
+      Array [
+        Object {
+          "text": "Any unpublished",
+          "value": "Any unpublished",
+        },
+        Object {
+          "text": "In Creation",
+          "value": "In Creation",
+        },
+        Object {
+          "text": "In Draft",
+          "value": "In Draft",
+        },
+        Object {
+          "text": "In Review",
+          "value": "In Review",
+        },
+        Object {
+          "text": "Retracted",
+          "value": "Retracted",
+        },
+        Object {
+          "text": "Submitted for Approval",
+          "value": "Submitted for Approval",
+        },
+        Object {
+          "text": "Unpublished",
+          "value": "Unpublished",
+        },
+      ]
+    }
     onChange={[Function]}
     selectedValue={null}
     style={

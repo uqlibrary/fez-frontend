@@ -276,7 +276,6 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render correct input props for publication status field', () => {
         const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('UnpublishedStatusField');
             expect(inputProps).toEqual({
                 'aria-label': 'Select status to search for',
                 error: false,
@@ -290,6 +289,36 @@ describe('AdvancedSearchRowInput', () => {
                 selectedValue: [],
                 style: { marginTop: 0 },
                 genericSelectFieldId: 'rek-status',
+                itemsList: [
+                    {
+                        text: 'Any unpublished',
+                        value: 'Any unpublished',
+                    },
+                    {
+                        text: 'In Creation',
+                        value: 'In Creation',
+                    },
+                    {
+                        text: 'In Draft',
+                        value: 'In Draft',
+                    },
+                    {
+                        text: 'In Review',
+                        value: 'In Review',
+                    },
+                    {
+                        text: 'Retracted',
+                        value: 'Retracted',
+                    },
+                    {
+                        text: 'Submitted for Approval',
+                        value: 'Submitted for Approval',
+                    },
+                    {
+                        text: 'Unpublished',
+                        value: 'Unpublished',
+                    },
+                ],
             });
         });
         setup({
@@ -427,7 +456,7 @@ describe('AdvancedSearchRowInput', () => {
         const renderFn = jest.fn((InputComponent, inputProps) => {
             const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('UnpublishedStatusField').simulate('change', 'Test Value');
+            wrapper.find('Memo(NewGenericSelectField)').simulate('change', 'Test Value');
             expect(onChangeFn).toHaveBeenCalled();
         });
 
