@@ -2,6 +2,8 @@
 import Immutable from 'immutable';
 import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
+import { ALTERNATE_GENRE } from 'config/general';
+import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
 import {
     AIATSIS_CODES_VOCAB_ID,
@@ -26,8 +28,6 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
-// import { AccessSelectorField } from 'modules/SharedComponents/SelectFields';
-import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
 import {
@@ -39,7 +39,7 @@ import {
     RelatedDatasetAndPublicationListField,
     SeriesField,
 } from 'modules/SharedComponents/LookupFields';
-import { AccessSelectorField, ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
@@ -70,6 +70,7 @@ import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocT
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 export default {
     default: {
@@ -1096,11 +1097,13 @@ export default {
             },
         },
         fez_record_search_key_alternate_genre: {
-            component: AlternateGenreField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_alternate_genre',
-                label: 'Alternate genre',
+                itemsList: ALTERNATE_GENRE,
+                genericSelectFieldId: 'rek-alternate-genre',
                 multiple: true,
+                ...selectFields.alternateGenre,
             },
         },
         rek_genre: {
@@ -1133,7 +1136,7 @@ export default {
             },
         },
         fez_record_search_key_access_conditions: {
-            component: AccessSelectorField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_access_conditions.rek_access_conditions',
                 id: 'data-collection-access-selector',

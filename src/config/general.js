@@ -1433,7 +1433,6 @@ export const REFEREED_SOURCES = [
 ];
 
 export const ALTERNATE_GENRE = [
-    { value: null, text: 'Please choose an option' },
     { value: '453663', text: 'Conversation' },
     { value: '453664', text: 'Culture, stories, people' },
     { value: '453665', text: 'Session organisation' },

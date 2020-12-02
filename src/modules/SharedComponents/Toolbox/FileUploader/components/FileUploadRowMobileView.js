@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import FileUploadEmbargoDate from './FileUploadEmbargoDate';
 import FileUploadRowStatus from './FileUploadRowStatus';
-import { AccessSelectorField } from 'modules/SharedComponents/SelectFields';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, INHERIT_OPTION } from '../config';
 import { selectFields } from 'locale/selectFields';
@@ -87,14 +87,14 @@ export class FileUploadRowMobileView extends PureComponent {
                                 secondary={fileAccessColumn}
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
-                                <AccessSelectorField
+                                <NewGenericSelectField
                                     value={accessConditionId || ''}
                                     onChange={this.props.onAccessConditionChange}
                                     disabled={disabled}
                                     ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
-                                    accessSelectorFieldId={`dsi-open-access-${index}`}
+                                    genericSelectFieldId={`dsi-open-access-${index}`}
                                     itemsList={
                                         this.props.isAdmin
                                             ? [...FILE_ACCESS_OPTIONS, INHERIT_OPTION]

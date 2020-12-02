@@ -1,4 +1,14 @@
 export const selectFields = {
+    alternateGenre: {
+        label: 'Alternate genre',
+        ariaLabel: 'Please select as many alternate genre options as you like',
+        selectPrompt: 'Please select alternate genre',
+    },
+    accessCondition: {
+        label: 'Access conditions',
+        selectPrompt: 'Select access conditions',
+        errorMessage: 'This field is required',
+    },
     collection: {
         label: 'Select a collection',
         ariaLabel: 'Select a collection',
@@ -21,10 +31,5 @@ export const selectFields = {
         label: 'Thesis type',
         ariaLabel: 'Select a thesis type',
         selectPrompt: 'Please select a thesis type',
-    },
-    accessCondition: {
-        label: 'Access conditions',
-        selectPrompt: 'Select access conditions',
-        errorMessage: 'This field is required',
     },
 };

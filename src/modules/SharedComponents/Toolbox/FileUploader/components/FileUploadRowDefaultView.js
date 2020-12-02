@@ -1,10 +1,8 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-// import FileUploadAccessSelector from './FileUploadAccessSelector';
 import FileUploadEmbargoDate from './FileUploadEmbargoDate';
 import FileUploadRowStatus from './FileUploadRowStatus';
-import { AccessSelectorField } from 'modules/SharedComponents/SelectFields';
 
 import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, INHERIT_OPTION } from '../config';
 import { selectFields } from 'locale/selectFields';
@@ -13,6 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 export class FileUploadRowDefaultView extends PureComponent {
     static propTypes = {
@@ -65,14 +64,14 @@ export class FileUploadRowDefaultView extends PureComponent {
                     {requireOpenAccessStatus && (
                         <Fragment>
                             <Grid item md={3} sm={4}>
-                                <AccessSelectorField
+                                <NewGenericSelectField
                                     value={accessConditionId || ''}
                                     onChange={this.props.onAccessConditionChange}
                                     disabled={disabled}
                                     ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
-                                    accessSelectorFieldId={`dsi-open-access-${index}`}
+                                    genericSelectFieldId={`dsi-open-access-${index}`}
                                     itemsList={
                                         this.props.isAdmin
                                             ? [...FILE_ACCESS_OPTIONS, INHERIT_OPTION]

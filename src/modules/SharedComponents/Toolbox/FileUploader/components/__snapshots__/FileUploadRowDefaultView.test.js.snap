@@ -85,8 +85,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       md={3}
       sm={4}
     >
-      <AccessSelectorField
-        accessSelectorFieldId="dsi-open-access-0"
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
         displayEmpty={true}
@@ -96,6 +95,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
             "className": undefined,
           }
         }
+        genericSelectFieldId="dsi-open-access-0"
         hideLabel={true}
         itemsList={
           Array [
@@ -195,8 +195,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       md={3}
       sm={4}
     >
-      <AccessSelectorField
-        accessSelectorFieldId="dsi-open-access-0"
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
         displayEmpty={true}
@@ -206,6 +205,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
             "className": undefined,
           }
         }
+        genericSelectFieldId="dsi-open-access-0"
         hideLabel={true}
         itemsList={
           Array [
@@ -305,8 +305,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       md={3}
       sm={4}
     >
-      <AccessSelectorField
-        accessSelectorFieldId="dsi-open-access-0"
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
         displayEmpty={true}
@@ -316,6 +315,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
             "className": undefined,
           }
         }
+        genericSelectFieldId="dsi-open-access-0"
         hideLabel={true}
         itemsList={
           Array [
@@ -449,8 +449,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       md={3}
       sm={4}
     >
-      <AccessSelectorField
-        accessSelectorFieldId="dsi-open-access-0"
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
         displayEmpty={true}
@@ -460,6 +459,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
             "className": undefined,
           }
         }
+        genericSelectFieldId="dsi-open-access-0"
         hideLabel={true}
         itemsList={
           Array [

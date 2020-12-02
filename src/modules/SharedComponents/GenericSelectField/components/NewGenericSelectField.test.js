@@ -86,8 +86,7 @@ describe('NewGenericSelectField', () => {
     it('should display error', () => {
         const onChange = jest.fn();
         const { getByTestId } = setup({
-            error: true,
-            errorText: 'This field is required',
+            error: 'This field is required',
             itemsList: [
                 {
                     text: 'Option 1',

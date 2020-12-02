@@ -566,7 +566,20 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 <Field
                   component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
@@ -1927,7 +1940,20 @@ exports[`AddDataCollection test should render component with a valid collection 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
@@ -3284,7 +3310,20 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 <Field
                   component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
@@ -4641,7 +4680,20 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
