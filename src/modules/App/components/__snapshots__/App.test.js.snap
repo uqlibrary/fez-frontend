@@ -597,6 +597,20 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "access": Array [
+            "researcher",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "My editorial appointments",
+          "path": "/editorial-appointments",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -1162,14 +1176,33 @@ exports[`Application component should determine if it has incomplete works from 
             path="/author-identifiers/google-scholar/link"
           />
           <Route
-            component={[Function]}
+            access={
+              Array [
+                "researcher",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_17"
+            pageTitle="My editorial appointments"
+            path="/editorial-appointments"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_18"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1184,14 +1217,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_19"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_20"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -1204,7 +1237,7 @@ exports[`Application component should determine if it has incomplete works from 
                 "_status": -1,
               }
             }
-            key="route_21"
+            key="route_22"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1412,6 +1445,20 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "access": Array [
+            "researcher",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "My editorial appointments",
+          "path": "/editorial-appointments",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -1977,14 +2024,33 @@ exports[`Application component should determine if it has incomplete works from 
             path="/author-identifiers/google-scholar/link"
           />
           <Route
-            component={[Function]}
+            access={
+              Array [
+                "researcher",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_17"
+            pageTitle="My editorial appointments"
+            path="/editorial-appointments"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_18"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1999,14 +2065,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_19"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_20"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -2019,7 +2085,7 @@ exports[`Application component should determine if it has incomplete works from 
                 "_status": -1,
               }
             }
-            key="route_21"
+            key="route_22"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2624,6 +2690,20 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/author-identifiers/google-scholar/link",
         },
         Object {
+          "access": Array [
+            "researcher",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "My editorial appointments",
+          "path": "/editorial-appointments",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -3193,14 +3273,33 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/author-identifiers/google-scholar/link"
           />
           <Route
-            component={[Function]}
+            access={
+              Array [
+                "researcher",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_17"
+            pageTitle="My editorial appointments"
+            path="/editorial-appointments"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_18"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -3215,14 +3314,14 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_19"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_20"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -3235,7 +3334,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 "_status": -1,
               }
             }
-            key="route_21"
+            key="route_22"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3441,6 +3540,20 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "Google Scholar identifier",
           "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "My editorial appointments",
+          "path": "/editorial-appointments",
         },
         Object {
           "component": [Function],
@@ -3689,6 +3802,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "linkTo": "/data-collections/add",
           "primaryText": "Add a missing dataset",
+        },
+        Object {
+          "linkTo": "/editorial-appointments",
+          "primaryText": "My editorial appointments",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
@@ -4028,14 +4145,33 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/author-identifiers/google-scholar/link"
           />
           <Route
-            component={[Function]}
+            access={
+              Array [
+                "researcher",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_17"
+            pageTitle="My editorial appointments"
+            path="/editorial-appointments"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_18"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -4050,14 +4186,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_19"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_20"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -4070,7 +4206,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 "_status": -1,
               }
             }
-            key="route_21"
+            key="route_22"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4276,6 +4412,20 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Google Scholar identifier",
           "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "My editorial appointments",
+          "path": "/editorial-appointments",
         },
         Object {
           "component": [Function],
@@ -4524,6 +4674,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/data-collections/add",
           "primaryText": "Add a missing dataset",
+        },
+        Object {
+          "linkTo": "/editorial-appointments",
+          "primaryText": "My editorial appointments",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -4848,14 +5002,33 @@ exports[`Application component should render app for account with fez author wit
             path="/author-identifiers/google-scholar/link"
           />
           <Route
-            component={[Function]}
+            access={
+              Array [
+                "researcher",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_ctor": [Function],
+                "_result": null,
+                "_status": -1,
+              }
+            }
             exact={true}
             key="route_17"
+            pageTitle="My editorial appointments"
+            path="/editorial-appointments"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_18"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -4870,14 +5043,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_19"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_20"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -4890,7 +5063,7 @@ exports[`Application component should render app for account with fez author wit
                 "_status": -1,
               }
             }
-            key="route_21"
+            key="route_22"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5096,6 +5269,20 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "Google Scholar identifier",
           "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_ctor": [Function],
+            "_result": null,
+            "_status": -1,
+          },
+          "exact": true,
+          "pageTitle": "My editorial appointments",
+          "path": "/editorial-appointments",
         },
         Object {
           "component": [Function],
@@ -7009,6 +7196,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/author-identifiers/google-scholar/link",
                           },
                           Object {
+                            "access": Array [
+                              "researcher",
+                            ],
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_ctor": [Function],
+                              "_result": null,
+                              "_status": -1,
+                            },
+                            "exact": true,
+                            "pageTitle": "My editorial appointments",
+                            "path": "/editorial-appointments",
+                          },
+                          Object {
                             "component": [Function],
                             "exact": true,
                             "pageTitle": "eSpace",
@@ -7285,6 +7486,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "exact": true,
                               "pageTitle": "Google Scholar identifier",
                               "path": "/author-identifiers/google-scholar/link",
+                            },
+                            Object {
+                              "access": Array [
+                                "researcher",
+                              ],
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_ctor": [Function],
+                                "_result": null,
+                                "_status": -1,
+                              },
+                              "exact": true,
+                              "pageTitle": "My editorial appointments",
+                              "path": "/editorial-appointments",
                             },
                             Object {
                               "component": [Function],
@@ -7564,6 +7779,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "exact": true,
                                 "pageTitle": "Google Scholar identifier",
                                 "path": "/author-identifiers/google-scholar/link",
+                              },
+                              Object {
+                                "access": Array [
+                                  "researcher",
+                                ],
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_ctor": [Function],
+                                  "_result": null,
+                                  "_status": -1,
+                                },
+                                "exact": true,
+                                "pageTitle": "My editorial appointments",
+                                "path": "/editorial-appointments",
                               },
                               Object {
                                 "component": [Function],
