@@ -136,6 +136,12 @@ export const validateDataCollection = (
             },
         }) ||
             {}),
+        ...((!((ais || {}).fez_record_search_key_license || {}).rek_license && {
+            fez_record_search_key_license: {
+                rek_license: summary.rek_license,
+            },
+        }) ||
+            {}),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {

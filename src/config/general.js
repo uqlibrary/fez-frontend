@@ -1465,6 +1465,16 @@ export const OA_STATUS_TYPE = [
 
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
+export const ANDS_COLLECTION_TYPE_OPTIONS = [
+    {
+        value: ANDS_COLLECTION_TYPE_COLLECTION,
+        text: 'Collection',
+    },
+    {
+        value: ANDS_COLLECTION_TYPE_DATASET,
+        text: 'Dataset',
+    },
+];
 
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';

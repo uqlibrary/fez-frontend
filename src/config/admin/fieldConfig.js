@@ -2,7 +2,7 @@
 import Immutable from 'immutable';
 import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
-import { ALTERNATE_GENRE } from 'config/general';
+import { ALTERNATE_GENRE, ANDS_COLLECTION_TYPE_OPTIONS } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
 import {
@@ -52,7 +52,6 @@ import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusFi
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
-import { AndsCollectionTypesField } from 'modules/SharedComponents/Toolbox/AndsCollectionTypesField';
 import {
     IssnListEditorField,
     LinkInfoListEditorField,
@@ -1258,10 +1257,14 @@ export default {
             },
         },
         fez_record_search_key_ands_collection_type: {
-            component: AndsCollectionTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_ands_collection_type.rek_ands_collection_type',
-                label: 'Collection type',
+                itemsList: ANDS_COLLECTION_TYPE_OPTIONS,
+                genericSelectFieldId: 'rek-ands-collection-type',
+                required: true,
+                validate: [validation.required],
+                ...selectFields.andsCollectionType,
             },
         },
         fez_record_search_key_project_name: {
@@ -1879,10 +1882,6 @@ export default {
                 validate: [validation.required],
             }),
             fez_record_search_key_publisher: () => ({
-                required: true,
-                validate: [validation.required],
-            }),
-            fez_record_search_key_ands_collection_type: () => ({
                 required: true,
                 validate: [validation.required],
             }),
