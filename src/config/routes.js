@@ -71,6 +71,9 @@ export const pathConfig = {
         // legacy: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
         add: '/data-collections/add',
     },
+    editorialAppointments: {
+        list: '/editorial-appointments',
+    },
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
@@ -191,25 +194,18 @@ export const flattedPathConfig = [
     '/dashboard',
     '/data-collections/add',
     '/data-collections/mine',
-    '/contact',
+    '/editorial-appointments',
     '/rhdsubmission',
     '/sbslodge_new',
     '/tool/lookup',
-    '/records/search',
-    '/records/mine',
-    '/records/possible',
-    '/records/incomplete',
     '/records/claim',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',
-    '/records/claim',
     '/records/incomplete',
     '/records/mine',
     '/records/possible',
     '/records/search',
-    '/rhdsubmission',
-    '/sbslodge_new',
     '/view',
 ];
 
@@ -411,6 +407,13 @@ export const getRoutesConfig = ({
                       access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.googleScholarLink.title,
+                  },
+                  {
+                      path: pathConfig.editorialAppointments.list,
+                      component: components.MyEditorialAppointments,
+                      access: [roles.researcher],
+                      exact: true,
+                      pageTitle: locale.pages.editorialAppointments.title,
                   },
               ]
             : []),
@@ -631,6 +634,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.dataset.add,
                       ...locale.menu.addMissingDataset,
+                  },
+                  {
+                      linkTo: pathConfig.editorialAppointments.list,
+                      ...locale.menu.myEditorialAppointments,
                   },
                   {
                       linkTo: pathConfig.authorStatistics.url(account.id),

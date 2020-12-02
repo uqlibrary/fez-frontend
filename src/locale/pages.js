@@ -1128,5 +1128,9 @@ export default {
             title: 'Bulk updates',
             loadingMessage: 'Loading bulk updates',
         },
+        editorialAppointments: {
+            title: 'My editorial appointments',
+            loadingMessage: 'Loading editorial appointments',
+        },
     },
 };
