@@ -2,7 +2,7 @@
 import Immutable from 'immutable';
 import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
-import { ALTERNATE_GENRE, ANDS_COLLECTION_TYPE_OPTIONS } from 'config/general';
+import { ALTERNATE_GENRE, ANDS_COLLECTION_TYPE_OPTIONS, INSTITUTIONAL_STATUS, LANGUAGE } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
 import {
@@ -49,7 +49,6 @@ import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordin
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
-import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import {
@@ -252,13 +251,13 @@ export default {
             },
         },
         languages: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languages',
-                label: 'Language of work',
-                placeholder: 'Language of work',
                 multiple: true,
+                itemsList: LANGUAGE,
                 genericSelectFieldId: 'rek-language',
+                ...selectFields.language,
             },
         },
         fez_record_search_key_audience_size: {
@@ -655,13 +654,13 @@ export default {
             },
         },
         languageOfJournalName: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfJournalName',
-                label: 'Language of journal name',
-                placeholder: '',
                 multiple: true,
                 genericSelectFieldId: 'rek-language-of-journal-name',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfJournalName,
             },
         },
         languageOfBookTitle: {
@@ -845,10 +844,12 @@ export default {
             },
         },
         fez_record_search_key_institutional_status: {
-            component: InstitutionalStatusField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_institutional_status.rek_institutional_status',
-                label: 'Institutional status',
+                itemsList: INSTITUTIONAL_STATUS,
+                genericSelectFieldId: 'rek-institutional-status',
+                canUnselect: true,
             },
         },
         fez_record_search_key_oa_status_type: {

@@ -1054,7 +1054,6 @@ export const AUDIENCE_SIZE = [
 ];
 
 export const LANGUAGE = [
-    { value: null, text: 'Select multiple languages as required' },
     { value: 'afr', text: 'Afrikaans' },
     { value: 'alb', text: 'Albanian' },
     { value: 'ara', text: 'Arabic' },
@@ -1415,7 +1414,6 @@ export const HERDC_STATUS = [
 ];
 
 export const INSTITUTIONAL_STATUS = [
-    { value: null, text: 'Please choose an option' },
     { value: '453223', text: 'UQ' },
     { value: '453224', text: 'Non-UQ' },
     { value: '453225', text: 'Unknown' },
