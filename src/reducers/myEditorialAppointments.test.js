@@ -1,6 +1,16 @@
 import * as actions from 'actions/actionTypes';
 import myEditorialAppointmentsReducer, { initialState } from './myEditorialAppointments';
 
+/*
+    `eap_id`
+    `eap_jnl_id`
+    `eap_journal_name`
+    `eap_role_cvo_id`
+    `eap_role_name`
+    `eap_start_year`
+    `eap_end_year`
+*/
+
 describe('editorial appointment reducer', () => {
     it('returns the correct state while editorial appointment are loading', () => {
         const test = myEditorialAppointmentsReducer(initialState, {
@@ -14,13 +24,13 @@ describe('editorial appointment reducer', () => {
             type: actions.MY_EDITORIAL_APPOINTMENT_LIST_LOADED,
             payload: [
                 {
-                    fvs_id: 1,
+                    eap_id: 1,
                 },
             ],
         });
 
         expect(test.myEditorialAppointmentsListLoading).toEqual(false);
-        expect(test.myEditorialAppointmentsList).toEqual([{ fvs_id: 1 }]);
+        expect(test.myEditorialAppointmentsList).toEqual([{ eap_id: 1 }]);
         expect(test.myEditorialAppointmentsListError).toEqual(null);
     });
 
@@ -51,43 +61,57 @@ describe('editorial appointment reducer', () => {
 
     it('returns the correct state when editorial appointment item is successfully updated', () => {
         const oldData = {
-            fvs_id: 2,
-            fvs_description: 'test',
-            fvs_alias: 'tests',
-            fvs_search_parameters: 'test',
+            eap_id: 2,
+            eap_journal_name: 'test',
+            eap_jnl_id: 2134,
+            eap_role_cvo_id: '454145',
+            eap_role_name: 'Guest Editor',
+            eap_start_year: '2010',
+            eap_end_year: '2020',
         };
         const test = myEditorialAppointmentsReducer(
             {
                 ...initialState,
                 myEditorialAppointmentsList: [
                     {
-                        fvs_id: 1,
-                        fvs_description: 'test',
-                        fvs_alias: 'test',
-                        fvs_search_parameters: 'test',
+                        eap_id: 1,
+                        eap_journal_name: 'test',
+                        eap_jnl_id: 'test',
+                        eap_role_cvo_id: 'test',
                     },
                     oldData,
                 ],
             },
             {
                 type: actions.MY_EDITORIAL_APPOINTMENT_ITEM_UPDATE_SUCCESS,
-                payload: { fvs_id: 2, fvs_description: 'testing', fvs_alias: 'tests', fvs_search_parameters: 'test' },
+                payload: {
+                    eap_id: 2,
+                    eap_journal_name: 'test',
+                    eap_jnl_id: 2134,
+                    eap_role_cvo_id: '454144',
+                    eap_role_name: 'Editorial Board Member',
+                    eap_start_year: '2010',
+                    eap_end_year: '2020',
+                },
                 oldData,
             },
         );
         expect(test.myEditorialAppointmentsListItemUpdating).toEqual(false);
         expect(test.myEditorialAppointmentsList).toEqual([
             {
-                fvs_id: 1,
-                fvs_description: 'test',
-                fvs_alias: 'test',
-                fvs_search_parameters: 'test',
+                eap_id: 1,
+                eap_journal_name: 'test',
+                eap_jnl_id: 'test',
+                eap_role_cvo_id: 'test',
             },
             {
-                fvs_id: 2,
-                fvs_description: 'testing',
-                fvs_alias: 'tests',
-                fvs_search_parameters: 'test',
+                eap_id: 2,
+                eap_journal_name: 'test',
+                eap_jnl_id: 2134,
+                eap_role_cvo_id: '454144',
+                eap_role_name: 'Editorial Board Member',
+                eap_start_year: '2010',
+                eap_end_year: '2020',
             },
         ]);
     });
@@ -110,20 +134,20 @@ describe('editorial appointment reducer', () => {
 
     it('returns the correct state when editorial appointment item is successfully deleted', () => {
         const oldData = {
-            fvs_id: 2,
-            fvs_description: 'test',
-            fvs_alias: 'tests',
-            fvs_search_parameters: 'test',
+            eap_id: 2,
+            eap_journal_name: 'test',
+            eap_jnl_id: 'tests',
+            eap_role_cvo_id: 'test',
         };
         const test = myEditorialAppointmentsReducer(
             {
                 ...initialState,
                 myEditorialAppointmentsList: [
                     {
-                        fvs_id: 1,
-                        fvs_description: 'test',
-                        fvs_alias: 'test',
-                        fvs_search_parameters: 'test',
+                        eap_id: 1,
+                        eap_journal_name: 'test',
+                        eap_jnl_id: 'test',
+                        eap_role_cvo_id: 'test',
                     },
                     oldData,
                 ],
@@ -136,10 +160,10 @@ describe('editorial appointment reducer', () => {
         expect(test.myEditorialAppointmentsListItemDeleting).toEqual(false);
         expect(test.myEditorialAppointmentsList).toEqual([
             {
-                fvs_id: 1,
-                fvs_description: 'test',
-                fvs_alias: 'test',
-                fvs_search_parameters: 'test',
+                eap_id: 1,
+                eap_journal_name: 'test',
+                eap_jnl_id: 'test',
+                eap_role_cvo_id: 'test',
             },
         ]);
     });
