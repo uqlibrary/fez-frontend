@@ -21,5 +21,5 @@ echo "$ npm ci"
 npm ci
 
 printf "\n\n--- INSTALL JEST ---\n"
-echo "$ npm install --save-dev jest"
+echo "$ npm install -g jest"
 npm install -g jest
