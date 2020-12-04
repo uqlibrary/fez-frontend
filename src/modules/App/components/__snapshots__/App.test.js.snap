@@ -9216,6 +9216,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       actions={
                                                         Object {
                                                           "addFavouriteSearch": [Function],
+                                                          "addMyEditorialAppointments": [Function],
                                                           "adminCreate": [Function],
                                                           "adminReset": [Function],
                                                           "adminUpdate": [Function],
@@ -9246,6 +9247,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "createSearchPromise": [Function],
                                                           "deleteAttachedFile": [Function],
                                                           "deleteFavouriteSearchListItem": [Function],
+                                                          "deleteMyEditorialAppointmentsListItem": [Function],
                                                           "deleteRecord": [Function],
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
@@ -9269,6 +9271,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadCurrentAccount": [Function],
                                                           "loadFavouriteSearchList": [Function],
                                                           "loadFullRecordToClaim": [Function],
+                                                          "loadMyEditorialAppointmentsList": [Function],
                                                           "loadNewsFeed": [Function],
                                                           "loadOrcidSyncStatus": [Function],
                                                           "loadPublicationList": [Function],
@@ -9306,6 +9309,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "updateDoi": [Function],
                                                           "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
+                                                          "updateMyEditorialAppointmentsListItem": [Function],
                                                         }
                                                       }
                                                       autoFocus={true}
@@ -11545,6 +11549,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           actions={
                             Object {
                               "addFavouriteSearch": [Function],
+                              "addMyEditorialAppointments": [Function],
                               "adminCreate": [Function],
                               "adminReset": [Function],
                               "adminUpdate": [Function],
@@ -11575,6 +11580,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "createSearchPromise": [Function],
                               "deleteAttachedFile": [Function],
                               "deleteFavouriteSearchListItem": [Function],
+                              "deleteMyEditorialAppointmentsListItem": [Function],
                               "deleteRecord": [Function],
                               "dismissAppAlert": [Function],
                               "exportAuthorPublications": [Function],
@@ -11598,6 +11604,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "loadCurrentAccount": [Function],
                               "loadFavouriteSearchList": [Function],
                               "loadFullRecordToClaim": [Function],
+                              "loadMyEditorialAppointmentsList": [Function],
                               "loadNewsFeed": [Function],
                               "loadOrcidSyncStatus": [Function],
                               "loadPublicationList": [Function],
@@ -11635,6 +11642,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "updateDoi": [Function],
                               "updateFavouriteSearchListItem": [Function],
                               "updateIncompleteRecord": [Function],
+                              "updateMyEditorialAppointmentsListItem": [Function],
                             }
                           }
                           appAlert={null}
@@ -13182,6 +13190,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       actions={
                                                                         Object {
                                                                           "addFavouriteSearch": [Function],
+                                                                          "addMyEditorialAppointments": [Function],
                                                                           "adminCreate": [Function],
                                                                           "adminReset": [Function],
                                                                           "adminUpdate": [Function],
@@ -13212,6 +13221,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "createSearchPromise": [Function],
                                                                           "deleteAttachedFile": [Function],
                                                                           "deleteFavouriteSearchListItem": [Function],
+                                                                          "deleteMyEditorialAppointmentsListItem": [Function],
                                                                           "deleteRecord": [Function],
                                                                           "dismissAppAlert": [Function],
                                                                           "exportAuthorPublications": [Function],
@@ -13235,6 +13245,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadCurrentAccount": [Function],
                                                                           "loadFavouriteSearchList": [Function],
                                                                           "loadFullRecordToClaim": [Function],
+                                                                          "loadMyEditorialAppointmentsList": [Function],
                                                                           "loadNewsFeed": [Function],
                                                                           "loadOrcidSyncStatus": [Function],
                                                                           "loadPublicationList": [Function],
@@ -13272,6 +13283,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "updateDoi": [Function],
                                                                           "updateFavouriteSearchListItem": [Function],
                                                                           "updateIncompleteRecord": [Function],
+                                                                          "updateMyEditorialAppointmentsListItem": [Function],
                                                                         }
                                                                       }
                                                                       history={
@@ -13325,6 +13337,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         actions={
                                                                           Object {
                                                                             "addFavouriteSearch": [Function],
+                                                                            "addMyEditorialAppointments": [Function],
                                                                             "adminCreate": [Function],
                                                                             "adminReset": [Function],
                                                                             "adminUpdate": [Function],
@@ -13355,6 +13368,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "createSearchPromise": [Function],
                                                                             "deleteAttachedFile": [Function],
                                                                             "deleteFavouriteSearchListItem": [Function],
+                                                                            "deleteMyEditorialAppointmentsListItem": [Function],
                                                                             "deleteRecord": [Function],
                                                                             "dismissAppAlert": [Function],
                                                                             "exportAuthorPublications": [Function],
@@ -13378,6 +13392,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadCurrentAccount": [Function],
                                                                             "loadFavouriteSearchList": [Function],
                                                                             "loadFullRecordToClaim": [Function],
+                                                                            "loadMyEditorialAppointmentsList": [Function],
                                                                             "loadNewsFeed": [Function],
                                                                             "loadOrcidSyncStatus": [Function],
                                                                             "loadPublicationList": [Function],
@@ -13415,6 +13430,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateDoi": [Function],
                                                                             "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
+                                                                            "updateMyEditorialAppointmentsListItem": [Function],
                                                                           }
                                                                         }
                                                                         classes={
@@ -14602,6 +14618,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 actions={
                                                                                   Object {
                                                                                     "addFavouriteSearch": [Function],
+                                                                                    "addMyEditorialAppointments": [Function],
                                                                                     "adminCreate": [Function],
                                                                                     "adminReset": [Function],
                                                                                     "adminUpdate": [Function],
@@ -14632,6 +14649,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "createSearchPromise": [Function],
                                                                                     "deleteAttachedFile": [Function],
                                                                                     "deleteFavouriteSearchListItem": [Function],
+                                                                                    "deleteMyEditorialAppointmentsListItem": [Function],
                                                                                     "deleteRecord": [Function],
                                                                                     "dismissAppAlert": [Function],
                                                                                     "exportAuthorPublications": [Function],
@@ -14655,6 +14673,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadCurrentAccount": [Function],
                                                                                     "loadFavouriteSearchList": [Function],
                                                                                     "loadFullRecordToClaim": [Function],
+                                                                                    "loadMyEditorialAppointmentsList": [Function],
                                                                                     "loadNewsFeed": [Function],
                                                                                     "loadOrcidSyncStatus": [Function],
                                                                                     "loadPublicationList": [Function],
@@ -14692,6 +14711,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "updateDoi": [Function],
                                                                                     "updateFavouriteSearchListItem": [Function],
                                                                                     "updateIncompleteRecord": [Function],
+                                                                                    "updateMyEditorialAppointmentsListItem": [Function],
                                                                                   }
                                                                                 }
                                                                               >
@@ -14699,6 +14719,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   actions={
                                                                                     Object {
                                                                                       "addFavouriteSearch": [Function],
+                                                                                      "addMyEditorialAppointments": [Function],
                                                                                       "adminCreate": [Function],
                                                                                       "adminReset": [Function],
                                                                                       "adminUpdate": [Function],
@@ -14729,6 +14750,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "createSearchPromise": [Function],
                                                                                       "deleteAttachedFile": [Function],
                                                                                       "deleteFavouriteSearchListItem": [Function],
+                                                                                      "deleteMyEditorialAppointmentsListItem": [Function],
                                                                                       "deleteRecord": [Function],
                                                                                       "dismissAppAlert": [Function],
                                                                                       "exportAuthorPublications": [Function],
@@ -14752,6 +14774,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadCurrentAccount": [Function],
                                                                                       "loadFavouriteSearchList": [Function],
                                                                                       "loadFullRecordToClaim": [Function],
+                                                                                      "loadMyEditorialAppointmentsList": [Function],
                                                                                       "loadNewsFeed": [Function],
                                                                                       "loadOrcidSyncStatus": [Function],
                                                                                       "loadPublicationList": [Function],
@@ -14789,6 +14812,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateDoi": [Function],
                                                                                       "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
+                                                                                      "updateMyEditorialAppointmentsListItem": [Function],
                                                                                     }
                                                                                   }
                                                                                   classes={

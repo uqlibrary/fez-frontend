@@ -30,3 +30,4 @@ export { default as deleteRecordReducer } from './deleteRecord';
 export { default as bulkUpdatesReducer } from './bulkUpdates';
 export { default as favouriteSearchReducer } from './favouriteSearch';
 export { default as changeDisplayTypeReducer } from './changeDisplayType';
+export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';

@@ -308,6 +308,12 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.favouriteSearchItem })
     // .reply(404)
+    .onGet(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)
+    .reply(200, mockData.myEditorialAppointmentsList)
+    // .reply(500)
+    .onGet(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.myEditorialAppointmentItem })
+    // .reply(404)
     .onGet(new RegExp(escapeRegExp(routes.ISSN_LINKS_API({ type: 'sherpa-romeo', issn: '.*' }).apiUrl)))
     .reply(config => {
         const issn = config.url.split(/[\s,\/]+/).pop();

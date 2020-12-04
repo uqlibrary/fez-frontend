@@ -3092,5 +3092,23 @@ export default {
                 selectPrompt: 'Please select a collection',
             },
         },
+        myEditorialAppointmentsList: {
+            header: {
+                columns: {
+                    journalName: {
+                        title: 'Journal name',
+                    },
+                    role: {
+                        title: 'Editorial role',
+                    },
+                    startYear: {
+                        title: 'Start year',
+                    },
+                    endYear: {
+                        title: 'End year',
+                    },
+                },
+            },
+        },
     },
 };
