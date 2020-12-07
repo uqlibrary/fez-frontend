@@ -6,6 +6,7 @@ function setup(testProps = {}, renderer = render) {
     const props = {
         list: [],
         handleRowUpdate: jest.fn(() => Promise.resolve()),
+        handleRowDelete: jest.fn(() => Promise.resolve()),
         ...testProps,
     };
 
@@ -102,5 +103,46 @@ describe('MyEditorialAppointmentsList', () => {
 
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
+    });
+
+    it('should delete my editorial appointment item', async () => {
+        const { getByTestId } = setup({
+            list: [
+                {
+                    eap_id: 1,
+                    eap_journal_name: 'test',
+                    eap_jnl_id: 1234,
+                    eap_role_cvo_id: '123456',
+                    eap_start_year: '2006',
+                    eap_end_year: '2026',
+                    eap_role_name: 'Guest Editor',
+                },
+                {
+                    eap_id: 2,
+                    eap_journal_name: 'testing',
+                    eap_jnl_id: 12345,
+                    eap_role_cvo_id: '123457',
+                    eap_start_year: '2016',
+                    eap_end_year: '2020',
+                    eap_role_name: 'Editor',
+                },
+            ],
+        });
+        const listItem0 = getByTestId('my-editorial-appointments-list-row-0');
+        expect(listItem0).toBeInTheDocument();
+
+        const listItem1 = getByTestId('my-editorial-appointments-list-row-1');
+        expect(listItem1).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete'));
+
+        act(() => {
+            fireEvent.click(getByTestId('my-editorial-appointments-delete-save'));
+        });
+
+        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+
+        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
     });
 });

@@ -8,7 +8,11 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
 
 import { default as locale } from 'locale/pages';
-import { loadMyEditorialAppointmentsList, updateMyEditorialAppointmentsListItem } from 'actions';
+import {
+    deleteMyEditorialAppointmentsListItem,
+    loadMyEditorialAppointmentsList,
+    updateMyEditorialAppointmentsListItem,
+} from 'actions';
 
 export const MyEditorialAppointments = () => {
     const dispatch = useDispatch();
@@ -25,6 +29,10 @@ export const MyEditorialAppointments = () => {
 
     const handleRowUpdate = (newData, oldData) => {
         return dispatch(updateMyEditorialAppointmentsListItem(newData, oldData));
+    };
+
+    const handleRowDelete = oldData => {
+        return dispatch(deleteMyEditorialAppointmentsListItem(oldData));
     };
 
     React.useEffect(() => {
@@ -47,7 +55,11 @@ export const MyEditorialAppointments = () => {
             {!!myEditorialAppointmentsListError && <Alert {...myEditorialAppointmentsListError} type="error" />}
             {!!myEditorialAppointmentsList && (
                 <StandardCard hideTitle>
-                    <MyEditorialAppointmentsList handleRowUpdate={handleRowUpdate} list={myEditorialAppointmentsList} />
+                    <MyEditorialAppointmentsList
+                        handleRowUpdate={handleRowUpdate}
+                        handleRowDelete={handleRowDelete}
+                        list={myEditorialAppointmentsList}
+                    />
                 </StandardCard>
             )}
         </StandardPage>

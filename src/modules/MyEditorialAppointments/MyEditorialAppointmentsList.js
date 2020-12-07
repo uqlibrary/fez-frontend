@@ -186,7 +186,7 @@ export const getColumns = () => {
     ];
 };
 
-export const MyEditorialAppointmentsList = ({ disabled, handleRowUpdate, list }) => {
+export const MyEditorialAppointmentsList = ({ disabled, handleRowDelete, handleRowUpdate, list }) => {
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns();
@@ -280,6 +280,15 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowUpdate, list })
                         })
                         .catch(() => setData(prevState => prevState));
                 },
+                onRowDelete: oldData => {
+                    return handleRowDelete(oldData).then(() => {
+                        setData(prevState => {
+                            const data = [...prevState];
+                            data.splice(data.indexOf(oldData), 1);
+                            return data;
+                        });
+                    });
+                },
             }}
             options={{
                 actionsColumnIndex: -1,
@@ -292,8 +301,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowUpdate, list })
 
 MyEditorialAppointmentsList.propTypes = {
     disabled: PropTypes.bool,
+    handleRowUpdate: PropTypes.func,
+    handleRowDelete: PropTypes.func,
     list: PropTypes.array,
-    locale: PropTypes.object,
 };
 
 export default React.memo(MyEditorialAppointmentsList);

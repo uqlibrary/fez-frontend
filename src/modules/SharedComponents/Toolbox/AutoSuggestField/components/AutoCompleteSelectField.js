@@ -37,7 +37,7 @@ export const AutoCompleteSelectField = ({
                 onClear();
             }
         },
-        [allowFreeText, onChange],
+        [allowFreeText, onChange, onClear],
     );
 
     const handleChange = useCallback(
