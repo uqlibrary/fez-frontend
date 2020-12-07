@@ -9,6 +9,7 @@ import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
 
 import { default as locale } from 'locale/pages';
 import {
+    addMyEditorialAppointments,
     deleteMyEditorialAppointmentsListItem,
     loadMyEditorialAppointmentsList,
     updateMyEditorialAppointmentsListItem,
@@ -26,6 +27,10 @@ export const MyEditorialAppointments = () => {
     const myEditorialAppointmentsListError = useSelector(
         state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsListError,
     );
+
+    const handleRowAdd = newData => {
+        return dispatch(addMyEditorialAppointments(newData));
+    };
 
     const handleRowUpdate = (newData, oldData) => {
         return dispatch(updateMyEditorialAppointmentsListItem(newData, oldData));
@@ -56,6 +61,7 @@ export const MyEditorialAppointments = () => {
             {!!myEditorialAppointmentsList && (
                 <StandardCard hideTitle>
                     <MyEditorialAppointmentsList
+                        handleRowAdd={handleRowAdd}
                         handleRowUpdate={handleRowUpdate}
                         handleRowDelete={handleRowDelete}
                         list={myEditorialAppointmentsList}

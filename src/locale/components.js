@@ -3119,6 +3119,7 @@ export default {
                     startYearHint: 'Please type in start year',
                     endYearLabel: 'End year',
                     endYearHint: 'Please type in end year',
+                    addButton: 'Add an editorial appointment',
                 },
             },
             row: {

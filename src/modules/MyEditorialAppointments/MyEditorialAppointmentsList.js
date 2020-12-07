@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from 'material-table';
+import moment from 'moment';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@material-ui/core/Typography';
@@ -173,7 +174,10 @@ export const getColumns = () => {
                         value={props.value}
                         onChange={e => props.onChange(e.target.value)}
                         textFieldId="eap-end-year"
-                        error={(rowData.eap_end_year || '').length === 0}
+                        error={
+                            (rowData.eap_end_year || '').length === 0 ||
+                            !moment(rowData.eap_end_year).isSameOrAfter(moment(), 'year')
+                        }
                         label={endYearLabel}
                         placeholder={endYearHint}
                         required
@@ -181,12 +185,13 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData => rowData.eap_end_year !== '',
+            validate: rowData =>
+                rowData.eap_end_year !== '' && moment(rowData.eap_end_year).isSameOrAfter(moment(), 'year'),
         },
     ];
 };
 
-export const MyEditorialAppointmentsList = ({ disabled, handleRowDelete, handleRowUpdate, list }) => {
+export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns();
@@ -216,7 +221,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowDelete, handleR
                     />
                 ),
                 Action: props => {
-                    if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
+                    if (
+                        typeof props.action !== 'function' &&
+                        !props.action.action &&
+                        props.action.position !== 'toolbar'
+                    ) {
                         //  Save or Cancel actions for Add/Edit/Delete actions
                         const { icon: Icon, tooltip, ...restAction } = props.action;
                         return (
@@ -259,6 +268,27 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowDelete, handleR
                                 }}
                             />
                         );
+                    } else if (
+                        typeof props.action !== 'function' &&
+                        !props.action.action &&
+                        props.action.position === 'toolbar'
+                    ) {
+                        //  Add actions
+                        const { icon: Icon, tooltip, ...restAction } = props.action;
+                        return (
+                            <MTableAction
+                                {...props}
+                                action={{
+                                    ...restAction,
+                                    icon: () => (
+                                        <Icon
+                                            id={`my-editorial-appointments-${tooltip.toLowerCase()}`}
+                                            data-testid={`my-editorial-appointments-${tooltip.toLowerCase()}`}
+                                        />
+                                    ),
+                                }}
+                            />
+                        );
                     } else {
                         return <MTableAction {...props} />;
                     }
@@ -269,6 +299,15 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowDelete, handleR
             title=""
             editable={{
                 onRowUpdateCancelled: () => {},
+                onRowAdd: newData => {
+                    return handleRowAdd(newData)
+                        .then(() => {
+                            setData(prevState => {
+                                return [...prevState, newData];
+                            });
+                        })
+                        .catch(() => setData(prevState => prevState));
+                },
                 onRowUpdate: (newData, oldData) => {
                     return handleRowUpdate(newData, oldData)
                         .then(() => {
@@ -292,6 +331,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowDelete, handleR
             }}
             options={{
                 actionsColumnIndex: -1,
+                addRowPosition: 'first',
                 paging: false,
                 search: data.length > 10,
             }}
@@ -301,6 +341,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowDelete, handleR
 
 MyEditorialAppointmentsList.propTypes = {
     disabled: PropTypes.bool,
+    handleRowAdd: PropTypes.func,
     handleRowUpdate: PropTypes.func,
     handleRowDelete: PropTypes.func,
     list: PropTypes.array,
