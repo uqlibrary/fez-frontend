@@ -8,7 +8,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
 
 import { default as locale } from 'locale/pages';
-import { loadMyEditorialAppointmentsList } from 'actions';
+import { loadMyEditorialAppointmentsList, updateMyEditorialAppointmentsListItem } from 'actions';
 
 export const MyEditorialAppointments = () => {
     const dispatch = useDispatch();
@@ -22,6 +22,10 @@ export const MyEditorialAppointments = () => {
     const myEditorialAppointmentsListError = useSelector(
         state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsListError,
     );
+
+    const handleRowUpdate = (newData, oldData) => {
+        return dispatch(updateMyEditorialAppointmentsListItem(newData, oldData));
+    };
 
     React.useEffect(() => {
         if (!myEditorialAppointmentsList) {
@@ -43,7 +47,7 @@ export const MyEditorialAppointments = () => {
             {!!myEditorialAppointmentsListError && <Alert {...myEditorialAppointmentsListError} type="error" />}
             {!!myEditorialAppointmentsList && (
                 <StandardCard hideTitle>
-                    <MyEditorialAppointmentsList list={myEditorialAppointmentsList} />
+                    <MyEditorialAppointmentsList handleRowUpdate={handleRowUpdate} list={myEditorialAppointmentsList} />
                 </StandardCard>
             )}
         </StandardPage>

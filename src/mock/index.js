@@ -369,6 +369,10 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
     .onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(config => {
         return [200, { data: { ...mockData.favouriteSearchItem } }];
+    })
+    .onPut(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.myEditorialAppointmentItem } }];
     });
 
 mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' })).reply(200, { data: {} });

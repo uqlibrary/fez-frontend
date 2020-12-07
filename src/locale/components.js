@@ -3109,6 +3109,23 @@ export default {
                     },
                 },
             },
+            form: {
+                locale: {
+                    journalNameLabel: 'Journal name',
+                    journalNameHint: 'Please start typing to lookup journal name',
+                    editorialRoleLabel: 'Editorial role',
+                    editorialRoleHint: 'Please select an editorial role or type in',
+                    startYearLabel: 'Start year',
+                    startYearHint: 'Please type in start year',
+                    endYearLabel: 'End year',
+                    endYearHint: 'Please type in end year',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
         },
     },
 };

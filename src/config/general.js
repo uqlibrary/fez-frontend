@@ -1496,15 +1496,15 @@ export const EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR = 454147;
 export const EDITORIAL_ROLE_OTHER = 454148;
 
 export const EDITORIAL_ROLE_OPTIONS = [
-    { value: EDITORIAL_ROLE_ASSOCIATE_EDITOR, text: 'Associate Editor' },
-    { value: EDITORIAL_ROLE_DEPUTY_EDITOR, text: 'Deputy Editor' },
-    { value: EDITORIAL_ROLE_EDITOR, text: 'Editor' },
-    { value: EDITORIAL_ROLE_EDITOR_IN_CHIEF, text: 'Editor-in-Chief' },
-    { value: EDITORIAL_ROLE_EDITORIAL_BOARD_MEMBER, text: 'Editorial Board Member' },
-    { value: EDITORIAL_ROLE_GUEST_EDITOR, text: 'Guest Editor' },
-    { value: EDITORIAL_ROLE_SECTION_EDITOR, text: 'Section Editor' },
-    { value: EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR, text: 'Single Issue Editor' },
-    { value: EDITORIAL_ROLE_OTHER, text: 'Other' },
+    { value: 'Associate Editor' },
+    { value: 'Deputy Editor' },
+    { value: 'Editor' },
+    { value: 'Editor-in-Chief' },
+    { value: 'Editorial Board Member' },
+    { value: 'Guest Editor' },
+    { value: 'Section Editor' },
+    { value: 'Single Issue Editor' },
+    { value: 'Other' },
 ];
 
 export const EDITORIAL_ROLE_MAP = {

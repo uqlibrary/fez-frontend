@@ -6,6 +6,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 export const AutoCompleteSelectField = ({
     allowFreeText,
     autoCompleteSelectFieldId,
+    clearable,
     defaultValue,
     disabled,
     error,
@@ -14,6 +15,7 @@ export const AutoCompleteSelectField = ({
     getOptionLabel,
     itemsList,
     onChange,
+    onClear,
     required,
 }) => {
     const [open, setOpen] = useState(false);
@@ -29,6 +31,10 @@ export const AutoCompleteSelectField = ({
         (event, value, reason) => {
             if (!!allowFreeText && !!value && reason === 'input') {
                 onChange({ value });
+            } else if (!!event && event.type === 'click' && reason === 'clear') {
+                onClear();
+            } else if (!value && reason === 'input') {
+                onClear();
             }
         },
         [allowFreeText, onChange],
@@ -54,7 +60,7 @@ export const AutoCompleteSelectField = ({
             id={autoCompleteSelectFieldId}
             open={open}
             clearOnEscape
-            disableClearable
+            disableClearable={!clearable}
             onOpen={() => {
                 setOpen(true);
             }}
@@ -97,6 +103,7 @@ export const AutoCompleteSelectField = ({
 AutoCompleteSelectField.propTypes = {
     allowFreeText: PropTypes.bool,
     autoCompleteSelectFieldId: PropTypes.string.isRequired,
+    clearable: PropTypes.bool,
     defaultValue: PropTypes.object,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
@@ -105,6 +112,7 @@ AutoCompleteSelectField.propTypes = {
     getOptionLabel: PropTypes.func.isRequired,
     itemsList: PropTypes.array,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
     required: PropTypes.bool,
 };
 
