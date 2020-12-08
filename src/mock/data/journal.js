@@ -1,8 +1,8 @@
 export const journalDetails = {
     "data": {
-        "jnl_jid": 1,
-        "jnl_title": "Journal",
-        "jnl_publisher": "Publisher",
+        "jnl_jid": 12306,
+        "jnl_title": "Education in the North: the journal of Scottish education",
+        "jnl_publisher": "University of Aberdeen, School of Education",
         "jnl_created_date": "2020-11-12 23:36:02",
         "jnl_updated_date": "2020-11-12 23:36:02",
         "fez_journal_abdc": {
@@ -37,43 +37,73 @@ export const journalDetails = {
             "jnl_cwts_source_date": "2020-11-12"
         },
         "fez_journal_doaj": {
-            "jnl_doaj_jid": "1",
-            "jnl_doaj_source_id": "2199839911313",
-            "jnl_doaj_doa_apc_average_price": null,
-            "jnl_doaj_apc_currency": null,
+            "jnl_doaj_jid": 12306,
+            "jnl_doaj_source_id": "e05931389c0d41ad85a3bee708389841",
+            "jnl_doaj_apc_average_price": 250,
+            "jnl_doaj_apc_currency": 'AUD',
             "jnl_doaj_has_doi": true,
             "jnl_doaj_seal": false,
             "jnl_doaj_by": true,
             "jnl_doaj_nd": false,
-            "jnl_doaj_nc": false,
+            "jnl_doaj_nc": true,
             "jnl_doaj_sa": false,
-            "jnl_doaj_homepage_url": "http://homepage.com",
-            "jnl_doaj_last_updated": "2020-11-12 23:36:02"
+            "jnl_doaj_homepage_url": "https://www.abdn.ac.uk/eitn/",
+            "jnl_doaj_last_updated": "2020-12-07 16:17:55"
         },
         "fez_journal_era": [
             {
-                "jnl_era_id": 2,
-                "jnl_era_source_id": "111111",
-                "jnl_era_jid": "1",
+                "jnl_era_id": 77912,
+                "jnl_era_source_id": "20061",
+                "jnl_era_jid": 12306,
                 "jnl_era_source_year": 2010,
                 "fez_journal_era_for_code": [
                     {
-                        "jnl_era_for_code_id": "2",
-                        "jnl_era_for_code": "2222",
-                        "jnl_era_for_code_order": 1
+                        "jnl_era_for_code_id": 77912,
+                        "jnl_era_for_code": "452716",
+                        "jnl_era_for_code_order": 1,
+                        "jnl_era_for_code_lookup": "1301 Education Systems"
                     }
                 ]
             },
             {
-                "jnl_era_id": 1,
-                "jnl_era_source_id": "111111",
-                "jnl_era_jid": "1",
-                "jnl_era_source_year": 2020,
+                "jnl_era_id": 61690,
+                "jnl_era_source_id": "20061",
+                "jnl_era_jid": 12306,
+                "jnl_era_source_year": 2012,
                 "fez_journal_era_for_code": [
                     {
-                        "jnl_era_for_code_id": "1",
-                        "jnl_era_for_code": "1111",
-                        "jnl_era_for_code_order": 1
+                        "jnl_era_for_code_id": 61690,
+                        "jnl_era_for_code": "452716",
+                        "jnl_era_for_code_order": 1,
+                        "jnl_era_for_code_lookup": "1301 Education Systems"
+                    }
+                ]
+            },
+            {
+                "jnl_era_id": 33609,
+                "jnl_era_source_id": "20061",
+                "jnl_era_jid": 12306,
+                "jnl_era_source_year": 2015,
+                "fez_journal_era_for_code": [
+                    {
+                        "jnl_era_for_code_id": 33609,
+                        "jnl_era_for_code": "452716",
+                        "jnl_era_for_code_order": 1,
+                        "jnl_era_for_code_lookup": "1301 Education Systems"
+                    }
+                ]
+            },
+            {
+                "jnl_era_id": 12306,
+                "jnl_era_source_id": "20061",
+                "jnl_era_jid": 12306,
+                "jnl_era_source_year": 2018,
+                "fez_journal_era_for_code": [
+                    {
+                        "jnl_era_for_code_id": 12306,
+                        "jnl_era_for_code": "452716",
+                        "jnl_era_for_code_order": 1,
+                        "jnl_era_for_code_lookup": "1301 Education Systems"
                     }
                 ]
             }
@@ -87,38 +117,41 @@ export const journalDetails = {
         ],
         "fez_journal_issn": [
             {
-                "jnl_issn_jid": "1",
-                "jnl_issn": "1234-1234",
+                "jnl_issn_jid": 12306,
+                "jnl_issn": "0424-5512",
                 "jnl_issn_type": null,
                 "jnl_issn_order": 1,
                 "fez_sherpa_romeo": {
-                    "srm_id": 1,
-                    "srm_issn": "1234-1234",
-                    "srm_xml": null,
+                    "srm_id": 11955,
+                    "srm_issn": "0424-5512",
+                    "srm_xml": "",
                     "srm_json": null,
-                    "srm_journal_id": "sherpa journal id",
-                    "srm_journal_name": null,
-                    "srm_journal_link": null,
-                    "srm_colour": null,
-                    "srm_date_updated": "2020-11-12 23:36:02"
+                    "srm_source_id": null,
+                    "srm_journal_name": "Education in the North",
+                    "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/4008",
+                    "srm_colour": "gray",
+                    "srm_date_updated": "2017-09-30 16:19:03"
                 },
                 "fez_ulrichs": {
-                    "ulr_id": 1,
-                    "ulr_issn": "1234-1234",
-                    "ulr_title": null,
-                    "ulr_title_id": null,
-                    "ulr_abbrev_title": "ulr abbrev title",
-                    "ulr_publisher": null,
-                    "ulr_country": null,
-                    "ulr_start_year": null,
-                    "ulr_frequency": null,
-                    "ulr_open_access": null,
-                    "ulr_open_access_url": null,
-                    "ulr_reviewed": null,
-                    "ulr_refereed": null,
-                    "ulr_formats": null,
-                    "ulr_description": null,
-                    "ulr_last_updated": "2020-11-12 23:36:02"
+                    "ulr_id": 5927,
+                    "ulr_issn": "0424-5512",
+                    "ulr_status": "Ceased",
+                    "ulr_source_id": "161791",
+                    "ulr_title": "Education in the North",
+                    "ulr_title_id": "110885",
+                    "ulr_abbrev_title": null,
+                    "ulr_publisher": "Northern College of Education",
+                    "ulr_country": "United Kingdom",
+                    "ulr_start_year": "1965",
+                    "ulr_frequency": "Annual",
+                    "ulr_open_access": "0",
+                    "ulr_open_access_url": "https://example.com",
+                    "ulr_reviewed": "0",
+                    "ulr_refereed": "1",
+                    "ulr_formats": "Print",
+                    "ulr_description": "Covers all aspects of education in Scotland.",
+                    "ulr_xml": "",
+                    "ulr_last_updated": "2020-12-04 05:29:21"
                 }
             }
         ],
