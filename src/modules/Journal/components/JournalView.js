@@ -34,115 +34,99 @@ const renderJournalDetail = (detail, index, sizes) =>
 
 const nodeJoin = (arr, glue) => arr.slice(1).reduce((op, item) => op.concat([glue, item]), [arr[0]]);
 
-const getBasicDetails = journalDetails => [
-    {
-        title: 'ISO abbreviated title',
-        data:
-            (journalDetails.fez_journal_jcr_scie && journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title) ||
-            (journalDetails.fez_journal_jcr_ssci && journalDetails.fez_journal_jcr_ssci.jnl_jcr_ssci_abbrev_title) ||
-            (journalDetails.fez_journal_issn &&
-                journalDetails.fez_journal_issn[0] &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_abbrev_title),
-    },
-    {
-        title: 'ISSN(s)',
-        data:
-            Array.isArray(journalDetails.fez_journal_issn) &&
-            journalDetails.fez_journal_issn.length > 0 &&
-            journalDetails.fez_journal_issn.map(issn => issn.jnl_issn).join(', '),
-    },
-    {
-        title: 'Publisher',
-        data:
-            journalDetails.jnl_publisher &&
-            `${journalDetails.jnl_publisher}${journalDetails.fez_journal_issn &&
-                journalDetails.fez_journal_issn[0] &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_country &&
-                `, ${journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_country}`}`,
-    },
-    {
-        title: 'Refereed',
-        data:
-            (journalDetails.fez_journal_issn &&
-                journalDetails.fez_journal_issn[0] &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_refereed &&
-                'Yes') ||
-            'No',
-    },
-    [
+const getBasicDetails = journalDetails => {
+    const detailRows = [
         {
-            title: 'First year of publication',
+            title: 'ISO abbreviated title',
             data:
-                journalDetails.fez_journal_issn &&
-                journalDetails.fez_journal_issn[0] &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_start_year,
+                (journalDetails.fez_journal_jcr_scie &&
+                    journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title) ||
+                (journalDetails.fez_journal_jcr_ssci &&
+                    journalDetails.fez_journal_jcr_ssci.jnl_jcr_ssci_abbrev_title) ||
+                (journalDetails.fez_journal_issn &&
+                    journalDetails.fez_journal_issn[0] &&
+                    journalDetails.fez_journal_issn[0].fez_ulrichs &&
+                    journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_abbrev_title),
         },
         {
-            title: 'Frequency of publication',
+            title: 'ISSN(s)',
             data:
-                journalDetails.fez_journal_issn &&
-                journalDetails.fez_journal_issn[0] &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_frequency,
+                Array.isArray(journalDetails.fez_journal_issn) &&
+                journalDetails.fez_journal_issn.map(issn => issn.jnl_issn).join(', '),
         },
-    ],
-    {
-        title: 'Journal formats available',
-        data:
-            journalDetails.fez_journal_issn &&
-            journalDetails.fez_journal_issn[0] &&
-            journalDetails.fez_journal_issn[0].fez_ulrichs &&
-            journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_formats,
-    },
-    {
-        title: 'Journal URL',
-        data: journalDetails.fez_journal_issn &&
-            journalDetails.fez_journal_issn[0] &&
-            journalDetails.fez_journal_issn[0].fez_ulrichs &&
-            journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url && (
-                <ExternalLink href={journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url}>
-                    {journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url}
-                </ExternalLink>
-            ),
-    },
-    {
-        title: 'Description',
-        data:
-            journalDetails.fez_journal_issn &&
-            journalDetails.fez_journal_issn[0] &&
-            journalDetails.fez_journal_issn[0].fez_ulrichs &&
-            journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_description,
-    },
-    {
-        title: 'View journal in Ulrichs',
-        data:
-            Array.isArray(journalDetails.fez_journal_issn) &&
-            journalDetails.fez_journal_issn.length > 0 &&
-            nodeJoin(
-                journalDetails.fez_journal_issn.map(
-                    (issn, index) =>
-                        issn.fez_ulrichs &&
-                        issn.fez_ulrichs.ulr_title_id && (
-                            <ExternalLink
-                                key={index}
-                                href={globalLocale.global.ulrichsLink.externalUrl.replace(
-                                    '[id]',
-                                    issn.fez_ulrichs.ulr_title_id,
-                                )}
-                                title={globalLocale.global.ulrichsLink.ariaLabel}
-                            >
-                                {issn.fez_ulrichs.ulr_title}
-                            </ExternalLink>
-                        ),
+        {
+            title: 'Publisher',
+            data:
+                journalDetails.jnl_publisher &&
+                `${journalDetails.jnl_publisher}${journalDetails.fez_journal_issn &&
+                    journalDetails.fez_journal_issn[0] &&
+                    journalDetails.fez_journal_issn[0].fez_ulrichs &&
+                    journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_country &&
+                    `, ${journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_country}`}`,
+        },
+    ];
+    if (
+        journalDetails.fez_journal_issn &&
+        journalDetails.fez_journal_issn[0] &&
+        journalDetails.fez_journal_issn[0].fez_ulrichs
+    ) {
+        return detailRows.concat([
+            {
+                title: 'Refereed',
+                data: (journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_refereed && 'Yes') || 'No',
+            },
+            [
+                {
+                    title: 'First year of publication',
+                    data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_start_year,
+                },
+                {
+                    title: 'Frequency of publication',
+                    data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_frequency,
+                },
+            ],
+            {
+                title: 'Journal formats available',
+                data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_formats,
+            },
+            {
+                title: 'Journal URL',
+                data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url && (
+                    <ExternalLink href={journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url}>
+                        {journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url}
+                    </ExternalLink>
                 ),
-                ', ',
-            ),
-    },
-];
+            },
+            {
+                title: 'Description',
+                data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_description,
+            },
+            {
+                title: 'View journal in Ulrichs',
+                data: nodeJoin(
+                    journalDetails.fez_journal_issn.map(
+                        (issn, index) =>
+                            issn.fez_ulrichs &&
+                            issn.fez_ulrichs.ulr_title_id && (
+                                <ExternalLink
+                                    key={index}
+                                    href={globalLocale.global.ulrichsLink.externalUrl.replace(
+                                        '[id]',
+                                        issn.fez_ulrichs.ulr_title_id,
+                                    )}
+                                    title={globalLocale.global.ulrichsLink.ariaLabel}
+                                >
+                                    {issn.fez_ulrichs.ulr_title}
+                                </ExternalLink>
+                            ),
+                    ),
+                    ', ',
+                ),
+            },
+        ]);
+    }
+    return detailRows;
+};
 
 const getOADetails = journalDetails => [
     {
