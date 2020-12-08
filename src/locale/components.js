@@ -3127,6 +3127,13 @@ export default {
                     editHint: 'Edit this item',
                 },
             },
+            successAlert: {
+                alertId: 'alert-done-editorial-appointment-add',
+                allowDismiss: true,
+                type: 'done',
+                message:
+                    'An editorial role has been successfully added. It will take up to 24 hours before it appears in downstream systems such as IAP and Academic Portal.',
+            },
         },
     },
 };

@@ -6,6 +6,7 @@ import moment from 'moment';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@material-ui/core/Typography';
+import { KeyboardDatePicker } from '@material-ui/pickers';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField } from 'modules/SharedComponents/LookupFields';
@@ -25,9 +26,9 @@ export const getColumns = () => {
                 editorialRoleLabel,
                 editorialRoleHint,
                 startYearLabel,
-                startYearHint,
+                // startYearHint,
                 endYearLabel,
-                endYearHint,
+                // endYearHint,
             },
         },
     } = locale.components.myEditorialAppointmentsList;
@@ -64,7 +65,7 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData => rowData.eap_journal_name !== '',
+            validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
         },
         {
             title: (
@@ -116,7 +117,7 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData => rowData.eap_role_name !== null,
+            validate: rowData => !!rowData.eap_role_name && rowData.eap_role_name !== null,
         },
         {
             title: (
@@ -135,21 +136,35 @@ export const getColumns = () => {
                 </Typography>
             ),
             editComponent: props => {
-                const { rowData } = props;
                 return (
-                    <TextField
-                        value={props.value}
-                        onChange={e => props.onChange(e.target.value)}
-                        textFieldId="eap-start-year"
-                        error={(rowData.eap_start_year || '').length === 0}
-                        label={startYearLabel}
-                        placeholder={startYearHint}
+                    <KeyboardDatePicker
+                        value={props.value || null}
+                        onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
+                        error={!moment(props.value || null).isValid() || moment(props.value).isAfter(moment(), 'year')}
+                        autoOk
+                        variant="inline"
+                        disableToolbar
+                        views={['year']}
+                        id="eap-start-year"
                         required
-                        fullWidth
+                        label={startYearLabel}
+                        disableFuture
+                        inputProps={{
+                            id: 'eap-start-year-input',
+                            'data-testid': 'eap-start-year-input',
+                            label: startYearLabel,
+                            'aria-label': startYearLabel,
+                            'aria-labelledby': 'eap-start-year-label',
+                        }}
+                        InputLabelProps={{
+                            id: 'eap-start-year-label',
+                            'data-testid': 'eap-start-year-label',
+                            htmlFor: 'eap-start-year-input',
+                        }}
                     />
                 );
             },
-            validate: rowData => rowData.eap_start_year !== '',
+            validate: rowData => !!rowData.eap_start_year && rowData.eap_start_year !== '',
         },
         {
             title: (
@@ -168,25 +183,44 @@ export const getColumns = () => {
                 </Typography>
             ),
             editComponent: props => {
-                const { rowData } = props;
+                const minDate = new Date();
+                minDate.setDate(1);
+                minDate.setMonth(0);
                 return (
-                    <TextField
-                        value={props.value}
-                        onChange={e => props.onChange(e.target.value)}
-                        textFieldId="eap-end-year"
+                    <KeyboardDatePicker
+                        value={props.value || null}
+                        onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
                         error={
-                            (rowData.eap_end_year || '').length === 0 ||
-                            !moment(rowData.eap_end_year).isSameOrAfter(moment(), 'year')
+                            !moment(props.value || null).isValid() ||
+                            !moment(props.value).isSameOrAfter(moment(), 'year')
                         }
-                        label={endYearLabel}
-                        placeholder={endYearHint}
+                        autoOk
+                        variant="inline"
+                        disableToolbar
+                        views={['year']}
+                        id="eap-end-year"
                         required
-                        fullWidth
+                        label={endYearLabel}
+                        minDate={minDate}
+                        inputProps={{
+                            id: 'eap-end-year-input',
+                            'data-testid': 'eap-end-year-input',
+                            label: endYearLabel,
+                            'aria-label': endYearLabel,
+                            'aria-labelledby': 'eap-end-year-label',
+                        }}
+                        InputLabelProps={{
+                            id: 'eap-end-year-label',
+                            'data-testid': 'eap-end-year-label',
+                            htmlFor: 'eap-end-year-input',
+                        }}
                     />
                 );
             },
             validate: rowData =>
-                rowData.eap_end_year !== '' && moment(rowData.eap_end_year).isSameOrAfter(moment(), 'year'),
+                !!rowData.eap_end_year &&
+                rowData.eap_end_year !== '' &&
+                moment(rowData.eap_end_year).isSameOrAfter(moment(), 'year'),
         },
     ];
 };
@@ -268,11 +302,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 }}
                             />
                         );
-                    } else if (
-                        typeof props.action !== 'function' &&
-                        !props.action.action &&
-                        props.action.position === 'toolbar'
-                    ) {
+                    } else {
                         //  Add actions
                         const { icon: Icon, tooltip, ...restAction } = props.action;
                         return (
@@ -289,8 +319,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 }}
                             />
                         );
-                    } else {
-                        return <MTableAction {...props} />;
                     }
                 },
             }}

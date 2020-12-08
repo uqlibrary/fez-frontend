@@ -82,6 +82,7 @@ const handlers = {
     [actions.MY_EDITORIAL_APPOINTMENT_ADDING]: state => ({
         ...state,
         myEditorialAppointmentsAdding: true,
+        myEditorialAppointmentsAddSuccess: false,
     }),
 
     [actions.MY_EDITORIAL_APPOINTMENT_ADD_SUCCESS]: state => ({
