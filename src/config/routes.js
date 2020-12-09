@@ -7,6 +7,7 @@ import { createHash } from 'crypto';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+export const numericIdRegExp = '[0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
 const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUrl = '/records/search') => {
@@ -162,6 +163,9 @@ export const pathConfig = {
     digiteam: {
         batchImport: '/batch-import',
     },
+    journal: {
+        view: id => `/journal/view/${id}`,
+    },
 };
 
 // a duplicate list of routes for
@@ -183,6 +187,7 @@ export const flattedPathConfig = [
     '/dashboard',
     '/data-collections/add',
     '/data-collections/mine',
+    '/journal/view',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',
@@ -216,6 +221,7 @@ export const getRoutesConfig = ({
     existingAlias = {},
 }) => {
     const pid = `:pid(${pidRegExp})`;
+    const id = `:id(${numericIdRegExp})`;
     const publicPages = [
         {
             path: pathConfig.index,
@@ -486,6 +492,12 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.bulkUpdates.title,
+                  },
+                  {
+                      path: pathConfig.journal.view(id),
+                      component: components.JournalView,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.journal.view.title,
                   },
               ]
             : []),
