@@ -158,4 +158,7 @@ export const pathConfig = {
     digiteam: {
         batchImport: '/batch-import',
     },
+    journal: {
+        view: id => `/journal/view/${id}`,
+    },
 };

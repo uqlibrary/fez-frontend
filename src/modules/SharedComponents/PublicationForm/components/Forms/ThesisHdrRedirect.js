@@ -5,7 +5,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { default as formLocale } from 'locale/publicationForm';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -18,7 +18,7 @@ export default class ThesisHdrRedirect extends Component {
     }
 
     _handleAction = () => {
-        window.location.assign(routes.pathConfig.hdrSubmission);
+        window.location.assign(pathConfig.hdrSubmission);
         // this.props.history.replace(routes.pathConfig.hdrSubmission);
     };
 

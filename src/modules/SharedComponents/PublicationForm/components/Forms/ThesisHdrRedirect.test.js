@@ -1,7 +1,7 @@
 jest.dontMock('./ThesisHdrRedirect');
 
 import ThesisHdrRedirect from './ThesisHdrRedirect';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 function setup(testProps = {}) {
     const props = {
@@ -30,7 +30,7 @@ describe('ThesisHdrRedirect ', () => {
         setup({})
             .instance()
             ._handleAction();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(routes.pathConfig.hdrSubmission));
+        expect(window.location.assign).toBeCalledWith(expect.stringContaining(pathConfig.hdrSubmission));
         window.location = location;
     });
 });
