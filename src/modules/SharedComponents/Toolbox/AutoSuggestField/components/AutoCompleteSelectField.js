@@ -61,6 +61,7 @@ export const AutoCompleteSelectField = ({
             open={open}
             clearOnEscape
             disableClearable={!clearable}
+            openOnFocus
             onOpen={() => {
                 setOpen(true);
             }}

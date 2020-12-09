@@ -61,14 +61,14 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.click(getByTestId('my-editorial-appointments-add'));
 
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('eap-role-name-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
         expect(getByTestId('my-editorial-appointments-add-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.mouseDown(getByTestId('eap-role-name-input'));
+        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
         fireEvent.click(getByText('Guest Editor'));
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
         fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
@@ -92,7 +92,7 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.click(getByTestId('my-editorial-appointments-add'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.mouseDown(getByTestId('eap-role-name-input'));
+        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
         fireEvent.click(getByText('Guest Editor'));
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
         fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
@@ -120,7 +120,7 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-        let listItem = getByTestId('my-editorial-appointments-list-row-0');
+        const listItem = getByTestId('my-editorial-appointments-list-row-0');
 
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('test');
         expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Guest Editor');
@@ -133,7 +133,7 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.click(getByLabelText('Clear'));
-        expect(getByTestId('eap-role-name-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '' } });
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
@@ -144,8 +144,11 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('my-editorial-appointments-update-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.mouseDown(getByTestId('eap-role-name-input'));
-        fireEvent.click(getByText('Guest Editor'));
+        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
+        fireEvent.click(getByText('Other'));
+
+        expect(getByTestId('eap-role-name-input')).toBeInTheDocument();
+        fireEvent.change(getByTestId('eap-role-name-input'), { target: { value: 'Testing other role' } });
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
         fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
 
@@ -153,10 +156,11 @@ describe('MyEditorialAppointmentsList', () => {
             fireEvent.click(getByTestId('my-editorial-appointments-update-save'));
         });
 
-        listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
 
-        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-        expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
+        expect(getByTestId('eap-journal-name-0')).toHaveTextContent('testing');
+        expect(getByTestId('eap-start-year-0')).toHaveTextContent('2010');
+        expect(getByTestId('eap-role-name-0')).toHaveTextContent('Testing other role');
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {

@@ -3115,6 +3115,8 @@ export default {
                     journalNameHint: 'Please start typing to lookup journal name',
                     editorialRoleLabel: 'Editorial role',
                     editorialRoleHint: 'Please select an editorial role or type in',
+                    otherRoleLabel: 'Other role name',
+                    otherRoleHint: 'Please specify the other role name',
                     startYearLabel: 'Start year',
                     startYearHint: 'Please type in start year',
                     endYearLabel: 'End year',

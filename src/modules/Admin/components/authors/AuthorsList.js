@@ -252,12 +252,17 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                                   disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
                                   required
                                   autoComplete="off"
+                                  allowFreeText
                                   error={
                                       (contributor.nameAsPublished || '').trim().length === 0
                                           ? false
                                           : (contributor.creatorRole || '').trim().length === 0
                                   }
-                                  value={contributor.creatorRole}
+                                  value={
+                                      !!contributor.creatorRole
+                                          ? { value: contributor.creatorRole, text: contributor.creatorRole }
+                                          : null
+                                  }
                               />
                           );
                       },

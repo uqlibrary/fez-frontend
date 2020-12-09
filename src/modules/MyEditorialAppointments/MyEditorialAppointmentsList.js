@@ -12,7 +12,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
 
-import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS } from 'config/general';
+import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
 
 export const getColumns = () => {
     const {
@@ -25,6 +25,8 @@ export const getColumns = () => {
                 journalNameHint,
                 editorialRoleLabel,
                 editorialRoleHint,
+                otherRoleLabel,
+                otherRoleHint,
                 startYearLabel,
                 // startYearHint,
                 endYearLabel,
@@ -85,36 +87,61 @@ export const getColumns = () => {
             ),
             editComponent: props => {
                 const { rowData } = props;
+                console.log(rowData, props);
+
                 const handleChange = selectedItem => {
-                    const newValue = {
-                        eap_role_name: selectedItem,
-                        eap_role_cvo_id: Object.keys(EDITORIAL_ROLE_MAP).find(
-                            key => EDITORIAL_ROLE_MAP[key] === selectedItem,
-                        ),
-                    };
-                    props.onRowDataChange({ ...rowData, ...newValue });
+                    props.onRowDataChange({
+                        ...rowData,
+                        eap_role_name: selectedItem === EDITORIAL_ROLE_OTHER ? null : EDITORIAL_ROLE_MAP[selectedItem],
+                        eap_role_cvo_id: selectedItem,
+                    });
                 };
+
                 const handleClear = () =>
                     props.onRowDataChange({ ...rowData, eap_role_name: null, eap_role_cvo_id: null });
 
+                const handleRoleNameChangeForOther = e =>
+                    props.onRowDataChange({ ...rowData, eap_role_name: e.target.value });
+
                 return (
-                    <RoleField
-                        {...props}
-                        autoCompleteSelectFieldId="eap-role-name"
-                        fullWidth
-                        clearable
-                        key={`editorial-appointment-role-${rowData.eap_role_cvo_id}`}
-                        id="editorial-appointment-role"
-                        floatingLabelText={editorialRoleLabel}
-                        hintText={editorialRoleHint}
-                        onChange={handleChange}
-                        onClear={handleClear}
-                        itemsList={EDITORIAL_ROLE_OPTIONS}
-                        required
-                        autoComplete="off"
-                        error={(rowData.eap_role_name || '').trim().length === 0}
-                        value={rowData.eap_role_name}
-                    />
+                    <React.Fragment>
+                        <RoleField
+                            {...props}
+                            autoCompleteSelectFieldId="eap-role-cvo-id"
+                            fullWidth
+                            clearable
+                            key={`eap-role-${rowData.eap_role_cvo_id}`}
+                            id="eap-role-cvo-id"
+                            floatingLabelText={editorialRoleLabel}
+                            hintText={editorialRoleHint}
+                            onChange={handleChange}
+                            onClear={handleClear}
+                            itemsList={EDITORIAL_ROLE_OPTIONS}
+                            required
+                            autoComplete="off"
+                            error={!rowData.eap_role_cvo_id}
+                            value={
+                                !!rowData.eap_role_cvo_id
+                                    ? {
+                                          value: rowData.eap_role_cvo_id,
+                                          text: EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id],
+                                      }
+                                    : null
+                            }
+                        />
+                        {rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER && (
+                            <TextField
+                                value={rowData.eap_role_name}
+                                onChange={handleRoleNameChangeForOther}
+                                textFieldId="eap-role-name"
+                                error={!rowData.eap_role_name}
+                                label={otherRoleLabel}
+                                placeholder={otherRoleHint}
+                                required
+                                fullWidth
+                            />
+                        )}
+                    </React.Fragment>
                 );
             },
             validate: rowData => !!rowData.eap_role_name && rowData.eap_role_name !== null,
