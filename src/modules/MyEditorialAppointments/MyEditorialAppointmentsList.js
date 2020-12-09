@@ -82,17 +82,17 @@ export const getColumns = () => {
                     id={`eap-role-name-${rowData.tableData.id}`}
                     data-testid={`eap-role-name-${rowData.tableData.id}`}
                 >
-                    {rowData.eap_role_name}
+                    {`${EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id]}${
+                        !!rowData.eap_role_name ? ' (' + rowData.eap_role_name + ')' : ''
+                    }`}
                 </Typography>
             ),
             editComponent: props => {
                 const { rowData } = props;
-                console.log(rowData, props);
 
                 const handleChange = selectedItem => {
                     props.onRowDataChange({
                         ...rowData,
-                        eap_role_name: selectedItem === EDITORIAL_ROLE_OTHER ? null : EDITORIAL_ROLE_MAP[selectedItem],
                         eap_role_cvo_id: selectedItem,
                     });
                 };
@@ -144,7 +144,9 @@ export const getColumns = () => {
                     </React.Fragment>
                 );
             },
-            validate: rowData => !!rowData.eap_role_name && rowData.eap_role_name !== null,
+            validate: rowData =>
+                !!rowData.eap_role_cvo_id &&
+                (rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
         },
         {
             title: (

@@ -113,7 +113,7 @@ describe('MyEditorialAppointmentsList', () => {
                     eap_id: 1,
                     eap_journal_name: 'test',
                     eap_jnl_id: 1234,
-                    eap_role_cvo_id: '123456',
+                    eap_role_cvo_id: '454145',
                     eap_start_year: '2006',
                     eap_end_year: '2026',
                     eap_role_name: 'Guest Editor',
@@ -160,7 +160,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         expect(getByTestId('eap-journal-name-0')).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0')).toHaveTextContent('2010');
-        expect(getByTestId('eap-role-name-0')).toHaveTextContent('Testing other role');
+        expect(getByTestId('eap-role-name-0')).toHaveTextContent('Other (Testing other role)');
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
