@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
-import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
+import { routes, pathConfig, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
 import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
 import browserUpdate from 'browser-update';
@@ -202,17 +202,16 @@ export class AppClass extends PureComponent {
     redirectToOrcid = () => {
         if (window.location.search.indexOf('?') >= 0 && window.location.search.indexOf('code') >= 0) {
             // if user already received an orcid response - clean up query string by redirecting via window.location
-            window.location.assign(routes.pathConfig.authorIdentifiers.orcid.absoluteLink);
+            window.location.assign(pathConfig.authorIdentifiers.orcid.absoluteLink);
         } else {
-            this.props.history.push(routes.pathConfig.authorIdentifiers.orcid.link);
+            this.props.history.push(pathConfig.authorIdentifiers.orcid.link);
         }
     };
 
     isPublicPage = menuItems => {
         return (
             menuItems.filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public).length >
-                0 ||
-            new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname)
+                0 || new RegExp(pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname)
         );
     };
 
@@ -246,7 +245,7 @@ export class AppClass extends PureComponent {
             this.props.author &&
             Object.keys(this.props.author).length > 1 &&
             !this.props.author.aut_orcid_id &&
-            this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+            this.props.location.pathname !== pathConfig.authorIdentifiers.orcid.link;
         const isHdrStudent =
             !isAuthorLoading &&
             !!this.props.account &&
@@ -272,11 +271,11 @@ export class AppClass extends PureComponent {
         );
         const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage =
-            this.props.location.pathname === routes.pathConfig.hdrSubmission ||
-            this.props.location.pathname === routes.pathConfig.sbsSubmission;
+            this.props.location.pathname === pathConfig.hdrSubmission ||
+            this.props.location.pathname === pathConfig.sbsSubmission;
         const isSearchPage =
-            this.props.location.pathname === routes.pathConfig.records.search ||
-            this.props.location.pathname === routes.pathConfig.records.search;
+            this.props.location.pathname === pathConfig.records.search ||
+            this.props.location.pathname === pathConfig.records.search;
         const showMenu = !isThesisSubmissionPage;
 
         const containerStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 260 } : {};

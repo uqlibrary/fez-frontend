@@ -6,7 +6,7 @@ import { PublicationForm } from 'modules/SharedComponents/PublicationForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 // forms & custom components
-import { routes } from 'config';
+import { pathConfig } from 'config';
 import locale from 'locale/pages';
 import Grid from '@material-ui/core/Grid';
 
@@ -33,17 +33,17 @@ export default class NewRecord extends PureComponent {
 
     _restartWorkflow = () => {
         this.props.actions.clearNewRecord();
-        this.props.history.push(routes.pathConfig.records.add.find);
+        this.props.history.push(pathConfig.records.add.find);
     };
 
     _navigateToMyResearch = () => {
         this.props.actions.clearNewRecord();
-        this.props.history.push(routes.pathConfig.records.mine);
+        this.props.history.push(pathConfig.records.mine);
     };
 
     _navigateToFixRecord = () => {
         this.props.actions.clearNewRecord();
-        this.props.history.push(routes.pathConfig.records.fix(this.props.newRecord.rek_pid));
+        this.props.history.push(pathConfig.records.fix(this.props.newRecord.rek_pid));
     };
 
     render() {

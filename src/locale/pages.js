@@ -7,7 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import locale from 'locale/components';
 
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { DOI_ORG_PREFIX } from 'config/doi';
 /*
 

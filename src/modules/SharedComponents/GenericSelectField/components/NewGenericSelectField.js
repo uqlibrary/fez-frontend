@@ -32,11 +32,13 @@ export const NewGenericSelectField = ({
     formHelperTextProps,
     genericSelectFieldId,
     hideLabel,
+    input,
     itemsList,
     itemsLoading,
     label,
     loadItemsList,
     loadingHint,
+    meta,
     multiple,
     onChange,
     required,
@@ -46,6 +48,9 @@ export const NewGenericSelectField = ({
     value,
 }) => {
     const classes = useStyles();
+    const [selectValue, setSelectValue] = React.useState(multiple ? [] : '');
+    const [inputError, setInputError] = React.useState(!!error);
+    const [inputErrorText, setInputErrorText] = React.useState(error || errorText || null);
 
     const promptMenuItem = {
         value: '',
@@ -59,6 +64,7 @@ export const NewGenericSelectField = ({
         disabled: true,
     };
 
+    /* Run this effect if items list are needed to be loaded from api */
     React.useEffect(() => {
         if (itemsList.length === 0 && loadItemsList) {
             loadItemsList();
@@ -66,8 +72,49 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleChange = React.useCallback(event => onChange(event.target.value), []);
+    /* Run this effect to set value from redux-form field */
+    React.useEffect(() => {
+        if (!!input && !!input.value) {
+            setSelectValue(!!input.value.toJS ? input.value.toJS() : input.value);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [input]);
+
+    /* Run this effect to set value for non redux-form field */
+    React.useEffect(() => {
+        if (!input) {
+            if (multiple) {
+                value.length > 0 ? setSelectValue(value) : setSelectValue([]);
+            } else {
+                !!value ? setSelectValue(value) : setSelectValue('');
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [value]);
+
+    /* Run this effect to set error state for redux-form field */
+    React.useEffect(() => {
+        if (!!meta) {
+            setInputError(!!meta.error);
+            setInputErrorText(meta.error);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [meta]);
+
+    /* Run this effect to set error state for non redux-form field */
+    React.useEffect(() => {
+        if (!meta) {
+            setInputError(!!error);
+            setInputErrorText(!!error ? error : null);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [error]);
+
+    const handleChange = React.useCallback(
+        !!input ? event => input.onChange(event.target.value) : event => onChange(event.target.value),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [],
+    );
 
     const renderMenuItems = itemsList => {
         return [
@@ -76,7 +123,7 @@ export const NewGenericSelectField = ({
                     <MenuItem
                         classes={{ selected: classes.selectedMenuItem }}
                         style={{ display: 'block' }}
-                        selected={(multiple && value.includes(item.value)) || undefined}
+                        selected={(multiple && selectValue.includes(item.value)) || undefined}
                         value={item.value}
                         key={index + 1}
                         disabled={item && ((!canUnselect && !item.value) || !!item.disabled)}
@@ -91,7 +138,7 @@ export const NewGenericSelectField = ({
     };
 
     return (
-        <FormControl fullWidth required={required} error={!!error}>
+        <FormControl fullWidth required={required} error={!!inputError}>
             {!hideLabel && (
                 <InputLabel
                     hidden={hideLabel}
@@ -120,19 +167,20 @@ export const NewGenericSelectField = ({
                     id: `${genericSelectFieldId}-select`,
                     'data-testid': `${genericSelectFieldId}-select`,
                 }}
-                value={value}
+                value={selectValue}
+                {...(hideLabel && multiple ? { renderValue /* istanbul ignore next */: () => selectPrompt } : {})}
                 {...(!!selectProps ? { ...selectProps } : {})}
             >
                 {itemsLoading ? renderMenuItems([loadingMenuItem]) : renderMenuItems([promptMenuItem, ...itemsList])}
             </Select>
-            {!!error && (
+            {!!inputError && (
                 <FormHelperText
-                    error={!!error}
+                    error={!!inputError}
                     data-testid={`${genericSelectFieldId}-helper-text`}
                     id={`${genericSelectFieldId}-helper-text`}
                     {...(!!formHelperTextProps ? { ...formHelperTextProps } : {})}
                 >
-                    {errorText}
+                    {inputErrorText}
                 </FormHelperText>
             )}
         </FormControl>
@@ -148,6 +196,8 @@ NewGenericSelectField.propTypes = {
     formHelperTextProps: PropTypes.object,
     genericSelectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
+    input: PropTypes.object,
+    meta: PropTypes.object,
     itemsList: PropTypes.arrayOf(
         PropTypes.shape({
             text: PropTypes.string.isRequired,
@@ -175,5 +225,7 @@ NewGenericSelectField.defaultProps = {
     selectPrompt: 'Please select an option',
     loadingHint: 'Loading items...',
 };
+
+NewGenericSelectField.displayName = 'NewGenericSelectField';
 
 export default React.memo(NewGenericSelectField);

@@ -1,7 +1,7 @@
 import React from 'react';
 import NotFound from './NotFound';
 
-import * as routes from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 import { accounts } from 'mock/data/account';
 
@@ -38,7 +38,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render auth required page', () => {
-        useLocationHook.mockImplementation(() => ({ pathname: routes.pathConfig.contact }));
+        useLocationHook.mockImplementation(() => ({ pathname: pathConfig.contact }));
         useAccountContext.mockImplementation(() => ({ account: null }));
 
         const { getByText } = setup();
@@ -49,7 +49,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render permissions denied page', () => {
-        useLocationHook.mockImplementation(() => ({ pathname: routes.pathConfig.admin.masquerade }));
+        useLocationHook.mockImplementation(() => ({ pathname: pathConfig.admin.masquerade }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
         const { getByText } = setup();

@@ -12,8 +12,8 @@ import {
 } from 'modules/SharedComponents/PublicationsList';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import locale from 'locale/components';
-import { routes } from 'config';
 import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
+import { pathConfig } from 'config';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -314,7 +314,7 @@ export default class MyRecords extends PureComponent {
                                             disabled={isLoadingOrExporting}
                                             excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                             isMyDataSetPage={
-                                                this.props.location.pathname === routes.pathConfig.dataset.mine
+                                                this.props.location.pathname === pathConfig.dataset.mine
                                             }
                                             renameFacetsList={txt.facetsFilter.renameFacetsList}
                                             lookupFacetsList={txt.facetsFilter.lookupFacetsList}

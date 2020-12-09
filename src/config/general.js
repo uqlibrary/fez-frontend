@@ -732,8 +732,6 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
     { value: 'Technician' },
 ];
 
-export const OPEN_ACCESS_ID = 453619;
-export const MEDIATED_ACCESS_ID = 453618;
 export const CURRENT_LICENCES = [
     {
         value: 453701,
@@ -1058,7 +1056,6 @@ export const AUDIENCE_SIZE = [
 ];
 
 export const LANGUAGE = [
-    { value: null, text: 'Select multiple languages as required' },
     { value: 'afr', text: 'Afrikaans' },
     { value: 'alb', text: 'Albanian' },
     { value: 'ara', text: 'Arabic' },
@@ -1419,7 +1416,6 @@ export const HERDC_STATUS = [
 ];
 
 export const INSTITUTIONAL_STATUS = [
-    { value: null, text: 'Please choose an option' },
     { value: '453223', text: 'UQ' },
     { value: '453224', text: 'Non-UQ' },
     { value: '453225', text: 'Unknown' },
@@ -1437,7 +1433,6 @@ export const REFEREED_SOURCES = [
 ];
 
 export const ALTERNATE_GENRE = [
-    { value: null, text: 'Please choose an option' },
     { value: '453663', text: 'Conversation' },
     { value: '453664', text: 'Culture, stories, people' },
     { value: '453665', text: 'Session organisation' },
@@ -1462,7 +1457,6 @@ export const OA_STATUS = [
 ];
 
 export const OA_STATUS_TYPE = [
-    { value: null, text: 'Please choose an option' },
     { value: 454120, text: 'Green' },
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
@@ -1471,6 +1465,16 @@ export const OA_STATUS_TYPE = [
 
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
+export const ANDS_COLLECTION_TYPE_OPTIONS = [
+    {
+        value: ANDS_COLLECTION_TYPE_COLLECTION,
+        text: 'Collection',
+    },
+    {
+        value: ANDS_COLLECTION_TYPE_DATASET,
+        text: 'Dataset',
+    },
+];
 
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
@@ -1484,3 +1488,16 @@ export const MY_RECORDS_BULK_EXPORT_SIZE = 1000;
 export const PUB_LIST_BULK_EXPORT_SIZES = [PUB_SEARCH_BULK_EXPORT_SIZE, MY_RECORDS_BULK_EXPORT_SIZE];
 
 export const THESIS_UPLOAD_RETRIES = 5;
+
+export const OPEN_ACCESS_ID = 453619;
+export const MEDIATED_ACCESS_ID = 453618;
+export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
+    {
+        value: OPEN_ACCESS_ID,
+        text: 'Open Access',
+    },
+    {
+        value: MEDIATED_ACCESS_ID,
+        text: 'Mediated Access',
+    },
+];

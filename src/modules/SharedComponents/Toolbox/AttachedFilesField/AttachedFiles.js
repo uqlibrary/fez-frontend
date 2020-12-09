@@ -18,7 +18,7 @@ import { useRecordContext, useFormValuesContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import { isFileValid } from 'config/validation';
-import { mui1theme, openAccessConfig, routes, viewRecordsConfig } from 'config';
+import { mui1theme, openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
 
 import FileName from 'modules/ViewRecord/components/partials/FileName';
 import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
@@ -74,7 +74,7 @@ const usePreview = initialPreviewState => {
     return [preview, showPreview, hidePreview];
 };
 
-export const getUrl = (pid, fileName) => fileName && routes.pathConfig.file.url(pid, fileName);
+export const getUrl = (pid, fileName) => fileName && pathConfig.file.url(pid, fileName);
 
 export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
     const embargoDate = dataStream.dsi_embargo_date;

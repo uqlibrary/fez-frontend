@@ -29,7 +29,7 @@ import { onSubmit } from '../submitHandler';
 
 import { useTabbedContext, useRecordContext } from 'context';
 import pageLocale from 'locale/pages';
-import { routes, validation, publicationTypes } from 'config';
+import { pathConfig, validation, publicationTypes } from 'config';
 import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 
@@ -49,7 +49,7 @@ export const getQueryStringValue = (location, varName, initialValue) => {
 
 export const navigateToSearchResult = (createMode, authorDetails, history, location) => {
     if (createMode) {
-        history.push(routes.pathConfig.admin.add);
+        history.push(pathConfig.admin.add);
     }
     const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
     if (
@@ -59,7 +59,7 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
     ) {
         history.push(decodeURIComponent(navigatedFrom));
     } else {
-        history.push(routes.pathConfig.records.mine);
+        history.push(pathConfig.records.mine);
     }
 };
 
@@ -147,7 +147,7 @@ export const AdminInterface = ({
 
     const handleCancel = event => {
         event.preventDefault();
-        const pushToHistory = () => history.push(routes.pathConfig.records.view(record.rek_pid));
+        const pushToHistory = () => history.push(pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
             /* istanbul ignore next */
             record.rek_editing_user === authorDetails.username
@@ -155,7 +155,7 @@ export const AdminInterface = ({
                 : pushToHistory();
         } else {
             // Else this is a new record, so just go to the homepage
-            history.push(routes.pathConfig.index);
+            history.push(pathConfig.index);
         }
     };
 
@@ -188,7 +188,7 @@ export const AdminInterface = ({
 
     const navigateToViewRecord = pid => {
         if (!!pid && validation.isValidPid(pid)) {
-            history.push(routes.pathConfig.records.view(pid));
+            history.push(pathConfig.records.view(pid));
         }
     };
 

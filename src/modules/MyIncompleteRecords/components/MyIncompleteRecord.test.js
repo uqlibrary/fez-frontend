@@ -1,6 +1,6 @@
 import MyIncompleteRecord from './MyIncompleteRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 import { act } from '@testing-library/react';
 
 function setup(testProps = {}) {
@@ -84,7 +84,7 @@ describe('Component MyIncompleteRecord', () => {
             .find('#cancel-fix-work')
             .first()
             .simulate('click');
-        expect(testMethod).toHaveBeenCalledWith(routes.pathConfig.records.incomplete);
+        expect(testMethod).toHaveBeenCalledWith(pathConfig.records.incomplete);
     });
 
     it('should display confirmation box after successful submission', () => {
@@ -149,13 +149,13 @@ describe('Component MyIncompleteRecord', () => {
             .find('Memo(ConfirmationBox)')
             .props()
             .onCancelAction();
-        expect(testFn).toBeCalledWith(routes.pathConfig.records.incomplete);
+        expect(testFn).toBeCalledWith(pathConfig.records.incomplete);
 
         wrapper
             .find('Memo(ConfirmationBox)')
             .props()
             .onAction();
-        expect(testFn).toBeCalledWith(routes.pathConfig.dashboard);
+        expect(testFn).toBeCalledWith(pathConfig.dashboard);
     });
 
     it('should render no fields as they are complete', () => {

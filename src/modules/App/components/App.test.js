@@ -1,7 +1,7 @@
 import { AppClass } from './App';
 import App from './App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
-import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT } from 'config';
+import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, pathConfig } from 'config';
 import mui1theme from 'config';
 
 function setup(testProps = {}) {
@@ -368,7 +368,7 @@ describe('Application component', () => {
     it('should not render orcid alert for account with fez author without ORCID ID on thesis submission page', () => {
         const wrapper = setup({
             location: {
-                pathname: routes.pathConfig.hdrSubmission,
+                pathname: pathConfig.hdrSubmission,
             },
             account: account,
             author: {
@@ -403,7 +403,7 @@ describe('Application component', () => {
     it('should render thesis submission for HDR without menu', () => {
         const wrapper = setup({
             location: {
-                pathname: routes.pathConfig.hdrSubmission,
+                pathname: pathConfig.hdrSubmission,
             },
             account: accounts.s2222222,
             author: {
@@ -481,7 +481,7 @@ describe('Application component', () => {
         });
 
         wrapper.instance().redirectToOrcid();
-        expect(testMethod).toHaveBeenCalledWith(routes.pathConfig.authorIdentifiers.orcid.link);
+        expect(testMethod).toHaveBeenCalledWith(pathConfig.authorIdentifiers.orcid.link);
     });
 
     it('should start loading current user', () => {

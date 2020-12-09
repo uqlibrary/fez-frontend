@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { default as globalLocale } from 'locale/global';
 import { default as viewRecordLocale } from 'locale/viewRecord';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Link } from 'react-router-dom';
 

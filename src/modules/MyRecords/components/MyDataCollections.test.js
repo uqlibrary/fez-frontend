@@ -1,5 +1,5 @@
 import myDatasets from './MyRecords';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 import { locale } from 'locale';
 
 function setup(testProps = {}) {
@@ -9,7 +9,7 @@ function setup(testProps = {}) {
             setFixRecord: jest.fn(),
         },
         location: {
-            pathname: routes.pathConfig.dataset.mine,
+            pathname: pathConfig.dataset.mine,
             state: null,
         },
         history: {
@@ -156,12 +156,12 @@ describe('myDatasets test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
-            thisUrl: routes.pathConfig.dataset.mine,
+            thisUrl: pathConfig.dataset.mine,
         });
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.dataset.mine, state: { page: 2, hasPublications: true } },
+            location: { pathname: pathConfig.dataset.mine, state: { page: 2, hasPublications: true } },
             publicationsListPagingData: {},
             loadingPublicationsList: false,
             publicationsList: [],
@@ -177,11 +177,11 @@ describe('myDatasets test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
-            thisUrl: routes.pathConfig.dataset.mine,
+            thisUrl: pathConfig.dataset.mine,
         });
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.dataset.mine, state: null },
+            location: { pathname: pathConfig.dataset.mine, state: null },
             publicationsListPagingData: {},
             loadingPublicationsList: false,
             publicationsList: [],
@@ -197,7 +197,7 @@ describe('myDatasets test', () => {
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'PUSH' },
-            location: { pathname: routes.pathConfig.dataset.mine },
+            location: { pathname: pathConfig.dataset.mine },
             mine: {},
         });
         expect(testAction).not.toHaveBeenCalled();

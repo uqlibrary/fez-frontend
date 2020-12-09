@@ -2,6 +2,7 @@ import { useEffect, useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import * as validationRules from 'config/validation';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import {
     AuthorIdField,
     PublisherField,
@@ -9,7 +10,8 @@ import {
     CollectionField,
 } from 'modules/SharedComponents/LookupFields';
 import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
-import { UnpublishedStatusField } from './Fields/UnpublishedStatusField';
+
+import { UNPUBLISHED_STATUS } from 'config/general';
 
 const runValidationRules = (inputField, value) => {
     const rules = !!inputField.validation && inputField.validation;
@@ -39,7 +41,7 @@ const getInputComponent = type => {
         case 'OrgUnitLookup':
             return OrgUnitNameField;
         case 'StatusLookup':
-            return UnpublishedStatusField;
+            return NewGenericSelectField;
         default:
             return TextField;
     }
@@ -139,9 +141,11 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'StatusLookup':
             return {
                 ...selectDefaultProps,
+                genericSelectFieldId: 'rek-status',
                 autoWidth: false,
                 hideLabel: true,
                 displayEmpty: false,
+                itemsList: UNPUBLISHED_STATUS,
                 onChange: item => onChange(item),
             };
         default:

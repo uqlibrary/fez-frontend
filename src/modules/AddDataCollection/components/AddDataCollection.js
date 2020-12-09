@@ -15,7 +15,6 @@ import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields'
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
@@ -24,7 +23,7 @@ import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import DepositAgreementField from './DepositAgreementField';
 
-import { routes, validation } from 'config';
+import { pathConfig, validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import { CURRENT_LICENCES } from 'config/general';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
@@ -33,6 +32,7 @@ import { locale } from 'locale';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -77,7 +77,7 @@ export default class AddDataCollection extends Component {
     _navigateToMyDatasets = () => {
         this.props.resetForm();
         this.props.actions.clearNewRecord();
-        this.props.history.push(routes.pathConfig.dataset.mine);
+        this.props.history.push(pathConfig.dataset.mine);
     };
 
     _restartWorkflow = () => {
@@ -334,12 +334,14 @@ export default class AddDataCollection extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12} sm={12} md={4}>
                                             <Field
-                                                component={AccessSelectorField}
+                                                component={NewGenericSelectField}
                                                 id="data-collection-access-selector"
                                                 name="fez_record_search_key_access_conditions.rek_access_conditions"
                                                 required
                                                 validate={[validation.required]}
                                                 disabled={this.props.submitting}
+                                                itemsList={DATASET_ACCESS_CONDITIONS_OPTIONS}
+                                                genericSelectFieldId="rek-access-conditions"
                                                 {...txt.information.accessAndLicensing.fieldLabels.accessConditions}
                                             />
                                         </Grid>

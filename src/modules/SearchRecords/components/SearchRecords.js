@@ -8,8 +8,8 @@ import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import { routes } from 'config';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
+import { pathConfig } from 'config';
 import param from 'can-param';
 import deparam from 'can-deparam';
 
@@ -96,7 +96,7 @@ class SearchRecords extends PureComponent {
         if (
             this.props.location !== newProps.location &&
             newProps.history.action === 'POP' &&
-            newProps.location.pathname === routes.pathConfig.records.search
+            newProps.location.pathname === pathConfig.records.search
         ) {
             this.setState({ ...(!!newProps.location.state ? newProps.location.state : this.state) }, () => {
                 // only will be called when user clicks back on search records page
@@ -217,9 +217,9 @@ class SearchRecords extends PureComponent {
     updateHistoryAndSearch = () => {
         this.props.history.push({
             pathname:
-                this.props.location.pathname === routes.pathConfig.admin.unpublished
-                    ? routes.pathConfig.admin.unpublished
-                    : routes.pathConfig.records.search,
+                this.props.location.pathname === pathConfig.admin.unpublished
+                    ? pathConfig.admin.unpublished
+                    : pathConfig.records.search,
             search: param(this.state),
             state: { ...this.state },
         });

@@ -24,7 +24,7 @@ import {
 } from 'modules/SharedComponents/SelectFields';
 
 import { validation, publicationTypes } from 'config';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 

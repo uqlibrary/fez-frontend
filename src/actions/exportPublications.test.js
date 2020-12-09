@@ -1,20 +1,18 @@
-jest.mock('./exportPublicationsDataTransformers');
-
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as exportPublicationsActions from './exportPublications';
 import { exportSearchToExcel as exportSearchToExcelResponse } from 'mock/data/testing/searchRecords';
-import { promptForDownload } from './exportPublicationsDataTransformers';
+import * as ExportPublicationsTransformers from './exportPublicationsDataTransformers';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
-beforeEach(() => {
-    promptForDownload.mockClear();
-});
-
 describe('Export publications actions', () => {
+    let promptForDownload;
+
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
+
+        promptForDownload = jest.spyOn(ExportPublicationsTransformers, 'promptForDownload');
     });
 
     afterEach(() => {
