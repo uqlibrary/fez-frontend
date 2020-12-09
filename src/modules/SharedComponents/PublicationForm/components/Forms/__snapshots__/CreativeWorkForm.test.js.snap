@@ -691,6 +691,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
             },
             "language": Object {
               "label": "Language",
+              "selectPrompt": "Please select languages as required",
             },
             "notes": Object {
               "label": "Notes",
@@ -1144,6 +1145,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
             },
             "language": Object {
               "label": "Language",
+              "selectPrompt": "Please select languages as required",
             },
             "notes": Object {
               "label": "Notes",

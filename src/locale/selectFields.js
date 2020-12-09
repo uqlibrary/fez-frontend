@@ -47,6 +47,26 @@ export const selectFields = {
         ariaLabel: 'Please select multiple languages of journal name as required',
         selectPrompt: 'Select multiple languages as required',
     },
+    languageOfBookTitle: {
+        label: 'Language of book title',
+        ariaLabel: 'Please select multiple languages of book title as required',
+        selectPrompt: 'Select multiple languages as required',
+    },
+    languageOfConferenceName: {
+        label: 'Language of conference name',
+        ariaLabel: 'Please select multiple languages of conference name as required',
+        selectPrompt: 'Select multiple languages as required',
+    },
+    languageOfProceedingsTitle: {
+        label: 'Language of proceedings title',
+        ariaLabel: 'Please select multiple languages of proceedings title as required',
+        selectPrompt: 'Select multiple languages as required',
+    },
+    languageOfTitle: {
+        label: 'Language of title',
+        ariaLabel: 'Please select multiple languages of title as required',
+        selectPrompt: 'Select multiple languages as required',
+    },
     thesisSubtype: {
         label: 'Thesis type',
         ariaLabel: 'Select a thesis type',

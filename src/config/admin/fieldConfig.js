@@ -49,7 +49,6 @@ import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordin
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
-import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import {
     IssnListEditorField,
@@ -664,35 +663,35 @@ export default {
             },
         },
         languageOfBookTitle: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfBookTitle',
-                label: 'Language of book title',
-                placeholder: '',
                 multiple: true,
                 genericSelectFieldId: 'rek-language-of-book-title',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfBookTitle,
             },
         },
         languageOfConferenceName: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfConferenceName',
-                label: 'Language of conference name',
-                placeholder: 'Language of conference name',
                 multiple: true,
                 fullWidth: true,
                 genericSelectFieldId: 'rek-language-of-conference-name',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfConferenceName,
             },
         },
         languageOfProceedingsTitle: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfProceedingsTitle',
-                label: 'Language of proceedings title',
-                placeholder: 'Language of proceedings title',
                 multiple: true,
                 fullWidth: true,
                 genericSelectFieldId: 'rek-language-of-proceedings-title',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfProceedingsTitle,
             },
         },
         fez_record_search_key_conference_location: {
@@ -720,13 +719,13 @@ export default {
             },
         },
         languageOfTitle: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfTitle',
-                label: 'Language of title',
-                placeholder: '',
                 multiple: true,
                 genericSelectFieldId: 'rek-language-of-title',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfTitle,
             },
         },
         fez_record_search_key_native_script_journal_name: {
