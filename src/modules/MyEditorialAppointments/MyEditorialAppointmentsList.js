@@ -171,7 +171,7 @@ export const getColumns = () => {
                         onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
                         error={
                             !moment(String(props.value)).isValid() ||
-                            moment(String(props.value)).isAfter(moment(), 'year')
+                            !moment(String(props.value)).isSameOrBefore(moment(), 'year')
                         }
                         autoOk
                         variant="inline"
@@ -196,7 +196,9 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData => !!rowData.eap_start_year && rowData.eap_start_year !== '',
+            validate: rowData =>
+                moment(String(rowData.eap_start_year)).isValid() &&
+                moment(String(rowData.eap_start_year)).isSameOrBefore(moment(), 'year'),
         },
         {
             title: (
@@ -250,9 +252,8 @@ export const getColumns = () => {
                 );
             },
             validate: rowData =>
-                !!rowData.eap_end_year &&
-                rowData.eap_end_year !== '' &&
-                moment(rowData.eap_end_year).isSameOrAfter(moment(), 'year'),
+                moment(String(rowData.eap_end_year)).isValid() &&
+                moment(String(rowData.eap_end_year)).isSameOrAfter(moment(), 'year'),
         },
     ];
 };
