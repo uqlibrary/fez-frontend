@@ -3137,5 +3137,11 @@ export default {
                     'An editorial role has been successfully added. It will take up to 24 hours before it appears in downstream systems such as IAP and Academic Portal.',
             },
         },
+        JournalIdField: {
+            detailsLink: {
+                title: 'View journal details in a new tab',
+                linkText: 'View details',
+            },
+        },
     },
 };

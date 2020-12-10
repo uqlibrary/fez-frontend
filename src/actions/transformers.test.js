@@ -2946,6 +2946,7 @@ describe('Sanitising empty data', () => {
  *  - bibliographicSection.rek_description'
  *  - bibliographicSection.rek_date'
  *  - bibliographicSection.languages'
+ *  - bibliographicSection.fez_matched_journals'
  *  - bibliographicSection.fez_record_search_key_journal_name.rek_journal_name'
  *  - bibliographicSection.fez_record_search_key_book_title.rek_book_title'
  *  - bibliographicSection.fez_record_search_key_conference_name.rek_conference_name'
@@ -3418,6 +3419,9 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfProceedingsTitle: ['eng', 'pol'],
                 languageOfJournalName: ['fre'],
+                fez_matched_journals: {
+                    jnl_jid: 7669,
+                },
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -3446,6 +3450,10 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_of_journal_name_order: 1,
                     },
                 ],
+                fez_matched_journals: {
+                    mtj_jnl_id: 7669,
+                    mtj_status: 'M',
+                },
             });
         });
     });

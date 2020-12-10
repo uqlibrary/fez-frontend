@@ -1,7 +1,7 @@
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-// import matchSorter from 'match-sorter';
+
 import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 import Fuse from 'fuse.js';
 
@@ -55,5 +55,4 @@ const mapDispatchToProps = (dispatch, props) => ({
     onClear: !!props.value || (!!props.input && !!props.input.value) ? props.onClear : () => {},
 });
 
-// prettier-ignore
 export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

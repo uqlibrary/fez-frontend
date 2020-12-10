@@ -1132,5 +1132,11 @@ export default {
             title: 'My editorial appointments',
             loadingMessage: 'Loading editorial appointments',
         },
+        journal: {
+            view: {
+                title: 'Journal details',
+                loadingMessage: 'Loading journal data',
+            },
+        },
     },
 };

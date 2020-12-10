@@ -1657,28 +1657,11 @@ export default {
                     'dsi_security_inherited': 0,
                 },
             ],
-            'fez_matched_journals': [
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 8463,
-                    'mtj_status': 'A',
-                },
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 22918,
-                    'mtj_status': 'A',
-                },
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 54790,
-                    'mtj_status': 'A',
-                },
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 93348,
-                    'mtj_status': 'A',
-                },
-            ],
+            'fez_matched_journals': {
+                'mtj_pid': 'UQ:696826',
+                'mtj_jnl_id': 8463,
+                'mtj_status': 'M',
+            },
             'rek_display_type_lookup': 'Journal Article',
             'rek_pubmed_doc_type_lookup': null,
             'rek_object_type_lookup': 'Record',

@@ -131,7 +131,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(onClearFn).not.toBeCalled();
     });
 
-    it('should render give option template for options', async () => {
+    it('should render given option template for options', async () => {
         // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div id="option-template">{option}</div>;
 
@@ -176,5 +176,13 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         expect(onClearFn).toBeCalled();
+    });
+
+    it('should display supplemental node when provided', () => {
+        const { getByText } = setup({
+            supplemental: <div>hello</div>,
+        });
+
+        expect(getByText('hello')).toBeInTheDocument();
     });
 });
