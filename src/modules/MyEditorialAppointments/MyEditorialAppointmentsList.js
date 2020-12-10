@@ -167,9 +167,12 @@ export const getColumns = () => {
             editComponent: props => {
                 return (
                     <KeyboardDatePicker
-                        value={props.value || null}
+                        value={(!!props.value && moment(String(props.value))) || null}
                         onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
-                        error={!moment(props.value || null).isValid() || moment(props.value).isAfter(moment(), 'year')}
+                        error={
+                            !moment(String(props.value)).isValid() ||
+                            moment(String(props.value)).isAfter(moment(), 'year')
+                        }
                         autoOk
                         variant="inline"
                         disableToolbar
@@ -217,11 +220,11 @@ export const getColumns = () => {
                 minDate.setMonth(0);
                 return (
                     <KeyboardDatePicker
-                        value={props.value || null}
+                        value={(!!props.value && moment(String(props.value))) || null}
                         onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
                         error={
-                            !moment(props.value || null).isValid() ||
-                            !moment(props.value).isSameOrAfter(moment(), 'year')
+                            !moment(String(props.value)).isValid() ||
+                            !moment(String(props.value)).isSameOrAfter(moment(), 'year')
                         }
                         autoOk
                         variant="inline"
