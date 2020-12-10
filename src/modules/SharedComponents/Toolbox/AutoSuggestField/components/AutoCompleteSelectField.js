@@ -72,6 +72,7 @@ export const AutoCompleteSelectField = ({
             onInputChange={handleInputChange}
             onChange={handleChange}
             getOptionLabel={getOptionLabel}
+            getOptionSelected={(option, value) => option.value === value.value}
             options={options}
             popupIcon={false}
             disabled={disabled}

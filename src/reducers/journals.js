@@ -21,7 +21,7 @@ const handlers = {
     }),
 };
 
-export default function journalReducer(state = {}, action) {
+export default function journalReducer(state = initState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

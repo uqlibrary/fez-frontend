@@ -107,7 +107,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should validate inputs and render updated info after editing', async () => {
-        const { getByTestId, getByLabelText, getByText } = setup({
+        const { getByTestId, getAllByLabelText, getByText } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -132,7 +132,7 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.click(getByLabelText('Clear'));
+        fireEvent.click(getAllByLabelText('Clear')[1]);
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '' } });

@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { RoleField } from 'modules/SharedComponents/LookupFields';
+import { RoleField, JournalNameField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
 
 import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
@@ -53,18 +53,35 @@ export const getColumns = () => {
             ),
             editComponent: props => {
                 const { rowData } = props;
+                const handleChange = selectedItem => {
+                    props.onRowDataChange({
+                        ...rowData,
+                        eap_jnl_id: selectedItem.jnl_jid,
+                        eap_journal_name: selectedItem.jnl_title || selectedItem.value,
+                    });
+                };
+
                 return (
-                    <TextField
-                        autoFocus
-                        value={props.value}
-                        onChange={e => props.onChange(e.target.value)}
-                        textFieldId="eap-journal-name"
-                        error={(rowData.eap_journal_name || '').length === 0}
-                        label={journalNameLabel}
-                        placeholder={journalNameHint}
-                        required
-                        fullWidth
-                    />
+                    <React.Fragment>
+                        <JournalNameField
+                            autoFocus
+                            journalNameFieldId="eap-journal-name"
+                            value={
+                                !!rowData.eap_jnl_id
+                                    ? { id: rowData.eap_jnl_id, value: props.value }
+                                    : { value: props.value }
+                            }
+                            onChange={handleChange}
+                            error={(rowData.eap_journal_name || '').length === 0}
+                            label={journalNameLabel}
+                            placeholder={journalNameHint}
+                            selectedJournal={!!rowData.eap_jnl_id ? { id: rowData.eap_jnl_id } : null}
+                            required
+                            fullWidth
+                            allowFreeText
+                            clearOnInputClear
+                        />
+                    </React.Fragment>
                 );
             },
             validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
