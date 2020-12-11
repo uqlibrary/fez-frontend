@@ -10,6 +10,9 @@ import {
     LANGUAGE,
     OA_STATUS,
     OA_STATUS_TYPE,
+    PUBMED_DOC_TYPES,
+    SCOPUS_DOC_TYPES,
+    WOS_DOC_TYPES,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -64,13 +67,10 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
@@ -168,27 +168,30 @@ export default {
             },
         },
         rek_wok_doc_type: {
-            component: WoSDocTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'identifiersSection.rek_wok_doc_type',
-                label: 'WoS doc type(s)',
-                placeholder: '',
+                genericSelectFieldId: 'rek-wok-doc-type',
+                itemsList: WOS_DOC_TYPES,
+                ...selectFields.wokDocType,
             },
         },
         rek_scopus_doc_type: {
-            component: ScopusDocTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'identifiersSection.rek_scopus_doc_type',
-                label: 'Scopus doc type(s)',
-                placeholder: '',
+                genericSelectFieldId: 'rek-scopus-doc-type',
+                itemsList: SCOPUS_DOC_TYPES,
+                ...selectFields.scopusDocType,
             },
         },
         rek_pubmed_doc_type: {
-            component: PubmedDocTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'identifiersSection.rek_pubmed_doc_type',
-                label: 'PubMed doc type(s)',
-                placeholder: '',
+                genericSelectFieldId: 'rek-pubmed-doc-type',
+                itemsList: PUBMED_DOC_TYPES,
+                ...selectFields.pubmedDocType,
             },
         },
         links: {
