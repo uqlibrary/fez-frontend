@@ -348,7 +348,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12} sm={12} md={4}>
                                             <Field
                                                 component={NewGenericSelectField}
-                                                genericSelectFieldId="rek-licenseTitle"
+                                                genericSelectFieldId="rek-license"
                                                 id="data-collection-licence-selector"
                                                 name="fez_record_search_key_license.rek_license"
                                                 required
