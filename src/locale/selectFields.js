@@ -67,9 +67,39 @@ export const selectFields = {
         ariaLabel: 'Please select multiple languages of title as required',
         selectPrompt: 'Select multiple languages as required',
     },
+    license: {
+        label: 'License',
+        ariaLabel: 'Select a license',
+        selectPrompt: 'Please select a license',
+    },
+    oaStatus: {
+        label: 'OA status',
+        ariaLabel: 'Select an oa status',
+        selectPrompt: 'Please select an oa status',
+    },
+    oaStatusType: {
+        label: 'OA status type',
+        ariaLabel: 'Select an oa status type',
+        selectPrompt: 'Please select an oa status type',
+    },
+    pubmedDocType: {
+        label: 'PubMed doc type(s)',
+        ariaLabel: 'Select a pubmed doc type',
+        selectPrompt: 'Please select a pubmed doc type',
+    },
+    scopusDocType: {
+        label: 'Scopus doc type(s)',
+        ariaLabel: 'Select a scopus doc type',
+        selectPrompt: 'Please select a scopus doc type',
+    },
     thesisSubtype: {
         label: 'Thesis type',
         ariaLabel: 'Select a thesis type',
         selectPrompt: 'Please select a thesis type',
+    },
+    wokDocType: {
+        label: 'WoS doc type(s)',
+        ariaLabel: 'Select a WoS doc type',
+        selectPrompt: 'Please select a WoS doc type(s)',
     },
 };

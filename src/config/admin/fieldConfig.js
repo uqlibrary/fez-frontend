@@ -2,7 +2,18 @@
 import Immutable from 'immutable';
 import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
-import { ALTERNATE_GENRE, ANDS_COLLECTION_TYPE_OPTIONS, INSTITUTIONAL_STATUS, LANGUAGE } from 'config/general';
+import {
+    ALL_LICENCES,
+    ALTERNATE_GENRE,
+    ANDS_COLLECTION_TYPE_OPTIONS,
+    INSTITUTIONAL_STATUS,
+    LANGUAGE,
+    OA_STATUS,
+    OA_STATUS_TYPE,
+    PUBMED_DOC_TYPES,
+    SCOPUS_DOC_TYPES,
+    WOS_DOC_TYPES,
+} from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
 import {
@@ -50,23 +61,17 @@ import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordin
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
-import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import {
     IssnListEditorField,
     LinkInfoListEditorField,
     ListEditorField,
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
-import { OAStatusTypeField } from 'modules/SharedComponents/Toolbox/OAStatusTypeField';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
@@ -164,27 +169,30 @@ export default {
             },
         },
         rek_wok_doc_type: {
-            component: WoSDocTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'identifiersSection.rek_wok_doc_type',
-                label: 'WoS doc type(s)',
-                placeholder: '',
+                genericSelectFieldId: 'rek-wok-doc-type',
+                itemsList: WOS_DOC_TYPES,
+                ...selectFields.wokDocType,
             },
         },
         rek_scopus_doc_type: {
-            component: ScopusDocTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'identifiersSection.rek_scopus_doc_type',
-                label: 'Scopus doc type(s)',
-                placeholder: '',
+                genericSelectFieldId: 'rek-scopus-doc-type',
+                itemsList: SCOPUS_DOC_TYPES,
+                ...selectFields.scopusDocType,
             },
         },
         rek_pubmed_doc_type: {
-            component: PubmedDocTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'identifiersSection.rek_pubmed_doc_type',
-                label: 'PubMed doc type(s)',
-                placeholder: '',
+                genericSelectFieldId: 'rek-pubmed-doc-type',
+                itemsList: PUBMED_DOC_TYPES,
+                ...selectFields.pubmedDocType,
             },
         },
         links: {
@@ -864,17 +872,23 @@ export default {
             },
         },
         fez_record_search_key_oa_status_type: {
-            component: OAStatusTypeField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_oa_status_type.rek_oa_status_type',
-                label: 'OA status type',
+                genericSelectFieldId: 'rek-oa-status-type',
+                itemsList: OA_STATUS_TYPE,
+                canUnselect: true,
+                ...selectFields.oaStatusType,
             },
         },
         fez_record_search_key_oa_status: {
-            component: OAStatusField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_oa_status.rek_oa_status',
-                label: 'OA status',
+                genericSelectFieldId: 'rek-oa-status',
+                itemsList: OA_STATUS,
+                canUnselect: true,
+                ...selectFields.oaStatus,
             },
         },
         additionalNotes: {
@@ -1089,11 +1103,12 @@ export default {
             },
         },
         fez_record_search_key_license: {
-            component: LicenceSelectorField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_license.rek_license',
-                label: 'Licence',
-                isAdmin: true, // show the extra info that is only visible to admins
+                itemsList: ALL_LICENCES,
+                genericSelectFieldId: 'rek-license',
+                ...selectFields.license,
             },
         },
         fez_record_search_key_original_format: {

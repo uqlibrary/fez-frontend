@@ -16,10 +16,12 @@ export { default as createRecordReducer } from './createRecord';
 export { default as deleteRecordReducer } from './deleteRecord';
 export { default as doiReducer } from './doi';
 export { default as exportPublicationsReducer } from './exportPublications';
+export { default as favouriteSearchReducer } from './favouriteSearch';
 export { default as fileUploadReducer } from './fileUpload';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
 export { default as journalReducer } from './journals';
+export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';
 export { default as myLatestPublicationsReducer } from './myLatestPublications';
 export { default as myTrendingPublicationsReducer } from './myTrendingPublications';
 export { default as newsFeedReducer } from './newsFeed';
@@ -30,5 +32,3 @@ export { default as searchRecordsReducer } from './searchRecords';
 export { default as thirdPartyLookupToolReducer } from './thirdPartyLookupTool';
 export { default as topCitedPublicationsReducer } from './topCitedPublications';
 export { default as viewRecordReducer } from './viewRecord';
-export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';
-export { default as favouriteSearchReducer } from './favouriteSearch'; // Unable to move this before searchRecordsReducer
