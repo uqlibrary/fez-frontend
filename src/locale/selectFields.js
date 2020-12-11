@@ -67,6 +67,11 @@ export const selectFields = {
         ariaLabel: 'Please select multiple languages of title as required',
         selectPrompt: 'Select multiple languages as required',
     },
+    license: {
+        label: 'License',
+        ariaLabel: 'Select a license',
+        selectPrompt: 'Please select a license',
+    },
     thesisSubtype: {
         label: 'Thesis type',
         ariaLabel: 'Select a thesis type',

@@ -795,6 +795,20 @@ export const DEPRECATED_LICENCES = [
     },
 ];
 
+export const ALL_LICENCES = [
+    {
+        value: -1,
+        text: 'None',
+    },
+    ...CURRENT_LICENCES.map(licence => {
+        return {
+            value: licence.value,
+            text: licence.text + ' ' + licence.link,
+        };
+    }),
+    ...DEPRECATED_LICENCES,
+];
+
 export const ORG_TYPE_ID_MUSEUM = '453983';
 export const ORG_TYPE_ID_GALLERY = '453984';
 export const ORG_TYPE_ID_GOVERNMENT = '453985';

@@ -2,7 +2,13 @@
 import Immutable from 'immutable';
 import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
-import { ALTERNATE_GENRE, ANDS_COLLECTION_TYPE_OPTIONS, INSTITUTIONAL_STATUS, LANGUAGE } from 'config/general';
+import {
+    ALL_LICENCES,
+    ALTERNATE_GENRE,
+    ANDS_COLLECTION_TYPE_OPTIONS,
+    INSTITUTIONAL_STATUS,
+    LANGUAGE,
+} from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
 import {
@@ -49,7 +55,6 @@ import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordin
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
-import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import {
     IssnListEditorField,
     LinkInfoListEditorField,
@@ -1077,11 +1082,12 @@ export default {
             },
         },
         fez_record_search_key_license: {
-            component: LicenceSelectorField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_license.rek_license',
-                label: 'Licence',
-                isAdmin: true, // show the extra info that is only visible to admins
+                itemsList: ALL_LICENCES,
+                genericSelectFieldId: 'rek-license',
+                ...selectFields.license,
             },
         },
         fez_record_search_key_original_format: {
