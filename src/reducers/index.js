@@ -30,4 +30,5 @@ export { default as searchRecordsReducer } from './searchRecords';
 export { default as thirdPartyLookupToolReducer } from './thirdPartyLookupTool';
 export { default as topCitedPublicationsReducer } from './topCitedPublications';
 export { default as viewRecordReducer } from './viewRecord';
+export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';
 export { default as favouriteSearchReducer } from './favouriteSearch'; // Unable to move this before searchRecordsReducer

@@ -345,3 +345,7 @@ export const BULK_UPDATES_API = () => ({
 export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
 });
+
+export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
+    apiUrl: `editorial-appointment${!!id ? `/${id}` : ''}`,
+});

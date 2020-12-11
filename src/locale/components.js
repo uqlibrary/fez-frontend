@@ -3110,6 +3110,51 @@ export default {
                 selectPrompt: 'Please select a collection',
             },
         },
+        myEditorialAppointmentsList: {
+            header: {
+                columns: {
+                    journalName: {
+                        title: 'Journal name',
+                    },
+                    role: {
+                        title: 'Editorial role',
+                    },
+                    startYear: {
+                        title: 'Start year',
+                    },
+                    endYear: {
+                        title: 'End year',
+                    },
+                },
+            },
+            form: {
+                locale: {
+                    journalNameLabel: 'Journal name',
+                    journalNameHint: 'Please start typing to lookup journal name',
+                    editorialRoleLabel: 'Editorial role',
+                    editorialRoleHint: 'Please select an editorial role or type in',
+                    otherRoleLabel: 'Other role name',
+                    otherRoleHint: 'Please specify the other role name',
+                    startYearLabel: 'Start year',
+                    startYearHint: 'Please type in start year',
+                    endYearLabel: 'End year',
+                    endYearHint: 'Please type in end year',
+                    addButton: 'Add an editorial appointment',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            successAlert: {
+                alertId: 'alert-done-editorial-appointment-add',
+                allowDismiss: true,
+                type: 'done',
+                message:
+                    'An editorial role has been successfully added. It will take up to 24 hours before it appears in downstream systems such as IAP and Academic Portal.',
+            },
+        },
         JournalIdField: {
             detailsLink: {
                 title: 'View journal details in a new tab',

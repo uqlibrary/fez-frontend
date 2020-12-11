@@ -73,6 +73,9 @@ export default {
         favouriteSearch: {
             primaryText: 'Favourite searches',
         },
+        myEditorialAppointments: {
+            primaryText: 'My editorial appointments',
+        },
     },
     footer: {
         cricos: {

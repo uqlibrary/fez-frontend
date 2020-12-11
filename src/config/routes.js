@@ -193,18 +193,19 @@ export const flattedPathConfig = [
     '/dashboard',
     '/data-collections/add',
     '/data-collections/mine',
+    '/editorial-appointments',
     '/journal/view',
+    '/rhdsubmission',
+    '/sbslodge_new',
+    '/tool/lookup',
+    '/records/claim',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',
-    '/records/claim',
     '/records/incomplete',
     '/records/mine',
     '/records/possible',
     '/records/search',
-    '/rhdsubmission',
-    '/sbslodge_new',
-    '/tool/lookup',
     '/view',
 ];
 
@@ -409,6 +410,13 @@ export const getRoutesConfig = ({
                       access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.googleScholarLink.title,
+                  },
+                  {
+                      path: pathConfig.editorialAppointments.list,
+                      component: components.MyEditorialAppointments,
+                      access: [roles.researcher],
+                      exact: true,
+                      pageTitle: locale.pages.editorialAppointments.title,
                   },
               ]
             : []),
@@ -647,6 +655,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.dataset.add,
                       ...locale.menu.addMissingDataset,
+                  },
+                  {
+                      linkTo: pathConfig.editorialAppointments.list,
+                      ...locale.menu.myEditorialAppointments,
                   },
                   {
                       linkTo: pathConfig.authorStatistics.url(account.id),
