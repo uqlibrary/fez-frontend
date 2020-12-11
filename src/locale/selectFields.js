@@ -69,23 +69,33 @@ export const selectFields = {
     },
     license: {
         label: 'License',
-        ariaLabel: 'Select a license',
-        selectPrompt: 'Please select a license',
+        ariaLabel: 'Please elect a license',
+        selectPrompt: 'Select a license',
     },
     oaStatus: {
         label: 'OA status',
-        ariaLabel: 'Select an oa status',
-        selectPrompt: 'Please select an oa status',
+        ariaLabel: 'Please select an oa status',
+        selectPrompt: 'Select an oa status',
     },
     oaStatusType: {
         label: 'OA status type',
-        ariaLabel: 'Select an oa status type',
-        selectPrompt: 'Please select an oa status type',
+        ariaLabel: 'Please select an oa status type',
+        selectPrompt: 'Select an oa status type',
     },
     pubmedDocType: {
         label: 'PubMed doc type(s)',
-        ariaLabel: 'Select a pubmed doc type',
-        selectPrompt: 'Please select a pubmed doc type',
+        ariaLabel: 'Please select a pubmed doc type',
+        selectPrompt: 'Select a pubmed doc type',
+    },
+    qualityIndicators: {
+        label: 'Quality indicators',
+        ariaLabel: 'Please select quality indicators',
+        selectPrompt: 'Select quality indicators',
+    },
+    refereedSource: {
+        label: 'Refereed source',
+        ariaLabel: 'Please select a refereed source',
+        selectPrompt: 'Select a refereed source',
     },
     scopusDocType: {
         label: 'Scopus doc type(s)',

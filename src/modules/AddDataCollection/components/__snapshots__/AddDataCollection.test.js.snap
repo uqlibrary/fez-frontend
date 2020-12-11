@@ -597,7 +597,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  ariaLabel="Select a license"
+                  ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
                   genericSelectFieldId="rek-licenseTitle"
@@ -638,7 +638,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
-                  selectPrompt="Please select a license"
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
@@ -2007,7 +2007,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  ariaLabel="Select a license"
+                  ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
                   genericSelectFieldId="rek-licenseTitle"
@@ -2048,7 +2048,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
-                  selectPrompt="Please select a license"
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
@@ -3413,7 +3413,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  ariaLabel="Select a license"
+                  ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
                   genericSelectFieldId="rek-licenseTitle"
@@ -3454,7 +3454,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
-                  selectPrompt="Please select a license"
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
@@ -4819,7 +4819,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  ariaLabel="Select a license"
+                  ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
                   genericSelectFieldId="rek-licenseTitle"
@@ -4860,7 +4860,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
-                  selectPrompt="Please select a license"
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
