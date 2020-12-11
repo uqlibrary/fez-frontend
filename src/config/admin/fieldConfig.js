@@ -11,6 +11,8 @@ import {
     OA_STATUS,
     OA_STATUS_TYPE,
     PUBMED_DOC_TYPES,
+    QUALITY_INDICATORS,
+    REFEREED_SOURCES,
     SCOPUS_DOC_TYPES,
     WOS_DOC_TYPES,
 } from 'config/general';
@@ -68,8 +70,6 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
-import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -666,10 +666,12 @@ export default {
             },
         },
         fez_record_search_key_refereed_source: {
-            component: RefereedSourceField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_refereed_source.rek_refereed_source',
-                label: 'Refereed source',
+                genericSelectFieldId: 'rek-refereed-source',
+                itemsList: REFEREED_SOURCES,
+                ...selectFields.refereedSource,
             },
         },
         languageOfJournalName: {
@@ -950,11 +952,13 @@ export default {
             },
         },
         qualityIndicators: {
-            component: QualityIndicatorField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'ntroSection.qualityIndicators',
-                label: 'Quality indicators',
+                genericSelectFieldId: 'rek-quality-indicator',
+                itemsList: QUALITY_INDICATORS,
                 multiple: true,
+                ...selectFields.qualityIndicators,
             },
         },
         grants: {

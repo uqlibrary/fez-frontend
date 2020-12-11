@@ -1280,7 +1280,6 @@ export const CONTENT_INDICATORS_COLLECTIONS_BLACKLIST = [
 ];
 
 export const WOS_DOC_TYPES = [
-    { value: -1, text: 'Please choose an option', disabled: true },
     { value: 'None', text: 'None' },
     { value: '2', text: '2 - Abstract of Published item' },
     { value: 'A', text: 'A - Art Exhibit Review' },
@@ -1319,7 +1318,6 @@ export const WOS_DOC_TYPES = [
     { value: 'V', text: 'V - TV Review, Radio Review, Video Review' },
 ];
 export const SCOPUS_DOC_TYPES = [
-    { value: -1, text: 'Please choose an option', disabled: true },
     { value: 'None', text: 'None' },
     { value: 'ab', text: 'ab - Abstract Report' },
     { value: 'ar', text: 'ar - Article' },
