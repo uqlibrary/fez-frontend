@@ -6,7 +6,6 @@ exports[`OAStatus component should render default view 1`] = `
   error={false}
   errorText=""
   genericSelectFieldId="rek-oa-status"
-  hideLabel={false}
   itemsList={
     Array [
       Object {
@@ -65,7 +64,7 @@ exports[`OAStatus component should render default view 1`] = `
     }
   }
   selectPrompt="Please select an option"
-  value={-1}
+  value=""
 />
 `;
 
@@ -75,7 +74,6 @@ exports[`OAStatus component should render immutable list as selected value with 
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-oa-status"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -167,7 +165,6 @@ exports[`OAStatus component should render when given a default value field props
   error={false}
   errorText=""
   genericSelectFieldId="rek-oa-status"
-  hideLabel={false}
   itemsList={
     Array [
       Object {
@@ -242,7 +239,6 @@ exports[`OAStatus component should render with given field props 1`] = `
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-oa-status"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],

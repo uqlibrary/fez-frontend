@@ -1,4 +1,4 @@
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 const prefixFileNameSuffix = (prefix = '', fileName, suffix = '', extension) =>
     `${prefix}${prefix !== '' ? '_' : ''}${fileName.substr(0, fileName.lastIndexOf('.'))}${
@@ -120,7 +120,7 @@ export const viewRecordsConfig = {
                     isMultiple: false,
                 },
             ],
-            url: pid => routes.pathConfig.records.view(pid, true),
+            url: pid => pathConfig.records.view(pid, true),
         },
         {
             searchKey: 'fez_record_search_key_subject',
@@ -142,7 +142,7 @@ export const viewRecordsConfig = {
                 },
             ],
             // TODO add dsi_checksum as a third param, if this function ever gets used in the future
-            url: (pid, fileName) => routes.pathConfig.file.url(pid, fileName),
+            url: (pid, fileName) => pathConfig.file.url(pid, fileName),
         },
         {
             searchKey: null,

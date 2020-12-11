@@ -2,7 +2,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as authorsActions from './authors';
 import * as mockData from 'mock/data';
-import * as routes from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 describe('Action creators for authors', () => {
     beforeEach(() => {
@@ -127,7 +127,7 @@ describe('Action creators for authors', () => {
         // parameters required for AUTHOR_ORCID_DETAILS_API call
         const params = {
             code: orcidCode,
-            redirUri: routes.pathConfig.authorIdentifiers.orcid.absoluteLink,
+            redirUri: pathConfig.authorIdentifiers.orcid.absoluteLink,
         };
 
         const patchRequest = { aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid };
@@ -169,7 +169,7 @@ describe('Action creators for authors', () => {
         // parameters required for AUTHOR_ORCID_DETAILS_API call
         const params = {
             code: orcidCode,
-            redirUri: routes.pathConfig.authorIdentifiers.orcid.absoluteLink,
+            redirUri: pathConfig.authorIdentifiers.orcid.absoluteLink,
         };
 
         const patchRequest = { aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid };
@@ -194,7 +194,7 @@ describe('Action creators for authors', () => {
         // parameters required for AUTHOR_ORCID_DETAILS_API call
         const params = {
             code: orcidCode,
-            redirUri: routes.pathConfig.authorIdentifiers.orcid.absoluteLink,
+            redirUri: pathConfig.authorIdentifiers.orcid.absoluteLink,
         };
 
         mockApi

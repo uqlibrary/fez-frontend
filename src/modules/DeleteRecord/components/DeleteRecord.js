@@ -17,7 +17,7 @@ import { default as formsLocale } from 'locale/forms';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { routes, validation } from 'config';
+import { pathConfig, validation } from 'config';
 import { UQ_DOI_PREFIX } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -67,11 +67,11 @@ export default class DeleteRecord extends PureComponent {
     };
 
     _navigateToSearchPage = () => {
-        this.props.history.push(routes.pathConfig.records.search);
+        this.props.history.push(pathConfig.records.search);
     };
 
     _navigateToViewPage = () => {
-        this.props.history.push(routes.pathConfig.records.view(this.props.match.params.pid));
+        this.props.history.push(pathConfig.records.view(this.props.match.params.pid));
     };
 
     _setSuccessConfirmation = ref => {

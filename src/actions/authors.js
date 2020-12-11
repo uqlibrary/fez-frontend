@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import { get, patch } from 'repositories/generic';
 import { SEARCH_AUTHOR_LOOKUP_API, AUTHOR_API, AUTHOR_ORCID_DETAILS_API } from 'repositories/routes';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { getAuthorIdentifierOrcidPatchRequest } from './transformers';
 
 /**

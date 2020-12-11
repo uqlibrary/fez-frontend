@@ -20,7 +20,7 @@ import { MyLatestPublications } from 'modules/SharedComponents/MyLatestPublicati
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import { PublicationStats } from 'modules/SharedComponents/PublicationStats';
 
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';

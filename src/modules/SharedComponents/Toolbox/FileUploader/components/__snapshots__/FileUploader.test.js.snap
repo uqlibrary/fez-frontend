@@ -521,6 +521,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -533,22 +538,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     "embargoDateClosedAccess": "No date required",
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
-                    "fileUploadRowAccessSelector": Object {
-                      "errorMessage": "This field is required",
-                      "options": Array [
-                        Object {
-                          "text": "Open Access",
-                          "value": 5,
-                        },
-                        Object {
-                          "text": "Closed Access",
-                          "value": 1,
-                        },
-                      ],
-                      "selectPrompt": "Select access conditions",
-                    },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -968,6 +964,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 </div>,
                                 "fileUploadRow": Object {
                                   "defaultView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                   },
                                   "deleteHint": "Remove this file",
@@ -980,22 +981,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "embargoDateClosedAccess": "No date required",
                                   "embargoDateColumn": "Embargo date",
                                   "fileAccessColumn": "File access",
-                                  "fileUploadRowAccessSelector": Object {
-                                    "errorMessage": "This field is required",
-                                    "options": Array [
-                                      Object {
-                                        "text": "Open Access",
-                                        "value": 5,
-                                      },
-                                      Object {
-                                        "text": "Closed Access",
-                                        "value": 1,
-                                      },
-                                    ],
-                                    "selectPrompt": "Select access conditions",
-                                  },
                                   "filenameColumn": "File name",
                                   "mobileView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
@@ -1078,6 +1070,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   </div>,
                                   "fileUploadRow": Object {
                                     "defaultView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                     },
                                     "deleteHint": "Remove this file",
@@ -1090,22 +1087,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
-                                    "fileUploadRowAccessSelector": Object {
-                                      "errorMessage": "This field is required",
-                                      "options": Array [
-                                        Object {
-                                          "text": "Open Access",
-                                          "value": 5,
-                                        },
-                                        Object {
-                                          "text": "Closed Access",
-                                          "value": 1,
-                                        },
-                                      ],
-                                      "selectPrompt": "Select access conditions",
-                                    },
                                     "filenameColumn": "File name",
                                     "mobileView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                       "embargoDateColumn": "Embargo date",
                                       "fileAccessColumn": "File access",
@@ -1504,6 +1492,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       </div>,
                                                       "fileUploadRow": Object {
                                                         "defaultView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                         },
                                                         "deleteHint": "Remove this file",
@@ -1516,22 +1509,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "embargoDateClosedAccess": "No date required",
                                                         "embargoDateColumn": "Embargo date",
                                                         "fileAccessColumn": "File access",
-                                                        "fileUploadRowAccessSelector": Object {
-                                                          "errorMessage": "This field is required",
-                                                          "options": Array [
-                                                            Object {
-                                                              "text": "Open Access",
-                                                              "value": 5,
-                                                            },
-                                                            Object {
-                                                              "text": "Closed Access",
-                                                              "value": 1,
-                                                            },
-                                                          ],
-                                                          "selectPrompt": "Select access conditions",
-                                                        },
                                                         "filenameColumn": "File name",
                                                         "mobileView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
@@ -1612,6 +1596,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </div>,
                                                         "fileUploadRow": Object {
                                                           "defaultView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                           },
                                                           "deleteHint": "Remove this file",
@@ -1624,22 +1613,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
-                                                          "fileUploadRowAccessSelector": Object {
-                                                            "errorMessage": "This field is required",
-                                                            "options": Array [
-                                                              Object {
-                                                                "text": "Open Access",
-                                                                "value": 5,
-                                                              },
-                                                              Object {
-                                                                "text": "Closed Access",
-                                                                "value": 1,
-                                                              },
-                                                            ],
-                                                            "selectPrompt": "Select access conditions",
-                                                          },
                                                           "filenameColumn": "File name",
                                                           "mobileView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                             "embargoDateColumn": "Embargo date",
                                                             "fileAccessColumn": "File access",
@@ -3100,6 +3080,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -3112,22 +3097,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     "embargoDateClosedAccess": "No date required",
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
-                    "fileUploadRowAccessSelector": Object {
-                      "errorMessage": "This field is required",
-                      "options": Array [
-                        Object {
-                          "text": "Open Access",
-                          "value": 5,
-                        },
-                        Object {
-                          "text": "Closed Access",
-                          "value": 1,
-                        },
-                      ],
-                      "selectPrompt": "Select access conditions",
-                    },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -3547,6 +3523,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 </div>,
                                 "fileUploadRow": Object {
                                   "defaultView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                   },
                                   "deleteHint": "Remove this file",
@@ -3559,22 +3540,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "embargoDateClosedAccess": "No date required",
                                   "embargoDateColumn": "Embargo date",
                                   "fileAccessColumn": "File access",
-                                  "fileUploadRowAccessSelector": Object {
-                                    "errorMessage": "This field is required",
-                                    "options": Array [
-                                      Object {
-                                        "text": "Open Access",
-                                        "value": 5,
-                                      },
-                                      Object {
-                                        "text": "Closed Access",
-                                        "value": 1,
-                                      },
-                                    ],
-                                    "selectPrompt": "Select access conditions",
-                                  },
                                   "filenameColumn": "File name",
                                   "mobileView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
@@ -3657,6 +3629,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   </div>,
                                   "fileUploadRow": Object {
                                     "defaultView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                     },
                                     "deleteHint": "Remove this file",
@@ -3669,22 +3646,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
-                                    "fileUploadRowAccessSelector": Object {
-                                      "errorMessage": "This field is required",
-                                      "options": Array [
-                                        Object {
-                                          "text": "Open Access",
-                                          "value": 5,
-                                        },
-                                        Object {
-                                          "text": "Closed Access",
-                                          "value": 1,
-                                        },
-                                      ],
-                                      "selectPrompt": "Select access conditions",
-                                    },
                                     "filenameColumn": "File name",
                                     "mobileView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                       "embargoDateColumn": "Embargo date",
                                       "fileAccessColumn": "File access",
@@ -4083,6 +4051,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       </div>,
                                                       "fileUploadRow": Object {
                                                         "defaultView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                         },
                                                         "deleteHint": "Remove this file",
@@ -4095,22 +4068,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "embargoDateClosedAccess": "No date required",
                                                         "embargoDateColumn": "Embargo date",
                                                         "fileAccessColumn": "File access",
-                                                        "fileUploadRowAccessSelector": Object {
-                                                          "errorMessage": "This field is required",
-                                                          "options": Array [
-                                                            Object {
-                                                              "text": "Open Access",
-                                                              "value": 5,
-                                                            },
-                                                            Object {
-                                                              "text": "Closed Access",
-                                                              "value": 1,
-                                                            },
-                                                          ],
-                                                          "selectPrompt": "Select access conditions",
-                                                        },
                                                         "filenameColumn": "File name",
                                                         "mobileView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
@@ -4191,6 +4155,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </div>,
                                                         "fileUploadRow": Object {
                                                           "defaultView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                           },
                                                           "deleteHint": "Remove this file",
@@ -4203,22 +4172,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
-                                                          "fileUploadRowAccessSelector": Object {
-                                                            "errorMessage": "This field is required",
-                                                            "options": Array [
-                                                              Object {
-                                                                "text": "Open Access",
-                                                                "value": 5,
-                                                              },
-                                                              Object {
-                                                                "text": "Closed Access",
-                                                                "value": 1,
-                                                              },
-                                                            ],
-                                                            "selectPrompt": "Select access conditions",
-                                                          },
                                                           "filenameColumn": "File name",
                                                           "mobileView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                             "embargoDateColumn": "Embargo date",
                                                             "fileAccessColumn": "File access",
@@ -5202,6 +5162,11 @@ exports[`Component FileUploader should render default component 1`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5214,22 +5179,13 @@ exports[`Component FileUploader should render default component 1`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5373,6 +5329,11 @@ exports[`Component FileUploader should render disabled component 1`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5385,22 +5346,13 @@ exports[`Component FileUploader should render disabled component 1`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5543,6 +5495,11 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5555,22 +5512,13 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5718,6 +5666,11 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5730,22 +5683,13 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5885,6 +5829,11 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -5897,22 +5846,13 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -5943,6 +5883,11 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -5955,22 +5900,13 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -6057,6 +5993,11 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6069,22 +6010,13 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6224,6 +6156,11 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -6236,22 +6173,13 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -6334,6 +6262,11 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6346,22 +6279,13 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6504,6 +6428,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6516,22 +6445,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6679,6 +6599,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6691,22 +6616,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6847,6 +6763,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -6859,22 +6780,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -6907,6 +6819,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -6919,22 +6836,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7018,6 +6926,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -7030,22 +6943,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -7193,6 +7097,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -7205,22 +7114,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -7360,6 +7260,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7372,22 +7277,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7418,6 +7314,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7430,22 +7331,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7533,6 +7425,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -7545,22 +7442,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -7700,6 +7588,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7712,22 +7605,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7760,6 +7644,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7772,22 +7661,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7875,6 +7755,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -7887,22 +7772,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -8042,6 +7918,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8054,22 +7935,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8102,6 +7974,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8114,22 +7991,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8227,6 +8095,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -8239,22 +8112,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -8394,6 +8258,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8406,22 +8275,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8454,6 +8314,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8466,22 +8331,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8574,6 +8430,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -8586,22 +8447,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -8749,6 +8601,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -8761,22 +8618,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "errorMessage": "This field is required",
-              "options": Array [
-                Object {
-                  "text": "Open Access",
-                  "value": 5,
-                },
-                Object {
-                  "text": "Closed Access",
-                  "value": 1,
-                },
-              ],
-              "selectPrompt": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -8917,6 +8765,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8929,22 +8782,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8977,6 +8821,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8989,22 +8838,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "errorMessage": "This field is required",
-            "options": Array [
-              Object {
-                "text": "Open Access",
-                "value": 5,
-              },
-              Object {
-                "text": "Closed Access",
-                "value": 1,
-              },
-            ],
-            "selectPrompt": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",

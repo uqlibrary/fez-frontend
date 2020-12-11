@@ -8,7 +8,7 @@ import { showAppAlert } from 'actions/app';
 import locale from 'locale/global';
 import Raven from 'raven-js';
 import param from 'can-param';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,

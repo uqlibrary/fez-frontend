@@ -1,15 +1,9 @@
-jest.mock('./exportPublications');
-
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as searchActions from './search';
 import * as mockData from 'mock/data';
-import { exportPublications } from './exportPublications';
+import * as ExportPublicationsActions from './exportPublications';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
-
-beforeEach(() => {
-    exportPublications.mockClear();
-});
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
@@ -546,7 +540,13 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
-    describe('exportSearchPublications()', () => {
+    describe('exportEspacePublications()', () => {
+        let exportPublications;
+
+        beforeEach(() => {
+            exportPublications = jest.spyOn(ExportPublicationsActions, 'exportPublications');
+        });
+
         it('calls exportPublications with expected params', async () => {
             const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
             const testRequest = {
@@ -563,9 +563,7 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export'),
             );
         });
-    });
 
-    describe('exportEspacePublications', () => {
         it('should call records API with no facets if none provided', () => {
             const testRequest = {
                 activeFacets: false,

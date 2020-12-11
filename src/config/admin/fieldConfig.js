@@ -1,7 +1,9 @@
 /* eslint-disable max-len */
 import Immutable from 'immutable';
-import { validation } from 'config';
+import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
+import { ALTERNATE_GENRE, ANDS_COLLECTION_TYPE_OPTIONS, INSTITUTIONAL_STATUS, LANGUAGE } from 'config/general';
+import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
 import {
     AIATSIS_CODES_VOCAB_ID,
@@ -26,8 +28,6 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
-import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
-import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
 import {
@@ -39,6 +39,7 @@ import {
     RelatedDatasetAndPublicationListField,
     SeriesField,
 } from 'modules/SharedComponents/LookupFields';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
@@ -48,10 +49,7 @@ import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordin
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
-import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
-import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
-import { AndsCollectionTypesField } from 'modules/SharedComponents/Toolbox/AndsCollectionTypesField';
 import {
     IssnListEditorField,
     LinkInfoListEditorField,
@@ -60,7 +58,7 @@ import {
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
 import { OAStatusTypeField } from 'modules/SharedComponents/Toolbox/OAStatusTypeField';
-import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
@@ -69,6 +67,7 @@ import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocT
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 export default {
     default: {
@@ -251,13 +250,13 @@ export default {
             },
         },
         languages: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languages',
-                label: 'Language of work',
-                placeholder: 'Language of work',
                 multiple: true,
+                itemsList: LANGUAGE,
                 genericSelectFieldId: 'rek-language',
+                ...selectFields.language,
             },
         },
         fez_record_search_key_audience_size: {
@@ -654,45 +653,45 @@ export default {
             },
         },
         languageOfJournalName: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfJournalName',
-                label: 'Language of journal name',
-                placeholder: '',
                 multiple: true,
                 genericSelectFieldId: 'rek-language-of-journal-name',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfJournalName,
             },
         },
         languageOfBookTitle: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfBookTitle',
-                label: 'Language of book title',
-                placeholder: '',
                 multiple: true,
                 genericSelectFieldId: 'rek-language-of-book-title',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfBookTitle,
             },
         },
         languageOfConferenceName: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfConferenceName',
-                label: 'Language of conference name',
-                placeholder: 'Language of conference name',
                 multiple: true,
                 fullWidth: true,
                 genericSelectFieldId: 'rek-language-of-conference-name',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfConferenceName,
             },
         },
         languageOfProceedingsTitle: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfProceedingsTitle',
-                label: 'Language of proceedings title',
-                placeholder: 'Language of proceedings title',
                 multiple: true,
                 fullWidth: true,
                 genericSelectFieldId: 'rek-language-of-proceedings-title',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfProceedingsTitle,
             },
         },
         fez_record_search_key_conference_location: {
@@ -720,13 +719,13 @@ export default {
             },
         },
         languageOfTitle: {
-            component: LanguageField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.languageOfTitle',
-                label: 'Language of title',
-                placeholder: '',
                 multiple: true,
                 genericSelectFieldId: 'rek-language-of-title',
+                itemsList: LANGUAGE,
+                ...selectFields.languageOfTitle,
             },
         },
         fez_record_search_key_native_script_journal_name: {
@@ -844,10 +843,12 @@ export default {
             },
         },
         fez_record_search_key_institutional_status: {
-            component: InstitutionalStatusField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_institutional_status.rek_institutional_status',
-                label: 'Institutional status',
+                itemsList: INSTITUTIONAL_STATUS,
+                genericSelectFieldId: 'rek-institutional-status',
+                canUnselect: true,
             },
         },
         fez_record_search_key_oa_status_type: {
@@ -1095,11 +1096,13 @@ export default {
             },
         },
         fez_record_search_key_alternate_genre: {
-            component: AlternateGenreField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_alternate_genre',
-                label: 'Alternate genre',
+                itemsList: ALTERNATE_GENRE,
+                genericSelectFieldId: 'rek-alternate-genre',
                 multiple: true,
+                ...selectFields.alternateGenre,
             },
         },
         rek_genre: {
@@ -1112,13 +1115,14 @@ export default {
             },
         },
         rek_genre_type: {
-            component: ThesisSubtypeField,
+            component: ThesisSubtypeSelectField,
             componentProps: {
                 name: 'bibliographicSection.rek_genre_type',
                 fullWidth: true,
                 label: 'Thesis type',
                 required: true,
                 validate: [validation.required],
+                genericSelectFieldId: 'rek-genre-type',
             },
         },
         geoCoordinates: {
@@ -1131,12 +1135,14 @@ export default {
             },
         },
         fez_record_search_key_access_conditions: {
-            component: AccessSelectorField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_access_conditions.rek_access_conditions',
                 id: 'data-collection-access-selector',
                 required: true,
                 validate: [validation.required],
+                itemsList: DATASET_ACCESS_CONDITIONS_OPTIONS,
+                genericSelectFieldId: 'rek-access-conditions',
                 ...formLocale.addDataset.information.accessAndLicensing.fieldLabels.accessConditions,
             },
         },
@@ -1251,10 +1257,14 @@ export default {
             },
         },
         fez_record_search_key_ands_collection_type: {
-            component: AndsCollectionTypesField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_ands_collection_type.rek_ands_collection_type',
-                label: 'Collection type',
+                itemsList: ANDS_COLLECTION_TYPE_OPTIONS,
+                genericSelectFieldId: 'rek-ands-collection-type',
+                required: true,
+                validate: [validation.required],
+                ...selectFields.andsCollectionType,
             },
         },
         fez_record_search_key_project_name: {
@@ -1872,10 +1882,6 @@ export default {
                 validate: [validation.required],
             }),
             fez_record_search_key_publisher: () => ({
-                required: true,
-                validate: [validation.required],
-            }),
-            fez_record_search_key_ands_collection_type: () => ({
                 required: true,
                 validate: [validation.required],
             }),

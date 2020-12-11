@@ -10,7 +10,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import {
     OrgUnitNameField,
     FilteredFieldOfResearchListField,
@@ -170,12 +170,14 @@ export default class SbsSubmission extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <Field
-                                                component={ThesisSubtypeField}
+                                                component={ThesisSubtypeSelectField}
+                                                id="thesis-subtype"
                                                 itemsList={THESIS_SUBMISSION_SUBTYPES}
                                                 name="rek_genre_type"
+                                                genericSelectFieldId="rek-genre-type"
                                                 disabled={this.props.submitting}
                                                 validate={[validation.required]}
-                                                locale={txt.information.fieldLabels.thesisType}
+                                                {...txt.information.fieldLabels.thesisType}
                                                 required
                                             />
                                         </Grid>

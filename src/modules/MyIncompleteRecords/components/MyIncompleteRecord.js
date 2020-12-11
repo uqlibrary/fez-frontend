@@ -21,13 +21,11 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
-import { validation, routes } from 'config';
+import { validation, pathConfig } from 'config';
 import { default as pagesLocale } from '../locale';
 import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
-
-import { pathConfig } from 'config/routes';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -101,11 +99,11 @@ export const MyIncompleteRecord = props => {
     );
 
     const _navigateToMyIncomplete = () => {
-        history.push(routes.pathConfig.records.incomplete);
+        history.push(pathConfig.records.incomplete);
     };
 
     const _navigateToDashboard = () => {
-        history.push(routes.pathConfig.dashboard);
+        history.push(pathConfig.dashboard);
     };
 
     const _cancelFix = () => {
