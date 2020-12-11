@@ -62,6 +62,9 @@ export const pathConfig = {
         // legacy: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
         add: '/data-collections/add',
     },
+    editorialAppointments: {
+        list: '/editorial-appointments',
+    },
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
