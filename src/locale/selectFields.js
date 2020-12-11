@@ -72,6 +72,16 @@ export const selectFields = {
         ariaLabel: 'Select a license',
         selectPrompt: 'Please select a license',
     },
+    oaStatus: {
+        label: 'OA status',
+        ariaLabel: 'Select an oa status',
+        selectPrompt: 'Please select an oa status',
+    },
+    oaStatusType: {
+        label: 'OA status type',
+        ariaLabel: 'Select an oa status type',
+        selectPrompt: 'Please select an oa status type',
+    },
     thesisSubtype: {
         label: 'Thesis type',
         ariaLabel: 'Select a thesis type',

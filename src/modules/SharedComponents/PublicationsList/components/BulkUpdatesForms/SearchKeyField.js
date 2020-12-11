@@ -12,22 +12,25 @@ import {
     BULK_UPDATE_SEARCH_KEY_WOK_DOC_TYPE,
 } from 'config/bulkUpdates';
 
-import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
 import { OrgUnitNameField, SeriesField } from 'modules/SharedComponents/LookupFields';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { OA_STATUS } from 'config/general';
+import { selectFields } from 'locale/selectFields';
 
 // istanbul ignore next
 const normalizeFn = value => (!!value && value.hasOwnProperty('htmlText') ? value.htmlText : null);
 
 export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
     [BULK_UPDATE_SEARCH_KEY_OA_STATUS]: {
-        component: OAStatusField,
+        component: NewGenericSelectField,
         componentProps: {
             genericSelectFieldId: 'rek-oa-status',
+            itemsList: OA_STATUS,
             normalize: value => parseInt(value, 10),
+            ...selectFields.oaStatus,
         },
     },
     [BULK_UPDATE_SEARCH_KEY_SCOPUS_DOC_TYPE]: {

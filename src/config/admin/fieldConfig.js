@@ -8,6 +8,8 @@ import {
     ANDS_COLLECTION_TYPE_OPTIONS,
     INSTITUTIONAL_STATUS,
     LANGUAGE,
+    OA_STATUS,
+    OA_STATUS_TYPE,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -61,8 +63,6 @@ import {
     ListEditorField,
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
-import { OAStatusTypeField } from 'modules/SharedComponents/Toolbox/OAStatusTypeField';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -857,17 +857,23 @@ export default {
             },
         },
         fez_record_search_key_oa_status_type: {
-            component: OAStatusTypeField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_oa_status_type.rek_oa_status_type',
-                label: 'OA status type',
+                genericSelectFieldId: 'rek-oa-status-type',
+                itemsList: OA_STATUS_TYPE,
+                canUnselect: true,
+                ...selectFields.oaStatusType,
             },
         },
         fez_record_search_key_oa_status: {
-            component: OAStatusField,
+            component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_oa_status.rek_oa_status',
-                label: 'OA status',
+                genericSelectFieldId: 'rek-oa-status',
+                itemsList: OA_STATUS,
+                canUnselect: true,
+                ...selectFields.oaStatus,
             },
         },
         additionalNotes: {
