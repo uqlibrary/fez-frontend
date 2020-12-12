@@ -10,6 +10,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { TabbedCard } from 'modules/SharedComponents/Toolbox/TabbedCard';
 
 import pagesLocale from 'locale/pages';
 import { default as globalLocale } from 'locale/global';
@@ -19,20 +20,25 @@ const renderJournalDetail = (detail, index, sizes) =>
     (!Array.isArray(detail.data) || detail.data.length > 0) && (
         <Grid container spacing={2} alignItems="flex-start" key={index}>
             {detail.title && (
-                <Grid item component="span" {...sizes.title}>
+                <Grid item component="span" {...sizes.title} data-testid={`${index}-label`}>
                     <Typography component="span" variant="body2">
                         {detail.title}
                         {': '}
                     </Typography>
                 </Grid>
             )}
-            <Grid item component="span" {...sizes.data}>
+            <Grid item component="span" {...sizes.data} data-testid={`${index}`}>
                 {detail.data}
             </Grid>
         </Grid>
     );
 
 const nodeJoin = (arr, glue) => arr.slice(1).reduce((op, item) => op.concat([glue, item]), [arr[0]]);
+const titleToId = (title = '') =>
+    title
+        .replace(/[^a-z0-9]/gi, '')
+        .toLowerCase()
+        .replace(/ /g, '-');
 
 const getBasicDetails = journalDetails => {
     const detailRows = [
@@ -109,7 +115,7 @@ const getBasicDetails = journalDetails => {
                             issn.fez_ulrichs &&
                             issn.fez_ulrichs.ulr_title_id && (
                                 <ExternalLink
-                                    key={index}
+                                    key={`journal-ulrichs-${index}-link`}
                                     href={globalLocale.global.ulrichsLink.externalUrl.replace(
                                         '[id]',
                                         issn.fez_ulrichs.ulr_title_id,
@@ -155,6 +161,7 @@ const getOADetails = journalDetails => [
         data:
             journalDetails.fez_journal_doaj &&
             journalDetails.fez_journal_doaj.jnl_doaj_last_updated &&
+            moment(journalDetails.fez_journal_doaj.jnl_doaj_last_updated).isValid &&
             moment(journalDetails.fez_journal_doaj.jnl_doaj_last_updated).format('Do MMMM YYYY [at] h:mma'),
     },
     {
@@ -177,7 +184,7 @@ const getOADetails = journalDetails => [
                             issn.fez_sherpa_romeo &&
                             issn.fez_sherpa_romeo.srm_journal_link && (
                                 <ExternalLink
-                                    key={index}
+                                    key={`journal-sherpa-${index}-link`}
                                     href={issn.fez_sherpa_romeo.srm_journal_link}
                                     title={globalLocale.global.sherpaRomeoLink.externalLinktext}
                                 >
@@ -191,23 +198,84 @@ const getOADetails = journalDetails => [
     },
 ];
 
-const renderSectionContents = details =>
+const getSCIEdetails = journalDetails => ({
+    common:
+        (journalDetails.fez_journal_jcr_scie && [
+            {
+                title: 'Abbreviated title',
+                data: journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title,
+            },
+            [
+                {
+                    title: 'Impact factor',
+                    data: journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_impact_factor,
+                },
+                {
+                    title: '5 year impact factor',
+                    data: journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_5yr_impact_factor,
+                },
+            ],
+            {
+                title: 'JCR version',
+                data:
+                    journalDetails.fez_journal_jcr_scie &&
+                    moment(journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_source_date).isValid &&
+                    moment(journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_source_date).format('YYYY'),
+            },
+            {
+                data: (
+                    <ExternalLink
+                        href="https://jcr-clarivate-com.ezproxy.library.uq.edu.au"
+                        title="Open JCR website in a new tab"
+                    >
+                        Go to JCR website
+                    </ExternalLink>
+                ),
+            },
+        ]) ||
+        [],
+    tabs:
+        (journalDetails.fez_journal_jcr_scie &&
+            Array.isArray(journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category) &&
+            journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(category => ({
+                title: category.jnl_jcr_scie_category_description,
+                content: [
+                    [
+                        { title: 'Ranking', data: category.jnl_jcr_scie_category_ranking },
+                        { title: 'Quartile', data: category.jnl_jcr_scie_category_quartile },
+                    ],
+                ],
+            }))) ||
+        [],
+});
+
+export const renderSectionContents = (details, id) =>
     details.map((detailRow, index) => {
         if (Array.isArray(detailRow)) {
             return (
-                <Grid container spacing={0} alignItems="flex-start">
+                <Grid container spacing={0} alignItems="flex-start" key={`${id}-row-${index}-grid`}>
                     {detailRow.map((detailColumn, subIndex) => (
-                        <Grid item xs={12} sm style={{ padding: '8px 8px 8px 0' }} key={`${index}-${subIndex}`}>
-                            {renderJournalDetail(detailColumn, `${index}-${subIndex}`, {
-                                title: { xs: 'auto' },
-                                data: { xs: 'auto' },
-                            })}
+                        <Grid
+                            item
+                            xs={12}
+                            sm
+                            style={{ padding: '8px 8px 8px 0' }}
+                            key={`${id}-row-${index}-column-${subIndex}-grid`}
+                        >
+                            {renderJournalDetail(
+                                detailColumn,
+                                `${id}-${titleToId(detailColumn.title) || `-row-${index}-column-${subIndex}`}`,
+                                {
+                                    title: { xs: 'auto' },
+                                    data: { xs: 'auto' },
+                                },
+                            )}
                         </Grid>
                     ))}
                 </Grid>
             );
         }
-        return renderJournalDetail(detailRow, index, {
+        return renderJournalDetail(detailRow, `${id}-${titleToId(detailRow.title) || `field-${index}`}`, {
             title: { xs: 12, sm: 6, md: 3 },
             data: { xs: 'auto' },
         });
@@ -228,15 +296,22 @@ export const JournalView = ({ journalDetails, journalLoading, journalLoadingErro
         return (
             <StandardPage standardPageId="journal-view" title={journalDetails.jnl_title || ''}>
                 <StandardCard standardCardId="journal-basic-details" noHeader>
-                    {renderSectionContents(getBasicDetails(journalDetails))}
+                    {renderSectionContents(getBasicDetails(journalDetails), 'journal-basic-details')}
                 </StandardCard>
                 <br />
                 <StandardCard
                     standardCardId="journal-open-access"
                     title="Open Access (Directory of Open Access Journals - DOAJ)"
                 >
-                    {renderSectionContents(getOADetails(journalDetails))}
+                    {renderSectionContents(getOADetails(journalDetails), 'journal-open-access')}
                 </StandardCard>
+                <br />
+                <TabbedCard
+                    cardId="journal-scie"
+                    cardTitle="Clarivate Journal Citation Reports - Science Citation Index"
+                    {...getSCIEdetails(journalDetails)}
+                    contentRenderer={renderSectionContents}
+                />
                 <h3>Raw API response output</h3>
                 <pre>{JSON.stringify(journalDetails, null, 2)}</pre>
             </StandardPage>
