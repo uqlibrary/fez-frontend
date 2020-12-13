@@ -918,9 +918,59 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={true}
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -1762,9 +1812,59 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -2476,9 +2576,59 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -3320,9 +3470,59 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -4104,9 +4304,59 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
