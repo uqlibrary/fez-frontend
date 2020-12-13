@@ -225,16 +225,28 @@ const getClarivateDetails = (journalDetails, slugPiece) => ({
                         'YYYY',
                     ),
             },
-            {
-                data: (
-                    <ExternalLink
-                        href="https://jcr-clarivate-com.ezproxy.library.uq.edu.au"
-                        title="Open JCR website in a new tab"
-                    >
-                        Go to JCR website
-                    </ExternalLink>
-                ),
-            },
+            [
+                {
+                    data: (
+                        <ExternalLink
+                            href="https://jcr-clarivate-com.ezproxy.library.uq.edu.au"
+                            title="Open JCR website in a new tab"
+                        >
+                            Go to JCR website
+                        </ExternalLink>
+                    ),
+                },
+                {
+                    data: (
+                        <ExternalLink
+                            href={`https://clarivate.com/webofsciencegroup/solutions/webofscience-${slugPiece}/`}
+                            title="Open in a new tab"
+                        >
+                            {`More info about JCR ${slugPiece.toUpperCase()}`}
+                        </ExternalLink>
+                    ),
+                },
+            ],
         ]) ||
         [],
     tabs:
@@ -246,6 +258,86 @@ const getClarivateDetails = (journalDetails, slugPiece) => ({
                     [
                         { title: 'Ranking', data: category[`jnl_jcr_${slugPiece}_category_ranking`] },
                         { title: 'Quartile', data: category[`jnl_jcr_${slugPiece}_category_quartile`] },
+                    ],
+                ],
+            }))) ||
+        [],
+});
+
+const getCiteScoreDetails = journalDetails => ({
+    common:
+        (journalDetails.fez_journal_cite_score && [
+            {
+                title: 'CiteScore version',
+                data:
+                    moment(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date).isValid &&
+                    moment(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date).format('YYYY'),
+            },
+            [
+                {
+                    data: (
+                        <ExternalLink
+                            href={`https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/${journalDetails.fez_journal_cite_score.jnl_cite_score_source_id}`}
+                            title="Open in new tab"
+                        >
+                            Go to record in CiteScore
+                        </ExternalLink>
+                    ),
+                },
+                {
+                    data: (
+                        <ExternalLink
+                            href="https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/"
+                            title="Open in new tab"
+                        >
+                            More info about CiteScore
+                        </ExternalLink>
+                    ),
+                },
+            ],
+        ]) ||
+        [],
+    tabs:
+        (journalDetails.fez_journal_cite_score &&
+            Array.isArray(journalDetails.fez_journal_cite_score.fez_journal_cite_score_asjc_code) &&
+            journalDetails.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(code => ({
+                title: code.jnl_cite_score_asjc_code,
+                content: [
+                    {
+                        title: 'Scopus ASJC Code',
+                        data: code.jnl_cite_score_asjc_code,
+                    },
+                    [
+                        {
+                            title: 'CiteScore',
+                            data: code.jnl_cite_score_asjc_code_cite_score,
+                        },
+                        {
+                            title: 'Ranked',
+                            data:
+                                code.jnl_cite_score_asjc_code_rank &&
+                                `${code.jnl_cite_score_asjc_code_rank} out of ${code.jnl_cite_score_asjc_code_rank_out_of}`,
+                        },
+                    ],
+                    [
+                        {
+                            title: 'Top 10% (CiteScore Percentile)',
+                            data: (code.jnl_cite_score_asjc_code_top_10_percent && 'Yes') || 'No',
+                        },
+                        {
+                            title: 'Percentile',
+                            data: code.jnl_cite_score_asjc_code_percentile,
+                        },
+                        {
+                            title: 'Percent Cited',
+                            data:
+                                code.jnl_cite_score_asjc_code_percent_cited &&
+                                `${code.jnl_cite_score_asjc_code_percent_cited}%`,
+                        },
+                    ],
+                    [
+                        { title: 'SNIP', data: code.jnl_cite_score_asjc_code_snip },
+                        { title: 'SJR', data: code.jnl_cite_score_asjc_code_sjr },
                     ],
                 ],
             }))) ||
@@ -320,6 +412,13 @@ export const JournalView = ({ journalDetails, journalLoading, journalLoadingErro
                     cardId="journal-ssci"
                     cardTitle="Clarivate Journal Citation Reports - Social Science Citation Index"
                     {...getClarivateDetails(journalDetails, 'ssci')}
+                    contentRenderer={renderSectionContents}
+                />
+                <br />
+                <TabbedCard
+                    cardId="journal-citescore"
+                    cardTitle="Elsevier CiteScore"
+                    {...getCiteScoreDetails(journalDetails)}
                     contentRenderer={renderSectionContents}
                 />
                 <br />
