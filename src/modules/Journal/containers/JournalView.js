@@ -317,12 +317,54 @@ const getCiteScoreDetails = journalDetails => ({
         [],
 });
 
+const getIndexDetails = journalDetails => [
+    {
+        title: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
+        data:
+            Array.isArray(journalDetails.fez_journal_wos_category) &&
+            journalDetails.fez_journal_wos_category
+                .map(category => `${category.jnl_wos_category_index} (${category.jnl_wos_category})`)
+                .join(', '),
+    },
+    {
+        title: 'Science Citation Index Expanded - WOS Subject Categories',
+        data:
+            journalDetails.fez_journal_jcr_scie &&
+            Array.isArray(journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category) &&
+            journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category
+                .map(category => category.jnl_jcr_scie_category_description)
+                .join(', '),
+    },
+    {
+        title: 'Social Science Citation Index - WOS Subject Categories',
+        data:
+            journalDetails.fez_journal_jcr_ssci &&
+            Array.isArray(journalDetails.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category) &&
+            journalDetails.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category
+                .map(category => category.jnl_jcr_ssci_category_description)
+                .join(', '),
+    },
+    {
+        title: 'Emerging Sources Citation Index - WOS Subject Categories',
+        data: '????',
+    },
+    {
+        title: 'Scopus',
+        data: (journalDetails.fez_journal_cite_score && 'Yes') || 'No',
+    },
+    {
+        title: 'Pubmed',
+        data: (journalDetails.fez_journal_pubmed && 'Yes') || 'No',
+    },
+];
+
 const mapStateToProps = state => {
     const { journalDetails = false, journalLoading = false, journalLoadingError = false } = state.get('journalReducer');
 
     return {
         basicDetails: getBasicDetails(journalDetails),
         citeScoreDetails: getCiteScoreDetails(journalDetails),
+        indexDetails: getIndexDetails(journalDetails),
         journalDetails,
         journalDetailsLoaded: !!journalDetails,
         journalLoading,

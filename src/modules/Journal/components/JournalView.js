@@ -72,6 +72,7 @@ export const JournalView = ({
     actions,
     basicDetails,
     citeScoreDetails,
+    indexDetails,
     journalDetails,
     journalDetailsLoaded,
     journalLoading,
@@ -127,6 +128,10 @@ export const JournalView = ({
                     contentRenderer={renderSectionContents}
                 />
                 <br />
+                <StandardCard standardCardId="journal-indexed-in" title="Indexed in">
+                    {renderSectionContents(indexDetails, 'journal-indexed-in')}
+                </StandardCard>
+                <br />
                 <h3>Raw API response output</h3>
                 <pre>{JSON.stringify(journalDetails, null, 2)}</pre>
             </StandardPage>
@@ -138,6 +143,7 @@ JournalView.propTypes = {
     actions: PropTypes.object,
     basicDetails: PropTypes.array,
     citeScoreDetails: PropTypes.object,
+    indexDetails: PropTypes.array,
     journalDetails: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
     journalDetailsLoaded: PropTypes.bool,
     journalLoading: PropTypes.bool,
