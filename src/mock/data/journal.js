@@ -158,7 +158,7 @@ export const journalDetails = {
         "fez_journal_jcr_scie": {
             "jnl_jcr_scie_id": 1,
             "jnl_jcr_scie_jid": "1",
-            "jnl_jcr_scie_abbrev_title": "jcr ssci abbrev title",
+            "jnl_jcr_scie_abbrev_title": "jcr scie abbrev title",
             "jnl_jcr_scie_impact_factor": "1.5",
             "jnl_jcr_scie_5yr_impact_factor": "1.5",
             "jnl_jcr_scie_source_date": "2020-11-12",
@@ -185,16 +185,16 @@ export const journalDetails = {
             "jnl_jcr_ssci_id": 1,
             "jnl_jcr_ssci_jid": "1",
             "jnl_jcr_ssci_abbrev_title": "jcr ssci abbrev title",
-            "jnl_jcr_ssci_impact_factor": "1.5",
-            "jnl_jcr_ssci_5yr_impact_factor": "1.5",
+            "jnl_jcr_ssci_impact_factor": "1.3",
+            "jnl_jcr_ssci_5yr_impact_factor": "1.2",
             "jnl_jcr_ssci_source_date": "2020-11-12",
             "fez_journal_jcr_ssci_category": [
                 {
-                    "jnl_jcr_ssci_category_id": "1",
-                    "jnl_jcr_ssci_category_code": "DA",
-                    "jnl_jcr_ssci_category_description": "Businese",
-                    "jnl_jcr_ssci_category_ranking": "1123/1123",
-                    "jnl_jcr_ssci_category_quartile": "Q1",
+                    "jnl_jcr_ssci_category_id": "123",
+                    "jnl_jcr_ssci_category_code": "BB",
+                    "jnl_jcr_ssci_category_description": "Test category",
+                    "jnl_jcr_ssci_category_ranking": "123/123",
+                    "jnl_jcr_ssci_category_quartile": "Q2",
                     "jnl_jcr_ssci_category_order": 1
                 }
             ]

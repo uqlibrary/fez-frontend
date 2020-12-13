@@ -198,29 +198,32 @@ const getOADetails = journalDetails => [
     },
 ];
 
-const getSCIEdetails = journalDetails => ({
+const getClarivateDetails = (journalDetails, slugPiece) => ({
     common:
-        (journalDetails.fez_journal_jcr_scie && [
+        (journalDetails[`fez_journal_jcr_${slugPiece}`] && [
             {
                 title: 'Abbreviated title',
-                data: journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title,
+                data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_abbrev_title`],
             },
             [
                 {
                     title: 'Impact factor',
-                    data: journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_impact_factor,
+                    data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_impact_factor`],
                 },
                 {
                     title: '5 year impact factor',
-                    data: journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_5yr_impact_factor,
+                    data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_5yr_impact_factor`],
                 },
             ],
             {
                 title: 'JCR version',
                 data:
-                    journalDetails.fez_journal_jcr_scie &&
-                    moment(journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_source_date).isValid &&
-                    moment(journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_source_date).format('YYYY'),
+                    journalDetails[`fez_journal_jcr_${slugPiece}`] &&
+                    moment(journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_source_date`])
+                        .isValid &&
+                    moment(journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_source_date`]).format(
+                        'YYYY',
+                    ),
             },
             {
                 data: (
@@ -235,14 +238,14 @@ const getSCIEdetails = journalDetails => ({
         ]) ||
         [],
     tabs:
-        (journalDetails.fez_journal_jcr_scie &&
-            Array.isArray(journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category) &&
-            journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(category => ({
-                title: category.jnl_jcr_scie_category_description,
+        (journalDetails[`fez_journal_jcr_${slugPiece}`] &&
+            Array.isArray(journalDetails[`fez_journal_jcr_${slugPiece}`][`fez_journal_jcr_${slugPiece}_category`]) &&
+            journalDetails[`fez_journal_jcr_${slugPiece}`][`fez_journal_jcr_${slugPiece}_category`].map(category => ({
+                title: category[`jnl_jcr_${slugPiece}_category_description`],
                 content: [
                     [
-                        { title: 'Ranking', data: category.jnl_jcr_scie_category_ranking },
-                        { title: 'Quartile', data: category.jnl_jcr_scie_category_quartile },
+                        { title: 'Ranking', data: category[`jnl_jcr_${slugPiece}_category_ranking`] },
+                        { title: 'Quartile', data: category[`jnl_jcr_${slugPiece}_category_quartile`] },
                     ],
                 ],
             }))) ||
@@ -309,9 +312,17 @@ export const JournalView = ({ journalDetails, journalLoading, journalLoadingErro
                 <TabbedCard
                     cardId="journal-scie"
                     cardTitle="Clarivate Journal Citation Reports - Science Citation Index"
-                    {...getSCIEdetails(journalDetails)}
+                    {...getClarivateDetails(journalDetails, 'scie')}
                     contentRenderer={renderSectionContents}
                 />
+                <br />
+                <TabbedCard
+                    cardId="journal-ssci"
+                    cardTitle="Clarivate Journal Citation Reports - Social Science Citation Index"
+                    {...getClarivateDetails(journalDetails, 'ssci')}
+                    contentRenderer={renderSectionContents}
+                />
+                <br />
                 <h3>Raw API response output</h3>
                 <pre>{JSON.stringify(journalDetails, null, 2)}</pre>
             </StandardPage>
