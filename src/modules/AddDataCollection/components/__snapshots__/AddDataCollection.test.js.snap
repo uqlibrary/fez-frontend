@@ -600,7 +600,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-licenseTitle"
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
                   itemsList={
                     Array [
@@ -2010,7 +2010,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-licenseTitle"
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
                   itemsList={
                     Array [
@@ -3416,7 +3416,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-licenseTitle"
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
                   itemsList={
                     Array [
@@ -4822,7 +4822,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   ariaLabel="Please elect a license"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-licenseTitle"
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
                   itemsList={
                     Array [

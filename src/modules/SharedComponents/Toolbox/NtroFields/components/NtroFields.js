@@ -11,14 +11,13 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
-import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { SeriesField } from 'modules/SharedComponents/LookupFields';
 
 import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
-import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE } from 'config/general';
+import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'config/general';
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
@@ -455,7 +454,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hidePeerReviewActivity && (
                                     <Grid item xs={12} sm={this.row5Width}>
                                         <Field
-                                            component={QualityIndicatorField}
+                                            component={NewGenericSelectField}
                                             disabled={this.props.submitting}
                                             id="quality-indicators"
                                             name="qualityIndicators"
@@ -463,6 +462,7 @@ export default class NtroFields extends React.PureComponent {
                                             placeholder={metadata.fields.peerReviewActivity.label}
                                             required
                                             multiple
+                                            itemsList={QUALITY_INDICATORS}
                                             validate={[validation.requiredList]}
                                         />
                                     </Grid>
