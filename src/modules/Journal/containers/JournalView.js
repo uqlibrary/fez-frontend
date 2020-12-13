@@ -27,12 +27,26 @@ const getBasicDetails = journalDetails => {
                     journalDetails.fez_journal_issn[0].fez_ulrichs &&
                     journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_abbrev_title),
         },
-        {
-            title: 'ISSN(s)',
-            data:
-                Array.isArray(journalDetails.fez_journal_issn) &&
-                journalDetails.fez_journal_issn.map(issn => issn.jnl_issn).join(', '),
-        },
+        [
+            {
+                title: 'ISSN(s)',
+                data:
+                    Array.isArray(journalDetails.fez_journal_issn) &&
+                    journalDetails.fez_journal_issn
+                        .filter(issn => issn.jnl_issn_type !== 454151)
+                        .map(issn => issn.jnl_issn)
+                        .join(', '),
+            },
+            {
+                title: 'eISSN(s)',
+                data:
+                    Array.isArray(journalDetails.fez_journal_issn) &&
+                    journalDetails.fez_journal_issn
+                        .filter(issn => issn.jnl_issn_type === 454151)
+                        .map(issn => issn.jnl_issn)
+                        .join(', '),
+            },
+        ],
         {
             title: 'Publisher',
             data:
