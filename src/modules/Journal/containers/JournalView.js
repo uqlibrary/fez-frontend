@@ -358,6 +358,66 @@ const getIndexDetails = journalDetails => [
     },
 ];
 
+const getListedDetails = journalDetails => [
+    [
+        {
+            title: 'Australian Business Deans Council journal quality list',
+            data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_rating,
+        },
+        {
+            title: 'Field of Research Codes',
+            data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_for_code,
+        },
+    ],
+    {
+        title: 'Current list',
+        data:
+            journalDetails.fez_journal_abdc &&
+            journalDetails.fez_journal_abdc.jnl_abdc_source_date &&
+            moment(journalDetails.fez_journal_abdc.jnl_abdc_source_date).isValid &&
+            moment(journalDetails.fez_journal_abdc.jnl_abdc_source_date).format('Do MMMM YYYY'),
+    },
+    {
+        title: 'CWTS Leiden Ranking',
+        data:
+            (journalDetails.fez_journal_cwts &&
+                `Yes, ${moment(journalDetails.fez_journal_cwts.jnl_cwts_source_date).isValid &&
+                    moment(journalDetails.fez_journal_cwts.jnl_cwts_source_date).format('YYYY')}`) ||
+            'No',
+    },
+    [
+        {
+            title: 'Excellence in Research for Australia (ERA)',
+            data: (journalDetails.fez_journal_era && 'Yes') || 'No',
+        },
+        {
+            title: 'ERA Years with Field of Research codes',
+            data:
+                Array.isArray(journalDetails.fez_journal_era) &&
+                nodeJoin(
+                    journalDetails.fez_journal_era.map(
+                        era =>
+                            `${era.jnl_era_source_year}: ${Array.isArray(era.fez_journal_era_for_code) &&
+                                era.fez_journal_era_for_code
+                                    .map(forCode => forCode.jnl_era_for_code_lookup)
+                                    .join(', ')}`,
+                    ),
+                    <br />,
+                ),
+        },
+    ],
+    {
+        title: 'Nature Index',
+        data:
+            (journalDetails.fez_journal_nature_index &&
+                `Yes, ${moment(journalDetails.fez_journal_nature_index.jnl_nature_index_source_date).isValid &&
+                    moment(journalDetails.fez_journal_nature_index.jnl_nature_index_source_date).format(
+                        'Do MMMM YYYY',
+                    )}`) ||
+            'No',
+    },
+];
+
 const mapStateToProps = state => {
     const { journalDetails = false, journalLoading = false, journalLoadingError = false } = state.get('journalReducer');
 
@@ -372,6 +432,7 @@ const mapStateToProps = state => {
         journalTitle: (!!journalDetails && journalDetails.jnl_title) || '',
         jscieDetails: getClarivateDetails(journalDetails, 'scie'),
         jssciDetails: getClarivateDetails(journalDetails, 'ssci'),
+        listedDetails: getListedDetails(journalDetails),
         oaDetails: getOADetails(journalDetails),
     };
 };

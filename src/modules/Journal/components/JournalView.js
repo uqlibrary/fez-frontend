@@ -80,6 +80,7 @@ export const JournalView = ({
     journalTitle,
     jscieDetails,
     jssciDetails,
+    listedDetails,
     match,
     oaDetails,
 }) => {
@@ -132,6 +133,10 @@ export const JournalView = ({
                     {renderSectionContents(indexDetails, 'journal-indexed-in')}
                 </StandardCard>
                 <br />
+                <StandardCard standardCardId="journal-listed-in" title="Listed in">
+                    {renderSectionContents(listedDetails, 'journal-listed-in')}
+                </StandardCard>
+                <br />
                 <h3>Raw API response output</h3>
                 <pre>{JSON.stringify(journalDetails, null, 2)}</pre>
             </StandardPage>
@@ -151,6 +156,7 @@ JournalView.propTypes = {
     journalTitle: PropTypes.string,
     jscieDetails: PropTypes.object,
     jssciDetails: PropTypes.object,
+    listedDetails: PropTypes.array,
     match: PropTypes.object,
     oaDetails: PropTypes.array,
 };
