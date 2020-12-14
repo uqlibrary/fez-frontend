@@ -721,6 +721,7 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             },
             "language": Object {
               "label": "Language",
+              "selectPrompt": "Please select languages as required",
             },
             "notes": Object {
               "label": "Notes",

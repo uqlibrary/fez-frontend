@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AuthorsCitationView from './AuthorsCitationView';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 const EditorsCitationView = ({
     citationStyle,

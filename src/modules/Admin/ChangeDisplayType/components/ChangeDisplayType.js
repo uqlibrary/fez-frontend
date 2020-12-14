@@ -11,7 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 
 import { DOCUMENT_TYPES_EDIT_ONLY, publicationTypes } from 'config/general';
-import { routes, validation } from 'config';
+import { pathConfig, validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 import viewRecordLocale from 'locale/viewRecord';
@@ -127,7 +127,7 @@ export const ChangeDisplayType = ({
     const navigateToViewPage = () => {
         /* istanbul ignore else */
         if (!!pid && validation.isValidPid(pid)) {
-            window.location.assign(routes.pathConfig.records.view(pid, true));
+            window.location.assign(pathConfig.records.view(pid, true));
         }
     };
 
@@ -135,7 +135,7 @@ export const ChangeDisplayType = ({
     /* istanbul ignore next */
     const navigateToEditRecord = () => {
         if (!!pid && validation.isValidPid(pid)) {
-            window.location.assign(routes.pathConfig.admin.edit(pid));
+            window.location.assign(pathConfig.admin.edit(pid));
         }
     };
 

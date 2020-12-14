@@ -68,15 +68,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                 )}
                 <Grid item xs={12}>
                     <Field
-                        component={({ input, meta, ...rest }) => (
-                            <NewGenericSelectField
-                                error={!!meta.error}
-                                errorText={meta.error}
-                                onChange={input.onChange}
-                                value={input.value || -1}
-                                {...rest}
-                            />
-                        )}
+                        component={NewGenericSelectField}
                         disabled={submitting || submitSucceeded}
                         genericSelectFieldId="search-author-by"
                         label={txt.changeAuthorIdForm.formLabels.searchBy}

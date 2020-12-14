@@ -265,51 +265,51 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
 export const THESIS_SUBTYPES = [
     {
         value: 'B.A. Thesis',
-        label: 'B.A. Thesis',
+        text: 'B.A. Thesis',
     },
     {
         value: 'B.Sc Thesis',
-        label: 'B.Sc Thesis',
+        text: 'B.Sc Thesis',
     },
     {
         value: "Bachelor's Thesis",
-        label: "Bachelor's Thesis",
+        text: "Bachelor's Thesis",
     },
     {
         value: 'Higher Doctorate',
-        label: 'Higher Doctorate',
+        text: 'Higher Doctorate',
     },
     {
         value: 'Honours Thesis',
-        label: 'Honours Thesis',
+        text: 'Honours Thesis',
     },
     {
         value: 'M.A. Thesis',
-        label: 'M.A. Thesis',
+        text: 'M.A. Thesis',
     },
     {
         value: 'M.Sc Thesis',
-        label: 'M.Sc Thesis',
+        text: 'M.Sc Thesis',
     },
     {
         value: "Master's Thesis",
-        label: "Master's Thesis",
+        text: "Master's Thesis",
     },
     {
         value: 'MPhil Thesis',
-        label: 'MPhil Thesis',
+        text: 'MPhil Thesis',
     },
     {
         value: 'Other',
-        label: 'Other',
+        text: 'Other',
     },
     {
         value: 'PhD Thesis',
-        label: 'PhD Thesis',
+        text: 'PhD Thesis',
     },
     {
         value: 'Professional Doctorate',
-        label: 'Professional Doctorate',
+        text: 'Professional Doctorate',
     },
 ];
 
@@ -548,10 +548,6 @@ export const publicationTypes = (components, isAdmin = false) => ({
 
 export const THESIS_SUBMISSION_SUBTYPES = [
     {
-        value: undefined,
-        text: 'Select a thesis type',
-    },
-    {
         value: 'MPhil Thesis',
         text: 'MPhil Thesis',
     },
@@ -757,8 +753,6 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
     },
 ];
 
-export const OPEN_ACCESS_ID = 453619;
-export const MEDIATED_ACCESS_ID = 453618;
 export const CURRENT_LICENCES = [
     {
         value: 453701,
@@ -1083,7 +1077,6 @@ export const AUDIENCE_SIZE = [
 ];
 
 export const LANGUAGE = [
-    { value: null, text: 'Select multiple languages as required' },
     { value: 'afr', text: 'Afrikaans' },
     { value: 'alb', text: 'Albanian' },
     { value: 'ara', text: 'Arabic' },
@@ -1444,7 +1437,6 @@ export const HERDC_STATUS = [
 ];
 
 export const INSTITUTIONAL_STATUS = [
-    { value: null, text: 'Please choose an option' },
     { value: '453223', text: 'UQ' },
     { value: '453224', text: 'Non-UQ' },
     { value: '453225', text: 'Unknown' },
@@ -1462,7 +1454,6 @@ export const REFEREED_SOURCES = [
 ];
 
 export const ALTERNATE_GENRE = [
-    { value: null, text: 'Please choose an option' },
     { value: '453663', text: 'Conversation' },
     { value: '453664', text: 'Culture, stories, people' },
     { value: '453665', text: 'Session organisation' },
@@ -1487,7 +1478,6 @@ export const OA_STATUS = [
 ];
 
 export const OA_STATUS_TYPE = [
-    { value: null, text: 'Please choose an option' },
     { value: 454120, text: 'Green' },
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
@@ -1496,6 +1486,16 @@ export const OA_STATUS_TYPE = [
 
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
+export const ANDS_COLLECTION_TYPE_OPTIONS = [
+    {
+        value: ANDS_COLLECTION_TYPE_COLLECTION,
+        text: 'Collection',
+    },
+    {
+        value: ANDS_COLLECTION_TYPE_DATASET,
+        text: 'Dataset',
+    },
+];
 
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
@@ -1539,3 +1539,15 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR]: 'Single Issue Editor',
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
+export const OPEN_ACCESS_ID = 453619;
+export const MEDIATED_ACCESS_ID = 453618;
+export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
+    {
+        value: OPEN_ACCESS_ID,
+        text: 'Open Access',
+    },
+    {
+        value: MEDIATED_ACCESS_ID,
+        text: 'Mediated Access',
+    },
+];

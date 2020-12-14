@@ -1,5 +1,5 @@
 import SearchRecords from './SearchRecords';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 import { locale } from 'locale';
 
 function setup(testProps = {}) {
@@ -188,7 +188,7 @@ describe('SearchRecords page', () => {
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.search, state: { page: 2 } },
+            location: { pathname: pathConfig.records.search, state: { page: 2 } },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(2);
@@ -199,7 +199,7 @@ describe('SearchRecords page', () => {
         const wrapper = setup({ actions: { searchEspacePublications: testAction } });
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.search, state: null },
+            location: { pathname: pathConfig.records.search, state: null },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
@@ -294,11 +294,11 @@ describe('SearchRecords page', () => {
         const wrapper = setup({
             history: {
                 push: jest.fn(history => {
-                    expect(history.pathname).toBe(routes.pathConfig.admin.unpublished);
+                    expect(history.pathname).toBe(pathConfig.admin.unpublished);
                 }),
             },
             location: {
-                pathname: routes.pathConfig.admin.unpublished,
+                pathname: pathConfig.admin.unpublished,
                 search: '',
             },
         });

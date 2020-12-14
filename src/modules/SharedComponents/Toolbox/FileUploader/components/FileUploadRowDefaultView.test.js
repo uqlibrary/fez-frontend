@@ -28,6 +28,11 @@ describe('Component FileUploadRowDefaultView', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render default view for admin', () => {
+        const wrapper = setup({ isAdmin: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render default view with styles', () => {
         const wrapper = getElement(FileUploadRowDefaultViewWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();

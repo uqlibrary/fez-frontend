@@ -2,14 +2,16 @@ import { useEffect, useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import * as validationRules from 'config/validation';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import {
     AuthorIdField,
     PublisherField,
     OrgUnitNameField,
     CollectionField,
 } from 'modules/SharedComponents/LookupFields';
-import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { UnpublishedStatusField } from './Fields/UnpublishedStatusField';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
+
+import { UNPUBLISHED_STATUS } from 'config/general';
 
 const runValidationRules = (inputField, value) => {
     const rules = !!inputField.validation && inputField.validation;
@@ -30,7 +32,7 @@ const getInputComponent = type => {
         case 'PublisherLookup':
             return PublisherField;
         case 'ThesisTypeLookup':
-            return ThesisSubtypeField;
+            return ThesisSubtypeSelectField;
         case 'CollectionsLookup':
             return CollectionField;
         case 'AuthorIdLookup':
@@ -39,7 +41,7 @@ const getInputComponent = type => {
         case 'OrgUnitLookup':
             return OrgUnitNameField;
         case 'StatusLookup':
-            return UnpublishedStatusField;
+            return NewGenericSelectField;
         default:
             return TextField;
     }
@@ -114,10 +116,20 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'ThesisTypeLookup':
             return {
                 ...selectDefaultProps,
+                value: value.length > 0 ? value : [],
                 multiple: inputField.multiple,
                 autoWidth: false,
                 hideLabel: true,
-                displayEmpty: true,
+                displayEmpty: value === '' || value.length === 0,
+                genericSelectFieldId: 'rek-genre-type',
+                selectPrompt: inputField.selectPrompt,
+                ...(value === '' || value.length === 0
+                    ? {
+                          selectProps: {
+                              renderValue /* istanbul ignore next */: () => inputField.selectPrompt,
+                          },
+                      }
+                    : {}),
             };
         case 'CollectionsLookup':
             return {
@@ -129,9 +141,11 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'StatusLookup':
             return {
                 ...selectDefaultProps,
+                genericSelectFieldId: 'rek-status',
                 autoWidth: false,
                 hideLabel: true,
                 displayEmpty: false,
+                itemsList: UNPUBLISHED_STATUS,
                 onChange: item => onChange(item),
             };
         default:

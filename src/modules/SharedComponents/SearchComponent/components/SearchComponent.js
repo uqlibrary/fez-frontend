@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import param from 'can-param';
 
 import Snackbar from '@material-ui/core/Snackbar';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 import {
     DEFAULT_QUERY_PARAMS,
     UNPUBLISHED_STATUS_MAP,
@@ -240,9 +240,7 @@ export default class SearchComponent extends PureComponent {
 
             // navigate to search results page
             this.props.history.push({
-                pathname: this.props.isUnpublishedBufferPage
-                    ? routes.pathConfig.admin.unpublished
-                    : routes.pathConfig.records.search,
+                pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
                 search: param(searchQuery),
                 state: { ...searchQuery },
             });

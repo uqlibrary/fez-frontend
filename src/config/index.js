@@ -11,6 +11,7 @@ export {
     GOOGLE_MAPS_API_URL,
     GOOGLE_MAPS_API_CHINA_URL,
     PATH_PREFIX,
+    DATASET_ACCESS_CONDITIONS_OPTIONS,
 } from './general';
 
 export { api, generateCancelToken, cache, sessionApi } from './axios';
@@ -26,3 +27,4 @@ export { claimRecordConfig } from './claimRecord';
 export { mui1theme, adminTheme } from './theme';
 export { history } from './history';
 export * as BULK_UPDATES from './bulkUpdates';
+export { pathConfig } from './pathConfig';

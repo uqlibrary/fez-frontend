@@ -1,5 +1,6 @@
 import * as routes from './routes';
 import { accounts, currentAuthor, authorDetails } from 'mock/data/account';
+import { pathConfig, getDatastreamVersionQueryString } from './pathConfig';
 
 describe('Routes getMenuConfig method', () => {
     it('should return a list of menus for anon user', () => {
@@ -215,7 +216,7 @@ describe('Routes other methods', () => {
     it('file.url should without checksum', () => {
         const pid = 'UQ:12345';
         const filename = 'image.jpg';
-        const url = routes.pathConfig.file.url(pid, filename);
+        const url = pathConfig.file.url(pid, filename);
         expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}`);
     });
 
@@ -223,8 +224,8 @@ describe('Routes other methods', () => {
         const pid = 'UQ:12345';
         const filename = 'image.jpg';
         const checksum = 'a5a5d5qwe5dq5f5qefqe';
-        const versionHash = routes.getDatastreamVersionQueryString(filename, checksum);
-        const url = routes.pathConfig.file.url(pid, filename, checksum);
+        const versionHash = getDatastreamVersionQueryString(filename, checksum);
+        const url = pathConfig.file.url(pid, filename, checksum);
         expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}?dsi_version=${versionHash}`);
     });
 });

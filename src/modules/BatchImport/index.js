@@ -1,1 +1,1 @@
-export { default as BatchImport } from './containers/BatchImport';
+export { default as BatchImport } from './components/BatchImport';

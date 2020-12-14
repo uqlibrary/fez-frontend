@@ -230,23 +230,13 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "WrappedComponent": [Function],
-                      "compare": null,
-                      "displayName": "Connect(GenericSelectField)",
-                      "type": [Function],
-                    }
-                  }
+                  ariaLabel="Select a thesis type"
+                  component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
-                      Object {
-                        "text": "Select a thesis type",
-                        "value": undefined,
-                      },
                       Object {
                         "text": "MPhil Thesis",
                         "value": "MPhil Thesis",
@@ -264,6 +254,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   label="Thesis type"
                   name="rek_genre_type"
                   required={true}
+                  selectPrompt="Please select a thesis type"
                   validate={
                     Array [
                       [Function],
@@ -784,23 +775,13 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "WrappedComponent": [Function],
-                      "compare": null,
-                      "displayName": "Connect(GenericSelectField)",
-                      "type": [Function],
-                    }
-                  }
+                  ariaLabel="Select a thesis type"
+                  component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
-                      Object {
-                        "text": "Select a thesis type",
-                        "value": undefined,
-                      },
                       Object {
                         "text": "MPhil Thesis",
                         "value": "MPhil Thesis",
@@ -818,6 +799,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   label="Thesis type"
                   name="rek_genre_type"
                   required={true}
+                  selectPrompt="Please select a thesis type"
                   validate={
                     Array [
                       [Function],

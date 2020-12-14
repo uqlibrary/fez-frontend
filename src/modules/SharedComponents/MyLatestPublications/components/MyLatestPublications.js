@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { routes } from 'config';
+import { pathConfig } from 'config';
 import { locale } from 'locale';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -46,7 +46,7 @@ export class MyLatestPublications extends PureComponent {
     }
 
     _viewMyResearch = () => {
-        this.props.history.push(routes.pathConfig.records.mine);
+        this.props.history.push(pathConfig.records.mine);
     };
 
     render() {

@@ -1,7 +1,4 @@
 import React from 'react';
-import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_CONDITION_CLOSED } from './config';
-
-export { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_CONDITION_CLOSED } from './config';
 
 export default {
     instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
@@ -85,20 +82,22 @@ export default {
         uploadInProgressText: 'Uploading...',
         defaultView: {
             embargoDateClosedAccess: 'No date required',
+            accessCondition: {
+                label: 'Access conditions',
+                selectPrompt: 'Select access conditions',
+                errorMessage: 'This field is required',
+            },
         },
         mobileView: {
             filenameColumn: 'File name',
             fileAccessColumn: 'File access',
             embargoDateColumn: 'Embargo date',
             embargoDateClosedAccess: 'No date required',
-        },
-        fileUploadRowAccessSelector: {
-            selectPrompt: 'Select access conditions',
-            errorMessage: 'This field is required',
-            options: [
-                { text: 'Open Access', value: FILE_ACCESS_CONDITION_OPEN },
-                { text: 'Closed Access', value: FILE_ACCESS_CONDITION_CLOSED },
-            ],
+            accessCondition: {
+                label: 'Access conditions',
+                selectPrompt: 'Select access conditions',
+                errorMessage: 'This field is required',
+            },
         },
     },
 };
