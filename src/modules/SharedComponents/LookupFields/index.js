@@ -4,7 +4,6 @@ export { FieldOfResearchField } from './containers/FieldOfResearchField';
 export { FieldOfResearchListField } from './containers/FieldOfResearchListField';
 export { FilteredFieldOfResearchListField } from './containers/FieldOfResearchListField';
 export { JournalIdField } from './containers/JournalIdField';
-export { JournalNameField } from './containers/JournalNameField';
 export { NewspaperNameField } from './containers/NewspaperNameField';
 export { OrgNameField } from './containers/OrgNameField';
 export { OrgUnitNameField } from './containers/OrgUnitNameField';

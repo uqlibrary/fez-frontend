@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { RoleField, JournalNameField } from 'modules/SharedComponents/LookupFields';
+import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
 
 import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
@@ -63,9 +63,9 @@ export const getColumns = () => {
 
                 return (
                     <React.Fragment>
-                        <JournalNameField
+                        <JournalIdField
                             autoFocus
-                            journalNameFieldId="eap-journal-name"
+                            journalIdFieldId="eap-journal-name"
                             value={
                                 !!rowData.eap_jnl_id
                                     ? { id: rowData.eap_jnl_id, value: props.value }
@@ -75,11 +75,11 @@ export const getColumns = () => {
                             error={(rowData.eap_journal_name || '').length === 0}
                             label={journalNameLabel}
                             placeholder={journalNameHint}
-                            selectedJournal={!!rowData.eap_jnl_id ? { id: rowData.eap_jnl_id } : null}
                             required
                             fullWidth
                             allowFreeText
                             clearOnInputClear
+                            floatingLabelText="Journal name"
                         />
                     </React.Fragment>
                 );
