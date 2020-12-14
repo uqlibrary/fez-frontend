@@ -456,6 +456,7 @@ export default class NtroFields extends React.PureComponent {
                                         <Field
                                             component={NewGenericSelectField}
                                             disabled={this.props.submitting}
+                                            genericSelectFieldId="rek-quality-indicator"
                                             id="quality-indicators"
                                             name="qualityIndicators"
                                             label={metadata.fields.peerReviewActivity.label}
