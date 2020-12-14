@@ -948,7 +948,7 @@ export default {
                 name: 'ntroSection.significanceAndContributionStatement',
                 label: 'Scale/significance of work - Contribution statement',
                 placeholder: '',
-                locale: locale.components.scaleOfSignificanceListForm.field,
+                locale: locale.components.scaleOfSignificanceListAdminForm.field,
             },
         },
         qualityIndicators: {
@@ -1712,50 +1712,6 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
-            significanceAndContributionStatement: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            significanceInputFieldLabel: 'Scale/Significance of work',
-                            significanceInputFieldHint: 'Please select scale of significance',
-                            contributionStatementInputFieldLabel: 'Creator research statement',
-                            contributionStatementFieldHint: 'Enter description',
-                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
-                            authorOrderAlert: {
-                                message:
-                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                                type: 'info',
-                            },
-                        },
-                    },
-                    header: {
-                        locale: {
-                            nameColumn: 'Scale/significance of work - Creator research statement',
-                            reorderColumn: 'Reorder items',
-                            deleteAll: 'Remove all items',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all items?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                    row: {
-                        locale: {
-                            moveUpHint: 'Move item up the order',
-                            moveDownHint: 'Move item down the order',
-                            deleteHint: 'Remove this item',
-                            deleteRecordConfirmation: {
-                                confirmationTitle: 'Delete item',
-                                confirmationMessage: 'Are you sure you want to delete this item?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -1779,50 +1735,6 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
-            significanceAndContributionStatement: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            significanceInputFieldLabel: 'Scale/Significance of work',
-                            significanceInputFieldHint: 'Please select scale of significance',
-                            contributionStatementInputFieldLabel: 'Creator research statement',
-                            contributionStatementFieldHint: 'Enter description',
-                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
-                            authorOrderAlert: {
-                                message:
-                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                                type: 'info',
-                            },
-                        },
-                    },
-                    header: {
-                        locale: {
-                            nameColumn: 'Scale/significance of work - Creator research statement',
-                            reorderColumn: 'Reorder items',
-                            deleteAll: 'Remove all items',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all items?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                    row: {
-                        locale: {
-                            moveUpHint: 'Move item up the order',
-                            moveDownHint: 'Move item down the order',
-                            deleteHint: 'Remove this item',
-                            deleteRecordConfirmation: {
-                                confirmationTitle: 'Delete item',
-                                confirmationMessage: 'Are you sure you want to delete this item?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -1830,50 +1742,6 @@ export default {
         },
         [PUBLICATION_TYPE_CREATIVE_WORK]: {
             grants: () => ({ ...locale.components.grants }),
-            significanceAndContributionStatement: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            significanceInputFieldLabel: 'Scale/Significance of work',
-                            significanceInputFieldHint: 'Please select scale of significance',
-                            contributionStatementInputFieldLabel: 'Creator research statement',
-                            contributionStatementFieldHint: 'Enter description',
-                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
-                            authorOrderAlert: {
-                                message:
-                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                                type: 'info',
-                            },
-                        },
-                    },
-                    header: {
-                        locale: {
-                            nameColumn: 'Scale/significance of work - Creator research statement',
-                            reorderColumn: 'Reorder items',
-                            deleteAll: 'Remove all items',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all items?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                    row: {
-                        locale: {
-                            moveUpHint: 'Move item up the order',
-                            moveDownHint: 'Move item down the order',
-                            deleteHint: 'Remove this item',
-                            deleteRecordConfirmation: {
-                                confirmationTitle: 'Delete item',
-                                confirmationMessage: 'Are you sure you want to delete this item?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -1955,50 +1823,6 @@ export default {
             editors: () => ({
                 locale: { ...locale.components.authorsList('contributor').field },
             }),
-            significanceAndContributionStatement: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            significanceInputFieldLabel: 'Scale/Significance of work',
-                            significanceInputFieldHint: 'Please select scale of significance',
-                            contributionStatementInputFieldLabel: 'Creator research statement',
-                            contributionStatementFieldHint: 'Enter description',
-                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
-                            authorOrderAlert: {
-                                message:
-                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                                type: 'info',
-                            },
-                        },
-                    },
-                    header: {
-                        locale: {
-                            nameColumn: 'Scale/significance of work - Creator research statement',
-                            reorderColumn: 'Reorder items',
-                            deleteAll: 'Remove all items',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all items?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                    row: {
-                        locale: {
-                            moveUpHint: 'Move item up the order',
-                            moveDownHint: 'Move item down the order',
-                            deleteHint: 'Remove this item',
-                            deleteRecordConfirmation: {
-                                confirmationTitle: 'Delete item',
-                                confirmationMessage: 'Are you sure you want to delete this item?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
             fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),
@@ -2023,50 +1847,6 @@ export default {
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
             authors: ({ isNtro }) => ({ isNtro }),
-            significanceAndContributionStatement: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            significanceInputFieldLabel: 'Scale/Significance of work',
-                            significanceInputFieldHint: 'Please select scale of significance',
-                            contributionStatementInputFieldLabel: 'Creator research statement',
-                            contributionStatementFieldHint: 'Enter description',
-                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
-                            authorOrderAlert: {
-                                message:
-                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                                type: 'info',
-                            },
-                        },
-                    },
-                    header: {
-                        locale: {
-                            nameColumn: 'Scale/significance of work - Creator research statement',
-                            reorderColumn: 'Reorder items',
-                            deleteAll: 'Remove all items',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all items?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                    row: {
-                        locale: {
-                            moveUpHint: 'Move item up the order',
-                            moveDownHint: 'Move item down the order',
-                            deleteHint: 'Remove this item',
-                            deleteRecordConfirmation: {
-                                confirmationTitle: 'Delete item',
-                                confirmationMessage: 'Are you sure you want to delete this item?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
             grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_MANUSCRIPT]: {
@@ -2097,50 +1877,6 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
-            significanceAndContributionStatement: () => ({
-                locale: {
-                    form: {
-                        locale: {
-                            significanceInputFieldLabel: 'Scale/Significance of work',
-                            significanceInputFieldHint: 'Please select scale of significance',
-                            contributionStatementInputFieldLabel: 'Creator research statement',
-                            contributionStatementFieldHint: 'Enter description',
-                            addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
-                            authorOrderAlert: {
-                                message:
-                                    'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                                type: 'info',
-                            },
-                        },
-                    },
-                    header: {
-                        locale: {
-                            nameColumn: 'Scale/significance of work - Creator research statement',
-                            reorderColumn: 'Reorder items',
-                            deleteAll: 'Remove all items',
-                            deleteAllConfirmation: {
-                                confirmationTitle: 'Delete all',
-                                confirmationMessage: 'Are you sure you want to delete all items?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                    row: {
-                        locale: {
-                            moveUpHint: 'Move item up the order',
-                            moveDownHint: 'Move item down the order',
-                            deleteHint: 'Remove this item',
-                            deleteRecordConfirmation: {
-                                confirmationTitle: 'Delete item',
-                                confirmationMessage: 'Are you sure you want to delete this item?',
-                                cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes',
-                            },
-                        },
-                    },
-                },
-            }),
             fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),

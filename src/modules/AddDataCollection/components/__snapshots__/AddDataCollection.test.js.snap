@@ -564,7 +564,13 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
@@ -598,7 +604,13 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               >
                 <Field
                   ariaLabel="Please elect a license"
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
@@ -1974,7 +1986,13 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
@@ -2008,7 +2026,13 @@ exports[`AddDataCollection test should render component with a valid collection 
               >
                 <Field
                   ariaLabel="Please elect a license"
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
@@ -3380,7 +3404,13 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
@@ -3414,7 +3444,13 @@ exports[`AddDataCollection test should render component with an invalid collecti
               >
                 <Field
                   ariaLabel="Please elect a license"
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
@@ -4786,7 +4822,13 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
@@ -4820,7 +4862,13 @@ exports[`AddDataCollection test should render data set form 1`] = `
               >
                 <Field
                   ariaLabel="Please elect a license"
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"

@@ -32,7 +32,7 @@ import { selectFields } from 'locale/selectFields';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
