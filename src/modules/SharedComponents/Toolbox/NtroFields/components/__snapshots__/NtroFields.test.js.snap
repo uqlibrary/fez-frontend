@@ -926,6 +926,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               }
             }
             disabled={true}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
             itemsList={
               Array [
@@ -1820,6 +1821,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
             itemsList={
               Array [
@@ -2584,6 +2586,7 @@ exports[`Component NtroFields should render default view 1`] = `
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
             itemsList={
               Array [
@@ -3478,6 +3481,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
             itemsList={
               Array [
@@ -4312,6 +4316,7 @@ exports[`Component NtroFields should show significance field even if contributio
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
             itemsList={
               Array [
