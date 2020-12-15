@@ -3120,7 +3120,9 @@ export default {
                     endYearLabel: 'End year',
                     endYearHint: 'Current or future year only',
                     endYearErrorMessage: 'Year must be current or future year',
-                    addButton: 'Add an editorial appointment',
+                    addButtonTooltip: 'Add new editorial appointment',
+                    editButtonTooltip: 'Edit this editorial appointment',
+                    deleteButtonTooltip: 'Delete this editorial appointment',
                 },
             },
             row: {

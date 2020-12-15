@@ -319,6 +319,12 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
     const columns = React.createRef();
     columns.current = getColumns();
 
+    const {
+        form: {
+            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+        },
+    } = locale.components.myEditorialAppointmentsList;
+
     const [data, setData] = React.useState(list);
 
     return (
@@ -420,9 +426,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             title=""
             localization={{
                 body: {
-                    addTooltip: 'Add new editorial appointment',
-                    editTooltip: 'Edit this editorial appointment',
-                    deleteTooltip: 'Delete this editorial appointment',
+                    addTooltip: addButtonTooltip,
+                    editTooltip: editButtonTooltip,
+                    deleteTooltip: deleteButtonTooltip,
                 },
             }}
             editable={{
