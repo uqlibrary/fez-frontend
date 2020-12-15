@@ -430,7 +430,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 onRowAdd: newData => {
                     return handleRowAdd(newData)
                         .then(data => {
-                            console.log(data);
                             setData(prevState => {
                                 return [...prevState, data];
                             });
@@ -440,7 +439,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 onRowUpdate: (newData, oldData) => {
                     return handleRowUpdate(newData, oldData)
                         .then(data => {
-                            console.log(data);
                             setData(prevState => {
                                 const list = [...prevState];
                                 list[list.indexOf(oldData)] = data;
