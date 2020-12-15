@@ -79,6 +79,9 @@ export const MyEditorialAppointments = () => {
         <StandardPage title={locale.pages.editorialAppointments.title}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
+                    {<Alert {...componentLocale.components.myEditorialAppointmentsList.infoTextAlert} />}
+                </Grid>
+                <Grid item xs={12}>
                     {!!myEditorialAppointmentsListError && <Alert {...myEditorialAppointmentsListError} type="error" />}
                 </Grid>
                 <Grid item xs={12}>

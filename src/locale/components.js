@@ -3155,6 +3155,11 @@ export default {
             },
         },
         myEditorialAppointmentsList: {
+            infoTextAlert: {
+                type: 'info',
+                message:
+                    'Please record your current editorial appointment on this page. This information will be made available to downstream systems such as the Individual Activity Profile (IAP). You should only record your current editorial appointments.',
+            },
             header: {
                 columns: {
                     journalName: {

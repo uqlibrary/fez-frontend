@@ -6,6 +6,7 @@ import moment from 'moment';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -399,24 +400,35 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         );
                     } else {
                         //  Add actions
-                        const { icon: Icon, tooltip, ...restAction } = props.action;
+                        // const { icon: Icon, tooltip, ...restAction } = props.action;
+                        const { tooltip } = props.action;
                         return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    tooltip: tooltip,
-                                    icon: iconProps => (
-                                        <Icon
-                                            {...iconProps}
-                                            id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-${tooltip
-                                                .toLowerCase()
-                                                .replace(/ /g, '-')}`}
-                                        />
-                                    ),
-                                }}
+                            <Button
+                                id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                disabled={props.disabled}
+                                variant="contained"
+                                color="primary"
+                                children={tooltip}
+                                onClick={event => props.action.onClick(event, props.data)}
                             />
+                            // <MTableAction
+                            //     {...props}
+                            //     action={{
+                            //         ...restAction,
+                            //         tooltip: tooltip,
+                            //         icon: iconProps => (
+                            //             <Icon
+                            //                 {...iconProps}
+                            //                 id={`my-editorial-appointments-${tooltip
+                            // .toLowerCase().replace(/ /g, '-')}`}
+                            //                 data-testid={`my-editorial-appointments-${tooltip
+                            //                     .toLowerCase()
+                            //                     .replace(/ /g, '-')}`}
+                            //             />
+                            //         ),
+                            //     }}
+                            // />
                         );
                     }
                 },
@@ -468,6 +480,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 addRowPosition: 'first',
                 paging: false,
                 search: data.length > 10,
+                rowStyle: rowData => ({
+                    borderLeft: moment(String(rowData.eap_end_year)).isBefore(moment(), 'year') ? '8px solid red' : '',
+                }),
             }}
         />
     );

@@ -16,7 +16,7 @@ export default {
         "eap_role_cvo_id": '454142',
         "eap_role_name": null,
         "eap_start_year": 2010,
-        "eap_end_year": 2020,
+        "eap_end_year": 2019,
         "eap_aut_id": 11123
     }, {
         "eap_id": 3,
