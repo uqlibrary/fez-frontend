@@ -328,6 +328,10 @@ const getCiteScoreDetails = journalDetails => ({
                             data: code.jnl_cite_score_asjc_code_cite_score,
                         },
                         {
+                            title: 'Quartile',
+                            data: code.jnl_cite_score_asjc_code_quartile,
+                        },
+                        {
                             title: 'Ranked',
                             data:
                                 code.jnl_cite_score_asjc_code_rank &&
@@ -442,16 +446,12 @@ const getListedDetails = journalDetails => [
             title: 'ERA Years with Field of Research codes',
             data:
                 Array.isArray(journalDetails.fez_journal_era) &&
-                nodeJoin(
-                    journalDetails.fez_journal_era.map(
-                        era =>
-                            `${era.jnl_era_source_year}: ${Array.isArray(era.fez_journal_era_for_code) &&
-                                era.fez_journal_era_for_code
-                                    .map(forCode => forCode.jnl_era_for_code_lookup)
-                                    .join(', ')}`,
-                    ),
-                    <br />,
-                ),
+                journalDetails.fez_journal_era.map((era, index) => (
+                    <div data-testid={`journal-era-category${index}`}>
+                        {`${era.jnl_era_source_year}: ${Array.isArray(era.fez_journal_era_for_code) &&
+                            era.fez_journal_era_for_code.map(forCode => forCode.jnl_era_for_code_lookup).join(', ')}`}
+                    </div>
+                )),
         },
     ],
     {
@@ -473,7 +473,6 @@ const mapStateToProps = state => {
         basicDetails: getBasicDetails(journalDetails),
         citeScoreDetails: getCiteScoreDetails(journalDetails),
         indexDetails: getIndexDetails(journalDetails),
-        journalDetails,
         journalDetailsLoaded: !!journalDetails,
         journalLoading,
         journalLoadingError,
