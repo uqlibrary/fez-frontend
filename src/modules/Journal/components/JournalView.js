@@ -12,6 +12,13 @@ import { TabbedCard } from 'modules/SharedComponents/Toolbox/TabbedCard';
 
 import pagesLocale from 'locale/pages';
 
+/**
+ * Common renderer for a row of data. It may be a single piece of data, or an array of multiple pieces of data.
+ *
+ * @param {Object} detail Title and data to render. Data can be a string, a JSX node, or an array of JSX nodes.
+ * @param {String} index Slug for creating test IDs
+ * @param {Object} sizes Indicates Grid breakpoints for title and data
+ */
 const renderJournalDetail = (detail, index, sizes) =>
     detail.data &&
     (!Array.isArray(detail.data) || detail.data.length > 0) && (

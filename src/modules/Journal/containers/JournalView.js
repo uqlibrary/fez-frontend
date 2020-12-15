@@ -12,6 +12,21 @@ import { default as globalLocale } from 'locale/global';
 import * as actions from 'actions';
 
 const nodeJoin = (arr, glue) => arr.slice(1).reduce((op, item) => op.concat([glue, item]), [arr[0]]);
+const getLicence = ({ by, nd, nc, sa }) => {
+    const conditions = [];
+    by && conditions.push('by');
+    nd && conditions.push('nd');
+    nc && conditions.push('nc');
+    sa && conditions.push('sa');
+    const licence = conditions.join('-');
+    return [`cc-${licence}`, `http://creativecommons.org/licenses/${licence}/3.0/deed.en_US`];
+};
+
+export const renderLicence = (className, url) => (
+    <ExternalLink href={url} data-testid="journal-oa-licence">
+        <div className={`fez-icon license ${className}`} />
+    </ExternalLink>
+);
 
 const getBasicDetails = journalDetails => {
     const detailRows = [
@@ -138,6 +153,19 @@ const getOADetails = journalDetails => [
             journalDetails.fez_journal_doaj &&
             journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price &&
             `${journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price} ${journalDetails.fez_journal_doaj.jnl_doaj_apc_currency}`,
+    },
+    {
+        title: 'Journal licence',
+        data:
+            journalDetails.fez_journal_doaj &&
+            renderLicence(
+                ...getLicence({
+                    by: journalDetails.fez_journal_doaj.jnl_doaj_by,
+                    nd: journalDetails.fez_journal_doaj.jnl_doaj_nd,
+                    nc: journalDetails.fez_journal_doaj.jnl_doaj_nc,
+                    sa: journalDetails.fez_journal_doaj.jnl_doaj_sa,
+                }),
+            ),
     },
     {
         title: 'DOAJ seal',
