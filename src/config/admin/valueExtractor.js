@@ -929,6 +929,7 @@ export default {
         getValue: record =>
             (!Array.isArray(record.fez_matched_journals) && {
                 jnl_jid: record.fez_matched_journals.mtj_jnl_id,
+                id: record.fez_matched_journals.mtj_jnl_id,
             }) ||
             {},
     },

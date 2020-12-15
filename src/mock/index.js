@@ -391,7 +391,7 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
     })
     .onPut(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        return [200, { data: { ...mockData.myEditorialAppointmentItem } }];
+        return [200, { ...mockData.myEditorialAppointmentItem }];
     });
 
 mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
@@ -436,7 +436,7 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
-    .reply(200, { data: { ...mockData.favouriteSearchItem } });
+    .reply(200, { ...mockData.myEditorialAppointmentItem });
 
 // Note: The existing records of all the mocked types below (regular records, collections and community)
 // are all patched via the same endpoint, so if you want to mock a failure of one of those,

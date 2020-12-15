@@ -6,28 +6,33 @@ import { JournalTemplate } from 'modules/SharedComponents/LookupFields';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { APP_URL, PATH_PREFIX } from 'config';
 import locale from 'locale/components';
+import matchSorter from 'match-sorter';
 
 const mapStateToProps = (state, props) => {
-    const { itemsList = [], itemsLoading = false } = state.get('journalReducer');
-    const selectedItem =
-        itemsList.find(item => item.jnl_jid === props.input.value.jnl_jid) ||
-        (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS());
+    const selectedJournalId =
+        (!!props.input && !!props.input.value && props.input.value.id) || (!!props.value && props.value.id);
+
     return {
-        autoCompleteAsynchronousFieldId: props.JournalIdFieldId || 'fez-matched-journals',
-        itemsList,
-        itemsLoading,
-        allowFreeText: false,
+        autoCompleteAsynchronousFieldId: props.journalIdFieldId || 'fez-matched-journals',
+        itemsList:
+            state.get('journalReducer').itemsList.map(item => ({ ...item, id: item.jnl_jid, value: item.jnl_title })) ||
+            [],
+        itemsLoading: state.get('journalReducer').itemsLoading || false,
+        allowFreeText: props.allowFreeText || false,
         errorText: props.meta ? props.meta.error : null,
         error: props.meta ? !!props.meta.error : null,
-        getOptionLabel: item => String((item || {}).jnl_jid || ''),
-        filterOptions: options => options,
+        getOptionLabel: (!!props.getOptionLabel && props.getOptionLabel) || (item => (item || {}).value || ''),
+        filterOptions: (options, { inputValue }) => {
+            return matchSorter(options, inputValue, { keys: ['value'] });
+        },
         floatingLabelText: props.floatingLabelText || 'Journal Id',
         OptionTemplate: JournalTemplate,
-        supplemental: !!selectedItem && (
+        defaultValue: (!!props.input && { value: props.input.value }) || props.value,
+        supplemental: !!selectedJournalId && (
             <ExternalLink
-                id={`journal-${selectedItem.jnl_jid}-details`}
-                data-testid={`journal-${selectedItem.jnl_jid}-details`}
-                href={`${APP_URL}${PATH_PREFIX}journal/view/${selectedItem.jnl_jid}`}
+                id={`journal-${selectedJournalId}-details`}
+                data-testid={`journal-${selectedJournalId}-details`}
+                href={`${APP_URL}${PATH_PREFIX}journal/view/${selectedJournalId}`}
                 title={locale.components.JournalIdField.detailsLink.title}
                 rel=""
             >
@@ -36,15 +41,10 @@ const mapStateToProps = (state, props) => {
         ),
         ...(!!((props || {}).meta || {}).form
             ? {
-                  defaultValue:
-                      (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-                      (!!props.input.value && props.input.value) ||
-                      [],
                   error: !!props.meta.error,
                   errorText: props.meta.error || '',
               }
             : {
-                  defaultValue: itemsList.filter(journal => (props.value || []).jnl_jid === journal.jnl_jid),
                   error: props.error,
                   errorText: props.errorText || '',
               }),
@@ -53,8 +53,8 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadJournalLookup(searchQuery)),
-    onChange: item => props.input.onChange(item),
-    onClear: () => props.input.onChange(null),
+    onChange: (!!props.input && (item => props.input.onChange(item))) || (item => props.onChange(item)),
+    onClear: () => (!!props.input && props.input.onChange(null)) || props.onChange({}),
 });
 
 export const JournalIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

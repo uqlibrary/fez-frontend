@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { RoleField, JournalNameField } from 'modules/SharedComponents/LookupFields';
+import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
 
 import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
@@ -29,8 +29,10 @@ export const getColumns = () => {
                 otherRoleHint,
                 startYearLabel,
                 // startYearHint,
+                startYearErrorMessage,
                 endYearLabel,
-                // endYearHint,
+                endYearHint,
+                endYearErrorMessage,
             },
         },
     } = locale.components.myEditorialAppointmentsList;
@@ -63,9 +65,9 @@ export const getColumns = () => {
 
                 return (
                     <React.Fragment>
-                        <JournalNameField
+                        <JournalIdField
                             autoFocus
-                            journalNameFieldId="eap-journal-name"
+                            journalIdFieldId="eap-journal-name"
                             value={
                                 !!rowData.eap_jnl_id
                                     ? { id: rowData.eap_jnl_id, value: props.value }
@@ -75,16 +77,24 @@ export const getColumns = () => {
                             error={(rowData.eap_journal_name || '').length === 0}
                             label={journalNameLabel}
                             placeholder={journalNameHint}
-                            selectedJournal={!!rowData.eap_jnl_id ? { id: rowData.eap_jnl_id } : null}
                             required
                             fullWidth
                             allowFreeText
                             clearOnInputClear
+                            floatingLabelText="Journal name"
                         />
                     </React.Fragment>
                 );
             },
             validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
+            cellStyle: {
+                width: '45%',
+                maxWidth: '45%',
+            },
+            headerStyle: {
+                width: '45%',
+                maxWidth: '45%',
+            },
         },
         {
             title: (
@@ -164,6 +174,14 @@ export const getColumns = () => {
             validate: rowData =>
                 !!rowData.eap_role_cvo_id &&
                 (rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
+            cellStyle: {
+                width: '25%',
+                maxWidth: '25%',
+            },
+            headerStyle: {
+                width: '25%',
+                maxWidth: '25%',
+            },
         },
         {
             title: (
@@ -198,6 +216,8 @@ export const getColumns = () => {
                         required
                         label={startYearLabel}
                         disableFuture
+                        maxDateMessage={startYearErrorMessage}
+                        invalidDateMessage={startYearErrorMessage}
                         inputProps={{
                             id: 'eap-start-year-input',
                             'data-testid': 'eap-start-year-input',
@@ -216,6 +236,14 @@ export const getColumns = () => {
             validate: rowData =>
                 moment(String(rowData.eap_start_year)).isValid() &&
                 moment(String(rowData.eap_start_year)).isSameOrBefore(moment(), 'year'),
+            cellStyle: {
+                width: '15%',
+                maxWidth: '15%',
+            },
+            headerStyle: {
+                width: '15%',
+                maxWidth: '15%',
+            },
         },
         {
             title: (
@@ -253,12 +281,15 @@ export const getColumns = () => {
                         required
                         label={endYearLabel}
                         minDate={minDate}
+                        minDateMessage={endYearErrorMessage}
+                        invalidDateMessage={endYearErrorMessage}
                         inputProps={{
                             id: 'eap-end-year-input',
                             'data-testid': 'eap-end-year-input',
                             label: endYearLabel,
                             'aria-label': endYearLabel,
                             'aria-labelledby': 'eap-end-year-label',
+                            placeholder: endYearHint,
                         }}
                         InputLabelProps={{
                             id: 'eap-end-year-label',
@@ -271,6 +302,14 @@ export const getColumns = () => {
             validate: rowData =>
                 moment(String(rowData.eap_end_year)).isValid() &&
                 moment(String(rowData.eap_end_year)).isSameOrAfter(moment(), 'year'),
+            cellStyle: {
+                width: '15%',
+                maxWidth: '15%',
+            },
+            headerStyle: {
+                width: '15%',
+                maxWidth: '15%',
+            },
         },
     ];
 };
@@ -321,10 +360,10 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                         <Icon
                                             id={`my-editorial-appointments-${(!!props.data.tableData &&
                                                 props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
+                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                             data-testid={`my-editorial-appointments-${(!!props.data.tableData &&
                                                 props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
+                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                         />
                                     ),
                                 }}
@@ -343,10 +382,10 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                             disabled={disabled}
                                             id={`my-editorial-appointments-list-row-${
                                                 props.data.tableData.id
-                                            }-${tooltip.toLowerCase()}`}
+                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                             data-testid={`my-editorial-appointments-list-row-${
                                                 props.data.tableData.id
-                                            }-${tooltip.toLowerCase()}`}
+                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                         />
                                     ),
                                 }}
@@ -360,10 +399,14 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 {...props}
                                 action={{
                                     ...restAction,
-                                    icon: () => (
+                                    tooltip: tooltip,
+                                    icon: iconProps => (
                                         <Icon
-                                            id={`my-editorial-appointments-${tooltip.toLowerCase()}`}
-                                            data-testid={`my-editorial-appointments-${tooltip.toLowerCase()}`}
+                                            {...iconProps}
+                                            id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                            data-testid={`my-editorial-appointments-${tooltip
+                                                .toLowerCase()
+                                                .replace(/ /g, '-')}`}
                                         />
                                     ),
                                 }}
@@ -375,24 +418,33 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             data={data}
             icons={tableIcons}
             title=""
+            localization={{
+                body: {
+                    addTooltip: 'Add new editorial appointment',
+                    editTooltip: 'Edit this editorial appointment',
+                    deleteTooltip: 'Delete this editorial appointment',
+                },
+            }}
             editable={{
                 onRowUpdateCancelled: () => {},
                 onRowAdd: newData => {
                     return handleRowAdd(newData)
-                        .then(() => {
+                        .then(data => {
+                            console.log(data);
                             setData(prevState => {
-                                return [...prevState, newData];
+                                return [...prevState, data];
                             });
                         })
                         .catch(() => setData(prevState => prevState));
                 },
                 onRowUpdate: (newData, oldData) => {
                     return handleRowUpdate(newData, oldData)
-                        .then(() => {
+                        .then(data => {
+                            console.log(data);
                             setData(prevState => {
-                                const data = [...prevState];
-                                data[data.indexOf(oldData)] = newData;
-                                return data;
+                                const list = [...prevState];
+                                list[list.indexOf(oldData)] = data;
+                                return list;
                             });
                         })
                         .catch(() => setData(prevState => prevState));
