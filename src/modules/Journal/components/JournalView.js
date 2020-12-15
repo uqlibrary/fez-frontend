@@ -48,24 +48,24 @@ export const renderSectionContents = (details, id) =>
         if (Array.isArray(detailRow)) {
             return (
                 <Grid container spacing={0} alignItems="flex-start" key={`${id}-row-${index}-grid`}>
-                    {detailRow.map((detailColumn, subIndex) => (
-                        <Grid
-                            item
-                            xs={12}
-                            sm
-                            style={{ padding: '8px 8px 8px 0' }}
-                            key={`${id}-row-${index}-column-${subIndex}-grid`}
-                        >
-                            {renderJournalDetail(
-                                detailColumn,
-                                `${id}-${titleToId(detailColumn.title) || `-row-${index}-column-${subIndex}`}`,
-                                {
-                                    title: { xs: 'auto' },
-                                    data: { xs: 'auto' },
-                                },
-                            )}
-                        </Grid>
-                    ))}
+                    {detailRow.map((detailColumn, subIndex) => {
+                        const renderedColumn = renderJournalDetail(
+                            detailColumn,
+                            `${id}-${titleToId(detailColumn.title) || `-row-${index}-column-${subIndex}`}`,
+                            {
+                                title: { xs: 'auto' },
+                                data: { xs: 'auto' },
+                            },
+                        );
+                        const key = `${id}-row-${index}-column-${subIndex}-grid`;
+                        return (
+                            (!!renderedColumn && (
+                                <Grid item xs={12} sm style={{ padding: '8px 8px 8px 0' }} key={key}>
+                                    {renderedColumn}
+                                </Grid>
+                            )) || <span key={key} />
+                        );
+                    })}
                 </Grid>
             );
         }
@@ -80,7 +80,6 @@ export const JournalView = ({
     basicDetails,
     citeScoreDetails,
     indexDetails,
-    journalDetails,
     journalDetailsLoaded,
     journalLoading,
     journalLoadingError,
@@ -143,9 +142,6 @@ export const JournalView = ({
                 <StandardCard standardCardId="journal-listed-in" title="Listed in">
                     {renderSectionContents(listedDetails, 'journal-listed-in')}
                 </StandardCard>
-                <br />
-                <h3>Raw API response output</h3>
-                <pre>{JSON.stringify(journalDetails, null, 2)}</pre>
             </StandardPage>
         );
     }
@@ -156,7 +152,6 @@ JournalView.propTypes = {
     basicDetails: PropTypes.array,
     citeScoreDetails: PropTypes.object,
     indexDetails: PropTypes.array,
-    journalDetails: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
     journalDetailsLoaded: PropTypes.bool,
     journalLoading: PropTypes.bool,
     journalLoadingError: PropTypes.bool,
