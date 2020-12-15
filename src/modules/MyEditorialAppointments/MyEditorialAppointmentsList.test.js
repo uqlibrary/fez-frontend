@@ -5,8 +5,8 @@ import { render, fireEvent, act, waitFor, WithReduxStore } from 'test-utils';
 function setup(testProps = {}) {
     const props = {
         list: [],
-        handleRowAdd: jest.fn(() => Promise.resolve()),
-        handleRowUpdate: jest.fn(() => Promise.resolve()),
+        handleRowAdd: jest.fn(data => Promise.resolve(data)),
+        handleRowUpdate: jest.fn(data => Promise.resolve(data)),
         handleRowDelete: jest.fn(() => Promise.resolve()),
         ...testProps,
     };
@@ -58,7 +58,7 @@ describe('MyEditorialAppointmentsList', () => {
             list: [],
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-add'));
+        fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
@@ -89,7 +89,7 @@ describe('MyEditorialAppointmentsList', () => {
             handleRowAdd: jest.fn(() => Promise.reject()),
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-add'));
+        fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
         fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
@@ -127,7 +127,7 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2006');
         expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('2026');
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
@@ -179,7 +179,7 @@ describe('MyEditorialAppointmentsList', () => {
             handleRowUpdate: jest.fn(() => Promise.reject()),
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
@@ -209,7 +209,7 @@ describe('MyEditorialAppointmentsList', () => {
             ],
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
@@ -253,7 +253,7 @@ describe('MyEditorialAppointmentsList', () => {
         const listItem1 = getByTestId('my-editorial-appointments-list-row-1');
         expect(listItem1).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete-this-editorial-appointment'));
 
         act(() => {
             fireEvent.click(getByTestId('my-editorial-appointments-delete-save'));
