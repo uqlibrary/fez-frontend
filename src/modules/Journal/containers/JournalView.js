@@ -331,36 +331,42 @@ const getCiteScoreDetails = journalDetails => ({
         [],
 });
 
+const getWosCategoriesByIndex = (categories, indexName) =>
+    (Array.isArray(categories) &&
+        categories
+            .filter(category => category.jnl_wos_category_index === indexName)
+            .map((categoryObj, categoryObjIndex) =>
+                nodeJoin(
+                    (categoryObj.jnl_wos_category || '')
+                        .split('|')
+                        .map((categoryName, categoryIndex) => (
+                            <span
+                                data-testid={`wos-${indexName.toLowerCase()}${categoryObjIndex}-category${categoryIndex}`}
+                            >
+                                {categoryName.trim()}
+                            </span>
+                        )),
+                    ', ',
+                ),
+            )) ||
+    '';
+
 const getIndexDetails = journalDetails => [
     {
         title: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
-        data:
-            Array.isArray(journalDetails.fez_journal_wos_category) &&
-            journalDetails.fez_journal_wos_category
-                .map(category => `${category.jnl_wos_category_index} (${category.jnl_wos_category})`)
-                .join(', '),
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'AHCI'),
     },
     {
         title: 'Science Citation Index Expanded - WOS Subject Categories',
-        data:
-            journalDetails.fez_journal_jcr_scie &&
-            Array.isArray(journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category) &&
-            journalDetails.fez_journal_jcr_scie.fez_journal_jcr_scie_category
-                .map(category => category.jnl_jcr_scie_category_description)
-                .join(', '),
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SCIE'),
     },
     {
         title: 'Social Science Citation Index - WOS Subject Categories',
-        data:
-            journalDetails.fez_journal_jcr_ssci &&
-            Array.isArray(journalDetails.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category) &&
-            journalDetails.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category
-                .map(category => category.jnl_jcr_ssci_category_description)
-                .join(', '),
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SSCI'),
     },
     {
         title: 'Emerging Sources Citation Index - WOS Subject Categories',
-        data: '????',
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'ESCI'),
     },
     {
         title: 'Scopus',
