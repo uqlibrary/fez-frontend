@@ -480,6 +480,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 addRowPosition: 'first',
                 paging: false,
                 search: data.length > 10,
+                rowStyle: rowData => ({
+                    borderLeft: moment(String(rowData.eap_end_year)).isBefore(moment(), 'year') ? '8px solid red' : '',
+                }),
             }}
         />
     );
