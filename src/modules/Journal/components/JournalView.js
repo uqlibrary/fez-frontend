@@ -11,6 +11,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { TabbedCard } from 'modules/SharedComponents/Toolbox/TabbedCard';
 
 import pagesLocale from 'locale/pages';
+const txt = pagesLocale.pages.journal.view;
 
 /**
  * Common renderer for a row of data. It may be a single piece of data, or an array of multiple pieces of data.
@@ -26,7 +27,7 @@ const renderJournalDetail = (detail, index, sizes) =>
             {detail.title && (
                 <Grid item component="span" {...sizes.title} data-testid={`${index}-label`}>
                     <Typography component="span" variant="body2">
-                        {detail.title}
+                        {txt.titles[detail.title] || detail.title}
                         {': '}
                     </Typography>
                 </Grid>
@@ -47,17 +48,17 @@ export const renderSectionContents = (details, id) =>
     details.map((detailRow, index) => {
         if (Array.isArray(detailRow)) {
             return (
-                <Grid container spacing={0} alignItems="flex-start" key={`${id}-row-${index}-grid`}>
+                <Grid container spacing={0} alignItems="flex-start" key={`${id}-row${index}-grid`}>
                     {detailRow.map((detailColumn, subIndex) => {
                         const renderedColumn = renderJournalDetail(
                             detailColumn,
-                            `${id}-${titleToId(detailColumn.title) || `-row-${index}-column-${subIndex}`}`,
+                            `${id}-${titleToId(detailColumn.title) || `-row${index}-column${subIndex}`}`,
                             {
                                 title: { xs: 'auto' },
                                 data: { xs: 'auto' },
                             },
                         );
-                        const key = `${id}-row-${index}-column-${subIndex}-grid`;
+                        const key = `${id}-row${index}-column${subIndex}-grid`;
                         return (
                             (!!renderedColumn && (
                                 <Grid item xs={12} sm style={{ padding: '8px 8px 8px 0' }} key={key}>
@@ -69,7 +70,7 @@ export const renderSectionContents = (details, id) =>
                 </Grid>
             );
         }
-        return renderJournalDetail(detailRow, `${id}-${titleToId(detailRow.title) || `field-${index}`}`, {
+        return renderJournalDetail(detailRow, `${id}-${titleToId(detailRow.title) || `field${index}`}`, {
             title: { xs: 12, sm: 6, md: 3 },
             data: { xs: 'auto' },
         });
@@ -95,7 +96,6 @@ export const JournalView = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const txt = pagesLocale.pages.journal.view;
     if (journalLoadingError) {
         return <Alert {...txt.loadFailureAlert} />;
     } else if (journalLoading || !journalDetailsLoaded) {
@@ -107,39 +107,36 @@ export const JournalView = ({
                     {renderSectionContents(basicDetails, 'journal-basic-details')}
                 </StandardCard>
                 <br />
-                <StandardCard
-                    standardCardId="journal-open-access"
-                    title="Open Access (Directory of Open Access Journals - DOAJ)"
-                >
+                <StandardCard standardCardId="journal-open-access" title={txt.titles.oaSection}>
                     {renderSectionContents(oaDetails, 'journal-open-access')}
                 </StandardCard>
                 <br />
                 <TabbedCard
                     cardId="journal-scie"
-                    cardTitle="Clarivate Journal Citation Reports - Science Citation Index"
+                    cardTitle={txt.titles.scieSection}
                     {...jscieDetails}
                     contentRenderer={renderSectionContents}
                 />
                 <br />
                 <TabbedCard
                     cardId="journal-ssci"
-                    cardTitle="Clarivate Journal Citation Reports - Social Science Citation Index"
+                    cardTitle={txt.titles.ssciSection}
                     {...jssciDetails}
                     contentRenderer={renderSectionContents}
                 />
                 <br />
                 <TabbedCard
                     cardId="journal-citescore"
-                    cardTitle="Elsevier CiteScore"
+                    cardTitle={txt.titles.citeScoreSection}
                     {...citeScoreDetails}
                     contentRenderer={renderSectionContents}
                 />
                 <br />
-                <StandardCard standardCardId="journal-indexed-in" title="Indexed in">
+                <StandardCard standardCardId="journal-indexed-in" title={txt.titles.indexSection}>
                     {renderSectionContents(indexDetails, 'journal-indexed-in')}
                 </StandardCard>
                 <br />
-                <StandardCard standardCardId="journal-listed-in" title="Listed in">
+                <StandardCard standardCardId="journal-listed-in" title={txt.titles.listedSection}>
                     {renderSectionContents(listedDetails, 'journal-listed-in')}
                 </StandardCard>
             </StandardPage>

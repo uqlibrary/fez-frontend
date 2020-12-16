@@ -8,8 +8,11 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import JournalView from '../components/JournalView';
 
 import { default as globalLocale } from 'locale/global';
+import pagesLocale from 'locale/pages';
 
 import * as actions from 'actions';
+
+const txt = pagesLocale.pages.journal.view;
 
 const nodeJoin = (arr, glue) => arr.slice(1).reduce((op, item) => op.concat([glue, item]), [arr[0]]);
 const getLicence = ({ by, nd, nc, sa }) => {
@@ -31,7 +34,7 @@ export const renderLicence = (className, url) => (
 const getBasicDetails = journalDetails => {
     const detailRows = [
         {
-            title: 'ISO abbreviated title',
+            title: 'ulrAbbrevTitle',
             data:
                 (journalDetails.fez_journal_jcr_scie &&
                     journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title) ||
@@ -44,7 +47,7 @@ const getBasicDetails = journalDetails => {
         },
         [
             {
-                title: 'ISSN(s)',
+                title: 'issns',
                 data:
                     Array.isArray(journalDetails.fez_journal_issn) &&
                     journalDetails.fez_journal_issn
@@ -53,7 +56,7 @@ const getBasicDetails = journalDetails => {
                         .join(', '),
             },
             {
-                title: 'eISSN(s)',
+                title: 'eissns',
                 data:
                     Array.isArray(journalDetails.fez_journal_issn) &&
                     journalDetails.fez_journal_issn
@@ -63,7 +66,7 @@ const getBasicDetails = journalDetails => {
             },
         ],
         {
-            title: 'Publisher',
+            title: 'publisherWithCountry',
             data:
                 journalDetails.jnl_publisher &&
                 `${journalDetails.jnl_publisher}${journalDetails.fez_journal_issn &&
@@ -80,37 +83,40 @@ const getBasicDetails = journalDetails => {
     ) {
         return detailRows.concat([
             {
-                title: 'Refereed',
+                title: 'urlRefereed',
                 data: (journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_refereed && 'Yes') || 'No',
             },
             [
                 {
-                    title: 'First year of publication',
+                    title: 'ulrStartYear',
                     data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_start_year,
                 },
                 {
-                    title: 'Frequency of publication',
+                    title: 'ulrFrequency',
                     data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_frequency,
                 },
             ],
             {
-                title: 'Journal formats available',
+                title: 'ulrFormats',
                 data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_formats,
             },
             {
-                title: 'Journal URL',
+                title: 'ulrOpenAccessUrl',
                 data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url && (
-                    <ExternalLink href={journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url}>
+                    <ExternalLink
+                        href={journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url}
+                        title={txt.links.ulrOpenAccessUrl.title}
+                    >
                         {journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url}
                     </ExternalLink>
                 ),
             },
             {
-                title: 'Description',
+                title: 'ulrDescription',
                 data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_description,
             },
             {
-                title: 'View journal in Ulrichs',
+                title: 'ulrTitleLink',
                 data: nodeJoin(
                     journalDetails.fez_journal_issn.map(
                         (issn, index) =>
@@ -122,7 +128,7 @@ const getBasicDetails = journalDetails => {
                                         '[id]',
                                         issn.fez_ulrichs.ulr_title_id,
                                     )}
-                                    title={globalLocale.global.ulrichsLink.ariaLabel}
+                                    title={txt.links.ulrTitleLink.title}
                                 >
                                     {issn.fez_ulrichs.ulr_title}
                                 </ExternalLink>
@@ -138,7 +144,7 @@ const getBasicDetails = journalDetails => {
 
 const getOADetails = journalDetails => [
     {
-        title: 'Open access',
+        title: 'ulrOpenAccess',
         data:
             (journalDetails.fez_journal_issn &&
                 journalDetails.fez_journal_issn[0] &&
@@ -148,14 +154,14 @@ const getOADetails = journalDetails => [
             'No',
     },
     {
-        title: 'Article processing charges',
+        title: 'doajApcAvgPrice',
         data:
             journalDetails.fez_journal_doaj &&
             journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price &&
             `${journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price} ${journalDetails.fez_journal_doaj.jnl_doaj_apc_currency}`,
     },
     {
-        title: 'Journal licence',
+        title: 'licence',
         data:
             journalDetails.fez_journal_doaj &&
             renderLicence(
@@ -168,11 +174,11 @@ const getOADetails = journalDetails => [
             ),
     },
     {
-        title: 'DOAJ seal',
+        title: 'doajSeal',
         data: (journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_seal && 'Yes') || 'No',
     },
     {
-        title: 'Last updated',
+        title: 'doajLastUpdated',
         data:
             journalDetails.fez_journal_doaj &&
             journalDetails.fez_journal_doaj.jnl_doaj_last_updated &&
@@ -180,15 +186,18 @@ const getOADetails = journalDetails => [
             moment(journalDetails.fez_journal_doaj.jnl_doaj_last_updated).format('Do MMMM YYYY [at] h:mma'),
     },
     {
-        title: 'View in DOAJ',
+        title: 'doajHomepageUrl',
         data: journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url && (
-            <ExternalLink href={journalDetails.fez_journal_doaj.jnl_doaj_homepage_url} title={'DOAJ Homepage'}>
+            <ExternalLink
+                href={journalDetails.fez_journal_doaj.jnl_doaj_homepage_url}
+                title={txt.links.doajHomepageUrl.title}
+            >
                 {journalDetails.fez_journal_doaj.jnl_doaj_homepage_url}
             </ExternalLink>
         ),
     },
     {
-        title: 'Sherpa Romeo open access and archiving policies',
+        title: 'srmJournalLink',
         data:
             Array.isArray(journalDetails.fez_journal_issn) &&
             journalDetails.fez_journal_issn.length > 0 &&
@@ -201,7 +210,7 @@ const getOADetails = journalDetails => [
                                 <ExternalLink
                                     key={`journal-sherpa-${index}-link`}
                                     href={issn.fez_sherpa_romeo.srm_journal_link}
-                                    title={globalLocale.global.sherpaRomeoLink.externalLinktext}
+                                    title={txt.links.srmJournalLink.title}
                                 >
                                     {issn.fez_sherpa_romeo.srm_issn}
                                 </ExternalLink>
@@ -217,21 +226,21 @@ const getClarivateDetails = (journalDetails, slugPiece) => ({
     common:
         (journalDetails[`fez_journal_jcr_${slugPiece}`] && [
             {
-                title: 'Abbreviated title',
+                title: 'jcrAbbrevTitle',
                 data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_abbrev_title`],
             },
             [
                 {
-                    title: 'Impact factor',
+                    title: 'jcrImpactFactor',
                     data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_impact_factor`],
                 },
                 {
-                    title: '5 year impact factor',
+                    title: 'jcr5yrImpactFactor',
                     data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_5yr_impact_factor`],
                 },
             ],
             {
-                title: 'JCR version',
+                title: 'jcrSourceDate',
                 data:
                     journalDetails[`fez_journal_jcr_${slugPiece}`] &&
                     moment(journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_source_date`])
@@ -243,21 +252,18 @@ const getClarivateDetails = (journalDetails, slugPiece) => ({
             [
                 {
                     data: (
-                        <ExternalLink
-                            href="https://jcr-clarivate-com.ezproxy.library.uq.edu.au"
-                            title="Open JCR website in a new tab"
-                        >
-                            Go to JCR website
+                        <ExternalLink href={txt.links.jcrHomePage.href} title={txt.links.jcrHomePage.title}>
+                            {txt.links.jcrHomePage.text}
                         </ExternalLink>
                     ),
                 },
                 {
                     data: (
                         <ExternalLink
-                            href={`https://clarivate.com/webofsciencegroup/solutions/webofscience-${slugPiece}/`}
-                            title="Open in a new tab"
+                            href={`${txt.links.jcrMoreInfo.linkPrefix}${slugPiece}/`}
+                            title={txt.links.jcrMoreInfo.title}
                         >
-                            {`More info about JCR ${slugPiece.toUpperCase()}`}
+                            {`${txt.links.jcrMoreInfo.textPrefix} ${slugPiece.toUpperCase()}`}
                         </ExternalLink>
                     ),
                 },
@@ -271,8 +277,14 @@ const getClarivateDetails = (journalDetails, slugPiece) => ({
                 title: category[`jnl_jcr_${slugPiece}_category_description`],
                 content: [
                     [
-                        { title: 'Ranking', data: category[`jnl_jcr_${slugPiece}_category_ranking`] },
-                        { title: 'Quartile', data: category[`jnl_jcr_${slugPiece}_category_quartile`] },
+                        {
+                            title: 'jcrCategoryRanking',
+                            data: category[`jnl_jcr_${slugPiece}_category_ranking`],
+                        },
+                        {
+                            title: 'jcrCategoryQuartile',
+                            data: category[`jnl_jcr_${slugPiece}_category_quartile`],
+                        },
                     ],
                 ],
             }))) ||
@@ -283,7 +295,7 @@ const getCiteScoreDetails = journalDetails => ({
     common:
         (journalDetails.fez_journal_cite_score && [
             {
-                title: 'CiteScore version',
+                title: 'citeScoreSourceDate',
                 data:
                     moment(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date).isValid &&
                     moment(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date).format('YYYY'),
@@ -292,20 +304,17 @@ const getCiteScoreDetails = journalDetails => ({
                 {
                     data: (
                         <ExternalLink
-                            href={`https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/${journalDetails.fez_journal_cite_score.jnl_cite_score_source_id}`}
-                            title="Open in new tab"
+                            href={`${txt.links.citeScoreSource.linkPrefix}${journalDetails.fez_journal_cite_score.jnl_cite_score_source_id}`}
+                            title={txt.links.citeScoreSource.title}
                         >
-                            Go to record in CiteScore
+                            {txt.links.citeScoreSource.text}
                         </ExternalLink>
                     ),
                 },
                 {
                     data: (
-                        <ExternalLink
-                            href="https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/"
-                            title="Open in new tab"
-                        >
-                            More info about CiteScore
+                        <ExternalLink href={txt.links.citeScoreMoreInfo.href} title={txt.links.citeScoreMoreInfo.title}>
+                            {txt.links.citeScoreMoreInfo.text}
                         </ExternalLink>
                     ),
                 },
@@ -319,20 +328,20 @@ const getCiteScoreDetails = journalDetails => ({
                 title: code.jnl_cite_score_asjc_code,
                 content: [
                     {
-                        title: 'Scopus ASJC Code',
+                        title: 'citeScoreAsjcCode',
                         data: code.jnl_cite_score_asjc_code,
                     },
                     [
                         {
-                            title: 'CiteScore',
+                            title: 'citeScoreAsjcCodeSiteScore',
                             data: code.jnl_cite_score_asjc_code_cite_score,
                         },
                         {
-                            title: 'Quartile',
+                            title: 'citeScoreAsjcCodeQuartile',
                             data: code.jnl_cite_score_asjc_code_quartile,
                         },
                         {
-                            title: 'Ranked',
+                            title: 'citeScoreAsjcCodeRank',
                             data:
                                 code.jnl_cite_score_asjc_code_rank &&
                                 `${code.jnl_cite_score_asjc_code_rank} out of ${code.jnl_cite_score_asjc_code_rank_out_of}`,
@@ -340,23 +349,23 @@ const getCiteScoreDetails = journalDetails => ({
                     ],
                     [
                         {
-                            title: 'Top 10% (CiteScore Percentile)',
+                            title: 'citeScoreAsjcCodeTop10Pct',
                             data: (code.jnl_cite_score_asjc_code_top_10_percent && 'Yes') || 'No',
                         },
                         {
-                            title: 'Percentile',
+                            title: 'citeScoreAsjcCodePercentile',
                             data: code.jnl_cite_score_asjc_code_percentile,
                         },
                         {
-                            title: 'Percent Cited',
+                            title: 'citeScoreAsjcCodePercentCited',
                             data:
                                 code.jnl_cite_score_asjc_code_percent_cited &&
                                 `${code.jnl_cite_score_asjc_code_percent_cited}%`,
                         },
                     ],
                     [
-                        { title: 'SNIP', data: code.jnl_cite_score_asjc_code_snip },
-                        { title: 'SJR', data: code.jnl_cite_score_asjc_code_sjr },
+                        { title: 'citeScoreAsjcCodeSnip', data: code.jnl_cite_score_asjc_code_snip },
+                        { title: 'citeScoreAsjcCodeSjr', data: code.jnl_cite_score_asjc_code_sjr },
                     ],
                 ],
             }))) ||
@@ -369,15 +378,14 @@ const getWosCategoriesByIndex = (categories, indexName) =>
             .filter(category => category.jnl_wos_category_index === indexName)
             .map((categoryObj, categoryObjIndex) =>
                 nodeJoin(
-                    (categoryObj.jnl_wos_category || '')
-                        .split('|')
-                        .map((categoryName, categoryIndex) => (
-                            <span
-                                data-testid={`wos-${indexName.toLowerCase()}${categoryObjIndex}-category${categoryIndex}`}
-                            >
+                    (categoryObj.jnl_wos_category || '').split('|').map((categoryName, categoryIndex) => {
+                        const id = `wos-${indexName.toLowerCase()}${categoryObjIndex}-category${categoryIndex}`;
+                        return (
+                            <span key={id} data-testid={id}>
                                 {categoryName.trim()}
                             </span>
-                        )),
+                        );
+                    }),
                     ', ',
                 ),
             )) ||
@@ -385,27 +393,27 @@ const getWosCategoriesByIndex = (categories, indexName) =>
 
 const getIndexDetails = journalDetails => [
     {
-        title: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
+        title: 'wosCategoryAhci',
         data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'AHCI'),
     },
     {
-        title: 'Science Citation Index Expanded - WOS Subject Categories',
+        title: 'wosCategoryScie',
         data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SCIE'),
     },
     {
-        title: 'Social Science Citation Index - WOS Subject Categories',
+        title: 'wosCategorySsci',
         data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SSCI'),
     },
     {
-        title: 'Emerging Sources Citation Index - WOS Subject Categories',
+        title: 'wosCategoryEsci',
         data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'ESCI'),
     },
     {
-        title: 'Scopus',
+        title: 'hasScopus',
         data: (journalDetails.fez_journal_cite_score && 'Yes') || 'No',
     },
     {
-        title: 'Pubmed',
+        title: 'hasPubmed',
         data: (journalDetails.fez_journal_pubmed && 'Yes') || 'No',
     },
 ];
@@ -413,16 +421,16 @@ const getIndexDetails = journalDetails => [
 const getListedDetails = journalDetails => [
     [
         {
-            title: 'Australian Business Deans Council journal quality list',
+            title: 'adbcRating',
             data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_rating,
         },
         {
-            title: 'Field of Research Codes',
+            title: 'adbcForCode',
             data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_for_code,
         },
     ],
     {
-        title: 'Current list',
+        title: 'adbcSourceDate',
         data:
             journalDetails.fez_journal_abdc &&
             journalDetails.fez_journal_abdc.jnl_abdc_source_date &&
@@ -430,7 +438,7 @@ const getListedDetails = journalDetails => [
             moment(journalDetails.fez_journal_abdc.jnl_abdc_source_date).format('Do MMMM YYYY'),
     },
     {
-        title: 'CWTS Leiden Ranking',
+        title: 'cwtsSourceDate',
         data:
             (journalDetails.fez_journal_cwts &&
                 `Yes, ${moment(journalDetails.fez_journal_cwts.jnl_cwts_source_date).isValid &&
@@ -439,15 +447,15 @@ const getListedDetails = journalDetails => [
     },
     [
         {
-            title: 'Excellence in Research for Australia (ERA)',
+            title: 'hasEra',
             data: (journalDetails.fez_journal_era && 'Yes') || 'No',
         },
         {
-            title: 'ERA Years with Field of Research codes',
+            title: 'eraForCode',
             data:
                 Array.isArray(journalDetails.fez_journal_era) &&
                 journalDetails.fez_journal_era.map((era, index) => (
-                    <div data-testid={`journal-era-category${index}`}>
+                    <div key={`journal-era-category${index}`} data-testid={`journal-era-category${index}`}>
                         {`${era.jnl_era_source_year}: ${Array.isArray(era.fez_journal_era_for_code) &&
                             era.fez_journal_era_for_code.map(forCode => forCode.jnl_era_for_code_lookup).join(', ')}`}
                     </div>
@@ -455,7 +463,7 @@ const getListedDetails = journalDetails => [
         },
     ],
     {
-        title: 'Nature Index',
+        title: 'natureIndexSourceDate',
         data:
             (journalDetails.fez_journal_nature_index &&
                 `Yes, ${moment(journalDetails.fez_journal_nature_index.jnl_nature_index_source_date).isValid &&
