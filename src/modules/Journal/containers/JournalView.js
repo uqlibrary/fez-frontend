@@ -25,11 +25,15 @@ const getLicence = ({ by, nd, nc, sa }) => {
     return [`cc-${licence}`, `http://creativecommons.org/licenses/${licence}/3.0/deed.en_US`];
 };
 
-export const renderLicence = (className, url) => (
+const renderLicence = (className, url) => (
     <ExternalLink href={url} data-testid="journal-oa-licence">
         <div className={`fez-icon license ${className}`} />
     </ExternalLink>
 );
+
+const renderBoolean = isTrue => (isTrue ? 'Yes' : 'No');
+const renderDateTime = (dateTimeString, format) =>
+    moment(dateTimeString).isValid && moment(dateTimeString).format(format);
 
 const getBasicDetails = journalDetails => {
     const detailRows = [
@@ -84,7 +88,7 @@ const getBasicDetails = journalDetails => {
         return detailRows.concat([
             {
                 title: 'urlRefereed',
-                data: (journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_refereed && 'Yes') || 'No',
+                data: renderBoolean(journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_refereed),
             },
             [
                 {
@@ -175,15 +179,14 @@ const getOADetails = journalDetails => [
     },
     {
         title: 'doajSeal',
-        data: (journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_seal && 'Yes') || 'No',
+        data: journalDetails.fez_journal_doaj && renderBoolean(journalDetails.fez_journal_doaj.jnl_doaj_seal),
     },
     {
         title: 'doajLastUpdated',
         data:
             journalDetails.fez_journal_doaj &&
             journalDetails.fez_journal_doaj.jnl_doaj_last_updated &&
-            moment(journalDetails.fez_journal_doaj.jnl_doaj_last_updated).isValid &&
-            moment(journalDetails.fez_journal_doaj.jnl_doaj_last_updated).format('Do MMMM YYYY [at] h:mma'),
+            renderDateTime(journalDetails.fez_journal_doaj.jnl_doaj_last_updated, 'Do MMMM YYYY [at] h:mma'),
     },
     {
         title: 'doajHomepageUrl',
@@ -243,9 +246,8 @@ const getClarivateDetails = (journalDetails, slugPiece) => ({
                 title: 'jcrSourceDate',
                 data:
                     journalDetails[`fez_journal_jcr_${slugPiece}`] &&
-                    moment(journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_source_date`])
-                        .isValid &&
-                    moment(journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_source_date`]).format(
+                    renderDateTime(
+                        journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_source_date`],
                         'YYYY',
                     ),
             },
@@ -296,9 +298,7 @@ const getCiteScoreDetails = journalDetails => ({
         (journalDetails.fez_journal_cite_score && [
             {
                 title: 'citeScoreSourceDate',
-                data:
-                    moment(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date).isValid &&
-                    moment(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date).format('YYYY'),
+                data: renderDateTime(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date, 'YYYY'),
             },
             [
                 {
@@ -350,7 +350,7 @@ const getCiteScoreDetails = journalDetails => ({
                     [
                         {
                             title: 'citeScoreAsjcCodeTop10Pct',
-                            data: (code.jnl_cite_score_asjc_code_top_10_percent && 'Yes') || 'No',
+                            data: renderBoolean(code.jnl_cite_score_asjc_code_top_10_percent),
                         },
                         {
                             title: 'citeScoreAsjcCodePercentile',
@@ -410,11 +410,11 @@ const getIndexDetails = journalDetails => [
     },
     {
         title: 'hasScopus',
-        data: (journalDetails.fez_journal_cite_score && 'Yes') || 'No',
+        data: renderBoolean(journalDetails.fez_journal_cite_score),
     },
     {
         title: 'hasPubmed',
-        data: (journalDetails.fez_journal_pubmed && 'Yes') || 'No',
+        data: renderBoolean(journalDetails.fez_journal_pubmed),
     },
 ];
 
@@ -434,21 +434,19 @@ const getListedDetails = journalDetails => [
         data:
             journalDetails.fez_journal_abdc &&
             journalDetails.fez_journal_abdc.jnl_abdc_source_date &&
-            moment(journalDetails.fez_journal_abdc.jnl_abdc_source_date).isValid &&
-            moment(journalDetails.fez_journal_abdc.jnl_abdc_source_date).format('Do MMMM YYYY'),
+            renderDateTime(journalDetails.fez_journal_abdc.jnl_abdc_source_date, 'Do MMMM YYYY'),
     },
     {
         title: 'cwtsSourceDate',
         data:
             (journalDetails.fez_journal_cwts &&
-                `Yes, ${moment(journalDetails.fez_journal_cwts.jnl_cwts_source_date).isValid &&
-                    moment(journalDetails.fez_journal_cwts.jnl_cwts_source_date).format('YYYY')}`) ||
+                `Yes, ${renderDateTime(journalDetails.fez_journal_cwts.jnl_cwts_source_date, 'YYYY')}`) ||
             'No',
     },
     [
         {
             title: 'hasEra',
-            data: (journalDetails.fez_journal_era && 'Yes') || 'No',
+            data: renderBoolean(journalDetails.fez_journal_era),
         },
         {
             title: 'eraForCode',
@@ -466,10 +464,10 @@ const getListedDetails = journalDetails => [
         title: 'natureIndexSourceDate',
         data:
             (journalDetails.fez_journal_nature_index &&
-                `Yes, ${moment(journalDetails.fez_journal_nature_index.jnl_nature_index_source_date).isValid &&
-                    moment(journalDetails.fez_journal_nature_index.jnl_nature_index_source_date).format(
-                        'Do MMMM YYYY',
-                    )}`) ||
+                `Yes, ${renderDateTime(
+                    journalDetails.fez_journal_nature_index.jnl_nature_index_source_date,
+                    'Do MMMM YYYY',
+                )}`) ||
             'No',
     },
 ];

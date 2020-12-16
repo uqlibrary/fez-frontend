@@ -44,6 +44,12 @@ const titleToId = (title = '') =>
         .toLowerCase()
         .replace(/ /g, '-');
 
+/**
+ * Renderer for a card's content area.
+ *
+ * @param {Array} details Data to render. Each entry holds data for a row.
+ * @param {String} id Slug prefix for test ID
+ */
 export const renderSectionContents = (details, id) =>
     details.map((detailRow, index) => {
         if (Array.isArray(detailRow)) {

@@ -18,7 +18,7 @@ const TabbedCard = ({ cardId, cardTitle, tabs, common, contentRenderer }) => {
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
     const handleTabChange = (event, value) => setCurrentTabValue(value);
 
-    if (!Array.isArray(common) || common.length === 0) {
+    if ((!Array.isArray(common) || common.length === 0) && (!Array.isArray(tabs) || tabs.length === 0)) {
         return '';
     }
 
