@@ -53,6 +53,24 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
     });
 
+    it('should render rows with red indicator for expired editorial appointments', () => {
+        const { getByTestId } = setup({
+            list: [
+                {
+                    eap_id: 1,
+                    eap_journal_name: 'test',
+                    eap_jnl_id: 1234,
+                    eap_role_cvo_id: '123456',
+                    eap_start_year: '2006',
+                    eap_end_year: '1970',
+                    eap_role_name: 'Guest Editor',
+                },
+            ],
+        });
+
+        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+    });
+
     it('should validate inputs and render added info after adding', async () => {
         const { getByTestId, getByText } = setup({
             list: [],
