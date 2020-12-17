@@ -859,6 +859,7 @@ export default {
                 itemsList: INSTITUTIONAL_STATUS,
                 genericSelectFieldId: 'rek-institutional-status',
                 canUnselect: true,
+                ...selectFields.institutionalStatus,
             },
         },
         fez_record_search_key_oa_status_type: {
