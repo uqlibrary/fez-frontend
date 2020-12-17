@@ -835,7 +835,7 @@ export default {
                 label: locale.components.contentIndicators.label,
                 multiple: true,
                 fullWidth: true,
-                unselectable: true,
+                canUnselect: true,
             },
         },
         fez_record_search_key_herdc_code: {

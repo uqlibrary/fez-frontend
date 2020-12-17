@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentIndicatorsField component should mark dropdown as disabled when all indicators have been selected 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   disabled={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-content-indicator"
-  hideLabel={false}
   itemsList={
     Array [
       Object {
@@ -54,12 +53,12 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
 `;
 
 exports[`ContentIndicatorsField component should not mark dropdown as disabled when all indicators have been selected for admins 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
+  canUnselect={true}
   disabled={false}
   error={false}
   errorText=""
   genericSelectFieldId="rek-content-indicator"
-  hideLabel={false}
   itemsList={
     Array [
       Object {
@@ -102,18 +101,16 @@ exports[`ContentIndicatorsField component should not mark dropdown as disabled w
       ],
     }
   }
-  unselectable={true}
   value={Array []}
 />
 `;
 
 exports[`ContentIndicatorsField component should render default view 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   disabled={false}
   error={false}
   errorText=""
   genericSelectFieldId="rek-content-indicator"
-  hideLabel={false}
   itemsList={
     Array [
       Object {
@@ -143,12 +140,11 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
 `;
 
 exports[`ContentIndicatorsField component should render with given field props 1`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   disabled={false}
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-content-indicator"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -200,12 +196,11 @@ exports[`ContentIndicatorsField component should render with given field props 1
 `;
 
 exports[`ContentIndicatorsField component should render with given field props 2`] = `
-<GenericSelectField
+<Memo(NewGenericSelectField)
   disabled={false}
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-content-indicator"
-  hideLabel={false}
   input={
     Object {
       "value": Immutable.List [
