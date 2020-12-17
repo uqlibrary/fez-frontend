@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import {
     CONTENT_INDICATORS,
     CONTENT_INDICATORS_DOCTYPE_BLACKLIST,
@@ -35,7 +35,7 @@ export const getContentIndicators = props =>
     CONTENT_INDICATORS.map(item => ({
         ...item,
         disabled:
-            !props.unselectable &&
+            !props.canUnselect &&
             !!props.meta &&
             !!props.meta.initial &&
             !!props.meta.initial.toJS &&
@@ -43,9 +43,8 @@ export const getContentIndicators = props =>
     }));
 
 export const ContentIndicatorsField = props => (
-    <GenericSelectField
+    <NewGenericSelectField
         itemsList={getContentIndicators(props)}
-        hideLabel={false}
         locale={{ label: props.label }}
         value={getSelected(props)}
         onChange={(!!props.input && props.input.onChange) || undefined}
@@ -54,7 +53,7 @@ export const ContentIndicatorsField = props => (
         {...props}
         disabled={
             props.disabled ||
-            (!props.unselectable &&
+            (!props.canUnselect &&
                 !!props.meta &&
                 !!props.meta.initial &&
                 !!props.meta.initial.toJS &&
@@ -69,7 +68,7 @@ ContentIndicatorsField.propTypes = {
     meta: PropTypes.object,
     label: PropTypes.string,
     disabled: PropTypes.bool,
-    unselectable: PropTypes.bool,
+    canUnselect: PropTypes.bool,
 };
 
 export default ContentIndicatorsField;
