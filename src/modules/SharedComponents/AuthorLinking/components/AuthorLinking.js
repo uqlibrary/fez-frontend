@@ -229,7 +229,7 @@ export class AuthorLinking extends PureComponent {
             <div className={this.props.className}>
                 <Grid container>
                     <Grid item className={this.props.classes.infiniteContainer}>
-                        <Infinite containerHeight={200} elementHeight={73} infiniteLoadBeginEdgeOffset={50}>
+                        <Infinite containerHeight={250} elementHeight={50} infiniteLoadBeginEdgeOffset={50}>
                             {this.authorsToRender}
                         </Infinite>
                     </Grid>

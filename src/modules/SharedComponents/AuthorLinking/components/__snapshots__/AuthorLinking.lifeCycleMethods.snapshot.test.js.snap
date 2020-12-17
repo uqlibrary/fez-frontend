@@ -11,9 +11,9 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -79,9 +79,9 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -147,9 +147,9 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 1`] 
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -215,9 +215,9 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -316,9 +316,9 @@ exports[`AuthorLinking should render component if authorList has more authors th
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}

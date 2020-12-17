@@ -10,9 +10,9 @@ exports[`layout should handle basic props properly 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -37,9 +37,9 @@ exports[`layout should handle empty params on rendering authors 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -64,9 +64,9 @@ exports[`layout should handle missing props properly 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -91,9 +91,9 @@ exports[`layout should handle missing search keys properly 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -278,9 +278,9 @@ exports[`layout shows extra small widths correctly (1 per row) 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -504,9 +504,9 @@ exports[`layout shows normal widths correctly (3 per row) 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
@@ -700,9 +700,9 @@ exports[`layout shows small widths correctly (2 per row) 1`] = `
     >
       <Infinite
         className=""
-        containerHeight={200}
+        containerHeight={250}
         displayBottomUpwards={false}
-        elementHeight={73}
+        elementHeight={50}
         handleScroll={[Function]}
         infiniteLoadBeginEdgeOffset={50}
         isInfiniteLoading={false}
