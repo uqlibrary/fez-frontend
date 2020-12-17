@@ -67,14 +67,14 @@ export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {
     const regexGroup = [
-        /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i,
+        /^10.\d{4,9}\/[-._;()\/:A-Z0-9]+$/i,
         /^10.1002\/[^\s]+$/i,
         /^10.\d{4}\/\d+-\d+X?\(\d+\)\d+<[\d\w]+:[\d\w]*>\d+.\d+.\w+;\d$/i,
         /^10.1021\/\w\w\d+$/i,
         /^10.1207\/[\w\d]+\&\d+_\d+$/i,
     ];
 
-    return regexGroup.reduce((isValid, regex) => regex.test(value.trim()) || isValid, false);
+    return regexGroup.reduce((isValid, regex) => regex.test(value) || isValid, false);
 };
 export const isValidPubMedValue = value => {
     // pubmed id is all digits, min 3 digits
