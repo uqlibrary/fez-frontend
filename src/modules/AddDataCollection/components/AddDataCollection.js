@@ -15,7 +15,6 @@ import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields'
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
@@ -28,11 +27,12 @@ import { CURRENT_LICENCES } from 'config/general';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
+import { selectFields } from 'locale/selectFields';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -347,14 +347,15 @@ export default class AddDataCollection extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={4}>
                                             <Field
-                                                component={LicenceSelectorField}
+                                                component={NewGenericSelectField}
+                                                genericSelectFieldId="rek-license"
                                                 id="data-collection-licence-selector"
                                                 name="fez_record_search_key_license.rek_license"
                                                 required
                                                 validate={[validation.required]}
                                                 disabled={this.props.submitting}
-                                                {...txt.information.accessAndLicensing.fieldLabels
-                                                    .licensingAndTermsOfAccess}
+                                                itemsList={CURRENT_LICENCES}
+                                                {...selectFields.license}
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={4}>
