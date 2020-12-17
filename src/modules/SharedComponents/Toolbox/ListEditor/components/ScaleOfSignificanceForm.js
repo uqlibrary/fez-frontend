@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import RichEditor from 'modules/SharedComponents/RichEditor/components/RichEditor';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
@@ -70,7 +70,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
                 <Alert {...authorOrderAlert} />
             </Grid>
             <Grid item style={{ flexGrow: 1 }} xs={12}>
-                <GenericSelectField
+                <NewGenericSelectField
                     fullWidth
                     name="key"
                     genericSelectFieldId="rek-significance"
