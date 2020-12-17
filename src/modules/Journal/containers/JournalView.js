@@ -8,6 +8,7 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import JournalView from '../components/JournalView';
 
 import { default as globalLocale } from 'locale/global';
+import { CREATIVE_COMMONS_LICENCES, getCreativeCommonsUrl } from 'config/general';
 import pagesLocale from 'locale/pages';
 
 import * as actions from 'actions';
@@ -22,11 +23,14 @@ const getLicence = ({ by, nd, nc, sa }) => {
     nc && conditions.push('nc');
     sa && conditions.push('sa');
     const licence = conditions.join('-');
-    return [`cc-${licence}`, `http://creativecommons.org/licenses/${licence}/3.0/deed.en_US`];
+    return [`cc-${licence}`, getCreativeCommonsUrl(licence), CREATIVE_COMMONS_LICENCES[licence]];
 };
 
-const renderLicence = (className, url) => (
+const renderLicence = (className, url, text) => (
     <ExternalLink href={url} data-testid="journal-oa-licence">
+        <div data-testid="journal-oa-licence-lookup" style={{ paddingRight: '1rem' }}>
+            {text}
+        </div>
         <div className={`fez-icon license ${className}`} />
     </ExternalLink>
 );
