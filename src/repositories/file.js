@@ -25,12 +25,16 @@ export function putUploadFile(pid, file, dispatch, formName) {
         post(FILE_UPLOAD_API(), {
             Key: `${pid}/${file.name}`,
             Metadata: {
-                dsi_security_policy:
-                    file.access_condition_id === FILE_ACCESS_CONDITION_OPEN &&
-                    !!file.date &&
-                    moment(file.date).isAfter()
-                        ? FILE_ACCESS_CONDITION_CLOSED
-                        : file.access_condition_id,
+                ...(!!file.access_condition_id
+                    ? {
+                          dsi_security_policy:
+                              file.access_condition_id === FILE_ACCESS_CONDITION_OPEN &&
+                              !!file.date &&
+                              moment(file.date).isAfter()
+                                  ? FILE_ACCESS_CONDITION_CLOSED
+                                  : file.access_condition_id,
+                      }
+                    : {}),
                 ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN &&
                 !moment(file.date).isSame(moment(), 'day')
                     ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
