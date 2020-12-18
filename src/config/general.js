@@ -1563,3 +1563,5 @@ export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
         text: 'Mediated Access',
     },
 ];
+
+export const USERS_WITH_ACCESS_TO_EDITORIAL_ROLES = ['uqvasai', 'uqaheath', 'uqamartl', 'uqmfeene', 'uqmmarr1'];
