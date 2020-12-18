@@ -1567,3 +1567,5 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR]: 'Single Issue Editor',
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
+
+export const USERS_WITH_ACCESS_TO_EDITORIAL_ROLES = ['uqvasai', 'uqaheath', 'uqamartl', 'uqmfeene', 'uqmmarr1'];
