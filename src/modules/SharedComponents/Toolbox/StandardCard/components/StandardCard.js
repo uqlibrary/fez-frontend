@@ -78,6 +78,7 @@ export class Cards extends Component {
             : `standard-card${typeof title === 'string' ? '-' + title.replace(/ /g, '-').toLowerCase() : ''}`;
         return (
             <Card
+                id={standardCardId}
                 data-testid={standardCardId}
                 className={`${classes.card} StandardCard`}
                 style={{ ...customBG, ...customTitle, ...fullHeight }}
@@ -91,6 +92,7 @@ export class Cards extends Component {
                             component: subCard ? 'h4' : 'h3',
                             color: 'inherit',
                             'data-testid': `${standardCardId}-header`,
+                            id: `${standardCardId}-header`,
                         }}
                         action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{
@@ -101,6 +103,7 @@ export class Cards extends Component {
                     />
                 )}
                 <CardContent
+                    id={`${standardCardId}-content`}
                     data-testid={`${standardCardId}-content`}
                     className={(this.props.noPadding && classes.cardContentNoPadding) || ''}
                 >

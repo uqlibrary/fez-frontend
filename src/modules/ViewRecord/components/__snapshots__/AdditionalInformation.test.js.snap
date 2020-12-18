@@ -4273,6 +4273,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-106 StandardCard"
                               data-testid="standard-card-additional-information"
+                              id="standard-card-additional-information"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -4283,12 +4284,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                   }
                                 }
                                 data-testid="standard-card-additional-information"
+                                id="standard-card-additional-information"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-106 StandardCard"
                                   data-testid="standard-card-additional-information"
                                   elevation={1}
+                                  id="standard-card-additional-information"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
@@ -4327,11 +4330,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                     }
                                     data-testid="standard-card-additional-information"
                                     elevation={1}
+                                    id="standard-card-additional-information"
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-106 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-additional-information"
+                                      id="standard-card-additional-information"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -4348,6 +4353,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                             "color": "inherit",
                                             "component": "h3",
                                             "data-testid": "standard-card-additional-information-header",
+                                            "id": "standard-card-additional-information-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -4371,6 +4377,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                               "color": "inherit",
                                               "component": "h3",
                                               "data-testid": "standard-card-additional-information-header",
+                                              "id": "standard-card-additional-information-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -4388,6 +4395,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                 component="h3"
                                                 data-testid="standard-card-additional-information-header"
                                                 display="block"
+                                                id="standard-card-additional-information-header"
                                                 variant="h5"
                                               >
                                                 <ForwardRef(Typography)
@@ -4430,11 +4438,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                   component="h3"
                                                   data-testid="standard-card-additional-information-header"
                                                   display="block"
+                                                  id="standard-card-additional-information-header"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                     data-testid="standard-card-additional-information-header"
+                                                    id="standard-card-additional-information-header"
                                                   >
                                                     Additional information
                                                   </h3>
@@ -4447,6 +4457,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
                                         data-testid="standard-card-additional-information-content"
+                                        id="standard-card-additional-information-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -4456,10 +4467,12 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                             }
                                           }
                                           data-testid="standard-card-additional-information-content"
+                                          id="standard-card-additional-information-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
                                             data-testid="standard-card-additional-information-content"
+                                            id="standard-card-additional-information-content"
                                           >
                                             <div
                                               key="0"
