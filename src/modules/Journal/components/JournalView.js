@@ -20,25 +20,25 @@ const txt = pagesLocale.pages.journal.view;
  * @param {String} index Slug for creating test IDs
  * @param {Object} sizes Indicates Grid breakpoints for title and data
  */
-const renderJournalDetail = (detail, index, sizes) =>
+export const renderJournalDetail = (detail, index, sizes) =>
     detail.data &&
     (!Array.isArray(detail.data) || detail.data.length > 0) && (
         <Grid container spacing={2} alignItems="flex-start" key={index}>
             {detail.title && (
-                <Grid item component="span" {...sizes.title} data-testid={`${index}-label`}>
+                <Grid item component="span" {...sizes.title} data-testid={`${index}-label`} id={`${index}-label`}>
                     <Typography component="span" variant="body2">
                         {txt.titles[detail.title] || detail.title}
                         {': '}
                     </Typography>
                 </Grid>
             )}
-            <Grid item component="span" {...sizes.data} data-testid={`${index}`}>
+            <Grid item component="span" {...sizes.data} data-testid={`${index}`} id={`${index}`}>
                 {detail.data}
             </Grid>
         </Grid>
     );
 
-const titleToId = (title = '') =>
+export const titleToId = (title = '') =>
     title
         .replace(/[^a-z0-9]/gi, '')
         .toLowerCase()
@@ -51,6 +51,7 @@ const titleToId = (title = '') =>
  * @param {String} id Slug prefix for test ID
  */
 export const renderSectionContents = (details, id) =>
+    details &&
     details.map((detailRow, index) => {
         if (Array.isArray(detailRow)) {
             return (
@@ -58,7 +59,7 @@ export const renderSectionContents = (details, id) =>
                     {detailRow.map((detailColumn, subIndex) => {
                         const renderedColumn = renderJournalDetail(
                             detailColumn,
-                            `${id}-${titleToId(detailColumn.title) || `-row${index}-column${subIndex}`}`,
+                            `${id}-${titleToId(detailColumn.title) || `row${index}-column${subIndex}`}`,
                             {
                                 title: { xs: 'auto' },
                                 data: { xs: 'auto' },
@@ -103,9 +104,9 @@ export const JournalView = ({
     }, []);
 
     if (journalLoadingError) {
-        return <Alert {...txt.loadFailureAlert} />;
+        return <Alert alertId="journal-load-failure-alert" {...txt.loadFailureAlert} />;
     } else if (journalLoading || !journalDetailsLoaded) {
-        return <InlineLoader message={txt.loadingMessage} />;
+        return <InlineLoader message={txt.loadingMessage} loaderId="journal-loading" />;
     } else {
         return (
             <StandardPage standardPageId="journal-view" title={journalTitle}>

@@ -14,7 +14,7 @@ const titleToId = title =>
         .toLowerCase()
         .replace(/ /g, '-');
 
-const TabbedCard = ({ cardId, cardTitle, tabs, common, contentRenderer }) => {
+const TabbedCard = ({ cardId, cardTitle, common, contentRenderer, tabs }) => {
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
     const handleTabChange = (event, value) => setCurrentTabValue(value);
 
@@ -32,33 +32,34 @@ const TabbedCard = ({ cardId, cardTitle, tabs, common, contentRenderer }) => {
                 )}
                 <Grid item xs={12}>
                     <Tabs
-                        value={currentTabValue}
-                        onChange={handleTabChange}
                         indicatorColor="primary"
+                        onChange={handleTabChange}
                         textColor="primary"
+                        value={currentTabValue}
                     >
                         {tabs.map((tab, index) => (
                             <Tab
+                                data-testid={`${cardId}-tab${index}-heading`}
+                                id={`${cardId}-tab${index}-heading`}
+                                key={`${cardId}-tab${index}-heading`}
                                 label={tab.title}
-                                key={`${cardId}-tab-${index}-heading`}
-                                data-testid={`${cardId}-tab-${index}-heading`}
                                 value={`${index}`}
                             />
                         ))}
                     </Tabs>
                     {tabs.map((tab, index) => (
                         <TabContainer
-                            value={`${index}`}
-                            key={`${cardId}-tab-${index}-content`}
-                            tabbed
                             currentTab={currentTabValue}
+                            key={`${cardId}-tab${index}-content`}
+                            tabbed
+                            value={`${index}`}
                         >
                             <StandardCard
-                                standardCardId={`${cardId}-${titleToId(tab.title)}-section`}
-                                squareTop
                                 noHeader
+                                squareTop
+                                standardCardId={`${cardId}-${titleToId(tab.title)}-section`}
                             >
-                                {contentRenderer(tab.content, `${cardId}-tab-${index}`)}
+                                {contentRenderer(tab.content, `${cardId}-tab${index}`)}
                             </StandardCard>
                         </TabContainer>
                     ))}
