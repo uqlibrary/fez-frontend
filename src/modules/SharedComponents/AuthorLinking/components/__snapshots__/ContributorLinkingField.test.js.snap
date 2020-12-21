@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorLinkingField should render as expected 1`] = `
-<WithStyles(WithWidth(AuthorLinking))
+<Memo(AuthorLinking)
+  authorLinkingId="rek-contributor-id"
   input={
     Object {
       "onChange": [Function],
