@@ -83,6 +83,10 @@ export default {
                 message: 'The requested page could not be found.',
                 status: 404,
             },
+            409: {
+                message: 'Duplicate entry',
+                status: 409,
+            },
             410: {
                 message: 'This work has been deleted.',
                 status: 410,

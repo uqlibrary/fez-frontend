@@ -105,7 +105,7 @@ export function addMyEditorialAppointments(data) {
                 payload: e,
             });
 
-            return false;
+            return Promise.reject(e);
         }
     };
 }
