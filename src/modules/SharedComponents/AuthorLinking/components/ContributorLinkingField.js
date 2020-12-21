@@ -10,6 +10,7 @@ export default function ContributorLinkingField(fieldProps) {
                 order: 'rek_contributor_id_order',
                 type: 'contributor',
             }}
+            authorLinkingId="rek-contributor-id"
             {...fieldProps}
         />
     );
