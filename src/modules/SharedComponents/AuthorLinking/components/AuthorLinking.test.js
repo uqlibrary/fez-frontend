@@ -1,21 +1,24 @@
-import { AuthorLinking } from './AuthorLinking';
+import React from 'react';
+import AuthorLinking from './AuthorLinking';
+import { render, fireEvent } from 'test-utils';
+
+import * as Hook from 'hooks/useWidth';
 
 function setup(testProps = {}) {
     const props = {
-        searchKey: testProps.searchKey || {},
-        author: testProps.author || { aut_id: 410 },
-        authorList: testProps.authorList || [],
-        linkedAuthorIdList: testProps.linkedAuthorIdList,
-        disabled: testProps.disabled || false,
-        classes: {
-            root: 'root',
-            label: 'label',
-            checkboxRoot: 'checkboxRoot',
-            checkboxChecked: 'checkboxChecked',
+        authorLinkingId: 'rek-author-id',
+        loggedInAuthor: { aut_id: 410 },
+        authorList: [],
+        disabled: false,
+        onChange: jest.fn(),
+        searchKey: {
+            value: 'rek_author_id',
+            order: 'rek_author_id_order',
+            type: 'author',
         },
         ...testProps,
     };
-    return getElement(AuthorLinking, props);
+    return render(<AuthorLinking {...props} />);
 }
 
 // Authors
@@ -42,440 +45,143 @@ const authorList = [
     { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Steptoe, Raymond J.', rek_author_order: 8 },
     { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Wells, James W.', rek_author_order: 9 },
 ];
-const searchKey = { value: 'rek_author_id', order: 'rek_author_id_order', type: 'author' };
 
 describe('AuthorLinking', () => {
-    it('should prepare output correctly with linked author ids provided where logged in author id not present', () => {
-        const component = setup();
-        const preparedOutput = component.instance().prepareOutput(
-            { searchKey },
-            {
-                selectedAuthor: {
-                    rek_author_id_id: null,
-                    rek_author_id_pid: 'UQ:111111',
-                    rek_author_id: 410,
-                    rek_author_id_order: 6,
-                },
-            },
-            linkedAuthorIdList,
-        );
+    it('should correctly call onChange callback with correct output data', () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId } = setup({
+            authorList: authorList,
+            linkedAuthorIdList: linkedAuthorIdList,
+            onChange: onChangeFn,
+        });
 
-        expect(preparedOutput).toEqual([
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 3 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 5 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 6 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 7 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 123, rek_author_id_order: 8 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 9 },
-        ]);
-    });
+        fireEvent.click(getByTestId('rek-author-id-5'));
 
-    it('should prepare output correctly with empty linked author id list', () => {
-        const component = setup();
-        const preparedOutput = component.instance().prepareOutput(
-            { searchKey },
-            {
-                selectedAuthor: {
-                    rek_author_id_id: null,
-                    rek_author_id_pid: 'UQ:111111',
-                    rek_author_id: 410,
-                    rek_author_id_order: 6,
-                },
-            },
-            authorList.map(author => component.instance().transformToAuthorOrderId(0, author, searchKey)),
-        );
-
-        expect(preparedOutput).toEqual([
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 3 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 5 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 6 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 7 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 8 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 9 },
-        ]);
-    });
-
-    it('should prepare output correctly with author order not start from 1', () => {
-        const component = setup();
-        const preparedOutput = component.instance().prepareOutput(
-            { searchKey },
-            {
-                selectedAuthor: {
-                    rek_author_id_id: null,
-                    rek_author_id_pid: 'UQ:111111',
-                    rek_author_id: 410,
-                    rek_author_id_order: 3,
-                },
-            },
-            [
+        expect(onChangeFn).toHaveBeenCalledWith({
+            authors: [
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 3 },
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 5 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 6 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 7 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 123, rek_author_id_order: 8 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 9 },
             ],
-        );
-
-        expect(preparedOutput).toEqual([
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 3 },
-            { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
-        ]);
-    });
-});
-
-// Contributors
-const linkedContributorIdList = [
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 1,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 2,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 3,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 4,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 5,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 6,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 7,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 123,
-        rek_contributor_id_order: 8,
-    },
-    {
-        rek_contributor_id_id: null,
-        rek_contributor_id_pid: 'UQ:111111',
-        rek_contributor_id: 0,
-        rek_contributor_id_order: 9,
-    },
-];
-const contributorList = [
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Overgaard, Nana H.',
-        rek_contributor_order: 1,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Cruz, Jazmina L.',
-        rek_contributor_order: 2,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Bridge, Jennifer A.',
-        rek_contributor_order: 3,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Nel, Hendrik J.',
-        rek_contributor_order: 4,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Frazer, Ian H.',
-        rek_contributor_order: 5,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'La Gruta, Nicole L.',
-        rek_contributor_order: 6,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Blumenthal, Antje',
-        rek_contributor_order: 7,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Steptoe, Raymond J.',
-        rek_contributor_order: 8,
-    },
-    {
-        rek_contributor_id: null,
-        rek_contributor_pid: 'UQ:111111',
-        rek_author: 'Wells, James W.',
-        rek_contributor_order: 9,
-    },
-];
-const contributorSearchKey = { value: 'rek_contributor_id', order: 'rek_contributor_id_order', type: 'contributor' };
-
-describe('ContributorLinking', () => {
-    it(
-        'should prepare output correctly with linked contributor ' +
-            'ids provided where logged in author id not present',
-        () => {
-            const component = setup();
-            const preparedOutput = component.instance().prepareOutput(
-                { searchKey: contributorSearchKey },
-                {
-                    selectedAuthor: {
-                        rek_contributor_id_id: null,
-                        rek_contributor_id_pid: 'UQ:111111',
-                        rek_contributor_id: 410,
-                        rek_contributor_id_order: 6,
-                    },
-                },
-                linkedContributorIdList,
-            );
-
-            expect(preparedOutput).toEqual([
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 0,
-                    rek_contributor_id_order: 1,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 0,
-                    rek_contributor_id_order: 2,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 0,
-                    rek_contributor_id_order: 3,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 0,
-                    rek_contributor_id_order: 4,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 0,
-                    rek_contributor_id_order: 5,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 410,
-                    rek_contributor_id_order: 6,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 0,
-                    rek_contributor_id_order: 7,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 123,
-                    rek_contributor_id_order: 8,
-                },
-                {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 0,
-                    rek_contributor_id_order: 9,
-                },
-            ]);
-        },
-    );
-
-    it('should prepare output correctly with empty linked author id list', () => {
-        const component = setup();
-        const preparedOutput = component.instance().prepareOutput(
-            { searchKey: contributorSearchKey },
-            {
-                selectedAuthor: {
-                    rek_contributor_id_id: null,
-                    rek_contributor_id_pid: 'UQ:111111',
-                    rek_contributor_id: 410,
-                    rek_contributor_id_order: 6,
-                },
-            },
-            contributorList.map(author =>
-                component.instance().transformToAuthorOrderId(0, author, contributorSearchKey),
-            ),
-        );
-
-        expect(preparedOutput).toEqual([
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 1,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 2,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 3,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 4,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 5,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 410,
-                rek_contributor_id_order: 6,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 7,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 8,
-            },
-            {
-                rek_contributor_id_id: null,
-                rek_contributor_id_pid: 'UQ:111111',
-                rek_contributor_id: 0,
-                rek_contributor_id_order: 9,
-            },
-        ]);
-    });
-});
-
-describe('layout', () => {
-    it('should handle basic props properly', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
+            valid: false,
+        });
     });
 
-    it('should handle missing props properly', () => {
-        const testprops = {
-            author: {},
-            linkedAuthorIdList: [],
-        };
-        const wrapper = setup(testprops);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should handle empty params on rendering authors', () => {
-        const testprops = {
-            author: {},
-            linkedAuthorIdList: [],
-        };
-        const wrapper = setup(testprops);
-        wrapper.instance().getAuthorsToRender();
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance().context.isMobile = true;
-        expect(wrapper.instance().getAuthorsToRender([])).toEqual([]);
-    });
-
-    it('should handle missing search keys properly', () => {
-        const testprops = {
-            searchKey: {
-                value: 'rek_author_id',
-                order: 'rek_author_id_order',
-            },
+    it('should correctly call onChange callback with empty linked author id list', () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId } = setup({
             authorList: authorList,
-        };
-        const wrapper = setup(testprops);
-        expect(toJson(wrapper)).toMatchSnapshot();
+            onChange: onChangeFn,
+        });
+
+        fireEvent.click(getByTestId('rek-author-id-5'));
+
+        expect(onChangeFn).toHaveBeenCalledWith({
+            authors: [
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 3 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 5 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 6 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 7 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 8 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 9 },
+            ],
+            valid: false,
+        });
     });
 
-    it('shows extra small widths correctly (1 per row)', () => {
-        const testprops = {
-            width: 'xs',
-            searchKey: {
-                value: 'rek_author_id',
-                order: 'rek_author_id_order',
-                type: 'author',
-            },
-            authorList: authorList,
-        };
-        const wrapper = setup(testprops);
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should correctly call onChange callback with author order not start from 1', () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId } = setup({
+            onChange: onChangeFn,
+            authorList: [
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Cruz, Jazmina L.',
+                    rek_author_order: 2,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Bridge, Jennifer A.',
+                    rek_author_order: 3,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Nel, Hendrik J.',
+                    rek_author_order: 4,
+                },
+            ],
+        });
+
+        fireEvent.click(getByTestId('rek-author-id-1'));
+
+        expect(onChangeFn).toHaveBeenCalledWith({
+            authors: [
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 3 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
+            ],
+            valid: false,
+        });
+
+        fireEvent.click(getByTestId('author-accept-declaration-input'));
+
+        expect(onChangeFn).toHaveBeenCalledWith({
+            authors: [
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 3 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4 },
+            ],
+            valid: true,
+        });
     });
 
-    it('shows small widths correctly (2 per row)', () => {
-        const testprops = {
-            width: 'sm',
-            searchKey: {
-                value: 'rek_author_id',
-                order: 'rek_author_id_order',
-                type: 'author',
-            },
+    it('should correctly render number of authors per row for width=sm', () => {
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+
+        useWidth.mockImplementation(() => 'sm');
+
+        const onChangeFn = jest.fn();
+
+        const { getByTestId, queryByTestId } = setup({
             authorList: authorList,
-        };
-        const wrapper = setup(testprops);
-        expect(toJson(wrapper)).toMatchSnapshot();
+            onChange: onChangeFn,
+        });
+
+        expect(getByTestId('rek-author-id-row-0')).toBeInTheDocument();
+        expect(getByTestId('rek-author-id-row-1')).toBeInTheDocument();
+        expect(getByTestId('rek-author-id-row-2')).toBeInTheDocument();
+        expect(getByTestId('rek-author-id-row-3')).toBeInTheDocument();
+        expect(getByTestId('rek-author-id-row-4')).toBeInTheDocument();
+        expect(queryByTestId('rek-author-id-row-5')).not.toBeInTheDocument();
     });
 
-    it('shows normal widths correctly (3 per row)', () => {
-        const testprops = {
-            searchKey: {
-                value: 'rek_author_id',
-                order: 'rek_author_id_order',
-                type: 'author',
-            },
+    it('should correctly render number of authors per row for width=md', () => {
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+
+        useWidth.mockImplementation(() => 'md');
+
+        const onChangeFn = jest.fn();
+
+        const { getByTestId, queryByTestId } = setup({
             authorList: authorList,
-        };
-        const wrapper = setup(testprops);
-        expect(toJson(wrapper)).toMatchSnapshot();
+            onChange: onChangeFn,
+        });
+
+        expect(getByTestId('rek-author-id-row-0')).toBeInTheDocument();
+        expect(getByTestId('rek-author-id-row-1')).toBeInTheDocument();
+        expect(getByTestId('rek-author-id-row-2')).toBeInTheDocument();
+        expect(queryByTestId('rek-author-id-row-3')).not.toBeInTheDocument();
     });
 });

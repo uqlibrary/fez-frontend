@@ -15,15 +15,18 @@ export const styles = theme => ({
     },
     buttonBase: {
         justifyContent: 'flex-start',
+        marginBottom: theme.spacing(-1),
+        marginTop: theme.spacing(1),
     },
     authorOrder: {
-        marginLeft: theme.spacing(6),
+        marginLeft: theme.spacing(5),
         marginBottom: theme.spacing(2),
     },
 });
 
 export class AuthorItem extends PureComponent {
     static propTypes = {
+        authorItemId: PropTypes.string,
         type: PropTypes.string,
         linked: PropTypes.bool,
         selected: PropTypes.bool,
@@ -76,24 +79,32 @@ export class AuthorItem extends PureComponent {
 
         return (
             <Grid item xs={12} sm={6} md={4}>
-                <Grid container>
-                    <Grid item xs={12}>
-                        <Button
-                            onClick={!linked && !selected ? this._selectAuthor : undefined}
-                            fullWidth
-                            disabled={disabled}
-                            className={this.props.classes.buttonBase}
+                <Button
+                    onClick={!linked && !selected ? this._selectAuthor : undefined}
+                    fullWidth
+                    disabled={disabled}
+                    className={this.props.classes.buttonBase}
+                    startIcon={icon}
+                    children={
+                        <Typography
+                            variant="button"
+                            id={`${this.props.authorItemId}-name`}
+                            data-testid={`${this.props.authorItemId}-name`}
                         >
-                            {icon}
                             {author[`rek_${this.props.type}`]}
-                        </Button>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant="caption" className={this.props.classes.authorOrder}>
-                            {authorOrder}
                         </Typography>
-                    </Grid>
-                </Grid>
+                    }
+                    id={`${this.props.authorItemId}`}
+                    data-testid={`${this.props.authorItemId}`}
+                />
+                <Typography
+                    variant="caption"
+                    className={this.props.classes.authorOrder}
+                    id={`${this.props.authorItemId}-order`}
+                    data-testid={`${this.props.authorItemId}-order`}
+                >
+                    {authorOrder}
+                </Typography>
             </Grid>
         );
     }
