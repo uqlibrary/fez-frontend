@@ -437,6 +437,7 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
     .reply(200, { ...mockData.myEditorialAppointmentItem });
+    // .reply(409, { data: 'Server error' });
 
 // Note: The existing records of all the mocked types below (regular records, collections and community)
 // are all patched via the same endpoint, so if you want to mock a failure of one of those,

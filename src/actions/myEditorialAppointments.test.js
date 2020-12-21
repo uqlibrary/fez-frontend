@@ -171,14 +171,20 @@ describe('myEditorialAppointments actions', () => {
                 actions.MY_EDITORIAL_APPOINTMENT_ADD_FAILED,
             ];
 
-            await mockActionsStore.dispatch(
-                addMyEditorialAppointments({
-                    eap_journal_name: 'test',
-                    eap_jnl_id: 1234,
-                    eap_role_name: 'test',
-                    eap_role_cvo_id: '12345',
-                }),
-            );
+            await expect(
+                mockActionsStore.dispatch(
+                    addMyEditorialAppointments({
+                        eap_journal_name: 'test',
+                        eap_jnl_id: 1234,
+                        eap_role_name: 'test',
+                        eap_role_cvo_id: '12345',
+                    }),
+                ),
+            ).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
 
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });

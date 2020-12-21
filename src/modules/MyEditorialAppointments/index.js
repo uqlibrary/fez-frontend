@@ -36,6 +36,10 @@ export const MyEditorialAppointments = () => {
         state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsAddSuccess,
     );
 
+    const myEditorialAppointmentsAddError = useSelector(
+        state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsAddError,
+    );
+
     const handleRowAdd = newData => {
         return dispatch(addMyEditorialAppointments(newData));
     };
@@ -81,9 +85,16 @@ export const MyEditorialAppointments = () => {
                 <Grid item xs={12}>
                     {<Alert {...componentLocale.components.myEditorialAppointmentsList.infoTextAlert} />}
                 </Grid>
-                <Grid item xs={12}>
-                    {!!myEditorialAppointmentsListError && <Alert {...myEditorialAppointmentsListError} type="error" />}
-                </Grid>
+                {!!myEditorialAppointmentsListError && (
+                    <Grid item xs={12}>
+                        <Alert {...myEditorialAppointmentsListError} type="error" />
+                    </Grid>
+                )}
+                {!!myEditorialAppointmentsAddError && (
+                    <Grid item xs={12}>
+                        <Alert {...myEditorialAppointmentsAddError} type="error" />
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     {!!myEditorialAppointmentsList && (
                         <StandardCard hideTitle>
