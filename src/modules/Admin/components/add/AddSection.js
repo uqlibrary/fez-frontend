@@ -15,7 +15,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import Hidden from '@material-ui/core/Hidden';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 export const AddSection = ({
     hasDefaultDocTypeSubType,
@@ -44,7 +44,7 @@ export const AddSection = ({
     /* istanbul ignore next */
     const handleCancel = event => {
         event.preventDefault();
-        history.push(routes.pathConfig.index);
+        history.push(pathConfig.index);
     };
     return (
         <form>

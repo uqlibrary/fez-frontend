@@ -1,20 +1,20 @@
 import * as records from 'mock/data/testing/records';
 import Meta from './Meta';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 function setup(testProps = {}) {
     const props = {
         routesConfig: [
             {
-                path: routes.pathConfig.index,
+                path: pathConfig.index,
                 pageTitle: 'Index page',
             },
             {
-                regExPath: routes.pathConfig.records.fix('(UQ:\\d+)'),
+                regExPath: pathConfig.records.fix('(UQ:\\d+)'),
                 pageTitle: 'Fix my record page title',
             },
             {
-                path: routes.pathConfig.hdrSubmission,
+                path: pathConfig.hdrSubmission,
                 pageTitle: 'RHD submission page title',
             },
         ],
@@ -35,7 +35,7 @@ describe('Meta Component ', () => {
             publication: records.journal,
             routesConfig: [
                 {
-                    path: routes.pathConfig.admin.edit,
+                    path: pathConfig.admin.edit,
                     pageTitle: 'Test',
                 },
             ],

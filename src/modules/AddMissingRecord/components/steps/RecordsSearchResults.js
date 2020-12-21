@@ -18,7 +18,7 @@ const PublicationListLoadingProgress = React.lazy(() =>
     import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
 );
 
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
 export default class RecordsSearchResults extends PureComponent {

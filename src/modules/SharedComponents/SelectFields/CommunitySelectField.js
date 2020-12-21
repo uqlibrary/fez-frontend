@@ -9,7 +9,7 @@ export default function CommunitySelectField(fieldProps) {
     const dompurify = require('dompurify');
     const translatedItemList = useSelector(
         state =>
-            state.get('communitiesReducer') &&
+            !!state.get('communitiesReducer') &&
             state.get('communitiesReducer').itemsList.map((item, index) => {
                 return {
                     text: dompurify.sanitize(item.rek_title, noHtmlConfig),
@@ -18,7 +18,9 @@ export default function CommunitySelectField(fieldProps) {
                 };
             }),
     );
-    const itemsLoading = useSelector(state => state.get('communitiesReducer').itemsLoading);
+    const itemsLoading = useSelector(
+        state => !!state.get('communitiesReducer') && state.get('communitiesReducer').itemsLoading,
+    );
 
     React.useEffect(() => {
         dispatch(actions.communitiesList());
@@ -28,12 +30,13 @@ export default function CommunitySelectField(fieldProps) {
     return (
         <NewGenericSelectField
             disabled={itemsLoading || fieldProps.disabled}
+            displayEmpty={itemsLoading} // display loading prompt while items are loading
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
             itemsList={translatedItemList}
             itemsLoading={itemsLoading}
             onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value || -1}
+            value={fieldProps.input.value || ''}
             {...fieldProps}
         />
     );

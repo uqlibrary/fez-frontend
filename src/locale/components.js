@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import { selectFields } from 'locale/selectFields';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -901,6 +902,50 @@ export default {
                 header: {
                     locale: {
                         nameColumn: 'Scale/significance of work - Creator contribution statement',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        scaleOfSignificanceListAdminForm: {
+            field: {
+                form: {
+                    locale: {
+                        significanceInputFieldLabel: 'Scale/Significance of work',
+                        significanceInputFieldHint: 'Please select scale of significance',
+                        contributionStatementInputFieldLabel: 'Creator research statement',
+                        contributionStatementFieldHint: 'Enter description',
+                        addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        authorOrderAlert: {
+                            message:
+                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                            type: 'info',
+                        },
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Scale/significance of work - Creator research statement',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -1941,9 +1986,9 @@ export default {
                         title: 'Thesis type',
                         combiner: 'is one of',
                         type: 'ThesisTypeLookup',
-                        hint: 'Select a Thesis type',
+                        selectPrompt: 'Select a Thesis type',
                         multiple: true,
-                        validation: ['required'],
+                        validation: ['requiredList'],
                         ariaLabel: 'Select multiple thesis types to search for',
                         id: 'rek-genre-type',
                     },
@@ -2216,48 +2261,44 @@ export default {
                 help: {},
                 formLabels: {
                     community: {
-                        label: 'Select a community',
-                        placeholder: 'Select a community',
-                        ariaLabel: 'Select a community',
+                        ...selectFields.community,
                     },
                     collection: {
-                        label: 'Select a collection',
-                        placeholder: 'Select a collection',
-                        ariaLabel: 'Select a collection',
+                        ...selectFields.collection,
                     },
                     docType: {
                         label: 'Select a document type',
                         placeholder: 'Select a document type',
                         ariaLabel: 'Select a document type',
+                        selectPrompt: 'Please select a document type',
                     },
                     subType: {
                         label: 'Select a document subtype',
                         placeholder: 'Select a document subtype',
                         ariaLabel: 'Select a document subtype',
+                        selectPrompt: 'Please select a document subtype',
                     },
                     directory: {
-                        label: 'Select folder where CSV and datastream files are located',
-                        placeholder: 'Select folder where CSV and datastream files are located',
-                        ariaLabel: 'Select folder where CSV and datastream files are located',
+                        ...selectFields.directory,
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
                     submitButtonLabel: 'Ingest now',
                 },
                 submitProgressAlert: {
                     type: 'info',
-                    alertId: 'alert-info',
+                    alertId: 'alert-info-batch-import',
                     title: 'Requesting CSV ingest',
                     message: 'Waiting for response...',
                 },
                 submitSuccessAlert: {
                     type: 'done',
-                    alertId: 'alert-done',
+                    alertId: 'alert-done-batch-import',
                     title: 'Success',
                     message: 'The request to batch-import has been submitted successfully.',
                 },
                 submitFailureAlert: {
                     type: 'error',
-                    alertId: 'alert-error',
+                    alertId: 'alert-error-batch-import',
                     title: 'Error',
                     message: 'The batch-import request could not be submitted.',
                 },

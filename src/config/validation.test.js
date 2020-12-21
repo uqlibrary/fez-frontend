@@ -102,8 +102,8 @@ describe('Validation method', () => {
     });
 
     it('should validate doi', () => {
-        expect(validation.isValidDOIValue(' 10.1007/978-3-319-60492-3_52 ')).toBeTruthy();
-        expect(validation.isValidDOIValue(' 10.1007/something ')).toBeTruthy();
+        expect(validation.isValidDOIValue('10.1007/978-3-319-60492-3_52')).toBeTruthy();
+        expect(validation.isValidDOIValue('10.1007/something')).toBeTruthy();
     });
 
     it('should validate pubmed id', () => {

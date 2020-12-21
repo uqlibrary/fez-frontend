@@ -2,6 +2,11 @@ export const FILE_ACCESS_CONDITION_CLOSED = 1;
 export const FILE_ACCESS_CONDITION_OPEN = 5;
 export const FILE_ACCESS_CONDITION_INHERIT = 99;
 
+export const FILE_ACCESS_OPTIONS = [
+    { text: 'Open Access', value: FILE_ACCESS_CONDITION_OPEN },
+    { text: 'Closed Access', value: FILE_ACCESS_CONDITION_CLOSED },
+];
+
 export const INHERIT_OPTION = {
     text: 'Inherit from parent collection',
     value: FILE_ACCESS_CONDITION_INHERIT,

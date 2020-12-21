@@ -31,7 +31,7 @@ export default function DocumentTypeSingleField(fieldProps) {
                 (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
             }
             selectPrompt="Please select a display type"
-            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || -1}
+            value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || ''}
             {...fieldProps}
         />
     );

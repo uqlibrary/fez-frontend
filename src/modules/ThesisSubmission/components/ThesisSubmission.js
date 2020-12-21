@@ -10,8 +10,8 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { OrgUnitNameField, FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -226,10 +226,11 @@ export const ThesisSubmission = ({
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <Field
-                                            component={ThesisSubtypeField}
+                                            component={ThesisSubtypeSelectField}
                                             id="thesis-subtype"
                                             itemsList={THESIS_SUBMISSION_SUBTYPES}
                                             name="rek_genre_type"
+                                            genericSelectFieldId="rek-genre-type"
                                             disabled={submitting}
                                             validate={[validation.required]}
                                             {...txt.information.fieldLabels.thesisType}

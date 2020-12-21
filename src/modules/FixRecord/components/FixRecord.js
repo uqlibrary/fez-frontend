@@ -24,7 +24,7 @@ import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
-import { validation, routes } from 'config';
+import { validation, pathConfig } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 
@@ -108,11 +108,11 @@ export default class FixRecord extends PureComponent {
     };
 
     _navigateToMyResearch = () => {
-        this.props.history.push(routes.pathConfig.records.mine);
+        this.props.history.push(pathConfig.records.mine);
     };
 
     _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
+        this.props.history.push(pathConfig.dashboard);
     };
 
     _cancelFix = () => {

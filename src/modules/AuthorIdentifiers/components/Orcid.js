@@ -13,7 +13,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/pages';
-import { routes, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL } from 'config';
+import { pathConfig, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL } from 'config';
 
 export default class Orcid extends Component {
     static propTypes = {
@@ -57,7 +57,7 @@ export default class Orcid extends Component {
                 client_id: ORCID_CLIENT_ID,
                 response_type: 'code',
                 scope: '/read-limited /activities/update /person/update',
-                redirect_uri: routes.pathConfig.authorIdentifiers.orcid.absoluteLink,
+                redirect_uri: pathConfig.authorIdentifiers.orcid.absoluteLink,
                 state: orcidStateId,
             },
             existingOrcidRequest: {
@@ -170,7 +170,7 @@ export default class Orcid extends Component {
     }
 
     _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
+        this.props.history.push(pathConfig.dashboard);
     };
 
     _setAuthoriseConfirmation = ref => {

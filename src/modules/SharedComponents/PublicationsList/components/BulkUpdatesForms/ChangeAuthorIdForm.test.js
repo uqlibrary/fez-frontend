@@ -5,13 +5,13 @@ import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
-        recordsSelected: [
-            {
+        recordsSelected: {
+            'UQ:123456': {
                 rek_pid: 'UQ:123456',
                 fez_record_search_key_author: [{ rek_author: 'Test', rek_author_order: 1 }],
                 fez_record_search_key_author_id: [{ rek_author_id: null }],
             },
-            {
+            'UQ:1234': {
                 rek_pid: 'UQ:1234',
                 fez_record_search_key_author: [
                     { rek_author: 'Test', rek_author_order: 1 },
@@ -22,7 +22,7 @@ function setup(testProps = {}) {
                     { rek_author_id: 2, rek_author_id_order: 2, rek_author_id_id: 22 },
                 ],
             },
-            {
+            'UQ:4321': {
                 rek_pid: 'UQ:4321',
                 fez_record_search_key_author: [{ rek_author: 'Testing', rek_author_order: 1 }],
                 fez_record_search_key_author_id: [
@@ -30,7 +30,7 @@ function setup(testProps = {}) {
                     { rek_author_id: 2, rek_author_id_order: 2, rek_author_id_id: 22 },
                 ],
             },
-        ],
+        },
         onCancel: jest.fn(),
         ...testProps,
     };

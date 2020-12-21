@@ -13,7 +13,7 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 import { withStyles } from '@material-ui/core/styles';
 
 import locale from 'locale/viewRecord';
-import { openAccessConfig, routes, viewRecordsConfig } from 'config';
+import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -249,7 +249,7 @@ export class FilesClass extends Component {
     };
 
     getUrl = (pid, fileName, checksum = '') => {
-        return pid && fileName && routes.pathConfig.file.url(pid, fileName, checksum);
+        return pid && fileName && pathConfig.file.url(pid, fileName, checksum);
     };
 
     searchByKey = (list, key, value) => {

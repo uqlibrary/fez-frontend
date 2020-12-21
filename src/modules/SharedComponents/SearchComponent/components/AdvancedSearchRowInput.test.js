@@ -1,6 +1,6 @@
 import React from 'react';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
-import { rtlRender } from 'test-utils';
+import { render } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -13,7 +13,7 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return rtlRender(<AdvancedSearchRowInput {...props} />);
+    return render(<AdvancedSearchRowInput {...props} />);
 }
 
 describe('AdvancedSearchRowInput', () => {
@@ -176,13 +176,14 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render correct input props for thesis type select field', () => {
         const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(GenericSelectField)');
-            expect(inputProps).toEqual({
+            expect(InputComponent.displayName).toEqual('ThesisSubtypeSelectField');
+            expect(inputProps).toMatchObject({
                 'aria-label': 'Select multiple thesis types to search for',
-                error: false,
-                errorText: undefined,
-                hintText: 'Select as many thesis types as you want',
+                error: true,
+                errorText: 'This field is required',
+                selectPrompt: 'Select as many thesis types as you want',
                 label: undefined,
+                genericSelectFieldId: 'rek-genre-type',
                 onChange: inputProps.onChange,
                 autoWidth: false,
                 displayEmpty: true,
@@ -190,19 +191,55 @@ describe('AdvancedSearchRowInput', () => {
                 multiple: true,
                 selectedValue: [],
                 style: { marginTop: 0 },
+                value: [],
             });
         });
         setup({
             render: renderFn,
             inputField: {
                 type: 'ThesisTypeLookup',
-                validation: ['required'],
+                validation: ['requiredList'],
                 ariaLabel: 'Select multiple thesis types to search for',
                 title: 'Thesis type',
                 multiple: true,
-                hint: 'Select as many thesis types as you want',
+                selectPrompt: 'Select as many thesis types as you want',
             },
             value: [],
+            onChange: jest.fn(),
+        });
+    });
+
+    it('should render correct input props for thesis type select field with given values', () => {
+        const renderFn = jest.fn((InputComponent, inputProps) => {
+            expect(InputComponent.displayName).toEqual('ThesisSubtypeSelectField');
+            expect(inputProps).toMatchObject({
+                'aria-label': 'Select multiple thesis types to search for',
+                error: false,
+                errorText: undefined,
+                selectPrompt: 'Select as many thesis types as you want',
+                label: undefined,
+                genericSelectFieldId: 'rek-genre-type',
+                onChange: inputProps.onChange,
+                autoWidth: false,
+                displayEmpty: false,
+                hideLabel: true,
+                multiple: true,
+                selectedValue: ['B.A. Thesis'],
+                style: { marginTop: 0 },
+                value: ['B.A. Thesis'],
+            });
+        });
+        setup({
+            render: renderFn,
+            inputField: {
+                type: 'ThesisTypeLookup',
+                validation: ['requiredList'],
+                ariaLabel: 'Select multiple thesis types to search for',
+                title: 'Thesis type',
+                multiple: true,
+                selectPrompt: 'Select as many thesis types as you want',
+            },
+            value: ['B.A. Thesis'],
             onChange: jest.fn(),
         });
     });
@@ -239,7 +276,6 @@ describe('AdvancedSearchRowInput', () => {
 
     it('should render correct input props for publication status field', () => {
         const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(GenericSelectField)');
             expect(inputProps).toEqual({
                 'aria-label': 'Select status to search for',
                 error: false,
@@ -252,6 +288,37 @@ describe('AdvancedSearchRowInput', () => {
                 hideLabel: true,
                 selectedValue: [],
                 style: { marginTop: 0 },
+                genericSelectFieldId: 'rek-status',
+                itemsList: [
+                    {
+                        text: 'Any unpublished',
+                        value: 'Any unpublished',
+                    },
+                    {
+                        text: 'In Creation',
+                        value: 'In Creation',
+                    },
+                    {
+                        text: 'In Draft',
+                        value: 'In Draft',
+                    },
+                    {
+                        text: 'In Review',
+                        value: 'In Review',
+                    },
+                    {
+                        text: 'Retracted',
+                        value: 'Retracted',
+                    },
+                    {
+                        text: 'Submitted for Approval',
+                        value: 'Submitted for Approval',
+                    },
+                    {
+                        text: 'Unpublished',
+                        value: 'Unpublished',
+                    },
+                ],
             });
         });
         setup({
@@ -389,7 +456,7 @@ describe('AdvancedSearchRowInput', () => {
         const renderFn = jest.fn((InputComponent, inputProps) => {
             const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(GenericSelectField)').simulate('change', 'Test Value');
+            wrapper.find('Memo(NewGenericSelectField)').simulate('change', 'Test Value');
             expect(onChangeFn).toHaveBeenCalled();
         });
 
@@ -436,7 +503,7 @@ describe('AdvancedSearchRowInput', () => {
         const renderFn = jest.fn((InputComponent, inputProps) => {
             const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(GenericSelectField)').simulate('change', 'Test');
+            wrapper.find('ThesisSubtypeSelectField').simulate('change', 'Test');
             expect(onChangeFn).toHaveBeenCalled();
         });
 

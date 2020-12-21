@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import { locale } from 'locale';
-import { routes, publicationTypes } from 'config';
+import { publicationTypes, pathConfig } from 'config';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -157,7 +157,7 @@ export class PublicationCitation extends PureComponent {
         const { history, publication } = this.props;
         switch (action) {
             case 'fixRecord':
-                history.push(routes.pathConfig.records.fix(publication.rek_pid));
+                history.push(pathConfig.records.fix(publication.rek_pid));
                 break;
             case 'shareRecord':
                 // TODO: display share interface
@@ -171,9 +171,7 @@ export class PublicationCitation extends PureComponent {
     renderTitle = () => {
         const { publication, hideLinks } = this.props;
         return publication.rek_pid && !hideLinks ? (
-            <Link to={routes.pathConfig.records.view(publication.rek_pid)}>
-                {ReactHtmlParser(publication.rek_title)}
-            </Link>
+            <Link to={pathConfig.records.view(publication.rek_pid)}>{ReactHtmlParser(publication.rek_title)}</Link>
         ) : (
             ReactHtmlParser(publication.rek_title)
         );

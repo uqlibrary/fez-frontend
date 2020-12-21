@@ -7,18 +7,17 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
-import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
-import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { SeriesField } from 'modules/SharedComponents/LookupFields';
 
 import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
-import { AUDIENCE_SIZE, SIGNIFICANCE } from 'config/general';
+import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'config/general';
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
@@ -153,6 +152,7 @@ export default class NtroFields extends React.PureComponent {
                     },
                     language: {
                         label: 'Language',
+                        selectPrompt: 'Please select languages as required',
                     },
                 },
             },
@@ -441,10 +441,11 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideLanguage && (
                                     <Grid item xs={12} sm={this.row5Width}>
                                         <Field
-                                            component={LanguageField}
+                                            component={NewGenericSelectField}
                                             name="languages"
                                             disabled={this.props.submitting}
-                                            label={metadata.fields.language.label}
+                                            {...metadata.fields.language}
+                                            itemsList={LANGUAGE}
                                             multiple
                                             validate={[validation.requiredList]}
                                         />
@@ -453,14 +454,16 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hidePeerReviewActivity && (
                                     <Grid item xs={12} sm={this.row5Width}>
                                         <Field
-                                            component={QualityIndicatorField}
+                                            component={NewGenericSelectField}
                                             disabled={this.props.submitting}
+                                            genericSelectFieldId="rek-quality-indicator"
                                             id="quality-indicators"
                                             name="qualityIndicators"
                                             label={metadata.fields.peerReviewActivity.label}
                                             placeholder={metadata.fields.peerReviewActivity.label}
                                             required
                                             multiple
+                                            itemsList={QUALITY_INDICATORS}
                                             validate={[validation.requiredList]}
                                         />
                                     </Grid>

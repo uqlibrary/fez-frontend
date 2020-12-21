@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // forms & custom components
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { Stepper } from 'modules/SharedComponents/Toolbox/Stepper';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
 export default class AddMissingRecord extends PureComponent {

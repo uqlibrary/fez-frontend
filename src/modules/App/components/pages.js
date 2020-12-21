@@ -3,7 +3,7 @@ import React from 'react';
 // lazy loaded components
 export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
 export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
-export const BatchImport = React.lazy(() => import('modules/BatchImport/containers/BatchImport'));
+export const BatchImport = React.lazy(() => import('modules/BatchImport/components/BatchImport'));
 export const BulkUpdates = React.lazy(() => import('modules/BulkUpdates'));
 export const ChangeDisplayType = React.lazy(() =>
     import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType'),
