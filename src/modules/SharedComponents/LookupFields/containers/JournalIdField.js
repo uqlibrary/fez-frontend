@@ -1,9 +1,12 @@
 import React from 'react';
-import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
-import * as actions from 'actions';
-import { JournalTemplate } from 'modules/SharedComponents/LookupFields';
+
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { JournalTemplate } from 'modules/SharedComponents/LookupFields';
+
+import * as actions from 'actions';
+
 import { APP_URL, PATH_PREFIX } from 'config';
 import locale from 'locale/components';
 
@@ -13,16 +16,17 @@ const mapStateToProps = (state, props) => {
         itemsList.find(item => item.jnl_jid === props.input.value.jnl_jid) ||
         (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS());
     return {
-        autoCompleteAsynchronousFieldId: props.JournalIdFieldId || 'fez-matched-journals',
-        itemsList,
-        itemsLoading,
         allowFreeText: false,
-        errorText: props.meta ? props.meta.error : null,
+        autoCompleteAsynchronousFieldId: props.JournalIdFieldId || 'fez-matched-journals',
         error: props.meta ? !!props.meta.error : null,
-        getOptionLabel: item => String((item || {}).jnl_jid || ''),
+        errorText: props.meta ? props.meta.error : null,
         filterOptions: options => options,
         floatingLabelText: props.floatingLabelText || 'Journal Id',
+        getOptionLabel: item => String((item || {}).jnl_jid || ''),
+        itemsList,
+        itemsLoading,
         OptionTemplate: JournalTemplate,
+        placeholder: locale.components.JournalIdField.placeholder,
         supplemental: !!selectedItem && (
             <ExternalLink
                 id={`journal-${selectedItem.jnl_jid}-details`}
