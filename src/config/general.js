@@ -1568,4 +1568,11 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
 
-export const USERS_WITH_ACCESS_TO_EDITORIAL_ROLES = ['uqvasai', 'uqaheath', 'uqamartl', 'uqmfeene', 'uqmmarr1'];
+export const USERS_WITH_ACCESS_TO_EDITORIAL_ROLES = [
+    'uqaheath',
+    'uqamartl',
+    'uqathom1',
+    'uqmfeene',
+    'uqmmarr1',
+    'uqvasai',
+];
