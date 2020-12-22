@@ -9,6 +9,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { TabbedCard } from 'modules/SharedComponents/Toolbox/TabbedCard';
+import { hasContent as tabbedCardHasContent } from 'modules/SharedComponents/Toolbox/TabbedCard/components/TabbedCard';
 
 import pagesLocale from 'locale/pages';
 const txt = pagesLocale.pages.journal.view;
@@ -110,42 +111,66 @@ export const JournalView = ({
     } else {
         return (
             <StandardPage standardPageId="journal-view" title={journalTitle}>
-                <StandardCard standardCardId="journal-basic-details" noHeader>
-                    {renderSectionContents(basicDetails, 'journal-basic-details')}
-                </StandardCard>
-                <br />
-                <StandardCard standardCardId="journal-open-access" title={txt.titles.oaSection}>
-                    {renderSectionContents(oaDetails, 'journal-open-access')}
-                </StandardCard>
-                <br />
-                <TabbedCard
-                    cardId="journal-scie"
-                    cardTitle={txt.titles.scieSection}
-                    {...jscieDetails}
-                    contentRenderer={renderSectionContents}
-                />
-                <br />
-                <TabbedCard
-                    cardId="journal-ssci"
-                    cardTitle={txt.titles.ssciSection}
-                    {...jssciDetails}
-                    contentRenderer={renderSectionContents}
-                />
-                <br />
-                <TabbedCard
-                    cardId="journal-citescore"
-                    cardTitle={txt.titles.citeScoreSection}
-                    {...citeScoreDetails}
-                    contentRenderer={renderSectionContents}
-                />
-                <br />
-                <StandardCard standardCardId="journal-indexed-in" title={txt.titles.indexSection}>
-                    {renderSectionContents(indexDetails, 'journal-indexed-in')}
-                </StandardCard>
-                <br />
-                <StandardCard standardCardId="journal-listed-in" title={txt.titles.listedSection}>
-                    {renderSectionContents(listedDetails, 'journal-listed-in')}
-                </StandardCard>
+                <Grid container spacing={2}>
+                    {basicDetails && (
+                        <Grid item xs={12}>
+                            <StandardCard standardCardId="journal-basic-details" noHeader>
+                                {renderSectionContents(basicDetails, 'journal-basic-details')}
+                            </StandardCard>
+                        </Grid>
+                    )}
+                    {oaDetails && (
+                        <Grid item xs={12}>
+                            <StandardCard standardCardId="journal-open-access" title={txt.titles.oaSection}>
+                                {renderSectionContents(oaDetails, 'journal-open-access')}
+                            </StandardCard>
+                        </Grid>
+                    )}
+                    {jscieDetails && tabbedCardHasContent(jscieDetails.common, jscieDetails.tabs) && (
+                        <Grid item xs={12}>
+                            <TabbedCard
+                                cardId="journal-scie"
+                                cardTitle={txt.titles.scieSection}
+                                {...jscieDetails}
+                                contentRenderer={renderSectionContents}
+                            />
+                        </Grid>
+                    )}
+                    {jssciDetails && tabbedCardHasContent(jssciDetails.common, jssciDetails.tabs) && (
+                        <Grid item xs={12}>
+                            <TabbedCard
+                                cardId="journal-ssci"
+                                cardTitle={txt.titles.ssciSection}
+                                {...jssciDetails}
+                                contentRenderer={renderSectionContents}
+                            />
+                        </Grid>
+                    )}
+                    {citeScoreDetails && tabbedCardHasContent(citeScoreDetails.common, citeScoreDetails.tabs) && (
+                        <Grid item xs={12}>
+                            <TabbedCard
+                                cardId="journal-citescore"
+                                cardTitle={txt.titles.citeScoreSection}
+                                {...citeScoreDetails}
+                                contentRenderer={renderSectionContents}
+                            />
+                        </Grid>
+                    )}
+                    {indexDetails && (
+                        <Grid item xs={12}>
+                            <StandardCard standardCardId="journal-indexed-in" title={txt.titles.indexSection}>
+                                {renderSectionContents(indexDetails, 'journal-indexed-in')}
+                            </StandardCard>
+                        </Grid>
+                    )}
+                    {listedDetails && (
+                        <Grid item xs={12}>
+                            <StandardCard standardCardId="journal-listed-in" title={txt.titles.listedSection}>
+                                {renderSectionContents(listedDetails, 'journal-listed-in')}
+                            </StandardCard>
+                        </Grid>
+                    )}
+                </Grid>
             </StandardPage>
         );
     }

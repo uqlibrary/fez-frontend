@@ -8,17 +8,20 @@ import Tabs from '@material-ui/core/Tabs';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import TabContainer from 'modules/Admin/components/TabContainer';
 
-const titleToId = title =>
+const titleToId = (title = '') =>
     title
         .replace(/[^a-z0-9]/gi, '')
         .toLowerCase()
         .replace(/ /g, '-');
 
+export const hasContent = (common, tabs) =>
+    (Array.isArray(common) && common.length > 0) || (Array.isArray(tabs) && tabs.length > 0);
+
 const TabbedCard = ({ cardId, cardTitle, common, contentRenderer, tabs }) => {
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
     const handleTabChange = (event, value) => setCurrentTabValue(value);
 
-    if ((!Array.isArray(common) || common.length === 0) && (!Array.isArray(tabs) || tabs.length === 0)) {
+    if (!hasContent(common, tabs)) {
         return '';
     }
 
