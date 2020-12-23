@@ -10,6 +10,7 @@ export default function AuthorLinkingField(fieldProps) {
                 order: 'rek_author_id_order',
                 type: 'author',
             }}
+            authorLinkingId="rek-author-id"
             {...fieldProps}
         />
     );
