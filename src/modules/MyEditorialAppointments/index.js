@@ -87,12 +87,20 @@ export const MyEditorialAppointments = () => {
                 </Grid>
                 {!!myEditorialAppointmentsListError && (
                     <Grid item xs={12}>
-                        <Alert {...myEditorialAppointmentsListError} type="error" />
+                        <Alert
+                            {...myEditorialAppointmentsListError}
+                            type="error"
+                            alertId="alert-error-my-editorial-appointments-list"
+                        />
                     </Grid>
                 )}
                 {!!myEditorialAppointmentsAddError && (
                     <Grid item xs={12}>
-                        <Alert {...myEditorialAppointmentsAddError} type="error" />
+                        <Alert
+                            {...myEditorialAppointmentsAddError}
+                            type="error"
+                            alertId="alert-error-my-editorial-appointments-add"
+                        />
                     </Grid>
                 )}
                 <Grid item xs={12}>
