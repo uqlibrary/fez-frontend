@@ -7,7 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { JournalNameField } from 'modules/SharedComponents/LookupFields';
+import { NewspaperNameField } from 'modules/SharedComponents/LookupFields';
 
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
@@ -47,7 +47,7 @@ export default class NewspaperArticleForm extends Component {
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
-                                    component={JournalNameField}
+                                    component={NewspaperNameField}
                                     name="fez_record_search_key_newspaper.rek_newspaper"
                                     disabled={this.props.submitting}
                                     {...txt.information.fieldLabels.newspaperName}

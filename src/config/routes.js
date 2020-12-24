@@ -2,12 +2,14 @@ import React from 'react';
 import { locale } from 'locale';
 import { pathConfig, getSearchUrl } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
+import { USERS_WITH_ACCESS_TO_EDITORIAL_ROLES } from 'config/general';
 // import param from 'can-param';
 // import { DEFAULT_QUERY_PARAMS } from 'config/general';
 // import { createHash } from 'crypto';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+export const numericIdRegExp = '[0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
 // const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUrl = '/records/search') => {
@@ -192,25 +194,19 @@ export const flattedPathConfig = [
     '/dashboard',
     '/data-collections/add',
     '/data-collections/mine',
-    '/contact',
+    '/editorial-appointments',
+    '/journal/view',
     '/rhdsubmission',
     '/sbslodge_new',
     '/tool/lookup',
-    '/records/search',
-    '/records/mine',
-    '/records/possible',
-    '/records/incomplete',
     '/records/claim',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',
-    '/records/claim',
     '/records/incomplete',
     '/records/mine',
     '/records/possible',
     '/records/search',
-    '/rhdsubmission',
-    '/sbslodge_new',
     '/view',
 ];
 
@@ -231,6 +227,7 @@ export const getRoutesConfig = ({
     isHdrStudent = false,
 }) => {
     const pid = `:pid(${pidRegExp})`;
+    const id = `:id(${numericIdRegExp})`;
     const publicPages = [
         {
             path: pathConfig.index,
@@ -413,6 +410,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.googleScholarLink.title,
                   },
+                  {
+                      path: pathConfig.editorialAppointments.list,
+                      component: components.MyEditorialAppointments,
+                      access: [roles.researcher],
+                      exact: true,
+                      pageTitle: locale.pages.editorialAppointments.title,
+                  },
               ]
             : []),
         ...(authorDetails && isAdmin(authorDetails)
@@ -501,6 +505,12 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.bulkUpdates.title,
+                  },
+                  {
+                      path: pathConfig.journal.view(id),
+                      component: components.JournalView,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.journal.view.title,
                   },
               ]
             : []),
@@ -633,6 +643,14 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.dataset.add,
                       ...locale.menu.addMissingDataset,
                   },
+                  ...(process.env.NODE_ENV !== 'production' || USERS_WITH_ACCESS_TO_EDITORIAL_ROLES.includes(account.id)
+                      ? [
+                            {
+                                linkTo: pathConfig.editorialAppointments.list,
+                                ...locale.menu.myEditorialAppointments,
+                            },
+                        ]
+                      : []),
                   {
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,

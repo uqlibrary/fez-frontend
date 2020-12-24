@@ -3133,5 +3133,65 @@ export default {
                 selectPrompt: 'Please select a collection',
             },
         },
+        myEditorialAppointmentsList: {
+            infoTextAlert: {
+                type: 'info',
+                message:
+                    'Please record your current editorial appointment on this page. This information will be made available to downstream systems such as the Individual Activity Profile (IAP). You should only record your current editorial appointments.',
+            },
+            header: {
+                columns: {
+                    journalName: {
+                        title: 'Journal name',
+                    },
+                    role: {
+                        title: 'Editorial role',
+                    },
+                    startYear: {
+                        title: 'Start year',
+                    },
+                    endYear: {
+                        title: 'End year',
+                    },
+                },
+            },
+            form: {
+                locale: {
+                    journalNameLabel: 'Journal name',
+                    journalNameHint: 'Type journal name or issn',
+                    editorialRoleLabel: 'Editorial role',
+                    editorialRoleHint: 'Please select an editorial role or type in',
+                    otherRoleLabel: 'Other role name',
+                    otherRoleHint: 'Please specify the other role name',
+                    startYearLabel: 'Start year',
+                    startYearHint: 'Please type in start year',
+                    startYearErrorMessage: 'Year must be current or previous year',
+                    endYearLabel: 'End year',
+                    endYearHint: 'Current or future year only',
+                    endYearErrorMessage: 'Year must be current or future year',
+                    addButtonTooltip: 'Add new editorial appointment',
+                    editButtonTooltip: 'Edit this editorial appointment',
+                    deleteButtonTooltip: 'Delete this editorial appointment',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            successAlert: {
+                alertId: 'alert-done-editorial-appointment-add',
+                allowDismiss: true,
+                type: 'done',
+                message:
+                    'An editorial role has been successfully added. It will take up to 24 hours before it appears in downstream systems such as IAP and Academic Portal.',
+            },
+        },
+        JournalIdField: {
+            detailsLink: {
+                title: 'View journal details in a new tab',
+                linkText: 'View details',
+            },
+        },
     },
 };

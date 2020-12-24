@@ -47,6 +47,7 @@ import {
     AuthorIdField,
     CollectionField,
     FieldOfResearchListField,
+    JournalIdField,
     OrgUnitNameField,
     OrgNameField,
     RelatedDatasetAndPublicationListField,
@@ -285,6 +286,18 @@ export default {
                 placeholder: '',
                 required: true,
                 validate: [validation.required],
+            },
+        },
+        fez_matched_journals: {
+            component: JournalIdField,
+            componentProps: {
+                name: 'bibliographicSection.fez_matched_journals',
+                fullWidth: true,
+                floatingLabelText: 'Journal Id',
+                placeholder: '',
+                required: true,
+                validate: [validation.required],
+                getOptionLabel: option => (!!option && !!option.id && String(option.id)) || '',
             },
         },
         fez_record_search_key_book_title: {

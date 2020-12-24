@@ -925,4 +925,12 @@ export default {
     fez_record_search_key_job_number: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_job_number'),
     },
+    fez_matched_journals: {
+        getValue: record =>
+            (!Array.isArray(record.fez_matched_journals) && {
+                jnl_jid: record.fez_matched_journals.mtj_jnl_id,
+                id: record.fez_matched_journals.mtj_jnl_id,
+            }) ||
+            {},
+    },
 };

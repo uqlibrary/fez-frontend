@@ -723,13 +723,34 @@ export const UNPUBLISHED_STATUS_TEXT_MAP = {
     [UNPUBLISHED]: 'Unpublished',
 };
 export const DATA_COLLECTION_CREATOR_ROLES = [
-    { value: 'Project lead/Principal investigator' },
-    { value: 'Co-investigator' },
-    { value: 'Higher degree research student' },
-    { value: 'Research assistant' },
-    { value: 'Software engineer' },
-    { value: 'Statistician' },
-    { value: 'Technician' },
+    {
+        value: 'Project lead/Principal investigator',
+        text: 'Project lead/Principal investigator',
+    },
+    {
+        value: 'Co-investigator',
+        text: 'Co-investigator',
+    },
+    {
+        value: 'Higher degree research student',
+        text: 'Higher degree research student',
+    },
+    {
+        value: 'Research assistant',
+        text: 'Research assistant',
+    },
+    {
+        value: 'Software engineer',
+        text: 'Software engineer',
+    },
+    {
+        value: 'Statistician',
+        text: 'Statistician',
+    },
+    {
+        value: 'Technician',
+        text: 'Technician',
+    },
 ];
 
 export const CURRENT_LICENCES = [
@@ -1497,6 +1518,39 @@ export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
 
 export const THESIS_UPLOAD_RETRIES = 5;
 
+export const EDITORIAL_ROLE_ASSOCIATE_EDITOR = '454140';
+export const EDITORIAL_ROLE_DEPUTY_EDITOR = '454141';
+export const EDITORIAL_ROLE_EDITOR = '454142';
+export const EDITORIAL_ROLE_EDITOR_IN_CHIEF = '454143';
+export const EDITORIAL_ROLE_EDITORIAL_BOARD_MEMBER = '454144';
+export const EDITORIAL_ROLE_GUEST_EDITOR = '454145';
+export const EDITORIAL_ROLE_SECTION_EDITOR = '454146';
+export const EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR = '454147';
+export const EDITORIAL_ROLE_OTHER = '454148';
+
+export const EDITORIAL_ROLE_OPTIONS = [
+    { value: EDITORIAL_ROLE_ASSOCIATE_EDITOR, text: 'Associate Editor' },
+    { value: EDITORIAL_ROLE_DEPUTY_EDITOR, text: 'Deputy Editor' },
+    { value: EDITORIAL_ROLE_EDITOR, text: 'Editor' },
+    { value: EDITORIAL_ROLE_EDITOR_IN_CHIEF, text: 'Editor-in-Chief' },
+    { value: EDITORIAL_ROLE_EDITORIAL_BOARD_MEMBER, text: 'Editorial Board Member' },
+    { value: EDITORIAL_ROLE_GUEST_EDITOR, text: 'Guest Editor' },
+    { value: EDITORIAL_ROLE_SECTION_EDITOR, text: 'Section Editor' },
+    { value: EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR, text: 'Single Issue Editor' },
+    { value: EDITORIAL_ROLE_OTHER, text: 'Other' },
+];
+
+export const EDITORIAL_ROLE_MAP = {
+    [EDITORIAL_ROLE_ASSOCIATE_EDITOR]: 'Associate Editor',
+    [EDITORIAL_ROLE_DEPUTY_EDITOR]: 'Deputy Editor',
+    [EDITORIAL_ROLE_EDITOR]: 'Editor',
+    [EDITORIAL_ROLE_EDITOR_IN_CHIEF]: 'Editor-in-Chief',
+    [EDITORIAL_ROLE_EDITORIAL_BOARD_MEMBER]: 'Editorial Board Member',
+    [EDITORIAL_ROLE_GUEST_EDITOR]: 'Guest Editor',
+    [EDITORIAL_ROLE_SECTION_EDITOR]: 'Section Editor',
+    [EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR]: 'Single Issue Editor',
+    [EDITORIAL_ROLE_OTHER]: 'Other',
+};
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
 export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
@@ -1508,4 +1562,13 @@ export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
         value: MEDIATED_ACCESS_ID,
         text: 'Mediated Access',
     },
+];
+
+export const USERS_WITH_ACCESS_TO_EDITORIAL_ROLES = [
+    'uqaheath',
+    'uqamartl',
+    'uqathom1',
+    'uqmfeene',
+    'uqmmarr1',
+    'uqvasai',
 ];

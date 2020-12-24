@@ -10,6 +10,8 @@ import { isFileValid } from 'config/validation';
 import {
     DOCUMENT_TYPES_LOOKUP,
     PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_THESIS,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
@@ -85,7 +87,7 @@ const getInitialFormValues = (recordToView, recordType) => {
     };
 };
 
-const onChange = (values, dispatch) => {
+const onChange = (values, dispatch, props, previousValues) => {
     if (
         !!values.get('rek_display_type') &&
         values.get('rek_display_type') === PUBLICATION_TYPE_THESIS &&
@@ -94,6 +96,29 @@ const onChange = (values, dispatch) => {
     ) {
         dispatch(
             change(FORM_NAME, 'bibliographicSection.rek_genre_type', values.get('adminSection').get('rek_subtype')),
+        );
+    }
+
+    if (
+        !!values.get('rek_display_type') &&
+        [PUBLICATION_TYPE_CONFERENCE_PAPER, PUBLICATION_TYPE_JOURNAL_ARTICLE].includes(
+            values.get('rek_display_type'),
+        ) &&
+        values.get('bibliographicSection') &&
+        values.get('bibliographicSection').get('fez_matched_journals') &&
+        values.get('bibliographicSection').get('fez_matched_journals').jnl_title &&
+        (!previousValues.get('bibliographicSection') ||
+            !previousValues.get('bibliographicSection').get('fez_matched_journals') ||
+            !previousValues.get('bibliographicSection').get('fez_matched_journals').jnl_title ||
+            previousValues.get('bibliographicSection').get('fez_matched_journals').jnl_title !==
+                values.get('bibliographicSection').get('fez_matched_journals').jnl_title)
+    ) {
+        dispatch(
+            change(
+                FORM_NAME,
+                'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
+                values.get('bibliographicSection').get('fez_matched_journals').jnl_title,
+            ),
         );
     }
 };

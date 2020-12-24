@@ -21,7 +21,7 @@ export default {
             title: 'Language of work & Journal name',
             groups: [
                 ['languages'],
-                ['fez_record_search_key_journal_name'],
+                ['fez_matched_journals', 'fez_record_search_key_journal_name'],
                 ...(isLote
                     ? [
                           ['languageOfJournalName'],
