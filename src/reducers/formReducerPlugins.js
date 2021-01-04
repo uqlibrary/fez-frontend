@@ -31,7 +31,7 @@ export const resetValue = (state, action) => {
     }
 };
 
-export const deleteFileFromSecuritySection = (state, action) => {
+export const adminReduxFormPlugin = (state, action) => {
     switch (action.type) {
         case ADMIN_DELETE_ATTACHED_FILE:
             const fileName = action.payload.dsi_dsid;

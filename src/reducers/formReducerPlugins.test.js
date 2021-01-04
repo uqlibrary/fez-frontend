@@ -173,7 +173,7 @@ describe('Form reducer plugin', () => {
         });
     });
 
-    describe('deleteFileFromSecuritySection: ', () => {
+    describe('adminReduxFormPlugin: ', () => {
         let initialState;
         beforeEach(() => {
             initialState = Map({
@@ -225,7 +225,7 @@ describe('Form reducer plugin', () => {
         });
 
         it('should remove file provided in action payload from security section datastreams', () => {
-            const nextState = plugins.deleteFileFromSecuritySection(initialState, {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
                 type: ADMIN_DELETE_ATTACHED_FILE,
                 payload: {
                     dsi_dsid: 'test.mp4',
@@ -250,7 +250,7 @@ describe('Form reducer plugin', () => {
         });
 
         it('should not delete any file if the file provided in action payload is not present in security section', () => {
-            const nextState = plugins.deleteFileFromSecuritySection(initialState, {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
                 type: ADMIN_DELETE_ATTACHED_FILE,
                 payload: {
                     dsi_dsid: 'testing.mp4',
@@ -268,7 +268,7 @@ describe('Form reducer plugin', () => {
         });
 
         it('should return given state as it is for action not listed in the plugin', () => {
-            const nextState = plugins.deleteFileFromSecuritySection(initialState, {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
                 type: 'SOME_OTHER_ACTION',
                 payload: {
                     dsi_dsid: 'testing.mp4',
