@@ -254,7 +254,7 @@ export default {
             return returnValue;
         },
     },
-    issnField: {
+    issns: {
         getValue: record => {
             const returnValue = (record.fez_record_search_key_issn || []).map(issn => ({
                 rek_order: issn.rek_issn_order,

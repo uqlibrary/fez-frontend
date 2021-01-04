@@ -550,11 +550,11 @@ export default {
                 canEdit: true,
             },
         },
-        issnField: {
+        issns: {
             component: IssnListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'bibliographicSection.issnField',
+                name: 'bibliographicSection.issns',
                 isValid: validation.isValidIssn,
                 listEditorId: 'rek-issn',
                 locale: locale.components.issnForm.field,

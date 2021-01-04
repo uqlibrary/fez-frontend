@@ -35,7 +35,7 @@ exports[`BibliographicSection component should render default view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "issnField",
+            "issns",
           ],
         ],
         "title": "ISSN",
@@ -129,7 +129,7 @@ exports[`BibliographicSection component should render design form fields 1`] = `
       Object {
         "groups": Array [
           Array [
-            "issnField",
+            "issns",
           ],
         ],
         "title": "ISSN",
@@ -233,7 +233,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "issnField",
+            "issns",
           ],
         ],
         "title": "ISSN",

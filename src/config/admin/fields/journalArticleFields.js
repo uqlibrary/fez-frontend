@@ -38,7 +38,7 @@ export default {
         },
         {
             title: 'ISSN',
-            groups: [['issnField']],
+            groups: [['issns']],
         },
         {
             title: 'Bibliographic',
