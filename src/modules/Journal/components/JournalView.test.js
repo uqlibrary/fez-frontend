@@ -3,7 +3,7 @@ import { Router } from 'react-router-dom';
 import { rtlRender } from 'test-utils';
 import { createMemoryHistory } from 'history';
 
-import JournalView, { renderSectionContents, renderJournalDetail } from './JournalView';
+import JournalView, { renderSectionContents, renderJournalDetail, renderMultiColumn } from './JournalView';
 
 const history = createMemoryHistory();
 const testFn = jest.fn();
@@ -67,19 +67,19 @@ describe('JournalView Component', () => {
             listedDetails: [{ title: 'Test title 7', data: 'test data 7' }],
         });
         expect(getByTestId('journal-view')).toBeInTheDocument();
-        expect(getByTestId('journal-basic-details-testtitle1-label')).toHaveTextContent('Test title 1:');
+        expect(getByTestId('journal-basic-details-testtitle1-label')).toHaveTextContent('Test title 1');
         expect(getByTestId('journal-basic-details-testtitle1')).toHaveTextContent('test data 1');
-        expect(getByTestId('journal-open-access-testtitle2-label')).toHaveTextContent('Test title 2:');
+        expect(getByTestId('journal-open-access-testtitle2-label')).toHaveTextContent('Test title 2');
         expect(getByTestId('journal-open-access-testtitle2')).toHaveTextContent('test data 2');
-        expect(getByTestId('journal-scie-tab0-testtitle3-label')).toHaveTextContent('Test title 3:');
+        expect(getByTestId('journal-scie-tab0-testtitle3-label')).toHaveTextContent('Test title 3');
         expect(getByTestId('journal-scie-tab0-testtitle3')).toHaveTextContent('test data 3');
-        expect(getByTestId('journal-ssci-tab0-testtitle4-label')).toHaveTextContent('Test title 4:');
+        expect(getByTestId('journal-ssci-tab0-testtitle4-label')).toHaveTextContent('Test title 4');
         expect(getByTestId('journal-ssci-tab0-testtitle4')).toHaveTextContent('test data 4');
-        expect(getByTestId('journal-citescore-tab0-testtitle5-label')).toHaveTextContent('Test title 5:');
+        expect(getByTestId('journal-citescore-tab0-testtitle5-label')).toHaveTextContent('Test title 5');
         expect(getByTestId('journal-citescore-tab0-testtitle5')).toHaveTextContent('test data 5');
-        expect(getByTestId('journal-indexed-in-testtitle6-label')).toHaveTextContent('Test title 6:');
+        expect(getByTestId('journal-indexed-in-testtitle6-label')).toHaveTextContent('Test title 6');
         expect(getByTestId('journal-indexed-in-testtitle6')).toHaveTextContent('test data 6');
-        expect(getByTestId('journal-listed-in-testtitle7-label')).toHaveTextContent('Test title 7:');
+        expect(getByTestId('journal-listed-in-testtitle7-label')).toHaveTextContent('Test title 7');
         expect(getByTestId('journal-listed-in-testtitle7')).toHaveTextContent('test data 7');
     });
 
@@ -122,9 +122,33 @@ describe('JournalView Component', () => {
                     'journal-basic-details',
                 ),
             );
-            expect(getByTestId('journal-basic-details-row0-column0')).toBeInTheDocument();
-            expect(getByTestId('journal-basic-details-row0-column0')).toHaveTextContent('test data 1');
+            expect(getByTestId('journal-basic-details-field0')).toBeInTheDocument();
+            expect(getByTestId('journal-basic-details-field0')).toHaveTextContent('test data 1');
             expect(queryByTestId('journal-basic-details-testtitle2')).not.toBeInTheDocument();
+        });
+    });
+
+    describe('helper for rendering a multi-column row', () => {
+        it('handles a column that has empty data', () => {
+            expect(renderMultiColumn([{ title: 'Test title', data: '' }])).toEqual('');
+        });
+
+        it('handles a column that has an array of data', () => {
+            const { getByTestId } = rtlRender(
+                renderMultiColumn([{ title: 'Test title', data: ['test', 'data'] }], 0, 'journal-basic-details'),
+            );
+            expect(getByTestId('journal-basic-details-testtitle')).toHaveTextContent('testdata');
+        });
+
+        it('renders test IDs for columns without titles', () => {
+            const { getByTestId } = rtlRender(
+                renderMultiColumn(
+                    [{ title: 'Test title 1', data: 'test data 1' }, { data: 'test data 2' }],
+                    0,
+                    'journal-basic-details',
+                ),
+            );
+            expect(getByTestId('journal-basic-details-row0-column1')).toHaveTextContent('test data 2');
         });
     });
 

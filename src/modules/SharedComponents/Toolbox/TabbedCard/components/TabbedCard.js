@@ -9,7 +9,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import TabContainer from 'modules/Admin/components/TabContainer';
 
 const titleToId = (title = '') =>
-    title
+    `${title}`
         .replace(/[^a-z0-9]/gi, '')
         .toLowerCase()
         .replace(/ /g, '-');

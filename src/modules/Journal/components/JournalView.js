@@ -19,31 +19,66 @@ const txt = pagesLocale.pages.journal.view;
  *
  * @param {Object} detail Title and data to render. Data can be a string, a JSX node, or an array of JSX nodes.
  * @param {String} index Slug for creating test IDs
- * @param {Object} sizes Indicates Grid breakpoints for title and data
+ * @param {Object} breakpoints Indicates Grid breakpoints for title and data
  */
-export const renderJournalDetail = (detail, index, sizes) =>
+export const renderJournalDetail = (detail, index, breakpoints) =>
     detail.data &&
     (!Array.isArray(detail.data) || detail.data.length > 0) && (
         <Grid container spacing={2} alignItems="flex-start" key={index}>
             {detail.title && (
-                <Grid item component="span" {...sizes.title} data-testid={`${index}-label`} id={`${index}-label`}>
-                    <Typography component="span" variant="body2">
+                <Grid item component="span" {...breakpoints.title} data-testid={`${index}-label`} id={`${index}-label`}>
+                    <Typography component="span" variant="subtitle2">
                         {txt.titles[detail.title] || detail.title}
-                        {': '}
                     </Typography>
                 </Grid>
             )}
-            <Grid item component="span" {...sizes.data} data-testid={`${index}`} id={`${index}`}>
+            <Grid item component="span" {...breakpoints.data} data-testid={`${index}`} id={`${index}`}>
                 {detail.data}
             </Grid>
         </Grid>
     );
 
 export const titleToId = (title = '') =>
-    title
+    `${title}`
         .replace(/[^a-z0-9]/gi, '')
         .toLowerCase()
         .replace(/ /g, '-');
+
+const renderSingleColumn = (detailColumn, index, id) =>
+    renderJournalDetail(detailColumn, `${id}-${titleToId(detailColumn.title) || `field${index}`}`, {
+        title: { xs: 12, sm: 6, md: 3 },
+        data: { xs: 'auto' },
+    });
+
+export const renderMultiColumn = (detailRow, index, id) => {
+    const nonEmptyColumns = detailRow.filter(
+        detail => detail.data && (!Array.isArray(detail.data) || detail.data.length > 0),
+    );
+
+    switch (nonEmptyColumns.length) {
+        case 0:
+            return '';
+        case 1:
+            return renderSingleColumn(nonEmptyColumns[0], index, id);
+        default:
+            return (
+                <Grid container spacing={2} alignItems="flex-start" key={`${id}-row${index}-grid`}>
+                    {nonEmptyColumns.map((detailColumn, subIndex) => (
+                        <Grid item xs={12} sm key={`${id}-row${index}-column${subIndex}-grid`}>
+                            {renderJournalDetail(
+                                detailColumn,
+                                `${id}-${titleToId(detailColumn.title) || `row${index}-column${subIndex}`}`,
+                                {
+                                    title: { xs: 12, sm: 6 },
+                                    data: { xs: 'auto' },
+                                },
+                            )}
+                        </Grid>
+                    ))}
+                </Grid>
+            );
+    }
+};
 
 /**
  * Renderer for a card's content area.
@@ -53,36 +88,9 @@ export const titleToId = (title = '') =>
  */
 export const renderSectionContents = (details, id) =>
     details &&
-    details.map((detailRow, index) => {
-        if (Array.isArray(detailRow)) {
-            return (
-                <Grid container spacing={0} alignItems="flex-start" key={`${id}-row${index}-grid`}>
-                    {detailRow.map((detailColumn, subIndex) => {
-                        const renderedColumn = renderJournalDetail(
-                            detailColumn,
-                            `${id}-${titleToId(detailColumn.title) || `row${index}-column${subIndex}`}`,
-                            {
-                                title: { xs: 'auto' },
-                                data: { xs: 'auto' },
-                            },
-                        );
-                        const key = `${id}-row${index}-column${subIndex}-grid`;
-                        return (
-                            (!!renderedColumn && (
-                                <Grid item xs={12} sm style={{ padding: '8px 8px 8px 0' }} key={key}>
-                                    {renderedColumn}
-                                </Grid>
-                            )) || <span key={key} />
-                        );
-                    })}
-                </Grid>
-            );
-        }
-        return renderJournalDetail(detailRow, `${id}-${titleToId(detailRow.title) || `field${index}`}`, {
-            title: { xs: 12, sm: 6, md: 3 },
-            data: { xs: 'auto' },
-        });
-    });
+    details.map((detailRow, index) =>
+        Array.isArray(detailRow) ? renderMultiColumn(detailRow, index, id) : renderSingleColumn(detailRow, index, id),
+    );
 
 export const JournalView = ({
     actions,
