@@ -6,6 +6,7 @@ import { SESSION_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
+import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -49,6 +50,22 @@ mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
         return [403, {}];
     }
     return [404, {}];
+});
+
+mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
+    const headers = {
+        excel: {
+            'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        },
+        endnote: {
+            'content-type': 'application/vnd.endnote',
+        },
+    };
+    if (PUB_LIST_BULK_EXPORT_SIZES.includes(config.params.per_page)) {
+        return [200, {}];
+    } else {
+        return [200, 'Exported file contents', headers[config.params.export_to]];
+    }
 });
 
 mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
