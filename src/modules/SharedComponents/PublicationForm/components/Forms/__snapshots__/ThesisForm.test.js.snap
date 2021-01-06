@@ -140,23 +140,13 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": [Function],
-                "compare": null,
-                "displayName": "Connect(GenericSelectField)",
-                "type": [Function],
-              }
-            }
+            ariaLabel="Select a thesis type"
+            component={[Function]}
             disabled={false}
-            locale={
-              Object {
-                "label": "Thesis type",
-              }
-            }
+            label="Thesis type"
             name="rek_genre_type"
             required={true}
+            selectPrompt="Please select a thesis type"
             validate={
               Array [
                 [Function],

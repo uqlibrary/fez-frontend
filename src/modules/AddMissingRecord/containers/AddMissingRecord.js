@@ -4,15 +4,12 @@ import * as actions from 'actions';
 import AddMissingRecord from '../components/AddMissingRecord';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = state => {
     return {
         ...(state && state.get('searchRecordsReducer') ? state.get('searchRecordsReducer') : {}),
         ...(state && state.get('createRecordReducer') ? state.get('createRecordReducer') : {}),
         account: state && state.get('accountReducer') ? state.get('accountReducer').account : null,
         author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
-        initialValues: {
-            rek_title: props.rawSearchQuery || '',
-        },
     };
 };
 

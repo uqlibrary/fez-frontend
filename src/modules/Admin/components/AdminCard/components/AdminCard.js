@@ -8,11 +8,14 @@ export const styles = theme => ({
     card: {
         marginTop: 8,
     },
-    title: {
+    titlePortion: {
         marginLeft: -4,
-        opacity: 0.66,
+    },
+    title: {
+        opacity: 0.85,
         color: theme.palette.primary.main,
         fontSize: theme.typography.fontSize,
+        fontWeight: 500,
     },
     divider: {
         opacity: 0.1,
@@ -37,8 +40,8 @@ export class Cards extends Component {
                             <Grid item xs>
                                 <hr className={classes.divider} />
                             </Grid>
-                            <Grid item xs={'auto'} className={classes.title}>
-                                <Typography component={'h4'} color={'primary'}>
+                            <Grid item xs={'auto'} className={classes.titlePortion}>
+                                <Typography component={'h4'} color={'primary'} className={classes.title}>
                                     &nbsp;{title}
                                 </Typography>
                             </Grid>

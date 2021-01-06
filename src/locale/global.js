@@ -1,6 +1,6 @@
 import React from 'react';
 import { APP_URL } from 'config/general';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 /*
 
@@ -82,6 +82,10 @@ export default {
             404: {
                 message: 'The requested page could not be found.',
                 status: 404,
+            },
+            409: {
+                message: 'Duplicate entry',
+                status: 409,
             },
             410: {
                 message: 'This work has been deleted.',

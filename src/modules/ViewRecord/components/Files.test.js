@@ -1,6 +1,6 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import Files, { getFileOpenAccessStatus } from './Files';
+import Files, { formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
 import { FilesClass } from './Files';
 import * as mock from 'mock/data';
 
@@ -929,11 +929,10 @@ describe('Files Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render bytes correctly', () => {
-        const wrapper = setup({});
-        expect(wrapper.instance().formatBytes(0)).toEqual('0 Bytes');
-        expect(wrapper.instance().formatBytes(1024)).toEqual('1 KB');
-        expect(wrapper.instance().formatBytes(1048576)).toEqual('1 MB');
+    it('should have helper to render bytes correctly', () => {
+        expect(formatBytes(0)).toEqual('0 Bytes');
+        expect(formatBytes(1024)).toEqual('1 KB');
+        expect(formatBytes(1048576)).toEqual('1 MB');
     });
 
     it('should render icon for mimeType', () => {
@@ -1235,10 +1234,9 @@ describe('Files Component ', () => {
         expect(wrapper.state().preview.mimeType).toEqual(null);
     });
 
-    it('should return the file name with an _xt suffix', () => {
-        const wrapper = setup({});
+    it('should have a helper to return the file name with an _xt suffix', () => {
         const fileName = 'test_xt.jpg';
-        expect(wrapper.instance().untranscodedItem(fileName)).toEqual('test');
+        expect(untranscodedItem(fileName)).toEqual('test');
     });
 
     it('should return checksums', () => {

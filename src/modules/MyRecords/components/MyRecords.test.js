@@ -1,11 +1,11 @@
 import MyRecords from './MyRecords';
-import { routes, general } from 'config';
+import { pathConfig, general } from 'config';
 import { locale } from 'locale';
 
 function setup(testProps = {}) {
     const props = {
         location: {
-            pathname: routes.pathConfig.records.mine,
+            pathname: pathConfig.records.mine,
             state: null,
         },
         history: {
@@ -181,12 +181,12 @@ describe('MyRecords test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
-            thisUrl: routes.pathConfig.records.mine,
+            thisUrl: pathConfig.records.mine,
         });
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.mine, state: { page: 2, hasPublications: true } },
+            location: { pathname: pathConfig.records.mine, state: { page: 2, hasPublications: true } },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().hasPublications).toEqual(true);
@@ -198,11 +198,11 @@ describe('MyRecords test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
-            thisUrl: routes.pathConfig.records.mine,
+            thisUrl: pathConfig.records.mine,
         });
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.mine, state: null },
+            location: { pathname: pathConfig.records.mine, state: null },
             loadingPublicationsList: false,
             publicationsList: [],
         });
@@ -216,7 +216,7 @@ describe('MyRecords test', () => {
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'PUSH' },
-            location: { pathname: routes.pathConfig.records.mine },
+            location: { pathname: pathConfig.records.mine },
             mine: {
                 loadingPublicationsList: false,
                 publicationsList: [],

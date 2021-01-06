@@ -206,6 +206,24 @@ export default {
                 rek_oa_status: 453694,
                 rek_oa_status_lookup: 'link (no DOI)'
             },
+            fez_record_search_key_link: [
+                {
+                    rek_link_id: 3186907,
+                    rek_link_pid: "UQ:795469",
+                    rek_link_xsdmf_id: 9605,
+                    rek_link: "https://www.library.uq.edu.au/fryer-library/indigenous-voices",
+                    rek_link_order: 1
+                }
+            ],
+            fez_record_search_key_link_description: [
+                {
+                    rek_link_description_id: 3186876,
+                    rek_link_description_pid: "UQ:795469",
+                    rek_link_description_xsdmf_id: 9604,
+                    rek_link_description: "Browse Indigenous language resources from this collection online",
+                    rek_link_description_order: 1
+                }
+            ],
             fez_record_search_key_oa_status_type: null,
             rek_altmetric_score_xsdmf_id: null,
             fez_record_search_key_org_name: null,
@@ -2759,7 +2777,500 @@ export default {
                 rek_volume_number_xsdmf_id: null,
                 rek_volume_number: '337'
             }
-        }
+        },
+        {
+               "rek_pid":"UQ:66e9f53",
+               "rek_title_xsdmf_id":null,
+               "rek_title":"Fluid mechanics in turbulent times: what can we learn in 2020?",
+               "rek_description_xsdmf_id":null,
+               "rek_description":null,
+               "rek_display_type_xsdmf_id":null,
+               "rek_display_type":130,
+               "rek_status_xsdmf_id":null,
+               "rek_status":2,
+               "rek_date_xsdmf_id":null,
+               "rek_date":"2020-12-11T00:00:00Z",
+               "rek_object_type_xsdmf_id":null,
+               "rek_object_type":3,
+               "rek_depositor_xsdmf_id":null,
+               "rek_depositor":41783,
+               "rek_created_date_xsdmf_id":null,
+               "rek_created_date":"2020-11-17T04:30:51Z",
+               "rek_updated_date_xsdmf_id":null,
+               "rek_updated_date":"2020-11-18T04:47:52Z",
+               "rek_file_downloads":0,
+               "rek_citation":"<a class=\"citation_author_name\" title=\"Browse by Author Name for Chanson, Hubert\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Chanson%2C+Hubert&searchQueryParams%5Brek_author%5D%5Blabel%5D=Chanson%2C+Hubert&searchMode=advanced\">Chanson, Hubert<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Brown, Richard\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Brown%2C+Richard&searchQueryParams%5Brek_author%5D%5Blabel%5D=Brown%2C+Richard&searchMode=advanced\">Brown, Richard<\/a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Kani, Michel\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Kani%2C+Michel&searchQueryParams%5Brek_author%5D%5Blabel%5D=Kani%2C+Michel&searchMode=advanced\">Kani, Michel<\/a> (<span class=\"citation_date\">2020<\/span>). <i><a class=\"citation_title\" title=\"Click to view Conference Paper: Fluid mechanics in turbulent times: what can we learn in 2020?\" href=\"\/view\/UQ:66e9f53\">Fluid mechanics in turbulent times: what can we learn in 2020?<\/a><\/i>. <i><span class=\"citation_conference_name\">22nd Australasian Fluid Mechanics Conference AFMC2020<\/span><\/i>, <span class=\"citation_conference_location\">Brisbane, Australia<\/span>, <span class=\"citation_conference_dates\">7-10 December 2020<\/span>. <span class=\"citation_place_of_publication\">Brisbane, Australia<\/span>: <span class=\"citation_publisher\">The University of Queensland<\/span>. doi: <span class=\"citation_doi\">10.14264\/66e9f53<\/span>",
+               "rek_genre_xsdmf_id":null,
+               "rek_genre":null,
+               "rek_genre_type_xsdmf_id":null,
+               "rek_genre_type":null,
+               "rek_formatted_title_xsdmf_id":null,
+               "rek_formatted_title":null,
+               "rek_formatted_abstract_xsdmf_id":null,
+               "rek_formatted_abstract":"The Proceedings of the 22nd Australasian Fluid Mechanics Conference AFMC2020 focus on many aspects of fluid mechanics and their applications, especially in terms of diversity, challenges, ecology, and public health relevant to the 21st century. The event organisation aimed to facilitate the sharing of information among biomedical, chemical, civil, environmental, mechanical, mining, nuclear and water engineers coming from different regions, universities, industries and background, including developed and developing countries, and students, young and senior professionals. After reviewing the challenges associated with fluid mechanics in terms of diversity, challenges, ecology, public health, socio-economics into the 21st century, the proceedings peer-review process is detailed. The proceedings contents are listed, as well as the AFMC2020 organisation. At the end, the reviewers are acknowledged.",
+               "rek_depositor_affiliation_xsdmf_id":null,
+               "rek_depositor_affiliation":null,
+               "rek_thomson_citation_count":null,
+               "rek_thomson_citation_count_xsdmf_id":null,
+               "rek_subtype_xsdmf_id":null,
+               "rek_subtype":"Fully published paper",
+               "rek_scopus_citation_count":null,
+               "rek_herdc_notes_xsdmf_id":null,
+               "rek_scopus_doc_type_xsdmf_id":null,
+               "rek_scopus_doc_type":null,
+               "rek_wok_doc_type_xsdmf_id":null,
+               "rek_wok_doc_type":null,
+               "rek_pubmed_doc_type_xsdmf_id":null,
+               "rek_pubmed_doc_type":null,
+               "rek_security_inherited":1,
+               "rek_altmetric_score":null,
+               "rek_altmetric_score_xsdmf_id":null,
+               "rek_altmetric_id":null,
+               "rek_altmetric_id_xsdmf_id":null,
+               "rek_copyright_xsdmf_id":null,
+               "rek_copyright":"on",
+               "rek_security_policy":1,
+               "rek_datastream_policy":null,
+               "fez_record_search_key_advisory_statement":null,
+               "fez_record_search_key_article_number":null,
+               "fez_record_search_key_additional_notes":null,
+               "fez_record_search_key_assigned_group_id":[
+                  
+               ],
+               "fez_record_search_key_assigned_user_id":[
+                  
+               ],
+               "fez_record_search_key_author":[
+                  {
+                     "rek_author_id":32857651,
+                     "rek_author_pid":"UQ:66e9f53",
+                     "rek_author_xsdmf_id":null,
+                     "rek_author":"Chanson, Hubert",
+                     "rek_author_order":1
+                  },
+                  {
+                     "rek_author_id":32857652,
+                     "rek_author_pid":"UQ:66e9f53",
+                     "rek_author_xsdmf_id":null,
+                     "rek_author":"Brown, Richard",
+                     "rek_author_order":2
+                  },
+                  {
+                     "rek_author_id":32857653,
+                     "rek_author_pid":"UQ:66e9f53",
+                     "rek_author_xsdmf_id":null,
+                     "rek_author":"Kani, Michel",
+                     "rek_author_order":3
+                  }
+               ],
+               "fez_record_search_key_author_crossref_authenticated":[
+                  
+               ],
+               "fez_record_search_key_author_crossref_orcid":[
+                  
+               ],
+               "fez_record_search_key_author_id":[
+                  {
+                     "rek_author_id_id":33034196,
+                     "rek_author_id_pid":"UQ:66e9f53",
+                     "rek_author_id_xsdmf_id":null,
+                     "rek_author_id":0,
+                     "rek_author_id_order":1,
+                     "author":null
+                  },
+                  {
+                     "rek_author_id_id":33034197,
+                     "rek_author_id_pid":"UQ:66e9f53",
+                     "rek_author_id_xsdmf_id":null,
+                     "rek_author_id":0,
+                     "rek_author_id_order":2,
+                     "author":null
+                  },
+                  {
+                     "rek_author_id_id":33034198,
+                     "rek_author_id_pid":"UQ:66e9f53",
+                     "rek_author_id_xsdmf_id":null,
+                     "rek_author_id":0,
+                     "rek_author_id_order":3,
+                     "author":null
+                  }
+               ],
+               "fez_record_search_key_biosis_id":null,
+               "fez_record_search_key_chapter_number":null,
+               "fez_record_search_key_conference_dates":{
+                  "rek_conference_dates_id":1080533,
+                  "rek_conference_dates_pid":"UQ:66e9f53",
+                  "rek_conference_dates_xsdmf_id":null,
+                  "rek_conference_dates":"7-10 December 2020"
+               },
+               "fez_record_search_key_conference_id":null,
+               "fez_record_search_key_conference_location":{
+                  "rek_conference_location_id":1091786,
+                  "rek_conference_location_pid":"UQ:66e9f53",
+                  "rek_conference_location_xsdmf_id":null,
+                  "rek_conference_location":"Brisbane, Australia"
+               },
+               "fez_record_search_key_conference_name":{
+                  "rek_conference_name_id":1072485,
+                  "rek_conference_name_pid":"UQ:66e9f53",
+                  "rek_conference_name_xsdmf_id":null,
+                  "rek_conference_name":"22nd Australasian Fluid Mechanics Conference AFMC2020"
+               },
+               "fez_record_search_key_contributor":[
+                  {
+                     "rek_contributor_id":3251361,
+                     "rek_contributor_pid":"UQ:66e9f53",
+                     "rek_contributor_xsdmf_id":null,
+                     "rek_contributor":"Hubert Chanson",
+                     "rek_contributor_order":1
+                  },
+                  {
+                     "rek_contributor_id":3251362,
+                     "rek_contributor_pid":"UQ:66e9f53",
+                     "rek_contributor_xsdmf_id":null,
+                     "rek_contributor":"Richard Brown",
+                     "rek_contributor_order":2
+                  }
+               ],
+               "fez_record_search_key_contributor_id":[
+                  
+               ],
+               "fez_record_search_key_convener":null,
+               "fez_record_search_key_corresponding_country":[
+                  
+               ],
+               "fez_record_search_key_corresponding_email":[
+                  
+               ],
+               "fez_record_search_key_corresponding_name":[
+                  
+               ],
+               "fez_record_search_key_corresponding_organisation":[
+                  
+               ],
+               "fez_record_search_key_datastream_policy":null,
+               "fez_record_search_key_date_available":null,
+               "fez_record_search_key_doi":{
+                  "rek_doi_id":1820413,
+                  "rek_doi_pid":"UQ:66e9f53",
+                  "rek_doi_xsdmf_id":null,
+                  "rek_doi":"10.14264\/66e9f53",
+                  "fez_altmetric":null
+               },
+               "fez_record_search_key_end_page":null,
+               "fez_record_search_key_file_attachment_access_condition":[
+                  
+               ],
+               "fez_record_search_key_file_attachment_embargo_date":[
+                  
+               ],
+               "fez_record_search_key_file_attachment_name":[
+                  {
+                     "rek_file_attachment_name_id":4556437,
+                     "rek_file_attachment_name_pid":"UQ:66e9f53",
+                     "rek_file_attachment_name_xsdmf_id":null,
+                     "rek_file_attachment_name":"placeholder_2020xt.txt",
+                     "rek_file_attachment_name_order":1
+                  }
+               ],
+               "fez_record_search_key_geographic_area":[
+                  
+               ],
+               "fez_record_search_key_grant_acronym":[
+                  
+               ],
+               "fez_record_search_key_grant_agency":[
+                  
+               ],
+               "fez_record_search_key_grant_agency_id":[
+                  
+               ],
+               "fez_record_search_key_grant_id":[
+                  
+               ],
+               "fez_record_search_key_grant_text":[
+                  
+               ],
+               "fez_record_search_key_herdc_code":{
+                  "rek_herdc_code_id":5063066,
+                  "rek_herdc_code_pid":"UQ:66e9f53",
+                  "rek_herdc_code_xsdmf_id":null,
+                  "rek_herdc_code":450014,
+                  "rek_herdc_code_lookup":"E1"
+               },
+               "fez_record_search_key_herdc_status":{
+                  "rek_herdc_status_id":3919118,
+                  "rek_herdc_status_pid":"UQ:66e9f53",
+                  "rek_herdc_status_xsdmf_id":null,
+                  "rek_herdc_status":453220,
+                  "rek_herdc_status_lookup":"Provisional Code"
+               },
+               "fez_record_search_key_institutional_status":null,
+               "fez_record_search_key_isbn":[
+                  {
+                     "rek_isbn_id":1141993,
+                     "rek_isbn_pid":"UQ:66e9f53",
+                     "rek_isbn_xsdmf_id":null,
+                     "rek_isbn":"9781742723419",
+                     "rek_isbn_order":1
+                  }
+               ],
+               "fez_record_search_key_isderivationof":[
+                  
+               ],
+               "fez_record_search_key_isi_loc":null,
+               "fez_record_search_key_ismemberof":[
+                  {
+                     "rek_ismemberof_id":12599223,
+                     "rek_ismemberof_pid":"UQ:66e9f53",
+                     "rek_ismemberof_xsdmf_id":null,
+                     "rek_ismemberof":"UQ:ffbf03a",
+                     "rek_ismemberof_order":1,
+                     "parent":{
+                        "rek_pid":"UQ:ffbf03a",
+                        "rek_security_policy":1,
+                        "rek_datastream_policy":0
+                     },
+                     "rek_ismemberof_lookup":"Proceedings of the 22nd Australasian Fluid Mechanics Conference AFMC2020 (Holding collection)"
+                  }
+               ],
+               "fez_record_search_key_issn":[
+                  
+               ],
+               "fez_record_search_key_issue_number":null,
+               "fez_record_search_key_journal_name":null,
+               "fez_record_search_key_keywords":[
+                  {
+                     "rek_keywords_id":31137687,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Fluid mechanics",
+                     "rek_keywords_order":1
+                  },
+                  {
+                     "rek_keywords_id":31137688,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Australasia",
+                     "rek_keywords_order":2
+                  },
+                  {
+                     "rek_keywords_id":31137689,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"AFMC2020",
+                     "rek_keywords_order":3
+                  },
+                  {
+                     "rek_keywords_id":31137690,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Challenges",
+                     "rek_keywords_order":4
+                  },
+                  {
+                     "rek_keywords_id":31137691,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Diversity",
+                     "rek_keywords_order":5
+                  },
+                  {
+                     "rek_keywords_id":31137692,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Ecology",
+                     "rek_keywords_order":6
+                  },
+                  {
+                     "rek_keywords_id":31137693,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Public Health",
+                     "rek_keywords_order":7
+                  },
+                  {
+                     "rek_keywords_id":31137694,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Peer-review process",
+                     "rek_keywords_order":8
+                  },
+                  {
+                     "rek_keywords_id":31137695,
+                     "rek_keywords_pid":"UQ:66e9f53",
+                     "rek_keywords_xsdmf_id":null,
+                     "rek_keywords":"Proceedings",
+                     "rek_keywords_order":9
+                  }
+               ],
+               "fez_record_search_key_language":[
+                  {
+                     "rek_language_id":5671905,
+                     "rek_language_pid":"UQ:66e9f53",
+                     "rek_language_xsdmf_id":null,
+                     "rek_language":"eng",
+                     "rek_language_order":1
+                  }
+               ],
+               "fez_record_search_key_language_of_journal_name":[
+                  
+               ],
+               "fez_record_search_key_language_of_proceedings_title":[
+                  
+               ],
+               "fez_record_search_key_language_of_title":[
+                  
+               ],
+               "fez_record_search_key_license":{
+                  "rek_license_id":35160,
+                  "rek_license_pid":"UQ:66e9f53",
+                  "rek_license_xsdmf_id":null,
+                  "rek_license":453610,
+                  "rek_license_lookup":"Creative Commons Attribution noncommercial"
+               },
+               "fez_record_search_key_link":[
+                  
+               ],
+               "fez_record_search_key_link_description":[
+                  
+               ],
+               "fez_record_search_key_native_script_conference_name":null,
+               "fez_record_search_key_native_script_journal_name":null,
+               "fez_record_search_key_native_script_proceedings_title":null,
+               "fez_record_search_key_native_script_title":null,
+               "fez_record_search_key_notes":{
+                  "rek_notes_id":1197201,
+                  "rek_notes_pid":"UQ:66e9f53",
+                  "rek_notes_xsdmf_id":null,
+                  "rek_notes":"Conference paper number:E1"
+               },
+               "fez_record_search_key_oa_embargo_days":null,
+               "fez_record_search_key_oa_notes":null,
+               "fez_record_search_key_oa_status":{
+                  "rek_oa_status_id":871144,
+                  "rek_oa_status_pid":"UQ:66e9f53",
+                  "rek_oa_status_xsdmf_id":null,
+                  "rek_oa_status":453695,
+                  "rek_oa_status_lookup":"File (Publisher version)"
+               },
+               "fez_record_search_key_oa_status_type":null,
+               "fez_record_search_key_place_of_publication":{
+                  "rek_place_of_publication_id":4497062,
+                  "rek_place_of_publication_pid":"UQ:66e9f53",
+                  "rek_place_of_publication_xsdmf_id":null,
+                  "rek_place_of_publication":"Brisbane, Australia"
+               },
+               "fez_record_search_key_possible_author_id":[
+                  
+               ],
+               "fez_record_search_key_proceedings_title":{
+                  "rek_proceedings_title_id":958578,
+                  "rek_proceedings_title_pid":"UQ:66e9f53",
+                  "rek_proceedings_title_xsdmf_id":null,
+                  "rek_proceedings_title":"Proceedings of the 22nd Australasian Fluid Mechanics Conference AFMC2020"
+               },
+               "fez_record_search_key_publisher":{
+                  "rek_publisher_id":4843766,
+                  "rek_publisher_pid":"UQ:66e9f53",
+                  "rek_publisher_xsdmf_id":null,
+                  "rek_publisher":"The University of Queensland"
+               },
+               "fez_record_search_key_pubmed_id":null,
+               "fez_record_search_key_pubmed_central_id":null,
+               "fez_record_search_key_refereed":null,
+               "fez_record_search_key_refereed_source":null,
+               "fez_record_search_key_retracted":null,
+               "fez_record_search_key_roman_script_conference_name":null,
+               "fez_record_search_key_roman_script_journal_name":null,
+               "fez_record_search_key_roman_script_proceedings_title":null,
+               "fez_record_search_key_roman_script_title":null,
+               "fez_record_search_key_scopus_id":null,
+               "fez_record_search_key_security_policy":[
+                  {
+                     "rek_security_policy_id":819120,
+                     "rek_security_policy_pid":"UQ:66e9f53",
+                     "rek_security_policy":1,
+                     "rek_security_policy_order":1
+                  }
+               ],
+               "fez_record_search_key_series":null,
+               "fez_record_search_key_start_page":null,
+               "fez_record_search_key_subject":[
+                  
+               ],
+               "fez_record_search_key_total_chapters":null,
+               "fez_record_search_key_total_pages":null,
+               "fez_record_search_key_translated_conference_name":null,
+               "fez_record_search_key_translated_journal_name":null,
+               "fez_record_search_key_translated_proceedings_title":null,
+               "fez_record_search_key_translated_title":null,
+               "fez_record_search_key_volume_number":null,
+               "fez_record_search_key_wok_doc_types":[
+                  
+               ],
+               "fez_record_search_key_zoorec_id":null,
+               "fez_datastream_info":[
+                  
+               ],
+               "fez_matched_journals":[
+                  
+               ],
+               "fez_record_search_key_isdatasetof":[
+                  
+               ],
+               "fez_record_search_key_has_related_datasets":[
+                  
+               ],
+               "fez_record_search_key_has_derivations":[
+                  
+               ],
+               "rek_display_type_lookup":"Conference Paper",
+               "rek_pubmed_doc_type_lookup":null,
+               "rek_object_type_lookup":"Record",
+               "rek_scopus_doc_type_lookup":null,
+               "rek_status_lookup":"Published",
+               "rek_wok_doc_type_lookup":"Abstract of Published Item",
+               "rek_herdc_notes":null,
+               "rek_editing_user":null,
+               "rek_editing_user_lookup":null,
+               "rek_editing_start_date":null,
+               "fez_internal_notes":null,
+               "fez_record_search_key_audience_size":null,
+               "fez_record_search_key_author_affiliation_id":[
+                  
+               ],
+               "fez_record_search_key_author_affiliation_country":[
+                  
+               ],
+               "fez_record_search_key_author_affiliation_full_address":[
+                  
+               ],
+               "fez_record_search_key_author_affiliation_name":[
+                  
+               ],
+               "fez_record_search_key_author_affiliation_type":[
+                  
+               ],
+               "fez_record_search_key_content_indicator":[
+                  
+               ],
+               "fez_record_search_key_creator_contribution_statement":[
+                  
+               ],
+               "fez_record_search_key_grant_type":[
+                  
+               ],
+               "fez_record_search_key_grant_agency_type":[
+                  
+               ],
+               "fez_record_search_key_quality_indicator":[
+                  
+               ],
+               "fez_record_search_key_significance":[
+                  
+               ]
+         }
     ],
     filters: {
         facets: {

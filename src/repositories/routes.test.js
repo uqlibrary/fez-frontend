@@ -671,10 +671,6 @@ describe('Backend routes method', () => {
         expect(routes.GET_NEWS_API()).toEqual({ apiUrl: 'fez-news' });
     });
 
-    it('should construct url for GET_ACML_QUICK_TEMPLATES_API', () => {
-        expect(routes.GET_ACML_QUICK_TEMPLATES_API()).toEqual({ apiUrl: 'acml/quick-templates' });
-    });
-
     it('should construct url for AUTHOR_TRENDING_PUBLICATIONS_API', () => {
         expect(routes.AUTHOR_TRENDING_PUBLICATIONS_API()).toEqual({ apiUrl: 'records/my-trending' });
     });
@@ -831,6 +827,12 @@ describe('Backend routes method', () => {
     it('should construct url for ORCID_SYNC_API', () => {
         expect(routes.ORCID_SYNC_API()).toEqual({
             apiUrl: 'external/orcid/jobs/sync',
+        });
+    });
+
+    it('should construct url for BULK_UPDATES_API', () => {
+        expect(routes.BULK_UPDATES_API()).toEqual({
+            apiUrl: 'records/bulk-updates',
         });
     });
 

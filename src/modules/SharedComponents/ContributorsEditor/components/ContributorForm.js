@@ -82,6 +82,7 @@ export const ContributorForm = ({
                 orgaff:
                     (contributor.affiliation === AFFILIATION_TYPE_UQ && globalLocale.global.orgTitle) ||
                     contributor.orgaff,
+                required: false,
             });
 
             // reset internal state
@@ -272,6 +273,7 @@ export const ContributorForm = ({
                             disabled={disabled || contributor.nameAsPublished.trim().length === 0}
                             required={required}
                             autoComplete="off"
+                            allowFreeText
                             error={
                                 contributor.nameAsPublished.trim().length === 0
                                     ? false

@@ -1,5 +1,6 @@
 import React from 'react';
 import locale from 'locale/components';
+import fileUploaderLocale from 'modules/SharedComponents/Toolbox/FileUploader/locale';
 
 /*
 
@@ -26,7 +27,7 @@ export default {
     help: {
         title: 'Add more information to an existing NTRO',
         text: (
-            <div>
+            <p>
                 For help, click{' '}
                 <a
                     href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
@@ -35,7 +36,7 @@ export default {
                     here
                 </a>
                 .
-            </div>
+            </p>
         ),
         buttonLabel: 'CLOSE',
     },
@@ -102,57 +103,14 @@ export default {
         fileUpload: {
             title: 'Upload files',
             locale: {
+                ...fileUploaderLocale,
+                fileUploadRow: {},
                 instructions: '',
-                accessTermsAndConditions:
-                    'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                ntroSpecificInstructions: '',
                 validation: {
-                    ['notFiles']: 'Invalid files ([fileNames])',
-                    ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
-                    ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
-                    ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']:
-                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
-                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
+                    ...fileUploaderLocale.validation,
+                    ['sameFileNameWithDifferentExt']: '',
                 },
-                successTitle: 'Success',
-                successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
-                delayNotice: 'Notice',
-                delayMessage:
-                    'During peak times, there may be a delay before newly uploaded files appear on the record.',
-                errorTitle: 'Upload Errors',
-                fileUploadRestrictionHeading: 'File upload restrictions',
-                fileUploadRestrictions: (
-                    <div>
-                        Please ensure:
-                        <ul>
-                            <li>files are under 5GB in size</li>
-                            <li>file names begin with a letter and are less than 45 characters long</li>
-                            <li>
-                                file names contain only upper and lowercase alphanumeric characters, and underscores
-                            </li>
-                            <li>
-                                file names have only a single period which precedes the file extension: e.g. “.pdf”,
-                                “.mov”, “.tiff”, “.wav” etc.
-                                <br />
-                                (two periods are allowed for multipart zip files. Allowed formats for part description
-                                are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                            </li>
-                            <li>
-                                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe,
-                                jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf,
-                                png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                            </li>
-                            <li>files are uploaded individually and not inside a folder</li>
-                        </ul>
-                    </div>
-                ),
-                fileUploadInstruction: (
-                    <p>
-                        Click here to select files,
-                        <br />
-                        or drag files into this area to upload
-                    </p>
-                ),
             },
             text: (
                 <div>

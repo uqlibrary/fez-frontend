@@ -76,12 +76,7 @@ export default {
                 ['fez_record_search_key_refereed_source', 'contentIndicators'],
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [
@@ -97,7 +92,7 @@ export default {
 };
 
 export const validateResearchReport = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -107,11 +102,6 @@ export const validateResearchReport = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {

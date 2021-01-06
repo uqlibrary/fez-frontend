@@ -11,7 +11,20 @@ describe('Form reducer plugin', () => {
                 const nextState = plugins.resetValue(falsy, {
                     type: actionTypes.UNREGISTER_FIELD,
                     payload: {
-                        name: '',
+                        name: 'test',
+                    },
+                });
+                expect(nextState).toBeNull;
+            });
+        });
+
+        it('returns state if name is undefined', () => {
+            const falsies = [false, null, undefined, ''];
+            falsies.forEach(falsy => {
+                const nextState = plugins.resetValue(falsy, {
+                    type: actionTypes.UNREGISTER_FIELD,
+                    payload: {
+                        name: undefined,
                     },
                 });
                 expect(nextState).toBeNull;
@@ -175,6 +188,38 @@ describe('Form reducer plugin', () => {
                             }),
                         ]),
                     }),
+                    publication: Map({
+                        fez_record_search_key_file_attachment_name: List([
+                            Map({
+                                rek_file_attachment_name: 'test.mp4',
+                                rek_file_attachment_name_order: 1,
+                            }),
+                            Map({
+                                rek_file_attachment_name: 'testing.jpg',
+                                rek_file_attachment_name_order: 2,
+                            }),
+                        ]),
+                        fez_record_search_key_file_attachment_access_condition: List([
+                            Map({
+                                rek_file_attachment_access_condition: '1',
+                                rek_file_attachment_access_condition_order: 1,
+                            }),
+                            Map({
+                                rek_file_attachment_access_condition: '1',
+                                rek_file_attachment_access_condition_order: 2,
+                            }),
+                        ]),
+                        fez_record_search_key_file_attachment_embargo_date: List([
+                            Map({
+                                rek_file_attachment_embargo_date: '2020-11-30T00:00:00Z',
+                                rek_file_attachment_embargo_date_order: 1,
+                            }),
+                            Map({
+                                rek_file_attachment_embargo_date: '2020-11-30T00:00:00Z',
+                                rek_file_attachment_embargo_date_order: 2,
+                            }),
+                        ]),
+                    }),
                 }),
             });
         });
@@ -193,6 +238,13 @@ describe('Form reducer plugin', () => {
                 .get('dataStreams')
                 .toJS();
             expect(dataStreams.length).toEqual(1);
+            expect(
+                nextState
+                    .get('values')
+                    .get('publication')
+                    .get('fez_record_search_key_file_attachment_name')
+                    .toJS().length,
+            ).toEqual(1);
 
             expect(dataStreams).toEqual([{ dsi_dsid: 'testing.jpg' }]);
         });

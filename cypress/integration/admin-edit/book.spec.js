@@ -6,14 +6,14 @@ context('Book admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
 
         cy.adminEditTabbedView(false);
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditCleanup();
     });
 
@@ -21,9 +21,7 @@ context('Book admin edit', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div >div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Title');
@@ -67,10 +65,7 @@ context('Book admin edit', () => {
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/';
 
         cy.loadRecordForAdminEdit(record.rek_pid);
-        cy.get('.StandardPage form > div >div')
-            .get('.StandardCard')
-            .eq(1)
-            .as('bibliographicTab');
+        cy.get('[data-testid=bibliographic-section-content]').as('bibliographicTab');
 
         const checkIssnLinks = (container, issn) => {
             const sherpaLink =
@@ -143,19 +138,18 @@ context('Book admin edit', () => {
             cy.get('@issnBlock')
                 .find('input')
                 .type('33333333{enter}');
+            cy.get('#rek-issn-list-row-3').within(row => {
+                checkIssnLinks(row, '3333-3333');
+                cy.get('span > a')
+                    .eq(1)
+                    .should('have.attr', 'title', 'Lecture Notes in Computer Science')
+                    .should(
+                        'have.attr',
+                        'aria-label',
+                        'Source publisher name/place and alternate ISSNs in a new window',
+                    );
+            });
             cy.get('#rek-issn-list-row-3')
-                .within(row => {
-                    checkIssnLinks(row, '3333-3333');
-                    cy.get('span > a')
-                        .eq(1)
-                        .should('have.attr', 'title', 'Lecture Notes in Computer Science')
-                        .should(
-                            'have.attr',
-                            'aria-label',
-                            'Source publisher name/place and alternate ISSNs in a new window',
-                        );
-                })
-                .parents('#rek-issn-list-row-3')
                 .find('button[aria-label="Edit this item"]')
                 .click();
             cy.log('Edit the 4th entry');

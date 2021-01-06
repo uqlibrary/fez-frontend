@@ -1,5 +1,5 @@
 import PossiblyMyRecords from './PossiblyMyRecords';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 function setup(testProps = {}) {
     const props = {
@@ -21,7 +21,7 @@ function setup(testProps = {}) {
             setClaimPublication: jest.fn(),
         },
         location: {
-            pathname: routes.pathConfig.records.possible,
+            pathname: pathConfig.records.possible,
             state: null,
         },
         history: {
@@ -225,7 +225,7 @@ describe('Component PossiblyMyRecords', () => {
                 action: 'POP',
             },
             location: {
-                pathname: routes.pathConfig.records.possible,
+                pathname: pathConfig.records.possible,
                 state: {
                     hasPublications: true,
                     activeFacets: {
@@ -254,7 +254,7 @@ describe('Component PossiblyMyRecords', () => {
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.possible, state: null },
+            location: { pathname: pathConfig.records.possible, state: null },
         });
 
         expect(wrapper.state().activeFacets).toEqual({ filters: {}, ranges: {} });

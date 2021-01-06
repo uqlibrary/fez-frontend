@@ -110,10 +110,12 @@ export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: 
 export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-trending' });
 
 // lookup apis
-export const GET_ACML_QUICK_TEMPLATES_API = () => ({ apiUrl: 'acml/quick-templates' });
 export const GET_NEWS_API = () => ({ apiUrl: 'fez-news' });
 export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies?cvo_ids=${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
+export const JOURNAL_LOOKUP_API = ({ query }) => ({
+    apiUrl: `journals/search?rule=lookup&query=${query}`,
+});
 
 // file uploading apis
 export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
@@ -336,6 +338,14 @@ export const UNLOCK_RECORD_API = ({ pid }) => ({
     apiUrl: `records/${pid}/unlock`,
 });
 
+export const BULK_UPDATES_API = () => ({
+    apiUrl: 'records/bulk-updates',
+});
+
 export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
+});
+
+export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
+    apiUrl: `editorial-appointment${!!id ? `/${id}` : ''}`,
 });

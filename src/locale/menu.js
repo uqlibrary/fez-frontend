@@ -67,8 +67,14 @@ export default {
                 primaryText: 'CSV ingest',
             },
         },
+        bulkUpdates: {
+            primaryText: 'Bulk updates',
+        },
         favouriteSearch: {
             primaryText: 'Favourite searches',
+        },
+        myEditorialAppointments: {
+            primaryText: 'My editorial appointments',
         },
     },
     footer: {

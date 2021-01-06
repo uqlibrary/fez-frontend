@@ -9,23 +9,25 @@ export const AutoCompleteAsynchronousField = ({
     allowFreeText,
     autoCompleteAsynchronousFieldId,
     clearSuggestions,
+    clearOnInputClear,
     defaultValue,
     disabled,
     error,
     errorText,
     filterOptions,
     floatingLabelText,
-    hideLabel,
     getOptionLabel,
+    hideLabel,
     itemsList,
     itemsLoading,
     loadSuggestions,
     onChange,
     onClear,
     OptionTemplate,
+    placeholder,
     prefilledSearch,
     required,
-    placeholder,
+    supplemental,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
@@ -49,9 +51,11 @@ export const AutoCompleteAsynchronousField = ({
                 onClear();
             } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
                 onChange({ value: newInputValue });
+            } else if (!newInputValue && clearOnInputClear && reason === 'input') {
+                onClear();
             }
         },
-        [allowFreeText, prefilledSearch, onChange, onClear],
+        [allowFreeText, prefilledSearch, onChange, onClear, clearOnInputClear],
     );
 
     const handleChange = useCallback(
@@ -86,62 +90,65 @@ export const AutoCompleteAsynchronousField = ({
         }
     }, [open]);
     return (
-        <Autocomplete
-            id={autoCompleteAsynchronousFieldId}
-            clearOnEscape
-            disabled={disabled}
-            open={open}
-            onOpen={() => {
-                setOpen(true);
-            }}
-            onClose={() => {
-                setOpen(false);
-            }}
-            onInputChange={handleInputChange}
-            onChange={handleChange}
-            filterOptions={filterOptions}
-            getOptionSelected={(option, value) => option.value === value.value}
-            getOptionLabel={getOptionLabel}
-            options={options}
-            loading={loading}
-            popupIcon={false}
-            value={value}
-            renderInput={params => (
-                <TextField
-                    {...params}
-                    error={error}
-                    placeholder={placeholder}
-                    helperText={(error && errorText) || ''}
-                    fullWidth
-                    label={!hideLabel && floatingLabelText}
-                    InputProps={{
-                        ...params.InputProps,
-                        endAdornment: (
-                            <React.Fragment>
-                                {loading ? (
-                                    <CircularProgress color="inherit" size={20} id="loading-suggestions" />
-                                ) : null}
-                                {params.InputProps.endAdornment}
-                            </React.Fragment>
-                        ),
-                    }}
-                    inputProps={{
-                        ...params.inputProps,
-                        id: `${autoCompleteAsynchronousFieldId}-input`,
-                        'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
-                    }}
-                    value={inputValue}
-                    onChange={handleSearchTextChange}
-                    required={required}
-                />
-            )}
-            ListboxProps={{
-                id: `${autoCompleteAsynchronousFieldId}-options`,
-                'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
-            }}
-            {...((!!allowFreeText && { freeSolo: true }) || {})}
-            {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
-        />
+        <React.Fragment>
+            <Autocomplete
+                id={autoCompleteAsynchronousFieldId}
+                clearOnEscape
+                disabled={disabled}
+                open={open}
+                onOpen={() => {
+                    setOpen(true);
+                }}
+                onClose={() => {
+                    setOpen(false);
+                }}
+                onInputChange={handleInputChange}
+                onChange={handleChange}
+                filterOptions={filterOptions}
+                getOptionSelected={(option, value) => option.value === value.value}
+                getOptionLabel={getOptionLabel}
+                options={options}
+                loading={loading}
+                popupIcon={false}
+                value={value}
+                renderInput={params => (
+                    <TextField
+                        {...params}
+                        error={error}
+                        placeholder={placeholder}
+                        helperText={(error && errorText) || ''}
+                        fullWidth
+                        label={!hideLabel && floatingLabelText}
+                        InputProps={{
+                            ...params.InputProps,
+                            endAdornment: (
+                                <React.Fragment>
+                                    {loading ? (
+                                        <CircularProgress color="inherit" size={20} id="loading-suggestions" />
+                                    ) : null}
+                                    {params.InputProps.endAdornment}
+                                </React.Fragment>
+                            ),
+                        }}
+                        inputProps={{
+                            ...params.inputProps,
+                            id: `${autoCompleteAsynchronousFieldId}-input`,
+                            'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
+                        }}
+                        value={inputValue}
+                        onChange={handleSearchTextChange}
+                        required={required}
+                    />
+                )}
+                ListboxProps={{
+                    id: `${autoCompleteAsynchronousFieldId}-options`,
+                    'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
+                }}
+                {...((!!allowFreeText && { freeSolo: true }) || {})}
+                {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
+            />
+            {!!supplemental && <div style={{ marginTop: '0.5rem' }}>{supplemental}</div>}
+        </React.Fragment>
     );
 };
 
@@ -149,23 +156,25 @@ AutoCompleteAsynchronousField.propTypes = {
     allowFreeText: PropTypes.bool,
     autoCompleteAsynchronousFieldId: PropTypes.string.isRequired,
     clearSuggestions: PropTypes.func,
+    clearOnInputClear: PropTypes.bool,
     defaultValue: PropTypes.any,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     errorText: PropTypes.string,
     filterOptions: PropTypes.func.isRequired,
     floatingLabelText: PropTypes.string,
-    placeholder: PropTypes.string,
     getOptionLabel: PropTypes.func.isRequired,
+    hideLabel: PropTypes.bool,
     itemsList: PropTypes.array,
     itemsLoading: PropTypes.bool,
     loadSuggestions: PropTypes.func,
     onChange: PropTypes.func,
     onClear: PropTypes.func,
     OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+    placeholder: PropTypes.string,
     prefilledSearch: PropTypes.bool,
     required: PropTypes.bool,
-    hideLabel: PropTypes.bool,
+    supplemental: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
 };
 
 export default React.memo(AutoCompleteAsynchronousField);

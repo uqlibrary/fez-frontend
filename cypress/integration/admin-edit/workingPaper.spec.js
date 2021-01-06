@@ -12,7 +12,7 @@ context('Working paper admin edit', () => {
     });
 
     it('should load with specified elements', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -22,43 +22,39 @@ context('Working paper admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
-            .within(() => {
-                cy.get('h3').should('have.text', 'Bibliographic');
-
-                cy.get('.AdminCard')
-                    .as('cards')
-                    .eq(0)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Title');
-                        cy.get('span span')
-                            .eq(0)
-                            .should('contain.text', 'Formatted title');
-                        cy.get('#cke_rek-title-editor').should('exist');
-                        cy.readCKEditor('rek-title').should(text => {
-                            expect(text).to.contain(record.rek_title.replace("'", '&#39;'));
-                        });
+        cy.get('[data-testid=bibliographic-section-header]').should('have.text', 'Bibliographic');
+        cy.get('[data-testid=bibliographic-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .as('cards')
+                .eq(0)
+                .within(() => {
+                    cy.get('h4').should('contain', 'Title');
+                    cy.get('span span')
+                        .eq(0)
+                        .should('contain.text', 'Formatted title');
+                    cy.get('#cke_rek-title-editor').should('exist');
+                    cy.readCKEditor('rek-title').should(text => {
+                        expect(text).to.contain(record.rek_title.replace("'", '&#39;'));
                     });
+                });
 
-                cy.get('@cards')
-                    .eq(4)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Bibliographic');
-                        cy.get('[data-testid=rek-report-number-input]').should(
-                            'have.value',
-                            record.fez_record_search_key_report_number.rek_report_number,
-                        );
-                        cy.get('[data-testid=rek-org-name-input]').should(
-                            'have.value',
-                            record.fez_record_search_key_org_name.rek_org_name,
-                        );
-                        cy.get('[data-testid=rek-org-unit-name-input]').should(
-                            'have.value',
-                            record.fez_record_search_key_org_unit_name.rek_org_unit_name,
-                        );
-                    });
-            });
+            cy.get('@cards')
+                .eq(4)
+                .within(() => {
+                    cy.get('h4').should('contain', 'Bibliographic');
+                    cy.get('[data-testid=rek-report-number-input]').should(
+                        'have.value',
+                        record.fez_record_search_key_report_number.rek_report_number,
+                    );
+                    cy.get('[data-testid=rek-org-name-input]').should(
+                        'have.value',
+                        record.fez_record_search_key_org_name.rek_org_name,
+                    );
+                    cy.get('[data-testid=rek-org-unit-name-input]').should(
+                        'have.value',
+                        record.fez_record_search_key_org_unit_name.rek_org_unit_name,
+                    );
+                });
+        });
     });
 });

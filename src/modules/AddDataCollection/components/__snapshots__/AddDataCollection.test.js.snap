@@ -564,9 +564,28 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
@@ -584,12 +603,54 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ariaLabel="Please elect a license"
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
-                  label="Licence"
+                  itemsList={
+                    Array [
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-use with Acknowledgement",
+                        "value": 453701,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Commercial Use Restriction",
+                        "value": 454104,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Share Alike Requirement",
+                        "value": 454105,
+                      },
+                    ]
+                  }
+                  label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
@@ -1238,7 +1299,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -1247,6 +1308,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -1260,15 +1326,24 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
-                      "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -1911,9 +1986,28 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
@@ -1931,12 +2025,54 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ariaLabel="Please elect a license"
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
-                  label="Licence"
+                  itemsList={
+                    Array [
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-use with Acknowledgement",
+                        "value": 453701,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Commercial Use Restriction",
+                        "value": 454104,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Share Alike Requirement",
+                        "value": 454105,
+                      },
+                    ]
+                  }
+                  label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
@@ -2585,7 +2721,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -2594,6 +2730,11 @@ exports[`AddDataCollection test should render component with a valid collection 
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -2607,15 +2748,24 @@ exports[`AddDataCollection test should render component with a valid collection 
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
-                      "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -3254,9 +3404,28 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
@@ -3274,12 +3443,54 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ariaLabel="Please elect a license"
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
-                  label="Licence"
+                  itemsList={
+                    Array [
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-use with Acknowledgement",
+                        "value": 453701,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Commercial Use Restriction",
+                        "value": 454104,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Share Alike Requirement",
+                        "value": 454105,
+                      },
+                    ]
+                  }
+                  label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
@@ -3928,7 +4139,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -3937,6 +4148,11 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -3950,15 +4166,24 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
-                      "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -4597,9 +4822,28 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-access-conditions"
                   id="data-collection-access-selector"
+                  itemsList={
+                    Array [
+                      Object {
+                        "text": "Open Access",
+                        "value": 453619,
+                      },
+                      Object {
+                        "text": "Mediated Access",
+                        "value": 453618,
+                      },
+                    ]
+                  }
                   label="Access conditions"
                   name="fez_record_search_key_access_conditions.rek_access_conditions"
                   required={true}
@@ -4617,12 +4861,54 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ariaLabel="Please elect a license"
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
+                  genericSelectFieldId="rek-license"
                   id="data-collection-licence-selector"
-                  label="Licence"
+                  itemsList={
+                    Array [
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-use with Acknowledgement",
+                        "value": 453701,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Commercial Use Restriction",
+                        "value": 454104,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.",
+                        ],
+                        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+                        "text": "Permitted Re-Use with Share Alike Requirement",
+                        "value": 454105,
+                      },
+                    ]
+                  }
+                  label="License"
                   name="fez_record_search_key_license.rek_license"
                   required={true}
+                  selectPrompt="Select a license"
                   validate={
                     Array [
                       [Function],
@@ -5271,7 +5557,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -5280,6 +5566,11 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -5293,15 +5584,24 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
                     "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Mediated Access",
-                        "9": "Open Access",
-                      },
-                      "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
+                      "options": Array [
+                        Object {
+                          "text": "Open Access",
+                          "value": 5,
+                        },
+                        Object {
+                          "text": "Mediated Access",
+                          "value": 1,
+                        },
+                      ],
                     },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",

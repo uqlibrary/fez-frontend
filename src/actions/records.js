@@ -152,6 +152,7 @@ const prepareThesisSubmission = data => {
         rek_formatted_abstract: data.thesisAbstract.htmlText,
         rek_subtype: data.rek_genre_type,
         rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
+        _thesis_submission_type: data.isHdrThesis ? 'hdr' : 'sbs',
     };
 
     // delete extra form values from request object
@@ -456,6 +457,7 @@ const getAdminRecordRequest = data => {
         'bibliographicSection',
         'authorsSection',
         'grantInformationSection',
+        'notesSection',
         'ntroSection',
         'filesSection',
         'securitySection',
@@ -477,6 +479,7 @@ const getAdminRecordRequest = data => {
             ...transformers.getNtroSectionSearchKeys(data.ntroSection),
             ...transformers.getFilesSectionSearchKeys(restFilesSection),
             ...transformers.getSecuritySectionSearchKeys(data.securitySection),
+            ...transformers.getNotesSectionSearchKeys(data.notesSection),
             ...transformers.getDatastreamInfo(
                 (data.publication || {}).fez_datastream_info || [],
                 (data.filesSection || {}).fez_datastream_info || [],
@@ -484,7 +487,12 @@ const getAdminRecordRequest = data => {
             ),
         },
         hasFilesToUpload,
-        hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(files.queue) : null,
+        hasFilesToUpload
+            ? transformers.getRecordFileAttachmentSearchKey(files.queue, {
+                  ...data.publication,
+                  ...data.adminSection,
+              })
+            : null,
     ];
 };
 
@@ -652,6 +660,37 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
 };
 
 /**
+ * Change author ID action
+ *
+ * @param {array} records
+ * @param {object} data
+ */
+export const changeAuthorId = (records, data) => {
+    const changeAuthorIdRequest = transformers.getChangeAuthorIdValues(records, data);
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_AUTHOR_ID_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), changeAuthorIdRequest);
+            dispatch({
+                type: actions.CHANGE_AUTHOR_ID_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_AUTHOR_ID_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};
+
+/**
  * Change display type action
  *
  * @param {array} records
@@ -663,7 +702,6 @@ export const changeDisplayType = (records, data, isBulkUpdate = false) => {
         rek_pid: record.rek_pid,
         ...data,
     }));
-
     return async dispatch => {
         dispatch({
             type: actions.CHANGE_DISPLAY_TYPE_INPROGRESS,
@@ -685,7 +723,67 @@ export const changeDisplayType = (records, data, isBulkUpdate = false) => {
                 payload: e,
             });
 
-            return false;
+            return Promise.reject(e);
+        }
+    };
+};
+
+export const changeSearchKeyValue = (records, data) => {
+    const changeSearchKeyValueRequest = transformers.getChangeSearchKeyValues(records, data);
+
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_SEARCH_KEY_VALUE_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), changeSearchKeyValueRequest);
+            dispatch({
+                type: actions.CHANGE_SEARCH_KEY_VALUE_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_SEARCH_KEY_VALUE_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};
+
+/**
+ * Change display type action
+ *
+ * @param {array} records
+ * @param {object} data
+ * @param {bool} isRemoveFrom
+ */
+export const copyToOrRemoveFromCollection = (records, data, isRemoveFrom = false) => {
+    const copyToOrRemoveFromCollectionRequest = isRemoveFrom
+        ? transformers.getRemoveFromCollectionData(records, data)
+        : transformers.getCopyToCollectionData(records, data);
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_COLLECTIONS_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), copyToOrRemoveFromCollectionRequest);
+            dispatch({
+                type: actions.CHANGE_COLLECTIONS_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_COLLECTIONS_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
         }
     };
 };

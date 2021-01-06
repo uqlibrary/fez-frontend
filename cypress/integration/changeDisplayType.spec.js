@@ -1,11 +1,8 @@
-import componentsLocale from '../../src/locale/components';
 import { default as recordListBook } from '../../src/mock/data/records/publicationTypeListBookEdited';
 import { default as recordListImage } from '../../src/mock/data/records/publicationTypeListImage';
 
 const recordBook = recordListBook.data[0];
 const recordImage = recordListImage.data[0];
-
-const changeDisplayTypeLocale = componentsLocale.components.changeDisplayType;
 
 context('Change display type', () => {
     const selectItem = (field, firstChildlabel) => {
@@ -23,7 +20,7 @@ context('Change display type', () => {
         cy.visit(`/admin/change-display-type/${pid}?user=uqstaff`).then(() => {
             cy.get('h2')
                 .should('have.length', 1)
-                .should('contain', changeDisplayTypeLocale.title)
+                .should('contain', 'Change display type from ')
                 .should('contain', recordBook.rek_display_type_lookup)
                 .should('contain', recordBook.rek_subtype);
 
@@ -40,25 +37,22 @@ context('Change display type', () => {
             cy.get('[data-testid=change-display-type-submit]').should('not.be.disabled');
 
             cy.get('[data-testid=change-display-type-submit]')
-                .should('have.text', changeDisplayTypeLocale.submit)
+                .should('have.text', 'Change display type')
                 .click();
 
             // form submitted and the green 'all good' message appears, with 'view' and 'edit' buttons
             cy.get('[data-testid=change-display-type-submit-status]')
-                .should('contain', changeDisplayTypeLocale.successAlert.title)
-                .should('contain', changeDisplayTypeLocale.successAlert.message);
+                .should('contain', 'Success')
+                .should('contain', 'Display type has been changed successfully.');
 
             cy.get('[role=dialog]')
                 .should('exist')
                 .find('h2')
-                .should('contain', changeDisplayTypeLocale.workflowConfirmation.confirmationTitle);
+                .should('contain', 'Change Display type');
 
-            cy.get('[data-testid=cancel-changeDisplayTypeDone]').contains(
-                'button',
-                changeDisplayTypeLocale.workflowConfirmation.cancelButtonLabel,
-            );
+            cy.get('[data-testid=cancel-changeDisplayTypeDone]').contains('button', 'View work');
             cy.get('[data-testid=confirm-changeDisplayTypeDone]')
-                .contains('button', changeDisplayTypeLocale.workflowConfirmation.confirmButtonLabel)
+                .contains('button', 'Edit full work')
                 .click();
             cy.location().should(loc => {
                 expect(loc.pathname).to.eq(`/admin/edit/${pid}`);
@@ -72,7 +66,7 @@ context('Change display type', () => {
         cy.visit(`/admin/change-display-type/${pid}?user=uqstaff`).then(() => {
             cy.get('h2')
                 .should('have.length', 1)
-                .should('contain', changeDisplayTypeLocale.title)
+                .should('contain', 'Change display type from ')
                 .should('contain', recordImage.rek_display_type_lookup);
 
             cy.get('.publicationCitation .citationTitle').should('contain', recordImage.rek_title);
@@ -85,25 +79,22 @@ context('Change display type', () => {
             cy.get('[data-testid=change-display-type-submit]').should('not.be.disabled');
 
             cy.get('[data-testid=change-display-type-submit]')
-                .should('have.text', changeDisplayTypeLocale.submit)
+                .should('have.text', 'Change display type')
                 .click();
 
             // form submitted and the green 'all good' message appears, with 'view' and 'edit' buttons
             cy.get('[data-testid=change-display-type-submit-status]')
-                .should('contain', changeDisplayTypeLocale.successAlert.title)
-                .should('contain', changeDisplayTypeLocale.successAlert.message);
+                .should('contain', 'Success')
+                .should('contain', 'Display type has been changed successfully.');
 
             cy.get('[role=dialog]')
                 .should('exist')
                 .find('h2')
-                .should('contain', changeDisplayTypeLocale.workflowConfirmation.confirmationTitle);
+                .should('contain', 'Change Display type');
 
-            cy.get('[data-testid=confirm-changeDisplayTypeDone]').contains(
-                'button',
-                changeDisplayTypeLocale.workflowConfirmation.confirmButtonLabel,
-            );
+            cy.get('[data-testid=confirm-changeDisplayTypeDone]').contains('button', 'Edit full work');
             cy.get('[data-testid=cancel-changeDisplayTypeDone]')
-                .contains('button', changeDisplayTypeLocale.workflowConfirmation.cancelButtonLabel)
+                .contains('button', 'View work')
                 .click();
             cy.location().should(loc => {
                 expect(loc.pathname).to.eq(`/view/${pid}`);

@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import locale from 'locale/viewRecord';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { withStyles } from '@material-ui/core/styles';
+import moment from 'moment';
+
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import moment from 'moment';
-import VolumeUp from '@material-ui/icons/VolumeUp';
-import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
 import Image from '@material-ui/icons/Image';
+import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
+import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
+import Typography from '@material-ui/core/Typography';
 import Videocam from '@material-ui/icons/Videocam';
-import { openAccessConfig, routes, viewRecordsConfig } from 'config';
-import MediaPreview from './MediaPreview';
-import FileName from './partials/FileName';
+import VolumeUp from '@material-ui/icons/VolumeUp';
+import { withStyles } from '@material-ui/core/styles';
+
+import locale from 'locale/viewRecord';
+import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
+
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+
+import FileName from './partials/FileName';
+import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
 import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
@@ -64,6 +68,88 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
         };
     }
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
+};
+
+export const getFileNameIfPresent = (value, dataStreams) => {
+    const match = dataStreams.find(item => item.dsi_dsid === value);
+    return match ? match.dsi_dsid : null;
+};
+
+export const getMatchingFilename = (filenames, dataStreams) =>
+    filenames.reduce(
+        (matchedFilename, currentFilename) => matchedFilename || getFileNameIfPresent(currentFilename, dataStreams),
+        null,
+    );
+
+export const untranscodedItem = filename => {
+    let file = null;
+    if (filename.indexOf('_xt') >= 0) {
+        file = filename
+            .replace('_xt', '')
+            .split('.')
+            .slice(0, -1)
+            .join('.');
+    } else {
+        file = filename
+            .split('.')
+            .slice(0, -1)
+            .join('.');
+    }
+    return file;
+};
+
+export const checkForThumbnail = (filename, dataStreams) => {
+    const file = untranscodedItem(filename);
+    const thumbnailFilenames = [
+        `thumbnail_${file}_compressed_t.jpg`,
+        `thumbnail_${file}_t.jpg`,
+        `thumbnail_${file}.jpg`,
+        `${file}_t.jpg`,
+    ];
+    return getMatchingFilename(thumbnailFilenames, dataStreams);
+};
+
+export const checkForPreview = (filename, dataStreams) => {
+    const file = untranscodedItem(filename);
+    const previewFilenames = [
+        `preview_${file}_compressed_t.jpg`,
+        `preview_${file}_t.jpg`,
+        `preview_${file}.jpg`,
+        `${file}_t.jpg`,
+        `preview_${file}_compressed_t.mp4`,
+        `preview_${file}_t.mp4`,
+        `${file}_t.mp4`,
+        `preview_${file}_compressed_t.mp3`,
+        `preview_${file}_t.mp3`,
+        `${file}_t.mp3`,
+    ];
+    return getMatchingFilename(previewFilenames, dataStreams);
+};
+
+export const checkForWeb = (filename, dataStreams) => {
+    const file = untranscodedItem(filename);
+    const webFilenames = [
+        `web_${file}_compressed_t.jpg`,
+        `web_${file}_t.jpg`,
+        `web_${file}.jpg`,
+        `web_${file}_compressed_t.mp4`,
+        `web_${file}_t.mp4`,
+        `web_${file}_compressed_t.mp3`,
+        `web_${file}_t.mp3`,
+    ];
+    return getMatchingFilename(webFilenames, dataStreams);
+};
+
+export const formatBytes = bytes => {
+    if (bytes === 0) {
+        return '0 Bytes';
+    }
+    const k = 1024;
+    const decimals = 2;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const index = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
 };
 
 export class FilesClass extends Component {
@@ -124,7 +210,7 @@ export class FilesClass extends Component {
             return <PictureAsPdf className={this.props.classes.fileIcon} color={'secondary'} />;
         } else if (mimeType.indexOf('image') >= 0) {
             return <Image className={this.props.classes.fileIcon} color={'secondary'} />;
-        } else if (mimeType.indexOf('video') >= 0) {
+        } else if (mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf') {
             return <Videocam className={this.props.classes.fileIcon} color={'secondary'} />;
         } else {
             return <InsertDriveFile className={this.props.classes.fileIcon} color={'secondary'} />;
@@ -162,19 +248,8 @@ export class FilesClass extends Component {
         }
     };
 
-    formatBytes = bytes => {
-        if (bytes === 0) {
-            return '0 Bytes';
-        }
-        const k = 1024;
-        const decimals = 2;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-        const index = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
-    };
-
     getUrl = (pid, fileName, checksum = '') => {
-        return pid && fileName && routes.pathConfig.file.url(pid, fileName, checksum);
+        return pid && fileName && pathConfig.file.url(pid, fileName, checksum);
     };
 
     searchByKey = (list, key, value) => {
@@ -183,71 +258,6 @@ export class FilesClass extends Component {
 
     isFileValid = dataStream => {
         return getSecurityAccess(dataStream, this.props) && !isDerivative(dataStream) && isAdded(dataStream);
-    };
-
-    getMatchingFilename = names => {
-        const datastreamFileNames = this.props.publication.fez_datastream_info.map(item => item.dsi_dsid);
-        const findMatch = (nameMatch, name) => nameMatch || (datastreamFileNames.includes(name) && name);
-        return names.reduce(findMatch, false) || null;
-    };
-
-    untranscodedItem = filename => {
-        let file = null;
-        if (filename.indexOf('_xt') >= 0) {
-            file = filename
-                .replace('_xt', '')
-                .split('.')
-                .slice(0, -1)
-                .join('.');
-        } else {
-            file = filename
-                .split('.')
-                .slice(0, -1)
-                .join('.');
-        }
-        return file;
-    };
-
-    checkForThumbnail = filename => {
-        const file = this.untranscodedItem(filename);
-        const names = [
-            `thumbnail_${file}_compressed_t.jpg`,
-            `thumbnail_${file}_t.jpg`,
-            `thumbnail_${file}.jpg`,
-            `${file}_t.jpg`,
-        ];
-        return this.getMatchingFilename(names);
-    };
-
-    checkForPreview = filename => {
-        const file = this.untranscodedItem(filename);
-        const names = [
-            `preview_${file}_compressed_t.jpg`,
-            `preview_${file}_t.jpg`,
-            `preview_${file}.jpg`,
-            `${file}_t.jpg`,
-            `preview_${file}_compressed_t.mp4`,
-            `preview_${file}_t.mp4`,
-            `${file}_t.mp4`,
-            `preview_${file}_compressed_t.mp3`,
-            `preview_${file}_t.mp3`,
-            `${file}_t.mp3`,
-        ];
-        return this.getMatchingFilename(names);
-    };
-
-    checkForWeb = filename => {
-        const file = this.untranscodedItem(filename);
-        const names = [
-            `web_${file}_compressed_t.jpg`,
-            `web_${file}_t.jpg`,
-            `web_${file}.jpg`,
-            `web_${file}_compressed_t.mp4`,
-            `web_${file}_t.mp4`,
-            `web_${file}_compressed_t.mp3`,
-            `web_${file}_t.mp3`,
-        ];
-        return this.getMatchingFilename(names);
     };
 
     getChecksums = (dataStream, thumbnailFileName, previewFileName, webFileName, dataStreams) => {
@@ -284,9 +294,9 @@ export class FilesClass extends Component {
                   const pid = publication.rek_pid;
                   const fileName = dataStream.dsi_dsid;
                   const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                  const thumbnailFileName = this.checkForThumbnail(fileName);
-                  const previewFileName = this.checkForPreview(fileName);
-                  const webFileName = this.checkForWeb(fileName);
+                  const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+                  const previewFileName = checkForPreview(fileName, dataStreams);
+                  const webFileName = checkForWeb(fileName, dataStreams);
                   const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
                   const securityAccess = getSecurityAccess(dataStream, componentProps);
                   const checksums = this.getChecksums(
@@ -302,7 +312,7 @@ export class FilesClass extends Component {
                       fileName: fileName,
                       description: dataStream.dsi_label,
                       mimeType: mimeType,
-                      calculatedSize: this.formatBytes(dataStream.dsi_size),
+                      calculatedSize: formatBytes(dataStream.dsi_size),
                       allowDownload: !openAccessStatus.embargoDate,
                       icon: this.renderFileIcon(
                           pid,

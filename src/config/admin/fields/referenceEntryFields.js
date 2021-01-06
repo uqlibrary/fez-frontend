@@ -73,26 +73,13 @@ export default {
                 ],
                 ['fez_record_search_key_refereed_source', 'contentIndicators'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],
 };
 
-export const validateReferenceEntry = (
-    { filesSection: fs, authorsSection: as },
-    { validationErrorsSummary: summary },
-) => ({
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
-    },
+export const validateReferenceEntry = ({ authorsSection: as }, { validationErrorsSummary: summary }) => ({
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {
             authors: summary.authors,

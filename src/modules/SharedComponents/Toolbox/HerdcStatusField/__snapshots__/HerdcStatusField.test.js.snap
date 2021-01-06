@@ -1,18 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HerdcStatusField component should render default view 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-status"
-  hideLabel={false}
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "Provisional Code",
         "value": "453220",
@@ -28,17 +22,15 @@ exports[`HerdcStatusField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={Array []}
+  value=""
 />
 `;
 
 exports[`HerdcStatusField component should render immutable list as selected value with given field props 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-herdc-status"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -50,10 +42,6 @@ exports[`HerdcStatusField component should render immutable list as selected val
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "Provisional Code",
         "value": "453220",
@@ -78,7 +66,7 @@ exports[`HerdcStatusField component should render immutable list as selected val
   onChange={[MockFunction]}
   placeholder="Test placeholder"
   value={
-    Array [
+    Immutable.List [
       "One",
       "Two",
     ]
@@ -87,19 +75,13 @@ exports[`HerdcStatusField component should render immutable list as selected val
 `;
 
 exports[`HerdcStatusField component should render when given a default value field props 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   defaultValue="afr"
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-status"
-  hideLabel={false}
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "Provisional Code",
         "value": "453220",
@@ -117,21 +99,15 @@ exports[`HerdcStatusField component should render when given a default value fie
     }
   }
   placeholder="Test placeholder"
-  value={
-    Array [
-      "afr",
-    ]
-  }
+  value=""
 />
 `;
 
 exports[`HerdcStatusField component should render with given field props 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-herdc-status"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -143,10 +119,6 @@ exports[`HerdcStatusField component should render with given field props 1`] = `
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "Provisional Code",
         "value": "453220",

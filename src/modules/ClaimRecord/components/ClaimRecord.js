@@ -21,7 +21,7 @@ import {
     ContentIndicatorsField,
     showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
-import { claimRecordConfig, routes, validation } from 'config';
+import { claimRecordConfig, pathConfig, validation } from 'config';
 import locale from 'locale/forms';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -74,16 +74,18 @@ export default class ClaimRecord extends PureComponent {
     }
 
     _navigateToMyResearch = () => {
-        this.props.history.push(routes.pathConfig.records.mine);
+        this.props.history.push(pathConfig.records.mine);
     };
 
     _cancelClaim = () => {
+        this.props.actions.clearNewRecord();
         this.props.history.goBack();
     };
 
     _claimAnother = () => {
         if (!!this.props.redirectPath) {
             this.props.history.push(this.props.redirectPath);
+            this.props.actions.clearNewRecord();
             this.props.actions.clearRedirectPath();
         } else {
             this.props.history.goBack();
@@ -111,7 +113,7 @@ export default class ClaimRecord extends PureComponent {
     };
 
     _navigateToFixRecord = () => {
-        this.props.history.push(routes.pathConfig.records.fix(this._publication().rek_pid));
+        this.props.history.push(pathConfig.records.fix(this._publication().rek_pid));
     };
 
     _publication = () => {

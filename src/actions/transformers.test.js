@@ -83,14 +83,14 @@ describe('getRecordFileAttachmentSearchKey test', () => {
     it('should return request object structure for files with various open access status', () => {
         const files = [
             {
-                access_condition_id: 9, // open access, should stay open
+                access_condition_id: 5, // open access, should stay open
                 name: 'file1.txt',
                 date: moment()
                     .clone()
                     .format('YYYY-MM-DD'), // today
             },
             {
-                access_condition_id: 9, // open access, should be closed 'cause in the future
+                access_condition_id: 5, // open access, should be closed 'cause in the future
                 name: 'file2.txt',
                 date: moment()
                     .clone()
@@ -98,7 +98,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     .format('YYYY-MM-DD'), // future
             },
             {
-                access_condition_id: 9, // open access, should stay open 'cause in the past
+                access_condition_id: 5, // open access, should stay open 'cause in the past
                 name: 'file3.txt',
                 date: moment()
                     .clone()
@@ -106,7 +106,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     .format('YYYY-MM-DD'), // past
             },
             {
-                access_condition_id: 8, // closed access, should stay closed
+                access_condition_id: 1, // closed access, should stay closed
                 name: 'file4.txt',
             },
         ];
@@ -142,19 +142,19 @@ describe('getRecordFileAttachmentSearchKey test', () => {
             ],
             fez_record_search_key_file_attachment_access_condition: [
                 {
-                    rek_file_attachment_access_condition: 9,
+                    rek_file_attachment_access_condition: 5,
                     rek_file_attachment_access_condition_order: 1,
                 },
                 {
-                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition: 1,
                     rek_file_attachment_access_condition_order: 2,
                 },
                 {
-                    rek_file_attachment_access_condition: 9,
+                    rek_file_attachment_access_condition: 5,
                     rek_file_attachment_access_condition_order: 3,
                 },
                 {
-                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition: 1,
                     rek_file_attachment_access_condition_order: 4,
                 },
             ],
@@ -186,6 +186,45 @@ describe('getRecordFileAttachmentSearchKey test', () => {
             ],
             fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_access_condition: [],
+        };
+        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return request object structure for files with inherit most secure policy from collection', () => {
+        const files = [
+            {
+                name: 'file.txt',
+                access_condition_id: 99,
+            },
+            {
+                name: 'file2.txt',
+                access_condition_id: 5,
+            },
+        ];
+        const record = { collections: [{ rek_datastream_policy: 4 }, { rek_datastream_policy: 5 }] };
+        const expected = {
+            fez_record_search_key_file_attachment_name: [
+                {
+                    rek_file_attachment_name: 'file.txt',
+                    rek_file_attachment_name_order: 1,
+                },
+                {
+                    rek_file_attachment_name: 'file2.txt',
+                    rek_file_attachment_name_order: 2,
+                },
+            ],
+            fez_record_search_key_file_attachment_embargo_date: [],
+            fez_record_search_key_file_attachment_access_condition: [
+                {
+                    rek_file_attachment_access_condition: 4,
+                    rek_file_attachment_access_condition_order: 1,
+                },
+                {
+                    rek_file_attachment_access_condition: 5,
+                    rek_file_attachment_access_condition_order: 2,
+                },
+            ],
         };
         const result = transformers.getRecordFileAttachmentSearchKey(files, record);
         expect(result).toEqual(expected);
@@ -2339,39 +2378,13 @@ describe('getDatastreamInfo', () => {
 });
 
 describe('getAdminSectionSearchKeys', () => {
-    it('should get search key for any internal notes entered', () => {
-        const expected = {
-            fez_internal_notes: {
-                ain_detail: '<p>This is test internal note</p>',
-            },
-            rek_herdc_notes: 'This is test herdc notes',
-        };
-
-        expect(
-            transformers.getAdminSectionSearchKeys({
-                internalNotes: {
-                    htmlText: '<p>This is test internal note</p>',
-                    plainText: 'This is test internal note',
-                },
-                rek_herdc_notes: {
-                    htmlText: 'This is test herdc notes',
-                    plainText: 'This is test herdc notes',
-                },
-            }),
-        ).toEqual(expected);
-    });
-
-    it('should get search key for any internal notes entered', () => {
-        expect(transformers.getAdminSectionSearchKeys()).toEqual({ fez_internal_notes: null });
+    it('should get correct object', () => {
+        expect(transformers.getAdminSectionSearchKeys()).toEqual({ fez_record_search_key_license: {} });
     });
 
     it('should transform all search keys for additional information section', () => {
         const data = {
-            collections: [12344, 22343],
-            additionalNotes: {
-                htmlText: '<p>Test additional notes</p>',
-                plainText: 'Test additional notes',
-            },
+            collections: [{ rek_pid: 'UQ:12344' }, { rek_pid: 'UQ:22343' }],
             contentIndicators: [123, 234],
             contactName: 'Test',
             contactEmail: 'test@email.com',
@@ -2405,20 +2418,16 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
-                    rek_ismemberof: 12344,
+                    rek_ismemberof: 'UQ:12344',
                     rek_ismemberof_order: 1,
                 },
                 {
-                    rek_ismemberof: 22343,
+                    rek_ismemberof: 'UQ:22343',
                     rek_ismemberof_order: 2,
                 },
             ],
-            fez_record_search_key_notes: {
-                rek_notes: '<p>Test additional notes</p>',
-            },
             fez_record_search_key_content_indicator: [
                 {
                     rek_content_indicator: 123,
@@ -2471,10 +2480,6 @@ describe('getAdminSectionSearchKeys', () => {
     it('should transform all search keys for additional information section correctly', () => {
         const data = {
             collections: [{ id: 12344 }, { id: 22343 }],
-            additionalNotes: {
-                htmlText: '<p>Test additional notes</p>',
-                plainText: 'Test additional notes',
-            },
             contentIndicators: [123, 234],
             contactName: 'Test',
             contactEmail: 'test@email.com',
@@ -2513,7 +2518,6 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: 12344,
@@ -2524,9 +2528,6 @@ describe('getAdminSectionSearchKeys', () => {
                     rek_ismemberof_order: 2,
                 },
             ],
-            fez_record_search_key_notes: {
-                rek_notes: '<p>Test additional notes</p>',
-            },
             fez_record_search_key_content_indicator: [
                 {
                     rek_content_indicator: 123,
@@ -2624,7 +2625,6 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2634,6 +2634,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
             fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2684,7 +2685,6 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_internal_notes: null,
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
@@ -2694,6 +2694,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
             fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_license: {},
         });
     });
 
@@ -2703,7 +2704,7 @@ describe('getAdminSectionSearchKeys', () => {
             contentIndicators: [],
         };
 
-        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({ fez_internal_notes: null });
+        expect(transformers.getAdminSectionSearchKeys(data)).toEqual({ fez_record_search_key_license: {} });
     });
 });
 
@@ -2945,6 +2946,7 @@ describe('Sanitising empty data', () => {
  *  - bibliographicSection.rek_description'
  *  - bibliographicSection.rek_date'
  *  - bibliographicSection.languages'
+ *  - bibliographicSection.fez_matched_journals'
  *  - bibliographicSection.fez_record_search_key_journal_name.rek_journal_name'
  *  - bibliographicSection.fez_record_search_key_book_title.rek_book_title'
  *  - bibliographicSection.fez_record_search_key_conference_name.rek_conference_name'
@@ -3068,7 +3070,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
-                fez_record_search_key_license: {},
                 fez_record_search_key_related_datasets: {
                     plainText: 'A related dataset',
                     htmlText: '<p>A related dataset</p>',
@@ -3114,20 +3115,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_related_publications: {
                     rek_related_publications: '<p>A related publication</p>',
                 },
-            });
-        });
-
-        it('should use default parameter value', () => {
-            expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
             });
         });
     });
@@ -3301,7 +3288,7 @@ describe('getBibliographicSectionSearchKeys', () => {
         // also useful for swapping search key names in to check they are properly handled
 
         it('should only save the supplied key for a one-to-one search key', () => {
-            let data = {
+            const data = {
                 fez_record_search_key_license: { rek_license: 123 },
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -3309,19 +3296,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_license: { rek_license: 123 },
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
-            });
-
-            data = {};
-            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -3368,38 +3342,6 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_issn: [{ rek_issn: '2323-2323', rek_issn_order: 1 }],
-            });
-
-            const dataEmpty = {};
-            expect(transformers.getBibliographicSectionSearchKeys(dataEmpty)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
-            });
-        });
-
-        it('should be able to delete search key', () => {
-            const data = {
-                fez_record_search_key_isderivationof: [],
-            };
-
-            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
-                rek_description: null,
-                rek_formatted_abstract: null,
-                fez_record_search_key_language: [
-                    {
-                        rek_language: 'eng',
-                        rek_language_order: 1,
-                    },
-                ],
-                fez_record_search_key_isderivationof: [],
             });
         });
 
@@ -3477,6 +3419,9 @@ describe('getBibliographicSectionSearchKeys', () => {
             const data = {
                 languageOfProceedingsTitle: ['eng', 'pol'],
                 languageOfJournalName: ['fre'],
+                fez_matched_journals: {
+                    jnl_jid: 7669,
+                },
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -3505,6 +3450,10 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_language_of_journal_name_order: 1,
                     },
                 ],
+                fez_matched_journals: {
+                    mtj_jnl_id: 7669,
+                    mtj_status: 'M',
+                },
             });
         });
     });
@@ -4446,6 +4395,551 @@ describe('getRecordIsDatasetOfSearchKey', () => {
                     rek_isdatasetof_order: 1,
                 },
             ],
+        });
+    });
+});
+
+describe('getNotesSectionSearchKeys', () => {
+    it('should get search key for any internal notes entered', () => {
+        const expected = {
+            fez_internal_notes: {
+                ain_detail: '<p>This is test internal note</p>',
+            },
+            rek_herdc_notes: 'This is test herdc notes',
+        };
+
+        expect(
+            transformers.getNotesSectionSearchKeys({
+                internalNotes: {
+                    htmlText: '<p>This is test internal note</p>',
+                    plainText: 'This is test internal note',
+                },
+                rek_herdc_notes: {
+                    htmlText: 'This is test herdc notes',
+                    plainText: 'This is test herdc notes',
+                },
+            }),
+        ).toEqual(expected);
+    });
+
+    it('should get search key for any internal notes entered', () => {
+        expect(transformers.getNotesSectionSearchKeys()).toEqual({ fez_internal_notes: null });
+    });
+
+    it('should get search key for any additional notes entered', () => {
+        const expected = {
+            fez_record_search_key_notes: {
+                rek_notes: '<p>This is test additional note</p>',
+            },
+            fez_record_search_key_additional_notes: {
+                rek_additional_notes: '<p>This is test additional note</p>',
+            },
+            rek_herdc_notes: 'This is test herdc notes',
+            fez_internal_notes: null,
+        };
+
+        expect(
+            transformers.getNotesSectionSearchKeys({
+                additionalNotes: {
+                    htmlText: '<p>This is test additional note</p>',
+                    plainText: 'This is test additional note',
+                },
+                rek_herdc_notes: {
+                    htmlText: 'This is test herdc notes',
+                    plainText: 'This is test herdc notes',
+                },
+            }),
+        ).toEqual(expected);
+    });
+});
+
+describe('getChangeSearchKeyValues', () => {
+    describe('should correcty transform search key values for search key', () => {
+        it('fez_record_search_key_oa_status.rek_oa_status', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_oa_status: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_oa_status: { rek_oa_status: 123456, rek_oa_status_id: 99999 },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_oa_status.rek_oa_status',
+                        fez_record_search_key_oa_status: {
+                            rek_oa_status: 222222,
+                        },
+                        edit_reason: 'test reason',
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_oa_status: { rek_oa_status: 222222 },
+                    edit_reason: 'test reason',
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_oa_status: { rek_oa_status: 222222, rek_oa_status_id: 99999 },
+                    edit_reason: 'test reason',
+                },
+            ]);
+        });
+
+        it('rek_scopus_doc_type', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', rek_scopus_doc_type: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_scopus_doc_type: 'ab',
+                        },
+                    ],
+                    {
+                        search_key: 'rek_scopus_doc_type',
+                        rek_scopus_doc_type: 'ar',
+                        edit_reason: 'test reason',
+                    },
+                ),
+            ).toEqual([
+                { rek_pid: 'UQ:111111', rek_scopus_doc_type: 'ar', edit_reason: 'test reason' },
+                { rek_pid: 'UQ:222222', rek_scopus_doc_type: 'ar', edit_reason: 'test reason' },
+            ]);
+        });
+
+        it('rek_wok_doc_type', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', rek_wok_doc_type: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            rek_wok_doc_type: 'A',
+                        },
+                    ],
+                    {
+                        search_key: 'rek_wok_doc_type',
+                        rek_wok_doc_type: '@',
+                        edit_reason: 'test reason',
+                    },
+                ),
+            ).toEqual([
+                { rek_pid: 'UQ:111111', rek_wok_doc_type: '@', edit_reason: 'test reason' },
+                { rek_pid: 'UQ:222222', rek_wok_doc_type: '@', edit_reason: 'test reason' },
+            ]);
+        });
+
+        it('fez_record_search_key_org_unit_name.rek_org_unit_name', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_org_unit_name: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_org_unit_name: {
+                                rek_org_unit_name: 'School of economics',
+                                rek_org_unit_name_id: 99999,
+                            },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_org_unit_name.rek_org_unit_name',
+                        fez_record_search_key_org_unit_name: {
+                            rek_org_unit_name: 'School of science',
+                        },
+                        edit_reason: 'test reason',
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_org_unit_name: { rek_org_unit_name: 'School of science' },
+                    edit_reason: 'test reason',
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_org_unit_name: {
+                        rek_org_unit_name: 'School of science',
+                        rek_org_unit_name_id: 99999,
+                    },
+                    edit_reason: 'test reason',
+                },
+            ]);
+        });
+
+        it('fez_record_search_key_notes.rek_notes', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_notes: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_notes: {
+                                rek_notes: '<p>initial notes</p>',
+                                rek_notes_id: 99999,
+                            },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_notes.rek_notes',
+                        fez_record_search_key_notes: {
+                            rek_notes: '<p>initial notes</p>',
+                        },
+                        edit_reason: 'test reason',
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_notes: { rek_notes: '<p>initial notes</p>' },
+                    edit_reason: 'test reason',
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_notes: {
+                        rek_notes: '<p>initial notes</p><p>initial notes</p>',
+                        rek_notes_id: 99999,
+                    },
+                    edit_reason: 'test reason',
+                },
+            ]);
+        });
+
+        it('fez_record_search_key_series.rek_series', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_series: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_series: { rek_series: 'Test series', rek_series_id: 99999 },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_series.rek_series',
+                        fez_record_search_key_series: {
+                            rek_series: 'Testing series',
+                        },
+                        edit_reason: 'test reason',
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_series: { rek_series: 'Testing series' },
+                    edit_reason: 'test reason',
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_series: { rek_series: 'Testing series', rek_series_id: 99999 },
+                    edit_reason: 'test reason',
+                },
+            ]);
+        });
+
+        it('fez_record_search_key_rights.rek_rights', () => {
+            expect(
+                transformers.getChangeSearchKeyValues(
+                    [
+                        { rek_pid: 'UQ:111111', fez_record_search_key_rights: null },
+                        {
+                            rek_pid: 'UQ:222222',
+                            fez_record_search_key_rights: { rek_rights: 'Test', rek_rights_id: 99999 },
+                        },
+                    ],
+                    {
+                        search_key: 'fez_record_search_key_rights.rek_rights',
+                        fez_record_search_key_rights: {
+                            rek_rights: 'Testing',
+                        },
+                        edit_reason: 'test reason',
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:111111',
+                    fez_record_search_key_rights: { rek_rights: 'Testing' },
+                    edit_reason: 'test reason',
+                },
+                {
+                    rek_pid: 'UQ:222222',
+                    fez_record_search_key_rights: { rek_rights: 'Testing', rek_rights_id: 99999 },
+                    edit_reason: 'test reason',
+                },
+            ]);
+        });
+    });
+});
+
+describe('getChangeAuthorIdValues', () => {
+    it('should correctly transform author id values', () => {
+        expect(
+            transformers.getChangeAuthorIdValues(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_author: [
+                            {
+                                rek_author: 'Test',
+                                rek_author_order: 1,
+                            },
+                            {
+                                rek_author: 'Testing',
+                                rek_author_order: 2,
+                            },
+                        ],
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: null,
+                            },
+                            {
+                                rek_author_id: null,
+                            },
+                        ],
+                    },
+                    {
+                        rek_pid: 'UQ:22222',
+                        fez_record_search_key_author: [
+                            {
+                                rek_author: 'Testing',
+                                rek_author_order: 1,
+                            },
+                        ],
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: 123,
+                                rek_author_id_order: 1,
+                                rek_author_id_id: 999,
+                            },
+                        ],
+                    },
+                    {
+                        rek_pid: 'UQ:33333',
+                        fez_record_search_key_author: [
+                            {
+                                rek_author: 'Test',
+                                rek_author_order: 1,
+                            },
+                        ],
+
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: null,
+                            },
+                        ],
+                    },
+                ],
+                {
+                    search_author_by: 'author',
+                    search_author: {
+                        author: 'Testing',
+                    },
+                    rek_author_id: 1234,
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: null,
+                    },
+                    {
+                        rek_author_id: 1234,
+                        rek_author_id_order: 2,
+                    },
+                ],
+            },
+            {
+                rek_pid: 'UQ:22222',
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 1234,
+                        rek_author_id_order: 1,
+                        rek_author_id_id: 999,
+                    },
+                ],
+            },
+            {
+                rek_pid: 'UQ:33333',
+            },
+        ]);
+    });
+});
+
+describe('getChangeAuthorIdValues', () => {
+    it('should correctly transform author id values', () => {
+        expect(
+            transformers.getChangeAuthorIdValues(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_author: [
+                            {
+                                rek_author: 'Test',
+                                rek_author_order: 1,
+                            },
+                            {
+                                rek_author: 'Testing',
+                                rek_author_order: 2,
+                            },
+                        ],
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: null,
+                            },
+                            {
+                                rek_author_id: null,
+                            },
+                        ],
+                    },
+                    {
+                        rek_pid: 'UQ:22222',
+                        fez_record_search_key_author: [
+                            {
+                                rek_author: 'Testing',
+                                rek_author_order: 1,
+                            },
+                        ],
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: 123,
+                                rek_author_id_order: 1,
+                                rek_author_id_id: 999,
+                            },
+                        ],
+                    },
+                    {
+                        rek_pid: 'UQ:33333',
+                        fez_record_search_key_author: [
+                            {
+                                rek_author: 'Test',
+                                rek_author_order: 1,
+                            },
+                        ],
+
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: null,
+                            },
+                        ],
+                    },
+                ],
+                {
+                    search_author_by: 'author',
+                    search_author: {
+                        author: 'Testing',
+                    },
+                    rek_author_id: 1234,
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: null,
+                    },
+                    {
+                        rek_author_id: 1234,
+                        rek_author_id_order: 2,
+                    },
+                ],
+            },
+            {
+                rek_pid: 'UQ:22222',
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 1234,
+                        rek_author_id_order: 1,
+                        rek_author_id_id: 999,
+                    },
+                ],
+            },
+            {
+                rek_pid: 'UQ:33333',
+            },
+        ]);
+    });
+});
+
+describe('getCopyToCollectionData', () => {
+    it('should correctly transform data for copy to collection', () => {
+        expect(
+            transformers.getCopyToCollectionData(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+                    },
+                ],
+                {
+                    search_key: 'rek_ismemberof',
+                    collections: [{ rek_pid: 'UQ:234' }],
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_ismemberof: [
+                    { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                    {
+                        rek_ismemberof: 'UQ:234',
+                        rek_ismemberof_order: 2,
+                    },
+                ],
+            },
+        ]);
+    });
+});
+
+describe('getRemoveFromCollectionData', () => {
+    it('should correctly transform data for remove from collection', () => {
+        expect(
+            transformers.getRemoveFromCollectionData(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_ismemberof: [
+                            { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                            { rek_ismemberof: 'UQ:234', rek_ismemberof_order: 2 },
+                        ],
+                    },
+                ],
+                {
+                    search_key: 'rek_ismemberof',
+                    collections: [{ rek_pid: 'UQ:234' }],
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+            },
+        ]);
+    });
+});
+
+describe('getBibliographicSection for thesis', () => {
+    it('should correctly transform data for thesis rek_subtype and rek_genre_type', () => {
+        const data = {
+            rek_genre_type: 'B.A. Thesis',
+        };
+
+        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+            rek_date: '1000-01-01 00:00:00',
+            rek_description: null,
+            rek_formatted_abstract: null,
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
+            rek_subtype: 'B.A. Thesis',
+            rek_genre_type: 'B.A. Thesis',
         });
     });
 });

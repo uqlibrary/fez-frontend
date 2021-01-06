@@ -264,6 +264,7 @@ exports[`ResearchReportForm renders  component 1`] = `
                 </div>,
                 "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
+                "organisationColumn": "Organisation",
                 "reorderColumn": "Reorder items",
               },
             },
@@ -393,6 +394,7 @@ exports[`ResearchReportForm renders  component 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -452,12 +454,31 @@ exports[`ResearchReportForm renders  component 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -802,6 +823,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                 </div>,
                 "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
+                "organisationColumn": "Organisation",
                 "reorderColumn": "Reorder items",
               },
             },
@@ -931,6 +953,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -990,12 +1013,31 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "displayName": "Connect(Component)",
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>

@@ -25,6 +25,7 @@ export class FileUploader extends PureComponent {
         disabled: PropTypes.bool,
         defaultQuickTemplateId: PropTypes.number,
         isNtro: PropTypes.bool,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -38,6 +39,7 @@ export class FileUploader extends PureComponent {
         },
         requireOpenAccessStatus: false,
         isNtro: false,
+        isAdmin: false,
     };
 
     constructor(props) {
@@ -105,7 +107,7 @@ export class FileUploader extends PureComponent {
 
         file[config.FILE_META_KEY_ACCESS_CONDITION] = newValue;
 
-        if (newValue === config.OPEN_ACCESS_ID) {
+        if (newValue === config.FILE_ACCESS_CONDITION_OPEN) {
             file[config.FILE_META_KEY_EMBARGO_DATE] = moment().format();
         } else {
             file[config.FILE_META_KEY_EMBARGO_DATE] = null;
@@ -211,7 +213,7 @@ export class FileUploader extends PureComponent {
             files.filter(
                 file =>
                     file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION) &&
-                    file[config.FILE_META_KEY_ACCESS_CONDITION] === config.OPEN_ACCESS_ID,
+                    file[config.FILE_META_KEY_ACCESS_CONDITION] === config.FILE_ACCESS_CONDITION_OPEN,
             ).length > 0
         );
     };
@@ -291,6 +293,7 @@ export class FileUploader extends PureComponent {
                     disabled={disabled}
                     focusOnIndex={this.state.focusOnIndex}
                     locale={this.props.locale.fileUploadRow}
+                    isAdmin={this.props.isAdmin}
                 />
             );
         });

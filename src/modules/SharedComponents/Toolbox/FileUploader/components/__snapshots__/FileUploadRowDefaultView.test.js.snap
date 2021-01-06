@@ -85,12 +85,48 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       md={3}
       sm={4}
     >
-      <WithStyles(FileUploadAccessSelector)
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={8}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value={1}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -159,12 +195,162 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       md={3}
       sm={4}
     >
-      <WithStyles(FileUploadAccessSelector)
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error="This field is required"
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={null}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value=""
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={2}
+      sm={2}
+    >
+      <WithStyles(ForwardRef(Typography))
+        data-testid="dsi-embargo-date-0"
+        gutterBottom={true}
+        variant="body2"
+      >
+        No date required
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      className=""
+      item={true}
+      xs={1}
+    >
+      <Connect(FileUploadRowStatus)
+        disabled={false}
+        fileUploadRowStatusId="dsi-dsid-0"
+        name="test.pdf"
+        onDelete={[MockFunction]}
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</div>
+`;
+
+exports[`Component FileUploadRowDefaultView should render default view for admin 1`] = `
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 4,
+    }
+  }
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={6}
+      sm={5}
+    >
+      <WithStyles(ForwardRef(Typography))
+        data-testid="dsi-dsid-0"
+        gutterBottom={true}
+        noWrap={true}
+        variant="body2"
+      >
+        test.pdf
+         (
+        100 MB
+        )
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={3}
+      sm={4}
+    >
+      <Memo(NewGenericSelectField)
+        autoFocus={false}
+        disabled={false}
+        displayEmpty={true}
+        error="This field is required"
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+            Object {
+              "text": "Inherit from parent collection",
+              "value": 99,
+            },
+          ]
+        }
+        onChange={[MockFunction]}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value=""
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
@@ -201,8 +387,12 @@ exports[`Component FileUploadRowDefaultView should render default view with styl
   accessConditionId={null}
   classes={
     Object {
+      "error": "FileUploadRowDefaultView-error-6",
       "icon": "FileUploadRowDefaultView-icon-1",
+      "placeholder": "FileUploadRowDefaultView-placeholder-4",
       "row": "FileUploadRowDefaultView-row-2",
+      "selected": "FileUploadRowDefaultView-selected-5",
+      "selector": "FileUploadRowDefaultView-selector-3",
     }
   }
   disabled={false}
@@ -259,12 +449,48 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       md={3}
       sm={4}
     >
-      <WithStyles(FileUploadAccessSelector)
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={9}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value={5}
       />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))

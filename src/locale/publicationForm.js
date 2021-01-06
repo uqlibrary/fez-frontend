@@ -1,7 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { default as txt } from './components';
-import { fileUploaderLocale, CLOSED_ACCESS_ID } from 'modules/SharedComponents/Toolbox/FileUploader';
+import {
+    fileUploaderLocale,
+    FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_CLOSED,
+} from 'modules/SharedComponents/Toolbox/FileUploader';
+import { selectFields } from 'locale/selectFields';
 
 export default {
     cancel: 'Abandon and search again',
@@ -552,7 +557,7 @@ export default {
                     year: 'Year',
                 },
                 thesisType: {
-                    label: 'Thesis type',
+                    ...selectFields.thesisSubtype,
                 },
                 author: {
                     label: 'Author name',
@@ -1324,7 +1329,7 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8GB. <br />
+                        Maximum file size is 5GB. <br />
                         PDF files must be saved using the following naming structure{' '}
                         <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
                         be thesis, abstract, and etc. For example:
@@ -1415,7 +1420,7 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8GB. <br />
+                        Maximum file size is 5GB. <br />
                         PDF files must be saved using the following naming structure{' '}
                         <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
                         be thesis, abstract, and etc. For example:
@@ -1672,10 +1677,10 @@ export default {
                     ...fileUploaderLocale.fileUploadRow,
                     fileUploadRowAccessSelector: {
                         ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector,
-                        accessSelectOptionsText: {
-                            ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.accessSelectOptionsText,
-                            [CLOSED_ACCESS_ID]: 'Mediated Access',
-                        },
+                        options: [
+                            { text: 'Open Access', value: FILE_ACCESS_CONDITION_OPEN },
+                            { text: 'Mediated Access', value: FILE_ACCESS_CONDITION_CLOSED },
+                        ],
                     },
                 },
             },
@@ -1690,8 +1695,8 @@ export default {
         },
         formLabels: {
             ismemberof: {
-                label: 'Select community',
-                placeholder: 'Select a community this collection is a member of',
+                ...selectFields.community,
+                selectPrompt: 'Select a community this collection is a member of',
             },
             title: {
                 label: 'Title of collection',

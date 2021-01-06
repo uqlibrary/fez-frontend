@@ -1,6 +1,11 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
 import { CONTENT_INDICATORS } from 'config/general';
+import {
+    FILE_ACCESS_CONDITION_CLOSED,
+    FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_INHERIT,
+} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 const moment = require('moment');
 
@@ -78,13 +83,14 @@ export const getRecordLinkSearchKey = data => {
 export const getRecordFileAttachmentSearchKey = (files, record) => {
     if (!files || files.length === 0) return {};
 
-    const OPEN_ACCESS_ID = 9;
-    const CLOSED_ACCESS_ID = 8;
-
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount =
-        record && record.fez_record_search_key_file_attachment_name
-            ? record.fez_record_search_key_file_attachment_name.length
+        record &&
+        record.fez_record_search_key_file_attachment_name &&
+        record.fez_record_search_key_file_attachment_name.length > 0
+            ? record.fez_record_search_key_file_attachment_name[
+                  record.fez_record_search_key_file_attachment_name.length - 1
+              ].rek_file_attachment_name_order
             : 0;
     const attachmentNames = files.map((item, index) => ({
         rek_file_attachment_name: item.name,
@@ -102,11 +108,19 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     const attachmentAccessConditions = files
         .map((item, index) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
+            let accessCondition = item.access_condition_id;
+            if (accessCondition === FILE_ACCESS_CONDITION_OPEN && item.date && moment(item.date).isAfter()) {
+                accessCondition = FILE_ACCESS_CONDITION_CLOSED;
+            } else if (accessCondition === FILE_ACCESS_CONDITION_INHERIT) {
+                const parentPolicy = record.collections.reduce(
+                    (policy, collection) =>
+                        collection.rek_datastream_policy < policy ? collection.rek_datastream_policy : policy,
+                    5,
+                );
+                accessCondition = parentPolicy;
+            }
             return {
-                rek_file_attachment_access_condition:
-                    item.access_condition_id === OPEN_ACCESS_ID && item.date && moment(item.date).isAfter()
-                        ? CLOSED_ACCESS_ID
-                        : item.access_condition_id,
+                rek_file_attachment_access_condition: accessCondition,
                 rek_file_attachment_access_condition_order: initialCount + index + 1,
             };
         })
@@ -849,15 +863,14 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_date_recorded: dateRecorded,
         fez_record_search_key_end_date: endDate,
         fez_record_search_key_isderivationof: relatedPubs,
-        fez_record_search_key_license: license,
         fez_record_search_key_location: location,
         fez_record_search_key_isdatasetof: datasets,
         fez_record_search_key_related_datasets: relatedDatasets,
         fez_record_search_key_related_publications: relatedPublications,
         issnField,
+        fez_matched_journals: matchedJournal,
         ...rest
     } = data;
-
     return {
         ...cleanBlankEntries(rest),
         ...(!!relatedDatasets && relatedDatasets.hasOwnProperty('htmlText')
@@ -878,6 +891,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             !data.rek_date || !moment(data.rek_date).isValid()
                 ? '1000-01-01 00:00:00'
                 : moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
+        ...(!!data.rek_genre_type ? { rek_subtype: data.rek_genre_type } : {}),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
         ...{
@@ -941,7 +955,6 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),
@@ -955,6 +968,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             : {}),
         ...(!!relatedPubs ? getRecordIsDerivationOfSearchKey(relatedPubs) : {}),
         ...getRecordIsDatasetOfSearchKey(datasets),
+        ...((!!matchedJournal && { fez_matched_journals: { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' } }) ||
+            {}),
     };
 };
 
@@ -1024,7 +1039,7 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
     return {
         fez_record_search_key_ismemberof: collections.map((collection, index) => ({
-            rek_ismemberof: !!collection.id ? collection.id : collection,
+            rek_ismemberof: !!collection.id ? collection.id : collection.rek_pid,
             rek_ismemberof_order: index + 1,
         })),
     };
@@ -1112,12 +1127,10 @@ export const getOpenAccessStatusSearchKey = record => {
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
-        additionalNotes,
         contentIndicators,
         contactName,
         contactNameId,
         contactEmail,
-        internalNotes,
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
@@ -1125,15 +1138,11 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
         fez_record_search_key_end_date: endDate,
-        rek_herdc_notes: herdcNotes,
         ...rest
     } = data;
 
     return {
         ...getRecordIsMemberOfSearchKey(collections),
-        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
-            ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
-            : {}),
         ...getContentIndicatorSearchKey(contentIndicators),
         ...(!!contactName && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
@@ -1143,11 +1152,11 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
-        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
-        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
-            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
-            : { fez_internal_notes: null }),
-        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
+        ...{
+            fez_record_search_key_license: {
+                ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),
+            },
+        },
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...rest,
     };
@@ -1217,4 +1226,107 @@ export const getDatastreamInfo = (
             })),
         },
     };
+};
+
+export const getNotesSectionSearchKeys = (data = {}) => {
+    const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes } = data;
+    return {
+        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
+            ? {
+                  fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText },
+                  fez_record_search_key_additional_notes: { rek_additional_notes: additionalNotes.htmlText },
+              }
+            : {}),
+        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
+            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
+            : { fez_internal_notes: null }),
+        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
+    };
+};
+
+export const getChangeSearchKeyValues = (records, data) => {
+    const { search_key: searchKey } = data;
+    const [primaryKey, subKey] = searchKey.split('.');
+    const getSearchKeyValue = (primaryKey, subKey, item) => {
+        switch (primaryKey) {
+            case 'fez_record_search_key_notes':
+                return {
+                    [primaryKey]: {
+                        ...item,
+                        [subKey]: `${(!!item && item[subKey]) || ''}${data[primaryKey][subKey]}`,
+                    },
+                };
+            default:
+                return {
+                    [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
+                };
+        }
+    };
+    return records.map(({ rek_pid: pid, [primaryKey]: item }) => ({
+        rek_pid: pid,
+        ...getSearchKeyValue(primaryKey, subKey, item),
+        edit_reason: data.edit_reason || '',
+    }));
+};
+
+/**
+ *
+ * @param {array} records records that needs to be bulk updated
+ * @param {array} data form data in the form of the object
+ *
+ * data = {
+ *      search_author_by: 'author' || 'author_id',
+ *      search_author: {
+ *          author: 'Test, User',
+ *          author_id: 123455,
+ *      },
+ *      rek_author_id: 222222,
+ * }
+ */
+export const getChangeAuthorIdValues = (records, data) => {
+    const { search_author_by: searchAuthorBy } = data;
+    return records.map(record => {
+        const [item] = record[`fez_record_search_key_${searchAuthorBy}`].filter(
+            author => author[`rek_${searchAuthorBy}`] === data.search_author[searchAuthorBy],
+        );
+
+        if (!!item) {
+            return {
+                rek_pid: record.rek_pid,
+                fez_record_search_key_author_id: record.fez_record_search_key_author_id.map((authorId, index) => ({
+                    ...authorId,
+                    ...(index + 1 === item[`rek_${searchAuthorBy}_order`]
+                        ? { rek_author_id: data.rek_author_id, rek_author_id_order: index + 1 }
+                        : {}),
+                })),
+            };
+        } else {
+            return {
+                rek_pid: record.rek_pid,
+            };
+        }
+    });
+};
+
+export const getRemoveFromCollectionData = (records, data) => {
+    const selectedCollections = data.collections.map(collection => collection.rek_pid);
+    return records.map(record => ({
+        rek_pid: record.rek_pid,
+        fez_record_search_key_ismemberof: record.fez_record_search_key_ismemberof.filter(
+            collection => !selectedCollections.includes(collection.rek_ismemberof),
+        ),
+    }));
+};
+
+export const getCopyToCollectionData = (records, data) => {
+    return records.map(record => ({
+        rek_pid: record.rek_pid,
+        fez_record_search_key_ismemberof: [
+            ...record.fez_record_search_key_ismemberof,
+            ...data.collections.map((collection, index) => ({
+                rek_ismemberof: collection.rek_pid,
+                rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
+            })),
+        ],
+    }));
 };

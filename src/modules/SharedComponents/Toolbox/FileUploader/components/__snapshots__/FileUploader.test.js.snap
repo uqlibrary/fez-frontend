@@ -480,6 +480,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 }
               }
               filesInQueue={Array []}
+              isAdmin={false}
               isNtro={true}
               locale={
                 Object {
@@ -511,7 +512,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -520,6 +521,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -532,16 +538,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     "embargoDateClosedAccess": "No date required",
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
-                    "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Closed Access",
-                        "9": "Open Access",
-                      },
-                      "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
-                    },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -952,7 +955,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                     </li>
                                     <li>
-                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                     </li>
                                     <li>
                                       files are uploaded individually and not inside a folder
@@ -961,6 +964,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 </div>,
                                 "fileUploadRow": Object {
                                   "defaultView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                   },
                                   "deleteHint": "Remove this file",
@@ -973,16 +981,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "embargoDateClosedAccess": "No date required",
                                   "embargoDateColumn": "Embargo date",
                                   "fileAccessColumn": "File access",
-                                  "fileUploadRowAccessSelector": Object {
-                                    "accessSelectOptionsText": Object {
-                                      "8": "Closed Access",
-                                      "9": "Open Access",
-                                    },
-                                    "errorMessage": "This field is required",
-                                    "initialValue": "Select access conditions",
-                                  },
                                   "filenameColumn": "File name",
                                   "mobileView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
@@ -1056,7 +1061,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                       </li>
                                       <li>
-                                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
@@ -1065,6 +1070,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   </div>,
                                   "fileUploadRow": Object {
                                     "defaultView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                     },
                                     "deleteHint": "Remove this file",
@@ -1077,16 +1087,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
-                                    "fileUploadRowAccessSelector": Object {
-                                      "accessSelectOptionsText": Object {
-                                        "8": "Closed Access",
-                                        "9": "Open Access",
-                                      },
-                                      "errorMessage": "This field is required",
-                                      "initialValue": "Select access conditions",
-                                    },
                                     "filenameColumn": "File name",
                                     "mobileView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                       "embargoDateColumn": "Embargo date",
                                       "fileAccessColumn": "File access",
@@ -1143,6 +1150,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "mpe": "video/mpeg",
                                   "mpeg": "video/mpeg",
                                   "mpg": "video/mpeg",
+                                  "mxf": "application/mxf",
                                   "ods": "application/vnd.oasis.opendocument.spreadsheet",
                                   "pdf": "application/pdf",
                                   "png": "image/png",
@@ -1475,7 +1483,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                           </li>
                                                           <li>
-                                                            file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                            file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                           </li>
                                                           <li>
                                                             files are uploaded individually and not inside a folder
@@ -1484,6 +1492,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       </div>,
                                                       "fileUploadRow": Object {
                                                         "defaultView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                         },
                                                         "deleteHint": "Remove this file",
@@ -1496,16 +1509,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "embargoDateClosedAccess": "No date required",
                                                         "embargoDateColumn": "Embargo date",
                                                         "fileAccessColumn": "File access",
-                                                        "fileUploadRowAccessSelector": Object {
-                                                          "accessSelectOptionsText": Object {
-                                                            "8": "Closed Access",
-                                                            "9": "Open Access",
-                                                          },
-                                                          "errorMessage": "This field is required",
-                                                          "initialValue": "Select access conditions",
-                                                        },
                                                         "filenameColumn": "File name",
                                                         "mobileView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
@@ -1577,7 +1587,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                             </li>
                                                             <li>
-                                                              file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                              file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
@@ -1586,6 +1596,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </div>,
                                                         "fileUploadRow": Object {
                                                           "defaultView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                           },
                                                           "deleteHint": "Remove this file",
@@ -1598,16 +1613,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
-                                                          "fileUploadRowAccessSelector": Object {
-                                                            "accessSelectOptionsText": Object {
-                                                              "8": "Closed Access",
-                                                              "9": "Open Access",
-                                                            },
-                                                            "errorMessage": "This field is required",
-                                                            "initialValue": "Select access conditions",
-                                                          },
                                                           "filenameColumn": "File name",
                                                           "mobileView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                             "embargoDateColumn": "Embargo date",
                                                             "fileAccessColumn": "File access",
@@ -1943,7 +1955,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                                     </li>
                                                                     <li>
-                                                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                                     </li>
                                                                     <li>
                                                                       files are uploaded individually and not inside a folder
@@ -3027,6 +3039,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 }
               }
               filesInQueue={Array []}
+              isAdmin={false}
               isNtro={true}
               locale={
                 Object {
@@ -3058,7 +3071,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -3067,6 +3080,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   </div>,
                   "fileUploadRow": Object {
                     "defaultView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                     },
                     "deleteHint": "Remove this file",
@@ -3079,16 +3097,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     "embargoDateClosedAccess": "No date required",
                     "embargoDateColumn": "Embargo date",
                     "fileAccessColumn": "File access",
-                    "fileUploadRowAccessSelector": Object {
-                      "accessSelectOptionsText": Object {
-                        "8": "Closed Access",
-                        "9": "Open Access",
-                      },
-                      "errorMessage": "This field is required",
-                      "initialValue": "Select access conditions",
-                    },
                     "filenameColumn": "File name",
                     "mobileView": Object {
+                      "accessCondition": Object {
+                        "errorMessage": "This field is required",
+                        "label": "Access conditions",
+                        "selectPrompt": "Select access conditions",
+                      },
                       "embargoDateClosedAccess": "No date required",
                       "embargoDateColumn": "Embargo date",
                       "fileAccessColumn": "File access",
@@ -3499,7 +3514,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                     </li>
                                     <li>
-                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                     </li>
                                     <li>
                                       files are uploaded individually and not inside a folder
@@ -3508,6 +3523,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 </div>,
                                 "fileUploadRow": Object {
                                   "defaultView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                   },
                                   "deleteHint": "Remove this file",
@@ -3520,16 +3540,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "embargoDateClosedAccess": "No date required",
                                   "embargoDateColumn": "Embargo date",
                                   "fileAccessColumn": "File access",
-                                  "fileUploadRowAccessSelector": Object {
-                                    "accessSelectOptionsText": Object {
-                                      "8": "Closed Access",
-                                      "9": "Open Access",
-                                    },
-                                    "errorMessage": "This field is required",
-                                    "initialValue": "Select access conditions",
-                                  },
                                   "filenameColumn": "File name",
                                   "mobileView": Object {
+                                    "accessCondition": Object {
+                                      "errorMessage": "This field is required",
+                                      "label": "Access conditions",
+                                      "selectPrompt": "Select access conditions",
+                                    },
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
@@ -3603,7 +3620,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                       </li>
                                       <li>
-                                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
@@ -3612,6 +3629,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   </div>,
                                   "fileUploadRow": Object {
                                     "defaultView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                     },
                                     "deleteHint": "Remove this file",
@@ -3624,16 +3646,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     "embargoDateClosedAccess": "No date required",
                                     "embargoDateColumn": "Embargo date",
                                     "fileAccessColumn": "File access",
-                                    "fileUploadRowAccessSelector": Object {
-                                      "accessSelectOptionsText": Object {
-                                        "8": "Closed Access",
-                                        "9": "Open Access",
-                                      },
-                                      "errorMessage": "This field is required",
-                                      "initialValue": "Select access conditions",
-                                    },
                                     "filenameColumn": "File name",
                                     "mobileView": Object {
+                                      "accessCondition": Object {
+                                        "errorMessage": "This field is required",
+                                        "label": "Access conditions",
+                                        "selectPrompt": "Select access conditions",
+                                      },
                                       "embargoDateClosedAccess": "No date required",
                                       "embargoDateColumn": "Embargo date",
                                       "fileAccessColumn": "File access",
@@ -3690,6 +3709,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "mpe": "video/mpeg",
                                   "mpeg": "video/mpeg",
                                   "mpg": "video/mpeg",
+                                  "mxf": "application/mxf",
                                   "ods": "application/vnd.oasis.opendocument.spreadsheet",
                                   "pdf": "application/pdf",
                                   "png": "image/png",
@@ -4022,7 +4042,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                           </li>
                                                           <li>
-                                                            file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                            file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                           </li>
                                                           <li>
                                                             files are uploaded individually and not inside a folder
@@ -4031,6 +4051,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       </div>,
                                                       "fileUploadRow": Object {
                                                         "defaultView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                         },
                                                         "deleteHint": "Remove this file",
@@ -4043,16 +4068,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "embargoDateClosedAccess": "No date required",
                                                         "embargoDateColumn": "Embargo date",
                                                         "fileAccessColumn": "File access",
-                                                        "fileUploadRowAccessSelector": Object {
-                                                          "accessSelectOptionsText": Object {
-                                                            "8": "Closed Access",
-                                                            "9": "Open Access",
-                                                          },
-                                                          "errorMessage": "This field is required",
-                                                          "initialValue": "Select access conditions",
-                                                        },
                                                         "filenameColumn": "File name",
                                                         "mobileView": Object {
+                                                          "accessCondition": Object {
+                                                            "errorMessage": "This field is required",
+                                                            "label": "Access conditions",
+                                                            "selectPrompt": "Select access conditions",
+                                                          },
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
@@ -4124,7 +4146,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                             </li>
                                                             <li>
-                                                              file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                              file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
@@ -4133,6 +4155,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </div>,
                                                         "fileUploadRow": Object {
                                                           "defaultView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                           },
                                                           "deleteHint": "Remove this file",
@@ -4145,16 +4172,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           "embargoDateClosedAccess": "No date required",
                                                           "embargoDateColumn": "Embargo date",
                                                           "fileAccessColumn": "File access",
-                                                          "fileUploadRowAccessSelector": Object {
-                                                            "accessSelectOptionsText": Object {
-                                                              "8": "Closed Access",
-                                                              "9": "Open Access",
-                                                            },
-                                                            "errorMessage": "This field is required",
-                                                            "initialValue": "Select access conditions",
-                                                          },
                                                           "filenameColumn": "File name",
                                                           "mobileView": Object {
+                                                            "accessCondition": Object {
+                                                              "errorMessage": "This field is required",
+                                                              "label": "Access conditions",
+                                                              "selectPrompt": "Select access conditions",
+                                                            },
                                                             "embargoDateClosedAccess": "No date required",
                                                             "embargoDateColumn": "Embargo date",
                                                             "fileAccessColumn": "File access",
@@ -4490,7 +4514,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                                     </li>
                                                                     <li>
-                                                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                                     </li>
                                                                     <li>
                                                                       files are uploaded individually and not inside a folder
@@ -5129,7 +5153,7 @@ exports[`Component FileUploader should render default component 1`] = `
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -5138,6 +5162,11 @@ exports[`Component FileUploader should render default component 1`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5150,16 +5179,13 @@ exports[`Component FileUploader should render default component 1`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5216,6 +5242,7 @@ exports[`Component FileUploader should render default component 1`] = `
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -5293,7 +5320,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -5302,6 +5329,11 @@ exports[`Component FileUploader should render disabled component 1`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5314,16 +5346,13 @@ exports[`Component FileUploader should render disabled component 1`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5380,6 +5409,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -5456,7 +5486,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -5465,6 +5495,11 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5477,16 +5512,13 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5543,6 +5575,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -5624,7 +5657,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -5633,6 +5666,11 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5645,16 +5683,13 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -5711,6 +5746,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -5788,10 +5824,16 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -5804,16 +5846,13 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -5839,10 +5878,16 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -5855,16 +5900,13 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -5942,7 +5984,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -5951,6 +5993,11 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -5963,16 +6010,13 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6029,6 +6073,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -6106,10 +6151,16 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -6122,16 +6173,13 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -6205,7 +6253,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -6214,6 +6262,11 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6226,16 +6279,13 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6292,6 +6342,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -6368,7 +6419,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -6377,6 +6428,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6389,16 +6445,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6455,6 +6508,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -6536,7 +6590,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -6545,6 +6599,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6557,16 +6616,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6623,6 +6679,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -6701,10 +6758,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -6717,16 +6780,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -6754,10 +6814,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -6770,16 +6836,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -6854,7 +6917,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -6863,6 +6926,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -6875,16 +6943,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -6941,6 +7006,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -7022,7 +7088,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -7031,6 +7097,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -7043,16 +7114,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -7109,6 +7177,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -7186,10 +7255,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7202,16 +7277,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7237,10 +7309,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7253,16 +7331,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7341,7 +7416,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -7350,6 +7425,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -7362,16 +7442,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -7428,6 +7505,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -7505,10 +7583,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7521,16 +7605,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7545,7 +7626,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
-          "access_condition_id": 8,
+          "access_condition_id": 1,
           "date": null,
           "fileData": File {},
           "name": "a.txt",
@@ -7558,10 +7639,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7574,16 +7661,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7662,7 +7746,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -7671,6 +7755,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -7683,16 +7772,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -7749,6 +7835,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -7826,10 +7913,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7842,16 +7935,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7866,7 +7956,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
-          "access_condition_id": 9,
+          "access_condition_id": 5,
           "date": "2020-01-01T10:00:00-00:15",
           "fileData": File {},
           "name": "a.txt",
@@ -7879,10 +7969,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -7895,16 +7991,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -7993,7 +8086,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -8002,6 +8095,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -8014,16 +8112,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -8080,6 +8175,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -8157,10 +8253,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8173,16 +8275,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8197,7 +8296,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
-          "access_condition_id": 9,
+          "access_condition_id": 5,
           "date": "2017-10-10T00:00:00-00:15",
           "fileData": File {},
           "name": "a.txt",
@@ -8210,10 +8309,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8226,16 +8331,13 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8319,7 +8421,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -8328,6 +8430,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -8340,16 +8447,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -8406,6 +8510,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -8487,7 +8592,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -8496,6 +8601,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           </div>,
           "fileUploadRow": Object {
             "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
             },
             "deleteHint": "Remove this file",
@@ -8508,16 +8618,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
-            "fileUploadRowAccessSelector": Object {
-              "accessSelectOptionsText": Object {
-                "8": "Closed Access",
-                "9": "Open Access",
-              },
-              "errorMessage": "This field is required",
-              "initialValue": "Select access conditions",
-            },
             "filenameColumn": "File name",
             "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
               "embargoDateClosedAccess": "No date required",
               "embargoDateColumn": "Embargo date",
               "fileAccessColumn": "File access",
@@ -8574,6 +8681,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "mpe": "video/mpeg",
           "mpeg": "video/mpeg",
           "mpg": "video/mpeg",
+          "mxf": "application/mxf",
           "ods": "application/vnd.oasis.opendocument.spreadsheet",
           "pdf": "application/pdf",
           "png": "image/png",
@@ -8652,10 +8760,16 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       fileUploadRowId="fez-datastream-info-list-row-0"
       focusOnIndex={0}
       index={0}
+      isAdmin={false}
       key="a.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8668,16 +8782,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",
@@ -8705,10 +8816,16 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       fileUploadRowId="fez-datastream-info-list-row-1"
       focusOnIndex={0}
       index={1}
+      isAdmin={false}
       key="b.txt"
       locale={
         Object {
           "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
           },
           "deleteHint": "Remove this file",
@@ -8721,16 +8838,13 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "embargoDateClosedAccess": "No date required",
           "embargoDateColumn": "Embargo date",
           "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
           "filenameColumn": "File name",
           "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
             "embargoDateClosedAccess": "No date required",
             "embargoDateColumn": "Embargo date",
             "fileAccessColumn": "File access",

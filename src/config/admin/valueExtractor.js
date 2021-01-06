@@ -50,7 +50,8 @@ const authorsGetValue = record => {
         uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
         uqUsername: `${((authorIds[order] || {}).author || {}).aut_org_username ||
             ((authorIds[order] || {}).author || {}).aut_student_username ||
-            ''} - ${(authorIds[order] || {}).rek_author_id || 0}`,
+            ((authorIds[order] || {}).author || {}).aut_ref_num ||
+            ''}`,
         aut_id: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
@@ -242,6 +243,8 @@ export default {
     collections: {
         getValue: record => {
             const returnValue = record.fez_record_search_key_ismemberof.map(collection => ({
+                rek_pid: collection.rek_ismemberof,
+                rek_title: collection.rek_ismemberof_lookup,
                 id: collection.rek_ismemberof,
                 value: collection.rek_ismemberof_lookup,
             }));
@@ -438,11 +441,18 @@ export default {
     },
     additionalNotes: {
         getValue: record =>
-            getValueSearchKeyCKEditor(
-                record,
-                'fez_record_search_key_notes.rek_notes',
-                'fez_record_search_key_notes.rek_notes',
-            ),
+            !!record.fez_record_search_key_additional_notes &&
+            !!record.fez_record_search_key_additional_notes.rek_additional_notes
+                ? getValueSearchKeyCKEditor(
+                      record,
+                      'fez_record_search_key_additional_notes.rek_additional_notes',
+                      'fez_record_search_key_additional_notes.rek_additional_notes',
+                  )
+                : getValueSearchKeyCKEditor(
+                      record,
+                      'fez_record_search_key_notes.rek_notes',
+                      'fez_record_search_key_notes.rek_notes',
+                  ),
     },
     advisoryStatement: {
         getValue: record =>
@@ -914,5 +924,13 @@ export default {
     },
     fez_record_search_key_job_number: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_job_number'),
+    },
+    fez_matched_journals: {
+        getValue: record =>
+            (!Array.isArray(record.fez_matched_journals) && {
+                jnl_jid: record.fez_matched_journals.mtj_jnl_id,
+                id: record.fez_matched_journals.mtj_jnl_id,
+            }) ||
+            {},
     },
 };

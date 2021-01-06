@@ -1,5 +1,17 @@
-export const CLOSED_ACCESS_ID = 8;
-export const OPEN_ACCESS_ID = 9;
+export const FILE_ACCESS_CONDITION_CLOSED = 1;
+export const FILE_ACCESS_CONDITION_OPEN = 5;
+export const FILE_ACCESS_CONDITION_INHERIT = 99;
+
+export const FILE_ACCESS_OPTIONS = [
+    { text: 'Open Access', value: FILE_ACCESS_CONDITION_OPEN },
+    { text: 'Closed Access', value: FILE_ACCESS_CONDITION_CLOSED },
+];
+
+export const INHERIT_OPTION = {
+    text: 'Inherit from parent collection',
+    value: FILE_ACCESS_CONDITION_INHERIT,
+};
+
 export const SIZE_BASE = 1000;
 
 export const DEFAULT_FILE_UPLOAD_LIMIT = 10;
@@ -48,6 +60,7 @@ export const MIME_TYPE_WHITELIST = {
     mp4: 'video/mp4',
     mp4v: 'video/mp4',
     mp3: 'audio/mp3',
+    mxf: 'application/mxf',
     wav: 'audio/wav',
     mpe: 'video/mpeg',
     mpeg: 'video/mpeg',

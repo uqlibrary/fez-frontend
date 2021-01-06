@@ -43,12 +43,12 @@ context('Homepage', () => {
 
     it('Has expected menu items for a researcher', () => {
         cy.visit('/?user=uqresearcher');
-        checkMenuItemCount(12);
+        checkMenuItemCount(13);
     });
 
     it('Has expected menu items for an admin', () => {
         cy.visit('/?user=uqstaff');
-        checkMenuItemCount(21);
+        checkMenuItemCount(23);
     });
 
     it('Has expected menu items for a student without an author account', () => {
@@ -58,24 +58,24 @@ context('Homepage', () => {
 
     it('Has expected menu items for a RHD student', () => {
         cy.visit('/?user=s2222222');
-        checkMenuItemCount(12);
+        checkMenuItemCount(13);
     });
 
     it('Has expected menu items for a Masqueradable staff member', () => {
         cy.visit('/?user=uqmasquerade');
-        checkMenuItemCount(13);
+        checkMenuItemCount(14);
         cy.get('#mainMenu .menu-item-container p').contains('uq.masquerader@example.uq.edu.au');
     });
 
     it('Shows help panel as expected', () => {
         cy.visit('/?user=uqresearcher');
         cy.get('button#help-icon').click();
-        cy.get('span#help-drawer-title').should('be.visible');
-        cy.get('span#help-drawer-title').contains('About these metrics');
-        cy.get('div#help-drawer-button')
-            .find('button')
+        cy.get('[data-testid=help-drawer-title]')
+            .should('be.visible')
+            .contains('About these metrics');
+        cy.get('[data-testid=help-drawer-close]')
             .contains('CLOSE')
             .click();
-        cy.get('span#help-drawer-title').should('not.be.visible');
+        cy.get('[data-testid=help-drawer-title]').should('not.be.visible');
     });
 });

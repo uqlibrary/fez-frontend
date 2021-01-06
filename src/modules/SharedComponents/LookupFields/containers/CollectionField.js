@@ -13,12 +13,10 @@ const mapStateToProps = (state, props) => {
         getOptionLabel: item => item.rek_title,
         ...(!!((props || {}).meta || {}).form
             ? {
-                  defaultValue: itemsList.filter(collection =>
-                      (
-                          (props.input.value.toJS && props.input.value.toJS().map(value => value.id)) ||
-                          props.input.value
-                      ).includes(collection.rek_pid),
-                  ),
+                  defaultValue:
+                      (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
+                      (!!props.input.value && props.input.value) ||
+                      [],
                   error: !!props.meta.error,
                   errorText: props.meta.error || '',
               }
@@ -35,7 +33,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: () => dispatch(actions.collectionsList()),
     ...(!!((props || {}).meta || {}).form
         ? {
-              onChange: item => props.input.onChange(item.map(collection => collection.rek_pid)),
+              onChange: item => props.input.onChange(item),
               onClear: () => props.input.onChange(null),
           }
         : {

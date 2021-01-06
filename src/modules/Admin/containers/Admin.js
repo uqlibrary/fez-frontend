@@ -1,6 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { destroy, reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
+import { destroy, reduxForm, getFormValues, getFormSyncErrors, change } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { withRouter } from 'react-router';
@@ -10,18 +10,19 @@ import { isFileValid } from 'config/validation';
 import {
     DOCUMENT_TYPES_LOOKUP,
     PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_THESIS,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
-import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 import { onSubmit } from '../submitHandler';
 import { identifiersParams, bibliographicParams, authorsParams } from 'modules/Admin/helpers';
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
-    displayAdvisoryStatement: publicationTypeHasAdvisoryStatement(record),
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
@@ -81,13 +82,51 @@ const getInitialFormValues = (recordToView, recordType) => {
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
             filesSection:
                 (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
+            notesSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'notes')) || {},
         },
     };
+};
+
+const onChange = (values, dispatch, props, previousValues) => {
+    if (
+        !!values.get('rek_display_type') &&
+        values.get('rek_display_type') === PUBLICATION_TYPE_THESIS &&
+        !!values.get('adminSection').get('rek_subtype') &&
+        !values.get('bibliographicSection').get('rek_genre_type')
+    ) {
+        dispatch(
+            change(FORM_NAME, 'bibliographicSection.rek_genre_type', values.get('adminSection').get('rek_subtype')),
+        );
+    }
+
+    if (
+        !!values.get('rek_display_type') &&
+        [PUBLICATION_TYPE_CONFERENCE_PAPER, PUBLICATION_TYPE_JOURNAL_ARTICLE].includes(
+            values.get('rek_display_type'),
+        ) &&
+        values.get('bibliographicSection') &&
+        values.get('bibliographicSection').get('fez_matched_journals') &&
+        values.get('bibliographicSection').get('fez_matched_journals').jnl_title &&
+        (!previousValues.get('bibliographicSection') ||
+            !previousValues.get('bibliographicSection').get('fez_matched_journals') ||
+            !previousValues.get('bibliographicSection').get('fez_matched_journals').jnl_title ||
+            previousValues.get('bibliographicSection').get('fez_matched_journals').jnl_title !==
+                values.get('bibliographicSection').get('fez_matched_journals').jnl_title)
+    ) {
+        dispatch(
+            change(
+                FORM_NAME,
+                'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
+                values.get('bibliographicSection').get('fez_matched_journals').jnl_title,
+            ),
+        );
+    }
 };
 
 const PrototypeContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
+    onChange,
     validate,
     destroyOnUnmount: false,
 })(AdminContainer);

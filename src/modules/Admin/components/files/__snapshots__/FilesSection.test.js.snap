@@ -22,6 +22,14 @@ exports[`FilesSection component should render default view for Files on a Data C
       Object {
         "groups": Array [
           Array [
+            "advisoryStatement",
+          ],
+        ],
+        "title": "Advisory statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
             "rek_copyright",
           ],
         ],
@@ -59,39 +67,6 @@ exports[`FilesSection component should render default view for Files on a public
           ],
         ],
         "title": "Advisory statement",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "rek_copyright",
-          ],
-        ],
-        "title": "Copyright agreement",
-      },
-    ]
-  }
-  disabled={false}
-/>
-`;
-
-exports[`FilesSection component should render default view for Files on a publication type that does NOT show advisory statement 1`] = `
-<Section
-  cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
-            "fez_datastream_info",
-          ],
-        ],
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "files",
-          ],
-        ],
-        "title": "Files",
       },
       Object {
         "groups": Array [

@@ -12,24 +12,21 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should load with specified elements', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1);
-        cy.adminEditCheckTabErrorBadge(5);
+        cy.adminEditCheckTabErrorBadge('bibliographic');
+        cy.adminEditCheckTabErrorBadge('files');
     });
 
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-header]').should('have.text', 'Bibliographic');
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
-                cy.get('h3').should('have.text', 'Bibliographic');
-
                 cy.get('h4').should('contain', 'Bibliographic');
 
                 cy.get('[data-testid=rek-rights-input]').should(
@@ -230,13 +227,10 @@ context('Digilib Image admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form >div >div')
-            .get('.StandardCard')
-            .eq(2)
+        cy.get('[data-testid=authors-section-header]').should('have.text', 'Authors');
+        cy.get('[data-testid=authors-section-content]')
             .as('authorDetailsTab')
             .within(() => {
-                cy.get('h3').should('have.text', 'Authors');
-
                 cy.get('.AdminCard')
                     .as('cards')
                     .eq(0)
@@ -247,9 +241,10 @@ context('Digilib Image admin edit', () => {
                             item => item.rek_architect_name
                         );
                         architects.forEach((author, index) => {
-                            cy.get('p')
-                                .eq(index)
-                                .should('have.text', author);
+                            cy.get(`[data-testid=rek-architect-name-list-row-${index}-name-as-published]`).should(
+                                'have.text',
+                                author,
+                            );
                         });
                     });
 
@@ -259,9 +254,10 @@ context('Digilib Image admin edit', () => {
                         cy.get('h4').should('contain', 'Photographers');
                         const authors = record.fez_record_search_key_author.map(item => item.rek_author);
                         authors.forEach((author, index) => {
-                            cy.get('p')
-                                .eq(index)
-                                .should('have.text', author);
+                            cy.get(`[data-testid=rek-author-list-row-${index}-name-as-published]`).should(
+                                'have.text',
+                                author,
+                            );
                         });
                     });
 
@@ -271,9 +267,10 @@ context('Digilib Image admin edit', () => {
                         cy.get('h4').should('contain', 'Other contributors');
                         const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
                         contributors.forEach((contributor, index) => {
-                            cy.get('p')
-                                .eq(index)
-                                .should('have.text', contributor);
+                            cy.get(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`).should(
+                                'have.text',
+                                contributor,
+                            );
                         });
                     });
             });

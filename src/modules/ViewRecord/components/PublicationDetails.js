@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import { default as componentLocale } from 'locale/components';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';

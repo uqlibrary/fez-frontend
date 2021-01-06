@@ -54,6 +54,7 @@ export class OpenAccessIcon extends PureComponent {
                 this.props.openAccessStatusId !== openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
                     ? txt.openAccessLabel.replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId])
                     : txt.labelOpenAccessNoStatus;
+
             return (
                 <Fragment>
                     <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>

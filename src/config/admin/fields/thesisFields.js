@@ -59,19 +59,14 @@ export default {
             groups: [
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],
 };
 
 export const validateThesis = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -89,11 +84,6 @@ export const validateThesis = (
             subjects: summary.subjects,
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {

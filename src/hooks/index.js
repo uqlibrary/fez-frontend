@@ -2,17 +2,10 @@
 import { useState, useCallback } from 'react';
 import { useRecordContext, useAccountContext } from 'context';
 import { publicationTypes } from 'config';
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export const usePublicationSubtype = (displayType = null, isAdmin = false) => {
     const { record } = useRecordContext();
-    return publicationTypes({}, isAdmin)[displayType || record.rek_display_type].subtypes || [];
-};
-
-export const userIsAdmin = () => {
-    const { account } = useAccountContext();
-    return !!account.is_administrator;
+    return (publicationTypes({}, isAdmin)[displayType || record.rek_display_type] || {}).subtypes || [];
 };
 
 export const userIsResearcher = () => {
@@ -47,14 +40,6 @@ export const useConfirmationState = () => {
     return [isOpen, showConfirmation, hideConfirmation];
 };
 
-export const useWidth = () => {
-    const theme = useTheme();
-    const keys = [...theme.breakpoints.keys].reverse();
-    return (
-        keys.reduce((output, key) => {
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const matches = useMediaQuery(theme.breakpoints.up(key));
-            return !output && matches ? key : output;
-        }, null) || 'xs'
-    );
-};
+export { userIsAdmin } from './userIsAdmin';
+export { useRecordsSelector } from './useRecordsSelector';
+export { useWidth } from './useWidth';

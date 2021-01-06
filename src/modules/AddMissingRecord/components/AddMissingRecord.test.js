@@ -1,6 +1,6 @@
 import React from 'react';
 import AddMissingRecord from './AddMissingRecord';
-import * as routes from '../../../config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 function setup(testProps = {}) {
     const props = {
@@ -24,7 +24,7 @@ function setup(testProps = {}) {
 describe('Component AddMissingRecord', () => {
     it('method getStepperIndex should return step [0] and Stepper should render the 1st step', () => {
         const props = {
-            location: { pathname: routes.pathConfig.records.add.find },
+            location: { pathname: pathConfig.records.add.find },
             addRecordStep: () => <span />,
         };
         const wrapper = setup({ ...props });
@@ -35,7 +35,7 @@ describe('Component AddMissingRecord', () => {
     it('method getStepperIndex should return step [1] and Stepper should render the 2nd step', () => {
         const props = {
             rawSearchQuery: 'This is a test',
-            location: { pathname: routes.pathConfig.records.add.results },
+            location: { pathname: pathConfig.records.add.results },
             addRecordStep: () => <span />,
         };
         const wrapper = setup({ ...props });
@@ -46,7 +46,7 @@ describe('Component AddMissingRecord', () => {
     it('should return 0 when landing on invalid location with tokens not equal to 3', () => {
         const props = {
             rawSearchQuery: 'This is a test',
-            location: { pathname: `${routes.pathConfig.records.add.results}/test` },
+            location: { pathname: `${pathConfig.records.add.results}/test` },
             addRecordStep: () => <span />,
         };
         const wrapper = setup({ ...props });
@@ -55,7 +55,7 @@ describe('Component AddMissingRecord', () => {
 
     it('method getStepperIndex should return step [2] and Stepper should render the 3rd step', () => {
         const props = {
-            location: { pathname: routes.pathConfig.records.add.new },
+            location: { pathname: pathConfig.records.add.new },
             addRecordStep: () => <span />,
         };
         const wrapper = setup({ ...props });
@@ -71,12 +71,12 @@ describe('Component AddMissingRecord', () => {
             const props = {
                 rawSearchQuery: null,
                 history: { replace: testReplace },
-                location: { pathname: routes.pathConfig.records.add.results },
-                match: { path: routes.pathConfig.records.add.results },
+                location: { pathname: pathConfig.records.add.results },
+                match: { path: pathConfig.records.add.results },
                 addRecordStep: () => <span />,
             };
             setup({ ...props });
-            expect(testReplace).toBeCalledWith(routes.pathConfig.records.add.find);
+            expect(testReplace).toBeCalledWith(pathConfig.records.add.find);
         },
     );
 });

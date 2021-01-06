@@ -2,7 +2,7 @@ import React from 'react';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
 import { render, WithReduxStore, WithRouter } from 'test-utils';
 import moment from 'moment';
-import * as Hooks from 'hooks';
+import * as Hooks from 'hooks/userIsAdmin';
 
 function setup(testProps = {}) {
     const props = {

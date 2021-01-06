@@ -11,7 +11,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/pages';
-import { routes, validation } from 'config';
+import { pathConfig, validation } from 'config';
 
 export default class GoogleScholar extends PureComponent {
     static propTypes = {
@@ -55,7 +55,7 @@ export default class GoogleScholar extends PureComponent {
     };
 
     _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
+        this.props.history.push(pathConfig.dashboard);
     };
 
     getAlert = ({ submitFailed = false, submitting = false, error, alertLocale = {} }) => {

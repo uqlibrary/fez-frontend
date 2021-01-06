@@ -77,7 +77,6 @@ export default {
                 ['fez_record_search_key_end_date'],
                 ['fez_record_search_key_time_period_start_date'],
                 ['fez_record_search_key_time_period_end_date'],
-                ['additionalNotes'],
             ],
         },
         {
@@ -88,16 +87,12 @@ export default {
                 ['fez_record_search_key_project_id'],
             ],
         },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
-        },
     ],
     ntro: () => [],
 };
 
 export const validateDataCollection = (
-    { bibliographicSection: bs, adminSection: ais, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, adminSection: ais, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -141,10 +136,10 @@ export const validateDataCollection = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...(((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
+        ...((!((ais || {}).fez_record_search_key_license || {}).rek_license && {
+            fez_record_search_key_license: {
+                rek_license: summary.rek_license,
+            },
         }) ||
             {}),
     },
