@@ -273,6 +273,7 @@ export const ContributorForm = ({
                             disabled={disabled || contributor.nameAsPublished.trim().length === 0}
                             required={required}
                             autoComplete="off"
+                            allowFreeText
                             error={
                                 contributor.nameAsPublished.trim().length === 0
                                     ? false

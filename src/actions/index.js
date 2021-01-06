@@ -14,6 +14,7 @@ export * from './fixRecord';
 export * from './incompleteRecords';
 export * from './issnLinks';
 export * from './journals';
+export * from './myEditorialAppointments';
 export * from './newsFeed';
 export * from './orcidSync';
 export * from './publications';

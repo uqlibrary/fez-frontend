@@ -21,6 +21,7 @@ export { default as fileUploadReducer } from './fileUpload';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
 export { default as journalReducer } from './journals';
+export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';
 export { default as myLatestPublicationsReducer } from './myLatestPublications';
 export { default as myTrendingPublicationsReducer } from './myTrendingPublications';
 export { default as newsFeedReducer } from './newsFeed';

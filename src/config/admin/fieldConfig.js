@@ -297,6 +297,7 @@ export default {
                 placeholder: '',
                 required: true,
                 validate: [validation.required],
+                getOptionLabel: option => (!!option && !!option.id && String(option.id)) || '',
             },
         },
         fez_record_search_key_book_title: {

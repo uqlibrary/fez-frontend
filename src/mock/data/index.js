@@ -70,3 +70,7 @@ export { bulkUpdatesList } from './bulkUpdates';
 // Favourite search mock data
 export { default as favouriteSearchList } from './favouriteSearch/favouriteSearchList';
 export { default as favouriteSearchItem } from './favouriteSearch/favouriteSearchItem';
+
+// My editorial appointments mock data
+export { default as myEditorialAppointmentsList } from './myEditorialAppointments/myEditorialAppointmentsList';
+export { default as myEditorialAppointmentItem } from './myEditorialAppointments/myEditorialAppointmentItem';

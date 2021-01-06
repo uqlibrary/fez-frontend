@@ -43,12 +43,12 @@ context('Homepage', () => {
 
     it('Has expected menu items for a researcher', () => {
         cy.visit('/?user=uqresearcher');
-        checkMenuItemCount(12);
+        checkMenuItemCount(13);
     });
 
     it('Has expected menu items for an admin', () => {
         cy.visit('/?user=uqstaff');
-        checkMenuItemCount(22);
+        checkMenuItemCount(23);
     });
 
     it('Has expected menu items for a student without an author account', () => {
@@ -58,12 +58,12 @@ context('Homepage', () => {
 
     it('Has expected menu items for a RHD student', () => {
         cy.visit('/?user=s2222222');
-        checkMenuItemCount(12);
+        checkMenuItemCount(13);
     });
 
     it('Has expected menu items for a Masqueradable staff member', () => {
         cy.visit('/?user=uqmasquerade');
-        checkMenuItemCount(13);
+        checkMenuItemCount(14);
         cy.get('#mainMenu .menu-item-container p').contains('uq.masquerader@example.uq.edu.au');
     });
 

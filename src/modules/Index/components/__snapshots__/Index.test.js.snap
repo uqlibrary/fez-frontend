@@ -1855,6 +1855,7 @@ exports[`Index page should render placeholders 1`] = `
                                                     actions={
                                                       Object {
                                                         "addFavouriteSearch": [Function],
+                                                        "addMyEditorialAppointments": [Function],
                                                         "adminCreate": [Function],
                                                         "adminReset": [Function],
                                                         "adminUpdate": [Function],
@@ -1885,6 +1886,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "createSearchPromise": [Function],
                                                         "deleteAttachedFile": [Function],
                                                         "deleteFavouriteSearchListItem": [Function],
+                                                        "deleteMyEditorialAppointmentsListItem": [Function],
                                                         "deleteRecord": [Function],
                                                         "dismissAppAlert": [Function],
                                                         "exportAuthorPublications": [Function],
@@ -1910,6 +1912,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadFullRecordToClaim": [Function],
                                                         "loadJournal": [Function],
                                                         "loadJournalLookup": [Function],
+                                                        "loadMyEditorialAppointmentsList": [Function],
                                                         "loadNewsFeed": [Function],
                                                         "loadOrcidSyncStatus": [Function],
                                                         "loadPublicationList": [Function],
@@ -1947,6 +1950,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "updateDoi": [Function],
                                                         "updateFavouriteSearchListItem": [Function],
                                                         "updateIncompleteRecord": [Function],
+                                                        "updateMyEditorialAppointmentsListItem": [Function],
                                                       }
                                                     }
                                                     history={
@@ -2000,6 +2004,7 @@ exports[`Index page should render placeholders 1`] = `
                                                       actions={
                                                         Object {
                                                           "addFavouriteSearch": [Function],
+                                                          "addMyEditorialAppointments": [Function],
                                                           "adminCreate": [Function],
                                                           "adminReset": [Function],
                                                           "adminUpdate": [Function],
@@ -2030,6 +2035,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "createSearchPromise": [Function],
                                                           "deleteAttachedFile": [Function],
                                                           "deleteFavouriteSearchListItem": [Function],
+                                                          "deleteMyEditorialAppointmentsListItem": [Function],
                                                           "deleteRecord": [Function],
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
@@ -2055,6 +2061,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadFullRecordToClaim": [Function],
                                                           "loadJournal": [Function],
                                                           "loadJournalLookup": [Function],
+                                                          "loadMyEditorialAppointmentsList": [Function],
                                                           "loadNewsFeed": [Function],
                                                           "loadOrcidSyncStatus": [Function],
                                                           "loadPublicationList": [Function],
@@ -2092,6 +2099,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "updateDoi": [Function],
                                                           "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
+                                                          "updateMyEditorialAppointmentsListItem": [Function],
                                                         }
                                                       }
                                                       classes={
@@ -3292,6 +3300,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               actions={
                                                                 Object {
                                                                   "addFavouriteSearch": [Function],
+                                                                  "addMyEditorialAppointments": [Function],
                                                                   "adminCreate": [Function],
                                                                   "adminReset": [Function],
                                                                   "adminUpdate": [Function],
@@ -3322,6 +3331,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "createSearchPromise": [Function],
                                                                   "deleteAttachedFile": [Function],
                                                                   "deleteFavouriteSearchListItem": [Function],
+                                                                  "deleteMyEditorialAppointmentsListItem": [Function],
                                                                   "deleteRecord": [Function],
                                                                   "dismissAppAlert": [Function],
                                                                   "exportAuthorPublications": [Function],
@@ -3347,6 +3357,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadFullRecordToClaim": [Function],
                                                                   "loadJournal": [Function],
                                                                   "loadJournalLookup": [Function],
+                                                                  "loadMyEditorialAppointmentsList": [Function],
                                                                   "loadNewsFeed": [Function],
                                                                   "loadOrcidSyncStatus": [Function],
                                                                   "loadPublicationList": [Function],
@@ -3384,6 +3395,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "updateDoi": [Function],
                                                                   "updateFavouriteSearchListItem": [Function],
                                                                   "updateIncompleteRecord": [Function],
+                                                                  "updateMyEditorialAppointmentsListItem": [Function],
                                                                 }
                                                               }
                                                             >
@@ -3391,6 +3403,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 actions={
                                                                   Object {
                                                                     "addFavouriteSearch": [Function],
+                                                                    "addMyEditorialAppointments": [Function],
                                                                     "adminCreate": [Function],
                                                                     "adminReset": [Function],
                                                                     "adminUpdate": [Function],
@@ -3421,6 +3434,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "createSearchPromise": [Function],
                                                                     "deleteAttachedFile": [Function],
                                                                     "deleteFavouriteSearchListItem": [Function],
+                                                                    "deleteMyEditorialAppointmentsListItem": [Function],
                                                                     "deleteRecord": [Function],
                                                                     "dismissAppAlert": [Function],
                                                                     "exportAuthorPublications": [Function],
@@ -3446,6 +3460,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadFullRecordToClaim": [Function],
                                                                     "loadJournal": [Function],
                                                                     "loadJournalLookup": [Function],
+                                                                    "loadMyEditorialAppointmentsList": [Function],
                                                                     "loadNewsFeed": [Function],
                                                                     "loadOrcidSyncStatus": [Function],
                                                                     "loadPublicationList": [Function],
@@ -3483,6 +3498,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "updateDoi": [Function],
                                                                     "updateFavouriteSearchListItem": [Function],
                                                                     "updateIncompleteRecord": [Function],
+                                                                    "updateMyEditorialAppointmentsListItem": [Function],
                                                                   }
                                                                 }
                                                                 classes={

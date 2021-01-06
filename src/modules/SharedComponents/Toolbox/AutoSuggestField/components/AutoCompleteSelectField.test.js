@@ -97,4 +97,40 @@ describe('AutoCompleteSelectField component', () => {
 
         expect(getByText('Please select some value')).toBeInTheDocument();
     });
+
+    it('should clear the input value on clicking "Clear" button ', () => {
+        const onClearFn = jest.fn();
+        const { getByTestId, getByTitle } = setup({
+            clearable: true,
+            onClear: onClearFn,
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'cherry' } });
+        });
+
+        act(() => {
+            fireEvent.click(getByTitle('Clear'));
+        });
+
+        expect(onClearFn).toBeCalled();
+    });
+
+    it('should clear the input value on deleting input value by keyboard', () => {
+        const onClearFn = jest.fn();
+        const { getByTestId } = setup({
+            clearOnInputClear: true,
+            onClear: onClearFn,
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: 'cherry' } });
+        });
+
+        act(() => {
+            fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: '' } });
+        });
+
+        expect(onClearFn).toBeCalled();
+    });
 });

@@ -332,3 +332,7 @@ export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
 export const JOURNAL_API = ({ id }) => ({
     apiUrl: `journals/${id}`,
 });
+
+export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
+    apiUrl: `editorial-appointment${!!id ? `/${id}` : ''}`,
+});
