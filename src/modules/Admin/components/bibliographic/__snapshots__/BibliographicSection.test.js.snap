@@ -18,6 +18,7 @@ exports[`BibliographicSection component should render default view 1`] = `
             "languages",
           ],
           Array [
+            "fez_matched_journals",
             "fez_record_search_key_journal_name",
           ],
         ],
@@ -215,6 +216,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
             "languages",
           ],
           Array [
+            "fez_matched_journals",
             "fez_record_search_key_journal_name",
           ],
         ],
