@@ -1,18 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { hasContent as tabbedCardHasContent } from 'modules/SharedComponents/Toolbox/TabbedCard/components/TabbedCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { TabbedCard } from 'modules/SharedComponents/Toolbox/TabbedCard';
-import { hasContent as tabbedCardHasContent } from 'modules/SharedComponents/Toolbox/TabbedCard/components/TabbedCard';
 
 import pagesLocale from 'locale/pages';
+import { CREATIVE_COMMONS_LICENCES, getCreativeCommonsUrl } from 'config/general';
 const txt = pagesLocale.pages.journal.view;
+
+export const renderBoolean = isTrue => (isTrue ? txt.booleanTrue : txt.booleanFalse);
+export const renderDateTime = (dateTimeString, format) =>
+    moment(dateTimeString).isValid && moment(dateTimeString).format(format);
+export const renderExtLink = (key, href, title, text) => <ExternalLink {...{ key, href, title }}>{text}</ExternalLink>;
+
+export const getLicenceAttrs = ({ by, nd, nc, sa }) => {
+    const conditions = [];
+    by && conditions.push('by');
+    nd && conditions.push('nd');
+    nc && conditions.push('nc');
+    sa && conditions.push('sa');
+    const licence = conditions.join('-');
+    return [`cc-${licence}`, getCreativeCommonsUrl(licence), CREATIVE_COMMONS_LICENCES[licence]];
+};
+
+export const renderLicence = (className, url, text) => (
+    <ExternalLink href={url} id="journal-oa-licence" data-testid="journal-oa-licence">
+        <div data-testid="journal-oa-licence-lookup" style={{ paddingRight: '1rem' }}>
+            {text}
+        </div>
+        <div className={`fez-icon license ${className}`} />
+    </ExternalLink>
+);
 
 /**
  * Common renderer for a row of data. It may be a single piece of data, or an array of multiple pieces of data.
@@ -28,7 +55,7 @@ export const renderJournalDetail = (detail, index, breakpoints) =>
             {detail.title && (
                 <Grid item component="span" {...breakpoints.title} data-testid={`${index}-label`} id={`${index}-label`}>
                     <Typography component="span" variant="subtitle2">
-                        {txt.titles[detail.title] || detail.title}
+                        {detail.title}
                     </Typography>
                 </Grid>
             )}
@@ -38,14 +65,8 @@ export const renderJournalDetail = (detail, index, breakpoints) =>
         </Grid>
     );
 
-export const titleToId = (title = '') =>
-    `${title}`
-        .replace(/[^a-z0-9]/gi, '')
-        .toLowerCase()
-        .replace(/ /g, '-');
-
 const renderSingleColumn = (detailColumn, index, id) =>
-    renderJournalDetail(detailColumn, `${id}-${titleToId(detailColumn.title) || `field${index}`}`, {
+    renderJournalDetail(detailColumn, `${id}-${detailColumn.id || `field${index}`}`, {
         title: { xs: 12, sm: 6, md: 3 },
         data: { xs: 'auto' },
     });
@@ -67,7 +88,7 @@ export const renderMultiColumn = (detailRow, index, id) => {
                         <Grid item xs={12} sm key={`${id}-row${index}-column${subIndex}-grid`}>
                             {renderJournalDetail(
                                 detailColumn,
-                                `${id}-${titleToId(detailColumn.title) || `row${index}-column${subIndex}`}`,
+                                `${id}-${detailColumn.id || `row${index}-column${subIndex}`}`,
                                 {
                                     title: { xs: 12, sm: 6 },
                                     data: { xs: 'auto' },
@@ -118,27 +139,27 @@ export const JournalView = ({
         return <InlineLoader message={txt.loadingMessage} loaderId="journal-loading" />;
     } else {
         return (
-            <StandardPage standardPageId="journal-view" title={journalTitle}>
+            <StandardPage standardPageId={txt.pageId} title={journalTitle}>
                 <Grid container spacing={2}>
                     {basicDetails && (
                         <Grid item xs={12}>
-                            <StandardCard standardCardId="journal-basic-details" noHeader>
-                                {renderSectionContents(basicDetails, 'journal-basic-details')}
+                            <StandardCard standardCardId={txt.entries.basicSection.id} noHeader>
+                                {renderSectionContents(basicDetails, txt.entries.basicSection.id)}
                             </StandardCard>
                         </Grid>
                     )}
                     {oaDetails && (
                         <Grid item xs={12}>
-                            <StandardCard standardCardId="journal-open-access" title={txt.titles.oaSection}>
-                                {renderSectionContents(oaDetails, 'journal-open-access')}
+                            <StandardCard standardCardId={txt.entries.oaSection.id} title={txt.entries.oaSection.title}>
+                                {renderSectionContents(oaDetails, txt.entries.oaSection.id)}
                             </StandardCard>
                         </Grid>
                     )}
                     {jscieDetails && tabbedCardHasContent(jscieDetails.common, jscieDetails.tabs) && (
                         <Grid item xs={12}>
                             <TabbedCard
-                                cardId="journal-scie"
-                                cardTitle={txt.titles.scieSection}
+                                cardId={txt.entries.scieSection.id}
+                                cardTitle={txt.entries.scieSection.title}
                                 {...jscieDetails}
                                 contentRenderer={renderSectionContents}
                             />
@@ -147,8 +168,8 @@ export const JournalView = ({
                     {jssciDetails && tabbedCardHasContent(jssciDetails.common, jssciDetails.tabs) && (
                         <Grid item xs={12}>
                             <TabbedCard
-                                cardId="journal-ssci"
-                                cardTitle={txt.titles.ssciSection}
+                                cardId={txt.entries.ssciSection.id}
+                                cardTitle={txt.entries.ssciSection.title}
                                 {...jssciDetails}
                                 contentRenderer={renderSectionContents}
                             />
@@ -157,8 +178,8 @@ export const JournalView = ({
                     {citeScoreDetails && tabbedCardHasContent(citeScoreDetails.common, citeScoreDetails.tabs) && (
                         <Grid item xs={12}>
                             <TabbedCard
-                                cardId="journal-citescore"
-                                cardTitle={txt.titles.citeScoreSection}
+                                cardId={txt.entries.citeScoreSection.id}
+                                cardTitle={txt.entries.citeScoreSection.title}
                                 {...citeScoreDetails}
                                 contentRenderer={renderSectionContents}
                             />
@@ -166,15 +187,21 @@ export const JournalView = ({
                     )}
                     {indexDetails && (
                         <Grid item xs={12}>
-                            <StandardCard standardCardId="journal-indexed-in" title={txt.titles.indexSection}>
-                                {renderSectionContents(indexDetails, 'journal-indexed-in')}
+                            <StandardCard
+                                standardCardId={txt.entries.indexSection.id}
+                                title={txt.entries.indexSection.title}
+                            >
+                                {renderSectionContents(indexDetails, txt.entries.indexSection.id)}
                             </StandardCard>
                         </Grid>
                     )}
                     {listedDetails && (
                         <Grid item xs={12}>
-                            <StandardCard standardCardId="journal-listed-in" title={txt.titles.listedSection}>
-                                {renderSectionContents(listedDetails, 'journal-listed-in')}
+                            <StandardCard
+                                standardCardId={txt.entries.listedSection.title}
+                                title={txt.entries.listedSection.title}
+                            >
+                                {renderSectionContents(listedDetails, txt.entries.listedSection.id)}
                             </StandardCard>
                         </Grid>
                     )}

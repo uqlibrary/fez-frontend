@@ -1135,66 +1135,231 @@ export default {
         journal: {
             view: {
                 title: 'Journal details',
+                pageId: 'journal-view',
                 loadingMessage: 'Loading journal data',
                 loadFailureAlert: {
                     title: 'Loading failed',
                     message: 'Unable to load journal details',
                     type: 'error_outline',
                 },
-                titles: {
-                    ulrAbbrevTitle: 'ISO abbreviated title',
-                    issns: 'ISSN(s)',
-                    eissns: 'eISSN(s)',
-                    publisherWithCountry: 'Publisher',
-                    oaSection: 'Open Access (Directory of Open Access Journals - DOAJ)',
-                    urlRefereed: 'Refereed',
-                    ulrStartYear: 'First year of publication',
-                    ulrFrequency: 'Frequency of publication',
-                    ulrFormats: 'Journal formats available',
-                    ulrOpenAccessUrl: 'Journal URL',
-                    ulrDescription: 'Description',
-                    ulrTitleLink: 'View journal in Ulrichs',
-                    ulrOpenAccess: 'Open access',
-                    doajApcAvgPrice: 'Article processing charges',
-                    licence: 'Journal licence',
-                    doajSeal: 'DOAJ seal',
-                    doajLastUpdated: 'Last updated',
-                    doajHomepageUrl: 'View in DOAJ',
-                    srmJournalLink: 'Sherpa Romeo open access and archiving policies',
-                    scieSection: 'Clarivate Journal Citation Reports - Science Citation Index',
-                    ssciSection: 'Clarivate Journal Citation Reports - Social Science Citation Index',
-                    jcrAbbrevTitle: 'Abbreviated title',
-                    jcrImpactFactor: 'Impact factor',
-                    jcr5yrImpactFactor: '5 year impact factor',
-                    jcrSourceDate: 'JCR version',
-                    jcrCategoryRanking: 'Ranking',
-                    jcrCategoryQuartile: 'Quartile',
-                    siteScoreSection: 'Elsevier CiteScore',
-                    citeScoreSourceDate: 'CiteScore version',
-                    citeScoreAsjcCode: 'Scopus ASJC Code',
-                    citeScoreAsjcCodeSiteScore: 'CiteScore',
-                    citeScoreAsjcCodeQuartile: 'Quartile',
-                    citeScoreAsjcCodeRank: 'Ranked',
-                    citeScoreAsjcCodeTop10Pct: 'Top 10% (CiteScore Percentile)',
-                    citeScoreAsjcCodePercentile: 'Percentile',
-                    citeScoreAsjcCodePercentCited: 'Percent Cited',
-                    citeScoreAsjcCodeSnip: 'SNIP',
-                    citeScoreAsjcCodeSjr: 'SJR',
-                    indexSection: 'Indexed in',
-                    wosCategoryAhci: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
-                    wosCategoryScie: 'Science Citation Index Expanded - WOS Subject Categories',
-                    wosCategorySsci: 'Social Science Citation Index - WOS Subject Categories',
-                    wosCategoryEsci: 'Emerging Sources Citation Index - WOS Subject Categories',
-                    hasScopus: 'Scopus',
-                    hasPubmed: 'Pubmed',
-                    listedSection: 'Listed in',
-                    adbcRating: 'Australian Business Deans Council journal quality list',
-                    adbcForCode: 'Field of Research Codes',
-                    adbcSourceDate: 'Current list',
-                    cwtsSourceDate: 'CWTS Leiden Ranking',
-                    hasEra: 'Excellence in Research for Australia (ERA)',
-                    eraForCode: 'ERA Years with Field of Research codes',
-                    natureIndexSourceDate: 'Nature Index',
+                booleanTrue: 'Yes',
+                booleanFalse: 'No',
+                entries: {
+                    basicSection: {
+                        id: 'journal-basic-details',
+                    },
+                    ulrAbbrevTitle: {
+                        title: 'ISO abbreviated title',
+                        id: 'ulr-abbrev-title',
+                    },
+                    issns: {
+                        title: 'ISSN(s)',
+                        id: 'issns',
+                    },
+                    eissns: {
+                        title: 'eISSN(s)',
+                        id: 'eissns',
+                    },
+                    publisherWithCountry: {
+                        title: 'Publisher',
+                        id: 'publisher-with-country',
+                    },
+                    oaSection: {
+                        title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                        id: 'journal-open-access',
+                    },
+                    urlRefereed: {
+                        title: 'Refereed',
+                        id: 'url-refereed',
+                    },
+                    ulrStartYear: {
+                        title: 'First year of publication',
+                        id: 'ulr-start-year',
+                    },
+                    ulrFrequency: {
+                        title: 'Frequency of publication',
+                        id: 'ulr-frequency',
+                    },
+                    ulrFormats: {
+                        title: 'Journal formats available',
+                        id: 'ulr-formats',
+                    },
+                    ulrOpenAccessUrl: {
+                        title: 'Journal URL',
+                        id: 'ulr-open-access-url',
+                    },
+                    ulrDescription: {
+                        title: 'Description',
+                        id: 'ulr-description',
+                    },
+                    ulrTitleLink: {
+                        title: 'View journal in Ulrichs',
+                        id: 'ulr-title-link',
+                    },
+                    ulrOpenAccess: {
+                        title: 'Open access',
+                        id: 'ulr-open-access',
+                    },
+                    doajApcAvgPrice: {
+                        title: 'Article processing charges',
+                        id: 'doaj-apc-avg-price',
+                    },
+                    licence: {
+                        title: 'Journal licence',
+                        id: 'licence',
+                    },
+                    doajSeal: {
+                        title: 'DOAJ seal',
+                        id: 'doaj-seal',
+                    },
+                    doajLastUpdated: {
+                        title: 'Last updated',
+                        id: 'doaj-last-updated',
+                    },
+                    doajHomepageUrl: {
+                        title: 'View in DOAJ',
+                        id: 'doaj-homepage-url',
+                    },
+                    srmJournalLink: {
+                        title: 'Sherpa Romeo open access and archiving policies',
+                        id: 'srm-journal-link',
+                    },
+                    scieSection: {
+                        title: 'Clarivate Journal Citation Reports - Science Citation Index',
+                        id: 'journal-scie',
+                    },
+                    ssciSection: {
+                        title: 'Clarivate Journal Citation Reports - Social Science Citation Index',
+                        id: 'journal-ssci',
+                    },
+                    jcrAbbrevTitle: {
+                        title: 'Abbreviated title',
+                        id: 'jcr-abbrev-title',
+                    },
+                    jcrImpactFactor: {
+                        title: 'Impact factor',
+                        id: 'jcr-impact-factor',
+                    },
+                    jcr5yrImpactFactor: {
+                        title: '5 year impact factor',
+                        id: 'jcr5yrImpactFactor',
+                    },
+                    jcrSourceDate: {
+                        title: 'JCR version',
+                        id: 'jcr-source-date',
+                    },
+                    jcrCategoryRanking: {
+                        title: 'Ranking',
+                        id: 'jcr-category-ranking',
+                    },
+                    jcrCategoryQuartile: {
+                        title: 'Quartile',
+                        id: 'jcr-category-quartile',
+                    },
+                    citeScoreSection: {
+                        title: 'Elsevier CiteScore',
+                        id: 'journal-cite-score',
+                    },
+                    citeScoreSourceDate: {
+                        title: 'CiteScore version',
+                        id: 'cite-score-source-date',
+                    },
+                    citeScoreAsjcCode: {
+                        title: 'Scopus ASJC Code',
+                        id: 'cite-score-asjc-code',
+                    },
+                    citeScoreAsjcCodeCiteScore: {
+                        title: 'CiteScore',
+                        id: 'cite-score-asjc-code-cite-score',
+                    },
+                    citeScoreAsjcCodeQuartile: {
+                        title: 'Quartile',
+                        id: 'cite-score-asjc-code-quartile',
+                    },
+                    citeScoreAsjcCodeRank: {
+                        title: 'Ranked',
+                        id: 'cite-score-asjc-code-rank',
+                    },
+                    citeScoreAsjcCodeTop10Pct: {
+                        title: 'Top 10% (CiteScore Percentile)',
+                        id: 'cite-score-asjc-code-top-10-percentile',
+                    },
+                    citeScoreAsjcCodePercentile: {
+                        title: 'Percentile',
+                        id: 'cite-score-asjc-code-percentile',
+                    },
+                    citeScoreAsjcCodePercentCited: {
+                        title: 'Percent Cited',
+                        id: 'cite-score-asjc-code-percent-cited',
+                    },
+                    citeScoreAsjcCodeSnip: {
+                        title: 'SNIP',
+                        id: 'cite-score-asjc-code-snip',
+                    },
+                    citeScoreAsjcCodeSjr: {
+                        title: 'SJR',
+                        id: 'cite-score-asjc-code-sjr',
+                    },
+                    indexSection: {
+                        title: 'Indexed in',
+                        id: 'journal-indexed-in',
+                    },
+                    wosCategoryAhci: {
+                        title: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
+                        id: 'wos-category-ahci',
+                    },
+                    wosCategoryScie: {
+                        title: 'Science Citation Index Expanded - WOS Subject Categories',
+                        id: 'wos-category-scie',
+                    },
+                    wosCategorySsci: {
+                        title: 'Social Science Citation Index - WOS Subject Categories',
+                        id: 'wos-category-ssci',
+                    },
+                    wosCategoryEsci: {
+                        title: 'Emerging Sources Citation Index - WOS Subject Categories',
+                        id: 'wos-category-esci',
+                    },
+                    hasScopus: {
+                        title: 'Scopus',
+                        id: 'has-scopus',
+                    },
+                    hasPubmed: {
+                        title: 'Pubmed',
+                        id: 'has-pubmed',
+                    },
+                    listedSection: {
+                        title: 'Listed in',
+                        id: 'journal-listed-in',
+                    },
+                    adbcRating: {
+                        title: 'Australian Business Deans Council journal quality list',
+                        id: 'adbc-rating',
+                    },
+                    adbcForCode: {
+                        title: 'Field of Research Codes',
+                        id: 'adbc-for-code',
+                    },
+                    adbcSourceDate: {
+                        title: 'Current list',
+                        id: 'adbc-source-date',
+                    },
+                    cwtsSourceDate: {
+                        title: 'CWTS Leiden Ranking',
+                        id: 'cwts-source-date',
+                    },
+                    hasEra: {
+                        title: 'Excellence in Research for Australia (ERA)',
+                        id: 'has-era',
+                    },
+                    eraForCode: {
+                        title: 'ERA Years with Field of Research codes',
+                        id: 'era-for-code',
+                    },
+                    natureIndexSourceDate: {
+                        title: 'Nature Index',
+                        id: 'nature-index-source-date',
+                    },
                 },
                 links: {
                     ulrOpenAccessUrl: {

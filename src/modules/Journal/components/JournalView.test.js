@@ -3,7 +3,18 @@ import { Router } from 'react-router-dom';
 import { rtlRender } from 'test-utils';
 import { createMemoryHistory } from 'history';
 
-import JournalView, { renderSectionContents, renderJournalDetail, renderMultiColumn } from './JournalView';
+import JournalView, {
+    getLicenceAttrs,
+    renderBoolean,
+    renderDateTime,
+    renderExtLink,
+    renderJournalDetail,
+    renderLicence,
+    renderMultiColumn,
+    renderSectionContents,
+} from './JournalView';
+
+import { CREATIVE_COMMONS_LICENCES, getCreativeCommonsUrl } from 'config/general';
 
 const history = createMemoryHistory();
 const testFn = jest.fn();
@@ -52,19 +63,19 @@ describe('JournalView Component', () => {
     it('renders loaded state', () => {
         const { getByTestId } = setup({
             journalDetailsLoaded: true,
-            basicDetails: [{ title: 'Test title 1', data: 'test data 1' }],
-            oaDetails: [{ title: 'Test title 2', data: 'test data 2' }],
+            basicDetails: [{ title: 'Test title 1', data: 'test data 1', id: 'testtitle1' }],
+            oaDetails: [{ title: 'Test title 2', data: 'test data 2', id: 'testtitle2' }],
             jscieDetails: {
-                tabs: [{ content: [{ title: 'Test title 3', data: 'test data 3' }] }],
+                tabs: [{ content: [{ title: 'Test title 3', data: 'test data 3', id: 'testtitle3' }] }],
             },
             jssciDetails: {
-                tabs: [{ content: [{ title: 'Test title 4', data: 'test data 4' }] }],
+                tabs: [{ content: [{ title: 'Test title 4', data: 'test data 4', id: 'testtitle4' }] }],
             },
             citeScoreDetails: {
-                tabs: [{ content: [{ title: 'Test title 5', data: 'test data 5' }] }],
+                tabs: [{ content: [{ title: 'Test title 5', data: 'test data 5', id: 'testtitle5' }] }],
             },
-            indexDetails: [{ title: 'Test title 6', data: 'test data 6' }],
-            listedDetails: [{ title: 'Test title 7', data: 'test data 7' }],
+            indexDetails: [{ title: 'Test title 6', data: 'test data 6', id: 'testtitle6' }],
+            listedDetails: [{ title: 'Test title 7', data: 'test data 7', id: 'testtitle7' }],
         });
         expect(getByTestId('journal-view')).toBeInTheDocument();
         expect(getByTestId('journal-basic-details-testtitle1-label')).toHaveTextContent('Test title 1');
@@ -75,8 +86,8 @@ describe('JournalView Component', () => {
         expect(getByTestId('journal-scie-tab0-testtitle3')).toHaveTextContent('test data 3');
         expect(getByTestId('journal-ssci-tab0-testtitle4-label')).toHaveTextContent('Test title 4');
         expect(getByTestId('journal-ssci-tab0-testtitle4')).toHaveTextContent('test data 4');
-        expect(getByTestId('journal-citescore-tab0-testtitle5-label')).toHaveTextContent('Test title 5');
-        expect(getByTestId('journal-citescore-tab0-testtitle5')).toHaveTextContent('test data 5');
+        expect(getByTestId('journal-cite-score-tab0-testtitle5-label')).toHaveTextContent('Test title 5');
+        expect(getByTestId('journal-cite-score-tab0-testtitle5')).toHaveTextContent('test data 5');
         expect(getByTestId('journal-indexed-in-testtitle6-label')).toHaveTextContent('Test title 6');
         expect(getByTestId('journal-indexed-in-testtitle6')).toHaveTextContent('test data 6');
         expect(getByTestId('journal-listed-in-testtitle7-label')).toHaveTextContent('Test title 7');
@@ -86,7 +97,10 @@ describe('JournalView Component', () => {
     describe('helper for rendering sections', () => {
         it('handles a single column row', () => {
             const { getByTestId } = rtlRender(
-                renderSectionContents([{ title: 'Test title', data: 'test data' }], 'journal-basic-details'),
+                renderSectionContents(
+                    [{ title: 'Test title', data: 'test data', id: 'testtitle' }],
+                    'journal-basic-details',
+                ),
             );
             expect(getByTestId('journal-basic-details-testtitle')).toBeInTheDocument();
             expect(getByTestId('journal-basic-details-testtitle')).toHaveTextContent('test data');
@@ -102,8 +116,8 @@ describe('JournalView Component', () => {
                 renderSectionContents(
                     [
                         [
-                            { title: 'Test title 1', data: 'test data 1' },
-                            { title: 'Test title 2', data: 'test data 2' },
+                            { title: 'Test title 1', data: 'test data 1', id: 'testtitle1' },
+                            { title: 'Test title 2', data: 'test data 2', id: 'testtitle2' },
                         ],
                     ],
                     'journal-basic-details',
@@ -118,7 +132,7 @@ describe('JournalView Component', () => {
         it('handles rows with missing title or data in a column', () => {
             const { getByTestId, queryByTestId } = rtlRender(
                 renderSectionContents(
-                    [[{ data: 'test data 1' }, { title: 'Test title 2', data: '' }]],
+                    [[{ data: 'test data 1' }, { title: 'Test title 2', data: '', id: 'testtitle2' }]],
                     'journal-basic-details',
                 ),
             );
@@ -130,12 +144,16 @@ describe('JournalView Component', () => {
 
     describe('helper for rendering a multi-column row', () => {
         it('handles a column that has empty data', () => {
-            expect(renderMultiColumn([{ title: 'Test title', data: '' }])).toEqual('');
+            expect(renderMultiColumn([{ title: 'Test title', data: '', id: 'testtitle' }])).toEqual('');
         });
 
         it('handles a column that has an array of data', () => {
             const { getByTestId } = rtlRender(
-                renderMultiColumn([{ title: 'Test title', data: ['test', 'data'] }], 0, 'journal-basic-details'),
+                renderMultiColumn(
+                    [{ title: 'Test title', data: ['test', 'data'], id: 'testtitle' }],
+                    0,
+                    'journal-basic-details',
+                ),
             );
             expect(getByTestId('journal-basic-details-testtitle')).toHaveTextContent('testdata');
         });
@@ -143,7 +161,7 @@ describe('JournalView Component', () => {
         it('renders test IDs for columns without titles', () => {
             const { getByTestId } = rtlRender(
                 renderMultiColumn(
-                    [{ title: 'Test title 1', data: 'test data 1' }, { data: 'test data 2' }],
+                    [{ title: 'Test title 1', data: 'test data 1', id: 'testtitle1' }, { data: 'test data 2' }],
                     0,
                     'journal-basic-details',
                 ),
@@ -159,6 +177,7 @@ describe('JournalView Component', () => {
                     {
                         title: 'Test title',
                         data: [<div key="part1">Hello</div>, ', ', <div key="part2">World!</div>],
+                        id: 'testtitle',
                     },
                     'journal-basic-details-testtitle',
                     {
@@ -170,5 +189,35 @@ describe('JournalView Component', () => {
             expect(getByTestId('journal-basic-details-testtitle')).toBeInTheDocument();
             expect(getByTestId('journal-basic-details-testtitle')).toHaveTextContent('Hello, World!');
         });
+    });
+
+    it('has a helper to render booleans', () => {
+        expect(renderBoolean(true)).toBe('Yes');
+        expect(renderBoolean(false)).toBe('No');
+    });
+
+    it('has a helper to render dateTime', () => {
+        expect(renderDateTime('2020-02-20', 'YYYY')).toBe('2020');
+    });
+
+    it('has a helper to render an external link', () => {
+        const { getByText } = rtlRender(renderExtLink('test-key-1', 'https://example.com/', 'Link title', 'Example'));
+        expect(getByText('Example')).toHaveAttribute('href', 'https://example.com/');
+        expect(getByText('Example')).toHaveAttribute('title', 'Link title');
+        expect(getByText('Example')).toHaveAttribute('target', '_blank');
+    });
+
+    it('has a helper to get licence combination', () => {
+        expect(getLicenceAttrs({ by: true, nd: true, nc: true, sa: true })).toStrictEqual([
+            'cc-by-nd-nc-sa',
+            getCreativeCommonsUrl('by-nd-nc-sa'),
+            CREATIVE_COMMONS_LICENCES['by-nd-nc-sa'],
+        ]);
+    });
+
+    it('has helper to render a licence', () => {
+        const { getByText, getByTestId } = rtlRender(renderLicence('cc-by-nc', 'https://example.com/', 'Example'));
+        expect(getByTestId('journal-oa-licence')).toHaveAttribute('href', 'https://example.com/');
+        expect(getByText('Example')).toHaveAttribute('data-testid', 'journal-oa-licence-lookup');
     });
 });
