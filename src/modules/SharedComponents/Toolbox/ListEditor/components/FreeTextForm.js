@@ -32,6 +32,7 @@ export const FreeTextForm = ({
     required,
     itemSelectedToEdit,
     listEditorId,
+    onSubmit,
 }) => {
     const classes = useStyles();
     const [item, setItem] = useState(itemSelectedToEdit || '');
@@ -59,7 +60,7 @@ export const FreeTextForm = ({
         }
 
         // pass on the selected item
-        onAdd(item);
+        !!onAdd ? onAdd(item) : onSubmit([item]);
         setItemSubmitted(true);
     };
 
@@ -108,7 +109,7 @@ export const FreeTextForm = ({
 };
 
 FreeTextForm.propTypes = {
-    onAdd: PropTypes.func.isRequired,
+    onAdd: PropTypes.func,
     isValid: PropTypes.func,
     locale: PropTypes.object,
     disabled: PropTypes.bool,
@@ -118,6 +119,7 @@ FreeTextForm.propTypes = {
     required: PropTypes.bool,
     itemSelectedToEdit: PropTypes.any,
     listEditorId: PropTypes.string,
+    onSubmit: PropTypes.func,
 };
 
 FreeTextForm.defaultProps = {
