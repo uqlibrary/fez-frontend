@@ -207,72 +207,72 @@ const getOADetails = journalDetails => [
     },
 ];
 
-const getClarivateDetails = (journalDetails, slugPiece) => ({
-    common:
-        (journalDetails[`fez_journal_jcr_${slugPiece}`] && [
-            {
-                ...txt.entries.jcrAbbrevTitle,
-                data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_abbrev_title`],
-            },
-            [
+const getClarivateDetails = (journalDetails, indexType) => {
+    const clarivateDetails = journalDetails[`fez_journal_jcr_${indexType}`];
+    const subKeyPrefix = `jnl_jcr_${indexType}`;
+    const categoryKey = `fez_journal_jcr_${indexType}_category`;
+    return {
+        common:
+            (clarivateDetails && [
                 {
-                    ...txt.entries.jcrImpactFactor,
-                    data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_impact_factor`],
+                    ...txt.entries.jcrAbbrevTitle,
+                    data: clarivateDetails[`${subKeyPrefix}_abbrev_title`],
                 },
-                {
-                    ...txt.entries.jcr5yrImpactFactor,
-                    data: journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_5yr_impact_factor`],
-                },
-            ],
-            {
-                ...txt.entries.jcrSourceDate,
-                data:
-                    journalDetails[`fez_journal_jcr_${slugPiece}`] &&
-                    renderDateTime(
-                        journalDetails[`fez_journal_jcr_${slugPiece}`][`jnl_jcr_${slugPiece}_source_date`],
-                        'YYYY',
-                    ),
-            },
-            [
-                {
-                    data: renderExtLink(
-                        null,
-                        txt.links.jcrHomePage.href,
-                        txt.links.jcrHomePage.title,
-                        txt.links.jcrHomePage.text,
-                    ),
-                },
-                {
-                    data: renderExtLink(
-                        null,
-                        `${txt.links.jcrMoreInfo.linkPrefix}${slugPiece}/`,
-                        txt.links.jcrMoreInfo.title,
-                        `${txt.links.jcrMoreInfo.textPrefix} ${slugPiece.toUpperCase()}`,
-                    ),
-                },
-            ],
-        ]) ||
-        [],
-    tabs:
-        (journalDetails[`fez_journal_jcr_${slugPiece}`] &&
-            Array.isArray(journalDetails[`fez_journal_jcr_${slugPiece}`][`fez_journal_jcr_${slugPiece}_category`]) &&
-            journalDetails[`fez_journal_jcr_${slugPiece}`][`fez_journal_jcr_${slugPiece}_category`].map(category => ({
-                title: category[`jnl_jcr_${slugPiece}_category_description`],
-                content: [
-                    [
-                        {
-                            ...txt.entries.jcrCategoryRanking,
-                            data: category[`jnl_jcr_${slugPiece}_category_ranking`],
-                        },
-                        {
-                            ...txt.entries.jcrCategoryQuartile,
-                            data: category[`jnl_jcr_${slugPiece}_category_quartile`],
-                        },
-                    ],
+                [
+                    {
+                        ...txt.entries.jcrImpactFactor,
+                        data: clarivateDetails[`${subKeyPrefix}_impact_factor`],
+                    },
+                    {
+                        ...txt.entries.jcr5yrImpactFactor,
+                        data: clarivateDetails[`${subKeyPrefix}_5yr_impact_factor`],
+                    },
                 ],
-            }))) ||
-        [],
-});
+                {
+                    ...txt.entries.jcrSourceDate,
+                    data: clarivateDetails && clarivateDetails[`${subKeyPrefix}_source_date`],
+                },
+                [
+                    {
+                        data: renderExtLink(
+                            null,
+                            txt.links.jcrHomePage.href,
+                            txt.links.jcrHomePage.title,
+                            txt.links.jcrHomePage.text,
+                        ),
+                    },
+                    {
+                        data: renderExtLink(
+                            null,
+                            `${txt.links.jcrMoreInfo.linkPrefix}${indexType}/`,
+                            txt.links.jcrMoreInfo.title,
+                            `${txt.links.jcrMoreInfo.textPrefix} ${indexType.toUpperCase()}`,
+                        ),
+                    },
+                ],
+            ]) ||
+            [],
+        tabs:
+            (clarivateDetails &&
+                Array.isArray(clarivateDetails[categoryKey]) &&
+                clarivateDetails[categoryKey].map(category => ({
+                    title: category[`${subKeyPrefix}_category_description`],
+                    content: [
+                        [
+                            {
+                                ...txt.entries.jcrCategoryRanking,
+                                data: category[`${subKeyPrefix}_category_ranking`],
+                            },
+                            {
+                                ...txt.entries.jcrCategoryQuartile,
+                                data: category[`${subKeyPrefix}_category_quartile`],
+                            },
+                        ],
+                    ],
+                }))) ||
+            [],
+    };
+};
 
 const getCiteScoreDetails = journalDetails => ({
     common:
