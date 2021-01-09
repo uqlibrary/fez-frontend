@@ -64,9 +64,11 @@ import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import {
-    IssnListEditorField,
+    IssnForm,
     LinkInfoListEditorField,
     ListEditorField,
+    NewListEditorField,
+    KeywordsForm,
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
@@ -535,7 +537,7 @@ export default {
             },
         },
         fez_record_search_key_keywords: {
-            component: ListEditorField,
+            component: NewListEditorField,
             componentProps: {
                 scrollListHeight: 250,
                 scrollList: true,
@@ -544,14 +546,14 @@ export default {
                     value: 'rek_keywords',
                     order: 'rek_keywords_order',
                 },
-                isValid: validation.isValidKeyword(111),
                 listEditorId: 'rek-keywords',
                 locale: locale.components.keywordsForm.field,
                 canEdit: true,
+                ListEditorForm: KeywordsForm,
             },
         },
         issns: {
-            component: IssnListEditorField,
+            component: NewListEditorField,
             componentProps: {
                 remindToAdd: true,
                 name: 'bibliographicSection.issns',
@@ -563,7 +565,9 @@ export default {
                     return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
                 canEdit: true,
+                ListEditorForm: IssnForm,
                 rowItemTemplate: IssnRowItemTemplate,
+                ListEditorItemTemplate: IssnRowItemTemplate,
                 getItemSelectedToEdit: (list, index) =>
                     (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
             },
