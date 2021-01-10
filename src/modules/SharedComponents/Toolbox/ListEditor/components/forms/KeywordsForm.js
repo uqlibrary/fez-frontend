@@ -5,14 +5,17 @@ import { FreeTextForm } from '../FreeTextForm';
 import { validation } from 'config';
 
 export const KeywordsForm = props => {
-    const { onSubmit } = props;
-    const handleSubmit = React.useCallback(item => onSubmit(item[0].split('|').filter(token => token.trim() !== '')), [
-        onSubmit,
-    ]);
+    const { onSubmit, mode } = props;
+    const handleSubmit = React.useCallback(
+        (item, indexFinder) =>
+            onSubmit(mode === 'add' ? item[0].split('|').filter(token => token.trim() !== '') : item, indexFinder),
+        [onSubmit, mode],
+    );
     return <FreeTextForm {...props} isValid={validation.isValidKeyword(111)} onSubmit={handleSubmit} />;
 };
 
 KeywordsForm.propTypes = {
+    mode: PropTypes.string,
     onSubmit: PropTypes.func,
 };
 
