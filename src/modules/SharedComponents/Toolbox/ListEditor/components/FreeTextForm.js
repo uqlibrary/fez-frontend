@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { isValidKeyword } from 'config/validation';
+import { indexOf } from 'lodash';
 
 const useStyles = makeStyles(theme => ({
     MUITextLabel: theme.overrides.MuiFormLabel,
@@ -28,9 +29,11 @@ export const FreeTextForm = ({
     disabled,
     error,
     remindToAdd,
+    mode,
     normalize,
     required,
     itemSelectedToEdit,
+    listEditorFormId,
     listEditorId,
     onSubmit,
 }) => {
@@ -60,18 +63,25 @@ export const FreeTextForm = ({
         }
 
         // pass on the selected item
-        !!onAdd ? onAdd(item) : onSubmit([item]);
+        !!onAdd ? onAdd(item) : onSubmit(mode === 'add' ? [item] : item, indexOf);
         setItemSubmitted(true);
     };
 
-    const { inputFieldLabel, inputFieldHint, remindToAddText, addButtonLabel, id, editButtonLabel } = locale;
+    const { inputFieldLabel, inputFieldHint, remindToAddText, addButtonLabel, editButtonLabel } = locale;
     const inputLengthText = isValid(item);
     return (
-        <Grid container spacing={2} display="row" alignItems="center">
+        <Grid
+            container
+            spacing={2}
+            display="row"
+            alignItems="center"
+            id={listEditorFormId}
+            data-testid={listEditorFormId}
+        >
             <Grid item style={{ flexGrow: 1 }}>
                 <TextField
                     fullWidth
-                    id={id}
+                    id={`${listEditorId}-input`}
                     data-testid={`${listEditorId}-input`}
                     inputProps={{
                         ref: textField,
@@ -95,8 +105,8 @@ export const FreeTextForm = ({
             <Grid item xs={12} sm={2}>
                 <Button
                     fullWidth
-                    id={`add-${listEditorId}`}
-                    data-testid={`${listEditorId}-add`}
+                    id={`${listEditorId}-${mode}`}
+                    data-testid={`${listEditorId}-${mode}`}
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}
@@ -112,12 +122,14 @@ FreeTextForm.propTypes = {
     onAdd: PropTypes.func,
     isValid: PropTypes.func,
     locale: PropTypes.object,
+    mode: PropTypes.string,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     remindToAdd: PropTypes.bool,
     normalize: PropTypes.func,
     required: PropTypes.bool,
     itemSelectedToEdit: PropTypes.any,
+    listEditorFormId: PropTypes.string,
     listEditorId: PropTypes.string,
     onSubmit: PropTypes.func,
 };
