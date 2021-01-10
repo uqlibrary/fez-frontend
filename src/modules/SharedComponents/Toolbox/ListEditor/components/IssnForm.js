@@ -4,15 +4,19 @@ import FreeTextForm from './FreeTextForm';
 
 export const IssnForm = props => {
     const onAdd = !!props.onAdd ? props.onAdd : props.onSubmit;
+    const indexFinder = (list, item) => list.findIndex(listItem => listItem.key === item.key);
 
     const handleSubmit = item => {
-        onAdd({
-            key: item,
-            value: {
-                sherpaRomeo: { link: false },
-                ulrichs: { link: false, linkText: '' },
+        onAdd(
+            {
+                key: item,
+                value: {
+                    sherpaRomeo: { link: false },
+                    ulrichs: { link: false, linkText: '' },
+                },
             },
-        });
+            indexFinder,
+        );
     };
 
     return (
