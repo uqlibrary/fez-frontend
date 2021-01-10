@@ -1,7 +1,5 @@
 import React from 'react';
-import FreeTextForm from './components/FreeTextForm';
 import NewListEditor from './components/NewListEditor';
-import GenericTemplate from './components/GenericTemplate';
 
 const getValue = (input, normalize, searchKey) =>
     normalize(
@@ -33,8 +31,6 @@ export const NewListEditorField = fieldProps => {
             onChange={fieldProps.input.onChange}
             remindToAdd={fieldProps.remindToAdd}
             list={value}
-            ListEditorForm={FreeTextForm}
-            ListEditorItemTemplate={GenericTemplate}
             {...fieldProps}
         />
     );
