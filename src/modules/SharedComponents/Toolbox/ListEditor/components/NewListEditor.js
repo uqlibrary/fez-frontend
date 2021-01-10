@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { uniqWith, isEqual, findIndex } from 'lodash';
+import { uniqWith, isEqual } from 'lodash';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
+import GenericTemplate from './GenericTemplate';
+import FreeTextForm from './FreeTextForm';
 
 export const NewListEditor = ({
     canEdit,
@@ -38,13 +40,18 @@ export const NewListEditor = ({
         setItemsList(itemsList => uniqWith([...itemsList, ...item], isEqual).slice(0, maxCount)),
     );
 
+    /**
+     * @param {object} item
+     * @param {function} indexFinder(list, item) {} specific implementation to find
+     *      duplicate index of the item being submitted
+     */
     const handleUpdate = React.useCallback(
-        item => {
+        (item, indexFinder) => {
             setItemsList(itemsList => {
                 const preIndexItems = itemsList.slice(0, indexToUpdate);
                 const postIndexItems = itemsList.slice(indexToUpdate + 1);
 
-                if (findIndex([...preIndexItems, ...postIndexItems], item) < 0) {
+                if (indexFinder([...preIndexItems, ...postIndexItems], item) < 0) {
                     return [...preIndexItems, item, ...postIndexItems];
                 } else {
                     return [...preIndexItems, itemToUpdate, ...postIndexItems];
@@ -53,6 +60,7 @@ export const NewListEditor = ({
 
             setIndexToUpdate(null);
             setItemToUpdate(null);
+            setMode('add');
         },
         [indexToUpdate, itemToUpdate],
     );
@@ -66,14 +74,16 @@ export const NewListEditor = ({
         [itemsList],
     );
 
-    const handleMoveUp = React.useCallback((item, index) => {
-        setItemsList(itemsList => [
-            ...itemsList.slice(0, index - 1),
-            item,
-            itemsList[index - 1],
-            ...itemsList.slice(index + 1),
-        ]);
-    }, []);
+    const handleMoveUp = React.useCallback(
+        (item, index) =>
+            setItemsList(itemsList => [
+                ...itemsList.slice(0, index - 1),
+                item,
+                itemsList[index - 1],
+                ...itemsList.slice(index + 1),
+            ]),
+        [],
+    );
 
     const handleMoveDown = React.useCallback(
         (item, index) =>
@@ -126,6 +136,7 @@ export const NewListEditor = ({
                 itemSelectedToEdit={itemToUpdate}
                 normalize={inputNormalizer}
                 listEditorFormId={`${listEditorId}-form-${mode}`}
+                listEditorId={listEditorId}
                 {...((locale && locale.form) || {})}
             />
             {itemsList.length > 0 && (
@@ -133,7 +144,7 @@ export const NewListEditor = ({
                     onDeleteAll={handleDeleteAll}
                     hideReorder={hideReorder || itemsList.length < 2}
                     disabled={disabled}
-                    listEditorId={listEditorId}
+                    listEditorId={`${listEditorId}-row-header`}
                     {...((locale && locale.header) || {})}
                 />
             )}
@@ -158,7 +169,6 @@ export const NewListEditor = ({
                     />
                 ))}
             </div>
-            {/* )} */}
             <FormHelperText error={error} children={errorText} />
         </div>
     );
@@ -189,6 +199,8 @@ NewListEditor.propTypes = {
 
 NewListEditor.defaultProps = {
     inputNormalizer: value => value,
+    ListEditorForm: FreeTextForm,
+    ListEditorItemTemplate: GenericTemplate,
     transform: (list, searchKey) =>
         list.map((listItem, index) => ({ [searchKey.value]: listItem, [searchKey.order]: index + 1 })),
 };
