@@ -8,7 +8,7 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
@@ -141,14 +141,15 @@ export default class CommunityForm extends Component {
                                             <Grid item xs={12}>
                                                 <Typography>{txt.formLabels.keywords.description}</Typography>
                                                 <Field
-                                                    component={ListEditorField}
+                                                    component={NewListEditorField}
                                                     name="fez_record_search_key_keywords"
                                                     maxCount={10}
-                                                    isValid={validation.isValidKeyword(111)}
+                                                    // isValid={validation.isValidKeyword(111)}
                                                     searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                                     listEditorId="rek-keywords"
                                                     locale={txt.formLabels.keywords.field}
                                                     disabled={this.props.submitting}
+                                                    ListEditorForm={KeywordsForm}
                                                 />
                                             </Grid>
                                         </Grid>

@@ -130,6 +130,7 @@ export const NewListEditor = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [itemsList]);
 
+    console.log(mode);
     return (
         <div id={`${listEditorId}-list-editor`}>
             <ListEditorForm

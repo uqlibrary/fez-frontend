@@ -740,9 +740,15 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-agency"
+                  listEditorId="rek-grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -796,9 +802,15 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-id"
+                  listEditorId="rek-grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -866,9 +878,15 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="type-of-data"
+                  listEditorId="rek-type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -936,9 +954,15 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="software-required"
+                  listEditorId="rek-software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -1006,9 +1030,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ListEditorForm={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="keywords"
+                  listEditorId="rek-keywords"
                   locale={
                     Object {
                       "form": Object {
@@ -2162,9 +2199,15 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-agency"
+                  listEditorId="rek-grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -2218,9 +2261,15 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-id"
+                  listEditorId="rek-grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -2288,9 +2337,15 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="type-of-data"
+                  listEditorId="rek-type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -2358,9 +2413,15 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="software-required"
+                  listEditorId="rek-software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -2428,9 +2489,22 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ListEditorForm={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="keywords"
+                  listEditorId="rek-keywords"
                   locale={
                     Object {
                       "form": Object {
@@ -3580,9 +3654,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-agency"
+                  listEditorId="rek-grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -3636,9 +3716,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-id"
+                  listEditorId="rek-grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -3706,9 +3792,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="type-of-data"
+                  listEditorId="rek-type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -3776,9 +3868,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="software-required"
+                  listEditorId="rek-software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -3846,9 +3944,22 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ListEditorForm={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="keywords"
+                  listEditorId="rek-keywords"
                   locale={
                     Object {
                       "form": Object {
@@ -4998,9 +5109,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-agency"
+                  listEditorId="rek-grant-agency"
                   locale={
                     Object {
                       "form": Object {
@@ -5054,9 +5171,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="grant-id"
+                  listEditorId="rek-grant-id"
                   locale={
                     Object {
                       "form": Object {
@@ -5124,9 +5247,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="type-of-data"
+                  listEditorId="rek-type-of-data"
                   locale={
                     Object {
                       "form": Object {
@@ -5194,9 +5323,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="software-required"
+                  listEditorId="rek-software-required"
                   locale={
                     Object {
                       "form": Object {
@@ -5264,9 +5399,22 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  ListEditorForm={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  listEditorId="keywords"
+                  listEditorId="rek-keywords"
                   locale={
                     Object {
                       "form": Object {
