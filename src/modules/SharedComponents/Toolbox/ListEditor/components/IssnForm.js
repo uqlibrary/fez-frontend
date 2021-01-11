@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FreeTextForm from './FreeTextForm';
 
+export const indexFinder = (list, item) => list.findIndex(listItem => listItem.key === item.key);
+
 export const IssnForm = props => {
     const onAdd = !!props.onAdd ? props.onAdd : props.onSubmit;
-    const indexFinder = (list, item) => list.findIndex(listItem => listItem.key === item.key);
 
     const handleSubmit = item => {
         onAdd(

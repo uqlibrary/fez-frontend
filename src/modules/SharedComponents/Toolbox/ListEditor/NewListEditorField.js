@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
 
 const getValue = (input, normalize, searchKey) =>
@@ -15,23 +16,23 @@ export const useItemsList = (input, normalize, searchKey) => {
     return [value, setValue];
 };
 
-export const NewListEditorField = fieldProps => {
-    const { normalize, searchKey } = fieldProps;
-    const [value, setValue] = useItemsList(fieldProps.input, normalize, searchKey);
+export const NewListEditorField = props => {
+    const { normalize, searchKey } = props;
+    const [value, setValue] = useItemsList(props.input, normalize, searchKey);
 
     React.useEffect(() => {
-        setValue(getValue(fieldProps.input, normalize, searchKey));
+        setValue(getValue(props.input, normalize, searchKey));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [fieldProps.input]);
+    }, [props.input]);
 
     return (
         <NewListEditor
-            errorText={fieldProps.meta ? fieldProps.meta.error : null}
-            error={fieldProps.meta && !!fieldProps.meta.error}
-            onChange={fieldProps.input.onChange}
-            remindToAdd={fieldProps.remindToAdd}
+            errorText={props.meta ? props.meta.error : null}
+            error={props.meta && !!props.meta.error}
+            onChange={props.input.onChange}
+            remindToAdd={props.remindToAdd}
             list={value}
-            {...fieldProps}
+            {...props}
         />
     );
 };
@@ -42,6 +43,14 @@ NewListEditorField.defaultProps = {
         order: 'rek_order',
     },
     normalize: (value, searchKey) => value.map(item => item[searchKey.value]),
+};
+
+NewListEditorField.propTypes = {
+    searchKey: PropTypes.object,
+    normalize: PropTypes.func,
+    remindToAdd: PropTypes.string,
+    input: PropTypes.object,
+    meta: PropTypes.object,
 };
 
 export default React.memo(NewListEditorField);

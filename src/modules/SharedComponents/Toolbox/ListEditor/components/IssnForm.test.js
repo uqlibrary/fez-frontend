@@ -1,5 +1,5 @@
 import React from 'react';
-import IssnForm from './IssnForm';
+import IssnForm, { indexFinder } from './IssnForm';
 import { rtlRender, fireEvent } from 'test-utils';
 
 describe('IssnForm behaviour tests', () => {
@@ -9,30 +9,33 @@ describe('IssnForm behaviour tests', () => {
             <IssnForm
                 onAdd={onAddFn}
                 locale={{
-                    id: 'issn-text-input',
                     inputFieldLabel: 'Item name',
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Add',
                 }}
                 listEditorId="issn"
                 normalize={jest.fn(value => value)}
+                mode="add"
             />,
         );
 
-        expect(getByTestId('add-issn')).toHaveAttribute('disabled', '');
+        expect(getByTestId('issn-add')).toHaveAttribute('disabled', '');
 
-        fireEvent.change(getByTestId('issn-text-input'), { target: { value: '0000-0000' } });
+        fireEvent.change(getByTestId('issn-input'), { target: { value: '0000-0000' } });
 
-        expect(getByTestId('add-issn')).not.toHaveAttribute('disabled', '');
+        expect(getByTestId('issn-add')).not.toHaveAttribute('disabled', '');
 
-        fireEvent.click(getByTestId('add-issn'));
+        fireEvent.click(getByTestId('issn-add'));
 
-        expect(onAddFn).toHaveBeenCalledWith({
-            key: '0000-0000',
-            value: {
-                sherpaRomeo: { link: false },
-                ulrichs: { link: false, linkText: '' },
+        expect(onAddFn).toHaveBeenCalledWith(
+            {
+                key: '0000-0000',
+                value: {
+                    sherpaRomeo: { link: false },
+                    ulrichs: { link: false, linkText: '' },
+                },
             },
-        });
+            indexFinder,
+        );
     });
 });

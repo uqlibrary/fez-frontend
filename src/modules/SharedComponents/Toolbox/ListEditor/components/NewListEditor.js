@@ -44,6 +44,8 @@ export const NewListEditor = ({
      * @param {object} item
      * @param {function} indexFinder(list, item) {} specific implementation to find
      *      duplicate index of the item being submitted
+     *
+     * This implementation doesn't handle keywords with pipes (|) during update
      */
     const handleUpdate = React.useCallback(
         (item, indexFinder) => {
