@@ -178,6 +178,7 @@ describe('Form reducer plugin', () => {
         beforeEach(() => {
             initialState = Map({
                 values: Map({
+                    rek_display_type: 179,
                     securitySection: Map({
                         dataStreams: List([
                             Map({
@@ -217,6 +218,17 @@ describe('Form reducer plugin', () => {
                             Map({
                                 rek_file_attachment_embargo_date: '2020-11-30T00:00:00Z',
                                 rek_file_attachment_embargo_date_order: 2,
+                            }),
+                        ]),
+                    }),
+                    bibliographicSection: Map({
+                        issns: List([
+                            Map({
+                                rek_value: {
+                                    key: '1111-1111',
+                                    value: {},
+                                },
+                                rek_order: 1,
                             }),
                         ]),
                     }),
@@ -283,6 +295,104 @@ describe('Form reducer plugin', () => {
             expect(dataStreams.length).toEqual(2);
 
             expect(dataStreams).toEqual([{ dsi_dsid: 'test.mp4' }, { dsi_dsid: 'testing.jpg' }]);
+        });
+
+        it('should update issns from the selected journal object in the journal ID field', () => {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
+                type: actionTypes.CHANGE,
+                meta: {
+                    field: 'bibliographicSection.fez_matched_journals',
+                    touch: false,
+                },
+                payload: {
+                    value: 'Testing update from form reducer',
+                    fez_journal_issn: [
+                        {
+                            jnl_issn: '2222-2222',
+                        },
+                        {
+                            jnl_issn: '3333-3333',
+                        },
+                    ],
+                },
+            });
+
+            expect(
+                nextState
+                    .get('values')
+                    .get('bibliographicSection')
+                    .get('fez_record_search_key_journal_name')
+                    .get('rek_journal_name'),
+            ).toEqual('Testing update from form reducer');
+
+            expect(
+                nextState
+                    .get('values')
+                    .get('bibliographicSection')
+                    .get('issns')
+                    .toJS(),
+            ).toEqual([
+                {
+                    rek_value: {
+                        key: '1111-1111',
+                        value: {},
+                    },
+                    rek_order: 1,
+                },
+                {
+                    rek_value: {
+                        key: '2222-2222',
+                        value: {
+                            sherpaRomeo: { link: false },
+                            ulrichs: { link: false, linkText: '' },
+                        },
+                    },
+                },
+                {
+                    rek_value: {
+                        key: '3333-3333',
+                        value: {
+                            sherpaRomeo: { link: false },
+                            ulrichs: { link: false, linkText: '' },
+                        },
+                    },
+                },
+            ]);
+
+            const nextStateWithoutUpdate = plugins.adminReduxFormPlugin(initialState, {
+                type: actionTypes.CHANGE,
+                meta: {
+                    field: 'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
+                    touch: false,
+                },
+                payload: {
+                    value: 'Testing update from form reducer',
+                    fez_journal_issn: [
+                        {
+                            jnl_issn: '2222-2222',
+                        },
+                        {
+                            jnl_issn: '3333-3333',
+                        },
+                    ],
+                },
+            });
+
+            expect(
+                nextStateWithoutUpdate
+                    .get('values')
+                    .get('bibliographicSection')
+                    .get('issns')
+                    .toJS(),
+            ).toEqual([
+                {
+                    rek_value: {
+                        key: '1111-1111',
+                        value: {},
+                    },
+                    rek_order: 1,
+                },
+            ]);
         });
     });
 });

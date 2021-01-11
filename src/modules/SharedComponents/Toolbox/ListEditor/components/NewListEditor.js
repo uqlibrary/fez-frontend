@@ -107,7 +107,11 @@ export const NewListEditor = ({
 
     const scrollStyle = React.useRef(
         !!scrollList && itemsList.length >= scrollListHeight / 55
-            ? { style: { width: '100%', height: scrollListHeight, overflowX: 'hidden', overflowY: 'scroll' } }
+            ? {
+                  style: { width: '100%', height: scrollListHeight, overflowX: 'hidden', overflowY: 'scroll' },
+                  id: `${listEditorId}-scroll-list`,
+                  'data-testid': `${listEditorId}-scroll-list`,
+              }
             : {},
     );
 
@@ -146,7 +150,7 @@ export const NewListEditor = ({
                     onDeleteAll={handleDeleteAll}
                     hideReorder={hideReorder || itemsList.length < 2}
                     disabled={disabled}
-                    listEditorId={`${listEditorId}-row-header`}
+                    listEditorId={listEditorId}
                     {...((locale && locale.header) || {})}
                 />
             )}

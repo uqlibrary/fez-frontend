@@ -62,9 +62,6 @@ describe('NewListEditorField component', () => {
 
     it('should render new list editor component without any list items', () => {
         const props = {
-            meta: {
-                error: 'test1',
-            },
             input: {
                 onChange: jest.fn(),
             },

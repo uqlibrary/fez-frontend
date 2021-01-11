@@ -129,8 +129,38 @@ describe('NewListEditor component', () => {
             searchKey: { value: 'rek_keywords', order: 'rek_keywords_order' },
         });
 
-        fireEvent.click(getByTestId('keywords-list-row-1-delete'));
+        fireEvent.click(getByTestId('keywords-list-row-1-delete')); // two
         waitFor(() => getByTestId('confirm-action'));
         fireEvent.click(getByTestId('confirm-action'));
+
+        expect(getByTestId('keywords-list-row-1')).toHaveTextContent('three');
+    });
+
+    it('should delete all items from the list', () => {
+        const { getByTestId, queryByTestId } = setup({
+            canEdit: true,
+            list: ['one', 'two', 'three'],
+            listEditorId: 'keywords',
+            searchKey: { value: 'rek_keywords', order: 'rek_keywords_order' },
+        });
+
+        fireEvent.click(getByTestId('delete-all-keywords'));
+        waitFor(() => getByTestId('confirm-action'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        expect(queryByTestId('keywords-list-row-0')).not.toBeInTheDocument();
+    });
+
+    it('should render scrolling list', () => {
+        const { getByTestId } = setup({
+            canEdit: true,
+            list: ['one', 'two', 'three'],
+            listEditorId: 'keywords',
+            searchKey: { value: 'rek_keywords', order: 'rek_keywords_order' },
+            scrollList: true,
+            scrollListHeight: 55,
+        });
+
+        expect(getByTestId('keywords-scroll-list')).toBeInTheDocument();
     });
 });

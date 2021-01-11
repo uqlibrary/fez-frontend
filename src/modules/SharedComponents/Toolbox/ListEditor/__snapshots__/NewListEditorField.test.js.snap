@@ -93,7 +93,7 @@ exports[`NewListEditorField component should render new list editor component wi
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root"
-              id="delete-all-test-row-header"
+              id="delete-all-test"
               tabindex="0"
               type="button"
             >
@@ -416,7 +416,7 @@ exports[`NewListEditorField component should render new list editor component wi
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root"
-              id="delete-all-test-row-header"
+              id="delete-all-test"
               tabindex="0"
               type="button"
             >
@@ -711,10 +711,8 @@ exports[`NewListEditorField component should render new list editor component wi
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root Mui-error"
-    >
-      test1
-    </p>
+      class="MuiFormHelperText-root"
+    />
   </div>
 </DocumentFragment>
 `;
