@@ -93,6 +93,7 @@ exports[`NewListEditorField component should render new list editor component wi
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root"
+              data-testid="delete-all-test"
               id="delete-all-test"
               tabindex="0"
               type="button"
@@ -416,6 +417,7 @@ exports[`NewListEditorField component should render new list editor component wi
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root"
+              data-testid="delete-all-test"
               id="delete-all-test"
               tabindex="0"
               type="button"
