@@ -208,6 +208,9 @@ export const renderSectionContents = (details, id) =>
         Array.isArray(detailRow) ? renderMultiColumn(detailRow, index, id) : renderSingleColumn(detailRow, index, id),
     );
 
+const sectionHasDataArray = sectionDetails =>
+    sectionDetails.some(item => !!item.data && Array.isArray(item.data) && item.data.length > 0);
+
 export const JournalView = ({
     actions,
     basicDetails,
@@ -280,7 +283,7 @@ export const JournalView = ({
                             />
                         </Grid>
                     )}
-                    {indexDetails && (
+                    {indexDetails && sectionHasDataArray(indexDetails) && (
                         <Grid item xs={12}>
                             <StandardCard
                                 standardCardId={txt.entries.indexSection.id}
