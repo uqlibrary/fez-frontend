@@ -108,13 +108,19 @@ const getOADetails = journalDetails => [
             journalDetails.fez_journal_issn[0].fez_ulrichs &&
             !!journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access,
     },
-    {
-        ...txt.entries.doajApcAvgPrice,
-        data:
-            journalDetails.fez_journal_doaj &&
-            journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price &&
-            `${journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price} ${journalDetails.fez_journal_doaj.jnl_doaj_apc_currency}`,
-    },
+    [
+        {
+            ...txt.entries.doajHomepageUrl,
+            data: journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url,
+        },
+        {
+            ...txt.entries.doajApcAvgPrice,
+            data:
+                journalDetails.fez_journal_doaj &&
+                journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price &&
+                `${journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price} ${journalDetails.fez_journal_doaj.jnl_doaj_apc_currency}`,
+        },
+    ],
     {
         ...txt.entries.licence,
         data: journalDetails.fez_journal_doaj && {
@@ -133,8 +139,11 @@ const getOADetails = journalDetails => [
         data: journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_last_updated,
     },
     {
-        ...txt.entries.doajHomepageUrl,
-        data: journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url,
+        ...txt.entries.doajJournalUrl,
+        data:
+            journalDetails.fez_journal_issn &&
+            journalDetails.fez_journal_issn[0] &&
+            journalDetails.fez_journal_issn[0].jnl_issn,
     },
     {
         ...txt.entries.srmJournalLink,

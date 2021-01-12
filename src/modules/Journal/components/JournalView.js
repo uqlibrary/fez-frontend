@@ -73,6 +73,14 @@ export const renderData = detail => {
         case txt.links.citeScoreMoreInfo.id:
             return renderExtLink(null, detail.data.href, detail.data.title, detail.data.text);
 
+        case txt.links.doajJournalUrl.id:
+            return renderExtLink(
+                null,
+                `${txt.links.doajJournalUrl.linkPrefix}${detail.data}`,
+                txt.links.doajJournalUrl.title,
+                detail.data,
+            );
+
         case txt.links.jcrMoreInfo.id:
             return renderExtLink(
                 null,

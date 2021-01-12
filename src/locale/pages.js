@@ -1201,6 +1201,10 @@ export default {
                         title: 'Open access',
                         id: 'ulr-open-access',
                     },
+                    doajHomepageUrl: {
+                        title: 'Journal home page',
+                        id: 'doaj-homepage-url',
+                    },
                     doajApcAvgPrice: {
                         title: 'Article processing charges',
                         id: 'doaj-apc-avg-price',
@@ -1217,9 +1221,9 @@ export default {
                         title: 'Last updated',
                         id: 'doaj-last-updated',
                     },
-                    doajHomepageUrl: {
+                    doajJournalUrl: {
                         title: 'View in DOAJ',
-                        id: 'doaj-homepage-url',
+                        id: 'doaj-journal-url',
                     },
                     srmJournalLink: {
                         title: 'Sherpa Romeo open access and archiving policies',
@@ -1369,8 +1373,13 @@ export default {
                     ulrTitleLink: {
                         title: 'View Ulrichs details in a new tab',
                     },
+                    doajJournalUrl: {
+                        id: 'doaj-journal-url',
+                        linkPrefix: 'https://doaj.org/toc/',
+                        title: 'View journal details in DOAJ',
+                    },
                     doajHomepageUrl: {
-                        title: 'View DOAJ Homepage in a new tab',
+                        title: 'View homepage in a new tab',
                     },
                     srmJournalLink: {
                         title: 'View SHERPA/RoMEO details in a new tab',

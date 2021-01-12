@@ -280,6 +280,13 @@ describe('JournalView Component', () => {
             it('renders hardcoded variant', () => {
                 const testValues = [
                     {
+                        input: { id: 'doaj-journal-url', data: 'test1' },
+                        output: {
+                            url: `${txt.links.doajJournalUrl.linkPrefix}test1`,
+                            text: 'test1',
+                        },
+                    },
+                    {
                         input: { id: 'jcr-more-info', data: 'test1' },
                         output: {
                             url: `${txt.links.jcrMoreInfo.linkPrefix}test1/`,
