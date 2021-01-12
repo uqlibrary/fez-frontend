@@ -13,33 +13,120 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { TabbedCard } from 'modules/SharedComponents/Toolbox/TabbedCard';
 
+import { default as CreativeCommonsLicence } from './partials/CreativeCommonsLicence';
+import { default as WosCategories } from './partials/WosCategories';
+
+import { default as globalLocale } from 'locale/global';
 import pagesLocale from 'locale/pages';
-import { CREATIVE_COMMONS_LICENCES, getCreativeCommonsUrl } from 'config/general';
+import EraForCodes from './partials/EraForCodes';
 const txt = pagesLocale.pages.journal.view;
 
+export const nodeJoin = (arr, glue) =>
+    arr
+        .slice(1)
+        .reduce((op, item) => op.concat([glue, item]), [arr[0]])
+        .filter(Boolean);
+
 export const renderBoolean = isTrue => (isTrue ? txt.booleanTrue : txt.booleanFalse);
+
 export const renderDateTime = (dateTimeString, format) =>
     moment(dateTimeString).isValid && moment(dateTimeString).format(format);
+
+export const renderBooleanWithDate = (status, date, format) =>
+    `${renderBoolean(status)}${(status && `, ${renderDateTime(date, format)}`) || ''}`;
+
 export const renderExtLink = (key, href, title, text) => <ExternalLink {...{ key, href, title }}>{text}</ExternalLink>;
 
-export const getLicenceAttrs = ({ by, nd, nc, sa }) => {
-    const conditions = [];
-    by && conditions.push('by');
-    nd && conditions.push('nd');
-    nc && conditions.push('nc');
-    sa && conditions.push('sa');
-    const licence = conditions.join('-');
-    return [`cc-${licence}`, getCreativeCommonsUrl(licence), CREATIVE_COMMONS_LICENCES[licence]];
-};
+export const renderData = detail => {
+    switch (detail.id) {
+        case txt.entries.licence.id:
+            return <CreativeCommonsLicence {...detail.data} />;
 
-export const renderLicence = (className, url, text) => (
-    <ExternalLink href={url} id="journal-oa-licence" data-testid="journal-oa-licence">
-        <div data-testid="journal-oa-licence-lookup" style={{ paddingRight: '1rem' }}>
-            {text}
-        </div>
-        <div className={`fez-icon license ${className}`} />
-    </ExternalLink>
-);
+        case txt.entries.urlRefereed.id:
+        case txt.entries.doajSeal.id:
+        case txt.entries.citeScoreAsjcCodeTop10Pct.id:
+        case txt.entries.hasScopus.id:
+        case txt.entries.hasPubmed.id:
+        case txt.entries.hasEra.id:
+        case txt.entries.ulrOpenAccess.id:
+            return renderBoolean(detail.data);
+
+        case txt.entries.doajLastUpdated.id:
+            return renderDateTime(detail.data, 'Do MMMM YYYY [at] h:mma');
+        case txt.entries.jcrSourceDate.id:
+        case txt.entries.citeScoreSourceDate.id:
+            return renderDateTime(detail.data, 'YYYY');
+        case txt.entries.adbcSourceDate.id:
+            return renderDateTime(detail.data, 'Do MMMM YYYY');
+
+        case txt.entries.cwtsSourceDate.id:
+            return renderBooleanWithDate(detail.data.status, detail.data.date, 'YYYY');
+        case txt.entries.natureIndexSourceDate.id:
+            return renderBooleanWithDate(detail.data.status, detail.data.date, 'Do MMMM YYYY');
+
+        case txt.entries.ulrOpenAccessUrl.id:
+            return renderExtLink(null, detail.data, txt.links.ulrOpenAccessUrl.title, detail.data);
+        case txt.entries.doajHomepageUrl.id:
+            return renderExtLink(null, detail.data, txt.links.doajHomepageUrl.title, detail.data);
+
+        case txt.links.jcrHomePage.id:
+        case txt.links.citeScoreMoreInfo.id:
+            return renderExtLink(null, detail.data.href, detail.data.title, detail.data.text);
+
+        case txt.links.jcrMoreInfo.id:
+            return renderExtLink(
+                null,
+                `${txt.links.jcrMoreInfo.linkPrefix}${detail.data}/`,
+                txt.links.jcrMoreInfo.title,
+                `${txt.links.jcrMoreInfo.textPrefix} ${detail.data.toUpperCase()}`,
+            );
+
+        case txt.links.citeScoreSource.id:
+            return renderExtLink(
+                null,
+                `${txt.links.citeScoreSource.linkPrefix}${detail.data}`,
+                txt.links.citeScoreSource.title,
+                txt.links.citeScoreSource.text,
+            );
+
+        case txt.entries.ulrTitleLink.id:
+            return nodeJoin(
+                detail.data.map((ulrichs, index) =>
+                    renderExtLink(
+                        `journal-ulrichs-${index}-link`,
+                        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichs.ulr_title_id),
+                        txt.links.ulrTitleLink.title,
+                        ulrichs.ulr_title,
+                    ),
+                ),
+                ', ',
+            );
+
+        case txt.entries.srmJournalLink.id:
+            return nodeJoin(
+                detail.data.map((sherpa, index) =>
+                    renderExtLink(
+                        `journal-sherpa-${index}-link`,
+                        sherpa.srm_journal_link,
+                        txt.links.srmJournalLink.title,
+                        sherpa.srm_issn,
+                    ),
+                ),
+            );
+
+        case txt.entries.wosCategoryAhci.id:
+        case txt.entries.wosCategoryScie.id:
+        case txt.entries.wosCategorySsci.id:
+        case txt.entries.wosCategoryEsci.id:
+            return <WosCategories categoryData={detail.data} />;
+
+        case txt.entries.eraForCode.id:
+            return (!!Array.isArray(detail.data) && <EraForCodes forCodes={detail.data} />) || '';
+
+        default:
+            return detail.data;
+    }
+};
 
 /**
  * Common renderer for a row of data. It may be a single piece of data, or an array of multiple pieces of data.
@@ -60,7 +147,7 @@ export const renderJournalDetail = (detail, index, breakpoints) =>
                 </Grid>
             )}
             <Grid item component="span" {...breakpoints.data} data-testid={`${index}`} id={`${index}`}>
-                {detail.data}
+                {renderData(detail)}
             </Grid>
         </Grid>
     );

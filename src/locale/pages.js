@@ -1144,6 +1144,7 @@ export default {
                 },
                 booleanTrue: 'Yes',
                 booleanFalse: 'No',
+                rankingOutOf: 'out of',
                 entries: {
                     basicSection: {
                         id: 'journal-basic-details',
@@ -1375,21 +1376,25 @@ export default {
                         title: 'View SHERPA/RoMEO details in a new tab',
                     },
                     jcrHomePage: {
+                        id: 'jcr-home-page',
                         href: 'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
                         title: 'Open JCR website in a new tab',
                         text: 'Go to JCR website',
                     },
                     jcrMoreInfo: {
+                        id: 'jcr-more-info',
                         linkPrefix: 'https://clarivate.com/webofsciencegroup/solutions/webofscience-',
                         title: 'Open more info in a new tab',
                         textPrefix: 'More info about JCR',
                     },
                     citeScoreSource: {
+                        id: 'cite-score-source',
                         linkPrefix: 'https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/',
                         title: 'Open CiteScore record in a new tab',
                         text: 'Go to record in CiteScore',
                     },
                     citeScoreMoreInfo: {
+                        id: 'cite-score-more-info',
                         href: 'https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/',
                         title: 'View more about CiteScore in a new tab',
                         text: 'More info about CiteScore',

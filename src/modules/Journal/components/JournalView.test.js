@@ -4,17 +4,17 @@ import { rtlRender } from 'test-utils';
 import { createMemoryHistory } from 'history';
 
 import JournalView, {
-    getLicenceAttrs,
     renderBoolean,
+    renderData,
     renderDateTime,
     renderExtLink,
     renderJournalDetail,
-    renderLicence,
     renderMultiColumn,
     renderSectionContents,
 } from './JournalView';
 
-import { CREATIVE_COMMONS_LICENCES, getCreativeCommonsUrl } from 'config/general';
+import pagesLocale from 'locale/pages';
+const txt = pagesLocale.pages.journal.view;
 
 const history = createMemoryHistory();
 const testFn = jest.fn();
@@ -207,17 +207,168 @@ describe('JournalView Component', () => {
         expect(getByText('Example')).toHaveAttribute('target', '_blank');
     });
 
-    it('has a helper to get licence combination', () => {
-        expect(getLicenceAttrs({ by: true, nd: true, nc: true, sa: true })).toStrictEqual([
-            'cc-by-nd-nc-sa',
-            getCreativeCommonsUrl('by-nd-nc-sa'),
-            CREATIVE_COMMONS_LICENCES['by-nd-nc-sa'],
-        ]);
-    });
+    describe('data renderer', () => {
+        it('renders licence', () => {
+            const { getByTestId } = rtlRender(
+                renderData({ id: 'licence', data: { by: true, nd: true, nc: true, sa: true } }),
+            );
+            expect(getByTestId('journal-oa-licence')).toBeInTheDocument();
+            expect(getByTestId('journal-oa-licence')).toHaveAttribute(
+                'href',
+                'https://creativecommons.org/licenses/by-nd-nc-sa/3.0/deed.en_US',
+            );
+        });
 
-    it('has helper to render a licence', () => {
-        const { getByText, getByTestId } = rtlRender(renderLicence('cc-by-nc', 'https://example.com/', 'Example'));
-        expect(getByTestId('journal-oa-licence')).toHaveAttribute('href', 'https://example.com/');
-        expect(getByText('Example')).toHaveAttribute('data-testid', 'journal-oa-licence-lookup');
+        it('renders boolean', () => {
+            expect(renderData({ id: 'url-refereed', data: true })).toBe('Yes');
+        });
+
+        it('renders dateTime entries', () => {
+            const testValues = [
+                {
+                    input: { id: 'doaj-last-updated', data: '2020-02-20T12:00:00' },
+                    output: '20th February 2020 at 12:00pm',
+                },
+                {
+                    input: { id: 'jcr-source-date', data: '2020-02-20' },
+                    output: '2020',
+                },
+                {
+                    input: { id: 'adbc-source-date', data: '2020-02-20' },
+                    output: '20th February 2020',
+                },
+                {
+                    input: { id: 'cwts-source-date', data: { status: true, date: '2020-02-20' } },
+                    output: 'Yes, 2020',
+                },
+                {
+                    input: { id: 'cwts-source-date', data: { status: false } },
+                    output: 'No',
+                },
+                {
+                    input: { id: 'nature-index-source-date', data: { status: true, date: '2020-02-20' } },
+                    output: 'Yes, 20th February 2020',
+                },
+            ];
+            testValues.map(item => {
+                expect(renderData(item.input)).toBe(item.output);
+            });
+        });
+
+        describe('external links', () => {
+            it('renders url-only variant', () => {
+                const testIds = ['ulr-open-access-url', 'doaj-homepage-url'];
+                testIds.map((id, index) => {
+                    const { getByText } = rtlRender(renderData({ id, data: `test${index}` }));
+                    expect(getByText(`test${index}`)).toHaveAttribute('href', `test${index}`);
+                });
+            });
+
+            it('renders passed-in attributes variant', () => {
+                const testIds = ['jcr-home-page', 'cite-score-more-info'];
+                testIds.map((id, index) => {
+                    const { getByText } = rtlRender(
+                        renderData({
+                            id,
+                            data: { href: `test-url${index}`, title: `test-title${index}`, text: `test${index}` },
+                        }),
+                    );
+                    expect(getByText(`test${index}`)).toHaveAttribute('href', `test-url${index}`);
+                });
+            });
+
+            it('renders hardcoded variant', () => {
+                const testValues = [
+                    {
+                        input: { id: 'jcr-more-info', data: 'test1' },
+                        output: {
+                            url: `${txt.links.jcrMoreInfo.linkPrefix}test1/`,
+                            text: `${txt.links.jcrMoreInfo.textPrefix} TEST1`,
+                        },
+                    },
+                    {
+                        input: { id: 'cite-score-source', data: 'test1' },
+                        output: {
+                            url: `${txt.links.citeScoreSource.linkPrefix}test1`,
+                            text: txt.links.citeScoreSource.text,
+                        },
+                    },
+                ];
+                testValues.map(testValue => {
+                    const { getByText } = rtlRender(renderData(testValue.input));
+                    expect(getByText(testValue.output.text)).toHaveAttribute('href', testValue.output.url);
+                });
+            });
+
+            it('renders sets of links', () => {
+                const ulrichsColumn = {
+                    id: 'ulr-title-link',
+                    data: [
+                        { ulr_title_id: '1234', ulr_title: 'test1' },
+                        { ulr_title_id: '5678', ulr_title: 'test2' },
+                    ],
+                };
+                const { getByText } = rtlRender(renderData(ulrichsColumn));
+                expect(getByText('test1')).toHaveAttribute(
+                    'href',
+                    'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/1234',
+                );
+                expect(getByText('test2')).toHaveAttribute(
+                    'href',
+                    'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/5678',
+                );
+
+                const sherpaColumn = {
+                    id: 'srm-journal-link',
+                    data: [
+                        { srm_journal_link: 'https://example.com/1', srm_issn: '1234-5678' },
+                        { srm_journal_link: 'https://example.com/2', srm_issn: '1234-5679' },
+                    ],
+                };
+                rtlRender(renderData(sherpaColumn));
+                expect(getByText('1234-5678')).toHaveAttribute('href', 'https://example.com/1');
+                expect(getByText('1234-5679')).toHaveAttribute('href', 'https://example.com/2');
+            });
+        });
+
+        it('renders list of wos categories', () => {
+            const detail = {
+                id: 'wos-category-ahci',
+                data: [
+                    { jnl_wos_category_index: 'ahci', jnl_wos_category: 'category1|category2' },
+                    { jnl_wos_category_index: 'ahci', jnl_wos_category: 'category3' },
+                    { jnl_wos_category_index: 'ahci', jnl_wos_category: '' },
+                ],
+            };
+            const { getByText } = rtlRender(renderData(detail));
+            expect(getByText('category1')).toHaveAttribute('data-testid', 'wos-ahci0-category0');
+            expect(getByText('category2')).toHaveAttribute('data-testid', 'wos-ahci0-category1');
+            expect(getByText('category3')).toHaveAttribute('data-testid', 'wos-ahci1-category0');
+        });
+
+        it('renders ERA FoR codes', () => {
+            const detail = {
+                id: 'era-for-code',
+                data: [
+                    {
+                        jnl_era_source_year: '2020',
+                        fez_journal_era_for_code: [
+                            {
+                                jnl_era_for_code_lookup: 'Code 1',
+                            },
+                            {
+                                jnl_era_for_code_lookup: 'Code 2',
+                            },
+                        ],
+                    },
+                    {
+                        jnl_era_source_year: '2021',
+                    },
+                ],
+            };
+            const { getByText } = rtlRender(renderData(detail));
+            expect(getByText('2020: Code 1, Code 2')).toHaveAttribute('data-testid', 'journal-era-category0');
+            expect(renderData({ id: 'era-for-code', data: '' })).toBe('');
+        });
     });
 });

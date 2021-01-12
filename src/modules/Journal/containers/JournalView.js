@@ -1,24 +1,13 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 
-import JournalView, {
-    getLicenceAttrs,
-    renderBoolean,
-    renderDateTime,
-    renderExtLink,
-    renderLicence,
-} from '../components/JournalView';
-
-import { default as globalLocale } from 'locale/global';
-import pagesLocale from 'locale/pages';
+import JournalView from '../components/JournalView';
 
 import * as actions from 'actions';
 
+import pagesLocale from 'locale/pages';
 const txt = pagesLocale.pages.journal.view;
-
-const nodeJoin = (arr, glue) => arr.slice(1).reduce((op, item) => op.concat([glue, item]), [arr[0]]);
 
 const getBasicDetails = journalDetails => {
     const detailRows = [
@@ -73,7 +62,7 @@ const getBasicDetails = journalDetails => {
         return detailRows.concat([
             {
                 ...txt.entries.urlRefereed,
-                data: renderBoolean(journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_refereed),
+                data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_refereed,
             },
             [
                 {
@@ -91,14 +80,7 @@ const getBasicDetails = journalDetails => {
             },
             {
                 ...txt.entries.ulrOpenAccessUrl,
-                data:
-                    journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url &&
-                    renderExtLink(
-                        null,
-                        journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url,
-                        txt.links.ulrOpenAccessUrl.title,
-                        journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url,
-                    ),
+                data: journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url,
             },
             {
                 ...txt.entries.ulrDescription,
@@ -106,23 +88,11 @@ const getBasicDetails = journalDetails => {
             },
             {
                 ...txt.entries.ulrTitleLink,
-                data: nodeJoin(
-                    journalDetails.fez_journal_issn.map(
-                        (issn, index) =>
-                            issn.fez_ulrichs &&
-                            issn.fez_ulrichs.ulr_title_id &&
-                            renderExtLink(
-                                `journal-ulrichs-${index}-link`,
-                                globalLocale.global.ulrichsLink.externalUrl.replace(
-                                    '[id]',
-                                    issn.fez_ulrichs.ulr_title_id,
-                                ),
-                                txt.links.ulrTitleLink.title,
-                                issn.fez_ulrichs.ulr_title,
-                            ),
-                    ),
-                    ', ',
-                ),
+                data:
+                    Array.isArray(journalDetails.fez_journal_issn) &&
+                    journalDetails.fez_journal_issn
+                        .map(issn => !!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_title_id && issn.fez_ulrichs)
+                        .filter(Boolean),
             },
         ]);
     }
@@ -133,12 +103,10 @@ const getOADetails = journalDetails => [
     {
         ...txt.entries.ulrOpenAccess,
         data:
-            (journalDetails.fez_journal_issn &&
-                journalDetails.fez_journal_issn[0] &&
-                journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                !!journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access &&
-                'Yes') ||
-            'No',
+            journalDetails.fez_journal_issn &&
+            journalDetails.fez_journal_issn[0] &&
+            journalDetails.fez_journal_issn[0].fez_ulrichs &&
+            !!journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access,
     },
     {
         ...txt.entries.doajApcAvgPrice,
@@ -149,61 +117,32 @@ const getOADetails = journalDetails => [
     },
     {
         ...txt.entries.licence,
-        data:
-            journalDetails.fez_journal_doaj &&
-            renderLicence(
-                ...getLicenceAttrs({
-                    by: journalDetails.fez_journal_doaj.jnl_doaj_by,
-                    nd: journalDetails.fez_journal_doaj.jnl_doaj_nd,
-                    nc: journalDetails.fez_journal_doaj.jnl_doaj_nc,
-                    sa: journalDetails.fez_journal_doaj.jnl_doaj_sa,
-                }),
-            ),
+        data: journalDetails.fez_journal_doaj && {
+            by: journalDetails.fez_journal_doaj.jnl_doaj_by,
+            nd: journalDetails.fez_journal_doaj.jnl_doaj_nd,
+            nc: journalDetails.fez_journal_doaj.jnl_doaj_nc,
+            sa: journalDetails.fez_journal_doaj.jnl_doaj_sa,
+        },
     },
     {
         ...txt.entries.doajSeal,
-        data: journalDetails.fez_journal_doaj && renderBoolean(journalDetails.fez_journal_doaj.jnl_doaj_seal),
+        data: journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_seal,
     },
     {
         ...txt.entries.doajLastUpdated,
-        data:
-            journalDetails.fez_journal_doaj &&
-            journalDetails.fez_journal_doaj.jnl_doaj_last_updated &&
-            renderDateTime(journalDetails.fez_journal_doaj.jnl_doaj_last_updated, 'Do MMMM YYYY [at] h:mma'),
+        data: journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_last_updated,
     },
     {
         ...txt.entries.doajHomepageUrl,
-        data:
-            journalDetails.fez_journal_doaj &&
-            journalDetails.fez_journal_doaj.jnl_doaj_homepage_url &&
-            renderExtLink(
-                null,
-                journalDetails.fez_journal_doaj.jnl_doaj_homepage_url,
-                txt.links.doajHomepageUrl.title,
-                journalDetails.fez_journal_doaj.jnl_doaj_homepage_url,
-            ),
+        data: journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url,
     },
     {
         ...txt.entries.srmJournalLink,
         data:
             Array.isArray(journalDetails.fez_journal_issn) &&
-            journalDetails.fez_journal_issn.length > 0 &&
-            nodeJoin(
-                journalDetails.fez_journal_issn
-                    .map(
-                        (issn, index) =>
-                            issn.fez_sherpa_romeo &&
-                            issn.fez_sherpa_romeo.srm_journal_link &&
-                            renderExtLink(
-                                `journal-sherpa-${index}-link`,
-                                issn.fez_sherpa_romeo.srm_journal_link,
-                                txt.links.srmJournalLink.title,
-                                issn.fez_sherpa_romeo.srm_issn,
-                            ),
-                    )
-                    .filter(item => !!item),
-                ', ',
-            ).filter(item => !!item),
+            journalDetails.fez_journal_issn
+                .map(issn => issn.fez_sherpa_romeo && issn.fez_sherpa_romeo.srm_journal_link && issn.fez_sherpa_romeo)
+                .filter(Boolean),
     },
 ];
 
@@ -234,20 +173,12 @@ const getClarivateDetails = (journalDetails, indexType) => {
                 },
                 [
                     {
-                        data: renderExtLink(
-                            null,
-                            txt.links.jcrHomePage.href,
-                            txt.links.jcrHomePage.title,
-                            txt.links.jcrHomePage.text,
-                        ),
+                        id: txt.links.jcrHomePage.id,
+                        data: txt.links.jcrHomePage,
                     },
                     {
-                        data: renderExtLink(
-                            null,
-                            `${txt.links.jcrMoreInfo.linkPrefix}${indexType}/`,
-                            txt.links.jcrMoreInfo.title,
-                            `${txt.links.jcrMoreInfo.textPrefix} ${indexType.toUpperCase()}`,
-                        ),
+                        id: txt.links.jcrMoreInfo.id,
+                        data: indexType,
                     },
                 ],
             ]) ||
@@ -279,24 +210,16 @@ const getCiteScoreDetails = journalDetails => ({
         (journalDetails.fez_journal_cite_score && [
             {
                 ...txt.entries.citeScoreSourceDate,
-                data: renderDateTime(journalDetails.fez_journal_cite_score.jnl_cite_score_source_date, 'YYYY'),
+                data: journalDetails.fez_journal_cite_score.jnl_cite_score_source_date,
             },
             [
                 {
-                    data: renderExtLink(
-                        null,
-                        `${txt.links.citeScoreSource.linkPrefix}${journalDetails.fez_journal_cite_score.jnl_cite_score_source_id}`,
-                        txt.links.citeScoreSource.title,
-                        txt.links.citeScoreSource.text,
-                    ),
+                    id: txt.links.citeScoreSource.id,
+                    data: journalDetails.fez_journal_cite_score.jnl_cite_score_source_id,
                 },
                 {
-                    data: renderExtLink(
-                        null,
-                        txt.links.citeScoreMoreInfo.href,
-                        txt.links.citeScoreMoreInfo.title,
-                        txt.links.citeScoreMoreInfo.text,
-                    ),
+                    id: txt.links.citeScoreMoreInfo.id,
+                    data: txt.links.citeScoreMoreInfo,
                 },
             ],
         ]) ||
@@ -324,13 +247,13 @@ const getCiteScoreDetails = journalDetails => ({
                             ...txt.entries.citeScoreAsjcCodeRank,
                             data:
                                 code.jnl_cite_score_asjc_code_rank &&
-                                `${code.jnl_cite_score_asjc_code_rank} out of ${code.jnl_cite_score_asjc_code_rank_out_of}`,
+                                `${code.jnl_cite_score_asjc_code_rank} ${txt.rankingOutOf} ${code.jnl_cite_score_asjc_code_rank_out_of}`,
                         },
                     ],
                     [
                         {
                             ...txt.entries.citeScoreAsjcCodeTop10Pct,
-                            data: renderBoolean(code.jnl_cite_score_asjc_code_top_10_percent),
+                            data: code.jnl_cite_score_asjc_code_top_10_percent,
                         },
                         {
                             ...txt.entries.citeScoreAsjcCodePercentile,
@@ -353,23 +276,7 @@ const getCiteScoreDetails = journalDetails => ({
 });
 
 const getWosCategoriesByIndex = (categories, indexName) =>
-    (Array.isArray(categories) &&
-        categories
-            .filter(category => category.jnl_wos_category_index === indexName)
-            .map((categoryObj, categoryObjIndex) =>
-                nodeJoin(
-                    (categoryObj.jnl_wos_category || '').split('|').map((categoryName, categoryIndex) => {
-                        const id = `wos-${indexName.toLowerCase()}${categoryObjIndex}-category${categoryIndex}`;
-                        return (
-                            <span key={id} data-testid={id}>
-                                {categoryName.trim()}
-                            </span>
-                        );
-                    }),
-                    ', ',
-                ),
-            )) ||
-    '';
+    Array.isArray(categories) && categories.filter(category => category.jnl_wos_category_index === indexName);
 
 const getIndexDetails = journalDetails => [
     {
@@ -390,11 +297,11 @@ const getIndexDetails = journalDetails => [
     },
     {
         ...txt.entries.hasScopus,
-        data: renderBoolean(journalDetails.fez_journal_cite_score),
+        data: journalDetails.fez_journal_cite_score,
     },
     {
         ...txt.entries.hasPubmed,
-        data: renderBoolean(journalDetails.fez_journal_pubmed),
+        data: journalDetails.fez_journal_pubmed,
     },
 ];
 
@@ -411,44 +318,33 @@ const getListedDetails = journalDetails => [
     ],
     {
         ...txt.entries.adbcSourceDate,
-        data:
-            journalDetails.fez_journal_abdc &&
-            journalDetails.fez_journal_abdc.jnl_abdc_source_date &&
-            renderDateTime(journalDetails.fez_journal_abdc.jnl_abdc_source_date, 'Do MMMM YYYY'),
+        data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_source_date,
     },
     {
         ...txt.entries.cwtsSourceDate,
-        data:
-            (journalDetails.fez_journal_cwts &&
-                `Yes, ${renderDateTime(journalDetails.fez_journal_cwts.jnl_cwts_source_date, 'YYYY')}`) ||
-            'No',
+        data: {
+            status: !!journalDetails.fez_journal_cwts,
+            date: (!!journalDetails.fez_journal_cwts && journalDetails.fez_journal_cwts.jnl_cwts_source_date) || '',
+        },
     },
     [
         {
             ...txt.entries.hasEra,
-            data: renderBoolean(journalDetails.fez_journal_era),
+            data: journalDetails.fez_journal_era,
         },
         {
             ...txt.entries.eraForCode,
-            data:
-                Array.isArray(journalDetails.fez_journal_era) &&
-                journalDetails.fez_journal_era.map((era, index) => (
-                    <div key={`journal-era-category${index}`} data-testid={`journal-era-category${index}`}>
-                        {`${era.jnl_era_source_year}: ${Array.isArray(era.fez_journal_era_for_code) &&
-                            era.fez_journal_era_for_code.map(forCode => forCode.jnl_era_for_code_lookup).join(', ')}`}
-                    </div>
-                )),
+            data: journalDetails.fez_journal_era,
         },
     ],
     {
         ...txt.entries.natureIndexSourceDate,
-        data:
-            (journalDetails.fez_journal_nature_index &&
-                `Yes, ${renderDateTime(
-                    journalDetails.fez_journal_nature_index.jnl_nature_index_source_date,
-                    'Do MMMM YYYY',
-                )}`) ||
-            'No',
+        data: {
+            status: journalDetails.fez_journal_nature_index,
+            date:
+                journalDetails.fez_journal_nature_index &&
+                journalDetails.fez_journal_nature_index.jnl_nature_index_source_date,
+        },
     },
 ];
 
