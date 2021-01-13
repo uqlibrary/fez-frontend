@@ -1,5 +1,5 @@
 export default {
-    total: 50,
+    total: 7,
     per_page: 10,
     current_page: 1,
     from: 1,
