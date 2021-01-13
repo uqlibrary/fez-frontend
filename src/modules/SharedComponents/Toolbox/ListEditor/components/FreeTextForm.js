@@ -145,6 +145,7 @@ FreeTextForm.defaultProps = {
     },
     required: false,
     itemSelectedToEdit: '',
+    mode: 'add',
 };
 
 export default React.memo(FreeTextForm);
