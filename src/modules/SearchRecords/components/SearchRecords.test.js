@@ -684,11 +684,15 @@ describe('SearchRecords page', () => {
             actions: {
                 exportEspacePublications: testFn,
             },
+            publicationsList: [1],
         });
         wrapper.setState({ pageSize: 500, bulkExportSelected: true }, () => {
             wrapper.instance().updateHistoryAndSearch();
         });
         expect(testFn).toHaveBeenCalledTimes(0);
+        expect(wrapper.find('[data-testid="search-bulk-export-size-message"]').text()).toBe(
+            'The export will have the first 500 works.',
+        );
 
         wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
         expect(testFn).toHaveBeenCalledWith({

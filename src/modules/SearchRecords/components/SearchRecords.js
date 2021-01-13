@@ -341,6 +341,14 @@ class SearchRecords extends PureComponent {
                                         ) : (
                                             <span>{txt.loadingPagingMessage}</span>
                                         )}
+                                        {this.state.bulkExportSelected && (
+                                            <span data-testid="search-bulk-export-size-message">
+                                                {txt.bulkExportSizeMessage.replace(
+                                                    '[bulkExportSize]',
+                                                    PUB_SEARCH_BULK_EXPORT_SIZE,
+                                                )}
+                                            </span>
+                                        )}
                                     </Grid>
                                     <Grid item xs={12}>
                                         <PublicationsListSorting
@@ -361,7 +369,7 @@ class SearchRecords extends PureComponent {
                                             loading={isLoadingOrExporting}
                                             pagingData={pagingData}
                                             onPageChanged={this.pageChanged}
-                                            disabled={isLoadingOrExporting}
+                                            disabled={isLoadingOrExporting || this.state.bulkExportSelected}
                                         />
                                     </Grid>
                                     {isLoadingOrExporting && (
@@ -403,7 +411,7 @@ class SearchRecords extends PureComponent {
                                             loading={isLoadingOrExporting}
                                             pagingData={pagingData}
                                             onPageChanged={this.pageChanged}
-                                            disabled={isLoadingOrExporting}
+                                            disabled={isLoadingOrExporting || this.state.bulkExportSelected}
                                         />
                                     </Grid>
                                 </Grid>
