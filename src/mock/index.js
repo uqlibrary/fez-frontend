@@ -394,12 +394,13 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
         return [200, { ...mockData.myEditorialAppointmentItem }];
     });
 
-mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
-    .reply(200, {
-        data: 'Record deleted',
-    });
+mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {
+    data: 'Record deleted',
+});
 mock.onDelete(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl))).reply(200, { data: {} });
-mock.onDelete(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl))).reply(200, { data: {} });
+mock.onDelete(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl))).reply(200, {
+    data: {},
+});
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
@@ -437,7 +438,7 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
     .reply(200, { ...mockData.myEditorialAppointmentItem });
-    // .reply(409, { data: 'Server error' });
+// .reply(409, { data: 'Server error' });
 
 // Note: The existing records of all the mocked types below (regular records, collections and community)
 // are all patched via the same endpoint, so if you want to mock a failure of one of those,

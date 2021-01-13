@@ -223,6 +223,14 @@ export default class MyRecords extends PureComponent {
                                                 .replace('[recordsTo]', pagingData.to)}
                                         </span>
                                     )}
+                                    {this.state.bulkExportSelected && (
+                                        <span data-testid="my-records-bulk-export-size-message">
+                                            {txt.bulkExportSizeMessage.replace(
+                                                '[bulkExportSize]',
+                                                MY_RECORDS_BULK_EXPORT_SIZE,
+                                            )}
+                                        </span>
+                                    )}
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             {txt.text}
@@ -247,7 +255,14 @@ export default class MyRecords extends PureComponent {
                                                 loading={isLoadingOrExporting}
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
-                                                disabled={isLoadingOrExporting}
+                                                disabled={isLoadingOrExporting || this.state.bulkExportSelected}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <ConfirmDialogBox
+                                                locale={confirmationLocale}
+                                                hideCancelButton
+                                                onRef={this._setSuccessConfirmation}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -285,7 +300,7 @@ export default class MyRecords extends PureComponent {
                                                 loading={isLoadingOrExporting}
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
-                                                disabled={isLoadingOrExporting}
+                                                disabled={isLoadingOrExporting || this.state.bulkExportSelected}
                                             />
                                         </Grid>
                                     </Grid>

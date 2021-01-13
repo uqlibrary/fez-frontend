@@ -21,6 +21,7 @@ context('Search', () => {
             .closest('[class*="MuiFormControl-root"]')
             // .contains('label', searchLocale.searchBoxPlaceholder);
             .contains('label', 'Search eSpace');
+
         cy.get('#simple-search-input').type('cats and dogs{enter}');
         cy.get('[data-testid="standard-card-content"]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
         cy.get('.StandardPage > div > div > div:nth-of-type(4) h6').should('contain', 'Refine results');
