@@ -298,11 +298,16 @@ describe('MyRecords test', () => {
                 exportAuthorPublications: testFn,
             },
             publicationsListCustomActions: null,
+            publicationsList: [1],
         });
         wrapper.setState({ pageSize: 1000 }, () => {
             wrapper.instance().pushPageHistory();
         });
         expect(wrapper.instance().state.bulkExportSelected).toBe(true);
+        expect(wrapper.find('[data-testid="my-records-bulk-export-size-message"]').text()).toBe(
+            'The export will have the first 1000 works.',
+        );
+
         wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
         expect(testFn).toHaveBeenCalledWith({
             activeFacets: {
@@ -311,7 +316,7 @@ describe('MyRecords test', () => {
             },
             bulkExportSelected: true,
             exportPublicationsFormat: 'excel',
-            hasPublications: false,
+            hasPublications: true,
             page: 1,
             pageSize: 1000,
             sortBy: 'published_date',

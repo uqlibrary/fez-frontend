@@ -276,6 +276,7 @@ export default {
         myResearch: {
             pageTitle: 'My research',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (
                 <span>
                     Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
@@ -541,6 +542,7 @@ export default {
             title: 'eSpace search',
             loadingMessage: 'Searching for works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {

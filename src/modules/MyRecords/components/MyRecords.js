@@ -223,6 +223,14 @@ export default class MyRecords extends PureComponent {
                                                 .replace('[recordsTo]', pagingData.to)}
                                         </span>
                                     )}
+                                    {this.state.bulkExportSelected && (
+                                        <span data-testid="my-records-bulk-export-size-message">
+                                            {txt.bulkExportSizeMessage.replace(
+                                                '[bulkExportSize]',
+                                                MY_RECORDS_BULK_EXPORT_SIZE,
+                                            )}
+                                        </span>
+                                    )}
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             {txt.text}
