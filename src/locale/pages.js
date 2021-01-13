@@ -1349,9 +1349,9 @@ export default {
                         title: 'Current list',
                         id: 'adbc-source-date',
                     },
-                    cwtsSourceDate: {
+                    cwtsSourceYear: {
                         title: 'CWTS Leiden Ranking',
-                        id: 'cwts-source-date',
+                        id: 'cwts-source-year',
                     },
                     hasEra: {
                         title: 'Excellence in Research for Australia (ERA)',

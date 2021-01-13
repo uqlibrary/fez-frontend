@@ -44,7 +44,7 @@ export const journalDetails = {
         },
         "fez_journal_cwts": {
             "jnl_cwts_jid": "1",
-            "jnl_cwts_source_date": "2020-11-12"
+            "jnl_cwts_source_year": "2020"
         },
         "fez_journal_doaj": {
             "jnl_doaj_jid": 12306,

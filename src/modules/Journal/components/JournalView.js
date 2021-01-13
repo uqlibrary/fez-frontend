@@ -59,8 +59,11 @@ export const renderData = detail => {
         case txt.entries.adbcSourceDate.id:
             return renderDateTime(detail.data, 'Do MMMM YYYY');
 
-        case txt.entries.cwtsSourceDate.id:
-            return renderBooleanWithDate(detail.data.status, detail.data.date, 'YYYY');
+        case txt.entries.cwtsSourceYear.id:
+            return detail.data.status
+                ? `${txt.booleanTrue}${detail.data.year ? `, ${detail.data.year}` : ''}`
+                : txt.booleanFalse;
+
         case txt.entries.natureIndexSourceDate.id:
             return renderBooleanWithDate(detail.data.status, detail.data.date, 'Do MMMM YYYY');
 
