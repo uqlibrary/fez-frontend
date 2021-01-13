@@ -74,7 +74,7 @@ describe('JournalView Component', () => {
             citeScoreDetails: {
                 tabs: [{ content: [{ title: 'Test title 5', data: 'test data 5', id: 'testtitle5' }] }],
             },
-            indexDetails: [{ title: 'Test title 6', data: 'test data 6', id: 'testtitle6' }],
+            indexDetails: [{ title: 'Test title 6', data: ['test data 6'], id: 'testtitle6' }],
             listedDetails: [{ title: 'Test title 7', data: 'test data 7', id: 'testtitle7' }],
         });
         expect(getByTestId('journal-view')).toBeInTheDocument();
@@ -238,16 +238,24 @@ describe('JournalView Component', () => {
                     output: '20th February 2020',
                 },
                 {
-                    input: { id: 'cwts-source-date', data: { status: true, date: '2020-02-20' } },
+                    input: { id: 'cwts-source-year', data: { status: true, year: '2020' } },
                     output: 'Yes, 2020',
                 },
                 {
-                    input: { id: 'cwts-source-date', data: { status: false } },
+                    input: { id: 'cwts-source-year', data: { status: true, year: '' } },
+                    output: 'Yes',
+                },
+                {
+                    input: { id: 'cwts-source-year', data: { status: false } },
                     output: 'No',
                 },
                 {
                     input: { id: 'nature-index-source-date', data: { status: true, date: '2020-02-20' } },
                     output: 'Yes, 20th February 2020',
+                },
+                {
+                    input: { id: 'nature-index-source-date', data: { status: false, date: '' } },
+                    output: 'No',
                 },
             ];
             testValues.map(item => {

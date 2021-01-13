@@ -330,10 +330,10 @@ const getListedDetails = journalDetails => [
         data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_source_date,
     },
     {
-        ...txt.entries.cwtsSourceDate,
+        ...txt.entries.cwtsSourceYear,
         data: {
             status: !!journalDetails.fez_journal_cwts,
-            date: (!!journalDetails.fez_journal_cwts && journalDetails.fez_journal_cwts.jnl_cwts_source_date) || '',
+            year: (!!journalDetails.fez_journal_cwts && journalDetails.fez_journal_cwts.jnl_cwts_source_year) || '',
         },
     },
     [

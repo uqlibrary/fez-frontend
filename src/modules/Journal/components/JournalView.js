@@ -59,8 +59,11 @@ export const renderData = detail => {
         case txt.entries.adbcSourceDate.id:
             return renderDateTime(detail.data, 'Do MMMM YYYY');
 
-        case txt.entries.cwtsSourceDate.id:
-            return renderBooleanWithDate(detail.data.status, detail.data.date, 'YYYY');
+        case txt.entries.cwtsSourceYear.id:
+            return detail.data.status
+                ? `${txt.booleanTrue}${detail.data.year ? `, ${detail.data.year}` : ''}`
+                : txt.booleanFalse;
+
         case txt.entries.natureIndexSourceDate.id:
             return renderBooleanWithDate(detail.data.status, detail.data.date, 'Do MMMM YYYY');
 
@@ -208,6 +211,9 @@ export const renderSectionContents = (details, id) =>
         Array.isArray(detailRow) ? renderMultiColumn(detailRow, index, id) : renderSingleColumn(detailRow, index, id),
     );
 
+const sectionHasDataArray = sectionDetails =>
+    sectionDetails.some(item => !!item.data && Array.isArray(item.data) && item.data.length > 0);
+
 export const JournalView = ({
     actions,
     basicDetails,
@@ -280,7 +286,7 @@ export const JournalView = ({
                             />
                         </Grid>
                     )}
-                    {indexDetails && (
+                    {indexDetails && sectionHasDataArray(indexDetails) && (
                         <Grid item xs={12}>
                             <StandardCard
                                 standardCardId={txt.entries.indexSection.id}
