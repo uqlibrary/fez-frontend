@@ -30,7 +30,7 @@ const mapStateToProps = (state, props) => {
         },
         floatingLabelText: props.floatingLabelText || 'Journal Id',
         OptionTemplate: JournalTemplate,
-        defaultValue: { id: `${selectedJournalId}` } || '',
+        defaultValue: (!!props.input && { id: `${selectedJournalId}` }) || (!!props.value && props.value) || '',
         supplemental: !!selectedJournalId && (
             <ExternalLink
                 id={`journal-${selectedJournalId}-details`}
