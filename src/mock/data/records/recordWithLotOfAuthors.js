@@ -21193,23 +21193,11 @@ export default {
        "fez_datastream_info":[
           
        ],
-       "fez_matched_journals":[
-          {
-             "mtj_pid":"UQ:d6de3c2",
-             "mtj_jnl_id":41645,
-             "mtj_status":"A"
-          },
-          {
-             "mtj_pid":"UQ:d6de3c2",
-             "mtj_jnl_id":44747,
-             "mtj_status":"A"
-          },
-          {
-             "mtj_pid":"UQ:d6de3c2",
-             "mtj_jnl_id":111516,
-             "mtj_status":"A"
-          }
-       ],
+       "fez_matched_journals": {
+         "mtj_pid":"UQ:d6de3c2",
+         "mtj_jnl_id":41645,
+         "mtj_status":"M"
+       },
        "fez_record_search_key_isdatasetof":[
           
        ],
