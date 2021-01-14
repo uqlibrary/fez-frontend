@@ -927,7 +927,7 @@ export default {
     },
     fez_matched_journals: {
         getValue: record =>
-            (!Array.isArray(record.fez_matched_journals) && {
+            (record.fez_matched_journals && {
                 jnl_jid: record.fez_matched_journals.mtj_jnl_id,
                 id: record.fez_matched_journals.mtj_jnl_id,
             }) ||
