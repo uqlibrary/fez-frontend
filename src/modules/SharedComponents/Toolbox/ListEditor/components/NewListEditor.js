@@ -116,13 +116,6 @@ export const NewListEditor = ({
     );
 
     /**
-     * Run this effect if the list has been updated from the redux-form directly through formReducerPlugin
-     */
-    React.useEffect(() => {
-        setItemsList(list);
-    }, [list]);
-
-    /**
      * Run this effect on itemsList changed from various actions (add/update/delete/moveUp/moveDown)
      */
     React.useEffect(() => {
