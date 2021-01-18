@@ -27,6 +27,7 @@ export const NewListEditorField = props => {
 
     return (
         <NewListEditor
+            key={value.length}
             errorText={props.meta ? props.meta.error : null}
             error={props.meta && !!props.meta.error}
             onChange={props.input.onChange}
