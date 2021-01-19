@@ -7,11 +7,10 @@ import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { hasContent as tabbedCardHasContent } from 'modules/SharedComponents/Toolbox/TabbedCard/components/TabbedCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import { TabbedCard } from 'modules/SharedComponents/Toolbox/TabbedCard';
+import { TabbedCard, tabbedCardHasContent } from 'modules/SharedComponents/Toolbox/TabbedCard';
 
 import { default as CreativeCommonsLicence } from './partials/CreativeCommonsLicence';
 import { default as WosCategories } from './partials/WosCategories';
