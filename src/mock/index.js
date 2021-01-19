@@ -6,6 +6,7 @@ import { SESSION_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
+import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -49,6 +50,22 @@ mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
         return [403, {}];
     }
     return [404, {}];
+});
+
+mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
+    const headers = {
+        excel: {
+            'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        },
+        endnote: {
+            'content-type': 'application/vnd.endnote',
+        },
+    };
+    if (PUB_LIST_BULK_EXPORT_SIZES.includes(config.params.per_page)) {
+        return [200, {}];
+    } else {
+        return [200, 'Exported file contents', headers[config.params.export_to]];
+    }
 });
 
 mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
@@ -378,7 +395,9 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
     });
 
 mock.onDelete(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl))).reply(200, { data: {} });
-mock.onDelete(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl))).reply(200, { data: {} });
+mock.onDelete(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl))).reply(200, {
+    data: {},
+});
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
@@ -416,7 +435,7 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
     .reply(200, { ...mockData.myEditorialAppointmentItem });
-    // .reply(409, { data: 'Server error' });
+// .reply(409, { data: 'Server error' });
 
 mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {
     data: 'Record deleted',
