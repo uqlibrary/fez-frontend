@@ -8,6 +8,11 @@ export const usePublicationSubtype = (displayType = null, isAdmin = false) => {
     return (publicationTypes({}, isAdmin)[displayType || record.rek_display_type] || {}).subtypes || [];
 };
 
+export const userIsResearcher = () => {
+    const { account } = useAccountContext();
+    return (account.aut_org_username || account.aut_student_username || false) === account.id;
+};
+
 export const userIsAuthor = () => {
     const { account } = useAccountContext();
     const { record } = useRecordContext();

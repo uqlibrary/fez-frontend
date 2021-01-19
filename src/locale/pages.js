@@ -40,20 +40,13 @@ export default {
                 <StandardCard>
                     <h3>General Enquiries</h3>
                     <p>
-                        Tel: 07 334 69775 <br />
+                        Tel: 07 334 69981 <br />
                         Email: <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
                         <br />
                     </p>
-                    <h3>Staff contact</h3>
                     <p>
-                        Andrew Heath
-                        <br />
-                        Manager, UQ eSpace
-                        <br />
-                        Tel: 07 334 69981
-                        <br />
-                        Email: <a href="mailto:a.heath@library.uq.edu.au">a.heath@library.uq.edu.au</a>
-                        <br />
+                        Due to COVID-19 measures the phones may not always be monitored by on-site staff. Please email
+                        us for assistance if you are unable to reach us.
                     </p>
                     <h3>About UQ eSpace</h3>
                     The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
@@ -276,6 +269,7 @@ export default {
         myResearch: {
             pageTitle: 'My research',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (
                 <span>
                     Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
@@ -541,6 +535,7 @@ export default {
             title: 'eSpace search',
             loadingMessage: 'Searching for works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {

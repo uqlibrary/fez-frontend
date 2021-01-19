@@ -1,5 +1,14 @@
 import { validation, openAccessConfig } from 'config';
-import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
+import {
+    IN_CREATION,
+    IN_DRAFT,
+    IN_REVIEW,
+    UNPUBLISHED,
+    RETRACTED,
+    SUBMITTED_FOR_APPROVAL,
+    PUB_SEARCH_BULK_EXPORT_SIZE,
+} from 'config/general';
+import param from 'can-param';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
@@ -251,6 +260,13 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         };
     }
 
+    const exportParams = {};
+    if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
+        // eslint-disable-next-line no-unused-vars
+        const { exportPublicationsFormat, ...queryValuesToSend } = query;
+        exportParams.querystring = encodeURIComponent(param(queryValuesToSend));
+    }
+
     return {
         apiUrl: `records/${route}`,
         options: {
@@ -258,6 +274,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
                 ...getSearchType(values.searchQuery),
                 ...getStandardSearchParams(values),
                 ...(advancedSearchQueryParams || searchQueryParams),
+                ...exportParams,
             },
         },
     };
