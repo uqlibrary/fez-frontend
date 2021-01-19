@@ -1736,6 +1736,17 @@ export default {
             ],
             sortDirection: ['Desc', 'Asc'],
             recordsPerPage: [20, 50, 100],
+            exportOnlyLabel: 'Export Only:',
+            bulkExportConfirmation: {
+                confirmationTitle: 'Export queued successfully',
+                confirmationMessage: (
+                    <span style={{ display: 'block', margin: '1em 0' }}>
+                        Bulk export request has been queued. When the request has been processed, you will receive an
+                        email with the exported file as an attachment.
+                    </span>
+                ),
+                confirmButtonLabel: 'Close',
+            },
         },
         newsFeed: {
             title: 'Latest news',
