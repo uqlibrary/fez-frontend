@@ -141,7 +141,7 @@
         "@material-ui/pickers": "^3.2.10",
         "@material-ui/styles": "^4.9.0",
         "@material/animation": "0.34.0",
-        "axios": "^0.21.1",
+        "axios": "^0.18.1",
         "axios-cache-adapter": "^2.0.0",
         "babel-loader": "^8.0.6",
         "can-deparam": "^1.1.1",
