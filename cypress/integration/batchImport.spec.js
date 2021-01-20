@@ -28,7 +28,9 @@ context('Batch import', () => {
             cy.waitUntil(() => cy.get(`[data-testid=${field}-options]`).should('exist'));
             cy.get(`[data-testid=${field}-option-${option}]`).click();
 
-            cy.get('[data-testid=batch-import-validation]').should('not.contain', validationMessage);
+            if (validationMessage) {
+                cy.get('[data-testid=batch-import-validation]').should('not.contain', validationMessage);
+            }
         };
 
         cy.visit('/batch-import?user=digiteamMember').then(() => {
@@ -71,7 +73,7 @@ context('Batch import', () => {
             selectItem('doc-type-id', 1, validationErrors.doc_type_id);
 
             // Select directory
-            selectItem('directory', 1, validationErrors.directory);
+            selectItem('directory', 1);
 
             cy.get('[data-testid=batch-import-validation]').should('not.exist');
             cy.get('[data-testid=batch-import-submit]').should('not.be.disabled');

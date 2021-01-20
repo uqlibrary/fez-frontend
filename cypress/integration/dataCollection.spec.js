@@ -315,7 +315,7 @@ context('Data Collection form', () => {
             .type('16')
             .clear();
         cy.get('[data-testid=rek-keywords-input]').type('Keywords 1');
-        cy.contains('p', 'Invalid day').should('not.be.visible');
+        cy.contains('p', 'Invalid day').should('not.exist');
 
         // an 31st of april is an invalid date
         cy.get('[data-testid=rek-start-date-day-input]').type('31');
@@ -344,7 +344,7 @@ context('Data Collection form', () => {
             .clear()
             .type('1976');
 
-        cy.contains('p', 'Date must be before now').should('not.be.visible');
+        cy.contains('p', 'Date must be before now').should('not.exist');
 
         cy.get('@errors').should('have.length', errorCount);
 
@@ -375,7 +375,7 @@ context('Data Collection form', () => {
             .clear()
             .type('1976');
 
-        cy.contains('p', 'Date range is not valid').should('not.be.visible');
+        cy.contains('p', 'Date range is not valid').should('not.exist');
 
         cy.get('@errors').should('have.length', errorCount);
         cy.get('@submitButton').should('not.be.disabled');
