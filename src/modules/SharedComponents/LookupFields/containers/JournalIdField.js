@@ -18,7 +18,10 @@ const mapStateToProps = (state, props) => {
     return {
         autoCompleteAsynchronousFieldId: props.journalIdFieldId || 'fez-matched-journals',
         itemsList:
-            state.get('journalReducer').itemsList.map(item => ({ ...item, id: item.jnl_jid, value: item.jnl_title })) ||
+            (state.get('journalReducer').itemsList &&
+                state
+                    .get('journalReducer')
+                    .itemsList.map(item => ({ ...item, id: item.jnl_jid, value: item.jnl_title }))) ||
             [],
         itemsLoading: state.get('journalReducer').itemsLoading || false,
         allowFreeText: props.allowFreeText || false,
@@ -31,6 +34,7 @@ const mapStateToProps = (state, props) => {
         floatingLabelText: props.floatingLabelText || 'Journal Id',
         OptionTemplate: JournalTemplate,
         defaultValue: (!!props.input && { id: `${selectedJournalId}` }) || (!!props.value && props.value) || '',
+        placeholder: locale.components.JournalIdField.placeholder,
         supplemental: !!selectedJournalId && (
             <ExternalLink
                 id={`journal-${selectedJournalId}-details`}

@@ -843,9 +843,27 @@ describe('Backend routes method', () => {
         });
     });
 
-    it('should construct url for favourite search list api', () => {
+    it('should construct url for favourite search list api without id', () => {
         expect(routes.FAVOURITE_SEARCH_LIST_API()).toEqual({
             apiUrl: 'favourite_search',
+        });
+    });
+
+    it('should construct url for favourite search list api with id', () => {
+        expect(routes.FAVOURITE_SEARCH_LIST_API({ id: '1' })).toEqual({
+            apiUrl: 'favourite_search/1',
+        });
+    });
+
+    it('should construct url for journal lookup api', () => {
+        expect(routes.JOURNAL_LOOKUP_API({ query: 'test' })).toEqual({
+            apiUrl: 'journals/search?rule=lookup&query=test',
+        });
+    });
+
+    it('should construct url for journal details api', () => {
+        expect(routes.JOURNAL_API({ id: '12' })).toEqual({
+            apiUrl: 'journals/12',
         });
     });
 });

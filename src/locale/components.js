@@ -3209,6 +3209,7 @@ export default {
             },
         },
         JournalIdField: {
+            placeholder: 'Enter ISSN or Journal Title',
             detailsLink: {
                 title: 'View journal details in a new tab',
                 linkText: 'View details',
