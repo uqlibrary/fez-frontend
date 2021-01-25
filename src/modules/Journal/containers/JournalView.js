@@ -332,8 +332,19 @@ const getListedDetails = journalDetails => [
     {
         ...txt.entries.cwtsSourceYear,
         data: {
-            status: !!journalDetails.fez_journal_cwts,
-            year: (!!journalDetails.fez_journal_cwts && journalDetails.fez_journal_cwts.jnl_cwts_source_year) || '',
+            status:
+                Array.isArray(journalDetails.fez_journal_wos_category) &&
+                journalDetails.fez_journal_wos_category.some(
+                    category => category.fez_journal_cwts && category.fez_journal_cwts.jnl_cwts_source_year,
+                ),
+            year:
+                Array.isArray(journalDetails.fez_journal_wos_category) &&
+                journalDetails.fez_journal_wos_category.reduce(
+                    (firstcwtsSourceYear, category) =>
+                        firstcwtsSourceYear ||
+                        (category.fez_journal_cwts && category.fez_journal_cwts.jnl_cwts_source_year),
+                    '',
+                ),
         },
     },
     [
