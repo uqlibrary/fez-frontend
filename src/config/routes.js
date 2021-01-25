@@ -179,6 +179,7 @@ export const flattedPathConfig = [
     '/admin/change-display-type',
     '/admin/collection',
     '/admin/community',
+    '/admin/master-journal-list-ingest',
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/add',
@@ -547,6 +548,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.digiteam],
                       pageTitle: locale.components.digiTeam.batchImport.title,
+                  },
+                  {
+                      path: pathConfig.admin.masterJournalListIngest,
+                      component: components.MasterJournalListIngest,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.components.MasterJournalListIngest.title,
                   },
               ]
             : []),

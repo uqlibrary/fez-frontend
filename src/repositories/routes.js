@@ -326,6 +326,10 @@ export const BATCH_IMPORT_API = () => ({
     apiUrl: 'external/records/batch-import',
 });
 
+export const MASTER_JOURNAL_LIST_INGEST_API = () => ({
+    apiUrl: 'journals/batch-import',
+});
+
 export const ISSN_LINKS_API = ({ type, issn }) => ({
     apiUrl: `tool/lookup/local/${type}/${issn}`,
 });
