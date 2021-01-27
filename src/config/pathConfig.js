@@ -140,6 +140,7 @@ export const pathConfig = {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',
+        masterJournalListIngest: '/admin/master-journal-list-ingest',
     },
     authorIdentifiers: {
         orcid: {
