@@ -8,9 +8,9 @@ import Tabs from '@material-ui/core/Tabs';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import TabContainer from 'modules/Admin/components/TabContainer';
 
-const titleToId = (title = '') =>
+export const titleToId = (title = '') =>
     `${title}`
-        .replace(/[^a-z0-9]/gi, '')
+        .replace(/[^a-z0-9 ]/gi, '')
         .toLowerCase()
         .replace(/ /g, '-');
 
