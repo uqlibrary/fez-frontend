@@ -30,7 +30,7 @@ export const requestMJLIngest = directory => dispatch => {
     dispatch({ type: actions.MASTER_JOURNAL_LIST_INGEST_REQUESTING, payload: directory });
     return (
         directory &&
-        post(MASTER_JOURNAL_LIST_INGEST_API(), { directory }).then(
+        post(MASTER_JOURNAL_LIST_INGEST_API(), directory).then(
             response => {
                 dispatch({
                     type: actions.MASTER_JOURNAL_LIST_INGEST_REQUESTED,
