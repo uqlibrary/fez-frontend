@@ -1,7 +1,7 @@
 import React from 'react';
 import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
-import TabbedCard from './TabbedCard';
+import TabbedCard, { titleToId } from './TabbedCard';
 
 function setup(testProps) {
     const props = {
@@ -24,8 +24,8 @@ describe('TabbedCard Component', () => {
         });
         expect(getByTestId('test-card0-tab0-heading')).toBeInTheDocument();
         expect(getByTestId('test-card0-tab0-heading')).toHaveTextContent('Test tab');
-        expect(getByTestId('test-card0-testtabtitle-section-content')).toBeInTheDocument();
-        expect(getByTestId('test-card0-testtabtitle-section-content')).toHaveTextContent('Test tab content');
+        expect(getByTestId('test-card0-test-tab-title-section-content')).toBeInTheDocument();
+        expect(getByTestId('test-card0-test-tab-title-section-content')).toHaveTextContent('Test tab content');
     });
 
     it('renders tabs as expected', async () => {
@@ -38,7 +38,12 @@ describe('TabbedCard Component', () => {
         });
         expect(getByTestId('test-card0-tab0-heading')).toBeInTheDocument();
         fireEvent.click(getByTestId('test-card0-tab1-heading'));
-        await waitFor(() => getByTestId('test-card0-testtab2title-section'));
-        expect(getByTestId('test-card0-testtab2title-section')).toHaveTextContent('Test tab 2 content');
+        await waitFor(() => getByTestId('test-card0-test-tab-2-title-section'));
+        expect(getByTestId('test-card0-test-tab-2-title-section')).toHaveTextContent('Test tab 2 content');
+    });
+
+    it('has helper to convert titles to ID', () => {
+        expect(titleToId('Test title 1!')).toBe('test-title-1');
+        expect(titleToId()).toBe('');
     });
 });
