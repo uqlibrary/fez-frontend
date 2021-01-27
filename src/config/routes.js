@@ -716,6 +716,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.digiteam.batchImport,
                   },
                   {
+                      linkTo: pathConfig.admin.masterJournalListIngest,
+                      ...locale.menu.masterJournalListIngest,
+                  },
+                  {
                       linkTo: pathConfig.admin.bulkUpdates,
                       ...locale.menu.bulkUpdates,
                   },
