@@ -7,7 +7,7 @@ context('Scroll to top module', () => {
     });
 
     it('Scroll to the bottom of the homepage, then click the scroll to top and the tabs should be visible', () => {
-        cy.contains('Homo sapiens in Arabia').should('exist');
+        cy.contains('Peptide mimic').should('exist');
         cy.get('.StandardPage').should('exist'); // This forces a scroll to the top.
         cy.get('#scrolltopbtn').should('have.css', 'opacity', '0');
         cy.contains('Genome-wide association').scrollIntoView();
