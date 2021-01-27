@@ -3,1696 +3,2384 @@ export const hindexResponse = {"hindex_scopus": 42, "hindex_incites": 47};
 export const trendingPublications = {
     "total": 60,
     "data": [{
-        "rek_pid": "UQ:6781f9d",
-        "rek_title_xsdmf_id": 10588,
-        "rek_title": "Homo sapiens in Arabia by 85,000 years ago",
-        "rek_description_xsdmf_id": null,
-        "rek_description": "Understanding the timing and character of the expansion of Homo sapiens out of Africa is critical for inferring the colonization and admixture processes that underpin global population history. It has been argued that dispersal out of Africa had an early phase, particularly ~130-90 thousand years ago (ka), that reached only the East Mediterranean Levant, and a later phase, ~60-50\u2009ka, that extended across the diverse environments of Eurasia to Sahul. However, recent findings from East Asia and Sahul challenge this model. Here we show that H. sapiens was in the Arabian Peninsula before 85\u2009ka. We describe the Al Wusta-1 (AW-1) intermediate phalanx from the site of Al Wusta in the Nefud desert, Saudi Arabia. AW-1 is the oldest directly dated fossil of our species outside Africa and the Levant. The palaeoenvironmental context of Al Wusta demonstrates that H. sapiens using Middle Palaeolithic stone tools dispersed into Arabia during a phase of increased precipitation driven by orbital forcing, in association with a primarily African fauna. A Bayesian model incorporating independent chronometric age estimates indicates a chronology for Al Wusta of ~95-86\u2009ka, which we correlate with a humid episode in the later part of Marine Isotope Stage 5 known from various regional records. Al Wusta shows that early dispersals were more spatially and temporally extensive than previously thought. Early H. sapiens dispersals out of Africa were not limited to winter rainfall-fed Levantine Mediterranean woodlands immediately adjacent to Africa, but extended deep into the semi-arid grasslands of Arabia, facilitated by periods of enhanced monsoonal rainfall.",
-        "rek_display_type_xsdmf_id": null,
-        "rek_display_type": 179,
-        "rek_status_xsdmf_id": null,
-        "rek_status": 2,
-        "rek_date_xsdmf_id": null,
-        "rek_date": "2018-05-01T00:00:00Z",
-        "rek_object_type_xsdmf_id": null,
-        "rek_object_type": 3,
-        "rek_depositor_xsdmf_id": null,
-        "rek_depositor": null,
-        "rek_created_date_xsdmf_id": null,
-        "rek_created_date": "2018-04-26T13:23:26Z",
-        "rek_updated_date_xsdmf_id": 3678,
-        "rek_updated_date": "2018-06-05T02:41:31Z",
-        "rek_file_downloads": 0,
-        "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Groucutt, Huw S\" href=\"\/list\/author\/Groucutt%2C+Huw+S\/\">Groucutt, Huw S<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Gr\u00fcn, Rainer\" href=\"\/list\/author\/Gr%26uuml%3Bn%2C+Rainer\/\">Gr\u00fcn, Rainer<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Zalmout, Iyad A S\" href=\"\/list\/author\/Zalmout%2C+Iyad+A+S\/\">Zalmout, Iyad A S<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Drake, Nick A\" href=\"\/list\/author\/Drake%2C+Nick+A\/\">Drake, Nick A<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Armitage, Simon J\" href=\"\/list\/author\/Armitage%2C+Simon+J\/\">Armitage, Simon J<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Candy, Ian\" href=\"\/list\/author\/Candy%2C+Ian\/\">Candy, Ian<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Clark-Wilson, Richard\" href=\"\/list\/author\/Clark-Wilson%2C+Richard\/\">Clark-Wilson, Richard<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Louys, Julien\" href=\"\/list\/author\/Louys%2C+Julien\/\">Louys, Julien<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Breeze, Paul S\" href=\"\/list\/author\/Breeze%2C+Paul+S\/\">Breeze, Paul S<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Duval, Mathieu\" href=\"\/list\/author\/Duval%2C+Mathieu\/\">Duval, Mathieu<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Buck, Laura T\" href=\"\/list\/author\/Buck%2C+Laura+T\/\">Buck, Laura T<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Kivell, Tracy L\" href=\"\/list\/author\/Kivell%2C+Tracy+L\/\">Kivell, Tracy L<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Pomeroy, Emma\" href=\"\/list\/author\/Pomeroy%2C+Emma\/\">Pomeroy, Emma<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Stephens, Nicholas B\" href=\"\/list\/author\/Stephens%2C+Nicholas+B\/\">Stephens, Nicholas B<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Stock, Jay T\" href=\"\/list\/author\/Stock%2C+Jay+T\/\">Stock, Jay T<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Stewart, Mathew\" href=\"\/list\/author\/Stewart%2C+Mathew\/\">Stewart, Mathew<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Price, Gilbert J\" href=\"\/list\/author_id\/7780\/\">Price, Gilbert J<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Kinsley, Leslie\" href=\"\/list\/author\/Kinsley%2C+Leslie\/\">Kinsley, Leslie<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Sung, Wing Wai\" href=\"\/list\/author\/Sung%2C+Wing+Wai\/\">Sung, Wing Wai<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Alsharekh, Abdullah\" href=\"\/list\/author\/Alsharekh%2C+Abdullah\/\">Alsharekh, Abdullah<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Al-Omari, Abdulaziz\" href=\"\/list\/author\/Al-Omari%2C+Abdulaziz\/\">Al-Omari, Abdulaziz<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Zahir, Muhammad\" href=\"\/list\/author\/Zahir%2C+Muhammad\/\">Zahir, Muhammad<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Memesh, Abdullah M\" href=\"\/list\/author\/Memesh%2C+Abdullah+M\/\">Memesh, Abdullah M<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Abdulshakoor, Ammar J\" href=\"\/list\/author\/Abdulshakoor%2C+Ammar+J\/\">Abdulshakoor, Ammar J<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Al-Masari, Abdu M\" href=\"\/list\/author\/Al-Masari%2C+Abdu+M\/\">Al-Masari, Abdu M<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Bahameem, Ahmed A\" href=\"\/list\/author\/Bahameem%2C+Ahmed+A\/\">Bahameem, Ahmed A<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Al Murayyi, Khaled M S\" href=\"\/list\/author\/Al+Murayyi%2C+Khaled+M+S\/\">Al Murayyi, Khaled M S<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Zahrani, Badr\" href=\"\/list\/author\/Zahrani%2C+Badr\/\">Zahrani, Badr<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Scerri, Eleanor L M\" href=\"\/list\/author\/Scerri%2C+Eleanor+L+M\/\">Scerri, Eleanor L M<\/a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Petraglia, Michael D\" href=\"\/list\/author\/Petraglia%2C+Michael+D\/\">Petraglia, Michael D<\/a> (<span class=\"citation_date\">2018<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Homo sapiens in Arabia by 85,000 years ago\" href=\"\/view\/UQ:6781f9d\">Homo sapiens in Arabia by 85,000 years ago<\/a>. <i><span class=\"citation_journal_name\">Nature ecology &amp; evolution<\/span><\/i>, <i><span class=\"citation_volume_number\">2<\/span><\/i> <span class=\"citation_issue_number\">5<\/span>: <span class=\"citation_start_page\">800<\/span>-<span class=\"citation_end_page\">809<\/span>. doi:<span class=\"citation_doi\">10.1038\/s41559-018-0518-2<\/span>",
-        "rek_genre_xsdmf_id": null,
-        "rek_genre": "Journal Article",
-        "rek_genre_type_xsdmf_id": null,
-        "rek_genre_type": "Article (original research)",
-        "rek_formatted_title_xsdmf_id": null,
-        "rek_formatted_title": null,
-        "rek_formatted_abstract_xsdmf_id": null,
-        "rek_formatted_abstract": null,
-        "rek_depositor_affiliation_xsdmf_id": 11881,
-        "rek_depositor_affiliation": 1248,
-        "rek_thomson_citation_count": 1,
-        "rek_thomson_citation_count_xsdmf_id": null,
-        "rek_subtype_xsdmf_id": null,
-        "rek_subtype": "Article (original research)",
-        "rek_scopus_citation_count": null,
-        "rek_herdc_notes_xsdmf_id": null,
-        "rek_herdc_notes": null,
-        "rek_scopus_doc_type_xsdmf_id": null,
-        "rek_scopus_doc_type": null,
-        "rek_wok_doc_type_xsdmf_id": null,
-        "rek_wok_doc_type": "@",
-        "rek_pubmed_doc_type_xsdmf_id": null,
-        "rek_pubmed_doc_type": "Journal Article",
-        "rek_security_inherited": 1,
-        "rek_altmetric_score": 1243,
-        "rek_altmetric_score_xsdmf_id": null,
-        "rek_altmetric_id": 36047797,
-        "rek_altmetric_id_xsdmf_id": null,
-        "rek_copyright_xsdmf_id": 3679,
-        "rek_copyright": "off",
-        "fez_record_search_key_article_number": null,
-        "fez_record_search_key_assigned_group_id": [],
-        "fez_record_search_key_assigned_user_id": [],
-        "fez_record_search_key_author": [{
-            "rek_author_id": 30459169,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Groucutt, Huw S",
-            "rek_author_order": 1
-        }, {
-            "rek_author_id": 30459170,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Gr\u00fcn, Rainer",
-            "rek_author_order": 2
-        }, {
-            "rek_author_id": 30459171,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Zalmout, Iyad A S",
-            "rek_author_order": 3
-        }, {
-            "rek_author_id": 30459172,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Drake, Nick A",
-            "rek_author_order": 4
-        }, {
-            "rek_author_id": 30459173,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Armitage, Simon J",
-            "rek_author_order": 5
-        }, {
-            "rek_author_id": 30459174,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Candy, Ian",
-            "rek_author_order": 6
-        }, {
-            "rek_author_id": 30459175,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Clark-Wilson, Richard",
-            "rek_author_order": 7
-        }, {
-            "rek_author_id": 30459176,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Louys, Julien",
-            "rek_author_order": 8
-        }, {
-            "rek_author_id": 30459177,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Breeze, Paul S",
-            "rek_author_order": 9
-        }, {
-            "rek_author_id": 30459178,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Duval, Mathieu",
-            "rek_author_order": 10
-        }, {
-            "rek_author_id": 30459179,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Buck, Laura T",
-            "rek_author_order": 11
-        }, {
-            "rek_author_id": 30459180,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Kivell, Tracy L",
-            "rek_author_order": 12
-        }, {
-            "rek_author_id": 30459181,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Pomeroy, Emma",
-            "rek_author_order": 13
-        }, {
-            "rek_author_id": 30459182,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Stephens, Nicholas B",
-            "rek_author_order": 14
-        }, {
-            "rek_author_id": 30459183,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Stock, Jay T",
-            "rek_author_order": 15
-        }, {
-            "rek_author_id": 30459184,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Stewart, Mathew",
-            "rek_author_order": 16
-        }, {
-            "rek_author_id": 30459185,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Price, Gilbert J",
-            "rek_author_order": 17
-        }, {
-            "rek_author_id": 30459186,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Kinsley, Leslie",
-            "rek_author_order": 18
-        }, {
-            "rek_author_id": 30459187,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Sung, Wing Wai",
-            "rek_author_order": 19
-        }, {
-            "rek_author_id": 30459188,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Alsharekh, Abdullah",
-            "rek_author_order": 20
-        }, {
-            "rek_author_id": 30459189,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Al-Omari, Abdulaziz",
-            "rek_author_order": 21
-        }, {
-            "rek_author_id": 30459190,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Zahir, Muhammad",
-            "rek_author_order": 22
-        }, {
-            "rek_author_id": 30459191,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Memesh, Abdullah M",
-            "rek_author_order": 23
-        }, {
-            "rek_author_id": 30459192,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Abdulshakoor, Ammar J",
-            "rek_author_order": 24
-        }, {
-            "rek_author_id": 30459193,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Al-Masari, Abdu M",
-            "rek_author_order": 25
-        }, {
-            "rek_author_id": 30459194,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Bahameem, Ahmed A",
-            "rek_author_order": 26
-        }, {
-            "rek_author_id": 30459195,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Al Murayyi, Khaled M S",
-            "rek_author_order": 27
-        }, {
-            "rek_author_id": 30459196,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Zahrani, Badr",
-            "rek_author_order": 28
-        }, {
-            "rek_author_id": 30459197,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Scerri, Eleanor L M",
-            "rek_author_order": 29
-        }, {
-            "rek_author_id": 30459198,
-            "rek_author_pid": "UQ:6781f9d",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Petraglia, Michael D",
-            "rek_author_order": 30
-        }],
-        "fez_record_search_key_author_affiliation_country": [{
-            "rek_author_affiliation_country_id": 744972,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 1,
-            "rek_author_affiliation_country": "England|Germany"
-        }, {
-            "rek_author_affiliation_country_id": 744973,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 2,
-            "rek_author_affiliation_country": "Australia|Australia"
-        }, {
-            "rek_author_affiliation_country_id": 744974,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 3,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744975,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 4,
-            "rek_author_affiliation_country": "Germany|England"
-        }, {
-            "rek_author_affiliation_country_id": 744976,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 5,
-            "rek_author_affiliation_country": "England|Norway"
-        }, {
-            "rek_author_affiliation_country_id": 744977,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 6,
-            "rek_author_affiliation_country": "England"
-        }, {
-            "rek_author_affiliation_country_id": 744978,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 7,
-            "rek_author_affiliation_country": "England"
-        }, {
-            "rek_author_affiliation_country_id": 744979,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 8,
-            "rek_author_affiliation_country": "Australia"
-        }, {
-            "rek_author_affiliation_country_id": 744980,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 9,
-            "rek_author_affiliation_country": "England"
-        }, {
-            "rek_author_affiliation_country_id": 744981,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 10,
-            "rek_author_affiliation_country": "Australia|Spain"
-        }, {
-            "rek_author_affiliation_country_id": 744982,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 11,
-            "rek_author_affiliation_country": "England|England"
-        }, {
-            "rek_author_affiliation_country_id": 744983,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 12,
-            "rek_author_affiliation_country": "England|Germany"
-        }, {
-            "rek_author_affiliation_country_id": 744984,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 13,
-            "rek_author_affiliation_country": "England|England"
-        }, {
-            "rek_author_affiliation_country_id": 744985,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 14,
-            "rek_author_affiliation_country": "Germany"
-        }, {
-            "rek_author_affiliation_country_id": 744986,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 15,
-            "rek_author_affiliation_country": "England|Canada"
-        }, {
-            "rek_author_affiliation_country_id": 744987,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 16,
-            "rek_author_affiliation_country": "Australia"
-        }, {
-            "rek_author_affiliation_country_id": 744988,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 17,
-            "rek_author_affiliation_country": "Australia"
-        }, {
-            "rek_author_affiliation_country_id": 744989,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 18,
-            "rek_author_affiliation_country": "Australia"
-        }, {
-            "rek_author_affiliation_country_id": 744990,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 19,
-            "rek_author_affiliation_country": "England"
-        }, {
-            "rek_author_affiliation_country_id": 744991,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 20,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744992,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 21,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744993,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 22,
-            "rek_author_affiliation_country": "Pakistan"
-        }, {
-            "rek_author_affiliation_country_id": 744994,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 23,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744995,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 24,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744996,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 25,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744997,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 26,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744998,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 27,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 744999,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 28,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 745000,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 29,
-            "rek_author_affiliation_country": "Saudi Arabia"
-        }, {
-            "rek_author_affiliation_country_id": 745001,
-            "rek_author_affiliation_country_pid": "UQ:6781f9d",
-            "rek_author_affiliation_country_xsdmf_id": 0,
-            "rek_author_affiliation_country_order": 30,
-            "rek_author_affiliation_country": "England|USA"
-        }],
-        "fez_record_search_key_author_affiliation_full_address": [{
-            "rek_author_affiliation_full_address_id": 809872,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 1,
-            "rek_author_affiliation_full_address": "School of Archaeology, Research Laboratory for Archaeology and the History of Art, University of Oxford, Oxford, UK. huw.groucutt@rlaha.ox.ac.uk."
-        }, {
-            "rek_author_affiliation_full_address_id": 809873,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 2,
-            "rek_author_affiliation_full_address": "Department of Archaeology, Max Planck Institute for the Science of Human History, Jena, Germany. huw.groucutt@rlaha.ox.ac.uk."
-        }, {
-            "rek_author_affiliation_full_address_id": 809874,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 3,
-            "rek_author_affiliation_full_address": "Australian Research Centre for Human Evolution (ARCHE), Environmental Futures Research Institute, Griffith University, Nathan, Queensland, Australia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809875,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 4,
-            "rek_author_affiliation_full_address": "Research School of Earth Sciences, The Australian National University, Canberra, Australian Capital Territory, Australia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809876,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 5,
-            "rek_author_affiliation_full_address": "Saudi Geological Survey, Sedimentary Rocks and Palaeontology Department, Jeddah, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809877,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 6,
-            "rek_author_affiliation_full_address": "Department of Archaeology, Max Planck Institute for the Science of Human History, Jena, Germany."
-        }, {
-            "rek_author_affiliation_full_address_id": 809878,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 7,
-            "rek_author_affiliation_full_address": "Department of Geography, King's College London, London, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809879,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 8,
-            "rek_author_affiliation_full_address": "Department of Geography, Royal Holloway, University of London, London, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809880,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 9,
-            "rek_author_affiliation_full_address": "SFF Centre for Early Sapiens Behaviour (SapienCE), University of Bergen, Bergen, Norway."
-        }, {
-            "rek_author_affiliation_full_address_id": 809881,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 10,
-            "rek_author_affiliation_full_address": "Department of Geography, Royal Holloway, University of London, London, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809882,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 11,
-            "rek_author_affiliation_full_address": "Department of Geography, Royal Holloway, University of London, London, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809883,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 12,
-            "rek_author_affiliation_full_address": "Australian Research Centre for Human Evolution (ARCHE), Environmental Futures Research Institute, Griffith University, Nathan, Queensland, Australia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809884,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 13,
-            "rek_author_affiliation_full_address": "Department of Geography, King's College London, London, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809885,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 14,
-            "rek_author_affiliation_full_address": "Australian Research Centre for Human Evolution (ARCHE), Environmental Futures Research Institute, Griffith University, Nathan, Queensland, Australia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809886,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 15,
-            "rek_author_affiliation_full_address": "Geochronology, Centro Nacional de Investigaci\u00f3n sobre la Evoluci\u00f3n (CENIEH), Burgos, Spain."
-        }, {
-            "rek_author_affiliation_full_address_id": 809887,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 16,
-            "rek_author_affiliation_full_address": "PAVE Research Group, Department of Archaeology, University of Cambridge, Cambridge, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809888,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 17,
-            "rek_author_affiliation_full_address": "Earth Sciences Department, Natural History Museum, London, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809889,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 18,
-            "rek_author_affiliation_full_address": "Skeletal Biology Research Centre, School of Anthropology and Conservation, University of Kent, Canterbury, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809890,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 19,
-            "rek_author_affiliation_full_address": "Department of Human Evolution, Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany."
-        }, {
-            "rek_author_affiliation_full_address_id": 809891,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 20,
-            "rek_author_affiliation_full_address": "PAVE Research Group, Department of Archaeology, University of Cambridge, Cambridge, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809892,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 21,
-            "rek_author_affiliation_full_address": "School of Natural Sciences and Psychology, Liverpool John Moores University, Liverpool, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809893,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 22,
-            "rek_author_affiliation_full_address": "Department of Human Evolution, Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany."
-        }, {
-            "rek_author_affiliation_full_address_id": 809894,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 23,
-            "rek_author_affiliation_full_address": "PAVE Research Group, Department of Archaeology, University of Cambridge, Cambridge, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809895,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 24,
-            "rek_author_affiliation_full_address": "Department of Anthropology, University of Western Ontario, London, Ontario, Canada."
-        }, {
-            "rek_author_affiliation_full_address_id": 809896,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 25,
-            "rek_author_affiliation_full_address": "Palaeontology, Geobiology and Earth Archives Research Centre, School of Biological, Earth and Environmental Science, University of New South Wales, Sydney, New South Wales, Australia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809897,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 26,
-            "rek_author_affiliation_full_address": "School of Earth and Environmental Sciences, The University of Queensland, St Lucia, Queensland, Australia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809898,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 27,
-            "rek_author_affiliation_full_address": "Research School of Earth Sciences, The Australian National University, Canberra, Australian Capital Territory, Australia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809899,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 28,
-            "rek_author_affiliation_full_address": "Department of Life Sciences, Natural History Museum, London, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809900,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 29,
-            "rek_author_affiliation_full_address": "Department of Archaeology, King Saud University, Riyadh, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809901,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 30,
-            "rek_author_affiliation_full_address": "Saudi Commission for Tourism and National Heritage, Riyadh, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809902,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 31,
-            "rek_author_affiliation_full_address": "Department of Archaeology, Hazara University, Mansehra, Pakistan."
-        }, {
-            "rek_author_affiliation_full_address_id": 809903,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 32,
-            "rek_author_affiliation_full_address": "Saudi Geological Survey, Sedimentary Rocks and Palaeontology Department, Jeddah, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809904,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 33,
-            "rek_author_affiliation_full_address": "Saudi Geological Survey, Sedimentary Rocks and Palaeontology Department, Jeddah, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809905,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 34,
-            "rek_author_affiliation_full_address": "Saudi Geological Survey, Sedimentary Rocks and Palaeontology Department, Jeddah, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809906,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 35,
-            "rek_author_affiliation_full_address": "Saudi Geological Survey, Sedimentary Rocks and Palaeontology Department, Jeddah, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809907,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 36,
-            "rek_author_affiliation_full_address": "Saudi Commission for Tourism and National Heritage, Riyadh, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809908,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 37,
-            "rek_author_affiliation_full_address": "Saudi Commission for Tourism and National Heritage, Riyadh, Saudi Arabia."
-        }, {
-            "rek_author_affiliation_full_address_id": 809909,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 38,
-            "rek_author_affiliation_full_address": "School of Archaeology, Research Laboratory for Archaeology and the History of Art, University of Oxford, Oxford, UK."
-        }, {
-            "rek_author_affiliation_full_address_id": 809910,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 39,
-            "rek_author_affiliation_full_address": "Department of Archaeology, Max Planck Institute for the Science of Human History, Jena, Germany."
-        }, {
-            "rek_author_affiliation_full_address_id": 809911,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 40,
-            "rek_author_affiliation_full_address": "Department of Archaeology, Max Planck Institute for the Science of Human History, Jena, Germany. petraglia@shh.mpg.de."
-        }, {
-            "rek_author_affiliation_full_address_id": 809912,
-            "rek_author_affiliation_full_address_pid": "UQ:6781f9d",
-            "rek_author_affiliation_full_address_xsdmf_id": 0,
-            "rek_author_affiliation_full_address_order": 41,
-            "rek_author_affiliation_full_address": "Human Origins Program, National Museum of Natural History, Smithsonian Institution, Washington DC, USA. petraglia@shh.mpg.de."
-        }],
-        "fez_record_search_key_author_affiliation_id": [],
-        "fez_record_search_key_author_affiliation_name": [{
-            "rek_author_affiliation_name_id": 745793,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 1,
-            "rek_author_affiliation_name": "Univ Oxford|Max Planck Inst Sci Human Hist"
-        }, {
-            "rek_author_affiliation_name_id": 745794,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 2,
-            "rek_author_affiliation_name": "Griffith Univ|Australian Natl Univ"
-        }, {
-            "rek_author_affiliation_name_id": 745795,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 3,
-            "rek_author_affiliation_name": "Saudi Geol Survey"
-        }, {
-            "rek_author_affiliation_name_id": 745796,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 4,
-            "rek_author_affiliation_name": "Max Planck Inst Sci Human Hist|Kings Coll London"
-        }, {
-            "rek_author_affiliation_name_id": 745797,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 5,
-            "rek_author_affiliation_name": "Univ London|Univ Bergen"
-        }, {
-            "rek_author_affiliation_name_id": 745798,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 6,
-            "rek_author_affiliation_name": "Univ London"
-        }, {
-            "rek_author_affiliation_name_id": 745799,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 7,
-            "rek_author_affiliation_name": "Univ London"
-        }, {
-            "rek_author_affiliation_name_id": 745800,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 8,
-            "rek_author_affiliation_name": "Griffith Univ"
-        }, {
-            "rek_author_affiliation_name_id": 745801,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 9,
-            "rek_author_affiliation_name": "Kings Coll London"
-        }, {
-            "rek_author_affiliation_name_id": 745802,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 10,
-            "rek_author_affiliation_name": "Griffith Univ|Ctr Nacl Invest Evoluc CENIEH"
-        }, {
-            "rek_author_affiliation_name_id": 745803,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 11,
-            "rek_author_affiliation_name": "Univ Cambridge|Nat Hist Museum"
-        }, {
-            "rek_author_affiliation_name_id": 745804,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 12,
-            "rek_author_affiliation_name": "Univ Kent|Max Planck Inst Evolutionary Anthropol"
-        }, {
-            "rek_author_affiliation_name_id": 745805,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 13,
-            "rek_author_affiliation_name": "Univ Cambridge|Liverpool John Moores Univ"
-        }, {
-            "rek_author_affiliation_name_id": 745806,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 14,
-            "rek_author_affiliation_name": "Max Planck Inst Evolutionary Anthropol"
-        }, {
-            "rek_author_affiliation_name_id": 745807,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 15,
-            "rek_author_affiliation_name": "Univ Cambridge|Univ Western Ontario"
-        }, {
-            "rek_author_affiliation_name_id": 745808,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 16,
-            "rek_author_affiliation_name": "Univ New South Wales"
-        }, {
-            "rek_author_affiliation_name_id": 745809,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 17,
-            "rek_author_affiliation_name": "Univ Queensland"
-        }, {
-            "rek_author_affiliation_name_id": 745810,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 18,
-            "rek_author_affiliation_name": "Australian Natl Univ"
-        }, {
-            "rek_author_affiliation_name_id": 745811,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 19,
-            "rek_author_affiliation_name": "Nat Hist Museum"
-        }, {
-            "rek_author_affiliation_name_id": 745812,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 20,
-            "rek_author_affiliation_name": "King Saud Univ"
-        }, {
-            "rek_author_affiliation_name_id": 745813,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 21,
-            "rek_author_affiliation_name": "Saudi Commiss Tourism & Natl Heritage"
-        }, {
-            "rek_author_affiliation_name_id": 745814,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 22,
-            "rek_author_affiliation_name": "Hazara Univ"
-        }, {
-            "rek_author_affiliation_name_id": 745815,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 23,
-            "rek_author_affiliation_name": "Saudi Geol Survey"
-        }, {
-            "rek_author_affiliation_name_id": 745816,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 24,
-            "rek_author_affiliation_name": "Saudi Geol Survey"
-        }, {
-            "rek_author_affiliation_name_id": 745817,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 25,
-            "rek_author_affiliation_name": "Saudi Geol Survey"
-        }, {
-            "rek_author_affiliation_name_id": 745818,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 26,
-            "rek_author_affiliation_name": "Saudi Geol Survey"
-        }, {
-            "rek_author_affiliation_name_id": 745819,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 27,
-            "rek_author_affiliation_name": "Saudi Commiss Tourism & Natl Heritage"
-        }, {
-            "rek_author_affiliation_name_id": 745820,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 28,
-            "rek_author_affiliation_name": "Saudi Commiss Tourism & Natl Heritage"
-        }, {
-            "rek_author_affiliation_name_id": 745821,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 29,
-            "rek_author_affiliation_name": "Saudi Commiss Tourism & Natl Heritage"
-        }, {
-            "rek_author_affiliation_name_id": 745822,
-            "rek_author_affiliation_name_pid": "UQ:6781f9d",
-            "rek_author_affiliation_name_xsdmf_id": 0,
-            "rek_author_affiliation_name_order": 30,
-            "rek_author_affiliation_name": "Univ Oxford|Smithsonian Inst"
-        }],
-        "fez_record_search_key_author_id": [{
-            "rek_author_id_id": 29735839,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 1
-        }, {
-            "rek_author_id_id": 29735840,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 2
-        }, {
-            "rek_author_id_id": 29735841,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 3
-        }, {
-            "rek_author_id_id": 29735842,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 4
-        }, {
-            "rek_author_id_id": 29735843,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 5
-        }, {
-            "rek_author_id_id": 29735844,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 6
-        }, {
-            "rek_author_id_id": 29735845,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 7
-        }, {
-            "rek_author_id_id": 29735846,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 8
-        }, {
-            "rek_author_id_id": 29735847,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 9
-        }, {
-            "rek_author_id_id": 29735848,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 10
-        }, {
-            "rek_author_id_id": 29735849,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 11
-        }, {
-            "rek_author_id_id": 29735850,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 12
-        }, {
-            "rek_author_id_id": 29735851,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 13
-        }, {
-            "rek_author_id_id": 29735852,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 14
-        }, {
-            "rek_author_id_id": 29735853,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 15
-        }, {
-            "rek_author_id_id": 29735854,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 16
-        }, {
-            "rek_author_id_id": 29735855,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 7780,
-            "rek_author_id_order": 17,
-            "rek_author_id_lookup": "Gilbert Price"
-        }, {
-            "rek_author_id_id": 29735856,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 18
-        }, {
-            "rek_author_id_id": 29735857,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 19
-        }, {
-            "rek_author_id_id": 29735858,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 20
-        }, {
-            "rek_author_id_id": 29735859,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 21
-        }, {
-            "rek_author_id_id": 29735860,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 22
-        }, {
-            "rek_author_id_id": 29735861,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 23
-        }, {
-            "rek_author_id_id": 29735862,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 24
-        }, {
-            "rek_author_id_id": 29735863,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 25
-        }, {
-            "rek_author_id_id": 29735864,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 26
-        }, {
-            "rek_author_id_id": 29735865,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 27
-        }, {
-            "rek_author_id_id": 29735866,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 28
-        }, {
-            "rek_author_id_id": 29735867,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 29
-        }, {
-            "rek_author_id_id": 29735868,
-            "rek_author_id_pid": "UQ:6781f9d",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 30
-        }],
-        "fez_record_search_key_biosis_id": null,
-        "fez_record_search_key_contributor": [],
-        "fez_record_search_key_contributor_id": [],
-        "fez_record_search_key_corresponding_country": [{
-            "rek_corresponding_country_id": 297499,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 1,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297500,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 2,
-            "rek_corresponding_country": "Germany"
-        }, {
-            "rek_corresponding_country_id": 297501,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 3,
-            "rek_corresponding_country": "Australia"
-        }, {
-            "rek_corresponding_country_id": 297502,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 4,
-            "rek_corresponding_country": "Australia"
-        }, {
-            "rek_corresponding_country_id": 297503,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 5,
-            "rek_corresponding_country": "Saudi Arabia"
-        }, {
-            "rek_corresponding_country_id": 297504,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 6,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297505,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 7,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297506,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 8,
-            "rek_corresponding_country": "Norway"
-        }, {
-            "rek_corresponding_country_id": 297507,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 9,
-            "rek_corresponding_country": "Spain"
-        }, {
-            "rek_corresponding_country_id": 297508,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 10,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297509,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 11,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297510,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 12,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297511,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 13,
-            "rek_corresponding_country": "Germany"
-        }, {
-            "rek_corresponding_country_id": 297512,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 14,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297513,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 15,
-            "rek_corresponding_country": "Canada"
-        }, {
-            "rek_corresponding_country_id": 297514,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 16,
-            "rek_corresponding_country": "Australia"
-        }, {
-            "rek_corresponding_country_id": 297515,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 17,
-            "rek_corresponding_country": "Australia"
-        }, {
-            "rek_corresponding_country_id": 297516,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 18,
-            "rek_corresponding_country": "England"
-        }, {
-            "rek_corresponding_country_id": 297517,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 19,
-            "rek_corresponding_country": "Saudi Arabia"
-        }, {
-            "rek_corresponding_country_id": 297518,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 20,
-            "rek_corresponding_country": "Saudi Arabia"
-        }, {
-            "rek_corresponding_country_id": 297519,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 21,
-            "rek_corresponding_country": "Pakistan"
-        }, {
-            "rek_corresponding_country_id": 297520,
-            "rek_corresponding_country_pid": "UQ:6781f9d",
-            "rek_corresponding_country_xsdmf_id": 0,
-            "rek_corresponding_country_order": 22,
-            "rek_corresponding_country": "USA"
-        }],
-        "fez_record_search_key_corresponding_email": [{
-            "rek_corresponding_email_id": 69965,
-            "rek_corresponding_email_pid": "UQ:6781f9d",
-            "rek_corresponding_email_xsdmf_id": 0,
-            "rek_corresponding_email_order": 1,
-            "rek_corresponding_email": "huw.groucutt@rlaha.ox.ac.uk|petraglia@shh.mpg.de"
-        }, {
-            "rek_corresponding_email_id": 69966,
-            "rek_corresponding_email_pid": "UQ:6781f9d",
-            "rek_corresponding_email_xsdmf_id": 0,
-            "rek_corresponding_email_order": 2,
-            "rek_corresponding_email": "huw.groucutt@rlaha.ox.ac.uk"
-        }, {
-            "rek_corresponding_email_id": 69967,
-            "rek_corresponding_email_pid": "UQ:6781f9d",
-            "rek_corresponding_email_xsdmf_id": 0,
-            "rek_corresponding_email_order": 3,
-            "rek_corresponding_email": "petraglia@shh.mpg.de"
-        }],
-        "fez_record_search_key_corresponding_name": [{
-            "rek_corresponding_name_id": 63391,
-            "rek_corresponding_name_pid": "UQ:6781f9d",
-            "rek_corresponding_name_xsdmf_id": 0,
-            "rek_corresponding_name_order": 1,
-            "rek_corresponding_name": "Groucutt, Huw S.|Petraglia, Michael D."
-        }, {
-            "rek_corresponding_name_id": 63392,
-            "rek_corresponding_name_pid": "UQ:6781f9d",
-            "rek_corresponding_name_xsdmf_id": 0,
-            "rek_corresponding_name_order": 2,
-            "rek_corresponding_name": "Groucutt, Huw S."
-        }, {
-            "rek_corresponding_name_id": 63393,
-            "rek_corresponding_name_pid": "UQ:6781f9d",
-            "rek_corresponding_name_xsdmf_id": 0,
-            "rek_corresponding_name_order": 3,
-            "rek_corresponding_name": "Petraglia, Michael D."
-        }],
-        "fez_record_search_key_corresponding_organisation": [{
-            "rek_corresponding_organisation_id": 294849,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 1,
-            "rek_corresponding_organisation": "Univ Oxford"
-        }, {
-            "rek_corresponding_organisation_id": 294850,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 2,
-            "rek_corresponding_organisation": "Max Planck Inst Sci Human Hist"
-        }, {
-            "rek_corresponding_organisation_id": 294851,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 3,
-            "rek_corresponding_organisation": "Griffith Univ"
-        }, {
-            "rek_corresponding_organisation_id": 294852,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 4,
-            "rek_corresponding_organisation": "Australian Natl Univ"
-        }, {
-            "rek_corresponding_organisation_id": 294853,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 5,
-            "rek_corresponding_organisation": "Saudi Geol Survey"
-        }, {
-            "rek_corresponding_organisation_id": 294854,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 6,
-            "rek_corresponding_organisation": "Kings Coll London"
-        }, {
-            "rek_corresponding_organisation_id": 294855,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 7,
-            "rek_corresponding_organisation": "Univ London"
-        }, {
-            "rek_corresponding_organisation_id": 294856,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 8,
-            "rek_corresponding_organisation": "Univ Bergen"
-        }, {
-            "rek_corresponding_organisation_id": 294857,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 9,
-            "rek_corresponding_organisation": "Ctr Nacl Invest Evoluc CENIEH"
-        }, {
-            "rek_corresponding_organisation_id": 294858,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 10,
-            "rek_corresponding_organisation": "Univ Cambridge"
-        }, {
-            "rek_corresponding_organisation_id": 294859,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 11,
-            "rek_corresponding_organisation": "Nat Hist Museum"
-        }, {
-            "rek_corresponding_organisation_id": 294860,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 12,
-            "rek_corresponding_organisation": "Univ Kent"
-        }, {
-            "rek_corresponding_organisation_id": 294861,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 13,
-            "rek_corresponding_organisation": "Max Planck Inst Evolutionary Anthropol"
-        }, {
-            "rek_corresponding_organisation_id": 294862,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 14,
-            "rek_corresponding_organisation": "Liverpool John Moores Univ"
-        }, {
-            "rek_corresponding_organisation_id": 294863,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 15,
-            "rek_corresponding_organisation": "Univ Western Ontario"
-        }, {
-            "rek_corresponding_organisation_id": 294864,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 16,
-            "rek_corresponding_organisation": "Univ New South Wales"
-        }, {
-            "rek_corresponding_organisation_id": 294865,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 17,
-            "rek_corresponding_organisation": "Univ Queensland"
-        }, {
-            "rek_corresponding_organisation_id": 294866,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 18,
-            "rek_corresponding_organisation": "Nat Hist Museum"
-        }, {
-            "rek_corresponding_organisation_id": 294867,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 19,
-            "rek_corresponding_organisation": "King Saud Univ"
-        }, {
-            "rek_corresponding_organisation_id": 294868,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 20,
-            "rek_corresponding_organisation": "Saudi Commiss Tourism & Natl Heritage"
-        }, {
-            "rek_corresponding_organisation_id": 294869,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 21,
-            "rek_corresponding_organisation": "Hazara Univ"
-        }, {
-            "rek_corresponding_organisation_id": 294870,
-            "rek_corresponding_organisation_pid": "UQ:6781f9d",
-            "rek_corresponding_organisation_xsdmf_id": 0,
-            "rek_corresponding_organisation_order": 22,
-            "rek_corresponding_organisation": "Smithsonian Inst"
-        }],
-        "fez_record_search_key_datastream_policy": null,
-        "fez_record_search_key_date_available": {
-            "rek_date_available_id": 1035132,
-            "rek_date_available_pid": "UQ:6781f9d",
-            "rek_date_available_xsdmf_id": 10571,
-            "rek_date_available": "2018-01-01T00:00:00Z"
-        },
-        "fez_record_search_key_doi": {
-            "rek_doi_id": 1707110,
-            "rek_doi_pid": "UQ:6781f9d",
-            "rek_doi_xsdmf_id": null,
-            "rek_doi": "10.1038\/s41559-018-0518-2",
-            "fez_altmetric": {
-                "as_id": 97474,
-                "as_amid": 36047797,
-                "as_doi": "10.1038\/s41559-018-0518-2",
-                "as_score": 1243,
-                "as_created": "1524220278",
-                "as_last_checked": "1527852664",
-                "as_1d": 0,
-                "as_2d": 0,
-                "as_3d": 0,
-                "as_4d": 0,
-                "as_5d": 0,
-                "as_6d": 0,
-                "as_1w": 0,
-                "as_1m": 16.65,
-                "as_3m": 1242.88,
-                "as_6m": 1242.88,
-                "as_1y": 1242.88,
-                "as_total_posts_count": 808,
-                "as_facebook_posts_count": 13,
-                "as_policy_posts_count": 0,
-                "as_blogs_posts_count": 14,
-                "as_googleplus_posts_count": 3,
-                "as_news_posts_count": 98,
-                "as_reddit_posts_count": 0,
-                "as_twitter_posts_count": 675,
-                "as_syllabi_posts_count": 0,
-                "as_video_posts_count": 1,
-                "as_weibo_posts_count": 0,
-                "as_qa_posts_count": 0,
-                "as_f1000_posts_count": 0,
-                "as_wikipedia_posts_count": 1,
-                "as_pinterest_posts_count": 0,
-                "as_linkedin_posts_count": 0,
-                "as_peer_reviews_posts_count": 0,
-                "as_citation_url": "http:\/\/www.altmetric.com\/details.php?citation_id=36047797"
-            }
-        },
-        "fez_record_search_key_end_page": {
-            "rek_end_page_id": 5740003,
-            "rek_end_page_pid": "UQ:6781f9d",
-            "rek_end_page_xsdmf_id": null,
-            "rek_end_page": "809"
-        },
-        "fez_record_search_key_file_attachment_access_condition": [],
-        "fez_record_search_key_file_attachment_embargo_date": [],
-        "fez_record_search_key_file_attachment_name": [],
-        "fez_record_search_key_grant_acronym": [],
-        "fez_record_search_key_grant_agency": [{
-            "rek_grant_agency_id": 100857,
-            "rek_grant_agency_pid": "UQ:6781f9d",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency_order": 1,
-            "rek_grant_agency": "European Research Council"
-        }, {
-            "rek_grant_agency_id": 100858,
-            "rek_grant_agency_pid": "UQ:6781f9d",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency_order": 2,
-            "rek_grant_agency": "SCTH"
-        }, {
-            "rek_grant_agency_id": 100859,
-            "rek_grant_agency_pid": "UQ:6781f9d",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency_order": 3,
-            "rek_grant_agency": "British Academy"
-        }, {
-            "rek_grant_agency_id": 100860,
-            "rek_grant_agency_pid": "UQ:6781f9d",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency_order": 4,
-            "rek_grant_agency": "Leverhulme Trust"
-        }, {
-            "rek_grant_agency_id": 100861,
-            "rek_grant_agency_pid": "UQ:6781f9d",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency_order": 5,
-            "rek_grant_agency": "Australian Research Council"
-        }, {
-            "rek_grant_agency_id": 100862,
-            "rek_grant_agency_pid": "UQ:6781f9d",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency_order": 6,
-            "rek_grant_agency": "European Union Marie Curie International Outgoing Fellowship"
-        }, {
-            "rek_grant_agency_id": 100863,
-            "rek_grant_agency_pid": "UQ:6781f9d",
-            "rek_grant_agency_xsdmf_id": 0,
-            "rek_grant_agency_order": 7,
-            "rek_grant_agency": "Research Council of Norway (SFF Centre for Early Sapiens Behaviour)"
-        }],
-        "fez_record_search_key_grant_agency_id": [],
-        "fez_record_search_key_grant_id": [],
-        "fez_record_search_key_grant_text": [],
-        "fez_record_search_key_herdc_code": {
-            "rek_herdc_code_id": 4928574,
-            "rek_herdc_code_pid": "UQ:6781f9d",
-            "rek_herdc_code_xsdmf_id": null,
-            "rek_herdc_code": 450009,
-            "rek_herdc_code_lookup": "C1"
-        },
-        "fez_record_search_key_herdc_status": {
-            "rek_herdc_status_id": 3793330,
-            "rek_herdc_status_pid": "UQ:6781f9d",
-            "rek_herdc_status_xsdmf_id": null,
-            "rek_herdc_status": 453220,
-            "rek_herdc_status_lookup": "Provisional Code"
-        },
-        "fez_record_search_key_institutional_status": {
-            "rek_institutional_status_id": 3455268,
-            "rek_institutional_status_pid": "UQ:6781f9d",
-            "rek_institutional_status_xsdmf_id": null,
-            "rek_institutional_status": 453223,
-            "rek_institutional_status_lookup": "UQ"
-        },
-        "fez_record_search_key_isbn": [],
-        "fez_record_search_key_isderivationof": [],
-        "fez_record_search_key_isi_loc": {
-            "rek_isi_loc_id": 4046610,
-            "rek_isi_loc_pid": "UQ:6781f9d",
-            "rek_isi_loc_xsdmf_id": null,
-            "rek_isi_loc": "000431613500015",
-            "fez_thomson_citations": {
-                "tc_isi_loc": "000431613500015",
-                "tc_created": "1526923424",
-                "tc_last_checked": "1526923424",
-                "tc_count": 1,
-                "tc_1d": 0,
-                "tc_2d": 0,
-                "tc_3d": 0,
-                "tc_4d": 0,
-                "tc_5d": 0,
-                "tc_6d": 0,
-                "tc_1w": 0,
-                "tc_1m": 0,
-                "tc_3m": 0,
-                "tc_6m": 0,
-                "tc_1y": 0,
-                "tc_citation_url": "http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/gateway.isiknowledge.com\/gateway\/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000431613500015"
-            }
-        },
-        "fez_record_search_key_ismemberof": [{
-            "rek_ismemberof_id": 12234062,
-            "rek_ismemberof_pid": "UQ:6781f9d",
-            "rek_ismemberof_xsdmf_id": null,
-            "rek_ismemberof": "UQ:688533",
-            "rek_ismemberof_order": 1,
-            "rek_ismemberof_lookup": "Pubmed Import"
-        }],
-        "fez_record_search_key_issn": [{
-            "rek_issn_id": 5402591,
-            "rek_issn_pid": "UQ:6781f9d",
-            "rek_issn_xsdmf_id": null,
-            "rek_issn": "2397-334X",
-            "rek_issn_order": 1,
-            "fez_journal_issns": [],
-            "fez_sherpa_romeo": {
-                "srm_id": 11251478,
-                "srm_issn": "2397-334X",
-                "srm_journal_name": "Nature Ecology and Evolution",
-                "srm_journal_link": "http://example.com",
+            "rek_pid":"UQ:caf3afd",
+            "rek_title_xsdmf_id":null,
+            "rek_title":"Genome-wide association analyses of chronotype in 697,828 individuals provides insights into circadian rhythms TEst",
+            "rek_description_xsdmf_id":null,
+            "rek_description":null,
+            "rek_display_type_xsdmf_id":null,
+            "rek_display_type":130,
+            "rek_status_xsdmf_id":null,
+            "rek_status":2,
+            "rek_date_xsdmf_id":null,
+            "rek_date":"2020-01-01T00:00:00Z",
+            "rek_object_type_xsdmf_id":null,
+            "rek_object_type":3,
+            "rek_depositor_xsdmf_id":null,
+            "rek_depositor":41783,
+            "rek_created_date_xsdmf_id":null,
+            "rek_created_date":"2019-01-29T22:25:49Z",
+            "rek_updated_date_xsdmf_id":null,
+            "rek_updated_date":"2020-11-25T19:35:48Z",
+            "rek_file_downloads":0,
+            "rek_citation":"<a class=\"citation_author_name\" title=\"Browse by Author Name for Jones, Samuel E.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Jones%2C+Samuel+E.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Jones%2C+Samuel+E.&searchMode=advanced\">Jones, Samuel E.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Lane, Jacqueline M.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Lane%2C+Jacqueline+M.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Lane%2C+Jacqueline+M.&searchMode=advanced\">Lane, Jacqueline M.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Wood, Andrew R.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Wood%2C+Andrew+R.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Wood%2C+Andrew+R.&searchMode=advanced\">Wood, Andrew R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for van Hees, Vincent T.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=van+Hees%2C+Vincent+T.&searchQueryParams%5Brek_author%5D%5Blabel%5D=van+Hees%2C+Vincent+T.&searchMode=advanced\">van Hees, Vincent T.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tyrrell, Jessica\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Tyrrell%2C+Jessica&searchQueryParams%5Brek_author%5D%5Blabel%5D=Tyrrell%2C+Jessica&searchMode=advanced\">Tyrrell, Jessica<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Beaumont, Robin N.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Beaumont%2C+Robin+N.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Beaumont%2C+Robin+N.&searchMode=advanced\">Beaumont, Robin N.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Jeffries, Aaron R.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Jeffries%2C+Aaron+R.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Jeffries%2C+Aaron+R.&searchMode=advanced\">Jeffries, Aaron R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Dashti, Hassan S.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Dashti%2C+Hassan+S.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Dashti%2C+Hassan+S.&searchMode=advanced\">Dashti, Hassan S.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Hillsdon, Melvyn\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Hillsdon%2C+Melvyn&searchQueryParams%5Brek_author%5D%5Blabel%5D=Hillsdon%2C+Melvyn&searchMode=advanced\">Hillsdon, Melvyn<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Ruth, Katherine S.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Ruth%2C+Katherine+S.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Ruth%2C+Katherine+S.&searchMode=advanced\">Ruth, Katherine S.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tuke, Marcus A.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Tuke%2C+Marcus+A.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Tuke%2C+Marcus+A.&searchMode=advanced\">Tuke, Marcus A.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Yaghootkar, Hanieh\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Yaghootkar%2C+Hanieh&searchQueryParams%5Brek_author%5D%5Blabel%5D=Yaghootkar%2C+Hanieh&searchMode=advanced\">Yaghootkar, Hanieh<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Sharp, Seth A.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Sharp%2C+Seth+A.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Sharp%2C+Seth+A.&searchMode=advanced\">Sharp, Seth A.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Jie, Yingjie\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Jie%2C+Yingjie&searchQueryParams%5Brek_author%5D%5Blabel%5D=Jie%2C+Yingjie&searchMode=advanced\">Jie, Yingjie<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Thompson, William D.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Thompson%2C+William+D.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Thompson%2C+William+D.&searchMode=advanced\">Thompson, William D.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Harrison, Jamie W.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Harrison%2C+Jamie+W.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Harrison%2C+Jamie+W.&searchMode=advanced\">Harrison, Jamie W.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Dawes, Amy\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Dawes%2C+Amy&searchQueryParams%5Brek_author%5D%5Blabel%5D=Dawes%2C+Amy&searchMode=advanced\">Dawes, Amy<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Byrne, Enda M.\" href=\"\/records\/search?searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=4975&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=Byrne%2C+Enda+M.&searchMode=advanced\">Byrne, Enda M.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tiemeier, Henning\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Tiemeier%2C+Henning&searchQueryParams%5Brek_author%5D%5Blabel%5D=Tiemeier%2C+Henning&searchMode=advanced\">Tiemeier, Henning<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Allebrandt, Karla V.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Allebrandt%2C+Karla+V.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Allebrandt%2C+Karla+V.&searchMode=advanced\">Allebrandt, Karla V.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Bowden, Jack\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Bowden%2C+Jack&searchQueryParams%5Brek_author%5D%5Blabel%5D=Bowden%2C+Jack&searchMode=advanced\">Bowden, Jack<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Ray, David W.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Ray%2C+David+W.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Ray%2C+David+W.&searchMode=advanced\">Ray, David W.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Freathy, Rachel M.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Freathy%2C+Rachel+M.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Freathy%2C+Rachel+M.&searchMode=advanced\">Freathy, Rachel M.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Murray, Anna\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Murray%2C+Anna&searchQueryParams%5Brek_author%5D%5Blabel%5D=Murray%2C+Anna&searchMode=advanced\">Murray, Anna<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Mazzotti, Diego R.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Mazzotti%2C+Diego+R.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Mazzotti%2C+Diego+R.&searchMode=advanced\">Mazzotti, Diego R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Gehrman, Philip R.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Gehrman%2C+Philip+R.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Gehrman%2C+Philip+R.&searchMode=advanced\">Gehrman, Philip R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Lawlor, Debbie A.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Lawlor%2C+Debbie+A.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Lawlor%2C+Debbie+A.&searchMode=advanced\">Lawlor, Debbie A.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Frayling, Timothy M.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Frayling%2C+Timothy+M.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Frayling%2C+Timothy+M.&searchMode=advanced\">Frayling, Timothy M.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Rutter, Martin K.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Rutter%2C+Martin+K.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Rutter%2C+Martin+K.&searchMode=advanced\">Rutter, Martin K.<\/a> ... <a class=\"citation_author_name\" title=\"Browse by Author Name for Weedon, Michael N.\" href=\"\/records\/search?searchQueryParams%5Brek_author%5D%5Bvalue%5D=Weedon%2C+Michael+N.&searchQueryParams%5Brek_author%5D%5Blabel%5D=Weedon%2C+Michael+N.&searchMode=advanced\">Weedon, Michael N.<\/a> (<span class=\"citation_date\">2020<\/span>). <i><a class=\"citation_title\" title=\"Click to view Conference Paper: Genome-wide association analyses of chronotype in 697,828 individuals provides insights into circadian rhythms TEst\" href=\"\/view\/UQ:caf3afd\">Genome-wide association analyses of chronotype in 697,828 individuals provides insights into circadian rhythms TEst<\/a><\/i>. <i><span class=\"citation_conference_name\">2<\/span><\/i>, <span class=\"citation_conference_location\">Ljubljana, Slovenia<\/span>, <span class=\"citation_conference_dates\">1 July - 5 July 2019<\/span>. <span class=\"citation_place_of_publication\">London, United Kingdom<\/span>: <span class=\"citation_publisher\">Nature Publishing Group<\/span>. doi: <span class=\"citation_doi\">10.1038\/s41467-018-08259-7<\/span>",
+            "rek_genre_xsdmf_id":null,
+            "rek_genre":"Conference Paper",
+            "rek_genre_type_xsdmf_id":null,
+            "rek_genre_type":"Fully published paper",
+            "rek_formatted_title_xsdmf_id":null,
+            "rek_formatted_title":"<p>Genome-wide association analyses of chronotype in 697,828 individuals provides insights into circadian rhythms TEst<\/p>",
+            "rek_formatted_abstract_xsdmf_id":null,
+            "rek_formatted_abstract":null,
+            "rek_depositor_affiliation_xsdmf_id":null,
+            "rek_depositor_affiliation":1247,
+            "rek_thomson_citation_count":19,
+            "rek_thomson_citation_count_xsdmf_id":null,
+            "rek_subtype_xsdmf_id":null,
+            "rek_subtype":"Fully published paper",
+            "rek_scopus_citation_count":33,
+            "rek_herdc_notes_xsdmf_id":null,
+            "rek_scopus_doc_type_xsdmf_id":null,
+            "rek_scopus_doc_type":null,
+            "rek_wok_doc_type_xsdmf_id":null,
+            "rek_wok_doc_type":null,
+            "rek_pubmed_doc_type_xsdmf_id":null,
+            "rek_pubmed_doc_type":"Comparative Study",
+            "rek_security_inherited":1,
+            "rek_altmetric_score":1733,
+            "rek_altmetric_score_xsdmf_id":null,
+            "rek_altmetric_id":54662540,
+            "rek_altmetric_id_xsdmf_id":null,
+            "rek_copyright_xsdmf_id":null,
+            "rek_copyright":"on",
+            "rek_security_policy":1,
+            "rek_datastream_policy":null,
+            "fez_record_search_key_advisory_statement":{
+                "rek_advisory_statement_id":23093,
+                "rek_advisory_statement_pid":"UQ:caf3afd",
+                "rek_advisory_statement_xsdmf_id":null,
+                "rek_advisory_statement":"<p>Changed advisory statement<\/p>"
             },
-            "rek_issn_lookup": ""
-        }],
-        "fez_record_search_key_issue_number": {
-            "rek_issue_number_id": 4582061,
-            "rek_issue_number_pid": "UQ:6781f9d",
-            "rek_issue_number_xsdmf_id": null,
-            "rek_issue_number": "5"
-        },
-        "fez_record_search_key_journal_name": {
-            "rek_journal_name_id": 5271045,
-            "rek_journal_name_pid": "UQ:6781f9d",
-            "rek_journal_name_xsdmf_id": null,
-            "rek_journal_name": "Nature ecology & evolution"
-        },
-        "fez_record_search_key_keywords": [{
-            "rek_keywords_id": 30473799,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Electron-Spin-Resonance",
-            "rek_keywords_order": 1
+            "fez_record_search_key_article_number":{
+                "rek_article_number_id":23557,
+                "rek_article_number_pid":"UQ:caf3afd",
+                "rek_article_number_xsdmf_id":null,
+                "rek_article_number":"343"
+            },
+            "fez_record_search_key_additional_notes":null,
+            "fez_record_search_key_assigned_group_id":[
+                
+            ],
+            "fez_record_search_key_assigned_user_id":[
+                
+            ],
+            "fez_record_search_key_author":[
+                {
+                    "rek_author_id":32619613,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Jones, Samuel E.",
+                    "rek_author_order":1
+                },
+                {
+                    "rek_author_id":32619614,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Lane, Jacqueline M.",
+                    "rek_author_order":2
+                },
+                {
+                    "rek_author_id":32619615,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Wood, Andrew R.",
+                    "rek_author_order":3
+                },
+                {
+                    "rek_author_id":32619616,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"van Hees, Vincent T.",
+                    "rek_author_order":4
+                },
+                {
+                    "rek_author_id":32619617,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Tyrrell, Jessica",
+                    "rek_author_order":5
+                },
+                {
+                    "rek_author_id":32619618,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Beaumont, Robin N.",
+                    "rek_author_order":6
+                },
+                {
+                    "rek_author_id":32619619,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Jeffries, Aaron R.",
+                    "rek_author_order":7
+                },
+                {
+                    "rek_author_id":32619620,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Dashti, Hassan S.",
+                    "rek_author_order":8
+                },
+                {
+                    "rek_author_id":32619621,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Hillsdon, Melvyn",
+                    "rek_author_order":9
+                },
+                {
+                    "rek_author_id":32619622,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Ruth, Katherine S.",
+                    "rek_author_order":10
+                },
+                {
+                    "rek_author_id":32619623,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Tuke, Marcus A.",
+                    "rek_author_order":11
+                },
+                {
+                    "rek_author_id":32619624,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Yaghootkar, Hanieh",
+                    "rek_author_order":12
+                },
+                {
+                    "rek_author_id":32619625,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Sharp, Seth A.",
+                    "rek_author_order":13
+                },
+                {
+                    "rek_author_id":32619626,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Jie, Yingjie",
+                    "rek_author_order":14
+                },
+                {
+                    "rek_author_id":32619627,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Thompson, William D.",
+                    "rek_author_order":15
+                },
+                {
+                    "rek_author_id":32619628,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Harrison, Jamie W.",
+                    "rek_author_order":16
+                },
+                {
+                    "rek_author_id":32619629,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Dawes, Amy",
+                    "rek_author_order":17
+                },
+                {
+                    "rek_author_id":32619630,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Byrne, Enda M.",
+                    "rek_author_order":18
+                },
+                {
+                    "rek_author_id":32619631,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Tiemeier, Henning",
+                    "rek_author_order":19
+                },
+                {
+                    "rek_author_id":32619632,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Allebrandt, Karla V.",
+                    "rek_author_order":20
+                },
+                {
+                    "rek_author_id":32619633,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Bowden, Jack",
+                    "rek_author_order":21
+                },
+                {
+                    "rek_author_id":32619634,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Ray, David W.",
+                    "rek_author_order":22
+                },
+                {
+                    "rek_author_id":32619635,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Freathy, Rachel M.",
+                    "rek_author_order":23
+                },
+                {
+                    "rek_author_id":32619636,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Murray, Anna",
+                    "rek_author_order":24
+                },
+                {
+                    "rek_author_id":32619637,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Mazzotti, Diego R.",
+                    "rek_author_order":25
+                },
+                {
+                    "rek_author_id":32619638,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Gehrman, Philip R.",
+                    "rek_author_order":26
+                },
+                {
+                    "rek_author_id":32619639,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Lawlor, Debbie A.",
+                    "rek_author_order":27
+                },
+                {
+                    "rek_author_id":32619640,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Frayling, Timothy M.",
+                    "rek_author_order":28
+                },
+                {
+                    "rek_author_id":32619641,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Rutter, Martin K.",
+                    "rek_author_order":29
+                },
+                {
+                    "rek_author_id":32619642,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Hinds, David A.",
+                    "rek_author_order":30
+                },
+                {
+                    "rek_author_id":32619643,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Saxena, Richa",
+                    "rek_author_order":31
+                },
+                {
+                    "rek_author_id":32619644,
+                    "rek_author_pid":"UQ:caf3afd",
+                    "rek_author_xsdmf_id":null,
+                    "rek_author":"Weedon, Michael N.",
+                    "rek_author_order":32
+                }
+            ],
+            "fez_record_search_key_author_crossref_authenticated":[
+                
+            ],
+            "fez_record_search_key_author_crossref_orcid":[
+                
+            ],
+            "fez_record_search_key_author_id":[
+                {
+                    "rek_author_id_id":32737013,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":1,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737014,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":2,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737015,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":3,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737016,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":4,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737017,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":5,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737018,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":6,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737019,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":7,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737020,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":8,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737021,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":9,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737022,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":10,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737023,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":11,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737024,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":12,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737025,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":13,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737026,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":14,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737027,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":15,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737028,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":16,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737029,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":17,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737030,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":4975,
+                    "rek_author_id_order":18,
+                    "author":{
+                        "aut_org_username":"uqebyrn2",
+                        "aut_student_username":null,
+                        "aut_id":4975,
+                        "aut_orcid_id":"0000-0002-9491-7797",
+                        "aut_title":"Dr"
+                    },
+                    "rek_author_id_lookup":"Byrne, Enda"
+                },
+                {
+                    "rek_author_id_id":32737031,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":19,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737032,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":20,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737033,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":21,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737034,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":22,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737035,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":23,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737036,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":24,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737037,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":25,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737038,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":26,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737039,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":27,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737040,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":28,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737041,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":29,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737042,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":30,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737043,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":31,
+                    "author":null
+                },
+                {
+                    "rek_author_id_id":32737044,
+                    "rek_author_id_pid":"UQ:caf3afd",
+                    "rek_author_id_xsdmf_id":null,
+                    "rek_author_id":0,
+                    "rek_author_id_order":32,
+                    "author":null
+                }
+            ],
+            "fez_record_search_key_biosis_id":null,
+            "fez_record_search_key_chapter_number":null,
+            "fez_record_search_key_conference_dates":{
+                "rek_conference_dates_id":1076598,
+                "rek_conference_dates_pid":"UQ:caf3afd",
+                "rek_conference_dates_xsdmf_id":null,
+                "rek_conference_dates":"1 July - 5 July 2019"
+            },
+            "fez_record_search_key_conference_id":null,
+            "fez_record_search_key_conference_location":{
+                "rek_conference_location_id":1087520,
+                "rek_conference_location_pid":"UQ:caf3afd",
+                "rek_conference_location_xsdmf_id":null,
+                "rek_conference_location":"Ljubljana, Slovenia"
+            },
+            "fez_record_search_key_conference_name":{
+                "rek_conference_name_id":1068941,
+                "rek_conference_name_pid":"UQ:caf3afd",
+                "rek_conference_name_xsdmf_id":null,
+                "rek_conference_name":"2"
+            },
+            "fez_record_search_key_contributor":[
+                
+            ],
+            "fez_record_search_key_contributor_id":[
+                
+            ],
+            "fez_record_search_key_convener":null,
+            "fez_record_search_key_corresponding_country":[
+                {
+                    "rek_corresponding_country_id":524975,
+                    "rek_corresponding_country_pid":"UQ:caf3afd",
+                    "rek_corresponding_country_xsdmf_id":0,
+                    "rek_corresponding_country":"gbr",
+                    "rek_corresponding_country_order":1
+                }
+            ],
+            "fez_record_search_key_corresponding_email":[
+                {
+                    "rek_corresponding_email_id":127198,
+                    "rek_corresponding_email_pid":"UQ:caf3afd",
+                    "rek_corresponding_email_xsdmf_id":0,
+                    "rek_corresponding_email":"M.N.Weedon@exeter.ac.uk",
+                    "rek_corresponding_email_order":1
+                }
+            ],
+            "fez_record_search_key_corresponding_name":[
+                {
+                    "rek_corresponding_name_id":187222,
+                    "rek_corresponding_name_pid":"UQ:caf3afd",
+                    "rek_corresponding_name_xsdmf_id":0,
+                    "rek_corresponding_name":"Weedon M.N.",
+                    "rek_corresponding_name_order":1
+                }
+            ],
+            "fez_record_search_key_corresponding_organisation":[
+                {
+                    "rek_corresponding_organisation_id":510041,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Exeter",
+                    "rek_corresponding_organisation_order":1
+                },
+                {
+                    "rek_corresponding_organisation_id":510042,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"VA Boston Healthcare System",
+                    "rek_corresponding_organisation_order":2
+                },
+                {
+                    "rek_corresponding_organisation_id":510043,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"VA Boston Healthcare System",
+                    "rek_corresponding_organisation_order":3
+                },
+                {
+                    "rek_corresponding_organisation_id":510044,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Harvard University",
+                    "rek_corresponding_organisation_order":4
+                },
+                {
+                    "rek_corresponding_organisation_id":510045,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Massachusetts Institute of Technology (MIT)",
+                    "rek_corresponding_organisation_order":5
+                },
+                {
+                    "rek_corresponding_organisation_id":510046,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Netherlands eSci Ctr",
+                    "rek_corresponding_organisation_order":6
+                },
+                {
+                    "rek_corresponding_organisation_id":510047,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Exeter",
+                    "rek_corresponding_organisation_order":7
+                },
+                {
+                    "rek_corresponding_organisation_id":510048,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Queensland",
+                    "rek_corresponding_organisation_order":8
+                },
+                {
+                    "rek_corresponding_organisation_id":510049,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Erasmus University Rotterdam",
+                    "rek_corresponding_organisation_order":9
+                },
+                {
+                    "rek_corresponding_organisation_id":510050,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Erasmus University Medical Center",
+                    "rek_corresponding_organisation_order":10
+                },
+                {
+                    "rek_corresponding_organisation_id":510051,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Sanofi-Aventis",
+                    "rek_corresponding_organisation_order":11
+                },
+                {
+                    "rek_corresponding_organisation_id":510052,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Bristol",
+                    "rek_corresponding_organisation_order":12
+                },
+                {
+                    "rek_corresponding_organisation_id":510053,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Bristol",
+                    "rek_corresponding_organisation_order":13
+                },
+                {
+                    "rek_corresponding_organisation_id":510054,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Manchester",
+                    "rek_corresponding_organisation_order":14
+                },
+                {
+                    "rek_corresponding_organisation_id":510055,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Manchester",
+                    "rek_corresponding_organisation_order":15
+                },
+                {
+                    "rek_corresponding_organisation_id":510056,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Pennsylvania",
+                    "rek_corresponding_organisation_order":16
+                },
+                {
+                    "rek_corresponding_organisation_id":510057,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Pennsylvania",
+                    "rek_corresponding_organisation_order":17
+                },
+                {
+                    "rek_corresponding_organisation_id":510058,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"University of Manchester",
+                    "rek_corresponding_organisation_order":18
+                },
+                {
+                    "rek_corresponding_organisation_id":510059,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"23andMe Inc",
+                    "rek_corresponding_organisation_order":19
+                },
+                {
+                    "rek_corresponding_organisation_id":510060,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Harvard University",
+                    "rek_corresponding_organisation_order":20
+                },
+                {
+                    "rek_corresponding_organisation_id":510061,
+                    "rek_corresponding_organisation_pid":"UQ:caf3afd",
+                    "rek_corresponding_organisation_xsdmf_id":0,
+                    "rek_corresponding_organisation":"Harvard University",
+                    "rek_corresponding_organisation_order":21
+                }
+            ],
+            "fez_record_search_key_datastream_policy":null,
+            "fez_record_search_key_date_available":{
+                "rek_date_available_id":1103917,
+                "rek_date_available_pid":"UQ:caf3afd",
+                "rek_date_available_xsdmf_id":null,
+                "rek_date_available":"2019-01-01T00:00:00Z"
+            },
+            "fez_record_search_key_doi":{
+                "rek_doi_id":1796939,
+                "rek_doi_pid":"UQ:caf3afd",
+                "rek_doi_xsdmf_id":null,
+                "rek_doi":"10.1038\/s41467-018-08259-7",
+                "fez_altmetric":{
+                    "as_id":119944,
+                    "as_amid":54662540,
+                    "as_doi":"10.1038\/s41467-018-08259-7",
+                    "as_score":1733,
+                    "as_created":"1549019364",
+                    "as_last_checked":"1579288027",
+                    "as_1d":0,
+                    "as_2d":0.25,
+                    "as_3d":0.25,
+                    "as_4d":0.25,
+                    "as_5d":0.25,
+                    "as_6d":0.25,
+                    "as_1w":0.25,
+                    "as_1m":0.25,
+                    "as_3m":27.15,
+                    "as_6m":61.15,
+                    "as_1y":1732.39,
+                    "as_total_posts_count":692,
+                    "as_facebook_posts_count":5,
+                    "as_policy_posts_count":0,
+                    "as_blogs_posts_count":15,
+                    "as_googleplus_posts_count":0,
+                    "as_news_posts_count":203,
+                    "as_reddit_posts_count":1,
+                    "as_twitter_posts_count":467,
+                    "as_syllabi_posts_count":0,
+                    "as_video_posts_count":1,
+                    "as_weibo_posts_count":0,
+                    "as_qa_posts_count":0,
+                    "as_f1000_posts_count":0,
+                    "as_wikipedia_posts_count":0,
+                    "as_pinterest_posts_count":0,
+                    "as_linkedin_posts_count":0,
+                    "as_peer_reviews_posts_count":0,
+                    "as_citation_url":"http:\/\/www.altmetric.com\/details.php?citation_id=54662540"
+                }
+            },
+            "fez_record_search_key_end_page":{
+                "rek_end_page_id":5822866,
+                "rek_end_page_pid":"UQ:caf3afd",
+                "rek_end_page_xsdmf_id":null,
+                "rek_end_page":"345"
+            },
+            "fez_record_search_key_file_attachment_access_condition":[
+                {
+                    "rek_file_attachment_access_condition_id":26033,
+                    "rek_file_attachment_access_condition_pid":"UQ:caf3afd",
+                    "rek_file_attachment_access_condition_xsdmf_id":0,
+                    "rek_file_attachment_access_condition":"9",
+                    "rek_file_attachment_access_condition_order":1
+                }
+            ],
+            "fez_record_search_key_file_attachment_embargo_date":[
+                
+            ],
+            "fez_record_search_key_file_attachment_name":[
+                {
+                    "rek_file_attachment_name_id":4531221,
+                    "rek_file_attachment_name_pid":"UQ:caf3afd",
+                    "rek_file_attachment_name_xsdmf_id":null,
+                    "rek_file_attachment_name":"claim-receipt.pdf",
+                    "rek_file_attachment_name_order":1
+                }
+            ],
+            "fez_record_search_key_geographic_area":[
+                
+            ],
+            "fez_record_search_key_grant_acronym":[
+                {
+                    "rek_grant_acronym_id":52446,
+                    "rek_grant_acronym_pid":"UQ:caf3afd",
+                    "rek_grant_acronym_xsdmf_id":0,
+                    "rek_grant_acronym":"HL",
+                    "rek_grant_acronym_order":1
+                },
+                {
+                    "rek_grant_acronym_id":52447,
+                    "rek_grant_acronym_pid":"UQ:caf3afd",
+                    "rek_grant_acronym_xsdmf_id":0,
+                    "rek_grant_acronym":"DK",
+                    "rek_grant_acronym_order":2
+                },
+                {
+                    "rek_grant_acronym_id":52448,
+                    "rek_grant_acronym_pid":"UQ:caf3afd",
+                    "rek_grant_acronym_xsdmf_id":0,
+                    "rek_grant_acronym":"DK",
+                    "rek_grant_acronym_order":3
+                },
+                {
+                    "rek_grant_acronym_id":52449,
+                    "rek_grant_acronym_pid":"UQ:caf3afd",
+                    "rek_grant_acronym_xsdmf_id":0,
+                    "rek_grant_acronym":"DK",
+                    "rek_grant_acronym_order":4
+                }
+            ],
+            "fez_record_search_key_grant_agency":[
+                {
+                    "rek_grant_agency_id":204630,
+                    "rek_grant_agency_pid":"UQ:caf3afd",
+                    "rek_grant_agency_xsdmf_id":0,
+                    "rek_grant_agency":"NHLBI NIH HHS",
+                    "rek_grant_agency_order":1
+                },
+                {
+                    "rek_grant_agency_id":204631,
+                    "rek_grant_agency_pid":"UQ:caf3afd",
+                    "rek_grant_agency_xsdmf_id":0,
+                    "rek_grant_agency":"NIDDK NIH HHS",
+                    "rek_grant_agency_order":2
+                },
+                {
+                    "rek_grant_agency_id":204632,
+                    "rek_grant_agency_pid":"UQ:caf3afd",
+                    "rek_grant_agency_xsdmf_id":0,
+                    "rek_grant_agency":"NIDDK NIH HHS",
+                    "rek_grant_agency_order":3
+                },
+                {
+                    "rek_grant_agency_id":204633,
+                    "rek_grant_agency_pid":"UQ:caf3afd",
+                    "rek_grant_agency_xsdmf_id":0,
+                    "rek_grant_agency":"NIDDK NIH HHS",
+                    "rek_grant_agency_order":4
+                },
+                {
+                    "rek_grant_agency_id":204634,
+                    "rek_grant_agency_pid":"UQ:caf3afd",
+                    "rek_grant_agency_xsdmf_id":0,
+                    "rek_grant_agency":"Wellcome Trust",
+                    "rek_grant_agency_order":5
+                }
+            ],
+            "fez_record_search_key_grant_agency_id":[
+                
+            ],
+            "fez_record_search_key_grant_id":[
+                {
+                    "rek_grant_id_id":126176,
+                    "rek_grant_id_pid":"UQ:caf3afd",
+                    "rek_grant_id_xsdmf_id":0,
+                    "rek_grant_id":"T32 HL007901",
+                    "rek_grant_id_order":1
+                },
+                {
+                    "rek_grant_id_id":126177,
+                    "rek_grant_id_pid":"UQ:caf3afd",
+                    "rek_grant_id_xsdmf_id":0,
+                    "rek_grant_id":"R01 DK107859",
+                    "rek_grant_id_order":2
+                },
+                {
+                    "rek_grant_id_id":126178,
+                    "rek_grant_id_pid":"UQ:caf3afd",
+                    "rek_grant_id_xsdmf_id":0,
+                    "rek_grant_id":"R01 DK102696",
+                    "rek_grant_id_order":3
+                },
+                {
+                    "rek_grant_id_id":126179,
+                    "rek_grant_id_pid":"UQ:caf3afd",
+                    "rek_grant_id_xsdmf_id":0,
+                    "rek_grant_id":"F32 DK102323",
+                    "rek_grant_id_order":4
+                },
+                {
+                    "rek_grant_id_id":126180,
+                    "rek_grant_id_pid":"UQ:caf3afd",
+                    "rek_grant_id_xsdmf_id":0,
+                    "rek_grant_id":"Not set",
+                    "rek_grant_id_order":5
+                }
+            ],
+            "fez_record_search_key_grant_text":[
+                
+            ],
+            "fez_record_search_key_herdc_code":{
+                "rek_herdc_code_id":5035700,
+                "rek_herdc_code_pid":"UQ:caf3afd",
+                "rek_herdc_code_xsdmf_id":null,
+                "rek_herdc_code":450009,
+                "rek_herdc_code_lookup":"C1"
+            },
+            "fez_record_search_key_herdc_status":{
+                "rek_herdc_status_id":3894010,
+                "rek_herdc_status_pid":"UQ:caf3afd",
+                "rek_herdc_status_xsdmf_id":null,
+                "rek_herdc_status":453220,
+                "rek_herdc_status_lookup":"Provisional Code"
+            },
+            "fez_record_search_key_institutional_status":{
+                "rek_institutional_status_id":3590696,
+                "rek_institutional_status_pid":"UQ:caf3afd",
+                "rek_institutional_status_xsdmf_id":null,
+                "rek_institutional_status":453223,
+                "rek_institutional_status_lookup":"UQ"
+            },
+            "fez_record_search_key_isbn":[
+                
+            ],
+            "fez_record_search_key_isderivationof":[
+                
+            ],
+            "fez_record_search_key_isi_loc":{
+                "rek_isi_loc_id":4107086,
+                "rek_isi_loc_pid":"UQ:caf3afd",
+                "rek_isi_loc_xsdmf_id":null,
+                "rek_isi_loc":"000456958500001",
+                "fez_thomson_citations":null
+            },
+            "fez_record_search_key_ismemberof":[
+                {
+                    "rek_ismemberof_id":12534345,
+                    "rek_ismemberof_pid":"UQ:caf3afd",
+                    "rek_ismemberof_xsdmf_id":null,
+                    "rek_ismemberof":"UQ:3858",
+                    "rek_ismemberof_order":1,
+                    "parent":{
+                        "rek_pid":"UQ:3858",
+                        "rek_security_policy":5,
+                        "rek_datastream_policy":5
+                    },
+                    "rek_ismemberof_lookup":"Institute for Molecular Bioscience - Publications"
+                }
+            ],
+            "fez_record_search_key_issn":[
+                {
+                    "rek_issn_id":5556783,
+                    "rek_issn_pid":"UQ:caf3afd",
+                    "rek_issn_xsdmf_id":null,
+                    "rek_issn":"2041-1723",
+                    "rek_issn_order":1,
+                    "fez_journal":{
+                        "jnl_issn_jid":20339,
+                        "jnl_issn":"2041-1723",
+                        "jnl_issn_type":null,
+                        "jnl_issn_order":1,
+                        "fez_journal_era":[
+                            {
+                                "jnl_era_id":69978,
+                                "jnl_era_source_id":"122966",
+                                "jnl_era_jid":20339,
+                                "jnl_era_source_year":2012
+                            },
+                            {
+                                "jnl_era_id":26638,
+                                "jnl_era_source_id":"122966",
+                                "jnl_era_jid":20339,
+                                "jnl_era_source_year":2015
+                            },
+                            {
+                                "jnl_era_id":20339,
+                                "jnl_era_source_id":"122966",
+                                "jnl_era_jid":20339,
+                                "jnl_era_source_year":2018
+                            }
+                        ]
+                    },
+                    "fez_sherpa_romeo":{
+                        "srm_id":35381,
+                        "srm_issn":"2041-1723",
+                        "srm_journal_name":"Nature Communications",
+                        "srm_colour":"green",
+                        "srm_journal_link":"http:\/\/v2.sherpa.ac.uk\/id\/publication\/24265"
+                    },
+                    "fez_ulrichs":{
+                        "ulr_issn":"2041-1723",
+                        "ulr_title_id":"684236",
+                        "ulr_title":"Nature Communications"
+                    },
+                    "rek_issn_lookup":""
+                }
+            ],
+            "fez_record_search_key_issue_number":{
+                "rek_issue_number_id":4652789,
+                "rek_issue_number_pid":"UQ:caf3afd",
+                "rek_issue_number_xsdmf_id":null,
+                "rek_issue_number":"1"
+            },
+            "fez_record_search_key_journal_name":{
+                "rek_journal_name_id":5371267,
+                "rek_journal_name_pid":"UQ:caf3afd",
+                "rek_journal_name_xsdmf_id":null,
+                "rek_journal_name":" Nature Communications"
+            },
+            "fez_record_search_key_keywords":[
+                {
+                    "rek_keywords_id":31015563,
+                    "rek_keywords_pid":"UQ:caf3afd",
+                    "rek_keywords_xsdmf_id":null,
+                    "rek_keywords":"General Biochemistry, Genetics and Molecular Biology",
+                    "rek_keywords_order":1
+                },
+                {
+                    "rek_keywords_id":31015564,
+                    "rek_keywords_pid":"UQ:caf3afd",
+                    "rek_keywords_xsdmf_id":null,
+                    "rek_keywords":"General Physics and Astronomy",
+                    "rek_keywords_order":2
+                },
+                {
+                    "rek_keywords_id":31015565,
+                    "rek_keywords_pid":"UQ:caf3afd",
+                    "rek_keywords_xsdmf_id":null,
+                    "rek_keywords":"General Chemistry",
+                    "rek_keywords_order":3
+                }
+            ],
+            "fez_record_search_key_language":[
+                {
+                    "rek_language_id":5646120,
+                    "rek_language_pid":"UQ:caf3afd",
+                    "rek_language_xsdmf_id":null,
+                    "rek_language":"eng",
+                    "rek_language_order":1
+                }
+            ],
+            "fez_record_search_key_language_of_journal_name":[
+                
+            ],
+            "fez_record_search_key_language_of_proceedings_title":[
+                
+            ],
+            "fez_record_search_key_language_of_title":[
+                
+            ],
+            "fez_record_search_key_license":{
+                "rek_license_id":52867,
+                "rek_license_pid":"UQ:caf3afd",
+                "rek_license_xsdmf_id":null,
+                "rek_license":453608,
+                "rek_license_lookup":"Creative Commons Attribution (only)"
+            },
+            "fez_record_search_key_link":[
+                
+            ],
+            "fez_record_search_key_link_description":[
+                
+            ],
+            "fez_record_search_key_native_script_conference_name":null,
+            "fez_record_search_key_native_script_journal_name":null,
+            "fez_record_search_key_native_script_proceedings_title":null,
+            "fez_record_search_key_native_script_title":null,
+            "fez_record_search_key_notes":null,
+            "fez_record_search_key_oa_embargo_days":null,
+            "fez_record_search_key_oa_notes":null,
+            "fez_record_search_key_oa_status":{
+                "rek_oa_status_id":850991,
+                "rek_oa_status_pid":"UQ:caf3afd",
+                "rek_oa_status_xsdmf_id":null,
+                "rek_oa_status":453693,
+                "rek_oa_status_lookup":"DOI"
+            },
+            "fez_record_search_key_oa_status_type":{
+                "rek_oa_status_type_id":65003,
+                "rek_oa_status_type_pid":"UQ:caf3afd",
+                "rek_oa_status_type":454121,
+                "rek_oa_status_type_lookup":"Gold"
+            },
+            "fez_record_search_key_place_of_publication":{
+                "rek_place_of_publication_id":4470948,
+                "rek_place_of_publication_pid":"UQ:caf3afd",
+                "rek_place_of_publication_xsdmf_id":null,
+                "rek_place_of_publication":"London, United Kingdom"
+            },
+            "fez_record_search_key_possible_author_id":[
+                
+            ],
+            "fez_record_search_key_proceedings_title":null,
+            "fez_record_search_key_publisher":{
+                "rek_publisher_id":4809437,
+                "rek_publisher_pid":"UQ:caf3afd",
+                "rek_publisher_xsdmf_id":null,
+                "rek_publisher":"Nature Publishing Group"
+            },
+            "fez_record_search_key_pubmed_id":{
+                "rek_pubmed_id_id":313858,
+                "rek_pubmed_id_pid":"UQ:caf3afd",
+                "rek_pubmed_id_xsdmf_id":null,
+                "rek_pubmed_id":null
+            },
+            "fez_record_search_key_pubmed_central_id":null,
+            "fez_record_search_key_refereed":{
+                "rek_refereed_id":2924476,
+                "rek_refereed_pid":"UQ:caf3afd",
+                "rek_refereed_xsdmf_id":null,
+                "rek_refereed":1
+            },
+            "fez_record_search_key_refereed_source":{
+                "rek_refereed_source_id":1587528,
+                "rek_refereed_source_pid":"UQ:caf3afd",
+                "rek_refereed_source_xsdmf_id":null,
+                "rek_refereed_source":453635,
+                "rek_refereed_source_lookup":"Ulrichs"
+            },
+            "fez_record_search_key_retracted":null,
+            "fez_record_search_key_roman_script_conference_name":null,
+            "fez_record_search_key_roman_script_journal_name":null,
+            "fez_record_search_key_roman_script_proceedings_title":null,
+            "fez_record_search_key_roman_script_title":null,
+            "fez_record_search_key_scopus_id":{
+                "rek_scopus_id_id":2638591,
+                "rek_scopus_id_pid":"UQ:caf3afd",
+                "rek_scopus_id_xsdmf_id":null,
+                "rek_scopus_id":"2-s2.0-85060800167",
+                "fez_scopus_citations":{
+                    "sc_eid":"2-s2.0-85060800167",
+                    "sc_created":"1586326481",
+                    "sc_last_checked":"1586326481",
+                    "sc_count":33,
+                    "sc_1d":0,
+                    "sc_2d":0,
+                    "sc_3d":0,
+                    "sc_4d":0,
+                    "sc_5d":0,
+                    "sc_6d":0,
+                    "sc_1w":0,
+                    "sc_1m":0,
+                    "sc_3m":13,
+                    "sc_6m":21,
+                    "sc_1y":31,
+                    "sc_citation_url":"http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/www.scopus.com\/results\/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-85060800167"
+                }
+            },
+            "fez_record_search_key_security_policy":[
+                {
+                    "rek_security_policy_id":789423,
+                    "rek_security_policy_pid":"UQ:caf3afd",
+                    "rek_security_policy":5,
+                    "rek_security_policy_order":1
+                }
+            ],
+            "fez_record_search_key_series":null,
+            "fez_record_search_key_start_page":{
+                "rek_start_page_id":5906607,
+                "rek_start_page_pid":"UQ:caf3afd",
+                "rek_start_page_xsdmf_id":null,
+                "rek_start_page":"343"
+            },
+            "fez_record_search_key_subject":[
+                {
+                    "rek_subject_id":9827529,
+                    "rek_subject_pid":"UQ:caf3afd",
+                    "rek_subject_xsdmf_id":null,
+                    "rek_subject":453242,
+                    "rek_subject_order":1,
+                    "rek_subject_lookup":"1600 Chemistry"
+                },
+                {
+                    "rek_subject_id":9827530,
+                    "rek_subject_pid":"UQ:caf3afd",
+                    "rek_subject_xsdmf_id":null,
+                    "rek_subject":453239,
+                    "rek_subject_order":2,
+                    "rek_subject_lookup":"1300 Biochemistry, Genetics and Molecular Biology"
+                },
+                {
+                    "rek_subject_id":9827531,
+                    "rek_subject_pid":"UQ:caf3afd",
+                    "rek_subject_xsdmf_id":null,
+                    "rek_subject":453257,
+                    "rek_subject_order":3,
+                    "rek_subject_lookup":"3100 Physics and Astronomy"
+                }
+            ],
+            "fez_record_search_key_total_chapters":null,
+            "fez_record_search_key_total_pages":{
+                "rek_total_pages_id":5875722,
+                "rek_total_pages_pid":"UQ:caf3afd",
+                "rek_total_pages_xsdmf_id":null,
+                "rek_total_pages":"11"
+            },
+            "fez_record_search_key_translated_conference_name":null,
+            "fez_record_search_key_translated_journal_name":null,
+            "fez_record_search_key_translated_proceedings_title":null,
+            "fez_record_search_key_translated_title":null,
+            "fez_record_search_key_volume_number":{
+                "rek_volume_number_id":5409131,
+                "rek_volume_number_pid":"UQ:caf3afd",
+                "rek_volume_number_xsdmf_id":null,
+                "rek_volume_number":"10"
+            },
+            "fez_record_search_key_wok_doc_types":[
+                {
+                    "rek_wok_doc_types_id":104247,
+                    "rek_wok_doc_types_pid":"UQ:caf3afd",
+                    "rek_wok_doc_types_xsdmf_id":null,
+                    "rek_wok_doc_types":"Article",
+                    "rek_wok_doc_types_order":1
+                }
+            ],
+            "fez_record_search_key_zoorec_id":null,
+            "fez_datastream_info":[
+                {
+                    "dsi_id":3692575,
+                    "dsi_pid":"UQ:caf3afd",
+                    "dsi_dsid":"claim-receipt.pdf",
+                    "dsi_checksum":"019940a7dcde68640d6f45cfa26ad7f5",
+                    "dsi_embargo_date":null,
+                    "dsi_open_access":null,
+                    "dsi_label":null,
+                    "dsi_mimetype":"application\/pdf",
+                    "dsi_copyright":null,
+                    "dsi_state":"A",
+                    "dsi_size":93333,
+                    "dsi_security_policy":5,
+                    "dsi_security_inherited":1
+                },
+                {
+                    "dsi_id":3692576,
+                    "dsi_pid":"UQ:caf3afd",
+                    "dsi_dsid":"thumbnail_claim-receipt_t.jpg",
+                    "dsi_checksum":"3e19a06e55782d51276e945432be6efa",
+                    "dsi_embargo_date":null,
+                    "dsi_open_access":null,
+                    "dsi_label":null,
+                    "dsi_mimetype":"image\/jpeg",
+                    "dsi_copyright":null,
+                    "dsi_state":"A",
+                    "dsi_size":1337,
+                    "dsi_security_policy":1,
+                    "dsi_security_inherited":0
+                }
+            ],
+            "fez_matched_journals":{
+                "mtj_pid":"UQ:caf3afd",
+                "mtj_jnl_id":20339,
+                "mtj_status":"A"
+            },
+            "fez_record_search_key_isdatasetof":[
+                
+            ],
+            "fez_record_search_key_has_related_datasets":[
+                
+            ],
+            "fez_record_search_key_has_derivations":[
+                
+            ],
+            "rek_display_type_lookup":"Conference Paper",
+            "rek_pubmed_doc_type_lookup":"Article (original research)",
+            "rek_object_type_lookup":"Record",
+            "rek_scopus_doc_type_lookup":null,
+            "rek_status_lookup":"Published",
+            "rek_wok_doc_type_lookup":"Abstract of Published Item",
+            "rek_herdc_notes":null,
+            "rek_editing_user":"uqldegro",
+            "rek_editing_user_lookup":"Lea De Groot",
+            "rek_editing_start_date":"2020-10-26 05:00:02",
+            "fez_internal_notes":null,
+            "fez_record_search_key_audience_size":null,
+            "fez_record_search_key_author_affiliation_id":[
+                
+            ],
+            "fez_record_search_key_author_affiliation_country":[
+                {
+                    "rek_author_affiliation_country_id":2588580,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":1
+                },
+                {
+                    "rek_author_affiliation_country_id":2588581,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"usa",
+                    "rek_author_affiliation_country_order":2
+                },
+                {
+                    "rek_author_affiliation_country_id":2588582,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":3
+                },
+                {
+                    "rek_author_affiliation_country_id":2588583,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"nld",
+                    "rek_author_affiliation_country_order":4
+                },
+                {
+                    "rek_author_affiliation_country_id":2588584,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":5
+                },
+                {
+                    "rek_author_affiliation_country_id":2588585,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":6
+                },
+                {
+                    "rek_author_affiliation_country_id":2588586,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":7
+                },
+                {
+                    "rek_author_affiliation_country_id":2588587,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"usa",
+                    "rek_author_affiliation_country_order":8
+                },
+                {
+                    "rek_author_affiliation_country_id":2588588,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":9
+                },
+                {
+                    "rek_author_affiliation_country_id":2588589,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":10
+                },
+                {
+                    "rek_author_affiliation_country_id":2588590,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":11
+                },
+                {
+                    "rek_author_affiliation_country_id":2588591,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":12
+                },
+                {
+                    "rek_author_affiliation_country_id":2588592,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":13
+                },
+                {
+                    "rek_author_affiliation_country_id":2588593,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":14
+                },
+                {
+                    "rek_author_affiliation_country_id":2588594,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":15
+                },
+                {
+                    "rek_author_affiliation_country_id":2588595,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":16
+                },
+                {
+                    "rek_author_affiliation_country_id":2588596,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":17
+                },
+                {
+                    "rek_author_affiliation_country_id":2588597,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"aus",
+                    "rek_author_affiliation_country_order":18
+                },
+                {
+                    "rek_author_affiliation_country_id":2588598,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"nld",
+                    "rek_author_affiliation_country_order":19
+                },
+                {
+                    "rek_author_affiliation_country_id":2588599,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"deu",
+                    "rek_author_affiliation_country_order":20
+                },
+                {
+                    "rek_author_affiliation_country_id":2588600,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":21
+                },
+                {
+                    "rek_author_affiliation_country_id":2588601,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":22
+                },
+                {
+                    "rek_author_affiliation_country_id":2588602,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":23
+                },
+                {
+                    "rek_author_affiliation_country_id":2588603,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":24
+                },
+                {
+                    "rek_author_affiliation_country_id":2588604,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"usa",
+                    "rek_author_affiliation_country_order":25
+                },
+                {
+                    "rek_author_affiliation_country_id":2588605,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"usa",
+                    "rek_author_affiliation_country_order":26
+                },
+                {
+                    "rek_author_affiliation_country_id":2588606,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":27
+                },
+                {
+                    "rek_author_affiliation_country_id":2588607,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":28
+                },
+                {
+                    "rek_author_affiliation_country_id":2588608,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":29
+                },
+                {
+                    "rek_author_affiliation_country_id":2588609,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"usa",
+                    "rek_author_affiliation_country_order":30
+                },
+                {
+                    "rek_author_affiliation_country_id":2588610,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"usa",
+                    "rek_author_affiliation_country_order":31
+                },
+                {
+                    "rek_author_affiliation_country_id":2588611,
+                    "rek_author_affiliation_country_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_country_xsdmf_id":0,
+                    "rek_author_affiliation_country":"gbr",
+                    "rek_author_affiliation_country_order":32
+                }
+            ],
+            "fez_record_search_key_author_affiliation_full_address":[
+                {
+                    "rek_author_affiliation_full_address_id":2600311,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":1
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600312,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Center for Genomic Medicine, Massachusetts General Hospital, Boston, 02114, MA, USA.",
+                    "rek_author_affiliation_full_address_order":2
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600313,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General Hospital and Harvard Medical School, Boston, 02114, MA, USA.",
+                    "rek_author_affiliation_full_address_order":3
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600314,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Broad Institute, Cambridge, 02142, MA, USA.",
+                    "rek_author_affiliation_full_address_order":4
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600315,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":5
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600316,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Netherlands eScience Center, Amsterdam, 1098, XG, Netherlands.",
+                    "rek_author_affiliation_full_address_order":6
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600317,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":7
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600318,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":8
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600319,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":9
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600320,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Center for Genomic Medicine, Massachusetts General Hospital, Boston, 02114, MA, USA.",
+                    "rek_author_affiliation_full_address_order":10
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600321,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Broad Institute, Cambridge, 02142, MA, USA.",
+                    "rek_author_affiliation_full_address_order":11
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600322,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Sport and Health Sciences, College of Life and Environmental Sciences, University of Exeter, Exeter, EX1 2LU, UK.",
+                    "rek_author_affiliation_full_address_order":12
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600323,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":13
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600324,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":14
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600325,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":15
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600326,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":16
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600327,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":17
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600328,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":18
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600329,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":19
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600330,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":20
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600331,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"The University of Queensland, Institute for Molecular Bioscience, Brisbane, 4072, QLD, Australia.",
+                    "rek_author_affiliation_full_address_order":21
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600332,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Department of Epidemiology, Erasmus Medical Center, Rotterdam, 3015, GE, Netherlands.",
+                    "rek_author_affiliation_full_address_order":22
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600333,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Department of Psychiatry, Erasmus Medical Center, Rotterdam, 3015, GD, Netherlands.",
+                    "rek_author_affiliation_full_address_order":23
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600334,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Department of Translational Informatics, Translational Medicine Early Development, Sanofi-Aventis Deutschland GmbH, Industriepark H\u00f6chst, Frankfurt, 65926, Germany.",
+                    "rek_author_affiliation_full_address_order":24
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600335,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"MRC Integrative Epidemiology Unit at the University of Bristol, Bristol, BS8 2BN, UK.",
+                    "rek_author_affiliation_full_address_order":25
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600336,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, BS8 2BN, UK.",
+                    "rek_author_affiliation_full_address_order":26
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600337,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Faculty of Biology, Medicine and Health, University of Manchester, Manchester, M13 9PL, UK.",
+                    "rek_author_affiliation_full_address_order":27
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600338,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Division of Endocrinology, Diabetes & Gastroenterology, School of Medical Sciences, Faculty of Biology, Medicine and Health, University of Manchester, Manchester, M13 9PL, UK.",
+                    "rek_author_affiliation_full_address_order":28
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600339,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":29
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600340,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":30
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600341,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Center for Sleep and Circadian Neurobiology, University of Pennsylvania, Philadelphia, 19104, PA, USA.",
+                    "rek_author_affiliation_full_address_order":31
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600342,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Perelman School of Medicine of the University of Pennsylvania, Philadelphia, 19104, PA, USA.",
+                    "rek_author_affiliation_full_address_order":32
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600343,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"MRC Integrative Epidemiology Unit at the University of Bristol, Bristol, BS8 2BN, UK.",
+                    "rek_author_affiliation_full_address_order":33
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600344,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, BS8 2BN, UK.",
+                    "rek_author_affiliation_full_address_order":34
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600345,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK.",
+                    "rek_author_affiliation_full_address_order":35
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600346,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Faculty of Biology, Medicine and Health, University of Manchester, Manchester, M13 9PL, UK.",
+                    "rek_author_affiliation_full_address_order":36
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600347,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Division of Endocrinology, Diabetes & Gastroenterology, School of Medical Sciences, Faculty of Biology, Medicine and Health, University of Manchester, Manchester, M13 9PL, UK.",
+                    "rek_author_affiliation_full_address_order":37
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600348,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Manchester Diabetes Centre, Manchester University NHS Foundation Trust, Manchester Academic Health Science Centre, Manchester, M13 0JE, UK.",
+                    "rek_author_affiliation_full_address_order":38
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600349,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"23andMe Inc., 899W. Evelyn Avenue, Mountain View, CA, 94041, USA.",
+                    "rek_author_affiliation_full_address_order":39
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600350,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Center for Genomic Medicine, Massachusetts General Hospital, Boston, 02114, MA, USA.",
+                    "rek_author_affiliation_full_address_order":40
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600351,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Department of Anesthesia, Critical Care and Pain Medicine, Massachusetts General Hospital and Harvard Medical School, Boston, 02114, MA, USA.",
+                    "rek_author_affiliation_full_address_order":41
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600352,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Departments of Medicine, Brigham and Women's Hospital and Beth Israel Deaconess Medical Center, Harvard Medical School, Boston, 02115, USA.",
+                    "rek_author_affiliation_full_address_order":42
+                },
+                {
+                    "rek_author_affiliation_full_address_id":2600353,
+                    "rek_author_affiliation_full_address_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_full_address_xsdmf_id":0,
+                    "rek_author_affiliation_full_address":"Genetics of Complex Traits, University of Exeter Medical School, Royal Devon & Exeter Hospital, Exeter, EX2 5DW, UK. M.N.Weedon@exeter.ac.uk.",
+                    "rek_author_affiliation_full_address_order":43
+                }
+            ],
+            "fez_record_search_key_author_affiliation_name":[
+                {
+                    "rek_author_affiliation_name_id":2735557,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":1
+                },
+                {
+                    "rek_author_affiliation_name_id":2735558,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":2
+                },
+                {
+                    "rek_author_affiliation_name_id":2735559,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":3
+                },
+                {
+                    "rek_author_affiliation_name_id":2735560,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":4
+                },
+                {
+                    "rek_author_affiliation_name_id":2735561,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":5
+                },
+                {
+                    "rek_author_affiliation_name_id":2735562,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":6
+                },
+                {
+                    "rek_author_affiliation_name_id":2735563,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":7
+                },
+                {
+                    "rek_author_affiliation_name_id":2735564,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":8
+                },
+                {
+                    "rek_author_affiliation_name_id":2735565,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":9
+                },
+                {
+                    "rek_author_affiliation_name_id":2735566,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":10
+                },
+                {
+                    "rek_author_affiliation_name_id":2735567,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":11
+                },
+                {
+                    "rek_author_affiliation_name_id":2735568,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":12
+                },
+                {
+                    "rek_author_affiliation_name_id":2735569,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":13
+                },
+                {
+                    "rek_author_affiliation_name_id":2735570,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":14
+                },
+                {
+                    "rek_author_affiliation_name_id":2735571,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":15
+                },
+                {
+                    "rek_author_affiliation_name_id":2735572,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":16
+                },
+                {
+                    "rek_author_affiliation_name_id":2735573,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":17
+                },
+                {
+                    "rek_author_affiliation_name_id":2735574,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":18
+                },
+                {
+                    "rek_author_affiliation_name_id":2735575,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":19
+                },
+                {
+                    "rek_author_affiliation_name_id":2735576,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":20
+                },
+                {
+                    "rek_author_affiliation_name_id":2735577,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":21
+                },
+                {
+                    "rek_author_affiliation_name_id":2735578,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":22
+                },
+                {
+                    "rek_author_affiliation_name_id":2735579,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":23
+                },
+                {
+                    "rek_author_affiliation_name_id":2735580,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":24
+                },
+                {
+                    "rek_author_affiliation_name_id":2735581,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":25
+                },
+                {
+                    "rek_author_affiliation_name_id":2735582,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":26
+                },
+                {
+                    "rek_author_affiliation_name_id":2735583,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":27
+                },
+                {
+                    "rek_author_affiliation_name_id":2735584,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":28
+                },
+                {
+                    "rek_author_affiliation_name_id":2735585,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":29
+                },
+                {
+                    "rek_author_affiliation_name_id":2735586,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":30
+                },
+                {
+                    "rek_author_affiliation_name_id":2735587,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":31
+                },
+                {
+                    "rek_author_affiliation_name_id":2735588,
+                    "rek_author_affiliation_name_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_name_xsdmf_id":0,
+                    "rek_author_affiliation_name":"Missing",
+                    "rek_author_affiliation_name_order":32
+                }
+            ],
+            "fez_record_search_key_author_affiliation_type":[
+                {
+                    "rek_author_affiliation_type_id":62573,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":1
+                },
+                {
+                    "rek_author_affiliation_type_id":62574,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":2
+                },
+                {
+                    "rek_author_affiliation_type_id":62575,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":3
+                },
+                {
+                    "rek_author_affiliation_type_id":62576,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":4
+                },
+                {
+                    "rek_author_affiliation_type_id":62577,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":5
+                },
+                {
+                    "rek_author_affiliation_type_id":62578,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":6
+                },
+                {
+                    "rek_author_affiliation_type_id":62579,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":7
+                },
+                {
+                    "rek_author_affiliation_type_id":62580,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":8
+                },
+                {
+                    "rek_author_affiliation_type_id":62581,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":9
+                },
+                {
+                    "rek_author_affiliation_type_id":62582,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":10
+                },
+                {
+                    "rek_author_affiliation_type_id":62583,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":11
+                },
+                {
+                    "rek_author_affiliation_type_id":62584,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":12
+                },
+                {
+                    "rek_author_affiliation_type_id":62585,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":13
+                },
+                {
+                    "rek_author_affiliation_type_id":62586,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":14
+                },
+                {
+                    "rek_author_affiliation_type_id":62587,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":15
+                },
+                {
+                    "rek_author_affiliation_type_id":62588,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":16
+                },
+                {
+                    "rek_author_affiliation_type_id":62589,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":17
+                },
+                {
+                    "rek_author_affiliation_type_id":62590,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":18
+                },
+                {
+                    "rek_author_affiliation_type_id":62591,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":19
+                },
+                {
+                    "rek_author_affiliation_type_id":62592,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":20
+                },
+                {
+                    "rek_author_affiliation_type_id":62593,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":21
+                },
+                {
+                    "rek_author_affiliation_type_id":62594,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":22
+                },
+                {
+                    "rek_author_affiliation_type_id":62595,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":23
+                },
+                {
+                    "rek_author_affiliation_type_id":62596,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":24
+                },
+                {
+                    "rek_author_affiliation_type_id":62597,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":25
+                },
+                {
+                    "rek_author_affiliation_type_id":62598,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":26
+                },
+                {
+                    "rek_author_affiliation_type_id":62599,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":27
+                },
+                {
+                    "rek_author_affiliation_type_id":62600,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":28
+                },
+                {
+                    "rek_author_affiliation_type_id":62601,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":29
+                },
+                {
+                    "rek_author_affiliation_type_id":62602,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":30
+                },
+                {
+                    "rek_author_affiliation_type_id":62603,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":31
+                },
+                {
+                    "rek_author_affiliation_type_id":62604,
+                    "rek_author_affiliation_type_pid":"UQ:caf3afd",
+                    "rek_author_affiliation_type_xsdmf_id":null,
+                    "rek_author_affiliation_type":0,
+                    "rek_author_affiliation_type_order":32
+                }
+            ],
+            "fez_record_search_key_content_indicator":[
+                
+            ],
+            "fez_record_search_key_creator_contribution_statement":[
+                
+            ],
+            "fez_record_search_key_grant_type":[
+                
+            ],
+            "fez_record_search_key_grant_agency_type":[
+                {
+                    "rek_grant_agency_type_id":1812,
+                    "rek_grant_agency_type_pid":"UQ:caf3afd",
+                    "rek_grant_agency_type_xsdmf_id":null,
+                    "rek_grant_agency_type":454045,
+                    "rek_grant_agency_type_order":1,
+                    "rek_grant_agency_type_lookup":"Not set"
+                },
+                {
+                    "rek_grant_agency_type_id":1813,
+                    "rek_grant_agency_type_pid":"UQ:caf3afd",
+                    "rek_grant_agency_type_xsdmf_id":null,
+                    "rek_grant_agency_type":454045,
+                    "rek_grant_agency_type_order":2,
+                    "rek_grant_agency_type_lookup":"Not set"
+                },
+                {
+                    "rek_grant_agency_type_id":1814,
+                    "rek_grant_agency_type_pid":"UQ:caf3afd",
+                    "rek_grant_agency_type_xsdmf_id":null,
+                    "rek_grant_agency_type":454045,
+                    "rek_grant_agency_type_order":3,
+                    "rek_grant_agency_type_lookup":"Not set"
+                },
+                {
+                    "rek_grant_agency_type_id":1815,
+                    "rek_grant_agency_type_pid":"UQ:caf3afd",
+                    "rek_grant_agency_type_xsdmf_id":null,
+                    "rek_grant_agency_type":454045,
+                    "rek_grant_agency_type_order":4,
+                    "rek_grant_agency_type_lookup":"Not set"
+                },
+                {
+                    "rek_grant_agency_type_id":1816,
+                    "rek_grant_agency_type_pid":"UQ:caf3afd",
+                    "rek_grant_agency_type_xsdmf_id":null,
+                    "rek_grant_agency_type":454045,
+                    "rek_grant_agency_type_order":5,
+                    "rek_grant_agency_type_lookup":"Not set"
+                }
+            ],
+            "fez_record_search_key_quality_indicator":[
+                
+            ],
+            "fez_record_search_key_significance":[
+                
+            ]
         }, {
-            "rek_keywords_id": 30473800,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "U-Series",
-            "rek_keywords_order": 2
-        }, {
-            "rek_keywords_id": 30473801,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Tooth Enamel",
-            "rek_keywords_order": 3
-        }, {
-            "rek_keywords_id": 30473802,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Saudi-Arabia",
-            "rek_keywords_order": 4
-        }, {
-            "rek_keywords_id": 30473803,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Northern Australia",
-            "rek_keywords_order": 5
-        }, {
-            "rek_keywords_id": 30473804,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Human Occupation",
-            "rek_keywords_order": 6
-        }, {
-            "rek_keywords_id": 30473805,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Humid Periods",
-            "rek_keywords_order": 7
-        }, {
-            "rek_keywords_id": 30473806,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Modern Humans",
-            "rek_keywords_order": 8
-        }, {
-            "rek_keywords_id": 30473807,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Human Fossils",
-            "rek_keywords_order": 9
-        }, {
-            "rek_keywords_id": 30473808,
-            "rek_keywords_pid": "UQ:6781f9d",
-            "rek_keywords_xsdmf_id": null,
-            "rek_keywords": "Jebel Irhoud",
-            "rek_keywords_order": 10
-        }],
-        "fez_record_search_key_language": [{
-            "rek_language_id": 5534501,
-            "rek_language_pid": "UQ:6781f9d",
-            "rek_language_xsdmf_id": null,
-            "rek_language": "eng",
-            "rek_language_order": 1
-        }],
-        "fez_record_search_key_license": null,
-        "fez_record_search_key_language_of_journal_name": [],
-        "fez_record_search_key_language_of_title": [],
-        "fez_record_search_key_link": [],
-        "fez_record_search_key_link_description": [],
-        "fez_record_search_key_native_script_journal_name": null,
-        "fez_record_search_key_native_script_title": null,
-        "fez_record_search_key_notes": null,
-        "fez_record_search_key_oa_embargo_days": null,
-        "fez_record_search_key_oa_notes": null,
-        "fez_record_search_key_oa_status": {
-            "rek_oa_status_id": 533661,
-            "rek_oa_status_pid": "UQ:6781f9d",
-            "rek_oa_status_xsdmf_id": null,
-            "rek_oa_status": 453692,
-            "rek_oa_status_lookup": "Not yet assessed"
-        },
-        "fez_record_search_key_oa_status_type": null,
-        "fez_record_search_key_place_of_publication": {
-            "rek_place_of_publication_id": 4369458,
-            "rek_place_of_publication_pid": "UQ:6781f9d",
-            "rek_place_of_publication_xsdmf_id": null,
-            "rek_place_of_publication": "LONDON"
-        },
-        "fez_record_search_key_publisher": {
-            "rek_publisher_id": 4679679,
-            "rek_publisher_pid": "UQ:6781f9d",
-            "rek_publisher_xsdmf_id": null,
-            "rek_publisher": "NATURE PUBLISHING GROUP"
-        },
-        "fez_record_search_key_pubmed_id": {
-            "rek_pubmed_id_id": 258697,
-            "rek_pubmed_id_pid": "UQ:6781f9d",
-            "rek_pubmed_id_xsdmf_id": null,
-            "rek_pubmed_id": "29632352"
-        },
-        "fez_record_search_key_pubmed_central_id": null,
-        "fez_record_search_key_refereed": {
-            "rek_refereed_id": 2721695,
-            "rek_refereed_pid": "UQ:6781f9d",
-            "rek_refereed_xsdmf_id": 7940,
-            "rek_refereed": 0
-        },
-        "fez_record_search_key_refereed_source": {
-            "rek_refereed_source_id": 1468828,
-            "rek_refereed_source_pid": "UQ:6781f9d",
-            "rek_refereed_source_xsdmf_id": 16623,
-            "rek_refereed_source": "453638",
-            "rek_refereed_source_lookup": "Not yet assessed"
-        },
-        "fez_record_search_key_retracted": {
-            "rek_retracted_id": 441025,
-            "rek_retracted_pid": "UQ:6781f9d",
-            "rek_retracted_xsdmf_id": 16603,
-            "rek_retracted": 0
-        },
-        "fez_record_search_key_roman_script_journal_name": null,
-        "fez_record_search_key_roman_script_title": null,
-        "fez_record_search_key_scopus_id": null,
-        "fez_record_search_key_start_page": {
-            "rek_start_page_id": 5813458,
-            "rek_start_page_pid": "UQ:6781f9d",
-            "rek_start_page_xsdmf_id": null,
-            "rek_start_page": "800"
-        },
-        "fez_record_search_key_subject": [],
-        "fez_record_search_key_total_pages": {
-            "rek_total_pages_id": 5782362,
-            "rek_total_pages_pid": "UQ:6781f9d",
-            "rek_total_pages_xsdmf_id": null,
-            "rek_total_pages": "10"
-        },
-        "fez_record_search_key_translated_journal_name": null,
-        "fez_record_search_key_translated_title": null,
-        "fez_record_search_key_volume_number": {
-            "rek_volume_number_id": 5325793,
-            "rek_volume_number_pid": "UQ:6781f9d",
-            "rek_volume_number_xsdmf_id": null,
-            "rek_volume_number": "2"
-        },
-        "fez_record_search_key_wok_doc_types": [{
-            "rek_wok_doc_types_id": 30108,
-            "rek_wok_doc_types_pid": "UQ:6781f9d",
-            "rek_wok_doc_types_xsdmf_id": null,
-            "rek_wok_doc_types": "Article",
-            "rek_wok_doc_types_order": 1
-        }],
-        "fez_record_search_key_zoorec_id": null,
-        "fez_datastream_info": [],
-        "fez_matched_journals": [],
-        "fez_record_search_key_has_datasets": [],
-        "fez_record_search_key_has_related_datasets": [],
-        "fez_record_search_key_has_derivations": [],
-        "rek_status_lookup": "Published",
-        "rek_object_type_lookup": "Record",
-        "rek_wok_doc_type_lookup": null,
-        "rek_display_type_lookup": "Journal Article",
-        "rek_scopus_doc_type_lookup": null,
-        "rek_pubmed_doc_type_lookup": null
-    }, {
         "rek_pid": "UQ:a62a760",
         "rek_title_xsdmf_id": null,
         "rek_title": "Peptide mimic for influenza vaccination using nonnatural combinatorial chemistry",
