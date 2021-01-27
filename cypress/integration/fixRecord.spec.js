@@ -58,9 +58,8 @@ context('Request correction form', () => {
             .contains(unfixFormLocale.title)
             .closest('.StandardCard')
             .should('contain', unfixFormLocale.alert.title)
-            .should('contain', unfixFormLocale.alert.message)
-            .contains('button', 'Submit')
-            .should('not.be.disabled');
+            .should('contain', unfixFormLocale.alert.message);
+        cy.contains('button', 'Submit').should('not.be.disabled');
     });
 
     it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {
