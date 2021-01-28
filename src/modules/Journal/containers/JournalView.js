@@ -243,11 +243,11 @@ const getCiteScoreDetails = journalDetails => ({
         (journalDetails.fez_journal_cite_score &&
             Array.isArray(journalDetails.fez_journal_cite_score.fez_journal_cite_score_asjc_code) &&
             journalDetails.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(code => ({
-                title: code.jnl_cite_score_asjc_code,
+                title: code.jnl_cite_score_asjc_code_lookup,
                 content: [
                     {
                         ...txt.entries.citeScoreAsjcCode,
-                        data: code.jnl_cite_score_asjc_code,
+                        data: code.jnl_cite_score_asjc_code_lookup,
                     },
                     [
                         {
