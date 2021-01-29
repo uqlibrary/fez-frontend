@@ -67,6 +67,9 @@ export default {
                 primaryText: 'CSV ingest',
             },
         },
+        masterJournalListIngest: {
+            primaryText: 'Master journal list ingest',
+        },
         bulkUpdates: {
             primaryText: 'Bulk updates',
         },

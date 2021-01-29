@@ -186,6 +186,7 @@ export const flattedPathConfig = [
     '/admin/edit',
     '/admin/favourite-search',
     '/admin/masquerade',
+    '/admin/master-journal-list-ingest',
     '/admin/unpublished',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
@@ -196,17 +197,17 @@ export const flattedPathConfig = [
     '/data-collections/mine',
     '/editorial-appointments',
     '/journal/view',
-    '/rhdsubmission',
-    '/sbslodge_new',
-    '/tool/lookup',
-    '/records/claim',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',
+    '/records/claim',
     '/records/incomplete',
     '/records/mine',
     '/records/possible',
     '/records/search',
+    '/rhdsubmission',
+    '/sbslodge_new',
+    '/tool/lookup',
     '/view',
 ];
 
@@ -550,6 +551,13 @@ export const getRoutesConfig = ({
                       access: [roles.digiteam],
                       pageTitle: locale.components.digiTeam.batchImport.title,
                   },
+                  {
+                      path: pathConfig.admin.masterJournalListIngest,
+                      component: components.MasterJournalListIngest,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.components.MasterJournalListIngest.title,
+                  },
               ]
             : []),
         ...publicPages,
@@ -720,6 +728,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.digiteam.batchImport,
                       ...locale.menu.digiteam.batchImport,
+                  },
+                  {
+                      linkTo: pathConfig.admin.masterJournalListIngest,
+                      ...locale.menu.masterJournalListIngest,
                   },
                   {
                       linkTo: pathConfig.admin.bulkUpdates,
