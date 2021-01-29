@@ -152,7 +152,6 @@ exports[`NavigationDialogBox component should render 1`] = `
                         },
                         "render": [Function],
                       },
-                      "displayName": "WithStyles(ForwardRef(Backdrop))",
                       "options": Object {
                         "defaultTheme": Object {
                           "breakpoints": Object {

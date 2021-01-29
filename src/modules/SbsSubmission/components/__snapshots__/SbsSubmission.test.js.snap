@@ -197,7 +197,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -227,7 +226,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -749,7 +747,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -779,7 +776,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }

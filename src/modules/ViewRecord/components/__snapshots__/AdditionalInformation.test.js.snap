@@ -10510,7 +10510,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                             target="_blank"
                                                                             title="Link to https://example.com/ will open in a new window."
                                                                           >
-                                                                            <ForwardRef
+                                                                            <OpenInNewIcon
                                                                               className="ExternalLink-externalLinkIcon-179"
                                                                             >
                                                                               <WithStyles(ForwardRef(SvgIcon))
@@ -10544,7 +10544,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                   </svg>
                                                                                 </ForwardRef(SvgIcon)>
                                                                               </WithStyles(ForwardRef(SvgIcon))>
-                                                                            </ForwardRef>
+                                                                            </OpenInNewIcon>
                                                                             Check publisher's open access policy
                                                                           </a>
                                                                         </ExternalLink>
@@ -12932,7 +12932,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                           target="_blank"
                                                                           title="Open this DOI in an new window"
                                                                         >
-                                                                          <ForwardRef
+                                                                          <OpenInNewIcon
                                                                             className="ExternalLink-externalLinkIcon-179"
                                                                           >
                                                                             <WithStyles(ForwardRef(SvgIcon))
@@ -12966,7 +12966,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 </svg>
                                                                               </ForwardRef(SvgIcon)>
                                                                             </WithStyles(ForwardRef(SvgIcon))>
-                                                                          </ForwardRef>
+                                                                          </OpenInNewIcon>
                                                                           https://doi.org/10.1242/jcs.196659
                                                                         </a>
                                                                       </ExternalLink>

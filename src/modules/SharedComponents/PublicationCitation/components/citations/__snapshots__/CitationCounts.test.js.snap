@@ -9902,7 +9902,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 target="_blank"
                                 title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                               >
-                                <ForwardRef
+                                <OpenInNewIcon
                                   className="ExternalLink-externalLinkIcon-110"
                                 >
                                   <WithStyles(ForwardRef(SvgIcon))
@@ -9936,7 +9936,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </ForwardRef>
+                                </OpenInNewIcon>
                                 View full statistics
                               </a>
                             </ExternalLink>
@@ -14657,7 +14657,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 target="_blank"
                                 title="This is test title"
                               >
-                                <ForwardRef
+                                <OpenInNewIcon
                                   className="ExternalLink-externalLinkIcon-110"
                                 >
                                   <WithStyles(ForwardRef(SvgIcon))
@@ -14691,7 +14691,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </ForwardRef>
+                                </OpenInNewIcon>
                                 View full statistics
                               </a>
                             </ExternalLink>

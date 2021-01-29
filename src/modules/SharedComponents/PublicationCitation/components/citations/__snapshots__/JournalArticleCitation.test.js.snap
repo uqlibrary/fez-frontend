@@ -7430,7 +7430,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <ForwardRef
+                        <OpenInNewIcon
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -7464,7 +7464,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </OpenInNewIcon>
                         https://doi.org/10.1242/jcs.196659
                       </a>
                     </ExternalLink>

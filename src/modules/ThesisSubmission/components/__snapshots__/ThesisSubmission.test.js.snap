@@ -276,7 +276,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -821,7 +820,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }

@@ -75,7 +75,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
               item={true}
               xs={12}
             >
-              <Field
+              <ForwardRef(Field)
                 className="requiredField"
                 component={[Function]}
                 disabled={false}
@@ -235,7 +235,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
               item={true}
               xs={12}
             >
-              <Field
+              <ForwardRef(Field)
                 className="requiredField"
                 component={[Function]}
                 disabled={true}
@@ -4218,7 +4218,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
               item={true}
               xs={12}
             >
-              <Field
+              <ForwardRef(Field)
                 className="requiredField"
                 component={[Function]}
                 disabled={false}
@@ -4361,7 +4361,7 @@ exports[`Component GoogleScholar  should render form if author has google schola
               item={true}
               xs={12}
             >
-              <Field
+              <ForwardRef(Field)
                 className="requiredField"
                 component={[Function]}
                 disabled={false}

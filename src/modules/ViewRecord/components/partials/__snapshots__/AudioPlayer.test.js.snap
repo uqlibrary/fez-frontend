@@ -583,7 +583,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                         <span
                           className="MuiIconButton-label"
                         >
-                          <ForwardRef
+                          <PlayArrowIcon
                             className="play"
                           >
                             <WithStyles(ForwardRef(SvgIcon))
@@ -617,7 +617,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                                 </svg>
                               </ForwardRef(SvgIcon)>
                             </WithStyles(ForwardRef(SvgIcon))>
-                          </ForwardRef>
+                          </PlayArrowIcon>
                         </span>
                         <WithStyles(memo)
                           center={true}
