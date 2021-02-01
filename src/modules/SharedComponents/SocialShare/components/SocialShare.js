@@ -67,7 +67,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
         email: {
             id: 'email',
             link: {
-                href: `mailto:?subject=${publication.rek_title}&body=Please review this record in UQ eSpace: ${APP_URL}/view/${publication.rek_pid}`,
+                href: `mailto:?subject=${publication.rek_title}&body=Please review this record in UQ eSpace: ${APP_URL}view/${publication.rek_pid}`,
                 title: 'Share this record via Email',
                 openInNewIcon: false,
             },
