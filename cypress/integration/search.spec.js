@@ -22,17 +22,17 @@ context('Search', () => {
             // .contains('label', searchLocale.searchBoxPlaceholder);
             .contains('label', 'Search eSpace');
 
-        cy.get('#simple-search-input').type('cats and dogs{enter}');
-        cy.get('[data-testid="standard-card-content"]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
+        cy.get('[data-testid=simple-search-input]').type('cats and dogs{enter}');
+        cy.get('[data-testid=standard-card-content]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
         cy.get('.StandardPage > div > div > div:nth-of-type(4) h6').should('contain', 'Refine results');
 
         // Click through to advanced search UI
-        cy.get('button#showAdvancedSearchButton')
+        cy.get('[data-testid=show-advanced-search]')
             .should('contain', 'Advanced search')
             .should('have.attr', 'aria-label', 'Click to switch to Advanced search')
             .click();
         cy.get('#advancedSearchForm h5').should('contain', 'Advanced search');
-        cy.get('input[name="searchField0"]')
+        cy.get('[data-testid=any-field-input]')
             .should('have.value', 'cats and dogs')
             .type("{home}it's raining ");
         cy.contains('label > span:nth-child(2)', 'Open access')
@@ -62,13 +62,13 @@ context('Search', () => {
         cy.get('button#advancedSearchButton')
             .should('be.disabled')
             .should('have.text', 'Search');
-        cy.get('[placeholder="Add an author name"]').type('Ky Lane{enter}');
-        cy.get('button#advancedSearchButton').should('not.be.disabled');
+        cy.get('[data-testid=rek-author-input]').type('Ky Lane{enter}');
+        cy.get('[data-testid=advanced-search]').should('not.be.disabled');
         // Add a set of collections to search from
         cy.contains('button', 'Add another field').click();
         cy.contains('Select a field').click();
         cy.contains('#field-type-options li', 'Collection').click();
-        cy.get('button#advancedSearchButton').should('be.disabled');
+        cy.get('[data-testid=advanced-search]').should('be.disabled');
         cy.get('[data-testid=rek-ismemberof-input]').click();
         cy.contains(
             '[data-testid=rek-ismemberof-options] li',
@@ -86,7 +86,7 @@ context('Search', () => {
                 "Any fieldcontainsit's raining cats and dogsANDAuthor NamecontainsKy LaneANDCollectionis one ofUQ:131735, UQ:7557 or UQ:254105ANDisopen access/full text",
             );
         });
-        cy.get('button#advancedSearchButton')
+        cy.get('[data-testid=advanced-search]')
             .should('not.be.disabled')
             .click();
         cy.get('[data-testid="standard-card-content"]')

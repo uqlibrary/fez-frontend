@@ -2981,6 +2981,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
                                                             data-testid="test-aut-id-input"
                                                             id="test-aut-id-input"
+                                                            name="test-aut-id"
                                                             spellcheck="false"
                                                             type="text"
                                                             value=""
@@ -2991,6 +2992,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                       }
                                                     }
                                                     label="UQ Author ID"
+                                                    name="test-aut-id"
                                                     onChange={[Function]}
                                                     value=""
                                                   >
@@ -3067,6 +3069,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
                                                               data-testid="test-aut-id-input"
                                                               id="test-aut-id-input"
+                                                              name="test-aut-id"
                                                               spellcheck="false"
                                                               type="text"
                                                               value=""
@@ -3077,6 +3080,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                         }
                                                       }
                                                       label="UQ Author ID"
+                                                      name="test-aut-id"
                                                       onChange={[Function]}
                                                       value=""
                                                     >
@@ -3234,6 +3238,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
                                                                       data-testid="test-aut-id-input"
                                                                       id="test-aut-id-input"
+                                                                      name="test-aut-id"
                                                                       spellcheck="false"
                                                                       type="text"
                                                                       value=""
@@ -3244,6 +3249,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                 }
                                                               }
                                                               multiline={false}
+                                                              name="test-aut-id"
                                                               onChange={[Function]}
                                                               value=""
                                                             >
@@ -3321,6 +3327,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
                                                                         data-testid="test-aut-id-input"
                                                                         id="test-aut-id-input"
+                                                                        name="test-aut-id"
                                                                         spellcheck="false"
                                                                         type="text"
                                                                         value=""
@@ -3331,6 +3338,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                   }
                                                                 }
                                                                 multiline={false}
+                                                                name="test-aut-id"
                                                                 onChange={[Function]}
                                                                 value=""
                                                               >
@@ -3409,6 +3417,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                           class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
                                                                           data-testid="test-aut-id-input"
                                                                           id="test-aut-id-input"
+                                                                          name="test-aut-id"
                                                                           spellcheck="false"
                                                                           type="text"
                                                                           value=""
@@ -3419,6 +3428,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     }
                                                                   }
                                                                   multiline={false}
+                                                                  name="test-aut-id"
                                                                   onChange={[Function]}
                                                                   type="text"
                                                                   value=""
@@ -3502,6 +3512,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                             class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
                                                                             data-testid="test-aut-id-input"
                                                                             id="test-aut-id-input"
+                                                                            name="test-aut-id"
                                                                             spellcheck="false"
                                                                             type="text"
                                                                             value=""
@@ -3512,6 +3523,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       }
                                                                     }
                                                                     multiline={false}
+                                                                    name="test-aut-id"
                                                                     onChange={[Function]}
                                                                     type="text"
                                                                     value=""
@@ -3532,6 +3544,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         data-testid="test-aut-id-input"
                                                                         disabled={false}
                                                                         id="test-aut-id-input"
+                                                                        name="test-aut-id"
                                                                         onAnimationStart={[Function]}
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
@@ -7290,6 +7303,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             data-testid="test-aut-id-input"
                                                             disabled=""
                                                             id="test-aut-id-input"
+                                                            name="test-aut-id"
                                                             spellcheck="false"
                                                             type="text"
                                                             value=""
@@ -7300,6 +7314,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       }
                                                     }
                                                     label="UQ Author ID"
+                                                    name="test-aut-id"
                                                     onChange={[Function]}
                                                     value=""
                                                   >
@@ -7366,6 +7381,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               data-testid="test-aut-id-input"
                                                               disabled=""
                                                               id="test-aut-id-input"
+                                                              name="test-aut-id"
                                                               spellcheck="false"
                                                               type="text"
                                                               value=""
@@ -7376,6 +7392,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         }
                                                       }
                                                       label="UQ Author ID"
+                                                      name="test-aut-id"
                                                       onChange={[Function]}
                                                       value=""
                                                     >
@@ -7523,6 +7540,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       data-testid="test-aut-id-input"
                                                                       disabled=""
                                                                       id="test-aut-id-input"
+                                                                      name="test-aut-id"
                                                                       spellcheck="false"
                                                                       type="text"
                                                                       value=""
@@ -7533,6 +7551,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 }
                                                               }
                                                               multiline={false}
+                                                              name="test-aut-id"
                                                               onChange={[Function]}
                                                               value=""
                                                             >
@@ -7600,6 +7619,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         data-testid="test-aut-id-input"
                                                                         disabled=""
                                                                         id="test-aut-id-input"
+                                                                        name="test-aut-id"
                                                                         spellcheck="false"
                                                                         type="text"
                                                                         value=""
@@ -7610,6 +7630,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   }
                                                                 }
                                                                 multiline={false}
+                                                                name="test-aut-id"
                                                                 onChange={[Function]}
                                                                 value=""
                                                               >
@@ -7678,6 +7699,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           data-testid="test-aut-id-input"
                                                                           disabled=""
                                                                           id="test-aut-id-input"
+                                                                          name="test-aut-id"
                                                                           spellcheck="false"
                                                                           type="text"
                                                                           value=""
@@ -7688,6 +7710,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     }
                                                                   }
                                                                   multiline={false}
+                                                                  name="test-aut-id"
                                                                   onChange={[Function]}
                                                                   type="text"
                                                                   value=""
@@ -7761,6 +7784,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                             data-testid="test-aut-id-input"
                                                                             disabled=""
                                                                             id="test-aut-id-input"
+                                                                            name="test-aut-id"
                                                                             spellcheck="false"
                                                                             type="text"
                                                                             value=""
@@ -7771,6 +7795,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       }
                                                                     }
                                                                     multiline={false}
+                                                                    name="test-aut-id"
                                                                     onChange={[Function]}
                                                                     type="text"
                                                                     value=""
@@ -7791,6 +7816,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         data-testid="test-aut-id-input"
                                                                         disabled={true}
                                                                         id="test-aut-id-input"
+                                                                        name="test-aut-id"
                                                                         onAnimationStart={[Function]}
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}

@@ -50,7 +50,7 @@ export const NewGenericSelectField = ({
     const classes = useStyles();
     const [selectValue, setSelectValue] = React.useState(multiple ? [] : '');
     const [inputError, setInputError] = React.useState(!!error);
-    const [inputErrorText, setInputErrorText] = React.useState(error || errorText || null);
+    const [inputErrorText, setInputErrorText] = React.useState(errorText || error || null);
 
     const promptMenuItem = {
         value: '',
@@ -105,7 +105,7 @@ export const NewGenericSelectField = ({
     React.useEffect(() => {
         if (!meta) {
             setInputError(!!error);
-            setInputErrorText(!!error ? error : null);
+            setInputErrorText(!!error ? errorText || error : null);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error]);
