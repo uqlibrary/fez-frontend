@@ -505,6 +505,7 @@ exports[`BookChapterForm renders  component 1`] = `
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
@@ -1134,6 +1135,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }

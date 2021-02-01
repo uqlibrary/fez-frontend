@@ -286,6 +286,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
                 },
                 "render": [Function],
               },
+              "displayName": "WithStyles(ForwardRef(Backdrop))",
               "options": Object {
                 "defaultTheme": Object {
                   "breakpoints": Object {

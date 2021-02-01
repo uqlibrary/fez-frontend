@@ -3046,7 +3046,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -3080,7 +3080,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef>
                         https://doi.org/10.1111/dar.12222
                       </a>
                     </ExternalLink>

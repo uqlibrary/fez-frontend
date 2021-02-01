@@ -829,7 +829,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                     target="_blank"
                     title="Open this DOI in an new window"
                   >
-                    <OpenInNewIcon
+                    <ForwardRef
                       className="ExternalLink-externalLinkIcon-2"
                     >
                       <WithStyles(ForwardRef(SvgIcon))
@@ -863,7 +863,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
                           </svg>
                         </ForwardRef(SvgIcon)>
                       </WithStyles(ForwardRef(SvgIcon))>
-                    </OpenInNewIcon>
+                    </ForwardRef>
                     https://doi.org/10.121212/lskdjflsdjf
                   </a>
                 </ExternalLink>

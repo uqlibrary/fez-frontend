@@ -1058,7 +1058,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                     <span
                       className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
                     >
-                      <AccessTimeIcon
+                      <ForwardRef
                         className="OpenAccessIcon-embargoedBadgeStyle-2"
                         fontSize="small"
                       >
@@ -1098,7 +1098,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                             </svg>
                           </ForwardRef(SvgIcon)>
                         </WithStyles(ForwardRef(SvgIcon))>
-                      </AccessTimeIcon>
+                      </ForwardRef>
                     </span>
                   </span>
                 </ForwardRef(Badge)>
@@ -1707,7 +1707,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                     <span
                       className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
                     >
-                      <AccessTimeIcon
+                      <ForwardRef
                         className="OpenAccessIcon-embargoedBadgeStyle-2"
                         fontSize="small"
                       >
@@ -1747,7 +1747,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                             </svg>
                           </ForwardRef(SvgIcon)>
                         </WithStyles(ForwardRef(SvgIcon))>
-                      </AccessTimeIcon>
+                      </ForwardRef>
                     </span>
                   </span>
                 </ForwardRef(Badge)>
@@ -2344,7 +2344,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                         <span
                           className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
                         >
-                          <LockIcon
+                          <ForwardRef
                             className="OpenAccessIcon-badgeStyle-1"
                             color="secondary"
                             fontSize="small"
@@ -2384,7 +2384,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                                 </svg>
                               </ForwardRef(SvgIcon)>
                             </WithStyles(ForwardRef(SvgIcon))>
-                          </LockIcon>
+                          </ForwardRef>
                         </span>
                       </span>
                     </ForwardRef(Badge)>

@@ -526,6 +526,7 @@ exports[`BookForm renders  component 1`] = `
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
@@ -904,6 +905,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
@@ -1494,6 +1496,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
@@ -2214,6 +2217,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
@@ -2688,6 +2692,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
@@ -3278,6 +3283,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
               "type": [Function],
             },
             "compare": null,
+            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }

@@ -3661,7 +3661,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -3695,7 +3695,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -7368,7 +7368,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -7402,7 +7402,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -11075,7 +11075,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -11109,7 +11109,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -14597,7 +14597,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -14631,7 +14631,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -18304,7 +18304,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -18338,7 +18338,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -25268,7 +25268,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -25302,7 +25302,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>

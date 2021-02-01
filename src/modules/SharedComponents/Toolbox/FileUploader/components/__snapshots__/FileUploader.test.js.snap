@@ -2325,7 +2325,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                           <div
                                                                             className="MuiGrid-root MuiGrid-item"
                                                                           >
-                                                                            <CloudUploadIcon
+                                                                            <ForwardRef
                                                                               className="FileUploadDropzoneStaticContent-cloudIcon-138"
                                                                             >
                                                                               <WithStyles(ForwardRef(SvgIcon))
@@ -2359,7 +2359,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                                   </svg>
                                                                                 </ForwardRef(SvgIcon)>
                                                                               </WithStyles(ForwardRef(SvgIcon))>
-                                                                            </CloudUploadIcon>
+                                                                            </ForwardRef>
                                                                           </div>
                                                                         </ForwardRef(Grid)>
                                                                       </WithStyles(ForwardRef(Grid))>
@@ -4884,7 +4884,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                           <div
                                                                             className="MuiGrid-root MuiGrid-item"
                                                                           >
-                                                                            <CloudUploadIcon
+                                                                            <ForwardRef
                                                                               className="FileUploadDropzoneStaticContent-cloudIcon-138"
                                                                             >
                                                                               <WithStyles(ForwardRef(SvgIcon))
@@ -4918,7 +4918,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                                   </svg>
                                                                                 </ForwardRef(SvgIcon)>
                                                                               </WithStyles(ForwardRef(SvgIcon))>
-                                                                            </CloudUploadIcon>
+                                                                            </ForwardRef>
                                                                           </div>
                                                                         </ForwardRef(Grid)>
                                                                       </WithStyles(ForwardRef(Grid))>

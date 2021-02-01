@@ -11,6 +11,7 @@ exports[`DashboardOrcidSync should render Done status, and be able to click the 
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
+          "displayName": "DoneIcon",
           "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
@@ -57,6 +58,7 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
     Object {
       "$$typeof": Symbol(react.memo),
       "compare": null,
+      "displayName": "SyncProblemIcon",
       "muiName": "SvgIcon",
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
@@ -73,6 +75,7 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
+          "displayName": "SyncProblemIcon",
           "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
@@ -144,6 +147,7 @@ exports[`DashboardOrcidSync should render Pending status 1`] = `
         },
         "render": [Function],
       },
+      "displayName": "WithStyles(ForwardRef(CircularProgress))",
       "options": Object {
         "defaultTheme": Object {
           "breakpoints": Object {
@@ -472,6 +476,7 @@ exports[`DashboardOrcidSync should render Pending status 1`] = `
             },
             "render": [Function],
           },
+          "displayName": "WithStyles(ForwardRef(CircularProgress))",
           "options": Object {
             "defaultTheme": Object {
               "breakpoints": Object {
@@ -825,6 +830,7 @@ exports[`DashboardOrcidSync should render Pending status 2`] = `
         },
         "render": [Function],
       },
+      "displayName": "WithStyles(ForwardRef(CircularProgress))",
       "options": Object {
         "defaultTheme": Object {
           "breakpoints": Object {
@@ -1153,6 +1159,7 @@ exports[`DashboardOrcidSync should render Pending status 2`] = `
             },
             "render": [Function],
           },
+          "displayName": "WithStyles(ForwardRef(CircularProgress))",
           "options": Object {
             "defaultTheme": Object {
               "breakpoints": Object {
@@ -1497,6 +1504,7 @@ exports[`DashboardOrcidSync should render properly 1`] = `
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
+          "displayName": "DoneIcon",
           "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),

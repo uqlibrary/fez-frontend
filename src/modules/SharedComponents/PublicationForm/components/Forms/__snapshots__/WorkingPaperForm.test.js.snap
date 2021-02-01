@@ -54,6 +54,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -78,6 +79,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -102,6 +104,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -126,6 +129,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }

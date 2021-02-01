@@ -55,6 +55,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -79,6 +80,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -102,6 +104,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -126,6 +129,7 @@ exports[`DepartmentTechnicalReportForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
+                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
