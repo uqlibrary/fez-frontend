@@ -12,7 +12,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
         facebook: {
             id: 'facebook',
             link: {
-                href: `https://www.facebook.com/sharer/sharer.php?u=${APP_URL}/view/${publication.rek_pid}`,
+                href: `https://www.facebook.com/sharer/sharer.php?u=${APP_URL}view/${publication.rek_pid}`,
                 width: 500,
                 height: 500,
                 title: 'Share this record on Facebook',
@@ -23,7 +23,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
         twitter: {
             id: 'twitter',
             link: {
-                href: `https://twitter.com/share?url=${APP_URL}/view/${publication.rek_pid}&text=${publication.rek_title} - `,
+                href: `https://twitter.com/share?url=${APP_URL}view/${publication.rek_pid}&text=${publication.rek_title} - `,
                 width: 500,
                 height: 300,
                 title: 'Share this record on Twitter',
@@ -34,7 +34,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
         linkedin: {
             id: 'linkedin',
             link: {
-                href: `https://linkedin.com/shareArticle?url=${APP_URL}/view/${publication.rek_pid}`,
+                href: `https://linkedin.com/shareArticle?url=${APP_URL}view/${publication.rek_pid}`,
                 width: 500,
                 height: 500,
                 title: 'Share this record on LinkedIn',
@@ -45,7 +45,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
         researchgate: {
             id: 'researchgate',
             link: {
-                href: `https://www.researchgate.net/go.Share.html?url=${APP_URL}/view/${publication.rek_pid}&title=${publication.rek_title}`,
+                href: `https://www.researchgate.net/go.Share.html?url=${APP_URL}view/${publication.rek_pid}&title=${publication.rek_title}`,
                 width: 500,
                 height: 600,
                 title: 'Share this record on Research Gate',
@@ -56,7 +56,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
         mendeley: {
             id: 'mendeley',
             link: {
-                href: `https://profitquery.com/add-to/mendeley/?url=${APP_URL}/view/${publication.rek_pid}`,
+                href: `https://profitquery.com/add-to/mendeley/?url=${APP_URL}view/${publication.rek_pid}`,
                 width: 500,
                 height: 500,
                 title: 'Share this record on Mendeley',
