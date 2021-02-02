@@ -1072,7 +1072,7 @@ exports[`File Name Component  should display file name link 1`] = `
                               target="_blank"
                               title="test.jpg"
                             >
-                              <ForwardRef
+                              <OpenInNewIcon
                                 className="ExternalLink-externalLinkIcon-135"
                               >
                                 <WithStyles(ForwardRef(SvgIcon))
@@ -1106,7 +1106,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                     </svg>
                                   </ForwardRef(SvgIcon)>
                                 </WithStyles(ForwardRef(SvgIcon))>
-                              </ForwardRef>
+                              </OpenInNewIcon>
                               test.jpg
                             </a>
                           </ExternalLink>
@@ -2213,7 +2213,7 @@ exports[`File Name Component  should render audio player 1`] = `
                               target="_blank"
                               title="test.mp3"
                             >
-                              <ForwardRef
+                              <OpenInNewIcon
                                 className="ExternalLink-externalLinkIcon-135"
                               >
                                 <WithStyles(ForwardRef(SvgIcon))
@@ -2247,7 +2247,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                     </svg>
                                   </ForwardRef(SvgIcon)>
                                 </WithStyles(ForwardRef(SvgIcon))>
-                              </ForwardRef>
+                              </OpenInNewIcon>
                               test.mp3
                             </a>
                           </ExternalLink>

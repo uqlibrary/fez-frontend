@@ -164,7 +164,6 @@ exports[`ResearchReportForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -468,7 +467,6 @@ exports[`ResearchReportForm renders  component 1`] = `
               "type": [Function],
             },
             "compare": null,
-            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
@@ -723,7 +721,6 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -1027,7 +1024,6 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
               "type": [Function],
             },
             "compare": null,
-            "displayName": "Connect(Component)",
             "type": [Function],
           }
         }
