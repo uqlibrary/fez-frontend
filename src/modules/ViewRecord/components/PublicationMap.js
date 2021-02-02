@@ -6,84 +6,87 @@ import SearchBox from 'react-google-maps/lib/components/places/SearchBox';
 import { compose, lifecycle } from 'recompose';
 import get from 'lodash.get';
 
-export const GoogleMapViewComponent = props => {
-    const styles = {
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35,
-    };
-    const bounds = new window.google.maps.LatLngBounds();
-    props.geoCoords.map(coord => {
-        bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
-    });
-    return (
-        <div id="googleMap">
-            {
-                <GoogleMap
-                    defaultZoom={props.zoom}
-                    defaultCenter={props.center}
-                    ref={props.onMapMounted(bounds, props.geoCoords)}
-                >
-                    {(props.readOnly || props.isSearch) &&
-                        props.geoCoords.length >= 1 &&
-                        (props.geoCoords.length > 1 ? (
-                            <Polygon paths={props.geoCoords} options={styles} />
-                        ) : (
-                            <Marker position={props.geoCoords[0]} />
-                        ))}
-                    {!props.readOnly && (
-                        <DrawingManager
-                            ref={props.onDrawingManagerMounted}
-                            defaultDrawingMode={window.google.maps.drawing.OverlayType.MARKER}
-                            defaultOptions={{
-                                drawingControl: true,
-                                drawingControlOptions: {
-                                    position: window.google.maps.ControlPosition.TOP_CENTER,
-                                    drawingModes: [
-                                        window.google.maps.drawing.OverlayType.MARKER,
-                                        window.google.maps.drawing.OverlayType.POLYGON,
-                                        window.google.maps.drawing.OverlayType.RECTANGLE,
-                                    ],
-                                },
-                            }}
-                            onMarkerComplete={props.handleMarkerComplete}
-                            onPolygonComplete={props.handlePolygonComplete}
-                            onRectangleComplete={props.handleRectangleComplete}
-                        />
-                    )}
-                    {!props.readOnly && (
-                        <SearchBox
-                            ref={props.onSearchBoxMounted}
-                            bounds={props.bounds}
-                            controlPosition={window.google.maps.ControlPosition.TOP_RIGHT}
-                            onPlacesChanged={props.onPlacesChanged}
-                        >
-                            <input
-                                type="text"
-                                placeholder="Search..."
-                                style={{
-                                    boxSizing: 'border-box',
-                                    border: '1px solid transparent',
-                                    width: '240px',
-                                    height: '24px',
-                                    marginTop: '5px',
-                                    padding: '0 12px',
-                                    borderRadius: '3px 0px 0px 3px',
-                                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
-                                    fontSize: '14px',
-                                    outline: 'none',
-                                    textOverflow: 'ellipses',
-                                }}
-                            />
-                        </SearchBox>
-                    )}
-                </GoogleMap>
-            }
-        </div>
-    );
+const styles = {
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35,
 };
+
+export const GoogleMapViewComponent = withScriptjs(
+    withGoogleMap(props => {
+        const bounds = new window.google.maps.LatLngBounds();
+        props.geoCoords.map(coord => {
+            bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
+        });
+        return (
+            <div id="googleMap">
+                {
+                    <GoogleMap
+                        defaultZoom={props.zoom}
+                        defaultCenter={props.center}
+                        ref={props.onMapMounted(bounds, props.geoCoords)}
+                    >
+                        {(props.readOnly || props.isSearch) &&
+                            props.geoCoords.length >= 1 &&
+                            (props.geoCoords.length > 1 ? (
+                                <Polygon paths={props.geoCoords} options={styles} />
+                            ) : (
+                                <Marker position={props.geoCoords[0]} />
+                            ))}
+                        {!props.readOnly && (
+                            <DrawingManager
+                                ref={props.onDrawingManagerMounted}
+                                defaultDrawingMode={window.google.maps.drawing.OverlayType.MARKER}
+                                defaultOptions={{
+                                    drawingControl: true,
+                                    drawingControlOptions: {
+                                        position: window.google.maps.ControlPosition.TOP_CENTER,
+                                        drawingModes: [
+                                            window.google.maps.drawing.OverlayType.MARKER,
+                                            window.google.maps.drawing.OverlayType.POLYGON,
+                                            window.google.maps.drawing.OverlayType.RECTANGLE,
+                                        ],
+                                    },
+                                }}
+                                onMarkerComplete={props.handleMarkerComplete}
+                                onPolygonComplete={props.handlePolygonComplete}
+                                onRectangleComplete={props.handleRectangleComplete}
+                            />
+                        )}
+                        {!props.readOnly && (
+                            <SearchBox
+                                ref={props.onSearchBoxMounted}
+                                bounds={props.bounds}
+                                controlPosition={window.google.maps.ControlPosition.TOP_RIGHT}
+                                onPlacesChanged={props.onPlacesChanged}
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    style={{
+                                        boxSizing: 'border-box',
+                                        border: '1px solid transparent',
+                                        width: '240px',
+                                        height: '24px',
+                                        marginTop: '5px',
+                                        padding: '0 12px',
+                                        borderRadius: '3px 0px 0px 3px',
+                                        boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
+                                        fontSize: '14px',
+                                        outline: 'none',
+                                        textOverflow: 'ellipses',
+                                    }}
+                                />
+                            </SearchBox>
+                        )}
+                    </GoogleMap>
+                }
+            </div>
+        );
+    }),
+);
 
 GoogleMapViewComponent.propTypes = {
     geoCoords: PropTypes.array,
@@ -119,7 +122,7 @@ export const getDefaultCenter = geoCoords => {
     }
 };
 
-const PublicationMap = compose(
+export const OldPublicationMap = compose(
     lifecycle({
         trimCoordinates(value, precision = 6) {
             return value.toFixed(precision).replace(/[\.]?0+$/, '');
@@ -233,5 +236,133 @@ const PublicationMap = compose(
     withScriptjs,
     withGoogleMap,
 )(GoogleMapViewComponent);
+
+const PublicationMap = props => {
+    const initialGeoCoords =
+        (!!props.coordinates &&
+            props.coordinates.split(' ').map(item => ({
+                lng: Number(item.split(',')[0]),
+                lat: Number(item.split(',')[1]),
+            }))) ||
+        [];
+    const defaultCenter = getDefaultCenter(initialGeoCoords);
+    const pointZoom = 7;
+    const polygonZoom = 13;
+
+    const [center, setCenter] = React.useState(defaultCenter);
+    const [bounds] = React.useState(null);
+    const [setCurrentOverlay] = React.useState(null);
+    const [zoom] = React.useState(initialGeoCoords.length === 1 ? pointZoom : polygonZoom);
+    const [geoCoords, setGeoCoords] = React.useState(initialGeoCoords);
+    const [isSearch, setIsSearch] = React.useState(false);
+
+    const refs = {};
+
+    const searchBoxRef = React.useRef();
+    const drawingManagerRef = React.useRef();
+
+    const trimCoordinates = (value, precision = 6) => {
+        return value.toFixed(precision).replace(/[\.]?0+$/, '');
+    };
+
+    const updateState = (geoCoords, currentOverlay) => {
+        setCurrentOverlay(prevCurrentOverlay => {
+            !!prevCurrentOverlay && prevCurrentOverlay.setMap(null);
+            return currentOverlay;
+        });
+        setGeoCoords(geoCoords);
+        setIsSearch(false);
+    };
+
+    const onMapMounted = (bounds, geoCoords) => map => {
+        refs.map = map;
+        map && bounds && geoCoords.length > 1 && map.fitBounds(bounds);
+    };
+    // const onBoundsChanged = () => {
+    //     setBounds(refs.map.getBounds());
+    //     setCenter(refs.map.getCenter());
+    // };
+    const onDrawingManagerMounted = ref => {
+        drawingManagerRef.current = ref;
+    };
+    const onSearchBoxMounted = ref => {
+        searchBoxRef.current = ref;
+    };
+    const onPlacesChanged = () => {
+        const places = searchBoxRef.current.getPlaces();
+        const bounds = new window.google.maps.LatLngBounds();
+
+        places.forEach(place => {
+            if (place.geometry.viewport) {
+                bounds.union(place.geometry.viewport);
+            } else {
+                bounds.extend(place.geometry.location);
+            }
+        });
+        const nextMarkers = places.map(place => ({
+            position: place.geometry.location,
+        }));
+        const nextCenter = get(nextMarkers, '0.position', this.state.center);
+
+        setCenter(nextCenter);
+        setGeoCoords(nextMarkers.map(coord => ({ lat: coord.position.lat(), lng: coord.position.lng() })));
+        setIsSearch(true);
+        refs.map.fitBounds(bounds);
+    };
+    const handleRectangleComplete = rectangle => {
+        const ne = rectangle.getBounds().getNorthEast();
+        const sw = rectangle.getBounds().getSouthWest();
+        updateState(
+            [
+                { lat: ne.lat(), lng: ne.lng() },
+                { lat: ne.lat(), lng: sw.lng() },
+                { lat: sw.lat(), lng: sw.lng() },
+                { lat: sw.lat(), lng: ne.lng() },
+                { lat: ne.lat(), lng: ne.lng() },
+            ],
+            rectangle,
+        );
+    };
+    const handlePolygonComplete = polygon => {
+        const points = polygon
+            .getPath()
+            .getArray()
+            .map(point => ({ lat: point.lat(), lng: point.lng() }));
+        updateState([...points, points[0]], polygon);
+    };
+    const handleMarkerComplete = marker => {
+        updateState([{ lat: marker.getPosition().lat(), lng: marker.getPosition().lng() }], marker);
+    };
+    React.useEffect(() => {
+        !!props.onChange &&
+            props.onChange(
+                geoCoords.map(coord => `${trimCoordinates(coord.lng)},${trimCoordinates(coord.lat)}`).join(' '),
+            );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [geoCoords]);
+
+    return (
+        <GoogleMapViewComponent
+            geoCoords={geoCoords}
+            zoom={zoom}
+            bounds={bounds}
+            center={center}
+            isSearch={isSearch}
+            onMapMounted={onMapMounted}
+            onDrawingManagerMounted={onDrawingManagerMounted}
+            onSearchBoxMounted={onSearchBoxMounted}
+            onPlacesChanged={onPlacesChanged}
+            handleMarkerComplete={handleMarkerComplete}
+            handlePolygonComplete={handlePolygonComplete}
+            handleRectangleComplete={handleRectangleComplete}
+            {...props}
+        />
+    );
+};
+
+PublicationMap.propTypes = {
+    coordinates: PropTypes.string,
+    onChange: PropTypes.func,
+};
 
 export default PublicationMap;
