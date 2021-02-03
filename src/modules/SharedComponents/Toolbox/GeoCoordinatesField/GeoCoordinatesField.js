@@ -1,5 +1,5 @@
 import React from 'react';
-import PublicationMap from 'modules/ViewRecord/components/PublicationMap';
+import PublicationMap from 'modules/ViewRecord/components/NewPublicationMap';
 import { GOOGLE_MAPS_API_URL, GOOGLE_MAPS_API_CHINA_URL } from 'config/general';
 
 export default function GeoCoordinatesField(fieldProps) {

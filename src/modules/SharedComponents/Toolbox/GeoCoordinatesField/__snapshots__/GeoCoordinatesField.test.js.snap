@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GeoCoordinatesField component should render default view 1`] = `
-<lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+<Memo(PublicationMap)
   containerElement={
     <div
       style={
@@ -37,7 +37,7 @@ exports[`GeoCoordinatesField component should render default view 1`] = `
 `;
 
 exports[`GeoCoordinatesField component should render default view for AU 1`] = `
-<lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+<Memo(PublicationMap)
   containerElement={
     <div
       style={
@@ -73,7 +73,7 @@ exports[`GeoCoordinatesField component should render default view for AU 1`] = `
 `;
 
 exports[`GeoCoordinatesField component should render default view for CN 1`] = `
-<lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+<Memo(PublicationMap)
   containerElement={
     <div
       style={

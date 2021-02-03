@@ -20091,7 +20091,7 @@ exports[`Additional Information Component  renderLicense() 1`] = `
 exports[`Additional Information Component  renderMap() for Australia 1`] = `<span />`;
 
 exports[`Additional Information Component  renderMap() for Australia 2`] = `
-<lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+<PublicationMap
   containerElement={
     <div
       data-testid="rek-geographic-area"
@@ -20125,7 +20125,7 @@ exports[`Additional Information Component  renderMap() for Australia 2`] = `
 exports[`Additional Information Component  renderMap() for China 1`] = `<span />`;
 
 exports[`Additional Information Component  renderMap() for China 2`] = `
-<lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+<PublicationMap
   containerElement={
     <div
       data-testid="rek-geographic-area"
@@ -32258,7 +32258,7 @@ exports[`Additional Information Component  should render component with data col
             component="span"
             variant="body2"
           >
-            <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+            <PublicationMap
               containerElement={
                 <div
                   data-testid="rek-geographic-area"
@@ -34616,7 +34616,7 @@ exports[`Additional Information Component  should render component with data col
             component="span"
             variant="body2"
           >
-            <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+            <PublicationMap
               containerElement={
                 <div
                   data-testid="rek-geographic-area"

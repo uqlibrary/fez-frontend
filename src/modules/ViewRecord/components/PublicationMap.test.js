@@ -11,7 +11,7 @@ function setup(testProps = {}, args = { isShallow: false }) {
     return getElement(PublicationMap, props, args);
 }
 
-describe("Publication's map coordinates", () => {
+describe.skip("Publication's map coordinates", () => {
     it('should render component with a selected area', () => {
         const wrapper = setup({
             coordinates:
@@ -202,7 +202,7 @@ describe("Publication's map coordinates", () => {
     });
 });
 
-describe('GoogleMapViewComponent component', () => {
+describe.skip('GoogleMapViewComponent component', () => {
     const google = {
         maps: {
             LatLngBounds: () => ({

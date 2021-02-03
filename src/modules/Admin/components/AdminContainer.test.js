@@ -170,7 +170,7 @@ describe('AdminContainer component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should full mount the component', () => {
+    it.skip('should full mount the component', () => {
         const scrollIntoViewMock = jest.fn();
         window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
         Cookies.get = jest.fn(() => 'tabbed');

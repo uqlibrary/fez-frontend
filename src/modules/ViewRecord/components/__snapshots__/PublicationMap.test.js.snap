@@ -535,12 +535,13 @@ exports[`Publication's map coordinates should mount component 1`] = `
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+          <PublicationMap
             coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
-            <withScriptjs(withGoogleMap(GoogleMapViewComponent))
+            <withScriptjs(withGoogleMap(Component))
+              bounds={null}
               center={
                 Object {
                   "lat": -27.499433,
@@ -548,7 +549,6 @@ exports[`Publication's map coordinates should mount component 1`] = `
                 }
               }
               coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-              currentOverlay={null}
               geoCoords={
                 Array [
                   Object {
@@ -577,8 +577,8 @@ exports[`Publication's map coordinates should mount component 1`] = `
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
+              isSearch={false}
               loadingElement={<div />}
-              onBoundsChanged={[Function]}
               onDrawingManagerMounted={[Function]}
               onMapMounted={[Function]}
               onPlacesChanged={[Function]}
@@ -586,8 +586,8 @@ exports[`Publication's map coordinates should mount component 1`] = `
               zoom={13}
             >
               <div />
-            </withScriptjs(withGoogleMap(GoogleMapViewComponent))>
-          </lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))>
+            </withScriptjs(withGoogleMap(Component))>
+          </PublicationMap>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -1033,13 +1033,14 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+          <PublicationMap
             coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
             readOnly={true}
           >
-            <withScriptjs(withGoogleMap(GoogleMapViewComponent))
+            <withScriptjs(withGoogleMap(Component))
+              bounds={null}
               center={
                 Object {
                   "lat": -27.499433,
@@ -1047,7 +1048,6 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
                 }
               }
               coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-              currentOverlay={null}
               geoCoords={
                 Array [
                   Object {
@@ -1076,8 +1076,8 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
+              isSearch={false}
               loadingElement={<div />}
-              onBoundsChanged={[Function]}
               onDrawingManagerMounted={[Function]}
               onMapMounted={[Function]}
               onPlacesChanged={[Function]}
@@ -1086,8 +1086,8 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
               zoom={13}
             >
               <div />
-            </withScriptjs(withGoogleMap(GoogleMapViewComponent))>
-          </lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))>
+            </withScriptjs(withGoogleMap(Component))>
+          </PublicationMap>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -1096,7 +1096,8 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
 `;
 
 exports[`Publication's map coordinates should not render in read only mode 1`] = `
-<withScriptjs(withGoogleMap(GoogleMapViewComponent))
+<withScriptjs(withGoogleMap(Component))
+  bounds={null}
   center={
     Object {
       "lat": -27.489337,
@@ -1104,12 +1105,15 @@ exports[`Publication's map coordinates should not render in read only mode 1`] =
     }
   }
   coordinates="153.021781,-27.489337"
-  currentOverlay={null}
   geoCoords={
     Array [
       Object {
-        "lat": -27.489337,
-        "lng": 153.021781,
+        "lat": [Function],
+        "lng": [Function],
+      },
+      Object {
+        "lat": [Function],
+        "lng": [Function],
       },
     ]
   }
@@ -1117,8 +1121,8 @@ exports[`Publication's map coordinates should not render in read only mode 1`] =
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
+  isSearch={false}
   loadingElement={<div />}
-  onBoundsChanged={[Function]}
   onChange={[MockFunction]}
   onDrawingManagerMounted={[Function]}
   onMapMounted={[Function]}
@@ -2104,12 +2108,13 @@ exports[`Publication's map coordinates should render component with a marker 1`]
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+          <PublicationMap
             coordinates="153.021781,-27.489337"
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
-            <withScriptjs(withGoogleMap(GoogleMapViewComponent))
+            <withScriptjs(withGoogleMap(Component))
+              bounds={null}
               center={
                 Object {
                   "lat": -27.489337,
@@ -2117,7 +2122,6 @@ exports[`Publication's map coordinates should render component with a marker 1`]
                 }
               }
               coordinates="153.021781,-27.489337"
-              currentOverlay={null}
               geoCoords={
                 Array [
                   Object {
@@ -2130,8 +2134,8 @@ exports[`Publication's map coordinates should render component with a marker 1`]
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
+              isSearch={false}
               loadingElement={<div />}
-              onBoundsChanged={[Function]}
               onDrawingManagerMounted={[Function]}
               onMapMounted={[Function]}
               onPlacesChanged={[Function]}
@@ -2139,8 +2143,8 @@ exports[`Publication's map coordinates should render component with a marker 1`]
               zoom={7}
             >
               <div />
-            </withScriptjs(withGoogleMap(GoogleMapViewComponent))>
-          </lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))>
+            </withScriptjs(withGoogleMap(Component))>
+          </PublicationMap>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -2586,12 +2590,13 @@ exports[`Publication's map coordinates should render component with a selected a
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+          <PublicationMap
             coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
-            <withScriptjs(withGoogleMap(GoogleMapViewComponent))
+            <withScriptjs(withGoogleMap(Component))
+              bounds={null}
               center={
                 Object {
                   "lat": -27.499433,
@@ -2599,7 +2604,6 @@ exports[`Publication's map coordinates should render component with a selected a
                 }
               }
               coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-              currentOverlay={null}
               geoCoords={
                 Array [
                   Object {
@@ -2628,8 +2632,8 @@ exports[`Publication's map coordinates should render component with a selected a
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
+              isSearch={false}
               loadingElement={<div />}
-              onBoundsChanged={[Function]}
               onDrawingManagerMounted={[Function]}
               onMapMounted={[Function]}
               onPlacesChanged={[Function]}
@@ -2637,8 +2641,8 @@ exports[`Publication's map coordinates should render component with a selected a
               zoom={13}
             >
               <div />
-            </withScriptjs(withGoogleMap(GoogleMapViewComponent))>
-          </lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))>
+            </withScriptjs(withGoogleMap(Component))>
+          </PublicationMap>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -3084,12 +3088,13 @@ exports[`Publication's map coordinates should render component with empty coordi
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
+          <PublicationMap
             coordinates=""
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
-            <withScriptjs(withGoogleMap(GoogleMapViewComponent))
+            <withScriptjs(withGoogleMap(Component))
+              bounds={null}
               center={
                 Object {
                   "lat": -27.499412,
@@ -3097,14 +3102,13 @@ exports[`Publication's map coordinates should render component with empty coordi
                 }
               }
               coordinates=""
-              currentOverlay={null}
               geoCoords={Array []}
               googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
+              isSearch={false}
               loadingElement={<div />}
-              onBoundsChanged={[Function]}
               onDrawingManagerMounted={[Function]}
               onMapMounted={[Function]}
               onPlacesChanged={[Function]}
@@ -3112,8 +3116,8 @@ exports[`Publication's map coordinates should render component with empty coordi
               zoom={13}
             >
               <div />
-            </withScriptjs(withGoogleMap(GoogleMapViewComponent))>
-          </lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))>
+            </withScriptjs(withGoogleMap(Component))>
+          </PublicationMap>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
