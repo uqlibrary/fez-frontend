@@ -24,6 +24,7 @@ import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
 import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
+import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 
 const styles = theme => ({
     header: {
@@ -47,6 +48,7 @@ const getSecurityAccess = (dataStream, props) => {
         isAdmin ||
         isAuthor ||
         (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
+        (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 4) ||
         /* istanbul ignore next */
         (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
     );
@@ -313,7 +315,9 @@ export class FilesClass extends Component {
                       description: dataStream.dsi_label,
                       mimeType: mimeType,
                       calculatedSize: formatBytes(dataStream.dsi_size),
-                      allowDownload: !openAccessStatus.embargoDate,
+                      allowDownload:
+                          !openAccessStatus.embargoDate ||
+                          (componentProps.isAuthor && dataStream.dsi_security_policy === 4),
                       icon: this.renderFileIcon(
                           pid,
                           mimeType,
@@ -334,6 +338,7 @@ export class FilesClass extends Component {
                       mediaUrl: this.getUrl(pid, fileName, checksums.media),
                       securityStatus: securityAccess,
                       checksums: checksums,
+                      requiresLoginToDownload: !componentProps.isAuthor && dataStream.dsi_security_policy === 4,
                   };
               })
             : [];
@@ -397,6 +402,9 @@ export class FilesClass extends Component {
                                 dismissAction={this.props.setHideCulturalSensitivityStatement}
                             />
                         )}
+                    {/* istanbul ignore next */ !!fileData.filter(
+                        ({ requiresLoginToDownload }) => requiresLoginToDownload,
+                    ).length > 0 && <Alert {...{ ...locale.global.loginAlert, action: redirectUserToLogin() }} />}
                     <div style={{ padding: 8 }}>
                         <Grid
                             container
