@@ -48,15 +48,17 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                 lat: Number(item.split(',')[1]),
             }))) ||
         [];
+
+    const pointZoom = 7;
+    const polygonZoom = 13;
     const defaultCenter = getDefaultCenter(initialGeoCoords);
     const [center, setCenter] = React.useState(defaultCenter);
     const [geoCoords, setGeoCoords] = React.useState(initialGeoCoords);
     const [isSearch, setIsSearch] = React.useState(false);
-    const [setCurrentOverlay] = React.useState(null);
+    const [currentOverlay, setCurrentOverlay] = React.useState(null);
+    const [zoom] = React.useState(initialGeoCoords.length === 1 ? pointZoom : polygonZoom);
 
     const bounds = React.useRef(null);
-    // const pointZoom = 7;
-    // const polygonZoom = 13;
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
@@ -80,11 +82,18 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         return value.toFixed(precision).replace(/[\.]?0+$/, '');
     };
 
-    const updateState = (geoCoords, currentOverlay) => {
-        setCurrentOverlay(prevCurrentOverlay => {
-            !!prevCurrentOverlay && prevCurrentOverlay.setMap(null);
-            return currentOverlay;
-        });
+    React.useEffect(() => {
+        !!onChange &&
+            onChange(geoCoords.map(coord => `${trimCoordinates(coord.lng)},${trimCoordinates(coord.lat)}`).join(' '));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [geoCoords]);
+
+    const updateState = (geoCoords, overlay) => {
+        !!currentOverlay &&
+            setCurrentOverlay(prevCurrentOverlay => {
+                !!prevCurrentOverlay && prevCurrentOverlay.setMap(null);
+                return overlay;
+            });
         setGeoCoords(geoCoords);
         setIsSearch(false);
     };
@@ -124,9 +133,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         updateState([{ lat: marker.getPosition().lat(), lng: marker.getPosition().lng() }], marker);
     };
 
-    const onGoogleMapLoad = React.useCallback(function callback(map) {
-        const bounds = new window.google.maps.LatLngBounds();
-        map.fitBounds(bounds);
+    const onGoogleMapLoad = React.useCallback(map => {
         setMap(map);
     }, []);
 
@@ -148,7 +155,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         const nextMarkers = places.map(place => ({
             position: place.geometry.location,
         }));
-        const nextCenter = get(nextMarkers, '0.position', this.state.center);
+        const nextCenter = get(nextMarkers, '0.position', center);
 
         setCenter(nextCenter);
         setGeoCoords(nextMarkers.map(coord => ({ lat: coord.position.lat(), lng: coord.position.lng() })));
@@ -158,11 +165,14 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
 
     const renderMap = () => {
         bounds.current = new window.google.maps.LatLngBounds();
+        geoCoords.map(coord => {
+            bounds.current.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
+        });
         return (
             <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={center}
-                zoom={10}
+                zoom={zoom}
                 onLoad={onGoogleMapLoad}
                 onUnmount={onUnmount}
             >
@@ -177,7 +187,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                     <DrawingManager
                         onLoad={onDrawingManagerMounted}
                         defaultDrawingMode={window.google.maps.drawing.OverlayType.MARKER}
-                        defaultOptions={{
+                        options={{
                             drawingControl: true,
                             drawingControlOptions: {
                                 position: window.google.maps.ControlPosition.TOP_CENTER,
@@ -194,12 +204,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                     />
                 )}
                 {!readOnly && (
-                    <StandaloneSearchBox
-                        onLoad={onSearchBoxLoad}
-                        bounds={bounds.current}
-                        controlPosition={window.google.maps.ControlPosition.TOP_RIGHT}
-                        onPlacesChanged={onPlacesChanged}
-                    >
+                    <StandaloneSearchBox onLoad={onSearchBoxLoad} onPlacesChanged={onPlacesChanged}>
                         <input
                             type="text"
                             placeholder="Search..."
@@ -207,14 +212,17 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                                 boxSizing: 'border-box',
                                 border: '1px solid transparent',
                                 width: '240px',
-                                height: '24px',
-                                marginTop: '5px',
+                                height: '40px',
+                                marginTop: '10px',
                                 padding: '0 12px',
                                 borderRadius: '3px 0px 0px 3px',
                                 boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
                                 fontSize: '14px',
                                 outline: 'none',
                                 textOverflow: 'ellipses',
+                                position: 'absolute',
+                                right: '0',
+                                marginRight: '60px',
                             }}
                         />
                     </StandaloneSearchBox>
@@ -222,12 +230,6 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
             </GoogleMap>
         );
     };
-
-    React.useEffect(() => {
-        !!onChange &&
-            onChange(geoCoords.map(coord => `${trimCoordinates(coord.lng)},${trimCoordinates(coord.lat)}`).join(' '));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [geoCoords]);
 
     return isLoaded ? renderMap() : <></>;
 };
