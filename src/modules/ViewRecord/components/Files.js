@@ -13,6 +13,7 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 import { withStyles } from '@material-ui/core/styles';
 
 import locale from 'locale/viewRecord';
+import globalLocale from 'locale/global';
 import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -404,7 +405,7 @@ export class FilesClass extends Component {
                         )}
                     {/* istanbul ignore next */ !!fileData.filter(
                         ({ requiresLoginToDownload }) => requiresLoginToDownload,
-                    ).length > 0 && <Alert {...{ ...locale.global.loginAlert, action: redirectUserToLogin() }} />}
+                    ).length > 0 && <Alert {...{ ...globalLocale.global.loginAlert, action: redirectUserToLogin() }} />}
                     <div style={{ padding: 8 }}>
                         <Grid
                             container
