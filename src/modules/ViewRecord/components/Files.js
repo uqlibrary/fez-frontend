@@ -61,16 +61,27 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
         (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
         null;
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
-        return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
+        return {
+            isOpenAccess: false,
+            embargoDate: null,
+            openAccessStatusId: openAccessStatusId,
+            allowDownload: dataStream.dsi_security_policy === 4 ? !!props.isAuthor : true,
+        };
     } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
             isOpenAccess: false,
             embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
             openAccessStatusId: openAccessStatusId,
             securityStatus: getSecurityAccess(dataStream, props),
+            allowDownload: false,
         };
     }
-    return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
+    return {
+        isOpenAccess: true,
+        embargoDate: null,
+        openAccessStatusId: openAccessStatusId,
+        allowDownload: dataStream.dsi_security_policy === 4 ? !!props.isAuthor : true,
+    };
 };
 
 export const getFileNameIfPresent = (value, dataStreams) => {
@@ -316,9 +327,7 @@ export class FilesClass extends Component {
                       description: dataStream.dsi_label,
                       mimeType: mimeType,
                       calculatedSize: formatBytes(dataStream.dsi_size),
-                      allowDownload:
-                          !openAccessStatus.embargoDate ||
-                          (componentProps.isAuthor && dataStream.dsi_security_policy === 4),
+                      allowDownload: openAccessStatus.allowDownload,
                       icon: this.renderFileIcon(
                           pid,
                           mimeType,
