@@ -1265,7 +1265,7 @@ export default {
                         id: 'cite-score-source-date',
                     },
                     citeScoreAsjcCode: {
-                        title: 'Scopus ASJC Code',
+                        title: 'Scopus ASJC Code and sub-subject area',
                         id: 'cite-score-asjc-code',
                     },
                     citeScoreAsjcCodeCiteScore: {
