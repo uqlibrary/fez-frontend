@@ -8,8 +8,8 @@ const CreativeCommonsLicence = ({ by, nd, nc, sa }) => {
     // Note: the order of conditions is important; don't change.
     const conditions = [];
     by && conditions.push('by');
-    nd && conditions.push('nd');
     nc && conditions.push('nc');
+    nd && conditions.push('nd');
     sa && conditions.push('sa');
     const licence = conditions.join('-');
     const testId = 'journal-oa-licence';
