@@ -65,7 +65,7 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
             isOpenAccess: false,
             embargoDate: null,
             openAccessStatusId: openAccessStatusId,
-            allowDownload: dataStream.dsi_security_policy === 4 ? !!props.isAuthor : true,
+            allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
         };
     } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
@@ -80,7 +80,7 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
         isOpenAccess: true,
         embargoDate: null,
         openAccessStatusId: openAccessStatusId,
-        allowDownload: dataStream.dsi_security_policy === 4 ? !!props.isAuthor : true,
+        allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
     };
 };
 
@@ -175,6 +175,7 @@ export class FilesClass extends Component {
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
         author: PropTypes.object,
+        account: PropTypes.account,
     };
 
     constructor(props) {
@@ -348,7 +349,7 @@ export class FilesClass extends Component {
                       mediaUrl: this.getUrl(pid, fileName, checksums.media),
                       securityStatus: securityAccess,
                       checksums: checksums,
-                      requiresLoginToDownload: !componentProps.isAuthor && dataStream.dsi_security_policy === 4,
+                      requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
                   };
               })
             : [];

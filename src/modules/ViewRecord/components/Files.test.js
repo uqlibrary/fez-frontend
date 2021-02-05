@@ -1231,7 +1231,7 @@ describe('Files Component ', () => {
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: true });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3], props),
-        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: true });
+        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: false });
     });
 
     it('should clean up state on hidePreview', () => {
