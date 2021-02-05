@@ -141,6 +141,7 @@ export const NewViewRecord = ({
                     <React.Fragment>
                         <Files
                             author={author}
+                            account={account}
                             publication={recordToView}
                             hideCulturalSensitivityStatement={hideCulturalSensitivityStatement}
                             setHideCulturalSensitivityStatement={handleSetHideCulturalSensitivityStatement}
