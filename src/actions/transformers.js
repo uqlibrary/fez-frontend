@@ -867,7 +867,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_isdatasetof: datasets,
         fez_record_search_key_related_datasets: relatedDatasets,
         fez_record_search_key_related_publications: relatedPublications,
-        issnField,
+        issns,
         fez_matched_journals: matchedJournal,
         ...rest
     } = data;
@@ -958,9 +958,9 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),
-        ...(!!issnField
+        ...(!!issns
             ? {
-                  fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({
+                  fez_record_search_key_issn: issns.map(({ rek_value: value, rek_order: order }) => ({
                       rek_issn: value.key || value,
                       rek_issn_order: order,
                   })),

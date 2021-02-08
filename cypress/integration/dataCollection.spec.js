@@ -211,100 +211,100 @@ context('Data Collection form', () => {
         cy.get('@errors').should('have.length', --errorCount);
 
         // Funding body
-        cy.get('input#funding-body-input').type('Funding body 1');
-        cy.get('button#add-grant-agency').click();
-        cy.get('input#funding-body-input').type('Funding body 2');
-        cy.get('button#add-grant-agency').click();
-        cy.get('#grant-agency-list-row-1-move-up').click();
-        cy.get('#grant-agency-list-row-0-delete').click();
+        cy.get('[data-testid=rek-grant-agency-input]').type('Funding body 1');
+        cy.get('[data-testid=rek-grant-agency-add]').click();
+        cy.get('[data-testid=rek-grant-agency-input]').type('Funding body 2');
+        cy.get('[data-testid=rek-grant-agency-add]').click();
+        cy.get('[data-testid=rek-grant-agency-list-row-1-move-up]').click();
+        cy.get('[data-testid=rek-grant-agency-list-row-0-delete]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('[role="dialog"]').should('not.exist');
-        cy.get('#delete-all-grant-agency').click();
+        cy.get('#delete-all-rek-grant-agency').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#funding-body-input').type('Funding body 3');
-        cy.get('button#add-grant-agency').click();
+        cy.get('[data-testid=rek-grant-agency-input]').type('Funding body 3');
+        cy.get('[data-testid=rek-grant-agency-add]').click();
         cy.get('@submitButton').should('not.be.disabled');
         cy.get('@errors').should('have.length', errorCount);
 
         // Grant ID
-        cy.get('input#grant-id-input').type('Grant ID 1');
-        cy.get('button#add-grant-id').click();
-        cy.get('input#grant-id-input').type('Grant ID 2');
-        cy.get('button#add-grant-id').click();
-        cy.get('#grant-id-list-row-1-move-up').click();
-        cy.get('#grant-id-list-row-0-delete').click();
+        cy.get('[data-testid=rek-grant-id-input]').type('Grant ID 1');
+        cy.get('[data-testid=rek-grant-id-add]').click();
+        cy.get('[data-testid=rek-grant-id-input]').type('Grant ID 2');
+        cy.get('[data-testid=rek-grant-id-add]').click();
+        cy.get('[data-testid=rek-grant-id-list-row-1-move-up]').click();
+        cy.get('[data-testid=rek-grant-id-list-row-0-delete]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('#delete-all-grant-id').click();
+        cy.get('[data-testid=delete-all-rek-grant-id]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#grant-id-input').type('Grant ID 3');
-        cy.get('button#add-grant-id').click();
+        cy.get('[data-testid=rek-grant-id-input]').type('Grant ID 3');
+        cy.get('[data-testid=rek-grant-id-add]').click();
         cy.get('@submitButton').should('not.be.disabled');
         cy.get('@errors').should('have.length', errorCount);
     });
 
     it('validates dataset details', () => {
         // Type of data
-        cy.get('input#type-of-data-input').type('Type of data 1');
-        cy.get('button#add-type-of-data').click();
-        cy.get('input#type-of-data-input').type('Type of data 2');
-        cy.get('button#add-type-of-data').click();
-        cy.get('#type-of-data-list-row-1-move-up').click();
-        cy.get('#type-of-data-list-row-0-delete').click();
+        cy.get('[data-testid=rek-type-of-data-input]').type('Type of data 1');
+        cy.get('[data-testid=rek-type-of-data-add').click();
+        cy.get('[data-testid=rek-type-of-data-input]').type('Type of data 2');
+        cy.get('[data-testid=rek-type-of-data-add').click();
+        cy.get('[data-testid=rek-type-of-data-list-row-1-move-up]').click();
+        cy.get('[data-testid=rek-type-of-data-list-row-0-delete]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('#delete-all-type-of-data').click();
+        cy.get('[data-testid=delete-all-rek-type-of-data]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#type-of-data-input').type('Type of data 3');
-        cy.get('button#add-type-of-data').click();
+        cy.get('[data-testid=rek-type-of-data-input]').type('Type of data 3');
+        cy.get('[data-testid=rek-type-of-data-add').click();
         cy.get('@submitButton').should('not.be.disabled');
         cy.get('@errors').should('have.length', errorCount);
 
         // Software required
-        cy.get('input#software-required-input').type('Software required 1');
-        cy.get('button#add-software-required').click();
-        cy.get('input#software-required-input').type('Software required 2');
-        cy.get('button#add-software-required').click();
-        cy.get('#software-required-list-row-1-move-up').click();
-        cy.get('#software-required-list-row-0-delete').click();
+        cy.get('[data-testid=rek-software-required-input]').type('Software required 1');
+        cy.get('[data-testid=rek-software-required-add]').click();
+        cy.get('[data-testid=rek-software-required-input]').type('Software required 2');
+        cy.get('[data-testid=rek-software-required-add]').click();
+        cy.get('[data-testid=rek-software-required-list-row-1-move-up]').click();
+        cy.get('[data-testid=rek-software-required-list-row-0-delete]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('#delete-all-software-required').click();
+        cy.get('[data-testid=delete-all-rek-software-required]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#software-required-input').type('Software required 3');
-        cy.get('button#add-software-required').click();
+        cy.get('[data-testid=rek-software-required-input]').type('Software required 3');
+        cy.get('[data-testid=rek-software-required-add]').click();
         cy.get('@submitButton').should('not.be.disabled');
         cy.get('@errors').should('have.length', errorCount);
 
         // Keywords
-        cy.get('input#keywords-input').type('Keywords 1');
-        cy.get('button#add-keywords').click();
-        cy.get('input#keywords-input').type('Keywords 2');
-        cy.get('button#add-keywords').click();
-        cy.get('#keywords-list-row-1-move-up').click();
-        cy.get('#keywords-list-row-0-delete').click();
+        cy.get('[data-testid=rek-keywords-input]').type('Keywords 1');
+        cy.get('[data-testid=rek-keywords-add]').click();
+        cy.get('[data-testid=rek-keywords-input]').type('Keywords 2');
+        cy.get('[data-testid=rek-keywords-add]').click();
+        cy.get('[data-testid=rek-keywords-list-row-1-move-up]').click();
+        cy.get('[data-testid=rek-keywords-list-row-0-delete]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('#delete-all-keywords').click();
+        cy.get('[data-testid=delete-all-rek-keywords]').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#keywords-input').type('Keywords 3');
-        cy.get('button#add-keywords').click();
+        cy.get('[data-testid=rek-keywords-input]').type('Keywords 3');
+        cy.get('[data-testid=rek-keywords-add]').click();
         cy.get('@submitButton').should('not.be.disabled');
         cy.get('@errors').should('have.length', errorCount);
 
@@ -314,8 +314,8 @@ context('Data Collection form', () => {
         cy.get('[data-testid=rek-start-date-day-input]')
             .type('16')
             .clear();
-        cy.get('input#keywords-input').type('Keywords 1');
-        cy.contains('p', 'Invalid day').should('not.exist');
+        cy.get('[data-testid=rek-keywords-input]').type('Keywords 1');
+        cy.contains('p', 'Invalid day').should('not.be.visible');
 
         // an 31st of april is an invalid date
         cy.get('[data-testid=rek-start-date-day-input]').type('31');

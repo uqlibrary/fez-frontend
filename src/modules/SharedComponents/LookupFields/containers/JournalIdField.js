@@ -10,7 +10,10 @@ import matchSorter from 'match-sorter';
 
 const mapStateToProps = (state, props) => {
     const selectedJournalId =
-        (!!props.input && !!props.input.value && props.input.value.id) || (!!props.value && props.value.id);
+        (!!props.input &&
+            !!props.input.value &&
+            ((!!props.input.value.toJS && props.input.value.toJS().id) || props.input.value.id)) ||
+        (!!props.value && props.value.id);
 
     return {
         autoCompleteAsynchronousFieldId: props.journalIdFieldId || 'fez-matched-journals',
@@ -30,8 +33,7 @@ const mapStateToProps = (state, props) => {
         },
         floatingLabelText: props.floatingLabelText || 'Journal Id',
         OptionTemplate: JournalTemplate,
-        defaultValue: (!!props.input && { value: props.input.value }) || props.value,
-        placeholder: locale.components.JournalIdField.placeholder,
+        defaultValue: (!!props.input && { id: `${selectedJournalId}` }) || (!!props.value && props.value) || '',
         supplemental: !!selectedJournalId && (
             <ExternalLink
                 id={`journal-${selectedJournalId}-details`}
