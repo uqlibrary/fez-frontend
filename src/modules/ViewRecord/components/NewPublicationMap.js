@@ -72,11 +72,13 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     const drawingManagerRef = React.useRef();
 
     React.useEffect(() => {
-        !!bounds.current &&
+        if (!!bounds.current && !!geoCoords && geoCoords.length > 0) {
             geoCoords.map(coord => {
                 bounds.current.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
             });
-    }, [geoCoords]);
+            map.fitBounds(bounds.current);
+        }
+    }, [geoCoords, map]);
 
     const trimCoordinates = (value, precision = 6) => {
         return value.toFixed(precision).replace(/[\.]?0+$/, '');
@@ -89,11 +91,8 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     }, [geoCoords]);
 
     const updateState = (geoCoords, overlay) => {
-        !!currentOverlay &&
-            setCurrentOverlay(prevCurrentOverlay => {
-                !!prevCurrentOverlay && prevCurrentOverlay.setMap(null);
-                return overlay;
-            });
+        !!currentOverlay && currentOverlay.setMap(null);
+        setCurrentOverlay(overlay);
         setGeoCoords(geoCoords);
         setIsSearch(false);
     };
