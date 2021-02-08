@@ -4097,22 +4097,17 @@ export const journalArticle = {
             "rek_issn_xsdmf_id": null,
             "rek_issn": "1477-9137",
             "rek_issn_order": 1,
-            "fez_journal_issns": [{
+            "fez_journal": {
                 "jni_id": 13071,
                 "jni_jnl_id": 7538,
                 "jni_issn": "1477-9137",
                 "jni_issn_order": 2,
-                "fez_journal": {
-                    "jnl_id": 7538,
-                    "jnl_journal_name": "Journal of Cell Science",
-                    "jnl_era_id": 2234,
-                    "jnl_era_year": 2010,
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                    "jnl_rank": "A",
-                    "jnl_foreign_name": null
-                }
-            }],
+                "fez_journal_era": [{
+                    "jnl_era_source_id":"122966",
+                    "jnl_era_jid":20339,
+                    "jnl_era_source_year":2010
+                }]
+            },
             "fez_sherpa_romeo": {
                 "srm_id": 13764,
                 "srm_issn": "1477-9137",
@@ -4300,6 +4295,7 @@ export const journalArticle = {
     },
     "rek_display_type_lookup": "Journal Article"
 };
+
 
 export const bookChapter = {
     "rek_pid": "UQ:376215",

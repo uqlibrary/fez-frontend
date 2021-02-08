@@ -11,17 +11,17 @@ export default class JournalName extends PureComponent {
         publication: PropTypes.object.isRequired,
     };
 
-    // fez_journal_issns returns era data
+    // fez_journal returns era data
     getERAYears = (issns = []) => {
         const years = [];
         issns.map(issn => {
-            if (Array.isArray(issn.fez_journal_issns) && issn.fez_journal_issns.length > 0) {
-                issn.fez_journal_issns.map(journalIssn => {
-                    if (journalIssn.fez_journal && !years.includes(journalIssn.fez_journal.jnl_era_year)) {
-                        years.push(journalIssn.fez_journal.jnl_era_year);
+            !!issn.fez_journal &&
+                !!issn.fez_journal.fez_journal_era &&
+                issn.fez_journal.fez_journal_era.map(journalEra => {
+                    if (journalEra.jnl_era_source_year && !years.includes(journalEra.jnl_era_source_year)) {
+                        years.push(journalEra.jnl_era_source_year);
                     }
                 });
-            }
         });
 
         return years;
