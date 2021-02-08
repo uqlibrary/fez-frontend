@@ -3205,5 +3205,34 @@ export default {
                 linkText: 'View details',
             },
         },
+        MasterJournalListIngest: {
+            title: 'Master Journal List Ingest',
+            help: {},
+            formLabels: {
+                directory: {
+                    label: 'Choose ingest directory',
+                },
+                submitButtonLabel: 'Request ingest',
+                cancelButtonLabel: 'Cancel',
+            },
+            submitProgressAlert: {
+                type: 'info',
+                alertId: 'alert-info-mjl-ingest',
+                title: 'Requesting master journal list ingest',
+                message: 'Waiting for response...',
+            },
+            submitSuccessAlert: {
+                type: 'done',
+                alertId: 'alert-done-mjl-ingest',
+                title: 'Success',
+                message: 'The request to ingest master journal list has been submitted successfully.',
+            },
+            submitFailureAlert: {
+                type: 'error',
+                alertId: 'alert-error-mjl-ingest',
+                title: 'Error',
+                message: 'The request to ingest master journal list could not be submitted.',
+            },
+        },
     },
 };

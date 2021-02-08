@@ -2,31 +2,28 @@ export const journalDetails = {
     "data": {
         "jnl_jid": 8508,
         "jnl_title": "American Journal of Public Health",
-        "jnl_publisher": "Example Publisher",
+        "jnl_publisher": "American Public Health Association",
         "jnl_created_date": "2020-11-16 07:48:52",
-        "jnl_updated_date": "2020-12-23 23:47:06",
+        "jnl_updated_date": "2021-01-21 03:33:04",
+        "jnl_era_source_id": "13400",
         "fez_journal_abdc": {
-            "jnl_abdc_jid": 8508,
             "jnl_abdc_for_code": 452815,
             "jnl_abdc_rating": "A*",
             "jnl_abdc_source_date": "2019-06-12",
             "jnl_abdc_title": "American Journal of Public Health",
             "jnl_abdc_issn": "0090-0036",
-            "jnl_abdc_eissn": "1541-0048",
             "jnl_abdc_for_code_lookup": "1503 Business and Management"
         },
         "fez_journal_cite_score": {
-            "jnl_cite_score_id": 15858,
+            "jnl_cite_score_id": 25241,
             "jnl_cite_score_source_id": "19561",
-            "jnl_cite_score_jid": 8508,
-            "jnl_cite_score_source_year": 0,
+            "jnl_cite_score_source_year": 2019,
             "jnl_cite_score_title": "American Journal of Public Health",
             "jnl_cite_score_publisher": "American Public Health Association",
-            "jnl_cite_score_pissn": "0090-0036",
-            "jnl_cite_score_eissn": "1541-0048",
+            "jnl_cite_score_issn": "0090-0036",
             "fez_journal_cite_score_asjc_code": [
                 {
-                    "jnl_cite_score_asjc_code_id": 15858,
+                    "jnl_cite_score_asjc_code_id": 25241,
                     "jnl_cite_score_asjc_code_rank": 29,
                     "jnl_cite_score_asjc_code_rank_out_of": 516,
                     "jnl_cite_score_asjc_code_percentile": 94,
@@ -41,10 +38,6 @@ export const journalDetails = {
                     "jnl_cite_score_asjc_code_lookup": "2739 Public Health, Environmental and Occupational Health"
                 }
             ]
-        },
-        "fez_journal_cwts": {
-            "jnl_cwts_jid": "1",
-            "jnl_cwts_source_year": "2020"
         },
         "fez_journal_doaj": {
             "jnl_doaj_jid": 12306,
@@ -64,8 +57,8 @@ export const journalDetails = {
             {
                 "jnl_era_id": 73460,
                 "jnl_era_source_id": "13400",
-                "jnl_era_jid": 8508,
                 "jnl_era_source_year": 2010,
+                "jnl_era_title": "",
                 "fez_journal_era_for_code": [
                     {
                         "jnl_era_for_code_id": 73460,
@@ -78,8 +71,8 @@ export const journalDetails = {
             {
                 "jnl_era_id": 57795,
                 "jnl_era_source_id": "13400",
-                "jnl_era_jid": 8508,
                 "jnl_era_source_year": 2012,
+                "jnl_era_title": "",
                 "fez_journal_era_for_code": [
                     {
                         "jnl_era_for_code_id": 57795,
@@ -92,8 +85,8 @@ export const journalDetails = {
             {
                 "jnl_era_id": 28595,
                 "jnl_era_source_id": "13400",
-                "jnl_era_jid": 8508,
                 "jnl_era_source_year": 2015,
+                "jnl_era_title": "",
                 "fez_journal_era_for_code": [
                     {
                         "jnl_era_for_code_id": 28595,
@@ -106,8 +99,8 @@ export const journalDetails = {
             {
                 "jnl_era_id": 8508,
                 "jnl_era_source_id": "13400",
-                "jnl_era_jid": 8508,
                 "jnl_era_source_year": 2018,
+                "jnl_era_title": "American Journal of Public Health",
                 "fez_journal_era_for_code": [
                     {
                         "jnl_era_for_code_id": 8508,
@@ -120,15 +113,74 @@ export const journalDetails = {
         ],
         "fez_journal_esi": [
             {
-                "jnl_esi_jid": 8508,
                 "jnl_esi_subject": "SOCIAL SCIENCES, GENERAL",
                 "jnl_esi_issn": "0090-0036",
-                "jnl_esi_eissn": "1541-0048",
+                "jnl_esi_source_date": "2019-02-01",
+                "jnl_esi_title": "AMERICAN JOURNAL OF PUBLIC HEALTH"
+            },
+            {
+                "jnl_esi_subject": "SOCIAL SCIENCES, GENERAL",
+                "jnl_esi_issn": "1541-0048",
                 "jnl_esi_source_date": "2019-02-01",
                 "jnl_esi_title": "AMERICAN JOURNAL OF PUBLIC HEALTH"
             }
         ],
-        "fez_journal_historical_issn": [],
+        "fez_journal_historical_issn": [
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "0002-9572",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 1
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "1076-0704",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 2
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "1047-3491",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 3
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "1079-9567",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 4
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "1079-9559",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 5
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "0271-4353",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 6
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "0273-1975",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 7
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "0272-2313",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 8
+            },
+            {
+                "jnl_historical_issn_jid": 8508,
+                "jnl_historical_issn": "0737-8769",
+                "jnl_historical_issn_type": null,
+                "jnl_historical_issn_order": 9
+            }
+        ],
         "fez_journal_issn": [
             {
                 "jnl_issn_jid": 8508,
@@ -138,11 +190,9 @@ export const journalDetails = {
                 "fez_sherpa_romeo": {
                     "srm_id": 3792,
                     "srm_issn": "0090-0036",
-                    "srm_xml": "",
-                    "srm_json": "",
                     "srm_source_id": "10303",
                     "srm_journal_name": "American Journal of Public Health",
-                    "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/10303",
+                    "srm_journal_link": "https:\/\/v2.sherpa.ac.uk\/id\/publication\/10303",
                     "srm_colour": "yellow",
                     "srm_date_updated": "2020-12-04 07:51:06"
                 },
@@ -150,7 +200,7 @@ export const journalDetails = {
                     "ulr_id": 650,
                     "ulr_issn": "0090-0036",
                     "ulr_status": "Active",
-                    "ulr_source_id": "52087",
+                    "ulr_source_id": "52095",
                     "ulr_title": "American Journal of Public Health",
                     "ulr_title_id": "41698",
                     "ulr_abbrev_title": "AJPH",
@@ -164,8 +214,7 @@ export const journalDetails = {
                     "ulr_refereed": "1",
                     "ulr_formats": "Print",
                     "ulr_description": "Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.",
-                    "ulr_xml": "",
-                    "ulr_last_updated": "2020-12-04 04:32:31"
+                    "ulr_last_updated": "2021-01-13 03:21:08"
                 }
             },
             {
@@ -176,11 +225,9 @@ export const journalDetails = {
                 "fez_sherpa_romeo": {
                     "srm_id": 3793,
                     "srm_issn": "1541-0048",
-                    "srm_xml": "",
-                    "srm_json": "",
                     "srm_source_id": "10303",
                     "srm_journal_name": "American Journal of Public Health",
-                    "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/10303",
+                    "srm_journal_link": "https:\/\/v2.sherpa.ac.uk\/id\/publication\/10303",
                     "srm_colour": "yellow",
                     "srm_date_updated": "2020-12-04 17:57:15"
                 },
@@ -188,28 +235,26 @@ export const journalDetails = {
                     "ulr_id": 15274,
                     "ulr_issn": "1541-0048",
                     "ulr_status": "Active",
-                    "ulr_source_id": "52100",
+                    "ulr_source_id": "52108",
                     "ulr_title": "American Journal of Public Health",
                     "ulr_title_id": "41699",
                     "ulr_abbrev_title": null,
                     "ulr_publisher": "American Public Health Association",
                     "ulr_country": "United States",
-                    "ulr_start_year": 1965,
+                    "ulr_start_year": null,
                     "ulr_frequency": "Monthly",
                     "ulr_open_access": "0",
-                    "ulr_open_access_url": "https://example.com",
+                    "ulr_open_access_url": null,
                     "ulr_reviewed": "0",
                     "ulr_refereed": "1",
                     "ulr_formats": "Online",
                     "ulr_description": "Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.",
-                    "ulr_xml": "",
-                    "ulr_last_updated": "2020-12-04 08:43:24"
+                    "ulr_last_updated": "2021-01-13 12:18:05"
                 }
             }
         ],
         "fez_journal_jcr_scie": {
             "jnl_jcr_scie_id": 503,
-            "jnl_jcr_scie_jid": 8508,
             "jnl_jcr_scie_abbrev_title": "Am. J. Public Health",
             "jnl_jcr_scie_impact_factor": "5.381",
             "jnl_jcr_scie_5yr_impact_factor": "5.600",
@@ -222,7 +267,7 @@ export const journalDetails = {
                     "jnl_jcr_scie_category_id": 503,
                     "jnl_jcr_scie_category_code": "NE",
                     "jnl_jcr_scie_category_description": "PUBLIC, ENVIRONMENTAL & OCCUPATIONAL HEALTH",
-                    "jnl_jcr_scie_category_ranking": "12/185",
+                    "jnl_jcr_scie_category_ranking": "12\/185",
                     "jnl_jcr_scie_category_quartile": "Q1",
                     "jnl_jcr_scie_category_order": 1
                 },
@@ -238,7 +283,6 @@ export const journalDetails = {
         },
         "fez_journal_jcr_ssci": {
             "jnl_jcr_ssci_id": 3085,
-            "jnl_jcr_ssci_jid": 8508,
             "jnl_jcr_ssci_abbrev_title": "Am. J. Public Health",
             "jnl_jcr_ssci_impact_factor": "5.381",
             "jnl_jcr_ssci_5yr_impact_factor": "5.600",
@@ -251,14 +295,14 @@ export const journalDetails = {
                     "jnl_jcr_ssci_category_id": 3085,
                     "jnl_jcr_ssci_category_code": "NE",
                     "jnl_jcr_ssci_category_description": "PUBLIC, ENVIRONMENTAL & OCCUPATIONAL HEALTH",
-                    "jnl_jcr_ssci_category_ranking": "6/162",
+                    "jnl_jcr_ssci_category_ranking": "6\/162",
                     "jnl_jcr_ssci_category_quartile": "Q1",
                     "jnl_jcr_ssci_category_order": 1
                 }
             ]
         },
         "fez_journal_nature_index": {
-            "jnl_nature_index_jid": "1",
+            "jnl_nature_index_jid": 8508,
             "jnl_nature_index_source_date": "2020-11-12"
         },
         "fez_journal_pubmed": {
@@ -267,11 +311,40 @@ export const journalDetails = {
             "jnl_pubmed_source_id": "1254074"
         },
         "fez_journal_wos_category": [
+                {
+                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
+                "jnl_wos_category": "Public, Environmental & Occupational Health",
+                "jnl_wos_category_index": "SCIE",
+                "jnl_wos_category_issn": "0090-0036",
+                "jnl_wos_category_source_date": "2020-09-29",
+                "fez_journal_cwts": {
+                    "jnl_cwts_jid": 8508,
+                    "jnl_cwts_source_year": "2020"
+                }
+            },
+                {
+                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
+                "jnl_wos_category": "Public, Environmental & Occupational Health",
+                "jnl_wos_category_index": "SSCI",
+                "jnl_wos_category_issn": "0090-0036",
+                "jnl_wos_category_source_date": "2020-09-29",
+                "fez_journal_cwts": null
+            },
             {
-                "jnl_wos_category_jid": "1",
-                "jnl_wos_category_journal_title": "Journal",
-                "jnl_wos_category": "wos category 1 |wos category 2",
-                "jnl_wos_category_index": "AHCI"
+                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
+                "jnl_wos_category": "Public, Environmental & Occupational Health",
+                "jnl_wos_category_index": "SCIE",
+                "jnl_wos_category_issn": "1541-0048",
+                "jnl_wos_category_source_date": "2020-09-29",
+                "fez_journal_cwts": null
+            },
+            {
+                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
+                "jnl_wos_category": "Public, Environmental & Occupational Health",
+                "jnl_wos_category_index": "SSCI",
+                "jnl_wos_category_issn": "1541-0048",
+                "jnl_wos_category_source_date": "2020-09-29",
+                "fez_journal_cwts": null
             }
         ]
     }
