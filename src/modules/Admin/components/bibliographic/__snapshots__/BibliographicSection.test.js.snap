@@ -20,6 +20,7 @@ exports[`BibliographicSection component should render default view 1`] = `
           Array [
             "fez_matched_journals",
             "fez_record_search_key_journal_name",
+            "fez_matched_journals",
           ],
         ],
         "title": "Language of work & Journal name",
@@ -218,6 +219,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
           Array [
             "fez_matched_journals",
             "fez_record_search_key_journal_name",
+            "fez_matched_journals",
           ],
         ],
         "title": "Language of work & Journal name",
