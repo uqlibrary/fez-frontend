@@ -25,8 +25,10 @@ const styles = {
 export const getDefaultCenter = geoCoords => {
     if (geoCoords.length > 0) {
         const minLngPoint = geoCoords.reduce((min, point) => (point.lng < min ? point.lng : min), geoCoords[0].lng);
+        /* istanbul ignore next */
         const maxLngPoint = geoCoords.reduce((max, point) => (point.lng > max ? point.lng : max), geoCoords[0].lng);
         const minLatPoint = geoCoords.reduce((min, point) => (point.lat < min ? point.lat : min), geoCoords[0].lat);
+        /* istanbul ignore next */
         const maxLatPoint = geoCoords.reduce((max, point) => (point.lat > max ? point.lat : max), geoCoords[0].lat);
         return {
             lng: (maxLngPoint + minLngPoint) / 2,
@@ -76,7 +78,8 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
             geoCoords.map(coord => {
                 bounds.current.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
             });
-            map.fitBounds(bounds.current);
+            /* istanbul ignore next */
+            !!map && map.fitBounds(bounds.current);
         }
     }, [geoCoords, map]);
 
@@ -90,6 +93,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [geoCoords]);
 
+    /* istanbul ignore next */
     const updateState = (geoCoords, overlay) => {
         !!currentOverlay && currentOverlay.setMap(null);
         setCurrentOverlay(overlay);
@@ -97,14 +101,17 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         setIsSearch(false);
     };
 
+    /* istanbul ignore next */
     const onSearchBoxLoad = ref => {
         searchBox.current = ref;
     };
 
+    /* istanbul ignore next */
     const onDrawingManagerMounted = ref => {
         drawingManagerRef.current = ref;
     };
 
+    /* istanbul ignore next */
     const handleRectangleComplete = rectangle => {
         const ne = rectangle.getBounds().getNorthEast();
         const sw = rectangle.getBounds().getSouthWest();
@@ -120,6 +127,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         );
     };
 
+    /* istanbul ignore next */
     const handlePolygonComplete = polygon => {
         const points = polygon
             .getPath()
@@ -128,18 +136,22 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         updateState([...points, points[0]], polygon);
     };
 
+    /* istanbul ignore next */
     const handleMarkerComplete = marker => {
         updateState([{ lat: marker.getPosition().lat(), lng: marker.getPosition().lng() }], marker);
     };
 
+    /* istanbul ignore next */
     const onGoogleMapLoad = React.useCallback(map => {
         setMap(map);
     }, []);
 
+    /* istanbul ignore next */
     const onUnmount = React.useCallback(function callback() {
         setMap(null);
     }, []);
 
+    /* istanbul ignore next */
     const onPlacesChanged = () => {
         const places = searchBox.current.getPlaces();
         const bounds = new window.google.maps.LatLngBounds();
@@ -185,16 +197,12 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                 {!readOnly && (
                     <DrawingManager
                         onLoad={onDrawingManagerMounted}
-                        defaultDrawingMode={window.google.maps.drawing.OverlayType.MARKER}
+                        defaultDrawingMode="marker"
                         options={{
                             drawingControl: true,
                             drawingControlOptions: {
-                                position: window.google.maps.ControlPosition.TOP_CENTER,
-                                drawingModes: [
-                                    window.google.maps.drawing.OverlayType.MARKER,
-                                    window.google.maps.drawing.OverlayType.POLYGON,
-                                    window.google.maps.drawing.OverlayType.RECTANGLE,
-                                ],
+                                position: 2, // window.google.maps.ControlPosition.TOP_CENTER
+                                drawingModes: ['marker', 'polygon', 'rectangle'],
                             },
                         }}
                         onMarkerComplete={handleMarkerComplete}

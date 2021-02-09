@@ -32,6 +32,7 @@
         "@babel/runtime-corejs2": "^7.8.7",
         "@cypress/code-coverage": "^3.9.2",
         "@date-io/date-fns": "^2.8.1",
+        "@googlemaps/jest-mocks": "^0.1.0",
         "@sentry/webpack-plugin": "^1.10.0",
         "@testing-library/dom": "^7.1.2",
         "@testing-library/jest-dom": "^5.1.1",
