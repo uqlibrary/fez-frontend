@@ -13,6 +13,7 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 import { withStyles } from '@material-ui/core/styles';
 
 import locale from 'locale/viewRecord';
+import globalLocale from 'locale/global';
 import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -24,6 +25,7 @@ import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
 import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
+import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 
 const styles = theme => ({
     header: {
@@ -47,6 +49,7 @@ const getSecurityAccess = (dataStream, props) => {
         isAdmin ||
         isAuthor ||
         (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
+        (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 4) ||
         /* istanbul ignore next */
         (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
     );
@@ -58,16 +61,27 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
         (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
         null;
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
-        return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
+        return {
+            isOpenAccess: false,
+            embargoDate: null,
+            openAccessStatusId: openAccessStatusId,
+            allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
+        };
     } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
             isOpenAccess: false,
             embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
             openAccessStatusId: openAccessStatusId,
             securityStatus: getSecurityAccess(dataStream, props),
+            allowDownload: false,
         };
     }
-    return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
+    return {
+        isOpenAccess: true,
+        embargoDate: null,
+        openAccessStatusId: openAccessStatusId,
+        allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
+    };
 };
 
 export const getFileNameIfPresent = (value, dataStreams) => {
@@ -161,6 +175,7 @@ export class FilesClass extends Component {
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
         author: PropTypes.object,
+        account: PropTypes.account,
     };
 
     constructor(props) {
@@ -313,7 +328,7 @@ export class FilesClass extends Component {
                       description: dataStream.dsi_label,
                       mimeType: mimeType,
                       calculatedSize: formatBytes(dataStream.dsi_size),
-                      allowDownload: !openAccessStatus.embargoDate,
+                      allowDownload: openAccessStatus.allowDownload,
                       icon: this.renderFileIcon(
                           pid,
                           mimeType,
@@ -334,6 +349,7 @@ export class FilesClass extends Component {
                       mediaUrl: this.getUrl(pid, fileName, checksums.media),
                       securityStatus: securityAccess,
                       checksums: checksums,
+                      requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
                   };
               })
             : [];
@@ -397,6 +413,9 @@ export class FilesClass extends Component {
                                 dismissAction={this.props.setHideCulturalSensitivityStatement}
                             />
                         )}
+                    {/* istanbul ignore next */ !!fileData.filter(
+                        ({ requiresLoginToDownload }) => requiresLoginToDownload,
+                    ).length > 0 && <Alert {...{ ...globalLocale.global.loginAlert, action: redirectUserToLogin() }} />}
                     <div style={{ padding: 8 }}>
                         <Grid
                             container
