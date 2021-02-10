@@ -2,35 +2,11 @@
 
 exports[`GeoCoordinatesField component should render default view 1`] = `
 <Memo(PublicationMap)
-  containerElement={
-    <div
-      style={
-        Object {
-          "height": "400px",
-        }
-      }
-    />
-  }
   country="AU"
-  googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
   input={
     Object {
       "onChange": [MockFunction],
     }
-  }
-  loadingElement={
-    <div
-      className="googleMap loading"
-    />
-  }
-  mapElement={
-    <div
-      style={
-        Object {
-          "height": "100%",
-        }
-      }
-    />
   }
   onChange={[MockFunction]}
 />
@@ -38,35 +14,11 @@ exports[`GeoCoordinatesField component should render default view 1`] = `
 
 exports[`GeoCoordinatesField component should render default view for AU 1`] = `
 <Memo(PublicationMap)
-  containerElement={
-    <div
-      style={
-        Object {
-          "height": "400px",
-        }
-      }
-    />
-  }
   country="AU"
-  googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
   input={
     Object {
       "onChange": [MockFunction],
     }
-  }
-  loadingElement={
-    <div
-      className="googleMap loading"
-    />
-  }
-  mapElement={
-    <div
-      style={
-        Object {
-          "height": "100%",
-        }
-      }
-    />
   }
   onChange={[MockFunction]}
 />
@@ -74,35 +26,11 @@ exports[`GeoCoordinatesField component should render default view for AU 1`] = `
 
 exports[`GeoCoordinatesField component should render default view for CN 1`] = `
 <Memo(PublicationMap)
-  containerElement={
-    <div
-      style={
-        Object {
-          "height": "400px",
-        }
-      }
-    />
-  }
   country="CN"
-  googleMapURL="http://maps.google.cn/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
   input={
     Object {
       "onChange": [MockFunction],
     }
-  }
-  loadingElement={
-    <div
-      className="googleMap loading"
-    />
-  }
-  mapElement={
-    <div
-      style={
-        Object {
-          "height": "100%",
-        }
-      }
-    />
   }
   onChange={[MockFunction]}
 />

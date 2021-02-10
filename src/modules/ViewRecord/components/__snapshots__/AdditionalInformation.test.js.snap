@@ -20091,33 +20091,8 @@ exports[`Additional Information Component  renderLicense() 1`] = `
 exports[`Additional Information Component  renderMap() for Australia 1`] = `<span />`;
 
 exports[`Additional Information Component  renderMap() for Australia 2`] = `
-<PublicationMap
-  containerElement={
-    <div
-      data-testid="rek-geographic-area"
-      style={
-        Object {
-          "height": "400px",
-        }
-      }
-    />
-  }
+<Memo(PublicationMap)
   coordinates="test"
-  googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-  loadingElement={
-    <div
-      className="googleMap loading"
-    />
-  }
-  mapElement={
-    <div
-      style={
-        Object {
-          "height": "100%",
-        }
-      }
-    />
-  }
   readOnly={true}
 />
 `;
@@ -20125,33 +20100,8 @@ exports[`Additional Information Component  renderMap() for Australia 2`] = `
 exports[`Additional Information Component  renderMap() for China 1`] = `<span />`;
 
 exports[`Additional Information Component  renderMap() for China 2`] = `
-<PublicationMap
-  containerElement={
-    <div
-      data-testid="rek-geographic-area"
-      style={
-        Object {
-          "height": "400px",
-        }
-      }
-    />
-  }
+<Memo(PublicationMap)
   coordinates="test"
-  googleMapURL="http://maps.google.cn/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-  loadingElement={
-    <div
-      className="googleMap loading"
-    />
-  }
-  mapElement={
-    <div
-      style={
-        Object {
-          "height": "100%",
-        }
-      }
-    />
-  }
   readOnly={true}
 />
 `;
@@ -32258,33 +32208,8 @@ exports[`Additional Information Component  should render component with data col
             component="span"
             variant="body2"
           >
-            <PublicationMap
-              containerElement={
-                <div
-                  data-testid="rek-geographic-area"
-                  style={
-                    Object {
-                      "height": "400px",
-                    }
-                  }
-                />
-              }
+            <Memo(PublicationMap)
               coordinates="153.050537,-27.352253"
-              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-              loadingElement={
-                <div
-                  className="googleMap loading"
-                />
-              }
-              mapElement={
-                <div
-                  style={
-                    Object {
-                      "height": "100%",
-                    }
-                  }
-                />
-              }
               readOnly={true}
             />
           </WithStyles(ForwardRef(Typography))>
@@ -34616,33 +34541,8 @@ exports[`Additional Information Component  should render component with data col
             component="span"
             variant="body2"
           >
-            <PublicationMap
-              containerElement={
-                <div
-                  data-testid="rek-geographic-area"
-                  style={
-                    Object {
-                      "height": "400px",
-                    }
-                  }
-                />
-              }
+            <Memo(PublicationMap)
               coordinates="178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275"
-              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-              loadingElement={
-                <div
-                  className="googleMap loading"
-                />
-              }
-              mapElement={
-                <div
-                  style={
-                    Object {
-                      "height": "100%",
-                    }
-                  }
-                />
-              }
               readOnly={true}
             />
           </WithStyles(ForwardRef(Typography))>

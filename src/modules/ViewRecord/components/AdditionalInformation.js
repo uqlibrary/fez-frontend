@@ -12,7 +12,7 @@ import {
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
-import PublicationMap from './NewPublicationMap';
+import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
 import { CURRENT_LICENCES } from 'config/general';
