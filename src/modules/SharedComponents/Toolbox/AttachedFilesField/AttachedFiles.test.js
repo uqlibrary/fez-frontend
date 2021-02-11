@@ -15,9 +15,7 @@ function createMatchMedia(width) {
     });
 }
 
-jest.mock('hooks');
-import { userIsAdmin } from 'hooks';
-// import * as UserIsAdminHook from 'hooks/userIsAdmin';
+import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 jest.mock('context');
 import { useRecordContext, useFormValuesContext } from 'context';
@@ -79,6 +77,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should render admin view', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const { getByText } = setup({ canEdit: true });
         expect(getByText('MyUQeSpace_Researcher_Guidelines_current.pdf')).toBeInTheDocument();
@@ -116,26 +115,26 @@ describe('AttachedFiles component', () => {
         expect(asFragment()).toMatchInlineSnapshot('<DocumentFragment />');
     });
 
-    // fit('should render admin edit view', () => {
-    //     const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
-    //     userIsAdmin.mockImplementation(() => true);
-    //     const onDeleteFn = jest.fn();
-    //     const onDescriptionChangeFn = jest.fn();
-    //     const { getByTestId } = setup({
-    //         canEdit: true,
-    //         onDelete: onDeleteFn,
-    //         onDescriptionChange: onDescriptionChangeFn,
-    //     });
+    it('should render admin edit view', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
+        const onDeleteFn = jest.fn();
+        const onDescriptionChangeFn = jest.fn();
+        const { getByTestId } = setup({
+            canEdit: true,
+            onDelete: onDeleteFn,
+            onDescriptionChange: onDescriptionChangeFn,
+        });
 
-    //     fireEvent.click(getByTestId('delete-file-3'));
-    //     expect(onDeleteFn).toHaveBeenCalledWith(3);
+        fireEvent.click(getByTestId('delete-file-3'));
+        expect(onDeleteFn).toHaveBeenCalledWith(3);
 
-    //     fireEvent.change(getByTestId('dsi-label-2-input'), { target: { value: 'test file description' } });
-    //     fireEvent.blur(getByTestId('dsi-label-2-input'));
-    //     expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
-    // });
+        fireEvent.change(getByTestId('dsi-label-2-input'), { target: { value: 'test file description' } });
+        expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
+    });
 
     it('should render embargo date field for open access file with embargo date in future', async () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
@@ -173,6 +172,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should show alert for advisory statement', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: 'test advisory statement' } },
@@ -190,6 +190,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should show alert for advisory statement from locale', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: null } },
@@ -208,6 +209,7 @@ describe('AttachedFiles component', () => {
 
     it('should toggle preview', async done => {
         Object.defineProperty(window.navigator, 'userAgent', { value: 'FireFox' });
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const onDateChangeFn = jest.fn();
         const { getByTitle, getByTestId, queryByTestId, getByText } = setup({
