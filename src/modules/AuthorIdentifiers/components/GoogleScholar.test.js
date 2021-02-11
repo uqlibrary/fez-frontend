@@ -1,172 +1,159 @@
+import React from 'react';
 import GoogleScholar from './GoogleScholar';
-import { currentAuthor } from 'mock/data/account';
+import Immutable from 'immutable';
+import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor } from 'test-utils';
+import * as repositories from 'repositories';
+import * as AuthorAction from 'actions/authors';
+import { Route } from 'react-router';
 
-jest.mock('redux-form/immutable');
+const setup = ({ state = {} } = {}) => {
+    return render(
+        <WithReduxStore initialState={Immutable.Map(state)}>
+            <WithRouter>
+                <Route path="/dashboard">Dashboard</Route>
+                <Route path="/" exact>
+                    <GoogleScholar />
+                </Route>
+            </WithRouter>
+        </WithReduxStore>,
+    );
+};
 
-function setup(testProps = {}, args = {}) {
-    const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        invalid: false,
-        valid: true,
-        pure: true,
-        pristine: true,
-        submitting: false,
-        accountAuthorLoading: testProps.accountAuthorLoading || false,
-        author: testProps.author || null,
-        actions: testProps.actions || {
-            showAppAlert: jest.fn(),
-            dismissAppAlert: jest.fn(),
-            resetSavingAuthorState: jest.fn(),
-        },
-        history: testProps.history || { push: jest.fn() },
+describe('GoogleScholar form', () => {
+    it('should load google scholar for given author to add google scholar identifier', async () => {
+        const updateCurrentAuthor = jest.spyOn(AuthorAction, 'updateCurrentAuthor');
 
-        // redux form props
-        handleSubmit: testProps.handleSubmit || jest.fn(),
-        initialValues: testProps.initialValues || {
-            aut_id: !!testProps.author ? testProps.author.aut_id : '',
-            aut_google_scholar_id: !!testProps.author ? testProps.author.aut_google_scholar_id : '',
-        },
-        submitSucceeded: testProps.submitSucceeded || false,
-        submitFailed: testProps.submitFailed || false,
-        error: testProps.error || null,
-        ...testProps,
-    };
+        mockApi
+            .onPatch(repositories.routes.AUTHOR_API({ authorId: 111 }).apiUrl)
+            .replyOnce(200, { data: { aut_id: 111, aut_google_scholar_id: 'abcd1234efgh' } });
 
-    return getElement(GoogleScholar, props, args);
-}
-
-describe('Component GoogleScholar ', () => {
-    it('should render nothing if author is not loaded', () => {
-        const wrapper = setup({
-            accountAuthorLoading: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it("should render form if author doesn't have google scholar id", () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.requiredField').length).toEqual(1);
-    });
-
-    it('should render form if author has google scholar id', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqresearcher.data,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.requiredField').length).toEqual(1);
-    });
-
-    it('should redirect to the dashbaord', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-        });
-        wrapper.instance()._navigateToDashboard();
-        expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
-    });
-
-    it('should go back to the dashboard if the submission succeeded', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-        });
-        wrapper.setProps({ submitSucceeded: true });
-        expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
-    });
-
-    it('should dispatch action to display success alert', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-        });
-        wrapper.setProps({ submitSucceeded: true });
-        expect(wrapper.instance().props.actions.showAppAlert).toHaveBeenCalled();
-    });
-
-    it('should display submission error if saving failed', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-            submitFailed: true,
-            error: 'failed!',
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should display submission in progress alert', () => {
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-            submitting: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should redirect to dashboard if user is not an author', () => {
-        const wrapper = setup();
-        wrapper.instance().UNSAFE_componentWillMount();
-        expect(wrapper.instance().props.history.push).toHaveBeenCalled();
-    });
-
-    it('should not redirect to dashboard if submit success state has not changed', () => {
-        const wrapper = setup();
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
-            submitSucceeded: wrapper.instance().props.submitSucceeded,
-        });
-        const testFn = jest.spyOn(wrapper.instance(), '_navigateToDashboard');
-        expect(testFn).not.toBeCalled();
-    });
-
-    it('should reset author update state when component is unmounted', () => {
-        const wrapper = setup();
-        wrapper.instance().componentWillUnmount();
-        expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
-    });
-
-    it.skip('should handle keyboard form submit event', () => {
-        const handleSubmitFn = jest.fn();
-        const wrapper = setup(
-            {
-                author: currentAuthor.uqnoauthid.data,
-                handleSubmit: handleSubmitFn,
+        const { getByTestId, getByText, queryByTestId } = setup({
+            state: {
+                accountReducer: {
+                    author: {
+                        aut_id: 111,
+                    },
+                },
             },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('form').simulate('keyDown', { key: 'Enter' });
-        expect(handleSubmitFn).toHaveBeenCalled();
+        });
 
-        handleSubmitFn.mockClear();
-        wrapper.find('form').simulate('keyDown', { key: 'A' });
-        expect(handleSubmitFn).not.toBeCalled();
+        expect(getByText('Add your Google Scholar identifier')).toBeInTheDocument();
+
+        expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
+        expect(getByTestId('aut-google-scholar-id-helper-text')).toBeInTheDocument();
+        expect(getByTestId('aut-google-scholar-id-helper-text')).toHaveTextContent('This field is required');
+
+        fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
+
+        expect(queryByTestId('aut-google-scholar-id-helper-text')).not.toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
+        });
+
+        await waitFor(() => getByText('Dashboard'));
+
+        expect(updateCurrentAuthor).toHaveBeenCalled();
     });
 
-    it('should get correct alert message', () => {
-        const wrapper = setup();
-        const alert1 = wrapper.instance().getAlert({});
-        expect(alert1).toBeNull();
-        const Alert = wrapper.instance().getAlert({
-            submitFailed: true,
-            error: 'test',
+    it('should load google scholar for given author to add google scholar identifier and show error message after submitting', async () => {
+        const updateCurrentAuthor = jest.spyOn(AuthorAction, 'updateCurrentAuthor');
+
+        mockApi.onPatch(repositories.routes.AUTHOR_API({ authorId: 111 }).apiUrl).replyOnce(500);
+
+        const { getByTestId, getByText, queryByTestId } = setup({
+            state: {
+                accountReducer: {
+                    author: {
+                        aut_id: 111,
+                    },
+                },
+            },
         });
-        expect(Alert.props.message).toEqual('test');
+
+        expect(getByText('Add your Google Scholar identifier')).toBeInTheDocument();
+
+        expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
+        expect(getByTestId('aut-google-scholar-id-helper-text')).toBeInTheDocument();
+        expect(getByTestId('aut-google-scholar-id-helper-text')).toHaveTextContent('This field is required');
+
+        fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
+
+        expect(queryByTestId('aut-google-scholar-id-helper-text')).not.toBeInTheDocument();
+
+        await act(async () => {
+            fireEvent.keyDown(getByTestId('submit-aut-google-scholar-id'), { key: 'Enter', code: 'Enter' });
+        });
+
+        expect(getByText('Saving -')).toBeInTheDocument();
+
+        await waitFor(() => getByText('Error -'));
+
+        expect(updateCurrentAuthor).toHaveBeenCalled();
+    });
+
+    it('should load google scholar for given author to update google scholar identifier', async () => {
+        const updateCurrentAuthor = jest.spyOn(AuthorAction, 'updateCurrentAuthor');
+
+        mockApi
+            .onPatch(repositories.routes.AUTHOR_API({ authorId: 111 }).apiUrl)
+            .replyOnce(200, { data: { aut_id: 111, aut_google_scholar_id: 'abcd1234efgh' } });
+
+        const { getByTestId, getByText } = setup({
+            state: {
+                accountReducer: {
+                    author: {
+                        aut_id: 111,
+                        aut_google_scholar_id: '111122223333',
+                    },
+                },
+            },
+        });
+
+        expect(getByText('Update your Google Scholar identifier')).toBeInTheDocument();
+
+        expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
+        expect(getByTestId('aut-google-scholar-id-input')).toHaveAttribute('value', '111122223333');
+
+        fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
+
+        act(() => {
+            fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
+        });
+
+        await waitFor(() => getByText('Dashboard'));
+
+        expect(updateCurrentAuthor).toHaveBeenCalled();
+    });
+
+    it('should navigate to dashboard if user is not author', async () => {
+        const { getByText } = setup({
+            state: {
+                accountReducer: {
+                    author: null,
+                    authorAccountLoading: null,
+                },
+            },
+        });
+
+        await waitFor(() => getByText('Dashboard'));
+        expect(getByText('Dashboard')).toBeInTheDocument();
+    });
+
+    it('should navigate to dashboard on cancel', () => {
+        const { getByTestId, getByText } = setup({
+            state: {
+                accountReducer: {
+                    author: {
+                        aut_id: 111,
+                        aut_google_scholar_id: '111122223333',
+                    },
+                },
+            },
+        });
+
+        fireEvent.click(getByTestId('cancel-aut-google-scholar-id'));
+
+        expect(getByText('Dashboard')).toBeInTheDocument();
     });
 });
