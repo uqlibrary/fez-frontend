@@ -87,7 +87,6 @@ exports[`ThesisForm  should render component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -118,7 +117,6 @@ exports[`ThesisForm  should render component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }

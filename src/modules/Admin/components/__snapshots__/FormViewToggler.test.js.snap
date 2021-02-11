@@ -28,7 +28,6 @@ exports[`FormViewToggler component should render default view 1`] = `
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
-          "displayName": "KeyboardIcon",
           "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
@@ -114,7 +113,6 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
-          "displayName": "KeyboardIcon",
           "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),

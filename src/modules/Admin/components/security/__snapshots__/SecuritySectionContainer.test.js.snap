@@ -10729,7 +10729,6 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                                     "type": Object {
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "Naked": [Function],
-                                                                      "displayName": "WithStyles(DataStreamSecuritySelector)",
                                                                       "options": Object {
                                                                         "defaultTheme": Object {
                                                                           "breakpoints": Object {

@@ -1224,7 +1224,6 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               Object {
                                 "$$typeof": Symbol(react.memo),
                                 "compare": null,
-                                "displayName": "HelpOutlineIcon",
                                 "muiName": "SvgIcon",
                                 "type": Object {
                                   "$$typeof": Symbol(react.forward_ref),
@@ -1397,7 +1396,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                           <span
                                             className="MuiIconButton-label"
                                           >
-                                            <ForwardRef
+                                            <HelpOutlineIcon
                                               className="makeStyles-helpIcon-137"
                                               titleAccess="Click for more information"
                                             >
@@ -1437,7 +1436,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                                   </svg>
                                                 </ForwardRef(SvgIcon)>
                                               </WithStyles(ForwardRef(SvgIcon))>
-                                            </ForwardRef>
+                                            </HelpOutlineIcon>
                                           </span>
                                           <WithStyles(memo)
                                             center={true}

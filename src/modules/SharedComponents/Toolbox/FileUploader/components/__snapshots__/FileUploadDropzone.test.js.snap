@@ -1431,7 +1431,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item"
                                                         >
-                                                          <ForwardRef
+                                                          <CloudUploadIcon
                                                             className="FileUploadDropzoneStaticContent-cloudIcon-107"
                                                           >
                                                             <WithStyles(ForwardRef(SvgIcon))
@@ -1465,7 +1465,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                                 </svg>
                                                               </ForwardRef(SvgIcon)>
                                                             </WithStyles(ForwardRef(SvgIcon))>
-                                                          </ForwardRef>
+                                                          </CloudUploadIcon>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
@@ -3113,7 +3113,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item"
                                                         >
-                                                          <ForwardRef
+                                                          <CloudUploadIcon
                                                             className="FileUploadDropzoneStaticContent-cloudIcon-107"
                                                           >
                                                             <WithStyles(ForwardRef(SvgIcon))
@@ -3147,7 +3147,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                                 </svg>
                                                               </ForwardRef(SvgIcon)>
                                                             </WithStyles(ForwardRef(SvgIcon))>
-                                                          </ForwardRef>
+                                                          </CloudUploadIcon>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
