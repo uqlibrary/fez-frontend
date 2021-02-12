@@ -333,7 +333,7 @@ export class FilesClass extends Component {
                           pid,
                           mimeType,
                           fileName,
-                          thumbnailFileName,
+                          !(!componentProps.account && dataStream.dsi_security_policy === 4) ? thumbnailFileName : null,
                           previewFileName,
                           webFileName,
                           securityAccess,
