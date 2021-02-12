@@ -68,6 +68,13 @@ export default {
             actionButtonLabel: 'Click to login',
             alertId: 'login',
         },
+        loginAlertForFiles: {
+            title: 'You are not logged in',
+            message: 'Login to UQ eSpace to access the files on this work',
+            type: 'info_outline',
+            actionButtonLabel: 'Click to login',
+            alertId: 'login',
+        },
         errorMessages: {
             401: {
                 message:
