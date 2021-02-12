@@ -518,7 +518,8 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 6998485
+            "dsi_size": 6998485,
+            "dsi_security_policy": 4,
         },
         {
             "dsi_pid": "UQ:185044",

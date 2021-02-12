@@ -1574,6 +1574,11 @@ describe('Files Component ', () => {
         expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
     });
 
+    it('getFileData{} branch 1', () => {
+        const wrapper = setup({ publication: fileDataRecord, isAdmin: false, author: null });
+        expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
+    });
+
     it('Should render the correct icon for a valid transcoded file', () => {
         const wrapper = setup({
             publication: {
