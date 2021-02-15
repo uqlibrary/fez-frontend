@@ -11,16 +11,13 @@ context('Search', () => {
 
     it('Doing a basic search to advanced search', () => {
         // Perform a basic search
-        cy.get('#simple-search-input')
-            .should(
-                'have.attr',
-                'aria-label',
-                // searchLocale.ariaInputLabel
-                'Enter your search query to search eSpace and then press Enter',
-            )
-            .closest('[class*="MuiFormControl-root"]')
-            // .contains('label', searchLocale.searchBoxPlaceholder);
-            .contains('label', 'Search eSpace');
+        cy.get('[data-testid=simple-search-input]').should(
+            'have.attr',
+            'aria-label',
+            // searchLocale.ariaInputLabel
+            'Enter your search query to search eSpace and then press Enter',
+        );
+        cy.get('[data-testid=simple-search-label]').should('have.text', 'Search eSpace');
 
         cy.get('[data-testid=simple-search-input]').type('cats and dogs{enter}');
         cy.get('[data-testid=standard-card-content]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
