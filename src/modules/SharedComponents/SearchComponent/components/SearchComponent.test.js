@@ -1,8 +1,5 @@
-import React from 'react';
 import SearchComponent from './SearchComponent';
 import moment from 'moment';
-
-import { render, WithRouter, fireEvent } from 'test-utils';
 
 function setup(testProps = {}, args = {}) {
     const props = {
@@ -1062,32 +1059,5 @@ describe('SearchComponent', () => {
                 }),
             ).toMatchSnapshot();
         });
-    });
-
-    it('search component should display validation message for PID input', () => {
-        const { getByTestId, getByText, queryByTestId } = render(
-            <WithRouter>
-                <SearchComponent history={{}} />
-            </WithRouter>,
-        );
-
-        fireEvent.click(getByTestId('show-advanced-search'));
-        fireEvent.mouseDown(getByTestId('field-type-select'));
-        fireEvent.click(getByText('PID'));
-
-        const invalidPIDs = ['abcd', '_uq:123', 'UQ: 12', 'uq:'];
-
-        invalidPIDs.forEach(invalidInput => {
-            fireEvent.change(getByTestId('rek-pid-input'), { target: { value: '' } });
-            fireEvent.change(getByTestId('rek-pid-input'), { target: { value: invalidInput } });
-            expect(getByTestId('rek-pid-helper-text')).toHaveTextContent('Please provide a valid PID (e.g. UQ:129af6)');
-            expect(getByTestId('advanced-search')).toHaveAttribute('disabled');
-        });
-
-        fireEvent.change(getByTestId('rek-pid-input'), { target: { value: '' } });
-        fireEvent.change(getByTestId('rek-pid-input'), { target: { value: 'UQ:123' } });
-
-        expect(queryByTestId('rek-pid-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('advanced-search')).not.toHaveAttribute('disabled');
     });
 });

@@ -34,7 +34,7 @@ describe('AdvancedSearchComponent', () => {
         expect(getByText(/please select a field to search/i)).toBeInTheDocument();
         expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
         expect(getByTestId('initial-input').disabled).toBeTruthy();
-        expect(getByTestId('advanced-search')).toBeInTheDocument();
+        expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
     });
 
     it('should render minimised view', () => {
@@ -53,7 +53,7 @@ describe('AdvancedSearchComponent', () => {
         expect(getByText(/please select a field to search/i)).toBeInTheDocument();
         expect(getByTestId('add-another-search-row').disabled).toBeTruthy();
         expect(getByTestId('initial-input').disabled).toBeTruthy();
-        expect(getByTestId('advanced-search')).toBeInTheDocument();
+        expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
         expect(getByText('open access/full text')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('advanced-search-open-access'));
@@ -68,7 +68,7 @@ describe('AdvancedSearchComponent', () => {
         expect(getByText(/advanced search/i)).toBeInTheDocument();
         expect(getByTestId('any-field-input').value).toEqual('i feel lucky');
         expect(getByTestId('add-another-search-row').disabled).toBeFalsy();
-        expect(getByTestId('advanced-search')).toBeInTheDocument();
+        expect(getByTestId('advancedSearchButton')).toBeInTheDocument();
         expect(getByText('open access/full text')).toBeInTheDocument();
     });
 
@@ -168,7 +168,7 @@ describe('AdvancedSearchComponent', () => {
             ],
         };
         const { getByTestId } = setup({ ...thisProps });
-        expect(getByTestId('advanced-search').disabled).toBeFalsy();
+        expect(getByTestId('advancedSearchButton').disabled).toBeFalsy();
     });
 
     it('should render advanced search docTypes with checked values based on props', async () => {
@@ -271,7 +271,7 @@ describe('AdvancedSearchComponent', () => {
             fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '10/11/2013' } });
         });
 
-        fireEvent.click(getByTestId('advanced-search'));
+        fireEvent.click(getByTestId('advancedSearchButton'));
 
         expect(onSearchFn).toHaveBeenCalledWith();
     });

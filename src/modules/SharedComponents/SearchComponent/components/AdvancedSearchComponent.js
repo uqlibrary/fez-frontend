@@ -289,7 +289,7 @@ export const AdvancedSearchComponent = ({
                                     fullWidth
                                     onClick={_handleAdvancedSearch}
                                     disabled={!haveAllAdvancedSearchFieldsValidated(fieldRows)}
-                                    id="advanced-search"
+                                    id="advancedSearchButton"
                                     data-testid="advanced-search"
                                 />
                             </Grid>
