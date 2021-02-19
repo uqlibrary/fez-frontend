@@ -32,13 +32,9 @@ export const validate = (values, props) => {
     return errors;
 };
 
-const MyIncompleteRecordReduxForm = reduxForm({
+export default reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,
     validate,
     onSubmit,
 })(MyIncompleteRecord);
-
-MyIncompleteRecordReduxForm.displayName = 'MyIncompleteRecordReduxForm';
-
-export default MyIncompleteRecordReduxForm;

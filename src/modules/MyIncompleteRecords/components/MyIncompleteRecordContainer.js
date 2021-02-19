@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useHistory } from 'react-router';
-import { Map } from 'immutable';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import {
     AFFILIATION_TYPE_NOT_UQ,
@@ -20,9 +17,8 @@ import { locale } from 'locale';
 import { authorAffiliationRequired } from 'config/validation';
 import { default as pagesLocale } from '../locale';
 import { incompleteRecord } from 'config';
-import MyIncompleteRecordForm, { FORM_NAME } from './MyIncompleteRecordForm';
-import { loadRecordToFix, clearFixRecord } from 'actions';
-import { getFormSyncErrors } from 'redux-form/immutable';
+
+import MyIncompleteRecordForm from './MyIncompleteRecordForm';
 
 const getInitialValues = (recordToFix, author, canMasquerade, disableInitialGrants) => {
     const grants = recordToFix.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
@@ -171,21 +167,18 @@ const getIsAuthorLinked = (recordToFix, author) => {
     return isAuthorLinked || isContributorLinked;
 };
 
-export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) => {
-    const dispatch = useDispatch();
-    const history = useHistory();
-    const { pid } = useParams();
-
-    /* Reading reducers */
-    const recordToFix = useSelector(state => state.get('fixRecordReducer').recordToFix);
-    const loadingRecordToFix = useSelector(state => state.get('fixRecordReducer').loadingRecordToFix);
-    const account = useSelector(state => state.get('accountReducer').account);
-    const author = useSelector(state => state.get('accountReducer').author);
-    const accountAuthorLoading = useSelector(state => state.get('accountReducer').accountAuthorLoading);
-
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const disableSubmit = !!formErrors && !(formErrors instanceof Map) && Object.keys(formErrors).length > 0;
-
+export const MyIncompleteRecordContainer = ({
+    account,
+    accountAuthorLoading,
+    author,
+    clearFixRecord,
+    disableInitialGrants,
+    loadingRecordToFix,
+    loadRecordToFix,
+    match,
+    recordToFix,
+    ...rest
+}) => {
     /* Initial state */
     const [ntroFieldProps, setNtroFieldProps] = React.useState({});
     const [initialValues, setInitialValues] = React.useState({});
@@ -196,9 +189,11 @@ export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) =
     const txt = pagesLocale;
 
     React.useEffect(() => {
-        !recordToFix && !!loadRecordToFix && dispatch(loadRecordToFix(pid));
+        if (!recordToFix && !!loadRecordToFix) {
+            loadRecordToFix(match.params.pid);
+        }
 
-        return () => dispatch(clearFixRecord());
+        return () => clearFixRecord();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -213,9 +208,7 @@ export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) =
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [recordToFix]);
 
-    if (accountAuthorLoading || loadingRecordToFix) {
-        return <InlineLoader message={txt.loadingMessage} />;
-    }
+    if (accountAuthorLoading || loadingRecordToFix) return <InlineLoader message={txt.loadingMessage} />;
 
     return (
         <MyIncompleteRecordForm
@@ -226,23 +219,31 @@ export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) =
             hasAnyFiles={hasAnyFiles}
             isAuthorLinked={isAuthorLinked}
             disableInitialGrants={disableInitialGrants}
-            disableSubmit={disableSubmit}
             account={account}
             author={author}
             recordToFix={recordToFix}
-            history={history}
             {...rest}
         />
     );
 };
 
 MyIncompleteRecordContainer.propTypes = {
+    recordToFix: PropTypes.object,
+    author: PropTypes.object,
+
+    accountAuthorLoading: PropTypes.bool,
+    loadingRecordToFix: PropTypes.bool,
+
     disableInitialGrants: PropTypes.bool,
+    account: PropTypes.object,
+
     match: PropTypes.shape({
         params: PropTypes.shape({
             pid: PropTypes.string.isRequired,
         }),
     }),
+    loadRecordToFix: PropTypes.func.isRequired,
+    clearFixRecord: PropTypes.func.isRequired,
 };
 
 export default React.memo(MyIncompleteRecordContainer);

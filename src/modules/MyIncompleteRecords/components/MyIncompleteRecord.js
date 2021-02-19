@@ -74,7 +74,7 @@ export const MyIncompleteRecord = props => {
     // if author is not linked to this record, abandon form
     if (!isAuthorLinked) {
         history.go(-1);
-        return <div id="author-not-linked" />;
+        return <div />;
     }
 
     const txtFixForm = formsLocale.forms.fixPublicationForm;

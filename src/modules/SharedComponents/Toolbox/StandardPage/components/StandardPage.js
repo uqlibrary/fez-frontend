@@ -44,11 +44,10 @@ export class Page extends Component {
                     <Grid item xs>
                         <Typography
                             className={classes.layoutTitle}
-                            color="primary"
-                            component="h2"
-                            id="page-title"
+                            color={'primary'}
+                            component={'h2'}
                             data-testid="page-title"
-                            variant="h4"
+                            variant={'h4'}
                         >
                             {title}
                         </Typography>

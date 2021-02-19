@@ -13,7 +13,6 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       color="primary"
       component="h2"
       data-testid="page-title"
-      id="page-title"
       variant="h4"
     >
       Test
@@ -51,7 +50,6 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
       color="primary"
       component="h2"
       data-testid="page-title"
-      id="page-title"
       variant="h4"
     >
       standard page title
@@ -1159,7 +1157,6 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               color="primary"
                               component="h2"
                               data-testid="page-title"
-                              id="page-title"
                               variant="h4"
                             >
                               <ForwardRef(Typography)
@@ -1201,13 +1198,11 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 color="primary"
                                 component="h2"
                                 data-testid="page-title"
-                                id="page-title"
                                 variant="h4"
                               >
                                 <h2
                                   className="MuiTypography-root Page-layoutTitle-2 MuiTypography-h4 MuiTypography-colorPrimary"
                                   data-testid="page-title"
-                                  id="page-title"
                                 >
                                   Test
                                 </h2>
