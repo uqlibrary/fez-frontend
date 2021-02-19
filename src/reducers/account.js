@@ -4,9 +4,9 @@ export const initialState = {
     account: null,
     author: null,
     authorDetails: null,
-    accountLoading: false,
-    accountAuthorLoading: false,
-    accountAuthorDetailsLoading: false,
+    accountLoading: true,
+    accountAuthorLoading: true,
+    accountAuthorDetailsLoading: true,
     isSessionExpired: null,
 };
 
