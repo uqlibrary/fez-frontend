@@ -11,7 +11,7 @@ context('Search', () => {
 
     it('Doing a basic search to advanced search', () => {
         // Perform a basic search
-        cy.get('#simple-search-input')
+        cy.get('[data-testid=simple-search-input]')
             .should(
                 'have.attr',
                 'aria-label',
@@ -59,7 +59,7 @@ context('Search', () => {
         cy.contains('Select a field').click();
         // Select author from the field dropdown
         cy.contains('#field-type-options li', 'Author Name').click();
-        cy.get('button#advancedSearchButton')
+        cy.get('[data-testid=advanced-search]')
             .should('be.disabled')
             .should('have.text', 'Search');
         cy.get('[data-testid=rek-author-input]').type('Ky Lane{enter}');
@@ -92,41 +92,5 @@ context('Search', () => {
         cy.get('[data-testid="standard-card-content"]')
             .should('contain', 'Searching for works')
             .contains('Displaying works 1 to 7 of 7 total works.');
-    });
-
-    it('should show appropriate form validation for PID field', () => {
-        const helpMessage = 'Please provide a valid PID (e.g. UQ:129af6)';
-
-        cy.get('button#showAdvancedSearchButton').click();
-        cy.contains('Select a field').click();
-        cy.contains('#field-type-options li', 'PID').click();
-        cy.get('#rek-pid-helper-text')
-            .as('helpText')
-            .should('contain', 'This field is required');
-        cy.get('button#advancedSearchButton')
-            .as('searchButton')
-            .should('be.disabled');
-
-        cy.get('[placeholder="Add a PID"]').as('pidField');
-
-        const invalidPIDs = ['abcd', '_uq:123', 'UQ: 12', 'uq:'];
-
-        invalidPIDs.forEach(invalidPID => {
-            cy.get('@pidField')
-                .clear()
-                .type(invalidPID);
-            cy.get('@helpText').should('contain', helpMessage);
-            cy.get('@searchButton').should('be.disabled');
-        });
-
-        cy.get('@pidField')
-            .clear()
-            .type('uq:123');
-        cy.get('@searchButton').should('not.be.disabled');
-        cy.get('@helpText').should('not.exist');
-
-        cy.get('[data-testid=advanced-search-caption]').should($caption => {
-            expect(cleanExtraSpaces($caption.text())).to.equal('PIDisuq:123');
-        });
     });
 });

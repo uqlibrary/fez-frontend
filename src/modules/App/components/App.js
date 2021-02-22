@@ -155,6 +155,7 @@ export class AppClass extends PureComponent {
 
     componentDidMount() {
         if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
+            console.log('loadCurrentAccount');
             this.props.actions.loadCurrentAccount();
         }
         this.handleResize(this.state.mediaQuery);
@@ -205,6 +206,10 @@ export class AppClass extends PureComponent {
     };
 
     redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
+        /* istanbul ignore next */
+        if (process.env.USE_MOCK) {
+            return;
+        }
         const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
         window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);

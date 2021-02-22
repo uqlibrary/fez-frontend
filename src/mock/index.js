@@ -2,7 +2,7 @@
 import { api, sessionApi } from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
-import { SESSION_COOKIE_NAME } from 'config';
+import { SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
@@ -15,6 +15,7 @@ const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(
 // const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
+Cookies.set(SESSION_USER_GROUP_COOKIE_NAME, 'LIBRARYSTAFFB');
 
 // Get user from query string
 let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;

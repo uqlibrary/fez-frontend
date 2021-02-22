@@ -303,7 +303,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         onClick={this._handleSearchMode}
                                         className="advancedButton"
                                         fullWidth
-                                        id="showAdvancedSearchButton"
+                                        id="show-advanced-search"
                                         data-testid="show-advanced-search"
                                     />
                                 </Grid>
