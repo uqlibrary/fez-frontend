@@ -280,6 +280,19 @@ exports[`Application component Should display mobile correctly 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <WithStyles(ForwardRef(Grid))
@@ -2377,6 +2390,19 @@ exports[`Application component should redirect to login page with correct return
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <WithStyles(ForwardRef(Grid))
@@ -2968,6 +2994,19 @@ exports[`Application component should render alert if user is not fez author 1`]
           "confirmButtonLabel": "Redirect to login",
           "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
           "confirmationTitle": "Session Expired",
+        }
+      }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
         }
       }
       onRef={[Function]}
@@ -3859,6 +3898,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -4731,6 +4783,19 @@ exports[`Application component should render app for account with fez author wit
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -5551,6 +5616,19 @@ exports[`Application component should render application with routing for the us
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -5843,6 +5921,19 @@ exports[`Application component should render for anon user 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -6121,6 +6212,19 @@ exports[`Application component should render thesis submission for HDR without m
           "confirmButtonLabel": "Redirect to login",
           "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
           "confirmationTitle": "Session Expired",
+        }
+      }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
         }
       }
       onRef={[Function]}
