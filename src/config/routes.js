@@ -35,6 +35,10 @@ const isAdmin = authorDetails => {
     return authorDetails && (!!authorDetails.is_administrator || !!authorDetails.is_super_administrator);
 };
 
+const isSuperAdmin = authorDetails => {
+    return authorDetails && !!authorDetails.is_super_administrator;
+};
+
 // export const getDatastreamVersionQueryString = (fileName, checksum) => {
 //     if (!checksum) {
 //         return '';
@@ -683,7 +687,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   },
               ]
             : []),
-        ...(authorDetails && isAdmin(authorDetails)
+        ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
                       linkTo: pathConfig.admin.community,
