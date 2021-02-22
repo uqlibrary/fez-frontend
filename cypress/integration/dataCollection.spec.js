@@ -315,7 +315,7 @@ context('Data Collection form', () => {
             .type('16')
             .clear();
         cy.get('[data-testid=rek-keywords-input]').type('Keywords 1');
-        cy.contains('p', 'Invalid day').should('not.be.visible');
+        cy.contains('p', 'Invalid day').should('not.exist');
 
         // an 31st of april is an invalid date
         cy.get('[data-testid=rek-start-date-day-input]').type('31');
