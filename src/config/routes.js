@@ -2,7 +2,6 @@ import React from 'react';
 import { locale } from 'locale';
 import { pathConfig, getSearchUrl } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
-import { USERS_WITH_ACCESS_TO_EDITORIAL_ROLES } from 'config/general';
 // import param from 'can-param';
 // import { DEFAULT_QUERY_PARAMS } from 'config/general';
 // import { createHash } from 'crypto';
@@ -674,14 +673,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.dataset.add,
                       ...locale.menu.addMissingDataset,
                   },
-                  ...(process.env.NODE_ENV !== 'production' || USERS_WITH_ACCESS_TO_EDITORIAL_ROLES.includes(account.id)
-                      ? [
-                            {
-                                linkTo: pathConfig.editorialAppointments.list,
-                                ...locale.menu.myEditorialAppointments,
-                            },
-                        ]
-                      : []),
+                  {
+                      linkTo: pathConfig.editorialAppointments.list,
+                      ...locale.menu.myEditorialAppointments,
+                  },
                   {
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
