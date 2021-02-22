@@ -1,1 +1,1 @@
-export { default as MyIncompleteRecord } from './containers/MyIncompleteRecord';
+export { default as MyIncompleteRecord } from './components/MyIncompleteRecordContainer';
