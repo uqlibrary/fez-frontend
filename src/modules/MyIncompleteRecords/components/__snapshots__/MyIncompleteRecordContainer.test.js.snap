@@ -239,7 +239,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             <div
               class="MuiPaper-root-243 MuiCard-root-242 Cards-card-237 StandardCard MuiPaper-elevation1-247 MuiPaper-rounded-244"
               data-testid="standard-card-type-&-collection"
-              id="standard-card-type-&-collection"
             >
               <div
                 class="MuiCardHeader-root-271"
@@ -250,7 +249,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <h3
                     class="MuiTypography-root-116 MuiCardHeader-title-275 MuiTypography-h5-125 MuiTypography-colorInherit-138 MuiTypography-displayBlock-145"
                     data-testid="standard-card-type-&-collection-header"
-                    id="standard-card-type-&-collection-header"
                   >
                     Type & Collection
                   </h3>
@@ -259,7 +257,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               <div
                 class="MuiCardContent-root-277"
                 data-testid="standard-card-type-&-collection-content"
-                id="standard-card-type-&-collection-content"
               >
                 <div
                   class="MuiGrid-root-1 makeStyles-GridType-146 MuiGrid-container-2 MuiGrid-spacing-xs-1-24"
@@ -322,7 +319,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             <div
               class="MuiPaper-root-243 MuiCard-root-242 Cards-card-237 StandardCard MuiPaper-elevation1-247 MuiPaper-rounded-244"
               data-testid="standard-card-author/creator-research-statement"
-              id="standard-card-author/creator-research-statement"
             >
               <div
                 class="MuiCardHeader-root-271"
@@ -333,7 +329,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <h3
                     class="MuiTypography-root-116 MuiCardHeader-title-275 MuiTypography-h5-125 MuiTypography-colorInherit-138 MuiTypography-displayBlock-145"
                     data-testid="standard-card-author/creator-research-statement-header"
-                    id="standard-card-author/creator-research-statement-header"
                   >
                     Author/Creator research statement
                   </h3>
@@ -375,7 +370,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               <div
                 class="MuiCardContent-root-277"
                 data-testid="standard-card-author/creator-research-statement-content"
-                id="standard-card-author/creator-research-statement-content"
               >
                 <div
                   class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-1-24"
@@ -511,7 +505,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             <div
               class="MuiPaper-root-243 MuiCard-root-242 Cards-card-237 StandardCard MuiPaper-elevation1-247 MuiPaper-rounded-244"
               data-testid="standard-card-ntro-data"
-              id="standard-card-ntro-data"
             >
               <div
                 class="MuiCardHeader-root-271"
@@ -522,7 +515,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <h3
                     class="MuiTypography-root-116 MuiCardHeader-title-275 MuiTypography-h5-125 MuiTypography-colorInherit-138 MuiTypography-displayBlock-145"
                     data-testid="standard-card-ntro-data-header"
-                    id="standard-card-ntro-data-header"
                   >
                     NTRO data
                   </h3>
@@ -564,7 +556,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               <div
                 class="MuiCardContent-root-277"
                 data-testid="standard-card-ntro-data-content"
-                id="standard-card-ntro-data-content"
               >
                 <div
                   class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-2-25"
@@ -706,7 +697,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             <div
               class="MuiPaper-root-243 MuiCard-root-242 Cards-card-237 StandardCard MuiPaper-elevation1-247 MuiPaper-rounded-244"
               data-testid="standard-card-grant-details"
-              id="standard-card-grant-details"
             >
               <div
                 class="MuiCardHeader-root-271"
@@ -717,7 +707,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <h3
                     class="MuiTypography-root-116 MuiCardHeader-title-275 MuiTypography-h5-125 MuiTypography-colorInherit-138 MuiTypography-displayBlock-145"
                     data-testid="standard-card-grant-details-header"
-                    id="standard-card-grant-details-header"
                   >
                     Grant details
                   </h3>
@@ -726,7 +715,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               <div
                 class="MuiCardContent-root-277"
                 data-testid="standard-card-grant-details-content"
-                id="standard-card-grant-details-content"
               >
                 <div>
                   Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
@@ -880,7 +868,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             <div
               class="MuiPaper-root-243 MuiCard-root-242 Cards-card-237 StandardCard MuiPaper-elevation1-247 MuiPaper-rounded-244"
               data-testid="standard-card-authors"
-              id="standard-card-authors"
             >
               <div
                 class="MuiCardHeader-root-271"
@@ -891,7 +878,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <h3
                     class="MuiTypography-root-116 MuiCardHeader-title-275 MuiTypography-h5-125 MuiTypography-colorInherit-138 MuiTypography-displayBlock-145"
                     data-testid="standard-card-authors-header"
-                    id="standard-card-authors-header"
                   >
                     Authors
                   </h3>
@@ -933,7 +919,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               <div
                 class="MuiCardContent-root-277"
                 data-testid="standard-card-authors-content"
-                id="standard-card-authors-content"
               >
                 <p
                   class="MuiTypography-root-116 MuiTypography-body1-118"
@@ -1656,7 +1641,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             <div
               class="MuiPaper-root-243 MuiCard-root-242 Cards-card-237 StandardCard MuiPaper-elevation1-247 MuiPaper-rounded-244"
               data-testid="standard-card-notes"
-              id="standard-card-notes"
             >
               <div
                 class="MuiCardHeader-root-271"
@@ -1667,7 +1651,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <h3
                     class="MuiTypography-root-116 MuiCardHeader-title-275 MuiTypography-h5-125 MuiTypography-colorInherit-138 MuiTypography-displayBlock-145"
                     data-testid="standard-card-notes-header"
-                    id="standard-card-notes-header"
                   >
                     Notes
                   </h3>
@@ -1676,7 +1659,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               <div
                 class="MuiCardContent-root-277"
                 data-testid="standard-card-notes-content"
-                id="standard-card-notes-content"
               >
                 <div
                   class="MuiFormControl-root-281 MuiTextField-root-280 MuiFormControl-fullWidth-284"
