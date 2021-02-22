@@ -426,7 +426,8 @@ export const getRoutesConfig = ({
                   },
               ]
             : []),
-        ...(authorDetails && isAdmin(authorDetails)
+
+        ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
                       path: pathConfig.admin.community,
@@ -442,6 +443,10 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.collection.title,
                   },
+              ]
+            : []),
+        ...(authorDetails && isAdmin(authorDetails)
+            ? [
                   {
                       path: pathConfig.admin.add,
                       render: props => <components.Admin {...props} createMode />,
