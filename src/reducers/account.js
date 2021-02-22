@@ -5,7 +5,7 @@ export const initialState = {
     author: null,
     authorDetails: null,
     accountLoading: false,
-    accountAuthorLoading: true,
+    accountAuthorLoading: false,
     accountAuthorDetailsLoading: true,
     isSessionExpired: null,
 };
