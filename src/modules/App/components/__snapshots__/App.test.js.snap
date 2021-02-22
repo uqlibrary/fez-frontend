@@ -446,7 +446,7 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "My research",
+          "pageTitle": "My works",
           "path": "/records/mine",
         },
         Object {
@@ -980,7 +980,7 @@ exports[`Application component should determine if it has incomplete works from 
             component={[Function]}
             exact={true}
             key="route_4"
-            pageTitle="My research"
+            pageTitle="My works"
             path="/records/mine"
           />
           <Route
@@ -1294,7 +1294,7 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "My research",
+          "pageTitle": "My works",
           "path": "/records/mine",
         },
         Object {
@@ -1828,7 +1828,7 @@ exports[`Application component should determine if it has incomplete works from 
             component={[Function]}
             exact={true}
             key="route_4"
-            pageTitle="My research"
+            pageTitle="My works"
             path="/records/mine"
           />
           <Route
@@ -2539,7 +2539,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "My research",
+          "pageTitle": "My works",
           "path": "/records/mine",
         },
         Object {
@@ -3077,7 +3077,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={[Function]}
             exact={true}
             key="route_4"
-            pageTitle="My research"
+            pageTitle="My works"
             path="/records/mine"
           />
           <Route
@@ -3391,7 +3391,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "My research",
+          "pageTitle": "My works",
           "path": "/records/mine",
         },
         Object {
@@ -3785,7 +3785,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/records/mine",
-          "primaryText": "My research",
+          "primaryText": "My works",
         },
         Object {
           "linkTo": "/records/possible",
@@ -3949,7 +3949,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={[Function]}
             exact={true}
             key="route_4"
-            pageTitle="My research"
+            pageTitle="My works"
             path="/records/mine"
           />
           <Route
@@ -4263,7 +4263,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "My research",
+          "pageTitle": "My works",
           "path": "/records/mine",
         },
         Object {
@@ -4657,7 +4657,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/mine",
-          "primaryText": "My research",
+          "primaryText": "My works",
         },
         Object {
           "linkTo": "/records/possible",
@@ -4806,7 +4806,7 @@ exports[`Application component should render app for account with fez author wit
             component={[Function]}
             exact={true}
             key="route_4"
-            pageTitle="My research"
+            pageTitle="My works"
             path="/records/mine"
           />
           <Route
@@ -5120,7 +5120,7 @@ exports[`Application component should render application with routing for the us
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "My research",
+          "pageTitle": "My works",
           "path": "/records/mine",
         },
         Object {
@@ -7045,7 +7045,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": [Function],
                             "exact": true,
-                            "pageTitle": "My research",
+                            "pageTitle": "My works",
                             "path": "/records/mine",
                           },
                           Object {
@@ -7337,7 +7337,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": [Function],
                               "exact": true,
-                              "pageTitle": "My research",
+                              "pageTitle": "My works",
                               "path": "/records/mine",
                             },
                             Object {
@@ -7630,7 +7630,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": [Function],
                                 "exact": true,
-                                "pageTitle": "My research",
+                                "pageTitle": "My works",
                                 "path": "/records/mine",
                               },
                               Object {
