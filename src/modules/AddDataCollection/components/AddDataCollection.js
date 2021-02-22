@@ -13,7 +13,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
@@ -408,8 +408,8 @@ export default class AddDataCollection extends Component {
 
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="grant-agency"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-grant-agency"
                                                 name="fez_record_search_key_grant_agency"
                                                 maxCount={10}
                                                 searchKey={{
@@ -422,8 +422,8 @@ export default class AddDataCollection extends Component {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="grant-id"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-grant-id"
                                                 name="fez_record_search_key_grant_id"
                                                 maxCount={10}
                                                 searchKey={{ value: 'rek_grant_id', order: 'rek_grant_id_order' }}
@@ -439,8 +439,8 @@ export default class AddDataCollection extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="type-of-data"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-type-of-data"
                                                 name="fez_record_search_key_type_of_data"
                                                 maxCount={10}
                                                 searchKey={{
@@ -456,8 +456,8 @@ export default class AddDataCollection extends Component {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="software-required"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-software-required"
                                                 name="fez_record_search_key_software_required"
                                                 maxCount={10}
                                                 searchKey={{
@@ -473,13 +473,14 @@ export default class AddDataCollection extends Component {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="keywords"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-keywords"
                                                 name="fez_record_search_key_keywords"
                                                 maxCount={10}
                                                 searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                                 locale={locale.components.keywordsForm.field}
                                                 disabled={this.props.submitting}
+                                                ListEditorForm={KeywordsForm}
                                             />
                                         </Grid>
                                         <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>

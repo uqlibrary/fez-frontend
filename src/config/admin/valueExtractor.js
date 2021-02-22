@@ -254,7 +254,7 @@ export default {
             return returnValue;
         },
     },
-    issnField: {
+    issns: {
         getValue: record => {
             const returnValue = (record.fez_record_search_key_issn || []).map(issn => ({
                 rek_order: issn.rek_issn_order,
@@ -927,7 +927,7 @@ export default {
     },
     fez_matched_journals: {
         getValue: record =>
-            (!Array.isArray(record.fez_matched_journals) && {
+            (record.fez_matched_journals && {
                 jnl_jid: record.fez_matched_journals.mtj_jnl_id,
                 id: record.fez_matched_journals.mtj_jnl_id,
             }) ||

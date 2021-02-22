@@ -326,6 +326,10 @@ export const BATCH_IMPORT_API = () => ({
     apiUrl: 'external/records/batch-import',
 });
 
+export const MASTER_JOURNAL_LIST_INGEST_API = () => ({
+    apiUrl: 'journals/batch-import',
+});
+
 export const ISSN_LINKS_API = ({ type, issn }) => ({
     apiUrl: `tool/lookup/local/${type}/${issn}`,
 });
@@ -344,6 +348,10 @@ export const BULK_UPDATES_API = () => ({
 
 export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
+});
+
+export const JOURNAL_API = ({ id }) => ({
+    apiUrl: `journals/${id}`,
 });
 
 export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({

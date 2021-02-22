@@ -9271,6 +9271,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadCurrentAccount": [Function],
                                                           "loadFavouriteSearchList": [Function],
                                                           "loadFullRecordToClaim": [Function],
+                                                          "loadJournal": [Function],
                                                           "loadJournalLookup": [Function],
                                                           "loadMyEditorialAppointmentsList": [Function],
                                                           "loadNewsFeed": [Function],
@@ -9283,6 +9284,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadThirdPartyResults": [Function],
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
+                                                          "requestMJLIngest": [Function],
                                                           "requestOrcidSync": [Function],
                                                           "resetDoi": [Function],
                                                           "resetSavingAuthorState": [Function],
@@ -11605,6 +11607,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "loadCurrentAccount": [Function],
                               "loadFavouriteSearchList": [Function],
                               "loadFullRecordToClaim": [Function],
+                              "loadJournal": [Function],
                               "loadJournalLookup": [Function],
                               "loadMyEditorialAppointmentsList": [Function],
                               "loadNewsFeed": [Function],
@@ -11617,6 +11620,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "loadThirdPartyResults": [Function],
                               "loadVocabulariesList": [Function],
                               "logout": [Function],
+                              "requestMJLIngest": [Function],
                               "requestOrcidSync": [Function],
                               "resetDoi": [Function],
                               "resetSavingAuthorState": [Function],
@@ -13247,6 +13251,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadCurrentAccount": [Function],
                                                                           "loadFavouriteSearchList": [Function],
                                                                           "loadFullRecordToClaim": [Function],
+                                                                          "loadJournal": [Function],
                                                                           "loadJournalLookup": [Function],
                                                                           "loadMyEditorialAppointmentsList": [Function],
                                                                           "loadNewsFeed": [Function],
@@ -13259,6 +13264,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadThirdPartyResults": [Function],
                                                                           "loadVocabulariesList": [Function],
                                                                           "logout": [Function],
+                                                                          "requestMJLIngest": [Function],
                                                                           "requestOrcidSync": [Function],
                                                                           "resetDoi": [Function],
                                                                           "resetSavingAuthorState": [Function],
@@ -13395,6 +13401,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadCurrentAccount": [Function],
                                                                             "loadFavouriteSearchList": [Function],
                                                                             "loadFullRecordToClaim": [Function],
+                                                                            "loadJournal": [Function],
                                                                             "loadJournalLookup": [Function],
                                                                             "loadMyEditorialAppointmentsList": [Function],
                                                                             "loadNewsFeed": [Function],
@@ -13407,6 +13414,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadThirdPartyResults": [Function],
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
+                                                                            "requestMJLIngest": [Function],
                                                                             "requestOrcidSync": [Function],
                                                                             "resetDoi": [Function],
                                                                             "resetSavingAuthorState": [Function],
@@ -14232,6 +14240,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     <WithStyles(ForwardRef(Card))
                                                                                       className="Cards-card-273 StandardCard"
                                                                                       data-testid="standard-card-what-is-espace?"
+                                                                                      id="standard-card-what-is-espace?"
                                                                                       style={Object {}}
                                                                                     >
                                                                                       <ForwardRef(Card)
@@ -14242,12 +14251,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           }
                                                                                         }
                                                                                         data-testid="standard-card-what-is-espace?"
+                                                                                        id="standard-card-what-is-espace?"
                                                                                         style={Object {}}
                                                                                       >
                                                                                         <WithStyles(ForwardRef(Paper))
                                                                                           className="MuiCard-root Cards-card-273 StandardCard"
                                                                                           data-testid="standard-card-what-is-espace?"
                                                                                           elevation={1}
+                                                                                          id="standard-card-what-is-espace?"
                                                                                           style={Object {}}
                                                                                         >
                                                                                           <ForwardRef(Paper)
@@ -14286,11 +14297,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                             }
                                                                                             data-testid="standard-card-what-is-espace?"
                                                                                             elevation={1}
+                                                                                            id="standard-card-what-is-espace?"
                                                                                             style={Object {}}
                                                                                           >
                                                                                             <div
                                                                                               className="MuiPaper-root MuiCard-root Cards-card-273 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                                               data-testid="standard-card-what-is-espace?"
+                                                                                              id="standard-card-what-is-espace?"
                                                                                               style={Object {}}
                                                                                             >
                                                                                               <WithStyles(ForwardRef(CardHeader))
@@ -14307,6 +14320,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     "color": "inherit",
                                                                                                     "component": "h3",
                                                                                                     "data-testid": "standard-card-what-is-espace?-header",
+                                                                                                    "id": "standard-card-what-is-espace?-header",
                                                                                                     "variant": "h5",
                                                                                                   }
                                                                                                 }
@@ -14330,6 +14344,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       "color": "inherit",
                                                                                                       "component": "h3",
                                                                                                       "data-testid": "standard-card-what-is-espace?-header",
+                                                                                                      "id": "standard-card-what-is-espace?-header",
                                                                                                       "variant": "h5",
                                                                                                     }
                                                                                                   }
@@ -14347,6 +14362,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         component="h3"
                                                                                                         data-testid="standard-card-what-is-espace?-header"
                                                                                                         display="block"
+                                                                                                        id="standard-card-what-is-espace?-header"
                                                                                                         variant="h5"
                                                                                                       >
                                                                                                         <ForwardRef(Typography)
@@ -14389,11 +14405,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           component="h3"
                                                                                                           data-testid="standard-card-what-is-espace?-header"
                                                                                                           display="block"
+                                                                                                          id="standard-card-what-is-espace?-header"
                                                                                                           variant="h5"
                                                                                                         >
                                                                                                           <h3
                                                                                                             className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                                                                             data-testid="standard-card-what-is-espace?-header"
+                                                                                                            id="standard-card-what-is-espace?-header"
                                                                                                           >
                                                                                                             What is eSpace?
                                                                                                           </h3>
@@ -14406,6 +14424,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               <WithStyles(ForwardRef(CardContent))
                                                                                                 className=""
                                                                                                 data-testid="standard-card-what-is-espace?-content"
+                                                                                                id="standard-card-what-is-espace?-content"
                                                                                               >
                                                                                                 <ForwardRef(CardContent)
                                                                                                   className=""
@@ -14415,10 +14434,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     }
                                                                                                   }
                                                                                                   data-testid="standard-card-what-is-espace?-content"
+                                                                                                  id="standard-card-what-is-espace?-content"
                                                                                                 >
                                                                                                   <div
                                                                                                     className="MuiCardContent-root"
                                                                                                     data-testid="standard-card-what-is-espace?-content"
+                                                                                                    id="standard-card-what-is-espace?-content"
                                                                                                   >
                                                                                                     <WithStyles(ForwardRef(Typography))
                                                                                                       variant="body2"
@@ -14677,6 +14698,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadCurrentAccount": [Function],
                                                                                     "loadFavouriteSearchList": [Function],
                                                                                     "loadFullRecordToClaim": [Function],
+                                                                                    "loadJournal": [Function],
                                                                                     "loadJournalLookup": [Function],
                                                                                     "loadMyEditorialAppointmentsList": [Function],
                                                                                     "loadNewsFeed": [Function],
@@ -14689,6 +14711,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadThirdPartyResults": [Function],
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
+                                                                                    "requestMJLIngest": [Function],
                                                                                     "requestOrcidSync": [Function],
                                                                                     "resetDoi": [Function],
                                                                                     "resetSavingAuthorState": [Function],
@@ -14779,6 +14802,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadCurrentAccount": [Function],
                                                                                       "loadFavouriteSearchList": [Function],
                                                                                       "loadFullRecordToClaim": [Function],
+                                                                                      "loadJournal": [Function],
                                                                                       "loadJournalLookup": [Function],
                                                                                       "loadMyEditorialAppointmentsList": [Function],
                                                                                       "loadNewsFeed": [Function],
@@ -14791,6 +14815,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadThirdPartyResults": [Function],
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
+                                                                                      "requestMJLIngest": [Function],
                                                                                       "requestOrcidSync": [Function],
                                                                                       "resetDoi": [Function],
                                                                                       "resetSavingAuthorState": [Function],

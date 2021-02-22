@@ -3791,6 +3791,7 @@ exports[`Component Links  Full mount render 1`] = `
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-107 StandardCard"
                               data-testid="standard-card-links"
+                              id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -3801,12 +3802,14 @@ exports[`Component Links  Full mount render 1`] = `
                                   }
                                 }
                                 data-testid="standard-card-links"
+                                id="standard-card-links"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-107 StandardCard"
                                   data-testid="standard-card-links"
                                   elevation={1}
+                                  id="standard-card-links"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
@@ -3845,11 +3848,13 @@ exports[`Component Links  Full mount render 1`] = `
                                     }
                                     data-testid="standard-card-links"
                                     elevation={1}
+                                    id="standard-card-links"
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-links"
+                                      id="standard-card-links"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -3866,6 +3871,7 @@ exports[`Component Links  Full mount render 1`] = `
                                             "color": "inherit",
                                             "component": "h3",
                                             "data-testid": "standard-card-links-header",
+                                            "id": "standard-card-links-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -3889,6 +3895,7 @@ exports[`Component Links  Full mount render 1`] = `
                                               "color": "inherit",
                                               "component": "h3",
                                               "data-testid": "standard-card-links-header",
+                                              "id": "standard-card-links-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -3906,6 +3913,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                 component="h3"
                                                 data-testid="standard-card-links-header"
                                                 display="block"
+                                                id="standard-card-links-header"
                                                 variant="h5"
                                               >
                                                 <ForwardRef(Typography)
@@ -3948,11 +3956,13 @@ exports[`Component Links  Full mount render 1`] = `
                                                   component="h3"
                                                   data-testid="standard-card-links-header"
                                                   display="block"
+                                                  id="standard-card-links-header"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                     data-testid="standard-card-links-header"
+                                                    id="standard-card-links-header"
                                                   >
                                                     Links
                                                   </h3>
@@ -3965,6 +3975,7 @@ exports[`Component Links  Full mount render 1`] = `
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
                                         data-testid="standard-card-links-content"
+                                        id="standard-card-links-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -3974,10 +3985,12 @@ exports[`Component Links  Full mount render 1`] = `
                                             }
                                           }
                                           data-testid="standard-card-links-content"
+                                          id="standard-card-links-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
                                             data-testid="standard-card-links-content"
+                                            id="standard-card-links-content"
                                           >
                                             <Hidden
                                               xsDown={true}
@@ -9955,6 +9968,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
                           data-testid="standard-card-links"
+                          id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -9965,12 +9979,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                               }
                             }
                             data-testid="standard-card-links"
+                            id="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
+                              id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
@@ -10009,11 +10025,13 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                 }
                                 data-testid="standard-card-links"
                                 elevation={1}
+                                id="standard-card-links"
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
+                                  id="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -10030,6 +10048,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         "color": "inherit",
                                         "component": "h3",
                                         "data-testid": "standard-card-links-header",
+                                        "id": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -10053,6 +10072,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                           "color": "inherit",
                                           "component": "h3",
                                           "data-testid": "standard-card-links-header",
+                                          "id": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -10070,6 +10090,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             component="h3"
                                             data-testid="standard-card-links-header"
                                             display="block"
+                                            id="standard-card-links-header"
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
@@ -10112,11 +10133,13 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                               component="h3"
                                               data-testid="standard-card-links-header"
                                               display="block"
+                                              id="standard-card-links-header"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-links-header"
+                                                id="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -10129,6 +10152,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
                                     data-testid="standard-card-links-content"
+                                    id="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -10138,10 +10162,12 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         }
                                       }
                                       data-testid="standard-card-links-content"
+                                      id="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
                                         data-testid="standard-card-links-content"
+                                        id="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}
@@ -16870,6 +16896,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
                           data-testid="standard-card-links"
+                          id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -16880,12 +16907,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                               }
                             }
                             data-testid="standard-card-links"
+                            id="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
+                              id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
@@ -16924,11 +16953,13 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                 }
                                 data-testid="standard-card-links"
                                 elevation={1}
+                                id="standard-card-links"
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
+                                  id="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -16945,6 +16976,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         "color": "inherit",
                                         "component": "h3",
                                         "data-testid": "standard-card-links-header",
+                                        "id": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -16968,6 +17000,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                           "color": "inherit",
                                           "component": "h3",
                                           "data-testid": "standard-card-links-header",
+                                          "id": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -16985,6 +17018,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             component="h3"
                                             data-testid="standard-card-links-header"
                                             display="block"
+                                            id="standard-card-links-header"
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
@@ -17027,11 +17061,13 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                               component="h3"
                                               data-testid="standard-card-links-header"
                                               display="block"
+                                              id="standard-card-links-header"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-links-header"
+                                                id="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -17044,6 +17080,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
                                     data-testid="standard-card-links-content"
+                                    id="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -17053,10 +17090,12 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         }
                                       }
                                       data-testid="standard-card-links-content"
+                                      id="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
                                         data-testid="standard-card-links-content"
+                                        id="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}
@@ -22483,6 +22522,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
                           data-testid="standard-card-links"
+                          id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -22493,12 +22533,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                               }
                             }
                             data-testid="standard-card-links"
+                            id="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
+                              id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
@@ -22537,11 +22579,13 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                 }
                                 data-testid="standard-card-links"
                                 elevation={1}
+                                id="standard-card-links"
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
+                                  id="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -22558,6 +22602,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         "color": "inherit",
                                         "component": "h3",
                                         "data-testid": "standard-card-links-header",
+                                        "id": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -22581,6 +22626,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                           "color": "inherit",
                                           "component": "h3",
                                           "data-testid": "standard-card-links-header",
+                                          "id": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -22598,6 +22644,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             component="h3"
                                             data-testid="standard-card-links-header"
                                             display="block"
+                                            id="standard-card-links-header"
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
@@ -22640,11 +22687,13 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                               component="h3"
                                               data-testid="standard-card-links-header"
                                               display="block"
+                                              id="standard-card-links-header"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-links-header"
+                                                id="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -22657,6 +22706,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
                                     data-testid="standard-card-links-content"
+                                    id="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -22666,10 +22716,12 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         }
                                       }
                                       data-testid="standard-card-links-content"
+                                      id="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
                                         data-testid="standard-card-links-content"
+                                        id="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}
@@ -29299,6 +29351,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                         <WithStyles(ForwardRef(Card))
                           className="Cards-card-107 StandardCard"
                           data-testid="standard-card-links"
+                          id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
@@ -29309,12 +29362,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                               }
                             }
                             data-testid="standard-card-links"
+                            id="standard-card-links"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
                               className="MuiCard-root Cards-card-107 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
+                              id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
@@ -29353,11 +29408,13 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                 }
                                 data-testid="standard-card-links"
                                 elevation={1}
+                                id="standard-card-links"
                                 style={Object {}}
                               >
                                 <div
                                   className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
+                                  id="standard-card-links"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -29374,6 +29431,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         "color": "inherit",
                                         "component": "h3",
                                         "data-testid": "standard-card-links-header",
+                                        "id": "standard-card-links-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -29397,6 +29455,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                           "color": "inherit",
                                           "component": "h3",
                                           "data-testid": "standard-card-links-header",
+                                          "id": "standard-card-links-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -29414,6 +29473,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             component="h3"
                                             data-testid="standard-card-links-header"
                                             display="block"
+                                            id="standard-card-links-header"
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
@@ -29456,11 +29516,13 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                               component="h3"
                                               data-testid="standard-card-links-header"
                                               display="block"
+                                              id="standard-card-links-header"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-links-header"
+                                                id="standard-card-links-header"
                                               >
                                                 Links
                                               </h3>
@@ -29473,6 +29535,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
                                     data-testid="standard-card-links-content"
+                                    id="standard-card-links-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -29482,10 +29545,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         }
                                       }
                                       data-testid="standard-card-links-content"
+                                      id="standard-card-links-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
                                         data-testid="standard-card-links-content"
+                                        id="standard-card-links-content"
                                       >
                                         <Hidden
                                           xsDown={true}

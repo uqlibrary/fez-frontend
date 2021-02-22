@@ -784,33 +784,31 @@ export const CURRENT_LICENCES = [
         ],
     },
 ];
+
+export const CREATIVE_COMMONS_LICENCES = {
+    ['by']: 'Creative Commons Attribution (only)',
+    ['by-nd']: 'Creative Commons Attribution no derivatives',
+    ['by-nc']: 'Creative Commons Attribution noncommercial',
+    ['by-nc-nd']: 'Creative Commons Attribution noncommercial no derivatives',
+    ['by-nc-sa']: 'Creative Commons Attribution noncommercial share alike',
+    ['by-sa']: 'Creative Commons Attribution share alike',
+};
+
+export const getCreativeCommonsUrl = conditionSlug =>
+    `https://creativecommons.org/licenses/${conditionSlug}/3.0/deed.en_US`;
+
 export const DEPRECATED_LICENCES = [
-    {
-        value: 453608,
-        text: 'Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US',
-    },
-    {
-        value: 453609,
-        text: 'Creative Commons Attribution no derivatives http://creativecommons.org/licenses/by-nd/3.0/deed.en_US',
-    },
-    {
-        value: 453610,
-        text: 'Creative Commons Attribution noncommercial http://creativecommons.org/licenses/by-nc/3.0/deed.en_US',
-    },
-    {
-        value: 453611,
-        text:
-            'Creative Commons Attribution noncommercial no derivatives http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US',
-    },
-    {
-        value: 453612,
-        text:
-            'Creative Commons Attribution noncommercial share alike http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US ',
-    },
-    {
-        value: 453613,
-        text: 'Creative Commons Attribution share alike http://creativecommons.org/licenses/by-sa/3.0/deed.en_US',
-    },
+    ...[
+        { value: 453608, conditionSlug: 'by' },
+        { value: 453609, conditionSlug: 'by-nd' },
+        { value: 453610, conditionSlug: 'by-nc' },
+        { value: 453611, conditionSlug: 'by-nc-nd' },
+        { value: 453612, conditionSlug: 'by-nc-sa' },
+        { value: 453613, conditionSlug: 'by-sa' },
+    ].map(item => ({
+        value: item.value,
+        text: `${CREATIVE_COMMONS_LICENCES[item.conditionSlug]} ${getCreativeCommonsUrl(item.conditionSlug)}`,
+    })),
     {
         value: 453702,
         text:

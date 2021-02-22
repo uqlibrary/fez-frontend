@@ -3702,6 +3702,7 @@ exports[`Related publications Component  should render component 2`] = `
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-105 StandardCard"
                               data-testid="standard-card-title"
+                              id="standard-card-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -3712,12 +3713,14 @@ exports[`Related publications Component  should render component 2`] = `
                                   }
                                 }
                                 data-testid="standard-card-title"
+                                id="standard-card-title"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-105 StandardCard"
                                   data-testid="standard-card-title"
                                   elevation={1}
+                                  id="standard-card-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
@@ -3756,11 +3759,13 @@ exports[`Related publications Component  should render component 2`] = `
                                     }
                                     data-testid="standard-card-title"
                                     elevation={1}
+                                    id="standard-card-title"
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-title"
+                                      id="standard-card-title"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -3777,6 +3782,7 @@ exports[`Related publications Component  should render component 2`] = `
                                             "color": "inherit",
                                             "component": "h3",
                                             "data-testid": "standard-card-title-header",
+                                            "id": "standard-card-title-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -3800,6 +3806,7 @@ exports[`Related publications Component  should render component 2`] = `
                                               "color": "inherit",
                                               "component": "h3",
                                               "data-testid": "standard-card-title-header",
+                                              "id": "standard-card-title-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -3817,6 +3824,7 @@ exports[`Related publications Component  should render component 2`] = `
                                                 component="h3"
                                                 data-testid="standard-card-title-header"
                                                 display="block"
+                                                id="standard-card-title-header"
                                                 variant="h5"
                                               >
                                                 <ForwardRef(Typography)
@@ -3859,11 +3867,13 @@ exports[`Related publications Component  should render component 2`] = `
                                                   component="h3"
                                                   data-testid="standard-card-title-header"
                                                   display="block"
+                                                  id="standard-card-title-header"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                     data-testid="standard-card-title-header"
+                                                    id="standard-card-title-header"
                                                   >
                                                     Title
                                                   </h3>
@@ -3876,6 +3886,7 @@ exports[`Related publications Component  should render component 2`] = `
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
                                         data-testid="standard-card-title-content"
+                                        id="standard-card-title-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -3885,10 +3896,12 @@ exports[`Related publications Component  should render component 2`] = `
                                             }
                                           }
                                           data-testid="standard-card-title-content"
+                                          id="standard-card-title-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
                                             data-testid="standard-card-title-content"
+                                            id="standard-card-title-content"
                                           >
                                             <ul
                                               className="RelatedPublicationsClass-list-1 publicationList"
@@ -7692,6 +7705,7 @@ exports[`Related publications Component  should render with a publication title 
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-105 StandardCard"
                               data-testid="standard-card-a-test-title"
+                              id="standard-card-a-test-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -7702,12 +7716,14 @@ exports[`Related publications Component  should render with a publication title 
                                   }
                                 }
                                 data-testid="standard-card-a-test-title"
+                                id="standard-card-a-test-title"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-105 StandardCard"
                                   data-testid="standard-card-a-test-title"
                                   elevation={1}
+                                  id="standard-card-a-test-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
@@ -7746,11 +7762,13 @@ exports[`Related publications Component  should render with a publication title 
                                     }
                                     data-testid="standard-card-a-test-title"
                                     elevation={1}
+                                    id="standard-card-a-test-title"
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-a-test-title"
+                                      id="standard-card-a-test-title"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -7767,6 +7785,7 @@ exports[`Related publications Component  should render with a publication title 
                                             "color": "inherit",
                                             "component": "h3",
                                             "data-testid": "standard-card-a-test-title-header",
+                                            "id": "standard-card-a-test-title-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -7790,6 +7809,7 @@ exports[`Related publications Component  should render with a publication title 
                                               "color": "inherit",
                                               "component": "h3",
                                               "data-testid": "standard-card-a-test-title-header",
+                                              "id": "standard-card-a-test-title-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -7807,6 +7827,7 @@ exports[`Related publications Component  should render with a publication title 
                                                 component="h3"
                                                 data-testid="standard-card-a-test-title-header"
                                                 display="block"
+                                                id="standard-card-a-test-title-header"
                                                 variant="h5"
                                               >
                                                 <ForwardRef(Typography)
@@ -7849,11 +7870,13 @@ exports[`Related publications Component  should render with a publication title 
                                                   component="h3"
                                                   data-testid="standard-card-a-test-title-header"
                                                   display="block"
+                                                  id="standard-card-a-test-title-header"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                     data-testid="standard-card-a-test-title-header"
+                                                    id="standard-card-a-test-title-header"
                                                   >
                                                     A test Title
                                                   </h3>
@@ -7866,6 +7889,7 @@ exports[`Related publications Component  should render with a publication title 
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
                                         data-testid="standard-card-a-test-title-content"
+                                        id="standard-card-a-test-title-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -7875,10 +7899,12 @@ exports[`Related publications Component  should render with a publication title 
                                             }
                                           }
                                           data-testid="standard-card-a-test-title-content"
+                                          id="standard-card-a-test-title-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
                                             data-testid="standard-card-a-test-title-content"
+                                            id="standard-card-a-test-title-content"
                                           >
                                             <ul
                                               className="RelatedPublicationsClass-list-1 publicationList"
@@ -11761,6 +11787,7 @@ exports[`Related publications Component  should render without a child search ke
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-105 StandardCard"
                               data-testid="standard-card-title"
+                              id="standard-card-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -11771,12 +11798,14 @@ exports[`Related publications Component  should render without a child search ke
                                   }
                                 }
                                 data-testid="standard-card-title"
+                                id="standard-card-title"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-105 StandardCard"
                                   data-testid="standard-card-title"
                                   elevation={1}
+                                  id="standard-card-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
@@ -11815,11 +11844,13 @@ exports[`Related publications Component  should render without a child search ke
                                     }
                                     data-testid="standard-card-title"
                                     elevation={1}
+                                    id="standard-card-title"
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-title"
+                                      id="standard-card-title"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -11836,6 +11867,7 @@ exports[`Related publications Component  should render without a child search ke
                                             "color": "inherit",
                                             "component": "h3",
                                             "data-testid": "standard-card-title-header",
+                                            "id": "standard-card-title-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -11859,6 +11891,7 @@ exports[`Related publications Component  should render without a child search ke
                                               "color": "inherit",
                                               "component": "h3",
                                               "data-testid": "standard-card-title-header",
+                                              "id": "standard-card-title-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -11876,6 +11909,7 @@ exports[`Related publications Component  should render without a child search ke
                                                 component="h3"
                                                 data-testid="standard-card-title-header"
                                                 display="block"
+                                                id="standard-card-title-header"
                                                 variant="h5"
                                               >
                                                 <ForwardRef(Typography)
@@ -11918,11 +11952,13 @@ exports[`Related publications Component  should render without a child search ke
                                                   component="h3"
                                                   data-testid="standard-card-title-header"
                                                   display="block"
+                                                  id="standard-card-title-header"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                     data-testid="standard-card-title-header"
+                                                    id="standard-card-title-header"
                                                   >
                                                     Title
                                                   </h3>
@@ -11935,6 +11971,7 @@ exports[`Related publications Component  should render without a child search ke
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
                                         data-testid="standard-card-title-content"
+                                        id="standard-card-title-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -11944,10 +11981,12 @@ exports[`Related publications Component  should render without a child search ke
                                             }
                                           }
                                           data-testid="standard-card-title-content"
+                                          id="standard-card-title-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
                                             data-testid="standard-card-title-content"
+                                            id="standard-card-title-content"
                                           >
                                             <ul
                                               className="RelatedPublicationsClass-list-1 publicationList"
@@ -23984,6 +24023,7 @@ exports[`Related publications Component  should render without a parent search k
                             <WithStyles(ForwardRef(Card))
                               className="Cards-card-105 StandardCard"
                               data-testid="standard-card-title"
+                              id="standard-card-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
@@ -23994,12 +24034,14 @@ exports[`Related publications Component  should render without a parent search k
                                   }
                                 }
                                 data-testid="standard-card-title"
+                                id="standard-card-title"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
                                   className="MuiCard-root Cards-card-105 StandardCard"
                                   data-testid="standard-card-title"
                                   elevation={1}
+                                  id="standard-card-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
@@ -24038,11 +24080,13 @@ exports[`Related publications Component  should render without a parent search k
                                     }
                                     data-testid="standard-card-title"
                                     elevation={1}
+                                    id="standard-card-title"
                                     style={Object {}}
                                   >
                                     <div
                                       className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-title"
+                                      id="standard-card-title"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -24059,6 +24103,7 @@ exports[`Related publications Component  should render without a parent search k
                                             "color": "inherit",
                                             "component": "h3",
                                             "data-testid": "standard-card-title-header",
+                                            "id": "standard-card-title-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -24082,6 +24127,7 @@ exports[`Related publications Component  should render without a parent search k
                                               "color": "inherit",
                                               "component": "h3",
                                               "data-testid": "standard-card-title-header",
+                                              "id": "standard-card-title-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -24099,6 +24145,7 @@ exports[`Related publications Component  should render without a parent search k
                                                 component="h3"
                                                 data-testid="standard-card-title-header"
                                                 display="block"
+                                                id="standard-card-title-header"
                                                 variant="h5"
                                               >
                                                 <ForwardRef(Typography)
@@ -24141,11 +24188,13 @@ exports[`Related publications Component  should render without a parent search k
                                                   component="h3"
                                                   data-testid="standard-card-title-header"
                                                   display="block"
+                                                  id="standard-card-title-header"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                     data-testid="standard-card-title-header"
+                                                    id="standard-card-title-header"
                                                   >
                                                     Title
                                                   </h3>
@@ -24158,6 +24207,7 @@ exports[`Related publications Component  should render without a parent search k
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
                                         data-testid="standard-card-title-content"
+                                        id="standard-card-title-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -24167,10 +24217,12 @@ exports[`Related publications Component  should render without a parent search k
                                             }
                                           }
                                           data-testid="standard-card-title-content"
+                                          id="standard-card-title-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
                                             data-testid="standard-card-title-content"
+                                            id="standard-card-title-content"
                                           >
                                             <ul
                                               className="RelatedPublicationsClass-list-1 publicationList"

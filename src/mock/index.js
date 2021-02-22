@@ -284,6 +284,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListThesis.data,
             ...mockData.publicationTypeListVideo.data,
             ...mockData.publicationTypeListWorkingPaper.data,
+            ...mockData.trendingPublications.data,
             ...mockData.unpublishedSearchList.data,
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
@@ -371,7 +372,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         return [200, { data }];
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
-    .reply(200, { ...mockData.journalLookup });
+    .reply(200, { ...mockData.journalLookup })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.journalDetails });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -434,7 +437,10 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
-    .reply(200, { ...mockData.myEditorialAppointmentItem });
+    .reply(200, { ...mockData.myEditorialAppointmentItem })
+    .onPost(routes.MASTER_JOURNAL_LIST_INGEST_API().apiUrl)
+    .reply(200, { data: {} });
+// .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
 
 mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {

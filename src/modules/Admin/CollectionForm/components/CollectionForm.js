@@ -7,7 +7,7 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -160,7 +160,7 @@ export default class CollectionForm extends Component {
                                                 <Grid item xs={12}>
                                                     <Typography>{txt.formLabels.keywords.description}</Typography>
                                                     <Field
-                                                        component={ListEditorField}
+                                                        component={NewListEditorField}
                                                         name="fez_record_search_key_keywords"
                                                         maxCount={10}
                                                         // validate={[validation.requiredList]}
@@ -168,7 +168,8 @@ export default class CollectionForm extends Component {
                                                             value: 'rek_keywords',
                                                             order: 'rek_keywords_order',
                                                         }}
-                                                        isValid={validation.isValidKeyword(111)}
+                                                        ListEditorForm={KeywordsForm}
+                                                        // isValid={validation.isValidKeyword(111)}
                                                         listEditorId="rek-keywords"
                                                         locale={txt.formLabels.keywords.field}
                                                         disabled={this.props.submitting}

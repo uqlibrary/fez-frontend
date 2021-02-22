@@ -10,6 +10,7 @@ export class InlineLoader extends React.Component {
     static propTypes = {
         message: PropTypes.string,
         classes: PropTypes.object,
+        loaderId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -17,6 +18,7 @@ export class InlineLoader extends React.Component {
     };
 
     render() {
+        const { loaderId, message } = this.props;
         return (
             <div style={{ padding: 8 }}>
                 <Grid
@@ -26,6 +28,8 @@ export class InlineLoader extends React.Component {
                     justify="center"
                     alignItems="center"
                     alignContent={'center'}
+                    id={loaderId}
+                    data-testid={loaderId}
                 >
                     <Hidden smUp>
                         <Grid item xs />
@@ -35,7 +39,7 @@ export class InlineLoader extends React.Component {
                     </Grid>
                     <Grid item xs={'auto'} style={{ textAlign: 'center' }}>
                         <Typography color={'primary'} variant={'h5'} component={'span'} style={{ fontSize: '1.33rem' }}>
-                            {this.props.message}
+                            {message}
                         </Typography>
                     </Grid>
                     <Hidden smUp>
