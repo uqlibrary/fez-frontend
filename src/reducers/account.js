@@ -5,8 +5,8 @@ export const initialState = {
     author: null,
     authorDetails: null,
     accountLoading: false,
-    accountAuthorLoading: true,
-    accountAuthorDetailsLoading: true,
+    accountAuthorLoading: false,
+    accountAuthorDetailsLoading: false,
     isSessionExpired: null,
 };
 
