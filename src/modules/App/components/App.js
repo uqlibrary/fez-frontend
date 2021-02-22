@@ -155,8 +155,9 @@ export class AppClass extends PureComponent {
 
     componentDidMount() {
         if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
-            console.log('loadCurrentAccount');
             this.props.actions.loadCurrentAccount();
+        } else {
+            this.props.actions.logout();
         }
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);

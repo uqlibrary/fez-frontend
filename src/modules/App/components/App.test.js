@@ -16,6 +16,7 @@ function setup(testProps = {}) {
         accountAuthorLoading: testProps.accountAuthorLoading || false,
         actions: testProps.actions || {
             loadCurrentAccount: jest.fn(),
+            logout: jest.fn(),
             searchAuthorPublications: jest.fn(),
             getFavouriteSearchAlias: jest.fn(),
         },
