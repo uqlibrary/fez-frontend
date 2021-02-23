@@ -8,7 +8,7 @@ export default {
             // secondaryText is set to user's email
         },
         myResearch: {
-            primaryText: 'My research',
+            primaryText: 'My works',
         },
         myDatasets: {
             primaryText: 'My research data',
