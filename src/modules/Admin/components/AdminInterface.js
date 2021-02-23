@@ -225,6 +225,7 @@ export const AdminInterface = ({
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
         );
 
+    console.log(!!submitting, !!disableSubmit, locked);
     const renderButtonBar = (placement = '') => (
         <React.Fragment>
             <Grid item xs={12} sm={2}>
@@ -243,7 +244,7 @@ export const AdminInterface = ({
                     <Button
                         id={`admin-work-retract${placement}`}
                         data-testid={`retract-admin${placement}`}
-                        disabled={!!submitting || !!disableSubmit || locked}
+                        disabled={!!submitting || !!disableSubmit}
                         variant="contained"
                         color="secondary"
                         fullWidth
