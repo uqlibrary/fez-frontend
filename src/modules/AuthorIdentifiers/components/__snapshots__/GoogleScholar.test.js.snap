@@ -1457,6 +1457,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                 color="primary"
                                 component="h2"
                                 data-testid="page-title"
+                                id="page-title"
                                 variant="h4"
                               >
                                 <ForwardRef(Typography)
@@ -1498,11 +1499,13 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                   color="primary"
                                   component="h2"
                                   data-testid="page-title"
+                                  id="page-title"
                                   variant="h4"
                                 >
                                   <h2
                                     className="MuiTypography-root Page-layoutTitle-2 MuiTypography-h4 MuiTypography-colorPrimary"
                                     data-testid="page-title"
+                                    id="page-title"
                                   >
                                     Google Scholar identifier
                                   </h2>
