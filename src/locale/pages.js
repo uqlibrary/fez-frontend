@@ -267,7 +267,7 @@ export default {
             },
         },
         myResearch: {
-            pageTitle: 'My research',
+            pageTitle: 'My works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (

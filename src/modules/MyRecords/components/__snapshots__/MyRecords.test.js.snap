@@ -2,7 +2,7 @@
 
 exports[`MyRecords test component has displayable facets 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -103,7 +103,7 @@ exports[`MyRecords test component has displayable facets 1`] = `
 
 exports[`MyRecords test renders active filters 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -208,7 +208,7 @@ exports[`MyRecords test renders active filters 1`] = `
 
 exports[`MyRecords test renders list of publications no facets 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -363,7 +363,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
 
 exports[`MyRecords test renders list of publications with custom actions 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -526,7 +526,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
 
 exports[`MyRecords test renders list of publications with facets 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -781,7 +781,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
 
 exports[`MyRecords test renders loading screen while export publications loading 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -907,7 +907,7 @@ exports[`MyRecords test renders loading screen while loading account data 1`] = 
 
 exports[`MyRecords test renders loading screen while loading publications  1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -927,7 +927,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
 
 exports[`MyRecords test renders loading screen while loading publications while filtering 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -1051,7 +1051,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
 
 exports[`MyRecords test renders no results 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
@@ -1106,7 +1106,7 @@ exports[`MyRecords test renders no results 1`] = `
 
 exports[`MyRecords test should handle export publications 1`] = `
 <StandardPage
-  title="My research"
+  title="My works"
 >
   <WithStyles(ForwardRef(Grid))
     container={true}
