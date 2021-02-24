@@ -2,7 +2,6 @@ import React from 'react';
 import { locale } from 'locale';
 import { pathConfig, getSearchUrl } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
-import { USERS_WITH_ACCESS_TO_EDITORIAL_ROLES } from 'config/general';
 // import param from 'can-param';
 // import { DEFAULT_QUERY_PARAMS } from 'config/general';
 // import { createHash } from 'crypto';
@@ -33,6 +32,10 @@ export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test
 
 const isAdmin = authorDetails => {
     return authorDetails && (!!authorDetails.is_administrator || !!authorDetails.is_super_administrator);
+};
+
+const isSuperAdmin = authorDetails => {
+    return authorDetails && !!authorDetails.is_super_administrator;
 };
 
 // export const getDatastreamVersionQueryString = (fileName, checksum) => {
@@ -179,6 +182,7 @@ export const flattedPathConfig = [
     '/admin/change-display-type',
     '/admin/collection',
     '/admin/community',
+    '/admin/master-journal-list-ingest',
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/add',
@@ -419,7 +423,8 @@ export const getRoutesConfig = ({
                   },
               ]
             : []),
-        ...(authorDetails && isAdmin(authorDetails)
+
+        ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
                       path: pathConfig.admin.community,
@@ -435,6 +440,10 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.collection.title,
                   },
+              ]
+            : []),
+        ...(authorDetails && isAdmin(authorDetails)
+            ? [
                   {
                       path: pathConfig.admin.add,
                       render: props => <components.Admin {...props} createMode />,
@@ -548,6 +557,13 @@ export const getRoutesConfig = ({
                       access: [roles.digiteam],
                       pageTitle: locale.components.digiTeam.batchImport.title,
                   },
+                  {
+                      path: pathConfig.admin.masterJournalListIngest,
+                      component: components.MasterJournalListIngest,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.components.MasterJournalListIngest.title,
+                  },
               ]
             : []),
         ...publicPages,
@@ -643,14 +659,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.dataset.add,
                       ...locale.menu.addMissingDataset,
                   },
-                  ...(process.env.NODE_ENV !== 'production' || USERS_WITH_ACCESS_TO_EDITORIAL_ROLES.includes(account.id)
-                      ? [
-                            {
-                                linkTo: pathConfig.editorialAppointments.list,
-                                ...locale.menu.myEditorialAppointments,
-                            },
-                        ]
-                      : []),
+                  {
+                      linkTo: pathConfig.editorialAppointments.list,
+                      ...locale.menu.myEditorialAppointments,
+                  },
                   {
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
@@ -661,7 +673,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   },
               ]
             : []),
-        ...(authorDetails && isAdmin(authorDetails)
+        ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
                       linkTo: pathConfig.admin.community,
@@ -706,6 +718,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.digiteam.batchImport,
                       ...locale.menu.digiteam.batchImport,
+                  },
+                  {
+                      linkTo: pathConfig.admin.masterJournalListIngest,
+                      ...locale.menu.masterJournalListIngest,
                   },
                   {
                       linkTo: pathConfig.admin.bulkUpdates,

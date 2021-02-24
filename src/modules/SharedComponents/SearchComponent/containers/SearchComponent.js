@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import deparam from 'can-deparam';
 
 export const mapStateToProps = (state, ownProps) => {
+    console.log(ownProps);
     let searchQuery;
     try {
         searchQuery = deparam(ownProps.location.search.substr(1)) || {};
@@ -20,6 +21,7 @@ export const mapStateToProps = (state, ownProps) => {
     const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList && publicationsList.length > 0;
 
     return {
+        ...state.get('accountReducer'),
         searchQueryParams: (!!searchQuery && searchQuery.searchQueryParams) || {},
         isAdvancedSearch: isAdvancedSearch,
         isAdvancedSearchMinimised: isAdvancedSearchMinimised,

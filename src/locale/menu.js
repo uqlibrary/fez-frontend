@@ -8,7 +8,7 @@ export default {
             // secondaryText is set to user's email
         },
         myResearch: {
-            primaryText: 'My research',
+            primaryText: 'My works',
         },
         myDatasets: {
             primaryText: 'My research data',
@@ -66,6 +66,9 @@ export default {
             batchImport: {
                 primaryText: 'CSV ingest',
             },
+        },
+        masterJournalListIngest: {
+            primaryText: 'Master journal list ingest',
         },
         bulkUpdates: {
             primaryText: 'Bulk updates',

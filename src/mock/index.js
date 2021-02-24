@@ -2,7 +2,7 @@
 import { api, sessionApi } from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
-import { SESSION_COOKIE_NAME } from 'config';
+import { SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
@@ -15,6 +15,7 @@ const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(
 // const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
+Cookies.set(SESSION_USER_GROUP_COOKIE_NAME, 'LIBRARYSTAFFB');
 
 // Get user from query string
 let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
@@ -284,6 +285,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListThesis.data,
             ...mockData.publicationTypeListVideo.data,
             ...mockData.publicationTypeListWorkingPaper.data,
+            ...mockData.trendingPublications.data,
             ...mockData.unpublishedSearchList.data,
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
@@ -371,7 +373,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         return [200, { data }];
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
-    .reply(200, { ...mockData.journalLookup });
+    .reply(200, { ...mockData.journalLookup })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.journalDetails });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -434,7 +438,10 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
-    .reply(200, { ...mockData.myEditorialAppointmentItem });
+    .reply(200, { ...mockData.myEditorialAppointmentItem })
+    .onPost(routes.MASTER_JOURNAL_LIST_INGEST_API().apiUrl)
+    .reply(200, { data: {} });
+// .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
 
 mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {

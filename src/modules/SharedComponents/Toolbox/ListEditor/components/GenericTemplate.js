@@ -7,3 +7,5 @@ export const GenericTemplate = ({ item }) => <Typography variant="body2">{item.v
 GenericTemplate.propTypes = {
     item: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
+
+export default React.memo(GenericTemplate);

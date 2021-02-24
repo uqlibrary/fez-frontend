@@ -385,9 +385,21 @@ exports[`Collection form should render the full form 1`] = `
                   Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
                 </WithStyles(ForwardRef(Typography))>
                 <Field
-                  component={[Function]}
+                  ListEditorForm={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
-                  isValid={[Function]}
                   listEditorId="rek-keywords"
                   locale={
                     Object {

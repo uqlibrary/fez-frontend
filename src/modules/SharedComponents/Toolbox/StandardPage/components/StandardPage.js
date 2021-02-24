@@ -34,20 +34,22 @@ export class Page extends Component {
         help: PropTypes.object,
         children: PropTypes.any,
         classes: PropTypes.object,
+        standardPageId: PropTypes.string,
     };
 
     render() {
-        const { classes, title, children, help } = this.props;
+        const { classes, title, children, help, standardPageId } = this.props;
         return (
-            <Grid container className="StandardPage">
+            <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
                 {title && (
                     <Grid item xs>
                         <Typography
                             className={classes.layoutTitle}
-                            color={'primary'}
-                            component={'h2'}
+                            color="primary"
+                            component="h2"
+                            id="page-title"
                             data-testid="page-title"
-                            variant={'h4'}
+                            variant="h4"
                         >
                             {title}
                         </Typography>
