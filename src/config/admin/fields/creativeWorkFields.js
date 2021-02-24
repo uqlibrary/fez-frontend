@@ -59,7 +59,7 @@ export default {
             groups: [['authors']],
         },
         {
-            title: 'Editors',
+            title: 'Contributors',
             groups: [['editors']],
         },
     ],

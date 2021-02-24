@@ -248,11 +248,13 @@ export default {
             Book: {
                 rek_date: 'Publication year',
                 fez_record_search_key_original_format: 'Physical description',
+                fez_record_search_key_contributor: isNtro => (isNtro ? 'Contributor(s)' : 'Editor(s)'),
             },
             'Book Chapter': {
                 rek_date: 'Publication year',
                 rek_title: 'Title of chapter',
                 fez_record_search_key_translated_title: 'Translated title of chapter',
+                fez_record_search_key_contributor: isNtro => (isNtro ? 'Contributor(s)' : 'Editor(s)'),
             },
             'Conference Paper': {
                 rek_date: 'Publication year',
@@ -267,6 +269,7 @@ export default {
             },
             'Creative Work': {
                 rek_genre: 'Type',
+                fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_start_date: 'Start date',
                 fez_record_search_key_end_date: 'End date',
                 rek_total_pages: 'Extent',
@@ -332,6 +335,7 @@ export default {
             'Research Report': {
                 rek_title: 'Title of report',
                 fez_record_search_key_translated_title: 'Translated title of report',
+                fez_record_search_key_contributor: isNtro => (isNtro ? 'Contributor(s)' : 'Editor(s)'),
             },
             Patent: {
                 rek_title: 'Patent title',

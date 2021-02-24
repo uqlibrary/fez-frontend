@@ -61,15 +61,17 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: ({ onlyEditors = false } = {}) => [
-        ...[
-            !onlyEditors && {
-                title: 'Authors',
-                groups: [['authors']],
-            },
-        ].filter(Boolean),
+    authors: ({ onlyEditors = false, isNtro = false } = {}) => [
+        ...(!onlyEditors
+            ? [
+                  {
+                      title: 'Authors',
+                      groups: [['authors']],
+                  },
+              ]
+            : []),
         {
-            title: 'Editors',
+            title: isNtro ? 'Contributors' : 'Editors',
             groups: [['editors']],
         },
     ],
