@@ -465,8 +465,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                   Array [
                     [Function],
                   ],
+                  Array [
+                    [Function],
+                  ],
                 ],
                 "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
                   Object {
                     "type": "return",
                     "value": undefined,
@@ -1705,8 +1712,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       Array [
                         [Function],
                       ],
+                      Array [
+                        [Function],
+                      ],
                     ],
                     "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -4374,8 +4388,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           Array [
                                                                             [Function],
                                                                           ],
+                                                                          Array [
+                                                                            [Function],
+                                                                          ],
                                                                         ],
                                                                         "results": Array [
+                                                                          Object {
+                                                                            "type": "return",
+                                                                            "value": undefined,
+                                                                          },
                                                                           Object {
                                                                             "type": "return",
                                                                             "value": undefined,
@@ -4441,8 +4462,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             Array [
                                                                               [Function],
                                                                             ],
+                                                                            Array [
+                                                                              [Function],
+                                                                            ],
                                                                           ],
                                                                           "results": Array [
+                                                                            Object {
+                                                                              "type": "return",
+                                                                              "value": undefined,
+                                                                            },
                                                                             Object {
                                                                               "type": "return",
                                                                               "value": undefined,
@@ -4478,8 +4506,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               Array [
                                                                                 [Function],
                                                                               ],
+                                                                              Array [
+                                                                                [Function],
+                                                                              ],
                                                                             ],
                                                                             "results": Array [
+                                                                              Object {
+                                                                                "type": "return",
+                                                                                "value": undefined,
+                                                                              },
                                                                               Object {
                                                                                 "type": "return",
                                                                                 "value": undefined,
@@ -4522,8 +4557,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 Array [
                                                                                   [Function],
                                                                                 ],
+                                                                                Array [
+                                                                                  [Function],
+                                                                                ],
                                                                               ],
                                                                               "results": Array [
+                                                                                Object {
+                                                                                  "type": "return",
+                                                                                  "value": undefined,
+                                                                                },
                                                                                 Object {
                                                                                   "type": "return",
                                                                                   "value": undefined,
@@ -4557,8 +4599,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   Array [
                                                                                     [Function],
                                                                                   ],
+                                                                                  Array [
+                                                                                    [Function],
+                                                                                  ],
                                                                                 ],
                                                                                 "results": Array [
+                                                                                  Object {
+                                                                                    "type": "return",
+                                                                                    "value": undefined,
+                                                                                  },
                                                                                   Object {
                                                                                     "type": "return",
                                                                                     "value": undefined,
@@ -11756,8 +11805,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Array [
                                                                         [Function],
                                                                       ],
+                                                                      Array [
+                                                                        [Function],
+                                                                      ],
                                                                     ],
                                                                     "results": Array [
+                                                                      Object {
+                                                                        "type": "return",
+                                                                        "value": undefined,
+                                                                      },
                                                                       Object {
                                                                         "type": "return",
                                                                         "value": undefined,
@@ -11823,8 +11879,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         Array [
                                                                           [Function],
                                                                         ],
+                                                                        Array [
+                                                                          [Function],
+                                                                        ],
                                                                       ],
                                                                       "results": Array [
+                                                                        Object {
+                                                                          "type": "return",
+                                                                          "value": undefined,
+                                                                        },
                                                                         Object {
                                                                           "type": "return",
                                                                           "value": undefined,
@@ -11860,8 +11923,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           Array [
                                                                             [Function],
                                                                           ],
+                                                                          Array [
+                                                                            [Function],
+                                                                          ],
                                                                         ],
                                                                         "results": Array [
+                                                                          Object {
+                                                                            "type": "return",
+                                                                            "value": undefined,
+                                                                          },
                                                                           Object {
                                                                             "type": "return",
                                                                             "value": undefined,
@@ -11904,8 +11974,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             Array [
                                                                               [Function],
                                                                             ],
+                                                                            Array [
+                                                                              [Function],
+                                                                            ],
                                                                           ],
                                                                           "results": Array [
+                                                                            Object {
+                                                                              "type": "return",
+                                                                              "value": undefined,
+                                                                            },
                                                                             Object {
                                                                               "type": "return",
                                                                               "value": undefined,
@@ -11939,8 +12016,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               Array [
                                                                                 [Function],
                                                                               ],
+                                                                              Array [
+                                                                                [Function],
+                                                                              ],
                                                                             ],
                                                                             "results": Array [
+                                                                              Object {
+                                                                                "type": "return",
+                                                                                "value": undefined,
+                                                                              },
                                                                               Object {
                                                                                 "type": "return",
                                                                                 "value": undefined,

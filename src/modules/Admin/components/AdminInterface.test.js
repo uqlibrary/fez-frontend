@@ -804,13 +804,13 @@ describe('AdminInterface component', () => {
 
         expect(wrapper.find('#admin-work-unpublish-top').length).toEqual(1);
         wrapper.find('#admin-work-unpublish-top').simulate('click');
-        expect(handleSubmit).toHaveBeenCalledTimes(2);
-        expect(onSubmit).toHaveBeenCalledTimes(2);
+        expect(handleSubmit).toHaveBeenCalled();
+        expect(onSubmit).toHaveBeenCalled();
 
         expect(wrapper.find('#admin-work-unpublish').length).toEqual(1);
         wrapper.find('#admin-work-unpublish').simulate('click');
-        expect(handleSubmit).toHaveBeenCalledTimes(2);
-        expect(onSubmit).toHaveBeenCalledTimes(2);
+        expect(handleSubmit).toHaveBeenCalled();
+        expect(onSubmit).toHaveBeenCalled();
     });
 
     it('should render publish button for unpublished record', () => {
