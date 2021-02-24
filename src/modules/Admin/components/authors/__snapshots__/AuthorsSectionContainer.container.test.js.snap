@@ -8,7 +8,10 @@ exports[`AuthorsSectionContainer component should render default view 1`] = `
     }
   }
 >
-  <Memo(AuthorsSection) />
+  <Memo(AuthorsSection)
+    isNtro={false}
+    key="disabled-undefined-isNtro-false"
+  />
 </ContextProvider>
 `;
 
@@ -22,6 +25,8 @@ exports[`AuthorsSectionContainer component should render disabled view 1`] = `
 >
   <Memo(AuthorsSection)
     disabled={true}
+    isNtro={false}
+    key="disabled-true-isNtro-false"
   />
 </ContextProvider>
 `;
