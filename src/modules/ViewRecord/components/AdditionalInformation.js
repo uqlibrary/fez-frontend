@@ -334,6 +334,16 @@ export class AdditionalInformationClass extends PureComponent {
         return fields.filter(item => !locale.viewRecord.adminFields.includes(item.field));
     };
 
+    getFieldHeading = (displayTypeHeadings, headings, field, isNtro) => {
+        if (displayTypeHeadings[field]) {
+            return typeof displayTypeHeadings[field] === 'function'
+                ? displayTypeHeadings[field](isNtro)
+                : displayTypeHeadings[field];
+        } else {
+            return headings.default[field];
+        }
+    };
+
     renderColumns = () => {
         const rows = [];
         const publication = this.props.publication;
@@ -369,7 +379,7 @@ export class AdditionalInformationClass extends PureComponent {
                 // do not display field when value is null, empty array
                 if (value && Object.keys(value).length > 0) {
                     const subkey = this.transformFieldNameToSubkey(field);
-                    const heading = displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field];
+                    const heading = this.getFieldHeading(displayTypeHeadings, headings, field, this.props.isNtro);
 
                     // logic to get values from fez_record_search_key fields
                     if (subkey) {
