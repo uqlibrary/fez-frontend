@@ -11,7 +11,7 @@ import { NTRO_SUBTYPES } from 'config/general';
 
 export const AuthorsSectionContainer = ({ disabled, formValues, isNtro = false }) => {
     return (
-        <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
+        <FormValuesContext.Provider value={{ formValues: { ...formValues.toJS(), isNtro } }}>
             <AuthorsSection key={`disabled-${disabled}-isNtro-${isNtro}`} disabled={disabled} isNtro={isNtro} />
         </FormValuesContext.Provider>
     );

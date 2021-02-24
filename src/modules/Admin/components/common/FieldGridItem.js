@@ -5,10 +5,11 @@ import { Field } from 'redux-form/immutable';
 import Grid from '@material-ui/core/Grid';
 import { fieldConfig } from 'config/admin';
 import { NTRO_SUBTYPES, SUBTYPE_NON_NTRO } from 'config/general';
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
     const { record } = useRecordContext();
+    const { formValues } = useFormValuesContext();
 
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
@@ -18,7 +19,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
     const componentProps = {
         ...fieldConfig.default[field].componentProps,
         ...(((fieldConfig.override[record.rek_display_type] || {})[field] || (() => {}))({
-            isNtro: NTRO_SUBTYPES.includes(record.rek_subtype),
+            isNtro: NTRO_SUBTYPES.includes(record.rek_subtype) || formValues.isNtro || false,
             isNonNtro: record.rek_subtype === SUBTYPE_NON_NTRO,
             isCreate: !record.rek_pid,
         }) || {}),

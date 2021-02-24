@@ -4,7 +4,9 @@ exports[`AuthorsSectionContainer component should render default view 1`] = `
 <ContextProvider
   value={
     Object {
-      "formValues": Object {},
+      "formValues": Object {
+        "isNtro": false,
+      },
     }
   }
 >
@@ -19,7 +21,9 @@ exports[`AuthorsSectionContainer component should render disabled view 1`] = `
 <ContextProvider
   value={
     Object {
-      "formValues": Object {},
+      "formValues": Object {
+        "isNtro": false,
+      },
     }
   }
 >
