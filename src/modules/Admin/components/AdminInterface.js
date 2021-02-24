@@ -30,7 +30,7 @@ import { onSubmit } from '../submitHandler';
 import { useTabbedContext, useRecordContext } from 'context';
 import pageLocale from 'locale/pages';
 import { pathConfig, validation, publicationTypes } from 'config';
-import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED, RETRACTED } from 'config/general';
+import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
 
@@ -225,7 +225,10 @@ export const AdminInterface = ({
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
         );
 
-    console.log(!!submitting, !!disableSubmit, locked);
+    const setPublicationRetractedAndSubmit = handleSubmit((values, dispatch, props) =>
+        onSubmit(values.setIn(['publication', 'fez_record_search_key_retracted', 'rek_retracted'], 1), dispatch, props),
+    );
+
     const renderButtonBar = (placement = '') => (
         <React.Fragment>
             <Grid item xs={12} sm={2}>
@@ -249,7 +252,7 @@ export const AdminInterface = ({
                         color="secondary"
                         fullWidth
                         children="Retract"
-                        onClick={setPublicationStatusAndSubmit(RETRACTED)}
+                        onClick={setPublicationRetractedAndSubmit}
                     />
                 </Grid>
             )}
