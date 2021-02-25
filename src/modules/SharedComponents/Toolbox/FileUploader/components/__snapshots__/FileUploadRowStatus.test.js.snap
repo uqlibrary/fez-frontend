@@ -570,7 +570,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                               <span
                                 className="MuiIconButton-label"
                               >
-                                <ForwardRef>
+                                <DeleteIcon>
                                   <WithStyles(ForwardRef(SvgIcon))>
                                     <ForwardRef(SvgIcon)
                                       classes={
@@ -599,7 +599,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </ForwardRef>
+                                </DeleteIcon>
                               </span>
                               <WithStyles(memo)
                                 center={true}

@@ -15,7 +15,7 @@ import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { GOOGLE_MAPS_API_CHINA_URL, GOOGLE_MAPS_API_URL, CURRENT_LICENCES } from 'config/general';
+import { CURRENT_LICENCES } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -277,17 +277,10 @@ export class AdditionalInformationClass extends PureComponent {
         if (coordinatesList.length === 0 || !coordinatesList[0].rek_geographic_area) {
             return <span />;
         }
-        const mapApiUrl = this.context.userCountry === 'CN' ? GOOGLE_MAPS_API_CHINA_URL : GOOGLE_MAPS_API_URL;
-        return (
-            <PublicationMap
-                googleMapURL={mapApiUrl}
-                loadingElement={<div className="googleMap loading" />}
-                containerElement={<div style={{ height: '400px' }} data-testid="rek-geographic-area" />}
-                mapElement={<div style={{ height: '100%' }} />}
-                coordinates={coordinatesList[0].rek_geographic_area}
-                readOnly
-            />
-        );
+        /*
+         *  New map doesn't support the dynamic google URLs. e.g. GOOGLE_MAPS_API_CHINA_URL
+         */
+        return <PublicationMap coordinates={coordinatesList[0].rek_geographic_area} readOnly />;
     };
 
     renderDoi = doi => {

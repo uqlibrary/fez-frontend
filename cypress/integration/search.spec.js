@@ -32,7 +32,7 @@ context('Search', () => {
             .should('have.attr', 'aria-label', 'Click to switch to Advanced search')
             .click();
         cy.get('#advancedSearchForm h5').should('contain', 'Advanced search');
-        cy.get('input[name="searchField0"]')
+        cy.get('[data-testid=any-field-input]')
             .should('have.value', 'cats and dogs')
             .type("{home}it's raining ");
         cy.contains('label > span:nth-child(2)', 'Open access')
@@ -62,7 +62,7 @@ context('Search', () => {
         cy.get('[data-testid=advanced-search]')
             .should('be.disabled')
             .should('have.text', 'Search');
-        cy.get('[placeholder="Add an author name"]').type('Ky Lane{enter}');
+        cy.get('[data-testid=rek-author-input]').type('Ky Lane{enter}');
         cy.get('[data-testid=advanced-search]').should('not.be.disabled');
         // Add a set of collections to search from
         cy.contains('button', 'Add another field').click();

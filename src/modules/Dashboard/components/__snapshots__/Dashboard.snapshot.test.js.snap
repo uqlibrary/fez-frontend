@@ -12920,7 +12920,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
-                                                                      <ForwardRef
+                                                                      <InfoOutlinedIcon
                                                                         className="icon"
                                                                         id="info-outline-icon"
                                                                       >
@@ -12958,7 +12958,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                             </svg>
                                                                           </ForwardRef(SvgIcon)>
                                                                         </WithStyles(ForwardRef(SvgIcon))>
-                                                                      </ForwardRef>
+                                                                      </InfoOutlinedIcon>
                                                                     </div>
                                                                   </ForwardRef(Grid)>
                                                                 </WithStyles(ForwardRef(Grid))>

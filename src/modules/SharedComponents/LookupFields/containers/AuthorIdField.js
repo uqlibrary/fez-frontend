@@ -16,6 +16,7 @@ const mapStateToProps = (state, props) => {
         keys: ['id', 'value'],
     };
     return {
+        ...(!!props.name ? { name: props.name } : {}),
         id: props.id,
         autoCompleteAsynchronousFieldId: props.authorIdFieldId,
         itemsList: itemsList.filter(item => !!item.id && item.id !== 0),

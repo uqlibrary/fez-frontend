@@ -35,7 +35,6 @@ exports[`AddSection component should render default view 1`] = `
                       "type": [Function],
                     },
                     "compare": null,
-                    "displayName": "Connect(Component)",
                     "type": [Function],
                   }
                 }
@@ -306,7 +305,6 @@ exports[`AddSection component should render with subtypes 1`] = `
                       "type": [Function],
                     },
                     "compare": null,
-                    "displayName": "Connect(Component)",
                     "type": [Function],
                   }
                 }

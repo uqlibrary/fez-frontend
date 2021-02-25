@@ -488,7 +488,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -1383,7 +1382,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -2148,7 +2146,6 @@ exports[`Component NtroFields should render default view 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -3043,7 +3040,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -3878,7 +3874,6 @@ exports[`Component NtroFields should show significance field even if contributio
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
