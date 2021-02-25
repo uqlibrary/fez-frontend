@@ -333,7 +333,7 @@ export class FilesClass extends Component {
                           pid,
                           mimeType,
                           fileName,
-                          thumbnailFileName,
+                          !(!componentProps.account && dataStream.dsi_security_policy === 4) ? thumbnailFileName : null,
                           previewFileName,
                           webFileName,
                           securityAccess,
@@ -415,7 +415,9 @@ export class FilesClass extends Component {
                         )}
                     {/* istanbul ignore next */ !!fileData.filter(
                         ({ requiresLoginToDownload }) => requiresLoginToDownload,
-                    ).length > 0 && <Alert {...{ ...globalLocale.global.loginAlert, action: redirectUserToLogin() }} />}
+                    ).length > 0 && (
+                        <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
+                    )}
                     <div style={{ padding: 8 }}>
                         <Grid
                             container
