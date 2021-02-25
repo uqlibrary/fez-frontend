@@ -7,13 +7,12 @@ import { Field, change, formValueSelector, reduxForm, SubmissionError, getFormSy
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
 
 import { PUBLICATION_TYPE_DESIGN } from 'config/general';
 import { createBatchImport } from 'actions';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -34,7 +33,6 @@ const selector = formValueSelector(FORM_NAME);
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
     return dispatch(createBatchImport(data)).catch(error => {
-        console.log(error);
         throw new SubmissionError({ _error: error.message });
     });
 };
@@ -137,23 +135,16 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                     {!!isDesignType && (
                                         <Grid item xs={12}>
                                             <Field
-                                                component={SelectField}
+                                                component={NewGenericSelectField}
                                                 disabled={submitting}
                                                 id="subtype"
-                                                selectFieldId="subtype"
+                                                genericSelectFieldId="subtype"
                                                 name="subtype"
                                                 required
                                                 validate={[validation.required]}
+                                                itemsList={designSubtypes.map(item => ({ text: item, value: item }))}
                                                 {...batchImportTxt.formLabels.subType}
-                                            >
-                                                {designSubtypes.map((item, index) => {
-                                                    return (
-                                                        <MenuItem value={item} key={'subtype_' + index}>
-                                                            {item}
-                                                        </MenuItem>
-                                                    );
-                                                })}
-                                            </Field>
+                                            />
                                         </Grid>
                                     )}
                                     <Grid item xs={12}>
@@ -211,7 +202,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
 
 BatchImport.propTypes = {
     dirty: PropTypes.bool,
-    error: PropTypes.bool,
+    error: PropTypes.string,
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     reset: PropTypes.func,
