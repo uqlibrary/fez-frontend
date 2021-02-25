@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom';
 import deparam from 'can-deparam';
 
 export const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps);
     let searchQuery;
     try {
         searchQuery = deparam(ownProps.location.search.substr(1)) || {};
