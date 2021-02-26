@@ -225,7 +225,6 @@ export const AdminInterface = ({
             onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
         );
 
-    console.log(!!submitting, !!disableSubmit, locked);
     const renderButtonBar = (placement = '') => (
         <React.Fragment>
             <Grid item xs={12} sm={2}>
@@ -352,7 +351,7 @@ export const AdminInterface = ({
                             <FormViewToggler />
                         </Grid>
                     </Hidden>
-                    {(record.fez_record_search_key_retracted || {}).rek_retracted === 1 && (
+                    {record.rek_status === RETRACTED && (
                         <Grid
                             container
                             alignContent="center"
