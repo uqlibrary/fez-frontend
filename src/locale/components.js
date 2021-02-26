@@ -2068,9 +2068,11 @@ export default {
                         combiner: 'is',
                         type: 'StatusLookup',
                         hint: 'Select status',
-                        validation: [],
+                        validation: ['required'],
                         ariaLabel: 'Select a status to search on',
                         isUnpublishedField: true,
+                        id: 'rek-status',
+                        selectPrompt: 'Select a status',
                     },
                     rek_created_date: {
                         order: 22,

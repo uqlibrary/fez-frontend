@@ -208,7 +208,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -1667,7 +1666,6 @@ exports[`AddDataCollection test should render component with a valid collection 
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -3122,7 +3120,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -4577,7 +4574,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -43,6 +43,24 @@ const useStyles = makeStyles(
     { withTheme: true },
 );
 
+export const AdvancedSearchField = ({ InputComponent, inputProps, value, disabled }) => (
+    <InputComponent
+        name={`search-field-${inputProps.id}`}
+        id="search-field"
+        fullWidth
+        value={value}
+        disabled={disabled}
+        {...inputProps}
+    />
+);
+
+AdvancedSearchField.propTypes = {
+    InputComponent: PropTypes.elementType,
+    inputProps: PropTypes.object,
+    value: PropTypes.any,
+    disabled: PropTypes.bool,
+};
+
 export const AdvancedSearchRow = props => {
     const {
         rowIndex,
@@ -76,21 +94,6 @@ export const AdvancedSearchRow = props => {
         }
         return null;
     };
-
-    const renderInputComponentAndProps = useCallback(
-        (InputComponent, inputProps) => (
-            <InputComponent
-                type="search"
-                name={`searchField${rowIndex}`}
-                id="searchField"
-                fullWidth
-                value={value}
-                disabled={searchField === '0'}
-                {...inputProps}
-            />
-        ),
-        [rowIndex, searchField, value],
-    );
 
     const txt = locale.components.searchComponent.advancedSearch;
     return (
@@ -162,7 +165,9 @@ export const AdvancedSearchRow = props => {
                                 {...props}
                                 onChange={_handleTextChange}
                                 inputField={txt.fieldTypes[searchField]}
-                                render={renderInputComponentAndProps}
+                                value={value}
+                                searchField={searchField}
+                                AdvancedSearchField={AdvancedSearchField}
                             />
                         </Grid>
                         {rowIndex !== 0 && (

@@ -21,6 +21,7 @@ export const AutoCompleteAsynchronousField = ({
     itemsList,
     itemsLoading,
     loadSuggestions,
+    name,
     onChange,
     onClear,
     OptionTemplate,
@@ -114,6 +115,7 @@ export const AutoCompleteAsynchronousField = ({
                 renderInput={params => (
                     <TextField
                         {...params}
+                        name={name || autoCompleteAsynchronousFieldId}
                         error={error}
                         placeholder={placeholder}
                         helperText={(error && errorText) || ''}
@@ -168,6 +170,7 @@ AutoCompleteAsynchronousField.propTypes = {
     itemsList: PropTypes.array,
     itemsLoading: PropTypes.bool,
     loadSuggestions: PropTypes.func,
+    name: PropTypes.string,
     onChange: PropTypes.func,
     onClear: PropTypes.func,
     OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),

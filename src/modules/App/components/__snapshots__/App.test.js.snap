@@ -21,9 +21,11 @@ exports[`Application component Should display mobile correctly 1`] = `
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -45,9 +47,11 @@ exports[`Application component Should display mobile correctly 1`] = `
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -280,6 +284,19 @@ exports[`Application component Should display mobile correctly 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <WithStyles(ForwardRef(Grid))
@@ -352,9 +369,11 @@ exports[`Application component Should display mobile correctly 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -380,9 +399,11 @@ exports[`Application component Should display mobile correctly 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_5"
@@ -431,9 +452,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -466,9 +489,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Add data collection",
@@ -481,9 +506,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim possible works",
@@ -516,9 +543,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim a work",
@@ -531,9 +560,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Request a correction, add more information or upload files",
@@ -573,9 +604,11 @@ exports[`Application component should determine if it has incomplete works from 
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -588,9 +621,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Google Scholar identifier",
@@ -602,9 +637,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "My editorial appointments",
@@ -624,9 +661,11 @@ exports[`Application component should determine if it has incomplete works from 
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -642,9 +681,11 @@ exports[`Application component should determine if it has incomplete works from 
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -961,9 +1002,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1006,9 +1049,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1026,9 +1071,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1071,9 +1118,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1091,9 +1140,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1145,9 +1196,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1165,9 +1218,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1184,9 +1239,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1211,9 +1268,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1232,9 +1291,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_22"
@@ -1279,9 +1340,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -1314,9 +1377,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Add data collection",
@@ -1329,9 +1394,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim possible works",
@@ -1364,9 +1431,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim a work",
@@ -1379,9 +1448,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Request a correction, add more information or upload files",
@@ -1421,9 +1492,11 @@ exports[`Application component should determine if it has incomplete works from 
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -1436,9 +1509,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Google Scholar identifier",
@@ -1450,9 +1525,11 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "My editorial appointments",
@@ -1472,9 +1549,11 @@ exports[`Application component should determine if it has incomplete works from 
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -1490,9 +1569,11 @@ exports[`Application component should determine if it has incomplete works from 
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -1809,9 +1890,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1854,9 +1937,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1874,9 +1959,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1919,9 +2006,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1939,9 +2028,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -1993,9 +2084,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -2013,9 +2106,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -2032,9 +2127,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -2059,9 +2156,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -2080,9 +2179,11 @@ exports[`Application component should determine if it has incomplete works from 
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_22"
@@ -2118,9 +2219,11 @@ exports[`Application component should redirect to login page with correct return
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -2142,9 +2245,11 @@ exports[`Application component should redirect to login page with correct return
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -2377,6 +2482,19 @@ exports[`Application component should redirect to login page with correct return
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <WithStyles(ForwardRef(Grid))
@@ -2449,9 +2567,11 @@ exports[`Application component should redirect to login page with correct return
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -2477,9 +2597,11 @@ exports[`Application component should redirect to login page with correct return
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_5"
@@ -2524,9 +2646,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -2559,9 +2683,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Add data collection",
@@ -2574,9 +2700,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim possible works",
@@ -2609,9 +2737,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim a work",
@@ -2624,9 +2754,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Request a correction, add more information or upload files",
@@ -2666,9 +2798,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -2681,9 +2815,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Google Scholar identifier",
@@ -2695,9 +2831,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "My editorial appointments",
@@ -2717,9 +2855,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -2735,9 +2875,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -2970,6 +3112,19 @@ exports[`Application component should render alert if user is not fez author 1`]
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <WithStyles(ForwardRef(Grid))
@@ -3058,9 +3213,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3103,9 +3260,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3123,9 +3282,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3168,9 +3329,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3188,9 +3351,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3242,9 +3407,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3262,9 +3429,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3281,9 +3450,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3308,9 +3479,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3329,9 +3502,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_22"
@@ -3376,9 +3551,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -3411,9 +3588,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Add data collection",
@@ -3426,9 +3605,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim possible works",
@@ -3461,9 +3642,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim a work",
@@ -3476,9 +3659,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Request a correction, add more information or upload files",
@@ -3518,9 +3703,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -3533,9 +3720,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Google Scholar identifier",
@@ -3547,9 +3736,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "My editorial appointments",
@@ -3569,9 +3760,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -3587,9 +3780,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -3859,6 +4054,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -3930,9 +4138,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3975,9 +4185,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -3995,9 +4207,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4040,9 +4254,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4060,9 +4276,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4114,9 +4332,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4134,9 +4354,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4153,9 +4375,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4180,9 +4404,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4201,9 +4427,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_22"
@@ -4248,9 +4476,11 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -4283,9 +4513,11 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Add data collection",
@@ -4298,9 +4530,11 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim possible works",
@@ -4333,9 +4567,11 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim a work",
@@ -4348,9 +4584,11 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Request a correction, add more information or upload files",
@@ -4390,9 +4628,11 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -4405,9 +4645,11 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Google Scholar identifier",
@@ -4419,9 +4661,11 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "My editorial appointments",
@@ -4441,9 +4685,11 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -4459,9 +4705,11 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -4731,6 +4979,19 @@ exports[`Application component should render app for account with fez author wit
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -4787,9 +5048,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4832,9 +5095,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4852,9 +5117,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4897,9 +5164,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4917,9 +5186,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4971,9 +5242,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -4991,9 +5264,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -5010,9 +5285,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -5037,9 +5314,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -5058,9 +5337,11 @@ exports[`Application component should render app for account with fez author wit
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_22"
@@ -5105,9 +5386,11 @@ exports[`Application component should render application with routing for the us
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -5140,9 +5423,11 @@ exports[`Application component should render application with routing for the us
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Add data collection",
@@ -5155,9 +5440,11 @@ exports[`Application component should render application with routing for the us
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim possible works",
@@ -5190,9 +5477,11 @@ exports[`Application component should render application with routing for the us
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Claim a work",
@@ -5205,9 +5494,11 @@ exports[`Application component should render application with routing for the us
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Request a correction, add more information or upload files",
@@ -5247,9 +5538,11 @@ exports[`Application component should render application with routing for the us
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -5262,9 +5555,11 @@ exports[`Application component should render application with routing for the us
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "Google Scholar identifier",
@@ -5276,9 +5571,11 @@ exports[`Application component should render application with routing for the us
           ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": "My editorial appointments",
@@ -5298,9 +5595,11 @@ exports[`Application component should render application with routing for the us
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -5316,9 +5615,11 @@ exports[`Application component should render application with routing for the us
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -5551,6 +5852,19 @@ exports[`Application component should render application with routing for the us
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -5584,9 +5898,11 @@ exports[`Application component should render for anon user 1`] = `
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -5608,9 +5924,11 @@ exports[`Application component should render for anon user 1`] = `
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Page not found",
         },
@@ -5843,6 +6161,19 @@ exports[`Application component should render for anon user 1`] = `
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -5878,9 +6209,11 @@ exports[`Application component should render for anon user 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -5906,9 +6239,11 @@ exports[`Application component should render for anon user 1`] = `
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_5"
@@ -5962,9 +6297,11 @@ exports[`Application component should render thesis submission for HDR without m
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "exact": true,
           "pageTitle": undefined,
@@ -5990,9 +6327,11 @@ exports[`Application component should render thesis submission for HDR without m
         Object {
           "component": Object {
             "$$typeof": Symbol(react.lazy),
-            "_ctor": [Function],
-            "_result": null,
-            "_status": -1,
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
           },
           "pageTitle": "Link ORCID ID to UQ eSpace",
         },
@@ -6123,6 +6462,19 @@ exports[`Application component should render thesis submission for HDR without m
           "confirmationTitle": "Session Expired",
         }
       }
+      onAction={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       onRef={[Function]}
     />
     <Connect(AppAlert) />
@@ -6182,9 +6534,11 @@ exports[`Application component should render thesis submission for HDR without m
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             exact={true}
@@ -6215,9 +6569,11 @@ exports[`Application component should render thesis submission for HDR without m
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
-                "_ctor": [Function],
-                "_result": null,
-                "_status": -1,
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
               }
             }
             key="route_6"
@@ -7030,9 +7386,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": undefined,
@@ -7065,9 +7423,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": "Add data collection",
@@ -7080,9 +7440,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": "Claim possible works",
@@ -7115,9 +7477,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": "Claim a work",
@@ -7130,9 +7494,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": "Request a correction, add more information or upload files",
@@ -7172,9 +7538,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           Object {
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -7187,9 +7555,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": "Google Scholar identifier",
@@ -7201,9 +7571,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": "My editorial appointments",
@@ -7223,9 +7595,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           Object {
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "exact": true,
                             "pageTitle": undefined,
@@ -7241,9 +7615,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           Object {
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
-                              "_ctor": [Function],
-                              "_result": null,
-                              "_status": -1,
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
                             },
                             "pageTitle": "Page not found",
                           },
@@ -7322,9 +7698,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": undefined,
@@ -7357,9 +7735,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": "Add data collection",
@@ -7372,9 +7752,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": "Claim possible works",
@@ -7407,9 +7789,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": "Claim a work",
@@ -7422,9 +7806,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": "Request a correction, add more information or upload files",
@@ -7464,9 +7850,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             Object {
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -7479,9 +7867,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": "Google Scholar identifier",
@@ -7493,9 +7883,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": "My editorial appointments",
@@ -7515,9 +7907,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             Object {
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "exact": true,
                               "pageTitle": undefined,
@@ -7533,9 +7927,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             Object {
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
-                                "_ctor": [Function],
-                                "_result": null,
-                                "_status": -1,
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
                               },
                               "pageTitle": "Page not found",
                             },
@@ -7615,9 +8011,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": undefined,
@@ -7650,9 +8048,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": "Add data collection",
@@ -7665,9 +8065,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": "Claim possible works",
@@ -7700,9 +8102,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": "Claim a work",
@@ -7715,9 +8119,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": "Request a correction, add more information or upload files",
@@ -7757,9 +8163,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               Object {
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": "Link ORCID ID to UQ eSpace",
@@ -7772,9 +8180,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": "Google Scholar identifier",
@@ -7786,9 +8196,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": "My editorial appointments",
@@ -7808,9 +8220,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               Object {
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "exact": true,
                                 "pageTitle": undefined,
@@ -7826,9 +8240,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               Object {
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
-                                  "_ctor": [Function],
-                                  "_result": null,
-                                  "_status": -1,
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
                                 },
                                 "pageTitle": "Page not found",
                               },
@@ -8412,7 +8828,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               <span
                                                                 className="MuiIconButton-label"
                                                               >
-                                                                <ForwardRef
+                                                                <MenuIcon
                                                                   style={
                                                                     Object {
                                                                       "color": "white",
@@ -8463,7 +8879,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       </svg>
                                                                     </ForwardRef(SvgIcon)>
                                                                   </WithStyles(ForwardRef(SvgIcon))>
-                                                                </ForwardRef>
+                                                                </MenuIcon>
                                                               </span>
                                                               <WithStyles(memo)
                                                                 center={true}
@@ -10141,7 +10557,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                   <span
                                                                     className="MuiIconButton-label"
                                                                   >
-                                                                    <ForwardRef
+                                                                    <PersonIcon
                                                                       className="makeStyles-iconButton-228"
                                                                       id="logged-in-icon"
                                                                     >
@@ -10179,7 +10595,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           </svg>
                                                                         </ForwardRef(SvgIcon)>
                                                                       </WithStyles(ForwardRef(SvgIcon))>
-                                                                    </ForwardRef>
+                                                                    </PersonIcon>
                                                                   </span>
                                                                   <WithStyles(memo)
                                                                     center={true}
@@ -10802,7 +11218,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     },
                                     "render": [Function],
                                   },
-                                  "displayName": "WithStyles(ForwardRef(Backdrop))",
                                   "options": Object {
                                     "defaultTheme": Object {
                                       "breakpoints": Object {
@@ -11224,7 +11639,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       },
                                       "render": [Function],
                                     },
-                                    "displayName": "WithStyles(ForwardRef(Backdrop))",
                                     "options": Object {
                                       "defaultTheme": Object {
                                         "breakpoints": Object {
@@ -15661,7 +16075,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       },
                                       "render": [Function],
                                     },
-                                    "displayName": "WithStyles(ForwardRef(Backdrop))",
                                     "options": Object {
                                       "defaultTheme": Object {
                                         "breakpoints": Object {

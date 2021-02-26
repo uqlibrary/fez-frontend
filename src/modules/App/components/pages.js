@@ -16,7 +16,7 @@ export const DeleteRecord = React.lazy(() => import('modules/DeleteRecord/contai
 export const Doi = React.lazy(() => import('modules/Admin/Doi/containers/Doi'));
 export const FavouriteSearch = React.lazy(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch'));
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
-export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
+export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/components/GoogleScholar'));
 export const JournalView = React.lazy(() => import('modules/Journal/containers/JournalView'));
 export const MasterJournalListIngest = React.lazy(() =>
     import('modules/Admin/MasterJournalListIngest/components/MasterJournalListIngest'),

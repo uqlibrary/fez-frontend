@@ -6,11 +6,12 @@ import Immutable from 'immutable';
 jest.mock('@material-ui/core/useMediaQuery');
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-jest.mock('js-cookie');
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
 }));
-import Cookies from 'js-cookie';
+jest.mock('js-cookie', () => ({
+    get: jest.fn(() => 'tabbed'),
+}));
 
 jest.mock('redux-form/immutable');
 
@@ -59,9 +60,6 @@ describe('AdminContainer component', () => {
     });
 
     it('should render mobile view', () => {
-        Cookies.mockImplementation(() => ({
-            get: jest.fn(() => 'tabbed'),
-        }));
         useMediaQuery.mockImplementation(() => true);
         const wrapper = setup({});
 
@@ -86,8 +84,6 @@ describe('AdminContainer component', () => {
     });
 
     it('should render component with tabbed interface', () => {
-        Cookies.mockImplementation(() => ({ get: jest.fn(() => 'tabbed') }));
-
         const wrapper = setup({
             loadingRecordToView: false,
             recordToView: null,
@@ -167,14 +163,6 @@ describe('AdminContainer component', () => {
             },
         });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should full mount the component', () => {
-        const scrollIntoViewMock = jest.fn();
-        window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
-        Cookies.get = jest.fn(() => 'tabbed');
-        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

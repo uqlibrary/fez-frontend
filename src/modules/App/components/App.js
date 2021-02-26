@@ -1,7 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
-import { routes, pathConfig, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
+import Cookies from 'js-cookie';
+import {
+    routes,
+    pathConfig,
+    AUTH_URL_LOGIN,
+    AUTH_URL_LOGOUT,
+    APP_URL,
+    SESSION_COOKIE_NAME,
+    SESSION_USER_GROUP_COOKIE_NAME,
+} from 'config';
 import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
 import browserUpdate from 'browser-update';
@@ -142,7 +151,11 @@ export class AppClass extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.actions.loadCurrentAccount();
+        if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
+            this.props.actions.loadCurrentAccount();
+        } else {
+            this.props.actions.logout();
+        }
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }
@@ -173,6 +186,10 @@ export class AppClass extends PureComponent {
     };
 
     redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
+        /* istanbul ignore next */
+        if (process.env.USE_MOCK) {
+            return;
+        }
         const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
         window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
