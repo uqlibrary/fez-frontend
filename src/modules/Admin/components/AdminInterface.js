@@ -351,7 +351,7 @@ export const AdminInterface = ({
                             <FormViewToggler />
                         </Grid>
                     </Hidden>
-                    {(record.fez_record_search_key_retracted || {}).rek_retracted === 1 && (
+                    {record.rek_status === RETRACTED && (
                         <Grid
                             container
                             alignContent="center"

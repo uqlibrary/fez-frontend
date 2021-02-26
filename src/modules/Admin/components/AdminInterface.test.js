@@ -437,9 +437,7 @@ describe('AdminInterface component', () => {
                 rek_title: 'This is test record',
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_display_type_lookup: 'Journal Article',
-                fez_record_search_key_retracted: {
-                    rek_retracted: 1,
-                },
+                rek_status: 7,
                 rek_display_type: 179,
             },
         }));
