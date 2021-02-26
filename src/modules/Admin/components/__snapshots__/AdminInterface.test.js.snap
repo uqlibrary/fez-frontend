@@ -133,15 +133,8 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -327,15 +320,8 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -523,15 +509,8 @@ exports[`AdminInterface component should display job created alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -714,15 +693,8 @@ exports[`AdminInterface component should display job created alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -883,15 +855,8 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1074,15 +1039,8 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1243,15 +1201,8 @@ exports[`AdminInterface component should display successful alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1434,15 +1385,8 @@ exports[`AdminInterface component should display successful alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1603,15 +1547,8 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1794,15 +1731,8 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -1975,15 +1905,8 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2117,15 +2040,8 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2288,15 +2204,8 @@ exports[`AdminInterface component should render default view as a full form view
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2468,15 +2377,8 @@ exports[`AdminInterface component should render default view as a full form view
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2637,15 +2539,8 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2809,15 +2704,8 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -2954,21 +2842,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
+                onClick={[MockFunction]}
                 style={
                   Object {
                     "whiteSpace": "nowrap",
@@ -3103,21 +2977,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
+                onClick={[MockFunction]}
                 style={
                   Object {
                     "whiteSpace": "nowrap",
@@ -3270,15 +3130,8 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3451,15 +3304,8 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3623,15 +3469,8 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3804,15 +3643,8 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       Array [
                         [Function],
                       ],
-                      Array [
-                        [Function],
-                      ],
                     ],
                     "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
                       Object {
                         "type": "return",
                         "value": undefined,
@@ -3949,21 +3781,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 data-testid="submit-admin-top"
                 fullWidth={true}
                 id="admin-work-submit-top"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
+                onClick={[MockFunction]}
                 style={
                   Object {
                     "whiteSpace": "nowrap",
@@ -4086,21 +3904,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 data-testid="submit-admin"
                 fullWidth={true}
                 id="admin-work-submit"
-                onClick={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        [Function],
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "type": "return",
-                        "value": undefined,
-                      },
-                    ],
-                  }
-                }
+                onClick={[MockFunction]}
                 style={
                   Object {
                     "whiteSpace": "nowrap",
