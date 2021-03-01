@@ -102,6 +102,10 @@ export const adminReduxFormPlugin = (state, action) => {
                     state.get('values').get('rek_display_type'),
                 )
             ) {
+                /* istanbul ignore next */
+                if (action.payload === null) {
+                    return state;
+                }
                 const issns = action.payload.fez_journal_issn.map(issn => ({
                     rek_value: {
                         key: issn.jnl_issn,
