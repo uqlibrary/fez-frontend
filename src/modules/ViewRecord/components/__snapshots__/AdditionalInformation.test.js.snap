@@ -20974,7 +20974,11 @@ exports[`Additional Information Component  should render component with audio do
                 data-testid="rek-alternate-genre-0"
                 key="rek-alternate-genre-0"
               >
-                Conversation
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=Conversation&searchQueryParams%5Ball%5D="
+                >
+                  Conversation
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -21032,19 +21036,31 @@ exports[`Additional Information Component  should render component with audio do
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                310199
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310199&searchQueryParams%5Ball%5D="
+                >
+                  310199
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                450019
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450019&searchQueryParams%5Ball%5D="
+                >
+                  450019
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-2"
                 key="rek-subject-2"
               >
-                450776
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D="
+                >
+                  450776
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -24302,13 +24318,21 @@ exports[`Additional Information Component  should render component with book cha
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                453239
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453239&searchQueryParams%5Ball%5D="
+                >
+                  453239
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                453253
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=453253&searchQueryParams%5Ball%5D="
+                >
+                  453253
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -27684,25 +27708,41 @@ exports[`Additional Information Component  should render component with conferen
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                290000
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290000&searchQueryParams%5Ball%5D="
+                >
+                  290000
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                290800
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290800&searchQueryParams%5Ball%5D="
+                >
+                  290800
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-2"
                 key="rek-subject-2"
               >
-                290802
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=290802&searchQueryParams%5Ball%5D="
+                >
+                  290802
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-3"
                 key="rek-subject-3"
               >
-                291104
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=291104&searchQueryParams%5Ball%5D="
+                >
+                  291104
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -28807,13 +28847,21 @@ exports[`Additional Information Component  should render component with creative
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                452674
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D="
+                >
+                  452674
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                452677
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677&searchQueryParams%5Ball%5D="
+                >
+                  452677
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -31566,13 +31614,21 @@ exports[`Additional Information Component  should render component with data col
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                452086
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D="
+                >
+                  452086
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                452109
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D="
+                >
+                  452109
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -32250,7 +32306,11 @@ exports[`Additional Information Component  should render component with data col
                 data-testid="rek-seo-code-0"
                 key="rek-seo-code-0"
               >
-                970106 Expanding Knowledge in the Biological Sciences
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D="
+                >
+                  970106 Expanding Knowledge in the Biological Sciences
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -34091,19 +34151,31 @@ exports[`Additional Information Component  should render component with data col
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                0602 Ecology
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D="
+                >
+                  0602 Ecology
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                040699 Physical Geography and Environmental Geoscience not elsewhere classified
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D="
+                >
+                  040699 Physical Geography and Environmental Geoscience not elsewhere classified
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-2"
                 key="rek-subject-2"
               >
-                0502 Environmental Science and Management
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0502+Environmental+Science+and+Management&searchQueryParams%5Ball%5D="
+                >
+                  0502 Environmental Science and Management
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -36348,25 +36420,41 @@ exports[`Additional Information Component  should render component with design d
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                310000
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=310000&searchQueryParams%5Ball%5D="
+                >
+                  310000
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                450025
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450025&searchQueryParams%5Ball%5D="
+                >
+                  450025
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-2"
                 key="rek-subject-2"
               >
-                452674
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D="
+                >
+                  452674
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-3"
                 key="rek-subject-3"
               >
-                452675
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452675&searchQueryParams%5Ball%5D="
+                >
+                  452675
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -37940,7 +38028,11 @@ exports[`Additional Information Component  should render component with generic 
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                451825
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825&searchQueryParams%5Ball%5D="
+                >
+                  451825
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -40046,7 +40138,11 @@ exports[`Additional Information Component  should render component with journal 
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                452815
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452815&searchQueryParams%5Ball%5D="
+                >
+                  452815
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -46243,13 +46339,21 @@ exports[`Additional Information Component  should render component with newspape
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                320100
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320100&searchQueryParams%5Ball%5D="
+                >
+                  320100
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                450590
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450590&searchQueryParams%5Ball%5D="
+                >
+                  450590
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -47177,19 +47281,31 @@ exports[`Additional Information Component  should render component with patent 1
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                270802
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270802&searchQueryParams%5Ball%5D="
+                >
+                  270802
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                270300
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=270300&searchQueryParams%5Ball%5D="
+                >
+                  270300
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-2"
                 key="rek-subject-2"
               >
-                320800
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800&searchQueryParams%5Ball%5D="
+                >
+                  320800
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -47585,19 +47701,31 @@ exports[`Additional Information Component  should render component with preprint
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                280210
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=280210&searchQueryParams%5Ball%5D="
+                >
+                  280210
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                230203
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230203&searchQueryParams%5Ball%5D="
+                >
+                  230203
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-2"
                 key="rek-subject-2"
               >
-                230117
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=230117&searchQueryParams%5Ball%5D="
+                >
+                  230117
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -51872,25 +52000,41 @@ exports[`Additional Information Component  should render component with referenc
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                430102 History - Asian
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=430102+History+-+Asian&searchQueryParams%5Ball%5D="
+                >
+                  430102 History - Asian
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                420212 Japanese
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=420212+Japanese&searchQueryParams%5Ball%5D="
+                >
+                  420212 Japanese
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-2"
                 key="rek-subject-2"
               >
-                751001 Languages and literature
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=751001+Languages+and+literature&searchQueryParams%5Ball%5D="
+                >
+                  751001 Languages and literature
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-3"
                 key="rek-subject-3"
               >
-                M
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=M&searchQueryParams%5Ball%5D="
+                >
+                  M
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -56192,13 +56336,21 @@ exports[`Additional Information Component  should render component with rek_star
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                452674
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452674&searchQueryParams%5Ball%5D="
+                >
+                  452674
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                452677
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452677&searchQueryParams%5Ball%5D="
+                >
+                  452677
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -57930,7 +58082,11 @@ exports[`Additional Information Component  should render component with thesis 1
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                300000
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D="
+                >
+                  300000
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -58832,7 +58988,11 @@ exports[`Additional Information Component  should render component with video do
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                451986
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986&searchQueryParams%5Ball%5D="
+                >
+                  451986
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -60033,13 +60193,21 @@ exports[`Additional Information Component  should render component with working 
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                452775
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452775&searchQueryParams%5Ball%5D="
+                >
+                  452775
+                </Link>
               </li>
               <li
                 data-testid="rek-subject-1"
                 key="rek-subject-1"
               >
-                452784
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452784&searchQueryParams%5Ball%5D="
+                >
+                  452784
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
@@ -61027,7 +61195,11 @@ exports[`Additional Information Component  should render oa status value link in
                 data-testid="rek-subject-0"
                 key="rek-subject-0"
               >
-                300000
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=300000&searchQueryParams%5Ball%5D="
+                >
+                  300000
+                </Link>
               </li>
             </ul>
           </WithStyles(ForwardRef(Typography))>
