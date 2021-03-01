@@ -41,5 +41,6 @@ export const useConfirmationState = () => {
 };
 
 export { userIsAdmin } from './userIsAdmin';
+export { useIsUserSuperAdmin } from './useIsUserSuperAdmin';
 export { useRecordsSelector } from './useRecordsSelector';
 export { useWidth } from './useWidth';

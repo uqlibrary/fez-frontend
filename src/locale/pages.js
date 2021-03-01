@@ -631,8 +631,8 @@ export default {
                 submit: 'Save Google Scholar ID',
                 cancel: 'Cancel',
                 googleScholarIdField: {
-                    floatingLabelText: 'Google Scholar ID',
-                    hintText: 'Enter your Google Scholar ID',
+                    label: 'Google Scholar ID',
+                    placeholder: 'Enter your Google Scholar ID',
                 },
             },
             add: {
@@ -679,8 +679,6 @@ export default {
                 type: 'error_outline',
                 alertId: 'alert-error',
                 title: 'Error',
-                message: message =>
-                    `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
             },
             progressAlert: {
                 type: 'info_outline',

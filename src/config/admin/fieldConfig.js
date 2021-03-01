@@ -299,6 +299,7 @@ export default {
                 placeholder: '',
                 required: true,
                 validate: [validation.required],
+                clearOnInputClear: true,
                 getOptionLabel: option => (!!option && !!option.id && String(option.id)) || '',
             },
         },

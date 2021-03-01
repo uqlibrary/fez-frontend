@@ -1113,7 +1113,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                                     <div
                                       className="MuiGrid-root MuiGrid-item"
                                     >
-                                      <ForwardRef
+                                      <CloudUploadIcon
                                         className="FileUploadDropzoneStaticContent-cloudIcon-4"
                                       >
                                         <WithStyles(ForwardRef(SvgIcon))
@@ -1147,7 +1147,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                                             </svg>
                                           </ForwardRef(SvgIcon)>
                                         </WithStyles(ForwardRef(SvgIcon))>
-                                      </ForwardRef>
+                                      </CloudUploadIcon>
                                     </div>
                                   </ForwardRef(Grid)>
                                 </WithStyles(ForwardRef(Grid))>

@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import * as validationRules from 'config/validation';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -94,6 +94,9 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'OrgUnitLookup':
             return {
                 ...lookupDefaultProps,
+                id: inputField.id,
+                placeholder: inputField.hint,
+                autoCompleteAsynchronousFieldId: inputField.id,
                 onChange: item => onChange(item.value, item.value),
             };
         case 'AuthorIdLookup':
@@ -104,6 +107,7 @@ const getInputProps = (inputField, value, onChange, label) => {
                 label: label,
                 hideLabel: true,
                 placeholder: inputField.hint,
+                id: inputField.id,
                 authorIdFieldId: 'rek-author-id',
                 onChange: item => {
                     if (!!item && !!item.id && parseInt(item.id, 10) > 0) {
@@ -129,7 +133,11 @@ const getInputProps = (inputField, value, onChange, label) => {
                               renderValue /* istanbul ignore next */: () => inputField.selectPrompt,
                           },
                       }
-                    : {}),
+                    : {
+                          selectProps: {
+                              renderValue /* istanbul ignore next */: () => value.join(', '),
+                          },
+                      }),
             };
         case 'CollectionsLookup':
             return {
@@ -144,12 +152,17 @@ const getInputProps = (inputField, value, onChange, label) => {
                 genericSelectFieldId: 'rek-status',
                 autoWidth: false,
                 hideLabel: true,
-                displayEmpty: false,
+                selectPrompt: inputField.selectPrompt,
+                displayEmpty: value === '',
                 itemsList: UNPUBLISHED_STATUS,
                 onChange: item => onChange(item),
             };
         default:
-            return {};
+            return {
+                ...defaultProps,
+                id: inputField.id || 'text-field',
+                textFieldId: inputField.id || 'text-field',
+            };
     }
 };
 
@@ -158,7 +171,7 @@ const getErrorProps = (inputField, value) => ({
     errorText: runValidationRules(inputField, value),
 });
 
-export const AdvancedSearchRowInput = ({ render, value, label, onChange, inputField }) => {
+export const AdvancedSearchRowInput = ({ AdvancedSearchField, value, label, onChange, inputField, searchField }) => {
     const InputComponent = getInputComponent(inputField.type);
     const [inputProps, setInputProps] = useState({
         ...getInputProps(inputField, value, onChange, label),
@@ -172,11 +185,18 @@ export const AdvancedSearchRowInput = ({ render, value, label, onChange, inputFi
         });
     }, [inputField, value, onChange, label]);
 
-    return render(InputComponent, { ...inputProps });
+    return (
+        <AdvancedSearchField
+            InputComponent={InputComponent}
+            inputProps={inputProps}
+            value={value}
+            disabled={searchField === '0'}
+        />
+    );
 };
 
 AdvancedSearchRowInput.propTypes = {
-    render: PropTypes.func.isRequired,
+    AdvancedSearchField: PropTypes.elementType,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.number]),
     label: PropTypes.any,
     onChange: PropTypes.func,
@@ -191,6 +211,7 @@ AdvancedSearchRowInput.propTypes = {
         loadingHint: PropTypes.string,
         ariaLabel: PropTypes.string,
     }),
+    searchField: PropTypes.string,
 };
 
 export default memo(AdvancedSearchRowInput);

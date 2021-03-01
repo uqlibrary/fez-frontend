@@ -257,12 +257,12 @@ export const AttachedFiles = ({
                                                 {isAdmin && canEdit ? (
                                                     <TextField
                                                         fullWidth
-                                                        onBlur={onFileDescriptionChange(index)}
+                                                        onChange={onFileDescriptionChange(index)}
                                                         name="fileDescription"
                                                         defaultValue={item.description}
                                                         id={`file-description-input-${index}`}
                                                         textFieldId={`dsi-label-${index}`}
-                                                        key={item.description}
+                                                        key={item.fileName}
                                                     />
                                                 ) : (
                                                     <Typography variant="body2" noWrap>

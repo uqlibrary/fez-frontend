@@ -1,6 +1,7 @@
 import React from 'react';
 import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useRecordContext, useTabbedContext } from 'context';
+import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
@@ -436,9 +437,7 @@ describe('AdminInterface component', () => {
                 rek_title: 'This is test record',
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_display_type_lookup: 'Journal Article',
-                fez_record_search_key_retracted: {
-                    rek_retracted: 1,
-                },
+                rek_status: 7,
                 rek_display_type: 179,
             },
         }));
@@ -843,5 +842,38 @@ describe('AdminInterface component', () => {
         }));
         const wrapper2 = setup({ tabs });
         expect(wrapper2.find('#admin-work-publish').length).toEqual(1);
+    });
+
+    it('should render retract button for super admin user', () => {
+        const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
+        useIsUserSuperAdmin.mockImplementation(() => true);
+
+        onSubmit.mockImplementation(() => {});
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_status: 2,
+                rek_title: 'This is test record',
+                rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_display_type: 179,
+            },
+        }));
+        const handleSubmit = jest.fn(f => f({ setIn: jest.fn() }));
+        const wrapper = setup({
+            handleSubmit,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+
+        expect(wrapper.find('#admin-work-retract-top').length).toEqual(1);
+        wrapper.find('#admin-work-retract-top').simulate('click');
+        expect(handleSubmit).toHaveBeenCalled();
+        expect(onSubmit).toHaveBeenCalled();
     });
 });
