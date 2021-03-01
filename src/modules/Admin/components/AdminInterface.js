@@ -30,8 +30,9 @@ import { onSubmit } from '../submitHandler';
 import { useTabbedContext, useRecordContext } from 'context';
 import pageLocale from 'locale/pages';
 import { pathConfig, validation, publicationTypes } from 'config';
-import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
+import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED, RETRACTED } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
+import { useIsUserSuperAdmin } from 'hooks';
 
 const AdminTab = withStyles({
     root: {
@@ -86,6 +87,7 @@ export const AdminInterface = ({
 }) => {
     const { record } = useRecordContext();
     const { tabbed, toggleTabbed } = useTabbedContext();
+    const isSuperAdmin = useIsUserSuperAdmin();
     const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
     const defaultTab = objectType === RECORD_TYPE_RECORD ? 'bibliographic' : 'security';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
@@ -236,6 +238,20 @@ export const AdminInterface = ({
                     onClick={handleCancel}
                 />
             </Grid>
+            {!!isSuperAdmin && (
+                <Grid item xs={12} sm={3}>
+                    <Button
+                        id={`admin-work-retract${placement}`}
+                        data-testid={`retract-admin${placement}`}
+                        disabled={!!submitting || !!disableSubmit}
+                        variant="contained"
+                        color="secondary"
+                        fullWidth
+                        children="Retract"
+                        onClick={setPublicationStatusAndSubmit(RETRACTED)}
+                    />
+                </Grid>
+            )}
             {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status !== PUBLISHED && !isDeleted && (
                 <Grid item xs={12} sm={3}>
                     <Button
@@ -272,7 +288,15 @@ export const AdminInterface = ({
                     />
                 </Grid>
             )}
-            <Grid item xs={12} sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted ? 7 : 10}>
+            <Grid
+                item
+                xs={12}
+                sm={
+                    (!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted && !isSuperAdmin && 7) ||
+                    (!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted && isSuperAdmin && 4) ||
+                    10
+                }
+            >
                 <Button
                     id={`admin-work-submit${placement}`}
                     data-testid={`submit-admin${placement}`}
@@ -327,7 +351,7 @@ export const AdminInterface = ({
                             <FormViewToggler />
                         </Grid>
                     </Hidden>
-                    {(record.fez_record_search_key_retracted || {}).rek_retracted === 1 && (
+                    {record.rek_status === RETRACTED && (
                         <Grid
                             container
                             alignContent="center"
