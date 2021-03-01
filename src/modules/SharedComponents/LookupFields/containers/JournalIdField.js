@@ -60,7 +60,7 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadJournalLookup(searchQuery)),
     onChange: (!!props.input && (item => props.input.onChange(item))) || (item => props.onChange(item)),
-    onClear: () => (!!props.input && props.input.onChange(null)) || props.onChange({}),
+    onClear: (!!props.input && (() => props.input.onChange(null))) || (() => props.onChange({})),
 });
 
 export const JournalIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
