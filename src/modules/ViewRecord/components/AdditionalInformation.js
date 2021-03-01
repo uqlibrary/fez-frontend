@@ -140,6 +140,8 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderContactEmail();
             case 'rek_geographic_area':
                 return this.renderMap(objects);
+            case 'rek_subject':
+                return this.renderList(objects, subkey, pathConfig.list.subject);
             default:
                 return this.renderList(objects, subkey);
         }

@@ -121,6 +121,15 @@ export const pathConfig = {
                 },
             }),
         herdcStatus: herdcStatus => getSearchUrl({ searchQuery: { all: herdcStatus } }),
+        subject: (subject, subjectLookup) =>
+            getSearchUrl({
+                searchQuery: { all: '' },
+                activeFacets: {
+                    filters: {
+                        'Subject (lookup)': subjectLookup,
+                    },
+                },
+            }),
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
