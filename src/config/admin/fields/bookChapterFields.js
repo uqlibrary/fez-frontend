@@ -77,13 +77,13 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: ({ isNtro = false } = {}) => [
+    authors: () => [
         {
             title: 'Authors',
             groups: [['authors']],
         },
         {
-            title: isNtro ? 'Contributors' : 'Editors',
+            title: 'Editors',
             groups: [['editors']],
         },
     ],
