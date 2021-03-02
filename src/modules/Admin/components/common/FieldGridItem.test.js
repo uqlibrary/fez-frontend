@@ -45,6 +45,21 @@ describe('FieldGridItem', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render with correct props', () => {
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_title: 'This is test record',
+                rek_subtype: 'Creative Work - Visual Art',
+            },
+        }));
+
+        const wrapper = setup({
+            field: 'editors',
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should handle missing field config', () => {
         setup({
             field: 'fake_field',

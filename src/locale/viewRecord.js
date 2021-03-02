@@ -333,7 +333,7 @@ export default {
             'Research Report': {
                 rek_title: 'Title of report',
                 fez_record_search_key_translated_title: 'Translated title of report',
-                fez_record_search_key_contributor: isNtro => (isNtro ? 'Contributor(s)' : 'Editor(s)'),
+                fez_record_search_key_contributor: 'Contributor(s)',
             },
             Patent: {
                 rek_title: 'Patent title',

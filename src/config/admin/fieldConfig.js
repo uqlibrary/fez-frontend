@@ -1887,9 +1887,7 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
-            editors: ({ isNtro }) => ({
-                ...(isNtro ? { locale: { ...locale.components.authorsList('contributor').field } } : {}),
-            }),
+            editors: () => ({ locale: { ...locale.components.authorsList('contributor').field } }),
             fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),
