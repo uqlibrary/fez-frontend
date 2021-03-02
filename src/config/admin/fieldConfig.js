@@ -1719,6 +1719,9 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            editors: ({ isNtro }) => ({
+                ...(isNtro ? { locale: { ...locale.components.authorsList('contributor').field } } : {}),
+            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -1742,6 +1745,9 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            editors: ({ isNtro }) => ({
+                ...(isNtro ? { locale: { ...locale.components.authorsList('contributor').field } } : {}),
+            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -1757,6 +1763,9 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            editors: ({ isNtro }) => ({
+                ...(isNtro ? { locale: { ...locale.components.authorsList('contributor').field } } : {}),
+            }),
         },
         [PUBLICATION_TYPE_DATA_COLLECTION]: {
             rek_copyright: () => ({
@@ -1884,6 +1893,9 @@ export default {
                 validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
+            editors: ({ isNtro }) => ({
+                ...(isNtro ? { locale: { ...locale.components.authorsList('contributor').field } } : {}),
+            }),
             fez_record_search_key_location: () => ({
                 label: locale.components.locationForm.field.form.locale.inputFieldLabel,
             }),

@@ -55,6 +55,11 @@ describe('FieldGridItem', () => {
 
 describe('FieldGridItem without record', () => {
     beforeEach(() => {
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                rek_title: 'Test title',
+            },
+        }));
         useRecordContext.mockImplementation(() => ({
             record: {},
         }));
