@@ -53,13 +53,13 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: () => [
+    authors: ({ isNtro = false }) => [
         {
             title: 'Authors',
             groups: [['authors']],
         },
         {
-            title: 'Contributors',
+            title: isNtro ? 'Contributors' : 'Editors',
             groups: [['editors']],
         },
     ],

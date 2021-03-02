@@ -15,7 +15,7 @@ import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { CURRENT_LICENCES } from 'config/general';
+import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -332,7 +332,9 @@ export class AdditionalInformationClass extends PureComponent {
     getFieldHeading = (displayTypeHeadings, headings, field, isNtro) => {
         if (displayTypeHeadings[field]) {
             return typeof displayTypeHeadings[field] === 'function'
-                ? displayTypeHeadings[field](isNtro)
+                ? displayTypeHeadings[field](
+                      isNtro && this.props.publication.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+                  )
                 : displayTypeHeadings[field];
         } else {
             return headings.default[field];
