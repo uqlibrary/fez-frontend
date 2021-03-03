@@ -96,7 +96,10 @@ export const bibliographicParams = (record, formValues) => ({
     isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
 });
 
-export const authorsParams = record => ({
-    isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-    onlyEditors: record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK,
-});
+export const authorsParams = (record, isNtro) => {
+    return {
+        isNtro: isNtro,
+        isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+        onlyEditors: record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK,
+    };
+};

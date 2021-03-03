@@ -62,12 +62,14 @@ export default {
         },
     ],
     authors: ({ onlyEditors = false } = {}) => [
-        ...[
-            !onlyEditors && {
-                title: 'Authors',
-                groups: [['authors']],
-            },
-        ].filter(Boolean),
+        ...(!onlyEditors
+            ? [
+                  {
+                      title: 'Authors',
+                      groups: [['authors']],
+                  },
+              ]
+            : []),
         {
             title: 'Editors',
             groups: [['editors']],
