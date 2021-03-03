@@ -11,6 +11,9 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     const hideLabel = !!filteredProps.hideLabel;
     delete filteredProps.errorText;
     delete filteredProps.hideLabel;
+    delete filteredProps.columnDef;
+    delete filteredProps.rowData;
+    delete filteredProps.onRowDataChange;
     return (
         <Fragment>
             <TextField
