@@ -35,7 +35,7 @@ const mapStateToProps = (state, props) => {
             : [],
         itemsLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
         defaultValue: (!!props.value && { value: props.value }) || '',
-        getOptionLabel: (!!props.getOptionLabel && props.getOptionLabel) || (option => option.value) || '',
+        getOptionLabel: (!!props.getOptionLabel && props.getOptionLabel) || (option => (option && option.value) || ''),
         filterOptions: (options, { inputValue }) => {
             const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
             return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
