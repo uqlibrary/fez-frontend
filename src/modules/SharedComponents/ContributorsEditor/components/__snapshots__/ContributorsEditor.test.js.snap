@@ -2810,7 +2810,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             }
                                             autoCompleteAsynchronousFieldId="test-aut-id"
                                             clearSuggestions={[Function]}
-                                            defaultValue=""
+                                            defaultValue={null}
                                             disabled={false}
                                             error={false}
                                             errorText="Type UQ author name to search"
@@ -2850,7 +2850,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               popupIcon={false}
                                               renderInput={[Function]}
                                               renderOption={[Function]}
-                                              value=""
+                                              value={null}
                                             >
                                               <ForwardRef(Autocomplete)
                                                 ListboxProps={
@@ -2902,7 +2902,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 popupIcon={false}
                                                 renderInput={[Function]}
                                                 renderOption={[Function]}
-                                                value=""
+                                                value={null}
                                               >
                                                 <div
                                                   aria-expanded={false}
@@ -2929,7 +2929,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                           >
                                                             <WithStyles(ForwardRef(IconButton))
                                                               aria-label="Clear"
-                                                              className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                              className="MuiAutocomplete-clearIndicator"
                                                               onClick={[Function]}
                                                               tabIndex={-1}
                                                               title="Clear"
@@ -3012,7 +3012,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                             >
                                                               <WithStyles(ForwardRef(IconButton))
                                                                 aria-label="Clear"
-                                                                className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                className="MuiAutocomplete-clearIndicator"
                                                                 onClick={[Function]}
                                                                 tabIndex={-1}
                                                                 title="Clear"
@@ -3192,7 +3192,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                   >
                                                                     <WithStyles(ForwardRef(IconButton))
                                                                       aria-label="Clear"
-                                                                      className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                      className="MuiAutocomplete-clearIndicator"
                                                                       onClick={[Function]}
                                                                       tabIndex={-1}
                                                                       title="Clear"
@@ -3281,7 +3281,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                     >
                                                                       <WithStyles(ForwardRef(IconButton))
                                                                         aria-label="Clear"
-                                                                        className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                        className="MuiAutocomplete-clearIndicator"
                                                                         onClick={[Function]}
                                                                         tabIndex={-1}
                                                                         title="Clear"
@@ -3370,7 +3370,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       >
                                                                         <WithStyles(ForwardRef(IconButton))
                                                                           aria-label="Clear"
-                                                                          className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                          className="MuiAutocomplete-clearIndicator"
                                                                           onClick={[Function]}
                                                                           tabIndex={-1}
                                                                           title="Clear"
@@ -3465,7 +3465,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         >
                                                                           <WithStyles(ForwardRef(IconButton))
                                                                             aria-label="Clear"
-                                                                            className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                            className="MuiAutocomplete-clearIndicator"
                                                                             onClick={[Function]}
                                                                             tabIndex={-1}
                                                                             title="Clear"
@@ -3560,14 +3560,14 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       >
                                                                         <WithStyles(ForwardRef(IconButton))
                                                                           aria-label="Clear"
-                                                                          className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                          className="MuiAutocomplete-clearIndicator"
                                                                           onClick={[Function]}
                                                                           tabIndex={-1}
                                                                           title="Clear"
                                                                         >
                                                                           <ForwardRef(IconButton)
                                                                             aria-label="Clear"
-                                                                            className="MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                            className="MuiAutocomplete-clearIndicator"
                                                                             classes={
                                                                               Object {
                                                                                 "colorInherit": "MuiIconButton-colorInherit",
@@ -3588,7 +3588,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                             <WithStyles(ForwardRef(ButtonBase))
                                                                               aria-label="Clear"
                                                                               centerRipple={true}
-                                                                              className="MuiIconButton-root MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                              className="MuiIconButton-root MuiAutocomplete-clearIndicator"
                                                                               disabled={false}
                                                                               focusRipple={true}
                                                                               onClick={[Function]}
@@ -3598,7 +3598,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                               <ForwardRef(ButtonBase)
                                                                                 aria-label="Clear"
                                                                                 centerRipple={true}
-                                                                                className="MuiIconButton-root MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                                className="MuiIconButton-root MuiAutocomplete-clearIndicator"
                                                                                 classes={
                                                                                   Object {
                                                                                     "disabled": "Mui-disabled",
@@ -3614,7 +3614,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                               >
                                                                                 <button
                                                                                   aria-label="Clear"
-                                                                                  className="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty"
+                                                                                  className="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-clearIndicator"
                                                                                   disabled={false}
                                                                                   onBlur={[Function]}
                                                                                   onClick={[Function]}
@@ -7137,7 +7137,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             }
                                             autoCompleteAsynchronousFieldId="test-aut-id"
                                             clearSuggestions={[Function]}
-                                            defaultValue=""
+                                            defaultValue={null}
                                             disabled={true}
                                             error={false}
                                             errorText="Type UQ author name to search"
@@ -7177,7 +7177,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               popupIcon={false}
                                               renderInput={[Function]}
                                               renderOption={[Function]}
-                                              value=""
+                                              value={null}
                                             >
                                               <ForwardRef(Autocomplete)
                                                 ListboxProps={
@@ -7229,7 +7229,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 popupIcon={false}
                                                 renderInput={[Function]}
                                                 renderOption={[Function]}
-                                                value=""
+                                                value={null}
                                               >
                                                 <div
                                                   aria-expanded={false}
