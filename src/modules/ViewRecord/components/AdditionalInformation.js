@@ -15,7 +15,7 @@ import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { CURRENT_LICENCES } from 'config/general';
+import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -140,6 +140,8 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderContactEmail();
             case 'rek_geographic_area':
                 return this.renderMap(objects);
+            case 'rek_subject':
+                return this.renderList(objects, subkey, pathConfig.list.subject);
             default:
                 return this.renderList(objects, subkey);
         }
@@ -327,6 +329,18 @@ export class AdditionalInformationClass extends PureComponent {
         return fields.filter(item => !locale.viewRecord.adminFields.includes(item.field));
     };
 
+    getFieldHeading = (displayTypeHeadings, headings, field, isNtro) => {
+        if (displayTypeHeadings[field]) {
+            return typeof displayTypeHeadings[field] === 'function'
+                ? displayTypeHeadings[field](
+                      isNtro && this.props.publication.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+                  )
+                : displayTypeHeadings[field];
+        } else {
+            return headings.default[field];
+        }
+    };
+
     renderColumns = () => {
         const rows = [];
         const publication = this.props.publication;
@@ -362,7 +376,7 @@ export class AdditionalInformationClass extends PureComponent {
                 // do not display field when value is null, empty array
                 if (value && Object.keys(value).length > 0) {
                     const subkey = this.transformFieldNameToSubkey(field);
-                    const heading = displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field];
+                    const heading = this.getFieldHeading(displayTypeHeadings, headings, field, this.props.isNtro);
 
                     // logic to get values from fez_record_search_key fields
                     if (subkey) {

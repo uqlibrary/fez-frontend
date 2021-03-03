@@ -175,7 +175,7 @@ export class FilesClass extends Component {
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
         author: PropTypes.object,
-        account: PropTypes.account,
+        account: PropTypes.object,
     };
 
     constructor(props) {
