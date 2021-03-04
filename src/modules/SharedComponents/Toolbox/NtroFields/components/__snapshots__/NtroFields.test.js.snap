@@ -503,7 +503,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Volume"
@@ -518,7 +529,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Issue"
@@ -533,7 +555,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Start page"
@@ -548,7 +581,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="End page"
@@ -563,7 +607,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             id="rek-total-pages"
@@ -586,7 +641,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Physical description"
@@ -648,6 +714,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               }
             }
             disabled={true}
+            genericSelectFieldId="rek-language"
             itemsList={
               Array [
                 Object {
@@ -1397,7 +1464,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -1412,7 +1490,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -1427,7 +1516,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -1442,7 +1542,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -1457,7 +1568,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -1480,7 +1602,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -1542,6 +1675,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-language"
             itemsList={
               Array [
                 Object {
@@ -2161,7 +2295,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -2176,7 +2321,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -2191,7 +2347,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -2206,7 +2373,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -2221,7 +2399,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -2244,7 +2433,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -2306,6 +2506,7 @@ exports[`Component NtroFields should render default view 1`] = `
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-language"
             itemsList={
               Array [
                 Object {
@@ -3055,7 +3256,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -3070,7 +3282,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -3085,7 +3308,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -3100,7 +3334,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -3115,7 +3360,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -3138,7 +3394,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -3200,6 +3467,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-language"
             itemsList={
               Array [
                 Object {
@@ -3889,7 +4157,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -3904,7 +4183,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -3919,7 +4209,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -3934,7 +4235,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -3949,7 +4261,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -3972,7 +4295,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -4034,6 +4368,7 @@ exports[`Component NtroFields should show significance field even if contributio
               }
             }
             disabled={false}
+            genericSelectFieldId="rek-language"
             itemsList={
               Array [
                 Object {

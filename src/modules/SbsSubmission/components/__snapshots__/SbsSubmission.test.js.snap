@@ -128,7 +128,18 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Author name"
@@ -484,7 +495,18 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             title="Additional notes"
           >
             <Field
-              component={[Function]}
+              component={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "propTypes": Object {
+                    "classes": [Function],
+                    "help": [Function],
+                    "innerRef": [Function],
+                    "textFieldId": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
               disabled={false}
               fullWidth={true}
               label="Notes (not publicly viewable)"
@@ -678,7 +700,18 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Author name"
@@ -1034,7 +1067,18 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             title="Additional notes"
           >
             <Field
-              component={[Function]}
+              component={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "propTypes": Object {
+                    "classes": [Function],
+                    "help": [Function],
+                    "innerRef": [Function],
+                    "textFieldId": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
               disabled={false}
               fullWidth={true}
               label="Notes (not publicly viewable)"
