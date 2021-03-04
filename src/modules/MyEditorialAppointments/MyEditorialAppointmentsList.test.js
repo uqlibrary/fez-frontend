@@ -187,6 +187,13 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-journal-name-0')).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0')).toHaveTextContent('2010');
         expect(getByTestId('eap-role-name-0')).toHaveTextContent('Other (Testing other role)');
+
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+
+        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
+        expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
+
+        fireEvent.keyDown(getByTestId('eap-journal-name-input'), { key: 'Enter', keyCode: 13 });
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {

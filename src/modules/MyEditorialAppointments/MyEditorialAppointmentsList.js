@@ -328,6 +328,15 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
 
     const [data, setData] = React.useState(list);
 
+    const handleEditingApproved = props => (action, newData, oldData) => {
+        const invalid = props.columns.some(column => !column.validate(newData));
+
+        if (invalid) {
+            return;
+        }
+        props.onEditingApproved(action, newData, oldData);
+    };
+
     return (
         <MaterialTable
             tableRef={materialTableRef}
@@ -348,6 +357,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         {...props}
                         id={`my-editorial-appointments-list-edit-row-${props.index}`}
                         data-testid={`my-editorial-appointments-list-edit-row-${props.index}`}
+                        onEditingApproved={handleEditingApproved(props)}
                     />
                 ),
                 Action: props => {
