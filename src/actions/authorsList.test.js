@@ -16,7 +16,7 @@ describe('author list actions', () => {
     describe('loadAuthorList action', () => {
         it('should dispatch correct number of actions on loading author list', async () => {
             mockApi
-                .onGet(repositories.routes.CURRENT_AUTHOR_API().apiUrl)
+                .onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl)
                 .reply(200, { data: { ...mockData.authorList } });
 
             const expectedActions = [actions.AUTHOR_LIST_LOADING, actions.AUTHOR_LIST_LOADED];
@@ -26,7 +26,7 @@ describe('author list actions', () => {
         });
 
         it('should dispatch correct number of actions on failed to load author list', async () => {
-            mockApi.onGet(repositories.routes.CURRENT_AUTHOR_API().apiUrl).reply(500);
+            mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl).reply(500);
 
             const expectedActions = [actions.AUTHOR_LIST_LOADING, actions.APP_ALERT_SHOW, actions.AUTHOR_LIST_FAILED];
 
@@ -42,7 +42,7 @@ describe('author list actions', () => {
     describe('updateAuthorListItem action', () => {
         it('should dispatch correct number of actions on author list item successfully updated', async () => {
             mockApi
-                .onPut(repositories.routes.CURRENT_AUTHOR_API({ id: 1 }).apiUrl)
+                .onPut(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl)
                 .reply(200, { data: { ...mockData.authorListItem } });
 
             const expectedActions = [actions.AUTHOR_ITEM_UPDATING, actions.AUTHOR_ITEM_UPDATE_SUCCESS];
@@ -52,7 +52,7 @@ describe('author list actions', () => {
         });
 
         it('should dispatch correct number of actions on author list item update failed', async () => {
-            mockApi.onPut(repositories.routes.CURRENT_AUTHOR_API({ id: 1 }).apiUrl).reply(500);
+            mockApi.onPut(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl).reply(500);
 
             const expectedActions = [
                 actions.AUTHOR_ITEM_UPDATING,
@@ -72,7 +72,7 @@ describe('author list actions', () => {
 
         it('should dispatch correct of number of actions for existing alias not found while updating', async () => {
             mockApi
-                .onPut(repositories.routes.CURRENT_AUTHOR_API({ id: 1 }).apiUrl)
+                .onPut(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl)
                 .reply(200, { data: { ...mockData.authorListItem } });
 
             const expectedActions = [actions.AUTHOR_ITEM_UPDATING, actions.AUTHOR_ITEM_UPDATE_SUCCESS];
@@ -90,7 +90,7 @@ describe('author list actions', () => {
     describe('deleteAuthorListItem action', () => {
         it('should dispatch correct number of actions on author list item successfully deleted', async () => {
             mockApi
-                .onDelete(repositories.routes.CURRENT_AUTHOR_API({ id: 1 }).apiUrl)
+                .onDelete(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl)
                 .reply(200, { data: { ...mockData.authorListItem } });
 
             const expectedActions = [actions.AUTHOR_ITEM_DELETING, actions.AUTHOR_ITEM_DELETE_SUCCESS];
@@ -100,7 +100,7 @@ describe('author list actions', () => {
         });
 
         it('should dispatch correct number of actions on author list item delete failed', async () => {
-            mockApi.onDelete(repositories.routes.CURRENT_AUTHOR_API({ id: 1 }).apiUrl).reply(500);
+            mockApi.onDelete(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl).reply(500);
 
             const expectedActions = [
                 actions.AUTHOR_ITEM_DELETING,
@@ -120,7 +120,7 @@ describe('author list actions', () => {
     describe('addAuthor action', () => {
         it('should dispatch correct number of actions on author successfully added', async () => {
             mockApi
-                .onPost(repositories.routes.CURRENT_AUTHOR_API().apiUrl)
+                .onPost(repositories.routes.AUTHOR_API().apiUrl)
                 .reply(200, { data: { ...mockData.authorListItem } });
 
             const expectedActions = [actions.AUTHOR_ADDING, actions.AUTHOR_ADD_SUCCESS];
@@ -137,7 +137,7 @@ describe('author list actions', () => {
         });
 
         it('should dispatch correct number of actions on author add failed', async () => {
-            mockApi.onPost(repositories.routes.CURRENT_AUTHOR_API().apiUrl).reply(500);
+            mockApi.onPost(repositories.routes.AUTHOR_API().apiUrl).reply(500);
 
             const expectedActions = [actions.AUTHOR_ADDING, actions.APP_ALERT_SHOW, actions.AUTHOR_ADD_FAILED];
 

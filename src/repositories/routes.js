@@ -90,12 +90,14 @@ export const CURRENT_ACCOUNT_API = () => ({
     apiUrl: 'account',
     options: { params: { ts: `${new Date().getTime()}` } },
 });
-export const AUTHORS_SEARCH_API = ({ query }) => ({
+export const AUTHORS_SEARCH_API = ({ query } = { query: undefined }) => ({
     apiUrl: 'fez-authors/search',
-    options: { params: { query: query, rule: 'lookup' } },
+    ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
 });
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
-export const AUTHOR_API = ({ authorId }) => ({ apiUrl: `fez-authors/${authorId}` });
+export const AUTHOR_API = ({ authorId } = { authorId: undefined }) => ({
+    apiUrl: `fez-authors${!!authorId ? `/${authorId}` : ''}`,
+});
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
     apiUrl: `authors/details/${userId}`,
 });

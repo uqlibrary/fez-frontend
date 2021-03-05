@@ -134,6 +134,7 @@ export const pathConfig = {
     },
     admin: {
         add: '/admin/add',
+        authors: '/admin/authors',
         changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         bulkUpdates: '/admin/bulk-updates',
         collection: '/admin/collection',

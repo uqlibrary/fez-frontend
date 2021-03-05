@@ -2,6 +2,7 @@ export * from './academic';
 export * from './account';
 export * from './app';
 export * from './authors';
+export * from './authorsList';
 export * from './batchImport';
 export * from './bulkUpdates';
 export * from './claimPublications';

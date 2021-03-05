@@ -208,7 +208,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.trendingPublications)
     .onGet(routes.AUTHORS_SEARCH_API({ query: '.*' }).apiUrl)
     .reply(config => {
-        if (config.params.rule === 'lookup') {
+        if (!!config.params && !!config.params.rule && config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList.author];
         } else {
             return [200, mockData.authorsSearch];
