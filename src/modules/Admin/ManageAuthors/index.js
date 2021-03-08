@@ -6,7 +6,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import AuthorsList from './AuthorsList';
+import ManageAuthorsList from './ManageAuthorsList';
 
 import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
@@ -19,7 +19,7 @@ import {
     dismissAppAlert,
 } from 'actions';
 
-export const Authors = () => {
+export const ManageAuthors = () => {
     const dispatch = useDispatch();
 
     const authorListLoading = useSelector(state => state.get('authorsListReducer').authorListLoading);
@@ -64,13 +64,13 @@ export const Authors = () => {
     if (authorListLoading) {
         return (
             <StandardPage>
-                <InlineLoader message={locale.pages.editorialAppointments.loadingMessage} />
+                <InlineLoader message={locale.pages.authors.loadingMessage} />
             </StandardPage>
         );
     }
 
     return (
-        <StandardPage title={locale.pages.editorialAppointments.title}>
+        <StandardPage title={locale.pages.authors.title}>
             <Grid container spacing={2}>
                 {!!authorListError && (
                     <Grid item xs={12}>
@@ -85,7 +85,7 @@ export const Authors = () => {
                 <Grid item xs={12}>
                     {!!authorList && (
                         <StandardCard hideTitle>
-                            <AuthorsList
+                            <ManageAuthorsList
                                 handleRowAdd={handleRowAdd}
                                 handleRowUpdate={handleRowUpdate}
                                 handleRowDelete={handleRowDelete}
@@ -99,4 +99,4 @@ export const Authors = () => {
     );
 };
 
-export default React.memo(Authors);
+export default React.memo(ManageAuthors);

@@ -3236,5 +3236,74 @@ export default {
                 message: 'The request to ingest master journal list could not be submitted.',
             },
         },
+        manageAuthors: {
+            header: {
+                columns: {
+                    id: {
+                        title: 'ID',
+                    },
+                    title: {
+                        title: 'Title',
+                    },
+                    firstName: {
+                        title: 'First Name',
+                    },
+                    middleName: {
+                        title: 'Middle Name',
+                    },
+                    lastName: {
+                        title: 'Last Name',
+                    },
+                    position: {
+                        title: 'Position',
+                    },
+                    orgStaffId: {
+                        title: 'Org Staff ID',
+                    },
+                    orgStudentId: {
+                        title: 'Org Student ID',
+                    },
+                    orgUsername: {
+                        title: 'Org Username',
+                    },
+                    studentUsername: {
+                        title: 'Student Username',
+                    },
+                    myPubsUrl: {
+                        title: 'My Pubs URL',
+                    },
+                    refNum: {
+                        title: 'Ref Num',
+                    },
+                    homepageLink: {
+                        title: 'Homepage Link',
+                    },
+                    createdDate: {
+                        title: 'Created Date',
+                    },
+                    orgMembership: {
+                        title: 'Org Membership',
+                    },
+                },
+            },
+            form: {
+                locale: {
+                    addButtonTooltip: 'Add new author',
+                    editButtonTooltip: 'Edit this author',
+                    deleteButtonTooltip: 'Delete this author',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            successAlert: {
+                alertId: 'alert-done-author-add',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully added.',
+            },
+        },
     },
 };

@@ -364,8 +364,8 @@ export const getRoutesConfig = ({
                       pageTitle: locale.pages.journal.view.title,
                   },
                   {
-                      path: pathConfig.admin.authors,
-                      component: components.Authors,
+                      path: pathConfig.admin.manageAuthors,
+                      component: components.ManageAuthors,
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.authors.title,
