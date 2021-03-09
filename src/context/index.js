@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 
 import AccountContext from './AccountContext';
+import EditableContext from './EditableContext';
 import FormErrorsContext from './FormErrorsContext';
 import FormValuesContext from './FormValuesContext';
 import LocallyStoredReducerContext from './LocallyStoredReducerContext';
@@ -11,6 +12,7 @@ import TabbedContext from './TabbedContext';
 import ScrollToSectionContext from './ScrollToSectionContext';
 
 export const useAccountContext = () => useContext(AccountContext);
+export const useEditableContext = () => useContext(EditableContext);
 export const useFormErrorsContext = () => useContext(FormErrorsContext);
 export const useFormValuesContext = () => useContext(FormValuesContext);
 export const useLocallyStoredReducerContext = () => useContext(LocallyStoredReducerContext);
@@ -22,6 +24,7 @@ export const useScrollToSectionContext = () => useContext(ScrollToSectionContext
 
 export {
     AccountContext,
+    EditableContext,
     FormErrorsContext,
     FormValuesContext,
     LocallyStoredReducerContext,

@@ -3246,43 +3246,46 @@ export default {
                         title: 'Title',
                     },
                     firstName: {
-                        title: 'First Name',
+                        title: 'First name',
                     },
                     middleName: {
-                        title: 'Middle Name',
+                        title: 'Middle name',
                     },
                     lastName: {
-                        title: 'Last Name',
+                        title: 'Last name',
+                    },
+                    displayName: {
+                        title: 'Display name',
                     },
                     position: {
                         title: 'Position',
                     },
                     orgStaffId: {
-                        title: 'Org Staff ID',
+                        title: 'Org staff ID',
                     },
                     orgStudentId: {
-                        title: 'Org Student ID',
+                        title: 'Org student ID',
                     },
                     orgUsername: {
-                        title: 'Org Username',
+                        title: 'Org username',
                     },
                     studentUsername: {
-                        title: 'Student Username',
+                        title: 'Student username',
                     },
                     myPubsUrl: {
-                        title: 'My Pubs URL',
+                        title: 'My pubs URL',
                     },
                     refNum: {
-                        title: 'Ref Num',
+                        title: 'Ref num',
                     },
                     homepageLink: {
-                        title: 'Homepage Link',
+                        title: 'Homepage link',
                     },
                     createdDate: {
-                        title: 'Created Date',
+                        title: 'Created date',
                     },
                     orgMembership: {
-                        title: 'Org Membership',
+                        title: 'Org membership',
                     },
                 },
             },
