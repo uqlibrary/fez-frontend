@@ -24,11 +24,13 @@ describe('author reducer', () => {
     it('returns the correct state when author are loaded', () => {
         const test = authorListReducer(initialState, {
             type: actions.AUTHOR_LIST_LOADED,
-            payload: [
-                {
-                    aut_id: 1,
-                },
-            ],
+            payload: {
+                data: [
+                    {
+                        aut_id: 1,
+                    },
+                ],
+            },
         });
 
         expect(test.authorListLoading).toEqual(false);

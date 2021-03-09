@@ -23,10 +23,10 @@ export function loadAuthorList() {
             const response = await get(AUTHORS_SEARCH_API());
             dispatch({
                 type: AUTHOR_LIST_LOADED,
-                payload: response.data,
+                payload: response,
             });
 
-            return Promise.resolve(response.data);
+            return Promise.resolve(response);
         } catch (e) {
             dispatch({
                 type: AUTHOR_LIST_FAILED,

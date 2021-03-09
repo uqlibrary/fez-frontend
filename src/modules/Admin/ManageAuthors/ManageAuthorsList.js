@@ -216,7 +216,16 @@ export const getColumns = () => {
     ];
 };
 
-export const ManageAuthorsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
+export const ManageAuthorsList = ({
+    disabled,
+    onChangePage,
+    onRowAdd,
+    onRowDelete,
+    onRowUpdate,
+    list,
+    page,
+    totalCount,
+}) => {
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns();
@@ -332,8 +341,11 @@ export const ManageAuthorsList = ({ disabled, handleRowAdd, handleRowDelete, han
                 },
             }}
             data={data}
+            page={page}
+            totalCount={totalCount}
             icons={tableIcons}
             title=""
+            onChangePage={onChangePage}
             localization={{
                 body: {
                     addTooltip: addButtonTooltip,
@@ -352,7 +364,7 @@ export const ManageAuthorsList = ({ disabled, handleRowAdd, handleRowDelete, han
             editable={{
                 onRowUpdateCancelled: () => {},
                 onRowAdd: newData => {
-                    return handleRowAdd(newData)
+                    return onRowAdd(newData)
                         .then(data => {
                             setData(prevState => {
                                 return [...prevState, data];
@@ -361,7 +373,7 @@ export const ManageAuthorsList = ({ disabled, handleRowAdd, handleRowDelete, han
                         .catch(() => setData(prevState => prevState));
                 },
                 onRowUpdate: (newData, oldData) => {
-                    return handleRowUpdate(newData, oldData)
+                    return onRowUpdate(newData, oldData)
                         .then(data => {
                             setData(prevState => {
                                 const list = [...prevState];
@@ -372,7 +384,7 @@ export const ManageAuthorsList = ({ disabled, handleRowAdd, handleRowDelete, han
                         .catch(() => setData(prevState => prevState));
                 },
                 onRowDelete: oldData => {
-                    return handleRowDelete(oldData).then(() => {
+                    return onRowDelete(oldData).then(() => {
                         setData(prevState => {
                             const data = [...prevState];
                             data.splice(data.indexOf(oldData), 1);
@@ -405,10 +417,13 @@ export const ManageAuthorsList = ({ disabled, handleRowAdd, handleRowDelete, han
 
 ManageAuthorsList.propTypes = {
     disabled: PropTypes.bool,
-    handleRowAdd: PropTypes.func,
-    handleRowUpdate: PropTypes.func,
-    handleRowDelete: PropTypes.func,
+    onChangePage: PropTypes.func,
+    onRowAdd: PropTypes.func,
+    onRowUpdate: PropTypes.func,
+    onRowDelete: PropTypes.func,
     list: PropTypes.array,
+    page: PropTypes.number,
+    totalCount: PropTypes.number,
 };
 
 export default React.memo(ManageAuthorsList);

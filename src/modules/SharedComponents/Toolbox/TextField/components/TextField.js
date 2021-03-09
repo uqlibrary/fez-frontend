@@ -31,6 +31,7 @@ export const TextFieldWrapper = props => {
                     'data-testid': `${props.textFieldId}-label`,
                     htmlFor: `${props.textFieldId}-input`,
                     hidden: hideLabel,
+                    ...filteredProps.InputLabelProps,
                 }}
             />
         </Fragment>

@@ -25,6 +25,8 @@ export const ManageAuthors = () => {
     const authorListLoading = useSelector(state => state.get('authorsListReducer').authorListLoading);
     const authorList = useSelector(state => state.get('authorsListReducer').authorList);
     const authorListError = useSelector(state => state.get('authorsListReducer').authorListError);
+    const currentPage = useSelector(state => state.get('authorsListReducer').currentPage);
+    const totalCount = useSelector(state => state.get('authorsListReducer').total);
 
     const authorAddSuccess = useSelector(state => state.get('authorsListReducer').authorAddSuccess);
 
@@ -86,10 +88,12 @@ export const ManageAuthors = () => {
                     {!!authorList && (
                         <StandardCard hideTitle>
                             <ManageAuthorsList
-                                handleRowAdd={handleRowAdd}
-                                handleRowUpdate={handleRowUpdate}
-                                handleRowDelete={handleRowDelete}
+                                onRowAdd={handleRowAdd}
+                                onRowUpdate={handleRowUpdate}
+                                onRowDelete={handleRowDelete}
                                 list={authorList}
+                                page={currentPage - 1}
+                                totalCount={totalCount}
                             />
                         </StandardCard>
                     )}
