@@ -968,7 +968,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             : {}),
         ...(!!relatedPubs ? getRecordIsDerivationOfSearchKey(relatedPubs) : {}),
         ...getRecordIsDatasetOfSearchKey(datasets),
-        fez_matched_journals: !!matchedJournal ? { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' } : undefined,
+        fez_matched_journals: !!matchedJournal ? { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' } : null,
     };
 };
 
