@@ -38,7 +38,18 @@ exports[`Community form should display successfull submission screen 1`] = `
                 >
                   <Field
                     autoFocus={true}
-                    component={[Function]}
+                    component={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "propTypes": Object {
+                          "classes": [Function],
+                          "help": [Function],
+                          "innerRef": [Function],
+                          "textFieldId": [Function],
+                        },
+                        "render": [Function],
+                      }
+                    }
                     disabled={false}
                     fullWidth={true}
                     label="Title of community"
@@ -59,7 +70,18 @@ exports[`Community form should display successfull submission screen 1`] = `
                   xs={12}
                 >
                   <Field
-                    component={[Function]}
+                    component={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "propTypes": Object {
+                          "classes": [Function],
+                          "help": [Function],
+                          "innerRef": [Function],
+                          "textFieldId": [Function],
+                        },
+                        "render": [Function],
+                      }
+                    }
                     disabled={false}
                     fullWidth={true}
                     label="Community description"
@@ -253,7 +275,18 @@ exports[`Community form should render form 1`] = `
                 >
                   <Field
                     autoFocus={true}
-                    component={[Function]}
+                    component={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "propTypes": Object {
+                          "classes": [Function],
+                          "help": [Function],
+                          "innerRef": [Function],
+                          "textFieldId": [Function],
+                        },
+                        "render": [Function],
+                      }
+                    }
                     disabled={false}
                     fullWidth={true}
                     label="Title of community"
@@ -274,7 +307,18 @@ exports[`Community form should render form 1`] = `
                   xs={12}
                 >
                   <Field
-                    component={[Function]}
+                    component={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "propTypes": Object {
+                          "classes": [Function],
+                          "help": [Function],
+                          "innerRef": [Function],
+                          "textFieldId": [Function],
+                        },
+                        "render": [Function],
+                      }
+                    }
                     disabled={false}
                     fullWidth={true}
                     label="Community description"

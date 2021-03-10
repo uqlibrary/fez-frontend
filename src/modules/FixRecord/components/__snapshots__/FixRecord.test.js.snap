@@ -1520,7 +1520,18 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Describe the problem with this work, eg work is a duplicate, or suggested changes"
@@ -1535,7 +1546,18 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -2711,7 +2733,18 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Describe the problem with this work, eg work is a duplicate, or suggested changes"
@@ -2726,7 +2759,18 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -3383,7 +3427,18 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Describe the problem with this work, eg work is a duplicate, or suggested changes"
@@ -3398,7 +3453,18 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"

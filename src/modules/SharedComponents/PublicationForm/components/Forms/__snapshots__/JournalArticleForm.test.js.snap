@@ -22,7 +22,18 @@ exports[`JournalArticleForm renders  component 1`] = `
         >
           <Field
             autoFocus={true}
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Title"
@@ -46,7 +57,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Journal name"
@@ -337,7 +359,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={6}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -352,7 +385,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={6}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -367,7 +411,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={6}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -382,7 +437,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={6}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -396,7 +462,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Article number"
@@ -410,7 +487,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
@@ -426,7 +514,18 @@ exports[`JournalArticleForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Link (URL)"
