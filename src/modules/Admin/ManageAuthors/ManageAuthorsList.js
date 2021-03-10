@@ -105,6 +105,24 @@ export const getColumns = () => {
             render: rowData => (
                 <ResearcherIdentifierColumnData rowData={rowData} key="viewable-researcher-identifiers-column-data" />
             ),
+            editComponent: ({ onRowDataChange, rowData, ...props }) => {
+                const handleChange = e => {
+                    onRowDataChange({
+                        ...rowData,
+                        [e.target.name]: e.target.value,
+                    });
+                };
+                return (
+                    <EditableContext.Provider value={{ editable: true }}>
+                        <ResearcherIdentifierColumnData
+                            {...props}
+                            rowData={rowData}
+                            onChange={handleChange}
+                            key="editable-researcher-identifiers-column-data"
+                        />
+                    </EditableContext.Provider>
+                );
+            },
         },
         // {
         //     title: <ColumnTitle title={notes.title} />,
