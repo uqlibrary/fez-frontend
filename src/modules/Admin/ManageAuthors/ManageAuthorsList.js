@@ -53,12 +53,23 @@ export const getColumns = () => {
         },
         {
             title: <ColumnTitle title="Name" />,
-            field: '',
-            render: rowData => <NameColumnData rowData={rowData} />,
+            field: 'name',
+            render: rowData => <NameColumnData rowData={rowData} key="viewable-name-column-data" />,
             editComponent: props => {
+                const handleChange = e => {
+                    props.onRowDataChange({
+                        ...props.rowData,
+                        [e.target.name]: e.target.value,
+                    });
+                };
                 return (
                     <EditableContext.Provider value={{ editable: true }}>
-                        <NameColumnData rowData={props.rowData} />
+                        <NameColumnData
+                            {...props}
+                            rowData={props.rowData}
+                            onChange={handleChange}
+                            key="editable-name-column-data"
+                        />
                     </EditableContext.Provider>
                 );
             },
@@ -103,11 +114,24 @@ export const getColumns = () => {
         {
             title: <ColumnTitle title="Identifiers/Usernames" />,
             field: '',
-            render: rowData => <IdentifierUsernameColumnData rowData={rowData} />,
+            render: rowData => (
+                <IdentifierUsernameColumnData rowData={rowData} key="viewable-identifiers-usernames-column-data" />
+            ),
             editComponent: props => {
+                const handleChange = e => {
+                    props.onRowDataChange({
+                        ...props.rowData,
+                        [e.target.name]: e.target.value,
+                    });
+                };
                 return (
                     <EditableContext.Provider value={{ editable: true }}>
-                        <IdentifierUsernameColumnData rowData={props.rowData} />
+                        <IdentifierUsernameColumnData
+                            {...props}
+                            rowData={props.rowData}
+                            onChange={handleChange}
+                            key="editable-identifiers-usernames-column-data"
+                        />
                     </EditableContext.Provider>
                 );
             },

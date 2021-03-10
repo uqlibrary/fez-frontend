@@ -17,36 +17,41 @@ export const NameColumnData = ({ rowData }) => {
         <Grid container spacing={1}>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-title-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-org-staff-id-${rowData.tableData.id}`}
                     data={rowData.aut_org_staff_id}
+                    name="aut_org_staff_id"
                     title={orgStaffId.title}
                 />
             </Grid>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-mname-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-org-username-${rowData.tableData.id}`}
                     data={rowData.aut_org_username}
+                    name="aut_org_username"
                     title={orgUsername.title}
                 />
             </Grid>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-fname-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-student-id-${rowData.tableData.id}`}
                     data={rowData.aut_student_id}
+                    name="aut_student_id"
                     title={orgStudentId.title}
                 />
             </Grid>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-lname-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-student-username-${rowData.tableData.id}`}
                     data={rowData.aut_student_username}
+                    name="aut_student_username"
                     title={studentUsername.title}
                 />
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-position-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-ref-num-${rowData.tableData.id}`}
                     data={rowData.aut_ref_num}
+                    name="aut_ref_num"
                     title={refNum.title}
                 />
             </Grid>

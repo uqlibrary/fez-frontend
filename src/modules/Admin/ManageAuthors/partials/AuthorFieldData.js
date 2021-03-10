@@ -14,11 +14,12 @@ const useStyles = makeStyles(() => ({
     underline: {},
 }));
 
-export const AuthorFieldData = ({ authorFieldDataId, data, title }) => {
+export const AuthorFieldData = ({ authorFieldDataId, data, title, ...props }) => {
     const classes = useStyles();
     const { editable } = useEditableContext();
     return (
         <TextField
+            {...props}
             textFieldId={authorFieldDataId}
             label={title}
             fullWidth
@@ -45,6 +46,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, title }) => {
                 disableAnimation: true,
             }}
             value={data || ''}
+            onChange={props.onChange}
         />
     );
 };
@@ -52,6 +54,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, title }) => {
 AuthorFieldData.propTypes = {
     authorFieldDataId: PropTypes.string,
     data: PropTypes.string,
+    onChange: PropTypes.func,
     title: PropTypes.string,
 };
 
