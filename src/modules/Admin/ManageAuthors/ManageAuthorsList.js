@@ -18,6 +18,7 @@ import IdentifierUsernameColumnData from './partials/IdentifierUsernameColumnDat
 
 // import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { default as locale } from 'locale/components';
+import { EditableContext } from 'context';
 
 export const getColumns = () => {
     const {
@@ -54,6 +55,13 @@ export const getColumns = () => {
             title: <ColumnTitle title="Name" />,
             field: '',
             render: rowData => <NameColumnData rowData={rowData} />,
+            editComponent: props => {
+                return (
+                    <EditableContext.Provider value={{ editable: true }}>
+                        <NameColumnData rowData={props.rowData} />
+                    </EditableContext.Provider>
+                );
+            },
             cellStyle: {
                 width: '30%',
                 maxWidth: '30%',
@@ -96,6 +104,13 @@ export const getColumns = () => {
             title: <ColumnTitle title="Identifiers/Usernames" />,
             field: '',
             render: rowData => <IdentifierUsernameColumnData rowData={rowData} />,
+            editComponent: props => {
+                return (
+                    <EditableContext.Provider value={{ editable: true }}>
+                        <IdentifierUsernameColumnData rowData={props.rowData} />
+                    </EditableContext.Provider>
+                );
+            },
             cellStyle: {
                 width: '25%',
                 maxWidth: '25%',
@@ -306,8 +321,7 @@ export const ManageAuthorsList = ({
                             />
                         );
                     } else {
-                        //  Add actions
-                        // const { icon: Icon, tooltip, ...restAction } = props.action;
+                        //  Add action
                         const { tooltip } = props.action;
                         return (
                             <Button
@@ -319,23 +333,6 @@ export const ManageAuthorsList = ({
                                 children={tooltip}
                                 onClick={event => props.action.onClick(event, props.data)}
                             />
-                            // <MTableAction
-                            //     {...props}
-                            //     action={{
-                            //         ...restAction,
-                            //         tooltip: tooltip,
-                            //         icon: iconProps => (
-                            //             <Icon
-                            //                 {...iconProps}
-                            //                 id={`authors-${tooltip
-                            // .toLowerCase().replace(/ /g, '-')}`}
-                            //                 data-testid={`authors-${tooltip
-                            //                     .toLowerCase()
-                            //                     .replace(/ /g, '-')}`}
-                            //             />
-                            //         ),
-                            //     }}
-                            // />
                         );
                     }
                 },
@@ -353,14 +350,6 @@ export const ManageAuthorsList = ({
                     deleteTooltip: deleteButtonTooltip,
                 },
             }}
-            // cellEditable={{
-            //     onCellEditApproved: (newValue, oldValue, rowData, columnDef) => {
-            //         console.log(newValue, oldValue, rowData, columnDef);
-            //         return new Promise(resolve => {
-            //             setTimeout(resolve, 1000);
-            //         });
-            //     },
-            // }}
             editable={{
                 onRowUpdateCancelled: () => {},
                 onRowAdd: newData => {

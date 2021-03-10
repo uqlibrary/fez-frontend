@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { makeStyles } from '@material-ui/styles';
 
+import { useEditableContext } from 'context';
+
 const useStyles = makeStyles(() => ({
     root: {
         '&::before': {
@@ -14,20 +16,26 @@ const useStyles = makeStyles(() => ({
 
 export const AuthorFieldData = ({ authorFieldDataId, data, title }) => {
     const classes = useStyles();
+    const { editable } = useEditableContext();
     return (
         <TextField
             textFieldId={authorFieldDataId}
             label={title}
+            fullWidth
             InputProps={{
                 style: {
                     fontSize: 14,
                     fontWeight: 400,
                 },
-                readOnly: true,
-                classes: {
-                    root: classes.root,
-                    underline: classes.underline,
-                },
+                ...(!editable
+                    ? {
+                          readOnly: true,
+                          classes: {
+                              root: classes.root,
+                              underline: classes.underline,
+                          },
+                      }
+                    : {}),
             }}
             InputLabelProps={{
                 style: {
@@ -36,7 +44,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, title }) => {
                 shrink: true,
                 disableAnimation: true,
             }}
-            value={data}
+            value={data || ''}
         />
     );
 };
