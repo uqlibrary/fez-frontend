@@ -7,7 +7,7 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
 
-export const NameColumnData = ({ rowData }) => {
+export const UsernameIdColumnData = ({ rowData, ...props }) => {
     const {
         header: {
             columns: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum },
@@ -21,6 +21,7 @@ export const NameColumnData = ({ rowData }) => {
                     data={rowData.aut_org_staff_id}
                     name="aut_org_staff_id"
                     title={orgStaffId.title}
+                    {...props}
                 />
             </Grid>
             <Grid item xs={6}>
@@ -29,6 +30,7 @@ export const NameColumnData = ({ rowData }) => {
                     data={rowData.aut_org_username}
                     name="aut_org_username"
                     title={orgUsername.title}
+                    {...props}
                 />
             </Grid>
             <Grid item xs={6}>
@@ -37,6 +39,7 @@ export const NameColumnData = ({ rowData }) => {
                     data={rowData.aut_student_id}
                     name="aut_student_id"
                     title={orgStudentId.title}
+                    {...props}
                 />
             </Grid>
             <Grid item xs={6}>
@@ -45,6 +48,7 @@ export const NameColumnData = ({ rowData }) => {
                     data={rowData.aut_student_username}
                     name="aut_student_username"
                     title={studentUsername.title}
+                    {...props}
                 />
             </Grid>
             <Grid item xs={12}>
@@ -53,14 +57,15 @@ export const NameColumnData = ({ rowData }) => {
                     data={rowData.aut_ref_num}
                     name="aut_ref_num"
                     title={refNum.title}
+                    {...props}
                 />
             </Grid>
         </Grid>
     );
 };
 
-NameColumnData.propTypes = {
+UsernameIdColumnData.propTypes = {
     rowData: PropTypes.object,
 };
 
-export default React.memo(NameColumnData);
+export default React.memo(UsernameIdColumnData);

@@ -3272,20 +3272,29 @@ export default {
                     studentUsername: {
                         title: 'Student username',
                     },
-                    myPubsUrl: {
-                        title: 'My pubs URL',
-                    },
                     refNum: {
                         title: 'Ref num',
-                    },
-                    homepageLink: {
-                        title: 'Homepage link',
                     },
                     createdDate: {
                         title: 'Created date',
                     },
                     orgMembership: {
                         title: 'Org membership',
+                    },
+                    notes: {
+                        title: 'Notes',
+                    },
+                    scopusId: {
+                        title: 'Scopus ID',
+                    },
+                    googleScholarId: {
+                        title: 'Google scholar ID',
+                    },
+                    peopleAustraliaId: {
+                        title: 'People Australia ID',
+                    },
+                    orcidId: {
+                        title: 'Orcid ID',
                     },
                 },
             },

@@ -4,7 +4,8 @@ import Typography from '@material-ui/core/Typography';
 
 export const ColumnData = ({ columnDataId, data }) => (
     <Typography
-        variant="body2"
+        variant="subtitle2"
+        component="div"
         {...(!!columnDataId
             ? {
                   'data-testid': columnDataId,

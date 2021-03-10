@@ -4,37 +4,20 @@ import PropTypes from 'prop-types';
 import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from 'material-table';
 
 import { tableIcons } from './ManageAuthorsListIcons';
-// import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-// import Grid from '@material-ui/core/Grid';
-// import Typography from '@material-ui/core/Typography';
-// import { KeyboardDatePicker } from '@material-ui/pickers';
-
-// import AuthorFieldData from './partials/AuthorFieldData';
 import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
 import NameColumnData from './partials/NameColumnData';
-import IdentifierUsernameColumnData from './partials/IdentifierUsernameColumnData';
+import UsernameIdColumnData from './partials/UsernameIdColumnData';
+import ResearcherIdentifierColumnData from './partials/ResearcherIdentifierColumnData';
 
-// import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { default as locale } from 'locale/components';
 import { EditableContext } from 'context';
 
 export const getColumns = () => {
     const {
         header: {
-            columns: {
-                id,
-                // orgStaffId,
-                // orgStudentId,
-                // orgUsername,
-                // studentUsername,
-                myPubsUrl,
-                // refNum,
-                // homepageLink,
-                createdDate,
-                // orgMembership,
-            },
+            columns: { id },
         },
     } = locale.components.manageAuthors;
     return [
@@ -55,10 +38,10 @@ export const getColumns = () => {
             title: <ColumnTitle title="Name" />,
             field: 'name',
             render: rowData => <NameColumnData rowData={rowData} key="viewable-name-column-data" />,
-            editComponent: props => {
+            editComponent: ({ onRowDataChange, rowData, ...props }) => {
                 const handleChange = e => {
-                    props.onRowDataChange({
-                        ...props.rowData,
+                    onRowDataChange({
+                        ...rowData,
                         [e.target.name]: e.target.value,
                     });
                 };
@@ -66,7 +49,7 @@ export const getColumns = () => {
                     <EditableContext.Provider value={{ editable: true }}>
                         <NameColumnData
                             {...props}
-                            rowData={props.rowData}
+                            rowData={rowData}
                             onChange={handleChange}
                             key="editable-name-column-data"
                         />
@@ -82,53 +65,24 @@ export const getColumns = () => {
                 maxWidth: '30%',
             },
         },
-        // {
-        //     title: <ColumnTitle title={title.title} />,
-        //     field: 'aut_title',
-        //     render: rowData => (
-        //         <ColumnData data={rowData.aut_title} columnDataId={`aut-title-${rowData.tableData.id}`} />
-        //     ),
-        // },
-        // {
-        //     title: <ColumnTitle title={firstName.title} />,
-        //     field: 'aut_fname',
-        //     render: rowData => (
-        //         <ColumnData data={rowData.aut_fname} columnDataId={`aut-fname-${rowData.tableData.id}`} />
-        //     ),
-        // },
-        // {
-        //     title: <ColumnTitle title={middleName.title} />,
-        //     field: 'aut_mname',
-        //     render: rowData => (
-        //         <ColumnData data={rowData.aut_mname} columnDataId={`aut-mname-${rowData.tableData.id}`} />
-        //     ),
-        // },
-        // {
-        //     title: <ColumnTitle title={lastName.title} />,
-        //     field: 'aut_lname',
-        //     render: rowData => (
-        //         <ColumnData data={rowData.aut_lname} columnDataId={`aut-lname-${rowData.tableData.id}`} />
-        //     ),
-        // },
-
         {
-            title: <ColumnTitle title="Identifiers/Usernames" />,
-            field: '',
+            title: <ColumnTitle title="Username & IDs" />,
+            field: 'identifiers-usernames',
             render: rowData => (
-                <IdentifierUsernameColumnData rowData={rowData} key="viewable-identifiers-usernames-column-data" />
+                <UsernameIdColumnData rowData={rowData} key="viewable-identifiers-usernames-column-data" />
             ),
-            editComponent: props => {
+            editComponent: ({ onRowDataChange, rowData, ...props }) => {
                 const handleChange = e => {
-                    props.onRowDataChange({
-                        ...props.rowData,
+                    onRowDataChange({
+                        ...rowData,
                         [e.target.name]: e.target.value,
                     });
                 };
                 return (
                     <EditableContext.Provider value={{ editable: true }}>
-                        <IdentifierUsernameColumnData
+                        <UsernameIdColumnData
                             {...props}
-                            rowData={props.rowData}
+                            rowData={rowData}
                             onChange={handleChange}
                             key="editable-identifiers-usernames-column-data"
                         />
@@ -144,104 +98,36 @@ export const getColumns = () => {
                 maxWidth: '25%',
             },
         },
-        // {
-        //     title: <ColumnTitle title={position.title} />,
-        //     field: 'aut_position',
-        //     render: rowData => (
-        //         <ColumnData data={rowData.aut_position} columnDataId={`aut-position-${rowData.tableData.id}`} />
-        //     ),
-        // },
-        // {
-        //     title: <ColumnTitle title={orgStaffId.title} />,
-        //     field: 'aut_org_staff_id',
-        //     render: rowData => (
-        //         <ColumnData data={rowData.aut_org_staff_id}
-        // columnDataId={`aut-org-staff-id-${rowData.tableData.id}`} />
-        //     ),
-        // },
-        // {
-        //     title: <ColumnTitle title={orgStudentId.title} />,
-        //     field: 'aut_org_student_id',
-        //     render: rowData => (
-        //         <ColumnData
-        //             data={rowData.aut_org_student_id}
-        //             columnDataId={`aut-org-student-id-${rowData.tableData.id}`}
-        //         />
-        //     ),
-        // },
-        // {
-        //     title: <ColumnTitle title={orgUsername.title} />,
-        //     field: 'aut_org_username',
-        //     render: rowData => (
-        //         <ColumnData data={rowData.aut_org_username} columnDataId={`au
-        // t-org-username-${rowData.tableData.id}`} />
-        //     ),
-        // },
-        // {
-        //     title: <ColumnTitle title={studentUsername.title} />,
-        //     field: 'aut_student_username',
-        //     render: rowData => (
-        //         <ColumnData
-        //             data={rowData.aut_student_username}
-        //             columnDataId={`aut-student-username-${rowData.tableData.id}`}
-        //         />
-        //     ),
-        // },
+
         {
-            title: <ColumnTitle title={myPubsUrl.title} />,
-            field: 'aut_my_pubs_url',
+            title: <ColumnTitle title="Researcher Identifiers" />,
+            field: 'researcher-identifiers',
             render: rowData => (
-                <ColumnData data={rowData.aut_my_pubs_url} columnDataId={`aut-my-pubs-url-${rowData.tableData.id}`} />
+                <ResearcherIdentifierColumnData rowData={rowData} key="viewable-researcher-identifiers-column-data" />
             ),
-            cellStyle: {
-                width: '12%',
-                maxWidth: '12%',
-            },
-            headerStyle: {
-                width: '12%',
-                maxWidth: '12%',
-            },
         },
         // {
-        //     title: <ColumnTitle title={refNum.title} />,
-        //     field: 'aut_ref_num',
+        //     title: <ColumnTitle title={notes.title} />,
+        //     field: 'aut_description',
         //     render: rowData => (
-        //         <ColumnData data={rowData.aut_ref_num} columnDataId={`aut-ref-num-${rowData.tableData.id}`} />
+        //         <ColumnData columnDataId={`aut-discription-${rowData.tableData.id}`}
+        // data={rowData.aut_description} />
         //     ),
+        //     cellStyle: {
+        //         width: '12%',
+        //         maxWidth: '12%',
+        //     },
+        //     headerStyle: {
+        //         width: '12%',
+        //         maxWidth: '12%',
+        //     },
         // },
         // {
-        //     title: <ColumnTitle title={homepageLink.title} />,
-        //     field: 'aut_homepage_link',
+        //     title: <ColumnTitle title={createdDate.title} />,
+        //     field: 'aut_created_date',
         //     render: rowData => (
-        //         <ColumnData
-        //             data={rowData.aut_homepage_link}
-        //             columnDataId={`aut-homepage-link-${rowData.tableData.id}`}
-        //         />
-        //     ),
-        // },
-        {
-            title: <ColumnTitle title={createdDate.title} />,
-            field: 'aut_created_date',
-            render: rowData => (
-                <ColumnData data={rowData.aut_created_date} columnDataId={`aut-created-date-${rowData.tableData.id}`} />
-            ),
-            cellStyle: {
-                width: '10%',
-                maxWidth: '10%',
-            },
-            headerStyle: {
-                width: '10%',
-                maxWidth: '10%',
-            },
-        },
-        // {
-        //     title: <ColumnTitle title={orgMembership.title} />,
-        //     field: 'aut_org_membership',
-        //     render: rowData => (
-        //         <ColumnData
-        //             data={rowData.aut_org_membership}
-        //             columnDataId={`aut-org-memberhsip-${rowData.tableData.id}`}
-        //         />
+        //         <ColumnData data={rowData.aut_created_date}
+        // columnDataId={`aut-created-date-${rowData.tableData.id}`} />
         //     ),
         //     cellStyle: {
         //         width: '10%',
