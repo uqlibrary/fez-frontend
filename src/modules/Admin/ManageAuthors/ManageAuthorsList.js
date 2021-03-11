@@ -39,10 +39,10 @@ export const getColumns = () => {
             field: 'name',
             render: rowData => <NameColumnData rowData={rowData} key="viewable-name-column-data" />,
             editComponent: ({ onRowDataChange, rowData, ...props }) => {
-                const handleChange = e => {
+                const handleChange = (name, value) => {
                     onRowDataChange({
                         ...rowData,
-                        [e.target.name]: e.target.value,
+                        [name]: value,
                     });
                 };
                 return (
@@ -72,10 +72,10 @@ export const getColumns = () => {
                 <UsernameIdColumnData rowData={rowData} key="viewable-identifiers-usernames-column-data" />
             ),
             editComponent: ({ onRowDataChange, rowData, ...props }) => {
-                const handleChange = e => {
+                const handleChange = (name, value) => {
                     onRowDataChange({
                         ...rowData,
-                        [e.target.name]: e.target.value,
+                        [name]: value,
                     });
                 };
                 return (
@@ -106,10 +106,10 @@ export const getColumns = () => {
                 <ResearcherIdentifierColumnData rowData={rowData} key="viewable-researcher-identifiers-column-data" />
             ),
             editComponent: ({ onRowDataChange, rowData, ...props }) => {
-                const handleChange = e => {
+                const handleChange = (name, value) => {
                     onRowDataChange({
                         ...rowData,
-                        [e.target.name]: e.target.value,
+                        [name]: value,
                     });
                 };
                 return (
