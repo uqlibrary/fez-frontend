@@ -73,8 +73,10 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list')).toBeInTheDocument();
 
         // Expect table column titles
+        expect(getByText('ID')).toBeInTheDocument();
         expect(getByText('Name')).toBeInTheDocument();
-        expect(getByText('Identifiers/Usernames')).toBeInTheDocument();
+        expect(getByText('Username & IDs')).toBeInTheDocument();
+        expect(getByText('Researcher Identifiers'));
     });
 
     it('should render error message', async () => {

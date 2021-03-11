@@ -16,7 +16,7 @@ describe('author list actions', () => {
     describe('loadAuthorList action', () => {
         it('should dispatch correct number of actions on loading author list', async () => {
             mockApi
-                .onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl)
+                .onGet(`${repositories.routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
                 .reply(200, { data: { ...mockData.authorList } });
 
             const expectedActions = [actions.AUTHOR_LIST_LOADING, actions.AUTHOR_LIST_LOADED];
@@ -26,7 +26,9 @@ describe('author list actions', () => {
         });
 
         it('should dispatch correct number of actions on failed to load author list', async () => {
-            mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl).reply(500);
+            mockApi
+                .onGet(`${repositories.routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
+                .reply(500);
 
             const expectedActions = [actions.AUTHOR_LIST_LOADING, actions.APP_ALERT_SHOW, actions.AUTHOR_LIST_FAILED];
 
