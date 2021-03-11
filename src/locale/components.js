@@ -3296,6 +3296,15 @@ export default {
                     orcidId: {
                         title: 'Orcid ID',
                     },
+                    researcherId: {
+                        title: 'Researcher ID',
+                    },
+                    isScopusIdAuthenticated: {
+                        title: 'Is Scopus ID authenticated?',
+                    },
+                    isOrcidSyncEnabled: {
+                        title: 'Is pub sync with ORCID profile enabled?',
+                    },
                 },
             },
             form: {

@@ -17,7 +17,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
         <Grid container spacing={1}>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-title-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-title-${rowData.tableData.id || props.index}`}
                     data={rowData.aut_title}
                     name="aut_title"
                     title={title.title}
@@ -79,6 +79,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
 
 NameColumnData.propTypes = {
     rowData: PropTypes.object,
+    index: PropTypes.number,
 };
 
 export default React.memo(NameColumnData);

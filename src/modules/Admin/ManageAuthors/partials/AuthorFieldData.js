@@ -35,8 +35,11 @@ export const AuthorFieldData = ({ authorFieldDataId, data, title, ...props }) =>
                               root: classes.root,
                               underline: classes.underline,
                           },
+                          ...props.InputProps,
                       }
-                    : {}),
+                    : {
+                          ...props.InputProps,
+                      }),
             }}
             InputLabelProps={{
                 style: {
@@ -46,7 +49,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, title, ...props }) =>
                 disableAnimation: true,
             }}
             value={data || ''}
-            onChange={props.onChange}
+            onChange={e => props.onChange(e.target.name, e.target.value)}
         />
     );
 };
@@ -54,6 +57,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, title, ...props }) =>
 AuthorFieldData.propTypes = {
     authorFieldDataId: PropTypes.string,
     data: PropTypes.string,
+    InputProps: PropTypes.object,
     onChange: PropTypes.func,
     title: PropTypes.string,
 };

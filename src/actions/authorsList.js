@@ -18,9 +18,13 @@ import { AUTHORS_SEARCH_API, AUTHOR_API } from 'repositories/routes';
 export function loadAuthorList() {
     return async dispatch => {
         dispatch({ type: AUTHOR_LIST_LOADING });
+        const authorsSearchApi = AUTHORS_SEARCH_API();
 
         try {
-            const response = await get(AUTHORS_SEARCH_API());
+            const response = await get({
+                ...authorsSearchApi,
+                apiUrl: `${authorsSearchApi.apiUrl}?sort=updated_date&order_by=desc`,
+            });
             dispatch({
                 type: AUTHOR_LIST_LOADED,
                 payload: response,
@@ -43,7 +47,7 @@ export function updateAuthorListItem(newData, oldData) {
         try {
             dispatch({ type: AUTHOR_ITEM_UPDATING });
 
-            const response = await put(AUTHOR_API({ id: newData.aut_id }), newData);
+            const response = await put(AUTHOR_API({ authorId: newData.aut_id }), newData);
 
             dispatch({
                 type: AUTHOR_ITEM_UPDATE_SUCCESS,
@@ -69,7 +73,7 @@ export function deleteAuthorListItem(oldData) {
         dispatch({ type: AUTHOR_ITEM_DELETING });
 
         try {
-            const response = await destroy(AUTHOR_API({ id: oldData.aut_id }));
+            const response = await destroy(AUTHOR_API({ authorId: oldData.aut_id }));
             dispatch({
                 type: AUTHOR_ITEM_DELETE_SUCCESS,
                 payload: oldData,

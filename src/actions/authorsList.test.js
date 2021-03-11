@@ -42,7 +42,7 @@ describe('author list actions', () => {
     describe('updateAuthorListItem action', () => {
         it('should dispatch correct number of actions on author list item successfully updated', async () => {
             mockApi
-                .onPut(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl)
+                .onPut(repositories.routes.AUTHOR_API({ authorId: 1 }).apiUrl)
                 .reply(200, { data: { ...mockData.authorListItem } });
 
             const expectedActions = [actions.AUTHOR_ITEM_UPDATING, actions.AUTHOR_ITEM_UPDATE_SUCCESS];
@@ -52,7 +52,7 @@ describe('author list actions', () => {
         });
 
         it('should dispatch correct number of actions on author list item update failed', async () => {
-            mockApi.onPut(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl).reply(500);
+            mockApi.onPut(repositories.routes.AUTHOR_API({ authorId: 1 }).apiUrl).reply(500);
 
             const expectedActions = [
                 actions.AUTHOR_ITEM_UPDATING,
@@ -72,7 +72,7 @@ describe('author list actions', () => {
 
         it('should dispatch correct of number of actions for existing alias not found while updating', async () => {
             mockApi
-                .onPut(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl)
+                .onPut(repositories.routes.AUTHOR_API({ authorId: 1 }).apiUrl)
                 .reply(200, { data: { ...mockData.authorListItem } });
 
             const expectedActions = [actions.AUTHOR_ITEM_UPDATING, actions.AUTHOR_ITEM_UPDATE_SUCCESS];
@@ -90,7 +90,7 @@ describe('author list actions', () => {
     describe('deleteAuthorListItem action', () => {
         it('should dispatch correct number of actions on author list item successfully deleted', async () => {
             mockApi
-                .onDelete(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl)
+                .onDelete(repositories.routes.AUTHOR_API({ authorId: 1 }).apiUrl)
                 .reply(200, { data: { ...mockData.authorListItem } });
 
             const expectedActions = [actions.AUTHOR_ITEM_DELETING, actions.AUTHOR_ITEM_DELETE_SUCCESS];
@@ -100,7 +100,7 @@ describe('author list actions', () => {
         });
 
         it('should dispatch correct number of actions on author list item delete failed', async () => {
-            mockApi.onDelete(repositories.routes.AUTHOR_API({ id: 1 }).apiUrl).reply(500);
+            mockApi.onDelete(repositories.routes.AUTHOR_API({ authorId: 1 }).apiUrl).reply(500);
 
             const expectedActions = [
                 actions.AUTHOR_ITEM_DELETING,
