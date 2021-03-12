@@ -3240,70 +3240,72 @@ export default {
             header: {
                 columns: {
                     id: {
-                        title: 'ID',
+                        label: 'ID',
                     },
                     title: {
-                        title: 'Title',
+                        label: 'Title',
                     },
                     firstName: {
-                        title: 'First name',
+                        label: 'First name',
                     },
                     middleName: {
-                        title: 'Middle name',
+                        label: 'Middle name',
                     },
                     lastName: {
-                        title: 'Last name',
+                        label: 'Last name',
                     },
                     displayName: {
-                        title: 'Display name',
+                        label: 'Display name',
                     },
                     position: {
-                        title: 'Position',
+                        label: 'Position',
                     },
                     orgStaffId: {
-                        title: 'Org staff ID',
+                        label: 'Org staff ID',
+                        helperText: 'This is a 7 digit number, usually preceded by a 0',
                     },
                     orgStudentId: {
-                        title: 'Org student ID',
+                        label: 'Org student ID',
+                        helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
                     },
                     orgUsername: {
-                        title: 'Org username',
+                        label: 'Org username',
                     },
                     studentUsername: {
-                        title: 'Student username',
+                        label: 'Student username',
                     },
                     refNum: {
-                        title: 'Ref num',
+                        label: 'Ref num',
                     },
                     createdDate: {
-                        title: 'Created date',
+                        label: 'Created date',
                     },
                     orgMembership: {
-                        title: 'Org membership',
+                        label: 'Org membership',
                     },
                     notes: {
-                        title: 'Notes',
+                        label: 'Notes',
                     },
                     scopusId: {
-                        title: 'Scopus ID',
+                        label: 'Scopus ID',
                     },
                     googleScholarId: {
-                        title: 'Google scholar ID',
+                        label: 'Google scholar ID',
                     },
                     peopleAustraliaId: {
-                        title: 'People Australia ID',
+                        label: 'People Australia ID',
                     },
                     orcidId: {
-                        title: 'Orcid ID',
+                        label: 'Orcid ID',
                     },
                     researcherId: {
-                        title: 'Researcher ID',
+                        label: 'Researcher ID',
                     },
                     isScopusIdAuthenticated: {
-                        title: 'Is Scopus ID authenticated?',
+                        label: 'Is Scopus ID authenticated?',
                     },
                     isOrcidSyncEnabled: {
-                        title: 'Is pub sync with ORCID profile enabled?',
+                        label: 'Is pub sync with ORCID profile enabled?',
                     },
                 },
             },

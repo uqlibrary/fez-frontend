@@ -13,6 +13,8 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
             columns: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum },
         },
     } = locale.components.manageAuthors;
+
+    console.log(orgStaffId, orgStudentId);
     return (
         <Grid container spacing={1}>
             <Grid item xs={6}>
@@ -20,8 +22,8 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-org-staff-id-${rowData.tableData.id}`}
                     data={rowData.aut_org_staff_id}
                     name="aut_org_staff_id"
-                    title={orgStaffId.title}
                     {...props}
+                    {...orgStaffId}
                 />
             </Grid>
             <Grid item xs={6}>
@@ -29,7 +31,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-org-username-${rowData.tableData.id}`}
                     data={rowData.aut_org_username}
                     name="aut_org_username"
-                    title={orgUsername.title}
+                    {...orgUsername}
                     {...props}
                 />
             </Grid>
@@ -38,8 +40,8 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-student-id-${rowData.tableData.id}`}
                     data={rowData.aut_student_id}
                     name="aut_student_id"
-                    title={orgStudentId.title}
                     {...props}
+                    {...orgStudentId}
                 />
             </Grid>
             <Grid item xs={6}>
@@ -47,7 +49,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-student-username-${rowData.tableData.id}`}
                     data={rowData.aut_student_username}
                     name="aut_student_username"
-                    title={studentUsername.title}
+                    {...studentUsername}
                     {...props}
                 />
             </Grid>
@@ -56,7 +58,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-ref-num-${rowData.tableData.id}`}
                     data={rowData.aut_ref_num}
                     name="aut_ref_num"
-                    title={refNum.title}
+                    {...refNum}
                     {...props}
                 />
             </Grid>

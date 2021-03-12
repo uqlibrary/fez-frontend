@@ -14,14 +14,13 @@ const useStyles = makeStyles(() => ({
     underline: {},
 }));
 
-export const AuthorFieldData = ({ authorFieldDataId, data, title, ...props }) => {
+export const AuthorFieldData = ({ authorFieldDataId, data, ...props }) => {
     const classes = useStyles();
     const { editable } = useEditableContext();
     return (
         <TextField
             {...props}
             textFieldId={authorFieldDataId}
-            label={title}
             fullWidth
             InputProps={{
                 style: {
@@ -59,7 +58,6 @@ AuthorFieldData.propTypes = {
     data: PropTypes.string,
     InputProps: PropTypes.object,
     onChange: PropTypes.func,
-    title: PropTypes.string,
 };
 
 export default React.memo(AuthorFieldData);

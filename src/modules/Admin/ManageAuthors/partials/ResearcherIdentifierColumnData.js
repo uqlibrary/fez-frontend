@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import VerifiedScopusUserIcon from '@material-ui/icons/VerifiedUser';
 import NonVerifiedScopusUserIcon from '@material-ui/icons/VerifiedUserOutlined';
 import OrcidSyncEnabled from '@material-ui/icons/Sync';
@@ -46,7 +47,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-researcher-id-${rowData.tableData.id}`}
                     data={rowData.aut_researcher_id}
                     name="aut_researcher_id"
-                    title={researcherId.title}
+                    {...researcherId}
                     {...props}
                 />
             </Grid>
@@ -55,22 +56,23 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-scopus-id-${rowData.tableData.id}`}
                     data={rowData.aut_scopus_id}
                     name="aut_scopus_id"
-                    title={scopusId.title}
+                    {...scopusId}
                     InputProps={{
                         endAdornment: (
                             <InputAdornment position="end">
-                                <IconButton
-                                    aria-label={isScopusIdAuthenticated.title}
-                                    tooltip={isScopusIdAuthenticated.title}
-                                    onClick={handleIsScopusIDAuthenticated}
-                                    {...(editable ? { disabled: false } : { disabled: true })}
-                                >
-                                    {rowData.aut_is_scopus_id_authenticated ? (
-                                        <VerifiedScopusUserIcon tooltip={isScopusIdAuthenticated.title} />
-                                    ) : (
-                                        <NonVerifiedScopusUserIcon tooltip={isScopusIdAuthenticated.title} />
-                                    )}
-                                </IconButton>
+                                <Tooltip title={isScopusIdAuthenticated.label}>
+                                    <IconButton
+                                        aria-label={isScopusIdAuthenticated.label}
+                                        onClick={handleIsScopusIDAuthenticated}
+                                        {...(editable ? { disabled: false } : { disabled: true })}
+                                    >
+                                        {rowData.aut_is_scopus_id_authenticated ? (
+                                            <VerifiedScopusUserIcon />
+                                        ) : (
+                                            <NonVerifiedScopusUserIcon />
+                                        )}
+                                    </IconButton>
+                                </Tooltip>
                             </InputAdornment>
                         ),
                     }}
@@ -82,7 +84,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-google-scholar-id-${rowData.tableData.id}`}
                     data={rowData.aut_google_scholar_id}
                     name="aut_google_scholar_d"
-                    title={googleScholarId.title}
+                    {...googleScholarId}
                     {...props}
                 />
             </Grid>
@@ -91,7 +93,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-people-australia-id-${rowData.tableData.id}`}
                     data={rowData.aut_people_australia_id}
                     name="aut_people_australia_id"
-                    title={peopleAustraliaId.title}
+                    {...peopleAustraliaId}
                     {...props}
                 />
             </Grid>
@@ -100,22 +102,23 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId={`aut-orcid-id-${rowData.tableData.id}`}
                     data={rowData.aut_orcid_id}
                     name="aut_orcid_id"
-                    title={orcidId.title}
+                    {...orcidId}
                     InputProps={{
                         endAdornment: (
                             <InputAdornment position="end">
-                                <IconButton
-                                    aria-label={isOrcidSyncEnabled.title}
-                                    tooltip={isOrcidSyncEnabled.title}
-                                    onClick={handleIsOrcidSyncEnabled}
-                                    {...(editable ? { disabled: false } : { disabled: true })}
-                                >
-                                    {rowData.aut_is_orcid_sync_enabled ? (
-                                        <OrcidSyncEnabled tooltip={isOrcidSyncEnabled.title} />
-                                    ) : (
-                                        <OrcidSyncDisabled tooltip={isOrcidSyncEnabled.title} />
-                                    )}
-                                </IconButton>
+                                <Tooltip title={isOrcidSyncEnabled.label}>
+                                    <IconButton
+                                        aria-label={isOrcidSyncEnabled.label}
+                                        onClick={handleIsOrcidSyncEnabled}
+                                        {...(editable ? { disabled: false } : { disabled: true })}
+                                    >
+                                        {rowData.aut_is_orcid_sync_enabled ? (
+                                            <OrcidSyncEnabled />
+                                        ) : (
+                                            <OrcidSyncDisabled />
+                                        )}
+                                    </IconButton>
+                                </Tooltip>
                             </InputAdornment>
                         ),
                     }}
