@@ -43,6 +43,8 @@ export const AuthorFieldData = ({ authorFieldDataId, data, ...props }) => {
             InputLabelProps={{
                 style: {
                     fontSize: '0.8rem',
+                    display: 'flex',
+                    alignItems: 'center',
                 },
                 shrink: true,
                 disableAnimation: true,

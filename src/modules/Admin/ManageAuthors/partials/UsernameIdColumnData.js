@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
+import Tooltip from '@material-ui/core/Tooltip';
+import InfoIcon from '@material-ui/icons/Info';
 
 import AuthorFieldData from './AuthorFieldData';
 
@@ -14,7 +16,6 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
         },
     } = locale.components.manageAuthors;
 
-    console.log(orgStaffId, orgStudentId);
     return (
         <Grid container spacing={1}>
             <Grid item xs={6}>
@@ -23,7 +24,14 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     data={rowData.aut_org_staff_id}
                     name="aut_org_staff_id"
                     {...props}
-                    {...orgStaffId}
+                    label={
+                        <React.Fragment>
+                            {orgStaffId.label}
+                            <Tooltip title={orgStaffId.helperText}>
+                                <InfoIcon style={{ marginLeft: '6px' }} />
+                            </Tooltip>
+                        </React.Fragment>
+                    }
                 />
             </Grid>
             <Grid item xs={6}>
@@ -41,7 +49,14 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     data={rowData.aut_student_id}
                     name="aut_student_id"
                     {...props}
-                    {...orgStudentId}
+                    label={
+                        <React.Fragment>
+                            {orgStudentId.label}
+                            <Tooltip title={orgStudentId.helperText}>
+                                <InfoIcon style={{ marginLeft: '6px' }} />
+                            </Tooltip>
+                        </React.Fragment>
+                    }
                 />
             </Grid>
             <Grid item xs={6}>
