@@ -214,6 +214,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.authorsSearch];
         }
     })
+    .onGet(`${routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
+    .reply(200, mockData.authorsSearch)
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)

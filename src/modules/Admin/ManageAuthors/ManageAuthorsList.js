@@ -216,20 +216,20 @@ export const ManageAuthorsList = ({
                 columns={columns.current}
                 components={{
                     Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
-                    Row: React.memo(props => (
+                    Row: props => (
                         <MTableBodyRow
                             {...props}
                             id={`authors-list-row-${props.index}`}
                             data-testid={`authors-list-row-${props.index}`}
                         />
-                    )),
-                    EditRow: React.memo(props => (
+                    ),
+                    EditRow: props => (
                         <MTableEditRow
                             {...props}
                             id={`authors-list-edit-row-${props.index}`}
                             data-testid={`authors-list-edit-row-${props.index}`}
                         />
-                    )),
+                    ),
                     Action: props => {
                         if (
                             typeof props.action !== 'function' &&
@@ -284,7 +284,6 @@ export const ManageAuthorsList = ({
                             typeof props.action.action === 'function' &&
                             props.action.position === 'row'
                         ) {
-                            console.log('render');
                             // custom action like Notes
 
                             /* <Tooltip title={notesButtonTooltip}> */
@@ -317,7 +316,10 @@ export const ManageAuthorsList = ({
                                                 </Popover> */
 
                             return (
-                                <IconButton aria-describedby="notes-popper" onClick={onNotesOpen}>
+                                <IconButton
+                                    aria-describedby="notes-popper"
+                                    onClick={e => onNotesOpen(e.currentTarget, props)}
+                                >
                                     <Notes />
                                 </IconButton>
                             );
@@ -427,5 +429,11 @@ ManageAuthorsList.propTypes = {
 };
 
 export default React.memo(ManageAuthorsList, (prevProps, nextProps) => {
+    console.log(
+        'memo',
+        prevProps,
+        nextProps,
+        prevProps.disabled === nextProps.disabled && prevProps.page === nextProps.page,
+    );
     return prevProps.disabled === nextProps.disabled && prevProps.page === nextProps.page;
 });
