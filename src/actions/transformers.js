@@ -848,6 +848,34 @@ export const getRecordIsDerivationOfSearchKey = relatedPubs => {
           };
 };
 
+export const getFezMatchedJournalsKey = matchedJournal => {
+    // No match was present in unedited record
+    if (matchedJournal === undefined) {
+        return {};
+    }
+
+    // Match was deleted
+    if (!matchedJournal) {
+        return {
+            fez_matched_journals: null,
+        };
+    }
+
+    // Match was untouched
+    if (!!matchedJournal.mtj_status) {
+        delete matchedJournal.id;
+        delete matchedJournal.jnl_jid;
+        return {
+            fez_matched_journals: matchedJournal,
+        };
+    }
+
+    // New match
+    return {
+        fez_matched_journals: { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' },
+    };
+};
+
 export const getBibliographicSectionSearchKeys = (data = {}) => {
     const {
         rek_title: title,
@@ -968,8 +996,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             : {}),
         ...(!!relatedPubs ? getRecordIsDerivationOfSearchKey(relatedPubs) : {}),
         ...getRecordIsDatasetOfSearchKey(datasets),
-        ...((!!matchedJournal && { fez_matched_journals: { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' } }) ||
-            {}),
+        ...getFezMatchedJournalsKey(matchedJournal),
     };
 };
 
