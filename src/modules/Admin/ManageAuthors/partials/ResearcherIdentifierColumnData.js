@@ -61,17 +61,19 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                         endAdornment: (
                             <InputAdornment position="end">
                                 <Tooltip title={isScopusIdAuthenticated.label}>
-                                    <IconButton
-                                        aria-label={isScopusIdAuthenticated.label}
-                                        onClick={handleIsScopusIDAuthenticated}
-                                        {...(editable ? { disabled: false } : { disabled: true })}
-                                    >
-                                        {rowData.aut_is_scopus_id_authenticated ? (
-                                            <VerifiedScopusUserIcon />
-                                        ) : (
-                                            <NonVerifiedScopusUserIcon />
-                                        )}
-                                    </IconButton>
+                                    <span>
+                                        <IconButton
+                                            aria-label={isScopusIdAuthenticated.label}
+                                            onClick={handleIsScopusIDAuthenticated}
+                                            {...(editable ? { disabled: false } : { disabled: true })}
+                                        >
+                                            {rowData.aut_is_scopus_id_authenticated ? (
+                                                <VerifiedScopusUserIcon />
+                                            ) : (
+                                                <NonVerifiedScopusUserIcon />
+                                            )}
+                                        </IconButton>
+                                    </span>
                                 </Tooltip>
                             </InputAdornment>
                         ),
@@ -107,17 +109,19 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                         endAdornment: (
                             <InputAdornment position="end">
                                 <Tooltip title={isOrcidSyncEnabled.label}>
-                                    <IconButton
-                                        aria-label={isOrcidSyncEnabled.label}
-                                        onClick={handleIsOrcidSyncEnabled}
-                                        {...(editable ? { disabled: false } : { disabled: true })}
-                                    >
-                                        {rowData.aut_is_orcid_sync_enabled ? (
-                                            <OrcidSyncEnabled />
-                                        ) : (
-                                            <OrcidSyncDisabled />
-                                        )}
-                                    </IconButton>
+                                    <span>
+                                        <IconButton
+                                            aria-label={isOrcidSyncEnabled.label}
+                                            onClick={handleIsOrcidSyncEnabled}
+                                            {...(editable ? { disabled: false } : { disabled: true })}
+                                        >
+                                            {rowData.aut_is_orcid_sync_enabled ? (
+                                                <OrcidSyncEnabled />
+                                            ) : (
+                                                <OrcidSyncDisabled />
+                                            )}
+                                        </IconButton>
+                                    </span>
                                 </Tooltip>
                             </InputAdornment>
                         ),

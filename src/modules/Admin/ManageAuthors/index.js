@@ -8,6 +8,12 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import ManageAuthorsList from './ManageAuthorsList';
 
+import Popper from '@material-ui/core/Popper';
+import Fade from '@material-ui/core/Fade';
+import Paper from '@material-ui/core/Paper';
+import { EditableContext } from 'context';
+import AuthorFieldData from './partials/AuthorFieldData';
+
 import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
 import {
@@ -31,6 +37,14 @@ export const ManageAuthors = () => {
     const authorAddSuccess = useSelector(state => state.get('authorsListReducer').authorAddSuccess);
 
     const authorAddError = useSelector(state => state.get('authorsListReducer').authorAddError);
+
+    const [notesButton, setNotesButton] = React.useState(null);
+    const [open, setOpen] = React.useState(false);
+
+    const handleNotesOpen = React.useCallback(event => {
+        setNotesButton(event.currentTarget);
+        setOpen(prev => !prev);
+    }, []);
 
     const handleRowAdd = newData => {
         return dispatch(addAuthor(newData));
@@ -87,10 +101,27 @@ export const ManageAuthors = () => {
                 <Grid item xs={12}>
                     {!!authorList && (
                         <StandardCard hideTitle>
+                            <Popper id="notes-popper" open={open} anchorEl={notesButton} position="bottom" transition>
+                                {({ TransitionProps }) => (
+                                    <Fade {...TransitionProps} timeout={350}>
+                                        <Paper>
+                                            <EditableContext.Provider value={{ editable: true }}>
+                                                <AuthorFieldData
+                                                    authorFieldDataId="aut-description"
+                                                    data="Some data"
+                                                    name="aut_description"
+                                                    onChange={event => console.log(event.target.value)}
+                                                />
+                                            </EditableContext.Provider>
+                                        </Paper>
+                                    </Fade>
+                                )}
+                            </Popper>
                             <ManageAuthorsList
                                 onRowAdd={handleRowAdd}
                                 onRowUpdate={handleRowUpdate}
                                 onRowDelete={handleRowDelete}
+                                onNotesOpen={handleNotesOpen}
                                 list={authorList}
                                 page={currentPage - 1}
                                 totalCount={totalCount}

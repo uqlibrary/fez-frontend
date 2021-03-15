@@ -3314,6 +3314,7 @@ export default {
                     addButtonTooltip: 'Add new author',
                     editButtonTooltip: 'Edit this author',
                     deleteButtonTooltip: 'Delete this author',
+                    notesButtonTooltip: 'View notes for this author',
                 },
             },
             row: {
