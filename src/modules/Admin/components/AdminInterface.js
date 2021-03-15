@@ -238,7 +238,7 @@ export const AdminInterface = ({
                     onClick={handleCancel}
                 />
             </Grid>
-            {!!isSuperAdmin && (
+            {!!isSuperAdmin && record.rek_status !== RETRACTED && (
                 <Grid item xs={12} sm={3}>
                     <Button
                         id={`admin-work-retract${placement}`}
