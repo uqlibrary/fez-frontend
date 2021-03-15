@@ -17,6 +17,56 @@ Object {
 }
 `;
 
+exports[`ContributorsEditor can edit a selected contributor and reset other contributor selected state 1`] = `
+Object {
+  "contributorIndexSelectedToEdit": null,
+  "contributors": Array [
+    Object {
+      "nameAsPublished": "test 1",
+      "selected": false,
+    },
+    Object {
+      "authorId": 410,
+      "disabled": false,
+      "required": false,
+      "selected": false,
+      "uqIdentifier": "410",
+    },
+    Object {
+      "nameAsPublished": "test 3",
+      "selected": false,
+    },
+  ],
+  "errorMessage": "",
+  "isCurrentAuthorSelected": true,
+}
+`;
+
+exports[`ContributorsEditor can edit a selected contributor and should not reset other contributor selected state if selected contributor is not current author 1`] = `
+Object {
+  "contributorIndexSelectedToEdit": null,
+  "contributors": Array [
+    Object {
+      "nameAsPublished": "test 1",
+      "selected": undefined,
+    },
+    Object {
+      "authorId": null,
+      "disabled": true,
+      "required": false,
+      "selected": false,
+      "uqIdentifier": 2,
+    },
+    Object {
+      "nameAsPublished": "test 3",
+      "selected": true,
+    },
+  ],
+  "errorMessage": "",
+  "isCurrentAuthorSelected": false,
+}
+`;
+
 exports[`ContributorsEditor can not add contributor with same id 1`] = `
 Object {
   "contributorIndexSelectedToEdit": null,
@@ -55,6 +105,7 @@ Object {
     Object {
       "aut_id": 410,
       "nameAsPublished": "test",
+      "selected": undefined,
     },
     Object {
       "authorId": null,
