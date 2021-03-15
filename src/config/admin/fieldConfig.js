@@ -297,8 +297,6 @@ export default {
                 fullWidth: true,
                 floatingLabelText: 'Journal Id',
                 placeholder: '',
-                required: true,
-                validate: [validation.required],
                 clearOnInputClear: true,
                 getOptionLabel: option => (!!option && !!option.id && String(option.id)) || '',
             },
