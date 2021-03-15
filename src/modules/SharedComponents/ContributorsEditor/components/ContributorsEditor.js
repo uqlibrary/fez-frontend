@@ -111,7 +111,10 @@ export class ContributorsEditor extends PureComponent {
             this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
         this.setState({
             contributors: [
-                ...this.state.contributors.slice(0, index),
+                ...this.state.contributors.slice(0, index).map(contributor => ({
+                    ...contributor,
+                    selected: isContributorACurrentAuthor ? false : contributor.selected,
+                })),
                 {
                     ...contributor,
                     disabled:
@@ -120,7 +123,10 @@ export class ContributorsEditor extends PureComponent {
                     authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
                     required: contributor.required || false,
                 },
-                ...this.state.contributors.slice(index + 1),
+                ...this.state.contributors.slice(index + 1).map(contributor => ({
+                    ...contributor,
+                    selected: isContributorACurrentAuthor ? false : contributor.selected,
+                })),
             ],
             errorMessage: '',
             isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || isContributorACurrentAuthor,
@@ -172,11 +178,14 @@ export class ContributorsEditor extends PureComponent {
     };
 
     assignContributor = index => {
-        const newContributors = this.state.contributors.map((item, itemIndex) => ({
-            ...item,
-            selected: !item.selected && index === itemIndex,
-            authorId: index === itemIndex && this.props.author ? this.props.author.aut_id : null,
-        }));
+        const newContributors =
+            (!this.state.isCurrentAuthorSelected &&
+                this.state.contributors.map((item, itemIndex) => ({
+                    ...item,
+                    selected: !item.selected && index === itemIndex,
+                    authorId: index === itemIndex && this.props.author ? this.props.author.aut_id : null,
+                }))) ||
+            this.state.contributors;
 
         this.setState({
             contributors: newContributors,
