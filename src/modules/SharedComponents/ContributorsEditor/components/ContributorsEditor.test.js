@@ -106,7 +106,7 @@ describe('ContributorsEditor', () => {
                 {
                     nameAsPublished: 'test',
                     selected: true,
-                    authorId: 1234,
+                    authorId: 1,
                 },
             ],
         });
@@ -168,12 +168,14 @@ describe('ContributorsEditor', () => {
                 {
                     nameAsPublished: 'test 3',
                     selected: true,
+                    authorId: 410,
                 },
             ],
             contributorIndexSelectedToEdit: 1,
         });
         wrapper.instance().addContributor({
             uqIdentifier: `${authorsSearch.data[0].aut_id}`,
+            aut_id: 410,
         });
         expect(wrapper.state()).toMatchSnapshot();
     });
