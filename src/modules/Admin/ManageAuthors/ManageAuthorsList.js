@@ -334,7 +334,7 @@ export const ManageAuthorsList = ({
                         onRowAdd(newData)
                             .then(data => {
                                 setData(prevState => {
-                                    return [data.data, ...prevState];
+                                    return [data.data || data, ...prevState];
                                 });
                             })
                             .catch(() => setData(prevState => prevState)),

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import IconButton from '@material-ui/core/IconButton';
 import Popper from '@material-ui/core/Popper';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
@@ -31,9 +30,11 @@ export const AuthorNotesButton = ({ iconProps, rowData }) => {
 
     return (
         <React.Fragment>
-            <IconButton aria-describedby="notes-popper" onClick={handleNotesOpen} size="small">
-                {editable ? <Comment {...iconProps} /> : <Notes {...iconProps} />}
-            </IconButton>
+            {editable ? (
+                <Comment {...iconProps} aria-describedby="notes-popper" onClick={handleNotesOpen} />
+            ) : (
+                <Notes {...iconProps} aria-describedby="notes-popper" onClick={handleNotesOpen} />
+            )}
             <Popper id="notes-popper" open={open} anchorEl={notesButton} position="left" transition>
                 {({ TransitionProps }) => (
                     <Fade {...TransitionProps} timeout={350}>
