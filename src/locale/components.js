@@ -3329,6 +3329,9 @@ export default {
                         label: 'Is pub sync with ORCID profile enabled?',
                         placeholder: '',
                     },
+                    openOrcidProfileInNewWindow: {
+                        label: 'Open ORCID profile in new window',
+                    },
                 },
             },
             form: {

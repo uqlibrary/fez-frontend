@@ -9,11 +9,13 @@ import VerifiedScopusUserIcon from '@material-ui/icons/VerifiedUser';
 import NonVerifiedScopusUserIcon from '@material-ui/icons/VerifiedUserOutlined';
 import OrcidSyncEnabled from '@material-ui/icons/Sync';
 import OrcidSyncDisabled from '@material-ui/icons/SyncDisabled';
+import OpenInNew from '@material-ui/icons/OpenInNew';
 
 import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
 import { useEditableContext } from 'context';
+import pageLocale from 'locale/pages';
 
 export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
     const {
@@ -26,12 +28,13 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                 isScopusIdAuthenticated,
                 isOrcidSyncEnabled,
                 researcherId,
+                openOrcidProfileInNewWindow,
             },
         },
     } = locale.components.manageAuthors;
 
     const { editable } = useEditableContext();
-
+    const txt = pageLocale.pages.dashboard.header.dashboardResearcherIds;
     const handleIsScopusIDAuthenticated = () => {
         props.onChange('aut_is_scopus_id_authenticated', !rowData.aut_is_scopus_id_authenticated ? 1 : 0);
     };
@@ -108,6 +111,25 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                     name="aut_orcid_id"
                     {...orcidId}
                     InputProps={{
+                        ...(!editable && !!rowData.aut_orcid_id
+                            ? {
+                                  startAdornment: (
+                                      <InputAdornment position="start">
+                                          <Tooltip title={openOrcidProfileInNewWindow.label}>
+                                              <IconButton
+                                                  aria-label={openOrcidProfileInNewWindow.label}
+                                                  color="secondary"
+                                                  href={`${txt.orcidUrlPrefix}${rowData.aut_orcid_id}`}
+                                                  target="_blank"
+                                                  size="small"
+                                              >
+                                                  <OpenInNew />
+                                              </IconButton>
+                                          </Tooltip>
+                                      </InputAdornment>
+                                  ),
+                              }
+                            : {}),
                         endAdornment: (
                             <InputAdornment position="end">
                                 <Tooltip title={isOrcidSyncEnabled.label}>
