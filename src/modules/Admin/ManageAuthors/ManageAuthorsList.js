@@ -1,15 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from 'material-table';
+import MaterialTable, { MTableAction, MTableActions, MTableBodyRow, MTableEditRow } from 'material-table';
 
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import Notes from '@material-ui/icons/Notes';
-// import Popover from '@material-ui/core/Popover';
-// import Tooltip from '@material-ui/core/Tooltip';
 
 import { tableIcons } from './ManageAuthorsListIcons';
+
+import AuthorNotesButton from './partials/AuthorNotesButton';
 import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
 import NameColumnData from './partials/NameColumnData';
@@ -130,22 +128,6 @@ export const getColumns = () => {
             },
         },
         // {
-        //     title: <ColumnTitle title={notes.title} />,
-        //     field: 'aut_description',
-        //     render: rowData => (
-        //         <ColumnData columnDataId={`aut-discription-${rowData.tableData.id}`}
-        // data={rowData.aut_description} />
-        //     ),
-        //     cellStyle: {
-        //         width: '12%',
-        //         maxWidth: '12%',
-        //     },
-        //     headerStyle: {
-        //         width: '12%',
-        //         maxWidth: '12%',
-        //     },
-        // },
-        // {
         //     title: <ColumnTitle title={createdDate.title} />,
         //     field: 'aut_created_date',
         //     render: rowData => (
@@ -170,7 +152,6 @@ export const ManageAuthorsList = ({
     onRowAdd,
     onRowDelete,
     onRowUpdate,
-    onNotesOpen,
     list,
     page,
     totalCount,
@@ -178,37 +159,15 @@ export const ManageAuthorsList = ({
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns();
-    // const notesButton = React.useRef(null);
-    // const notesOpen = React.useRef(false);
-
-    // const handleNotesClose = () => {
-    // const materialTable = materialTableRef.current;
-    // materialTable.dataManager.onRowDataChange({
-    //     ...rowData,
-    // // });
-    // materialTable.setState({
-    //     ...materialTable.dataManager.getRenderState(),
-    // });
-    // setNotesElement(null);
-    // };
 
     const {
         form: {
-            locale: {
-                addButtonTooltip,
-                editButtonTooltip,
-                deleteButtonTooltip,
-                // notesButtonTooltip
-            },
+            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
         },
-        // header: {
-        //     columns: { notes },
-        // },
     } = locale.components.manageAuthors;
 
     const [data, setData] = React.useState(list);
 
-    console.log('rerendering');
     return (
         <React.Fragment>
             <MaterialTable
@@ -230,6 +189,31 @@ export const ManageAuthorsList = ({
                             data-testid={`authors-list-edit-row-${props.index}`}
                         />
                     ),
+                    Actions: ({ actions, ...props }) => {
+                        if (!!props.data && !!props.data.tableData && props.data.tableData.editing === 'update') {
+                            return (
+                                <MTableActions
+                                    {...props}
+                                    actions={[
+                                        rowData => ({
+                                            icon: iconProps => {
+                                                return (
+                                                    <EditableContext.Provider value={{ editable: true }}>
+                                                        <AuthorNotesButton iconProps={iconProps} rowData={rowData} />
+                                                    </EditableContext.Provider>
+                                                );
+                                            },
+                                            size: 'small',
+                                            tooltip: '',
+                                        }),
+                                        ...actions,
+                                    ]}
+                                />
+                            );
+                        } else {
+                            return <MTableActions {...props} actions={actions} />;
+                        }
+                    },
                     Action: props => {
                         if (
                             typeof props.action !== 'function' &&
@@ -254,6 +238,7 @@ export const ManageAuthorsList = ({
                                             />
                                         ),
                                     }}
+                                    size="small"
                                 />
                             );
                         } else if (typeof props.action === 'function') {
@@ -276,6 +261,7 @@ export const ManageAuthorsList = ({
                                             />
                                         ),
                                     }}
+                                    size="small"
                                 />
                             );
                         } else if (
@@ -285,44 +271,7 @@ export const ManageAuthorsList = ({
                             props.action.position === 'row'
                         ) {
                             // custom action like Notes
-
-                            /* <Tooltip title={notesButtonTooltip}> */
-                            /* </Tooltip> */
-                            /* <Popover
-                                                    id={`notes-popover-${props.data.tableData.id}`}
-                                                    open={notesOpen}
-                                                    anchorEl={notesElement}
-                                                    onClose={handleNotesClose}
-                                                    anchorOrigin={{
-                                                        vertical: 'bottom',
-                                                        horizontal: 'center',
-                                                    }}
-                                                    transformOrigin={{
-                                                        vertical: 'top',
-                                                        horizontal: 'center',
-                                                    }}
-                                                >
-                                                    <EditableContext.Provider value={{ editable: true }}>
-                                                        <AuthorFieldData
-                                                            authorFieldDataId={`aut-description-
-                                                            // ${props.data.tableData.id ||
-                                                                props.index}`}
-                                                            data={props.data.aut_description}
-                                                            name="aut_description"
-                                                            {...notes}
-                                                            {...props}
-                                                        />
-                                                    </EditableContext.Provider>
-                                                </Popover> */
-
-                            return (
-                                <IconButton
-                                    aria-describedby="notes-popper"
-                                    onClick={e => onNotesOpen(e.currentTarget, props)}
-                                >
-                                    <Notes />
-                                </IconButton>
-                            );
+                            return <MTableAction {...props} />;
                         } else {
                             //  Add action
                             const { tooltip } = props.action;
@@ -365,6 +314,7 @@ export const ManageAuthorsList = ({
                             .catch(() => setData(prevState => prevState));
                     },
                     onRowUpdate: (newData, oldData) => {
+                        console.log(newData, oldData);
                         return onRowUpdate(newData, oldData)
                             .then(data => {
                                 setData(prevState => {
@@ -402,10 +352,11 @@ export const ManageAuthorsList = ({
                     rowStyle: () => ({
                         borderTop: '1px solid',
                     }),
+                    searchFieldAlignment: 'left',
                 }}
                 actions={[
                     rowData => ({
-                        icon: props => <Notes {...props} />,
+                        icon: props => <AuthorNotesButton iconProps={props} rowData={rowData} />,
                         iconProps: {
                             id: `auhors-list-row-${rowData.tableData.id}-notes`,
                             'data-testid': `authors-list-row-${rowData.tableData.id}-notes`,
@@ -428,12 +379,4 @@ ManageAuthorsList.propTypes = {
     totalCount: PropTypes.number,
 };
 
-export default React.memo(ManageAuthorsList, (prevProps, nextProps) => {
-    console.log(
-        'memo',
-        prevProps,
-        nextProps,
-        prevProps.disabled === nextProps.disabled && prevProps.page === nextProps.page,
-    );
-    return prevProps.disabled === nextProps.disabled && prevProps.page === nextProps.page;
-});
+export default React.memo(ManageAuthorsList);

@@ -20,7 +20,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
         <Grid container spacing={1}>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-org-staff-id-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-org-staff-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_org_staff_id}
                     name="aut_org_staff_id"
                     {...props}
@@ -32,11 +32,12 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                             </Tooltip>
                         </React.Fragment>
                     }
+                    placeholder=""
                 />
             </Grid>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-org-username-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-org-username${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_org_username}
                     name="aut_org_username"
                     {...orgUsername}
@@ -45,7 +46,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-student-id-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-student-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_student_id}
                     name="aut_student_id"
                     {...props}
@@ -57,11 +58,12 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                             </Tooltip>
                         </React.Fragment>
                     }
+                    placeholder=""
                 />
             </Grid>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-student-username-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-student-username${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_student_username}
                     name="aut_student_username"
                     {...studentUsername}
@@ -70,7 +72,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-ref-num-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-ref-num${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_ref_num}
                     name="aut_ref_num"
                     {...refNum}

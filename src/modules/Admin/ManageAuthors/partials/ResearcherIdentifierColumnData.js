@@ -44,7 +44,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
         <Grid container spacing={1}>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-researcher-id-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-researcher-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_researcher_id}
                     name="aut_researcher_id"
                     {...researcherId}
@@ -53,7 +53,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-scopus-id-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-scopus-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_scopus_id}
                     name="aut_scopus_id"
                     {...scopusId}
@@ -83,7 +83,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-google-scholar-id-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-google-scholar-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_google_scholar_id}
                     name="aut_google_scholar_d"
                     {...googleScholarId}
@@ -92,7 +92,9 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-people-australia-id-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-people-australia-id${
+                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                    }`}
                     data={rowData.aut_people_australia_id}
                     name="aut_people_australia_id"
                     {...peopleAustraliaId}
@@ -101,7 +103,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-orcid-id-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-orcid-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_orcid_id}
                     name="aut_orcid_id"
                     {...orcidId}

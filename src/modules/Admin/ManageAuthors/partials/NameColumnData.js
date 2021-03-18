@@ -17,7 +17,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
         <Grid container spacing={1}>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-title-${rowData.tableData.id || props.index}`}
+                    authorFieldDataId={`aut-title${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_title}
                     name="aut_title"
                     {...title}
@@ -28,7 +28,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
                 <Grid container spacing={1}>
                     <Grid item xs={4}>
                         <AuthorFieldData
-                            authorFieldDataId={`aut-fname-${rowData.tableData.id}`}
+                            authorFieldDataId={`aut-fname${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                             data={rowData.aut_fname}
                             name="aut_fname"
                             {...firstName}
@@ -37,7 +37,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
                     </Grid>
                     <Grid item xs={4}>
                         <AuthorFieldData
-                            authorFieldDataId={`aut-mname-${rowData.tableData.id}`}
+                            authorFieldDataId={`aut-mname${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                             data={rowData.aut_mname}
                             name="aut_mname"
                             {...middleName}
@@ -46,7 +46,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
                     </Grid>
                     <Grid item xs={4}>
                         <AuthorFieldData
-                            authorFieldDataId={`aut-lname-${rowData.tableData.id}`}
+                            authorFieldDataId={`aut-lname${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                             data={rowData.aut_lname}
                             name="aut_lname"
                             {...lastName}
@@ -57,7 +57,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-display-name-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-display-name${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_display_name}
                     name="aut_display_name"
                     {...displayName}
@@ -66,7 +66,7 @@ export const NameColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={12}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-position-${rowData.tableData.id}`}
+                    authorFieldDataId={`aut-position${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_position}
                     name="aut_position"
                     {...position}

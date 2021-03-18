@@ -3,15 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Grid from '@material-ui/core/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import ManageAuthorsList from './ManageAuthorsList';
-
-import Popper from '@material-ui/core/Popper';
-import Fade from '@material-ui/core/Fade';
-import Paper from '@material-ui/core/Paper';
 
 import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
@@ -36,18 +31,6 @@ export const ManageAuthors = () => {
     const authorAddSuccess = useSelector(state => state.get('authorsListReducer').authorAddSuccess);
 
     const authorAddError = useSelector(state => state.get('authorsListReducer').authorAddError);
-
-    const [notesButton, setNotesButton] = React.useState(null);
-    const [open, setOpen] = React.useState(false);
-
-    const rowData = React.useRef(null);
-
-    const handleNotesOpen = React.useCallback((target, props) => {
-        console.log(props);
-        rowData.current = props;
-        setNotesButton(target);
-        setOpen(prev => !prev);
-    }, []);
 
     const handleRowAdd = newData => {
         return dispatch(addAuthor(newData));
@@ -104,29 +87,10 @@ export const ManageAuthors = () => {
                 <Grid item xs={12}>
                     {!!authorList && (
                         <StandardCard hideTitle>
-                            <Popper id="notes-popper" open={open} anchorEl={notesButton} position="bottom" transition>
-                                {({ TransitionProps }) => (
-                                    <Fade {...TransitionProps} timeout={350}>
-                                        <Paper elevation={3}>
-                                            <StandardCard hideTitle>
-                                                <TextField
-                                                    textFieldId="aut_description"
-                                                    onChange={e => console.log(e.target.value)}
-                                                    defaultValue={rowData.current.data.aut_description}
-                                                    multiline
-                                                    rows={5}
-                                                    fullWidth
-                                                />
-                                            </StandardCard>
-                                        </Paper>
-                                    </Fade>
-                                )}
-                            </Popper>
                             <ManageAuthorsList
                                 onRowAdd={handleRowAdd}
                                 onRowUpdate={handleRowUpdate}
                                 onRowDelete={handleRowDelete}
-                                onNotesOpen={handleNotesOpen}
                                 list={authorList}
                                 page={currentPage - 1}
                                 totalCount={totalCount}

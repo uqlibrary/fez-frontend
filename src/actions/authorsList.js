@@ -47,7 +47,10 @@ export function updateAuthorListItem(newData, oldData) {
         try {
             dispatch({ type: AUTHOR_ITEM_UPDATING });
 
-            const response = await put(AUTHOR_API({ authorId: newData.aut_id }), newData);
+            const response = await put(AUTHOR_API({ authorId: newData.aut_id }), {
+                ...newData,
+                aut_description: oldData.aut_description,
+            });
 
             dispatch({
                 type: AUTHOR_ITEM_UPDATE_SUCCESS,
