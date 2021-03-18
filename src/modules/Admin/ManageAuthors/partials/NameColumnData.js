@@ -7,12 +7,19 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
 
-export const NameColumnData = ({ rowData, ...props }) => {
+export const NameColumnData = ({ rowData, helperText, ...props }) => {
+    /* Delete default error flag */
+    delete props.error;
+
     const {
         header: {
             columns: { title, displayName, firstName, middleName, lastName, position },
         },
     } = locale.components.manageAuthors;
+
+    /* Display error from the customised errorObject from helperText */
+    const errorObject = JSON.parse(helperText || '{}');
+
     return (
         <Grid container spacing={1}>
             <Grid item xs={12}>
@@ -31,8 +38,10 @@ export const NameColumnData = ({ rowData, ...props }) => {
                             authorFieldDataId={`aut-fname${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                             data={rowData.aut_fname}
                             name="aut_fname"
+                            required
                             {...firstName}
                             {...props}
+                            {...(!!errorObject.aut_fname ? errorObject.aut_fname : {})}
                         />
                     </Grid>
                     <Grid item xs={4}>
@@ -49,8 +58,10 @@ export const NameColumnData = ({ rowData, ...props }) => {
                             authorFieldDataId={`aut-lname${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                             data={rowData.aut_lname}
                             name="aut_lname"
+                            required
                             {...lastName}
                             {...props}
+                            {...(!!errorObject.aut_lname ? errorObject.aut_lname : {})}
                         />
                     </Grid>
                 </Grid>
@@ -80,6 +91,8 @@ export const NameColumnData = ({ rowData, ...props }) => {
 NameColumnData.propTypes = {
     rowData: PropTypes.object,
     index: PropTypes.number,
+    helperText: PropTypes.string,
+    error: PropTypes.bool,
 };
 
 export default React.memo(NameColumnData);

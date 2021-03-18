@@ -60,6 +60,31 @@ export const getColumns = () => {
                     </EditableContext.Provider>
                 );
             },
+            validate: rowData => {
+                let errorObject = {};
+
+                if (!rowData.aut_fname || rowData.aut_fname === '') {
+                    errorObject = {
+                        ...errorObject,
+                        aut_fname: {
+                            error: true,
+                            errorText: 'Required',
+                        },
+                    };
+                }
+
+                if (!rowData.aut_lname || rowData.aut_lname === '') {
+                    errorObject = {
+                        ...errorObject,
+                        aut_lname: {
+                            error: true,
+                            errorText: 'Required',
+                        },
+                    };
+                }
+
+                return Object.keys(errorObject).length === 0 ? true : JSON.stringify(errorObject);
+            },
             cellStyle: {
                 width: '30%',
                 maxWidth: '30%',
