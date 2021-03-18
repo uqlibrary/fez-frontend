@@ -1,6 +1,7 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
 import { render, fireEvent, act, waitFor, WithReduxStore } from 'test-utils';
+import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
@@ -82,35 +83,34 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
     });
 
-    // it('should validate inputs and render added info after adding', async () => {
-    //     const { getByTestId, getByText } = setup({
-    //         list: [],
-    //     });
+    it('should validate inputs and render added info after adding', async () => {
+        mockApi
+            .onPost(repositories.routes.AUTHOR_API().apiUrl)
+            .replyOnce(201, { data: { data: { aut_fname: 'Test', aut_lname: 'Name', aut_id: 1234 } } });
 
-    //     fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+        const { getByTestId } = setup({
+            list: [],
+        });
 
-    //     expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
-    //     expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
-    //     expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
-    //     expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
+        fireEvent.click(getByTestId('authors-add-new-author'));
 
-    //     expect(getByTestId('my-editorial-appointments-add-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
-    //     fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-    //     fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
-    //     fireEvent.click(getByText('Guest Editor'));
-    //     fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-    //     fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
+        expect(getByTestId('authors-add-save').closest('button')).toHaveAttribute('disabled');
 
-    //     act(() => {
-    //         fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
-    //     });
+        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
+        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
 
-    //     const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        act(() => {
+            fireEvent.click(getByTestId('authors-add-save'));
+        });
 
-    //     expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-    //     expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
-    // });
+        await waitFor(() => getByTestId('authors-list-row-0'));
+
+        expect(getByTestId('aut-fname-0-input')).toHaveAttribute('value', 'Test');
+        expect(getByTestId('aut-lname-0-input')).toHaveAttribute('value', 'Name');
+    });
 
     // it('should render previous list on unsuccessful add operation', async () => {
     //     const { getByTestId, getByText, queryByTestId } = setup({
