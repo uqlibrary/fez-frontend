@@ -36,6 +36,7 @@ export const getColumns = () => {
                 width: '6%',
                 maxWidth: '6%',
             },
+            editable: 'never',
         },
         {
             title: <ColumnTitle title="Name" />,
@@ -304,18 +305,16 @@ export const ManageAuthorsList = ({
                 }}
                 editable={{
                     onRowUpdateCancelled: () => {},
-                    onRowAdd: newData => {
-                        return onRowAdd(newData)
+                    onRowAdd: newData =>
+                        onRowAdd(newData)
                             .then(data => {
                                 setData(prevState => {
-                                    return [...prevState, data];
+                                    return [data.data, ...prevState];
                                 });
                             })
-                            .catch(() => setData(prevState => prevState));
-                    },
-                    onRowUpdate: (newData, oldData) => {
-                        console.log(newData, oldData);
-                        return onRowUpdate(newData, oldData)
+                            .catch(() => setData(prevState => prevState)),
+                    onRowUpdate: (newData, oldData) =>
+                        onRowUpdate(newData, oldData)
                             .then(data => {
                                 setData(prevState => {
                                     const list = [...prevState];
@@ -323,17 +322,15 @@ export const ManageAuthorsList = ({
                                     return list;
                                 });
                             })
-                            .catch(() => setData(prevState => prevState));
-                    },
-                    onRowDelete: oldData => {
-                        return onRowDelete(oldData).then(() => {
+                            .catch(() => setData(prevState => prevState)),
+                    onRowDelete: oldData =>
+                        onRowDelete(oldData).then(() => {
                             setData(prevState => {
                                 const data = [...prevState];
                                 data.splice(data.indexOf(oldData), 1);
                                 return data;
                             });
-                        });
-                    },
+                        }),
                 }}
                 options={{
                     actionsColumnIndex: -1,
@@ -345,9 +342,9 @@ export const ManageAuthorsList = ({
                     // ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
                     ...(data.length > 10 ? { paging: true } : { paging: false }),
                     pageSize: 20,
-                    pageSizeOptions: [5, 50, 100, 200, 500],
+                    pageSizeOptions: [5, 20, 50, 100, 200, 500],
                     padding: 'dense',
-                    overflowY: list.length > 10 ? 'auto' : 'hidden',
+                    overflowY: list.length > 20 ? 'auto' : 'hidden',
 
                     rowStyle: () => ({
                         borderTop: '1px solid',

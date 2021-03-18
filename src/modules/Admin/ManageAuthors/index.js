@@ -55,7 +55,7 @@ export const ManageAuthors = () => {
         if (authorAddSuccess) {
             dispatch(
                 showAppAlert({
-                    ...componentLocale.components.authorList.successAlert,
+                    ...componentLocale.components.manageAuthors.successAlert,
                     dismissAction: () => dispatch(dismissAppAlert()),
                 }),
             );
