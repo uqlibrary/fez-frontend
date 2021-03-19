@@ -334,14 +334,13 @@ export const ManageAuthorsList = ({
                         onRowAdd(newData)
                             .then(data => {
                                 setData(prevState => {
-                                    return [data.data || data, ...prevState];
+                                    return [data, ...prevState];
                                 });
                             })
                             .catch(() => setData(prevState => prevState)),
                     onRowUpdate: (newData, oldData) =>
                         onRowUpdate(newData, oldData)
                             .then(data => {
-                                console.log(newData, oldData, data);
                                 setData(prevState => {
                                     const list = [...prevState];
                                     list[list.indexOf(oldData)] = data;
@@ -379,8 +378,8 @@ export const ManageAuthorsList = ({
                     rowData => ({
                         icon: props => <AuthorNotesButton iconProps={props} rowData={rowData} />,
                         iconProps: {
-                            id: `auhors-list-row-${rowData.tableData.id}-notes`,
-                            'data-testid': `authors-list-row-${rowData.tableData.id}-notes`,
+                            id: `aut-description-${rowData.tableData.id}-view`,
+                            'data-testid': `aut-description-${rowData.tableData.id}-view`,
                         },
                     }),
                 ]}

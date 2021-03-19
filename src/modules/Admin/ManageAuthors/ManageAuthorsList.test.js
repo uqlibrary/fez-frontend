@@ -178,6 +178,11 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-title-0-input')).toHaveAttribute('value', 'Mr.');
         expect(getByTestId('aut-orcid-id-0-input')).toHaveAttribute('value', '0000-0001-1111-2222');
 
+        act(() => {
+            fireEvent.click(getByTestId('aut-description-0-view'));
+        });
+        expect(getByTestId('aut-description-0-input')).toHaveTextContent('Added position. Updated name');
+
         fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         fireEvent.change(getByTestId('aut-fname-0-input'), { target: { value: '' } });
@@ -194,6 +199,14 @@ describe('ManageAuthorsList', () => {
         fireEvent.change(getByTestId('aut-org-student-id-0-input'), { target: { value: '1234564' } });
 
         act(() => {
+            fireEvent.click(getByTestId('aut-is-scopus-id-authenticated-0'));
+        });
+
+        act(() => {
+            fireEvent.click(getByTestId('aut-is-orcid-sync-enabled-0'));
+        });
+
+        act(() => {
             fireEvent.click(getByTestId('authors-update-save'));
         });
 
@@ -203,6 +216,8 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-lname-0-input')).toHaveAttribute('value', 'Name');
         expect(getByTestId('aut-scopus-id-0-input')).toHaveAttribute('value', '1234-543');
         expect(getByTestId('aut-org-student-id-0-input')).toHaveAttribute('value', '1234564');
+        expect(getByTestId('scopus-id-is-authenticated-0')).toBeInTheDocument();
+        expect(getByTestId('orcid-sync-is-enabled-0')).toBeInTheDocument();
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
@@ -218,8 +233,8 @@ describe('ManageAuthorsList', () => {
                     aut_google_scholar_id: null,
                     aut_homepage_link: null,
                     aut_id: 2000003832,
-                    aut_is_orcid_sync_enabled: null,
-                    aut_is_scopus_id_authenticated: 0,
+                    aut_is_orcid_sync_enabled: 1,
+                    aut_is_scopus_id_authenticated: 1,
                     aut_lname: 'Desai',
                     aut_mname: null,
                     aut_mypub_url: null,
@@ -254,6 +269,14 @@ describe('ManageAuthorsList', () => {
         fireEvent.change(getByTestId('aut-lname-0-input'), { target: { value: 'Name' } });
 
         act(() => {
+            fireEvent.click(getByTestId('aut-is-scopus-id-authenticated-0'));
+        });
+
+        act(() => {
+            fireEvent.click(getByTestId('aut-is-orcid-sync-enabled-0'));
+        });
+
+        act(() => {
             fireEvent.click(getByTestId('authors-update-save'));
         });
 
@@ -261,6 +284,8 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('aut-fname-0-input')).toHaveAttribute('value', 'Vishal');
         expect(getByTestId('aut-lname-0-input')).toHaveAttribute('value', 'Desai');
+        expect(getByTestId('scopus-id-is-authenticated-0')).toBeInTheDocument();
+        expect(getByTestId('orcid-sync-is-enabled-0')).toBeInTheDocument();
     });
 
     it('should render previous list on cancelling edit operation', async () => {
