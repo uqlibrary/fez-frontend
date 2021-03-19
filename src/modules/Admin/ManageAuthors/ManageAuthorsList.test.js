@@ -191,6 +191,15 @@ describe('ManageAuthorsList', () => {
         fireEvent.change(getByTestId('aut-lname-0-input'), { target: { value: '' } });
         expect(getByTestId('aut-lname-0-input')).toHaveAttribute('aria-invalid', 'true');
 
+        act(() => {
+            fireEvent.click(getByTestId('aut-description-0-edit'));
+        });
+        fireEvent.change(getByTestId('aut-description-0-input'), { target: { value: 'Test notes' } });
+
+        act(() => {
+            fireEvent.click(getByTestId('aut-description-0-update'));
+        });
+
         expect(getByTestId('authors-update-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-fname-0-input'), { target: { value: 'Test' } });

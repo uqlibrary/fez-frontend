@@ -229,6 +229,10 @@ export const ManageAuthorsList = ({
                                                     </EditableContext.Provider>
                                                 );
                                             },
+                                            iconProps: {
+                                                id: `aut-description-${rowData.tableData.id}-edit`,
+                                                'data-testid': `aut-description-${rowData.tableData.id}-edit`,
+                                            },
                                             size: 'small',
                                             tooltip: '',
                                         }),
@@ -284,6 +288,7 @@ export const ManageAuthorsList = ({
                                                 data-testid={`authors-list-row-${
                                                     props.data.tableData.id
                                                 }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                                {...restAction.iconProps}
                                             />
                                         ),
                                     }}

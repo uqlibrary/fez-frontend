@@ -66,6 +66,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                                 <Tooltip title={isScopusIdAuthenticated.label}>
                                     <span>
                                         <IconButton
+                                            size="small"
                                             aria-label={isScopusIdAuthenticated.label}
                                             onClick={handleIsScopusIDAuthenticated}
                                             id={`aut-is-scopus-id-authenticated${
@@ -155,6 +156,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                                 <Tooltip title={isOrcidSyncEnabled.label}>
                                     <span>
                                         <IconButton
+                                            size="small"
                                             aria-label={isOrcidSyncEnabled.label}
                                             onClick={handleIsOrcidSyncEnabled}
                                             id={`aut-is-orcid-sync-enabled${

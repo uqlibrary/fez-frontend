@@ -3340,6 +3340,7 @@ export default {
                     editButtonTooltip: 'Edit this author',
                     deleteButtonTooltip: 'Delete this author',
                     notesButtonTooltip: 'View notes for this author',
+                    updateNotesButton: 'Update notes',
                 },
             },
             row: {
