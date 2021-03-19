@@ -1,7 +1,6 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
 import { render, fireEvent, act, waitFor, WithReduxStore } from 'test-utils';
-import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
@@ -84,10 +83,6 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate inputs and render added info after adding', async () => {
-        mockApi
-            .onPost(repositories.routes.AUTHOR_API().apiUrl)
-            .replyOnce(201, { data: { data: { aut_fname: 'Test', aut_lname: 'Name', aut_id: 1234 } } });
-
         const { getByTestId } = setup({
             list: [],
         });
@@ -112,28 +107,28 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-lname-0-input')).toHaveAttribute('value', 'Name');
     });
 
-    // it('should render previous list on unsuccessful add operation', async () => {
-    //     const { getByTestId, getByText, queryByTestId } = setup({
-    //         list: [],
-    //         handleRowAdd: jest.fn(() => Promise.reject()),
-    //     });
+    it('should render previous list on unsuccessful add operation', async () => {
+        const { getByTestId, getByText, queryByTestId } = setup({
+            list: [],
+            onRowAdd: jest.fn(() => Promise.reject()),
+        });
 
-    //     fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+        fireEvent.click(getByTestId('authors-add-new-author'));
 
-    //     fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-    //     fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
-    //     fireEvent.click(getByText('Guest Editor'));
-    //     fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-    //     fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
+        expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
-    //     act(() => {
-    //         fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
-    //     });
+        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
+        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
 
-    //     await waitFor(() => getByText('No records to display'));
+        act(() => {
+            fireEvent.click(getByTestId('authors-add-save'));
+        });
 
-    //     expect(queryByTestId('my-editorial-appointments-list-row-0')).not.toBeInTheDocument();
-    // });
+        await waitFor(() => getByText('No records to display'));
+
+        expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
+    });
 
     it('should validate inputs and render updated info after editing', async () => {
         const { getByTestId } = setup({
