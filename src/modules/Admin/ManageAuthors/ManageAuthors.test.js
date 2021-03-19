@@ -80,7 +80,7 @@ describe('ManageAuthors', () => {
     });
 
     it('should render error message', async () => {
-        mockApi.onGet(repository.routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl).replyOnce(500);
+        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API().apiUrl).replyOnce(500);
 
         try {
             const { getByText } = setup({});
