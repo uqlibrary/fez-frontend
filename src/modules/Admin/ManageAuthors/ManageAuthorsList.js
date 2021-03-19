@@ -365,13 +365,11 @@ export const ManageAuthorsList = ({
                     draggable: false,
                     search: data.length > 10,
                     emptyRowsWhenPaging: true,
-                    // ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
-                    ...(data.length > 10 ? { paging: true } : { paging: false }),
+                    paging: true,
                     pageSize: 20,
                     pageSizeOptions: [5, 20, 50, 100, 200, 500],
                     padding: 'dense',
-                    overflowY: list.length > 20 ? 'auto' : 'hidden',
-
+                    overflowY: 'auto',
                     rowStyle: () => ({
                         borderTop: '1px solid',
                     }),
