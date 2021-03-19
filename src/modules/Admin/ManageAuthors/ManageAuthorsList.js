@@ -341,6 +341,7 @@ export const ManageAuthorsList = ({
                     onRowUpdate: (newData, oldData) =>
                         onRowUpdate(newData, oldData)
                             .then(data => {
+                                console.log(newData, oldData, data);
                                 setData(prevState => {
                                     const list = [...prevState];
                                     list[list.indexOf(oldData)] = data;

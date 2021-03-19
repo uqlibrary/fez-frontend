@@ -88,7 +88,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                 <AuthorFieldData
                     authorFieldDataId={`aut-google-scholar-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_google_scholar_id}
-                    name="aut_google_scholar_d"
+                    name="aut_google_scholar_id"
                     {...googleScholarId}
                     {...props}
                 />
