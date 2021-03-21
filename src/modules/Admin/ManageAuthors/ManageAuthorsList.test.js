@@ -234,7 +234,7 @@ describe('ManageAuthorsList', () => {
             list: [
                 {
                     aut_created_date: '2021-03-18T04:47:06Z',
-                    aut_description: 'Added position. Updated name',
+                    aut_description: null,
                     aut_display_name: null,
                     aut_email: null,
                     aut_external_id: null,
@@ -271,6 +271,11 @@ describe('ManageAuthorsList', () => {
             ],
             onRowUpdate: jest.fn(() => Promise.reject()),
         });
+
+        act(() => {
+            fireEvent.click(getByTestId('aut-description-0-view'));
+        });
+        expect(getByTestId('aut-description-0-input')).toHaveTextContent('');
 
         fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 

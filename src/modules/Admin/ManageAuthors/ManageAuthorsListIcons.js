@@ -21,6 +21,6 @@ export const tableIcons = {
     LastPage: forwardRef((props, ref) => <LastPage {...props} ref={ref} />),
     NextPage: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
     PreviousPage: forwardRef((props, ref) => <ChevronLeft {...props} ref={ref} />),
-    ResetSearch: forwardRef((props, ref) => <Clear {...props} ref={ref} />),
-    Search: forwardRef((props, ref) => <Search {...props} ref={ref} />),
+    ResetSearch: forwardRef(/* istanbul ignore next */ (props, ref) => <Clear {...props} ref={ref} />),
+    Search: forwardRef(/* istanbul ignore next */ (props, ref) => <Search {...props} ref={ref} />),
 };
