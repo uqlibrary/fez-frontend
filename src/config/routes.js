@@ -19,6 +19,7 @@ const isSuperAdmin = authorDetails => {
 // a duplicate list of routes for
 export const flattedPathConfig = [
     '/admin/add',
+    '/admin/authors',
     '/admin/bulk-updates',
     '/admin/change-display-type',
     '/admin/collection',
@@ -360,6 +361,13 @@ export const getRoutesConfig = ({
                       component: components.JournalView,
                       access: [roles.admin],
                       pageTitle: locale.pages.journal.view.title,
+                  },
+                  {
+                      path: pathConfig.admin.manageAuthors,
+                      component: components.ManageAuthors,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.authors.title,
                   },
               ]
             : []),

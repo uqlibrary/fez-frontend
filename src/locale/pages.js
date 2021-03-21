@@ -1404,5 +1404,9 @@ export default {
                 },
             },
         },
+        authors: {
+            title: 'Manage authors',
+            loadingMessage: 'Loading authors',
+        },
     },
 };

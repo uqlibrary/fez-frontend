@@ -208,12 +208,14 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.trendingPublications)
     .onGet(routes.AUTHORS_SEARCH_API({ query: '.*' }).apiUrl)
     .reply(config => {
-        if (config.params.rule === 'lookup') {
+        if (!!config.params && !!config.params.rule && config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList.author];
         } else {
             return [200, mockData.authorsSearch];
         }
     })
+    .onGet(`${routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
+    .reply(200, mockData.authorsSearch)
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
@@ -405,6 +407,9 @@ mock.onDelete(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*
 mock.onDelete(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl))).reply(200, {
     data: {},
 });
+mock.onDelete(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl))).reply(200, {
+    data: {},
+});
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
@@ -470,9 +475,8 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .reply(200, { ...mockData.currentAuthor.uqresearcher })
     // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })
 
-    .onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
-    .reply(200, { data: { ...mockData.favouriteSearchItem } })
-
+    .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*'}).apiUrl)))
+    .reply(200, mockData.currentAuthor.uqstaff)
     .onAny()
     .reply(config => {
         console.log('url not found...', config);
