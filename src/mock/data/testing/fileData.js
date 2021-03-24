@@ -786,7 +786,7 @@ export default {
             "dsi_size": 7236
         }
     ],
-    "fez_matched_journals": [],
+    "fez_matched_journals": null,
     "fez_record_search_key_has_datasets": [],
     "fez_record_search_key_has_related_datasets": [],
     "fez_record_search_key_has_derivations": [],

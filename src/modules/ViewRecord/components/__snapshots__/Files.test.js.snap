@@ -2909,6 +2909,24 @@ exports[`Files Component  should render component full mount 1`] = `
                     "dsi_state": "A",
                   },
                 ],
+                "fez_matched_journals": Object {
+                  "fez_journal": Object {
+                    "fez_journal_era": Array [
+                      Object {
+                        "jnl_era_jid": 20339,
+                        "jnl_era_source_id": "122966",
+                        "jnl_era_source_year": 2010,
+                      },
+                    ],
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
+                  },
+                  "mtj_jnl_id": 13071,
+                  "mtj_pid": "UQ:676287",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -3567,19 +3585,6 @@ exports[`Files Component  should render component full mount 1`] = `
                 ],
                 "fez_record_search_key_issn": Array [
                   Object {
-                    "fez_journal": Object {
-                      "fez_journal_era": Array [
-                        Object {
-                          "jnl_era_jid": 20339,
-                          "jnl_era_source_id": "122966",
-                          "jnl_era_source_year": 2010,
-                        },
-                      ],
-                      "jni_id": 13071,
-                      "jni_issn": "1477-9137",
-                      "jni_issn_order": 2,
-                      "jni_jnl_id": 7538,
-                    },
                     "fez_sherpa_romeo": Object {
                       "srm_date_updated": "2017-09-30 18:26:18",
                       "srm_id": 13764,
@@ -3904,6 +3909,24 @@ exports[`Files Component  should render component full mount 1`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -4562,19 +4585,6 @@ exports[`Files Component  should render component full mount 1`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -4906,6 +4916,24 @@ exports[`Files Component  should render component full mount 1`] = `
                         "dsi_state": "A",
                       },
                     ],
+                    "fez_matched_journals": Object {
+                      "fez_journal": Object {
+                        "fez_journal_era": Array [
+                          Object {
+                            "jnl_era_jid": 20339,
+                            "jnl_era_source_id": "122966",
+                            "jnl_era_source_year": 2010,
+                          },
+                        ],
+                        "jni_id": 13071,
+                        "jni_issn": "1477-9137",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 7538,
+                      },
+                      "mtj_jnl_id": 13071,
+                      "mtj_pid": "UQ:676287",
+                      "mtj_status": "A",
+                    },
                     "fez_record_search_key_access_conditions": null,
                     "fez_record_search_key_acknowledgements": null,
                     "fez_record_search_key_additional_notes": null,
@@ -5564,19 +5592,6 @@ exports[`Files Component  should render component full mount 1`] = `
                     ],
                     "fez_record_search_key_issn": Array [
                       Object {
-                        "fez_journal": Object {
-                          "fez_journal_era": Array [
-                            Object {
-                              "jnl_era_jid": 20339,
-                              "jnl_era_source_id": "122966",
-                              "jnl_era_source_year": 2010,
-                            },
-                          ],
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
                         "fez_sherpa_romeo": Object {
                           "srm_date_updated": "2017-09-30 18:26:18",
                           "srm_id": 13764,

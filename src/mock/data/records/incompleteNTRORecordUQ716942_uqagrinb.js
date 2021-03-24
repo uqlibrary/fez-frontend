@@ -250,7 +250,7 @@ export default {
             "dsi_state": "A",
             "dsi_size": 3660
         }],
-        "fez_matched_journals": [],
+        "fez_matched_journals": null,
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],

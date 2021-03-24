@@ -212,7 +212,7 @@
         "build": "webpack -p --config=./webpack-dist.config",
         "build:dev": "webpack --config=./webpack.config",
         "cc:reportAll": "scripts/code-coverage.sh",
-        "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json .nyc_output",
+        "clean": "rm -rf assets coverage **/coverage cypress/screenshots cypress/videos dist node_modules **/node_modules stats.json .nyc_output",
         "codestyles:files": "cross-env prettier-eslint './*.js' --list-different -l silent",
         "codestyles:fix": "cross-env prettier-eslint --write",
         "codestyles:fix:all": "cross-env prettier-eslint '**/*.js' --write",

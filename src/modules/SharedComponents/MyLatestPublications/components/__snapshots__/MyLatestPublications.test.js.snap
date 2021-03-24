@@ -2237,28 +2237,11 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               "dsi_state": "D",
             },
           ],
-          "fez_matched_journals": Array [
-            Object {
-              "mtj_jnl_id": 7489,
-              "mtj_pid": "UQ:396321",
-              "mtj_status": "A",
-            },
-            Object {
-              "mtj_jnl_id": 34213,
-              "mtj_pid": "UQ:396321",
-              "mtj_status": "A",
-            },
-            Object {
-              "mtj_jnl_id": 53821,
-              "mtj_pid": "UQ:396321",
-              "mtj_status": "A",
-            },
-            Object {
-              "mtj_jnl_id": 104309,
-              "mtj_pid": "UQ:396321",
-              "mtj_status": "A",
-            },
-          ],
+          "fez_matched_journals": Object {
+            "mtj_jnl_id": 7489,
+            "mtj_pid": "UQ:396321",
+            "mtj_status": "A",
+          },
           "fez_record_search_key_advisory_statement": null,
           "fez_record_search_key_article_number": null,
           "fez_record_search_key_assigned_group_id": Array [],
