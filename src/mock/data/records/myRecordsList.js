@@ -731,15 +731,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 3660
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:678728",
             "mtj_jnl_id": 2528,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:678728", "mtj_jnl_id": 29907, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:678728",
-            "mtj_jnl_id": 47227,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:678728", "mtj_jnl_id": 100120, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -1621,15 +1617,11 @@ export default {
         "fez_record_search_key_wok_doc_types": [],
         "fez_record_search_key_zoorec_id": null,
         "fez_datastream_info": [],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:410094",
             "mtj_jnl_id": 41645,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:410094", "mtj_jnl_id": 44747, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:410094",
-            "mtj_jnl_id": 111516,
-            "mtj_status": "A"
-        }],
+        },
         "fez_record_search_key_file_hashdataset": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
@@ -2446,11 +2438,11 @@ export default {
         "fez_record_search_key_wok_doc_types": [],
         "fez_record_search_key_zoorec_id": null,
         "fez_datastream_info": [],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:398497",
             "mtj_jnl_id": 52440,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:398497", "mtj_jnl_id": 114237, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -3236,11 +3228,11 @@ export default {
         "fez_record_search_key_wok_doc_types": [],
         "fez_record_search_key_zoorec_id": null,
         "fez_datastream_info": [],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:379178",
             "mtj_jnl_id": 52602,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:379178", "mtj_jnl_id": 114389, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -4063,15 +4055,11 @@ export default {
                 "dsi_state": "A",
                 "dsi_size": 1526884
             }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:357538",
             "mtj_jnl_id": 7778,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:357538", "mtj_jnl_id": 22466, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:357538",
-            "mtj_jnl_id": 54110,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:357538", "mtj_jnl_id": 92905, "mtj_status": "A"}],
+        },
         "fez_record_search_key_file_hashdataset": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
@@ -5093,15 +5081,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 5644549
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:360881",
             "mtj_jnl_id": 2526,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:360881", "mtj_jnl_id": 29905, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:360881",
-            "mtj_jnl_id": 47225,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:360881", "mtj_jnl_id": 100118, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -5827,15 +5811,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 1967405
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:355233",
             "mtj_jnl_id": 41645,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:355233", "mtj_jnl_id": 44747, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:355233",
-            "mtj_jnl_id": 111516,
-            "mtj_status": "A"
-        }],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -6488,15 +6468,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 5910428
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:350994",
             "mtj_jnl_id": 2526,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:350994", "mtj_jnl_id": 29905, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:350994",
-            "mtj_jnl_id": 47225,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:350994", "mtj_jnl_id": 100118, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -7330,11 +7306,11 @@ export default {
         "fez_record_search_key_wok_doc_types": [],
         "fez_record_search_key_zoorec_id": null,
         "fez_datastream_info": [],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:344420",
             "mtj_jnl_id": 51356,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:344420", "mtj_jnl_id": 113238, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -8659,11 +8635,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 3705
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:306039",
             "mtj_jnl_id": 51356,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:306039", "mtj_jnl_id": 113238, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -9544,15 +9520,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 1842725
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:305893",
             "mtj_jnl_id": 7538,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:305893", "mtj_jnl_id": 22248, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:305893",
-            "mtj_jnl_id": 53871,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:305893", "mtj_jnl_id": 92692, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -10188,15 +10160,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 11280777
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:302599",
             "mtj_jnl_id": 13488,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:302599", "mtj_jnl_id": 38691, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:302599",
-            "mtj_jnl_id": 59808,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:302599", "mtj_jnl_id": 108645, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -11003,15 +10971,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 5164812
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:294055",
             "mtj_jnl_id": 7537,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:294055", "mtj_jnl_id": 22247, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:294055",
-            "mtj_jnl_id": 53870,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:294055", "mtj_jnl_id": 92691, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -11706,15 +11670,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 3414632
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:319620",
             "mtj_jnl_id": 2526,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:319620", "mtj_jnl_id": 29905, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:319620",
-            "mtj_jnl_id": 47225,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:319620", "mtj_jnl_id": 100118, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -12448,15 +12408,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 3705
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:284237",
             "mtj_jnl_id": 13488,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:284237", "mtj_jnl_id": 38691, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:284237",
-            "mtj_jnl_id": 59808,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:284237", "mtj_jnl_id": 108645, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -13415,15 +13371,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 3705
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:279315",
             "mtj_jnl_id": 13488,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:279315", "mtj_jnl_id": 38691, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:279315",
-            "mtj_jnl_id": 59808,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:279315", "mtj_jnl_id": 108645, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -14549,15 +14501,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 2249929
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:265967",
             "mtj_jnl_id": 3872,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:265967", "mtj_jnl_id": 31109, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:265967",
-            "mtj_jnl_id": 48560,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:265967", "mtj_jnl_id": 101287, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -15393,15 +15341,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 6100383
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:278920",
             "mtj_jnl_id": 7559,
             "mtj_status": "M"
-        }, {"mtj_pid": "UQ:278920", "mtj_jnl_id": 22267, "mtj_status": "M"}, {
-            "mtj_pid": "UQ:278920",
-            "mtj_jnl_id": 53892,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:278920", "mtj_jnl_id": 92711, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -15947,15 +15891,11 @@ export default {
         "fez_record_search_key_wok_doc_types": [],
         "fez_record_search_key_zoorec_id": null,
         "fez_datastream_info": [],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:277856",
             "mtj_jnl_id": 2793,
             "mtj_status": "M"
-        }, {"mtj_pid": "UQ:277856", "mtj_jnl_id": 30140, "mtj_status": "M"}, {
-            "mtj_pid": "UQ:277856",
-            "mtj_jnl_id": 47489,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:277856", "mtj_jnl_id": 100349, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],
@@ -16917,15 +16857,11 @@ export default {
             "dsi_state": "A",
             "dsi_size": 3592129
         }],
-        "fez_matched_journals": [{
+        "fez_matched_journals": {
             "mtj_pid": "UQ:256096",
             "mtj_jnl_id": 7528,
             "mtj_status": "A"
-        }, {"mtj_pid": "UQ:256096", "mtj_jnl_id": 22244, "mtj_status": "A"}, {
-            "mtj_pid": "UQ:256096",
-            "mtj_jnl_id": 53861,
-            "mtj_status": "A"
-        }, {"mtj_pid": "UQ:256096", "mtj_jnl_id": 92688, "mtj_status": "A"}],
+        },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
         "fez_record_search_key_has_derivations": [],

@@ -833,7 +833,7 @@ export default {
             "dsi_security_policy": 1
         }
     ],
-    "fez_matched_journals": [],
+    "fez_matched_journals": null,
     "fez_record_search_key_has_datasets": [],
     "fez_record_search_key_has_related_datasets": [],
     "fez_record_search_key_has_derivations": [],

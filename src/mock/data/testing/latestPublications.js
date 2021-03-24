@@ -3311,28 +3311,11 @@ export const latestPubsPayload = {
                 "dsi_security_inherited": 0
             },
         ],
-        "fez_matched_journals": [
-            {
-                "mtj_pid": "UQ:396321",
-                "mtj_jnl_id": 7489,
-                "mtj_status": "A"
-            },
-            {
-                "mtj_pid": "UQ:396321",
-                "mtj_jnl_id": 34213,
-                "mtj_status": "A"
-            },
-            {
-                "mtj_pid": "UQ:396321",
-                "mtj_jnl_id": 53821,
-                "mtj_status": "A"
-            },
-            {
-                "mtj_pid": "UQ:396321",
-                "mtj_jnl_id": 104309,
-                "mtj_status": "A"
-            }
-        ],
+        "fez_matched_journals": {
+            "mtj_pid": "UQ:396321",
+            "mtj_jnl_id": 7489,
+            "mtj_status": "A"
+        },
         "rek_display_type_lookup": "Journal Article",
         "rek_pubmed_doc_type_lookup": null,
         "rek_object_type_lookup": "Record",

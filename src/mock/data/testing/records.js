@@ -8316,7 +8316,7 @@ export const referenceEntry = {
     "fez_record_search_key_translated_title": null,
     "fez_record_search_key_volume_number": null,
     "fez_record_search_key_issn": [],
-    "fez_matched_journals": [],
+    "fez_matched_journals": null,
     "fez_record_search_key_file_hashdataset": [],
     "rek_status_lookup": "Published",
     "rek_object_type_lookup": "Record",
@@ -12048,28 +12048,11 @@ export const publicationDetails = {
             "dsi_security_inherited": 0
         },
     ],
-    "fez_matched_journals": [
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 7489,
-            "mtj_status": "A"
-        },
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 34213,
-            "mtj_status": "A"
-        },
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 53821,
-            "mtj_status": "A"
-        },
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 104309,
-            "mtj_status": "A"
-        }
-    ],
+    "fez_matched_journals": {
+        "mtj_pid": "UQ:396321",
+        "mtj_jnl_id": 7489,
+        "mtj_status": "A"
+    },
     "rek_display_type_lookup": "Journal Article",
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Record",
@@ -16998,15 +16981,7 @@ export const recordWithRelatedItems = {
     "fez_record_search_key_wok_doc_types": [],
         "fez_record_search_key_zoorec_id": null,
         "fez_datastream_info": [],
-        "fez_matched_journals": [{"mtj_pid": "UQ:76a9027", "mtj_jnl_id": 4703, "mtj_status": "A"}, {
-        "mtj_pid": "UQ:76a9027",
-        "mtj_jnl_id": 31814,
-        "mtj_status": "A"
-    }, {"mtj_pid": "UQ:76a9027", "mtj_jnl_id": 49384, "mtj_status": "A"}, {
-        "mtj_pid": "UQ:76a9027",
-        "mtj_jnl_id": 101982,
-        "mtj_status": "A"
-    }],
+        "fez_matched_journals": {"mtj_pid": "UQ:76a9027", "mtj_jnl_id": 4703, "mtj_status": "A"},
         "rek_display_type_lookup": "Journal Article",
         "rek_pubmed_doc_type_lookup": null,
         "rek_object_type_lookup": "Record",
