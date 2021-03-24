@@ -72,28 +72,11 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                   "dsi_state": "A",
                 },
               ],
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 13996,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 39175,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 60324,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 109121,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-              ],
+              "fez_matched_journals": Object {
+                "mtj_jnl_id": 13996,
+                "mtj_pid": "UQ:284280",
+                "mtj_status": "M",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -974,28 +957,11 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                   "dsi_state": "A",
                 },
               ],
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 13996,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 39175,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 60324,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 109121,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-              ],
+              "fez_matched_journals": Object {
+                "mtj_jnl_id": 13996,
+                "mtj_pid": "UQ:284280",
+                "mtj_status": "M",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -1855,28 +1821,45 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
                 "ain_id": 42684,
                 "ain_pid": "UQ:288291",
               },
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 2236,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
+              "fez_matched_journals": Object {
+                "fez_journal": Object {
+                  "fez_journal_era": Array [
+                    Object {
+                      "jnl_era_id": 75673,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2010,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 59748,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2012,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 30791,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2015,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 10412,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2018,
+                      "jnl_era_title": "Manual Therapy",
+                    },
+                  ],
+                  "jnl_created_date": "2020-11-16 07:55:32",
+                  "jnl_era_source_id": "16579",
+                  "jnl_jid": 10412,
+                  "jnl_publisher": "Elsevier Ltd",
+                  "jnl_title": "Musculoskeletal Science & Practice",
+                  "jnl_updated_date": "2021-03-02 23:37:12",
                 },
-                Object {
-                  "mtj_jnl_id": 29670,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 46937,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 99890,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-              ],
+                "mtj_jnl_id": 10412,
+                "mtj_pid": "UQ:288291",
+                "mtj_status": "A",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -2835,28 +2818,45 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
                 "ain_id": 42684,
                 "ain_pid": "UQ:288291",
               },
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 2236,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
+              "fez_matched_journals": Object {
+                "fez_journal": Object {
+                  "fez_journal_era": Array [
+                    Object {
+                      "jnl_era_id": 75673,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2010,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 59748,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2012,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 30791,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2015,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 10412,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2018,
+                      "jnl_era_title": "Manual Therapy",
+                    },
+                  ],
+                  "jnl_created_date": "2020-11-16 07:55:32",
+                  "jnl_era_source_id": "16579",
+                  "jnl_jid": 10412,
+                  "jnl_publisher": "Elsevier Ltd",
+                  "jnl_title": "Musculoskeletal Science & Practice",
+                  "jnl_updated_date": "2021-03-02 23:37:12",
                 },
-                Object {
-                  "mtj_jnl_id": 29670,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 46937,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 99890,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-              ],
+                "mtj_jnl_id": 10412,
+                "mtj_pid": "UQ:288291",
+                "mtj_status": "A",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -3888,7 +3888,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                   "dsi_state": "A",
                 },
               ],
-              "fez_matched_journals": Array [],
+              "fez_matched_journals": null,
               "fez_record_search_key_acknowledgements": Object {
                 "rek_acknowledgements": "This project is supported by the Australian National Data Service (ANDS). ANDS is supported by the Australian Government through the National Collaborative Research Infrastructure Strategy Program.",
                 "rek_acknowledgements_id": 24875,
@@ -4607,7 +4607,7 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                   "dsi_state": "A",
                 },
               ],
-              "fez_matched_journals": Array [],
+              "fez_matched_journals": null,
               "fez_record_search_key_acknowledgements": Object {
                 "rek_acknowledgements": "This project is supported by the Australian National Data Service (ANDS). ANDS is supported by the Australian Government through the National Collaborative Research Infrastructure Strategy Program.",
                 "rek_acknowledgements_id": 24875,
@@ -5253,28 +5253,45 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 "ain_id": 42684,
                 "ain_pid": "UQ:288291",
               },
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 2236,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
+              "fez_matched_journals": Object {
+                "fez_journal": Object {
+                  "fez_journal_era": Array [
+                    Object {
+                      "jnl_era_id": 75673,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2010,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 59748,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2012,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 30791,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2015,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 10412,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2018,
+                      "jnl_era_title": "Manual Therapy",
+                    },
+                  ],
+                  "jnl_created_date": "2020-11-16 07:55:32",
+                  "jnl_era_source_id": "16579",
+                  "jnl_jid": 10412,
+                  "jnl_publisher": "Elsevier Ltd",
+                  "jnl_title": "Musculoskeletal Science & Practice",
+                  "jnl_updated_date": "2021-03-02 23:37:12",
                 },
-                Object {
-                  "mtj_jnl_id": 29670,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 46937,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 99890,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-              ],
+                "mtj_jnl_id": 10412,
+                "mtj_pid": "UQ:288291",
+                "mtj_status": "A",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -6233,28 +6250,45 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 "ain_id": 42684,
                 "ain_pid": "UQ:288291",
               },
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 2236,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
+              "fez_matched_journals": Object {
+                "fez_journal": Object {
+                  "fez_journal_era": Array [
+                    Object {
+                      "jnl_era_id": 75673,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2010,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 59748,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2012,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 30791,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2015,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 10412,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2018,
+                      "jnl_era_title": "Manual Therapy",
+                    },
+                  ],
+                  "jnl_created_date": "2020-11-16 07:55:32",
+                  "jnl_era_source_id": "16579",
+                  "jnl_jid": 10412,
+                  "jnl_publisher": "Elsevier Ltd",
+                  "jnl_title": "Musculoskeletal Science & Practice",
+                  "jnl_updated_date": "2021-03-02 23:37:12",
                 },
-                Object {
-                  "mtj_jnl_id": 29670,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 46937,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 99890,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-              ],
+                "mtj_jnl_id": 10412,
+                "mtj_pid": "UQ:288291",
+                "mtj_status": "A",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -7213,28 +7247,45 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
                 "ain_id": 42684,
                 "ain_pid": "UQ:288291",
               },
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 2236,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
+              "fez_matched_journals": Object {
+                "fez_journal": Object {
+                  "fez_journal_era": Array [
+                    Object {
+                      "jnl_era_id": 75673,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2010,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 59748,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2012,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 30791,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2015,
+                      "jnl_era_title": "",
+                    },
+                    Object {
+                      "jnl_era_id": 10412,
+                      "jnl_era_source_id": "16579",
+                      "jnl_era_source_year": 2018,
+                      "jnl_era_title": "Manual Therapy",
+                    },
+                  ],
+                  "jnl_created_date": "2020-11-16 07:55:32",
+                  "jnl_era_source_id": "16579",
+                  "jnl_jid": 10412,
+                  "jnl_publisher": "Elsevier Ltd",
+                  "jnl_title": "Musculoskeletal Science & Practice",
+                  "jnl_updated_date": "2021-03-02 23:37:12",
                 },
-                Object {
-                  "mtj_jnl_id": 29670,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 46937,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 99890,
-                  "mtj_pid": "UQ:288291",
-                  "mtj_status": "A",
-                },
-              ],
+                "mtj_jnl_id": 10412,
+                "mtj_pid": "UQ:288291",
+                "mtj_status": "A",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -8220,28 +8271,11 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
                   "dsi_state": "A",
                 },
               ],
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 13996,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 39175,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 60324,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 109121,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-              ],
+              "fez_matched_journals": Object {
+                "mtj_jnl_id": 13996,
+                "mtj_pid": "UQ:284280",
+                "mtj_status": "M",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],
@@ -9122,28 +9156,11 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
                   "dsi_state": "A",
                 },
               ],
-              "fez_matched_journals": Array [
-                Object {
-                  "mtj_jnl_id": 13996,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 39175,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "M",
-                },
-                Object {
-                  "mtj_jnl_id": 60324,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-                Object {
-                  "mtj_jnl_id": 109121,
-                  "mtj_pid": "UQ:284280",
-                  "mtj_status": "A",
-                },
-              ],
+              "fez_matched_journals": Object {
+                "mtj_jnl_id": 13996,
+                "mtj_pid": "UQ:284280",
+                "mtj_status": "M",
+              },
               "fez_record_search_key_advisory_statement": null,
               "fez_record_search_key_article_number": null,
               "fez_record_search_key_assigned_group_id": Array [],

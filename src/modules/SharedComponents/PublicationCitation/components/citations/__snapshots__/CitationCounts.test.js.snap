@@ -4790,28 +4790,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "dsi_state": "A",
                   },
                 ],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 2528,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 29907,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 47227,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 100120,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 2528,
+                  "mtj_pid": "UQ:678728",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
@@ -5649,28 +5632,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "dsi_state": "A",
                     },
                   ],
-                  "fez_matched_journals": Array [
-                    Object {
-                      "mtj_jnl_id": 2528,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 29907,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 47227,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 100120,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                  ],
+                  "fez_matched_journals": Object {
+                    "mtj_jnl_id": 2528,
+                    "mtj_pid": "UQ:678728",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_article_number": null,
                   "fez_record_search_key_assigned_group_id": Array [],
                   "fez_record_search_key_assigned_user_id": Array [],
