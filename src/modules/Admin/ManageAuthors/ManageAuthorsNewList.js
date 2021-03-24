@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import MaterialTable, { MTableAction, MTableActions, MTableBodyRow, MTableEditRow } from 'material-table';
+import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
 
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
@@ -11,16 +11,15 @@ import { makeStyles } from '@material-ui/styles';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { tableIcons } from './ManageAuthorsListIcons';
 
-import AuthorNotesButton from './partials/AuthorNotesButton';
 import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
-import NameColumnData from './partials/NameColumnData';
-import UsernameIdColumnData from './partials/UsernameIdColumnData';
-import ResearcherIdentifierColumnData from './partials/ResearcherIdentifierColumnData';
+
+import AuthorHeader from './newPartials/AuthorHeader';
+import LeastAuthorData from './newPartials/LeastAuthorData';
+import FullAuthorDetails from './newPartials/FullAuthorDetails';
 
 import { default as locale } from 'locale/components';
 import { default as pageLocale } from 'locale/pages';
-import { EditableContext } from 'context';
 import { loadAuthorList } from 'actions';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
@@ -35,38 +34,39 @@ export const getColumns = () => {
             title: <ColumnTitle title={id.label} />,
             field: 'aut_id',
             render: rowData => <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} />,
-            cellStyle: {
-                width: '6%',
-                maxWidth: '6%',
+            cellStyle: (value, rowData) => {
+                if (rowData.tableData.editing === 'update') {
+                    return {
+                        display: 'block',
+                    };
+                } else {
+                    return {
+                        width: '6%',
+                        maxWidth: '6%',
+                    };
+                }
             },
-            headerStyle: {
-                width: '6%',
-                maxWidth: '6%',
-            },
-            editable: 'never',
+            // editable: 'never',
+            editComponent: () => <div />,
         },
         {
-            title: <ColumnTitle title="Name" />,
-            field: 'name',
-            render: rowData => <NameColumnData rowData={rowData} key="viewable-name-column-data" />,
-            editComponent: ({ onRowDataChange, rowData, ...props }) => {
-                const handleChange = (name, value) => {
-                    onRowDataChange({
-                        ...rowData,
-                        [name]: value,
-                    });
-                };
-                return (
-                    <EditableContext.Provider value={{ editable: true }}>
-                        <NameColumnData
-                            {...props}
-                            rowData={rowData}
-                            onChange={handleChange}
-                            key="editable-name-column-data"
-                        />
-                    </EditableContext.Provider>
-                );
-            },
+            title: <AuthorHeader />,
+            field: 'author',
+            sorting: false,
+            render: rowData => <LeastAuthorData rowData={rowData} />,
+            // editComponent: ({ onRowDataChange, rowData, ...props }) => {
+            //     const handleChange = (name, value) => {
+            //         onRowDataChange({
+            //             ...rowData,
+            //             [name]: value,
+            //         });
+            //     };
+            //     return (
+            //         <ScrollToSection scrollToSection>
+            //             <FullAuthorDetails {...props} rowData={rowData} onChange={handleChange} />
+            //         </ScrollToSection>
+            //     );
+            // },
             validate: rowData => {
                 let errorObject = {};
 
@@ -92,74 +92,79 @@ export const getColumns = () => {
 
                 return Object.keys(errorObject).length === 0 ? true : JSON.stringify(errorObject);
             },
-            cellStyle: {
-                width: '30%',
-                maxWidth: '30%',
-            },
-            headerStyle: {
-                width: '30%',
-                maxWidth: '30%',
-            },
-        },
-        {
-            title: <ColumnTitle title="Username & IDs" />,
-            field: 'identifiers-usernames',
-            render: rowData => (
-                <UsernameIdColumnData rowData={rowData} key="viewable-identifiers-usernames-column-data" />
-            ),
-            editComponent: ({ onRowDataChange, rowData, ...props }) => {
-                const handleChange = (name, value) => {
-                    onRowDataChange({
-                        ...rowData,
-                        [name]: value,
-                    });
-                };
-                return (
-                    <EditableContext.Provider value={{ editable: true }}>
-                        <UsernameIdColumnData
-                            {...props}
-                            rowData={rowData}
-                            onChange={handleChange}
-                            key="editable-identifiers-usernames-column-data"
-                        />
-                    </EditableContext.Provider>
-                );
-            },
-            cellStyle: {
-                width: '25%',
-                maxWidth: '25%',
-            },
-            headerStyle: {
-                width: '25%',
-                maxWidth: '25%',
+            cellStyle: (value, rowData) => {
+                if (rowData.tableData.editing === 'update') {
+                    return {
+                        display: 'block',
+                    };
+                } else {
+                    return {
+                        width: '100%',
+                        maxWidth: '100%',
+                    };
+                }
             },
         },
+        // {
+        //     title: <ColumnTitle title="Username & IDs" />,
+        //     field: 'identifiers-usernames',
+        //     render: rowData => (
+        //         <UsernameIdColumnData rowData={rowData} key="viewable-identifiers-usernames-column-data" />
+        //     ),
+        //     editComponent: ({ onRowDataChange, rowData, ...props }) => {
+        //         const handleChange = (name, value) => {
+        //             onRowDataChange({
+        //                 ...rowData,
+        //                 [name]: value,
+        //             });
+        //         };
+        //         return (
+        //             <EditableContext.Provider value={{ editable: true }}>
+        //                 <UsernameIdColumnData
+        //                     {...props}
+        //                     rowData={rowData}
+        //                     onChange={handleChange}
+        //                     key="editable-identifiers-usernames-column-data"
+        //                 />
+        //             </EditableContext.Provider>
+        //         );
+        //     },
+        //     cellStyle: {
+        //         width: '25%',
+        //         maxWidth: '25%',
+        //     },
+        //     headerStyle: {
+        //         width: '25%',
+        //         maxWidth: '25%',
+        //     },
+        // },
 
-        {
-            title: <ColumnTitle title="Researcher Identifiers" />,
-            field: 'researcher-identifiers',
-            render: rowData => (
-                <ResearcherIdentifierColumnData rowData={rowData} key="viewable-researcher-identifiers-column-data" />
-            ),
-            editComponent: ({ onRowDataChange, rowData, ...props }) => {
-                const handleChange = (name, value) => {
-                    onRowDataChange({
-                        ...rowData,
-                        [name]: value,
-                    });
-                };
-                return (
-                    <EditableContext.Provider value={{ editable: true }}>
-                        <ResearcherIdentifierColumnData
-                            {...props}
-                            rowData={rowData}
-                            onChange={handleChange}
-                            key="editable-researcher-identifiers-column-data"
-                        />
-                    </EditableContext.Provider>
-                );
-            },
-        },
+        // {
+        //     title: <ColumnTitle title="Researcher Identifiers" />,
+        //     field: 'researcher-identifiers',
+        //     render: rowData => (
+        //         <ResearcherIdentifierColumnData rowData={rowData}
+        // key="viewable-researcher-identifiers-column-data" />
+        //     ),
+        //     editComponent: ({ onRowDataChange, rowData, ...props }) => {
+        //         const handleChange = (name, value) => {
+        //             onRowDataChange({
+        //                 ...rowData,
+        //                 [name]: value,
+        //             });
+        //         };
+        //         return (
+        //             <EditableContext.Provider value={{ editable: true }}>
+        //                 <ResearcherIdentifierColumnData
+        //                     {...props}
+        //                     rowData={rowData}
+        //                     onChange={handleChange}
+        //                     key="editable-researcher-identifiers-column-data"
+        //                 />
+        //             </EditableContext.Provider>
+        //         );
+        //     },
+        // },
         // {
         //     title: <ColumnTitle title={createdDate.title} />,
         //     field: 'aut_created_date',
@@ -223,45 +228,19 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                     Row: props => (
                         <MTableBodyRow
                             {...props}
+                            hover
                             id={`authors-list-row-${props.index}`}
                             data-testid={`authors-list-row-${props.index}`}
                         />
                     ),
-                    EditRow: props => (
-                        <MTableEditRow
-                            {...props}
-                            id={`authors-list-edit-row-${props.index}`}
-                            data-testid={`authors-list-edit-row-${props.index}`}
-                        />
-                    ),
-                    Actions: ({ actions, ...props }) => {
-                        if (!!props.data && !!props.data.tableData && props.data.tableData.editing === 'update') {
-                            return (
-                                <MTableActions
-                                    {...props}
-                                    actions={[
-                                        rowData => ({
-                                            icon: iconProps => {
-                                                return (
-                                                    <EditableContext.Provider value={{ editable: true }}>
-                                                        <AuthorNotesButton iconProps={iconProps} rowData={rowData} />
-                                                    </EditableContext.Provider>
-                                                );
-                                            },
-                                            iconProps: {
-                                                id: `aut-description-${rowData.tableData.id}-edit`,
-                                                'data-testid': `aut-description-${rowData.tableData.id}-edit`,
-                                            },
-                                            size: 'small',
-                                            tooltip: '',
-                                        }),
-                                        ...actions,
-                                    ]}
-                                />
-                            );
-                        } else {
-                            return <MTableActions {...props} actions={actions} />;
-                        }
+                    EditRow: props => {
+                        return (
+                            <FullAuthorDetails
+                                {...props}
+                                id={`authors-list-edit-row-${props.index}`}
+                                data-testid={`authors-list-edit-row-${props.index}`}
+                            />
+                        );
                     },
                     Action: props => {
                         if (
@@ -314,14 +293,6 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                                     size="small"
                                 />
                             );
-                        } else if (
-                            typeof props.action === 'object' &&
-                            !!props.action.action &&
-                            typeof props.action.action === 'function' &&
-                            props.action.position === 'row'
-                        ) {
-                            // custom action like Notes
-                            return <MTableAction {...props} />;
                         } else {
                             //  Add action
                             const { tooltip } = props.action;
@@ -342,9 +313,22 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                 data={query => {
                     return dispatch(loadAuthorList({ page: query.page + 1, pageSize: query.pageSize }));
                 }}
+                onRowClick={(event, rowData) => {
+                    materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
+                    materialTableRef.current.setState({
+                        ...materialTableRef.current.dataManager.getRenderState(),
+                        showAddRow: false,
+                    });
+                    // togglePanel();
+                }}
                 onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
                 icons={tableIcons}
                 title=""
+                // detailPanel={rowData => (
+                //     <ScrollToSection scrollToSection>
+                //         <FullAuthorDetails rowData={rowData} />
+                //     </ScrollToSection>
+                // )}
                 localization={{
                     body: {
                         addTooltip: addButtonTooltip,
@@ -391,20 +375,10 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                     pageSizeOptions: [20, 50, 100],
                     padding: 'dense',
                     overflowY: 'auto',
-                    rowStyle: () => ({
-                        borderTop: '1px solid',
-                    }),
+                    rowStyle: (rowData, index, level, hasAnyEditRow) =>
+                        console.log(rowData, index, level, hasAnyEditRow),
                     searchFieldAlignment: 'left',
                 }}
-                actions={[
-                    rowData => ({
-                        icon: props => <AuthorNotesButton iconProps={props} rowData={rowData} />,
-                        iconProps: {
-                            id: `aut-description-${rowData.tableData.id}-view`,
-                            'data-testid': `aut-description-${rowData.tableData.id}-view`,
-                        },
-                    }),
-                ]}
             />
         </React.Fragment>
     );

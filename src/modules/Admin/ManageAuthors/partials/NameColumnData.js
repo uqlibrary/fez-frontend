@@ -90,7 +90,6 @@ export const NameColumnData = ({ rowData, helperText, ...props }) => {
 
 NameColumnData.propTypes = {
     rowData: PropTypes.object,
-    index: PropTypes.number,
     helperText: PropTypes.string,
     error: PropTypes.bool,
 };

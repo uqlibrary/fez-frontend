@@ -15,7 +15,7 @@ import {
 import { get, put, destroy, post } from 'repositories/generic';
 import { AUTHORS_SEARCH_API, AUTHOR_API } from 'repositories/routes';
 
-export function loadAuthorList() {
+export function loadAuthorList({ page, pageSize }) {
     return async dispatch => {
         dispatch({ type: AUTHOR_LIST_LOADING });
         const authorsSearchApi = AUTHORS_SEARCH_API();
@@ -23,14 +23,17 @@ export function loadAuthorList() {
         try {
             const response = await get({
                 ...authorsSearchApi,
-                apiUrl: `${authorsSearchApi.apiUrl}?sort=updated_date&order_by=desc`,
+                apiUrl: `${authorsSearchApi.apiUrl}?sort=updated_date&order_by=desc&page=${page}&per_page=${pageSize}`,
             });
             dispatch({
                 type: AUTHOR_LIST_LOADED,
                 payload: response,
             });
-
-            return Promise.resolve(response);
+            return Promise.resolve({
+                data: response.data,
+                page: response.current_page - 1,
+                totalCount: response.total,
+            });
         } catch (e) {
             dispatch({
                 type: AUTHOR_LIST_FAILED,
