@@ -3335,6 +3335,15 @@ export default {
                 },
             },
             form: {
+                editButton: 'Update author',
+                addButton: 'Save author',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete author',
+                    confirmationMessage: 'Are you sure you want to delete this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     editButtonTooltip: 'Edit this author',

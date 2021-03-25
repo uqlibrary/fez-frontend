@@ -14,6 +14,10 @@ import NotesData from './NotesData';
 import UsernameIdData from './UsernameIdData';
 import ResearcherIdentifierData from './ResearcherIdentifierData';
 
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { useConfirmationState } from 'hooks';
+import { default as locale } from 'locale/components';
+
 const useStyles = makeStyles(theme => ({
     background: {
         backgroundColor: theme.palette.secondary.light,
@@ -30,6 +34,11 @@ export const FullAuthorDetails = ({
     ...props
 }) => {
     const classes = useStyles();
+    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+
+    const {
+        form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
+    } = locale.components.manageAuthors;
 
     const [data, setData] = React.useState(rowData || {});
 
@@ -41,12 +50,35 @@ export const FullAuthorDetails = ({
         onEditingApproved(mode, data, rowData);
     };
 
+    const handleDelete = () => {
+        onEditingApproved(mode, data, rowData);
+    };
+
     const handleCancel = () => onEditingCanceled(mode, rowData);
+
+    const handleCancelDelete = () => {
+        handleCancel();
+        hideConfirmation();
+    };
+
+    React.useEffect(() => {
+        if (mode === 'delete') {
+            showConfirmation();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [mode]);
 
     return (
         <TableRow>
-            {(mode === 'update' || mode === 'add') && (
-                <TableCell colSpan={3}>
+            <TableCell colSpan={3}>
+                <ConfirmationBox
+                    confirmationBoxId="authors-delete-this-author-confirmation"
+                    onAction={handleDelete}
+                    onClose={handleCancelDelete}
+                    isOpen={isOpen}
+                    locale={deleteConfirmationLocale}
+                />
+                {(mode === 'update' || mode === 'add') && (
                     <ScrollToSection scrollToSection>
                         <div className={classes.background}>
                             <Grid container spacing={2}>
@@ -79,7 +111,7 @@ export const FullAuthorDetails = ({
                                                 color="primary"
                                                 onClick={handleSave}
                                             >
-                                                Update this author
+                                                {mode === 'update' ? editButton : addButton}
                                             </Button>
                                         </Grid>
                                         <Grid item>
@@ -91,7 +123,7 @@ export const FullAuthorDetails = ({
                                                 color="secondary"
                                                 onClick={handleCancel}
                                             >
-                                                Cancel
+                                                {cancelButton}
                                             </Button>
                                         </Grid>
                                     </Grid>
@@ -99,8 +131,8 @@ export const FullAuthorDetails = ({
                             </Grid>
                         </div>
                     </ScrollToSection>
-                </TableCell>
-            )}
+                )}
+            </TableCell>
         </TableRow>
     );
 };

@@ -237,8 +237,8 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                         return (
                             <FullAuthorDetails
                                 {...props}
-                                id={`authors-list-edit-row-${props.index}`}
-                                data-testid={`authors-list-edit-row-${props.index}`}
+                                id="authors-list-edit-row"
+                                data-testid="authors-list-edit-row"
                             />
                         );
                     },
@@ -375,8 +375,6 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                     pageSizeOptions: [20, 50, 100],
                     padding: 'dense',
                     overflowY: 'auto',
-                    rowStyle: (rowData, index, level, hasAnyEditRow) =>
-                        console.log(rowData, index, level, hasAnyEditRow),
                     searchFieldAlignment: 'left',
                 }}
             />

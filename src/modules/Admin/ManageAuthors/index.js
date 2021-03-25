@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import ManageAuthorsList from './ManageAuthorsList';
 import ManageAuthorsNewList from './ManageAuthorsNewList';
 
 import { default as componentLocale } from 'locale/components';
@@ -15,7 +14,6 @@ import { addAuthor, deleteAuthorListItem, updateAuthorListItem, showAppAlert, di
 export const ManageAuthors = () => {
     const dispatch = useDispatch();
 
-    const authorList = useSelector(state => state.get('authorsListReducer').authorList);
     const authorListError = useSelector(state => state.get('authorsListReducer').authorListError);
 
     const authorAddSuccess = useSelector(state => state.get('authorsListReducer').authorAddSuccess);
@@ -61,12 +59,6 @@ export const ManageAuthors = () => {
                 )}
                 <Grid item xs={12}>
                     <StandardCard noHeader>
-                        <ManageAuthorsList
-                            onRowAdd={handleRowAdd}
-                            onRowUpdate={handleRowUpdate}
-                            onRowDelete={handleRowDelete}
-                            list={authorList}
-                        />
                         <ManageAuthorsNewList
                             onRowAdd={handleRowAdd}
                             onRowUpdate={handleRowUpdate}
