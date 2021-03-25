@@ -289,6 +289,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListWorkingPaper.data,
             ...mockData.trendingPublications.data,
             ...mockData.unpublishedSearchList.data,
+            ...mockData.UQ353708.data
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
         // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);

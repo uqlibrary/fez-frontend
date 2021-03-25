@@ -103,7 +103,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                             required
                             validate={[validation.required]}
                             uqIdFieldId="search-by-rek-author-id"
-                            getOptionLabel={option => (!!option && `${option.id} (${option.value})`) || ''}
+                            getOptionLabel={option => !!option && `${option.id} (${option.value})`}
                             normalize={value => value.aut_id}
                             onClear={handleClear(`search_author.${searchAuthorBy}`)}
                         />
@@ -118,7 +118,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                         required
                         validate={[validation.required]}
                         uqIdFieldId="rek-author-id"
-                        getOptionLabel={option => (!!option && `${option.id} (${option.value})`) || ''}
+                        getOptionLabel={option => !!option && `${option.id} (${option.value})`}
                         normalize={value => value.aut_id}
                         onClear={handleClear('rek_author_id')}
                     />

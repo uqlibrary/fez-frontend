@@ -394,5 +394,17 @@ describe('Form reducer plugin', () => {
                 },
             ]);
         });
+
+        it('should leave state unchanged if fez_matched_journals is set to empty', () => {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
+                type: actionTypes.CHANGE,
+                meta: {
+                    field: 'bibliographicSection.fez_matched_journals',
+                    touch: false,
+                },
+                payload: null,
+            });
+            expect(nextState).toEqual(initialState);
+        });
     });
 });

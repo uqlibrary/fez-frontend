@@ -131,7 +131,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset name"
@@ -154,7 +165,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset description"
@@ -177,7 +199,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact name"
@@ -231,7 +264,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact email"
@@ -253,7 +297,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="DOI"
@@ -274,7 +329,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Publisher"
@@ -664,7 +730,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Copyright notice"
@@ -693,7 +770,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project name"
@@ -716,7 +804,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project description"
@@ -1261,7 +1360,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Additional information"
@@ -1277,7 +1387,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link to data in external repository"
@@ -1589,7 +1710,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset name"
@@ -1612,7 +1744,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset description"
@@ -1635,7 +1778,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact name"
@@ -1689,7 +1843,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact email"
@@ -1711,7 +1876,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="DOI"
@@ -1732,7 +1908,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Publisher"
@@ -2122,7 +2309,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Copyright notice"
@@ -2151,7 +2349,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project name"
@@ -2174,7 +2383,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project description"
@@ -2719,7 +2939,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Additional information"
@@ -2735,7 +2966,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link to data in external repository"
@@ -3043,7 +3285,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset name"
@@ -3066,7 +3319,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset description"
@@ -3089,7 +3353,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact name"
@@ -3143,7 +3418,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact email"
@@ -3165,7 +3451,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="DOI"
@@ -3186,7 +3483,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Publisher"
@@ -3576,7 +3884,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Copyright notice"
@@ -3605,7 +3924,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project name"
@@ -3628,7 +3958,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project description"
@@ -4173,7 +4514,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Additional information"
@@ -4189,7 +4541,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link to data in external repository"
@@ -4497,7 +4860,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset name"
@@ -4520,7 +4894,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Dataset description"
@@ -4543,7 +4928,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact name"
@@ -4597,7 +4993,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Contact email"
@@ -4619,7 +5026,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="DOI"
@@ -4640,7 +5058,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Publisher"
@@ -5030,7 +5459,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Copyright notice"
@@ -5059,7 +5499,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project name"
@@ -5082,7 +5533,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Project description"
@@ -5627,7 +6089,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Additional information"
@@ -5643,7 +6116,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link to data in external repository"

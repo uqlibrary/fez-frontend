@@ -106,7 +106,7 @@ AutoCompleteSelectField.propTypes = {
     allowFreeText: PropTypes.bool,
     autoCompleteSelectFieldId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
-    defaultValue: PropTypes.object,
+    defaultValue: PropTypes.string,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     errorText: PropTypes.string,

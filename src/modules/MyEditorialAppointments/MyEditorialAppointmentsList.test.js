@@ -28,6 +28,14 @@ describe('MyEditorialAppointmentsList', () => {
                 ownerDocument: document,
             },
         });
+        /**
+         * Suppressing below warning message from material-table library
+         * Warning: React does not recognize the `scrollWidth` prop on a DOM element. If you intentionally
+         * want it to appear in the DOM as a custom attribute, spell it as lowercase `scrollwidth` instead.
+         * If you accidentally passed it from a parent component, remove it from the DOM element.
+         */
+        jest.spyOn(console, 'error').mockImplementation(jest.fn());
+        jest.spyOn(console, 'warn').mockImplementation(jest.fn());
     });
 
     it('should render empty list', () => {
@@ -179,6 +187,13 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-journal-name-0')).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0')).toHaveTextContent('2010');
         expect(getByTestId('eap-role-name-0')).toHaveTextContent('Other (Testing other role)');
+
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+
+        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
+        expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
+
+        fireEvent.keyDown(getByTestId('eap-journal-name-input'), { key: 'Enter', keyCode: 13 });
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
