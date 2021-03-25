@@ -10,8 +10,8 @@ import { default as locale } from 'locale/components';
 
 export const NotesData = ({ rowData, onChange }) => {
     const {
-        header: {
-            columns: { notes },
+        editRow: {
+            fields: { notes },
         },
     } = locale.components.manageAuthors;
 

@@ -5,19 +5,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
 
-// import { makeStyles } from '@material-ui/styles';
-
-// const useStyles = makeStyles(() => ({
-//     root: {
-//         '&::before': {
-//             borderBottom: '1px dashed rgba(0, 0, 0, 0.7)',
-//         },
-//     },
-//     underline: {},
-// }));
-
 export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ...props }) => {
-    // const classes = useStyles();
     return (
         <React.Fragment>
             <Grid item xs={2}>
@@ -38,21 +26,13 @@ export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ..
                             fontSize: 14,
                             fontWeight: 400,
                         },
-                        // classes: {
-                        //     root: classes.root,
-                        //     underline: classes.underline,
-                        // },
                         ...props.InputProps,
                     }}
                     InputLabelProps={{
                         style: {
                             color: '#4085C6',
                             fontWeight: 400,
-                            // display: 'flex',
-                            // alignItems: 'center',
                         },
-                        shrink: true,
-                        disableAnimation: true,
                     }}
                     value={data || ''}
                     onChange={e => props.onChange(e.target.name, e.target.value)}

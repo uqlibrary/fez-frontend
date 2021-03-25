@@ -17,8 +17,8 @@ import pageLocale from 'locale/pages';
 
 export const ResearcherIdentifierData = ({ rowData, ...props }) => {
     const {
-        header: {
-            columns: {
+        editRow: {
+            fields: {
                 scopusId,
                 googleScholarId,
                 peopleAustraliaId,

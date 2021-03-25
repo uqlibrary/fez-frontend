@@ -15,9 +15,7 @@ export const ManageAuthors = () => {
     const dispatch = useDispatch();
 
     const authorListError = useSelector(state => state.get('authorsListReducer').authorListError);
-
     const authorAddSuccess = useSelector(state => state.get('authorsListReducer').authorAddSuccess);
-
     const authorAddError = useSelector(state => state.get('authorsListReducer').authorAddError);
 
     const handleRowAdd = newData => {

@@ -8,17 +8,10 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
 
-export const NameData = ({
-    rowData,
-    ...props
-    // helperText,
-}) => {
-    /* Delete default error flag */
-    // delete props.error;
-
+export const NameData = ({ rowData, ...props }) => {
     const {
-        header: {
-            columns: { title, displayName, firstName, middleName, lastName, position },
+        editRow: {
+            fields: { title, displayName, firstName, middleName, lastName, position },
         },
     } = locale.components.manageAuthors;
 

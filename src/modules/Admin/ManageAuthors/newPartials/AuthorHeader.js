@@ -1,15 +1,21 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import ColumnTitle from '../partials/ColumnTitle';
+import { default as locale } from 'locale/components';
 
 export const AuthorHeader = () => {
+    const {
+        header: {
+            columns: { displayName, uqUsername },
+        },
+    } = locale.components.manageAuthors;
     return (
         <Grid container>
             <Grid item xs={6}>
-                <ColumnTitle title="Display Name" />
+                <ColumnTitle {...displayName} />
             </Grid>
             <Grid item xs={6}>
-                <ColumnTitle title="UQ Username" />
+                <ColumnTitle {...uqUsername} />
             </Grid>
         </Grid>
     );
