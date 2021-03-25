@@ -6,11 +6,21 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 import AuthorFieldData from './AuthorFieldData';
+import { default as locale } from 'locale/components';
 
 import { useEditableContext } from 'context';
 
 export const AuthorNotesField = ({ rowData, onChange }) => {
     const { editable } = useEditableContext();
+    const {
+        form: {
+            locale: { updateNotesButton },
+        },
+
+        header: {
+            columns: { notes: notesLabel },
+        },
+    } = locale.components.manageAuthors;
     const [notes, setNotes] = React.useState(rowData.aut_description || '');
 
     const handleNotesUpdate = e => {
@@ -43,13 +53,19 @@ export const AuthorNotesField = ({ rowData, onChange }) => {
                             shrink: true,
                             disableAnimation: true,
                         }}
-                        label="Notes"
+                        {...notesLabel}
                     />
                 </Grid>
                 {editable && (
                     <Grid item xs={12}>
-                        <Button color="primary" onClick={handleNotesUpdate} size="small">
-                            {'Update notes'}
+                        <Button
+                            color="primary"
+                            onClick={handleNotesUpdate}
+                            size="small"
+                            id={`aut-description-${rowData.tableData.id}-update`}
+                            data-testid={`aut-description-${rowData.tableData.id}-update`}
+                        >
+                            {updateNotesButton}
                         </Button>
                     </Grid>
                 )}

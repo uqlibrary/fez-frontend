@@ -46,9 +46,9 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
             </Grid>
             <Grid item xs={6}>
                 <AuthorFieldData
-                    authorFieldDataId={`aut-student-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
-                    data={rowData.aut_student_id}
-                    name="aut_student_id"
+                    authorFieldDataId={`aut-org-student-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
+                    data={rowData.aut_org_student_id}
+                    name="aut_org_student_id"
                     {...props}
                     label={
                         <React.Fragment>

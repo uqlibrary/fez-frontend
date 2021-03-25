@@ -66,14 +66,35 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                                 <Tooltip title={isScopusIdAuthenticated.label}>
                                     <span>
                                         <IconButton
+                                            size="small"
                                             aria-label={isScopusIdAuthenticated.label}
                                             onClick={handleIsScopusIDAuthenticated}
+                                            id={`aut-is-scopus-id-authenticated${
+                                                !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                            }`}
+                                            data-testid={`aut-is-scopus-id-authenticated${
+                                                !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                            }`}
                                             {...(editable ? { disabled: false } : { disabled: true })}
                                         >
                                             {rowData.aut_is_scopus_id_authenticated ? (
-                                                <VerifiedScopusUserIcon />
+                                                <VerifiedScopusUserIcon
+                                                    id={`scopus-id-is-authenticated${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                    data-testid={`scopus-id-is-authenticated${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                />
                                             ) : (
-                                                <NonVerifiedScopusUserIcon />
+                                                <NonVerifiedScopusUserIcon
+                                                    id={`scopus-id-is-not-authenticated${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                    data-testid={`scopus-id-is-not-authenticated${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                />
                                             )}
                                         </IconButton>
                                     </span>
@@ -88,7 +109,7 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                 <AuthorFieldData
                     authorFieldDataId={`aut-google-scholar-id${!!rowData.tableData ? '-' + rowData.tableData.id : ''}`}
                     data={rowData.aut_google_scholar_id}
-                    name="aut_google_scholar_d"
+                    name="aut_google_scholar_id"
                     {...googleScholarId}
                     {...props}
                 />
@@ -135,14 +156,35 @@ export const ResearcherIdentifierColumnData = ({ rowData, ...props }) => {
                                 <Tooltip title={isOrcidSyncEnabled.label}>
                                     <span>
                                         <IconButton
+                                            size="small"
                                             aria-label={isOrcidSyncEnabled.label}
                                             onClick={handleIsOrcidSyncEnabled}
+                                            id={`aut-is-orcid-sync-enabled${
+                                                !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                            }`}
+                                            data-testid={`aut-is-orcid-sync-enabled${
+                                                !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                            }`}
                                             {...(editable ? { disabled: false } : { disabled: true })}
                                         >
                                             {rowData.aut_is_orcid_sync_enabled ? (
-                                                <OrcidSyncEnabled />
+                                                <OrcidSyncEnabled
+                                                    id={`orcid-sync-is-enabled${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                    data-testid={`orcid-sync-is-enabled${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                />
                                             ) : (
-                                                <OrcidSyncDisabled />
+                                                <OrcidSyncDisabled
+                                                    id={`orcid-sync-is-not-enabled${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                    data-testid={`orcid-sync-is-not-enabled${
+                                                        !!rowData.tableData ? '-' + rowData.tableData.id : ''
+                                                    }`}
+                                                />
                                             )}
                                         </IconButton>
                                     </span>

@@ -3240,106 +3240,104 @@ export default {
             header: {
                 columns: {
                     id: {
-                        label: 'ID',
-                        placeholder: '',
+                        title: 'ID',
                     },
+                    displayName: {
+                        title: 'Display name',
+                    },
+                    uqUsername: {
+                        title: 'UQ username',
+                    },
+                },
+            },
+            editRow: {
+                fields: {
                     title: {
                         label: 'Title',
-                        placeholder: '',
                     },
                     firstName: {
                         label: 'First name',
-                        placeholder: '',
                     },
                     middleName: {
                         label: 'Middle name',
-                        placeholder: '',
                     },
                     lastName: {
                         label: 'Last name',
-                        placeholder: '',
                     },
                     displayName: {
                         label: 'Display name',
-                        placeholder: '',
                     },
                     position: {
                         label: 'Position',
-                        placeholder: '',
                     },
                     orgStaffId: {
                         label: 'Org staff ID',
                         helperText: 'This is a 7 digit number, usually preceded by a 0',
-                        placeholder: '',
                     },
                     orgStudentId: {
                         label: 'Org student ID',
                         helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
-                        placeholder: '',
                     },
                     orgUsername: {
                         label: 'Org username',
-                        placeholder: '',
                     },
                     studentUsername: {
                         label: 'Student username',
-                        placeholder: '',
                     },
                     refNum: {
                         label: 'Ref num',
-                        placeholder: '',
-                    },
-                    createdDate: {
-                        label: 'Created date',
-                        placeholder: '',
                     },
                     orgMembership: {
                         label: 'Org membership',
-                        placeholder: '',
                     },
                     notes: {
                         label: 'Notes',
-                        placeholder: '',
                     },
                     scopusId: {
                         label: 'Scopus ID',
-                        placeholder: '',
                     },
                     googleScholarId: {
                         label: 'Google scholar ID',
-                        placeholder: '',
                     },
                     peopleAustraliaId: {
                         label: 'People Australia ID',
-                        placeholder: '',
                     },
                     orcidId: {
                         label: 'Orcid ID',
-                        placeholder: '',
                     },
                     researcherId: {
                         label: 'Researcher ID',
-                        placeholder: '',
                     },
                     isScopusIdAuthenticated: {
                         label: 'Is Scopus ID authenticated?',
-                        placeholder: '',
                     },
                     isOrcidSyncEnabled: {
                         label: 'Is pub sync with ORCID profile enabled?',
-                        placeholder: '',
                     },
                     openOrcidProfileInNewWindow: {
                         label: 'Open ORCID profile in new window',
                     },
+                    isUsernameOverridden: {
+                        label: 'Is username overridden by an admin?',
+                    },
                 },
             },
             form: {
+                editButton: 'Update author',
+                addButton: 'Save author',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete author',
+                    confirmationMessage: 'Are you sure you want to delete this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     editButtonTooltip: 'Edit this author',
                     deleteButtonTooltip: 'Delete this author',
                     notesButtonTooltip: 'View notes for this author',
+                    updateNotesButton: 'Update notes',
                 },
             },
             row: {

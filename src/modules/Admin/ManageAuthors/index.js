@@ -3,33 +3,19 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Grid from '@material-ui/core/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import ManageAuthorsList from './ManageAuthorsList';
+import ManageAuthorsNewList from './ManageAuthorsNewList';
 
 import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
-import {
-    addAuthor,
-    deleteAuthorListItem,
-    loadAuthorList,
-    updateAuthorListItem,
-    showAppAlert,
-    dismissAppAlert,
-} from 'actions';
+import { addAuthor, deleteAuthorListItem, updateAuthorListItem, showAppAlert, dismissAppAlert } from 'actions';
 
 export const ManageAuthors = () => {
     const dispatch = useDispatch();
 
-    const authorListLoading = useSelector(state => state.get('authorsListReducer').authorListLoading);
-    const authorList = useSelector(state => state.get('authorsListReducer').authorList);
     const authorListError = useSelector(state => state.get('authorsListReducer').authorListError);
-    const currentPage = useSelector(state => state.get('authorsListReducer').currentPage);
-    const totalCount = useSelector(state => state.get('authorsListReducer').total);
-
     const authorAddSuccess = useSelector(state => state.get('authorsListReducer').authorAddSuccess);
-
     const authorAddError = useSelector(state => state.get('authorsListReducer').authorAddError);
 
     const handleRowAdd = newData => {
@@ -45,13 +31,6 @@ export const ManageAuthors = () => {
     };
 
     React.useEffect(() => {
-        if (!authorList) {
-            dispatch(loadAuthorList());
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    React.useEffect(() => {
         if (authorAddSuccess) {
             dispatch(
                 showAppAlert({
@@ -62,14 +41,6 @@ export const ManageAuthors = () => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [authorAddSuccess]);
-
-    if (authorListLoading) {
-        return (
-            <StandardPage>
-                <InlineLoader message={locale.pages.authors.loadingMessage} />
-            </StandardPage>
-        );
-    }
 
     return (
         <StandardPage title={locale.pages.authors.title}>
@@ -85,18 +56,13 @@ export const ManageAuthors = () => {
                     </Grid>
                 )}
                 <Grid item xs={12}>
-                    {!!authorList && (
-                        <StandardCard hideTitle>
-                            <ManageAuthorsList
-                                onRowAdd={handleRowAdd}
-                                onRowUpdate={handleRowUpdate}
-                                onRowDelete={handleRowDelete}
-                                list={authorList}
-                                page={currentPage - 1}
-                                totalCount={totalCount}
-                            />
-                        </StandardCard>
-                    )}
+                    <StandardCard noHeader>
+                        <ManageAuthorsNewList
+                            onRowAdd={handleRowAdd}
+                            onRowUpdate={handleRowUpdate}
+                            onRowDelete={handleRowDelete}
+                        />
+                    </StandardCard>
                 </Grid>
             </Grid>
         </StandardPage>

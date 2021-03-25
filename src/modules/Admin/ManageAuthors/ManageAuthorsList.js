@@ -1,10 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import MaterialTable, { MTableAction, MTableActions, MTableBodyRow, MTableEditRow } from 'material-table';
 
 import Button from '@material-ui/core/Button';
+import Modal from '@material-ui/core/Modal';
+import { makeStyles } from '@material-ui/styles';
 
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { tableIcons } from './ManageAuthorsListIcons';
 
 import AuthorNotesButton from './partials/AuthorNotesButton';
@@ -15,7 +19,10 @@ import UsernameIdColumnData from './partials/UsernameIdColumnData';
 import ResearcherIdentifierColumnData from './partials/ResearcherIdentifierColumnData';
 
 import { default as locale } from 'locale/components';
+import { default as pageLocale } from 'locale/pages';
 import { EditableContext } from 'context';
+import { loadAuthorList } from 'actions';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 export const getColumns = () => {
     const {
@@ -172,19 +179,23 @@ export const getColumns = () => {
     ];
 };
 
-export const ManageAuthorsList = ({
-    disabled,
-    onChangePage,
-    onRowAdd,
-    onRowDelete,
-    onRowUpdate,
-    list,
-    page,
-    totalCount,
-}) => {
+const useStyles = makeStyles(() => ({
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+}));
+
+export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) => {
+    const dispatch = useDispatch();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns();
+
+    const classes = useStyles();
+
+    const [pageSize, setPageSize] = React.useState(20);
 
     const {
         form: {
@@ -192,7 +203,8 @@ export const ManageAuthorsList = ({
         },
     } = locale.components.manageAuthors;
 
-    const [data, setData] = React.useState(list);
+    // eslint-disable-next-line no-unused-vars
+    const [_, setData] = React.useState(list);
 
     return (
         <React.Fragment>
@@ -201,6 +213,13 @@ export const ManageAuthorsList = ({
                 columns={columns.current}
                 components={{
                     Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
+                    OverlayLoading: () => (
+                        <Modal open className={classes.modal}>
+                            <StandardCard noHeader standardCardId="loading-authors">
+                                <InlineLoader message={pageLocale.pages.authors.loadingMessage} />
+                            </StandardCard>
+                        </Modal>
+                    ),
                     Row: props => (
                         <MTableBodyRow
                             {...props}
@@ -228,6 +247,10 @@ export const ManageAuthorsList = ({
                                                         <AuthorNotesButton iconProps={iconProps} rowData={rowData} />
                                                     </EditableContext.Provider>
                                                 );
+                                            },
+                                            iconProps: {
+                                                id: `aut-description-${rowData.tableData.id}-edit`,
+                                                'data-testid': `aut-description-${rowData.tableData.id}-edit`,
                                             },
                                             size: 'small',
                                             tooltip: '',
@@ -277,13 +300,14 @@ export const ManageAuthorsList = ({
                                         tooltip,
                                         icon: () => (
                                             <Icon
-                                                disabled={disabled}
+                                                disabled={props.disabled}
                                                 id={`authors-list-row-${
                                                     props.data.tableData.id
                                                 }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                                 data-testid={`authors-list-row-${
                                                     props.data.tableData.id
                                                 }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                                {...restAction.iconProps}
                                             />
                                         ),
                                     }}
@@ -315,12 +339,12 @@ export const ManageAuthorsList = ({
                         }
                     },
                 }}
-                data={data}
-                page={page}
-                totalCount={totalCount}
+                data={query => {
+                    return dispatch(loadAuthorList({ page: query.page + 1, pageSize: query.pageSize }));
+                }}
+                onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
                 icons={tableIcons}
                 title=""
-                onChangePage={onChangePage}
                 localization={{
                     body: {
                         addTooltip: addButtonTooltip,
@@ -334,7 +358,7 @@ export const ManageAuthorsList = ({
                         onRowAdd(newData)
                             .then(data => {
                                 setData(prevState => {
-                                    return [data.data || data, ...prevState];
+                                    return [data, ...prevState];
                                 });
                             })
                             .catch(() => setData(prevState => prevState)),
@@ -362,15 +386,11 @@ export const ManageAuthorsList = ({
                     addRowPosition: 'first',
                     grouping: false,
                     draggable: false,
-                    search: data.length > 10,
                     emptyRowsWhenPaging: true,
-                    // ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
-                    ...(data.length > 10 ? { paging: true } : { paging: false }),
-                    pageSize: 20,
-                    pageSizeOptions: [5, 20, 50, 100, 200, 500],
+                    pageSize: pageSize,
+                    pageSizeOptions: [20, 50, 100],
                     padding: 'dense',
-                    overflowY: list.length > 20 ? 'auto' : 'hidden',
-
+                    overflowY: 'auto',
                     rowStyle: () => ({
                         borderTop: '1px solid',
                     }),
@@ -380,8 +400,8 @@ export const ManageAuthorsList = ({
                     rowData => ({
                         icon: props => <AuthorNotesButton iconProps={props} rowData={rowData} />,
                         iconProps: {
-                            id: `auhors-list-row-${rowData.tableData.id}-notes`,
-                            'data-testid': `authors-list-row-${rowData.tableData.id}-notes`,
+                            id: `aut-description-${rowData.tableData.id}-view`,
+                            'data-testid': `aut-description-${rowData.tableData.id}-view`,
                         },
                     }),
                 ]}
@@ -391,14 +411,10 @@ export const ManageAuthorsList = ({
 };
 
 ManageAuthorsList.propTypes = {
-    disabled: PropTypes.bool,
-    onChangePage: PropTypes.func,
     onRowAdd: PropTypes.func,
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,
     list: PropTypes.array,
-    page: PropTypes.number,
-    totalCount: PropTypes.number,
 };
 
 export default React.memo(ManageAuthorsList);
