@@ -27,5 +27,44 @@
     </iframe>
 </noscript>
 <div id="react-root" class="layout-fill"></div>
+<div id="ie-error" style="display:none;">
+    <style>
+        body, html, #ie-error {
+            overflow: hidden;
+            margin: 0;
+            height: 100%;
+        }
+        #ie-error div {
+            display: flex;
+            height: 100%;
+            background: linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%);
+            color: white;
+            align-items: center; 
+            justify-content: center;
+            font-size: 1.5rem;
+            font-family: Roboto, Helvetica, sans-serif;
+        }
+        #ie-error div p {
+            margin-top: -2rem;
+        }
+        #ie-error a {
+            color: white;
+        }
+    </style>
+    <div>
+        <p>Your browser is not supported for eSpace. Please&nbsp;<a href="https://browser-update.org/update.html">update your browser</a></p>
+    </div>
+</div>
+<script id="ie-script">
+    const userAgent = window.navigator.userAgent;
+    if (userAgent.indexOf("Trident") > 0 || userAgent.indexOf("Edge") > 0) {
+        document.body.removeChild(document.getElementById("react-root"));
+        document.getElementById("ie-error").setAttribute("style", "");
+        document.execCommand("Stop");
+    } else {
+        document.getElementById("ie-error").remove();
+        document.getElementById("ie-script").remove();
+    }
+</script>
 </body>
 </html>
