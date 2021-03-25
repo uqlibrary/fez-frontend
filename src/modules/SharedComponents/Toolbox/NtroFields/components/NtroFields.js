@@ -442,6 +442,7 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid item xs={12} sm={this.row5Width}>
                                         <Field
                                             component={NewGenericSelectField}
+                                            genericSelectFieldId="rek-language"
                                             name="languages"
                                             disabled={this.props.submitting}
                                             {...metadata.fields.language}

@@ -100,17 +100,29 @@ describe('ContributorsEditor', () => {
     it('appends a contributor with duplicate identifier to the list', () => {
         const wrapper = setup();
         expect(wrapper.state().contributors.length).toEqual(0);
+
+        wrapper.setState({
+            contributors: [
+                {
+                    nameAsPublished: 'test',
+                    selected: true,
+                    authorId: 1,
+                },
+            ],
+        });
+        wrapper.update();
         wrapper.instance().addContributor({
             displayName: 'J.Smith',
             ...authorsSearch.data[0],
+            uqIdentifier: '1',
         });
-        expect(wrapper.state().contributors.length).toEqual(1);
-        expect(wrapper.state().isCurrentAuthorSelected).toEqual(false);
+        expect(wrapper.state().contributors.length).toEqual(2);
+        expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
         wrapper.instance().addContributor({
             displayName: 'J.Smith II',
             ...authorsSearch.data[0],
         });
-        expect(wrapper.state().contributors.length).toEqual(1);
+        expect(wrapper.state().contributors.length).toEqual(2);
     });
 
     it('appends a contributor with identifier who is a current author to the list', () => {
@@ -134,6 +146,64 @@ describe('ContributorsEditor', () => {
         });
         wrapper.instance().addContributor({
             uqIdentifier: authorsSearch.data[0].aut_id,
+        });
+        expect(wrapper.state()).toMatchSnapshot();
+    });
+
+    it('can edit a selected contributor and reset other contributor selected state', () => {
+        const wrapper = setup({
+            editMode: true,
+            author: authorsSearch.data[0],
+        });
+        wrapper.setState({
+            contributors: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+
+                {
+                    nameAsPublished: 'test 2',
+                },
+
+                {
+                    nameAsPublished: 'test 3',
+                    selected: true,
+                    authorId: 410,
+                },
+            ],
+            contributorIndexSelectedToEdit: 1,
+        });
+        wrapper.instance().addContributor({
+            uqIdentifier: `${authorsSearch.data[0].aut_id}`,
+            aut_id: 410,
+        });
+        expect(wrapper.state()).toMatchSnapshot();
+    });
+
+    it('can edit a selected contributor and should not reset other contributor selected state if selected contributor is not current author', () => {
+        const wrapper = setup({
+            editMode: true,
+            author: authorsSearch.data[0],
+        });
+        wrapper.setState({
+            contributors: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+
+                {
+                    nameAsPublished: 'test 2',
+                },
+
+                {
+                    nameAsPublished: 'test 3',
+                    selected: true,
+                },
+            ],
+            contributorIndexSelectedToEdit: 1,
+        });
+        wrapper.instance().addContributor({
+            uqIdentifier: 2,
         });
         expect(wrapper.state()).toMatchSnapshot();
     });
@@ -205,6 +275,24 @@ describe('ContributorsEditor', () => {
         wrapper.instance().assignContributor(0);
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[0].selected).toEqual(true);
+    });
+
+    it('assigns a contributor to current author', async () => {
+        const wrapper = setup({
+            author: {
+                aut_id: 101,
+            },
+        });
+        wrapper.setState({
+            contributors: [{ aut_id: 101, selected: true }, { aut_id: 102 }, { aut_id: 103 }],
+            isCurrentAuthorSelected: true,
+        });
+        expect(wrapper.state().contributors.length).toEqual(3);
+        expect(wrapper.state().contributors[0].selected).toBeTruthy();
+        wrapper.instance().assignContributor(1);
+        expect(wrapper.state().contributors.length).toEqual(3);
+        expect(wrapper.state().contributors[0].selected).toBeTruthy();
+        expect(wrapper.state().contributors[1].selected).toBeFalsy();
     });
 
     it('chooses a contributor to edit', () => {
