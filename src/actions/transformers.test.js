@@ -3456,6 +3456,48 @@ describe('getBibliographicSectionSearchKeys', () => {
                 },
             });
         });
+
+        it('should preserve auto-matched jounrals', () => {
+            const data = {
+                fez_matched_journals: {
+                    mtj_jnl_id: 132,
+                    mtj_status: 'A',
+                },
+            };
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
+                fez_matched_journals: {
+                    mtj_jnl_id: 132,
+                    mtj_status: 'A',
+                },
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
+            });
+        });
+
+        it('should set key to null for a removed journal match', () => {
+            const data = {
+                fez_matched_journals: null,
+            };
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '1000-01-01 00:00:00',
+                rek_description: null,
+                rek_formatted_abstract: null,
+                fez_matched_journals: null,
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                        rek_language_order: 1,
+                    },
+                ],
+            });
+        });
     });
 
     describe('Design', () => {

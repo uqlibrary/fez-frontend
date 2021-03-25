@@ -4,17 +4,21 @@ import PropTypes from 'prop-types';
 
 import propFilter from '../../helpers/_filterProps';
 
-export const TextFieldWrapper = props => {
+export const TextFieldWrapper = React.forwardRef((props, ref) => {
     const filteredProps = propFilter({ ...props, forceError: true }, TextField.propTypes);
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const helperText = filteredProps.errorText || undefined;
     const hideLabel = !!filteredProps.hideLabel;
     delete filteredProps.errorText;
     delete filteredProps.hideLabel;
+    delete filteredProps.columnDef;
+    delete filteredProps.rowData;
+    delete filteredProps.onRowDataChange;
     return (
         <Fragment>
             <TextField
                 {...filteredProps}
+                ref={ref}
                 helperText={helperText}
                 id={props.textFieldId}
                 inputProps={{
@@ -36,7 +40,7 @@ export const TextFieldWrapper = props => {
             />
         </Fragment>
     );
-};
+});
 
 TextFieldWrapper.propTypes = {
     ...TextField.propTypes,

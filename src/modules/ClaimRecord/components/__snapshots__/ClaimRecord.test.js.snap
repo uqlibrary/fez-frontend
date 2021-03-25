@@ -991,7 +991,18 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -1006,7 +1017,18 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -2013,7 +2035,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -2028,7 +2061,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -3131,7 +3175,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -3146,7 +3201,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -4103,7 +4169,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -4118,7 +4195,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -5429,7 +5517,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -5444,7 +5543,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -6813,7 +6923,18 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -6828,7 +6949,18 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -8197,7 +8329,18 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -8212,7 +8355,18 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -9581,7 +9735,18 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -9596,7 +9761,18 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -11968,7 +12144,18 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -11983,7 +12170,18 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -13352,7 +13550,18 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -13367,7 +13576,18 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -14736,7 +14956,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={true}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -14751,7 +14982,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={true}
                   fullWidth={true}
                   label="Link (URL)"
@@ -16139,7 +16381,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -16154,7 +16407,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -17541,7 +17805,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -17556,7 +17831,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -18944,7 +19230,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -18959,7 +19256,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -19237,7 +19545,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -19252,7 +19571,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -19511,7 +19841,18 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -19526,7 +19867,18 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"

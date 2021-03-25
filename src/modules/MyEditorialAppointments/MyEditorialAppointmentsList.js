@@ -159,7 +159,7 @@ export const getColumns = () => {
                         />
                         {rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER && (
                             <TextField
-                                value={rowData.eap_role_name}
+                                value={rowData.eap_role_name || ''}
                                 onChange={handleRoleNameChangeForOther}
                                 textFieldId="eap-role-name"
                                 error={!rowData.eap_role_name}
@@ -203,11 +203,11 @@ export const getColumns = () => {
             editComponent: props => {
                 return (
                     <KeyboardDatePicker
-                        value={(!!props.value && moment(String(props.value))) || null}
+                        value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
                         onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
                         error={
-                            !moment(String(props.value)).isValid() ||
-                            !moment(String(props.value)).isSameOrBefore(moment(), 'year')
+                            !moment(String(props.value), 'YYYY').isValid() ||
+                            !moment(String(props.value), 'YYYY').isSameOrBefore(moment(), 'year')
                         }
                         autoOk
                         variant="inline"
@@ -235,8 +235,8 @@ export const getColumns = () => {
                 );
             },
             validate: rowData =>
-                moment(String(rowData.eap_start_year)).isValid() &&
-                moment(String(rowData.eap_start_year)).isSameOrBefore(moment(), 'year'),
+                moment(String(rowData.eap_start_year), 'YYYY').isValid() &&
+                moment(String(rowData.eap_start_year), 'YYYY').isSameOrBefore(moment(), 'year'),
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
@@ -268,11 +268,11 @@ export const getColumns = () => {
                 minDate.setMonth(0);
                 return (
                     <KeyboardDatePicker
-                        value={(!!props.value && moment(String(props.value))) || null}
+                        value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
                         onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
                         error={
-                            !moment(String(props.value)).isValid() ||
-                            !moment(String(props.value)).isSameOrAfter(moment(), 'year')
+                            !moment(String(props.value), 'YYYY').isValid() ||
+                            !moment(String(props.value), 'YYYY').isSameOrAfter(moment(), 'year')
                         }
                         autoOk
                         variant="inline"
@@ -301,8 +301,8 @@ export const getColumns = () => {
                 );
             },
             validate: rowData =>
-                moment(String(rowData.eap_end_year)).isValid() &&
-                moment(String(rowData.eap_end_year)).isSameOrAfter(moment(), 'year'),
+                moment(String(rowData.eap_end_year), 'YYYY').isValid() &&
+                moment(String(rowData.eap_end_year), 'YYYY').isSameOrAfter(moment(), 'year'),
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
@@ -328,6 +328,15 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
 
     const [data, setData] = React.useState(list);
 
+    const handleEditingApproved = props => (action, newData, oldData) => {
+        const invalid = props.columns.some(column => !column.validate(newData));
+
+        if (invalid) {
+            return;
+        }
+        props.onEditingApproved(action, newData, oldData);
+    };
+
     return (
         <MaterialTable
             tableRef={materialTableRef}
@@ -348,6 +357,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         {...props}
                         id={`my-editorial-appointments-list-edit-row-${props.index}`}
                         data-testid={`my-editorial-appointments-list-edit-row-${props.index}`}
+                        onEditingApproved={handleEditingApproved(props)}
                     />
                 ),
                 Action: props => {
@@ -481,7 +491,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 paging: false,
                 search: data.length > 10,
                 rowStyle: rowData => ({
-                    borderLeft: moment(String(rowData.eap_end_year)).isBefore(moment(), 'year') ? '8px solid red' : '',
+                    borderLeft: moment(String(rowData.eap_end_year), 'YYYY').isBefore(moment(), 'year')
+                        ? '8px solid red'
+                        : '',
                 }),
             }}
         />

@@ -113,7 +113,7 @@ export const getColumns = classes => {
                             fontSize: 13,
                         },
                     }}
-                    value={props.value}
+                    value={props.value || ''}
                     onChange={e => props.onChange(e.target.value)}
                     textFieldId="fvs-alias"
                     errorText={props.helperText}

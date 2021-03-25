@@ -22,7 +22,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
         >
           <Field
             autoFocus={true}
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Title of paper"
@@ -44,7 +55,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Conference name"
@@ -64,7 +86,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Conference location"
@@ -83,7 +116,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Conference dates (eg 13-15 December 2011)"
@@ -103,7 +147,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Proceedings title"
@@ -117,7 +172,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Journal name"
@@ -131,7 +197,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Place of publication"
@@ -145,7 +222,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Publisher"
@@ -499,7 +587,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -513,7 +612,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -526,7 +636,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
@@ -540,7 +661,18 @@ exports[`ConferencePaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Link (URL)"
