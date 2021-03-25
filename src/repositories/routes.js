@@ -94,6 +94,23 @@ export const AUTHORS_SEARCH_API = ({ query } = { query: undefined }) => ({
     apiUrl: 'fez-authors/search',
     ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
 });
+
+export const MANAGE_AUTHORS_LIST_API = params => {
+    const authorsSearchApi = AUTHORS_SEARCH_API(params);
+    return {
+        ...authorsSearchApi,
+        options: {
+            params: {
+                sort: 'updated_date',
+                order_by: 'desc',
+                page: params.page + 1,
+                per_page: params.pageSize,
+                ...((!!authorsSearchApi.options && authorsSearchApi.options.params) || {}),
+            },
+        },
+    };
+};
+
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
 export const AUTHOR_API = ({ authorId } = { authorId: undefined }) => ({
     apiUrl: `fez-authors${!!authorId ? `/${authorId}` : ''}`,

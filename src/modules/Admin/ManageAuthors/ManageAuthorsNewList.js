@@ -311,7 +311,7 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                     },
                 }}
                 data={query => {
-                    return dispatch(loadAuthorList({ page: query.page + 1, pageSize: query.pageSize }));
+                    return dispatch(loadAuthorList(query));
                 }}
                 onRowClick={(event, rowData) => {
                     materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
@@ -319,16 +319,10 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate, list }) 
                         ...materialTableRef.current.dataManager.getRenderState(),
                         showAddRow: false,
                     });
-                    // togglePanel();
                 }}
                 onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
                 icons={tableIcons}
                 title=""
-                // detailPanel={rowData => (
-                //     <ScrollToSection scrollToSection>
-                //         <FullAuthorDetails rowData={rowData} />
-                //     </ScrollToSection>
-                // )}
                 localization={{
                     body: {
                         addTooltip: addButtonTooltip,

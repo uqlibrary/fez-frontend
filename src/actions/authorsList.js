@@ -13,18 +13,14 @@ import {
     AUTHOR_ITEM_DELETE_FAILED,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
-import { AUTHORS_SEARCH_API, AUTHOR_API } from 'repositories/routes';
+import { AUTHOR_API, MANAGE_AUTHORS_LIST_API } from 'repositories/routes';
 
-export function loadAuthorList({ page, pageSize }) {
+export function loadAuthorList({ page, pageSize, search }) {
     return async dispatch => {
         dispatch({ type: AUTHOR_LIST_LOADING });
-        const authorsSearchApi = AUTHORS_SEARCH_API();
 
         try {
-            const response = await get({
-                ...authorsSearchApi,
-                apiUrl: `${authorsSearchApi.apiUrl}?sort=updated_date&order_by=desc&page=${page}&per_page=${pageSize}`,
-            });
+            const response = await get(MANAGE_AUTHORS_LIST_API({ page, pageSize, query: search }));
             dispatch({
                 type: AUTHOR_LIST_LOADED,
                 payload: response,
