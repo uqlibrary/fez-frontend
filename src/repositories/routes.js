@@ -96,16 +96,15 @@ export const AUTHORS_SEARCH_API = ({ query } = { query: undefined }) => ({
 });
 
 export const MANAGE_AUTHORS_LIST_API = params => {
-    const authorsSearchApi = AUTHORS_SEARCH_API(params);
     return {
-        ...authorsSearchApi,
+        apiUrl: 'fez-authors/search',
         options: {
             params: {
                 sort: 'updated_date',
                 order_by: 'desc',
                 page: params.page + 1,
                 per_page: params.pageSize,
-                ...((!!authorsSearchApi.options && authorsSearchApi.options.params) || {}),
+                query: params.query,
             },
         },
     };
