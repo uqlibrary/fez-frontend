@@ -960,7 +960,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 "dsi_state": "D",
               },
             ],
-            "fez_matched_journals": Array [],
+            "fez_matched_journals": null,
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": Array [],
             "fez_record_search_key_assigned_user_id": Array [
@@ -2319,7 +2319,7 @@ exports[`AdminContainer component should render memoized component with styles 1
                 "dsi_state": "D",
               },
             ],
-            "fez_matched_journals": Array [],
+            "fez_matched_journals": null,
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": Array [],
             "fez_record_search_key_assigned_user_id": Array [
@@ -3665,7 +3665,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                 "dsi_state": "D",
               },
             ],
-            "fez_matched_journals": Array [],
+            "fez_matched_journals": null,
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": Array [],
             "fez_record_search_key_assigned_user_id": Array [

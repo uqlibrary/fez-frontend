@@ -560,23 +560,11 @@ export default {
                 "dsi_security_policy": 1,
                 "dsi_security_inherited": 0
             }],
-            "fez_matched_journals": [{
+            "fez_matched_journals": {
                 "mtj_pid": "UQ:284280",
                 "mtj_jnl_id": 13996,
                 "mtj_status": "M"
-            }, {
-                "mtj_pid": "UQ:284280",
-                "mtj_jnl_id": 39175,
-                "mtj_status": "M"
-            }, {
-                "mtj_pid": "UQ:284280",
-                "mtj_jnl_id": 60324,
-                "mtj_status": "A"
-            }, {
-                "mtj_pid": "UQ:284280",
-                "mtj_jnl_id": 109121,
-                "mtj_status": "A"
-            }],
+            },
             "rek_display_type_lookup": "Research Report",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -887,7 +875,7 @@ export default {
             "fez_record_search_key_translated_title": null,
             "fez_record_search_key_wok_doc_types": [],
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Research Report",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

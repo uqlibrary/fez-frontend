@@ -320,7 +320,7 @@ export default {
             "fez_record_search_key_wok_doc_types": [],
             "fez_record_search_key_zoorec_id": null,
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "fez_record_search_key_isdatasetof": [],
             "fez_record_search_key_has_related_datasets": [],
             "fez_record_search_key_has_derivations": [],

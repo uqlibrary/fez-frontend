@@ -100,6 +100,24 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -670,19 +688,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -2256,6 +2261,24 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -2811,19 +2834,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -4390,6 +4400,24 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -5048,19 +5076,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -5796,6 +5811,24 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -6454,19 +6487,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -7202,6 +7222,24 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -7860,19 +7898,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -8608,6 +8633,24 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -9266,19 +9309,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -10014,6 +10044,24 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -10584,19 +10632,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -10995,6 +11030,24 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -11653,19 +11706,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -12423,6 +12463,24 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -13081,19 +13139,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -13829,6 +13874,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -14487,19 +14550,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -15254,6 +15304,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -15912,19 +15980,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -16678,6 +16733,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -17336,19 +17409,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -18103,6 +18163,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -18761,19 +18839,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -20124,6 +20189,24 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -20791,19 +20874,6 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal": Object {
-                        "fez_journal_era": Array [
-                          Object {
-                            "jnl_era_jid": 20339,
-                            "jnl_era_source_id": "122966",
-                            "jnl_era_source_year": 2010,
-                          },
-                        ],
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
