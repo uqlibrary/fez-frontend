@@ -12602,28 +12602,11 @@ exports[`Related publications Component  should render without a parent search k
             publication={
               Object {
                 "fez_datastream_info": Array [],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 4703,
-                    "mtj_pid": "UQ:76a9027",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 31814,
-                    "mtj_pid": "UQ:76a9027",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 49384,
-                    "mtj_pid": "UQ:76a9027",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 101982,
-                    "mtj_pid": "UQ:76a9027",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 4703,
+                  "mtj_pid": "UQ:76a9027",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_advisory_statement": null,
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
@@ -16125,28 +16108,11 @@ exports[`Related publications Component  should render without a parent search k
               publication={
                 Object {
                   "fez_datastream_info": Array [],
-                  "fez_matched_journals": Array [
-                    Object {
-                      "mtj_jnl_id": 4703,
-                      "mtj_pid": "UQ:76a9027",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 31814,
-                      "mtj_pid": "UQ:76a9027",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 49384,
-                      "mtj_pid": "UQ:76a9027",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 101982,
-                      "mtj_pid": "UQ:76a9027",
-                      "mtj_status": "A",
-                    },
-                  ],
+                  "fez_matched_journals": Object {
+                    "mtj_jnl_id": 4703,
+                    "mtj_pid": "UQ:76a9027",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_advisory_statement": null,
                   "fez_record_search_key_article_number": null,
                   "fez_record_search_key_assigned_group_id": Array [],
@@ -19661,28 +19627,11 @@ exports[`Related publications Component  should render without a parent search k
                 publication={
                   Object {
                     "fez_datastream_info": Array [],
-                    "fez_matched_journals": Array [
-                      Object {
-                        "mtj_jnl_id": 4703,
-                        "mtj_pid": "UQ:76a9027",
-                        "mtj_status": "A",
-                      },
-                      Object {
-                        "mtj_jnl_id": 31814,
-                        "mtj_pid": "UQ:76a9027",
-                        "mtj_status": "A",
-                      },
-                      Object {
-                        "mtj_jnl_id": 49384,
-                        "mtj_pid": "UQ:76a9027",
-                        "mtj_status": "A",
-                      },
-                      Object {
-                        "mtj_jnl_id": 101982,
-                        "mtj_pid": "UQ:76a9027",
-                        "mtj_status": "A",
-                      },
-                    ],
+                    "fez_matched_journals": Object {
+                      "mtj_jnl_id": 4703,
+                      "mtj_pid": "UQ:76a9027",
+                      "mtj_status": "A",
+                    },
                     "fez_record_search_key_advisory_statement": null,
                     "fez_record_search_key_article_number": null,
                     "fez_record_search_key_assigned_group_id": Array [],
