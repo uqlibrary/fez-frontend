@@ -142,7 +142,7 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
                         };
                     });
                 });
-        } else if (mode === 'delete') {
+        } else {
             const index = oldData.tableData.id;
             materialTable.props.editable
                 .onRowDelete(oldData)
