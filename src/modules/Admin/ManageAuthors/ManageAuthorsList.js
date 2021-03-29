@@ -39,11 +39,11 @@ export const getColumns = () => {
             sorting: false,
             render: rowData => <LeastAuthorData rowData={rowData} />,
             validate: rowData => {
-                let errorObject = {};
+                let error = {};
 
                 if (!rowData.aut_fname || rowData.aut_fname === '') {
-                    errorObject = {
-                        ...errorObject,
+                    error = {
+                        ...error,
                         aut_fname: {
                             error: true,
                             errorText: 'Required',
@@ -52,8 +52,8 @@ export const getColumns = () => {
                 }
 
                 if (!rowData.aut_lname || rowData.aut_lname === '') {
-                    errorObject = {
-                        ...errorObject,
+                    error = {
+                        ...error,
                         aut_lname: {
                             error: true,
                             errorText: 'Required',
@@ -61,7 +61,7 @@ export const getColumns = () => {
                     };
                 }
 
-                return Object.keys(errorObject).length === 0 ? true : JSON.stringify(errorObject);
+                return error;
             },
             cellStyle: {
                 width: '100%',
@@ -85,134 +85,195 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
         },
     } = locale.components.manageAuthors;
 
+    const handleSave = (mode, newData, oldData) => {
+        const materialTable = materialTableRef.current;
+
+        // materialTable.setState(prevState => {
+        if (mode === 'add') {
+            materialTable.props.editable
+                .onRowAdd(newData)
+                .then(data => {
+                    materialTable.setState(prevState => {
+                        materialTable.dataManager.setData([data, ...prevState.data]);
+                        return {
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: false,
+                        };
+                    });
+                })
+                .catch(() => {
+                    materialTable.setState(prevState => {
+                        materialTable.dataManager.setData([...prevState.data]);
+                        return {
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: false,
+                        };
+                    });
+                });
+        } else if (mode === 'update') {
+            const index = oldData.tableData.id;
+            materialTable.props.editable
+                .onRowUpdate(newData, oldData)
+                .then(data => {
+                    materialTable.setState(prevState => {
+                        materialTable.dataManager.changeRowEditing(oldData);
+                        materialTable.dataManager.setData([
+                            ...prevState.data.slice(0, index),
+                            data,
+                            ...prevState.data.slice(index + 1),
+                        ]);
+                        return {
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: false,
+                        };
+                    });
+                })
+                .catch(() => {
+                    materialTable.setState(prevState => {
+                        materialTable.dataManager.changeRowEditing(oldData);
+                        materialTable.dataManager.setData([
+                            ...prevState.data.slice(0, index),
+                            oldData,
+                            ...prevState.data.slice(index + 1),
+                        ]);
+                        return {
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: false,
+                        };
+                    });
+                });
+        } else if (mode === 'delete') {
+            const index = oldData.tableData.id;
+            materialTable.props.editable
+                .onRowDelete(oldData)
+                .then(() => {
+                    materialTable.setState(prevState => {
+                        materialTable.dataManager.setData([
+                            ...prevState.data.slice(0, index),
+                            ...prevState.data.slice(index + 1),
+                        ]);
+                        return {
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: false,
+                        };
+                    });
+                })
+                .catch(() => {
+                    materialTable.setState(prevState => {
+                        materialTable.dataManager.setData([...prevState.data]);
+                        return {
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: false,
+                        };
+                    });
+                });
+        }
+    };
+
     return (
-        <React.Fragment>
-            <MaterialTable
-                tableRef={materialTableRef}
-                columns={columns.current}
-                components={{
-                    Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
-                    Row: props => (
-                        <MTableBodyRow
+        <MaterialTable
+            tableRef={materialTableRef}
+            columns={columns.current}
+            components={{
+                Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
+                Row: props => (
+                    <MTableBodyRow
+                        {...props}
+                        hover
+                        id={`authors-list-row-${props.index}`}
+                        data-testid={`authors-list-row-${props.index}`}
+                    />
+                ),
+                EditRow: props => {
+                    return (
+                        <FullAuthorDetails
                             {...props}
-                            hover
-                            id={`authors-list-row-${props.index}`}
-                            data-testid={`authors-list-row-${props.index}`}
+                            id="authors-list-edit-row"
+                            data-testid="authors-list-edit-row"
+                            onEditingApproved={handleSave}
                         />
-                    ),
-                    EditRow: props => {
+                    );
+                },
+                Action: props => {
+                    if (typeof props.action === 'function') {
+                        const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
                         return (
-                            <FullAuthorDetails
+                            <MTableAction
                                 {...props}
-                                id="authors-list-edit-row"
-                                data-testid="authors-list-edit-row"
+                                action={{
+                                    ...restAction,
+                                    tooltip,
+                                    icon: () => (
+                                        <Icon
+                                            disabled={props.disabled}
+                                            id={`authors-list-row-${
+                                                props.data.tableData.id
+                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                            data-testid={`authors-list-row-${
+                                                props.data.tableData.id
+                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                            {...restAction.iconProps}
+                                        />
+                                    ),
+                                }}
+                                size="small"
                             />
                         );
-                    },
-                    Action: props => {
-                        if (typeof props.action === 'function') {
-                            const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                            return (
-                                <MTableAction
-                                    {...props}
-                                    action={{
-                                        ...restAction,
-                                        tooltip,
-                                        icon: () => (
-                                            <Icon
-                                                disabled={props.disabled}
-                                                id={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                {...restAction.iconProps}
-                                            />
-                                        ),
-                                    }}
-                                    size="small"
-                                />
-                            );
-                        } else {
-                            //  Add action
-                            const { tooltip } = props.action;
-                            return (
-                                <Button
-                                    id={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    data-testid={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    disabled={props.disabled}
-                                    variant="contained"
-                                    color="primary"
-                                    children={tooltip}
-                                    onClick={event => props.action.onClick(event, props.data)}
-                                />
-                            );
-                        }
-                    },
-                }}
-                data={query => dispatch(loadAuthorList(query))}
-                onRowClick={(event, rowData) => {
-                    materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
-                    materialTableRef.current.setState({
-                        ...materialTableRef.current.dataManager.getRenderState(),
-                        showAddRow: false,
-                    });
-                }}
-                onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
-                icons={tableIcons}
-                title=""
-                localization={{
-                    body: {
-                        addTooltip: addButtonTooltip,
-                        editTooltip: editButtonTooltip,
-                        deleteTooltip: deleteButtonTooltip,
-                    },
-                }}
-                editable={{
-                    onRowUpdateCancelled: () => {},
-                    onRowAdd: newData =>
-                        onRowAdd(newData)
-                            .then(data => {
-                                materialTableRef.current.setData(prevState => {
-                                    return [data, ...prevState];
-                                });
-                            })
-                            .catch(() => materialTableRef.current.setData(prevState => prevState)),
-                    onRowUpdate: (newData, oldData) =>
-                        onRowUpdate(newData, oldData)
-                            .then(data => {
-                                materialTableRef.current.setData(prevState => {
-                                    const list = [...prevState];
-                                    list[list.indexOf(oldData)] = data;
-                                    return list;
-                                });
-                            })
-                            .catch(() => materialTableRef.current.setData(prevState => prevState)),
-                    onRowDelete: oldData =>
-                        onRowDelete(oldData).then(() => {
-                            materialTableRef.current.setData(prevState => {
-                                const data = [...prevState];
-                                data.splice(data.indexOf(oldData), 1);
-                                return data;
-                            });
-                        }),
-                }}
-                options={{
-                    actionsColumnIndex: -1,
-                    addRowPosition: 'first',
-                    debounceInterval: 400,
-                    grouping: false,
-                    draggable: false,
-                    emptyRowsWhenPaging: true,
-                    pageSize: pageSize,
-                    pageSizeOptions: [20, 50, 100],
-                    padding: 'dense',
-                    overflowY: 'auto',
-                    searchFieldAlignment: 'left',
-                }}
-            />
-        </React.Fragment>
+                    } else {
+                        //  Add action
+                        const { tooltip } = props.action;
+                        return (
+                            <Button
+                                id={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                disabled={props.disabled}
+                                variant="contained"
+                                color="primary"
+                                children={tooltip}
+                                onClick={event => props.action.onClick(event, props.data)}
+                            />
+                        );
+                    }
+                },
+            }}
+            data={query => dispatch(loadAuthorList(query))}
+            onRowClick={(event, rowData) => {
+                materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
+                materialTableRef.current.setState({
+                    ...materialTableRef.current.dataManager.getRenderState(),
+                    showAddRow: false,
+                });
+            }}
+            onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
+            icons={tableIcons}
+            title=""
+            localization={{
+                body: {
+                    addTooltip: addButtonTooltip,
+                    editTooltip: editButtonTooltip,
+                    deleteTooltip: deleteButtonTooltip,
+                },
+            }}
+            editable={{
+                onRowUpdateCancelled: () => {},
+                onRowAdd: newData => onRowAdd(newData),
+                onRowUpdate: (newData, oldData) => onRowUpdate(newData, oldData),
+                onRowDelete: oldData => onRowDelete(oldData),
+            }}
+            options={{
+                actionsColumnIndex: -1,
+                addRowPosition: 'first',
+                debounceInterval: 400,
+                grouping: false,
+                draggable: false,
+                emptyRowsWhenPaging: true,
+                pageSize: pageSize,
+                pageSizeOptions: [20, 50, 100],
+                padding: 'dense',
+                overflowY: 'auto',
+                searchFieldAlignment: 'left',
+            }}
+        />
     );
 };
 

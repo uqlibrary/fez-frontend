@@ -8,7 +8,7 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
 
-export const NameData = ({ rowData, ...props }) => {
+export const NameData = ({ rowData, error, ...props }) => {
     const {
         editRow: {
             fields: { title, displayName, firstName, middleName, lastName, position },
@@ -39,6 +39,7 @@ export const NameData = ({ rowData, ...props }) => {
                     authorFieldDataId="aut-fname"
                     data={rowData.aut_fname}
                     name="aut_fname"
+                    {...((!!error.author && !!error.author.aut_fname && error.author.aut_fname) || {})}
                     {...firstName}
                     {...props}
                 />
@@ -53,6 +54,7 @@ export const NameData = ({ rowData, ...props }) => {
                     authorFieldDataId="aut-lname"
                     data={rowData.aut_lname}
                     name="aut_lname"
+                    {...((!!error.author && !!error.author.aut_lname && error.author.aut_lname) || {})}
                     {...lastName}
                     {...props}
                 />
@@ -73,15 +75,7 @@ NameData.propTypes = {
     onChange: PropTypes.func,
     index: PropTypes.number,
     helperText: PropTypes.string,
-    error: PropTypes.bool,
+    error: PropTypes.object,
 };
 
-export default React.memo(
-    NameData,
-    (prevProps, nextProps) =>
-        prevProps.rowData.aut_fname === nextProps.rowData.aut_fname &&
-        prevProps.rowData.aut_mname === nextProps.rowData.aut_mname &&
-        prevProps.rowData.aut_lname === nextProps.rowData.aut_lname &&
-        prevProps.rowData.aut_title === nextProps.rowData.aut_title &&
-        prevProps.rowData.aut_display_name === nextProps.rowData.aut_display_name,
-);
+export default React.memo(NameData);

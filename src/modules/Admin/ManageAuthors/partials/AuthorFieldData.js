@@ -30,7 +30,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ..
                     }}
                     InputLabelProps={{
                         style: {
-                            color: '#4085C6',
+                            ...(!props.error ? { color: '#4085C6' } : {}),
                             fontWeight: 400,
                         },
                     }}
@@ -48,6 +48,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ..
 AuthorFieldData.propTypes = {
     authorFieldDataId: PropTypes.string,
     data: PropTypes.string,
+    error: PropTypes.bool,
     label: PropTypes.string,
     helperText: PropTypes.string,
     InputProps: PropTypes.object,
