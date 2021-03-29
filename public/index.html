@@ -1,71 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta charset="utf-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta name="description" content="The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700" rel="stylesheet">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta charset="utf-8" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <meta
+            name="description"
+            content="The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700" rel="stylesheet" />
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','<%= htmlWebpackPlugin.options.gtm %>');</script>
-    <!-- End Google Tag Manager -->
-</head>
-<body>
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=<%= htmlWebpackPlugin.options.gtm %>"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden">
-
-    </iframe>
-</noscript>
-<div id="react-root" class="layout-fill"></div>
-<div id="ie-error" style="display:none;">
-    <style>
-        body, html, #ie-error {
-            overflow: hidden;
-            margin: 0;
-            height: 100%;
-        }
-        #ie-error div {
-            display: flex;
-            height: 100%;
-            background: linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%);
-            color: white;
-            align-items: center; 
-            justify-content: center;
-            font-size: 1.5rem;
-            font-family: Roboto, Helvetica, sans-serif;
-        }
-        #ie-error div p {
-            margin-top: -2rem;
-        }
-        #ie-error a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
-    <div>
-        <p>Your browser is not supported for eSpace. Please&nbsp;<a href="https://browser-update.org/update.html" target="_blank">update your browser</a>.</p>
-    </div>
-</div>
-<script id="ie-script">
-    const userAgent = window.navigator.userAgent;
-    if (userAgent.indexOf("Trident") > 0 || userAgent.indexOf("Edge") > 0) {
-        document.body.removeChild(document.getElementById("react-root"));
-        document.getElementById("ie-error").setAttribute("style", "");
-        document.execCommand("Stop");
-    } else {
-        document.getElementById("ie-error").remove();
-        document.getElementById("ie-script").remove();
-    }
-</script>
-</body>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','<%= htmlWebpackPlugin.options.gtm %>');</script>
+        <!-- End Google Tag Manager -->
+    </head>
+    <body>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=<%= htmlWebpackPlugin.options.gtm %>"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"
+            >
+            </iframe>
+        </noscript>
+        <div id="react-root" class="layout-fill"></div>
+        <div id="ie-error" style="display:none;">
+            <style>
+                body,
+                html,
+                #ie-error {
+                    overflow: hidden;
+                    margin: 0;
+                    height: 100%;
+                }
+                #ie-error div {
+                    display: grid;
+                    height: 100%;
+                    background: linear-gradient(135deg, rgb(81, 36, 122) 55%, rgb(150, 42, 139) 100%);
+                    color: white;
+                    padding: 1rem 2rem;
+                    font-family: Roboto, Helvetica, sans-serif;
+                    line-height: 1.5rem;
+                }
+                #ie-error p {
+                    max-width: 55rem;
+                }
+                #ie-error a {
+                    color: white;
+                    text-decoration: underline;
+                }
+            </style>
+            <script>
+                const userAgent = window.navigator.userAgent;
+                const browserDesc =
+                    userAgent.indexOf('Trident') > 0
+                        ? 'Internet Explorer'
+                        : userAgent.indexOf('Edge') > 0
+                        ? 'This version of Microsoft Edge'
+                        : '';
+            </script>
+            <div>
+                <p>
+                    <script>
+                        document.write(browserDesc);
+                    </script>
+                    cannot display this part of the Library website. Please visit our&nbsp;<a
+                        href="https://web.library.uq.edu.au/site-information/web-browser-compatibility"
+                        target="_blank"
+                    >browser compatibility page</a>
+                    for more information on supported browsers and try again with one of those.
+                </p>
+            </div>
+            <script>
+                if (userAgent.indexOf("Trident") > 0 || userAgent.indexOf("Edge") > 0) {
+                    document.body.removeChild(document.getElementById('react-root'));
+                    document.getElementById('ie-error').setAttribute('style', '');
+                    document.execCommand('Stop');
+                    window.stop && window.stop();
+                } else {
+                    document.getElementById("ie-error").remove();
+                }
+            </script>
+        </div>
+    </body>
 </html>
