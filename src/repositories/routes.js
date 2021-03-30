@@ -90,10 +90,26 @@ export const CURRENT_ACCOUNT_API = () => ({
     apiUrl: 'account',
     options: { params: { ts: `${new Date().getTime()}` } },
 });
-export const AUTHORS_SEARCH_API = ({ query } = { query: undefined }) => ({
+export const AUTHORS_SEARCH_API = ({ query } = { query: null }) => ({
     apiUrl: 'fez-authors/search',
     ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
 });
+
+export const MANAGE_AUTHORS_LIST_API = params => {
+    return {
+        apiUrl: 'fez-authors/search',
+        options: {
+            params: {
+                sort: 'updated_date',
+                order_by: 'desc',
+                page: params.page + 1,
+                per_page: params.pageSize,
+                query: params.query,
+            },
+        },
+    };
+};
+
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
 export const AUTHOR_API = ({ authorId } = { authorId: undefined }) => ({
     apiUrl: `fez-authors${!!authorId ? `/${authorId}` : ''}`,
