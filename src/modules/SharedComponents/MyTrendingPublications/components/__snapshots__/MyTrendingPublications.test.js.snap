@@ -99,28 +99,11 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Array [
               Object {
                 "fez_datastream_info": Array [],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 3283,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 30578,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 47977,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 100768,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 3283,
+                  "mtj_pid": "UQ:330391",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
@@ -776,18 +759,11 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Array [
               Object {
                 "fez_datastream_info": Array [],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 7532,
-                    "mtj_pid": "UQ:103860",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 34245,
-                    "mtj_pid": "UQ:103860",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 7532,
+                  "mtj_pid": "UQ:103860",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
@@ -1576,28 +1552,11 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Array [
               Object {
                 "fez_datastream_info": Array [],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 3283,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 30578,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 47977,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 100768,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 3283,
+                  "mtj_pid": "UQ:330391",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],

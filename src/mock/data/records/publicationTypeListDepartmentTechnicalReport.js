@@ -371,7 +371,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "fez_record_search_key_isdatasetof": [],
             "fez_record_search_key_has_related_datasets": [],
             "fez_record_search_key_has_derivations": [],
@@ -781,7 +781,7 @@ export default {
             "fez_record_search_key_wok_doc_types": [],
             "fez_record_search_key_isdatasetof": [],
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Department Technical Report",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

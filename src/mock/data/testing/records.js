@@ -4096,18 +4096,7 @@ export const journalArticle = {
             "rek_issn_pid": "UQ:676287",
             "rek_issn_xsdmf_id": null,
             "rek_issn": "1477-9137",
-            "rek_issn_order": 1,
-            "fez_journal": {
-                "jni_id": 13071,
-                "jni_jnl_id": 7538,
-                "jni_issn": "1477-9137",
-                "jni_issn_order": 2,
-                "fez_journal_era": [{
-                    "jnl_era_source_id":"122966",
-                    "jnl_era_jid":20339,
-                    "jnl_era_source_year":2010
-                }]
-            },
+            "rek_issn_order": 1,            
             "fez_sherpa_romeo": {
                 "srm_id": 13764,
                 "srm_issn": "1477-9137",
@@ -4119,6 +4108,22 @@ export const journalArticle = {
             "rek_issn_lookup": ""
         }
     ],
+    "fez_matched_journals": {
+        "mtj_jnl_id": 13071,
+        "mtj_pid": "UQ:676287",
+        "mtj_status": "A",
+        "fez_journal": {
+            "jni_id": 13071,
+            "jni_jnl_id": 7538,
+            "jni_issn": "1477-9137",
+            "jni_issn_order": 2,
+            "fez_journal_era": [{
+                "jnl_era_source_id":"122966",
+                "jnl_era_jid":20339,
+                "jnl_era_source_year":2010
+            }]
+        },
+    },
     "fez_record_search_key_issue_number": {
         "rek_issue_number_id": null,
         "rek_issue_number_pid": "UQ:676287",
@@ -8311,7 +8316,7 @@ export const referenceEntry = {
     "fez_record_search_key_translated_title": null,
     "fez_record_search_key_volume_number": null,
     "fez_record_search_key_issn": [],
-    "fez_matched_journals": [],
+    "fez_matched_journals": null,
     "fez_record_search_key_file_hashdataset": [],
     "rek_status_lookup": "Published",
     "rek_object_type_lookup": "Record",
@@ -12043,28 +12048,11 @@ export const publicationDetails = {
             "dsi_security_inherited": 0
         },
     ],
-    "fez_matched_journals": [
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 7489,
-            "mtj_status": "A"
-        },
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 34213,
-            "mtj_status": "A"
-        },
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 53821,
-            "mtj_status": "A"
-        },
-        {
-            "mtj_pid": "UQ:396321",
-            "mtj_jnl_id": 104309,
-            "mtj_status": "A"
-        }
-    ],
+    "fez_matched_journals": {
+        "mtj_pid": "UQ:396321",
+        "mtj_jnl_id": 7489,
+        "mtj_status": "A"
+    },
     "rek_display_type_lookup": "Journal Article",
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Record",
@@ -16993,15 +16981,7 @@ export const recordWithRelatedItems = {
     "fez_record_search_key_wok_doc_types": [],
         "fez_record_search_key_zoorec_id": null,
         "fez_datastream_info": [],
-        "fez_matched_journals": [{"mtj_pid": "UQ:76a9027", "mtj_jnl_id": 4703, "mtj_status": "A"}, {
-        "mtj_pid": "UQ:76a9027",
-        "mtj_jnl_id": 31814,
-        "mtj_status": "A"
-    }, {"mtj_pid": "UQ:76a9027", "mtj_jnl_id": 49384, "mtj_status": "A"}, {
-        "mtj_pid": "UQ:76a9027",
-        "mtj_jnl_id": 101982,
-        "mtj_status": "A"
-    }],
+        "fez_matched_journals": {"mtj_pid": "UQ:76a9027", "mtj_jnl_id": 4703, "mtj_status": "A"},
         "rek_display_type_lookup": "Journal Article",
         "rek_pubmed_doc_type_lookup": null,
         "rek_object_type_lookup": "Record",

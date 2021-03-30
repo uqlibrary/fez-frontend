@@ -12,17 +12,15 @@ export default class JournalName extends PureComponent {
     };
 
     // fez_journal returns era data
-    getERAYears = (issns = []) => {
+    getERAYears = matchedJournal => {
         const years = [];
-        issns.map(issn => {
-            !!issn.fez_journal &&
-                !!issn.fez_journal.fez_journal_era &&
-                issn.fez_journal.fez_journal_era.map(journalEra => {
-                    if (journalEra.jnl_era_source_year && !years.includes(journalEra.jnl_era_source_year)) {
-                        years.push(journalEra.jnl_era_source_year);
-                    }
-                });
-        });
+        if (matchedJournal && matchedJournal.fez_journal && matchedJournal.fez_journal.fez_journal_era) {
+            matchedJournal.fez_journal.fez_journal_era.map(journalEra => {
+                if (journalEra.jnl_era_source_year && !years.includes(journalEra.jnl_era_source_year)) {
+                    years.push(journalEra.jnl_era_source_year);
+                }
+            });
+        }
 
         return years;
     };
@@ -51,8 +49,8 @@ export default class JournalName extends PureComponent {
         return sherpaRomeoElement;
     };
 
-    renderJournalName = (journalName, issns) => {
-        const eraYears = this.getERAYears(issns);
+    renderJournalName = (journalName, matchedJournal) => {
+        const eraYears = this.getERAYears(matchedJournal);
         const eraJournalListedText =
             eraYears && eraYears.length > 0
                 ? viewRecordLocale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', '))
@@ -76,7 +74,7 @@ export default class JournalName extends PureComponent {
                     publication.fez_record_search_key_journal_name.rek_journal_name &&
                     this.renderJournalName(
                         publication.fez_record_search_key_journal_name.rek_journal_name,
-                        publication.fez_record_search_key_issn,
+                        publication.fez_matched_journals,
                     )}
                 {publication.fez_record_search_key_journal_name &&
                     publication.fez_record_search_key_issn &&
