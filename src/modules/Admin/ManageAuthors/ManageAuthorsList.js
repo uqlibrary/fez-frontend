@@ -10,12 +10,25 @@ import { tableIcons } from './ManageAuthorsListIcons';
 import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
 
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorHeader from './partials/AuthorHeader';
 import LeastAuthorData from './partials/LeastAuthorData';
 import FullAuthorDetails from './partials/FullAuthorDetails';
 
 import { default as locale } from 'locale/components';
 import { loadAuthorList } from 'actions';
+import Backdrop from '@material-ui/core/Backdrop';
+
+import makeStyles from '@material-ui/styles/makeStyles';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+
+export const useStyles = makeStyles(() => ({
+    backdrop: {
+        position: 'absolute',
+        zIndex: 9999,
+        color: 'rgba(0, 0, 0, 0.2)',
+    },
+}));
 
 export const getColumns = () => {
     const {
@@ -73,6 +86,7 @@ export const getColumns = () => {
 
 export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
     const dispatch = useDispatch();
+    const classes = useStyles();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns();
@@ -80,6 +94,7 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
     const [pageSize, setPageSize] = React.useState(20);
 
     const {
+        loadingText,
         form: {
             locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
         },
@@ -176,6 +191,13 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
             columns={columns.current}
             components={{
                 Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
+                OverlayLoading: props => (
+                    <Backdrop {...props} open className={classes.backdrop}>
+                        <StandardCard noHeader standardCardId="loading-authors">
+                            <InlineLoader message={loadingText} />
+                        </StandardCard>
+                    </Backdrop>
+                ),
                 Row: props => (
                     <MTableBodyRow
                         {...props}

@@ -3247,6 +3247,7 @@ export default {
             },
         },
         manageAuthors: {
+            loadingText: 'Loading authors',
             header: {
                 columns: {
                     id: {
