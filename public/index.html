@@ -31,16 +31,16 @@
             </iframe>
         </noscript>
         <div id="react-root" class="layout-fill"></div>
-        <div id="ie-error" style="display:none;">
+        <div id="old-browser-error" style="display:none;">
             <style>
                 body,
                 html,
-                #ie-error {
+                #old-browser-error {
                     overflow: hidden;
                     margin: 0;
                     height: 100%;
                 }
-                #ie-error div {
+                #old-browser-error div {
                     display: grid;
                     height: 100%;
                     background: linear-gradient(135deg, rgb(81, 36, 122) 55%, rgb(150, 42, 139) 100%);
@@ -49,45 +49,25 @@
                     font-family: Roboto, Helvetica, sans-serif;
                     line-height: 1.5rem;
                 }
-                #ie-error p {
+                #old-browser-error p {
                     max-width: 55rem;
                 }
-                #ie-error a {
+                #old-browser-error a {
                     color: white;
                     text-decoration: underline;
                 }
             </style>
-            <script>
-                const userAgent = window.navigator.userAgent;
-                const browserDesc =
-                    userAgent.indexOf('Trident') > 0
-                        ? 'Internet Explorer'
-                        : userAgent.indexOf('Edge') > 0
-                        ? 'This version of Microsoft Edge'
-                        : '';
-            </script>
             <div>
                 <p>
-                    <script>
-                        document.write(browserDesc);
-                    </script>
+                    <span id="browser-name"></span>
                     cannot display this part of the Library website. Please visit our&nbsp;<a
                         href="https://web.library.uq.edu.au/site-information/web-browser-compatibility"
                         target="_blank"
-                    >browser compatibility page</a>
+                        >browser compatibility page</a
+                    >
                     for more information on supported browsers and try again with one of those.
                 </p>
             </div>
-            <script>
-                if (userAgent.indexOf("Trident") > 0 || userAgent.indexOf("Edge") > 0) {
-                    document.body.removeChild(document.getElementById('react-root'));
-                    document.getElementById('ie-error').setAttribute('style', '');
-                    document.execCommand('Stop');
-                    window.stop && window.stop();
-                } else {
-                    document.getElementById("ie-error").remove();
-                }
-            </script>
         </div>
     </body>
 </html>
