@@ -13,24 +13,7 @@ import {
 } from 'config';
 import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
-import browserUpdate from 'browser-update';
 import { flattedPathConfig } from 'config/routes';
-
-browserUpdate({
-    required: {
-        e: -2,
-        i: 11,
-        f: -2,
-        o: -2,
-        s: -1,
-        c: -2,
-        samsung: 7.0,
-        vivaldi: 1.2,
-    },
-    insecure: true,
-    style: 'top',
-    shift_page_down: true,
-});
 
 // application components
 import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
