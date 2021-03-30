@@ -1,63 +1,56 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import FormHelperText from '@material-ui/core/FormHelperText';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { makeStyles } from '@material-ui/styles';
+import ColumnTitle from '../partials/ColumnTitle';
 
-import { useEditableContext } from 'context';
-
-const useStyles = makeStyles(() => ({
-    root: {
-        '&::before': {
-            borderBottom: '1px dashed rgba(0, 0, 0, 0.13)',
-        },
-    },
-    underline: {},
-}));
-
-export const AuthorFieldData = ({ authorFieldDataId, data, ...props }) => {
-    const classes = useStyles();
-    const { editable } = useEditableContext();
+export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ...props }) => {
     return (
-        <TextField
-            {...props}
-            textFieldId={authorFieldDataId}
-            fullWidth
-            InputProps={{
-                style: {
-                    fontSize: 14,
-                    fontWeight: 400,
-                },
-                ...(!editable
-                    ? {
-                          readOnly: true,
-                          classes: {
-                              root: classes.root,
-                              underline: classes.underline,
-                          },
-                          ...props.InputProps,
-                      }
-                    : {
-                          ...props.InputProps,
-                      }),
-            }}
-            InputLabelProps={{
-                style: {
-                    fontSize: '0.8rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                },
-                shrink: true,
-                disableAnimation: true,
-            }}
-            value={data || ''}
-            onChange={e => props.onChange(e.target.name, e.target.value)}
-        />
+        <React.Fragment>
+            <Grid item xs={2}>
+                <Grid container justify="flex-end">
+                    <Grid item>
+                        <ColumnTitle title={label} />
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid item xs={7}>
+                <TextField
+                    {...props}
+                    label={label}
+                    textFieldId={authorFieldDataId}
+                    fullWidth
+                    InputProps={{
+                        style: {
+                            fontSize: 14,
+                            fontWeight: 400,
+                        },
+                        ...props.InputProps,
+                    }}
+                    InputLabelProps={{
+                        style: {
+                            ...(!props.error ? { color: '#4085C6' } : {}),
+                            fontWeight: 400,
+                        },
+                    }}
+                    value={data || ''}
+                    onChange={e => props.onChange(e.target.name, e.target.value)}
+                />
+            </Grid>
+            <Grid item xs={3}>
+                <FormHelperText variant="outlined">{helperText}</FormHelperText>
+            </Grid>
+        </React.Fragment>
     );
 };
 
 AuthorFieldData.propTypes = {
     authorFieldDataId: PropTypes.string,
     data: PropTypes.string,
+    error: PropTypes.bool,
+    label: PropTypes.string,
+    helperText: PropTypes.string,
     InputProps: PropTypes.object,
     onChange: PropTypes.func,
 };

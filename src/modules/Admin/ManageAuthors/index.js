@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import ManageAuthorsNewList from './ManageAuthorsNewList';
+import ManageAuthorsNewList from './ManageAuthorsList';
 
 import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';

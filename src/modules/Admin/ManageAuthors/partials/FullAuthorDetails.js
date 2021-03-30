@@ -25,14 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const FullAuthorDetails = ({
-    disabled,
-    data: rowData,
-    mode,
-    onEditingApproved,
-    onEditingCanceled,
-    ...props
-}) => {
+export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled, columns }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
@@ -41,6 +34,7 @@ export const FullAuthorDetails = ({
     } = locale.components.manageAuthors;
 
     const [data, setData] = React.useState(rowData || {});
+    const [error, setError] = React.useState({});
 
     const handleChange = (name, value) => setData(data => ({ ...data, [name]: value }));
 
@@ -68,6 +62,16 @@ export const FullAuthorDetails = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mode]);
 
+    React.useEffect(() => {
+        setError(
+            columns.reduce(
+                (errorObject, column) => !!column.validate && { ...errorObject, [column.field]: column.validate(data) },
+                {},
+            ),
+        );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data]);
+
     return (
         <TableRow>
             <TableCell colSpan={3}>
@@ -83,16 +87,16 @@ export const FullAuthorDetails = ({
                         <div className={classes.background}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
-                                    <NameData {...props} rowData={data} onChange={handleChange} />
+                                    <NameData rowData={data} onChange={handleChange} error={error} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <UsernameIdData {...props} rowData={data} onChange={handleChange} />
+                                    <UsernameIdData rowData={data} onChange={handleChange} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <ResearcherIdentifierData {...props} rowData={data} onChange={handleChange} />
+                                    <ResearcherIdentifierData rowData={data} onChange={handleChange} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <NotesData {...props} rowData={data} onChange={handleChange} />
+                                    <NotesData rowData={data} onChange={handleChange} />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Grid
@@ -104,9 +108,12 @@ export const FullAuthorDetails = ({
                                     >
                                         <Grid item>
                                             <Button
-                                                id="authors-update-this-author-save"
-                                                data-testid="authors-update-this-author-save"
-                                                disabled={disabled}
+                                                key={JSON.stringify(error)}
+                                                id={`authors-${mode}-this-author-save`}
+                                                data-testid={`authors-${mode}-this-author-save`}
+                                                disabled={
+                                                    disabled || (!!error.author && Object.keys(error.author).length > 0)
+                                                }
                                                 variant="contained"
                                                 color="primary"
                                                 onClick={handleSave}
@@ -116,8 +123,8 @@ export const FullAuthorDetails = ({
                                         </Grid>
                                         <Grid item>
                                             <Button
-                                                id="authors-update-this-author-cancel"
-                                                data-testid="authors-update-this-author-cancel"
+                                                id={`authors-${mode}-this-author-cancel`}
+                                                data-testid={`authors-${mode}-this-author-cancel`}
                                                 disabled={disabled}
                                                 variant="outlined"
                                                 color="secondary"
@@ -138,6 +145,7 @@ export const FullAuthorDetails = ({
 };
 
 FullAuthorDetails.propTypes = {
+    columns: PropTypes.array,
     data: PropTypes.object,
     disabled: PropTypes.bool,
     mode: PropTypes.string,

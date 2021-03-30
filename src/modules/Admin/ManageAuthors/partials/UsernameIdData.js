@@ -20,7 +20,9 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
         },
     } = locale.components.manageAuthors;
 
-    const handleIsUsernameOverridden = () => {};
+    const handleIsUsernameOverridden = () => {
+        props.onChange('aut_is_username_overridden_by_admin', Number(!rowData.aut_is_username_overridden_by_admin));
+    };
 
     return (
         <StandardCard subCard title="Username & IDs" smallTitle customTitleBgColor="#F7F7F7">
@@ -47,19 +49,19 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                                             <IconButton
                                                 aria-label={isUsernameOverridden.label}
                                                 onClick={handleIsUsernameOverridden}
-                                                id="aut-is-scopus-id-authenticated"
-                                                data-testid="aut-is-scopus-id-authenticated"
+                                                id="aut-is-username-overridden-by-admin"
+                                                data-testid="aut-is-username-overridden-by-admin"
                                             >
                                                 {rowData.aut_is_username_overridden_by_admin ? (
                                                     <OverriddenIcon
-                                                        id="scopus-id-is-authenticated"
-                                                        data-testid="scopus-id-is-authenticated"
+                                                        id="username-is-overridden"
+                                                        data-testid="username-is-overridden"
                                                         color="primary"
                                                     />
                                                 ) : (
                                                     <NotOverriddenIcon
-                                                        id="scopus-id-is-not-authenticated"
-                                                        data-testid="scopus-id-is-not-authenticated"
+                                                        id="username-is-not-overridden"
+                                                        data-testid="username-is-not-overridden"
                                                         color="secondary"
                                                     />
                                                 )}
@@ -100,6 +102,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
 
 UsernameIdColumnData.propTypes = {
     rowData: PropTypes.object,
+    onChange: PropTypes.func,
 };
 
 export default React.memo(UsernameIdColumnData);

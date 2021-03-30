@@ -1,4 +1,4 @@
-import { deleteAuthorListItem, loadAuthorList, updateAuthorListItem, addAuthor } from './authorsList';
+import { deleteAuthorListItem, loadAuthorList, updateAuthorListItem, addAuthor } from './manageAuthors';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data/testing/authorsList';
@@ -16,23 +16,25 @@ describe('author list actions', () => {
     describe('loadAuthorList action', () => {
         it('should dispatch correct number of actions on loading author list', async () => {
             mockApi
-                .onGet(`${repositories.routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
+                .onGet(repositories.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl)
                 .reply(200, { data: { ...mockData.authorList } });
 
             const expectedActions = [actions.AUTHOR_LIST_LOADING, actions.AUTHOR_LIST_LOADED];
 
-            await mockActionsStore.dispatch(loadAuthorList());
+            await mockActionsStore.dispatch(loadAuthorList({ page: 1, pageSize: 20, search: '' }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('should dispatch correct number of actions on failed to load author list', async () => {
             mockApi
-                .onGet(`${repositories.routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
+                .onGet(`${repositories.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl}`)
                 .reply(500);
 
             const expectedActions = [actions.AUTHOR_LIST_LOADING, actions.APP_ALERT_SHOW, actions.AUTHOR_LIST_FAILED];
 
-            await expect(mockActionsStore.dispatch(loadAuthorList())).rejects.toEqual({
+            await expect(
+                mockActionsStore.dispatch(loadAuthorList({ page: 1, pageSize: 20, search: '' })),
+            ).rejects.toEqual({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',

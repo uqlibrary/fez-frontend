@@ -90,7 +90,7 @@ export const CURRENT_ACCOUNT_API = () => ({
     apiUrl: 'account',
     options: { params: { ts: `${new Date().getTime()}` } },
 });
-export const AUTHORS_SEARCH_API = ({ query } = { query: undefined }) => ({
+export const AUTHORS_SEARCH_API = ({ query } = { query: null }) => ({
     apiUrl: 'fez-authors/search',
     ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
 });
