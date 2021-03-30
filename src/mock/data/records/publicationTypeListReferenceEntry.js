@@ -315,7 +315,7 @@ export default {
             "fez_record_search_key_doi": null,
             "fez_record_search_key_isdatasetof": [],
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Reference Entry",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

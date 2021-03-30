@@ -447,7 +447,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Design",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -799,7 +799,7 @@ export default {
                 "dsi_security_policy": 1,
                 "dsi_security_inherited": 0
             }],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Design",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -1254,7 +1254,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Design",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

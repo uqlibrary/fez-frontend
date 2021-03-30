@@ -11,7 +11,7 @@
     "node": ">=7.2.0"
   },
   "scripts": {
-    "jest": "jest --coverage 'lib/**/*.test.js'",
+    "jest": "jest --coverage lib/**/*.test.js",
     "test": "npm run jest"
   }
 }
