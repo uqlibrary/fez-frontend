@@ -111,6 +111,16 @@ describe('ManageAuthorsList', () => {
         fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
         fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
+        fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-342' } });
+        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
+
+        act(() => {
+            fireEvent.click(getByTestId('aut-is-username-overridden-by-admin'));
+        });
+
+        act(() => {
+            fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
+        });
 
         act(() => {
             fireEvent.click(getByTestId('authors-add-this-author-save'));

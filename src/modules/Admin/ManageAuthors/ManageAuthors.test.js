@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthors from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
+import { act, render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as repository from 'repositories';
 
@@ -14,6 +14,15 @@ const setup = (testProps = {}) => {
 
 describe('ManageAuthors', () => {
     beforeEach(() => {
+        jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
+    });
+
+    afterEach(() => {
+        mockApi.reset();
+        jest.clearAllMocks();
+    });
+
+    it('should render default view', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 1, search: '' }).apiUrl))
             .replyOnce(200, {
@@ -57,15 +66,6 @@ describe('ManageAuthors', () => {
                 ],
                 total: 1,
             });
-        jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
-    });
-
-    afterEach(() => {
-        mockApi.reset();
-        jest.clearAllMocks();
-    });
-
-    it('should render default view', async () => {
         const loadAuthorListFn = jest.spyOn(ManageAuthorsActions, 'loadAuthorList');
 
         const { getByText, getByTestId } = setup({});
@@ -84,7 +84,9 @@ describe('ManageAuthors', () => {
     });
 
     it('should render error message', async () => {
-        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API().apiUrl).replyOnce(500);
+        mockApi
+            .onGet(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 1, query: '' }).apiUrl)
+            .replyOnce(500);
 
         try {
             const { getByText } = setup({});
@@ -96,5 +98,262 @@ describe('ManageAuthors', () => {
                 status: 500,
             });
         }
+    });
+
+    it('should change call an api with updated page size', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_id: 2011,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2012,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2013,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2014,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2015,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2016,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2017,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2018,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2019,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2020,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2021,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2022,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2023,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2024,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2025,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+
+                    {
+                        aut_id: 2026,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2027,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2028,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2029,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2030,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                ],
+                total: 23,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 50, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_id: 2011,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2012,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2013,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2014,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2015,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2016,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_student_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2017,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2018,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2019,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2020,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2021,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2022,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2023,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2024,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2025,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+
+                    {
+                        aut_id: 2026,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2027,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2028,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2029,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2030,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2032,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2032,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2033,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                ],
+                total: 23,
+                pageSize: 20,
+                current_page: 1,
+            });
+
+        const { getByText, getByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('authors-list-row-19')).toBeInTheDocument();
+
+        act(() => {
+            fireEvent.mouseDown(getByText('20 rows'));
+        });
+
+        act(() => {
+            fireEvent.click(getByText('50'));
+        });
+
+        await waitFor(() => getByTestId('authors-list-row-22'));
+
+        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('authors-list-row-22')).toBeInTheDocument();
     });
 });

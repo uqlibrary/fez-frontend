@@ -12,9 +12,9 @@ export const LeastAuthorData = ({ rowData }) => {
             <Grid item xs={6}>
                 <ColumnData
                     data={rowData.aut_org_username || rowData.aut_student_username}
-                    columnDataId={`${(rowData.aut_student_username && 'aut-student-username') || 'aut-org-username'}-${
-                        rowData.tableData.id
-                    }`}
+                    columnDataId={`${(rowData.aut_org_username && 'aut-org-username') ||
+                        (rowData.aut_student_username && 'aut-student-username') ||
+                        'aut-org-username'}-${rowData.tableData.id}`}
                 />
             </Grid>
         </Grid>
