@@ -24,18 +24,9 @@ describe('author reducer', () => {
     it('returns the correct state when author are loaded', () => {
         const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_LIST_LOADED,
-            payload: {
-                data: [
-                    {
-                        aut_id: 1,
-                    },
-                ],
-            },
         });
 
         expect(test.authorListLoading).toEqual(false);
-        expect(test.authorList).toEqual([{ aut_id: 1 }]);
-        expect(test.authorListError).toEqual(null);
     });
 
     it('returns the correct state when author list fails to load data', () => {
@@ -47,8 +38,7 @@ describe('author reducer', () => {
             },
         });
         expect(test.authorListLoading).toEqual(false);
-        expect(test.authorList).toEqual(null);
-        expect(test.authorListError).toEqual({ status: 500, message: 'Test error' });
+        expect(test.authorListLoadingError).toEqual({ status: 500, message: 'Test error' });
     });
 
     it('returns the state when an invalid action type is supplied', () => {
@@ -64,66 +54,16 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state when author item is successfully updated', () => {
-        const oldData = {
-            aut_id: 2,
-            aut_display_name: 'test',
-            aut_org_staff_id: 2134,
-            aut_org_username: '454145',
-            aut_student_username: 'Guest Editor',
-            aut_fname: '2010',
-            aut_lname: '2020',
-            aut_mname: '2020',
-            aut_title: '2020',
-        };
         const test = manageAuthorsReducer(
             {
                 ...initialState,
-                authorList: [
-                    {
-                        aut_id: 1,
-                        aut_display_name: 'test',
-                        aut_org_staff_id: 'test',
-                        aut_org_username: 'test',
-                    },
-                    oldData,
-                ],
             },
             {
                 type: actions.AUTHOR_ITEM_UPDATE_SUCCESS,
-                payload: {
-                    aut_id: 2,
-                    aut_display_name: 'test',
-                    aut_org_staff_id: 2134,
-                    aut_org_username: '454144',
-                    aut_student_username: 'Editorial Board Member',
-                    aut_fname: '2010',
-                    aut_lname: '2020',
-                    aut_mname: '2020',
-                    aut_title: '2020',
-                },
-                oldData,
             },
         );
         expect(test.authorListItemUpdating).toEqual(false);
-        expect(test.authorList).toEqual([
-            {
-                aut_id: 1,
-                aut_display_name: 'test',
-                aut_org_staff_id: 'test',
-                aut_org_username: 'test',
-            },
-            {
-                aut_id: 2,
-                aut_display_name: 'test',
-                aut_org_staff_id: 2134,
-                aut_org_username: '454144',
-                aut_student_username: 'Editorial Board Member',
-                aut_fname: '2010',
-                aut_lname: '2020',
-                aut_mname: '2020',
-                aut_title: '2020',
-            },
-        ]);
+        expect(test.authorListItemUpdateSuccess).toEqual(true);
     });
 
     it('returns the correct state when author item update failed', () => {
@@ -143,39 +83,16 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state when author item is successfully deleted', () => {
-        const oldData = {
-            aut_id: 2,
-            aut_display_name: 'test',
-            aut_org_staff_id: 'tests',
-            aut_org_username: 'test',
-        };
         const test = manageAuthorsReducer(
             {
                 ...initialState,
-                authorList: [
-                    {
-                        aut_id: 1,
-                        aut_display_name: 'test',
-                        aut_org_staff_id: 'test',
-                        aut_org_username: 'test',
-                    },
-                    oldData,
-                ],
             },
             {
                 type: actions.AUTHOR_ITEM_DELETE_SUCCESS,
-                payload: oldData,
             },
         );
         expect(test.authorListItemDeleting).toEqual(false);
-        expect(test.authorList).toEqual([
-            {
-                aut_id: 1,
-                aut_display_name: 'test',
-                aut_org_staff_id: 'test',
-                aut_org_username: 'test',
-            },
-        ]);
+        expect(test.authorListItemDeleteSuccess).toEqual(true);
     });
 
     it('returns the correct state when author item delete failed', () => {
