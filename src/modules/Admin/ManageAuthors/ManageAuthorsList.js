@@ -258,7 +258,14 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
                     }
                 },
             }}
-            data={query => dispatch(loadAuthorList(query))}
+            data={query => {
+                materialTableRef.current.dataManager.changeRowEditing();
+                materialTableRef.current.setState({
+                    ...materialTableRef.current.dataManager.getRenderState(),
+                    showAddRow: false,
+                });
+                return dispatch(loadAuthorList(query));
+            }}
             onRowClick={(event, rowData) => {
                 materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
                 materialTableRef.current.setState({
