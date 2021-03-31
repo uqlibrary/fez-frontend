@@ -1,5 +1,5 @@
 import * as actions from 'actions/actionTypes';
-import authorListReducer, { initialState } from './authorsList';
+import manageAuthorsReducer, { initialState } from './manageAuthors';
 
 /*
     "aut_id"
@@ -15,14 +15,14 @@ import authorListReducer, { initialState } from './authorsList';
 
 describe('author reducer', () => {
     it('returns the correct state while author are loading', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_LIST_LOADING,
         });
         expect(test.authorListLoading).toEqual(true);
     });
 
     it('returns the correct state when author are loaded', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_LIST_LOADED,
             payload: {
                 data: [
@@ -39,7 +39,7 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state when author list fails to load data', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_LIST_FAILED,
             payload: {
                 status: 500,
@@ -52,12 +52,12 @@ describe('author reducer', () => {
     });
 
     it('returns the state when an invalid action type is supplied', () => {
-        const test = authorListReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
+        const test = manageAuthorsReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
         expect(test).toEqual(initialState);
     });
 
     it('returns the correct state when author item is being updated', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_ITEM_UPDATING,
         });
         expect(test.authorListItemUpdating).toEqual(true);
@@ -75,7 +75,7 @@ describe('author reducer', () => {
             aut_mname: '2020',
             aut_title: '2020',
         };
-        const test = authorListReducer(
+        const test = manageAuthorsReducer(
             {
                 ...initialState,
                 authorList: [
@@ -127,7 +127,7 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state when author item update failed', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_ITEM_UPDATE_FAILED,
             payload: { status: 403, message: 'Test error message' },
         });
@@ -136,7 +136,7 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state when author item is being deleted', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_ITEM_DELETING,
         });
         expect(test.authorListItemDeleting).toEqual(true);
@@ -149,7 +149,7 @@ describe('author reducer', () => {
             aut_org_staff_id: 'tests',
             aut_org_username: 'test',
         };
-        const test = authorListReducer(
+        const test = manageAuthorsReducer(
             {
                 ...initialState,
                 authorList: [
@@ -179,7 +179,7 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state when author item delete failed', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_ITEM_DELETE_FAILED,
             payload: { status: 403, message: 'Test error message' },
         });
@@ -188,12 +188,12 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state while adding author', () => {
-        const test = authorListReducer(initialState, { type: actions.AUTHOR_ADDING });
+        const test = manageAuthorsReducer(initialState, { type: actions.AUTHOR_ADDING });
         expect(test.authorAdding).toEqual(true);
     });
 
     it('returns the correct state on author added successfully', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_ADD_SUCCESS,
         });
         expect(test.authorAdding).toEqual(false);
@@ -201,7 +201,7 @@ describe('author reducer', () => {
     });
 
     it('returns the correct state when author item add failed', () => {
-        const test = authorListReducer(initialState, {
+        const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_ADD_FAILED,
             payload: { status: 403, message: 'Test error message' },
         });
