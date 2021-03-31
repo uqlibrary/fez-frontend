@@ -11,10 +11,6 @@ export const initialState = {
     authorAdding: false,
     authorAddSuccess: false,
     authorAddError: null,
-    // pagination data for list
-    currentPage: 1,
-    perPage: 20,
-    totalCount: 20,
 };
 
 const handlers = {
@@ -27,9 +23,6 @@ const handlers = {
         ...state,
         authorListLoading: false,
         authorList: action.payload.data,
-        currentPage: action.payload.current_page,
-        perPage: action.payload.per_page,
-        totalCount: action.payload.total,
     }),
 
     [actions.AUTHOR_LIST_FAILED]: (state, action) => ({
