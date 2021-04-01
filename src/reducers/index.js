@@ -1,6 +1,5 @@
 export { default as academicStatsReducer } from './academic';
 export { default as accountReducer } from './account';
-export { default as authorsListReducer } from './authorsList';
 export { default as appReducer } from './app';
 export { default as authorsReducer } from './authors';
 export { default as batchImportDirectoriesReducer } from './batchImportDirectories';
@@ -22,6 +21,7 @@ export { default as fileUploadReducer } from './fileUpload';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
 export { default as journalReducer } from './journals';
+export { default as manageAuthorsReducer } from './manageAuthors';
 export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';
 export { default as myLatestPublicationsReducer } from './myLatestPublications';
 export { default as myTrendingPublicationsReducer } from './myTrendingPublications';
