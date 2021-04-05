@@ -3353,5 +3353,79 @@ export default {
                 message: 'An author has been successfully added.',
             },
         },
+        manageUsers: {
+            loadingText: 'Loading users',
+            header: {
+                columns: {
+                    id: {
+                        title: 'ID',
+                    },
+                    fullName: {
+                        title: 'Full name',
+                    },
+                    username: {
+                        title: 'Username',
+                    },
+                    email: {
+                        title: 'Email',
+                    },
+                    isAdmin: {
+                        title: 'Administrator?',
+                    },
+                    isSuperAdmin: {
+                        title: 'Super administrator?',
+                    },
+                },
+            },
+            editRow: {
+                fields: {
+                    username: {
+                        label: 'Username',
+                    },
+                    email: {
+                        label: 'Email',
+                    },
+                    fullName: {
+                        label: 'Full name',
+                    },
+                    isAdmin: {
+                        label: 'Administrator?',
+                    },
+                    isSuperAdmin: {
+                        label: 'Super administrator?',
+                    },
+                    password: {
+                        label: 'Password',
+                    },
+                },
+            },
+            form: {
+                editButton: 'Update user',
+                addButton: 'Save user',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete user',
+                    confirmationMessage: 'Are you sure you want to delete this user?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                locale: {
+                    addButtonTooltip: 'Add new user',
+                    editButtonTooltip: 'Edit this user',
+                    deleteButtonTooltip: 'Delete this user',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            successAlert: {
+                alertId: 'alert-done-user-add',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An user has been successfully added.',
+            },
+        },
     },
 };
