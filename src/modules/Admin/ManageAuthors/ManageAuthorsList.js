@@ -286,7 +286,7 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
             editable={{
                 onRowUpdateCancelled: () => {},
                 onRowAdd: newData => onRowAdd(newData),
-                onRowUpdate: (newData, oldData) => onRowUpdate(newData, oldData),
+                onRowUpdate: newData => onRowUpdate(newData),
                 onRowDelete: oldData => onRowDelete(oldData),
             }}
             options={{

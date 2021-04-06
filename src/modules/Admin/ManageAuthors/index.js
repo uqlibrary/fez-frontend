@@ -22,8 +22,8 @@ export const ManageAuthors = () => {
         return dispatch(addAuthor(newData));
     };
 
-    const handleRowUpdate = (newData, oldData) => {
-        return dispatch(updateAuthorListItem(newData, oldData));
+    const handleRowUpdate = newData => {
+        return dispatch(updateAuthorListItem(newData));
     };
 
     const handleRowDelete = oldData => {
