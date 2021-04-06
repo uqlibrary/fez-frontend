@@ -1,6 +1,6 @@
 'use strict';
 
-const { resolve } = require('path');
+const { resolve, join } = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
@@ -57,6 +57,7 @@ const webpackConfig = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
     entry: {
+        browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         main: resolve(__dirname, './src/index.js'),
         vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment', 'redux-form'],
     },
