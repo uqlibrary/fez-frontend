@@ -9631,8 +9631,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                     <SearchComponent
                                                       actions={
                                                         Object {
+                                                          "addAuthor": [Function],
                                                           "addFavouriteSearch": [Function],
                                                           "addMyEditorialAppointments": [Function],
+                                                          "addUser": [Function],
                                                           "adminCreate": [Function],
                                                           "adminReset": [Function],
                                                           "adminUpdate": [Function],
@@ -9662,9 +9664,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "createNewRecord": [Function],
                                                           "createSearchPromise": [Function],
                                                           "deleteAttachedFile": [Function],
+                                                          "deleteAuthorListItem": [Function],
                                                           "deleteFavouriteSearchListItem": [Function],
                                                           "deleteMyEditorialAppointmentsListItem": [Function],
                                                           "deleteRecord": [Function],
+                                                          "deleteUserListItem": [Function],
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
                                                           "exportEspacePublications": [Function],
@@ -9681,6 +9685,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "hideRecord": [Function],
                                                           "hideRecordErrorReset": [Function],
                                                           "linkAuthorOrcidId": [Function],
+                                                          "loadAuthorList": [Function],
                                                           "loadAuthorPublicationsStats": [Function],
                                                           "loadBulkUpdatesList": [Function],
                                                           "loadCollectionsList": [Function],
@@ -9698,6 +9703,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadRecordToView": [Function],
                                                           "loadSearchKeyList": [Function],
                                                           "loadThirdPartyResults": [Function],
+                                                          "loadUserList": [Function],
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
                                                           "requestMJLIngest": [Function],
@@ -9722,6 +9728,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "unclaimRecord": [Function],
                                                           "unlockRecord": [Function],
                                                           "unlockRecordToView": [Function],
+                                                          "updateAuthorListItem": [Function],
                                                           "updateCollection": [Function],
                                                           "updateCommunity": [Function],
                                                           "updateCurrentAuthor": [Function],
@@ -9729,6 +9736,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
                                                           "updateMyEditorialAppointmentsListItem": [Function],
+                                                          "updateUserListItem": [Function],
                                                         }
                                                       }
                                                       autoFocus={true}
@@ -11965,8 +11973,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         <AppAlert
                           actions={
                             Object {
+                              "addAuthor": [Function],
                               "addFavouriteSearch": [Function],
                               "addMyEditorialAppointments": [Function],
+                              "addUser": [Function],
                               "adminCreate": [Function],
                               "adminReset": [Function],
                               "adminUpdate": [Function],
@@ -11996,9 +12006,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "createNewRecord": [Function],
                               "createSearchPromise": [Function],
                               "deleteAttachedFile": [Function],
+                              "deleteAuthorListItem": [Function],
                               "deleteFavouriteSearchListItem": [Function],
                               "deleteMyEditorialAppointmentsListItem": [Function],
                               "deleteRecord": [Function],
+                              "deleteUserListItem": [Function],
                               "dismissAppAlert": [Function],
                               "exportAuthorPublications": [Function],
                               "exportEspacePublications": [Function],
@@ -12015,6 +12027,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "hideRecord": [Function],
                               "hideRecordErrorReset": [Function],
                               "linkAuthorOrcidId": [Function],
+                              "loadAuthorList": [Function],
                               "loadAuthorPublicationsStats": [Function],
                               "loadBulkUpdatesList": [Function],
                               "loadCollectionsList": [Function],
@@ -12032,6 +12045,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "loadRecordToView": [Function],
                               "loadSearchKeyList": [Function],
                               "loadThirdPartyResults": [Function],
+                              "loadUserList": [Function],
                               "loadVocabulariesList": [Function],
                               "logout": [Function],
                               "requestMJLIngest": [Function],
@@ -12056,6 +12070,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "unclaimRecord": [Function],
                               "unlockRecord": [Function],
                               "unlockRecordToView": [Function],
+                              "updateAuthorListItem": [Function],
                               "updateCollection": [Function],
                               "updateCommunity": [Function],
                               "updateCurrentAuthor": [Function],
@@ -12063,6 +12078,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "updateFavouriteSearchListItem": [Function],
                               "updateIncompleteRecord": [Function],
                               "updateMyEditorialAppointmentsListItem": [Function],
+                              "updateUserListItem": [Function],
                             }
                           }
                           appAlert={null}
@@ -13609,8 +13625,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     <WithStyles(WithWidth(TopCitedPublicationsClass))
                                                                       actions={
                                                                         Object {
+                                                                          "addAuthor": [Function],
                                                                           "addFavouriteSearch": [Function],
                                                                           "addMyEditorialAppointments": [Function],
+                                                                          "addUser": [Function],
                                                                           "adminCreate": [Function],
                                                                           "adminReset": [Function],
                                                                           "adminUpdate": [Function],
@@ -13640,9 +13658,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "createNewRecord": [Function],
                                                                           "createSearchPromise": [Function],
                                                                           "deleteAttachedFile": [Function],
+                                                                          "deleteAuthorListItem": [Function],
                                                                           "deleteFavouriteSearchListItem": [Function],
                                                                           "deleteMyEditorialAppointmentsListItem": [Function],
                                                                           "deleteRecord": [Function],
+                                                                          "deleteUserListItem": [Function],
                                                                           "dismissAppAlert": [Function],
                                                                           "exportAuthorPublications": [Function],
                                                                           "exportEspacePublications": [Function],
@@ -13659,6 +13679,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "hideRecord": [Function],
                                                                           "hideRecordErrorReset": [Function],
                                                                           "linkAuthorOrcidId": [Function],
+                                                                          "loadAuthorList": [Function],
                                                                           "loadAuthorPublicationsStats": [Function],
                                                                           "loadBulkUpdatesList": [Function],
                                                                           "loadCollectionsList": [Function],
@@ -13676,6 +13697,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadRecordToView": [Function],
                                                                           "loadSearchKeyList": [Function],
                                                                           "loadThirdPartyResults": [Function],
+                                                                          "loadUserList": [Function],
                                                                           "loadVocabulariesList": [Function],
                                                                           "logout": [Function],
                                                                           "requestMJLIngest": [Function],
@@ -13700,6 +13722,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "unclaimRecord": [Function],
                                                                           "unlockRecord": [Function],
                                                                           "unlockRecordToView": [Function],
+                                                                          "updateAuthorListItem": [Function],
                                                                           "updateCollection": [Function],
                                                                           "updateCommunity": [Function],
                                                                           "updateCurrentAuthor": [Function],
@@ -13707,6 +13730,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "updateFavouriteSearchListItem": [Function],
                                                                           "updateIncompleteRecord": [Function],
                                                                           "updateMyEditorialAppointmentsListItem": [Function],
+                                                                          "updateUserListItem": [Function],
                                                                         }
                                                                       }
                                                                       history={
@@ -13759,8 +13783,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       <WithWidth(TopCitedPublicationsClass)
                                                                         actions={
                                                                           Object {
+                                                                            "addAuthor": [Function],
                                                                             "addFavouriteSearch": [Function],
                                                                             "addMyEditorialAppointments": [Function],
+                                                                            "addUser": [Function],
                                                                             "adminCreate": [Function],
                                                                             "adminReset": [Function],
                                                                             "adminUpdate": [Function],
@@ -13790,9 +13816,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "createNewRecord": [Function],
                                                                             "createSearchPromise": [Function],
                                                                             "deleteAttachedFile": [Function],
+                                                                            "deleteAuthorListItem": [Function],
                                                                             "deleteFavouriteSearchListItem": [Function],
                                                                             "deleteMyEditorialAppointmentsListItem": [Function],
                                                                             "deleteRecord": [Function],
+                                                                            "deleteUserListItem": [Function],
                                                                             "dismissAppAlert": [Function],
                                                                             "exportAuthorPublications": [Function],
                                                                             "exportEspacePublications": [Function],
@@ -13809,6 +13837,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "hideRecord": [Function],
                                                                             "hideRecordErrorReset": [Function],
                                                                             "linkAuthorOrcidId": [Function],
+                                                                            "loadAuthorList": [Function],
                                                                             "loadAuthorPublicationsStats": [Function],
                                                                             "loadBulkUpdatesList": [Function],
                                                                             "loadCollectionsList": [Function],
@@ -13826,6 +13855,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadRecordToView": [Function],
                                                                             "loadSearchKeyList": [Function],
                                                                             "loadThirdPartyResults": [Function],
+                                                                            "loadUserList": [Function],
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
                                                                             "requestMJLIngest": [Function],
@@ -13850,6 +13880,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "unclaimRecord": [Function],
                                                                             "unlockRecord": [Function],
                                                                             "unlockRecordToView": [Function],
+                                                                            "updateAuthorListItem": [Function],
                                                                             "updateCollection": [Function],
                                                                             "updateCommunity": [Function],
                                                                             "updateCurrentAuthor": [Function],
@@ -13857,6 +13888,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
                                                                             "updateMyEditorialAppointmentsListItem": [Function],
+                                                                            "updateUserListItem": [Function],
                                                                           }
                                                                         }
                                                                         classes={
@@ -15056,8 +15088,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               <WithStyles(NewsFeed)
                                                                                 actions={
                                                                                   Object {
+                                                                                    "addAuthor": [Function],
                                                                                     "addFavouriteSearch": [Function],
                                                                                     "addMyEditorialAppointments": [Function],
+                                                                                    "addUser": [Function],
                                                                                     "adminCreate": [Function],
                                                                                     "adminReset": [Function],
                                                                                     "adminUpdate": [Function],
@@ -15087,9 +15121,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "createNewRecord": [Function],
                                                                                     "createSearchPromise": [Function],
                                                                                     "deleteAttachedFile": [Function],
+                                                                                    "deleteAuthorListItem": [Function],
                                                                                     "deleteFavouriteSearchListItem": [Function],
                                                                                     "deleteMyEditorialAppointmentsListItem": [Function],
                                                                                     "deleteRecord": [Function],
+                                                                                    "deleteUserListItem": [Function],
                                                                                     "dismissAppAlert": [Function],
                                                                                     "exportAuthorPublications": [Function],
                                                                                     "exportEspacePublications": [Function],
@@ -15106,6 +15142,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "hideRecord": [Function],
                                                                                     "hideRecordErrorReset": [Function],
                                                                                     "linkAuthorOrcidId": [Function],
+                                                                                    "loadAuthorList": [Function],
                                                                                     "loadAuthorPublicationsStats": [Function],
                                                                                     "loadBulkUpdatesList": [Function],
                                                                                     "loadCollectionsList": [Function],
@@ -15123,6 +15160,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadRecordToView": [Function],
                                                                                     "loadSearchKeyList": [Function],
                                                                                     "loadThirdPartyResults": [Function],
+                                                                                    "loadUserList": [Function],
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
                                                                                     "requestMJLIngest": [Function],
@@ -15147,6 +15185,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "unclaimRecord": [Function],
                                                                                     "unlockRecord": [Function],
                                                                                     "unlockRecordToView": [Function],
+                                                                                    "updateAuthorListItem": [Function],
                                                                                     "updateCollection": [Function],
                                                                                     "updateCommunity": [Function],
                                                                                     "updateCurrentAuthor": [Function],
@@ -15154,14 +15193,17 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "updateFavouriteSearchListItem": [Function],
                                                                                     "updateIncompleteRecord": [Function],
                                                                                     "updateMyEditorialAppointmentsListItem": [Function],
+                                                                                    "updateUserListItem": [Function],
                                                                                   }
                                                                                 }
                                                                               >
                                                                                 <NewsFeed
                                                                                   actions={
                                                                                     Object {
+                                                                                      "addAuthor": [Function],
                                                                                       "addFavouriteSearch": [Function],
                                                                                       "addMyEditorialAppointments": [Function],
+                                                                                      "addUser": [Function],
                                                                                       "adminCreate": [Function],
                                                                                       "adminReset": [Function],
                                                                                       "adminUpdate": [Function],
@@ -15191,9 +15233,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "createNewRecord": [Function],
                                                                                       "createSearchPromise": [Function],
                                                                                       "deleteAttachedFile": [Function],
+                                                                                      "deleteAuthorListItem": [Function],
                                                                                       "deleteFavouriteSearchListItem": [Function],
                                                                                       "deleteMyEditorialAppointmentsListItem": [Function],
                                                                                       "deleteRecord": [Function],
+                                                                                      "deleteUserListItem": [Function],
                                                                                       "dismissAppAlert": [Function],
                                                                                       "exportAuthorPublications": [Function],
                                                                                       "exportEspacePublications": [Function],
@@ -15210,6 +15254,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "hideRecord": [Function],
                                                                                       "hideRecordErrorReset": [Function],
                                                                                       "linkAuthorOrcidId": [Function],
+                                                                                      "loadAuthorList": [Function],
                                                                                       "loadAuthorPublicationsStats": [Function],
                                                                                       "loadBulkUpdatesList": [Function],
                                                                                       "loadCollectionsList": [Function],
@@ -15227,6 +15272,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadRecordToView": [Function],
                                                                                       "loadSearchKeyList": [Function],
                                                                                       "loadThirdPartyResults": [Function],
+                                                                                      "loadUserList": [Function],
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
                                                                                       "requestMJLIngest": [Function],
@@ -15251,6 +15297,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "unclaimRecord": [Function],
                                                                                       "unlockRecord": [Function],
                                                                                       "unlockRecordToView": [Function],
+                                                                                      "updateAuthorListItem": [Function],
                                                                                       "updateCollection": [Function],
                                                                                       "updateCommunity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
@@ -15258,6 +15305,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
                                                                                       "updateMyEditorialAppointmentsListItem": [Function],
+                                                                                      "updateUserListItem": [Function],
                                                                                     }
                                                                                   }
                                                                                   classes={

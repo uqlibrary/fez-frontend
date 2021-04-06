@@ -199,6 +199,8 @@ export const accounts = {
 
 export const authorsSearch = {
     "total": 10,
+    "current_page": 1,
+    "per_page": 10,
     "data": [{
         "aut_id": 410,
         "aut_org_username": "uqresearcher",

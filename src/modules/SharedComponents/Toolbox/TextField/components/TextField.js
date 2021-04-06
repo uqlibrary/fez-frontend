@@ -35,6 +35,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                     'data-testid': `${props.textFieldId}-label`,
                     htmlFor: `${props.textFieldId}-input`,
                     hidden: hideLabel,
+                    ...filteredProps.InputLabelProps,
                 }}
             />
         </Fragment>

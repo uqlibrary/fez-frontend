@@ -3236,5 +3236,196 @@ export default {
                 message: 'The request to ingest master journal list could not be submitted.',
             },
         },
+        manageAuthors: {
+            loadingText: 'Loading authors',
+            header: {
+                columns: {
+                    id: {
+                        title: 'ID',
+                    },
+                    displayName: {
+                        title: 'Display name',
+                    },
+                    uqUsername: {
+                        title: 'UQ username',
+                    },
+                },
+            },
+            editRow: {
+                fields: {
+                    title: {
+                        label: 'Title',
+                    },
+                    firstName: {
+                        label: 'First name',
+                    },
+                    middleName: {
+                        label: 'Middle name',
+                    },
+                    lastName: {
+                        label: 'Last name',
+                    },
+                    displayName: {
+                        label: 'Display name',
+                    },
+                    position: {
+                        label: 'Position',
+                    },
+                    orgStaffId: {
+                        label: 'Org staff ID',
+                        helperText: 'This is a 7 digit number, usually preceded by a 0',
+                    },
+                    orgStudentId: {
+                        label: 'Org student ID',
+                        helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
+                    },
+                    orgUsername: {
+                        label: 'Org username',
+                    },
+                    studentUsername: {
+                        label: 'Student username',
+                    },
+                    refNum: {
+                        label: 'Ref num',
+                    },
+                    orgMembership: {
+                        label: 'Org membership',
+                    },
+                    notes: {
+                        label: 'Notes',
+                    },
+                    scopusId: {
+                        label: 'Scopus ID',
+                    },
+                    googleScholarId: {
+                        label: 'Google scholar ID',
+                    },
+                    peopleAustraliaId: {
+                        label: 'People Australia ID',
+                    },
+                    orcidId: {
+                        label: 'Orcid ID',
+                    },
+                    researcherId: {
+                        label: 'Researcher ID',
+                    },
+                    isScopusIdAuthenticated: {
+                        label: 'Is Scopus ID authenticated?',
+                    },
+                    isOrcidSyncEnabled: {
+                        label: 'Is pub sync with ORCID profile enabled?',
+                    },
+                    openOrcidProfileInNewWindow: {
+                        label: 'Open ORCID profile in new window',
+                    },
+                    isUsernameOverridden: {
+                        label: 'Is username overridden by an admin?',
+                    },
+                },
+            },
+            form: {
+                editButton: 'Update author',
+                addButton: 'Save author',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete author',
+                    confirmationMessage: 'Are you sure you want to delete this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                locale: {
+                    addButtonTooltip: 'Add new author',
+                    editButtonTooltip: 'Edit this author',
+                    deleteButtonTooltip: 'Delete this author',
+                    notesButtonTooltip: 'View notes for this author',
+                    updateNotesButton: 'Update notes',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            successAlert: {
+                alertId: 'alert-done-author-add',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully added.',
+            },
+        },
+        manageUsers: {
+            loadingText: 'Loading users',
+            header: {
+                columns: {
+                    id: {
+                        title: 'ID',
+                    },
+                    fullName: {
+                        title: 'Full name',
+                    },
+                    username: {
+                        title: 'Username',
+                    },
+                    email: {
+                        title: 'Email',
+                    },
+                    isAdmin: {
+                        title: 'Administrator?',
+                    },
+                    isSuperAdmin: {
+                        title: 'Super administrator?',
+                    },
+                },
+            },
+            editRow: {
+                fields: {
+                    username: {
+                        label: 'Username',
+                    },
+                    email: {
+                        label: 'Email',
+                    },
+                    fullName: {
+                        label: 'Full name',
+                    },
+                    isAdmin: {
+                        label: 'Administrator?',
+                    },
+                    isSuperAdmin: {
+                        label: 'Super administrator?',
+                    },
+                    password: {
+                        label: 'Password',
+                    },
+                },
+            },
+            form: {
+                editButton: 'Update user',
+                addButton: 'Save user',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete user',
+                    confirmationMessage: 'Are you sure you want to delete this user?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                locale: {
+                    addButtonTooltip: 'Add new user',
+                    editButtonTooltip: 'Edit this user',
+                    deleteButtonTooltip: 'Delete this user',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            successAlert: {
+                alertId: 'alert-done-user-add',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An user has been successfully added.',
+            },
+        },
     },
 };
