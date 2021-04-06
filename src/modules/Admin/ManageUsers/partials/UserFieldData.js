@@ -45,7 +45,7 @@ export const UserFieldData = ({ authorFieldDataId, data, label, helperText, type
                         }}
                         InputLabelProps={{
                             style: {
-                                ...(!props.error ? { color: '#4085C6' } : {}),
+                                color: '#4085C6',
                                 fontWeight: 400,
                             },
                         }}

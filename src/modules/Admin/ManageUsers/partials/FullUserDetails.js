@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled, columns }) => {
+export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
@@ -31,10 +31,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     } = locale.components.manageUsers;
 
     const [data, setData] = React.useState(rowData || {});
-    const [error, setError] = React.useState({});
 
     const handleChange = (name, value) => {
-        console.log(name, value);
         setData(data => ({ ...data, [name]: value }));
     };
 
@@ -62,16 +60,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mode]);
 
-    React.useEffect(() => {
-        setError(
-            columns.reduce(
-                (errorObject, column) => !!column.validate && { ...errorObject, [column.field]: column.validate(data) },
-                {},
-            ),
-        );
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data]);
-
     return (
         <TableRow>
             <TableCell colSpan={7}>
@@ -87,7 +75,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                         <div className={classes.background}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
-                                    <NameData rowData={data} onChange={handleChange} error={error} />
+                                    <NameData rowData={data} onChange={handleChange} />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Grid
@@ -99,12 +87,9 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                     >
                                         <Grid item>
                                             <Button
-                                                key={JSON.stringify(error)}
                                                 id={`users-${mode}-this-user-save`}
                                                 data-testid={`users-${mode}-this-user-save`}
-                                                disabled={
-                                                    disabled || (!!error.user && Object.keys(error.user).length > 0)
-                                                }
+                                                disabled={disabled}
                                                 variant="contained"
                                                 color="primary"
                                                 onClick={handleSave}
@@ -136,7 +121,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
 };
 
 FullAuthorDetails.propTypes = {
-    columns: PropTypes.array,
     data: PropTypes.object,
     disabled: PropTypes.bool,
     mode: PropTypes.string,
