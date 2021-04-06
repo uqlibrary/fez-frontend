@@ -3275,6 +3275,9 @@ export default {
                     lastName: {
                         label: 'Last name',
                     },
+                    email: {
+                        label: 'Email',
+                    },
                     displayName: {
                         label: 'Display name',
                     },
