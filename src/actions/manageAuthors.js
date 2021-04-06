@@ -40,14 +40,13 @@ export function loadAuthorList({ page, pageSize, search }) {
     };
 }
 
-export function updateAuthorListItem(newData, oldData) {
+export function updateAuthorListItem(newData) {
     return async dispatch => {
         try {
             dispatch({ type: AUTHOR_ITEM_UPDATING });
 
             const response = await put(AUTHOR_API({ authorId: newData.aut_id }), {
                 ...newData,
-                aut_description: oldData.aut_description,
             });
 
             dispatch({
