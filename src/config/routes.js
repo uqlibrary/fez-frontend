@@ -573,7 +573,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.manageAuthors,
                   },
                   {
-                      linkTo: pathConfig.admin.users,
+                      linkTo: pathConfig.admin.manageUsers,
                       ...locale.menu.manageUsers,
                   },
                   {
