@@ -375,3 +375,22 @@ export const JOURNAL_API = ({ id }) => ({
 export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `editorial-appointment${!!id ? `/${id}` : ''}`,
 });
+
+export const MANAGE_USERS_LIST_API = params => {
+    return {
+        apiUrl: 'fez-users/search',
+        options: {
+            params: {
+                sort: 'updated_date',
+                order_by: 'desc',
+                page: params.page + 1,
+                per_page: params.pageSize,
+                query: params.query,
+            },
+        },
+    };
+};
+
+export const USER_API = ({ userId } = { userId: undefined }) => ({
+    apiUrl: `fez-users${!!userId ? `/${userId}` : ''}`,
+});
