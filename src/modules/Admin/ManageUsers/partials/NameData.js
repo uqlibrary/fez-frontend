@@ -11,7 +11,7 @@ import { default as locale } from 'locale/components';
 export const NameData = ({ rowData, ...props }) => {
     const {
         editRow: {
-            fields: { username, fullName, email, isAdmin, isSuperAdmin, password },
+            fields: { username, fullName, email, isAdmin, isSuperAdmin },
         },
     } = locale.components.manageUsers;
 
@@ -41,13 +41,6 @@ export const NameData = ({ rowData, ...props }) => {
                     data={rowData.usr_username}
                     name="usr_username"
                     {...username}
-                    {...props}
-                />
-                <UserFieldData
-                    authorFieldDataId="usr-password"
-                    data={rowData.usr_password}
-                    name="usr_password"
-                    {...password}
                     {...props}
                 />
                 <UserFieldData
