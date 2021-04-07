@@ -23,7 +23,6 @@ export function loadAuthorList({ page, pageSize, search }) {
             const response = await get(MANAGE_AUTHORS_LIST_API({ page, pageSize, query: search }));
             dispatch({
                 type: AUTHOR_LIST_LOADED,
-                payload: response,
             });
             return Promise.resolve({
                 data: response.data,
@@ -41,20 +40,17 @@ export function loadAuthorList({ page, pageSize, search }) {
     };
 }
 
-export function updateAuthorListItem(newData, oldData) {
+export function updateAuthorListItem(newData) {
     return async dispatch => {
         try {
             dispatch({ type: AUTHOR_ITEM_UPDATING });
 
             const response = await put(AUTHOR_API({ authorId: newData.aut_id }), {
                 ...newData,
-                aut_description: oldData.aut_description,
             });
 
             dispatch({
                 type: AUTHOR_ITEM_UPDATE_SUCCESS,
-                payload: response.data,
-                oldData,
             });
 
             return Promise.resolve(response.data);
@@ -62,7 +58,6 @@ export function updateAuthorListItem(newData, oldData) {
             dispatch({
                 type: AUTHOR_ITEM_UPDATE_FAILED,
                 payload: e,
-                oldData,
             });
 
             return Promise.reject(e);
@@ -78,7 +73,6 @@ export function deleteAuthorListItem(oldData) {
             const response = await destroy(AUTHOR_API({ authorId: oldData.aut_id }));
             dispatch({
                 type: AUTHOR_ITEM_DELETE_SUCCESS,
-                payload: oldData,
             });
 
             return Promise.resolve(response.data);
@@ -101,7 +95,6 @@ export function addAuthor(data) {
             const response = await post(AUTHOR_API(), data);
             dispatch({
                 type: AUTHOR_ADD_SUCCESS,
-                payload: response.data,
             });
 
             return Promise.resolve(response.data);

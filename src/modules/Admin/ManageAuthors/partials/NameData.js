@@ -11,7 +11,7 @@ import { default as locale } from 'locale/components';
 export const NameData = ({ rowData, error, ...props }) => {
     const {
         editRow: {
-            fields: { title, displayName, firstName, middleName, lastName, position },
+            fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
     } = locale.components.manageAuthors;
 
@@ -63,6 +63,13 @@ export const NameData = ({ rowData, error, ...props }) => {
                     data={rowData.aut_position}
                     name="aut_position"
                     {...position}
+                    {...props}
+                />
+                <AuthorFieldData
+                    authorFieldDataId="aut-email"
+                    data={rowData.aut_email}
+                    name="aut_email"
+                    {...email}
                     {...props}
                 />
             </Grid>

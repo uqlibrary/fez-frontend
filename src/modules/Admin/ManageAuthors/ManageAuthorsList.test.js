@@ -115,7 +115,7 @@ describe('ManageAuthorsList', () => {
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
 
         act(() => {
-            fireEvent.click(getByTestId('aut-is-username-overridden-by-admin'));
+            fireEvent.click(getByTestId('aut-name-overridden'));
         });
 
         act(() => {

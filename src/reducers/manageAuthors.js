@@ -2,19 +2,16 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     authorListLoading: true,
-    authorList: null,
-    authorListError: null,
+    authorListLoadingError: null,
     authorListItemUpdating: false,
+    authorListItemUpdateSuccess: false,
     authorListItemUpdateError: null,
     authorListItemDeleting: false,
+    authorListItemDeleteSuccess: false,
     authorListItemDeleteError: null,
     authorAdding: false,
     authorAddSuccess: false,
     authorAddError: null,
-    // pagination data for list
-    currentPage: 1,
-    perPage: 20,
-    totalCount: 20,
 };
 
 const handlers = {
@@ -23,20 +20,15 @@ const handlers = {
         authorListLoading: true,
     }),
 
-    [actions.AUTHOR_LIST_LOADED]: (state, action) => ({
+    [actions.AUTHOR_LIST_LOADED]: state => ({
         ...state,
         authorListLoading: false,
-        authorList: action.payload.data,
-        currentPage: action.payload.current_page,
-        perPage: action.payload.per_page,
-        totalCount: action.payload.total,
     }),
 
     [actions.AUTHOR_LIST_FAILED]: (state, action) => ({
         ...state,
         authorListLoading: false,
-        authorList: null,
-        authorListError: action.payload,
+        authorListLoadingError: action.payload,
     }),
 
     [actions.AUTHOR_ITEM_UPDATING]: state => ({
@@ -44,14 +36,11 @@ const handlers = {
         authorListItemUpdating: true,
     }),
 
-    [actions.AUTHOR_ITEM_UPDATE_SUCCESS]: (state, action) => {
-        const index = state.authorList.indexOf(action.oldData);
-        return {
-            ...state,
-            authorListItemUpdating: false,
-            authorList: [...state.authorList.slice(0, index), action.payload, ...state.authorList.slice(index + 1)],
-        };
-    },
+    [actions.AUTHOR_ITEM_UPDATE_SUCCESS]: state => ({
+        ...state,
+        authorListItemUpdating: false,
+        authorListItemUpdateSuccess: true,
+    }),
 
     [actions.AUTHOR_ITEM_UPDATE_FAILED]: (state, action) => ({
         ...state,
@@ -64,14 +53,11 @@ const handlers = {
         authorListItemDeleting: true,
     }),
 
-    [actions.AUTHOR_ITEM_DELETE_SUCCESS]: (state, action) => {
-        const index = state.authorList.indexOf(action.payload);
-        return {
-            ...state,
-            authorListItemDeleting: false,
-            authorList: [...state.authorList.slice(0, index), ...state.authorList.slice(index + 1)],
-        };
-    },
+    [actions.AUTHOR_ITEM_DELETE_SUCCESS]: state => ({
+        ...state,
+        authorListItemDeleting: false,
+        authorListItemDeleteSuccess: true,
+    }),
 
     [actions.AUTHOR_ITEM_DELETE_FAILED]: (state, action) => ({
         ...state,
@@ -99,7 +85,7 @@ const handlers = {
     }),
 };
 
-export default function authorsListReducer(state = initialState, action) {
+export default function manageAuthorsReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

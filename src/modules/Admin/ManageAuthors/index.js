@@ -14,16 +14,16 @@ import { addAuthor, deleteAuthorListItem, updateAuthorListItem, showAppAlert, di
 export const ManageAuthors = () => {
     const dispatch = useDispatch();
 
-    const authorListError = useSelector(state => state.get('authorsListReducer').authorListError);
-    const authorAddSuccess = useSelector(state => state.get('authorsListReducer').authorAddSuccess);
-    const authorAddError = useSelector(state => state.get('authorsListReducer').authorAddError);
+    const authorListError = useSelector(state => state.get('manageAuthorsReducer').authorListError);
+    const authorAddSuccess = useSelector(state => state.get('manageAuthorsReducer').authorAddSuccess);
+    const authorAddError = useSelector(state => state.get('manageAuthorsReducer').authorAddError);
 
     const handleRowAdd = newData => {
         return dispatch(addAuthor(newData));
     };
 
-    const handleRowUpdate = (newData, oldData) => {
-        return dispatch(updateAuthorListItem(newData, oldData));
+    const handleRowUpdate = newData => {
+        return dispatch(updateAuthorListItem(newData));
     };
 
     const handleRowDelete = oldData => {

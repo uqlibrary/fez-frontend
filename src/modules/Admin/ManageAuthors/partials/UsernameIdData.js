@@ -20,8 +20,8 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
         },
     } = locale.components.manageAuthors;
 
-    const handleIsUsernameOverridden = () => {
-        props.onChange('aut_is_username_overridden_by_admin', Number(!rowData.aut_is_username_overridden_by_admin));
+    const handleNameOverridden = () => {
+        props.onChange('aut_name_overridden', Number(!rowData.aut_name_overridden));
     };
 
     return (
@@ -48,20 +48,20 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                                         <span>
                                             <IconButton
                                                 aria-label={isUsernameOverridden.label}
-                                                onClick={handleIsUsernameOverridden}
-                                                id="aut-is-username-overridden-by-admin"
-                                                data-testid="aut-is-username-overridden-by-admin"
+                                                onClick={handleNameOverridden}
+                                                id="aut-name-overridden"
+                                                data-testid="aut-name-overridden"
                                             >
-                                                {rowData.aut_is_username_overridden_by_admin ? (
+                                                {rowData.aut_name_overridden ? (
                                                     <OverriddenIcon
-                                                        id="username-is-overridden"
-                                                        data-testid="username-is-overridden"
+                                                        id="name-is-overridden"
+                                                        data-testid="name-is-overridden"
                                                         color="primary"
                                                     />
                                                 ) : (
                                                     <NotOverriddenIcon
-                                                        id="username-is-not-overridden"
-                                                        data-testid="username-is-not-overridden"
+                                                        id="name-is-not-overridden"
+                                                        data-testid="name-is-not-overridden"
                                                         color="secondary"
                                                     />
                                                 )}
