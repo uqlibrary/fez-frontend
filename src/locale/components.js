@@ -3394,9 +3394,6 @@ export default {
                     isSuperAdmin: {
                         label: 'Super administrator?',
                     },
-                    password: {
-                        label: 'Password',
-                    },
                 },
             },
             form: {
