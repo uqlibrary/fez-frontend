@@ -3,7 +3,6 @@ import React from 'react';
 // lazy loaded components
 export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
 export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
-export const ManageAuthors = React.lazy(() => import('modules/Admin/ManageAuthors'));
 export const BatchImport = React.lazy(() => import('modules/BatchImport/components/BatchImport'));
 export const BulkUpdates = React.lazy(() => import('modules/BulkUpdates'));
 export const ChangeDisplayType = React.lazy(() =>
@@ -22,6 +21,8 @@ export const JournalView = React.lazy(() => import('modules/Journal/containers/J
 export const MasterJournalListIngest = React.lazy(() =>
     import('modules/Admin/MasterJournalListIngest/components/MasterJournalListIngest'),
 );
+export const ManageAuthors = React.lazy(() => import('modules/Admin/ManageAuthors'));
+export const ManageUsers = React.lazy(() => import('modules/Admin/ManageUsers'));
 export const MyEditorialAppointments = React.lazy(() => import('modules/MyEditorialAppointments'));
 export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
 export const NewViewRecord = React.lazy(() => import('modules/ViewRecord/containers/NewViewRecord'));

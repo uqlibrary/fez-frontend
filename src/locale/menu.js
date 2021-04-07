@@ -82,6 +82,9 @@ export default {
         manageAuthors: {
             primaryText: 'Manage authors',
         },
+        manageUsers: {
+            primaryText: 'Manage users',
+        },
     },
     footer: {
         cricos: {
