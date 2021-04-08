@@ -11,9 +11,13 @@ import {
     AUTHOR_ITEM_DELETING,
     AUTHOR_ITEM_DELETE_SUCCESS,
     AUTHOR_ITEM_DELETE_FAILED,
+    CHECKING_EXISTING_AUTHOR,
+    CHECKING_EXISTING_AUTHOR_FAILED,
+    EXISTING_AUTHOR_FOUND,
+    EXISTING_AUTHOR_NOT_FOUND,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
-import { AUTHOR_API, MANAGE_AUTHORS_LIST_API } from 'repositories/routes';
+import { AUTHOR_API, MANAGE_AUTHORS_LIST_API, AUTHORS_SEARCH_API } from 'repositories/routes';
 
 export function loadAuthorList({ page, pageSize, search }) {
     return async dispatch => {
@@ -101,6 +105,46 @@ export function addAuthor(data) {
         } catch (e) {
             dispatch({
                 type: AUTHOR_ADD_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+}
+
+export function checkForExistingAuthor(search, searchField, id) {
+    return async dispatch => {
+        dispatch({ type: CHECKING_EXISTING_AUTHOR });
+
+        try {
+            const response = await get(AUTHORS_SEARCH_API({ query: search }));
+
+            if (
+                response.total > 0 &&
+                response.data.filter(author => author.aut_id !== id && author[searchField] === search).length > 0
+            ) {
+                dispatch({
+                    type: EXISTING_AUTHOR_FOUND,
+                    payload: {
+                        field: searchField,
+                        error: true,
+                    },
+                });
+                return Promise.reject();
+            } else {
+                dispatch({
+                    type: EXISTING_AUTHOR_NOT_FOUND,
+                    payload: {
+                        field: searchField,
+                        error: false,
+                    },
+                });
+                return Promise.resolve();
+            }
+        } catch (e) {
+            dispatch({
+                type: CHECKING_EXISTING_AUTHOR_FAILED,
                 payload: e,
             });
 
