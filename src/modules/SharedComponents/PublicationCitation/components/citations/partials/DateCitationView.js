@@ -10,6 +10,7 @@ export default class DateCitationView extends PureComponent {
         format: PropTypes.string,
         className: PropTypes.string,
         isLocalised: PropTypes.bool,
+        forceSpecifiedFormat: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -18,6 +19,7 @@ export default class DateCitationView extends PureComponent {
         suffix: ').',
         className: 'citationDate',
         isLocalised: false,
+        forceSpecifiedFormat: false,
     };
 
     constructor(props) {
@@ -25,13 +27,13 @@ export default class DateCitationView extends PureComponent {
     }
 
     render() {
-        const { date, prefix, suffix, format, className, isLocalised } = this.props;
+        const { date, prefix, suffix, format, className, isLocalised, forceSpecifiedFormat } = this.props;
         // If there is no date, it is invalid, or is a placeholder
         if (!date || !moment(date).isValid() || moment(date).isSame(moment('1000-01-01T00:00:00Z'))) {
             return <span className="citationDate empty" />;
         }
         const momentDate = moment(date);
-        const showYearOnly = momentDate.month() === 0 && momentDate.date() === 1;
+        const showYearOnly = !forceSpecifiedFormat && momentDate.month() === 0 && momentDate.date() === 1;
         return (
             <span className={className}>
                 {prefix}
