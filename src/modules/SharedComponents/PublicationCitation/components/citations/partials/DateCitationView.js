@@ -30,6 +30,8 @@ export default class DateCitationView extends PureComponent {
         if (!date || !moment(date).isValid() || moment(date).isSame(moment('1000-01-01T00:00:00Z'))) {
             return <span className="citationDate empty" />;
         }
+        const momentDate = moment(date);
+        const showYearOnly = momentDate.month() === 0 && momentDate.date() === 1;
         return (
             <span className={className}>
                 {prefix}
@@ -37,8 +39,8 @@ export default class DateCitationView extends PureComponent {
                     ? moment
                           .utc(date)
                           .local()
-                          .format(format)
-                    : moment.utc(date).format(format)}
+                          .format(showYearOnly ? 'YYYY' : format)
+                    : moment.utc(date).format(showYearOnly ? 'YYYY' : format)}
                 {suffix}
             </span>
         );
