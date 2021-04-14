@@ -3940,6 +3940,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               <DateCitationView
                 className="citationDate"
                 date="2017-07-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -8315,6 +8316,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("

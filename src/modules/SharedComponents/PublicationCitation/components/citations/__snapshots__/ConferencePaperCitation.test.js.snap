@@ -2559,6 +2559,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
               <DateCitationView
                 className="citationDate"
                 date="2014-01-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -3931,6 +3932,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
