@@ -81,6 +81,7 @@ describe('IssnForm behaviour tests', () => {
             <IssnForm
                 onSubmit={onSubmitFn}
                 locale={{
+                    editButtonLabel: 'Edit',
                     inputFieldLabel: 'Item name',
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Update',
