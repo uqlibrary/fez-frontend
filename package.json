@@ -149,7 +149,6 @@
         "babel-loader": "^8.0.6",
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
-        "caniuse-lite": "^1.0.30001038",
         "classnames": "^2.2.6",
         "connected-react-router": "^6.4.0",
         "deep-diff": "^1.0.2",
