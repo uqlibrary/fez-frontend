@@ -103,7 +103,7 @@ export default {
                 },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing work',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
                 alternateActionButtonLabel: 'Fix work',
             },
             validationAlert: {
@@ -155,7 +155,7 @@ export default {
                 confirmationTitle: 'Unclaim a work',
                 confirmationMessage: 'You have unclaimed this work successfully',
                 cancelButtonLabel: 'Go to my dashboard',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
             },
             alert: {
                 type: 'warning',
@@ -229,7 +229,7 @@ export default {
                     type: 'info',
                 },
                 cancelButtonLabel: 'Go to my dashboard',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
             },
             validationAlert: {
                 type: 'warning',

@@ -337,7 +337,7 @@ export default {
                     alertId: 'alert-warning',
                 },
                 cancelButtonLabel: 'Add another missing dataset',
-                confirmButtonLabel: 'Go to my datasets',
+                confirmButtonLabel: 'Go to my research data',
             },
         },
         claimPublications: {
@@ -483,7 +483,7 @@ export default {
                     alertId: 'alert-warning',
                 },
                 cancelButtonLabel: 'Add another missing work',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
                 alternateActionButtonLabel: 'Fix work',
             },
         },
