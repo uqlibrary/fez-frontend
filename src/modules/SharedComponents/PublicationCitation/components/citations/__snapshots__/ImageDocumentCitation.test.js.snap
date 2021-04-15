@@ -1505,6 +1505,7 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
               <DateCitationView
                 className="citationDate"
                 date="1955-01-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -2390,6 +2391,7 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("

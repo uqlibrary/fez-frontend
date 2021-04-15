@@ -2056,6 +2056,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
               <DateCitationView
                 className="citationDate"
                 date="2006-01-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -2955,6 +2956,7 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
