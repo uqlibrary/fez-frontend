@@ -932,7 +932,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -1895,7 +1895,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -3078,7 +3078,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -4077,7 +4077,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -5320,7 +5320,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -6731,7 +6731,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -8142,7 +8142,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -9553,7 +9553,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -11950,7 +11950,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <WithStyles(ForwardRef(Grid))
                   container={true}
@@ -13383,7 +13383,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -14794,7 +14794,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -16224,7 +16224,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -17653,7 +17653,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -19083,7 +19083,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -19546,7 +19546,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -19842,7 +19842,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
               "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
