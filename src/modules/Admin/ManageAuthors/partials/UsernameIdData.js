@@ -111,15 +111,15 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     name="aut_org_staff_id"
                     {...orgStaffId}
                     {...props}
-                    {...orgStaffIdError}
+                    {...(!!orgStaffIdError ? orgStaffIdError : {})}
                 />
                 <AuthorFieldData
                     authorFieldDataId="aut-org-username"
                     data={rowData.aut_org_username}
                     name="aut_org_username"
                     {...orgUsername}
-                    {...(!!orgUsernameError ? orgUsernameError : {})}
                     {...props}
+                    {...(!!orgUsernameError ? orgUsernameError : {})}
                     InputProps={{
                         ...((!!rowData.aut_org_username && {
                             endAdornment: (
@@ -160,7 +160,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     name="aut_org_student_id"
                     {...props}
                     {...orgStudentId}
-                    {...orgStudentIdError}
+                    {...(!!orgStudentIdError ? orgStudentIdError : {})}
                 />
                 <AuthorFieldData
                     authorFieldDataId="aut-student-username"
@@ -168,7 +168,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     name="aut_student_username"
                     {...studentUsername}
                     {...props}
-                    {...studentUsernameError}
+                    {...(!!studentUsernameError ? studentUsernameError : {})}
                 />
                 <AuthorFieldData
                     authorFieldDataId="aut-ref-num"
