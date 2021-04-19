@@ -25,7 +25,8 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
         editRow: {
             fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },
             validation: {
-                /* orgStaffIdErrorText, orgStudentIdErrorText, */
+                orgStaffIdErrorText,
+                /* orgStudentIdErrorText, */
                 studentUsernameErrorText,
                 orgUsernameErrorText,
             },
@@ -34,11 +35,11 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
 
     const [orgUsernameError, setOrgUsernameError] = React.useState(null);
     const [studentUsernameError, setStudentUsernameError] = React.useState(null);
+    const [orgStaffIdError, setOrgStaffIdError] = React.useState(null);
 
     /**
      * @todo uncomment below code for aut_org_staff_id and aut_org_student_id validation error
      */
-    // const [orgStaffIdError, setOrgStaffIdError] = React.useState(null);
     // const [orgStudentIdError, setOrgStudentIdError] = React.useState(null);
 
     const checkForExisting = React.useRef(
@@ -62,15 +63,12 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
     }, [rowData.aut_student_username]);
 
     /* Run this effect on aut_org_staff_id change */
-    /**
-    @TODO   uncomment this block once api successfully search on aut_org_staff_id
     React.useEffect(() => {
         if (!!rowData.aut_org_staff_id && rowData.aut_org_staff_id.length === 7) {
             checkForExisting.current(rowData.aut_org_staff_id, 'aut_org_staff_id', rowData.aut_id);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [rowData.aut_org_staff_id]);
-    */
 
     /* Run this effect on aut_org_student_id change */
     /**
@@ -95,10 +93,10 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                         error ? { error: true, errorText: studentUsernameErrorText } : { error: false },
                     );
                     break;
-                /*
                 case 'aut_org_staff_id':
                     setOrgStaffIdError(error ? { error: true, errorText: orgStaffIdErrorText } : { error: false });
                     break;
+                /*
                 case 'aut_org_student_id':
                     setOrgStudentIdError(error ? { error: true, errorText: orgStudentIdErrorText } : { error: false });
                     break;
@@ -123,7 +121,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     name="aut_org_staff_id"
                     {...orgStaffId}
                     {...props}
-                    // {...orgStaffIdError}
+                    {...orgStaffIdError}
                 />
                 <AuthorFieldData
                     authorFieldDataId="aut-org-username"

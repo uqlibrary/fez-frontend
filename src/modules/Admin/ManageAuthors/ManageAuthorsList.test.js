@@ -577,7 +577,7 @@ describe('ManageAuthorsList', () => {
             .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
             .replyOnce(200, { data: [], total: 0 });
 
-        const { getByTestId, getByText, debug } = setup({
+        const { getByTestId, getByText } = setup({
             onRowDelete: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
