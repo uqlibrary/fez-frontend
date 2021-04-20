@@ -103,7 +103,6 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
     const handleSave = (mode, newData, oldData) => {
         const materialTable = materialTableRef.current;
 
-        // materialTable.setState(prevState => {
         if (mode === 'add') {
             materialTable.props.editable
                 .onRowAdd(newData)
@@ -284,7 +283,6 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
                 },
             }}
             editable={{
-                onRowUpdateCancelled: () => {},
                 onRowAdd: newData => onRowAdd(newData),
                 onRowUpdate: newData => onRowUpdate(newData),
                 onRowDelete: oldData => onRowDelete(oldData),

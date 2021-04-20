@@ -1,4 +1,10 @@
-import { deleteAuthorListItem, loadAuthorList, updateAuthorListItem, addAuthor } from './manageAuthors';
+import {
+    deleteAuthorListItem,
+    loadAuthorList,
+    updateAuthorListItem,
+    addAuthor,
+    checkForExistingAuthor,
+} from './manageAuthors';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data/testing/authorsList';
@@ -154,6 +160,48 @@ describe('author list actions', () => {
                         aut_fname: 'Test',
                     }),
                 ),
+            ).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('checkForExistingAuthor action', () => {
+        it('should dispatch correct number of actions on existing author found', async () => {
+            mockApi
+                .onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl)
+                .reply(200, { data: [{ aut_id: 2, aut_org_username: 'test' }], total: 1 });
+
+            const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_FOUND];
+
+            await mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on existing author not found', async () => {
+            mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl).reply(200, { data: [], total: 0 });
+
+            const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_NOT_FOUND];
+
+            await mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on checking existing author failed', async () => {
+            mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl).reply(500);
+
+            const expectedActions = [
+                actions.CHECKING_EXISTING_AUTHOR,
+                actions.APP_ALERT_SHOW,
+                actions.CHECKING_EXISTING_AUTHOR_FAILED,
+            ];
+
+            await expect(
+                mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1)),
             ).rejects.toEqual({
                 status: 500,
                 message:

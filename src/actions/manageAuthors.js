@@ -131,7 +131,7 @@ export function checkForExistingAuthor(search, searchField, id) {
                         error: true,
                     },
                 });
-                return Promise.reject();
+                return Promise.resolve();
             } else {
                 dispatch({
                     type: EXISTING_AUTHOR_NOT_FOUND,

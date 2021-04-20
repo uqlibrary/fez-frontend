@@ -76,23 +76,19 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
     React.useEffect(() => {
         if (!!existingAuthorFieldError) {
             const { field, error } = existingAuthorFieldError;
-            switch (field) {
-                case 'aut_org_username':
-                    setOrgUsernameError(error ? { error: true, errorText: orgUsernameErrorText } : { error: false });
-                    break;
-                case 'aut_student_username':
-                    setStudentUsernameError(
-                        error ? { error: true, errorText: studentUsernameErrorText } : { error: false },
-                    );
-                    break;
-                case 'aut_org_staff_id':
-                    setOrgStaffIdError(error ? { error: true, errorText: orgStaffIdErrorText } : { error: false });
-                    break;
-                case 'aut_org_student_id':
-                    setOrgStudentIdError(error ? { error: true, errorText: orgStudentIdErrorText } : { error: false });
-                    break;
-                default:
-                    break;
+            if (field === 'aut_org_username') {
+                setOrgUsernameError(error ? { error: true, errorText: orgUsernameErrorText } : { error: false });
+            }
+            if (field === 'aut_student_username') {
+                setStudentUsernameError(
+                    error ? { error: true, errorText: studentUsernameErrorText } : { error: false },
+                );
+            }
+            if (field === 'aut_org_staff_id') {
+                setOrgStaffIdError(error ? { error: true, errorText: orgStaffIdErrorText } : { error: false });
+            }
+            if (field === 'aut_org_student_id') {
+                setOrgStudentIdError(error ? { error: true, errorText: orgStudentIdErrorText } : { error: false });
             }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
