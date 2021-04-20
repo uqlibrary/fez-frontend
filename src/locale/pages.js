@@ -254,7 +254,7 @@ export default {
             },
             publicationsByYearChart: {
                 title: 'eSpace works per year',
-                yAxisTitle: 'Total publications',
+                yAxisTitle: 'Total works',
             },
             publicationTypesCountChart: {
                 title: 'Work types overview',
