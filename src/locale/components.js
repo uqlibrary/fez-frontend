@@ -3335,6 +3335,13 @@ export default {
                         label: 'Is username overridden by an admin?',
                     },
                 },
+                validation: {
+                    orgStaffIdErrorText: 'The supplied Organisation Staff ID is already on file for another author.',
+                    orgStudentIdErrorText:
+                        'The supplied Organisation Student ID is already on file for another author.',
+                    orgUsernameErrorText: 'The supplied Organisation Username is already on file for another author.',
+                    studentUsernameErrorText: 'The supplied Student username is already on file for another author.',
+                },
             },
             form: {
                 editButton: 'Update author',
