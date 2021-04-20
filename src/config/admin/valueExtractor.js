@@ -147,6 +147,15 @@ export const getValueSearchKeyCKEditor = (record, plainTextSearchKey, htmlTextSe
         deleteKey(record, htmlTextSearchKey);
     }
 
+    if (!returnValue.plainText && !!returnValue.htmlText) {
+        const tempDiv = document.createElement('div');
+
+        // Keep line breaks when converting html to text
+        tempDiv.innerHTML = returnValue.htmlText.replaceAll(/<(p|br ?\/?)>/g, '\n').replace(/^\n(.*)/, '$1');
+
+        returnValue.plainText = tempDiv.innerText;
+    }
+
     return returnValue;
 };
 
