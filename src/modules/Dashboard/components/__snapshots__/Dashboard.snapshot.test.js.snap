@@ -677,7 +677,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
               },
             ]
           }
-          yAxisTitle="Total works"
+          yAxisTitle="Total publications"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -1222,7 +1222,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
               },
             ]
           }
-          yAxisTitle="Total works"
+          yAxisTitle="Total publications"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -2710,7 +2710,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
               },
             ]
           }
-          yAxisTitle="Total works"
+          yAxisTitle="Total publications"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -4004,7 +4004,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
               },
             ]
           }
-          yAxisTitle="Total works"
+          yAxisTitle="Total publications"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -4806,7 +4806,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
               },
             ]
           }
-          yAxisTitle="Total works"
+          yAxisTitle="Total publications"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -5166,7 +5166,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
               },
             ]
           }
-          yAxisTitle="Total works"
+          yAxisTitle="Total publications"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>

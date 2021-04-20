@@ -12,7 +12,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
     item={true}
   >
     <WithStyles(InlineLoader)
-      message="Loading trending works"
+      message="Loading trending publications"
     />
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
@@ -1471,7 +1471,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
     customType={null}
     disableAlertClick={false}
     dismissTitle="Click to dismiss this alert"
-    message="Trending works are temporarily unavailable"
+    message="Trending publications are temporarily unavailable"
     showLoader={false}
     title="There has been an error"
     type="error"
