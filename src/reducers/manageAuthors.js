@@ -12,6 +12,7 @@ export const initialState = {
     authorAdding: false,
     authorAddSuccess: false,
     authorAddError: null,
+    existingAuthorFieldError: null,
 };
 
 const handlers = {
@@ -82,6 +83,16 @@ const handlers = {
         authorAdding: false,
         authorAddSuccess: false,
         authorAddError: action.payload,
+    }),
+
+    [actions.EXISTING_AUTHOR_FOUND]: (state, action) => ({
+        ...state,
+        existingAuthorFieldError: action.payload,
+    }),
+
+    [actions.EXISTING_AUTHOR_NOT_FOUND]: (state, action) => ({
+        ...state,
+        existingAuthorFieldError: action.payload,
     }),
 };
 
