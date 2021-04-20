@@ -15,7 +15,7 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
     item={true}
   >
     <WithStyles(InlineLoader)
-      message="Loading your trending works"
+      message="Loading your trending publications"
     />
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
