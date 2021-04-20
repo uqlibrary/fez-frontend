@@ -111,6 +111,7 @@ export const ResearcherIdentifierData = ({ rowData, ...props }) => {
                     {...orcidId}
                     {...props}
                     InputProps={{
+                        readOnly: true,
                         ...(!!rowData.aut_orcid_id
                             ? {
                                   startAdornment: (

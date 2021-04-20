@@ -221,7 +221,6 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-lname-input')).toHaveAttribute('value', 'Desai');
         expect(getByTestId('aut-position-input')).toHaveAttribute('value', 'Sr. Web Developer');
         expect(getByTestId('aut-title-input')).toHaveAttribute('value', 'Mr.');
-        expect(getByTestId('aut-orcid-id-input')).toHaveAttribute('value', '0000-0001-1111-2222');
         expect(getByTestId('aut-description-input')).toHaveTextContent('Added position. Updated name');
 
         fireEvent.change(getByTestId('aut-fname-input'), { target: { value: '' } });
