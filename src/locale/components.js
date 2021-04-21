@@ -3326,6 +3326,8 @@ export default {
                     },
                 },
                 validation: {
+                    firstNameErrorText: 'This field is required',
+                    lastNameErrorText: 'This field is required',
                     orgStaffIdErrorText: 'The supplied Organisation Staff ID is already on file for another author.',
                     orgStudentIdErrorText:
                         'The supplied Organisation Student ID is already on file for another author.',
