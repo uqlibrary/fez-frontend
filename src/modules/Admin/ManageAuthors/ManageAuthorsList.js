@@ -47,8 +47,8 @@ export const getColumns = () => {
                 <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} copiable />
             ),
             cellStyle: {
-                width: '13%',
-                maxWidth: '13%',
+                width: '15%',
+                maxWidth: '15%',
             },
         },
         {
