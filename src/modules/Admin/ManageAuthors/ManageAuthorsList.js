@@ -35,6 +35,9 @@ export const getColumns = () => {
         header: {
             columns: { id },
         },
+        editRow: {
+            validation: { firstNameErrorText, lastNameErrorText },
+        },
     } = locale.components.manageAuthors;
     return [
         {
@@ -44,8 +47,8 @@ export const getColumns = () => {
                 <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} copiable />
             ),
             cellStyle: {
-                width: '13%',
-                maxWidth: '13%',
+                width: '15%',
+                maxWidth: '15%',
             },
         },
         {
@@ -61,7 +64,7 @@ export const getColumns = () => {
                         ...error,
                         aut_fname: {
                             error: true,
-                            errorText: 'Required',
+                            errorText: firstNameErrorText,
                         },
                     };
                 }
@@ -71,7 +74,7 @@ export const getColumns = () => {
                         ...error,
                         aut_lname: {
                             error: true,
-                            errorText: 'Required',
+                            errorText: lastNameErrorText,
                         },
                     };
                 }

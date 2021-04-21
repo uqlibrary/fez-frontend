@@ -36,6 +36,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     authorFieldDataId="aut-fname"
                     data={rowData.aut_fname}
                     name="aut_fname"
+                    required
                     {...((!!error.author && !!error.author.aut_fname && error.author.aut_fname) || {})}
                     {...firstName}
                     {...props}
@@ -51,6 +52,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     authorFieldDataId="aut-lname"
                     data={rowData.aut_lname}
                     name="aut_lname"
+                    required
                     {...((!!error.author && !!error.author.aut_lname && error.author.aut_lname) || {})}
                     {...lastName}
                     {...props}
