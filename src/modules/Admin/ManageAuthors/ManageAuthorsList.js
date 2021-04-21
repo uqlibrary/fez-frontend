@@ -40,10 +40,12 @@ export const getColumns = () => {
         {
             title: <ColumnTitle title={id.title} />,
             field: 'aut_id',
-            render: rowData => <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} />,
+            render: rowData => (
+                <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} copiable />
+            ),
             cellStyle: {
-                width: '6%',
-                maxWidth: '6%',
+                width: '13%',
+                maxWidth: '13%',
             },
         },
         {
