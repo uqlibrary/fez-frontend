@@ -22,9 +22,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
+export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled, columns }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    const [error, setError] = React.useState({});
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
@@ -60,6 +61,17 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mode]);
 
+    React.useEffect(() => {
+        setError(
+            columns.reduce((errorObject, column) => {
+                return !!column.validate && !!column.validate(data)
+                    ? { ...errorObject, [column.field]: column.validate(data) }
+                    : { ...errorObject };
+            }, {}),
+        );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data]);
+
     return (
         <TableRow>
             <TableCell colSpan={7}>
@@ -75,7 +87,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                         <div className={classes.background}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
-                                    <NameData rowData={data} onChange={handleChange} />
+                                    <NameData rowData={data} onChange={handleChange} error={error} />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Grid
@@ -120,7 +132,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     );
 };
 
-FullAuthorDetails.propTypes = {
+FullUserDetails.propTypes = {
+    columns: PropTypes.array,
     data: PropTypes.object,
     disabled: PropTypes.bool,
     mode: PropTypes.string,
@@ -129,4 +142,4 @@ FullAuthorDetails.propTypes = {
     rowData: PropTypes.object,
 };
 
-export default React.memo(FullAuthorDetails);
+export default React.memo(FullUserDetails);

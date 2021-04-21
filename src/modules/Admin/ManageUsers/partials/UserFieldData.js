@@ -6,8 +6,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
 
-export const UserFieldData = ({ authorFieldDataId, data, label, helperText, type, ...props }) => {
-    console.log(data);
+export const UserFieldData = ({ userFieldDataId, data, label, helperText, type, ...props }) => {
     return (
         <React.Fragment>
             <Grid item xs={2}>
@@ -23,8 +22,8 @@ export const UserFieldData = ({ authorFieldDataId, data, label, helperText, type
                         {...props}
                         color={!!data ? 'primary' : 'secondary'}
                         inputProps={{
-                            'data-testid': `${authorFieldDataId}-input`,
-                            id: `${authorFieldDataId}-input`,
+                            'data-testid': `${userFieldDataId}-input`,
+                            id: `${userFieldDataId}-input`,
                         }}
                         checked={!!data}
                         onChange={e => props.onChange(e.target.name, e.target.checked)}
@@ -34,7 +33,7 @@ export const UserFieldData = ({ authorFieldDataId, data, label, helperText, type
                     <TextField
                         {...props}
                         label={label}
-                        textFieldId={authorFieldDataId}
+                        textFieldId={userFieldDataId}
                         fullWidth
                         InputProps={{
                             style: {
@@ -45,7 +44,7 @@ export const UserFieldData = ({ authorFieldDataId, data, label, helperText, type
                         }}
                         InputLabelProps={{
                             style: {
-                                color: '#4085C6',
+                                ...(!props.error ? { color: '#4085C6' } : {}),
                                 fontWeight: 400,
                             },
                         }}
@@ -62,7 +61,7 @@ export const UserFieldData = ({ authorFieldDataId, data, label, helperText, type
 };
 
 UserFieldData.propTypes = {
-    authorFieldDataId: PropTypes.string,
+    userFieldDataId: PropTypes.string,
     data: PropTypes.string,
     error: PropTypes.bool,
     helperText: PropTypes.string,

@@ -8,43 +8,45 @@ import UserFieldData from './UserFieldData';
 
 import { default as locale } from 'locale/components';
 
-export const NameData = ({ rowData, ...props }) => {
+export const NameData = ({ rowData, error, ...props }) => {
     const {
         editRow: {
             fields: { username, fullName, email, isAdmin, isSuperAdmin },
         },
     } = locale.components.manageUsers;
 
-    /* Display error from the customised errorObject from helperText */
-    // const errorObject = JSON.parse(helperText || '{}');
-
     return (
         <StandardCard subCard title="User information" smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <UserFieldData
-                    authorFieldDataId="usr-full-name"
+                    userFieldDataId="usr-full-name"
                     data={rowData.usr_full_name}
                     name="usr_full_name"
+                    required
+                    {...((!!error.usr_full_name && error.usr_full_name) || {})}
                     {...fullName}
                     {...props}
                 />
                 <UserFieldData
-                    authorFieldDataId="usr-email"
+                    userFieldDataId="usr-email"
                     data={rowData.usr_email}
                     name="usr_email"
-                    // {...((!!error.author && !!error.author.usr_email && error.author.usr_email) || {})}
+                    required
+                    {...((!!error.usr_email && error.usr_email) || {})}
                     {...email}
                     {...props}
                 />
                 <UserFieldData
-                    authorFieldDataId="usr-username"
+                    userFieldDataId="usr-username"
                     data={rowData.usr_username}
                     name="usr_username"
+                    required
+                    {...((!!error.usr_username && error.usr_username) || {})}
                     {...username}
                     {...props}
                 />
                 <UserFieldData
-                    authorFieldDataId="usr-administrator"
+                    userFieldDataId="usr-administrator"
                     data={rowData.usr_administrator}
                     name="usr_administrator"
                     type="checkbox"
@@ -52,7 +54,7 @@ export const NameData = ({ rowData, ...props }) => {
                     {...props}
                 />
                 <UserFieldData
-                    authorFieldDataId="usr-super-administrator"
+                    userFieldDataId="usr-super-administrator"
                     data={rowData.usr_super_administrator}
                     name="usr_super_administrator"
                     type="checkbox"

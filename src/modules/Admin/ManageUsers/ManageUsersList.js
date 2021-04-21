@@ -31,9 +31,13 @@ export const useStyles = makeStyles(() => ({
 export const getColumns = () => {
     const {
         header: {
-            columns: { id, fullName, username, email, isAdmin, isSuperAdmin },
+            columns: { id, fullName, username, email, status, isAdmin, isSuperAdmin },
+        },
+        editRow: {
+            validation: { usernameError, emailError, fullNameError },
         },
     } = locale.components.manageUsers;
+
     return [
         {
             title: <ColumnTitle title={id.title} />,
@@ -55,6 +59,7 @@ export const getColumns = () => {
             render: rowData => (
                 <ColumnData data={rowData.usr_full_name} columnDataId={`usr-full-name-${rowData.tableData.id}`} />
             ),
+            validate: rowData => (!!rowData.usr_full_name ? undefined : { error: true, errorText: fullNameError }),
             cellStyle: {
                 width: '30%',
                 maxWidth: '30%',
@@ -70,6 +75,7 @@ export const getColumns = () => {
             render: rowData => (
                 <ColumnData data={rowData.usr_username} columnDataId={`usr-username-${rowData.tableData.id}`} />
             ),
+            validate: rowData => (!!rowData.usr_username ? undefined : { error: true, errorText: usernameError }),
             cellStyle: {
                 width: '7%',
                 maxWidth: '7%',
@@ -85,6 +91,7 @@ export const getColumns = () => {
             render: rowData => (
                 <ColumnData data={rowData.usr_email} columnDataId={`usr-email-${rowData.tableData.id}`} />
             ),
+            validate: rowData => (!!rowData.usr_email ? undefined : { error: true, errorText: emailError }),
             cellStyle: {
                 width: '30%',
                 maxWidth: '30%',
@@ -95,6 +102,16 @@ export const getColumns = () => {
             },
         },
         {
+            title: <ColumnTitle title={status.title} />,
+            field: 'usr_status',
+            render: rowData => (
+                <ColumnData
+                    data={rowData.usr_status ? 'Active' : 'Inactive'}
+                    columnDataId={`usr-status-${rowData.tableData.id}`}
+                />
+            ),
+        },
+        {
             title: <ColumnTitle title={isAdmin.title} />,
             field: 'usr_administrator',
             render: rowData => (
@@ -103,14 +120,6 @@ export const getColumns = () => {
                     columnDataId={`usr-administrator-${rowData.tableData.id}`}
                 />
             ),
-            // cellStyle: {
-            //     width: '3%',
-            //     maxWidth: '3%',
-            // },
-            // headerStyle: {
-            //     width: '3%',
-            //     maxWidth: '3%',
-            // },
         },
         {
             title: <ColumnTitle title={isSuperAdmin.title} />,
@@ -121,50 +130,7 @@ export const getColumns = () => {
                     columnDataId={`usr-super-administrator-${rowData.tableData.id}`}
                 />
             ),
-            // cellStyle: {
-            //     width: '3%',
-            //     maxWidth: '3%',
-            // },
-            // headerStyle: {
-            //     width: '3%',
-            //     maxWidth: '3%',
-            // },
         },
-        // {
-        //     title: <AuthorHeader />,
-        //     field: 'author',
-        //     sorting: false,
-        //     render: rowData => <LeastAuthorData rowData={rowData} />,
-        //     validate: rowData => {
-        //         let error = {};
-
-        //         if (!rowData.aut_fname || rowData.aut_fname === '') {
-        //             error = {
-        //                 ...error,
-        //                 aut_fname: {
-        //                     error: true,
-        //                     errorText: 'Required',
-        //                 },
-        //             };
-        //         }
-
-        //         if (!rowData.aut_lname || rowData.aut_lname === '') {
-        //             error = {
-        //                 ...error,
-        //                 aut_lname: {
-        //                     error: true,
-        //                     errorText: 'Required',
-        //                 },
-        //             };
-        //         }
-
-        //         return error;
-        //     },
-        //     cellStyle: {
-        //         width: '100%',
-        //         maxWidth: '100%',
-        //     },
-        // },
     ];
 };
 
