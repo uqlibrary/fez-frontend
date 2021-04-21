@@ -15,9 +15,6 @@ export const NameData = ({ rowData, error, ...props }) => {
         },
     } = locale.components.manageAuthors;
 
-    /* Display error from the customised errorObject from helperText */
-    // const errorObject = JSON.parse(helperText || '{}');
-
     return (
         <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">

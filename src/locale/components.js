@@ -3379,6 +3379,9 @@ export default {
                     email: {
                         title: 'Email',
                     },
+                    status: {
+                        title: 'Status',
+                    },
                     isAdmin: {
                         title: 'Administrator?',
                     },
@@ -3404,6 +3407,11 @@ export default {
                     isSuperAdmin: {
                         label: 'Super administrator?',
                     },
+                },
+                validation: {
+                    usernameError: 'This field is required',
+                    emailError: 'This field is required',
+                    fullNameError: 'This field is required',
                 },
             },
             form: {
