@@ -381,8 +381,6 @@ export const MANAGE_USERS_LIST_API = params => {
         apiUrl: 'fez-users/search',
         options: {
             params: {
-                sort: 'updated_date',
-                order_by: 'desc',
                 page: params.page + 1,
                 per_page: params.pageSize,
                 query: params.query,
