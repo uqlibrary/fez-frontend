@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { upperFirst } from 'lodash';
 import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
 
 import Button from '@material-ui/core/Button';
@@ -105,10 +106,7 @@ export const getColumns = () => {
             title: <ColumnTitle title={status.title} />,
             field: 'usr_status',
             render: rowData => (
-                <ColumnData
-                    data={rowData.usr_status ? 'Active' : 'Inactive'}
-                    columnDataId={`usr-status-${rowData.tableData.id}`}
-                />
+                <ColumnData data={upperFirst(rowData.usr_status)} columnDataId={`usr-status-${rowData.tableData.id}`} />
             ),
         },
         {
