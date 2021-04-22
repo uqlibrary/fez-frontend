@@ -38,9 +38,9 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     };
 
     const handleSave = () => {
-        const newData = data;
-        delete newData.tableData;
-        onEditingApproved(mode, data, rowData);
+        // eslint-disable-next-line no-unused-vars
+        const { tableData, ...newData } = data;
+        onEditingApproved(mode, newData, rowData);
     };
 
     const handleDelete = () => {
@@ -101,7 +101,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                             <Button
                                                 id={`users-${mode}-this-user-save`}
                                                 data-testid={`users-${mode}-this-user-save`}
-                                                disabled={disabled}
+                                                disabled={disabled || Object.keys(error).length > 0}
                                                 variant="contained"
                                                 color="primary"
                                                 onClick={handleSave}

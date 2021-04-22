@@ -62,7 +62,7 @@ export const UserFieldData = ({ userFieldDataId, data, label, helperText, type, 
 
 UserFieldData.propTypes = {
     userFieldDataId: PropTypes.string,
-    data: PropTypes.string,
+    data: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     error: PropTypes.bool,
     helperText: PropTypes.string,
     InputProps: PropTypes.object,
