@@ -101,7 +101,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                             <Button
                                                 id={`users-${mode}-this-user-save`}
                                                 data-testid={`users-${mode}-this-user-save`}
-                                                disabled={disabled}
+                                                disabled={disabled || Object.keys(error).length > 0}
                                                 variant="contained"
                                                 color="primary"
                                                 onClick={handleSave}
