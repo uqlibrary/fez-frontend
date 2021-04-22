@@ -91,7 +91,7 @@ export default {
             },
         },
         myTrendingPublications: {
-            loading: 'Loading your trending publications',
+            loading: 'Loading your trending works',
             metrics: {
                 altmetric: {
                     title: 'Altmetric score',
@@ -142,16 +142,16 @@ export default {
             buttonLabel: 'CLOSE',
         },
         myLatestPublications: {
-            loading: 'Loading your latest publications',
+            loading: 'Loading your latest works',
             viewAllButtonLabel: 'View all',
         },
         topCitedPublications: {
-            loading: 'Loading trending publications',
+            loading: 'Loading trending works',
             notAvailableAlert: {
                 type: 'error',
                 alertId: 'alert-error',
                 title: 'There has been an error',
-                message: 'Trending publications are temporarily unavailable',
+                message: 'Trending works are temporarily unavailable',
             },
             altmetric: {
                 title: <span>Trending on Altmetric</span>,

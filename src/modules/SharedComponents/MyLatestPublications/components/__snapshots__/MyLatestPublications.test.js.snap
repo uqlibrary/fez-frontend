@@ -3932,7 +3932,7 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
   className="isLoading is-centered"
 >
   <WithStyles(InlineLoader)
-    message="Loading your latest publications"
+    message="Loading your latest works"
   />
 </div>
 `;
