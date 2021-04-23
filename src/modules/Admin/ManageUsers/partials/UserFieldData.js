@@ -26,7 +26,7 @@ export const UserFieldData = ({ userFieldDataId, data, label, helperText, type, 
                             id: `${userFieldDataId}-input`,
                         }}
                         checked={!!data}
-                        onChange={e => props.onChange(e.target.name, e.target.checked)}
+                        onChange={e => props.onChange(e.target.name, e.target.checked ? 1 : 0)}
                     />
                 )}
                 {type === 'text' && (
