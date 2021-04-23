@@ -197,6 +197,34 @@ describe('ContributorRowText', () => {
         expect(contributorRow.children.length).toBe(2);
     });
 
+    it('should render three columns for researcher while adding datasets', () => {
+        userIsAdmin.mockImplementation(() => false);
+
+        const { getByTestId } = rtlRender(
+            <ContributorRowText
+                canEdit={false}
+                classes={classes}
+                contributor={{
+                    nameAsPublished: 'Test, Testing',
+                    creatorRole: 'Librarian',
+                    aut_display_name: 'Test, Testing',
+                    aut_org_username: 'uqtest',
+                    aut_id: 123,
+                }}
+                index={0}
+                selectedClass="test"
+                showRoleInput
+                suffix={null}
+                width="md"
+                contributorRowId="test-list-row"
+            />,
+        );
+
+        const contributorRow = getByTestId('contributor-row');
+        expect(contributorRow.children.length).not.toBe(1);
+        expect(contributorRow.children.length).toBe(3);
+    });
+
     it('should render two columns for researcher while adding datasets for smaller screen size', () => {
         userIsAdmin.mockImplementation(() => false);
 
