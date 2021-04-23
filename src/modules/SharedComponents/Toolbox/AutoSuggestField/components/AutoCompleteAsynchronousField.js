@@ -33,7 +33,7 @@ export const AutoCompleteAsynchronousField = ({
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
     const [inputValue, setInputValue] = useState('');
-    const [value, setValue] = useState(defaultValue);
+    const [value, setValue] = useState(defaultValue || null);
     const active = useRef(true);
 
     const loading = itemsLoading;
