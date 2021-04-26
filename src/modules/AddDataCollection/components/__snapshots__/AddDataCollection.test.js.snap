@@ -529,6 +529,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [
@@ -2108,6 +2109,7 @@ exports[`AddDataCollection test should render component with a valid collection 
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [
@@ -3683,6 +3685,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [
@@ -5258,6 +5261,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [
