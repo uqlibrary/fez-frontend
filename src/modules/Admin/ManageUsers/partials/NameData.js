@@ -7,8 +7,11 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import UserFieldData from './UserFieldData';
 
 import { default as locale } from 'locale/components';
+import { useIsUserSuperAdmin } from 'hooks';
 
 export const NameData = ({ rowData, error, ...props }) => {
+    const isUserSuperAdmin = useIsUserSuperAdmin();
+
     const {
         editRow: {
             fields: { username, fullName, email, isAdmin, isSuperAdmin },
@@ -58,6 +61,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     data={rowData.usr_super_administrator}
                     name="usr_super_administrator"
                     type="checkbox"
+                    disabled={!isUserSuperAdmin}
                     {...isSuperAdmin}
                     {...props}
                 />
