@@ -16,7 +16,15 @@ const mapStateToProps = (state, props) => {
         useExtendedSearch: true,
         ignoreLocation: false,
         ignoreFieldNorm: false,
-        keys: ['id', 'aut_id', 'aut_display_name', 'aut_org_username', 'aut_student_username', 'aut_ref_num'],
+        keys: [
+            'id',
+            'aut_id',
+            'aut_display_name',
+            'aut_org_username',
+            'aut_student_username',
+            'aut_ref_num',
+            'aut_orcid_id',
+        ],
     };
     return {
         autoCompleteAsynchronousFieldId: props.uqIdFieldId || 'aut-id',
