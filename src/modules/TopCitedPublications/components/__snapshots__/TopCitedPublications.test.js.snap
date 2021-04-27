@@ -107,7 +107,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
                 The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
               </p>
               <p>
-                You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
+                You can click on the number as a link to see who is citing each work, or in the case of Altmetric who is referencing the work in social media and news outlets.
               </p>
               For more information visit :
               <br />
@@ -833,7 +833,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
               </p>
               <p>
-                You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
+                You can click on the number as a link to see who is citing each work, or in the case of Altmetric who is referencing the work in social media and news outlets.
               </p>
               For more information visit :
               <br />
