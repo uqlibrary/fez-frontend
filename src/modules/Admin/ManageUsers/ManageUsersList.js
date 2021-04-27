@@ -349,7 +349,14 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
                 padding: 'dense',
                 overflowY: 'auto',
                 searchFieldAlignment: 'left',
+                selection: true,
             }}
+            actions={[
+                {
+                    tooltip: 'Delete selected users',
+                    onClick: (evt, data) => console.log(data),
+                },
+            ]}
         />
     );
 };

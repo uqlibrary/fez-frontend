@@ -3408,6 +3408,7 @@ export default {
                     },
                     isSuperAdmin: {
                         label: 'Super administrator?',
+                        helperText: 'Only super admin users can update this flag',
                     },
                 },
                 validation: {
