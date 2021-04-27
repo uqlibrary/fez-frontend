@@ -54,20 +54,18 @@ export default {
                     <ul>
                         <li>Enhancing discovery of UQ research via search engines such as Google and Trove</li>
                         <li>
-                            Allowing researchers to deposit publications, datasets and open access materials and to view
-                            publication metrics
+                            Allowing researchers to deposit scholarly works, datasets and open access materials and to
+                            view associated metrics
                         </li>
                         <li>
-                            Maintaining a complete and accurate work of all UQ research publications and research data
-                            sets that feeds into central UQ systems including UQ Researchers and the Academic Portal
+                            Maintaining a complete and accurate collection of all UQ scholarly works and data sets that
+                            feeds into central UQ systems including UQ Researchers and the Academic Portal
                         </li>
                         <li>
                             Enabling government reporting such as Australian Research Council’s Excellence in Research
                             for Australia and the Engagement and Impact Assessment
                         </li>
-                        <li>
-                            Supporting the deposit of open access publications to make UQ research globally accessible
-                        </li>
+                        <li>Supporting the deposit of open access works to make UQ research globally accessible</li>
                         <li>
                             Preserving and making digitised materials accessible to the world including HDR theses,
                             photographs, audio materials, videos, manuscripts and other original works.
