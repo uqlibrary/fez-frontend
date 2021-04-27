@@ -13,7 +13,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         locale={
           Object {
             "cancelButtonLabel": "Add another missing dataset",
-            "confirmButtonLabel": "Go to my datasets",
+            "confirmButtonLabel": "Go to my research data",
             "confirmationMessage": <WithStyles(ForwardRef(Grid))
               container={true}
               spacing={3}
@@ -529,6 +529,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [
@@ -1606,7 +1607,7 @@ exports[`AddDataCollection test should render component with a valid collection 
         locale={
           Object {
             "cancelButtonLabel": "Add another missing dataset",
-            "confirmButtonLabel": "Go to my datasets",
+            "confirmButtonLabel": "Go to my research data",
             "confirmationMessage": <WithStyles(ForwardRef(Grid))
               container={true}
               spacing={3}
@@ -2108,6 +2109,7 @@ exports[`AddDataCollection test should render component with a valid collection 
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [
@@ -3181,7 +3183,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
         locale={
           Object {
             "cancelButtonLabel": "Add another missing dataset",
-            "confirmButtonLabel": "Go to my datasets",
+            "confirmButtonLabel": "Go to my research data",
             "confirmationMessage": <WithStyles(ForwardRef(Grid))
               container={true}
               spacing={3}
@@ -3683,6 +3685,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [
@@ -4756,7 +4759,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         locale={
           Object {
             "cancelButtonLabel": "Add another missing dataset",
-            "confirmButtonLabel": "Go to my datasets",
+            "confirmButtonLabel": "Go to my research data",
             "confirmationMessage": <WithStyles(ForwardRef(Grid))
               container={true}
               spacing={3}
@@ -5258,6 +5261,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               }
               name="authors"
               required={true}
+              showIdentifierLookup={true}
               showRoleInput={true}
               validate={
                 Array [

@@ -767,7 +767,7 @@ describe('Backend routes method', () => {
             options: {
                 params: {
                     rule: 'lookup',
-                    query: 'a b c ',
+                    query: 'a b-c ',
                 },
             },
         });
