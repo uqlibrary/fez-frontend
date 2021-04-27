@@ -37,11 +37,7 @@ context('Search', () => {
             .type("{home}it's raining ");
         cy.contains('label > span:nth-child(2)', 'Open access')
             .get('#advanced-search-open-access')
-            .should(
-                'have.attr',
-                'aria-label',
-                'Check to search for publications with are only open access / full text',
-            );
+            .should('have.attr', 'aria-label', 'Check to search for open access / full text works');
         cy.contains('label', 'Open access').click();
         cy.contains('button', 'Add another field')
             .should('have.attr', 'aria-label', 'Click to add another advanced search field')
