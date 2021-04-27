@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation, Redirect, Route } from 'react-router';
+import { useLocation, Redirect } from 'react-router';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
@@ -49,19 +49,12 @@ export const NotFound = () => {
     if (!!existingAlias) {
         const [pathname, search] = existingAlias.fvs_search_parameters.split('?');
         return (
-            <Route
-                render={
-                    // istanbul ignore next
-                    () => (
-                        <Redirect
-                            to={{
-                                pathname,
-                                search,
-                                state: { redirectedFromNotFound: true },
-                            }}
-                        />
-                    )
-                }
+            <Redirect
+                to={{
+                    pathname,
+                    search,
+                    state: { redirectedFromNotFound: true },
+                }}
             />
         );
     }
