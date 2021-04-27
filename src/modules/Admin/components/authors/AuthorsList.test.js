@@ -32,15 +32,6 @@ describe('AuthorsList', () => {
                 ownerDocument: document,
             },
         });
-
-        /**
-         * Suppressing below warning message from material-table library
-         * Warning: React does not recognize the `scrollWidth` prop on a DOM element. If you intentionally
-         * want it to appear in the DOM as a custom attribute, spell it as lowercase `scrollwidth` instead.
-         * If you accidentally passed it from a parent component, remove it from the DOM element.
-         */
-        jest.spyOn(console, 'error').mockImplementation(jest.fn());
-        jest.spyOn(console, 'warn').mockImplementation(jest.fn());
     });
 
     afterEach(() => {

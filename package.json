@@ -31,7 +31,6 @@
         "@babel/register": "^7.8.6",
         "@babel/runtime-corejs2": "^7.8.7",
         "@cypress/code-coverage": "^3.9.2",
-        "@date-io/date-fns": "^2.8.1",
         "@googlemaps/jest-mocks": "^0.1.0",
         "@sentry/webpack-plugin": "^1.10.0",
         "@testing-library/dom": "^7.1.2",
@@ -149,7 +148,6 @@
         "babel-loader": "^8.0.6",
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
-        "caniuse-lite": "^1.0.30001038",
         "classnames": "^2.2.6",
         "connected-react-router": "^6.4.0",
         "deep-diff": "^1.0.2",
@@ -171,7 +169,7 @@
         "keycode": "^2.2.0",
         "load-script": "^1.0.0",
         "match-sorter": "^4.0.2",
-        "material-table": "^1.69.0",
+        "material-table": "^1.69.2",
         "moment": "^2.22.1",
         "moment-timezone": "^0.5.16",
         "number-to-words": "^1.2.4",
@@ -250,8 +248,8 @@
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
     },
     "engines": {
-        "npm": "^6",
-        "node": "14.7.0"
+        "npm": "^7",
+        "node": "^14"
     },
     "babel": {
         "presets": [

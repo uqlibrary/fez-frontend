@@ -416,7 +416,7 @@ exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 1`
   customType={null}
   disableAlertClick={false}
   dismissTitle="Click to dismiss this alert"
-  message={null}
+  message=""
   showLoader={false}
   type="error"
   wiggle={null}
