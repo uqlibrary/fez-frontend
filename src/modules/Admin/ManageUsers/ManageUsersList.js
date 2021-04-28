@@ -20,6 +20,9 @@ import Backdrop from '@material-ui/core/Backdrop';
 
 import makeStyles from '@material-ui/styles/makeStyles';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip';
+import moment from 'moment';
 
 export const useStyles = makeStyles(() => ({
     backdrop: {
@@ -74,7 +77,14 @@ export const getColumns = () => {
             title: <ColumnTitle title={username.title} />,
             field: 'usr_username',
             render: rowData => (
-                <ColumnData data={rowData.usr_username} columnDataId={`usr-username-${rowData.tableData.id}`} />
+                <React.Fragment>
+                    <ColumnData data={rowData.usr_username} columnDataId={`usr-username-${rowData.tableData.id}`} />
+                    <Tooltip title="Last login date">
+                        <Typography variant="caption">
+                            {moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')}
+                        </Typography>
+                    </Tooltip>
+                </React.Fragment>
             ),
             validate: rowData => (!!rowData.usr_username ? undefined : { error: true, errorText: usernameError }),
             cellStyle: {
