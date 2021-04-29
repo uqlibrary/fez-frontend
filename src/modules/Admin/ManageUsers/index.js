@@ -9,7 +9,14 @@ import ManageUsersNewList from './ManageUsersList';
 
 import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
-import { addUser, deleteUserListItem, updateUserListItem, showAppAlert, dismissAppAlert } from 'actions';
+import {
+    addUser,
+    bulkDeleteUserListItems,
+    deleteUserListItem,
+    dismissAppAlert,
+    showAppAlert,
+    updateUserListItem,
+} from 'actions';
 
 export const ManageUsers = () => {
     const dispatch = useDispatch();
@@ -28,6 +35,10 @@ export const ManageUsers = () => {
 
     const handleRowDelete = oldData => {
         return dispatch(deleteUserListItem(oldData));
+    };
+
+    const handleBulkRowDelete = data => {
+        return dispatch(bulkDeleteUserListItems(data));
     };
 
     React.useEffect(() => {
@@ -61,6 +72,7 @@ export const ManageUsers = () => {
                             onRowAdd={handleRowAdd}
                             onRowUpdate={handleRowUpdate}
                             onRowDelete={handleRowDelete}
+                            onBulkRowDelete={handleBulkRowDelete}
                         />
                     </StandardCard>
                 </Grid>

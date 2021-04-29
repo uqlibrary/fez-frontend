@@ -142,7 +142,7 @@ export const getColumns = () => {
     ];
 };
 
-export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
+export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowDelete }) => {
     const dispatch = useDispatch();
     const classes = useStyles();
     const materialTableRef = React.createRef();
@@ -364,7 +364,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
             actions={[
                 {
                     tooltip: 'Delete selected users',
-                    onClick: (evt, data) => console.log(data),
+                    onClick: (evt, data) => onBulkRowDelete(data),
                 },
             ]}
         />
@@ -372,6 +372,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
 };
 
 ManageUsersList.propTypes = {
+    onBulkRowDelete: PropTypes.func,
     onRowAdd: PropTypes.func,
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,

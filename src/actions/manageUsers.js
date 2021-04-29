@@ -11,6 +11,9 @@ import {
     USER_ITEM_DELETING,
     USER_ITEM_DELETE_SUCCESS,
     USER_ITEM_DELETE_FAILED,
+    BULK_USER_ITEMS_DELETING,
+    BULK_USER_ITEMS_DELETE_SUCCESS,
+    BULK_USER_ITEMS_DELETE_FAILED,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
 import { USER_API, MANAGE_USERS_LIST_API } from 'repositories/routes';
@@ -102,6 +105,30 @@ export function deleteUserListItem(oldData) {
         } catch (e) {
             dispatch({
                 type: USER_ITEM_DELETE_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+}
+
+export function bulkDeleteUserListItems(oldData) {
+    return async dispatch => {
+        dispatch({ type: BULK_USER_ITEMS_DELETING });
+        const userIds = oldData.map(user => user.usr_id);
+        const ids = new URLSearchParams();
+        userIds.map(id => ids.append('usr_ids[]', id));
+        try {
+            const response = await post(USER_API({ userIds }), ids);
+            dispatch({
+                type: BULK_USER_ITEMS_DELETE_SUCCESS,
+            });
+
+            return Promise.resolve(response.data);
+        } catch (e) {
+            dispatch({
+                type: BULK_USER_ITEMS_DELETE_FAILED,
                 payload: e,
             });
 
