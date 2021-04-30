@@ -18,12 +18,31 @@ import {
     updateUserListItem,
 } from 'actions';
 
+export const getBulkDeleteMessages = messages => {
+    const deleteMessages = [];
+
+    for (const [userId, message] of Object.entries(messages)) {
+        deleteMessages.push(
+            <li key={`bulk-delete-user-${userId}`} data-testid={`bulk-delete-user-${userId}`}>
+                <strong>{userId}</strong> - <span>{message}</span>
+            </li>,
+        );
+    }
+    const message = (
+        <span>
+            <ul>{deleteMessages}</ul>
+        </span>
+    );
+    return message;
+};
+
 export const ManageUsers = () => {
     const dispatch = useDispatch();
 
     const userListError = useSelector(state => state.get('manageUsersReducer').userListError);
     const userAddSuccess = useSelector(state => state.get('manageUsersReducer').userAddSuccess);
     const userAddError = useSelector(state => state.get('manageUsersReducer').userAddError);
+    const bulkUserDeleteMessages = useSelector(state => state.get('manageUsersReducer').bulkUserDeleteMessages);
 
     const handleRowAdd = newData => {
         return dispatch(addUser(newData));
@@ -64,6 +83,15 @@ export const ManageUsers = () => {
                 {!!userAddError && (
                     <Grid item xs={12}>
                         <Alert {...userAddError} type="error" alertId="alert-error-user-add" />
+                    </Grid>
+                )}
+                {!!bulkUserDeleteMessages && (
+                    <Grid item xs={12}>
+                        <Alert
+                            message={getBulkDeleteMessages(bulkUserDeleteMessages)}
+                            type="done"
+                            alertId="alert-success-user-bulk-delete"
+                        />
                     </Grid>
                 )}
                 <Grid item xs={12}>

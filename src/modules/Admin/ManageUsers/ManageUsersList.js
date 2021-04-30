@@ -366,29 +366,40 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 {
                     icon: 'delete',
                     tooltip: 'Delete selected users',
-                    onClick: (evt, oldData) =>
-                        onBulkRowDelete(oldData).then(response => {
-                            const materialTable = materialTableRef.current;
-                            materialTable.setState(
-                                prevState => {
-                                    const newList = [...prevState.data];
-                                    for (const [userId, message] of Object.entries(response)) {
-                                        if (message === BULK_DELETE_USER_SUCCESS) {
-                                            newList.splice(
-                                                newList.findIndex(usr => String(usr.usr_id) === String(userId)),
-                                                1,
-                                            );
+                    onClick: (evt, oldData) => {
+                        const materialTable = materialTableRef.current;
+                        onBulkRowDelete(oldData)
+                            .then(response => {
+                                materialTable.setState(
+                                    prevState => {
+                                        const newList = [...prevState.data];
+                                        for (const [userId, message] of Object.entries(response)) {
+                                            if (message === BULK_DELETE_USER_SUCCESS) {
+                                                newList.splice(
+                                                    newList.findIndex(usr => String(usr.usr_id) === String(userId)),
+                                                    1,
+                                                );
+                                            }
                                         }
-                                    }
+                                        materialTable.dataManager.changeAllSelected(false);
+                                        materialTable.dataManager.setData(newList);
+                                        return {
+                                            ...materialTable.dataManager.getRenderState(),
+                                        };
+                                    },
+                                    () => materialTable.onSelectionChange(),
+                                );
+                            })
+                            .catch(() => {
+                                materialTable.setState(prevState => {
                                     materialTable.dataManager.changeAllSelected(false);
-                                    materialTable.dataManager.setData(newList);
+                                    materialTable.dataManager.setData([...prevState.data]);
                                     return {
                                         ...materialTable.dataManager.getRenderState(),
                                     };
-                                },
-                                () => materialTable.onSelectionChange(),
-                            );
-                        }),
+                                });
+                            });
+                    },
                 },
             ]}
         />

@@ -12,6 +12,7 @@ export const initialState = {
     userAdding: false,
     userAddSuccess: false,
     userAddError: null,
+    bulkUserDeleteMessages: null,
 };
 
 const handlers = {
@@ -82,6 +83,11 @@ const handlers = {
         userAdding: false,
         userAddSuccess: false,
         userAddError: action.payload,
+    }),
+
+    [actions.BULK_USER_ITEMS_DELETE_SUCCESS]: (state, action) => ({
+        ...state,
+        bulkUserDeleteMessages: action.payload,
     }),
 };
 

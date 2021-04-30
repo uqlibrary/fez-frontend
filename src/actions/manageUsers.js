@@ -123,6 +123,7 @@ export function bulkDeleteUserListItems(oldData) {
             const response = await post(USER_API({ userIds }), ids);
             dispatch({
                 type: BULK_USER_ITEMS_DELETE_SUCCESS,
+                payload: response.data,
             });
 
             return Promise.resolve(response.data);
