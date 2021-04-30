@@ -21,6 +21,7 @@ export function put({ apiUrl, options = {} }, data, config = {}) {
  * @returns {Promise}
  */
 export function post({ apiUrl, options = {} }, data, config = {}) {
+    console.log(apiUrl, data);
     return api.post(apiUrl, data, { ...config, ...options });
 }
 

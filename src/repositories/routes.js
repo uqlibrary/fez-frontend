@@ -389,6 +389,18 @@ export const MANAGE_USERS_LIST_API = params => {
     };
 };
 
-export const USER_API = ({ userId } = { userId: undefined }) => ({
-    apiUrl: `fez-users${!!userId ? `/${userId}` : ''}`,
-});
+export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: [] }) => {
+    if (!!userId && !!userIds && userIds.length === 0) {
+        return {
+            apiUrl: `fez-users/${userId}`,
+        };
+    }
+
+    if (!userId && !!userIds && userIds.length > 0) {
+        return {
+            apiUrl: 'fez-users/delete-list',
+        };
+    }
+
+    return { apiUrl: 'fez-users' };
+};

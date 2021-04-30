@@ -20,6 +20,10 @@ import Backdrop from '@material-ui/core/Backdrop';
 
 import makeStyles from '@material-ui/styles/makeStyles';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip';
+import moment from 'moment';
+import { BULK_DELETE_USER_SUCCESS } from 'config/general';
 
 export const useStyles = makeStyles(() => ({
     backdrop: {
@@ -74,7 +78,14 @@ export const getColumns = () => {
             title: <ColumnTitle title={username.title} />,
             field: 'usr_username',
             render: rowData => (
-                <ColumnData data={rowData.usr_username} columnDataId={`usr-username-${rowData.tableData.id}`} />
+                <React.Fragment>
+                    <ColumnData data={rowData.usr_username} columnDataId={`usr-username-${rowData.tableData.id}`} />
+                    <Tooltip title="Last login date">
+                        <Typography variant="caption">
+                            {moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')}
+                        </Typography>
+                    </Tooltip>
+                </React.Fragment>
             ),
             validate: rowData => (!!rowData.usr_username ? undefined : { error: true, errorText: usernameError }),
             cellStyle: {
@@ -132,7 +143,7 @@ export const getColumns = () => {
     ];
 };
 
-export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
+export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowDelete }) => {
     const dispatch = useDispatch();
     const classes = useStyles();
     const materialTableRef = React.createRef();
@@ -353,8 +364,42 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
             }}
             actions={[
                 {
+                    icon: 'delete',
                     tooltip: 'Delete selected users',
-                    onClick: (evt, data) => console.log(data),
+                    onClick: (evt, oldData) => {
+                        const materialTable = materialTableRef.current;
+                        onBulkRowDelete(oldData)
+                            .then(response => {
+                                materialTable.setState(
+                                    prevState => {
+                                        const newList = [...prevState.data];
+                                        for (const [userId, message] of Object.entries(response)) {
+                                            if (message === BULK_DELETE_USER_SUCCESS) {
+                                                newList.splice(
+                                                    newList.findIndex(usr => String(usr.usr_id) === String(userId)),
+                                                    1,
+                                                );
+                                            }
+                                        }
+                                        materialTable.dataManager.changeAllSelected(false);
+                                        materialTable.dataManager.setData(newList);
+                                        return {
+                                            ...materialTable.dataManager.getRenderState(),
+                                        };
+                                    },
+                                    () => materialTable.onSelectionChange(),
+                                );
+                            })
+                            .catch(() => {
+                                materialTable.setState(prevState => {
+                                    materialTable.dataManager.changeAllSelected(false);
+                                    materialTable.dataManager.setData([...prevState.data]);
+                                    return {
+                                        ...materialTable.dataManager.getRenderState(),
+                                    };
+                                });
+                            });
+                    },
                 },
             ]}
         />
@@ -362,6 +407,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
 };
 
 ManageUsersList.propTypes = {
+    onBulkRowDelete: PropTypes.func,
     onRowAdd: PropTypes.func,
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,

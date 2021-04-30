@@ -9,7 +9,32 @@ import ManageUsersNewList from './ManageUsersList';
 
 import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
-import { addUser, deleteUserListItem, updateUserListItem, showAppAlert, dismissAppAlert } from 'actions';
+import {
+    addUser,
+    bulkDeleteUserListItems,
+    deleteUserListItem,
+    dismissAppAlert,
+    showAppAlert,
+    updateUserListItem,
+} from 'actions';
+
+export const getBulkDeleteMessages = messages => {
+    const deleteMessages = [];
+
+    for (const [userId, message] of Object.entries(messages)) {
+        deleteMessages.push(
+            <li key={`bulk-delete-user-${userId}`} data-testid={`bulk-delete-user-${userId}`}>
+                <strong>{userId}</strong> - <span>{message}</span>
+            </li>,
+        );
+    }
+    const message = (
+        <span>
+            <ul>{deleteMessages}</ul>
+        </span>
+    );
+    return message;
+};
 
 export const ManageUsers = () => {
     const dispatch = useDispatch();
@@ -17,6 +42,7 @@ export const ManageUsers = () => {
     const userListError = useSelector(state => state.get('manageUsersReducer').userListError);
     const userAddSuccess = useSelector(state => state.get('manageUsersReducer').userAddSuccess);
     const userAddError = useSelector(state => state.get('manageUsersReducer').userAddError);
+    const bulkUserDeleteMessages = useSelector(state => state.get('manageUsersReducer').bulkUserDeleteMessages);
 
     const handleRowAdd = newData => {
         return dispatch(addUser(newData));
@@ -28,6 +54,10 @@ export const ManageUsers = () => {
 
     const handleRowDelete = oldData => {
         return dispatch(deleteUserListItem(oldData));
+    };
+
+    const handleBulkRowDelete = data => {
+        return dispatch(bulkDeleteUserListItems(data));
     };
 
     React.useEffect(() => {
@@ -55,12 +85,22 @@ export const ManageUsers = () => {
                         <Alert {...userAddError} type="error" alertId="alert-error-user-add" />
                     </Grid>
                 )}
+                {!!bulkUserDeleteMessages && (
+                    <Grid item xs={12}>
+                        <Alert
+                            message={getBulkDeleteMessages(bulkUserDeleteMessages)}
+                            type="done"
+                            alertId="alert-success-user-bulk-delete"
+                        />
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <StandardCard noHeader>
                         <ManageUsersNewList
                             onRowAdd={handleRowAdd}
                             onRowUpdate={handleRowUpdate}
                             onRowDelete={handleRowDelete}
+                            onBulkRowDelete={handleBulkRowDelete}
                         />
                     </StandardCard>
                 </Grid>
