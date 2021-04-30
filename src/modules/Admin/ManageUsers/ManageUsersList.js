@@ -23,6 +23,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import moment from 'moment';
+import { BULK_DELETE_USER_SUCCESS } from 'config/general';
 
 export const useStyles = makeStyles(() => ({
     backdrop: {
@@ -363,8 +364,31 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             }}
             actions={[
                 {
+                    icon: 'delete',
                     tooltip: 'Delete selected users',
-                    onClick: (evt, data) => onBulkRowDelete(data),
+                    onClick: (evt, oldData) =>
+                        onBulkRowDelete(oldData).then(response => {
+                            const materialTable = materialTableRef.current;
+                            materialTable.setState(
+                                prevState => {
+                                    const newList = [...prevState.data];
+                                    for (const [userId, message] of Object.entries(response)) {
+                                        if (message === BULK_DELETE_USER_SUCCESS) {
+                                            newList.splice(
+                                                newList.findIndex(usr => String(usr.usr_id) === String(userId)),
+                                                1,
+                                            );
+                                        }
+                                    }
+                                    materialTable.dataManager.changeAllSelected(false);
+                                    materialTable.dataManager.setData(newList);
+                                    return {
+                                        ...materialTable.dataManager.getRenderState(),
+                                    };
+                                },
+                                () => materialTable.onSelectionChange(),
+                            );
+                        }),
                 },
             ]}
         />
