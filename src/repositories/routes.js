@@ -112,8 +112,8 @@ export const MANAGE_AUTHORS_LIST_API = params => {
 
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
 
-export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, authorIds: [] }) => {
-    if (!!authorId && !!authorIds && authorIds.length === 0) {
+export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, authorIds: undefined }) => {
+    if (!!authorId && !authorIds) {
         return {
             apiUrl: `fez-authors/${authorId}`,
         };
@@ -404,8 +404,8 @@ export const MANAGE_USERS_LIST_API = params => {
     };
 };
 
-export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: [] }) => {
-    if (!!userId && !!userIds && userIds.length === 0) {
+export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: undefined }) => {
+    if (!!userId && !userIds) {
         return {
             apiUrl: `fez-users/${userId}`,
         };

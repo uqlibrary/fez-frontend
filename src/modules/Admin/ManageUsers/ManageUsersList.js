@@ -401,8 +401,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                                     () => materialTable.onSelectionChange(),
                                 );
                             })
-                            .catch(e => {
-                                console.log('catch', e);
+                            .catch(() => {
                                 materialTable.setState(prevState => {
                                     materialTable.dataManager.changeAllSelected(false);
                                     materialTable.dataManager.setData([...prevState.data]);
