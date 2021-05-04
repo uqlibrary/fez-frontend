@@ -303,6 +303,18 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 overflowY: 'auto',
                 searchFieldAlignment: 'left',
                 selection: true,
+                selectionProps: rowData => ({
+                    inputProps: {
+                        id: `select-author-${rowData.tableData.id}`,
+                        'data-testid': `select-author-${rowData.tableData.id}`,
+                    },
+                }),
+                headerSelectionProps: {
+                    inputProps: {
+                        id: 'select-all-authors',
+                        'data-testid': 'select-all-authors',
+                    },
+                },
             }}
             actions={[
                 {
@@ -316,14 +328,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                     prevState => {
                                         const newList = [...prevState.data];
                                         for (const [authorId, message] of Object.entries(response)) {
-                                            if (message === BULK_DELETE_AUTHOR_SUCCESS) {
+                                            message === BULK_DELETE_AUTHOR_SUCCESS &&
                                                 newList.splice(
                                                     newList.findIndex(
                                                         author => String(author.aut_id) === String(authorId),
                                                     ),
                                                     1,
                                                 );
-                                            }
                                         }
                                         materialTable.dataManager.changeAllSelected(false);
                                         materialTable.dataManager.setData(newList);

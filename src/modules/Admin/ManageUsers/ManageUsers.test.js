@@ -381,9 +381,103 @@ describe('ManageUsers', () => {
             fireEvent.click(getByText('50'));
         });
 
-        await waitFor(() => getByTestId('users-list-row-22'));
+        await act(() => waitFor(() => getByTestId('users-list-row-22')));
 
         expect(getByTestId('users-list-row-0')).toBeInTheDocument();
         expect(getByTestId('users-list-row-22')).toBeInTheDocument();
+    });
+
+    it('should bulk delete all users', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.USER_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        usr_id: 2011,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2012,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2013,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost(`${repository.routes.USER_API().apiUrl}/delete-list`)
+            .replyOnce(200, {
+                data: {
+                    '2011': 'User deleted',
+                    '2012': 'User deleted',
+                    '2013': 'User deleted',
+                },
+            });
+
+        const { getByText, getByTestId, queryByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-users'));
+        fireEvent.click(getByTestId('users-delete-selected-users'));
+
+        await waitFor(() => getByTestId('alert-success-user-bulk-delete'));
+
+        expect(queryByTestId('users-list-row-0')).not.toBeInTheDocument();
+        expect(queryByTestId('users-list-row-2')).not.toBeInTheDocument();
+    });
+
+    it('should fail to bulk delete all users', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.USER_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        usr_id: 2011,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2012,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2013,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost('fez-users/delete-list')
+            .replyOnce(500);
+
+        const { getByText, getByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-users'));
+        fireEvent.click(getByTestId('users-delete-selected-users'));
+
+        await waitFor(() => {
+            expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+            expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+        });
     });
 });

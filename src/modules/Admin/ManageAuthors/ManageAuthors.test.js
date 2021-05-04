@@ -351,9 +351,103 @@ describe('ManageAuthors', () => {
             fireEvent.click(getByText('50'));
         });
 
-        await waitFor(() => getByTestId('authors-list-row-22'));
+        await act(() => waitFor(() => getByTestId('authors-list-row-22')));
 
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-22')).toBeInTheDocument();
+    });
+
+    it('should bulk delete all authors', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_id: 2011,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2012,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2013,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost(`${repository.routes.AUTHOR_API().apiUrl}/delete-list`)
+            .replyOnce(200, {
+                data: {
+                    '2011': 'Author deleted',
+                    '2012': 'Author deleted',
+                    '2013': 'Author deleted',
+                },
+            });
+
+        const { getByText, getByTestId, queryByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-authors'));
+        fireEvent.click(getByTestId('authors-delete-selected-authors'));
+
+        await waitFor(() => getByTestId('alert-success-author-bulk-delete'));
+
+        expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
+        expect(queryByTestId('authors-list-row-2')).not.toBeInTheDocument();
+    });
+
+    it('should fail to bulk delete all authors', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_id: 2011,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2012,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2013,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost(`${repository.routes.AUTHOR_API().apiUrl}/delete-list`)
+            .replyOnce(500);
+
+        const { getByText, getByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-authors'));
+        fireEvent.click(getByTestId('authors-delete-selected-authors'));
+
+        await waitFor(() => {
+            expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+            expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+        });
     });
 });

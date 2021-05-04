@@ -1,5 +1,6 @@
 import {
     deleteAuthorListItem,
+    bulkDeleteAuthorListItems,
     loadAuthorList,
     updateAuthorListItem,
     addAuthor,
@@ -119,6 +120,34 @@ describe('author list actions', () => {
             ];
 
             await expect(mockActionsStore.dispatch(deleteAuthorListItem({ aut_id: 1 }))).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('bulkDeleteAuthorListItems action', () => {
+        it('should dispatch correct number of actions on bulk author list item successfully deleted', async () => {
+            mockApi.onPost('fez-authors/delete-list').reply(200, { data: { 1: 'Author deleted' } });
+
+            const expectedActions = [actions.BULK_AUTHOR_ITEMS_DELETING, actions.BULK_AUTHOR_ITEMS_DELETE_SUCCESS];
+
+            await mockActionsStore.dispatch(bulkDeleteAuthorListItems([{ aut_id: 1 }]));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on bulk author list item delete failed', async () => {
+            mockApi.onPost('fez-authors/delete-list').reply(500);
+
+            const expectedActions = [
+                actions.BULK_AUTHOR_ITEMS_DELETING,
+                actions.APP_ALERT_SHOW,
+                actions.BULK_AUTHOR_ITEMS_DELETE_FAILED,
+            ];
+
+            await expect(mockActionsStore.dispatch(bulkDeleteAuthorListItems([{ aut_id: 1 }]))).rejects.toEqual({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',

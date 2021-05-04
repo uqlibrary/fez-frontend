@@ -361,6 +361,18 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 overflowY: 'auto',
                 searchFieldAlignment: 'left',
                 selection: true,
+                selectionProps: rowData => ({
+                    inputProps: {
+                        id: `select-author-${rowData.tableData.id}`,
+                        'data-testid': `select-author-${rowData.tableData.id}`,
+                    },
+                }),
+                headerSelectionProps: {
+                    inputProps: {
+                        id: 'select-all-users',
+                        'data-testid': 'select-all-users',
+                    },
+                },
             }}
             actions={[
                 {
@@ -374,12 +386,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                                     prevState => {
                                         const newList = [...prevState.data];
                                         for (const [userId, message] of Object.entries(response)) {
-                                            if (message === BULK_DELETE_USER_SUCCESS) {
+                                            message === BULK_DELETE_USER_SUCCESS &&
                                                 newList.splice(
                                                     newList.findIndex(usr => String(usr.usr_id) === String(userId)),
                                                     1,
                                                 );
-                                            }
                                         }
                                         materialTable.dataManager.changeAllSelected(false);
                                         materialTable.dataManager.setData(newList);
@@ -390,7 +401,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                                     () => materialTable.onSelectionChange(),
                                 );
                             })
-                            .catch(() => {
+                            .catch(e => {
+                                console.log('catch', e);
                                 materialTable.setState(prevState => {
                                     materialTable.dataManager.changeAllSelected(false);
                                     materialTable.dataManager.setData([...prevState.data]);
