@@ -160,7 +160,7 @@ export default {
             alert: {
                 type: 'warning',
                 title: 'WARNING',
-                message: 'You are about to remove this publication from your eSpace profile.',
+                message: 'You are about to remove this work from your eSpace profile.',
             },
         },
         fixPublicationForm: {
