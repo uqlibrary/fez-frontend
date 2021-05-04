@@ -302,6 +302,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 padding: 'dense',
                 overflowY: 'auto',
                 searchFieldAlignment: 'left',
+                selection: true,
             }}
             actions={[
                 {
