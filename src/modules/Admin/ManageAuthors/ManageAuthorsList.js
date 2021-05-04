@@ -21,6 +21,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 
 import makeStyles from '@material-ui/styles/makeStyles';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { BULK_DELETE_AUTHOR_SUCCESS } from 'config/general';
 
 export const useStyles = makeStyles(() => ({
     backdrop: {
@@ -86,7 +87,7 @@ export const getColumns = () => {
     ];
 };
 
-export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
+export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate }) => {
     const dispatch = useDispatch();
     const classes = useStyles();
     const materialTableRef = React.createRef();
@@ -98,7 +99,7 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
     const {
         loadingText,
         form: {
-            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+            locale: { addButtonTooltip, bulkDeleteButtonTooltip, editButtonTooltip, deleteButtonTooltip },
         },
     } = locale.components.manageAuthors;
 
@@ -302,11 +303,54 @@ export const ManageAuthorsList = ({ onRowAdd, onRowDelete, onRowUpdate }) => {
                 overflowY: 'auto',
                 searchFieldAlignment: 'left',
             }}
+            actions={[
+                {
+                    icon: 'delete',
+                    tooltip: bulkDeleteButtonTooltip,
+                    onClick: (evt, oldData) => {
+                        const materialTable = materialTableRef.current;
+                        onBulkRowDelete(oldData)
+                            .then(response => {
+                                materialTable.setState(
+                                    prevState => {
+                                        const newList = [...prevState.data];
+                                        for (const [authorId, message] of Object.entries(response)) {
+                                            if (message === BULK_DELETE_AUTHOR_SUCCESS) {
+                                                newList.splice(
+                                                    newList.findIndex(
+                                                        author => String(author.aut_id) === String(authorId),
+                                                    ),
+                                                    1,
+                                                );
+                                            }
+                                        }
+                                        materialTable.dataManager.changeAllSelected(false);
+                                        materialTable.dataManager.setData(newList);
+                                        return {
+                                            ...materialTable.dataManager.getRenderState(),
+                                        };
+                                    },
+                                    () => materialTable.onSelectionChange(),
+                                );
+                            })
+                            .catch(() => {
+                                materialTable.setState(prevState => {
+                                    materialTable.dataManager.changeAllSelected(false);
+                                    materialTable.dataManager.setData([...prevState.data]);
+                                    return {
+                                        ...materialTable.dataManager.getRenderState(),
+                                    };
+                                });
+                            });
+                    },
+                },
+            ]}
         />
     );
 };
 
 ManageAuthorsList.propTypes = {
+    onBulkRowDelete: PropTypes.func,
     onRowAdd: PropTypes.func,
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,

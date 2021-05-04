@@ -155,7 +155,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     const {
         loadingText,
         form: {
-            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+            locale: { addButtonTooltip, bulkDeleteButtonTooltip, editButtonTooltip, deleteButtonTooltip },
         },
     } = locale.components.manageUsers;
 
@@ -365,7 +365,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             actions={[
                 {
                     icon: 'delete',
-                    tooltip: 'Delete selected users',
+                    tooltip: bulkDeleteButtonTooltip,
                     onClick: (evt, oldData) => {
                         const materialTable = materialTableRef.current;
                         onBulkRowDelete(oldData)

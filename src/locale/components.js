@@ -3345,6 +3345,7 @@ export default {
                 },
                 locale: {
                     addButtonTooltip: 'Add new author',
+                    bulkDeleteButtonTooltip: 'Delete selected authors',
                     editButtonTooltip: 'Edit this author',
                     deleteButtonTooltip: 'Delete this author',
                     notesButtonTooltip: 'View notes for this author',
@@ -3427,8 +3428,9 @@ export default {
                 },
                 locale: {
                     addButtonTooltip: 'Add new user',
-                    editButtonTooltip: 'Edit this user',
+                    bulkDeleteButtonTooltip: 'Delete selected users',
                     deleteButtonTooltip: 'Delete this user',
+                    editButtonTooltip: 'Edit this user',
                 },
             },
             row: {
