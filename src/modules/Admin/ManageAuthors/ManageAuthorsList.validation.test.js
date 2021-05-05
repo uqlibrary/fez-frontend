@@ -330,7 +330,7 @@ describe('ManageAuthorsList', () => {
             onBulkRowDelete: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
-        await act(() => waitForElementToBeRemoved(() => getByText('No records to display')));
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
 
         const listItem0 = getByTestId('authors-list-row-0');
         expect(listItem0).toBeInTheDocument();
@@ -339,7 +339,10 @@ describe('ManageAuthorsList', () => {
         expect(listItem1).toBeInTheDocument();
 
         fireEvent.click(getByTestId('select-all-authors'));
-        fireEvent.click(getByTestId('authors-delete-selected-authors'));
+        act(() => {
+            fireEvent.click(getByTestId('authors-delete-selected-authors'));
+        });
+        fireEvent.click(getByTestId('confirm-action'));
 
         await waitFor(() => getByTestId('authors-list-row-0'));
 

@@ -455,6 +455,13 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             '1000000293': 'User deleted',
             '9999999999': 'User not found'
         }
+    })
+    .onPost('fez-authors/delete-list')
+    .reply(200, { 
+        data: {
+            '410': 'Author deleted',
+            '9999999999': 'Author not found'
+        }
     });
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });

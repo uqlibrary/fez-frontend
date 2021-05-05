@@ -382,7 +382,7 @@ describe('ManageAuthors', () => {
                 pageSize: 20,
                 current_page: 1,
             })
-            .onPost(`${repository.routes.AUTHOR_API().apiUrl}/delete-list`)
+            .onPost('fez-authors/delete-list')
             .replyOnce(200, {
                 data: {
                     '2011': 'Author deleted',
@@ -400,11 +400,14 @@ describe('ManageAuthors', () => {
 
         fireEvent.click(getByTestId('select-all-authors'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
+        fireEvent.click(getByTestId('confirm-action'));
 
-        await waitFor(() => getByTestId('alert-success-author-bulk-delete'));
-
-        expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
-        expect(queryByTestId('authors-list-row-2')).not.toBeInTheDocument();
+        await act(() =>
+            waitFor(() => {
+                expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
+                expect(queryByTestId('authors-list-row-2')).not.toBeInTheDocument();
+            }),
+        );
     });
 
     it('should fail to bulk delete all authors', async () => {
@@ -444,6 +447,7 @@ describe('ManageAuthors', () => {
 
         fireEvent.click(getByTestId('select-all-authors'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
+        fireEvent.click(getByTestId('confirm-action'));
 
         await waitFor(() => {
             expect(getByTestId('authors-list-row-0')).toBeInTheDocument();

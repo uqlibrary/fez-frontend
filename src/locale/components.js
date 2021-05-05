@@ -3343,6 +3343,12 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected authors',
+                    confirmationMessage: 'Are you sure you want to delete selected authors?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     bulkDeleteButtonTooltip: 'Delete selected authors',
