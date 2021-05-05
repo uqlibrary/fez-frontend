@@ -196,7 +196,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         const rowsSelected = materialTable.dataManager.data.filter(row => !!row.tableData.checked);
         onBulkRowDelete(rowsSelected)
             .then(response => {
-                console.log(response);
                 materialTable.setState(
                     prevState => {
                         const newList = [...prevState.data];

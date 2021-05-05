@@ -430,11 +430,14 @@ describe('ManageUsers', () => {
 
         fireEvent.click(getByTestId('select-all-users'));
         fireEvent.click(getByTestId('users-delete-selected-users'));
+        fireEvent.click(getByTestId('confirm-action'));
 
-        await waitFor(() => getByTestId('alert-success-user-bulk-delete'));
-
-        expect(queryByTestId('users-list-row-0')).not.toBeInTheDocument();
-        expect(queryByTestId('users-list-row-2')).not.toBeInTheDocument();
+        await act(() =>
+            waitFor(() => {
+                expect(queryByTestId('users-list-row-0')).not.toBeInTheDocument();
+                expect(queryByTestId('users-list-row-2')).not.toBeInTheDocument();
+            }),
+        );
     });
 
     it('should fail to bulk delete all users', async () => {
@@ -474,10 +477,12 @@ describe('ManageUsers', () => {
 
         fireEvent.click(getByTestId('select-all-users'));
         fireEvent.click(getByTestId('users-delete-selected-users'));
+        fireEvent.click(getByTestId('confirm-action'));
 
         await waitFor(() => {
             expect(getByTestId('users-list-row-0')).toBeInTheDocument();
             expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+            expect(getByText('Add new user')).toBeInTheDocument();
         });
     });
 });
