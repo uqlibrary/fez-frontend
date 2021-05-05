@@ -20,11 +20,7 @@ import pagesLocale from 'locale/pages';
 import EraForCodes from './partials/EraForCodes';
 const txt = pagesLocale.pages.journal.view;
 
-export const nodeJoin = (arr, glue) =>
-    arr
-        .slice(1)
-        .reduce((op, item) => op.concat([glue, item]), [arr[0]])
-        .filter(Boolean);
+export const nodeJoin = (arr, glue) => arr.reduce((op, item) => [op, glue, item]);
 
 export const renderBoolean = isTrue => (isTrue ? txt.booleanTrue : txt.booleanFalse);
 
@@ -100,28 +96,36 @@ export const renderData = detail => {
             );
 
         case txt.entries.ulrTitleLink.id:
-            return nodeJoin(
-                detail.data.map((ulrichs, index) =>
-                    renderExtLink(
-                        `journal-ulrichs-${index}-link`,
-                        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichs.ulr_title_id),
-                        txt.links.ulrTitleLink.title,
-                        ulrichs.ulr_title,
-                    ),
-                ),
-                ', ',
+            return (
+                <React.Fragment>
+                    {nodeJoin(
+                        detail.data.map((ulrichs, index) =>
+                            renderExtLink(
+                                `journal-ulrichs-${index}-link`,
+                                globalLocale.global.ulrichsLink.externalUrl.replace('[id]', ulrichs.ulr_title_id),
+                                txt.links.ulrTitleLink.title,
+                                ulrichs.ulr_title,
+                            ),
+                        ),
+                        ', ',
+                    )}
+                </React.Fragment>
             );
 
         case txt.entries.srmJournalLink.id:
-            return nodeJoin(
-                detail.data.map((sherpa, index) =>
-                    renderExtLink(
-                        `journal-sherpa-${index}-link`,
-                        sherpa.srm_journal_link,
-                        txt.links.srmJournalLink.title,
-                        sherpa.srm_issn,
-                    ),
-                ),
+            return (
+                <React.Fragment>
+                    {nodeJoin(
+                        detail.data.map((sherpa, index) =>
+                            renderExtLink(
+                                `journal-sherpa-${index}-link`,
+                                sherpa.srm_journal_link,
+                                txt.links.srmJournalLink.title,
+                                sherpa.srm_issn,
+                            ),
+                        ),
+                    )}
+                </React.Fragment>
             );
 
         case txt.entries.wosCategoryAhci.id:
