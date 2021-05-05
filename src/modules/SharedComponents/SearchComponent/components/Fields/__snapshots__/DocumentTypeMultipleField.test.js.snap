@@ -56,7 +56,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     Work type
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
-    aria-label="Select multiple publications types to search on"
+    aria-label="Select work types to search on"
     disabled={false}
     fullWidth={true}
     id="document-type-selector"
@@ -69,7 +69,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       disabled={true}
       key="0"
     >
-      Select document types
+      Select work types
     </WithStyles(ForwardRef(MenuItem))>
     <WithStyles(ForwardRef(MenuItem))
       checked={false}
@@ -491,7 +491,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     Work type
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
-    aria-label="Select multiple publications types to search on"
+    aria-label="Select work types to search on"
     disabled={true}
     fullWidth={true}
     id="document-type-selector"
@@ -504,7 +504,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       disabled={true}
       key="0"
     >
-      Select document types
+      Select work types
     </WithStyles(ForwardRef(MenuItem))>
     <WithStyles(ForwardRef(MenuItem))
       checked={false}
@@ -926,7 +926,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
     Work type
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
-    aria-label="Select multiple publications types to search on"
+    aria-label="Select work types to search on"
     disabled={false}
     fullWidth={true}
     id="document-type-selector"
@@ -944,7 +944,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
       disabled={true}
       key="0"
     >
-      Select document types
+      Select work types
     </WithStyles(ForwardRef(MenuItem))>
     <WithStyles(ForwardRef(MenuItem))
       checked={false}

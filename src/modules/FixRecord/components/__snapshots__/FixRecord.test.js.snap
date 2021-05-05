@@ -1479,7 +1479,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
           locale={
             Object {
               "cancelButtonLabel": "Go to my dashboard",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -2680,7 +2680,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           locale={
             Object {
               "cancelButtonLabel": "Go to my dashboard",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <Alert
                   allowDismiss={false}
@@ -3386,7 +3386,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           locale={
             Object {
               "cancelButtonLabel": "Go to my dashboard",
-              "confirmButtonLabel": "Go to my research",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -4078,7 +4078,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               customType={null}
               disableAlertClick={false}
               dismissTitle="Click to dismiss this alert"
-              message="You are about to remove this publication from your eSpace profile."
+              message="You are about to remove this work from your eSpace profile."
               showLoader={false}
               title="WARNING"
               type="warning"
@@ -4088,7 +4088,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               locale={
                 Object {
                   "cancelButtonLabel": "Go to my dashboard",
-                  "confirmButtonLabel": "Go to my research",
+                  "confirmButtonLabel": "Go to my works",
                   "confirmationMessage": "You have unclaimed this work successfully",
                   "confirmationTitle": "Unclaim a work",
                 }

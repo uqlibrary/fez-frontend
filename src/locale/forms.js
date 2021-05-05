@@ -10,7 +10,7 @@ export default {
             claimingInformation: {
                 title: 'You are claiming to be an author for the following work:',
                 // help: {
-                //     title: 'Claiming a publication',
+                //     title: 'Claiming a  work',
                 //     text: 'Enter the text that will help people here',
                 //     buttonLabel: 'CLOSE'
                 // }
@@ -83,7 +83,7 @@ export default {
                 // }
             },
             cancelWorkflowConfirmation: {
-                confirmationTitle: 'Cancel claiming a publication',
+                confirmationTitle: 'Cancel claiming a work',
                 confirmationMessage: 'Are you sure you want to cancel claiming this work?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes',
@@ -101,9 +101,9 @@ export default {
                     message: 'Retry via "Fix work" screen or contact eSpace administrators.',
                     type: 'warning',
                 },
-                cancelButtonLabel: 'Claim more publications',
+                cancelButtonLabel: 'Claim more works',
                 addRecordButtonLabel: 'Add another missing work',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
                 alternateActionButtonLabel: 'Fix work',
             },
             validationAlert: {
@@ -155,12 +155,12 @@ export default {
                 confirmationTitle: 'Unclaim a work',
                 confirmationMessage: 'You have unclaimed this work successfully',
                 cancelButtonLabel: 'Go to my dashboard',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
             },
             alert: {
                 type: 'warning',
                 title: 'WARNING',
-                message: 'You are about to remove this publication from your eSpace profile.',
+                message: 'You are about to remove this work from your eSpace profile.',
             },
         },
         fixPublicationForm: {
@@ -229,7 +229,7 @@ export default {
                     type: 'info',
                 },
                 cancelButtonLabel: 'Go to my dashboard',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
             },
             validationAlert: {
                 type: 'warning',

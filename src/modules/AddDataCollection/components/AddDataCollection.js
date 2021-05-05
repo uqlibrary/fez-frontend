@@ -319,6 +319,7 @@ export default class AddDataCollection extends Component {
                                         name="authors"
                                         contributorEditorId="rek-author"
                                         showRoleInput
+                                        showIdentifierLookup
                                         locale={txt.information.creator.field}
                                         required
                                         disabled={this.props.submitting}

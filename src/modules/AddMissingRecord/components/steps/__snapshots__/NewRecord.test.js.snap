@@ -9,7 +9,7 @@ exports[`Add new record should render alert about file uploading or issue error 
       Object {
         "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
-        "confirmButtonLabel": "Go to my research",
+        "confirmButtonLabel": "Go to my works",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={3}
@@ -86,7 +86,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
       Object {
         "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
-        "confirmButtonLabel": "Go to my research",
+        "confirmButtonLabel": "Go to my works",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={3}
@@ -148,7 +148,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
     Object {
       "alternateActionButtonLabel": "Fix work",
       "cancelButtonLabel": "Add another missing work",
-      "confirmButtonLabel": "Go to my research",
+      "confirmButtonLabel": "Go to my works",
       "confirmationMessage": <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={3}
@@ -197,7 +197,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       Object {
         "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
-        "confirmButtonLabel": "Go to my research",
+        "confirmButtonLabel": "Go to my works",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={3}
@@ -616,7 +616,7 @@ exports[`Add new record should render the confirm dialog without an alert for a 
     Object {
       "alternateActionButtonLabel": "Fix work",
       "cancelButtonLabel": "Add another missing work",
-      "confirmButtonLabel": "Go to my research",
+      "confirmButtonLabel": "Go to my works",
       "confirmationMessage": <WithStyles(ForwardRef(Grid))
         container={true}
         spacing={3}
@@ -662,7 +662,7 @@ exports[`Add new record should render thesis as alert if HDR student 1`] = `
       Object {
         "alternateActionButtonLabel": "Fix work",
         "cancelButtonLabel": "Add another missing work",
-        "confirmButtonLabel": "Go to my research",
+        "confirmButtonLabel": "Go to my works",
         "confirmationMessage": <WithStyles(ForwardRef(Grid))
           container={true}
           spacing={3}
