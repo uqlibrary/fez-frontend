@@ -35,7 +35,7 @@ describe('ManageAuthorsList', () => {
         jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
     });
 
-    it('should copy author id to clipboard', async () => {
+    it.only('should copy author id to clipboard', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [
                 {
@@ -97,7 +97,7 @@ describe('ManageAuthorsList', () => {
         waitFor(() => getByTestId('copied-text-snackbar'));
     });
 
-    it('should render empty list', async () => {
+    it.only('should render empty list', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [],
             total: 0,
@@ -108,7 +108,7 @@ describe('ManageAuthorsList', () => {
         expect(getByText('No records to display')).toBeInTheDocument();
     });
 
-    it('should render rows for authors', async () => {
+    it.only('should render rows for authors', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [
                 {
@@ -157,7 +157,7 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
     });
 
-    it('should validate inputs and render added info after adding', async () => {
+    it.only('should validate inputs and render added info after adding', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -198,7 +198,7 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
     });
 
-    it('should render previous list on unsuccessful add operation', async () => {
+    it.only('should render previous list on unsuccessful add operation', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [],
             total: 0,
@@ -225,7 +225,7 @@ describe('ManageAuthorsList', () => {
         expect(queryByTestId('aut-display-name-0')).not.toBeInTheDocument();
     });
 
-    it('should validate inputs and render updated info after editing', async () => {
+    it.only('should validate inputs and render updated info after editing', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -316,7 +316,7 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
     });
 
-    it('should render previous list on unsuccessful edit operation', async () => {
+    it.only('should render previous list on unsuccessful edit operation', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -389,7 +389,7 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtest');
     });
 
-    it('should delete an author item', async () => {
+    it.only('should delete an author item', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -495,7 +495,7 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqvdesai');
     });
 
-    it('should render same list after unsuccessful delete operation', async () => {
+    it.only('should render same list after unsuccessful delete operation', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -590,18 +590,16 @@ describe('ManageAuthorsList', () => {
         const listItem1 = getByTestId('authors-list-row-1');
         expect(listItem1).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
-        });
+        fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
+        fireEvent.click(getByTestId('confirm-action'));
 
-        act(() => {
-            fireEvent.click(getByTestId('confirm-action'));
-        });
-        await waitFor(() => getByTestId('authors-list-row-0'));
-
-        expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
-        expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
-        expect(getByTestId('aut-display-name-1')).toHaveAttribute('value', 'Vishal, Desai');
-        expect(getByTestId('aut-org-username-1')).toHaveAttribute('value', 'uqvdesai');
+        await act(() =>
+            waitFor(() => getByTestId('authors-list-row-0')).then(() => {
+                expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
+                expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
+                expect(getByTestId('aut-display-name-1')).toHaveAttribute('value', 'Vishal, Desai');
+                expect(getByTestId('aut-org-username-1')).toHaveAttribute('value', 'uqvdesai');
+            }),
+        );
     });
 });

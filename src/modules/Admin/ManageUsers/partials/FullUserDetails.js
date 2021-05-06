@@ -50,7 +50,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     const handleCancel = () => onEditingCanceled(mode, rowData);
 
     const handleKeyPress = e => {
-        if (e.key === 'Escape') onEditingCanceled(mode, rowData);
+        e.key === 'Escape' && onEditingCanceled(mode, rowData);
     };
 
     const handleCancelDelete = () => {
@@ -77,7 +77,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     }, [data]);
 
     return (
-        <TableRow onKeyDown={handleKeyPress}>
+        <TableRow onKeyDown={handleKeyPress} id="user-edit-row" data-testid="user-edit-row">
             <TableCell colSpan={9}>
                 <ConfirmationBox
                     confirmationBoxId="users-delete-this-user-confirmation"
