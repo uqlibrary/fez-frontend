@@ -50,6 +50,10 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
 
     const handleCancel = () => onEditingCanceled(mode, rowData);
 
+    const handleKeyPress = e => {
+        if (e.key === 'Escape') onEditingCanceled(mode, rowData);
+    };
+
     const handleCancelDelete = () => {
         handleCancel();
         hideConfirmation();
@@ -73,8 +77,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     }, [data]);
 
     return (
-        <TableRow>
-            <TableCell colSpan={3}>
+        <TableRow onKeyDown={handleKeyPress}>
+            <TableCell colSpan={4}>
                 <ConfirmationBox
                     confirmationBoxId="authors-delete-this-author-confirmation"
                     onAction={handleDelete}
