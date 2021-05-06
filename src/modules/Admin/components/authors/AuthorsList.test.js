@@ -195,6 +195,14 @@ describe('AuthorsList', () => {
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
                 },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
+                },
             ],
         });
         const { getByTestId, getByText } = setup({
@@ -250,6 +258,14 @@ describe('AuthorsList', () => {
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
                 },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
+                },
             ],
         });
         const { getByTestId, getByText } = setup({
@@ -304,6 +320,14 @@ describe('AuthorsList', () => {
                     aut_ref_num: '123456',
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
+                },
+                {
+                    id: 112,
+                    value: 'uqtesting - 123',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
                 },
             ],
         });
@@ -444,6 +468,14 @@ describe('AuthorsList', () => {
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
                 },
+                {
+                    id: 112,
+                    value: 'test 1',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
+                },
             ],
         });
         const { getByTestId, getByText } = setup({
@@ -486,6 +518,14 @@ describe('AuthorsList', () => {
                     aut_org_username: 'uqtest',
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
+                },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
                 },
             ],
         });
@@ -553,6 +593,14 @@ describe('AuthorsList', () => {
                     aut_org_username: 'uqtest',
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
+                },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
                 },
             ],
         });

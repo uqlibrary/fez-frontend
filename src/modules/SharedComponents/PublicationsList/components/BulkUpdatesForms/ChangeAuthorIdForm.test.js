@@ -73,15 +73,13 @@ describe('ChangeAuthorIdForm', () => {
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        waitFor(() => getByTestId('search-author-by-options'));
+        await act(() => waitFor(() => getByTestId('search-author-by-options')));
         fireEvent.click(getByText('Author name'));
 
         expect(getByTestId('search-by-rek-author-helper-text')).toBeInTheDocument();
         expect(getByTestId('search-by-rek-author-helper-text')).toHaveTextContent('This field is required');
 
-        act(() => {
-            fireEvent.change(getByTestId('search-by-rek-author-input'), { target: { value: 'Test' } });
-        });
+        fireEvent.change(getByTestId('search-by-rek-author-input'), { target: { value: 'Test' } });
 
         // assert next state of the form
         expect(queryByTestId('search-by-rek-author-helper-text')).not.toBeInTheDocument();
@@ -90,23 +88,19 @@ describe('ChangeAuthorIdForm', () => {
             '1 of the 3 works you have selected do not match and will not be updated',
         );
 
-        act(() => {
-            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
+        fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
+        await waitFor(() => getByTestId('rek-author-id-options')).then(() => {
+            fireEvent.click(getByText('Testing'));
         });
-        await waitFor(() => getByTestId('rek-author-id-options'));
-        fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
         expect(queryByTestId('rek-author-id-helper-text')).not.toBeInTheDocument();
         expect(getByTestId('change-author-id-submit')).not.toHaveAttribute('disabled');
 
         // submit form
-        act(() => {
-            fireEvent.click(getByTestId('change-author-id-submit'));
-        });
+        fireEvent.click(getByTestId('change-author-id-submit'));
 
-        await waitFor(() => getByTestId('alert-done-change-author-id'));
-        expect(getByTestId('alert-done-change-author-id')).toBeInTheDocument();
+        await waitFor(() => expect(getByTestId('alert-done-change-author-id')).toBeInTheDocument());
     });
 
     it('should correctly search by author name, submit form and display error', async () => {
@@ -125,22 +119,18 @@ describe('ChangeAuthorIdForm', () => {
         expect(getByTestId('change-author-id-submit')).toHaveAttribute('disabled');
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        waitFor(() => getByTestId('search-author-by-options'));
+        await act(() => waitFor(() => getByTestId('search-author-by-options')));
         fireEvent.click(getByText('Author name'));
 
         expect(getByTestId('search-by-rek-author-helper-text')).toBeInTheDocument();
         expect(getByTestId('search-by-rek-author-helper-text')).toHaveTextContent('This field is required');
 
-        act(() => {
-            fireEvent.change(getByTestId('search-by-rek-author-input'), { target: { value: 'Test' } });
-        });
+        fireEvent.change(getByTestId('search-by-rek-author-input'), { target: { value: 'Test' } });
 
         // assert next state of the form
         expect(queryByTestId('search-by-rek-author-helper-text')).not.toBeInTheDocument();
 
-        act(() => {
-            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
-        });
+        fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         await waitFor(() => getByTestId('rek-author-id-options'));
         fireEvent.click(getByText('Testing'));
 
@@ -149,12 +139,9 @@ describe('ChangeAuthorIdForm', () => {
         expect(getByTestId('change-author-id-submit')).not.toHaveAttribute('disabled');
 
         // submit form
-        act(() => {
-            fireEvent.click(getByTestId('change-author-id-submit'));
-        });
+        fireEvent.click(getByTestId('change-author-id-submit'));
 
-        await waitFor(() => getByTestId('alert-error-change-author-id'));
-        expect(getByTestId('alert-error-change-author-id')).toBeInTheDocument();
+        await waitFor(() => expect(getByTestId('alert-error-change-author-id')).toBeInTheDocument());
     });
 
     it('should correctly search by author id, submit form and display success info', async () => {
@@ -177,24 +164,20 @@ describe('ChangeAuthorIdForm', () => {
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        waitFor(() => getByTestId('search-author-by-options'));
+        await act(() => waitFor(() => getByTestId('search-author-by-options')));
         fireEvent.click(getByText('Author ID'));
 
         expect(getByTestId('search-by-rek-author-id-helper-text')).toBeInTheDocument();
         expect(getByTestId('search-by-rek-author-id-helper-text')).toHaveTextContent('This field is required');
 
-        act(() => {
-            fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
-        });
+        fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
         await waitFor(() => getByTestId('search-by-rek-author-id-options'));
         fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
         expect(queryByTestId('search-by-rek-author-id-helper-text')).not.toBeInTheDocument();
 
-        act(() => {
-            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
-        });
+        fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         await waitFor(() => getByTestId('rek-author-id-options'));
         fireEvent.click(getByText('Testing'));
 
@@ -203,12 +186,9 @@ describe('ChangeAuthorIdForm', () => {
         expect(getByTestId('change-author-id-submit')).not.toHaveAttribute('disabled');
 
         // submit form
-        act(() => {
-            fireEvent.click(getByTestId('change-author-id-submit'));
-        });
+        fireEvent.click(getByTestId('change-author-id-submit'));
 
-        await waitFor(() => getByTestId('alert-done-change-author-id'));
-        expect(getByTestId('alert-done-change-author-id')).toBeInTheDocument();
+        await waitFor(() => expect(getByTestId('alert-done-change-author-id')).toBeInTheDocument());
     });
 
     it('should correctly search by author id, submit form and display error', async () => {
@@ -231,24 +211,20 @@ describe('ChangeAuthorIdForm', () => {
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        waitFor(() => getByTestId('search-author-by-options'));
+        await act(() => waitFor(() => getByTestId('search-author-by-options')));
         fireEvent.click(getByText('Author ID'));
 
         expect(getByTestId('search-by-rek-author-id-helper-text')).toBeInTheDocument();
         expect(getByTestId('search-by-rek-author-id-helper-text')).toHaveTextContent('This field is required');
 
-        act(() => {
-            fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
-        });
+        fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
         await waitFor(() => getByTestId('search-by-rek-author-id-options'));
         fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
         expect(queryByTestId('search-by-rek-author-id-helper-text')).not.toBeInTheDocument();
 
-        act(() => {
-            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
-        });
+        fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         await waitFor(() => getByTestId('rek-author-id-options'));
         fireEvent.click(getByText('Testing'));
 
@@ -257,12 +233,9 @@ describe('ChangeAuthorIdForm', () => {
         expect(getByTestId('change-author-id-submit')).not.toHaveAttribute('disabled');
 
         // submit form
-        act(() => {
-            fireEvent.click(getByTestId('change-author-id-submit'));
-        });
+        fireEvent.click(getByTestId('change-author-id-submit'));
 
-        await waitFor(() => getByTestId('alert-error-change-author-id'));
-        expect(getByTestId('alert-error-change-author-id')).toBeInTheDocument();
+        await waitFor(() => expect(getByTestId('alert-error-change-author-id')).toBeInTheDocument());
     });
 
     it('should correctly clear author ID field', async () => {
@@ -272,15 +245,13 @@ describe('ChangeAuthorIdForm', () => {
         const { getByTestId, getByText, getAllByTitle } = setup();
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
-        waitFor(() => getByTestId('search-author-by-options'));
+        await act(() => waitFor(() => getByTestId('search-author-by-options')));
         fireEvent.click(getByText('Author ID'));
 
         expect(getByTestId('search-by-rek-author-id-helper-text')).toBeInTheDocument();
         expect(getByTestId('search-by-rek-author-id-helper-text')).toHaveTextContent('This field is required');
 
-        act(() => {
-            fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
-        });
+        fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
         await waitFor(() => getByTestId('search-by-rek-author-id-options'));
 
         fireEvent.click(getByText('Testing'));
