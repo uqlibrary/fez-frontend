@@ -49,6 +49,10 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
     const handleCancel = () => onEditingCanceled(mode, rowData);
 
+    const handleKeyPress = e => {
+        if (e.key === 'Escape') onEditingCanceled(mode, rowData);
+    };
+
     const handleCancelDelete = () => {
         handleCancel();
         hideConfirmation();
@@ -73,7 +77,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     }, [data]);
 
     return (
-        <TableRow>
+        <TableRow onKeyDown={handleKeyPress}>
             <TableCell colSpan={9}>
                 <ConfirmationBox
                     confirmationBoxId="users-delete-this-user-confirmation"

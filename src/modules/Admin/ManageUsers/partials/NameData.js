@@ -26,6 +26,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     data={rowData.usr_full_name}
                     name="usr_full_name"
                     required
+                    autoFocus
                     {...((!!error.usr_full_name && error.usr_full_name) || {})}
                     {...fullName}
                     {...props}
