@@ -451,7 +451,22 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
     .reply(200, { ...mockData.myEditorialAppointmentItem })
     .onPost(routes.MASTER_JOURNAL_LIST_INGEST_API().apiUrl)
-    .reply(200, { data: {} });
+    .reply(200, { data: {} })
+    .onPost('fez-users/delete-list')
+    .reply(200, { 
+        data: {
+            '1000000293': 'User deleted',
+            '9999999999': 'User not found'
+        }
+    })
+    // .reply(500)
+    .onPost('fez-authors/delete-list')
+    .reply(200, { 
+        data: {
+            '410': 'Author deleted',
+            '9999999999': 'Author not found'
+        }
+    });
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
 

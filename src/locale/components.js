@@ -3355,8 +3355,15 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected authors',
+                    confirmationMessage: 'Are you sure you want to delete selected authors?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
+                    bulkDeleteButtonTooltip: 'Delete selected authors',
                     editButtonTooltip: 'Edit this author',
                     deleteButtonTooltip: 'Delete this author',
                     notesButtonTooltip: 'View notes for this author',
@@ -3418,6 +3425,7 @@ export default {
                     },
                     isSuperAdmin: {
                         label: 'Super administrator?',
+                        helperText: 'Only super admin users can update this flag',
                     },
                 },
                 validation: {
@@ -3436,10 +3444,17 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected users',
+                    confirmationMessage: 'Are you sure you want to delete selected users?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new user',
-                    editButtonTooltip: 'Edit this user',
+                    bulkDeleteButtonTooltip: 'Delete selected users',
                     deleteButtonTooltip: 'Delete this user',
+                    editButtonTooltip: 'Edit this user',
                 },
             },
             row: {

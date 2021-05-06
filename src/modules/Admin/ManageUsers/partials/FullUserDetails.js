@@ -74,7 +74,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
     return (
         <TableRow>
-            <TableCell colSpan={7}>
+            <TableCell colSpan={9}>
                 <ConfirmationBox
                     confirmationBoxId="users-delete-this-user-confirmation"
                     onAction={handleDelete}

@@ -1,4 +1,4 @@
-import { deleteUserListItem, loadUserList, updateUserListItem, addUser } from './manageUsers';
+import { deleteUserListItem, loadUserList, updateUserListItem, addUser, bulkDeleteUserListItems } from './manageUsers';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data/testing/usersList';
@@ -131,6 +131,34 @@ describe('user list actions', () => {
             ];
 
             await expect(mockActionsStore.dispatch(deleteUserListItem({ usr_id: 1 }))).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('bulkDeleteUserListItems action', () => {
+        it('should dispatch correct number of actions on bulk user list items successfully deleted', async () => {
+            mockApi.onPost('fez-users/delete-list').reply(200, { data: { 1: 'User deleted' } });
+
+            const expectedActions = [actions.BULK_USER_ITEMS_DELETING, actions.BULK_USER_ITEMS_DELETE_SUCCESS];
+
+            await mockActionsStore.dispatch(bulkDeleteUserListItems([{ usr_id: 1 }]));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on bulk user list item delete failed', async () => {
+            mockApi.onPost('fez-users/delete-list').reply(500);
+
+            const expectedActions = [
+                actions.BULK_USER_ITEMS_DELETING,
+                actions.APP_ALERT_SHOW,
+                actions.BULK_USER_ITEMS_DELETE_FAILED,
+            ];
+
+            await expect(mockActionsStore.dispatch(bulkDeleteUserListItems([{ usr_id: 1 }]))).rejects.toEqual({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',

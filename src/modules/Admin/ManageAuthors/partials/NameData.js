@@ -22,6 +22,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     authorFieldDataId="aut-display-name"
                     data={rowData.aut_display_name}
                     name="aut_display_name"
+                    autoFocus
                     {...displayName}
                     {...props}
                 />
