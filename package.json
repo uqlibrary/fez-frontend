@@ -248,7 +248,7 @@
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
     },
     "engines": {
-        "npm": "^7",
+        "npm": "^6",
         "node": "^14"
     },
     "babel": {

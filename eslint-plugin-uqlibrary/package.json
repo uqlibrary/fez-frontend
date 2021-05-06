@@ -3,12 +3,8 @@
   "version": "0.0.1",
   "main": "index.js",
   "bundleDependencies": [],
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "jest": "^25.1.0"
-  },
   "engines": {
-    "npm": "^7",
+    "npm": "^6",
     "node": "^14"
   },
   "scripts": {
