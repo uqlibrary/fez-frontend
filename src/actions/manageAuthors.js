@@ -141,7 +141,7 @@ export function addAuthor(data) {
     };
 }
 
-export function checkForExistingAuthor(search, searchField, id) {
+export function checkForExistingAuthor(search, searchField, id, validation) {
     return async dispatch => {
         dispatch({ type: CHECKING_EXISTING_AUTHOR });
 
@@ -155,8 +155,10 @@ export function checkForExistingAuthor(search, searchField, id) {
                 dispatch({
                     type: EXISTING_AUTHOR_FOUND,
                     payload: {
-                        field: searchField,
-                        error: true,
+                        [searchField]: {
+                            error: true,
+                            errorText: validation[searchField],
+                        },
                     },
                 });
                 return Promise.resolve();
@@ -164,8 +166,10 @@ export function checkForExistingAuthor(search, searchField, id) {
                 dispatch({
                     type: EXISTING_AUTHOR_NOT_FOUND,
                     payload: {
-                        field: searchField,
-                        error: false,
+                        [searchField]: {
+                            error: false,
+                            errorText: null,
+                        },
                     },
                 });
                 return Promise.resolve();

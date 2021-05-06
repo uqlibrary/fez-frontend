@@ -207,7 +207,9 @@ describe('author list actions', () => {
 
             const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_FOUND];
 
-            await mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1));
+            await mockActionsStore.dispatch(
+                checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+            );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -216,7 +218,9 @@ describe('author list actions', () => {
 
             const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_NOT_FOUND];
 
-            await mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1));
+            await mockActionsStore.dispatch(
+                checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+            );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -230,7 +234,9 @@ describe('author list actions', () => {
             ];
 
             await expect(
-                mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1)),
+                mockActionsStore.dispatch(
+                    checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+                ),
             ).rejects.toEqual({
                 status: 500,
                 message:
