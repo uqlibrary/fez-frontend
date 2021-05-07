@@ -1,4 +1,5 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListJournalArticle';
+import moment from 'moment';
 
 context('Journal Article admin edit', () => {
     const record = recordList.data[0];
@@ -200,9 +201,7 @@ context('Journal Article admin edit', () => {
                         cy.checkPartialDateFromRecordValue('rek-date', record.rek_date);
                         cy.get('[data-testid=rek-date-available-input]').should(
                             'have.value',
-                            Cypress.moment(record.fez_record_search_key_date_available.rek_date_available).format(
-                                'YYYY',
-                            ),
+                            moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY'),
                         );
                         cy.get('span span')
                             .eq(0)
@@ -468,10 +467,7 @@ context('Journal Article admin edit', () => {
                 .should('have.text', `${fileSizeInMB} MB`);
             cy.get('input')
                 .eq(1)
-                .should(
-                    'have.value',
-                    Cypress.moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'),
-                );
+                .should('have.value', moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'));
         });
         cy.get('[data-testid=files-section-content]').within(() => {
             cy.get('h4')
