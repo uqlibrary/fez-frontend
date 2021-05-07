@@ -169,7 +169,6 @@ export function exportAuthorPublications({
     sortDirection = 'Desc',
     activeFacets = { filters: {}, ranges: {} },
 }) {
-    console.log('exportAuthorPublications');
     return exportPublications(
         routes.CURRENT_USER_RECORDS_API(
             {

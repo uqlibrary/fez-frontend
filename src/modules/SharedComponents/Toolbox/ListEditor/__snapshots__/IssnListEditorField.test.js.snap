@@ -44,7 +44,7 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
 <ListEditor
   canEdit={false}
   distinctOnly={false}
-  error="test"
+  error={true}
   errorText="test"
   formComponent={[Function]}
   getItemSelectedToEdit={[Function]}

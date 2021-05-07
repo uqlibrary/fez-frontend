@@ -49,7 +49,6 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         <Grid item xs={12}>
                             <Field
                                 component={getSearchKeyValueField(searchKey).component}
-                                searchKey={searchKey}
                                 disabled={submitting || submitSucceeded}
                                 label={txt.changeSearchKeyValueForm.formLabels.searchKeyValue}
                                 name={searchKey}

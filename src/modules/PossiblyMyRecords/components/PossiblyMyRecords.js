@@ -161,7 +161,7 @@ export default class PossiblyMyRecords extends PureComponent {
 
     _setHideConfirmationBox = ref => (this.hideConfirmationBox = ref);
 
-    getAlert = (alertLocale, hasFailed = false, error = null) => {
+    getAlert = (alertLocale, hasFailed = false, error = '') => {
         return hasFailed ? (
             <Alert
                 {...{

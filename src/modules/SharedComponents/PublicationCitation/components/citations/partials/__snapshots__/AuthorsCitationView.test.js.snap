@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AuthorsCitationView test  should not fail with missing data 1`] = `
+exports[`AuthorsCitationView should not fail with missing data 1`] = `
 <span
   className=" empty"
 />
 `;
 
-exports[`AuthorsCitationView test  should render a header correctly when all authors are provided 1`] = `
+exports[`AuthorsCitationView should render a header correctly when all authors are provided 1`] = `
 <span
   className=""
 >
@@ -50,7 +50,7 @@ exports[`AuthorsCitationView test  should render a header correctly when all aut
 </span>
 `;
 
-exports[`AuthorsCitationView test  should render a header correctly when too many authors are provided 1`] = `
+exports[`AuthorsCitationView should render a header correctly when too many authors are provided 1`] = `
 <span
   className=""
 >
@@ -85,7 +85,7 @@ exports[`AuthorsCitationView test  should render a header correctly when too man
 </span>
 `;
 
-exports[`AuthorsCitationView test  should render a list with ellipsis when elasticsearch cant supply all authors 1`] = `
+exports[`AuthorsCitationView should render a list with ellipsis when elasticsearch cant supply all authors 1`] = `
 <span
   className=""
 >
@@ -120,7 +120,7 @@ exports[`AuthorsCitationView test  should render a list with ellipsis when elast
 </span>
 `;
 
-exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
+exports[`AuthorsCitationView should render component with 1 author 1`] = `
 <Provider
   store={
     Object {
@@ -620,7 +620,7 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 2 authors 1`] = `
+exports[`AuthorsCitationView should render component with 2 authors 1`] = `
 <Provider
   store={
     Object {
@@ -1142,7 +1142,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 2 authors for publication view page 1`] = `
+exports[`AuthorsCitationView should render component with 2 authors for publication view page 1`] = `
 <Provider
   store={
     Object {
@@ -1712,7 +1712,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 2 authors for publication view page if author ids not supplied 1`] = `
+exports[`AuthorsCitationView should render component with 2 authors for publication view page if author ids not supplied 1`] = `
 <Provider
   store={
     Object {
@@ -2276,7 +2276,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 3 authors 1`] = `
+exports[`AuthorsCitationView should render component with 3 authors 1`] = `
 <Provider
   store={
     Object {
@@ -2821,7 +2821,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 3 authors for publication view page 1`] = `
+exports[`AuthorsCitationView should render component with 3 authors for publication view page 1`] = `
 <Provider
   store={
     Object {
@@ -3437,7 +3437,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 3 authors with prefix/suffix 1`] = `
+exports[`AuthorsCitationView should render component with 3 authors with prefix/suffix 1`] = `
 <Provider
   store={
     Object {
@@ -3984,7 +3984,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 3 authors with prefix/suffix without changing original data structure 1`] = `
+exports[`AuthorsCitationView should render component with 3 authors with prefix/suffix without changing original data structure 1`] = `
 <Provider
   store={
     Object {
@@ -4531,7 +4531,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should render component with 10 authors and show more link 1`] = `
+exports[`AuthorsCitationView should render component with 10 authors and show more link 1`] = `
 <span
   className=""
 >
@@ -4648,7 +4648,7 @@ exports[`AuthorsCitationView test  should render component with 10 authors and s
 </span>
 `;
 
-exports[`AuthorsCitationView test  should render component with exactly 10 authors 1`] = `
+exports[`AuthorsCitationView should render component with exactly 10 authors 1`] = `
 <span
   className=""
 >
@@ -4747,7 +4747,7 @@ exports[`AuthorsCitationView test  should render component with exactly 10 autho
 </span>
 `;
 
-exports[`AuthorsCitationView test  should render component with no authors 1`] = `
+exports[`AuthorsCitationView should render component with no authors 1`] = `
 <Provider
   store={
     Object {
@@ -5219,7 +5219,7 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
 </Provider>
 `;
 
-exports[`AuthorsCitationView test  should set class on component with no authors 1`] = `
+exports[`AuthorsCitationView should set class on component with no authors 1`] = `
 <Provider
   store={
     Object {
