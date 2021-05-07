@@ -165,12 +165,7 @@ export function checkForExistingAuthor(search, searchField, id, validation) {
             } else {
                 dispatch({
                     type: EXISTING_AUTHOR_NOT_FOUND,
-                    payload: {
-                        [searchField]: {
-                            error: false,
-                            errorText: null,
-                        },
-                    },
+                    payload: {},
                 });
                 return Promise.resolve();
             }
