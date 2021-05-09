@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { throttle } from 'throttle-debounce';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -34,7 +33,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const existingAuthorFieldError = useSelector(state => state.get('manageAuthorsReducer').existingAuthorFieldError);
 
-    console.log(existingAuthorFieldError);
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
         editRow: { validation },
@@ -43,10 +41,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const [data, setData] = React.useState(rowData || {});
     const [error, setError] = React.useState({});
 
-    const checkForExisting = React.useRef(
-        throttle(500, (query, authorField, autId) =>
-            dispatch(checkForExistingAuthor(query, authorField, autId, validation)),
-        ),
+    const checkForExisting = React.useRef((query, authorField, autId) =>
+        dispatch(checkForExistingAuthor(query, authorField, autId, validation)),
     );
 
     const handleChange = (name, value) => setData(data => ({ ...data, [name]: value }));

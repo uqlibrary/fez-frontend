@@ -93,7 +93,10 @@ const handlers = {
 
     [actions.EXISTING_AUTHOR_NOT_FOUND]: (state, action) => ({
         ...state,
-        existingAuthorFieldError: action.payload,
+        existingAuthorFieldError: {
+            ...state.existingAuthorFieldError,
+            ...action.payload,
+        },
     }),
 
     [actions.BULK_AUTHOR_ITEMS_DELETE_SUCCESS]: (state, action) => ({
