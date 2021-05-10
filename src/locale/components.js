@@ -3343,6 +3343,10 @@ export default {
                         'The supplied Organisation Student ID is already on file for another author.',
                     orgUsernameErrorText: 'The supplied Organisation Username is already on file for another author.',
                     studentUsernameErrorText: 'The supplied Student username is already on file for another author.',
+                    aut_org_staff_id: 'The supplied Organisation Staff ID is already on file for another author.',
+                    aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
+                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
+                    aut_student_username: 'The supplied Student username is already on file for another author.',
                 },
             },
             form: {
