@@ -14,7 +14,10 @@ const setup = (testProps = {}) => {
 
 describe('ManageAuthors', () => {
     beforeEach(() => {
-        jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
+        // jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
+
+        const scrollIntoViewMock = jest.fn();
+        window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
     });
 
     afterEach(() => {
@@ -351,9 +354,166 @@ describe('ManageAuthors', () => {
             fireEvent.click(getByText('50'));
         });
 
-        await waitFor(() => getByTestId('authors-list-row-22'));
+        await act(() => waitFor(() => getByTestId('authors-list-row-22')));
 
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-22')).toBeInTheDocument();
+    });
+
+    it('should bulk delete all authors', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_id: 2011,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2012,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2013,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost('fez-authors/delete-list')
+            .replyOnce(200, {
+                data: {
+                    '2011': 'Author deleted',
+                    '2012': 'Author deleted',
+                    '2013': 'Author deleted',
+                },
+            });
+
+        const { getByText, getByTestId, queryByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-authors'));
+        fireEvent.click(getByTestId('authors-delete-selected-authors'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        await act(() =>
+            waitFor(() => {
+                expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
+                expect(queryByTestId('authors-list-row-2')).not.toBeInTheDocument();
+            }),
+        );
+    });
+
+    it('should fail to bulk delete all authors', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_id: 2011,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2012,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                    {
+                        aut_id: 2013,
+                        aut_display_name: 'Pun, PaulKang K.',
+                        aut_org_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost(`${repository.routes.AUTHOR_API().apiUrl}/delete-list`)
+            .replyOnce(500);
+
+        const { getByText, getByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-authors'));
+        fireEvent.click(getByTestId('authors-delete-selected-authors'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        await waitFor(() => {
+            expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+            expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+        });
+    });
+
+    it('should exit from editing author mode', async () => {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [
+                {
+                    aut_created_date: '2006-03-31T00:00:00Z',
+                    aut_description: null,
+                    aut_display_name: 'Pun, PaulKang K.',
+                    aut_email: 'punp@ramsayhealth.com.au',
+                    aut_external_id: '0000065773',
+                    aut_fname: 'PaulKang',
+                    aut_google_scholar_id: null,
+                    aut_homepage_link: null,
+                    aut_id: 2011,
+                    aut_is_orcid_sync_enabled: null,
+                    aut_is_scopus_id_authenticated: 0,
+                    aut_lname: 'Pun',
+                    aut_mname: null,
+                    aut_mypub_url: null,
+                    aut_orcid_bio: null,
+                    aut_orcid_id: null,
+                    aut_orcid_works_last_modified: null,
+                    aut_orcid_works_last_sync: null,
+                    aut_org_staff_id: '0030916',
+                    aut_org_student_id: null,
+                    aut_org_username: 'uqppun',
+                    aut_people_australia_id: null,
+                    aut_position: null,
+                    aut_publons_id: null,
+                    aut_ref_num: null,
+                    aut_researcher_id: null,
+                    aut_review_orcid_scopus_id_integration: null,
+                    aut_rid_last_updated: null,
+                    aut_rid_password: null,
+                    aut_scopus_id: null,
+                    aut_student_username: null,
+                    aut_title: 'Dr',
+                    aut_twitter_username: null,
+                    aut_update_date: '2020-01-19T19:29:55Z',
+                },
+            ],
+            total: 1,
+        });
+        const { getByTestId, getByText, queryByTestId, queryByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(getByTestId('authors-list-row-0'));
+        });
+        act(() => {
+            fireEvent.keyDown(getByTestId('author-edit-row'), { key: 'Escape' });
+        });
+
+        expect(queryByTestId('author-edit-row')).not.toBeInTheDocument();
+        expect(queryByText('Name information')).not.toBeInTheDocument();
     });
 });

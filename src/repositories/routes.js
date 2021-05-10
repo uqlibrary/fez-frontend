@@ -111,12 +111,27 @@ export const MANAGE_AUTHORS_LIST_API = params => {
 };
 
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
-export const AUTHOR_API = ({ authorId } = { authorId: undefined }) => ({
-    apiUrl: `fez-authors${!!authorId ? `/${authorId}` : ''}`,
-});
+
+export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, authorIds: undefined }) => {
+    if (!!authorId && !authorIds) {
+        return {
+            apiUrl: `fez-authors/${authorId}`,
+        };
+    }
+
+    if (!authorId && !!authorIds && authorIds.length > 0) {
+        return {
+            apiUrl: 'fez-authors/delete-list',
+        };
+    }
+
+    return { apiUrl: 'fez-authors' };
+};
+
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
     apiUrl: `authors/details/${userId}`,
 });
+
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
     apiUrl: `orcid/${userId}/request`,
     options: { params: { ...params } },
@@ -389,8 +404,8 @@ export const MANAGE_USERS_LIST_API = params => {
     };
 };
 
-export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: [] }) => {
-    if (!!userId && !!userIds && userIds.length === 0) {
+export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: undefined }) => {
+    if (!!userId && !userIds) {
         return {
             apiUrl: `fez-users/${userId}`,
         };

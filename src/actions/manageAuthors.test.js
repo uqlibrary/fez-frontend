@@ -1,5 +1,6 @@
 import {
     deleteAuthorListItem,
+    bulkDeleteAuthorListItems,
     loadAuthorList,
     updateAuthorListItem,
     addAuthor,
@@ -127,6 +128,34 @@ describe('author list actions', () => {
         });
     });
 
+    describe('bulkDeleteAuthorListItems action', () => {
+        it('should dispatch correct number of actions on bulk author list item successfully deleted', async () => {
+            mockApi.onPost('fez-authors/delete-list').reply(200, { data: { 1: 'Author deleted' } });
+
+            const expectedActions = [actions.BULK_AUTHOR_ITEMS_DELETING, actions.BULK_AUTHOR_ITEMS_DELETE_SUCCESS];
+
+            await mockActionsStore.dispatch(bulkDeleteAuthorListItems([{ aut_id: 1 }]));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on bulk author list item delete failed', async () => {
+            mockApi.onPost('fez-authors/delete-list').reply(500);
+
+            const expectedActions = [
+                actions.BULK_AUTHOR_ITEMS_DELETING,
+                actions.APP_ALERT_SHOW,
+                actions.BULK_AUTHOR_ITEMS_DELETE_FAILED,
+            ];
+
+            await expect(mockActionsStore.dispatch(bulkDeleteAuthorListItems([{ aut_id: 1 }]))).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
     describe('addAuthor action', () => {
         it('should dispatch correct number of actions on author successfully added', async () => {
             mockApi
@@ -178,7 +207,9 @@ describe('author list actions', () => {
 
             const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_FOUND];
 
-            await mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1));
+            await mockActionsStore.dispatch(
+                checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+            );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -187,7 +218,9 @@ describe('author list actions', () => {
 
             const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_NOT_FOUND];
 
-            await mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1));
+            await mockActionsStore.dispatch(
+                checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+            );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -201,7 +234,9 @@ describe('author list actions', () => {
             ];
 
             await expect(
-                mockActionsStore.dispatch(checkForExistingAuthor('test', 'aut_org_username', 1)),
+                mockActionsStore.dispatch(
+                    checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+                ),
             ).rejects.toEqual({
                 status: 500,
                 message:

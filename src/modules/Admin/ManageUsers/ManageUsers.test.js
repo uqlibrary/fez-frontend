@@ -15,6 +15,9 @@ const setup = (testProps = {}) => {
 describe('ManageUsers', () => {
     beforeEach(() => {
         jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
+
+        const scrollIntoViewMock = jest.fn();
+        window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
     });
 
     afterEach(() => {
@@ -381,9 +384,177 @@ describe('ManageUsers', () => {
             fireEvent.click(getByText('50'));
         });
 
-        await waitFor(() => getByTestId('users-list-row-22'));
+        await act(() => waitFor(() => getByTestId('users-list-row-22')));
 
         expect(getByTestId('users-list-row-0')).toBeInTheDocument();
         expect(getByTestId('users-list-row-22')).toBeInTheDocument();
+    });
+
+    it('should bulk delete all users', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.USER_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        usr_id: 2011,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2012,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2013,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost(`${repository.routes.USER_API().apiUrl}/delete-list`)
+            .replyOnce(200, {
+                data: {
+                    '2011': 'User deleted',
+                    '2012': 'User deleted',
+                    '2013': 'User deleted',
+                },
+            });
+
+        const { getByText, getByTestId, queryByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-users'));
+        fireEvent.click(getByTestId('users-delete-selected-users'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        await act(() =>
+            waitFor(() => {
+                expect(queryByTestId('users-list-row-0')).not.toBeInTheDocument();
+                expect(queryByTestId('users-list-row-2')).not.toBeInTheDocument();
+            }),
+        );
+    });
+
+    it('should fail to bulk delete all users', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.USER_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        usr_id: 2011,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2012,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                    {
+                        usr_id: 2013,
+                        usr_full_name: 'Pun, PaulKang K.',
+                        usr_username: 'uqppun',
+                    },
+                ],
+                total: 3,
+                pageSize: 20,
+                current_page: 1,
+            })
+            .onPost('fez-users/delete-list')
+            .replyOnce(500);
+
+        const { getByText, getByTestId } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('select-all-users'));
+        fireEvent.click(getByTestId('users-delete-selected-users'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        await waitFor(() => {
+            expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+            expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+            expect(getByText('Add new user')).toBeInTheDocument();
+        });
+    });
+
+    it('should exit from editing author mode', async () => {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [
+                {
+                    usr_id: 1000000293,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_status: 'active',
+                    usr_given_names: null,
+                    usr_family_name: null,
+                    usr_full_name: 'Test User',
+                    usr_email: 't.user@library.uq.edu.au',
+                    usr_preferences: null,
+                    usr_sms_email: null,
+                    usr_username: 'uqvasai',
+                    usr_shib_username: null,
+                    usr_administrator: true,
+                    usr_ldap_authentication: false,
+                    usr_login_count: 157,
+                    usr_shib_login_count: 0,
+                    usr_last_login_date: '2021-02-23T04:44:06Z',
+                    usr_external_usr_id: null,
+                    usr_super_administrator: true,
+                    usr_auth_rule_groups:
+                        '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    usr_real_last_login_date: '2021-02-22T11:49:49Z',
+                },
+                {
+                    usr_id: 1000000293,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_status: 'active',
+                    usr_given_names: null,
+                    usr_family_name: null,
+                    usr_full_name: 'Testing User',
+                    usr_email: 't.user@library.uq.edu.au',
+                    usr_preferences: null,
+                    usr_sms_email: null,
+                    usr_username: 'uqvdesai',
+                    usr_shib_username: null,
+                    usr_administrator: true,
+                    usr_ldap_authentication: false,
+                    usr_login_count: 157,
+                    usr_shib_login_count: 0,
+                    usr_last_login_date: '2021-02-23T04:44:06Z',
+                    usr_external_usr_id: null,
+                    usr_super_administrator: true,
+                    usr_auth_rule_groups:
+                        '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    usr_real_last_login_date: '2021-02-22T11:49:49Z',
+                },
+            ],
+            total: 2,
+        });
+        const { getByTestId, getByText, queryByTestId, queryByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(getByTestId('users-list-row-0'));
+        });
+        act(() => {
+            fireEvent.keyDown(getByTestId('user-edit-row'), { key: 'Escape' });
+        });
+
+        expect(queryByTestId('user-edit-row')).not.toBeInTheDocument();
+        expect(queryByText('Name information')).not.toBeInTheDocument();
     });
 });

@@ -15,6 +15,9 @@ import {
     CHECKING_EXISTING_AUTHOR_FAILED,
     EXISTING_AUTHOR_FOUND,
     EXISTING_AUTHOR_NOT_FOUND,
+    BULK_AUTHOR_ITEMS_DELETING,
+    BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
+    BULK_AUTHOR_ITEMS_DELETE_FAILED,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
 import { AUTHOR_API, MANAGE_AUTHORS_LIST_API, AUTHORS_SEARCH_API } from 'repositories/routes';
@@ -91,6 +94,31 @@ export function deleteAuthorListItem(oldData) {
     };
 }
 
+export function bulkDeleteAuthorListItems(oldData) {
+    return async dispatch => {
+        dispatch({ type: BULK_AUTHOR_ITEMS_DELETING });
+        const authorIds = oldData.map(author => author.aut_id);
+        const ids = new URLSearchParams();
+        authorIds.map(id => ids.append('aut_ids[]', id));
+        try {
+            const response = await post(AUTHOR_API({ authorIds }), ids);
+            dispatch({
+                type: BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
+                payload: response.data,
+            });
+
+            return Promise.resolve(response.data);
+        } catch (e) {
+            dispatch({
+                type: BULK_AUTHOR_ITEMS_DELETE_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+}
+
 export function addAuthor(data) {
     return async dispatch => {
         dispatch({ type: AUTHOR_ADDING });
@@ -113,7 +141,7 @@ export function addAuthor(data) {
     };
 }
 
-export function checkForExistingAuthor(search, searchField, id) {
+export function checkForExistingAuthor(search, searchField, id, validation) {
     return async dispatch => {
         dispatch({ type: CHECKING_EXISTING_AUTHOR });
 
@@ -127,18 +155,17 @@ export function checkForExistingAuthor(search, searchField, id) {
                 dispatch({
                     type: EXISTING_AUTHOR_FOUND,
                     payload: {
-                        field: searchField,
-                        error: true,
+                        [searchField]: {
+                            error: true,
+                            errorText: validation[searchField],
+                        },
                     },
                 });
                 return Promise.resolve();
             } else {
                 dispatch({
                     type: EXISTING_AUTHOR_NOT_FOUND,
-                    payload: {
-                        field: searchField,
-                        error: false,
-                    },
+                    payload: {},
                 });
                 return Promise.resolve();
             }

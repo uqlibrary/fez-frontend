@@ -3333,6 +3333,10 @@ export default {
                         'The supplied Organisation Student ID is already on file for another author.',
                     orgUsernameErrorText: 'The supplied Organisation Username is already on file for another author.',
                     studentUsernameErrorText: 'The supplied Student username is already on file for another author.',
+                    aut_org_staff_id: 'The supplied Organisation Staff ID is already on file for another author.',
+                    aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
+                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
+                    aut_student_username: 'The supplied Student username is already on file for another author.',
                 },
             },
             form: {
@@ -3345,8 +3349,15 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected authors',
+                    confirmationMessage: 'Are you sure you want to delete selected authors?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
+                    bulkDeleteButtonTooltip: 'Delete selected authors',
                     editButtonTooltip: 'Edit this author',
                     deleteButtonTooltip: 'Delete this author',
                     notesButtonTooltip: 'View notes for this author',
@@ -3427,10 +3438,17 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected users',
+                    confirmationMessage: 'Are you sure you want to delete selected users?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new user',
-                    editButtonTooltip: 'Edit this user',
+                    bulkDeleteButtonTooltip: 'Delete selected users',
                     deleteButtonTooltip: 'Delete this user',
+                    editButtonTooltip: 'Edit this user',
                 },
             },
             row: {

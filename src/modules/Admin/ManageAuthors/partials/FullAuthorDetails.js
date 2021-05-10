@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -16,6 +17,7 @@ import ResearcherIdentifierData from './ResearcherIdentifierData';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
+import { checkForExistingAuthor } from 'actions';
 import { default as locale } from 'locale/components';
 
 const useStyles = makeStyles(theme => ({
@@ -27,14 +29,21 @@ const useStyles = makeStyles(theme => ({
 
 export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled, columns }) => {
     const classes = useStyles();
+    const dispatch = useDispatch();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    const existingAuthorFieldError = useSelector(state => state.get('manageAuthorsReducer').existingAuthorFieldError);
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
+        editRow: { validation },
     } = locale.components.manageAuthors;
 
     const [data, setData] = React.useState(rowData || {});
     const [error, setError] = React.useState({});
+
+    const checkForExisting = React.useRef((query, authorField, autId) =>
+        dispatch(checkForExistingAuthor(query, authorField, autId, validation)),
+    );
 
     const handleChange = (name, value) => setData(data => ({ ...data, [name]: value }));
 
@@ -50,10 +59,46 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
 
     const handleCancel = () => onEditingCanceled(mode, rowData);
 
+    const handleKeyPress = e => {
+        e.key === 'Escape' && onEditingCanceled(mode, rowData);
+    };
+
     const handleCancelDelete = () => {
         handleCancel();
         hideConfirmation();
     };
+
+    /* Run this effect on aut_org_username change */
+    React.useEffect(() => {
+        if (!!data.aut_org_username && data.aut_org_username.length >= 5) {
+            checkForExisting.current(data.aut_org_username, 'aut_org_username', data.aut_id);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data.aut_org_username]);
+
+    /* Run this effect on aut_student_username change */
+    React.useEffect(() => {
+        if (!!data.aut_student_username && data.aut_student_username.length === 8) {
+            checkForExisting.current(data.aut_student_username, 'aut_student_username', data.aut_id);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data.aut_student_username]);
+
+    /* Run this effect on aut_org_staff_id change */
+    React.useEffect(() => {
+        if (!!data.aut_org_staff_id && data.aut_org_staff_id.length === 7) {
+            checkForExisting.current(data.aut_org_staff_id, 'aut_org_staff_id', data.aut_id);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data.aut_org_staff_id]);
+
+    /* Run this effect on aut_org_student_id change */
+    React.useEffect(() => {
+        if (!!data.aut_org_student_id && data.aut_org_student_id.length === 8) {
+            checkForExisting.current(data.aut_org_student_id, 'aut_org_student_id', data.aut_id);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data.aut_org_student_id]);
 
     React.useEffect(() => {
         if (mode === 'delete') {
@@ -65,16 +110,26 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     React.useEffect(() => {
         setError(
             columns.reduce(
-                (errorObject, column) => !!column.validate && { ...errorObject, [column.field]: column.validate(data) },
+                (errorObject, column) => !!column.validate && { ...errorObject, ...column.validate(data) },
                 {},
             ),
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
+    React.useEffect(() => {
+        if (!!existingAuthorFieldError) {
+            setError(prevError => ({
+                ...prevError,
+                ...existingAuthorFieldError,
+            }));
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [existingAuthorFieldError]);
+
     return (
-        <TableRow>
-            <TableCell colSpan={3}>
+        <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
+            <TableCell colSpan={4}>
                 <ConfirmationBox
                     confirmationBoxId="authors-delete-this-author-confirmation"
                     onAction={handleDelete}
@@ -90,7 +145,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                     <NameData rowData={data} onChange={handleChange} error={error} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <UsernameIdData rowData={data} onChange={handleChange} />
+                                    <UsernameIdData rowData={data} onChange={handleChange} error={error} />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <ResearcherIdentifierData rowData={data} onChange={handleChange} />
@@ -111,9 +166,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                                 key={JSON.stringify(error)}
                                                 id={`authors-${mode}-this-author-save`}
                                                 data-testid={`authors-${mode}-this-author-save`}
-                                                disabled={
-                                                    disabled || (!!error.author && Object.keys(error.author).length > 0)
-                                                }
+                                                disabled={disabled || Object.keys(error).length > 0}
                                                 variant="contained"
                                                 color="primary"
                                                 onClick={handleSave}

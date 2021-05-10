@@ -22,6 +22,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     authorFieldDataId="aut-display-name"
                     data={rowData.aut_display_name}
                     name="aut_display_name"
+                    autoFocus
                     {...displayName}
                     {...props}
                 />
@@ -36,8 +37,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     authorFieldDataId="aut-fname"
                     data={rowData.aut_fname}
                     name="aut_fname"
-                    required
-                    {...((!!error.author && !!error.author.aut_fname && error.author.aut_fname) || {})}
+                    {...((!!error.aut_fname && error.aut_fname) || {})}
                     {...firstName}
                     {...props}
                 />
@@ -52,8 +52,7 @@ export const NameData = ({ rowData, error, ...props }) => {
                     authorFieldDataId="aut-lname"
                     data={rowData.aut_lname}
                     name="aut_lname"
-                    required
-                    {...((!!error.author && !!error.author.aut_lname && error.author.aut_lname) || {})}
+                    {...((!!error.aut_lname && error.aut_lname) || {})}
                     {...lastName}
                     {...props}
                 />
