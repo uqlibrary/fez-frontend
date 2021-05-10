@@ -25,6 +25,7 @@ exports[`UnpublishedBufferCitationView test button click sets value should rende
       </i>
       <DateCitationView
         className="citationDate"
+        forceSpecifiedFormat={true}
         format="DD/MM/YYYY"
         isLocalised={true}
         prefix="Created "
@@ -32,6 +33,7 @@ exports[`UnpublishedBufferCitationView test button click sets value should rende
       />
       <DateCitationView
         className="citationDate"
+        forceSpecifiedFormat={true}
         format="DD/MM/YYYY"
         isLocalised={true}
         prefix="Updated "

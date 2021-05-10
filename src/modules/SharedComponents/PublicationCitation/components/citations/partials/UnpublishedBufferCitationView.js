@@ -22,6 +22,7 @@ export const UnpublishedBufferCitationView = ({ publication }) => {
                         prefix="Created "
                         suffix=", "
                         date={publication.rek_created_date}
+                        forceSpecifiedFormat
                     />
                     <DateCitationView
                         isLocalised
@@ -29,6 +30,7 @@ export const UnpublishedBufferCitationView = ({ publication }) => {
                         prefix="Updated "
                         suffix="."
                         date={publication.rek_updated_date}
+                        forceSpecifiedFormat
                     />
                 </Typography>
             </Grid>

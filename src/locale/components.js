@@ -91,7 +91,7 @@ export default {
             },
         },
         myTrendingPublications: {
-            loading: 'Loading your trending publications',
+            loading: 'Loading your trending works',
             metrics: {
                 altmetric: {
                     title: 'Altmetric score',
@@ -126,8 +126,8 @@ export default {
                         social media activity over time.
                     </p>
                     <p>
-                        You can click on the number as a link to see who is citing each publication, or in the case of
-                        Altmetric who is referencing the publication in social media and news outlets.
+                        You can click on the number as a link to see who is citing each work, or in the case of
+                        Altmetric who is referencing the work in social media and news outlets.
                     </p>
                     For more information visit :<br />
                     <a
@@ -142,16 +142,16 @@ export default {
             buttonLabel: 'CLOSE',
         },
         myLatestPublications: {
-            loading: 'Loading your latest publications',
+            loading: 'Loading your latest works',
             viewAllButtonLabel: 'View all',
         },
         topCitedPublications: {
-            loading: 'Loading trending publications',
+            loading: 'Loading trending works',
             notAvailableAlert: {
                 type: 'error',
                 alertId: 'alert-error',
                 title: 'There has been an error',
-                message: 'Trending publications are temporarily unavailable',
+                message: 'Trending works are temporarily unavailable',
             },
             altmetric: {
                 title: <span>Trending on Altmetric</span>,
@@ -2042,10 +2042,10 @@ export default {
                         title: 'Work type',
                         combiner: 'is one of',
                         type: null,
-                        hint: 'Select document types',
+                        hint: 'Select work types',
                         validation: [],
                         id: 'rek-display-type',
-                        ariaLabel: 'Select multiple publications types to search on',
+                        ariaLabel: 'Select work types to search on',
                     },
                     facet_year_range: {
                         order: 21,
@@ -2123,7 +2123,7 @@ export default {
                     title: 'Open access',
                     combiner: 'is',
                     captionText: <span className="value">open access/full text</span>,
-                    ariaLabel: 'Check to search for publications with are only open access / full text',
+                    ariaLabel: 'Check to search for open access / full text works',
                 },
                 addField: {
                     title: 'Add another field',

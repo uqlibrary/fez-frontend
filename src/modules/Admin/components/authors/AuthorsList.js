@@ -119,7 +119,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                         <Grid item style={{ flexGrow: '1' }}>
                             <TextField
                                 autoFocus
-                                value={props.value}
+                                value={props.value || ''}
                                 onChange={e => props.onChange(e.target.value)}
                                 textFieldId={contributorEditorId}
                                 error={(contributor.nameAsPublished || '').length === 0}
