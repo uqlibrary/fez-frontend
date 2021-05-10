@@ -361,7 +361,10 @@ export class FilesClass extends Component {
         const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
             files.blacklist.collections.includes(collection.rek_ismemberof),
         );
-        return !!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin);
+        return (
+            (!!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin)) ||
+            (this.props.author && this.props.author.pol_id === 1)
+        );
     };
 
     handleImageFailed = () => {

@@ -1956,6 +1956,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               <DateCitationView
                 className="citationDate"
                 date="2010-05-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY[,] MMMM D"
                 isLocalised={false}
                 prefix="("
@@ -3990,6 +3991,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               <DateCitationView
                 className="citationDate"
                 date="2010-05-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY[,] MMMM D"
                 isLocalised={false}
                 prefix="("
@@ -4897,6 +4899,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY[,] MMMM D"
                 isLocalised={false}
                 prefix="("

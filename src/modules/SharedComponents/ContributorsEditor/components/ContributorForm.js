@@ -177,7 +177,7 @@ export const ContributorForm = ({
     useEffect(() => {
         if (
             uqIdentifierUpdatedFlag &&
-            (!canEdit ||
+            ((!canEdit && !showRoleInput) ||
                 (canEdit && !isNtro && !showRoleInput) ||
                 (canEdit && isNtro && contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ))
         ) {

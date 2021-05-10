@@ -2257,6 +2257,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
               <DateCitationView
                 className="citationDate"
                 date="2011-03-29T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -4559,6 +4560,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
               <DateCitationView
                 className="citationDate"
                 date="2011-03-29T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -6871,6 +6873,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
               <DateCitationView
                 className="citationDate"
                 date="2011-03-29T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -7748,6 +7751,7 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("

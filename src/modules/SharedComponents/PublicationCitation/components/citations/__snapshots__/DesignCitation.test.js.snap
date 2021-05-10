@@ -2108,6 +2108,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
               <DateCitationView
                 className="citationDate"
                 date="2017-10-31T13:53:23Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -4268,6 +4269,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
               <DateCitationView
                 className="citationDate"
                 date="2017-10-31T13:53:23Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -5149,6 +5151,7 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
