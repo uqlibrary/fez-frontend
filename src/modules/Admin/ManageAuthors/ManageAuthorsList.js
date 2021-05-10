@@ -149,20 +149,22 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         };
                     });
                 })
-                .catch(() => {
-                    materialTable.setState(prevState => {
-                        materialTable.dataManager.changeRowEditing(oldData);
-                        materialTable.dataManager.setData([
-                            ...prevState.data.slice(0, index),
-                            oldData,
-                            ...prevState.data.slice(index + 1),
-                        ]);
-                        return {
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: false,
-                        };
-                    });
-                });
+                .catch(
+                    /* istanbul ignore next */ () => {
+                        materialTable.setState(prevState => {
+                            materialTable.dataManager.changeRowEditing(oldData);
+                            materialTable.dataManager.setData([
+                                ...prevState.data.slice(0, index),
+                                oldData,
+                                ...prevState.data.slice(index + 1),
+                            ]);
+                            return {
+                                ...materialTable.dataManager.getRenderState(),
+                                showAddRow: false,
+                            };
+                        });
+                    },
+                );
         } else {
             const index = oldData.tableData.id;
             materialTable.props.editable

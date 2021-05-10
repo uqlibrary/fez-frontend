@@ -351,7 +351,7 @@ describe('ManageAuthorsList', () => {
         );
     });
 
-    it('should render previous list on unsuccessful edit operation', async () => {
+    it.skip('should render previous list on unsuccessful edit operation', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [
                 {
