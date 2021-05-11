@@ -59,6 +59,13 @@ export const CopyToOrRemoveFromCollectionForm = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [collections]);
 
+    React.useEffect(() => {
+        if (submitSucceeded) {
+            onCancel();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [submitSucceeded]);
+
     return (
         <form data-testid={`${idText}-collection-form`} id={`${idText}-collection-form`}>
             <Grid container spacing={2}>
