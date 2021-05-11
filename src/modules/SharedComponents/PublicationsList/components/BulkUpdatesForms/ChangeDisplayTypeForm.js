@@ -36,6 +36,13 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
 
+    React.useEffect(() => {
+        if (submitSucceeded) {
+            onCancel();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [submitSucceeded]);
+
     return (
         <form data-testid="change-display-type-form" id="change-display-type-form">
             <Grid container spacing={2}>
