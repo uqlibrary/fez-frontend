@@ -51,7 +51,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
 
     React.useEffect(() => {
         if (submitSucceeded) {
-            setTimeout(onCancel, 1000);
+            setTimeout(onCancel, 2000);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [submitSucceeded]);
