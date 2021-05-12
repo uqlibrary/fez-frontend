@@ -61,7 +61,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
 
     React.useEffect(() => {
         if (submitSucceeded) {
-            onCancel();
+            setTimeout(onCancel, 2000);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [submitSucceeded]);
