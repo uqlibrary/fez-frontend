@@ -91,61 +91,6 @@ describe('ManageAuthorsList', () => {
         });
     });
 
-    it('should validate org username input and leave in invalid state for existing org username even after updating first name and last name', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [
-                    {
-                        aut_id: 111,
-                        aut_org_username: 'uqtest',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            });
-
-        const { getByTestId, getByText } = setup();
-
-        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
-
-        fireEvent.click(getByTestId('authors-add-new-author'));
-
-        expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
-        await waitFor(() => getByText('The supplied Organisation Username is already on file for another author.'));
-
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
-
-        await waitFor(() => {
-            expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
-        });
-    });
-
     it('should validate student username input for existing student username', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
@@ -404,6 +349,61 @@ describe('ManageAuthorsList', () => {
                 expect(getByTestId('aut-org-username-1')).toHaveAttribute('value', 'uqvdesai');
             }),
         );
+    });
+
+    it('should validate org username input and leave in invalid state for existing org username even after updating first name and last name', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [],
+                total: 0,
+            })
+            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_id: 111,
+                        aut_org_username: 'uqtest',
+                    },
+                ],
+                total: 1,
+            })
+            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [],
+                total: 0,
+            });
+
+        const { getByTestId, getByText } = setup();
+
+        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
+
+        fireEvent.click(getByTestId('authors-add-new-author'));
+
+        expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
+        await waitFor(() => getByText('The supplied Organisation Username is already on file for another author.'));
+
+        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
+        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
+        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
+
+        await waitFor(() => {
+            expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
+            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        });
     });
 
     it.skip('should render previous list on unsuccessful edit operation', async () => {
