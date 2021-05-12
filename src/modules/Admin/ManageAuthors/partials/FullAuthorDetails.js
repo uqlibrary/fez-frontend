@@ -108,24 +108,15 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     }, [mode]);
 
     React.useEffect(() => {
-        setError(
-            columns.reduce(
+        setError(() => ({
+            ...columns.reduce(
                 (errorObject, column) => !!column.validate && { ...errorObject, ...column.validate(data) },
                 {},
             ),
-        );
+            ...(!!existingAuthorFieldError ? existingAuthorFieldError : {}),
+        }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data]);
-
-    React.useEffect(() => {
-        if (!!existingAuthorFieldError) {
-            setError(prevError => ({
-                ...prevError,
-                ...existingAuthorFieldError,
-            }));
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [existingAuthorFieldError]);
+    }, [data, existingAuthorFieldError]);
 
     return (
         <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
@@ -166,7 +157,10 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                                 key={JSON.stringify(error)}
                                                 id={`authors-${mode}-this-author-save`}
                                                 data-testid={`authors-${mode}-this-author-save`}
-                                                disabled={disabled || Object.keys(error).length > 0}
+                                                disabled={
+                                                    disabled ||
+                                                    Object.keys(error).filter(field => error[field].error).length > 0
+                                                }
                                                 variant="contained"
                                                 color="primary"
                                                 onClick={handleSave}
