@@ -49,6 +49,13 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchAuthorByName]);
 
+    React.useEffect(() => {
+        if (submitSucceeded) {
+            setTimeout(onCancel, 2000);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [submitSucceeded]);
+
     return (
         <form data-testid="change-author-id-form" id="change-author-id-form">
             <Grid container spacing={2}>

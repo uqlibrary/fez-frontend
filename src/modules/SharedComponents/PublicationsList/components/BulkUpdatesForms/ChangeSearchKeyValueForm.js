@@ -30,6 +30,13 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
 
+    React.useEffect(() => {
+        if (submitSucceeded) {
+            setTimeout(onCancel, 2000);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [submitSucceeded]);
+
     return (
         <form data-testid="change-search-key-value-form" id="change-search-key-value-form">
             <Grid container spacing={2}>
@@ -49,7 +56,6 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         <Grid item xs={12}>
                             <Field
                                 component={getSearchKeyValueField(searchKey).component}
-                                searchKey={searchKey}
                                 disabled={submitting || submitSucceeded}
                                 label={txt.changeSearchKeyValueForm.formLabels.searchKeyValue}
                                 name={searchKey}

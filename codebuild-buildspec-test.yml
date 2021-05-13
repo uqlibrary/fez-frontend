@@ -28,8 +28,8 @@ env:
 phases:
   install:
     runtime-versions:
-      java: openjdk11
-      nodejs: 12
+      java: corretto11
+      nodejs: 14
     #commands:
       # - command
       # - command

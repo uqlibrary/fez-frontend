@@ -59,7 +59,7 @@ export const AutoCompleteMultiSelectField = ({
             renderTags={(value, getTagProps) =>
                 value.map((option, index) => (
                     <Chip
-                        label={!!option.rek_title ? option.rek_title : option}
+                        label={!!option.rek_title ? option.rek_title : option.rek_pid || option}
                         id={`${autoCompleteMultiSelectFieldId}-${index}`}
                         data-testid={`${autoCompleteMultiSelectFieldId}-${index}`}
                         {...getTagProps({ index })}
