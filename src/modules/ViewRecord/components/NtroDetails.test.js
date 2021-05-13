@@ -453,6 +453,43 @@ describe('NtroDetails ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('renders minor significance as an admin', () => {
+        const wrapper = setup({
+            account: { canMasquerade: true },
+            publication: {
+                ...ntro,
+                fez_record_search_key_significance: [
+                    {
+                        rek_significance_id: 214,
+                        rek_significance_pid: 'UQ:ec5ce03',
+                        rek_significance: 454027,
+                        rek_significance_order: 1,
+                        rek_significance_lookup: 'Minor',
+                    },
+                    {
+                        rek_significance_id: 215,
+                        rek_significance_pid: 'UQ:ec5ce03',
+                        rek_significance: 0,
+                        rek_significance_order: 2,
+                    },
+                    {
+                        rek_significance_id: 216,
+                        rek_significance_pid: 'UQ:ec5ce03',
+                        rek_significance: '',
+                        rek_significance_order: 3,
+                    },
+                    {
+                        rek_significance_id: 217,
+                        rek_significance_pid: 'UQ:ec5ce03',
+                        rek_significance: '',
+                        rek_significance_order: 4,
+                    },
+                ],
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renders contribution statement not as an admin', () => {
         const wrapper = setup({
             account: { canMasquerade: false },
