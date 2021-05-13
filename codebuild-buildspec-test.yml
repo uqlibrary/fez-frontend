@@ -29,7 +29,7 @@ phases:
   install:
     runtime-versions:
       java: corretto11
-      nodejs: 12
+      nodejs: 14
     #commands:
       # - command
       # - command

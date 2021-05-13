@@ -24,6 +24,8 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+import moment from 'moment';
+
 Cypress.Commands.add('navToHomeFromMenu', locale => {
     const baseUrl = Cypress.config('baseUrl');
 
@@ -68,7 +70,7 @@ Cypress.Commands.add('checkPartialDate', (id, { day, monthName, year }) => {
 });
 
 Cypress.Commands.add('checkPartialDateFromRecordValue', (id, dateString) => {
-    const date = Cypress.moment(dateString);
+    const date = moment(dateString);
     cy.checkPartialDate(id, {
         day: date.format('D'),
         monthName: date.format('MMMM'),

@@ -6,7 +6,7 @@ import { pathConfig } from 'config/pathConfig';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     authorIdLink: {
         color: theme.palette.success.main,
     },

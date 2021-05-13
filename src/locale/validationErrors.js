@@ -3,7 +3,7 @@ import React from 'react';
 export default {
     validationErrors: {
         publicationSearch:
-            'Type a valid publication DOI (e.g. 10.1163/9789004326828), ' +
+            'Type a valid DOI (e.g. 10.1163/9789004326828), ' +
             'Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
         isbn: 'ISBN value is not valid',
         issn: 'ISSN value is not valid',

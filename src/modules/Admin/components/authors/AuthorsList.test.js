@@ -32,15 +32,6 @@ describe('AuthorsList', () => {
                 ownerDocument: document,
             },
         });
-
-        /**
-         * Suppressing below warning message from material-table library
-         * Warning: React does not recognize the `scrollWidth` prop on a DOM element. If you intentionally
-         * want it to appear in the DOM as a custom attribute, spell it as lowercase `scrollwidth` instead.
-         * If you accidentally passed it from a parent component, remove it from the DOM element.
-         */
-        jest.spyOn(console, 'error').mockImplementation(jest.fn());
-        jest.spyOn(console, 'warn').mockImplementation(jest.fn());
     });
 
     afterEach(() => {
@@ -204,6 +195,14 @@ describe('AuthorsList', () => {
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
                 },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
+                },
             ],
         });
         const { getByTestId, getByText } = setup({
@@ -259,6 +258,14 @@ describe('AuthorsList', () => {
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
                 },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
+                },
             ],
         });
         const { getByTestId, getByText } = setup({
@@ -313,6 +320,14 @@ describe('AuthorsList', () => {
                     aut_ref_num: '123456',
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
+                },
+                {
+                    id: 112,
+                    value: 'uqtesting - 123',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
                 },
             ],
         });
@@ -453,6 +468,14 @@ describe('AuthorsList', () => {
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
                 },
+                {
+                    id: 112,
+                    value: 'test 1',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
+                },
             ],
         });
         const { getByTestId, getByText } = setup({
@@ -495,6 +518,14 @@ describe('AuthorsList', () => {
                     aut_org_username: 'uqtest',
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
+                },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
                 },
             ],
         });
@@ -562,6 +593,14 @@ describe('AuthorsList', () => {
                     aut_org_username: 'uqtest',
                     aut_fname: 'UQ',
                     aut_lname: 'Test',
+                },
+                {
+                    id: 112,
+                    value: 'test',
+                    aut_id: 112,
+                    aut_org_username: 'uqtest2',
+                    aut_fname: 'UQ2',
+                    aut_lname: 'Test2',
                 },
             ],
         });
