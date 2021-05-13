@@ -10119,6 +10119,176 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
 </WithStyles(ForwardRef(Grid))>
 `;
 
+exports[`NtroDetails  renders minor significance as an admin 2`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Non-traditional research output metadata"
+  >
+    <Component
+      data="Minor"
+      heading="Scale/Significance of work"
+      key="0"
+      rowId="rek-significance-0"
+      subheading="(Ky Lane)"
+    />
+    <Component
+      data="Missing"
+      heading="Scale/Significance of work"
+      key="1"
+      rowId="rek-significance-1"
+      subheading="(Someone else)"
+    />
+    <Component
+      data="Missing"
+      heading="Scale/Significance of work"
+      key="2"
+      rowId="rek-significance-2"
+      subheading="(Someone else again)"
+    />
+    <Component
+      data="Missing"
+      heading="Scale/Significance of work"
+      key="3"
+      rowId="rek-significance-3"
+      subheading="(undefined)"
+    />
+    <Component
+      data={
+        Array [
+          <p>
+            It was significant.
+          </p>,
+        ]
+      }
+      heading="Creator research statement"
+      key="0"
+      rowId="rek-creator-contribution-statement-0"
+      subheading="(Ky Lane)"
+    />
+    <Component
+      data={
+        Array [
+          "Missing.",
+        ]
+      }
+      heading="Creator research statement"
+      key="1"
+      rowId="rek-creator-contribution-statement-1"
+      subheading="(Someone else)"
+    />
+    <Component
+      data={
+        Array [
+          <p>
+            This is an abstract
+          </p>,
+        ]
+      }
+      heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-ismn-0"
+          >
+            979-0-7062-0805-4
+          </span>,
+        ]
+      }
+      heading="ISMN"
+      rowId="rek-ismn"
+    />
+    <Component
+      data="Volume"
+      heading="Volume"
+      rowId="rek-description"
+    />
+    <Component
+      data="Issue"
+      heading="Issue"
+      rowId="rek-issue-number"
+    />
+    <Component
+      data="Extent"
+      heading="Extent"
+      rowId="rek-total-pages"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-language-0"
+          >
+            English
+            , 
+          </span>,
+          <span
+            data-testid="rek-language-1"
+          >
+            Elamite
+            , 
+          </span>,
+          <span
+            data-testid="rek-language-2"
+          >
+            Egyptian (Ancient)
+            , 
+          </span>,
+          <span
+            data-testid="rek-language-3"
+          >
+            Dutch
+          </span>,
+        ]
+      }
+      heading="Language(s)"
+      rowId="rek-language"
+    />
+    <Component
+      data="Description"
+      heading="Physical description"
+      rowId="rek-original-format"
+    />
+    <Component
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
+      heading="Quality indicators"
+      rowId="rek-quality-indicator"
+    />
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
 exports[`NtroDetails  renders null for a non NTRO subtype 1`] = `""`;
 
 exports[`NtroDetails  renders start/end page correctly due to correct doc/sub types 1`] = `
