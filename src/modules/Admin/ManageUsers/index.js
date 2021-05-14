@@ -1,48 +1,17 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import Grid from '@material-ui/core/Grid';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import ManageUsersNewList from './ManageUsersList';
 
-import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
-import {
-    addUser,
-    bulkDeleteUserListItems,
-    deleteUserListItem,
-    dismissAppAlert,
-    showAppAlert,
-    updateUserListItem,
-} from 'actions';
-
-export const getBulkDeleteMessages = messages => {
-    const deleteMessages = [];
-
-    for (const [userId, message] of Object.entries(messages)) {
-        deleteMessages.push(
-            <li key={`bulk-delete-user-${userId}`} data-testid={`bulk-delete-user-${userId}`}>
-                <strong>{userId}</strong> - <span>{message}</span>
-            </li>,
-        );
-    }
-    const message = (
-        <span>
-            <ul>{deleteMessages}</ul>
-        </span>
-    );
-    return message;
-};
+import { addUser, bulkDeleteUserListItems, deleteUserListItem, updateUserListItem } from 'actions';
+import ActionFeedback from './partials/ActionFeedback';
 
 export const ManageUsers = () => {
     const dispatch = useDispatch();
-
-    const userListError = useSelector(state => state.get('manageUsersReducer').userListError);
-    const userAddSuccess = useSelector(state => state.get('manageUsersReducer').userAddSuccess);
-    const userAddError = useSelector(state => state.get('manageUsersReducer').userAddError);
-    const bulkUserDeleteMessages = useSelector(state => state.get('manageUsersReducer').bulkUserDeleteMessages);
 
     const handleRowAdd = newData => {
         return dispatch(addUser(newData));
@@ -60,40 +29,10 @@ export const ManageUsers = () => {
         return dispatch(bulkDeleteUserListItems(data));
     };
 
-    React.useEffect(() => {
-        if (userAddSuccess) {
-            dispatch(
-                showAppAlert({
-                    ...componentLocale.components.manageUsers.successAlert,
-                    dismissAction: () => dispatch(dismissAppAlert()),
-                }),
-            );
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [userAddSuccess]);
-
     return (
         <StandardPage title={locale.pages.users.title}>
             <Grid container spacing={2}>
-                {!!userListError && (
-                    <Grid item xs={12}>
-                        <Alert {...userListError} type="error" alertId="alert-error-users-list" />
-                    </Grid>
-                )}
-                {!!userAddError && (
-                    <Grid item xs={12}>
-                        <Alert {...userAddError} type="error" alertId="alert-error-user-add" />
-                    </Grid>
-                )}
-                {!!bulkUserDeleteMessages && (
-                    <Grid item xs={12}>
-                        <Alert
-                            message={getBulkDeleteMessages(bulkUserDeleteMessages)}
-                            type="done"
-                            alertId="alert-success-user-bulk-delete"
-                        />
-                    </Grid>
-                )}
+                <ActionFeedback />
                 <Grid item xs={12}>
                     <StandardCard noHeader>
                         <ManageUsersNewList

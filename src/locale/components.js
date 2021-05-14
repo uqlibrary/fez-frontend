@@ -3326,11 +3326,6 @@ export default {
                     },
                 },
                 validation: {
-                    orgStaffIdErrorText: 'The supplied Organisation Staff ID is already on file for another author.',
-                    orgStudentIdErrorText:
-                        'The supplied Organisation Student ID is already on file for another author.',
-                    orgUsernameErrorText: 'The supplied Organisation Username is already on file for another author.',
-                    studentUsernameErrorText: 'The supplied Student username is already on file for another author.',
                     aut_org_staff_id: 'The supplied Organisation Staff ID is already on file for another author.',
                     aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
                     aut_org_username: 'The supplied Organisation Username is already on file for another author.',
@@ -3367,11 +3362,52 @@ export default {
                     editHint: 'Edit this item',
                 },
             },
-            successAlert: {
+            listAuthorErrorAlert: {
+                alertId: 'alert-error-author-list',
+                allowDismiss: true,
+                type: 'error',
+                message: 'There was some error loading author list',
+            },
+            addAuthorSuccessAlert: {
                 alertId: 'alert-done-author-add',
                 allowDismiss: true,
                 type: 'done',
                 message: 'An author has been successfully added.',
+            },
+            updateAuthorSuccessAlert: {
+                alertId: 'alert-done-author-update',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully updated.',
+            },
+            deleteAuthorSuccessAlert: {
+                alertId: 'alert-done-author-delete',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully deleted.',
+            },
+            addAuthorErrorAlert: {
+                alertId: 'alert-error-author-add',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An author could not be added.',
+            },
+            updateAuthorErrorAlert: {
+                alertId: 'alert-error-author-update',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An author could not be updated.',
+            },
+            deleteAuthorErrorAlert: {
+                alertId: 'alert-error-author-delete',
+                allowDismiss: true,
+                type: 'error',
+                message: 'Cannot delete author with linked works',
+            },
+            bulkAuthorDeleteAlert: {
+                alertId: 'alert-info-author-bulk-delete',
+                allowDismiss: true,
+                type: 'info',
             },
         },
         manageUsers: {
@@ -3454,11 +3490,47 @@ export default {
                     editHint: 'Edit this item',
                 },
             },
-            successAlert: {
+            listUserErrorAlert: {
+                alertId: 'alert-error-user-list',
+                allowDismiss: true,
+                type: 'error',
+                message: 'There was some error loading user list',
+            },
+            addUserSuccessAlert: {
                 alertId: 'alert-done-user-add',
                 allowDismiss: true,
                 type: 'done',
                 message: 'An user has been successfully added.',
+            },
+            updateUserSuccessAlert: {
+                alertId: 'alert-done-user-update',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An user has been successfully updated.',
+            },
+            deleteUserSuccessAlert: {
+                alertId: 'alert-done-user-delete',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An user has been successfully deleted.',
+            },
+            addUserErrorAlert: {
+                alertId: 'alert-error-user-add',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An user could not be added.',
+            },
+            updateUserErrorAlert: {
+                alertId: 'alert-error-user-update',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An user could not be updated.',
+            },
+            deleteUserErrorAlert: {
+                alertId: 'alert-error-user-delete',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An user could not be deleted.',
             },
         },
     },

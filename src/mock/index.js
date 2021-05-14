@@ -463,6 +463,13 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             '410': 'Author deleted',
             '9999999999': 'Author not found'
         }
+    })
+    .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))
+    .reply(200, {
+        data: {
+            aut_id: 111,
+            aut_display_name: 'Mock Test'
+        }
     });
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
