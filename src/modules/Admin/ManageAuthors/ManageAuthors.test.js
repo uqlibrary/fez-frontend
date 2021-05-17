@@ -31,6 +31,7 @@ describe('ManageAuthors', () => {
         });
         const { getByText } = setup();
 
+        await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
 
         expect(getByText('No records to display')).toBeInTheDocument();
     });
