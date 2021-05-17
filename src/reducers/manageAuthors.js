@@ -17,70 +17,70 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.AUTHOR_LIST_LOADING]: state => ({
-        ...state,
+    [actions.AUTHOR_LIST_LOADING]: () => ({
+        ...initialState,
         authorListLoading: true,
     }),
 
-    [actions.AUTHOR_LIST_LOADED]: state => ({
-        ...state,
+    [actions.AUTHOR_LIST_LOADED]: () => ({
+        ...initialState,
         authorListLoading: false,
     }),
 
     [actions.AUTHOR_LIST_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         authorListLoading: false,
         authorListLoadingError: action.payload,
     }),
 
-    [actions.AUTHOR_ITEM_UPDATING]: state => ({
-        ...state,
+    [actions.AUTHOR_ITEM_UPDATING]: () => ({
+        ...initialState,
         authorListItemUpdating: true,
     }),
 
-    [actions.AUTHOR_ITEM_UPDATE_SUCCESS]: state => ({
-        ...state,
+    [actions.AUTHOR_ITEM_UPDATE_SUCCESS]: () => ({
+        ...initialState,
         authorListItemUpdating: false,
         authorListItemUpdateSuccess: true,
     }),
 
     [actions.AUTHOR_ITEM_UPDATE_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         authorListItemUpdating: false,
         authorListItemUpdateError: action.payload,
     }),
 
-    [actions.AUTHOR_ITEM_DELETING]: state => ({
-        ...state,
+    [actions.AUTHOR_ITEM_DELETING]: () => ({
+        ...initialState,
         authorListItemDeleting: true,
     }),
 
-    [actions.AUTHOR_ITEM_DELETE_SUCCESS]: state => ({
-        ...state,
+    [actions.AUTHOR_ITEM_DELETE_SUCCESS]: () => ({
+        ...initialState,
         authorListItemDeleting: false,
         authorListItemDeleteSuccess: true,
     }),
 
     [actions.AUTHOR_ITEM_DELETE_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         authorListItemDeleting: false,
         authorListItemDeleteError: action.payload,
     }),
 
-    [actions.AUTHOR_ADDING]: state => ({
-        ...state,
+    [actions.AUTHOR_ADDING]: () => ({
+        ...initialState,
         authorAdding: true,
         authorAddSuccess: false,
     }),
 
-    [actions.AUTHOR_ADD_SUCCESS]: state => ({
-        ...state,
+    [actions.AUTHOR_ADD_SUCCESS]: () => ({
+        ...initialState,
         authorAdding: false,
         authorAddSuccess: true,
     }),
 
     [actions.AUTHOR_ADD_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         authorAdding: false,
         authorAddSuccess: false,
         authorAddError: action.payload,
