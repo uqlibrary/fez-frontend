@@ -16,70 +16,70 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.USER_LIST_LOADING]: state => ({
-        ...state,
+    [actions.USER_LIST_LOADING]: () => ({
+        ...initialState,
         userListLoading: true,
     }),
 
-    [actions.USER_LIST_LOADED]: state => ({
-        ...state,
+    [actions.USER_LIST_LOADED]: () => ({
+        ...initialState,
         userListLoading: false,
     }),
 
     [actions.USER_LIST_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         userListLoading: false,
         userListLoadingError: action.payload,
     }),
 
-    [actions.USER_ITEM_UPDATING]: state => ({
-        ...state,
+    [actions.USER_ITEM_UPDATING]: () => ({
+        ...initialState,
         userListItemUpdating: true,
     }),
 
-    [actions.USER_ITEM_UPDATE_SUCCESS]: state => ({
-        ...state,
+    [actions.USER_ITEM_UPDATE_SUCCESS]: () => ({
+        ...initialState,
         userListItemUpdating: false,
         userListItemUpdateSuccess: true,
     }),
 
     [actions.USER_ITEM_UPDATE_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         userListItemUpdating: false,
         userListItemUpdateError: action.payload,
     }),
 
-    [actions.USER_ITEM_DELETING]: state => ({
-        ...state,
+    [actions.USER_ITEM_DELETING]: () => ({
+        ...initialState,
         userListItemDeleting: true,
     }),
 
-    [actions.USER_ITEM_DELETE_SUCCESS]: state => ({
-        ...state,
+    [actions.USER_ITEM_DELETE_SUCCESS]: () => ({
+        ...initialState,
         userListItemDeleting: false,
         userListItemDeleteSuccess: true,
     }),
 
     [actions.USER_ITEM_DELETE_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         userListItemDeleting: false,
         userListItemDeleteError: action.payload,
     }),
 
-    [actions.USER_ADDING]: state => ({
-        ...state,
+    [actions.USER_ADDING]: () => ({
+        ...initialState,
         userAdding: true,
         userAddSuccess: false,
     }),
 
-    [actions.USER_ADD_SUCCESS]: state => ({
-        ...state,
+    [actions.USER_ADD_SUCCESS]: () => ({
+        ...initialState,
         userAdding: false,
         userAddSuccess: true,
     }),
 
     [actions.USER_ADD_FAILED]: (state, action) => ({
-        ...state,
+        ...initialState,
         userAdding: false,
         userAddSuccess: false,
         userAddError: action.payload,
