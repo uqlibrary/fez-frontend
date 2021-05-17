@@ -64,7 +64,7 @@ export const ActionFeedback = () => {
             dispatch(
                 showAppAlert({
                     ...alert,
-                    dismissAction: () => dispatch(dismissAppAlert()),
+                    dismissAction: /* istanbul ignore next */ () => dispatch(dismissAppAlert()),
                 }),
             );
 
