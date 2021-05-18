@@ -102,7 +102,7 @@ export default {
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact ' +
                     'eSpace administrators or try again later.',
-                status: 500,
+                status: 422,
             },
             500: {
                 message:
