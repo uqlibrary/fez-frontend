@@ -38,19 +38,21 @@ export const ActionFeedback = () => {
     const {
         listAuthorErrorAlert,
         addAuthorSuccessAlert,
+        addAuthorErrorAlert,
         deleteAuthorSuccessAlert,
         updateAuthorSuccessAlert,
+        updateAuthorErrorAlert,
         bulkAuthorDeleteAlert,
     } = locale.components.manageAuthors;
 
     React.useEffect(() => {
         const alert =
             (!!authorAddSuccess && addAuthorSuccessAlert) ||
-            (!!authorAddError && authorAddError) ||
+            (!!authorAddError && addAuthorErrorAlert) ||
             (!!authorListItemDeleteSuccess && deleteAuthorSuccessAlert) ||
             (!!authorListItemDeleteError && authorListItemDeleteError) ||
             (!!authorListItemUpdateSuccess && updateAuthorSuccessAlert) ||
-            (!!authorListItemUpdateError && authorListItemUpdateError) ||
+            (!!authorListItemUpdateError && updateAuthorErrorAlert) ||
             (!!authorListLoadingError && listAuthorErrorAlert) ||
             (!!bulkAuthorDeleteMessages && {
                 ...bulkAuthorDeleteAlert,
