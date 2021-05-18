@@ -128,9 +128,11 @@ export class NtroDetailsClass extends PureComponent {
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={
-                                            publication.fez_record_search_key_author[
-                                                item.rek_creator_contribution_statement_order - 1
-                                            ].rek_author
+                                            (
+                                                publication.fez_record_search_key_author[
+                                                    item.rek_creator_contribution_statement_order - 1
+                                                ] || {}
+                                            ).rek_author
                                                 ? `(${
                                                       publication.fez_record_search_key_author[
                                                           item.rek_creator_contribution_statement_order - 1

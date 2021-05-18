@@ -485,6 +485,32 @@ describe('NtroDetails ', () => {
                         rek_significance_order: 4,
                     },
                 ],
+                fez_record_search_key_creator_contribution_statement: [
+                    {
+                        rek_creator_contribution_statement_id: 293,
+                        rek_creator_contribution_statement_pid: 'UQ:ec5ce03',
+                        rek_creator_contribution_statement: 'A statement',
+                        rek_creator_contribution_statement_order: 1,
+                    },
+                    {
+                        rek_creator_contribution_statement_id: 294,
+                        rek_creator_contribution_statement_pid: 'UQ:ec5ce03',
+                        rek_creator_contribution_statement: '     ',
+                        rek_creator_contribution_statement_order: 2,
+                    },
+                    {
+                        rek_creator_contribution_statement_id: 295,
+                        rek_creator_contribution_statement_pid: 'UQ:ec5ce03',
+                        rek_creator_contribution_statement: '',
+                        rek_creator_contribution_statement_order: 3,
+                    },
+                    {
+                        rek_creator_contribution_statement_id: 296,
+                        rek_creator_contribution_statement_pid: 'UQ:ec5ce03',
+                        rek_creator_contribution_statement: '',
+                        rek_creator_contribution_statement_order: 4,
+                    },
+                ],
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
