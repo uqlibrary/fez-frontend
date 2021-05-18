@@ -37,11 +37,8 @@ export const ActionFeedback = () => {
 
     const {
         listAuthorErrorAlert,
-        addAuthorErrorAlert,
         addAuthorSuccessAlert,
-        deleteAuthorErrorAlert,
         deleteAuthorSuccessAlert,
-        updateAuthorErrorAlert,
         updateAuthorSuccessAlert,
         bulkAuthorDeleteAlert,
     } = locale.components.manageAuthors;
@@ -49,11 +46,11 @@ export const ActionFeedback = () => {
     React.useEffect(() => {
         const alert =
             (!!authorAddSuccess && addAuthorSuccessAlert) ||
-            (!!authorAddError && addAuthorErrorAlert) ||
+            (!!authorAddError && authorAddError) ||
             (!!authorListItemDeleteSuccess && deleteAuthorSuccessAlert) ||
-            (!!authorListItemDeleteError && deleteAuthorErrorAlert) ||
+            (!!authorListItemDeleteError && authorListItemDeleteError) ||
             (!!authorListItemUpdateSuccess && updateAuthorSuccessAlert) ||
-            (!!authorListItemUpdateError && updateAuthorErrorAlert) ||
+            (!!authorListItemUpdateError && authorListItemUpdateError) ||
             (!!authorListLoadingError && listAuthorErrorAlert) ||
             (!!bulkAuthorDeleteMessages && {
                 ...bulkAuthorDeleteAlert,

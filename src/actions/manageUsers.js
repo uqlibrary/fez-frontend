@@ -83,7 +83,7 @@ export function updateUserListItem(newData) {
         } catch (e) {
             dispatch({
                 type: USER_ITEM_UPDATE_FAILED,
-                payload: e,
+                payload: e.message,
             });
 
             return Promise.reject(e);
@@ -105,7 +105,7 @@ export function deleteUserListItem(oldData) {
         } catch (e) {
             dispatch({
                 type: USER_ITEM_DELETE_FAILED,
-                payload: e,
+                payload: e.message,
             });
 
             return Promise.reject(e);
@@ -152,7 +152,7 @@ export function addUser(data) {
         } catch (e) {
             dispatch({
                 type: USER_ADD_FAILED,
-                payload: e,
+                payload: e.message,
             });
 
             return Promise.reject(e);
