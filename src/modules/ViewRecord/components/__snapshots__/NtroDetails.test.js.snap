@@ -10153,7 +10153,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
       heading="Scale/Significance of work"
       key="3"
       rowId="rek-significance-3"
-      subheading="(undefined)"
+      subheading="()"
     />
     <Component
       data={
