@@ -64,7 +64,7 @@ export function updateAuthorListItem(newData) {
         } catch (e) {
             dispatch({
                 type: AUTHOR_ITEM_UPDATE_FAILED,
-                payload: e.message,
+                payload: e.data,
             });
 
             return Promise.reject(e);
@@ -86,7 +86,7 @@ export function deleteAuthorListItem(oldData) {
         } catch (e) {
             dispatch({
                 type: AUTHOR_ITEM_DELETE_FAILED,
-                payload: e.message,
+                payload: e.data,
             });
 
             return Promise.reject(e);
@@ -133,7 +133,7 @@ export function addAuthor(data) {
         } catch (e) {
             dispatch({
                 type: AUTHOR_ADD_FAILED,
-                payload: e.message,
+                payload: e.data,
             });
 
             return Promise.reject(e);
