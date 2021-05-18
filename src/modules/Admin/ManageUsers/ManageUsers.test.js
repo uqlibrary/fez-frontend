@@ -697,7 +697,7 @@ describe('ManageUsers', () => {
                 total: 2,
             })
             .onDelete(new RegExp(repository.routes.USER_API({}).apiUrl))
-            .replyOnce(500);
+            .replyOnce(422, { data: 'Error' });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 

@@ -953,7 +953,7 @@ describe('ManageAuthors', () => {
                 total: 2,
             })
             .onDelete(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
-            .replyOnce(500)
+            .replyOnce(422, { data: 'Error' })
             .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
             .replyOnce(200, { data: [], total: 0 });
 
