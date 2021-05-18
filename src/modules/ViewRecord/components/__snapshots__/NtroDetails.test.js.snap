@@ -10158,9 +10158,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
     <Component
       data={
         Array [
-          <p>
-            It was significant.
-          </p>,
+          "A statement",
         ]
       }
       heading="Creator research statement"
@@ -10169,15 +10167,25 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data={
-        Array [
-          "Missing.",
-        ]
-      }
+      data="Missing"
       heading="Creator research statement"
       key="1"
       rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
+    />
+    <Component
+      data="Missing"
+      heading="Creator research statement"
+      key="2"
+      rowId="rek-creator-contribution-statement-2"
+      subheading="(Someone else again)"
+    />
+    <Component
+      data="Missing"
+      heading="Creator research statement"
+      key="3"
+      rowId="rek-creator-contribution-statement-3"
+      subheading=""
     />
     <Component
       data={
