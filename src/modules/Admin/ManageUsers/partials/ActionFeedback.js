@@ -36,11 +36,8 @@ export const ActionFeedback = () => {
 
     const {
         listUserErrorAlert,
-        addUserErrorAlert,
         addUserSuccessAlert,
-        deleteUserErrorAlert,
         deleteUserSuccessAlert,
-        updateUserErrorAlert,
         updateUserSuccessAlert,
         bulkUserDeleteAlert,
     } = locale.components.manageUsers;
@@ -48,11 +45,11 @@ export const ActionFeedback = () => {
     React.useEffect(() => {
         const alert =
             (!!userAddSuccess && addUserSuccessAlert) ||
-            (!!userAddError && addUserErrorAlert) ||
+            (!!userAddError && userAddError) ||
             (!!userListItemDeleteSuccess && deleteUserSuccessAlert) ||
-            (!!userListItemDeleteError && deleteUserErrorAlert) ||
+            (!!userListItemDeleteError && userListItemDeleteError) ||
             (!!userListItemUpdateSuccess && updateUserSuccessAlert) ||
-            (!!userListItemUpdateError && updateUserErrorAlert) ||
+            (!!userListItemUpdateError && userListItemUpdateError) ||
             (!!userListLoadingError && listUserErrorAlert) ||
             (!!bulkUserDeleteMessages && {
                 ...bulkUserDeleteAlert,
