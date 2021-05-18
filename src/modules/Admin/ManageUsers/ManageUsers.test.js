@@ -418,7 +418,7 @@ describe('ManageUsers', () => {
 
         await waitFor(() => getByTestId('users-list-row-0'));
 
-        expect(getByTestId('usr-full-name-0')).toHaveTextContent('Test Name');
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test Name');
     });
 
     it('should render previous list on unsuccessful add operation', async () => {
@@ -505,9 +505,9 @@ describe('ManageUsers', () => {
 
         await waitFor(() => getByTestId('users-list-row-0'));
 
-        expect(getByTestId('usr-full-name-0')).toHaveTextContent('Test');
-        expect(getByTestId('usr-email-0')).toHaveTextContent('test@uq.edu.au');
-        expect(getByTestId('usr-username-0')).toHaveTextContent('uqtname');
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test');
+        expect(getByTestId('usr-email-0')).toHaveAttribute('value', 'test@uq.edu.au');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqtname');
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
@@ -560,8 +560,8 @@ describe('ManageUsers', () => {
 
         await waitFor(() => getByTestId('users-list-row-0'));
 
-        expect(getByTestId('usr-full-name-0')).toHaveTextContent('Test User');
-        expect(getByTestId('usr-username-0')).toHaveTextContent('uqvasai');
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
     });
 
     it('should delete an user item', async () => {
@@ -638,8 +638,8 @@ describe('ManageUsers', () => {
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
-        expect(getByTestId('usr-full-name-0')).toHaveTextContent('Testing User');
-        expect(getByTestId('usr-username-0')).toHaveTextContent('uqvasai');
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Testing User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
     });
 
     it('should render same list after unsuccessful delete operation', async () => {
@@ -716,10 +716,10 @@ describe('ManageUsers', () => {
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
-        expect(getByTestId('usr-username-0')).toHaveTextContent('uqvasai');
-        expect(getByTestId('usr-full-name-0')).toHaveTextContent('Test User');
-        expect(getByTestId('usr-username-1')).toHaveTextContent('uqvdesai');
-        expect(getByTestId('usr-full-name-1')).toHaveTextContent('Testing User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
+        expect(getByTestId('usr-username-1')).toHaveAttribute('value', 'uqvdesai');
+        expect(getByTestId('usr-full-name-1')).toHaveAttribute('value', 'Testing User');
     });
 
     it('should bulk delete all users', async () => {
@@ -888,5 +888,54 @@ describe('ManageUsers', () => {
 
         expect(queryByTestId('user-edit-row')).not.toBeInTheDocument();
         expect(queryByText('Name information')).not.toBeInTheDocument();
+    });
+
+    it('should copy author id to clipboard', async () => {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [
+                {
+                    usr_id: 1000000293,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_status: 'active',
+                    usr_given_names: null,
+                    usr_family_name: null,
+                    usr_full_name: 'Test User',
+                    usr_email: 't.user@library.uq.edu.au',
+                    usr_preferences: null,
+                    usr_sms_email: null,
+                    usr_username: 'uqvasai',
+                    usr_shib_username: null,
+                    usr_administrator: true,
+                    usr_ldap_authentication: false,
+                    usr_login_count: 157,
+                    usr_shib_login_count: 0,
+                    usr_last_login_date: '2021-02-23T04:44:06Z',
+                    usr_external_usr_id: null,
+                    usr_super_administrator: true,
+                    usr_auth_rule_groups:
+                        '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    usr_real_last_login_date: '2021-02-22T11:49:49Z',
+                },
+            ],
+            total: 1,
+        });
+        Object.assign(navigator, {
+            clipboard: {
+                writeText: () => {
+                    return Promise.resolve();
+                },
+            },
+        });
+        jest.spyOn(navigator.clipboard, 'writeText');
+
+        const { getByTestId, getByText } = setup();
+
+        await act(() => waitForElementToBeRemoved(() => getByText('Loading users')));
+
+        fireEvent.click(getByTestId('usr-username-0-copy-text'));
+
+        expect(navigator.clipboard.writeText).toHaveBeenCalledWith('uqvasai');
+
+        waitFor(() => getByTestId('copied-text-snackbar'));
     });
 });
