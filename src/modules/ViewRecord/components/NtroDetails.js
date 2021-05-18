@@ -95,6 +95,10 @@ export class NtroDetailsClass extends PureComponent {
                                                     item.rek_significance_order - 1
                                                 ] || {}
                                             ).rek_author
+                                                ? publication.fez_record_search_key_author[
+                                                      item.rek_significance_order - 1
+                                                  ].rek_author
+                                                : ''
                                         })`}
                                         data={
                                             (item.rek_significance !== 0 &&
