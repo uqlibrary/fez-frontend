@@ -64,7 +64,11 @@ export const getColumns = () => {
             title: <ColumnTitle title={fullName.title} />,
             field: 'usr_full_name',
             render: rowData => (
-                <ColumnData data={rowData.usr_full_name} columnDataId={`usr-full-name-${rowData.tableData.id}`} />
+                <ColumnData
+                    data={rowData.usr_full_name}
+                    columnDataId={`usr-full-name-${rowData.tableData.id}`}
+                    copiable
+                />
             ),
             validate: rowData => (!!rowData.usr_full_name ? undefined : { error: true, errorText: fullNameError }),
             cellStyle: {
@@ -81,12 +85,18 @@ export const getColumns = () => {
             field: 'usr_username',
             render: rowData => (
                 <React.Fragment>
-                    <ColumnData data={rowData.usr_username} columnDataId={`usr-username-${rowData.tableData.id}`} />
-                    <Tooltip title="Last login date">
-                        <Typography variant="caption">
-                            {moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')}
-                        </Typography>
-                    </Tooltip>
+                    <ColumnData
+                        data={rowData.usr_username}
+                        columnDataId={`usr-username-${rowData.tableData.id}`}
+                        copiable
+                    />
+                    {!!rowData.usr_last_login_date && (
+                        <Tooltip title="Last login date">
+                            <Typography variant="caption">
+                                {moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')}
+                            </Typography>
+                        </Tooltip>
+                    )}
                 </React.Fragment>
             ),
             validate: rowData => (!!rowData.usr_username ? undefined : { error: true, errorText: usernameError }),
