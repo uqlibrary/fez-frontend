@@ -39,6 +39,7 @@ export const ActionFeedback = () => {
         addUserSuccessAlert,
         addUserErrorAlert,
         deleteUserSuccessAlert,
+        deleteUserErrorAlert,
         updateUserSuccessAlert,
         updateUserErrorAlert,
         bulkUserDeleteAlert,
@@ -49,7 +50,7 @@ export const ActionFeedback = () => {
             (!!userAddSuccess && addUserSuccessAlert) ||
             (!!userAddError && addUserErrorAlert) ||
             (!!userListItemDeleteSuccess && deleteUserSuccessAlert) ||
-            (!!userListItemDeleteError && userListItemDeleteError) ||
+            (!!userListItemDeleteError && { ...deleteUserErrorAlert, message: userListItemDeleteError }) ||
             (!!userListItemUpdateSuccess && updateUserSuccessAlert) ||
             (!!userListItemUpdateError && updateUserErrorAlert) ||
             (!!userListLoadingError && listUserErrorAlert) ||

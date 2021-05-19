@@ -40,6 +40,7 @@ export const ActionFeedback = () => {
         addAuthorSuccessAlert,
         addAuthorErrorAlert,
         deleteAuthorSuccessAlert,
+        deleteAuthorErrorAlert,
         updateAuthorSuccessAlert,
         updateAuthorErrorAlert,
         bulkAuthorDeleteAlert,
@@ -50,7 +51,7 @@ export const ActionFeedback = () => {
             (!!authorAddSuccess && addAuthorSuccessAlert) ||
             (!!authorAddError && addAuthorErrorAlert) ||
             (!!authorListItemDeleteSuccess && deleteAuthorSuccessAlert) ||
-            (!!authorListItemDeleteError && authorListItemDeleteError) ||
+            (!!authorListItemDeleteError && { ...deleteAuthorErrorAlert, message: authorListItemDeleteError }) ||
             (!!authorListItemUpdateSuccess && updateAuthorSuccessAlert) ||
             (!!authorListItemUpdateError && updateAuthorErrorAlert) ||
             (!!authorListLoadingError && listAuthorErrorAlert) ||
