@@ -102,7 +102,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const {
         loadingText,
         form: {
-            locale: { addButtonTooltip, bulkDeleteButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+            locale: {
+                addButtonTooltip,
+                bulkDeleteButtonTooltip,
+                editButtonTooltip,
+                deleteButtonTooltip,
+                scopusIngestButtonTooltip,
+            },
             bulkDeleteConfirmationLocale,
         },
     } = locale.components.manageAuthors;
@@ -270,6 +276,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     Action: props => {
                         if (typeof props.action === 'function') {
                             const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
+                            console.log(tooltip);
                             return (
                                 <MTableAction
                                     {...props}
@@ -288,6 +295,33 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                                 {...restAction.iconProps}
                                             />
                                         ),
+                                    }}
+                                    size="small"
+                                />
+                            );
+                        } else if (props.action.isScopusIngest) {
+                            const { icon: Icon, tooltip, ...restAction } = props.action;
+                            return (
+                                <MTableAction
+                                    {...props}
+                                    action={{
+                                        ...restAction,
+                                        tooltip,
+                                        disabled:
+                                            !props.data.aut_scopus_id ||
+                                            props.data.aut_is_scopus_id_authenticated === 0,
+                                        icon: () => (
+                                            <Icon
+                                                id={`authors-list-row-${
+                                                    props.data.tableData.id
+                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                                data-testid={`authors-list-row-${
+                                                    props.data.tableData.id
+                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                                {...restAction.iconProps}
+                                            />
+                                        ),
+                                        onClick: () => console.log(props.data),
                                     }}
                                     size="small"
                                 />
@@ -370,6 +404,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         icon: 'delete',
                         tooltip: bulkDeleteButtonTooltip,
                         onClick: showConfirmation,
+                        isFreeAction: false,
+                    },
+                    {
+                        icon: tableIcons.Download,
+                        isScopusIngest: true,
+                        position: 'row',
+                        tooltip: scopusIngestButtonTooltip,
                     },
                 ]}
             />
