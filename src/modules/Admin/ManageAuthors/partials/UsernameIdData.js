@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { throttle } from 'throttle-debounce';
-import { useDispatch, useSelector } from 'react-redux';
 
 import Grid from '@material-ui/core/Grid';
 import OverriddenIcon from '@material-ui/icons/Lock';
@@ -14,85 +12,13 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
-import { checkForExistingAuthor } from 'actions';
 
-export const UsernameIdColumnData = ({ rowData, ...props }) => {
-    const dispatch = useDispatch();
-
-    const existingAuthorFieldError = useSelector(state => state.get('manageAuthorsReducer').existingAuthorFieldError);
-
+export const UsernameIdColumnData = ({ rowData, error, ...props }) => {
     const {
         editRow: {
             fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },
-            validation: { orgStaffIdErrorText, orgStudentIdErrorText, studentUsernameErrorText, orgUsernameErrorText },
         },
     } = locale.components.manageAuthors;
-
-    const [orgUsernameError, setOrgUsernameError] = React.useState(null);
-    const [studentUsernameError, setStudentUsernameError] = React.useState(null);
-    const [orgStaffIdError, setOrgStaffIdError] = React.useState(null);
-
-    /**
-     * @todo uncomment below code for aut_org_staff_id and aut_org_student_id validation error
-     */
-    const [orgStudentIdError, setOrgStudentIdError] = React.useState(null);
-
-    const checkForExisting = React.useRef(
-        throttle(500, (query, authorField, autId) => dispatch(checkForExistingAuthor(query, authorField, autId))),
-    );
-
-    /* Run this effect on aut_org_username change */
-    React.useEffect(() => {
-        if (!!rowData.aut_org_username && rowData.aut_org_username.length >= 5) {
-            checkForExisting.current(rowData.aut_org_username, 'aut_org_username', rowData.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [rowData.aut_org_username]);
-
-    /* Run this effect on aut_student_username change */
-    React.useEffect(() => {
-        if (!!rowData.aut_student_username && rowData.aut_student_username.length === 8) {
-            checkForExisting.current(rowData.aut_student_username, 'aut_student_username', rowData.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [rowData.aut_student_username]);
-
-    /* Run this effect on aut_org_staff_id change */
-    React.useEffect(() => {
-        if (!!rowData.aut_org_staff_id && rowData.aut_org_staff_id.length === 7) {
-            checkForExisting.current(rowData.aut_org_staff_id, 'aut_org_staff_id', rowData.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [rowData.aut_org_staff_id]);
-
-    /* Run this effect on aut_org_student_id change */
-    React.useEffect(() => {
-        if (!!rowData.aut_org_student_id && rowData.aut_org_student_id.length === 8) {
-            checkForExisting.current(rowData.aut_org_student_id, 'aut_org_student_id', rowData.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [rowData.aut_org_student_id]);
-
-    React.useEffect(() => {
-        if (!!existingAuthorFieldError) {
-            const { field, error } = existingAuthorFieldError;
-            if (field === 'aut_org_username') {
-                setOrgUsernameError(error ? { error: true, errorText: orgUsernameErrorText } : { error: false });
-            }
-            if (field === 'aut_student_username') {
-                setStudentUsernameError(
-                    error ? { error: true, errorText: studentUsernameErrorText } : { error: false },
-                );
-            }
-            if (field === 'aut_org_staff_id') {
-                setOrgStaffIdError(error ? { error: true, errorText: orgStaffIdErrorText } : { error: false });
-            }
-            if (field === 'aut_org_student_id') {
-                setOrgStudentIdError(error ? { error: true, errorText: orgStudentIdErrorText } : { error: false });
-            }
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [existingAuthorFieldError]);
 
     const handleNameOverridden = () => {
         props.onChange('aut_name_overridden', Number(!rowData.aut_name_overridden));
@@ -105,17 +31,17 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId="aut-org-staff-id"
                     data={rowData.aut_org_staff_id}
                     name="aut_org_staff_id"
+                    {...((!!error.aut_org_staff_id && error.aut_org_staff_id) || {})}
                     {...orgStaffId}
                     {...props}
-                    {...(!!orgStaffIdError ? orgStaffIdError : {})}
                 />
                 <AuthorFieldData
                     authorFieldDataId="aut-org-username"
                     data={rowData.aut_org_username}
                     name="aut_org_username"
+                    {...((!!error.aut_org_username && error.aut_org_username) || {})}
                     {...orgUsername}
                     {...props}
-                    {...(!!orgUsernameError ? orgUsernameError : {})}
                     InputProps={{
                         ...((!!rowData.aut_org_username && {
                             endAdornment: (
@@ -154,17 +80,17 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
                     authorFieldDataId="aut-org-student-id"
                     data={rowData.aut_org_student_id}
                     name="aut_org_student_id"
+                    {...((!!error.aut_org_student_id && error.aut_org_student_id) || {})}
                     {...props}
                     {...orgStudentId}
-                    {...(!!orgStudentIdError ? orgStudentIdError : {})}
                 />
                 <AuthorFieldData
                     authorFieldDataId="aut-student-username"
                     data={rowData.aut_student_username}
                     name="aut_student_username"
+                    {...((!!error.aut_student_username && error.aut_student_username) || {})}
                     {...studentUsername}
                     {...props}
-                    {...(!!studentUsernameError ? studentUsernameError : {})}
                 />
                 <AuthorFieldData
                     authorFieldDataId="aut-ref-num"
@@ -180,6 +106,7 @@ export const UsernameIdColumnData = ({ rowData, ...props }) => {
 
 UsernameIdColumnData.propTypes = {
     rowData: PropTypes.object,
+    error: PropTypes.object,
     onChange: PropTypes.func,
 };
 

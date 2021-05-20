@@ -2,27 +2,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { upperFirst } from 'lodash';
 import makeStyles from '@material-ui/styles/makeStyles';
 import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
-import { tableIcons } from './ManageAuthorsListIcons';
+import { tableIcons } from './ManageUsersListIcons';
 
-import Button from '@material-ui/core/Button';
 import Backdrop from '@material-ui/core/Backdrop';
+import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
 
 import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
-import AuthorHeader from './partials/AuthorHeader';
-import LeastAuthorData from './partials/LeastAuthorData';
-import FullAuthorDetails from './partials/FullAuthorDetails';
 
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+
+import FullUserDetails from './partials/FullUserDetails';
 
 import { default as locale } from 'locale/components';
-import { loadAuthorList } from 'actions';
+import moment from 'moment';
+import { loadUserList } from 'actions';
 import { useConfirmationState } from 'hooks';
-import { BULK_DELETE_AUTHOR_SUCCESS } from 'config/general';
+import { BULK_DELETE_USER_SUCCESS } from 'config/general';
 
 export const useStyles = makeStyles(() => ({
     backdrop: {
@@ -35,63 +38,124 @@ export const useStyles = makeStyles(() => ({
 export const getColumns = () => {
     const {
         header: {
-            columns: { id },
+            columns: { id, fullName, username, email, status, isAdmin, isSuperAdmin },
         },
         editRow: {
-            validation: { firstNameErrorText, lastNameErrorText },
+            validation: { usernameError, emailError, fullNameError },
         },
-    } = locale.components.manageAuthors;
+    } = locale.components.manageUsers;
+
     return [
         {
             title: <ColumnTitle title={id.title} />,
-            field: 'aut_id',
-            render: rowData => (
-                <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} copiable />
-            ),
+            field: 'usr_id',
+            editable: 'never',
+            render: rowData => <ColumnData data={rowData.usr_id} columnDataId={`usr-id-${rowData.tableData.id}`} />,
             cellStyle: {
-                width: '15%',
-                maxWidth: '15%',
+                width: '5%',
+                maxWidth: '5%',
+            },
+            headerStyle: {
+                width: '5%',
+                maxWidth: '5%',
             },
         },
         {
-            title: <AuthorHeader />,
-            field: 'author',
-            sorting: false,
-            render: rowData => <LeastAuthorData rowData={rowData} />,
-            validate: rowData => {
-                let error = {};
-
-                if (!rowData.aut_fname || rowData.aut_fname === '') {
-                    error = {
-                        ...error,
-                        aut_fname: {
-                            error: true,
-                            errorText: firstNameErrorText,
-                        },
-                    };
-                }
-
-                if (!rowData.aut_lname || rowData.aut_lname === '') {
-                    error = {
-                        ...error,
-                        aut_lname: {
-                            error: true,
-                            errorText: lastNameErrorText,
-                        },
-                    };
-                }
-
-                return error;
-            },
+            title: <ColumnTitle title={fullName.title} />,
+            field: 'usr_full_name',
+            render: rowData => (
+                <ColumnData
+                    data={rowData.usr_full_name}
+                    columnDataId={`usr-full-name-${rowData.tableData.id}`}
+                    copiable
+                />
+            ),
+            validate: rowData => (!!rowData.usr_full_name ? undefined : { error: true, errorText: fullNameError }),
             cellStyle: {
-                width: '100%',
-                maxWidth: '100%',
+                width: '30%',
+                maxWidth: '30%',
             },
+            headerStyle: {
+                width: '30%',
+                maxWidth: '30%',
+            },
+        },
+        {
+            title: <ColumnTitle title={username.title} />,
+            field: 'usr_username',
+            render: rowData => (
+                <React.Fragment>
+                    <ColumnData
+                        data={rowData.usr_username}
+                        columnDataId={`usr-username-${rowData.tableData.id}`}
+                        copiable
+                    />
+                    {!!rowData.usr_last_login_date && (
+                        <Tooltip title="Last login date">
+                            <Typography variant="caption">
+                                {moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')}
+                            </Typography>
+                        </Tooltip>
+                    )}
+                </React.Fragment>
+            ),
+            validate: rowData => (!!rowData.usr_username ? undefined : { error: true, errorText: usernameError }),
+            cellStyle: {
+                width: '7%',
+                maxWidth: '7%',
+            },
+            headerStyle: {
+                width: '7%',
+                maxWidth: '7%',
+            },
+        },
+        {
+            title: <ColumnTitle title={email.title} />,
+            field: 'usr_email',
+            render: rowData => (
+                <ColumnData data={rowData.usr_email} columnDataId={`usr-email-${rowData.tableData.id}`} />
+            ),
+            validate: rowData => (!!rowData.usr_email ? undefined : { error: true, errorText: emailError }),
+            cellStyle: {
+                width: '30%',
+                maxWidth: '30%',
+            },
+            headerStyle: {
+                width: '30%',
+                maxWidth: '30%',
+            },
+        },
+        {
+            title: <ColumnTitle title={status.title} />,
+            field: 'usr_status',
+            render: rowData => (
+                <ColumnData data={upperFirst(rowData.usr_status)} columnDataId={`usr-status-${rowData.tableData.id}`} />
+            ),
+        },
+        {
+            title: <ColumnTitle title={isAdmin.title} />,
+            field: 'usr_administrator',
+            render: rowData => (
+                <ColumnData
+                    data={rowData.usr_administrator ? 'Yes' : 'No'}
+                    columnDataId={`usr-administrator-${rowData.tableData.id}`}
+                />
+            ),
+        },
+        {
+            title: <ColumnTitle title={isSuperAdmin.title} />,
+            field: 'usr_super_administrator',
+            render: rowData => (
+                <ColumnData
+                    data={rowData.usr_super_administrator ? 'Yes' : 'No'}
+                    columnDataId={`usr-super-administrator-${rowData.tableData.id}`}
+                />
+            ),
         },
     ];
 };
 
-export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate }) => {
+export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowDelete }) => {
     const dispatch = useDispatch();
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
@@ -105,20 +169,15 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const {
         loadingText,
         form: {
-            locale: {
-                addButtonTooltip,
-                bulkDeleteButtonTooltip,
-                editButtonTooltip,
-                deleteButtonTooltip,
-                scopusIngestButtonTooltip,
-            },
+            locale: { addButtonTooltip, bulkDeleteButtonTooltip, editButtonTooltip, deleteButtonTooltip },
             bulkDeleteConfirmationLocale,
         },
-    } = locale.components.manageAuthors;
+    } = locale.components.manageUsers;
 
     const handleSave = (mode, newData, oldData) => {
         const materialTable = materialTableRef.current;
 
+        // materialTable.setState(prevState => {
         if (mode === 'add') {
             materialTable.props.editable
                 .onRowAdd(newData)
@@ -158,22 +217,20 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         };
                     });
                 })
-                .catch(
-                    /* istanbul ignore next */ () => {
-                        materialTable.setState(prevState => {
-                            materialTable.dataManager.changeRowEditing(oldData);
-                            materialTable.dataManager.setData([
-                                ...prevState.data.slice(0, index),
-                                oldData,
-                                ...prevState.data.slice(index + 1),
-                            ]);
-                            return {
-                                ...materialTable.dataManager.getRenderState(),
-                                showAddRow: false,
-                            };
-                        });
-                    },
-                );
+                .catch(() => {
+                    materialTable.setState(prevState => {
+                        materialTable.dataManager.changeRowEditing(oldData);
+                        materialTable.dataManager.setData([
+                            ...prevState.data.slice(0, index),
+                            oldData,
+                            ...prevState.data.slice(index + 1),
+                        ]);
+                        return {
+                            ...materialTable.dataManager.getRenderState(),
+                            showAddRow: false,
+                        };
+                    });
+                });
         } else {
             const index = oldData.tableData.id;
             materialTable.props.editable
@@ -210,10 +267,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 materialTable.setState(
                     prevState => {
                         const newList = [...prevState.data];
-                        for (const [authorId, message] of Object.entries(response)) {
-                            message === BULK_DELETE_AUTHOR_SUCCESS &&
+                        for (const [userId, message] of Object.entries(response)) {
+                            message === BULK_DELETE_USER_SUCCESS &&
                                 newList.splice(
-                                    newList.findIndex(author => String(author.aut_id) === String(authorId)),
+                                    newList.findIndex(user => String(user.usr_id) === String(userId)),
                                     1,
                                 );
                         }
@@ -236,11 +293,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 });
             });
     };
-
     return (
         <React.Fragment>
             <ConfirmationBox
-                confirmationBoxId="bulk-delete-authors-confirmation"
+                confirmationBoxId="bulk-delete-users-confirmation"
                 onAction={handleBulkDelete}
                 onClose={hideConfirmation}
                 isOpen={isOpen}
@@ -250,10 +306,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 tableRef={materialTableRef}
                 columns={columns.current}
                 components={{
-                    Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
+                    Container: props => <div {...props} id="users-list" data-testid="users-list" />,
                     OverlayLoading: props => (
                         <Backdrop {...props} open className={classes.backdrop}>
-                            <StandardCard noHeader standardCardId="loading-authors">
+                            <StandardCard noHeader standardCardId="loading-users">
                                 <InlineLoader message={loadingText} />
                             </StandardCard>
                         </Backdrop>
@@ -262,16 +318,16 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         <MTableBodyRow
                             {...props}
                             hover
-                            id={`authors-list-row-${props.index}`}
-                            data-testid={`authors-list-row-${props.index}`}
+                            id={`users-list-row-${props.index}`}
+                            data-testid={`users-list-row-${props.index}`}
                         />
                     ),
                     EditRow: props => {
                         return (
-                            <FullAuthorDetails
+                            <FullUserDetails
                                 {...props}
-                                id="authors-list-edit-row"
-                                data-testid="authors-list-edit-row"
+                                id="users-list-edit-row"
+                                data-testid="users-list-edit-row"
                                 onEditingApproved={handleSave}
                             />
                         );
@@ -279,7 +335,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     Action: props => {
                         if (typeof props.action === 'function') {
                             const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                            console.log(tooltip);
                             return (
                                 <MTableAction
                                     {...props}
@@ -289,42 +344,15 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                         icon: () => (
                                             <Icon
                                                 disabled={props.disabled}
-                                                id={`authors-list-row-${
+                                                id={`users-list-row-${
                                                     props.data.tableData.id
                                                 }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                {...restAction.iconProps}
-                                            />
-                                        ),
-                                    }}
-                                    size="small"
-                                />
-                            );
-                        } else if (props.action.isScopusIngest) {
-                            const { icon: Icon, tooltip, ...restAction } = props.action;
-                            return (
-                                <MTableAction
-                                    {...props}
-                                    action={{
-                                        ...restAction,
-                                        tooltip,
-                                        disabled:
-                                            !props.data.aut_scopus_id ||
-                                            props.data.aut_is_scopus_id_authenticated === 0,
-                                        icon: () => (
-                                            <Icon
-                                                id={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`authors-list-row-${
+                                                data-testid={`users-list-row-${
                                                     props.data.tableData.id
                                                 }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                                 {...restAction.iconProps}
                                             />
                                         ),
-                                        onClick: () => console.log(props.data),
                                     }}
                                     size="small"
                                 />
@@ -334,8 +362,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             const { tooltip } = props.action;
                             return (
                                 <Button
-                                    id={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    data-testid={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                    id={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                    data-testid={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                     disabled={props.disabled}
                                     variant="contained"
                                     color="primary"
@@ -352,7 +380,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         ...materialTableRef.current.dataManager.getRenderState(),
                         showAddRow: false,
                     });
-                    return dispatch(loadAuthorList(query));
+                    return dispatch(loadUserList(query));
                 }}
                 onRowClick={(event, rowData) => {
                     materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
@@ -372,8 +400,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     },
                 }}
                 editable={{
+                    onRowUpdateCancelled: () => {},
                     onRowAdd: newData => onRowAdd(newData),
-                    onRowUpdate: newData => onRowUpdate(newData),
+                    onRowUpdate: (newData, oldData) => onRowUpdate(newData, oldData),
                     onRowDelete: oldData => onRowDelete(oldData),
                 }}
                 options={{
@@ -397,8 +426,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     }),
                     headerSelectionProps: {
                         inputProps: {
-                            id: 'select-all-authors',
-                            'data-testid': 'select-all-authors',
+                            id: 'select-all-users',
+                            'data-testid': 'select-all-users',
                         },
                     },
                 }}
@@ -407,13 +436,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         icon: 'delete',
                         tooltip: bulkDeleteButtonTooltip,
                         onClick: showConfirmation,
-                        isFreeAction: false,
-                    },
-                    {
-                        icon: tableIcons.Download,
-                        isScopusIngest: true,
-                        position: 'row',
-                        tooltip: scopusIngestButtonTooltip,
                     },
                 ]}
             />
@@ -421,11 +443,11 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     );
 };
 
-ManageAuthorsList.propTypes = {
+ManageUsersList.propTypes = {
     onBulkRowDelete: PropTypes.func,
     onRowAdd: PropTypes.func,
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,
 };
 
-export default React.memo(ManageAuthorsList);
+export default React.memo(ManageUsersList);

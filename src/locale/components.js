@@ -3326,13 +3326,10 @@ export default {
                     },
                 },
                 validation: {
-                    firstNameErrorText: 'This field is required',
-                    lastNameErrorText: 'This field is required',
-                    orgStaffIdErrorText: 'The supplied Organisation Staff ID is already on file for another author.',
-                    orgStudentIdErrorText:
-                        'The supplied Organisation Student ID is already on file for another author.',
-                    orgUsernameErrorText: 'The supplied Organisation Username is already on file for another author.',
-                    studentUsernameErrorText: 'The supplied Student username is already on file for another author.',
+                    aut_org_staff_id: 'The supplied Organisation Staff ID is already on file for another author.',
+                    aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
+                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
+                    aut_student_username: 'The supplied Student username is already on file for another author.',
                 },
             },
             form: {
@@ -3345,12 +3342,20 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected authors',
+                    confirmationMessage: 'Are you sure you want to delete selected authors?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
+                    bulkDeleteButtonTooltip: 'Delete selected authors',
                     editButtonTooltip: 'Edit this author',
                     deleteButtonTooltip: 'Delete this author',
                     notesButtonTooltip: 'View notes for this author',
                     updateNotesButton: 'Update notes',
+                    scopusIngestButtonTooltip: 'Ingest from Scopus',
                 },
             },
             row: {
@@ -3358,11 +3363,175 @@ export default {
                     editHint: 'Edit this item',
                 },
             },
-            successAlert: {
+            listAuthorErrorAlert: {
+                alertId: 'alert-error-author-list',
+                allowDismiss: true,
+                type: 'error',
+                message: 'There was some error loading author list',
+            },
+            addAuthorSuccessAlert: {
                 alertId: 'alert-done-author-add',
                 allowDismiss: true,
                 type: 'done',
                 message: 'An author has been successfully added.',
+            },
+            updateAuthorSuccessAlert: {
+                alertId: 'alert-done-author-update',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully updated.',
+            },
+            deleteAuthorSuccessAlert: {
+                alertId: 'alert-done-author-delete',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully deleted.',
+            },
+            addAuthorErrorAlert: {
+                alertId: 'alert-error-author-add',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An author could not be added.',
+            },
+            updateAuthorErrorAlert: {
+                alertId: 'alert-error-author-update',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An author could not be updated.',
+            },
+            deleteAuthorErrorAlert: {
+                alertId: 'alert-error-author-delete',
+                allowDismiss: true,
+                type: 'error',
+                message: 'Cannot delete author with linked works',
+            },
+            bulkAuthorDeleteAlert: {
+                alertId: 'alert-info-author-bulk-delete',
+                allowDismiss: true,
+                type: 'info',
+            },
+        },
+        manageUsers: {
+            loadingText: 'Loading users',
+            header: {
+                columns: {
+                    id: {
+                        title: 'ID',
+                    },
+                    fullName: {
+                        title: 'Full name',
+                    },
+                    username: {
+                        title: 'Username',
+                    },
+                    email: {
+                        title: 'Email',
+                    },
+                    status: {
+                        title: 'Status',
+                    },
+                    isAdmin: {
+                        title: 'Administrator?',
+                    },
+                    isSuperAdmin: {
+                        title: 'Super administrator?',
+                    },
+                },
+            },
+            editRow: {
+                fields: {
+                    username: {
+                        label: 'Username',
+                    },
+                    email: {
+                        label: 'Email',
+                    },
+                    fullName: {
+                        label: 'Full name',
+                    },
+                    isAdmin: {
+                        label: 'Administrator?',
+                    },
+                    isSuperAdmin: {
+                        label: 'Super administrator?',
+                        helperText: 'Only super admin users can update this flag',
+                    },
+                },
+                validation: {
+                    usernameError: 'This field is required',
+                    emailError: 'This field is required',
+                    fullNameError: 'This field is required',
+                },
+            },
+            form: {
+                editButton: 'Update user',
+                addButton: 'Save user',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete user',
+                    confirmationMessage: 'Are you sure you want to delete this user?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected users',
+                    confirmationMessage: 'Are you sure you want to delete selected users?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                locale: {
+                    addButtonTooltip: 'Add new user',
+                    bulkDeleteButtonTooltip: 'Delete selected users',
+                    deleteButtonTooltip: 'Delete this user',
+                    editButtonTooltip: 'Edit this user',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            listUserErrorAlert: {
+                alertId: 'alert-error-user-list',
+                allowDismiss: true,
+                type: 'error',
+                message: 'There was some error loading user list',
+            },
+            addUserSuccessAlert: {
+                alertId: 'alert-done-user-add',
+                allowDismiss: true,
+                type: 'done',
+                message: 'A user has been successfully added.',
+            },
+            updateUserSuccessAlert: {
+                alertId: 'alert-done-user-update',
+                allowDismiss: true,
+                type: 'done',
+                message: 'A user has been successfully updated.',
+            },
+            deleteUserSuccessAlert: {
+                alertId: 'alert-done-user-delete',
+                allowDismiss: true,
+                type: 'done',
+                message: 'A user has been successfully deleted.',
+            },
+            addUserErrorAlert: {
+                alertId: 'alert-error-user-add',
+                allowDismiss: true,
+                type: 'error',
+                message: 'A user could not be added.',
+            },
+            updateUserErrorAlert: {
+                alertId: 'alert-error-user-update',
+                allowDismiss: true,
+                type: 'error',
+                message: 'A user could not be updated.',
+            },
+            deleteUserErrorAlert: {
+                alertId: 'alert-error-user-delete',
+                allowDismiss: true,
+                type: 'error',
+                message: 'A user could not be deleted.',
             },
         },
     },

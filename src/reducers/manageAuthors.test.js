@@ -13,7 +13,7 @@ import manageAuthorsReducer, { initialState } from './manageAuthors';
     "aut_title"
 */
 
-describe('author reducer', () => {
+describe(' manage authors reducer', () => {
     it('returns the correct state while author are loading', () => {
         const test = manageAuthorsReducer(initialState, {
             type: actions.AUTHOR_LIST_LOADING,

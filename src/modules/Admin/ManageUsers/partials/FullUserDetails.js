@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -11,13 +10,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
 import NameData from './NameData';
-import NotesData from './NotesData';
-import UsernameIdData from './UsernameIdData';
-import ResearcherIdentifierData from './ResearcherIdentifierData';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
-import { checkForExistingAuthor } from 'actions';
 import { default as locale } from 'locale/components';
 
 const useStyles = makeStyles(theme => ({
@@ -27,30 +22,25 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled, columns }) => {
+export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled, columns }) => {
     const classes = useStyles();
-    const dispatch = useDispatch();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    const existingAuthorFieldError = useSelector(state => state.get('manageAuthorsReducer').existingAuthorFieldError);
+    const [error, setError] = React.useState({});
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
-        editRow: { validation },
-    } = locale.components.manageAuthors;
+    } = locale.components.manageUsers;
 
     const [data, setData] = React.useState(rowData || {});
-    const [error, setError] = React.useState({});
 
-    const checkForExisting = React.useRef((query, authorField, autId) =>
-        dispatch(checkForExistingAuthor(query, authorField, autId, validation)),
-    );
-
-    const handleChange = (name, value) => setData(data => ({ ...data, [name]: value }));
+    const handleChange = (name, value) => {
+        setData(data => ({ ...data, [name]: value }));
+    };
 
     const handleSave = () => {
-        const newData = data;
-        delete newData.tableData;
-        onEditingApproved(mode, data, rowData);
+        // eslint-disable-next-line no-unused-vars
+        const { tableData, ...newData } = data;
+        onEditingApproved(mode, newData, rowData);
     };
 
     const handleDelete = () => {
@@ -68,38 +58,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         hideConfirmation();
     };
 
-    /* Run this effect on aut_org_username change */
-    React.useEffect(() => {
-        if (!!data.aut_org_username && data.aut_org_username.length >= 5) {
-            checkForExisting.current(data.aut_org_username, 'aut_org_username', data.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data.aut_org_username]);
-
-    /* Run this effect on aut_student_username change */
-    React.useEffect(() => {
-        if (!!data.aut_student_username && data.aut_student_username.length === 8) {
-            checkForExisting.current(data.aut_student_username, 'aut_student_username', data.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data.aut_student_username]);
-
-    /* Run this effect on aut_org_staff_id change */
-    React.useEffect(() => {
-        if (!!data.aut_org_staff_id && data.aut_org_staff_id.length === 7) {
-            checkForExisting.current(data.aut_org_staff_id, 'aut_org_staff_id', data.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data.aut_org_staff_id]);
-
-    /* Run this effect on aut_org_student_id change */
-    React.useEffect(() => {
-        if (!!data.aut_org_student_id && data.aut_org_student_id.length === 8) {
-            checkForExisting.current(data.aut_org_student_id, 'aut_org_student_id', data.aut_id);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data.aut_org_student_id]);
-
     React.useEffect(() => {
         if (mode === 'delete') {
             showConfirmation();
@@ -108,21 +66,21 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     }, [mode]);
 
     React.useEffect(() => {
-        setError(() => ({
-            ...columns.reduce(
-                (errorObject, column) => !!column.validate && { ...errorObject, ...column.validate(data) },
-                {},
-            ),
-            ...(!!existingAuthorFieldError ? existingAuthorFieldError : {}),
-        }));
+        setError(
+            columns.reduce((errorObject, column) => {
+                return !!column.validate && !!column.validate(data)
+                    ? { ...errorObject, [column.field]: column.validate(data) }
+                    : { ...errorObject };
+            }, {}),
+        );
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data, existingAuthorFieldError]);
+    }, [data]);
 
     return (
-        <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
-            <TableCell colSpan={4}>
+        <TableRow onKeyDown={handleKeyPress} id="user-edit-row" data-testid="user-edit-row">
+            <TableCell colSpan={9}>
                 <ConfirmationBox
-                    confirmationBoxId="authors-delete-this-author-confirmation"
+                    confirmationBoxId="users-delete-this-user-confirmation"
                     onAction={handleDelete}
                     onClose={handleCancelDelete}
                     isOpen={isOpen}
@@ -136,15 +94,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                     <NameData rowData={data} onChange={handleChange} error={error} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <UsernameIdData rowData={data} onChange={handleChange} error={error} />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <ResearcherIdentifierData rowData={data} onChange={handleChange} />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <NotesData rowData={data} onChange={handleChange} />
-                                </Grid>
-                                <Grid item xs={12}>
                                     <Grid
                                         container
                                         direction="row-reverse"
@@ -154,13 +103,9 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                     >
                                         <Grid item>
                                             <Button
-                                                key={JSON.stringify(error)}
-                                                id={`authors-${mode}-this-author-save`}
-                                                data-testid={`authors-${mode}-this-author-save`}
-                                                disabled={
-                                                    disabled ||
-                                                    Object.keys(error).filter(field => error[field].error).length > 0
-                                                }
+                                                id={`users-${mode}-this-user-save`}
+                                                data-testid={`users-${mode}-this-user-save`}
+                                                disabled={disabled || Object.keys(error).length > 0}
                                                 variant="contained"
                                                 color="primary"
                                                 onClick={handleSave}
@@ -170,8 +115,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                         </Grid>
                                         <Grid item>
                                             <Button
-                                                id={`authors-${mode}-this-author-cancel`}
-                                                data-testid={`authors-${mode}-this-author-cancel`}
+                                                id={`users-${mode}-this-user-cancel`}
+                                                data-testid={`users-${mode}-this-user-cancel`}
                                                 disabled={disabled}
                                                 variant="outlined"
                                                 color="secondary"
@@ -191,7 +136,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     );
 };
 
-FullAuthorDetails.propTypes = {
+FullUserDetails.propTypes = {
     columns: PropTypes.array,
     data: PropTypes.object,
     disabled: PropTypes.bool,
@@ -201,4 +146,4 @@ FullAuthorDetails.propTypes = {
     rowData: PropTypes.object,
 };
 
-export default React.memo(FullAuthorDetails);
+export default React.memo(FullUserDetails);

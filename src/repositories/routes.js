@@ -111,12 +111,27 @@ export const MANAGE_AUTHORS_LIST_API = params => {
 };
 
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
-export const AUTHOR_API = ({ authorId } = { authorId: undefined }) => ({
-    apiUrl: `fez-authors${!!authorId ? `/${authorId}` : ''}`,
-});
+
+export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, authorIds: undefined }) => {
+    if (!!authorId && !authorIds) {
+        return {
+            apiUrl: `fez-authors/${authorId}`,
+        };
+    }
+
+    if (!authorId && !!authorIds && authorIds.length > 0) {
+        return {
+            apiUrl: 'fez-authors/delete-list',
+        };
+    }
+
+    return { apiUrl: 'fez-authors' };
+};
+
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
     apiUrl: `authors/details/${userId}`,
 });
+
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
     apiUrl: `orcid/${userId}/request`,
     options: { params: { ...params } },
@@ -375,3 +390,32 @@ export const JOURNAL_API = ({ id }) => ({
 export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `editorial-appointment${!!id ? `/${id}` : ''}`,
 });
+
+export const MANAGE_USERS_LIST_API = params => {
+    return {
+        apiUrl: 'fez-users/search',
+        options: {
+            params: {
+                page: params.page + 1,
+                per_page: params.pageSize,
+                query: params.query,
+            },
+        },
+    };
+};
+
+export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: undefined }) => {
+    if (!!userId && !userIds) {
+        return {
+            apiUrl: `fez-users/${userId}`,
+        };
+    }
+
+    if (!userId && !!userIds && userIds.length > 0) {
+        return {
+            apiUrl: 'fez-users/delete-list',
+        };
+    }
+
+    return { apiUrl: 'fez-users' };
+};
