@@ -289,7 +289,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListWorkingPaper.data,
             ...mockData.trendingPublications.data,
             ...mockData.unpublishedSearchList.data,
-            ...mockData.UQ353708.data
+            ...mockData.UQ353708.data,
+            ...mockData.UQ339703,
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
         // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
@@ -460,6 +461,9 @@ mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
     // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
+
+    .onPatch(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
+    .reply(200)
 
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
