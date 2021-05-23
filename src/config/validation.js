@@ -18,17 +18,32 @@ export const maxLengthWithWhitespace = max => value =>
         : undefined;
 export const maxLength9 = maxLength(9);
 export const maxLength10 = maxLength(10);
+export const maxLength11 = maxLength(11);
+export const maxLength12 = maxLength(12);
+export const maxLength20 = maxLength(20);
+export const maxLength30 = maxLength(30);
+export const maxLength50 = maxLength(50);
 export const maxLength255 = maxLength(255);
 export const maxLength800 = maxLength(800);
 export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
-// Min Length
+export const isValidResearcherId = value => {
+    const regexResearcherId = /^[A-Z]-\d{4}-\d{4}$/g;
+    return (
+        (!!value &&
+            (new RegExp(regexResearcherId).test(value.trim()) ? undefined : locale.validationErrors.researcherId)) ||
+        undefined
+    );
+};
+
+// Min Lengt
 export const minLength = min => value =>
     (value !== null || value !== undefined) && value.trim().length < min
         ? locale.validationErrors.minLength.replace('[min]', min)
         : undefined;
 export const minLength10 = minLength(10);
+export const minLength0 = minLength(0);
 
 // Public Search Validation rules
 export const maxLength500 = maxLength(500);

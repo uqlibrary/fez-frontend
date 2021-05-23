@@ -207,9 +207,11 @@ describe('author list actions', () => {
 
             const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_FOUND];
 
-            await mockActionsStore.dispatch(
-                checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
-            );
+            await expect(
+                mockActionsStore.dispatch(
+                    checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+                ),
+            ).rejects.toEqual({ aut_org_username: 'Some error' });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 

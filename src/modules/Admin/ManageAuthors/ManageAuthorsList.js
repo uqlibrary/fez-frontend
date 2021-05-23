@@ -13,7 +13,7 @@ import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
 import AuthorHeader from './partials/AuthorHeader';
 import LeastAuthorData from './partials/LeastAuthorData';
-import FullAuthorDetails from './partials/FullAuthorDetails';
+import FullAuthorDetails from './partials/FullAuthorDetailsNew';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -270,6 +270,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         return (
                             <FullAuthorDetails
                                 {...props}
+                                initialValues={props.data}
                                 id="authors-list-edit-row"
                                 data-testid="authors-list-edit-row"
                                 onEditingApproved={handleSave}

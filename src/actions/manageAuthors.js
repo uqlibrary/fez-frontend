@@ -18,9 +18,9 @@ import {
     BULK_AUTHOR_ITEMS_DELETING,
     BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
     BULK_AUTHOR_ITEMS_DELETE_FAILED,
-    SCOPUS_INGEST_REQUESTING,
-    SCOPUS_INGEST_REQUEST_SUCCESS,
-    SCOPUS_INGEST_REQUEST_FAILED,
+    // SCOPUS_INGEST_REQUESTING,
+    // SCOPUS_INGEST_REQUEST_SUCCESS,
+    // SCOPUS_INGEST_REQUEST_FAILED,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
 import { AUTHOR_API, MANAGE_AUTHORS_LIST_API, AUTHORS_SEARCH_API } from 'repositories/routes';
@@ -145,69 +145,114 @@ export function addAuthor(data) {
 }
 
 export function checkForExistingAuthor(search, searchField, id, validation) {
+    console.log('checkFormExia');
+    let exceptionCaught = true;
     return async dispatch => {
+        console.log('async');
         dispatch({ type: CHECKING_EXISTING_AUTHOR });
+        return get(AUTHORS_SEARCH_API({ query: search }))
+            .then(response => {
+                console.log('asfasf');
+                exceptionCaught = false;
+                if (
+                    response.total > 0 &&
+                    response.data.filter(author => author.aut_id !== id && author[searchField] === search).length > 0
+                ) {
+                    console.log('EXISTING_AUTHOR_FOUND');
+                    dispatch({
+                        type: EXISTING_AUTHOR_FOUND,
+                    });
+                    return Promise.reject({ [searchField]: validation[searchField] });
+                } else {
+                    dispatch({
+                        type: EXISTING_AUTHOR_NOT_FOUND,
+                    });
+                    return Promise.resolve();
+                }
+            })
+            .catch(e => {
+                if (exceptionCaught) {
+                    dispatch({
+                        type: CHECKING_EXISTING_AUTHOR_FAILED,
+                        payload: e,
+                    });
+                }
 
-        try {
-            const response = await get(AUTHORS_SEARCH_API({ query: search }));
-
-            if (
-                response.total > 0 &&
-                response.data.filter(author => author.aut_id !== id && author[searchField] === search).length > 0
-            ) {
-                dispatch({
-                    type: EXISTING_AUTHOR_FOUND,
-                    payload: {
-                        [searchField]: {
-                            error: true,
-                            errorText: validation[searchField],
-                        },
-                    },
-                });
-                return Promise.resolve();
-            } else {
-                dispatch({
-                    type: EXISTING_AUTHOR_NOT_FOUND,
-                    payload: {
-                        [searchField]: {
-                            error: false,
-                            errorText: null,
-                        },
-                    },
-                });
-                return Promise.resolve();
-            }
-        } catch (e) {
-            dispatch({
-                type: CHECKING_EXISTING_AUTHOR_FAILED,
-                payload: e,
+                return Promise.reject(e);
             });
-
-            return Promise.reject(e);
-        }
     };
 }
 
-export function ingestFromScopus(scopusId) {
-    return async dispatch => {
-        dispatch({ type: SCOPUS_INGEST_REQUESTING });
+/*
+export async function checkForExistingAuthor(values, dispatch, props, field) {
+    dispatch({ type: CHECKING_EXISTING_AUTHOR });
 
-        try {
-            const response = await post(AUTHOR_API({ query: scopusId }));
+    try {
+        const response = await get(AUTHORS_SEARCH_API({ query: values.get(field) }));
 
+        console.log(
+            response.total > 0 &&
+                response.data.filter(
+                    author => author.aut_id !== values.get('aut_id') && author[field] === values.get(field),
+                ).length > 0,
+        );
+        if (
+            response.total > 0 &&
+            response.data.filter(
+                author => author.aut_id !== values.get('aut_id') && author[field] === values.get(field),
+            ).length > 0
+        ) {
             dispatch({
-                type: SCOPUS_INGEST_REQUEST_SUCCESS,
-                payload: response,
+                type: EXISTING_AUTHOR_FOUND,
+                payload: {
+                    [field]: {
+                        error: 'Exists',
+                    },
+                },
             });
-
+            return Promise.reject({ [field]: 'Exists' });
+        } else {
+            dispatch({
+                type: EXISTING_AUTHOR_NOT_FOUND,
+                payload: {
+                    [field]: {
+                        error: false,
+                        errorText: null,
+                    },
+                },
+            });
             return Promise.resolve();
-        } catch (e) {
-            dispatch({
-                type: SCOPUS_INGEST_REQUEST_FAILED,
-                payload: e,
-            });
-
-            return Promise.reject(e);
         }
-    };
+    } catch (e) {
+        dispatch({
+            type: CHECKING_EXISTING_AUTHOR_FAILED,
+            payload: e,
+        });
+
+        return Promise.reject(e);
+    }
 }
+*/
+// export function ingestFromScopus(scopusId) {
+//     return async dispatch => {
+//         dispatch({ type: SCOPUS_INGEST_REQUESTING });
+
+//         try {
+//             const response = await post(AUTHOR_API({ query: scopusId }));
+
+//             dispatch({
+//                 type: SCOPUS_INGEST_REQUEST_SUCCESS,
+//                 payload: response,
+//             });
+
+//             return Promise.resolve();
+//         } catch (e) {
+//             dispatch({
+//                 type: SCOPUS_INGEST_REQUEST_FAILED,
+//                 payload: e,
+//             });
+
+//             return Promise.reject(e);
+//         }
+//     };
+// }

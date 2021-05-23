@@ -4,8 +4,11 @@ import Grid from '@material-ui/core/Grid';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
-export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ...props }) => {
+export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props }) => {
+    // console.log(props);
     return (
         <React.Fragment>
             <Grid item xs={2}>
@@ -27,15 +30,21 @@ export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ..
                             fontWeight: 400,
                         },
                         ...props.InputProps,
+                        ...((!!props.meta.asyncValidating && {
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <CircularProgress size={18} thickness={2} color="primary" />
+                                </InputAdornment>
+                            ),
+                        }) ||
+                            {}),
                     }}
                     InputLabelProps={{
                         style: {
-                            ...(!props.error ? { color: '#4085C6' } : {}),
+                            ...(!props.meta.error ? { color: '#4085C6' } : {}),
                             fontWeight: 400,
                         },
                     }}
-                    value={data || ''}
-                    onChange={e => props.onChange(e.target.name, e.target.value)}
                 />
             </Grid>
             <Grid item xs={3}>
@@ -48,7 +57,7 @@ export const AuthorFieldData = ({ authorFieldDataId, data, label, helperText, ..
 AuthorFieldData.propTypes = {
     authorFieldDataId: PropTypes.string,
     data: PropTypes.string,
-    error: PropTypes.bool,
+    meta: PropTypes.object,
     label: PropTypes.string,
     helperText: PropTypes.string,
     InputProps: PropTypes.object,
