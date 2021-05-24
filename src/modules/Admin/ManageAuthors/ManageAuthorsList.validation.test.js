@@ -3,6 +3,12 @@ import ManageAuthorsList from './ManageAuthorsList';
 import { render, fireEvent, act, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
 import * as repository from 'repositories';
 
+jest.mock('./helpers', () => ({
+    checkForExisting: jest.fn(),
+}));
+
+import { checkForExisting } from './helpers';
+
 function setup(testProps = {}) {
     const props = {
         onRowAdd: jest.fn(data => Promise.resolve(data)),
@@ -40,27 +46,10 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org username input for existing org username', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [
-                    {
-                        aut_id: 111,
-                        aut_org_username: 'uqtest',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            });
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [],
+            total: 0,
+        });
 
         const { getByTestId, getByText } = setup();
 
@@ -78,10 +67,27 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
-        await waitFor(() => getByText('The supplied Organisation Username is already on file for another author.'));
+
+        checkForExisting.mockImplementationOnce(
+            jest.fn(() =>
+                Promise.reject({
+                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
+                }),
+            ),
+        );
+
+        await act(() =>
+            waitFor(() =>
+                expect(
+                    getByText('The supplied Organisation Username is already on file for another author.'),
+                ).toBeInTheDocument(),
+            ),
+        );
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
 
@@ -92,27 +98,10 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate student username input for existing student username', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [
-                    {
-                        aut_id: 111,
-                        aut_student_username: 's1234567',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            });
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [],
+            total: 0,
+        });
         const { getByTestId, getByText } = setup();
 
         await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
@@ -129,10 +118,27 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234567' } });
-        await waitFor(() => getByText('The supplied Student username is already on file for another author.'));
+
+        checkForExisting.mockImplementationOnce(
+            jest.fn(() =>
+                Promise.reject({
+                    aut_student_username: 'The supplied Student username is already on file for another author.',
+                }),
+            ),
+        );
+
+        await act(() =>
+            waitFor(() =>
+                expect(
+                    getByText('The supplied Student username is already on file for another author.'),
+                ).toBeInTheDocument(),
+            ),
+        );
 
         expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234569' } });
 
@@ -143,27 +149,10 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org staff id input for existing org staff id and display error message', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [
-                    {
-                        aut_id: 111,
-                        aut_org_staff_id: '1234567',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            });
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [],
+            total: 0,
+        });
         const { getByTestId, getByText } = setup();
 
         await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
@@ -180,12 +169,29 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-staff-id-input'), { target: { value: '1234567' } });
-        await waitFor(() => getByText('The supplied Organisation Staff ID is already on file for another author.'));
+
+        checkForExisting.mockImplementationOnce(
+            jest.fn(() =>
+                Promise.reject({
+                    aut_org_staff_id: 'The supplied Organisation Staff ID is already on file for another author.',
+                }),
+            ),
+        );
+
+        await act(() =>
+            waitFor(() =>
+                expect(
+                    getByText('The supplied Organisation Staff ID is already on file for another author.'),
+                ).toBeInTheDocument(),
+            ),
+        );
 
         expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-staff-id-input'), { target: { value: '1234569' } });
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         await waitFor(() => {
             expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'false');
@@ -194,27 +200,10 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org student id input for existing org student id and display error message', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [
-                    {
-                        aut_id: 111,
-                        aut_org_student_id: '12345678',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            });
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [],
+            total: 0,
+        });
         const { getByTestId, getByText } = setup();
 
         await act(() => waitForElementToBeRemoved(() => getByText('Loading authors')));
@@ -231,12 +220,29 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345678' } });
-        await waitFor(() => getByText('The supplied Organisation Student ID is already on file for another author.'));
+
+        checkForExisting.mockImplementationOnce(
+            jest.fn(() =>
+                Promise.reject({
+                    aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
+                }),
+            ),
+        );
+
+        await act(() =>
+            waitFor(() =>
+                expect(
+                    getByText('The supplied Organisation Student ID is already on file for another author.'),
+                ).toBeInTheDocument(),
+            ),
+        );
 
         expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345679' } });
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         await waitFor(() => {
             expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'false');
@@ -352,27 +358,10 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org username input and leave in invalid state for existing org username even after updating first name and last name', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [
-                    {
-                        aut_id: 111,
-                        aut_org_username: 'uqtest',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
-            });
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [],
+            total: 0,
+        });
 
         const { getByTestId, getByText } = setup();
 
@@ -385,6 +374,15 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
+
+        checkForExisting.mockImplementationOnce(
+            jest.fn(() =>
+                Promise.reject({
+                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
+                }),
+            ),
+        );
+
         await waitFor(() => getByText('The supplied Organisation Username is already on file for another author.'));
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
@@ -399,6 +397,7 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         await waitFor(() => {
             expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
@@ -406,7 +405,7 @@ describe('ManageAuthorsList', () => {
         });
     });
 
-    it.skip('should render previous list on unsuccessful edit operation', async () => {
+    it('should render previous list on unsuccessful edit operation', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [
                 {

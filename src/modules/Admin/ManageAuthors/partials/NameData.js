@@ -1,86 +1,84 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { Field, formValueSelector } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';
 
+import { validation } from 'config';
 import { default as locale } from 'locale/components';
+import { FORM_NAME } from './manageAuthorConfig';
 
-export const NameData = ({ rowData, error, ...props }) => {
+const selector = formValueSelector(FORM_NAME);
+
+export const NameData = () => {
     const {
         editRow: {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
     } = locale.components.manageAuthors;
+    const autEmail = useSelector(state => selector(state, 'aut_email'));
 
     return (
         <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
-                <AuthorFieldData
+                <Field
+                    {...displayName}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-display-name"
-                    data={rowData.aut_display_name}
                     name="aut_display_name"
                     autoFocus
-                    {...displayName}
-                    {...props}
+                    validate={[validation.maxLength255]}
                 />
-                <AuthorFieldData
-                    authorFieldDataId="aut-title"
-                    data={rowData.aut_title}
-                    name="aut_title"
+                <Field
                     {...title}
-                    {...props}
+                    component={AuthorFieldData}
+                    authorFieldDataId="aut-title"
+                    name="aut_title"
+                    validate={[validation.maxLength255]}
                 />
-                <AuthorFieldData
-                    authorFieldDataId="aut-fname"
-                    data={rowData.aut_fname}
-                    name="aut_fname"
-                    {...((!!error.aut_fname && error.aut_fname) || {})}
+                <Field
                     {...firstName}
-                    {...props}
+                    component={AuthorFieldData}
+                    authorFieldDataId="aut-fname"
+                    name="aut_fname"
+                    required
+                    validate={[validation.required, validation.maxLength255]}
                 />
-                <AuthorFieldData
-                    authorFieldDataId="aut-mname"
-                    data={rowData.aut_mname}
-                    name="aut_mname"
+                <Field
                     {...middleName}
-                    {...props}
+                    component={AuthorFieldData}
+                    authorFieldDataId="aut-mname"
+                    name="aut_mname"
+                    validate={[validation.maxLength255]}
                 />
-                <AuthorFieldData
-                    authorFieldDataId="aut-lname"
-                    data={rowData.aut_lname}
-                    name="aut_lname"
-                    {...((!!error.aut_lname && error.aut_lname) || {})}
+                <Field
                     {...lastName}
-                    {...props}
+                    component={AuthorFieldData}
+                    name="aut_lname"
+                    authorFieldDataId="aut-lname"
+                    required
+                    validate={[validation.required, validation.maxLength255]}
                 />
-                <AuthorFieldData
-                    authorFieldDataId="aut-position"
-                    data={rowData.aut_position}
-                    name="aut_position"
+                <Field
                     {...position}
-                    {...props}
+                    component={AuthorFieldData}
+                    authorFieldDataId="aut-position"
+                    name="aut_position"
+                    validate={[validation.maxLength255]}
                 />
-                <AuthorFieldData
-                    authorFieldDataId="aut-email"
-                    data={rowData.aut_email}
-                    name="aut_email"
+                <Field
                     {...email}
-                    {...props}
+                    component={AuthorFieldData}
+                    authorFieldDataId="aut-email"
+                    name="aut_email"
+                    {...(!!autEmail ? { validate: [validation.email, validation.maxLength255] } : {})}
                 />
             </Grid>
         </StandardCard>
     );
-};
-
-NameData.propTypes = {
-    rowData: PropTypes.object,
-    onChange: PropTypes.func,
-    index: PropTypes.number,
-    helperText: PropTypes.string,
-    error: PropTypes.object,
 };
 
 export default React.memo(NameData);

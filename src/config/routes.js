@@ -27,7 +27,6 @@ export const flattedPathConfig = [
     '/admin/master-journal-list-ingest',
     '/admin/masquerade',
     '/admin/unpublished',
-    '/admin/users',
     '/admin/add',
     '/admin/edit',
     '/admin/delete',
@@ -371,13 +370,6 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.authors.title,
                   },
-                  {
-                      path: pathConfig.admin.manageUsers,
-                      component: components.ManageUsers,
-                      exact: true,
-                      access: [roles.admin],
-                      pageTitle: locale.pages.users.title,
-                  },
               ]
             : []),
         ...(account && account.canMasquerade
@@ -571,10 +563,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.admin.manageAuthors,
                       ...locale.menu.manageAuthors,
-                  },
-                  {
-                      linkTo: pathConfig.admin.manageUsers,
-                      ...locale.menu.manageUsers,
                   },
                   {
                       linkTo: pathConfig.admin.legacyEspace,

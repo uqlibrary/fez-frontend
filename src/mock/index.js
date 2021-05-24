@@ -289,7 +289,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListWorkingPaper.data,
             ...mockData.trendingPublications.data,
             ...mockData.unpublishedSearchList.data,
-            ...mockData.UQ353708.data
+            ...mockData.UQ353708.data,
+            ...mockData.UQ339703,
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
         // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
@@ -378,9 +379,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalLookup })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
-    .reply(200, { ...mockData.journalDetails })
-    .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
-    .reply(200, {...mockData.userList});
+    .reply(200, { ...mockData.journalDetails });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -463,6 +462,13 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             '410': 'Author deleted',
             '9999999999': 'Author not found'
         }
+    })
+    .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))
+    .reply(200, {
+        data: {
+            aut_id: 111,
+            aut_display_name: 'Mock Test'
+        }
     });
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
@@ -477,6 +483,9 @@ mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
     // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
+
+    .onPatch(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
+    .reply(200)
 
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })

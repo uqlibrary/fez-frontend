@@ -50,3 +50,4 @@ export { default as recordWithTiffAndThumbnail } from './recordWithTiffAndThumbn
 export { default as unpublishedSearchList } from './unpublishedSearchList';
 export { default as UQ716942uqagrinb } from './incompleteNTRORecordUQ716942_uqagrinb';
 export { default as UQ353708} from './editRecord';
+export { default as UQ339703} from './recordWithWSoD';

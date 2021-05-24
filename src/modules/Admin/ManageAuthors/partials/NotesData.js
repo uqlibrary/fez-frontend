@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -7,8 +6,9 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
+import { Field } from 'redux-form/immutable';
 
-export const NotesData = ({ rowData, onChange }) => {
+export const NotesData = props => {
     const {
         editRow: {
             fields: { notes },
@@ -18,23 +18,18 @@ export const NotesData = ({ rowData, onChange }) => {
     return (
         <StandardCard subCard noHeader>
             <Grid container spacing={2}>
-                <AuthorFieldData
+                <Field
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-description"
-                    data={rowData.aut_description}
                     name="aut_description"
                     multiline
                     rows={5}
-                    onChange={onChange}
                     {...notes}
+                    {...props}
                 />
             </Grid>
         </StandardCard>
     );
-};
-
-NotesData.propTypes = {
-    rowData: PropTypes.object,
-    onChange: PropTypes.func,
 };
 
 export default React.memo(NotesData);
