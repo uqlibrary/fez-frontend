@@ -51,6 +51,7 @@ export function loadAuthorList({ page, pageSize, search }) {
 }
 
 export function updateAuthorListItem(newData) {
+    console.log(newData);
     return async dispatch => {
         try {
             dispatch({ type: AUTHOR_ITEM_UPDATING });
@@ -144,30 +145,30 @@ export function addAuthor(data) {
     };
 }
 
-export function checkForExistingAuthor(search, searchField, id, validation) {
-    console.log('checkFormExia');
+export function checkForExistingAuthor(search, searchField, id, validation, asyncErrors) {
     let exceptionCaught = true;
     return async dispatch => {
-        console.log('async');
         dispatch({ type: CHECKING_EXISTING_AUTHOR });
         return get(AUTHORS_SEARCH_API({ query: search }))
             .then(response => {
-                console.log('asfasf');
                 exceptionCaught = false;
                 if (
                     response.total > 0 &&
                     response.data.filter(author => author.aut_id !== id && author[searchField] === search).length > 0
                 ) {
-                    console.log('EXISTING_AUTHOR_FOUND');
                     dispatch({
                         type: EXISTING_AUTHOR_FOUND,
                     });
-                    return Promise.reject({ [searchField]: validation[searchField] });
+                    return Promise.reject({ ...asyncErrors, [searchField]: validation[searchField] });
                 } else {
-                    dispatch({
-                        type: EXISTING_AUTHOR_NOT_FOUND,
-                    });
-                    return Promise.resolve();
+                    if (!!asyncErrors && Object.keys(asyncErrors).length > 0) {
+                        return Promise.reject({ ...asyncErrors });
+                    } else {
+                        dispatch({
+                            type: EXISTING_AUTHOR_NOT_FOUND,
+                        });
+                        return Promise.resolve();
+                    }
                 }
             })
             .catch(e => {

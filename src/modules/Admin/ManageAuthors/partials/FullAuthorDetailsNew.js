@@ -5,7 +5,7 @@ import {
     // useDispatch,
     useSelector,
 } from 'react-redux';
-import { getFormSyncErrors, getFormAsyncErrors, reduxForm } from 'redux-form/immutable';
+import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
 import debounce from 'debounce-promise';
 
 import Button from '@material-ui/core/Button';
@@ -23,9 +23,10 @@ import ResearcherIdentifierData from './ResearcherIdentifierData';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
-import { checkForExistingAuthor } from 'actions';
+// import { checkForExistingAuthor } from 'actions';
 import { default as locale } from 'locale/components';
 import { FORM_NAME } from './manageAuthorConfig';
+import { checkForExisting } from '../helpers';
 
 const useStyles = makeStyles(theme => ({
     background: {
@@ -36,26 +37,17 @@ const useStyles = makeStyles(theme => ({
 
 // const selector = formValueSelector(FORM_NAME);
 
-const onSubmit = (values, dispatch, props) => {
-    console.log(values.toJS(), props);
-};
-
-export const debouncedCheckForExistingAuthor = debounce(
-    (values, dispatch, props, field) =>
-        dispatch(
-            checkForExistingAuthor(
-                values.get(field),
-                field,
-                values.get('aut_id'),
-                locale.components.manageAuthors.editRow.validation,
-            ),
-        ),
-    1000,
-);
+// const onSubmit = (values, dispatch, props) => {
+//     console.log(values.toJS(), props);
+//     return props.onEditingApproved(props.mode, values.toJS(), props.data).catch(error => {
+//         throw new SubmissionError({ _error: error.message });
+//     });
+// };
 
 export const FullAuthorDetails = ({
     disabled,
     data: rowData,
+    // handleSubmit,
     mode,
     onEditingApproved,
     onEditingCanceled,
@@ -63,9 +55,11 @@ export const FullAuthorDetails = ({
     submitting,
     submitSucceeded,
 }) => {
+    console.log(rowData);
     const classes = useStyles();
     // const dispatch = useDispatch();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     const asyncFormErrors = useSelector(state => getFormAsyncErrors(FORM_NAME)(state));
 
@@ -80,7 +74,7 @@ export const FullAuthorDetails = ({
         // editRow: { validation },
     } = locale.components.manageAuthors;
 
-    const [data] = React.useState(rowData || {});
+    // const [data] = React.useState(rowData || {});
     // const [error, setError] = React.useState({});
 
     // const checkForExisting = React.useRef((query, authorField, autId) =>
@@ -90,13 +84,11 @@ export const FullAuthorDetails = ({
     // const handleChange = (name, value) => setData(data => ({ ...data, [name]: value }));
 
     const handleSave = () => {
-        const newData = data;
-        delete newData.tableData;
-        onEditingApproved(mode, data, rowData);
+        onEditingApproved(mode, formValues.toJS(), rowData);
     };
 
     const handleDelete = () => {
-        onEditingApproved(mode, data, rowData);
+        onEditingApproved(mode, rowData, rowData);
     };
 
     const handleCancel = () => onEditingCanceled(mode, rowData);
@@ -238,6 +230,7 @@ FullAuthorDetails.propTypes = {
     columns: PropTypes.array,
     data: PropTypes.object,
     disabled: PropTypes.bool,
+    handleSubmit: PropTypes.func,
     mode: PropTypes.string,
     onEditingApproved: PropTypes.func,
     onEditingCanceled: PropTypes.func,
@@ -248,8 +241,8 @@ FullAuthorDetails.propTypes = {
 
 const FullAuthorDetailsReduxForm = reduxForm({
     form: FORM_NAME,
-    onSubmit,
-    asyncValidate: debouncedCheckForExistingAuthor,
+    // onSubmit,
+    asyncValidate: debounce(checkForExisting, 1000),
     asyncChangeFields: ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'],
 })(FullAuthorDetails);
 
