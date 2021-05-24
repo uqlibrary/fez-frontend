@@ -33,7 +33,13 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
                         ...((!!props.meta.asyncValidating && {
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <CircularProgress size={18} thickness={2} color="primary" />
+                                    <CircularProgress
+                                        size={18}
+                                        thickness={2}
+                                        color="primary"
+                                        id="checking-existing-author-progress"
+                                        data-testid="checking-existing-author-progress"
+                                    />
                                 </InputAdornment>
                             ),
                         }) ||

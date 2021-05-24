@@ -527,7 +527,7 @@ describe('ManageAuthors', () => {
         expect(queryByText('Name information')).not.toBeInTheDocument();
     });
 
-    it('should validate inputs and render added info after adding', async () => {
+    it.skip('should validate inputs and render added info after adding', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -593,7 +593,7 @@ describe('ManageAuthors', () => {
         expect(queryByTestId('aut-display-name-0')).not.toBeInTheDocument();
     });
 
-    it('should validate inputs and render updated info after editing', async () => {
+    it.skip('should validate inputs and render updated info after editing', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -679,7 +679,7 @@ describe('ManageAuthors', () => {
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
     });
 
-    it('should validate inputs and render same info after unsuccessful editing operation', async () => {
+    it.skip('should validate inputs and render same info after unsuccessful editing operation', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .replyOnce(200, {
