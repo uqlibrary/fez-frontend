@@ -3275,18 +3275,20 @@ export default {
                         label: 'Position',
                     },
                     orgStaffId: {
-                        label: 'Org staff ID',
+                        label: 'Staff ID',
                         helperText: 'This is a 7 digit number, usually preceded by a 0',
                     },
                     orgStudentId: {
-                        label: 'Org student ID',
+                        label: 'Student ID',
                         helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
                     },
                     orgUsername: {
-                        label: 'Org username',
+                        label: 'Staff username',
                     },
                     studentUsername: {
                         label: 'Student username',
+                        helperText:
+                            "This is an 8 characters string: remove last digit from student ID and add prefix 's'.",
                     },
                     refNum: {
                         label: 'Ref num',

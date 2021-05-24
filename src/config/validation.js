@@ -29,7 +29,7 @@ export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
 export const isValidResearcherId = value => {
-    const regexResearcherId = /^[A-Z]-\d{4}-\d{4}$/g;
+    const regexResearcherId = /^[A-Z]{1,3}-\d{4}-\d{4}$/g;
     return (
         (!!value &&
             (new RegExp(regexResearcherId).test(value.trim()) ? undefined : locale.validationErrors.researcherId)) ||
