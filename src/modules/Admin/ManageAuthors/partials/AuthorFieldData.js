@@ -8,7 +8,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props }) => {
-    // console.log(props);
     return (
         <React.Fragment>
             <Grid item xs={2}>

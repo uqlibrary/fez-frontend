@@ -20,7 +20,7 @@ import { FORM_NAME } from './manageAuthorConfig';
 
 const selector = formValueSelector(FORM_NAME);
 
-export const ResearcherIdentifierData = ({ ...props }) => {
+export const ResearcherIdentifierData = () => {
     const dispatch = useDispatch();
     const {
         editRow: {
@@ -47,12 +47,10 @@ export const ResearcherIdentifierData = ({ ...props }) => {
 
     const handleIsScopusIDAuthenticated = () => {
         dispatch(change(FORM_NAME, 'aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated)));
-        // props.onChange('aut_is_scopus_id_authenticated', Number(!rowData.aut_is_scopus_id_authenticated));
     };
 
     const handleIsOrcidSyncEnabled = () => {
         dispatch(change(FORM_NAME, 'aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled)));
-        // props.onChange('aut_is_orcid_sync_enabled', Number(!rowData.aut_is_orcid_sync_enabled));
     };
 
     return (
@@ -61,20 +59,16 @@ export const ResearcherIdentifierData = ({ ...props }) => {
                 <Field
                     component={AuthorFieldData}
                     authorFieldDataId="aut-researcher-id"
-                    // data={rowData.aut_researcher_id}
                     name="aut_researcher_id"
                     validate={[validation.isValidResearcherId]}
                     {...researcherId}
-                    {...props}
                 />
                 <Field
                     component={AuthorFieldData}
                     authorFieldDataId="aut-scopus-id"
-                    // data={rowData.aut_scopus_id}
                     name="aut_scopus_id"
                     validate={[validation.maxLength255]}
                     {...scopusId}
-                    {...props}
                     InputProps={{
                         ...((!!autScopusId && {
                             endAdornment: (
@@ -112,28 +106,22 @@ export const ResearcherIdentifierData = ({ ...props }) => {
                 <Field
                     component={AuthorFieldData}
                     authorFieldDataId="aut-google-scholar-id"
-                    // data={rowData.aut_google_scholar_id}
                     name="aut_google_scholar_id"
                     {...(!!autGoogleScholarId ? { validate: [validation.isValidGoogleScholarId] } : {})}
                     {...googleScholarId}
-                    {...props}
                 />
                 <Field
                     component={AuthorFieldData}
                     authorFieldDataId="aut-people-australia-id"
-                    // data={rowData.aut_people_australia_id}
                     name="aut_people_australia_id"
                     validate={[validation.maxLength255]}
                     {...peopleAustraliaId}
-                    {...props}
                 />
                 <Field
                     component={AuthorFieldData}
                     authorFieldDataId="aut-orcid-id"
-                    // data={rowData.aut_orcid_id}
                     name="aut_orcid_id"
                     {...orcidId}
-                    {...props}
                     InputProps={{
                         readOnly: true,
                         ...(!!autOrcidId

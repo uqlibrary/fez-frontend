@@ -13,7 +13,7 @@ import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
 import AuthorHeader from './partials/AuthorHeader';
 import LeastAuthorData from './partials/LeastAuthorData';
-import FullAuthorDetails from './partials/FullAuthorDetailsNew';
+import FullAuthorDetails from './partials/FullAuthorDetails';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -37,9 +37,6 @@ export const getColumns = () => {
         header: {
             columns: { id },
         },
-        editRow: {
-            validation: { aut_fname: firstNameErrorText, aut_lname: lastNameErrorText },
-        },
     } = locale.components.manageAuthors;
     return [
         {
@@ -58,31 +55,6 @@ export const getColumns = () => {
             field: 'author',
             sorting: false,
             render: rowData => <LeastAuthorData rowData={rowData} />,
-            validate: rowData => {
-                let error = {};
-
-                if (!rowData.aut_fname || rowData.aut_fname === '') {
-                    error = {
-                        ...error,
-                        aut_fname: {
-                            error: true,
-                            errorText: firstNameErrorText,
-                        },
-                    };
-                }
-
-                if (!rowData.aut_lname || rowData.aut_lname === '') {
-                    error = {
-                        ...error,
-                        aut_lname: {
-                            error: true,
-                            errorText: lastNameErrorText,
-                        },
-                    };
-                }
-
-                return error;
-            },
             cellStyle: {
                 width: '100%',
                 maxWidth: '100%',

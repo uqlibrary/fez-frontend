@@ -3328,8 +3328,6 @@ export default {
                     },
                 },
                 validation: {
-                    aut_fname: 'This field is required',
-                    aut_lname: 'This field is required',
                     aut_org_staff_id: 'The supplied Organisation Staff ID is already on file for another author.',
                     aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
                     aut_org_username: 'The supplied Organisation Username is already on file for another author.',

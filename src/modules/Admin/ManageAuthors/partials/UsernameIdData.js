@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Field, formValueSelector, change } from 'redux-form/immutable';
 
@@ -19,7 +18,7 @@ import { FORM_NAME } from './manageAuthorConfig';
 
 const selector = formValueSelector(FORM_NAME);
 
-export const UsernameIdColumnData = ({ ...props }) => {
+export const UsernameIdColumnData = () => {
     const dispatch = useDispatch();
     const {
         editRow: {
@@ -32,7 +31,6 @@ export const UsernameIdColumnData = ({ ...props }) => {
 
     const handleNameOverridden = () => {
         dispatch(change(FORM_NAME, 'aut_name_overridden', Number(!autNameOverridden)));
-        // props.onChange('aut_name_overridden', Number(!rowData.aut_name_overridden));
     };
 
     return (
@@ -40,23 +38,17 @@ export const UsernameIdColumnData = ({ ...props }) => {
             <Grid container spacing={2} alignItems="center">
                 <Field
                     {...orgStaffId}
-                    {...props}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-staff-id"
-                    // data={rowData.aut_org_staff_id}
                     name="aut_org_staff_id"
                     validate={[validation.maxLength12]}
-                    // {...((!!error.aut_org_staff_id && error.aut_org_staff_id) || {})}
                 />
                 <Field
                     {...orgUsername}
-                    {...props}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-username"
-                    // data={rowData.aut_org_username}
                     name="aut_org_username"
                     validate={[validation.maxLength20]}
-                    // {...((!!error.aut_org_username && error.aut_org_username) || {})}
                     InputProps={{
                         ...((!!autOrgUsername && {
                             endAdornment: (
@@ -92,43 +84,29 @@ export const UsernameIdColumnData = ({ ...props }) => {
                     }}
                 />
                 <Field
-                    {...props}
                     {...orgStudentId}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-student-id"
-                    // data={rowData.aut_org_student_id}
                     name="aut_org_student_id"
                     validate={[validation.maxLength11]}
-                    // {...((!!error.aut_org_student_id && error.aut_org_student_id) || {})}
                 />
                 <Field
                     {...studentUsername}
-                    {...props}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-student-username"
-                    // data={rowData.aut_student_username}
                     name="aut_student_username"
                     validate={[validation.maxLength30]}
-                    // {...((!!error.aut_student_username && error.aut_student_username) || {})}
                 />
                 <Field
                     {...refNum}
-                    {...props}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-ref-num"
-                    // data={rowData.aut_ref_num}
                     name="aut_ref_num"
                     validate={[validation.maxLength50]}
                 />
             </Grid>
         </StandardCard>
     );
-};
-
-UsernameIdColumnData.propTypes = {
-    rowData: PropTypes.object,
-    error: PropTypes.object,
-    onChange: PropTypes.func,
 };
 
 export default React.memo(UsernameIdColumnData);

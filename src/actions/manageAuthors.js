@@ -51,7 +51,6 @@ export function loadAuthorList({ page, pageSize, search }) {
 }
 
 export function updateAuthorListItem(newData) {
-    console.log(newData);
     return async dispatch => {
         try {
             dispatch({ type: AUTHOR_ITEM_UPDATING });
@@ -162,7 +161,9 @@ export function checkForExistingAuthor(search, searchField, id, validation, asyn
                     return Promise.reject({ ...asyncErrors, [searchField]: validation[searchField] });
                 } else {
                     if (!!asyncErrors && Object.keys(asyncErrors).length > 0) {
-                        return Promise.reject({ ...asyncErrors });
+                        // eslint-disable-next-line no-unused-vars
+                        const { [searchField]: discardKey, ...restAsyncErrors } = asyncErrors;
+                        return Promise.reject({ ...restAsyncErrors });
                     } else {
                         dispatch({
                             type: EXISTING_AUTHOR_NOT_FOUND,
@@ -184,56 +185,6 @@ export function checkForExistingAuthor(search, searchField, id, validation, asyn
     };
 }
 
-/*
-export async function checkForExistingAuthor(values, dispatch, props, field) {
-    dispatch({ type: CHECKING_EXISTING_AUTHOR });
-
-    try {
-        const response = await get(AUTHORS_SEARCH_API({ query: values.get(field) }));
-
-        console.log(
-            response.total > 0 &&
-                response.data.filter(
-                    author => author.aut_id !== values.get('aut_id') && author[field] === values.get(field),
-                ).length > 0,
-        );
-        if (
-            response.total > 0 &&
-            response.data.filter(
-                author => author.aut_id !== values.get('aut_id') && author[field] === values.get(field),
-            ).length > 0
-        ) {
-            dispatch({
-                type: EXISTING_AUTHOR_FOUND,
-                payload: {
-                    [field]: {
-                        error: 'Exists',
-                    },
-                },
-            });
-            return Promise.reject({ [field]: 'Exists' });
-        } else {
-            dispatch({
-                type: EXISTING_AUTHOR_NOT_FOUND,
-                payload: {
-                    [field]: {
-                        error: false,
-                        errorText: null,
-                    },
-                },
-            });
-            return Promise.resolve();
-        }
-    } catch (e) {
-        dispatch({
-            type: CHECKING_EXISTING_AUTHOR_FAILED,
-            payload: e,
-        });
-
-        return Promise.reject(e);
-    }
-}
-*/
 // export function ingestFromScopus(scopusId) {
 //     return async dispatch => {
 //         dispatch({ type: SCOPUS_INGEST_REQUESTING });

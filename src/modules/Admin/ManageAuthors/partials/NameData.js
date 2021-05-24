@@ -28,7 +28,6 @@ export const NameData = () => {
                     {...displayName}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-display-name"
-                    // data={rowData.aut_display_name}
                     name="aut_display_name"
                     autoFocus
                     validate={[validation.maxLength255]}
@@ -37,7 +36,6 @@ export const NameData = () => {
                     {...title}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-title"
-                    // data={rowData.aut_title}
                     name="aut_title"
                     validate={[validation.maxLength255]}
                 />
@@ -45,17 +43,14 @@ export const NameData = () => {
                     {...firstName}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-fname"
-                    // data={rowData.aut_fname}
                     name="aut_fname"
                     required
                     validate={[validation.required, validation.maxLength255]}
-                    // {...((!!error.aut_fname && error.aut_fname) || {})}
                 />
                 <Field
                     {...middleName}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-mname"
-                    // data={rowData.aut_mname}
                     name="aut_mname"
                     validate={[validation.maxLength255]}
                 />
@@ -66,14 +61,11 @@ export const NameData = () => {
                     authorFieldDataId="aut-lname"
                     required
                     validate={[validation.required, validation.maxLength255]}
-                    // data={rowData.aut_lname}
-                    // {...((!!error.aut_lname && error.aut_lname) || {})}
                 />
                 <Field
                     {...position}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-position"
-                    // data={rowData.aut_position}
                     name="aut_position"
                     validate={[validation.maxLength255]}
                 />
@@ -81,7 +73,6 @@ export const NameData = () => {
                     {...email}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-email"
-                    // data={rowData.aut_email}
                     name="aut_email"
                     {...(!!autEmail ? { validate: [validation.email, validation.maxLength255] } : {})}
                 />
