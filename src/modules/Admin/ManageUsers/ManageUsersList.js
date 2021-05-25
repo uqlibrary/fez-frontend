@@ -40,9 +40,6 @@ export const getColumns = () => {
         header: {
             columns: { id, fullName, username, email, status, isAdmin, isSuperAdmin },
         },
-        editRow: {
-            validation: { usernameError, emailError, fullNameError },
-        },
     } = locale.components.manageUsers;
 
     return [
@@ -70,7 +67,6 @@ export const getColumns = () => {
                     copiable
                 />
             ),
-            validate: rowData => (!!rowData.usr_full_name ? undefined : { error: true, errorText: fullNameError }),
             cellStyle: {
                 width: '30%',
                 maxWidth: '30%',
@@ -99,7 +95,6 @@ export const getColumns = () => {
                     )}
                 </React.Fragment>
             ),
-            validate: rowData => (!!rowData.usr_username ? undefined : { error: true, errorText: usernameError }),
             cellStyle: {
                 width: '7%',
                 maxWidth: '7%',
@@ -115,7 +110,6 @@ export const getColumns = () => {
             render: rowData => (
                 <ColumnData data={rowData.usr_email} columnDataId={`usr-email-${rowData.tableData.id}`} />
             ),
-            validate: rowData => (!!rowData.usr_email ? undefined : { error: true, errorText: emailError }),
             cellStyle: {
                 width: '30%',
                 maxWidth: '30%',
@@ -326,6 +320,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         return (
                             <FullUserDetails
                                 {...props}
+                                initialValues={props.data}
                                 id="users-list-edit-row"
                                 data-testid="users-list-edit-row"
                                 onEditingApproved={handleSave}

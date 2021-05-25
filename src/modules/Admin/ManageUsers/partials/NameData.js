@@ -1,15 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import { useSelector, useDispatch } from 'react-redux';
+import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import UserFieldData from './UserFieldData';
 
+import { validation } from 'config';
 import { default as locale } from 'locale/components';
 import { useIsUserSuperAdmin } from 'hooks';
+// import { FORM_NAME } from './manageUserConfig';
 
-export const NameData = ({ rowData, error, ...props }) => {
+// const selector = formValueSelector(FORM_NAME);
+
+export const NameData = () => {
+    // const dispatch = useDispatch();
     const isUserSuperAdmin = useIsUserSuperAdmin();
 
     const {
@@ -18,65 +24,65 @@ export const NameData = ({ rowData, error, ...props }) => {
         },
     } = locale.components.manageUsers;
 
+    // const usrAdministrator = useSelector(state => selector(state, 'usr_administrator'));
+    // const usrSuperAdministrator = useSelector(state => selector(state, 'usr_super_administrator'));
+
+    // const handleUserAdministrator = () => {
+    //     dispatch(change(FORM_NAME, 'usr_administrator', Number(!usrAdministrator)));
+    // };
+
+    // const handleUserSuperAdministrator = () => {
+    //     dispatch(change(FORM_NAME, 'usr_super_administrator', Number(!usrSuperAdministrator)));
+    // };
+
     return (
         <StandardCard subCard title="User information" smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
-                <UserFieldData
+                <Field
+                    component={UserFieldData}
                     userFieldDataId="usr-full-name"
-                    data={rowData.usr_full_name}
                     name="usr_full_name"
                     required
                     autoFocus
-                    {...((!!error.usr_full_name && error.usr_full_name) || {})}
+                    validate={[validation.required, validation.maxLength255]}
                     {...fullName}
-                    {...props}
                 />
-                <UserFieldData
+                <Field
+                    component={UserFieldData}
                     userFieldDataId="usr-email"
-                    data={rowData.usr_email}
                     name="usr_email"
                     required
-                    {...((!!error.usr_email && error.usr_email) || {})}
+                    validate={[validation.required, validation.email, validation.maxLength255]}
                     {...email}
-                    {...props}
                 />
-                <UserFieldData
+                <Field
+                    component={UserFieldData}
                     userFieldDataId="usr-username"
-                    data={rowData.usr_username}
                     name="usr_username"
                     required
-                    {...((!!error.usr_username && error.usr_username) || {})}
+                    validate={[validation.required, validation.maxLength20]}
                     {...username}
-                    {...props}
                 />
-                <UserFieldData
+                <Field
+                    component={UserFieldData}
                     userFieldDataId="usr-administrator"
-                    data={rowData.usr_administrator}
                     name="usr_administrator"
                     type="checkbox"
+                    // onChange={handleUserAdministrator}
                     {...isAdmin}
-                    {...props}
                 />
-                <UserFieldData
+                <Field
+                    component={UserFieldData}
                     userFieldDataId="usr-super-administrator"
-                    data={rowData.usr_super_administrator}
                     name="usr_super_administrator"
                     type="checkbox"
                     disabled={!isUserSuperAdmin}
+                    // onChange={handleUserSuperAdministrator}
                     {...isSuperAdmin}
-                    {...props}
                 />
             </Grid>
         </StandardCard>
     );
-};
-
-NameData.propTypes = {
-    rowData: PropTypes.object,
-    onChange: PropTypes.func,
-    index: PropTypes.number,
-    helperText: PropTypes.string,
-    error: PropTypes.object,
 };
 
 export default React.memo(NameData);

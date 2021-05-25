@@ -252,7 +252,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     Action: props => {
                         if (typeof props.action === 'function') {
                             const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                            console.log(tooltip);
                             return (
                                 <MTableAction
                                     {...props}

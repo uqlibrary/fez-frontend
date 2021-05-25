@@ -6,7 +6,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
 
-export const UserFieldData = ({ userFieldDataId, data, label, helperText, type, ...props }) => {
+export const UserFieldData = ({ userFieldDataId, label, helperText, type, ...props }) => {
     return (
         <React.Fragment>
             <Grid item xs={2}>
@@ -20,13 +20,13 @@ export const UserFieldData = ({ userFieldDataId, data, label, helperText, type, 
                 {type === 'checkbox' && (
                     <Checkbox
                         {...props}
-                        color={!!data ? 'primary' : 'secondary'}
+                        color={!!props.input.value ? 'primary' : 'secondary'}
+                        checked={!!props.input.value}
                         inputProps={{
                             'data-testid': `${userFieldDataId}-input`,
                             id: `${userFieldDataId}-input`,
                         }}
-                        checked={!!data}
-                        onChange={e => props.onChange(e.target.name, e.target.checked ? 1 : 0)}
+                        onChange={event => props.input.onChange(event.target.checked ? 1 : 0)}
                     />
                 )}
                 {type === 'text' && (
@@ -44,12 +44,10 @@ export const UserFieldData = ({ userFieldDataId, data, label, helperText, type, 
                         }}
                         InputLabelProps={{
                             style: {
-                                ...(!props.error ? { color: '#4085C6' } : {}),
+                                ...(!props.meta.error ? { color: '#4085C6' } : {}),
                                 fontWeight: 400,
                             },
                         }}
-                        value={data || ''}
-                        onChange={e => props.onChange(e.target.name, e.target.value)}
                     />
                 )}
             </Grid>
@@ -62,12 +60,12 @@ export const UserFieldData = ({ userFieldDataId, data, label, helperText, type, 
 
 UserFieldData.propTypes = {
     userFieldDataId: PropTypes.string,
-    data: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    error: PropTypes.bool,
+    input: PropTypes.object,
+    onChange: PropTypes.func,
+    meta: PropTypes.object,
     helperText: PropTypes.string,
     InputProps: PropTypes.object,
     label: PropTypes.string,
-    onChange: PropTypes.func,
     type: PropTypes.string,
 };
 

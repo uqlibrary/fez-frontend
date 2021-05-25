@@ -27,6 +27,7 @@ export const flattedPathConfig = [
     '/admin/master-journal-list-ingest',
     '/admin/masquerade',
     '/admin/unpublished',
+    '/admin/users',
     '/admin/add',
     '/admin/edit',
     '/admin/delete',
@@ -369,6 +370,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.authors.title,
+                  },
+                  {
+                      path: pathConfig.admin.manageUsers,
+                      component: components.ManageUsers,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.users.title,
                   },
               ]
             : []),
