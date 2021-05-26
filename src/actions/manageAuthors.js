@@ -160,14 +160,14 @@ export function checkForExistingAuthor(search, searchField, id, validation, asyn
                     });
                     return Promise.reject({ ...asyncErrors, [searchField]: validation[searchField] });
                 } else {
+                    dispatch({
+                        type: EXISTING_AUTHOR_NOT_FOUND,
+                    });
                     if (!!asyncErrors && Object.keys(asyncErrors).length > 0) {
                         // eslint-disable-next-line no-unused-vars
                         const { [searchField]: discardKey, ...restAsyncErrors } = asyncErrors;
                         return Promise.reject({ ...restAsyncErrors });
                     } else {
-                        dispatch({
-                            type: EXISTING_AUTHOR_NOT_FOUND,
-                        });
                         return Promise.resolve();
                     }
                 }
