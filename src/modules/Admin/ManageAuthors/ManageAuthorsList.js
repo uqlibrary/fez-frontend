@@ -233,7 +233,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     Row: props => (
                         <MTableBodyRow
                             {...props}
-                            hover
+                            {...(props.hasAnyEditingRow ? { onRowClick: false, hover: false } : { hover: true })}
                             id={`authors-list-row-${props.index}`}
                             data-testid={`authors-list-row-${props.index}`}
                         />
