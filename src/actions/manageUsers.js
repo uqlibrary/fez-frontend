@@ -20,7 +20,7 @@ import {
     CHECKING_EXISTING_USER_FAILED,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
-import { USER_API, MANAGE_USERS_LIST_API } from 'repositories/routes';
+import { USER_API, MANAGE_USERS_LIST_API, USERS_SEARCH_API } from 'repositories/routes';
 
 /*
 "usr_id"
@@ -168,7 +168,7 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
     let exceptionCaught = true;
     return async dispatch => {
         dispatch({ type: CHECKING_EXISTING_USER });
-        return get(MANAGE_USERS_LIST_API({ query: search }))
+        return get(USERS_SEARCH_API({ query: search }))
             .then(response => {
                 console.log(response);
                 console.log(id, searchField, search);
@@ -182,16 +182,10 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
                     });
                     return Promise.reject({ ...asyncErrors, [searchField]: validation[searchField] });
                 } else {
-                    if (!!asyncErrors && Object.keys(asyncErrors).length > 0) {
-                        // eslint-disable-next-line no-unused-vars
-                        const { [searchField]: discardKey, ...restAsyncErrors } = asyncErrors;
-                        return Promise.reject({ ...restAsyncErrors });
-                    } else {
-                        dispatch({
-                            type: EXISTING_USER_NOT_FOUND,
-                        });
-                        return Promise.resolve();
-                    }
+                    dispatch({
+                        type: EXISTING_USER_NOT_FOUND,
+                    });
+                    return Promise.resolve();
                 }
             })
             .catch(e => {

@@ -404,6 +404,11 @@ export const MANAGE_USERS_LIST_API = params => {
     };
 };
 
+export const USERS_SEARCH_API = ({ query } = { query: null }) => ({
+    apiUrl: 'fez-users/search',
+    ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
+});
+
 export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: undefined }) => {
     if (!!userId && !userIds) {
         return {

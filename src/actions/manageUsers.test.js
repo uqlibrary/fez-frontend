@@ -1,4 +1,11 @@
-import { deleteUserListItem, loadUserList, updateUserListItem, addUser, bulkDeleteUserListItems } from './manageUsers';
+import {
+    deleteUserListItem,
+    loadUserList,
+    updateUserListItem,
+    addUser,
+    bulkDeleteUserListItems,
+    checkForExistingUser,
+} from './manageUsers';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data/testing/usersList';
@@ -103,7 +110,7 @@ describe('user list actions', () => {
             const expectedActions = [actions.USER_ITEM_UPDATING, actions.USER_ITEM_UPDATE_SUCCESS];
 
             await mockActionsStore.dispatch(
-                updateUserListItem({ usr_id: 1, aut_org_username: 'test' }, { usr_id: 1, aut_org_username: 'testing' }),
+                updateUserListItem({ usr_id: 1, usr_username: 'test' }, { usr_id: 1, usr_username: 'testing' }),
             );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
@@ -177,7 +184,7 @@ describe('user list actions', () => {
                 addUser({
                     aut_student_username: 'test',
                     aut_org_staff_id: '1234',
-                    aut_org_username: 'test',
+                    usr_username: 'test',
                     aut_fname: 'Test',
                 }),
             );
@@ -194,9 +201,59 @@ describe('user list actions', () => {
                     addUser({
                         aut_student_username: 'test',
                         aut_org_staff_id: '1234',
-                        aut_org_username: 'test',
+                        usr_username: 'test',
                         aut_fname: 'Test',
                     }),
+                ),
+            ).rejects.toEqual({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('checkForExistingUser action', () => {
+        it('should dispatch correct number of actions on existing user found', async () => {
+            mockApi
+                .onGet(repositories.routes.USERS_SEARCH_API().apiUrl)
+                .reply(200, { data: [{ usr_id: 2, usr_username: 'test' }], total: 1 });
+
+            const expectedActions = [actions.CHECKING_EXISTING_USER, actions.EXISTING_USER_FOUND];
+
+            await expect(
+                mockActionsStore.dispatch(
+                    checkForExistingUser('test', 'usr_username', 1, { usr_username: 'Some error' }),
+                ),
+            ).rejects.toEqual({ usr_username: 'Some error' });
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on existing user not found', async () => {
+            mockApi.onGet(repositories.routes.USERS_SEARCH_API().apiUrl).reply(200, { data: [], total: 0 });
+
+            const expectedActions = [actions.CHECKING_EXISTING_USER, actions.EXISTING_USER_NOT_FOUND];
+
+            await mockActionsStore.dispatch(
+                checkForExistingUser('test', 'usr_username', 1, { usr_username: 'Some error' }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on checking existing user failed', async () => {
+            mockApi.onGet(repositories.routes.USERS_SEARCH_API().apiUrl).reply(500);
+
+            const expectedActions = [
+                actions.CHECKING_EXISTING_USER,
+                actions.APP_ALERT_SHOW,
+                actions.CHECKING_EXISTING_USER_FAILED,
+            ];
+
+            await expect(
+                mockActionsStore.dispatch(
+                    checkForExistingUser('test', 'usr_username', 1, { usr_username: 'Some error' }),
                 ),
             ).rejects.toEqual({
                 status: 500,
