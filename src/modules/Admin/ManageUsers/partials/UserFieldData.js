@@ -5,6 +5,8 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import Checkbox from '@material-ui/core/Checkbox';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 export const UserFieldData = ({ userFieldDataId, label, helperText, type, ...props }) => {
     return (
@@ -41,6 +43,20 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type, ...pro
                                 fontWeight: 400,
                             },
                             ...props.InputProps,
+                            ...((!!props.meta.asyncValidating && {
+                                endAdornment: (
+                                    <InputAdornment position="end">
+                                        <CircularProgress
+                                            size={18}
+                                            thickness={2}
+                                            color="primary"
+                                            id="checking-existing-user-progress"
+                                            data-testid="checking-existing-user-progress"
+                                        />
+                                    </InputAdornment>
+                                ),
+                            }) ||
+                                {}),
                         }}
                         InputLabelProps={{
                             style: {

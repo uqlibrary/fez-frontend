@@ -3460,9 +3460,7 @@ export default {
                     },
                 },
                 validation: {
-                    usernameError: 'This field is required',
-                    emailError: 'This field is required',
-                    fullNameError: 'This field is required',
+                    usr_username: 'The supplied username is already on file for another user.',
                 },
             },
             form: {

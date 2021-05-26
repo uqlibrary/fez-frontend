@@ -14,6 +14,10 @@ import {
     BULK_USER_ITEMS_DELETING,
     BULK_USER_ITEMS_DELETE_SUCCESS,
     BULK_USER_ITEMS_DELETE_FAILED,
+    CHECKING_EXISTING_USER,
+    EXISTING_USER_FOUND,
+    EXISTING_USER_NOT_FOUND,
+    CHECKING_EXISTING_USER_FAILED,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
 import { USER_API, MANAGE_USERS_LIST_API } from 'repositories/routes';
@@ -157,5 +161,48 @@ export function addUser(data) {
 
             return Promise.reject(e);
         }
+    };
+}
+
+export function checkForExistingUser(search, searchField, id, validation, asyncErrors) {
+    let exceptionCaught = true;
+    return async dispatch => {
+        dispatch({ type: CHECKING_EXISTING_USER });
+        return get(MANAGE_USERS_LIST_API({ query: search }))
+            .then(response => {
+                console.log(response);
+                console.log(id, searchField, search);
+                exceptionCaught = false;
+                if (
+                    response.total === 1 &&
+                    response.data.filter(user => user.usr_id !== id && user[searchField] === search).length > 0
+                ) {
+                    dispatch({
+                        type: EXISTING_USER_FOUND,
+                    });
+                    return Promise.reject({ ...asyncErrors, [searchField]: validation[searchField] });
+                } else {
+                    if (!!asyncErrors && Object.keys(asyncErrors).length > 0) {
+                        // eslint-disable-next-line no-unused-vars
+                        const { [searchField]: discardKey, ...restAsyncErrors } = asyncErrors;
+                        return Promise.reject({ ...restAsyncErrors });
+                    } else {
+                        dispatch({
+                            type: EXISTING_USER_NOT_FOUND,
+                        });
+                        return Promise.resolve();
+                    }
+                }
+            })
+            .catch(e => {
+                if (exceptionCaught) {
+                    dispatch({
+                        type: CHECKING_EXISTING_USER_FAILED,
+                        payload: e,
+                    });
+                }
+
+                return Promise.reject(e);
+            });
     };
 }
