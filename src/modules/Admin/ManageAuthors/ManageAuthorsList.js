@@ -83,6 +83,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 editButtonTooltip,
                 deleteButtonTooltip,
                 scopusIngestButtonTooltip,
+                searchAriaLabel,
+                searchPlaceholder,
             },
             bulkDeleteConfirmationLocale,
         },
@@ -341,6 +343,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         addTooltip: addButtonTooltip,
                         editTooltip: editButtonTooltip,
                         deleteTooltip: deleteButtonTooltip,
+                    },
+                    toolbar: {
+                        searchAriaLabel: searchAriaLabel,
+                        searchPlaceholder: searchPlaceholder,
                     },
                 }}
                 editable={{

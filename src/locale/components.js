@@ -3358,6 +3358,8 @@ export default {
                     notesButtonTooltip: 'View notes for this author',
                     updateNotesButton: 'Update notes',
                     scopusIngestButtonTooltip: 'Ingest from Scopus',
+                    searchAriaLabel: 'Search authors',
+                    searchPlaceholder: 'Search authors',
                 },
             },
             row: {
