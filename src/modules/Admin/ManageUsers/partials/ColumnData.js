@@ -13,6 +13,7 @@ const useStyles = makeStyles(() => ({
     columnData: {
         fontSize: 14,
         fontWeight: 400,
+        width: '100%',
     },
 }));
 
@@ -36,6 +37,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                 className={classes.columnData}
                 value={!!data ? data : ''}
                 readOnly
+                fullwidth
                 {...(!!copiable
                     ? {
                           endAdornment: (

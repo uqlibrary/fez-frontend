@@ -2,19 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { upperFirst } from 'lodash';
 import makeStyles from '@material-ui/styles/makeStyles';
 import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
 import { tableIcons } from './ManageUsersListIcons';
 
 import Backdrop from '@material-ui/core/Backdrop';
 import Button from '@material-ui/core/Button';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-
-import ColumnTitle from './partials/ColumnTitle';
-import ColumnData from './partials/ColumnData';
-
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -22,10 +15,11 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import FullUserDetails from './partials/FullUserDetails';
 
 import { default as locale } from 'locale/components';
-import moment from 'moment';
 import { loadUserList } from 'actions';
 import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_USER_SUCCESS } from 'config/general';
+import UserDetailsRow from './partials/UserDetailsRow';
+import UserDetailsHeader from './partials/UserDetailsHeader';
 
 export const useStyles = makeStyles(() => ({
     backdrop: {
@@ -36,115 +30,11 @@ export const useStyles = makeStyles(() => ({
 }));
 
 export const getColumns = () => {
-    const {
-        header: {
-            columns: { id, fullName, username, email, status, isAdmin, isSuperAdmin },
-        },
-    } = locale.components.manageUsers;
-
     return [
         {
-            title: <ColumnTitle title={id.title} />,
-            field: 'usr_id',
-            editable: 'never',
-            render: rowData => <ColumnData data={rowData.usr_id} columnDataId={`usr-id-${rowData.tableData.id}`} />,
-            cellStyle: {
-                width: '5%',
-                maxWidth: '5%',
-            },
-            headerStyle: {
-                width: '5%',
-                maxWidth: '5%',
-            },
-        },
-        {
-            title: <ColumnTitle title={fullName.title} />,
-            field: 'usr_full_name',
-            render: rowData => (
-                <ColumnData
-                    data={rowData.usr_full_name}
-                    columnDataId={`usr-full-name-${rowData.tableData.id}`}
-                    copiable
-                />
-            ),
-            cellStyle: {
-                width: '30%',
-                maxWidth: '30%',
-            },
-            headerStyle: {
-                width: '30%',
-                maxWidth: '30%',
-            },
-        },
-        {
-            title: <ColumnTitle title={username.title} />,
-            field: 'usr_username',
-            render: rowData => (
-                <React.Fragment>
-                    <ColumnData
-                        data={rowData.usr_username}
-                        columnDataId={`usr-username-${rowData.tableData.id}`}
-                        copiable
-                    />
-                    {!!rowData.usr_last_login_date && (
-                        <Tooltip title="Last login date">
-                            <Typography variant="caption">
-                                {moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')}
-                            </Typography>
-                        </Tooltip>
-                    )}
-                </React.Fragment>
-            ),
-            cellStyle: {
-                width: '7%',
-                maxWidth: '7%',
-            },
-            headerStyle: {
-                width: '7%',
-                maxWidth: '7%',
-            },
-        },
-        {
-            title: <ColumnTitle title={email.title} />,
-            field: 'usr_email',
-            render: rowData => (
-                <ColumnData data={rowData.usr_email} columnDataId={`usr-email-${rowData.tableData.id}`} />
-            ),
-            cellStyle: {
-                width: '30%',
-                maxWidth: '30%',
-            },
-            headerStyle: {
-                width: '30%',
-                maxWidth: '30%',
-            },
-        },
-        {
-            title: <ColumnTitle title={status.title} />,
-            field: 'usr_status',
-            render: rowData => (
-                <ColumnData data={upperFirst(rowData.usr_status)} columnDataId={`usr-status-${rowData.tableData.id}`} />
-            ),
-        },
-        {
-            title: <ColumnTitle title={isAdmin.title} />,
-            field: 'usr_administrator',
-            render: rowData => (
-                <ColumnData
-                    data={rowData.usr_administrator ? 'Yes' : 'No'}
-                    columnDataId={`usr-administrator-${rowData.tableData.id}`}
-                />
-            ),
-        },
-        {
-            title: <ColumnTitle title={isSuperAdmin.title} />,
-            field: 'usr_super_administrator',
-            render: rowData => (
-                <ColumnData
-                    data={rowData.usr_super_administrator ? 'Yes' : 'No'}
-                    columnDataId={`usr-super-administrator-${rowData.tableData.id}`}
-                />
-            ),
+            title: <UserDetailsHeader />,
+            field: 'user',
+            render: rowData => <UserDetailsRow rowData={rowData} />,
         },
     ];
 };
@@ -287,6 +177,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 });
             });
     };
+
     return (
         <React.Fragment>
             <ConfirmationBox
@@ -311,6 +202,12 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     Row: props => (
                         <MTableBodyRow
                             {...props}
+                            {...(props.hasAnyEditingRow
+                                ? {
+                                      onRowClick: false,
+                                      hover: false,
+                                  }
+                                : { hover: true })}
                             hover
                             id={`users-list-row-${props.index}`}
                             data-testid={`users-list-row-${props.index}`}
@@ -393,6 +290,10 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         editTooltip: editButtonTooltip,
                         deleteTooltip: deleteButtonTooltip,
                     },
+                    toolbar: {
+                        searchAriaLabel: 'Search users',
+                        searchPlaceholder: 'Search users',
+                    },
                 }}
                 editable={{
                     onRowUpdateCancelled: () => {},
@@ -413,6 +314,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     overflowY: 'auto',
                     searchFieldAlignment: 'left',
                     selection: true,
+                    sorting: false,
                     selectionProps: rowData => ({
                         inputProps: {
                             id: `select-author-${rowData.tableData.id}`,

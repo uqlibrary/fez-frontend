@@ -3433,10 +3433,10 @@ export default {
                         title: 'Status',
                     },
                     isAdmin: {
-                        title: 'Administrator?',
+                        title: 'Is admin?',
                     },
                     isSuperAdmin: {
-                        title: 'Super administrator?',
+                        title: 'Is superadmin?',
                     },
                 },
             },
@@ -3484,6 +3484,8 @@ export default {
                     bulkDeleteButtonTooltip: 'Delete selected users',
                     deleteButtonTooltip: 'Delete this user',
                     editButtonTooltip: 'Edit this user',
+                    searchAriaLabel: 'Search users',
+                    searchPlaceholder: 'Search users',
                 },
             },
             row: {
