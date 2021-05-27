@@ -346,7 +346,7 @@ const getListedDetails = journalDetails => [
         },
         {
             ...txt.entries.adbcForCode,
-            data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_for_code,
+            data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_for_code_lookup,
         },
     ],
     {
