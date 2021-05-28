@@ -1,351 +1,299 @@
 export const journalDetails = {
-    "data": {
-        "jnl_jid": 8508,
-        "jnl_title": "American Journal of Public Health",
-        "jnl_publisher": "American Public Health Association",
-        "jnl_created_date": "2020-11-16 07:48:52",
-        "jnl_updated_date": "2021-01-21 03:33:04",
-        "jnl_era_source_id": "13400",
-        "fez_journal_abdc": {
-            "jnl_abdc_for_code": 452815,
-            "jnl_abdc_rating": "A*",
-            "jnl_abdc_source_date": "2019-06-12",
-            "jnl_abdc_title": "American Journal of Public Health",
-            "jnl_abdc_issn": "0090-0036",
-            "jnl_abdc_for_code_lookup": "1503 Business and Management"
+    'data': {
+        'jnl_jid': 8508,
+        'jnl_title': 'American Journal of Public Health',
+        'jnl_publisher': 'American Public Health Association',
+        'jnl_created_date': '2020-11-16 07:48:52',
+        'jnl_updated_date': '2021-01-21 03:33:04',
+        'jnl_era_source_id': '13400',
+        'fez_journal_abdc': {
+            'jnl_abdc_for_code': 452815,
+            'jnl_abdc_rating': 'A*',
+            'jnl_abdc_source_date': '2019-06-12',
+            'jnl_abdc_title': 'American Journal of Public Health',
+            'jnl_abdc_issn': '0090-0036',
+            'jnl_abdc_for_code_lookup': '1503 Business and Management',
         },
-        "fez_journal_cite_score": {
-            "jnl_cite_score_id": 25241,
-            "jnl_cite_score_source_id": "19561",
-            "jnl_cite_score_source_year": 2019,
-            "jnl_cite_score_title": "American Journal of Public Health",
-            "jnl_cite_score_publisher": "American Public Health Association",
-            "jnl_cite_score_issn": "0090-0036",
-            "fez_journal_cite_score_asjc_code": [
-                {
-                    "jnl_cite_score_asjc_code_id": 25241,
-                    "jnl_cite_score_asjc_code_rank": 29,
-                    "jnl_cite_score_asjc_code_rank_out_of": 516,
-                    "jnl_cite_score_asjc_code_percentile": 94,
-                    "jnl_cite_score_asjc_code_top_10_percent": true,
-                    "jnl_cite_score_asjc_code": 453458,
-                    "jnl_cite_score_asjc_code_cite_score": "6.6",
-                    "jnl_cite_score_asjc_code_snip": "2.18",
-                    "jnl_cite_score_asjc_code_sjr": "2.21",
-                    "jnl_cite_score_asjc_code_percent_cited": "70.2",
-                    "jnl_cite_score_asjc_code_order": 1,
-                    "jnl_cite_score_asjc_code_quartile": 1,
-                    "jnl_cite_score_asjc_code_lookup": "2739 Public Health, Environmental and Occupational Health"
-                }
-            ]
+        'fez_journal_cite_score': {
+            'jnl_cite_score_id': 25241,
+            'jnl_cite_score_source_id': '19561',
+            'jnl_cite_score_source_year': 2019,
+            'jnl_cite_score_title': 'American Journal of Public Health',
+            'jnl_cite_score_publisher': 'American Public Health Association',
+            'jnl_cite_score_issn': '0090-0036',
+            'fez_journal_cite_score_asjc_code': [{
+                'jnl_cite_score_asjc_code_id': 25241,
+                'jnl_cite_score_asjc_code_rank': 29,
+                'jnl_cite_score_asjc_code_rank_out_of': 516,
+                'jnl_cite_score_asjc_code_percentile': 94,
+                'jnl_cite_score_asjc_code_top_10_percent': true,
+                'jnl_cite_score_asjc_code': 453458,
+                'jnl_cite_score_asjc_code_cite_score': '6.6',
+                'jnl_cite_score_asjc_code_snip': '2.18',
+                'jnl_cite_score_asjc_code_sjr': '2.21',
+                'jnl_cite_score_asjc_code_percent_cited': '70.2',
+                'jnl_cite_score_asjc_code_order': 1,
+                'jnl_cite_score_asjc_code_quartile': 1,
+                'jnl_cite_score_asjc_code_lookup': '2739 Public Health, Environmental and Occupational Health',
+            }],
         },
-        "fez_journal_doaj": {
-            "jnl_doaj_jid": 12306,
-            "jnl_doaj_source_id": "e05931389c0d41ad85a3bee708389841",
-            "jnl_doaj_apc_average_price": 250,
-            "jnl_doaj_apc_currency": 'AUD',
-            "jnl_doaj_has_doi": true,
-            "jnl_doaj_seal": false,
-            "jnl_doaj_by": true,
-            "jnl_doaj_nd": false,
-            "jnl_doaj_nc": true,
-            "jnl_doaj_sa": false,
-            "jnl_doaj_homepage_url": "https://www.abdn.ac.uk/eitn/",
-            "jnl_doaj_last_updated": "2020-12-07 16:17:55"
+        'fez_journal_doaj': null,
+        'fez_journal_era': [{
+            'jnl_era_id': 73460,
+            'jnl_era_source_id': '13400',
+            'jnl_era_source_year': 2010,
+            'jnl_era_title': '',
+            'fez_journal_era_for_code': [{
+                'jnl_era_for_code_id': 73460,
+                'jnl_era_for_code': '452650',
+                'jnl_era_for_code_order': 1,
+                'jnl_era_for_code_lookup': '1117 Public Health and Health Services',
+            }],
+        }, {
+            'jnl_era_id': 57795,
+            'jnl_era_source_id': '13400',
+            'jnl_era_source_year': 2012,
+            'jnl_era_title': '',
+            'fez_journal_era_for_code': [{
+                'jnl_era_for_code_id': 57795,
+                'jnl_era_for_code': '452511',
+                'jnl_era_for_code_order': 1,
+                'jnl_era_for_code_lookup': '11 Medical and Health Sciences',
+            }],
+        }, {
+            'jnl_era_id': 28595,
+            'jnl_era_source_id': '13400',
+            'jnl_era_source_year': 2015,
+            'jnl_era_title': '',
+            'fez_journal_era_for_code': [{
+                'jnl_era_for_code_id': 28595,
+                'jnl_era_for_code': '452511',
+                'jnl_era_for_code_order': 1,
+                'jnl_era_for_code_lookup': '11 Medical and Health Sciences',
+            }],
+        }, {
+            'jnl_era_id': 8508,
+            'jnl_era_source_id': '13400',
+            'jnl_era_source_year': 2018,
+            'jnl_era_title': 'American Journal of Public Health',
+            'fez_journal_era_for_code': [{
+                'jnl_era_for_code_id': 8508,
+                'jnl_era_for_code': '452511',
+                'jnl_era_for_code_order': 1,
+                'jnl_era_for_code_lookup': '11 Medical and Health Sciences',
+            }],
+        }],
+        'fez_journal_esi': [{
+            'jnl_esi_subject': '456458',
+            'jnl_esi_issn': '0090-0036',
+            'jnl_esi_source_date': '2019-02-01',
+            'jnl_esi_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_esi_subject_lookup': 'Social Sciences, General',
+        }, {
+            'jnl_esi_subject': '456458',
+            'jnl_esi_issn': '1541-0048',
+            'jnl_esi_source_date': '2019-02-01',
+            'jnl_esi_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_esi_subject_lookup': 'Social Sciences, General',
+        }],
+        'fez_journal_historical_issn': [{
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '0002-9572',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 1,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '1076-0704',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 2,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '1047-3491',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 3,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '1079-9567',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 4,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '1079-9559',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 5,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '0271-4353',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 6,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '0273-1975',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 7,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '0272-2313',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 8,
+        }, {
+            'jnl_historical_issn_jid': 8508,
+            'jnl_historical_issn': '0737-8769',
+            'jnl_historical_issn_type': null,
+            'jnl_historical_issn_order': 9,
+        }],
+        'fez_journal_issn': [{
+            'jnl_issn_jid': 8508,
+            'jnl_issn': '0090-0036',
+            'jnl_issn_type': null,
+            'jnl_issn_order': 1,
+            'fez_sherpa_romeo': {
+                'srm_id': 3792,
+                'srm_issn': '0090-0036',
+                'srm_xml': '<?xml version="1.0" encoding="ISO-8859-1" ?>\n<!DOCTYPE romeoapi SYSTEM "http:\/\/www.sherpa.ac.uk\/romeo\/romeoapi293.dtd">\n<romeoapi version="2.9.9">\n  <header>\n    <parameters>\n      <parameter source="specified">\n        <parametername>issn<\/parametername>\n        <parametervalue>0090-0036<\/parametervalue>\n      <\/parameter>\n      <parameter source="specified">\n        <parametername>versions<\/parametername>\n        <parametervalue>all<\/parametervalue>\n      <\/parameter>\n      <parameter source="default">\n        <parametername>showfunder<\/parametername>\n        <parametervalue>none<\/parametervalue>\n      <\/parameter>\n      <parameter source="default">\n        <parametername>fIDnum<\/parametername>\n        <parametervalue>|<\/parametervalue>\n      <\/parameter>\n      <parameter source="default">\n        <parametername>la<\/parametername>\n        <parametervalue>en<\/parametervalue>\n      <\/parameter>\n    <\/parameters>\n    <numhits>1<\/numhits>\n    <apicontrol>journal<\/apicontrol>\n    <outcome>singleJournal<\/outcome>\n    <message \/>\n    <licence>SHERPA\/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the \'conditions for re-use\' at the &lt;licenceurl \/&gt;, and linked-to from the SHERPA\/RoMEO home page.<\/licence>\n    <licenceurl>http:\/\/www.sherpa.ac.uk\/romeoreuse.html<\/licenceurl>\n    <disclaimer>All SHERPA\/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.<\/disclaimer>\n    <timestamp>30-Sep-2017:16:34:08<\/timestamp>\n  <\/header>\n  <journals>\n    <journal>\n      <jtitle>American Journal of Public Health<\/jtitle>\n      <issn>0090-0036<\/issn>\n      <zetocpub>American Public Health Association<\/zetocpub>\n      <romeopub>American Public Health Association<\/romeopub>\n    <\/journal>\n  <\/journals>\n  <publishers>\n    <publisher id="13">\n      <name>American Public Health Association<\/name>\n      <alias \/>\n      <homeurl>http:\/\/www.apha.org\/<\/homeurl>\n      <preprints>\n        <prearchiving>can<\/prearchiving>\n        <prerestrictions \/>\n      <\/preprints>\n      <postprints>\n        <postarchiving>cannot<\/postarchiving>\n        <postrestrictions \/>\n      <\/postprints>\n      <pdfversion>\n        <pdfarchiving>unknown<\/pdfarchiving>\n        <pdfrestrictions \/>\n      <\/pdfversion>\n      <conditions>\n        <condition>Author\'s pre-print on institutional repositories<\/condition>\n        <condition>Publisher automatically deposits articles funded by NIH authors into PubMed Central for release &lt;num&gt;12&lt;\/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;\/period&gt; after publication<\/condition>\n        <condition>Publisher automatically deposits all other articles into PubMed Central for release &lt;num&gt;24&lt;\/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;\/period&gt; after publication<\/condition>\n        <condition>Publisher last reviewed on 16\/07\/2015<\/condition>\n        <condition>Publisher last contacted on 24\/06\/2015<\/condition>\n        <condition>Authors post-print may be deposited in closed access institutional repositories<\/condition>\n      <\/conditions>\n      <mandates \/>\n      <paidaccess>\n        <paidaccessurl>http:\/\/ajph.aphapublications.org\/page\/authors.html<\/paidaccessurl>\n        <paidaccessname>APHA Open Access<\/paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.<\/paidaccessnotes>\n      <\/paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Policy<\/copyrightlinktext>\n          <copyrightlinkurl>http:\/\/ajph.aphapublications.org\/userimages\/ContentEditor\/1317406522645\/AJPH_Copyright_Consent.pdf<\/copyrightlinkurl>\n        <\/copyrightlink>\n      <\/copyrightlinks>\n      <romeocolour>yellow<\/romeocolour>\n      <dateadded>2004-01-10 00:00:00<\/dateadded>\n      <dateupdated>2015-07-30 16:39:11<\/dateupdated>\n    <\/publisher>\n  <\/publishers>\n<\/romeoapi>\n',
+                'srm_json': '{"items":[{"title":[{"language":"en","title":"American Journal of Public Health","language_phrases":[{"value":"en","phrase":"English","language":"en"}],"acronym":"AJPH"}],"publishers":[{"publisher":{"publication_count":2,"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/publisher\\\/13","country":"us","country_phrases":[{"phrase":"United States of America","value":"us","language":"en"}],"url":"http:\\\/\\\/www.apha.org\\\/","id":13,"name":[{"language":"en","preferred":"name","name":"American Public Health Association","language_phrases":[{"language":"en","value":"en","phrase":"English"}],"preferred_phrases":[{"language":"en","phrase":"Name","value":"name"}]}]},"relationship_type":"society_publisher","relationship_type_phrases":[{"phrase":"Society Publisher","value":"society_publisher","language":"en"}]}],"url":"http:\\\/\\\/www.ajph.org\\\/","listed_in_doaj_phrases":[{"value":"no","phrase":"No","language":"en"}],"type_phrases":[{"language":"en","phrase":"Journal","value":"journal"}],"system_metadata":{"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/publication\\\/10303","publicly_visible_phrases":[{"value":"yes","phrase":"Yes","language":"en"}],"publicly_visible":"yes","date_modified":"2020-01-29 15:27:17","date_created":"2010-08-18 10:28:15","id":10303},"publisher_policy":[{"internal_moniker":"Default policy","id":13,"publication_count":1,"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/publisher_policy\\\/13","permitted_oa":[{"additional_oa_fee":"no","additional_oa_fee_phrases":[{"language":"en","value":"no","phrase":"No"}],"article_version_phrases":[{"value":"submitted","phrase":"Submitted","language":"en"}],"location":{"location":["institutional_repository"],"location_phrases":[{"phrase":"Institutional Repository","value":"institutional_repository","language":"en"}]},"article_version":["submitted"]},{"prerequisites":{"prerequisite_funders":[{"funder_metadata":{"name":[{"preferred_phrases":[{"language":"en","value":"name","phrase":"Name"}],"acronym":"NIH","name":"National Institutes of Health","language_phrases":[{"language":"en","value":"en","phrase":"English"}],"preferred":"name","language":"en"}],"id":9,"url":[{"url":"http:\\\/\\\/www.nih.gov\\\/","language_phrases":[{"language":"en","value":"en","phrase":"English"}],"language":"en"}],"country":"us","country_phrases":[{"value":"us","phrase":"United States of America","language":"en"}],"identifiers":[{"type_phrases":[{"language":"en","phrase":"FundRef DOI","value":"fundref"}],"identifier":"http:\\\/\\\/dx.doi.org\\\/10.13039\\\/100000002","type":"fundref"}]},"system_metadata":{"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/funder\\\/9","id":9}}]},"embargo":{"units_phrases":[{"phrase":"Months","value":"months","language":"en"}],"units":"months","amount":12},"article_version":["submitted"],"location":{"location_phrases":[{"phrase":"Named Repository","value":"named_repository","language":"en"}],"named_repository":["PubMed Central"],"location":["named_repository"]},"article_version_phrases":[{"language":"en","phrase":"Submitted","value":"submitted"}],"publisher_deposit":[{"repository_metadata":{"type":"disciplinary","description":"A subject-based repository of biomedical and life sciences journal literature developed and managed by the National Center for Biotechnology Information (NCBI) at the US National Library of Medicine (NLM). \\r\\n\\r\\nContent includes articles deposited by participating journals that have applied to and been selected for the archive by NLM, as well as individual author manuscripts that have been submitted in compliance with the NIH Public Access Policy and similar policies of other research funding agencies. More than 2000 journals currently use PMC as a repository. Digitization projects have also added content from the 18th, 19th, and 20th centuries to the archive.","url":"http:\\\/\\\/www.ncbi.nlm.nih.gov\\\/pmc\\\/","name":[{"preferred_phrases":[{"value":"name","phrase":"Name","language":"en"}],"name":"PubMed Central","language_phrases":[{"language":"en","value":"en","phrase":"English"}],"preferred":"name","language":"en"}],"type_phrases":[{"value":"disciplinary","phrase":"Disciplinary","language":"en"}]},"system_metadata":{"id":267,"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/repository\\\/267"}}],"additional_oa_fee":"no","additional_oa_fee_phrases":[{"language":"en","value":"no","phrase":"No"}]},{"publisher_deposit":[{"repository_metadata":{"type_phrases":[{"language":"en","value":"disciplinary","phrase":"Disciplinary"}],"name":[{"preferred":"name","language":"en","preferred_phrases":[{"value":"name","phrase":"Name","language":"en"}],"language_phrases":[{"language":"en","value":"en","phrase":"English"}],"name":"PubMed Central"}],"url":"http:\\\/\\\/www.ncbi.nlm.nih.gov\\\/pmc\\\/","type":"disciplinary","description":"A subject-based repository of biomedical and life sciences journal literature developed and managed by the National Center for Biotechnology Information (NCBI) at the US National Library of Medicine (NLM). \\r\\n\\r\\nContent includes articles deposited by participating journals that have applied to and been selected for the archive by NLM, as well as individual author manuscripts that have been submitted in compliance with the NIH Public Access Policy and similar policies of other research funding agencies. More than 2000 journals currently use PMC as a repository. Digitization projects have also added content from the 18th, 19th, and 20th centuries to the archive."},"system_metadata":{"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/repository\\\/267","id":267}}],"location":{"location":["named_repository"],"named_repository":["PubMed Central"],"location_phrases":[{"value":"named_repository","phrase":"Named Repository","language":"en"}]},"article_version_phrases":[{"language":"en","phrase":"Submitted","value":"submitted"}],"article_version":["submitted"],"additional_oa_fee":"no","additional_oa_fee_phrases":[{"phrase":"No","value":"no","language":"en"}],"embargo":{"units_phrases":[{"phrase":"Months","value":"months","language":"en"}],"amount":24,"units":"months"}},{"copyright_owner":"publishers","license":[{"license_phrases":[{"language":"en","value":"bespoke_license","phrase":"Publisher\'s Bespoke License"}],"license":"bespoke_license"}],"publisher_deposit":[{"repository_metadata":{"url":"http:\\\/\\\/www.ncbi.nlm.nih.gov\\\/pmc\\\/","type":"disciplinary","description":"A subject-based repository of biomedical and life sciences journal literature developed and managed by the National Center for Biotechnology Information (NCBI) at the US National Library of Medicine (NLM). \\r\\n\\r\\nContent includes articles deposited by participating journals that have applied to and been selected for the archive by NLM, as well as individual author manuscripts that have been submitted in compliance with the NIH Public Access Policy and similar policies of other research funding agencies. More than 2000 journals currently use PMC as a repository. Digitization projects have also added content from the 18th, 19th, and 20th centuries to the archive.","name":[{"language":"en","preferred":"name","name":"PubMed Central","language_phrases":[{"language":"en","value":"en","phrase":"English"}],"preferred_phrases":[{"phrase":"Name","value":"name","language":"en"}]}],"type_phrases":[{"language":"en","value":"disciplinary","phrase":"Disciplinary"}]},"system_metadata":{"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/repository\\\/267","id":267}}],"article_version_phrases":[{"language":"en","value":"published","phrase":"Published"}],"article_version":["published"],"location":{"location":["institutional_repository","named_repository","this_journal"],"named_repository":["PubMed Central"],"location_phrases":[{"phrase":"Institutional Repository","value":"institutional_repository","language":"en"},{"language":"en","value":"named_repository","phrase":"Named Repository"},{"language":"en","phrase":"This Journal","value":"this_journal"}]},"copyright_owner_phrases":[{"language":"en","value":"publishers","phrase":"Publishers"}],"additional_oa_fee":"yes","additional_oa_fee_phrases":[{"language":"en","value":"yes","phrase":"Yes"}]}],"urls":[{"url":"http:\\\/\\\/ajph.aphapublications.org\\\/userimages\\\/ContentEditor\\\/1317406522645\\\/AJPH_Copyright_Consent.pdf","description":"Copyright Information"},{"url":"http:\\\/\\\/ajph.aphapublications.org\\\/page\\\/authors.html","description":"APHA Open Access"}],"open_access_prohibited":"no","open_access_prohibited_phrases":[{"phrase":"No","value":"no","language":"en"}]}],"type":"journal","issns":[{"type_phrases":[{"language":"en","value":"print","phrase":"Print"}],"issn":"0090-0036","type":"print"},{"issn":"1541-0048","type":"electronic","type_phrases":[{"phrase":"Electronic","value":"electronic","language":"en"}]}],"listed_in_doaj":"no","id":10303}]}',
+                'srm_source_id': '10303',
+                'srm_journal_name': 'American Journal of Public Health',
+                'srm_journal_link': 'https:\/\/v2.sherpa.ac.uk\/id\/publication\/10303',
+                'srm_colour': 'yellow',
+                'srm_date_updated': '2020-12-04 07:51:06',
+            },
+            'fez_ulrichs': {
+                'ulr_id': 650,
+                'ulr_issn': '0090-0036',
+                'ulr_status': 'Active',
+                'ulr_source_id': '52130',
+                'ulr_title': 'American Journal of Public Health',
+                'ulr_title_id': '41698',
+                'ulr_abbrev_title': 'AJPH',
+                'ulr_publisher': 'American Public Health Association',
+                'ulr_country': 'United States',
+                'ulr_start_year': '1911',
+                'ulr_frequency': 'Monthly',
+                'ulr_open_access': '0',
+                'ulr_open_access_url': null,
+                'ulr_reviewed': '1',
+                'ulr_refereed': '1',
+                'ulr_formats': 'Print',
+                'ulr_description': 'Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.',
+                'ulr_xml': '<?xml version=\'1.0\' encoding=\'utf-8\'?>\r\n<searchResults>\n  <status>Success<\/status>\n  <totalRecords>1<\/totalRecords>\n  <numberOfRecords>1<\/numberOfRecords>\n  <requestQuery>0090-0036<\/requestQuery>\n  <results>\n    <UlrichTitle>\n      <id>51906<\/id>\n      <titleId>41698<\/titleId>\n      <title>American Journal of Public Health<\/title>\n      <issn>0090-0036<\/issn>\n      <publisher>\n        <string>American Public Health Association<\/string>\n      <\/publisher>\n      <country>United States<\/country>\n      <status>Active<\/status>\n      <startYear>1911<\/startYear>\n      <coden>AJHEAA<\/coden>\n      <toc>true<\/toc>\n      <refereed>true<\/refereed>\n      <availableOnline>false<\/availableOnline>\n      <openAccess>false<\/openAccess>\n      <reviewed>true<\/reviewed>\n      <historicTitle>false<\/historicTitle>\n      <frequency>Monthly<\/frequency>\n      <price>See Full Record<\/price>\n      <description>Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.<\/description>\n      <subject>\n        <string>PUBLIC HEALTH AND SAFETY<\/string>\n      <\/subject>\n      <keyFeatures>\n        <string>AI<\/string>\n        <string>CCC<\/string>\n        <string>JCR<\/string>\n        <string>MLR<\/string>\n        <string>RPR<\/string>\n        <string>TOC<\/string>\n        <string>URL<\/string>\n      <\/keyFeatures>\n      <otherFeatures>\n        <string>ADI<\/string>\n        <string>BIA<\/string>\n        <string>CHI<\/string>\n        <string>FSI<\/string>\n        <string>ILI<\/string>\n        <string>ITA<\/string>\n        <string>RPSA<\/string>\n      <\/otherFeatures>\n      <deweyNumbers>\n        <double>614.0<\/double>\n      <\/deweyNumbers>\n      <languages>\n        <string>English<\/string>\n      <\/languages>\n      <formats>\n        <string>Print<\/string>\n      <\/formats>\n      <serialTypes>\n        <string>Journal<\/string>\n      <\/serialTypes>\n      <contentTypes>\n        <string>Academic \/ Scholarly<\/string>\n      <\/contentTypes>\n      <rss\/>\n    <\/UlrichTitle>\n  <\/results>\n<\/searchResults>\r\n',
+                'ulr_last_updated': '2021-05-04 05:18:41',
+            },
+        }, {
+            'jnl_issn_jid': 8508,
+            'jnl_issn': '1541-0048',
+            'jnl_issn_type': null,
+            'jnl_issn_order': 2,
+            'fez_sherpa_romeo': {
+                'srm_id': 3793,
+                'srm_issn': '1541-0048',
+                'srm_xml': '<?xml version="1.0" encoding="ISO-8859-1" ?>\n<!DOCTYPE romeoapi SYSTEM "http:\/\/www.sherpa.ac.uk\/romeo\/romeoapi293.dtd">\n<romeoapi version="2.9.9">\n  <header>\n    <parameters>\n      <parameter source="specified">\n        <parametername>issn<\/parametername>\n        <parametervalue>1541-0048<\/parametervalue>\n      <\/parameter>\n      <parameter source="specified">\n        <parametername>versions<\/parametername>\n        <parametervalue>all<\/parametervalue>\n      <\/parameter>\n      <parameter source="default">\n        <parametername>showfunder<\/parametername>\n        <parametervalue>none<\/parametervalue>\n      <\/parameter>\n      <parameter source="default">\n        <parametername>fIDnum<\/parametername>\n        <parametervalue>|<\/parametervalue>\n      <\/parameter>\n      <parameter source="default">\n        <parametername>la<\/parametername>\n        <parametervalue>en<\/parametervalue>\n      <\/parameter>\n    <\/parameters>\n    <numhits>1<\/numhits>\n    <apicontrol>journal<\/apicontrol>\n    <outcome>singleJournal<\/outcome>\n    <message \/>\n    <licence>SHERPA\/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the \'conditions for re-use\' at the &lt;licenceurl \/&gt;, and linked-to from the SHERPA\/RoMEO home page.<\/licence>\n    <licenceurl>http:\/\/www.sherpa.ac.uk\/romeoreuse.html<\/licenceurl>\n    <disclaimer>All SHERPA\/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.<\/disclaimer>\n    <timestamp>30-Sep-2017:19:45:46<\/timestamp>\n  <\/header>\n  <journals>\n    <journal>\n      <jtitle>American Journal of Public Health<\/jtitle>\n      <issn>0090-0036<\/issn>\n      <zetocpub>American Public Health Association<\/zetocpub>\n      <romeopub>American Public Health Association<\/romeopub>\n    <\/journal>\n  <\/journals>\n  <publishers>\n    <publisher id="13">\n      <name>American Public Health Association<\/name>\n      <alias \/>\n      <homeurl>http:\/\/www.apha.org\/<\/homeurl>\n      <preprints>\n        <prearchiving>can<\/prearchiving>\n        <prerestrictions \/>\n      <\/preprints>\n      <postprints>\n        <postarchiving>cannot<\/postarchiving>\n        <postrestrictions \/>\n      <\/postprints>\n      <pdfversion>\n        <pdfarchiving>unknown<\/pdfarchiving>\n        <pdfrestrictions \/>\n      <\/pdfversion>\n      <conditions>\n        <condition>Author\'s pre-print on institutional repositories<\/condition>\n        <condition>Publisher automatically deposits articles funded by NIH authors into PubMed Central for release &lt;num&gt;12&lt;\/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;\/period&gt; after publication<\/condition>\n        <condition>Publisher automatically deposits all other articles into PubMed Central for release &lt;num&gt;24&lt;\/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;\/period&gt; after publication<\/condition>\n        <condition>Publisher last reviewed on 16\/07\/2015<\/condition>\n        <condition>Publisher last contacted on 24\/06\/2015<\/condition>\n        <condition>Authors post-print may be deposited in closed access institutional repositories<\/condition>\n      <\/conditions>\n      <mandates \/>\n      <paidaccess>\n        <paidaccessurl>http:\/\/ajph.aphapublications.org\/page\/authors.html<\/paidaccessurl>\n        <paidaccessname>APHA Open Access<\/paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.<\/paidaccessnotes>\n      <\/paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Policy<\/copyrightlinktext>\n          <copyrightlinkurl>http:\/\/ajph.aphapublications.org\/userimages\/ContentEditor\/1317406522645\/AJPH_Copyright_Consent.pdf<\/copyrightlinkurl>\n        <\/copyrightlink>\n      <\/copyrightlinks>\n      <romeocolour>yellow<\/romeocolour>\n      <dateadded>2004-01-10 00:00:00<\/dateadded>\n      <dateupdated>2015-07-30 16:39:11<\/dateupdated>\n    <\/publisher>\n  <\/publishers>\n<\/romeoapi>\n',
+                'srm_json': '{"items":[{"type":"journal","listed_in_doaj":"no","id":10303,"issns":[{"type":"print","issn":"0090-0036","type_phrases":[{"language":"en","phrase":"Print","value":"print"}]},{"type_phrases":[{"language":"en","phrase":"Electronic","value":"electronic"}],"type":"electronic","issn":"1541-0048"}],"listed_in_doaj_phrases":[{"phrase":"No","value":"no","language":"en"}],"publisher_policy":[{"permitted_oa":[{"additional_oa_fee_phrases":[{"language":"en","value":"no","phrase":"No"}],"additional_oa_fee":"no","location":{"location":["institutional_repository"],"location_phrases":[{"value":"institutional_repository","phrase":"Institutional Repository","language":"en"}]},"article_version_phrases":[{"value":"submitted","phrase":"Submitted","language":"en"}],"article_version":["submitted"]},{"prerequisites":{"prerequisite_funders":[{"funder_metadata":{"url":[{"language_phrases":[{"value":"en","phrase":"English","language":"en"}],"url":"http:\\\/\\\/www.nih.gov\\\/","language":"en"}],"name":[{"language":"en","preferred":"name","language_phrases":[{"value":"en","phrase":"English","language":"en"}],"name":"National Institutes of Health","acronym":"NIH","preferred_phrases":[{"language":"en","phrase":"Name","value":"name"}]}],"id":9,"country":"us","country_phrases":[{"language":"en","phrase":"United States of America","value":"us"}],"identifiers":[{"identifier":"http:\\\/\\\/dx.doi.org\\\/10.13039\\\/100000002","type_phrases":[{"phrase":"FundRef DOI","value":"fundref","language":"en"}],"type":"fundref"}]},"system_metadata":{"id":9,"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/funder\\\/9"}}]},"embargo":{"amount":12,"units":"months","units_phrases":[{"phrase":"Months","value":"months","language":"en"}]},"article_version":["submitted"],"article_version_phrases":[{"language":"en","phrase":"Submitted","value":"submitted"}],"location":{"named_repository":["PubMed Central"],"location_phrases":[{"value":"named_repository","phrase":"Named Repository","language":"en"}],"location":["named_repository"]},"publisher_deposit":[{"repository_metadata":{"type_phrases":[{"value":"disciplinary","phrase":"Disciplinary","language":"en"}],"name":[{"preferred":"name","language":"en","preferred_phrases":[{"phrase":"Name","value":"name","language":"en"}],"language_phrases":[{"value":"en","phrase":"English","language":"en"}],"name":"PubMed Central"}],"url":"http:\\\/\\\/www.ncbi.nlm.nih.gov\\\/pmc\\\/","description":"A subject-based repository of biomedical and life sciences journal literature developed and managed by the National Center for Biotechnology Information (NCBI) at the US National Library of Medicine (NLM). \\r\\n\\r\\nContent includes articles deposited by participating journals that have applied to and been selected for the archive by NLM, as well as individual author manuscripts that have been submitted in compliance with the NIH Public Access Policy and similar policies of other research funding agencies. More than 2000 journals currently use PMC as a repository. Digitization projects have also added content from the 18th, 19th, and 20th centuries to the archive.","type":"disciplinary"},"system_metadata":{"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/repository\\\/267","id":267}}],"additional_oa_fee_phrases":[{"language":"en","phrase":"No","value":"no"}],"additional_oa_fee":"no"},{"article_version":["submitted"],"location":{"location":["named_repository"],"location_phrases":[{"value":"named_repository","phrase":"Named Repository","language":"en"}],"named_repository":["PubMed Central"]},"article_version_phrases":[{"language":"en","value":"submitted","phrase":"Submitted"}],"publisher_deposit":[{"system_metadata":{"id":267,"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/repository\\\/267"},"repository_metadata":{"type_phrases":[{"language":"en","phrase":"Disciplinary","value":"disciplinary"}],"description":"A subject-based repository of biomedical and life sciences journal literature developed and managed by the National Center for Biotechnology Information (NCBI) at the US National Library of Medicine (NLM). \\r\\n\\r\\nContent includes articles deposited by participating journals that have applied to and been selected for the archive by NLM, as well as individual author manuscripts that have been submitted in compliance with the NIH Public Access Policy and similar policies of other research funding agencies. More than 2000 journals currently use PMC as a repository. Digitization projects have also added content from the 18th, 19th, and 20th centuries to the archive.","type":"disciplinary","url":"http:\\\/\\\/www.ncbi.nlm.nih.gov\\\/pmc\\\/","name":[{"name":"PubMed Central","language_phrases":[{"phrase":"English","value":"en","language":"en"}],"preferred_phrases":[{"language":"en","phrase":"Name","value":"name"}],"language":"en","preferred":"name"}]}}],"embargo":{"amount":24,"units":"months","units_phrases":[{"value":"months","phrase":"Months","language":"en"}]},"additional_oa_fee_phrases":[{"phrase":"No","value":"no","language":"en"}],"additional_oa_fee":"no"},{"publisher_deposit":[{"repository_metadata":{"type":"disciplinary","description":"A subject-based repository of biomedical and life sciences journal literature developed and managed by the National Center for Biotechnology Information (NCBI) at the US National Library of Medicine (NLM). \\r\\n\\r\\nContent includes articles deposited by participating journals that have applied to and been selected for the archive by NLM, as well as individual author manuscripts that have been submitted in compliance with the NIH Public Access Policy and similar policies of other research funding agencies. More than 2000 journals currently use PMC as a repository. Digitization projects have also added content from the 18th, 19th, and 20th centuries to the archive.","url":"http:\\\/\\\/www.ncbi.nlm.nih.gov\\\/pmc\\\/","name":[{"preferred_phrases":[{"language":"en","phrase":"Name","value":"name"}],"name":"PubMed Central","language_phrases":[{"language":"en","phrase":"English","value":"en"}],"preferred":"name","language":"en"}],"type_phrases":[{"phrase":"Disciplinary","value":"disciplinary","language":"en"}]},"system_metadata":{"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/repository\\\/267","id":267}}],"location":{"location":["institutional_repository","named_repository","this_journal"],"named_repository":["PubMed Central"],"location_phrases":[{"language":"en","phrase":"Institutional Repository","value":"institutional_repository"},{"language":"en","value":"named_repository","phrase":"Named Repository"},{"language":"en","phrase":"This Journal","value":"this_journal"}]},"article_version":["published"],"article_version_phrases":[{"phrase":"Published","value":"published","language":"en"}],"copyright_owner_phrases":[{"language":"en","value":"publishers","phrase":"Publishers"}],"additional_oa_fee":"yes","additional_oa_fee_phrases":[{"language":"en","value":"yes","phrase":"Yes"}],"copyright_owner":"publishers","license":[{"license_phrases":[{"language":"en","phrase":"Publisher\'s Bespoke License","value":"bespoke_license"}],"license":"bespoke_license"}]}],"urls":[{"url":"http:\\\/\\\/ajph.aphapublications.org\\\/userimages\\\/ContentEditor\\\/1317406522645\\\/AJPH_Copyright_Consent.pdf","description":"Copyright Information"},{"description":"APHA Open Access","url":"http:\\\/\\\/ajph.aphapublications.org\\\/page\\\/authors.html"}],"open_access_prohibited_phrases":[{"language":"en","value":"no","phrase":"No"}],"open_access_prohibited":"no","id":13,"internal_moniker":"Default policy","uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/publisher_policy\\\/13","publication_count":1}],"system_metadata":{"publicly_visible":"yes","publicly_visible_phrases":[{"language":"en","phrase":"Yes","value":"yes"}],"uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/publication\\\/10303","id":10303,"date_created":"2010-08-18 10:28:15","date_modified":"2020-01-29 15:27:17"},"type_phrases":[{"value":"journal","phrase":"Journal","language":"en"}],"url":"http:\\\/\\\/www.ajph.org\\\/","publishers":[{"relationship_type":"society_publisher","publisher":{"country_phrases":[{"language":"en","value":"us","phrase":"United States of America"}],"country":"us","uri":"http:\\\/\\\/v2.sherpa.ac.uk\\\/id\\\/publisher\\\/13","publication_count":2,"id":13,"name":[{"preferred":"name","language":"en","preferred_phrases":[{"phrase":"Name","value":"name","language":"en"}],"name":"American Public Health Association","language_phrases":[{"value":"en","phrase":"English","language":"en"}]}],"url":"http:\\\/\\\/www.apha.org\\\/"},"relationship_type_phrases":[{"language":"en","value":"society_publisher","phrase":"Society Publisher"}]}],"title":[{"acronym":"AJPH","language_phrases":[{"phrase":"English","value":"en","language":"en"}],"title":"American Journal of Public Health","language":"en"}]}]}',
+                'srm_source_id': '10303',
+                'srm_journal_name': 'American Journal of Public Health',
+                'srm_journal_link': 'https:\/\/v2.sherpa.ac.uk\/id\/publication\/10303',
+                'srm_colour': 'yellow',
+                'srm_date_updated': '2020-12-04 17:57:15',
+            },
+            'fez_ulrichs': {
+                'ulr_id': 15274,
+                'ulr_issn': '1541-0048',
+                'ulr_status': 'Active',
+                'ulr_source_id': '52143',
+                'ulr_title': 'American Journal of Public Health',
+                'ulr_title_id': '41699',
+                'ulr_abbrev_title': null,
+                'ulr_publisher': 'American Public Health Association',
+                'ulr_country': 'United States',
+                'ulr_start_year': null,
+                'ulr_frequency': 'Monthly',
+                'ulr_open_access': '0',
+                'ulr_open_access_url': null,
+                'ulr_reviewed': '0',
+                'ulr_refereed': '1',
+                'ulr_formats': 'Online',
+                'ulr_description': 'Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.',
+                'ulr_xml': '<?xml version=\'1.0\' encoding=\'utf-8\'?>\r\n<searchResults>\n  <status>Success<\/status>\n  <totalRecords>1<\/totalRecords>\n  <numberOfRecords>1<\/numberOfRecords>\n  <requestQuery>1541-0048<\/requestQuery>\n  <results>\n    <UlrichTitle>\n      <id>51919<\/id>\n      <titleId>41699<\/titleId>\n      <title>American Journal of Public Health<\/title>\n      <issn>1541-0048<\/issn>\n      <publisher>\n        <string>American Public Health Association<\/string>\n      <\/publisher>\n      <country>United States<\/country>\n      <status>Active<\/status>\n      <toc>false<\/toc>\n      <refereed>true<\/refereed>\n      <availableOnline>true<\/availableOnline>\n      <openAccess>false<\/openAccess>\n      <reviewed>false<\/reviewed>\n      <historicTitle>false<\/historicTitle>\n      <frequency>Monthly<\/frequency>\n      <price>Contact Publisher<\/price>\n      <description>Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.<\/description>\n      <subject>\n        <string>PUBLIC HEALTH AND SAFETY<\/string>\n      <\/subject>\n      <keyFeatures>\n        <string>AI<\/string>\n        <string>AVO<\/string>\n        <string>CCC<\/string>\n        <string>RPR<\/string>\n      <\/keyFeatures>\n      <otherFeatures>\n        <string>BIA<\/string>\n        <string>FSI<\/string>\n      <\/otherFeatures>\n      <deweyNumbers>\n        <double>614.0<\/double>\n      <\/deweyNumbers>\n      <languages>\n        <string>English<\/string>\n      <\/languages>\n      <formats>\n        <string>Online<\/string>\n      <\/formats>\n      <serialTypes>\n        <string>Journal<\/string>\n      <\/serialTypes>\n      <contentTypes>\n        <string>Academic \/ Scholarly<\/string>\n      <\/contentTypes>\n      <rss\/>\n    <\/UlrichTitle>\n  <\/results>\n<\/searchResults>\r\n',
+                'ulr_last_updated': '2021-05-04 14:07:53',
+            },
+        }],
+        'fez_journal_jcr_scie': {
+            'jnl_jcr_scie_id': 500,
+            'jnl_jcr_scie_abbrev_title': 'Am. J. Public Health',
+            'jnl_jcr_scie_impact_factor': '5.381',
+            'jnl_jcr_scie_5yr_impact_factor': '5.600',
+            'jnl_jcr_scie_source_year': 2018,
+            'jnl_jcr_scie_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_jcr_scie_issn': '0090-0036',
+            'jnl_jcr_scie_start_year': 1911,
+            'fez_journal_jcr_scie_category': [{
+                'jnl_jcr_scie_category_id': 500,
+                'jnl_jcr_scie_category_code': 'NE',
+                'jnl_jcr_scie_category_description': '456676',
+                'jnl_jcr_scie_category_ranking': '12\/185',
+                'jnl_jcr_scie_category_quartile': 'Q1',
+                'jnl_jcr_scie_category_order': 1,
+                'jnl_jcr_scie_category_description_lookup': 'Public, Environmental & Occupational Health',
+            }],
         },
-        "fez_journal_era": [
-            {
-                "jnl_era_id": 73460,
-                "jnl_era_source_id": "13400",
-                "jnl_era_source_year": 2010,
-                "jnl_era_title": "",
-                "fez_journal_era_for_code": [
-                    {
-                        "jnl_era_for_code_id": 73460,
-                        "jnl_era_for_code": "452650",
-                        "jnl_era_for_code_order": 1,
-                        "jnl_era_for_code_lookup": "1117 Public Health and Health Services"
-                    }
-                ]
-            },
-            {
-                "jnl_era_id": 57795,
-                "jnl_era_source_id": "13400",
-                "jnl_era_source_year": 2012,
-                "jnl_era_title": "",
-                "fez_journal_era_for_code": [
-                    {
-                        "jnl_era_for_code_id": 57795,
-                        "jnl_era_for_code": "452511",
-                        "jnl_era_for_code_order": 1,
-                        "jnl_era_for_code_lookup": "11 Medical and Health Sciences"
-                    }
-                ]
-            },
-            {
-                "jnl_era_id": 28595,
-                "jnl_era_source_id": "13400",
-                "jnl_era_source_year": 2015,
-                "jnl_era_title": "",
-                "fez_journal_era_for_code": [
-                    {
-                        "jnl_era_for_code_id": 28595,
-                        "jnl_era_for_code": "452511",
-                        "jnl_era_for_code_order": 1,
-                        "jnl_era_for_code_lookup": "11 Medical and Health Sciences"
-                    }
-                ]
-            },
-            {
-                "jnl_era_id": 8508,
-                "jnl_era_source_id": "13400",
-                "jnl_era_source_year": 2018,
-                "jnl_era_title": "American Journal of Public Health",
-                "fez_journal_era_for_code": [
-                    {
-                        "jnl_era_for_code_id": 8508,
-                        "jnl_era_for_code": "452511",
-                        "jnl_era_for_code_order": 1,
-                        "jnl_era_for_code_lookup": "11 Medical and Health Sciences"
-                    }
-                ]
-            }
-        ],
-        "fez_journal_esi": [
-            {
-                "jnl_esi_subject": "SOCIAL SCIENCES, GENERAL",
-                "jnl_esi_issn": "0090-0036",
-                "jnl_esi_source_date": "2019-02-01",
-                "jnl_esi_title": "AMERICAN JOURNAL OF PUBLIC HEALTH"
-            },
-            {
-                "jnl_esi_subject": "SOCIAL SCIENCES, GENERAL",
-                "jnl_esi_issn": "1541-0048",
-                "jnl_esi_source_date": "2019-02-01",
-                "jnl_esi_title": "AMERICAN JOURNAL OF PUBLIC HEALTH"
-            }
-        ],
-        "fez_journal_historical_issn": [
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "0002-9572",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 1
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "1076-0704",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 2
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "1047-3491",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 3
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "1079-9567",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 4
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "1079-9559",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 5
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "0271-4353",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 6
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "0273-1975",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 7
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "0272-2313",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 8
-            },
-            {
-                "jnl_historical_issn_jid": 8508,
-                "jnl_historical_issn": "0737-8769",
-                "jnl_historical_issn_type": null,
-                "jnl_historical_issn_order": 9
-            }
-        ],
-        "fez_journal_issn": [
-            {
-                "jnl_issn_jid": 8508,
-                "jnl_issn": "0090-0036",
-                "jnl_issn_type": null,
-                "jnl_issn_order": 1,
-                "fez_sherpa_romeo": {
-                    "srm_id": 3792,
-                    "srm_issn": "0090-0036",
-                    "srm_source_id": "10303",
-                    "srm_journal_name": "American Journal of Public Health",
-                    "srm_journal_link": "https:\/\/v2.sherpa.ac.uk\/id\/publication\/10303",
-                    "srm_colour": "yellow",
-                    "srm_date_updated": "2020-12-04 07:51:06"
-                },
-                "fez_ulrichs": {
-                    "ulr_id": 650,
-                    "ulr_issn": "0090-0036",
-                    "ulr_status": "Active",
-                    "ulr_source_id": "52095",
-                    "ulr_title": "American Journal of Public Health",
-                    "ulr_title_id": "41698",
-                    "ulr_abbrev_title": "AJPH",
-                    "ulr_publisher": "American Public Health Association",
-                    "ulr_country": "United States",
-                    "ulr_start_year": "1911",
-                    "ulr_frequency": "Monthly",
-                    "ulr_open_access": "0",
-                    "ulr_open_access_url": null,
-                    "ulr_reviewed": "1",
-                    "ulr_refereed": "1",
-                    "ulr_formats": "Print",
-                    "ulr_description": "Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.",
-                    "ulr_last_updated": "2021-01-13 03:21:08"
-                }
-            },
-            {
-                "jnl_issn_jid": 8508,
-                "jnl_issn": "1541-0048",
-                "jnl_issn_type": null,
-                "jnl_issn_order": 2,
-                "fez_sherpa_romeo": {
-                    "srm_id": 3793,
-                    "srm_issn": "1541-0048",
-                    "srm_source_id": "10303",
-                    "srm_journal_name": "American Journal of Public Health",
-                    "srm_journal_link": "https:\/\/v2.sherpa.ac.uk\/id\/publication\/10303",
-                    "srm_colour": "yellow",
-                    "srm_date_updated": "2020-12-04 17:57:15"
-                },
-                "fez_ulrichs": {
-                    "ulr_id": 15274,
-                    "ulr_issn": "1541-0048",
-                    "ulr_status": "Active",
-                    "ulr_source_id": "52108",
-                    "ulr_title": "American Journal of Public Health",
-                    "ulr_title_id": "41699",
-                    "ulr_abbrev_title": null,
-                    "ulr_publisher": "American Public Health Association",
-                    "ulr_country": "United States",
-                    "ulr_start_year": null,
-                    "ulr_frequency": "Monthly",
-                    "ulr_open_access": "0",
-                    "ulr_open_access_url": null,
-                    "ulr_reviewed": "0",
-                    "ulr_refereed": "1",
-                    "ulr_formats": "Online",
-                    "ulr_description": "Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.",
-                    "ulr_last_updated": "2021-01-13 12:18:05"
-                }
-            }
-        ],
-        "fez_journal_jcr_scie": {
-            "jnl_jcr_scie_id": 503,
-            "jnl_jcr_scie_abbrev_title": "Am. J. Public Health",
-            "jnl_jcr_scie_impact_factor": "5.381",
-            "jnl_jcr_scie_5yr_impact_factor": "5.600",
-            "jnl_jcr_scie_source_year": 2018,
-            "jnl_jcr_scie_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
-            "jnl_jcr_scie_issn": "0090-0036",
-            "jnl_jcr_scie_start_year": 1911,
-            "fez_journal_jcr_scie_category": [
-                {
-                    "jnl_jcr_scie_category_id": 503,
-                    "jnl_jcr_scie_category_code": "NE",
-                    "jnl_jcr_scie_category_description": "PUBLIC, ENVIRONMENTAL & OCCUPATIONAL HEALTH",
-                    "jnl_jcr_scie_category_ranking": "12\/185",
-                    "jnl_jcr_scie_category_quartile": "Q1",
-                    "jnl_jcr_scie_category_order": 1
-                },
-                {
-                    "jnl_jcr_scie_category_id": "2",
-                    "jnl_jcr_scie_category_code": "AA",
-                    "jnl_jcr_scie_category_description": "Category 2",
-                    "jnl_jcr_scie_category_ranking": "45/459",
-                    "jnl_jcr_scie_category_quartile": "Q3",
-                    "jnl_jcr_scie_category_order": 2
-                }
-            ]
+        'fez_journal_jcr_ssci': {
+            'jnl_jcr_ssci_id': 3078,
+            'jnl_jcr_ssci_abbrev_title': 'Am. J. Public Health',
+            'jnl_jcr_ssci_impact_factor': '5.381',
+            'jnl_jcr_ssci_5yr_impact_factor': '5.600',
+            'jnl_jcr_ssci_source_year': 2018,
+            'jnl_jcr_ssci_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_jcr_ssci_issn': '0090-0036',
+            'jnl_jcr_ssci_start_year': 1911,
+            'fez_journal_jcr_ssci_category': [{
+                'jnl_jcr_ssci_category_id': 3078,
+                'jnl_jcr_ssci_category_code': 'NE',
+                'jnl_jcr_ssci_category_description': '456676',
+                'jnl_jcr_ssci_category_ranking': '6\/162',
+                'jnl_jcr_ssci_category_quartile': 'Q1',
+                'jnl_jcr_ssci_category_order': 1,
+                'jnl_jcr_ssci_category_description_lookup': 'Public, Environmental & Occupational Health',
+            }],
         },
-        "fez_journal_jcr_ssci": {
-            "jnl_jcr_ssci_id": 3085,
-            "jnl_jcr_ssci_abbrev_title": "Am. J. Public Health",
-            "jnl_jcr_ssci_impact_factor": "5.381",
-            "jnl_jcr_ssci_5yr_impact_factor": "5.600",
-            "jnl_jcr_ssci_source_year": 2018,
-            "jnl_jcr_ssci_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
-            "jnl_jcr_ssci_issn": "0090-0036",
-            "jnl_jcr_ssci_start_year": 1911,
-            "fez_journal_jcr_ssci_category": [
-                {
-                    "jnl_jcr_ssci_category_id": 3085,
-                    "jnl_jcr_ssci_category_code": "NE",
-                    "jnl_jcr_ssci_category_description": "PUBLIC, ENVIRONMENTAL & OCCUPATIONAL HEALTH",
-                    "jnl_jcr_ssci_category_ranking": "6\/162",
-                    "jnl_jcr_ssci_category_quartile": "Q1",
-                    "jnl_jcr_ssci_category_order": 1
-                }
-            ]
+        'fez_journal_nature_index': null,
+        'fez_journal_pubmed': {
+            'jnl_pubmed_last_updated': '2021-01-28 22:36:22',
+            'jnl_pubmed_source_id': '1254074',
+            'jnl_pubmed_title': 'American journal of public health',
+            'jnl_pubmed_issn': '0090-0036',
         },
-        "fez_journal_nature_index": {
-            "jnl_nature_index_jid": 8508,
-            "jnl_nature_index_source_date": "2020-11-12"
-        },
-        "fez_journal_pubmed": {
-            "jnl_pubmed_jid": 8508,
-            "jnl_pubmed_last_updated": "2020-12-15 05:42:00",
-            "jnl_pubmed_source_id": "1254074"
-        },
-        "fez_journal_wos_category": [
-                {
-                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
-                "jnl_wos_category": "Public, Environmental & Occupational Health",
-                "jnl_wos_category_index": "SCIE",
-                "jnl_wos_category_issn": "0090-0036",
-                "jnl_wos_category_source_date": "2020-09-29",
-                "fez_journal_cwts": {
-                    "jnl_cwts_jid": 8508,
-                    "jnl_cwts_source_year": "2020"
-                }
-            },
-                {
-                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
-                "jnl_wos_category": "Public, Environmental & Occupational Health",
-                "jnl_wos_category_index": "SSCI",
-                "jnl_wos_category_issn": "0090-0036",
-                "jnl_wos_category_source_date": "2020-09-29",
-                "fez_journal_cwts": null
-            },
-            {
-                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
-                "jnl_wos_category": "Public, Environmental & Occupational Health",
-                "jnl_wos_category_index": "SCIE",
-                "jnl_wos_category_issn": "1541-0048",
-                "jnl_wos_category_source_date": "2020-09-29",
-                "fez_journal_cwts": null
-            },
-            {
-                "jnl_wos_category_title": "AMERICAN JOURNAL OF PUBLIC HEALTH",
-                "jnl_wos_category": "Public, Environmental & Occupational Health",
-                "jnl_wos_category_index": "SSCI",
-                "jnl_wos_category_issn": "1541-0048",
-                "jnl_wos_category_source_date": "2020-09-29",
-                "fez_journal_cwts": null
-            }
-        ]
-    }
+        'fez_journal_wos_category': [{
+            'jnl_wos_category_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_wos_category': '456676',
+            'jnl_wos_category_index': 'SCIE',
+            'jnl_wos_category_issn': '0090-0036',
+            'jnl_wos_category_source_date': '2020-09-29',
+            'fez_journal_cwts': { 'jnl_cwts_source_year': 2020, 'jnl_cwts_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH' },
+            'jnl_wos_category_lookup': 'Public, Environmental & Occupational Health',
+        }, {
+            'jnl_wos_category_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_wos_category': '456676',
+            'jnl_wos_category_index': 'SSCI',
+            'jnl_wos_category_issn': '0090-0036',
+            'jnl_wos_category_source_date': '2020-09-29',
+            'fez_journal_cwts': { 'jnl_cwts_source_year': 2020, 'jnl_cwts_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH' },
+            'jnl_wos_category_lookup': 'Public, Environmental & Occupational Health',
+        }, {
+            'jnl_wos_category_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_wos_category': '456676',
+            'jnl_wos_category_index': 'SCIE',
+            'jnl_wos_category_issn': '1541-0048',
+            'jnl_wos_category_source_date': '2020-09-29',
+            'fez_journal_cwts': { 'jnl_cwts_source_year': 2020, 'jnl_cwts_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH' },
+            'jnl_wos_category_lookup': 'Public, Environmental & Occupational Health',
+        }, {
+            'jnl_wos_category_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+            'jnl_wos_category': '456676',
+            'jnl_wos_category_index': 'SSCI',
+            'jnl_wos_category_issn': '1541-0048',
+            'jnl_wos_category_source_date': '2020-09-29',
+            'fez_journal_cwts': { 'jnl_cwts_source_year': 2020, 'jnl_cwts_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH' },
+            'jnl_wos_category_lookup': 'Public, Environmental & Occupational Health',
+        }],
+    },
 };
