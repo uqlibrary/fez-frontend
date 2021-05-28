@@ -763,7 +763,9 @@ describe('ManageUsers', () => {
         expect(getByTestId('users-list-row-0')).toBeInTheDocument();
         expect(getByTestId('users-list-row-2')).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('select-all-users'));
+        fireEvent.click(getByTestId('select-user-0'));
+        fireEvent.click(getByTestId('select-user-1'));
+        fireEvent.click(getByTestId('select-user-2'));
         fireEvent.click(getByTestId('users-delete-selected-users'));
         fireEvent.click(getByTestId('confirm-action'));
 
@@ -810,7 +812,9 @@ describe('ManageUsers', () => {
         expect(getByTestId('users-list-row-0')).toBeInTheDocument();
         expect(getByTestId('users-list-row-2')).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('select-all-users'));
+        fireEvent.click(getByTestId('select-user-0'));
+        fireEvent.click(getByTestId('select-user-1'));
+        fireEvent.click(getByTestId('select-user-2'));
         fireEvent.click(getByTestId('users-delete-selected-users'));
         fireEvent.click(getByTestId('confirm-action'));
 

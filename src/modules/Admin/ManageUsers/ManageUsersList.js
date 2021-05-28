@@ -315,18 +315,13 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     searchFieldAlignment: 'left',
                     selection: true,
                     sorting: false,
+                    showSelectAllCheckbox: false,
                     selectionProps: rowData => ({
                         inputProps: {
-                            id: `select-author-${rowData.tableData.id}`,
-                            'data-testid': `select-author-${rowData.tableData.id}`,
+                            id: `select-user-${rowData.tableData.id}`,
+                            'data-testid': `select-user-${rowData.tableData.id}`,
                         },
                     }),
-                    headerSelectionProps: {
-                        inputProps: {
-                            id: 'select-all-users',
-                            'data-testid': 'select-all-users',
-                        },
-                    },
                 }}
                 actions={[
                     {
