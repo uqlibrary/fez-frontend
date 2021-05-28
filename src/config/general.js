@@ -1582,6 +1582,10 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
 
+export const BULK_DELETE_USER_SUCCESS = 'User deleted';
+export const BULK_DELETE_USER_NOT_FOUND = 'User not found';
+export const BULK_DELETE_USER_PREMIS_EVENT = 'Cannot delete user with premis events';
+
 export const BULK_DELETE_AUTHOR_SUCCESS = 'Author deleted';
 export const BULK_DELETE_AUTHOR_NOT_FOUND = 'Author not found';
 export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked works';
