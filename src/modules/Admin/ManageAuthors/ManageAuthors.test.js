@@ -370,7 +370,7 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-22')).toBeInTheDocument();
     });
 
-    it('should bulk delete all authors', async () => {
+    it('should bulk delete authors', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
             .replyOnce(200, {
@@ -411,7 +411,9 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('select-all-authors'));
+        fireEvent.click(getByTestId('select-author-0'));
+        fireEvent.click(getByTestId('select-author-1'));
+        fireEvent.click(getByTestId('select-author-2'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
         fireEvent.click(getByTestId('confirm-action'));
 
@@ -460,7 +462,9 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('select-all-authors'));
+        fireEvent.click(getByTestId('select-author-0'));
+        fireEvent.click(getByTestId('select-author-1'));
+        fireEvent.click(getByTestId('select-author-2'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
         fireEvent.click(getByTestId('confirm-action'));
 

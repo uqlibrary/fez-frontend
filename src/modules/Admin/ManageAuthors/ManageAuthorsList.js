@@ -82,7 +82,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 bulkDeleteButtonTooltip,
                 editButtonTooltip,
                 deleteButtonTooltip,
-                scopusIngestButtonTooltip,
+                // scopusIngestButtonTooltip,
                 searchAriaLabel,
                 searchPlaceholder,
             },
@@ -367,18 +367,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     overflowY: 'auto',
                     searchFieldAlignment: 'left',
                     selection: true,
+                    showSelectAllCheckbox: false,
                     selectionProps: rowData => ({
                         inputProps: {
                             id: `select-author-${rowData.tableData.id}`,
                             'data-testid': `select-author-${rowData.tableData.id}`,
                         },
                     }),
-                    headerSelectionProps: {
-                        inputProps: {
-                            id: 'select-all-authors',
-                            'data-testid': 'select-all-authors',
-                        },
-                    },
                 }}
                 actions={[
                     {
@@ -387,12 +382,12 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         onClick: showConfirmation,
                         isFreeAction: false,
                     },
-                    {
-                        icon: tableIcons.Download,
-                        isScopusIngest: true,
-                        position: 'row',
-                        tooltip: scopusIngestButtonTooltip,
-                    },
+                    // {
+                    //     icon: tableIcons.Download,
+                    //     isScopusIngest: true,
+                    //     position: 'row',
+                    //     tooltip: scopusIngestButtonTooltip,
+                    // },
                 ]}
             />
         </React.Fragment>
