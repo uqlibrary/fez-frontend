@@ -1,6 +1,7 @@
 import { checkForExistingUser } from 'actions';
 import { default as locale } from 'locale/components';
 
+/* istanbul ignore next */
 export const checkForExisting = (values, dispatch, props, field) =>
     dispatch(
         checkForExistingUser(
