@@ -236,6 +236,8 @@ Before committing changes, locally run tests and update stapshots (if required).
 We are using [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) for
 our e2e UI testing.
 
+**NOTE**: If you are getting an error `Failed to deserialize the V8 snapshot blob` when running tests - be sure to delete your cypress cache - Windows: `\AppData\Local\Cypress\Cache`
+
 To run tests, first start the build, using mock data, ie `npm run start:mock`
 
 Then:
