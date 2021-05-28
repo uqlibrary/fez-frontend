@@ -13,7 +13,7 @@ const WosCategories = ({ categoryData }) =>
             return nodeJoin(
                 categoryNames.map((categoryName, categoryIndex) => (
                     <span key={`${idPrefix}${categoryName}`} data-testid={`${idPrefix}${categoryIndex}`}>
-                        {categoryName.trim()}&nbsp;
+                        {categoryName.trim()}
                         {categoryIssns[categoryIndex] && `(${categoryIssns[categoryIndex]})`}
                     </span>
                 )),
