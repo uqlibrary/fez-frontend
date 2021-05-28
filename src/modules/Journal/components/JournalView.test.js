@@ -350,15 +350,25 @@ describe('JournalView Component', () => {
             const detail = {
                 id: 'wos-category-ahci',
                 data: [
-                    { jnl_wos_category_index: 'ahci', jnl_wos_category: 'category1|category2', jnl_wos_category_lookup: 'Test1|Test2' },
-                    { jnl_wos_category_index: 'ahci', jnl_wos_category: 'category3', jnl_wos_category_lookup: 'Test3' },
+                    {
+                        jnl_wos_category_index: 'ahci',
+                        jnl_wos_category: 'category1|category2',
+                        jnl_wos_category_lookup: 'Test1|Test2',
+                        jnl_wos_category_issn: '123|456',
+                    },
+                    {
+                        jnl_wos_category_index: 'ahci',
+                        jnl_wos_category: 'category3',
+                        jnl_wos_category_lookup: 'Test3',
+                        jnl_wos_category_issn: '789',
+                    },
                     { jnl_wos_category_index: 'ahci', jnl_wos_category: '', jnl_wos_category_lookup: '' },
                 ],
             };
             const { getByText } = rtlRender(renderData(detail));
-            expect(getByText('Test1')).toHaveAttribute('data-testid', 'wos-ahci0-category0');
-            expect(getByText('Test2')).toHaveAttribute('data-testid', 'wos-ahci0-category1');
-            expect(getByText('Test3')).toHaveAttribute('data-testid', 'wos-ahci1-category0');
+            expect(getByText('Test1(123)')).toHaveAttribute('data-testid', 'wos-ahci0-category0');
+            expect(getByText('Test2(456)')).toHaveAttribute('data-testid', 'wos-ahci0-category1');
+            expect(getByText('Test3(789)')).toHaveAttribute('data-testid', 'wos-ahci1-category0');
         });
 
         it('renders ERA FoR codes', () => {
