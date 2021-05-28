@@ -236,6 +236,7 @@ export const JournalView = ({
         !journalDetailsLoaded && !journalLoading && !journalLoadingError && actions.loadJournal(match.params.id);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
     if (journalLoadingError) {
         return <Alert alertId="journal-load-failure-alert" {...txt.loadFailureAlert} />;
     } else if (journalLoading || !journalDetailsLoaded) {

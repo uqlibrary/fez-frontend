@@ -293,20 +293,17 @@ const getCiteScoreDetails = journalDetails => ({
 const getWosCategoriesByIndex = (categories, indexName) =>
     Array.isArray(categories) && categories.filter(category => category.jnl_wos_category_index === indexName);
 
-const getEsiSubject = journalDetails => {
-    return (
-        journalDetails.fez_journal_esi &&
-        journalDetails.fez_journal_esi.length > 0 &&
-        nodeJoin(
-            journalDetails.fez_journal_esi.map((item, index) => (
-                <span key={index} id={`${txt.entries.esiSubject.id}-${index}`}>
-                    {item.jnl_esi_subject_lookup} ({item.jnl_esi_issn})
-                </span>
-            )),
-            ', ',
-        )
+const getEsiSubject = journalDetails =>
+    journalDetails.fez_journal_esi &&
+    journalDetails.fez_journal_esi.length > 0 &&
+    nodeJoin(
+        journalDetails.fez_journal_esi.map((item, index) => (
+            <span key={index} id={`${txt.entries.esiSubject.id}-${index}`}>
+                {item.jnl_esi_subject_lookup}
+            </span>
+        )),
+        ', ',
     );
-};
 
 const getIndexDetails = journalDetails => {
     return [
