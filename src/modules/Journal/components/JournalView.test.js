@@ -350,7 +350,11 @@ describe('JournalView Component', () => {
             const detail = {
                 id: 'wos-category-ahci',
                 data: [
-                    { jnl_wos_category_index: 'ahci', jnl_wos_category: 'category1|category2', jnl_wos_category_lookup: 'Test1|Test2' },
+                    {
+                        jnl_wos_category_index: 'ahci',
+                        jnl_wos_category: 'category1|category2',
+                        jnl_wos_category_lookup: 'Test1|Test2',
+                    },
                     { jnl_wos_category_index: 'ahci', jnl_wos_category: 'category3', jnl_wos_category_lookup: 'Test3' },
                     { jnl_wos_category_index: 'ahci', jnl_wos_category: '', jnl_wos_category_lookup: '' },
                 ],
