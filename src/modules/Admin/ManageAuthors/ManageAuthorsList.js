@@ -82,7 +82,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 bulkDeleteButtonTooltip,
                 editButtonTooltip,
                 deleteButtonTooltip,
-                scopusIngestButtonTooltip,
+                // scopusIngestButtonTooltip,
+                searchAriaLabel,
+                searchPlaceholder,
             },
             bulkDeleteConfirmationLocale,
         },
@@ -233,7 +235,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     Row: props => (
                         <MTableBodyRow
                             {...props}
-                            hover
+                            {...(props.hasAnyEditingRow ? { onRowClick: false, hover: false } : { hover: true })}
                             id={`authors-list-row-${props.index}`}
                             data-testid={`authors-list-row-${props.index}`}
                         />
@@ -274,33 +276,33 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                     size="small"
                                 />
                             );
-                        } else if (props.action.isScopusIngest) {
-                            const { icon: Icon, tooltip, ...restAction } = props.action;
-                            return (
-                                <MTableAction
-                                    {...props}
-                                    action={{
-                                        ...restAction,
-                                        tooltip,
-                                        disabled:
-                                            !props.data.aut_scopus_id ||
-                                            props.data.aut_is_scopus_id_authenticated === 0,
-                                        icon: () => (
-                                            <Icon
-                                                id={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                {...restAction.iconProps}
-                                            />
-                                        ),
-                                        onClick: () => console.log(props.data),
-                                    }}
-                                    size="small"
-                                />
-                            );
+                            // } else if (props.action.isScopusIngest) {
+                            //     const { icon: Icon, tooltip, ...restAction } = props.action;
+                            //     return (
+                            //         <MTableAction
+                            //             {...props}
+                            //             action={{
+                            //                 ...restAction,
+                            //                 tooltip,
+                            //                 disabled:
+                            //                     !props.data.aut_scopus_id ||
+                            //                     props.data.aut_is_scopus_id_authenticated === 0,
+                            //                 icon: () => (
+                            //                     <Icon
+                            //                         id={`authors-list-row-${
+                            //                             props.data.tableData.id
+                            //                         }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                            //                         data-testid={`authors-list-row-${
+                            //                             props.data.tableData.id
+                            //                         }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                            //                         {...restAction.iconProps}
+                            //                     />
+                            //                 ),
+                            //                 onClick: () => console.log(props.data),
+                            //             }}
+                            //             size="small"
+                            //         />
+                            //     );
                         } else {
                             //  Add action
                             const { tooltip } = props.action;
@@ -342,6 +344,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         editTooltip: editButtonTooltip,
                         deleteTooltip: deleteButtonTooltip,
                     },
+                    toolbar: {
+                        searchAriaLabel: searchAriaLabel,
+                        searchPlaceholder: searchPlaceholder,
+                    },
                 }}
                 editable={{
                     onRowAdd: newData => onRowAdd(newData),
@@ -361,18 +367,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     overflowY: 'auto',
                     searchFieldAlignment: 'left',
                     selection: true,
+                    showSelectAllCheckbox: false,
                     selectionProps: rowData => ({
                         inputProps: {
                             id: `select-author-${rowData.tableData.id}`,
                             'data-testid': `select-author-${rowData.tableData.id}`,
                         },
                     }),
-                    headerSelectionProps: {
-                        inputProps: {
-                            id: 'select-all-authors',
-                            'data-testid': 'select-all-authors',
-                        },
-                    },
                 }}
                 actions={[
                     {
@@ -381,12 +382,12 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         onClick: showConfirmation,
                         isFreeAction: false,
                     },
-                    {
-                        icon: tableIcons.Download,
-                        isScopusIngest: true,
-                        position: 'row',
-                        tooltip: scopusIngestButtonTooltip,
-                    },
+                    // {
+                    //     icon: tableIcons.Download,
+                    //     isScopusIngest: true,
+                    //     position: 'row',
+                    //     tooltip: scopusIngestButtonTooltip,
+                    // },
                 ]}
             />
         </React.Fragment>
