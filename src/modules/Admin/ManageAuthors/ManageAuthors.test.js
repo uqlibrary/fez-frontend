@@ -5,6 +5,11 @@ import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
 import * as repository from 'repositories';
 
+jest.mock('./helpers', () => ({
+    checkForExisting: jest.fn(),
+}));
+import { checkForExisting } from './helpers';
+
 const setup = (testProps = {}) => {
     return render(
         <WithReduxStore>
@@ -534,8 +539,6 @@ describe('ManageAuthors', () => {
                 data: [],
                 total: 0,
             })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .replyOnce(200, { data: [], total: 0 })
             .onPost(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
 
@@ -555,6 +558,11 @@ describe('ManageAuthors', () => {
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-342' } });
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
+
+        await waitFor(() => getByTestId('aut-name-overridden'));
+
         fireEvent.click(getByTestId('aut-name-overridden'));
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('authors-add-this-author-save'));
@@ -638,9 +646,7 @@ describe('ManageAuthors', () => {
                 total: 1,
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
-            .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name', aut_org_username: 'uqtname' } })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .reply(200, { data: [], total: 0 });
+            .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name', aut_org_username: 'uqtname' } });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
@@ -668,8 +674,12 @@ describe('ManageAuthors', () => {
         fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
         fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-543' } });
         fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '1234564' } });
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
@@ -724,9 +734,7 @@ describe('ManageAuthors', () => {
                 total: 1,
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
-            .replyOnce(500)
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .reply(200, { data: [], total: 0 });
+            .replyOnce(500);
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
@@ -757,6 +765,8 @@ describe('ManageAuthors', () => {
         });
         fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '1234564' } });
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
+
+        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));

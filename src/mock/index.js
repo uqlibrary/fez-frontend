@@ -379,9 +379,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalLookup })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
-    .reply(200, { ...mockData.journalDetails })
-    .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
-    .reply(200, {...mockData.userList});
+    .reply(200, { ...mockData.journalDetails });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)

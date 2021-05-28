@@ -207,9 +207,11 @@ describe('author list actions', () => {
 
             const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_FOUND];
 
-            await mockActionsStore.dispatch(
-                checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
-            );
+            await expect(
+                mockActionsStore.dispatch(
+                    checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
+                ),
+            ).rejects.toEqual({ aut_org_username: 'Some error' });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -221,6 +223,26 @@ describe('author list actions', () => {
             await mockActionsStore.dispatch(
                 checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
             );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on existing author not found keeping previous async errors as it is', async () => {
+            mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API().apiUrl).reply(200, { data: [], total: 0 });
+
+            const expectedActions = [actions.CHECKING_EXISTING_AUTHOR, actions.EXISTING_AUTHOR_NOT_FOUND];
+
+            await expect(
+                mockActionsStore.dispatch(
+                    checkForExistingAuthor(
+                        'test',
+                        'aut_org_username',
+                        1,
+                        { aut_org_username: 'Some error' },
+                        { aut_org_staff_id: 'Previous error' },
+                    ),
+                ),
+            ).rejects.toEqual({ aut_org_staff_id: 'Previous error' });
+
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 

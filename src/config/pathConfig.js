@@ -135,7 +135,6 @@ export const pathConfig = {
     admin: {
         add: '/admin/add',
         manageAuthors: '/admin/authors',
-        manageUsers: '/admin/users',
         changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         bulkUpdates: '/admin/bulk-updates',
         collection: '/admin/collection',

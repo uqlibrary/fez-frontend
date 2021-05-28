@@ -1406,9 +1406,5 @@ export default {
             title: 'Manage authors',
             loadingMessage: 'Loading authors',
         },
-        users: {
-            title: 'Manage users',
-            loadingMessage: 'Loading users',
-        },
     },
 };

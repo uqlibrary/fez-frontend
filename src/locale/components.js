@@ -3285,18 +3285,20 @@ export default {
                         label: 'Position',
                     },
                     orgStaffId: {
-                        label: 'Org staff ID',
+                        label: 'Staff ID',
                         helperText: 'This is a 7 digit number, usually preceded by a 0',
                     },
                     orgStudentId: {
-                        label: 'Org student ID',
+                        label: 'Student ID',
                         helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
                     },
                     orgUsername: {
-                        label: 'Org username',
+                        label: 'Staff username',
                     },
                     studentUsername: {
                         label: 'Student username',
+                        helperText:
+                            "This is an 8 characters string: remove last digit from student ID and add prefix 's'.",
                     },
                     refNum: {
                         label: 'Ref num',
@@ -3365,6 +3367,9 @@ export default {
                     deleteButtonTooltip: 'Delete this author',
                     notesButtonTooltip: 'View notes for this author',
                     updateNotesButton: 'Update notes',
+                    scopusIngestButtonTooltip: 'Ingest from Scopus',
+                    searchAriaLabel: 'Search authors',
+                    searchPlaceholder: 'Search authors',
                 },
             },
             row: {
@@ -3418,129 +3423,6 @@ export default {
                 alertId: 'alert-info-author-bulk-delete',
                 allowDismiss: true,
                 type: 'info',
-            },
-        },
-        manageUsers: {
-            loadingText: 'Loading users',
-            header: {
-                columns: {
-                    id: {
-                        title: 'ID',
-                    },
-                    fullName: {
-                        title: 'Full name',
-                    },
-                    username: {
-                        title: 'Username',
-                    },
-                    email: {
-                        title: 'Email',
-                    },
-                    status: {
-                        title: 'Status',
-                    },
-                    isAdmin: {
-                        title: 'Administrator?',
-                    },
-                    isSuperAdmin: {
-                        title: 'Super administrator?',
-                    },
-                },
-            },
-            editRow: {
-                fields: {
-                    username: {
-                        label: 'Username',
-                    },
-                    email: {
-                        label: 'Email',
-                    },
-                    fullName: {
-                        label: 'Full name',
-                    },
-                    isAdmin: {
-                        label: 'Administrator?',
-                    },
-                    isSuperAdmin: {
-                        label: 'Super administrator?',
-                        helperText: 'Only super admin users can update this flag',
-                    },
-                },
-                validation: {
-                    usernameError: 'This field is required',
-                    emailError: 'This field is required',
-                    fullNameError: 'This field is required',
-                },
-            },
-            form: {
-                editButton: 'Update user',
-                addButton: 'Save user',
-                cancelButton: 'Cancel',
-                deleteConfirmationLocale: {
-                    confirmationTitle: 'Delete user',
-                    confirmationMessage: 'Are you sure you want to delete this user?',
-                    cancelButtonLabel: 'No',
-                    confirmButtonLabel: 'Yes',
-                },
-                bulkDeleteConfirmationLocale: {
-                    confirmationTitle: 'Delete selected users',
-                    confirmationMessage: 'Are you sure you want to delete selected users?',
-                    cancelButtonLabel: 'No',
-                    confirmButtonLabel: 'Yes',
-                },
-                locale: {
-                    addButtonTooltip: 'Add new user',
-                    bulkDeleteButtonTooltip: 'Delete selected users',
-                    deleteButtonTooltip: 'Delete this user',
-                    editButtonTooltip: 'Edit this user',
-                },
-            },
-            row: {
-                locale: {
-                    editHint: 'Edit this item',
-                },
-            },
-            listUserErrorAlert: {
-                alertId: 'alert-error-user-list',
-                allowDismiss: true,
-                type: 'error',
-                message: 'There was some error loading user list',
-            },
-            addUserSuccessAlert: {
-                alertId: 'alert-done-user-add',
-                allowDismiss: true,
-                type: 'done',
-                message: 'An user has been successfully added.',
-            },
-            updateUserSuccessAlert: {
-                alertId: 'alert-done-user-update',
-                allowDismiss: true,
-                type: 'done',
-                message: 'An user has been successfully updated.',
-            },
-            deleteUserSuccessAlert: {
-                alertId: 'alert-done-user-delete',
-                allowDismiss: true,
-                type: 'done',
-                message: 'An user has been successfully deleted.',
-            },
-            addUserErrorAlert: {
-                alertId: 'alert-error-user-add',
-                allowDismiss: true,
-                type: 'error',
-                message: 'An user could not be added.',
-            },
-            updateUserErrorAlert: {
-                alertId: 'alert-error-user-update',
-                allowDismiss: true,
-                type: 'error',
-                message: 'An user could not be updated.',
-            },
-            deleteUserErrorAlert: {
-                alertId: 'alert-error-user-delete',
-                allowDismiss: true,
-                type: 'error',
-                message: 'An user could not be deleted.',
             },
         },
     },
