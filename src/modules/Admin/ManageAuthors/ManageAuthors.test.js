@@ -701,7 +701,7 @@ describe('ManageAuthors', () => {
                         aut_email: null,
                         aut_external_id: null,
                         aut_fname: 'Vishal',
-                        aut_google_scholar_id: null,
+                        aut_google_scholar_id: 'asdflakjssss',
                         aut_homepage_link: null,
                         aut_id: 2000003832,
                         aut_is_orcid_sync_enabled: null,
