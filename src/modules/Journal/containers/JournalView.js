@@ -1,12 +1,12 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
-import { nodeJoin } from '../components/JournalView';
-import JournalView from '../components/JournalView';
-import * as actions from 'actions';
-import pagesLocale from 'locale/pages';
 
+import JournalView from '../components/JournalView';
+
+import * as actions from 'actions';
+
+import pagesLocale from 'locale/pages';
 const txt = pagesLocale.pages.journal.view;
 
 const getBasicDetails = journalDetails => {
@@ -202,7 +202,7 @@ const getClarivateDetails = (journalDetails, indexType) => {
             (clarivateDetails &&
                 Array.isArray(clarivateDetails[categoryKey]) &&
                 clarivateDetails[categoryKey].map(category => ({
-                    title: category[`${subKeyPrefix}_category_description_lookup`],
+                    title: category[`${subKeyPrefix}_category_description`],
                     content: [
                         [
                             {
@@ -293,50 +293,32 @@ const getCiteScoreDetails = journalDetails => ({
 const getWosCategoriesByIndex = (categories, indexName) =>
     Array.isArray(categories) && categories.filter(category => category.jnl_wos_category_index === indexName);
 
-const getEsiSubject = journalDetails =>
-    journalDetails.fez_journal_esi &&
-    journalDetails.fez_journal_esi.length > 0 &&
-    nodeJoin(
-        journalDetails.fez_journal_esi.map((item, index) => (
-            <span key={index} id={`${txt.entries.esiSubject.id}-${index}`}>
-                {item.jnl_esi_subject_lookup}
-            </span>
-        )),
-        ', ',
-    );
-
-const getIndexDetails = journalDetails => {
-    return [
-        {
-            ...txt.entries.esiSubject,
-            data: getEsiSubject(journalDetails),
-        },
-        {
-            ...txt.entries.wosCategoryAhci,
-            data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'AHCI'),
-        },
-        {
-            ...txt.entries.wosCategoryScie,
-            data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SCIE'),
-        },
-        {
-            ...txt.entries.wosCategorySsci,
-            data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SSCI'),
-        },
-        {
-            ...txt.entries.wosCategoryEsci,
-            data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'ESCI'),
-        },
-        {
-            ...txt.entries.hasScopus,
-            data: journalDetails.fez_journal_cite_score,
-        },
-        {
-            ...txt.entries.hasPubmed,
-            data: journalDetails.fez_journal_pubmed,
-        },
-    ];
-};
+const getIndexDetails = journalDetails => [
+    {
+        ...txt.entries.wosCategoryAhci,
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'AHCI'),
+    },
+    {
+        ...txt.entries.wosCategoryScie,
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SCIE'),
+    },
+    {
+        ...txt.entries.wosCategorySsci,
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'SSCI'),
+    },
+    {
+        ...txt.entries.wosCategoryEsci,
+        data: getWosCategoriesByIndex(journalDetails.fez_journal_wos_category, 'ESCI'),
+    },
+    {
+        ...txt.entries.hasScopus,
+        data: journalDetails.fez_journal_cite_score,
+    },
+    {
+        ...txt.entries.hasPubmed,
+        data: journalDetails.fez_journal_pubmed,
+    },
+];
 
 const getListedDetails = journalDetails => [
     [
@@ -346,7 +328,7 @@ const getListedDetails = journalDetails => [
         },
         {
             ...txt.entries.adbcForCode,
-            data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_for_code_lookup,
+            data: journalDetails.fez_journal_abdc && journalDetails.fez_journal_abdc.jnl_abdc_for_code,
         },
     ],
     {

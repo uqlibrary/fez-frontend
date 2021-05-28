@@ -360,9 +360,9 @@ describe('JournalView Component', () => {
                 ],
             };
             const { getByText } = rtlRender(renderData(detail));
-            expect(getByText('Test1')).toHaveAttribute('data-testid', 'wos-ahci0-category0');
-            expect(getByText('Test2')).toHaveAttribute('data-testid', 'wos-ahci0-category1');
-            expect(getByText('Test3')).toHaveAttribute('data-testid', 'wos-ahci1-category0');
+            expect(getByText('category1')).toHaveAttribute('data-testid', 'wos-ahci0-category0');
+            expect(getByText('category2')).toHaveAttribute('data-testid', 'wos-ahci0-category1');
+            expect(getByText('category3')).toHaveAttribute('data-testid', 'wos-ahci1-category0');
         });
 
         it('renders ERA FoR codes', () => {
