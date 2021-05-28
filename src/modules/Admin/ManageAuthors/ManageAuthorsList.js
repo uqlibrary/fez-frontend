@@ -276,33 +276,33 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                     size="small"
                                 />
                             );
-                        } else if (props.action.isScopusIngest) {
-                            const { icon: Icon, tooltip, ...restAction } = props.action;
-                            return (
-                                <MTableAction
-                                    {...props}
-                                    action={{
-                                        ...restAction,
-                                        tooltip,
-                                        disabled:
-                                            !props.data.aut_scopus_id ||
-                                            props.data.aut_is_scopus_id_authenticated === 0,
-                                        icon: () => (
-                                            <Icon
-                                                id={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                {...restAction.iconProps}
-                                            />
-                                        ),
-                                        onClick: () => console.log(props.data),
-                                    }}
-                                    size="small"
-                                />
-                            );
+                            // } else if (props.action.isScopusIngest) {
+                            //     const { icon: Icon, tooltip, ...restAction } = props.action;
+                            //     return (
+                            //         <MTableAction
+                            //             {...props}
+                            //             action={{
+                            //                 ...restAction,
+                            //                 tooltip,
+                            //                 disabled:
+                            //                     !props.data.aut_scopus_id ||
+                            //                     props.data.aut_is_scopus_id_authenticated === 0,
+                            //                 icon: () => (
+                            //                     <Icon
+                            //                         id={`authors-list-row-${
+                            //                             props.data.tableData.id
+                            //                         }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                            //                         data-testid={`authors-list-row-${
+                            //                             props.data.tableData.id
+                            //                         }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                            //                         {...restAction.iconProps}
+                            //                     />
+                            //                 ),
+                            //                 onClick: () => console.log(props.data),
+                            //             }}
+                            //             size="small"
+                            //         />
+                            //     );
                         } else {
                             //  Add action
                             const { tooltip } = props.action;

@@ -125,4 +125,23 @@ describe(' manage authors reducer', () => {
         expect(test.authorAdding).toEqual(false);
         expect(test.authorAddError).toEqual({ status: 403, message: 'Test error message' });
     });
+
+    it('returns the correct state when existing author found', () => {
+        const test = manageAuthorsReducer(initialState, {
+            type: actions.EXISTING_AUTHOR_FOUND,
+            payload: { status: 403, message: 'Test error message' },
+        });
+        expect(test.existingAuthorFieldError).toEqual({ status: 403, message: 'Test error message' });
+    });
+
+    it('returns the correct state when existing author not found', () => {
+        const test = manageAuthorsReducer(
+            { ...initialState, existingAuthorFieldError: { aut_org_username: 'Error' } },
+            {
+                type: actions.EXISTING_AUTHOR_NOT_FOUND,
+                payload: {},
+            },
+        );
+        expect(test.existingAuthorFieldError).toEqual({ aut_org_username: 'Error' });
+    });
 });
