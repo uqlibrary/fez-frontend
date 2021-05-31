@@ -3180,6 +3180,7 @@ export default {
                     startYearHint: 'Please type in start year',
                     startYearErrorMessage: 'Year must be current or previous year',
                     endYearLabel: 'End year',
+                    endYearCurrentYearLabel: 'Current',
                     endYearHint: 'Current or future year only',
                     endYearErrorMessage: 'Year must be current or future year',
                     addButtonTooltip: 'Add new editorial appointment',

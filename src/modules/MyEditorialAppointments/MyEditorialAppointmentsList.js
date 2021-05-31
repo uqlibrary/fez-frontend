@@ -26,7 +26,7 @@ export const CustomToolbar = props => {
             }}
             onClick={() => props.onChange(moment(new Date(), 'YYYY'))}
         >
-            Current
+            {locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}
         </Typography>
     );
 };
