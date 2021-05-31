@@ -134,6 +134,44 @@ describe('BatchImport Component', () => {
         done();
     });
 
+    it('should hide all other fields except directory selector', async () => {
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                    { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+                ],
+            });
+
+        mockApi
+            .onGet(repositories.routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({ communityPid: 'UQ:111' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:222', rek_title: 'Testing collection', rek_security_policy: 5 },
+                    { rek_pid: 'UQ:333', rek_title: 'Tested collection', rek_security_policy: 1 },
+                ],
+            });
+
+        mockApi.onGet(repositories.routes.BATCH_IMPORT_DIRECTORIES_API({}).apiUrl).replyOnce(200, {
+            data: ['Test directory 1', 'Test directory 2'],
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+
+        fireEvent.click(getByTestId('is-bulk-file-ingest-input'));
+
+        expect(queryByTestId('community-pid-select')).not.toBeInTheDocument();
+        expect(queryByTestId('doc-type-id-select')).not.toBeInTheDocument();
+
+        fireEvent.click(getByTestId('is-bulk-file-ingest-input'));
+
+        expect(getByTestId('community-pid-select')).toBeInTheDocument();
+        expect(getByTestId('doc-type-id-select')).toBeInTheDocument();
+    });
+
     it('navigates to homepage on cancel', async () => {
         const pushFn = jest.fn();
         const history = { push: pushFn };
