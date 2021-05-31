@@ -390,3 +390,37 @@ export const JOURNAL_API = ({ id }) => ({
 export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `editorial-appointment${!!id ? `/${id}` : ''}`,
 });
+
+export const MANAGE_USERS_LIST_API = params => {
+    return {
+        apiUrl: 'fez-users/search',
+        options: {
+            params: {
+                page: params.page + 1,
+                per_page: params.pageSize,
+                query: params.query,
+            },
+        },
+    };
+};
+
+export const USERS_SEARCH_API = ({ query } = { query: null }) => ({
+    apiUrl: 'fez-users/search',
+    ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
+});
+
+export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: undefined }) => {
+    if (!!userId && !userIds) {
+        return {
+            apiUrl: `fez-users/${userId}`,
+        };
+    }
+
+    if (!userId && !!userIds && userIds.length > 0) {
+        return {
+            apiUrl: 'fez-users/delete-list',
+        };
+    }
+
+    return { apiUrl: 'fez-users' };
+};

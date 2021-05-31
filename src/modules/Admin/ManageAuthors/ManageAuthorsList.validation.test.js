@@ -341,7 +341,8 @@ describe('ManageAuthorsList', () => {
         const listItem1 = getByTestId('authors-list-row-1');
         expect(listItem1).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('select-all-authors'));
+        fireEvent.click(getByTestId('select-author-0'));
+        fireEvent.click(getByTestId('select-author-1'));
         act(() => {
             fireEvent.click(getByTestId('authors-delete-selected-authors'));
         });

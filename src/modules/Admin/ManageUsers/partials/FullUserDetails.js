@@ -9,23 +9,18 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import Checkbox from '@material-ui/core/Checkbox';
 
 import { makeStyles } from '@material-ui/core/styles';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
-import ColumnData from './ColumnData';
 import NameData from './NameData';
-import LeastAuthorData from './LeastAuthorData';
-import UsernameIdData from './UsernameIdData';
-import ResearcherIdentifierData from './ResearcherIdentifierData';
-import NotesData from './NotesData';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
-import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig';
+import { FORM_NAME, DEBOUNCE_VALUE } from './manageUserConfig';
 import { checkForExisting } from '../helpers';
+import UserDetailsRow from './UserDetailsRow';
 
 const useStyles = makeStyles(theme => ({
     background: {
@@ -34,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const FullAuthorDetails = ({
+export const FullUserDetails = ({
     disabled,
     data: rowData,
     mode,
@@ -56,7 +51,7 @@ export const FullAuthorDetails = ({
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
-    } = locale.components.manageAuthors;
+    } = locale.components.manageUsers;
 
     const handleSave = () => onEditingApproved(mode, formValues.toJS(), rowData);
     const handleDelete = () => onEditingApproved(mode, rowData, rowData);
@@ -78,23 +73,14 @@ export const FullAuthorDetails = ({
     return (
         <React.Fragment>
             {(mode === 'update' || mode === 'add') && (
-                <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
-                    <TableCell colSpan={4}>
+                <TableRow onKeyDown={handleKeyPress} id="user-edit-row" data-testid="user-edit-row">
+                    <TableCell colSpan={9}>
                         <ScrollToSection scrollToSection>
                             <form>
                                 <div className={classes.background}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <NameData />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <UsernameIdData />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <ResearcherIdentifierData />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <NotesData />
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Grid
@@ -106,8 +92,8 @@ export const FullAuthorDetails = ({
                                             >
                                                 <Grid item>
                                                     <Button
-                                                        id={`authors-${mode}-this-author-save`}
-                                                        data-testid={`authors-${mode}-this-author-save`}
+                                                        id={`users-${mode}-this-user-save`}
+                                                        data-testid={`users-${mode}-this-user-save`}
                                                         disabled={disableSubmit || submitting || disabled}
                                                         variant="contained"
                                                         color="primary"
@@ -118,8 +104,8 @@ export const FullAuthorDetails = ({
                                                 </Grid>
                                                 <Grid item>
                                                     <Button
-                                                        id={`authors-${mode}-this-author-cancel`}
-                                                        data-testid={`authors-${mode}-this-author-cancel`}
+                                                        id={`users-${mode}-this-user-cancel`}
+                                                        data-testid={`users-${mode}-this-user-cancel`}
                                                         disabled={disabled}
                                                         variant="outlined"
                                                         color="secondary"
@@ -137,6 +123,7 @@ export const FullAuthorDetails = ({
                     </TableCell>
                 </TableRow>
             )}
+
             {mode === 'delete' && (
                 <TableRow
                     onKeyDown={handleKeyPress}
@@ -145,20 +132,14 @@ export const FullAuthorDetails = ({
                     className={classes.background}
                 >
                     <ConfirmationBox
-                        confirmationBoxId="authors-delete-this-author-confirmation"
+                        confirmationBoxId="users-delete-this-user-confirmation"
                         onAction={handleDelete}
                         onClose={handleCancelDelete}
                         isOpen={isOpen}
                         locale={deleteConfirmationLocale}
                     />
-                    <TableCell>
-                        <Checkbox disabled size="small" />
-                    </TableCell>
-                    <TableCell>
-                        <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} />
-                    </TableCell>
                     <TableCell colSpan={3}>
-                        <LeastAuthorData rowData={rowData} />
+                        <UserDetailsRow rowData={rowData} />
                     </TableCell>
                 </TableRow>
             )}
@@ -166,19 +147,20 @@ export const FullAuthorDetails = ({
     );
 };
 
-FullAuthorDetails.propTypes = {
+FullUserDetails.propTypes = {
     data: PropTypes.object,
     disabled: PropTypes.bool,
     mode: PropTypes.string,
     onEditingApproved: PropTypes.func,
     onEditingCanceled: PropTypes.func,
+    rowData: PropTypes.object,
     submitting: PropTypes.bool,
 };
 
-const FullAuthorDetailsReduxForm = reduxForm({
+const FullUserDetailsReduxForm = reduxForm({
     form: FORM_NAME,
     asyncValidate: debounce(checkForExisting, DEBOUNCE_VALUE),
-    asyncChangeFields: ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'],
-})(FullAuthorDetails);
+    asyncChangeFields: ['usr_username'],
+})(FullUserDetails);
 
-export default React.memo(FullAuthorDetailsReduxForm);
+export default React.memo(FullUserDetailsReduxForm);

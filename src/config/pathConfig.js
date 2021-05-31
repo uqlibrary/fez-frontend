@@ -134,7 +134,6 @@ export const pathConfig = {
     },
     admin: {
         add: '/admin/add',
-        manageAuthors: '/admin/authors',
         changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         bulkUpdates: '/admin/bulk-updates',
         collection: '/admin/collection',
@@ -150,6 +149,8 @@ export const pathConfig = {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',
+        manageAuthors: '/admin/authors',
+        manageUsers: '/admin/users',
         masterJournalListIngest: '/admin/master-journal-list-ingest',
     },
     authorIdentifiers: {
