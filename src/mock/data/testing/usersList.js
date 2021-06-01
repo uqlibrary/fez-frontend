@@ -62,7 +62,7 @@ export const userListItem = {
     "usr_ldap_authentication": false,
     "usr_login_count": 157,
     "usr_shib_login_count": 0,
-    "usr_last_login_date": "2021-02-23T04:44:06Z",
+    "usr_last_login_date": "2017-02-16T23:11:37Z",
     "usr_external_usr_id": null,
     "usr_super_administrator": true,
     "usr_auth_rule_groups": "53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11",
