@@ -390,7 +390,7 @@ describe('ManageUsers', () => {
         expect(getByTestId('users-list-row-22')).toBeInTheDocument();
     });
 
-    it('should render added info after adding', async () => {
+    it('should render added info after adding and display "Never" for last login date', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
@@ -398,7 +398,15 @@ describe('ManageUsers', () => {
                 total: 0,
             })
             .onPost(new RegExp(repository.routes.USER_API().apiUrl))
-            .replyOnce(200, { data: { usr_full_name: 'Test Name', usr_id: 1 } });
+            .replyOnce(200, {
+                data: {
+                    usr_full_name: 'Test Name',
+                    usr_username: 'uqtest',
+                    usr_id: 1,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_last_login_date: '2017-02-16T23:11:37Z',
+                },
+            });
         const { getByTestId } = setup();
 
         fireEvent.click(getByTestId('users-add-new-user'));
@@ -407,18 +415,13 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtest' } });
         fireEvent.click(getByTestId('usr-administrator-input'));
-
-        // act(() => {
         fireEvent.click(getByTestId('usr-administrator-input'));
-        // });
-
-        // act(() => {
         fireEvent.click(getByTestId('users-add-this-user-save'));
-        // });
 
         await waitFor(() => getByTestId('users-list-row-0'));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test Name');
+        expect(getByTestId('usr-last-login-date-0')).toHaveTextContent('Never');
     });
 
     it('should render previous list on unsuccessful add operation', async () => {
