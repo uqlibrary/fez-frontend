@@ -404,7 +404,7 @@ describe('ManageUsers', () => {
                     usr_username: 'uqtest',
                     usr_id: 1,
                     usr_created_date: '2017-02-16T23:11:37Z',
-                    usr_last_login_date: '2017-02-16T23:11:37Z',
+                    usr_last_login_date: '2017-02-16T23:11:38Z',
                 },
             });
         const { getByTestId } = setup();
