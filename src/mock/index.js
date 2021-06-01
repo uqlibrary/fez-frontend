@@ -208,12 +208,14 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.trendingPublications)
     .onGet(routes.AUTHORS_SEARCH_API({ query: '.*' }).apiUrl)
     .reply(config => {
-        if (config.params.rule === 'lookup') {
+        if (!!config.params && !!config.params.rule && config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList.author];
         } else {
             return [200, mockData.authorsSearch];
         }
     })
+    .onGet(`${routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
+    .reply(200, mockData.authorsSearch)
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
@@ -377,7 +379,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalLookup })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
-    .reply(200, { ...mockData.journalDetails });
+    .reply(200, { ...mockData.journalDetails })
+    .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
+    .reply(200, {...mockData.userList});
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -402,6 +406,9 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
 
 mock.onDelete(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl))).reply(200, { data: {} });
 mock.onDelete(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl))).reply(200, {
+    data: {},
+});
+mock.onDelete(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl))).reply(200, {
     data: {},
 });
 
@@ -442,7 +449,29 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
     .reply(200, { ...mockData.myEditorialAppointmentItem })
     .onPost(routes.MASTER_JOURNAL_LIST_INGEST_API().apiUrl)
-    .reply(200, { data: {} });
+    .reply(200, { data: {} })
+    .onPost('fez-users/delete-list')
+    .reply(200, { 
+        data: {
+            '1000000293': 'User deleted',
+            '9999999999': 'User not found'
+        }
+    })
+    // .reply(500)
+    .onPost('fez-authors/delete-list')
+    .reply(200, { 
+        data: {
+            '410': 'Author deleted',
+            '9999999999': 'Author not found'
+        }
+    })
+    .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))
+    .reply(200, {
+        data: {
+            aut_id: 111,
+            aut_display_name: 'Mock Test'
+        }
+    });
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
 
@@ -476,8 +505,11 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .reply(200, { ...mockData.currentAuthor.uqresearcher })
     // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })
 
+    .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*'}).apiUrl)))
+    .reply(200, mockData.currentAuthor.uqstaff)
     .onAny()
     .reply(config => {
         console.log('url not found...', config);
         return [404, { message: `MOCK URL NOT FOUND: ${config.url}` }];
     });
+    
