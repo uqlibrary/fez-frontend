@@ -33,7 +33,9 @@ export const UserDetailsRow = ({ rowData }) => {
                             id={`usr-last-login-date-${rowData.tableData.id}`}
                             data-testid={`usr-last-login-date-${rowData.tableData.id}`}
                         >
-                            {!!rowData.usr_last_login_date && rowData.usr_created_date !== rowData.usr_last_login_date
+                            {!!rowData.usr_last_login_date &&
+                            moment(rowData.usr_created_date).format('YYYY-MM-DD HH:mm') !==
+                                moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm')
                                 ? moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')
                                 : 'Never'}
                         </Typography>
