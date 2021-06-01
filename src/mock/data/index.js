@@ -76,3 +76,5 @@ export { default as favouriteSearchItem } from './favouriteSearch/favouriteSearc
 // My editorial appointments mock data
 export { default as myEditorialAppointmentsList } from './myEditorialAppointments/myEditorialAppointmentsList';
 export { default as myEditorialAppointmentItem } from './myEditorialAppointments/myEditorialAppointmentItem';
+
+export { userList } from './testing/usersList';

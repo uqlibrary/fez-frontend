@@ -79,6 +79,12 @@ export default {
         myEditorialAppointments: {
             primaryText: 'My editorial appointments',
         },
+        manageAuthors: {
+            primaryText: 'Manage authors',
+        },
+        manageUsers: {
+            primaryText: 'Manage users',
+        },
     },
     footer: {
         cricos: {

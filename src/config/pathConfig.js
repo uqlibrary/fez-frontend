@@ -149,6 +149,8 @@ export const pathConfig = {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',
+        manageAuthors: '/admin/authors',
+        manageUsers: '/admin/users',
         masterJournalListIngest: '/admin/master-journal-list-ingest',
     },
     authorIdentifiers: {

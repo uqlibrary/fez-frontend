@@ -604,6 +604,12 @@ describe('Backend routes method', () => {
         });
     });
 
+    it('should construct url for AUTHORS_SEARCH_API without search query', () => {
+        expect(routes.AUTHORS_SEARCH_API()).toEqual({
+            apiUrl: 'fez-authors/search',
+        });
+    });
+
     it('should construct url for AUTHOR_DETAILS_API', () => {
         expect(routes.AUTHOR_DETAILS_API({ userId: '410' })).toEqual({ apiUrl: 'authors/details/410' });
     });
