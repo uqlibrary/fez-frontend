@@ -274,7 +274,9 @@ export const getColumns = () => {
                     id={`eap-end-year-${rowData.tableData.id}`}
                     data-testid={`eap-end-year-${rowData.tableData.id}`}
                 >
-                    {rowData.eap_end_year}
+                    {moment(String(rowData.eap_end_year)).format('YYYY') === moment(new Date()).format('YYYY')
+                        ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
+                        : rowData.eap_end_year}
                 </Typography>
             ),
             editComponent: props => {
@@ -289,6 +291,11 @@ export const getColumns = () => {
                             !moment(String(props.value), 'YYYY').isValid() ||
                             !moment(String(props.value), 'YYYY').isSameOrAfter(moment(), 'year')
                         }
+                        {...((!!props.value &&
+                            moment(String(props.value)).format('YYYY') === moment(minDate).format('YYYY') && {
+                                format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
+                            }) ||
+                            {})}
                         autoOk
                         variant="inline"
                         views={['year']}
