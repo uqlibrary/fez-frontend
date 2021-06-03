@@ -170,8 +170,6 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
         dispatch({ type: CHECKING_EXISTING_USER });
         return get(USERS_SEARCH_API({ query: search }))
             .then(response => {
-                console.log(response);
-                console.log(id, searchField, search);
                 exceptionCaught = false;
                 if (
                     response.total === 1 &&
