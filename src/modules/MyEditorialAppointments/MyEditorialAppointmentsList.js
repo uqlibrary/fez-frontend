@@ -15,6 +15,22 @@ import { default as locale } from 'locale/components';
 
 import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
 
+export const CustomToolbar = props => {
+    return (
+        <Typography
+            variant="h6"
+            align="center"
+            style={{
+                margin: '8px',
+                cursor: 'pointer',
+            }}
+            onClick={() => props.onChange(moment(new Date(), 'YYYY'))}
+        >
+            {locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}
+        </Typography>
+    );
+};
+
 export const getColumns = () => {
     const {
         header: {
@@ -29,7 +45,6 @@ export const getColumns = () => {
                 otherRoleLabel,
                 otherRoleHint,
                 startYearLabel,
-                // startYearHint,
                 startYearErrorMessage,
                 endYearLabel,
                 endYearHint,
@@ -259,7 +274,9 @@ export const getColumns = () => {
                     id={`eap-end-year-${rowData.tableData.id}`}
                     data-testid={`eap-end-year-${rowData.tableData.id}`}
                 >
-                    {rowData.eap_end_year}
+                    {moment(String(rowData.eap_end_year)).format('YYYY') === moment(new Date()).format('YYYY')
+                        ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
+                        : rowData.eap_end_year}
                 </Typography>
             ),
             editComponent: props => {
@@ -274,9 +291,13 @@ export const getColumns = () => {
                             !moment(String(props.value), 'YYYY').isValid() ||
                             !moment(String(props.value), 'YYYY').isSameOrAfter(moment(), 'year')
                         }
+                        {...((!!props.value &&
+                            moment(String(props.value)).format('YYYY') === moment(minDate).format('YYYY') && {
+                                format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
+                            }) ||
+                            {})}
                         autoOk
                         variant="inline"
-                        disableToolbar
                         views={['year']}
                         id="eap-end-year"
                         required
@@ -297,6 +318,7 @@ export const getColumns = () => {
                             'data-testid': 'eap-end-year-label',
                             htmlFor: 'eap-end-year-input',
                         }}
+                        ToolbarComponent={CustomToolbar}
                     />
                 );
             },
@@ -410,7 +432,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         );
                     } else {
                         //  Add actions
-                        // const { icon: Icon, tooltip, ...restAction } = props.action;
                         const { tooltip } = props.action;
                         return (
                             <Button
@@ -422,23 +443,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 children={tooltip}
                                 onClick={event => props.action.onClick(event, props.data)}
                             />
-                            // <MTableAction
-                            //     {...props}
-                            //     action={{
-                            //         ...restAction,
-                            //         tooltip: tooltip,
-                            //         icon: iconProps => (
-                            //             <Icon
-                            //                 {...iconProps}
-                            //                 id={`my-editorial-appointments-${tooltip
-                            // .toLowerCase().replace(/ /g, '-')}`}
-                            //                 data-testid={`my-editorial-appointments-${tooltip
-                            //                     .toLowerCase()
-                            //                     .replace(/ /g, '-')}`}
-                            //             />
-                            //         ),
-                            //     }}
-                            // />
                         );
                     }
                 },
