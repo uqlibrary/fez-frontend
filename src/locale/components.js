@@ -2295,7 +2295,7 @@ export default {
                         ...selectFields.directory,
                     },
                     bulkFileIngest: {
-                        label: 'Switch to bulk file ingest',
+                        label: 'Switch to bulk file/edit ingest',
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
                     submitButtonLabel: 'Ingest now',
