@@ -289,4 +289,59 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
     });
+
+    it('should display "Current" for "eap_end_year" column if the year is same as current year', () => {
+        global.mockDate.set('1/1/2022');
+        const { getByTestId } = setup({
+            list: [
+                {
+                    eap_id: 1,
+                    eap_journal_name: 'test',
+                    eap_jnl_id: 1234,
+                    eap_role_cvo_id: '123456',
+                    eap_start_year: '2006',
+                    eap_end_year: '2022',
+                    eap_role_name: 'Guest Editor',
+                },
+            ],
+        });
+
+        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('eap-end-year-0')).toHaveTextContent('Current');
+    });
+
+    it('should select "Current" year on clicking "Current" options from the year popup menu', async () => {
+        global.mockDate.set('1/1/2022');
+        const { getByTestId, getByText } = setup({
+            list: [],
+        });
+
+        fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+
+        expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
+
+        expect(getByTestId('my-editorial-appointments-add-save').closest('button')).toHaveAttribute('disabled');
+
+        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
+        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
+        fireEvent.click(getByText('Guest Editor'));
+        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
+
+        fireEvent.click(getByTestId('eap-end-year-button-input'));
+        await waitFor(() => getByTestId('eap-end-year-current'));
+        fireEvent.click(getByTestId('eap-end-year-current'));
+
+        act(() => {
+            fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
+        });
+
+        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+
+        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
+        expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
+    });
 });
