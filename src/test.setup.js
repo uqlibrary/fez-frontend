@@ -104,3 +104,5 @@ jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 
 const MockDate = require('mockdate');
 MockDate.set('6/30/2017');
+
+global.mockDate = MockDate;
