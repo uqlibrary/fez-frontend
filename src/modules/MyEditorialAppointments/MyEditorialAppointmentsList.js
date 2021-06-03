@@ -25,6 +25,8 @@ export const CustomToolbar = props => {
                 cursor: 'pointer',
             }}
             onClick={() => props.onChange(moment(new Date(), 'YYYY'))}
+            id="eap-end-year-current"
+            data-testid="eap-end-year-current"
         >
             {locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}
         </Typography>
@@ -319,6 +321,10 @@ export const getColumns = () => {
                             htmlFor: 'eap-end-year-input',
                         }}
                         ToolbarComponent={CustomToolbar}
+                        KeyboardButtonProps={{
+                            id: 'eap-end-year-button-input',
+                            'data-testid': 'eap-end-year-button-input',
+                        }}
                     />
                 );
             },
