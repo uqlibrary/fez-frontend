@@ -27,13 +27,19 @@ export const UserDetailsRow = ({ rowData }) => {
                         columnDataId={`usr-username-${rowData.tableData.id}`}
                         copiable
                     />
-                    {!!rowData.usr_last_login_date && (
-                        <Tooltip title="Last login date">
-                            <Typography variant="caption">
-                                {moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')}
-                            </Typography>
-                        </Tooltip>
-                    )}
+                    <Tooltip title="Last login date">
+                        <Typography
+                            variant="caption"
+                            id={`usr-last-login-date-${rowData.tableData.id}`}
+                            data-testid={`usr-last-login-date-${rowData.tableData.id}`}
+                        >
+                            {!!rowData.usr_last_login_date &&
+                            moment(rowData.usr_created_date).format('YYYY-MM-DD HH:mm') !==
+                                moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm')
+                                ? moment(rowData.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')
+                                : 'Never'}
+                        </Typography>
+                    </Tooltip>
                 </React.Fragment>
             </Grid>
             <Grid item xs={3}>
