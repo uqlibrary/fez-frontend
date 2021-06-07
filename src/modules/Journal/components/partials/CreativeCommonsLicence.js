@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-import { CREATIVE_COMMONS_LICENCES, getCreativeCommonsUrl } from 'config/general';
+import { CCL_4_0_SLUG_TEXT_MAP, getCreativeCommonsUrl } from 'config/general';
 
 const CreativeCommonsLicence = ({ by, nd, nc, sa }) => {
     // Note: the order of conditions is important; don't change.
@@ -15,9 +15,9 @@ const CreativeCommonsLicence = ({ by, nd, nc, sa }) => {
     const testId = 'journal-oa-licence';
 
     return (
-        <ExternalLink href={getCreativeCommonsUrl(licence)} id={testId} data-testid={testId}>
+        <ExternalLink href={getCreativeCommonsUrl('4.0')(licence)} id={testId} data-testid={testId}>
             <div data-testid={`${testId}-lookup`} style={{ paddingRight: '1rem' }}>
-                {CREATIVE_COMMONS_LICENCES[licence]}
+                {CCL_4_0_SLUG_TEXT_MAP[licence]}
             </div>
             <div className={`fez-icon license cc-${licence}`} />
         </ExternalLink>

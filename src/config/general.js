@@ -785,29 +785,130 @@ export const CURRENT_LICENCES = [
     },
 ];
 
-export const CREATIVE_COMMONS_LICENCES = {
-    ['by']: 'Creative Commons Attribution (only)',
-    ['by-nd']: 'Creative Commons Attribution no derivatives',
-    ['by-nc']: 'Creative Commons Attribution noncommercial',
-    ['by-nc-nd']: 'Creative Commons Attribution noncommercial no derivatives',
-    ['by-nc-sa']: 'Creative Commons Attribution noncommercial share alike',
-    ['by-sa']: 'Creative Commons Attribution share alike',
+export const CCL_SLUG_BY = 'by';
+export const CCL_SLUG_BY_SA = 'by-sa';
+export const CCL_SLUG_BY_ND = 'by-nd';
+export const CCL_SLUG_BY_NC = 'by-nc';
+export const CCL_SLUG_BY_NC_SA = 'by-nc-sa';
+export const CCL_SLUG_BY_NC_ND = 'by-nc-nd';
+
+export const CCL_3_0_TEXT_BY = 'Creative Commons Attribution (only)';
+export const CCL_3_0_TEXT_BY_SA = 'Creative Commons Attribution share alike';
+export const CCL_3_0_TEXT_BY_ND = 'Creative Commons Attribution no derivatives';
+export const CCL_3_0_TEXT_BY_NC = 'Creative Commons Attribution noncommercial';
+export const CCL_3_0_TEXT_BY_NC_SA = 'Creative Commons Attribution noncommercial share alike';
+export const CCL_3_0_TEXT_BY_NC_ND = 'Creative Commons Attribution noncommercial no derivatives';
+
+export const CCL_4_0_TEXT_BY = 'Creative Commons Attribution 4.0 International';
+export const CCL_4_0_TEXT_BY_SA = 'Creative Commons Attribution-ShareAlike 4.0 International';
+export const CCL_4_0_TEXT_BY_ND = 'Creative Commons Attribution-NoDerivatives 4.0 International';
+export const CCL_4_0_TEXT_BY_NC = 'Creative Commons Attribution-NonCommercial 4.0 International';
+export const CCL_4_0_TEXT_BY_NC_SA = 'Creative Commons Attribution-NonCommerical-ShareAlike 4.0 International';
+export const CCL_4_0_TEXT_BY_NC_ND = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International';
+
+export const CCL_3_0_SLUG_TEXT_MAP = {
+    [CCL_SLUG_BY]: CCL_3_0_TEXT_BY,
+    [CCL_SLUG_BY_SA]: CCL_3_0_TEXT_BY_SA,
+    [CCL_SLUG_BY_ND]: CCL_3_0_TEXT_BY_ND,
+    [CCL_SLUG_BY_NC]: CCL_3_0_TEXT_BY_NC,
+    [CCL_SLUG_BY_NC_SA]: CCL_3_0_TEXT_BY_NC_SA,
+    [CCL_SLUG_BY_NC_ND]: CCL_3_0_TEXT_BY_NC_ND,
 };
 
-export const getCreativeCommonsUrl = conditionSlug =>
-    `https://creativecommons.org/licenses/${conditionSlug}/3.0/deed.en_US`;
+export const CCL_4_0_SLUG_TEXT_MAP = {
+    [CCL_SLUG_BY]: CCL_4_0_TEXT_BY,
+    [CCL_SLUG_BY_SA]: CCL_4_0_TEXT_BY_SA,
+    [CCL_SLUG_BY_ND]: CCL_4_0_TEXT_BY_ND,
+    [CCL_SLUG_BY_NC]: CCL_4_0_TEXT_BY_NC,
+    [CCL_SLUG_BY_NC_SA]: CCL_4_0_TEXT_BY_NC_SA,
+    [CCL_SLUG_BY_NC_ND]: CCL_4_0_TEXT_BY_NC_ND,
+};
+
+export const CREATIVE_COMMONS_LICENSES_3_0 = {
+    453608: {
+        value: 453608,
+        text: CCL_3_0_TEXT_BY,
+        slug: CCL_SLUG_BY,
+        version: '3.0',
+    },
+    453609: {
+        value: 453609,
+        text: CCL_3_0_TEXT_BY_SA,
+        slug: CCL_SLUG_BY_SA,
+        version: '3.0',
+    },
+    453610: {
+        value: 453610,
+        text: CCL_3_0_TEXT_BY_ND,
+        slug: CCL_SLUG_BY_ND,
+        version: '3.0',
+    },
+    453611: {
+        value: 453611,
+        text: CCL_3_0_TEXT_BY_NC,
+        slug: CCL_SLUG_BY_NC,
+        version: '3.0',
+    },
+    453612: {
+        value: 453612,
+        text: CCL_3_0_TEXT_BY_NC_SA,
+        slug: CCL_SLUG_BY_NC_SA,
+        version: '3.0',
+    },
+    453613: {
+        value: 453613,
+        text: CCL_4_0_TEXT_BY_NC_ND,
+        slug: CCL_SLUG_BY_NC_ND,
+        version: '3.0',
+    },
+};
+
+export const CREATIVE_COMMONS_LICENSES_4_0 = {
+    456710: {
+        value: 456710,
+        text: CCL_4_0_TEXT_BY,
+        slug: CCL_SLUG_BY,
+        version: '4.0',
+    },
+    456711: {
+        value: 456711,
+        text: CCL_4_0_TEXT_BY_SA,
+        slug: CCL_SLUG_BY_SA,
+        version: '4.0',
+    },
+    456712: {
+        value: 456712,
+        text: CCL_4_0_TEXT_BY_ND,
+        slug: CCL_SLUG_BY_ND,
+        version: '4.0',
+    },
+    456713: {
+        value: 456713,
+        text: CCL_4_0_TEXT_BY_NC,
+        slug: CCL_SLUG_BY_NC,
+        version: '4.0',
+    },
+    456714: {
+        value: 456714,
+        text: CCL_4_0_TEXT_BY_NC_SA,
+        slug: CCL_SLUG_BY_NC_SA,
+        version: '4.0',
+    },
+    456715: {
+        value: 456715,
+        text: CCL_4_0_TEXT_BY_NC_ND,
+        slug: CCL_SLUG_BY_NC_ND,
+        version: '4.0',
+    },
+};
+
+export const getCreativeCommonsUrl = version => conditionSlug =>
+    `https://creativecommons.org/licenses/${conditionSlug}/${version}/deed.en`;
 
 export const DEPRECATED_LICENCES = [
-    ...[
-        { value: 453608, conditionSlug: 'by' },
-        { value: 453609, conditionSlug: 'by-nd' },
-        { value: 453610, conditionSlug: 'by-nc' },
-        { value: 453611, conditionSlug: 'by-nc-nd' },
-        { value: 453612, conditionSlug: 'by-nc-sa' },
-        { value: 453613, conditionSlug: 'by-sa' },
-    ].map(item => ({
+    ...Object.values(CREATIVE_COMMONS_LICENSES_3_0).map(item => ({
         value: item.value,
-        text: `${CREATIVE_COMMONS_LICENCES[item.conditionSlug]} ${getCreativeCommonsUrl(item.conditionSlug)}`,
+        text: `${item.text} ${getCreativeCommonsUrl(item.version)(item.slug)}`,
     })),
     {
         value: 453702,
@@ -827,6 +928,10 @@ export const ALL_LICENCES = [
             text: licence.text + ' ' + licence.link,
         };
     }),
+    ...Object.values(CREATIVE_COMMONS_LICENSES_4_0).map(item => ({
+        value: item.value,
+        text: `${item.text} ${getCreativeCommonsUrl(item.version)(item.slug)}`,
+    })),
     ...DEPRECATED_LICENCES,
 ];
 

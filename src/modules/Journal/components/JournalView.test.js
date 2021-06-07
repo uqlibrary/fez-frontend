@@ -215,7 +215,7 @@ describe('JournalView Component', () => {
             expect(getByTestId('journal-oa-licence')).toBeInTheDocument();
             expect(getByTestId('journal-oa-licence')).toHaveAttribute(
                 'href',
-                'https://creativecommons.org/licenses/by-nc-nd-sa/3.0/deed.en_US',
+                'https://creativecommons.org/licenses/by-nc-nd-sa/4.0/deed.en',
             );
         });
 
