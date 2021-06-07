@@ -1300,6 +1300,10 @@ export default {
                         title: 'Indexed in',
                         id: 'journal-indexed-in',
                     },
+                    esiSubject: {
+                        title: 'Essential Science Indicators Research Fields',
+                        id: 'esi-subject-lookup',
+                    },
                     wosCategoryAhci: {
                         title: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
                         id: 'wos-category-ahci',
