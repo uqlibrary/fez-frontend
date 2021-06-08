@@ -6,6 +6,8 @@ import Immutable from 'immutable';
 import { Field, change, formValueSelector, reduxForm, SubmissionError, getFormSyncErrors } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 import Button from '@material-ui/core/Button';
 
 import { PUBLICATION_TYPE_DESIGN } from 'config/general';
@@ -48,6 +50,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const communityID = useSelector(state => selector(state, 'communityID'));
     const isDesignType = useSelector(state => selector(state, 'doc_type_id')) === PUBLICATION_TYPE_DESIGN;
+    const isBulkFileIngest = useSelector(state => selector(state, 'is_bulk_file_ingest'));
     const designSubtypes = isDesignType ? publicationTypes(null, true)[PUBLICATION_TYPE_DESIGN].subtypes : null;
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
@@ -96,17 +99,44 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                 <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <Field
-                                            component={CommunitySelectField}
-                                            genericSelectFieldId="community-pid"
+                                            component={props => (
+                                                <FormControlLabel
+                                                    control={
+                                                        <Switch
+                                                            {...props}
+                                                            name="checkedB"
+                                                            color="primary"
+                                                            // eslint-disable-next-line react/prop-types
+                                                            checked={isBulkFileIngest}
+                                                            // eslint-disable-next-line react/prop-types
+                                                            onChange={props.input.onChange}
+                                                        />
+                                                    }
+                                                    {...batchImportTxt.formLabels.bulkFileIngest}
+                                                />
+                                            )}
                                             disabled={submitting}
-                                            id="communityPID"
-                                            name="communityID"
+                                            id="is-bulk-file-ingest-input"
+                                            data-testid="is-bulk-file-ingest-input"
+                                            name="is_bulk_file_ingest"
                                             required
-                                            validate={[validation.required]}
-                                            {...batchImportTxt.formLabels.community}
                                         />
                                     </Grid>
-                                    {!!communityID && (
+                                    {!isBulkFileIngest && (
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={CommunitySelectField}
+                                                genericSelectFieldId="community-pid"
+                                                disabled={submitting}
+                                                id="communityPID"
+                                                name="communityID"
+                                                required
+                                                validate={[validation.required]}
+                                                {...batchImportTxt.formLabels.community}
+                                            />
+                                        </Grid>
+                                    )}
+                                    {!isBulkFileIngest && !!communityID && (
                                         <Grid item xs={12}>
                                             <Field
                                                 component={CollectionSelectField}
@@ -121,18 +151,20 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                             />
                                         </Grid>
                                     )}
-                                    <Grid item xs={12}>
-                                        <Field
-                                            component={DocumentTypeSingleField}
-                                            disabled={submitting}
-                                            id="doctypeID"
-                                            name="doc_type_id"
-                                            required
-                                            validate={[validation.required]}
-                                            {...batchImportTxt.formLabels.docType}
-                                        />
-                                    </Grid>
-                                    {!!isDesignType && (
+                                    {!isBulkFileIngest && (
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={DocumentTypeSingleField}
+                                                disabled={submitting}
+                                                id="doctypeID"
+                                                name="doc_type_id"
+                                                required
+                                                validate={[validation.required]}
+                                                {...batchImportTxt.formLabels.docType}
+                                            />
+                                        </Grid>
+                                    )}
+                                    {!isBulkFileIngest && !!isDesignType && (
                                         <Grid item xs={12}>
                                             <Field
                                                 component={NewGenericSelectField}
