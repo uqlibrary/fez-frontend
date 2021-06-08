@@ -100,6 +100,12 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.searchRecords.title,
         },
+        {
+            path: pathConfig.journal.view(id),
+            component: components.JournalView,
+            access: [roles.admin],
+            pageTitle: locale.pages.journal.view.title,
+        },
         ...(!account
             ? [
                   {
@@ -263,12 +269,6 @@ export const getRoutesConfig = ({
                       access: [roles.researcher],
                       exact: true,
                       pageTitle: locale.pages.editorialAppointments.title,
-                  },
-                  {
-                      path: pathConfig.journal.view(id),
-                      component: components.JournalView,
-                      access: [roles.admin],
-                      pageTitle: locale.pages.journal.view.title,
                   },
               ]
             : []),

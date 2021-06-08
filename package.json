@@ -218,6 +218,7 @@
         "codestyles:fix": "cross-env prettier-eslint --write",
         "codestyles:fix:all": "cross-env prettier-eslint '**/*.js' --write",
         "codestyles:fix:staged": "cross-env FILES=$(git diff --cached --name-only --diff-filter=ACM | grep \".jsx\\{0,1\\}$\"); npx prettier-eslint $FILES --write",
+        "cypress:clean": "cypress cache clear",
         "cypress:dashboard": "cypress run --record --parallel --config video=true --ci-build-id $CI_BUILD_NUMBER",
         "cypress:open": "cypress open",
         "cypress:run": "cypress run",
