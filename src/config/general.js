@@ -757,7 +757,6 @@ export const CURRENT_LICENCES = [
     {
         value: 453701,
         text: 'Permitted Re-use with Acknowledgement',
-        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         description: [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
             'The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.',
@@ -766,7 +765,6 @@ export const CURRENT_LICENCES = [
     {
         value: 454104,
         text: 'Permitted Re-Use with Commercial Use Restriction',
-        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         description: [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
             'I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.',
@@ -776,7 +774,6 @@ export const CURRENT_LICENCES = [
     {
         value: 454105,
         text: 'Permitted Re-Use with Share Alike Requirement',
-        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         description: [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
             'I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.',
@@ -792,72 +789,70 @@ export const CCL_SLUG_BY_NC = 'by-nc';
 export const CCL_SLUG_BY_NC_SA = 'by-nc-sa';
 export const CCL_SLUG_BY_NC_ND = 'by-nc-nd';
 
-export const CCL_3_0_TEXT_BY = 'Creative Commons Attribution (only)';
-export const CCL_3_0_TEXT_BY_SA = 'Creative Commons Attribution share alike';
-export const CCL_3_0_TEXT_BY_ND = 'Creative Commons Attribution no derivatives';
-export const CCL_3_0_TEXT_BY_NC = 'Creative Commons Attribution noncommercial';
-export const CCL_3_0_TEXT_BY_NC_SA = 'Creative Commons Attribution noncommercial share alike';
-export const CCL_3_0_TEXT_BY_NC_ND = 'Creative Commons Attribution noncommercial no derivatives';
-
-export const CCL_4_0_TEXT_BY = 'Creative Commons Attribution 4.0 International';
-export const CCL_4_0_TEXT_BY_SA = 'Creative Commons Attribution-ShareAlike 4.0 International';
-export const CCL_4_0_TEXT_BY_ND = 'Creative Commons Attribution-NoDerivatives 4.0 International';
-export const CCL_4_0_TEXT_BY_NC = 'Creative Commons Attribution-NonCommercial 4.0 International';
-export const CCL_4_0_TEXT_BY_NC_SA = 'Creative Commons Attribution-NonCommerical-ShareAlike 4.0 International';
-export const CCL_4_0_TEXT_BY_NC_ND = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International';
+export const CCL_BY = version => `Creative Commons Attribution ${version} International (CC BY ${version})`;
+export const CCL_BY_SA = version =>
+    `Creative Commons Attribution-ShareAlike ${version} International (CC BY-SA ${version})`;
+export const CCL_BY_ND = version =>
+    `Creative Commons Attribution-NoDerivatives ${version} International (CC BY-ND ${version})`;
+export const CCL_BY_NC = version =>
+    `Creative Commons Attribution-NonCommercial ${version} International (CC BY-NC ${version})`;
+export const CCL_BY_NC_SA = version =>
+    `Creative Commons Attribution-NonCommerical-ShareAlike ${version} International (CC BY-NC-SA ${version})`;
+export const CCL_BY_NC_ND = version =>
+    `Creative Commons Attribution-NonCommercial-NoDerivatives ${version} International (CC BY-NC-ND ${version})`;
 
 export const CCL_3_0_SLUG_TEXT_MAP = {
-    [CCL_SLUG_BY]: CCL_3_0_TEXT_BY,
-    [CCL_SLUG_BY_SA]: CCL_3_0_TEXT_BY_SA,
-    [CCL_SLUG_BY_ND]: CCL_3_0_TEXT_BY_ND,
-    [CCL_SLUG_BY_NC]: CCL_3_0_TEXT_BY_NC,
-    [CCL_SLUG_BY_NC_SA]: CCL_3_0_TEXT_BY_NC_SA,
-    [CCL_SLUG_BY_NC_ND]: CCL_3_0_TEXT_BY_NC_ND,
+    [CCL_SLUG_BY]: CCL_BY('3.0'),
+    [CCL_SLUG_BY_SA]: CCL_BY_SA('3.0'),
+    [CCL_SLUG_BY_ND]: CCL_BY_ND('3.0'),
+    [CCL_SLUG_BY_NC]: CCL_BY_NC('3.0'),
+    [CCL_SLUG_BY_NC_SA]: CCL_BY_NC_SA('3.0'),
+    [CCL_SLUG_BY_NC_ND]: CCL_BY_NC_ND('3.0'),
 };
 
 export const CCL_4_0_SLUG_TEXT_MAP = {
-    [CCL_SLUG_BY]: CCL_4_0_TEXT_BY,
-    [CCL_SLUG_BY_SA]: CCL_4_0_TEXT_BY_SA,
-    [CCL_SLUG_BY_ND]: CCL_4_0_TEXT_BY_ND,
-    [CCL_SLUG_BY_NC]: CCL_4_0_TEXT_BY_NC,
-    [CCL_SLUG_BY_NC_SA]: CCL_4_0_TEXT_BY_NC_SA,
-    [CCL_SLUG_BY_NC_ND]: CCL_4_0_TEXT_BY_NC_ND,
+    [CCL_SLUG_BY]: CCL_BY('4.0'),
+    [CCL_SLUG_BY_SA]: CCL_BY_SA('4.0'),
+    [CCL_SLUG_BY_ND]: CCL_BY_ND('4.0'),
+    [CCL_SLUG_BY_NC]: CCL_BY_NC('4.0'),
+    [CCL_SLUG_BY_NC_SA]: CCL_BY_NC_SA('4.0'),
+    [CCL_SLUG_BY_NC_ND]: CCL_BY_NC_ND('4.0'),
 };
 
 export const CREATIVE_COMMONS_LICENSES_3_0 = {
     453608: {
         value: 453608,
-        text: CCL_3_0_TEXT_BY,
+        text: CCL_BY('3.0'),
         slug: CCL_SLUG_BY,
         version: '3.0',
     },
     453609: {
         value: 453609,
-        text: CCL_3_0_TEXT_BY_SA,
+        text: CCL_BY_SA('3.0'),
         slug: CCL_SLUG_BY_SA,
         version: '3.0',
     },
     453610: {
         value: 453610,
-        text: CCL_3_0_TEXT_BY_ND,
+        text: CCL_BY_ND('3.0'),
         slug: CCL_SLUG_BY_ND,
         version: '3.0',
     },
     453611: {
         value: 453611,
-        text: CCL_3_0_TEXT_BY_NC,
+        text: CCL_BY_NC('3.0'),
         slug: CCL_SLUG_BY_NC,
         version: '3.0',
     },
     453612: {
         value: 453612,
-        text: CCL_3_0_TEXT_BY_NC_SA,
+        text: CCL_BY_NC_SA('3.0'),
         slug: CCL_SLUG_BY_NC_SA,
         version: '3.0',
     },
     453613: {
         value: 453613,
-        text: CCL_4_0_TEXT_BY_NC_ND,
+        text: CCL_BY_NC_ND('3.0'),
         slug: CCL_SLUG_BY_NC_ND,
         version: '3.0',
     },
@@ -866,37 +861,37 @@ export const CREATIVE_COMMONS_LICENSES_3_0 = {
 export const CREATIVE_COMMONS_LICENSES_4_0 = {
     456710: {
         value: 456710,
-        text: CCL_4_0_TEXT_BY,
+        text: CCL_BY('4.0'),
         slug: CCL_SLUG_BY,
         version: '4.0',
     },
     456711: {
         value: 456711,
-        text: CCL_4_0_TEXT_BY_SA,
+        text: CCL_BY_SA('4.0'),
         slug: CCL_SLUG_BY_SA,
         version: '4.0',
     },
     456712: {
         value: 456712,
-        text: CCL_4_0_TEXT_BY_ND,
+        text: CCL_BY_ND('4.0'),
         slug: CCL_SLUG_BY_ND,
         version: '4.0',
     },
     456713: {
         value: 456713,
-        text: CCL_4_0_TEXT_BY_NC,
+        text: CCL_BY_NC('4.0'),
         slug: CCL_SLUG_BY_NC,
         version: '4.0',
     },
     456714: {
         value: 456714,
-        text: CCL_4_0_TEXT_BY_NC_SA,
+        text: CCL_BY_NC_SA('4.0'),
         slug: CCL_SLUG_BY_NC_SA,
         version: '4.0',
     },
     456715: {
         value: 456715,
-        text: CCL_4_0_TEXT_BY_NC_ND,
+        text: CCL_BY_NC_ND('4.0'),
         slug: CCL_SLUG_BY_NC_ND,
         version: '4.0',
     },
@@ -908,12 +903,11 @@ export const getCreativeCommonsUrl = version => conditionSlug =>
 export const DEPRECATED_LICENCES = [
     ...Object.values(CREATIVE_COMMONS_LICENSES_3_0).map(item => ({
         value: item.value,
-        text: `${item.text} ${getCreativeCommonsUrl(item.version)(item.slug)}`,
+        text: `${item.text}`,
     })),
     {
         value: 453702,
-        text:
-            'Permitted Non-commercial Re-use with Acknowledgement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        text: 'Permitted Non-commercial Re-use with Acknowledgement',
     },
 ];
 
@@ -925,12 +919,12 @@ export const ALL_LICENCES = [
     ...CURRENT_LICENCES.map(licence => {
         return {
             value: licence.value,
-            text: licence.text + ' ' + licence.link,
+            text: licence.text,
         };
     }),
     ...Object.values(CREATIVE_COMMONS_LICENSES_4_0).map(item => ({
         value: item.value,
-        text: `${item.text} ${getCreativeCommonsUrl(item.version)(item.slug)}`,
+        text: `${item.text}`,
     })),
     ...DEPRECATED_LICENCES,
 ];

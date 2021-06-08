@@ -692,7 +692,7 @@ export default {
                 "rek_license_pid": "UQ:2d7b8a8",
                 "rek_license_xsdmf_id": 16636,
                 "rek_license": 453608,
-                "rek_license_lookup": "Creative Commons Attribution (only)"
+                "rek_license_lookup": "Creative Commons Attribution 3.0 International (CC BY 3.0)"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],

@@ -1120,7 +1120,7 @@ export const trendingPublications = {
                 "rek_license_pid":"UQ:caf3afd",
                 "rek_license_xsdmf_id":null,
                 "rek_license":453608,
-                "rek_license_lookup":"Creative Commons Attribution (only)"
+                "rek_license_lookup":"Creative Commons Attribution 3.0 International (CC BY 3.0)"
             },
             "fez_record_search_key_link":[
                 

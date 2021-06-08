@@ -44,7 +44,7 @@ context('Creative Work admin edit', () => {
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
                     .siblings('[role=button]')
                     .invoke('text')
-                    .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
+                    .should('equal', record.fez_record_search_key_license.rek_license_lookup);
                 cy.get('[data-testid="rek-content-indicator-select"]').should(
                     'have.text',
                     'Scholarship of Teaching and Learning',

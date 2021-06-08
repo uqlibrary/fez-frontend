@@ -3127,7 +3127,7 @@ export default {
                   "rek_license_pid":"UQ:66e9f53",
                   "rek_license_xsdmf_id":null,
                   "rek_license":453610,
-                  "rek_license_lookup":"Creative Commons Attribution noncommercial"
+                  "rek_license_lookup":"Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0)"
                },
                "fez_record_search_key_link":[
                   
