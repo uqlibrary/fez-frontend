@@ -782,6 +782,20 @@ export const CURRENT_LICENCES = [
     },
 ];
 
+export const CCL_BY_3_0_ID = 453608;
+export const CCL_BY_SA_3_0_ID = 453613;
+export const CCL_BY_ND_3_0_ID = 453609;
+export const CCL_BY_NC_3_0_ID = 453610;
+export const CCL_BY_NC_SA_3_0_ID = 453612;
+export const CCL_BY_NC_ND_3_0_ID = 453611;
+
+export const CCL_BY_4_0_ID = 456710;
+export const CCL_BY_SA_4_0_ID = 456711;
+export const CCL_BY_ND_4_0_ID = 456712;
+export const CCL_BY_NC_4_0_ID = 456713;
+export const CCL_BY_NC_SA_4_0_ID = 456714;
+export const CCL_BY_NC_ND_4_0_ID = 456715;
+
 export const CCL_SLUG_BY = 'by';
 export const CCL_SLUG_BY_SA = 'by-sa';
 export const CCL_SLUG_BY_ND = 'by-nd';
@@ -819,114 +833,71 @@ export const CCL_4_0_SLUG_TEXT_MAP = {
     [CCL_SLUG_BY_NC_ND]: CCL_BY_NC_ND('4.0'),
 };
 
-export const CREATIVE_COMMONS_LICENSES_3_0 = {
-    453608: {
-        value: 453608,
+export const CREATIVE_COMMONS_LICENSES_3_0 = [
+    {
+        value: CCL_BY_3_0_ID,
         text: CCL_BY('3.0'),
-        slug: CCL_SLUG_BY,
-        version: '3.0',
     },
-    453609: {
-        value: 453609,
+    {
+        value: CCL_BY_SA_3_0_ID,
         text: CCL_BY_SA('3.0'),
-        slug: CCL_SLUG_BY_SA,
-        version: '3.0',
     },
-    453610: {
-        value: 453610,
+    {
+        value: CCL_BY_ND_3_0_ID,
         text: CCL_BY_ND('3.0'),
-        slug: CCL_SLUG_BY_ND,
-        version: '3.0',
     },
-    453611: {
-        value: 453611,
+    {
+        value: CCL_BY_NC_3_0_ID,
         text: CCL_BY_NC('3.0'),
-        slug: CCL_SLUG_BY_NC,
-        version: '3.0',
     },
-    453612: {
-        value: 453612,
+    {
+        value: CCL_BY_NC_SA_3_0_ID,
         text: CCL_BY_NC_SA('3.0'),
-        slug: CCL_SLUG_BY_NC_SA,
-        version: '3.0',
     },
-    453613: {
-        value: 453613,
+    {
+        value: CCL_BY_NC_ND_3_0_ID,
         text: CCL_BY_NC_ND('3.0'),
-        slug: CCL_SLUG_BY_NC_ND,
-        version: '3.0',
     },
-};
+];
 
-export const CREATIVE_COMMONS_LICENSES_4_0 = {
-    456710: {
-        value: 456710,
+export const CREATIVE_COMMONS_LICENSES_4_0 = [
+    {
+        value: CCL_BY_4_0_ID,
         text: CCL_BY('4.0'),
-        slug: CCL_SLUG_BY,
-        version: '4.0',
     },
-    456711: {
-        value: 456711,
+    {
+        value: CCL_BY_SA_4_0_ID,
         text: CCL_BY_SA('4.0'),
-        slug: CCL_SLUG_BY_SA,
-        version: '4.0',
     },
-    456712: {
-        value: 456712,
+    {
+        value: CCL_BY_ND_4_0_ID,
         text: CCL_BY_ND('4.0'),
-        slug: CCL_SLUG_BY_ND,
-        version: '4.0',
     },
-    456713: {
-        value: 456713,
+    {
+        value: CCL_BY_NC_4_0_ID,
         text: CCL_BY_NC('4.0'),
-        slug: CCL_SLUG_BY_NC,
-        version: '4.0',
     },
-    456714: {
-        value: 456714,
+    {
+        value: CCL_BY_NC_SA_4_0_ID,
         text: CCL_BY_NC_SA('4.0'),
-        slug: CCL_SLUG_BY_NC_SA,
-        version: '4.0',
     },
-    456715: {
-        value: 456715,
+    {
+        value: CCL_BY_NC_ND_4_0_ID,
         text: CCL_BY_NC_ND('4.0'),
-        slug: CCL_SLUG_BY_NC_ND,
-        version: '4.0',
     },
-};
+];
 
 export const getCreativeCommonsUrl = version => conditionSlug =>
     `https://creativecommons.org/licenses/${conditionSlug}/${version}/deed.en`;
-
-export const DEPRECATED_LICENCES = [
-    ...Object.values(CREATIVE_COMMONS_LICENSES_3_0).map(item => ({
-        value: item.value,
-        text: `${item.text}`,
-    })),
-    {
-        value: 453702,
-        text: 'Permitted Non-commercial Re-use with Acknowledgement',
-    },
-];
 
 export const ALL_LICENCES = [
     {
         value: -1,
         text: 'None',
     },
-    ...CURRENT_LICENCES.map(licence => {
-        return {
-            value: licence.value,
-            text: licence.text,
-        };
-    }),
-    ...Object.values(CREATIVE_COMMONS_LICENSES_4_0).map(item => ({
-        value: item.value,
-        text: `${item.text}`,
-    })),
-    ...DEPRECATED_LICENCES,
+    ...CURRENT_LICENCES,
+    ...CREATIVE_COMMONS_LICENSES_4_0,
+    ...CREATIVE_COMMONS_LICENSES_3_0,
 ];
 
 export const ORG_TYPE_ID_MUSEUM = '453983';
