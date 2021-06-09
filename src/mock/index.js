@@ -381,7 +381,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
-    .reply(200, {...mockData.userList});
+    .reply(200, { ...mockData.userList });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -451,26 +451,26 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onPost(routes.MASTER_JOURNAL_LIST_INGEST_API().apiUrl)
     .reply(200, { data: {} })
     .onPost('fez-users/delete-list')
-    .reply(200, { 
+    .reply(200, {
         data: {
             '1000000293': 'User deleted',
-            '9999999999': 'User not found'
-        }
+            '9999999999': 'User not found',
+        },
     })
     // .reply(500)
     .onPost('fez-authors/delete-list')
-    .reply(200, { 
+    .reply(200, {
         data: {
             '410': 'Author deleted',
-            '9999999999': 'Author not found'
-        }
+            '9999999999': 'Author not found',
+        },
     })
     .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))
     .reply(200, {
         data: {
             aut_id: 111,
-            aut_display_name: 'Mock Test'
-        }
+            aut_display_name: 'Mock Test',
+        },
     });
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
@@ -505,11 +505,10 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .reply(200, { ...mockData.currentAuthor.uqresearcher })
     // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })
 
-    .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*'}).apiUrl)))
+    .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
     .onAny()
     .reply(config => {
         console.log('url not found...', config);
         return [404, { message: `MOCK URL NOT FOUND: ${config.url}` }];
     });
-    
