@@ -35,6 +35,30 @@ export const viewRecordsConfig = {
             className: 'cc-by-sa',
             url: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_US',
         },
+        456710: {
+            className: 'cc-by',
+            url: 'http://creativecommons.org/licenses/by/4.0/deed.en',
+        },
+        456711: {
+            className: 'cc-by-sa',
+            url: 'http://creativecommons.org/licenses/by-sa/4.0/deed.en',
+        },
+        456712: {
+            className: 'cc-by-nd',
+            url: 'http://creativecommons.org/licenses/by-nd/4.0/deed.en',
+        },
+        456713: {
+            className: 'cc-by-nc',
+            url: 'http://creativecommons.org/licenses/by-nc/4.0/deed.en',
+        },
+        456714: {
+            className: 'cc-by-nc-sa',
+            url: 'http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en',
+        },
+        456715: {
+            className: 'cc-by-nc-nd',
+            url: 'http://creativecommons.org/licenses/by-nc-nd/4.0/deed.en',
+        },
         453701: {
             className: 'uq',
             url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
