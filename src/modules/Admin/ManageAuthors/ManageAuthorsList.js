@@ -224,9 +224,20 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const handleHideScopusIngestConfirmation = () => hideScopusIngestConfirmation();
 
     const handleScopusIngest = () => {
+        const materialTable = materialTableRef.current;
         const autId = scopusIngestAuthor.current;
-        Cookies.set(`${SCOPUS_INGESTED_AUTHORS}_${autId}`, autId, { expires: 7 });
-        onScopusIngest(autId);
+        onScopusIngest(autId)
+            .then(() => {
+                Cookies.set(`${SCOPUS_INGESTED_AUTHORS}_${autId}`, autId, { expires: 7 });
+                materialTable.setState(() => ({
+                    ...materialTable.dataManager.getRenderState(),
+                }));
+            })
+            .catch(() => {
+                materialTable.setState(() => ({
+                    ...materialTable.dataManager.getRenderState(),
+                }));
+            });
         scopusIngestAuthor.current = null;
     };
 
@@ -261,7 +272,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     Row: props => (
                         <MTableBodyRow
                             {...props}
-                            {...(props.hasAnyEditingRow ? { onRowClick: false, hover: false } : { hover: true })}
+                            {...(props.hasAnyEditingRow ? { onRowClick: null, hover: false } : { hover: true })}
                             id={`authors-list-row-${props.index}`}
                             data-testid={`authors-list-row-${props.index}`}
                         />
@@ -305,6 +316,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         } else if (props.action.isScopusIngest) {
                             const { icon: Icon, tooltip, ...restAction } = props.action;
                             const isCookieSet = !!Cookies.get(`${SCOPUS_INGESTED_AUTHORS}_${props.data.aut_id}`);
+
                             return (
                                 <MTableAction
                                     {...props}

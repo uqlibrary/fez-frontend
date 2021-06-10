@@ -194,7 +194,7 @@ export function ingestFromScopus(autId) {
 
             dispatch({
                 type: SCOPUS_INGEST_REQUEST_SUCCESS,
-                payload: response,
+                payload: response.data,
             });
 
             return Promise.resolve();

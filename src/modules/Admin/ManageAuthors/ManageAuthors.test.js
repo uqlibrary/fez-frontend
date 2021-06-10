@@ -10,6 +10,9 @@ jest.mock('./helpers', () => ({
 }));
 import { checkForExisting } from './helpers';
 
+jest.mock('js-cookie');
+import Cookie from 'js-cookie';
+
 const setup = (testProps = {}) => {
     return render(
         <WithReduxStore>
@@ -1054,5 +1057,220 @@ describe('ManageAuthors', () => {
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith(2011);
 
         waitFor(() => getByTestId('copied-text-snackbar'));
+    });
+
+    it('should trigger scopus ingest for the author', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_created_date: '2021-03-18T04:47:06Z',
+                        aut_description: 'Added position. Updated name',
+                        aut_display_name: 'Test, Name',
+                        aut_email: null,
+                        aut_external_id: null,
+                        aut_fname: 'Vishal',
+                        aut_google_scholar_id: null,
+                        aut_homepage_link: null,
+                        aut_id: 2000003831,
+                        aut_is_orcid_sync_enabled: null,
+                        aut_is_scopus_id_authenticated: 0,
+                        aut_lname: 'Desai',
+                        aut_mname: null,
+                        aut_mypub_url: null,
+                        aut_orcid_bio: null,
+                        aut_orcid_id: '0000-0001-1111-2222',
+                        aut_orcid_works_last_modified: null,
+                        aut_orcid_works_last_sync: null,
+                        aut_org_staff_id: null,
+                        aut_org_student_id: null,
+                        aut_org_username: 'uqtname',
+                        aut_people_australia_id: null,
+                        aut_position: 'Sr. Web Developer',
+                        aut_publons_id: null,
+                        aut_ref_num: null,
+                        aut_researcher_id: null,
+                        aut_review_orcid_scopus_id_integration: null,
+                        aut_rid_last_updated: null,
+                        aut_rid_password: null,
+                        aut_scopus_id: null,
+                        aut_student_username: null,
+                        aut_title: 'Mr.',
+                        aut_twitter_username: null,
+                        aut_update_date: '2021-03-18T22:53:34Z',
+                    },
+                    {
+                        aut_created_date: '2021-03-18T04:47:06Z',
+                        aut_description: 'Added position. Updated name',
+                        aut_display_name: 'Vishal, Desai',
+                        aut_email: null,
+                        aut_external_id: null,
+                        aut_fname: 'Vishal',
+                        aut_google_scholar_id: null,
+                        aut_homepage_link: null,
+                        aut_id: 2000003832,
+                        aut_is_orcid_sync_enabled: null,
+                        aut_is_scopus_id_authenticated: 1,
+                        aut_lname: 'Asai',
+                        aut_mname: null,
+                        aut_mypub_url: null,
+                        aut_orcid_bio: null,
+                        aut_orcid_id: null,
+                        aut_orcid_works_last_modified: null,
+                        aut_orcid_works_last_sync: null,
+                        aut_org_staff_id: null,
+                        aut_org_student_id: null,
+                        aut_org_username: 'uqvdesai',
+                        aut_people_australia_id: null,
+                        aut_position: 'Sr Web Developer',
+                        aut_publons_id: null,
+                        aut_ref_num: null,
+                        aut_researcher_id: null,
+                        aut_review_orcid_scopus_id_integration: null,
+                        aut_rid_last_updated: null,
+                        aut_rid_password: null,
+                        aut_scopus_id: '123442323',
+                        aut_student_username: null,
+                        aut_title: 'Mr.',
+                        aut_twitter_username: null,
+                        aut_update_date: '2021-03-18T22:53:34Z',
+                    },
+
+                    {
+                        aut_created_date: '2021-03-18T04:47:06Z',
+                        aut_description: 'Added position. Updated name',
+                        aut_display_name: 'Vishal, Desai',
+                        aut_email: null,
+                        aut_external_id: null,
+                        aut_fname: 'Vishal',
+                        aut_google_scholar_id: null,
+                        aut_homepage_link: null,
+                        aut_id: 2000003833,
+                        aut_is_orcid_sync_enabled: null,
+                        aut_is_scopus_id_authenticated: 0,
+                        aut_lname: 'Asai',
+                        aut_mname: null,
+                        aut_mypub_url: null,
+                        aut_orcid_bio: null,
+                        aut_orcid_id: null,
+                        aut_orcid_works_last_modified: null,
+                        aut_orcid_works_last_sync: null,
+                        aut_org_staff_id: null,
+                        aut_org_student_id: null,
+                        aut_org_username: 'uqvdesai',
+                        aut_people_australia_id: null,
+                        aut_position: 'Sr Web Developer',
+                        aut_publons_id: null,
+                        aut_ref_num: null,
+                        aut_researcher_id: null,
+                        aut_review_orcid_scopus_id_integration: null,
+                        aut_rid_last_updated: null,
+                        aut_rid_password: null,
+                        aut_scopus_id: '123442323',
+                        aut_student_username: null,
+                        aut_title: 'Mr.',
+                        aut_twitter_username: null,
+                        aut_update_date: '2021-03-18T22:53:34Z',
+                    },
+                ],
+                total: 3,
+            })
+            .onPost(new RegExp(repository.routes.INGEST_WORKS_API().apiUrl))
+            .replyOnce(200, { data: 'Dispatched import' })
+            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
+            .replyOnce(200, { data: [], total: 0 });
+
+        const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+
+        const set = jest.spyOn(Cookie, 'set');
+
+        const { getByTestId, getByText } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+
+        expect(getByTestId('authors-list-row-0-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-list-row-1-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-list-row-2-ingest-from-scopus').closest('button')).toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        await act(() =>
+            waitFor(() => {
+                expect(showAppAlert).toHaveBeenCalledTimes(2);
+                expect(set).toHaveBeenCalledWith('SCOPUS_INGESTED_AUTHORS_2000003831', 2000003831, { expires: 7 });
+            }),
+        );
+    });
+
+    it('should fail to trigger scopus ingest for the author', async () => {
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [
+                    {
+                        aut_created_date: '2021-03-18T04:47:06Z',
+                        aut_description: 'Added position. Updated name',
+                        aut_display_name: 'Test, Name',
+                        aut_email: null,
+                        aut_external_id: null,
+                        aut_fname: 'Vishal',
+                        aut_google_scholar_id: null,
+                        aut_homepage_link: null,
+                        aut_id: 2000003831,
+                        aut_is_orcid_sync_enabled: null,
+                        aut_is_scopus_id_authenticated: 0,
+                        aut_lname: 'Desai',
+                        aut_mname: null,
+                        aut_mypub_url: null,
+                        aut_orcid_bio: null,
+                        aut_orcid_id: '0000-0001-1111-2222',
+                        aut_orcid_works_last_modified: null,
+                        aut_orcid_works_last_sync: null,
+                        aut_org_staff_id: null,
+                        aut_org_student_id: null,
+                        aut_org_username: 'uqtname',
+                        aut_people_australia_id: null,
+                        aut_position: 'Sr. Web Developer',
+                        aut_publons_id: null,
+                        aut_ref_num: null,
+                        aut_researcher_id: null,
+                        aut_review_orcid_scopus_id_integration: null,
+                        aut_rid_last_updated: null,
+                        aut_rid_password: null,
+                        aut_scopus_id: null,
+                        aut_student_username: null,
+                        aut_title: 'Mr.',
+                        aut_twitter_username: null,
+                        aut_update_date: '2021-03-18T22:53:34Z',
+                    },
+                ],
+                total: 1,
+            })
+            .onPost(new RegExp(repository.routes.INGEST_WORKS_API().apiUrl))
+            .replyOnce(422)
+            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
+            .replyOnce(200, { data: [], total: 0 });
+
+        const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+
+        const set = jest.spyOn(Cookie, 'set');
+
+        const { getByTestId, getByText } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+
+        expect(getByTestId('authors-list-row-0-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
+        fireEvent.click(getByTestId('confirm-action'));
+
+        await act(() =>
+            waitFor(() => {
+                expect(showAppAlert).toHaveBeenCalledTimes(2);
+                expect(set).not.toHaveBeenCalled();
+            }),
+        );
     });
 });
