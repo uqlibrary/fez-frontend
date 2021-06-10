@@ -41,7 +41,7 @@ context('Data Collection admin edit', () => {
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
                     .get('[data-testid=rek-license-select]')
                     .invoke('text')
-                    .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
+                    .should('equal', record.fez_record_search_key_license.rek_license_lookup);
                 cy.checkPartialDateFromRecordValue('rek-end-date', record.fez_record_search_key_end_date.rek_end_date);
             });
     });

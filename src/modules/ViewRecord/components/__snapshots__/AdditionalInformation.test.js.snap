@@ -20386,7 +20386,7 @@ exports[`Additional Information Component  should render component with audio do
                   "fez_record_search_key_license": Object {
                     "rek_license": 453611,
                     "rek_license_id": 22340,
-                    "rek_license_lookup": "Creative Commons Attribution noncommercial no derivatives",
+                    "rek_license_lookup": "Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives",
                     "rek_license_pid": "UQ:362394",
                     "rek_license_xsdmf_id": 16636,
                   },
@@ -20936,9 +20936,9 @@ exports[`Additional Information Component  should render component with audio do
             <span>
               <Link
                 data-testid="rek-license-lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+noncommercial+no+derivatives"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution-NonCommercial+3.0+International+(CC+BY-NC+3.0)+no+derivatives"
               >
-                Creative Commons Attribution noncommercial no derivatives
+                Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives
               </Link>
               <div
                 data-testid="rek-license-link"
@@ -34951,7 +34951,7 @@ exports[`Additional Information Component  should render component with data col
                   "fez_record_search_key_license": Object {
                     "rek_license": 453608,
                     "rek_license_id": 25285,
-                    "rek_license_lookup": "Creative Commons Attribution (only)",
+                    "rek_license_lookup": "Creative Commons Attribution 3.0 International (CC BY 3.0)",
                     "rek_license_pid": "UQ:354076",
                     "rek_license_xsdmf_id": null,
                   },
@@ -35561,7 +35561,7 @@ exports[`Additional Information Component  should render component with data col
                   "fez_record_search_key_license": Object {
                     "rek_license": 453608,
                     "rek_license_id": 25285,
-                    "rek_license_lookup": "Creative Commons Attribution (only)",
+                    "rek_license_lookup": "Creative Commons Attribution 3.0 International (CC BY 3.0)",
                     "rek_license_pid": "UQ:354076",
                     "rek_license_xsdmf_id": null,
                   },
@@ -35974,9 +35974,9 @@ exports[`Additional Information Component  should render component with data col
             <span>
               <Link
                 data-testid="rek-license-lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+(only)"
+                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=Creative+Commons+Attribution+3.0+International+(CC+BY+3.0)"
               >
-                Creative Commons Attribution (only)
+                Creative Commons Attribution 3.0 International (CC BY 3.0)
               </Link>
               <div
                 data-testid="rek-license-link"

@@ -6549,7 +6549,7 @@ export const audioDocument = {
         "rek_license_pid": "UQ:362394",
         "rek_license_xsdmf_id": 16636,
         "rek_license": 453611,
-        "rek_license_lookup": "Creative Commons Attribution noncommercial no derivatives"
+        "rek_license_lookup": "Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives"
     },
     "fez_record_search_key_link": [
 
@@ -13095,7 +13095,7 @@ export const recordLinks = {
         "rek_license_pid": "UQ:396321",
         "rek_license_xsdmf_id": null,
         "rek_license": 453608,
-        "rek_license_lookup": "Creative Commons Attribution (only)"
+        "rek_license_lookup": "Creative Commons Attribution 3.0 International (CC BY 3.0)"
     },
     "fez_record_search_key_issue_number": {
         "rek_issue_number_id": 4565410,
@@ -13590,7 +13590,7 @@ export const dataCollectionWithFoRCodes = {
         rek_license_pid: "UQ:354076",
         rek_license_xsdmf_id: null,
         rek_license: 453608,
-        rek_license_lookup: "Creative Commons Attribution (only)"
+        rek_license_lookup: "Creative Commons Attribution 3.0 International (CC BY 3.0)"
     },
     fez_record_search_key_link: [],
     fez_record_search_key_link_description: [],

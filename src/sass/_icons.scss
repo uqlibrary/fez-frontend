@@ -34,27 +34,27 @@
   }
 
   &.cc-by::before {
-    content: url(../../src/images/creativecommons/cca_only.png);
+    content: url(../../src/images/creativecommons/by.png);
   }
 
   &.cc-by-nd::before {
-    content: url(../../src/images/creativecommons/cca_no_derivatives.png);
+    content: url(../../src/images/creativecommons/by_nd.png);
   }
 
   &.cc-by-nc::before {
-    content: url(../../src/images/creativecommons/cca_noncom.png);
+    content: url(../../src/images/creativecommons/by_nc.png);
   }
 
   &.cc-by-nc-nd::before {
-    content: url(../../src/images/creativecommons/cca_noncom_no_derivatives.png);
+    content: url(../../src/images/creativecommons/by_nc_nd.png);
   }
 
   &.cc-by-nc-sa::before {
-    content: url(../../src/images/creativecommons/cca_noncom_share_alike.png);
+    content: url(../../src/images/creativecommons/by_nc_sa.png);
   }
 
   &.cc-by-sa::before {
-    content: url(../../src/images/creativecommons/cca_share_alike.png);
+    content: url(../../src/images/creativecommons/by_sa.png);
   }
 
   &.xsmall {
