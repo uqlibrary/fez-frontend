@@ -757,7 +757,6 @@ export const CURRENT_LICENCES = [
     {
         value: 453701,
         text: 'Permitted Re-use with Acknowledgement',
-        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         description: [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
             'The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.',
@@ -766,7 +765,6 @@ export const CURRENT_LICENCES = [
     {
         value: 454104,
         text: 'Permitted Re-Use with Commercial Use Restriction',
-        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         description: [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
             'I FURTHER AGREE TO A COMMERCIAL USE RESTRICTION on this dataset, or data included in it and to only and to only use this data in non-commercial endeavours.',
@@ -776,7 +774,6 @@ export const CURRENT_LICENCES = [
     {
         value: 454105,
         text: 'Permitted Re-Use with Share Alike Requirement',
-        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         description: [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
             'I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.',
@@ -785,49 +782,122 @@ export const CURRENT_LICENCES = [
     },
 ];
 
-export const CREATIVE_COMMONS_LICENCES = {
-    ['by']: 'Creative Commons Attribution (only)',
-    ['by-nd']: 'Creative Commons Attribution no derivatives',
-    ['by-nc']: 'Creative Commons Attribution noncommercial',
-    ['by-nc-nd']: 'Creative Commons Attribution noncommercial no derivatives',
-    ['by-nc-sa']: 'Creative Commons Attribution noncommercial share alike',
-    ['by-sa']: 'Creative Commons Attribution share alike',
+export const CCL_BY_3_0_ID = 453608;
+export const CCL_BY_SA_3_0_ID = 453613;
+export const CCL_BY_ND_3_0_ID = 453609;
+export const CCL_BY_NC_3_0_ID = 453610;
+export const CCL_BY_NC_SA_3_0_ID = 453612;
+export const CCL_BY_NC_ND_3_0_ID = 453611;
+
+export const CCL_BY_4_0_ID = 456710;
+export const CCL_BY_SA_4_0_ID = 456711;
+export const CCL_BY_ND_4_0_ID = 456712;
+export const CCL_BY_NC_4_0_ID = 456713;
+export const CCL_BY_NC_SA_4_0_ID = 456714;
+export const CCL_BY_NC_ND_4_0_ID = 456715;
+
+export const CCL_SLUG_BY = 'by';
+export const CCL_SLUG_BY_SA = 'by-sa';
+export const CCL_SLUG_BY_ND = 'by-nd';
+export const CCL_SLUG_BY_NC = 'by-nc';
+export const CCL_SLUG_BY_NC_SA = 'by-nc-sa';
+export const CCL_SLUG_BY_NC_ND = 'by-nc-nd';
+
+export const CCL_BY = version => `Creative Commons Attribution ${version} International (CC BY ${version})`;
+export const CCL_BY_SA = version =>
+    `Creative Commons Attribution-ShareAlike ${version} International (CC BY-SA ${version})`;
+export const CCL_BY_ND = version =>
+    `Creative Commons Attribution-NoDerivatives ${version} International (CC BY-ND ${version})`;
+export const CCL_BY_NC = version =>
+    `Creative Commons Attribution-NonCommercial ${version} International (CC BY-NC ${version})`;
+export const CCL_BY_NC_SA = version =>
+    `Creative Commons Attribution-NonCommerical-ShareAlike ${version} International (CC BY-NC-SA ${version})`;
+export const CCL_BY_NC_ND = version =>
+    `Creative Commons Attribution-NonCommercial-NoDerivatives ${version} International (CC BY-NC-ND ${version})`;
+
+export const CCL_3_0_SLUG_TEXT_MAP = {
+    [CCL_SLUG_BY]: CCL_BY('3.0'),
+    [CCL_SLUG_BY_SA]: CCL_BY_SA('3.0'),
+    [CCL_SLUG_BY_ND]: CCL_BY_ND('3.0'),
+    [CCL_SLUG_BY_NC]: CCL_BY_NC('3.0'),
+    [CCL_SLUG_BY_NC_SA]: CCL_BY_NC_SA('3.0'),
+    [CCL_SLUG_BY_NC_ND]: CCL_BY_NC_ND('3.0'),
 };
 
-export const getCreativeCommonsUrl = conditionSlug =>
-    `https://creativecommons.org/licenses/${conditionSlug}/3.0/deed.en_US`;
+export const CCL_4_0_SLUG_TEXT_MAP = {
+    [CCL_SLUG_BY]: CCL_BY('4.0'),
+    [CCL_SLUG_BY_SA]: CCL_BY_SA('4.0'),
+    [CCL_SLUG_BY_ND]: CCL_BY_ND('4.0'),
+    [CCL_SLUG_BY_NC]: CCL_BY_NC('4.0'),
+    [CCL_SLUG_BY_NC_SA]: CCL_BY_NC_SA('4.0'),
+    [CCL_SLUG_BY_NC_ND]: CCL_BY_NC_ND('4.0'),
+};
 
-export const DEPRECATED_LICENCES = [
-    ...[
-        { value: 453608, conditionSlug: 'by' },
-        { value: 453609, conditionSlug: 'by-nd' },
-        { value: 453610, conditionSlug: 'by-nc' },
-        { value: 453611, conditionSlug: 'by-nc-nd' },
-        { value: 453612, conditionSlug: 'by-nc-sa' },
-        { value: 453613, conditionSlug: 'by-sa' },
-    ].map(item => ({
-        value: item.value,
-        text: `${CREATIVE_COMMONS_LICENCES[item.conditionSlug]} ${getCreativeCommonsUrl(item.conditionSlug)}`,
-    })),
+export const CREATIVE_COMMONS_LICENSES_3_0 = [
     {
-        value: 453702,
-        text:
-            'Permitted Non-commercial Re-use with Acknowledgement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        value: CCL_BY_3_0_ID,
+        text: CCL_BY('3.0'),
+    },
+    {
+        value: CCL_BY_SA_3_0_ID,
+        text: CCL_BY_SA('3.0'),
+    },
+    {
+        value: CCL_BY_ND_3_0_ID,
+        text: CCL_BY_ND('3.0'),
+    },
+    {
+        value: CCL_BY_NC_3_0_ID,
+        text: CCL_BY_NC('3.0'),
+    },
+    {
+        value: CCL_BY_NC_SA_3_0_ID,
+        text: CCL_BY_NC_SA('3.0'),
+    },
+    {
+        value: CCL_BY_NC_ND_3_0_ID,
+        text: CCL_BY_NC_ND('3.0'),
     },
 ];
+
+export const CREATIVE_COMMONS_LICENSES_4_0 = [
+    {
+        value: CCL_BY_4_0_ID,
+        text: CCL_BY('4.0'),
+    },
+    {
+        value: CCL_BY_SA_4_0_ID,
+        text: CCL_BY_SA('4.0'),
+    },
+    {
+        value: CCL_BY_ND_4_0_ID,
+        text: CCL_BY_ND('4.0'),
+    },
+    {
+        value: CCL_BY_NC_4_0_ID,
+        text: CCL_BY_NC('4.0'),
+    },
+    {
+        value: CCL_BY_NC_SA_4_0_ID,
+        text: CCL_BY_NC_SA('4.0'),
+    },
+    {
+        value: CCL_BY_NC_ND_4_0_ID,
+        text: CCL_BY_NC_ND('4.0'),
+    },
+];
+
+export const getCreativeCommonsUrl = version => conditionSlug =>
+    `https://creativecommons.org/licenses/${conditionSlug}/${version}/deed.en`;
 
 export const ALL_LICENCES = [
     {
         value: -1,
         text: 'None',
     },
-    ...CURRENT_LICENCES.map(licence => {
-        return {
-            value: licence.value,
-            text: licence.text + ' ' + licence.link,
-        };
-    }),
-    ...DEPRECATED_LICENCES,
+    ...CURRENT_LICENCES,
+    ...CREATIVE_COMMONS_LICENSES_4_0,
+    ...CREATIVE_COMMONS_LICENSES_3_0,
 ];
 
 export const ORG_TYPE_ID_MUSEUM = '453983';

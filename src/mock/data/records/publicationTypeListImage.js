@@ -155,7 +155,7 @@ export default {
                 "rek_license_pid": "UQ:402976",
                 "rek_license_xsdmf_id": 17289,
                 "rek_license": "453613",
-                "rek_license_lookup": "Creative Commons Attribution share alike"
+                "rek_license_lookup": "Creative Commons Attribution-ShareAlike 3.0 International (CC BY-SA 3.0)"
             },
             "fez_record_search_key_link": [{
                 "rek_link_id": 3238884,

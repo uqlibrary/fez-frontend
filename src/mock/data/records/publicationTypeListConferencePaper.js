@@ -471,7 +471,7 @@ export default {
                 "rek_license_pid": "UQ:228367",
                 "rek_license_xsdmf_id": 16636,
                 "rek_license": 453609,
-                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+                "rek_license_lookup": "Creative Commons Attribution-NoDerivatives 3.0 International (CC BY-ND 3.0)"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
