@@ -18,12 +18,12 @@ import {
     BULK_AUTHOR_ITEMS_DELETING,
     BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
     BULK_AUTHOR_ITEMS_DELETE_FAILED,
-    // SCOPUS_INGEST_REQUESTING,
-    // SCOPUS_INGEST_REQUEST_SUCCESS,
-    // SCOPUS_INGEST_REQUEST_FAILED,
+    SCOPUS_INGEST_REQUESTING,
+    SCOPUS_INGEST_REQUEST_SUCCESS,
+    SCOPUS_INGEST_REQUEST_FAILED,
 } from './actionTypes';
 import { get, put, destroy, post } from 'repositories/generic';
-import { AUTHOR_API, MANAGE_AUTHORS_LIST_API, AUTHORS_SEARCH_API } from 'repositories/routes';
+import { AUTHOR_API, MANAGE_AUTHORS_LIST_API, AUTHORS_SEARCH_API, INGEST_WORKS_API } from 'repositories/routes';
 
 export function loadAuthorList({ page, pageSize, search }) {
     return async dispatch => {
@@ -185,26 +185,26 @@ export function checkForExistingAuthor(search, searchField, id, validation, asyn
     };
 }
 
-// export function ingestFromScopus(scopusId) {
-//     return async dispatch => {
-//         dispatch({ type: SCOPUS_INGEST_REQUESTING });
+export function ingestFromScopus(autId) {
+    return async dispatch => {
+        dispatch({ type: SCOPUS_INGEST_REQUESTING });
 
-//         try {
-//             const response = await post(AUTHOR_API({ query: scopusId }));
+        try {
+            const response = await post(INGEST_WORKS_API({ aut_id: autId, source: 'scopus' }));
 
-//             dispatch({
-//                 type: SCOPUS_INGEST_REQUEST_SUCCESS,
-//                 payload: response,
-//             });
+            dispatch({
+                type: SCOPUS_INGEST_REQUEST_SUCCESS,
+                payload: response,
+            });
 
-//             return Promise.resolve();
-//         } catch (e) {
-//             dispatch({
-//                 type: SCOPUS_INGEST_REQUEST_FAILED,
-//                 payload: e,
-//             });
+            return Promise.resolve();
+        } catch (e) {
+            dispatch({
+                type: SCOPUS_INGEST_REQUEST_FAILED,
+                payload: e,
+            });
 
-//             return Promise.reject(e);
-//         }
-//     };
-// }
+            return Promise.reject(e);
+        }
+    };
+}

@@ -3354,6 +3354,12 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                scopusIngestConfirmationLocale: {
+                    confirmationTitle: 'Ingest from Scopus',
+                    confirmationMessage: 'Are you sure you want to start ingest process from Scopus for this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     bulkDeleteButtonTooltip: 'Delete selected authors',

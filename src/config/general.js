@@ -1588,3 +1588,5 @@ export const BULK_DELETE_USER_PREMIS_EVENT = 'Cannot delete user with premis eve
 export const BULK_DELETE_AUTHOR_SUCCESS = 'Author deleted';
 export const BULK_DELETE_AUTHOR_NOT_FOUND = 'Author not found';
 export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked works';
+
+export const SCOPUS_INGESTED_AUTHORS = 'SCOPUS_INGESTED_AUTHORS';
