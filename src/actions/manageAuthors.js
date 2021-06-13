@@ -190,7 +190,7 @@ export function ingestFromScopus(autId) {
         dispatch({ type: SCOPUS_INGEST_REQUESTING });
 
         try {
-            const response = await post(INGEST_WORKS_API({ aut_id: autId, source: 'scopus' }));
+            const response = await post(INGEST_WORKS_API(), { aut_id: autId, source: 'scopus' });
 
             dispatch({
                 type: SCOPUS_INGEST_REQUEST_SUCCESS,
