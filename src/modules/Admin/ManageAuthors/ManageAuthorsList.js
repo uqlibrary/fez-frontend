@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
+import Cookies from 'js-cookie';
 import { useDispatch } from 'react-redux';
 import makeStyles from '@material-ui/styles/makeStyles';
 import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
@@ -22,7 +23,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { default as locale } from 'locale/components';
 import { loadAuthorList } from 'actions';
 import { useConfirmationState } from 'hooks';
-import { BULK_DELETE_AUTHOR_SUCCESS } from 'config/general';
+import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
 
 export const useStyles = makeStyles(() => ({
     backdrop: {
@@ -63,12 +64,15 @@ export const getColumns = () => {
     ];
 };
 
-export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate }) => {
+export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest }) => {
     const dispatch = useDispatch();
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    const [isScopusIngestOpen, showScopusIngestConfirmation, hideScopusIngestConfirmation] = useConfirmationState();
 
     const materialTableRef = React.createRef();
+    const scopusIngestAuthor = React.useRef();
+
     const columns = React.createRef();
     columns.current = getColumns();
 
@@ -82,11 +86,12 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 bulkDeleteButtonTooltip,
                 editButtonTooltip,
                 deleteButtonTooltip,
-                // scopusIngestButtonTooltip,
+                scopusIngestButtonTooltip,
                 searchAriaLabel,
                 searchPlaceholder,
             },
             bulkDeleteConfirmationLocale,
+            scopusIngestConfirmationLocale,
         },
     } = locale.components.manageAuthors;
 
@@ -211,6 +216,31 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             });
     };
 
+    const handleShowScopusIngestConfirmation = data => {
+        scopusIngestAuthor.current = data.aut_id;
+        showScopusIngestConfirmation();
+    };
+
+    const handleHideScopusIngestConfirmation = () => hideScopusIngestConfirmation();
+
+    const handleScopusIngest = () => {
+        const materialTable = materialTableRef.current;
+        const autId = scopusIngestAuthor.current;
+        onScopusIngest(autId)
+            .then(() => {
+                Cookies.set(`${SCOPUS_INGESTED_AUTHORS}_${autId}`, autId, { expires: 7 });
+                materialTable.setState(() => ({
+                    ...materialTable.dataManager.getRenderState(),
+                }));
+            })
+            .catch(() => {
+                materialTable.setState(() => ({
+                    ...materialTable.dataManager.getRenderState(),
+                }));
+            });
+        scopusIngestAuthor.current = null;
+    };
+
     return (
         <React.Fragment>
             <ConfirmationBox
@@ -219,6 +249,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 onClose={hideConfirmation}
                 isOpen={isOpen}
                 locale={bulkDeleteConfirmationLocale}
+            />
+            <ConfirmationBox
+                confirmationBoxId="scopus-ingest-confirmation"
+                onAction={handleScopusIngest}
+                onClose={handleHideScopusIngestConfirmation}
+                isOpen={isScopusIngestOpen}
+                locale={scopusIngestConfirmationLocale}
             />
             <MaterialTable
                 tableRef={materialTableRef}
@@ -235,7 +272,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     Row: props => (
                         <MTableBodyRow
                             {...props}
-                            {...(props.hasAnyEditingRow ? { onRowClick: false, hover: false } : { hover: true })}
+                            {...(props.hasAnyEditingRow ? { onRowClick: null, hover: false } : { hover: true })}
                             id={`authors-list-row-${props.index}`}
                             data-testid={`authors-list-row-${props.index}`}
                         />
@@ -276,33 +313,39 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                     size="small"
                                 />
                             );
-                            // } else if (props.action.isScopusIngest) {
-                            //     const { icon: Icon, tooltip, ...restAction } = props.action;
-                            //     return (
-                            //         <MTableAction
-                            //             {...props}
-                            //             action={{
-                            //                 ...restAction,
-                            //                 tooltip,
-                            //                 disabled:
-                            //                     !props.data.aut_scopus_id ||
-                            //                     props.data.aut_is_scopus_id_authenticated === 0,
-                            //                 icon: () => (
-                            //                     <Icon
-                            //                         id={`authors-list-row-${
-                            //                             props.data.tableData.id
-                            //                         }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                            //                         data-testid={`authors-list-row-${
-                            //                             props.data.tableData.id
-                            //                         }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                            //                         {...restAction.iconProps}
-                            //                     />
-                            //                 ),
-                            //                 onClick: () => console.log(props.data),
-                            //             }}
-                            //             size="small"
-                            //         />
-                            //     );
+                        } else if (props.action.isScopusIngest) {
+                            const { icon: Icon, tooltip, ...restAction } = props.action;
+                            const isCookieSet = !!Cookies.get(`${SCOPUS_INGESTED_AUTHORS}_${props.data.aut_id}`);
+
+                            return (
+                                <MTableAction
+                                    {...props}
+                                    action={{
+                                        ...restAction,
+                                        tooltip,
+                                        disabled:
+                                            isCookieSet ||
+                                            !(
+                                                !!props.data.aut_orcid_id ||
+                                                (!!props.data.aut_scopus_id &&
+                                                    props.data.aut_is_scopus_id_authenticated === 1)
+                                            ),
+                                        icon: () => (
+                                            <Icon
+                                                id={`authors-list-row-${
+                                                    props.data.tableData.id
+                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                                data-testid={`authors-list-row-${
+                                                    props.data.tableData.id
+                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                                {...restAction.iconProps}
+                                            />
+                                        ),
+                                        onClick: () => props.action.onClick(props.data),
+                                    }}
+                                    size="small"
+                                />
+                            );
                         } else {
                             //  Add action
                             const { tooltip } = props.action;
@@ -382,12 +425,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         onClick: showConfirmation,
                         isFreeAction: false,
                     },
-                    // {
-                    //     icon: tableIcons.Download,
-                    //     isScopusIngest: true,
-                    //     position: 'row',
-                    //     tooltip: scopusIngestButtonTooltip,
-                    // },
+                    {
+                        icon: tableIcons.Download,
+                        isScopusIngest: true,
+                        position: 'row',
+                        onClick: handleShowScopusIngestConfirmation,
+                        tooltip: scopusIngestButtonTooltip,
+                    },
                 ]}
             />
         </React.Fragment>
@@ -399,6 +443,7 @@ ManageAuthorsList.propTypes = {
     onRowAdd: PropTypes.func,
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,
+    onSelectionChange: PropTypes.func,
 };
 
 export default React.memo(ManageAuthorsList);

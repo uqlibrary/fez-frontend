@@ -14,6 +14,9 @@ export const initialState = {
     authorAddError: null,
     existingAuthorFieldError: null,
     bulkAuthorDeleteMessages: null,
+    scopusIngestRequesting: false,
+    scopusIngestRequestSuccess: false,
+    scopusIngestRequestError: false,
 };
 
 const handlers = {
@@ -102,6 +105,21 @@ const handlers = {
     [actions.BULK_AUTHOR_ITEMS_DELETE_SUCCESS]: (state, action) => ({
         ...state,
         bulkAuthorDeleteMessages: action.payload,
+    }),
+
+    [actions.SCOPUS_INGEST_REQUESTING]: () => ({
+        ...initialState,
+        scopusIngestRequesting: true,
+    }),
+
+    [actions.SCOPUS_INGEST_REQUEST_SUCCESS]: (state, action) => ({
+        ...initialState,
+        scopusIngestRequestSuccess: action.payload,
+    }),
+
+    [actions.SCOPUS_INGEST_REQUEST_FAILED]: (state, action) => ({
+        ...initialState,
+        scopusIngestRequestError: action.payload,
     }),
 };
 

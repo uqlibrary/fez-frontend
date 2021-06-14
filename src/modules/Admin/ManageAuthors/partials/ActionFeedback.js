@@ -33,6 +33,9 @@ export const ActionFeedback = () => {
         authorAddSuccess,
         authorAddError,
         bulkAuthorDeleteMessages,
+        scopusIngestRequesting,
+        scopusIngestRequestSuccess,
+        scopusIngestRequestError,
     } = useSelector(state => state.get('manageAuthorsReducer'));
 
     const {
@@ -44,6 +47,9 @@ export const ActionFeedback = () => {
         updateAuthorSuccessAlert,
         updateAuthorErrorAlert,
         bulkAuthorDeleteAlert,
+        scopusIngestRequestingAlert,
+        scopusIngestSuccessAlert,
+        scopusIngestErrorAlert,
     } = locale.components.manageAuthors;
 
     React.useEffect(() => {
@@ -58,8 +64,14 @@ export const ActionFeedback = () => {
             (!!bulkAuthorDeleteMessages && {
                 ...bulkAuthorDeleteAlert,
                 message: getBulkDeleteMessages(bulkAuthorDeleteMessages),
-            });
-        null;
+            }) ||
+            (!!scopusIngestRequesting && scopusIngestRequestingAlert) ||
+            (!!scopusIngestRequestSuccess && scopusIngestSuccessAlert) ||
+            (!!scopusIngestRequestError && {
+                ...scopusIngestErrorAlert,
+                message: scopusIngestRequestError,
+            }) ||
+            null;
 
         !!alert &&
             dispatch(
@@ -79,6 +91,9 @@ export const ActionFeedback = () => {
         authorAddSuccess,
         authorAddError,
         bulkAuthorDeleteMessages,
+        scopusIngestRequesting,
+        scopusIngestRequestSuccess,
+        scopusIngestRequestError,
     ]);
 
     return <div />;
