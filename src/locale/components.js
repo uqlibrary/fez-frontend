@@ -3356,7 +3356,8 @@ export default {
                 },
                 scopusIngestConfirmationLocale: {
                     confirmationTitle: 'Ingest from Scopus',
-                    confirmationMessage: 'Are you sure you want to start ingest process from Scopus for this author?',
+                    confirmationMessage:
+                        'Are you sure you want to start the ingest process from Scopus for this author?',
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
