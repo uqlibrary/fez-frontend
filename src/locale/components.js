@@ -3364,6 +3364,12 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                scopusIngestConfirmationLocale: {
+                    confirmationTitle: 'Ingest from Scopus',
+                    confirmationMessage: 'Are you sure you want to start ingest process from Scopus for this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     bulkDeleteButtonTooltip: 'Delete selected authors',
@@ -3404,6 +3410,24 @@ export default {
                 allowDismiss: true,
                 type: 'done',
                 message: 'An author has been successfully deleted.',
+            },
+            scopusIngestRequestingAlert: {
+                alertId: 'alert-info-scopus-ingest-requesting',
+                allowDismiss: true,
+                type: 'info',
+                message: 'Scopus ingest requesting',
+            },
+            scopusIngestSuccessAlert: {
+                alertId: 'alert-done-scopus-ingest-requested',
+                allowDismiss: true,
+                type: 'done',
+                message: 'Scopus ingest requested',
+            },
+            scopusIngestErrorAlert: {
+                alertId: 'alert-error-scopus-ingest-requested',
+                allowDismiss: true,
+                type: 'error',
+                message: 'Scopus ingest request failed',
             },
             addAuthorErrorAlert: {
                 alertId: 'alert-error-author-add',

@@ -371,6 +371,10 @@ export const ORCID_SYNC_API = () => ({
     apiUrl: 'external/orcid/jobs/sync',
 });
 
+export const INGEST_WORKS_API = () => ({
+    apiUrl: 'external/records/import',
+});
+
 export const UNLOCK_RECORD_API = ({ pid }) => ({
     apiUrl: `records/${pid}/unlock`,
 });

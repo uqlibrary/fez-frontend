@@ -8,7 +8,13 @@ import ManageAuthorsNewList from './ManageAuthorsList';
 import ActionFeedback from './partials/ActionFeedback';
 
 import { default as locale } from 'locale/pages';
-import { addAuthor, bulkDeleteAuthorListItems, deleteAuthorListItem, updateAuthorListItem } from 'actions';
+import {
+    addAuthor,
+    bulkDeleteAuthorListItems,
+    deleteAuthorListItem,
+    ingestFromScopus,
+    updateAuthorListItem,
+} from 'actions';
 
 export const ManageAuthors = () => {
     const dispatch = useDispatch();
@@ -29,6 +35,8 @@ export const ManageAuthors = () => {
         return dispatch(bulkDeleteAuthorListItems(data));
     };
 
+    const handleAuthorScopusIngest = autId => dispatch(ingestFromScopus(autId));
+
     return (
         <StandardPage title={locale.pages.authors.title}>
             <Grid container spacing={2}>
@@ -40,6 +48,7 @@ export const ManageAuthors = () => {
                             onRowAdd={handleRowAdd}
                             onRowUpdate={handleRowUpdate}
                             onRowDelete={handleRowDelete}
+                            onScopusIngest={handleAuthorScopusIngest}
                         />
                     </StandardCard>
                 </Grid>
