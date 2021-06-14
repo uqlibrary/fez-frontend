@@ -5,6 +5,7 @@ import {
     updateAuthorListItem,
     addAuthor,
     checkForExistingAuthor,
+    ingestFromScopus,
 } from './manageAuthors';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -261,6 +262,31 @@ describe('author list actions', () => {
                 ),
             ).rejects.toEqual({
                 status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
+
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('ingestFromScopus action', () => {
+        it('should dispatch correct number of actions on scopus ingest triggered', async () => {
+            mockApi.onPost(repositories.routes.INGEST_WORKS_API().apiUrl).reply(200, { data: 'Dispatched import' });
+
+            const expectedActions = [actions.SCOPUS_INGEST_REQUESTING, actions.SCOPUS_INGEST_REQUEST_SUCCESS];
+
+            await mockActionsStore.dispatch(ingestFromScopus(111));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch correct number of actions on scopus ingest not triggered', async () => {
+            mockApi.onPost(repositories.routes.INGEST_WORKS_API().apiUrl).reply(422);
+
+            const expectedActions = [actions.SCOPUS_INGEST_REQUESTING, actions.SCOPUS_INGEST_REQUEST_FAILED];
+
+            await expect(mockActionsStore.dispatch(ingestFromScopus(111))).rejects.toEqual({
+                status: 422,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             });
