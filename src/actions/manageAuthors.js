@@ -201,7 +201,7 @@ export function ingestFromScopus(autId) {
         } catch (e) {
             dispatch({
                 type: SCOPUS_INGEST_REQUEST_FAILED,
-                payload: e,
+                payload: e.message,
             });
 
             return Promise.reject(e);

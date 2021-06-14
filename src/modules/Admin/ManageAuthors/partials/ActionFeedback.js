@@ -67,7 +67,10 @@ export const ActionFeedback = () => {
             }) ||
             (!!scopusIngestRequesting && scopusIngestRequestingAlert) ||
             (!!scopusIngestRequestSuccess && scopusIngestSuccessAlert) ||
-            (!!scopusIngestRequestError && scopusIngestErrorAlert) ||
+            (!!scopusIngestRequestError && {
+                ...scopusIngestErrorAlert,
+                message: scopusIngestRequestError,
+            }) ||
             null;
 
         !!alert &&
