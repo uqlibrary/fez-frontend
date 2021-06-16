@@ -6,7 +6,7 @@ export default {
                 "fez_record_search_key_publisher": {
                     "rek_publisher_id": 4470847,
                     "rek_publisher_pid": "UQ:165934",
-                    "rek_publisher_xsdmf_id": 10096,
+                    "rek_publisher_xsdmf_id": null,
                     "rek_publisher": "Canadian Coaching Association"
                 },
                 "rek_title": "Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach",

@@ -1,22 +1,22 @@
 export default {
     "rek_pid": "UQ:11398",
-    "rek_title_xsdmf_id": 58,
+    "rek_title_xsdmf_id": null,
     "rek_title": "Aboriginal and Torres Strait Islander Studies Unit Publications",
     "rek_description_xsdmf_id": null,
     "rek_description": null,
-    "rek_display_type_xsdmf_id": 240,
+    "rek_display_type_xsdmf_id": null,
     "rek_display_type": 9,
-    "rek_status_xsdmf_id": 241,
+    "rek_status_xsdmf_id": null,
     "rek_status": 2,
     "rek_date_xsdmf_id": null,
     "rek_date": null,
-    "rek_object_type_xsdmf_id": 242,
+    "rek_object_type_xsdmf_id": null,
     "rek_object_type": 2,
-    "rek_depositor_xsdmf_id": 7573,
+    "rek_depositor_xsdmf_id": null,
     "rek_depositor": 116,
-    "rek_created_date_xsdmf_id": 7571,
+    "rek_created_date_xsdmf_id": null,
     "rek_created_date": "2006-12-20T21:56:09Z",
-    "rek_updated_date_xsdmf_id": 7572,
+    "rek_updated_date_xsdmf_id": null,
     "rek_updated_date": "2019-03-04T05:49:37Z",
     "rek_file_downloads": 0,
     "rek_citation": "",
@@ -56,7 +56,7 @@ export default {
         {
             "rek_ismemberof_id": 11527732,
             "rek_ismemberof_pid": "UQ:11398",
-            "rek_ismemberof_xsdmf_id": 91,
+            "rek_ismemberof_xsdmf_id": null,
             "rek_ismemberof": "UQ:12096",
             "rek_ismemberof_order": 1,
             "rek_ismemberof_lookup": "Aboriginal and Torres Strait Islander Studies Unit"
@@ -66,14 +66,14 @@ export default {
         {
             "rek_keywords_id": 29185812,
             "rek_keywords_pid": "UQ:11398",
-            "rek_keywords_xsdmf_id": 246,
+            "rek_keywords_xsdmf_id": null,
             "rek_keywords": "Torres Strait Islanders",
             "rek_keywords_order": 1
         },
         {
             "rek_keywords_id": 29185813,
             "rek_keywords_pid": "UQ:11398",
-            "rek_keywords_xsdmf_id": 246,
+            "rek_keywords_xsdmf_id": null,
             "rek_keywords": "Aborigines",
             "rek_keywords_order": 2
         }
