@@ -39,6 +39,21 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/records/search",
         },
         Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -352,9 +367,29 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/records/search"
           />
           <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_4"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_5"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -369,7 +404,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 },
               }
             }
-            key="route_5"
+            key="route_6"
             pageTitle="Page not found"
           />
         </Switch>
@@ -611,21 +646,6 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/editorial-appointments",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "pageTitle": "Journal details",
-          "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -655,6 +675,21 @@ exports[`Application component should determine if it has incomplete works from 
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": Object {
@@ -1230,34 +1265,14 @@ exports[`Application component should determine if it has incomplete works from 
             path="/editorial-appointments"
           />
           <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_18"
-            pageTitle="Journal details"
-            path="/journal/view/:id([0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1274,16 +1289,36 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={
@@ -1534,21 +1569,6 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/editorial-appointments",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "pageTitle": "Journal details",
-          "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -1578,6 +1598,21 @@ exports[`Application component should determine if it has incomplete works from 
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": Object {
@@ -2153,34 +2188,14 @@ exports[`Application component should determine if it has incomplete works from 
             path="/editorial-appointments"
           />
           <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_18"
-            pageTitle="Journal details"
-            path="/journal/view/:id([0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -2197,16 +2212,36 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={
@@ -2268,6 +2303,21 @@ exports[`Application component should redirect to login page with correct return
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2583,9 +2633,29 @@ exports[`Application component should redirect to login page with correct return
             path="/records/search"
           />
           <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_4"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_5"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -2600,7 +2670,7 @@ exports[`Application component should redirect to login page with correct return
                 },
               }
             }
-            key="route_5"
+            key="route_6"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2838,21 +2908,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/editorial-appointments",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "pageTitle": "Journal details",
-          "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -2882,6 +2937,21 @@ exports[`Application component should render alert if user is not fez author 1`]
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": Object {
@@ -3474,34 +3544,14 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/editorial-appointments"
           />
           <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_18"
-            pageTitle="Journal details"
-            path="/journal/view/:id([0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -3518,16 +3568,36 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={
@@ -3778,21 +3848,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/editorial-appointments",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "pageTitle": "Journal details",
-          "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -3822,6 +3877,21 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": Object {
@@ -4434,34 +4504,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/editorial-appointments"
           />
           <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_18"
-            pageTitle="Journal details"
-            path="/journal/view/:id([0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -4478,16 +4528,36 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={
@@ -4738,21 +4808,6 @@ exports[`Application component should render app for account with fez author wit
           "path": "/editorial-appointments",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "pageTitle": "Journal details",
-          "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -4782,6 +4837,21 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": Object {
@@ -5379,34 +5449,14 @@ exports[`Application component should render app for account with fez author wit
             path="/editorial-appointments"
           />
           <Route
-            access={
-              Array [
-                "admin",
-              ]
-            }
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_18"
-            pageTitle="Journal details"
-            path="/journal/view/:id([0-9]+)"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -5423,16 +5473,36 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
+          />
+          <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={
@@ -5683,21 +5753,6 @@ exports[`Application component should render application with routing for the us
           "path": "/editorial-appointments",
         },
         Object {
-          "access": Array [
-            "admin",
-          ],
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "pageTitle": "Journal details",
-          "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -5727,6 +5782,21 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": Object {
@@ -6030,6 +6100,21 @@ exports[`Application component should render for anon user 1`] = `
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "component": [Function],
@@ -6345,9 +6430,29 @@ exports[`Application component should render for anon user 1`] = `
             path="/records/search"
           />
           <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_4"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_4"
+            key="route_5"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -6362,7 +6467,7 @@ exports[`Application component should render for anon user 1`] = `
                 },
               }
             }
-            key="route_5"
+            key="route_6"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6429,6 +6534,21 @@ exports[`Application component should render thesis submission for HDR without m
           "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
+        },
+        Object {
+          "access": Array [
+            "admin",
+          ],
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Journal details",
+          "path": "/journal/view/:id([0-9]+)",
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
@@ -6670,13 +6790,33 @@ exports[`Application component should render thesis submission for HDR without m
             path="/records/search"
           />
           <Route
+            access={
+              Array [
+                "admin",
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
             key="route_4"
+            pageTitle="Journal details"
+            path="/journal/view/:id([0-9]+)"
+          />
+          <Route
+            key="route_5"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_5"
+            key="route_6"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -6692,7 +6832,7 @@ exports[`Application component should render thesis submission for HDR without m
                 },
               }
             }
-            key="route_6"
+            key="route_7"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -7700,21 +7840,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/editorial-appointments",
                           },
                           Object {
-                            "access": Array [
-                              "admin",
-                            ],
-                            "component": Object {
-                              "$$typeof": Symbol(react.lazy),
-                              "_init": [Function],
-                              "_payload": Object {
-                                "_result": [Function],
-                                "_status": -1,
-                              },
-                            },
-                            "pageTitle": "Journal details",
-                            "path": "/journal/view/:id([0-9]+)",
-                          },
-                          Object {
                             "component": [Function],
                             "exact": true,
                             "pageTitle": "eSpace",
@@ -7744,6 +7869,21 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "exact": true,
                             "pageTitle": "eSpace search",
                             "path": "/records/search",
+                          },
+                          Object {
+                            "access": Array [
+                              "admin",
+                            ],
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
+                            },
+                            "pageTitle": "Journal details",
+                            "path": "/journal/view/:id([0-9]+)",
                           },
                           Object {
                             "component": Object {
@@ -8027,21 +8167,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/editorial-appointments",
                             },
                             Object {
-                              "access": Array [
-                                "admin",
-                              ],
-                              "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_init": [Function],
-                                "_payload": Object {
-                                  "_result": [Function],
-                                  "_status": -1,
-                                },
-                              },
-                              "pageTitle": "Journal details",
-                              "path": "/journal/view/:id([0-9]+)",
-                            },
-                            Object {
                               "component": [Function],
                               "exact": true,
                               "pageTitle": "eSpace",
@@ -8071,6 +8196,21 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "exact": true,
                               "pageTitle": "eSpace search",
                               "path": "/records/search",
+                            },
+                            Object {
+                              "access": Array [
+                                "admin",
+                              ],
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
+                              },
+                              "pageTitle": "Journal details",
+                              "path": "/journal/view/:id([0-9]+)",
                             },
                             Object {
                               "component": Object {
@@ -8355,21 +8495,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/editorial-appointments",
                               },
                               Object {
-                                "access": Array [
-                                  "admin",
-                                ],
-                                "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_init": [Function],
-                                  "_payload": Object {
-                                    "_result": [Function],
-                                    "_status": -1,
-                                  },
-                                },
-                                "pageTitle": "Journal details",
-                                "path": "/journal/view/:id([0-9]+)",
-                              },
-                              Object {
                                 "component": [Function],
                                 "exact": true,
                                 "pageTitle": "eSpace",
@@ -8399,6 +8524,21 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "exact": true,
                                 "pageTitle": "eSpace search",
                                 "path": "/records/search",
+                              },
+                              Object {
+                                "access": Array [
+                                  "admin",
+                                ],
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
+                                },
+                                "pageTitle": "Journal details",
+                                "path": "/journal/view/:id([0-9]+)",
                               },
                               Object {
                                 "component": Object {

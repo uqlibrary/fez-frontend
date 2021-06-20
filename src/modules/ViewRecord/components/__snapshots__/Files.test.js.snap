@@ -3417,7 +3417,7 @@ exports[`Files Component  should render component full mount 1`] = `
                     "rek_file_attachment_access_condition_id": 17,
                     "rek_file_attachment_access_condition_order": 3,
                     "rek_file_attachment_access_condition_pid": "UQ:792099",
-                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                    "rek_file_attachment_access_condition_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -3426,7 +3426,7 @@ exports[`Files Component  should render component full mount 1`] = `
                     "rek_file_attachment_embargo_date_id": 83,
                     "rek_file_attachment_embargo_date_order": 3,
                     "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                    "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                    "rek_file_attachment_embargo_date_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -3523,7 +3523,7 @@ exports[`Files Component  should render component full mount 1`] = `
                     "rek_grant_text_id": 583,
                     "rek_grant_text_order": 1,
                     "rek_grant_text_pid": "UQ:676287",
-                    "rek_grant_text_xsdmf_id": 0,
+                    "rek_grant_text_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_herdc_code": Object {
@@ -4417,7 +4417,7 @@ exports[`Files Component  should render component full mount 1`] = `
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -4426,7 +4426,7 @@ exports[`Files Component  should render component full mount 1`] = `
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -4523,7 +4523,7 @@ exports[`Files Component  should render component full mount 1`] = `
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -5424,7 +5424,7 @@ exports[`Files Component  should render component full mount 1`] = `
                         "rek_file_attachment_access_condition_id": 17,
                         "rek_file_attachment_access_condition_order": 3,
                         "rek_file_attachment_access_condition_pid": "UQ:792099",
-                        "rek_file_attachment_access_condition_xsdmf_id": 0,
+                        "rek_file_attachment_access_condition_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -5433,7 +5433,7 @@ exports[`Files Component  should render component full mount 1`] = `
                         "rek_file_attachment_embargo_date_id": 83,
                         "rek_file_attachment_embargo_date_order": 3,
                         "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                        "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                        "rek_file_attachment_embargo_date_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_file_attachment_name": Array [
@@ -5530,7 +5530,7 @@ exports[`Files Component  should render component full mount 1`] = `
                         "rek_grant_text_id": 583,
                         "rek_grant_text_order": 1,
                         "rek_grant_text_pid": "UQ:676287",
-                        "rek_grant_text_xsdmf_id": 0,
+                        "rek_grant_text_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_herdc_code": Object {

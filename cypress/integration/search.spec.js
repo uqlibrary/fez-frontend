@@ -66,20 +66,15 @@ context('Search', () => {
         cy.contains('#field-type-options li', 'Collection').click();
         cy.get('[data-testid=advanced-search]').should('be.disabled');
         cy.get('[data-testid=rek-ismemberof-input]').click();
-        cy.contains(
-            '[data-testid=rek-ismemberof-options] li',
-            '5th Australasian Congress on Applied Mechanics',
-        ).click();
+        cy.contains('[data-testid=rek-ismemberof-options] li', '16th Australasian Fluid Mechanics Conference').click();
         cy.get('[data-testid=rek-ismemberof-input]').click();
         cy.contains(
             '[data-testid=rek-ismemberof-options] li',
-            'Advanced Computational Modelling Centre Publications',
+            '2004 Higher Education Research Data Collection',
         ).click();
-        cy.get('[data-testid=rek-ismemberof-input]').click();
-        cy.contains('[data-testid=rek-ismemberof-options] li', 'ERA 2012 Admin Only').click();
         cy.get('[data-testid=advanced-search-caption]').should($caption => {
             expect(cleanExtraSpaces($caption.text())).to.equal(
-                "Any fieldcontainsit's raining cats and dogsANDAuthor NamecontainsKy LaneANDCollectionis one ofUQ:131735, UQ:7557 or UQ:254105ANDisopen access/full text",
+                "Any fieldcontainsit's raining cats and dogsANDAuthor NamecontainsKy LaneANDCollectionis one ofUQ:120743 or UQ:217410ANDisopen access/full text",
             );
         });
         cy.get('[data-testid=advanced-search]')

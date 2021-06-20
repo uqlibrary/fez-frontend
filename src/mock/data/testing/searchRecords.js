@@ -9,7 +9,7 @@ export const espaceList = [
         "fez_record_search_key_isi_loc": {
             "rek_isi_loc_id": 3901795,
             "rek_isi_loc_pid": "UQ:224457",
-            "rek_isi_loc_xsdmf_id": 10821,
+            "rek_isi_loc_xsdmf_id": null,
             "rek_isi_loc": "000283520500009"
         },
         "fez_record_search_key_scopus_id": null
@@ -124,7 +124,7 @@ export const postReducerPublicationsList = [
         "fez_record_search_key_isi_loc": {
             "rek_isi_loc_id": 3901795,
             "rek_isi_loc_pid": "UQ:224457",
-            "rek_isi_loc_xsdmf_id": 10821,
+            "rek_isi_loc_xsdmf_id": null,
             "rek_isi_loc": "000283520500009"
         },
         "fez_record_search_key_scopus_id": null
