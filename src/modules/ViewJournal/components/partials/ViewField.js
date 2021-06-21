@@ -33,7 +33,7 @@ export const useData = (dataConfig = [], getData, mergeData, separator) => {
                         !!journalDetails[primaryKey] &&
                         !!journalDetails[primaryKey][index] &&
                         path.reduce((fieldValue, key) => {
-                            if (!!fieldValue[key]) {
+                            if (!!fieldValue && !!fieldValue[key]) {
                                 return fieldValue[key];
                             } else {
                                 return null;
@@ -57,7 +57,7 @@ export const useData = (dataConfig = [], getData, mergeData, separator) => {
                 }
             } else {
                 const data = path.reduce((fieldValue, key) => {
-                    if (!!fieldValue[key]) {
+                    if (!!fieldValue && !!fieldValue[key]) {
                         return fieldValue[key];
                     } else {
                         return null;

@@ -6,14 +6,7 @@ export const journalDetails = {
         'jnl_created_date': '2020-11-16 07:48:52',
         'jnl_updated_date': '2021-01-21 03:33:04',
         'jnl_era_source_id': '13400',
-        'fez_journal_abdc': {
-            'jnl_abdc_for_code': 452815,
-            'jnl_abdc_rating': 'A*',
-            'jnl_abdc_source_date': '2019-06-12',
-            'jnl_abdc_title': 'American Journal of Public Health',
-            'jnl_abdc_issn': '0090-0036',
-            'jnl_abdc_for_code_lookup': '1503 Business and Management',
-        },
+        'fez_journal_abdc': null,
         'fez_journal_cite_score': {
             'jnl_cite_score_id': 25241,
             'jnl_cite_score_source_id': '19561',
