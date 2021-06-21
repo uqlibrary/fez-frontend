@@ -160,7 +160,7 @@
         "downshift": "^5.0.3",
         "file-saver": "^2.0.2",
         "fuse.js": "^6.4.0",
-        "highcharts": "^8.1.1",
+        "highcharts": "^9.0.0",
         "highcharts-exporting": "^0.1.2",
         "history": "^4.7.2",
         "immutable": "^3.8.2",
