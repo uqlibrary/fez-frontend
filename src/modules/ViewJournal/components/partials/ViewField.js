@@ -101,9 +101,12 @@ const useStyles = makeStyles(theme => ({
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
         padding: theme.spacing(1),
     },
+    heading: {
+        fontWeight: 400,
+    },
 }));
 
-export const ViewField = ({ fieldConfig }) => {
+export const ViewField = ({ fieldConfig, headerColumnWidth }) => {
     const classes = useStyles();
     const {
         fieldId,
@@ -122,12 +125,17 @@ export const ViewField = ({ fieldConfig }) => {
     if (!!data || !!staticData) {
         return (
             <Grid container className={classes.gridRow}>
-                <Grid item xs={12} sm={3}>
-                    <Typography variant="body2" id={`${fieldId}-header`} data-testid={`${fieldId}-header`}>
+                <Grid item xs={12} sm={headerColumnWidth}>
+                    <Typography
+                        variant="body2"
+                        id={`${fieldId}-header`}
+                        data-testid={`${fieldId}-header`}
+                        className={classes.heading}
+                    >
                         {heading}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={9}>
+                <Grid item xs={12} sm={12 - headerColumnWidth}>
                     <TemplateComponent data={data} templateProps={templateProps} fieldId={fieldId} />
                 </Grid>
             </Grid>
@@ -139,6 +147,7 @@ export const ViewField = ({ fieldConfig }) => {
 
 ViewField.propTypes = {
     fieldConfig: PropTypes.object,
+    headerColumnWidth: PropTypes.number,
 };
 
 export default React.memo(ViewField);

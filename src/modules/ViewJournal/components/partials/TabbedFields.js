@@ -9,7 +9,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import TabContainer from 'modules/Admin/components/TabContainer';
 
 import { JournalDetailsContext } from '../JournalDataContext';
-import ViewField from './ViewField';
+import ViewRow from './ViewRow';
 
 const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
@@ -42,9 +42,9 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
                                     journalDetails: tab,
                                 }}
                             >
-                                {contentConfig.rows.map(field => (
-                                    <ViewField key={`${field.fieldId}`} fieldConfig={field} />
-                                ))}
+                                {contentConfig.rows.map((field, index) => {
+                                    return <ViewRow key={`${tabId}-${index}`} fields={field} />;
+                                })}
                             </JournalDetailsContext.Provider>
                         </StandardCard>
                     </TabContainer>

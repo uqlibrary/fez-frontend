@@ -14,6 +14,10 @@ export const journalDetails = {
             'jnl_cite_score_title': 'American Journal of Public Health',
             'jnl_cite_score_publisher': 'American Public Health Association',
             'jnl_cite_score_issn': '0090-0036',
+            jnl_cite_score: "3.7",
+            jnl_cite_score_percent_cited: "58",
+            jnl_cite_score_sjr: "0.767",
+            jnl_cite_score_snip: "1.64",
             'fez_journal_cite_score_asjc_code': [{
                 'jnl_cite_score_asjc_code_id': 25241,
                 'jnl_cite_score_asjc_code_rank': 29,
