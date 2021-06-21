@@ -1,4 +1,5 @@
 import globalLocale from 'locale/global';
+import moment from 'moment';
 
 export const journalViewConfig = {
     basic: {
@@ -896,6 +897,16 @@ export const journalViewConfig = {
                 {
                     heading: 'Nature Index',
                     fieldId: 'jnl-nature-index-source-date',
+                    getData: journalDetails =>
+                        `${!!journalDetails.fez_journal_nature_index ? 'Yes' : 'No'}${
+                            !!journalDetails.fez_journal_nature_index
+                                ? ', ' +
+                                  moment(
+                                      journalDetails.fez_journal_nature_index.jnl_nature_index_source_date,
+                                      'Do MMMM YYYY',
+                                  )
+                                : ''
+                        }`,
                 },
             ],
         ],
