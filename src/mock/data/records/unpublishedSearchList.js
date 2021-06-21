@@ -110,7 +110,7 @@ export default {
                 {
                     "rek_corresponding_country_id": 413866,
                     "rek_corresponding_country_pid": "UQ:c6cf5db",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                     "rek_corresponding_country": "aus",
                     "rek_corresponding_country_order": 1
                 }
@@ -120,7 +120,7 @@ export default {
                 {
                     "rek_corresponding_name_id": 129213,
                     "rek_corresponding_name_pid": "UQ:c6cf5db",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                     "rek_corresponding_name": "Chant I.J.",
                     "rek_corresponding_name_order": 1
                 }
@@ -1039,27 +1039,27 @@ export default {
         },
         {
             "rek_pid": "UQ:406567",
-            "rek_title_xsdmf_id": 10588,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Time‐frequency analysis of magnetotelluric data",
-            "rek_description_xsdmf_id": 11441,
+            "rek_description_xsdmf_id": null,
             "rek_description": "The natural signal magnetotelluric (MT) and audiomagnetotelluric (AMT) geophysical prospecting methods utilize the spectra of associated time‐varying horizontal electric and magnetic fields at the Earth's surface to determine a frequency‐dependent impedance tensor. Most present methods of analysis determine the spectra using variations on the Fourier transform and therefore must assume either that the signals under analysis are stationary over the record length or that any distortion in the spectral estimations due to non‐stationarity will occur in an equivalent manner in the spectra of both the electric and magnetic fields and thus not effect the impedance estimates. We use time‐frequency distribution (TFD) analysis techniques to show that this is not the case, and that the impedance tensor is affected by non‐stationary source field fluctuations. We further show that TFD analysis techniques can be used to overcome these problems and obtain stable and reliable estimates of the impedance tensor. These techniques are compared with previous techniques by using a standard data set (EMSLAB). Copyright",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 179,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 1,
-            "rek_date_xsdmf_id": 6386,
+            "rek_date_xsdmf_id": null,
             "rek_date": "1992-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 8524,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2016-09-27T02:53:33Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2020-03-09T05:48:35Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Chant I.J.\" href=\"/list/author/Chant+I.J./\">Chant I.J.</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Hastie L.M.\" href=\"/list/author/Hastie+L.M./\">Hastie L.M.</a> (<span class=\"citation_date\">1992</span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Time‐frequency analysis of magnetotelluric data\" href=\"/view/UQ:406567\">Time‐frequency analysis of magnetotelluric data</a>. <i><span class=\"citation_journal_name\">Geophysical Journal International</span></i>, <i><span class=\"citation_volume_number\">111</span></i> <span class=\"citation_issue_number\">2</span>: <span class=\"citation_start_page\">399</span>-<span class=\"citation_end_page\">413</span>. doi:<span class=\"citation_doi\">10.1111/j.1365-246X.1992.tb00586.x</span>",
-            "rek_genre_xsdmf_id": 7207,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Journal Article",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": "Article (original research)",
@@ -1071,12 +1071,12 @@ export default {
             "rek_depositor_affiliation": null,
             "rek_thomson_citation_count": 12,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12379,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Article (original research)",
             "rek_scopus_citation_count": 16,
             "rek_herdc_notes_xsdmf_id": null,
             "rek_herdc_notes": null,
-            "rek_scopus_doc_type_xsdmf_id": 12550,
+            "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": "ar",
             "rek_wok_doc_type_xsdmf_id": null,
             "rek_wok_doc_type": null,
@@ -1087,7 +1087,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": null,
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -1141,7 +1141,7 @@ export default {
                 {
                     "rek_corresponding_country_id": 425677,
                     "rek_corresponding_country_pid": "UQ:406567",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                     "rek_corresponding_country": "aus",
                     "rek_corresponding_country_order": 1
                 }
@@ -1151,7 +1151,7 @@ export default {
                 {
                     "rek_corresponding_name_id": 139171,
                     "rek_corresponding_name_pid": "UQ:406567",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                     "rek_corresponding_name": "Chant I.J.",
                     "rek_corresponding_name_order": 1
                 }
