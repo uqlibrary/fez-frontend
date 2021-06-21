@@ -102,7 +102,7 @@ export const getRoutesConfig = ({
         },
         {
             path: pathConfig.journal.view(id),
-            component: components.JournalView,
+            component: components.ViewJournal,
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
         },

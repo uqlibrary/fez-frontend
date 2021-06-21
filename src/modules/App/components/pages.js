@@ -18,6 +18,7 @@ export const FavouriteSearch = React.lazy(() => import('modules/Admin/FavouriteS
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
 export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/components/GoogleScholar'));
 export const JournalView = React.lazy(() => import('modules/Journal/containers/JournalView'));
+export const ViewJournal = React.lazy(() => import('modules/ViewJournal/components/ViewJournal'));
 export const ManageAuthors = React.lazy(() => import('modules/Admin/ManageAuthors'));
 export const ManageUsers = React.lazy(() => import('modules/Admin/ManageUsers'));
 export const MasterJournalListIngest = React.lazy(() =>
