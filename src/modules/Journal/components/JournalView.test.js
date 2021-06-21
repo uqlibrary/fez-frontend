@@ -212,8 +212,8 @@ describe('JournalView Component', () => {
             const { getByTestId } = rtlRender(
                 renderData({ id: 'licence', data: { by: true, nd: true, nc: true, sa: true } }),
             );
-            expect(getByTestId('journal-oa-licence')).toBeInTheDocument();
-            expect(getByTestId('journal-oa-licence')).toHaveAttribute(
+            expect(getByTestId('journal-oa-licence-lookup')).toBeInTheDocument();
+            expect(getByTestId('journal-oa-licence-icon')).toHaveAttribute(
                 'href',
                 'https://creativecommons.org/licenses/by-nc-nd-sa/4.0/deed.en',
             );
