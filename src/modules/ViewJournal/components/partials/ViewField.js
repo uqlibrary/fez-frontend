@@ -13,7 +13,7 @@ import MultiLinkTemplate from './MultiLinkTemplate';
 import MultiValueTemplate from './MultiValueTemplate';
 import WosCategoriesTemplate from './WosCategoriesTemplate';
 import { useJournalDetailsContext } from '../JournalDataContext';
-import CreativeCommonsLicence from 'modules/Journal/components/partials/CreativeCommonsLicence';
+import CreativeCommonsLicenceTemplate from './CreativeCommonsLicenceTemplate';
 
 export const useData = (dataConfig = [], getData, mergeData, separator) => {
     const { journalDetails } = useJournalDetailsContext();
@@ -85,8 +85,8 @@ export const useTemplate = (template, props) => {
             return [MultiLinkTemplate, props];
         case 'BooleanTemplate':
             return [BooleanTemplate, {}];
-        case 'CreativeCommonsLicence':
-            return [CreativeCommonsLicence, {}];
+        case 'CreativeCommonsLicenceTemplate':
+            return [CreativeCommonsLicenceTemplate, {}];
         case 'DateTimeTemplate':
             return [DateTimeTemplate, props];
         case 'WosCategoriesTemplate':

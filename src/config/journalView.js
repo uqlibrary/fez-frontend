@@ -222,7 +222,7 @@ export const journalViewConfig = {
                     nd: !!journalDetails.fez_journal_doaj.jnl_doaj_nd,
                     nc: !!journalDetails.fez_journal_doaj.jnl_doaj_nc,
                 }),
-                template: 'CreativeCommonsLicence',
+                template: 'CreativeCommonsLicenceTemplate',
             },
             {
                 heading: 'DOAJ seal',
