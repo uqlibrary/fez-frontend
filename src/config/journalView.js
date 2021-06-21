@@ -619,11 +619,10 @@ export const journalViewConfig = {
             {
                 heading: 'Essential Science Indicators Research Fields',
                 fieldId: 'jnl-esi-subject-lookup',
-                data: [
-                    {
-                        path: ['fez_journal_esi'],
-                    },
-                ],
+                getData: journalDetails =>
+                    !!journalDetails.fez_journal_esi &&
+                    journalDetails.fez_journal_esi.length > 0 &&
+                    journalDetails.fez_journal_esi,
                 template: 'MultiValueTemplate',
                 templateProps: {
                     getData: item => `${item.jnl_esi_subject_lookup} (${item.jnl_esi_issn})`,
