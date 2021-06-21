@@ -68,10 +68,7 @@ export const journalViewConfig = {
                             path: ['jnl_publisher'],
                         },
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_country'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_country'],
                         },
                     ],
                     template: 'DefaultTemplate',
@@ -83,10 +80,7 @@ export const journalViewConfig = {
                     fieldId: 'ulr-refereed',
                     data: [
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_refereed'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_refereed'],
                         },
                     ],
                     template: 'BooleanTemplate',
@@ -98,10 +92,7 @@ export const journalViewConfig = {
                     fieldId: 'ulr-start-year',
                     data: [
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_start_year'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_start_year'],
                         },
                     ],
                     template: 'DefaultTemplate',
@@ -113,10 +104,7 @@ export const journalViewConfig = {
                     fieldId: 'ulr-frequency',
                     data: [
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_frequency'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_frequency'],
                         },
                     ],
                     template: 'DefaultTemplate',
@@ -128,10 +116,7 @@ export const journalViewConfig = {
                     fieldId: 'ulr-formats',
                     data: [
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_formats'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_formats'],
                         },
                     ],
                     template: 'DefaultTemplate',
@@ -143,10 +128,7 @@ export const journalViewConfig = {
                     fieldId: 'ulr-open-access-url',
                     data: [
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_open_access_url'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_open_access_url'],
                         },
                     ],
                     template: 'DefaultTemplate',
@@ -158,10 +140,7 @@ export const journalViewConfig = {
                     fieldId: 'ulr-description',
                     data: [
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_description'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_description'],
                         },
                     ],
                     template: 'DefaultTemplate',
@@ -200,10 +179,7 @@ export const journalViewConfig = {
                     fieldId: 'ulr-open-access',
                     data: [
                         {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            index: 0,
-                            path: ['fez_ulrichs', 'ulr_open_access'],
+                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_open_access'],
                         },
                     ],
                     template: 'BooleanTemplate',

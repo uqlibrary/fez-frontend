@@ -28,32 +28,14 @@ export const useData = (dataConfig = [], getData, mergeData, separator) => {
         // eslint-disable-next-line no-unused-vars
         for (const [_, { isArray, index, primaryKey, path, filterFn }] of dataConfigIterator) {
             if (!!isArray) {
-                if (index !== undefined) {
-                    const data =
-                        !!journalDetails[primaryKey] &&
-                        !!journalDetails[primaryKey][index] &&
-                        path.reduce((fieldValue, key) => {
-                            if (!!fieldValue && !!fieldValue[key]) {
-                                return fieldValue[key];
-                            } else {
-                                return null;
-                            }
-                        }, journalDetails[primaryKey][index]);
+                const subKey = path[0];
+                const data =
+                    !!journalDetails[primaryKey] &&
+                    ((!!filterFn && journalDetails[primaryKey].filter(filterFn).map(item => item[subKey])) ||
+                        journalDetails[primaryKey].map(item => item[subKey]));
 
-                    if (!!data) {
-                        (!!mergeData && (fieldData = [fieldData, data].filter(Boolean))) || (fieldData = data);
-                        !!separator && (fieldData = fieldData.join(separator));
-                    }
-                } else {
-                    const subKey = path[0];
-                    const data =
-                        !!journalDetails[primaryKey] &&
-                        ((!!filterFn && journalDetails[primaryKey].filter(filterFn).map(item => item[subKey])) ||
-                            journalDetails[primaryKey].map(item => item[subKey]));
-
-                    if (!!data && data.length > 0) {
-                        fieldData = data;
-                    }
+                if (!!data && data.length > 0) {
+                    fieldData = data;
                 }
             } else {
                 const data = path.reduce((fieldValue, key) => {
