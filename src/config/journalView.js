@@ -326,6 +326,28 @@ export const journalViewConfig = {
                     format: 'YYYY',
                 },
             },
+            {
+                heading: 'JCR home page',
+                fieldId: 'jcr-home-page',
+                staticData: true,
+                template: 'LinkTemplate',
+                templateProps: {
+                    href: () => 'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
+                    text: () => 'Go to JCR website',
+                    title: 'Open JCR website in a new tab',
+                },
+            },
+            {
+                heading: 'JCR more info',
+                fieldId: 'jcr-more-info-scie',
+                staticData: true,
+                template: 'LinkTemplate',
+                templateProps: {
+                    href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
+                    text: () => 'More info about JCR SCIE',
+                    title: 'Open more info in a new tab',
+                },
+            },
         ],
         tabs: {
             tabId: 'fez-journal-jcr-scie-category',
@@ -397,6 +419,28 @@ export const journalViewConfig = {
                 template: 'DateTimeTemplate',
                 templateProps: {
                     format: 'YYYY',
+                },
+            },
+            {
+                heading: 'JCR home page',
+                fieldId: 'jcr-home-page',
+                staticData: true,
+                template: 'LinkTemplate',
+                templateProps: {
+                    href: () => 'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
+                    text: () => 'Go to JCR website',
+                    title: 'Open JCR website in a new tab',
+                },
+            },
+            {
+                heading: 'JCR more info',
+                fieldId: 'jcr-more-info-ssci',
+                staticData: true,
+                template: 'LinkTemplate',
+                templateProps: {
+                    href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
+                    text: () => 'More info about JCR SSCI',
+                    title: 'Open more info in a new tab',
                 },
             },
         ],
@@ -713,11 +757,8 @@ export const journalViewConfig = {
             {
                 heading: 'Excellence in Research for Australia (ERA)',
                 fieldId: 'fez-journal-era',
-                data: [
-                    {
-                        path: ['fez_journal_era'],
-                    },
-                ],
+                getData: journalDetails =>
+                    !!journalDetails.fez_journal_era && journalDetails.fez_journal_era.length > 0,
                 template: 'BooleanTemplate',
             },
             {
