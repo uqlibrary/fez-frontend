@@ -19,11 +19,18 @@ export const Section = ({ sectionKey, sectionConfig }) => {
                 smallTitle
             >
                 {sectionConfig.rows.map((field, index) => {
-                    return <ViewRow key={`${sectionKey}-${index}`} fields={field} />;
+                    return (
+                        <ViewRow
+                            key={`journal-details-${sectionKey}-view-row-${index}`}
+                            viewRowId={`journal-details-${sectionKey}-view-row-${index}`}
+                            fields={field}
+                        />
+                    );
                 })}
                 {!!sectionConfig.tabs && !!journalDetails[sectionConfig.key][sectionConfig.tabs.tabKey] && (
                     <TabbedFields
                         {...sectionConfig.tabs}
+                        tabId={`journal-details-tab-${sectionConfig.tabs.tabId}`}
                         data={journalDetails[sectionConfig.key][sectionConfig.tabs.tabKey]}
                     />
                 )}

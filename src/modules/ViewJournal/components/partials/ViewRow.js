@@ -4,16 +4,18 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import ViewField from './ViewField';
 
-export const ViewRow = ({ fields }) => {
+export const ViewRow = ({ viewRowId, fields }) => {
     return (
-        <Grid container>
-            {fields.map(field => (
-                <Grid item xs={12 / fields.length}>
-                    <ViewField
-                        key={`${field.fieldId}`}
-                        fieldConfig={field}
-                        headerColumnWidth={(12 * fields.length) / 4}
-                    />
+        <Grid container id={viewRowId} data-testid={viewRowId}>
+            {fields.map((field, index) => (
+                <Grid
+                    key={`${field.fieldId}`}
+                    item
+                    xs={12 / fields.length}
+                    id={`${viewRowId}-item-${index}`}
+                    data-testid={`${viewRowId}-item-${index}`}
+                >
+                    <ViewField fieldConfig={field} headerColumnWidth={(12 * fields.length) / 4} />
                 </Grid>
             ))}
         </Grid>
@@ -22,6 +24,7 @@ export const ViewRow = ({ fields }) => {
 
 ViewRow.propTypes = {
     fields: PropTypes.array,
+    viewRowId: PropTypes.string,
 };
 
 export default React.memo(ViewRow);

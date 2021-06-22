@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 import LinkTemplate from './LinkTemplate';
 
 export const MultiLinkTemplate = ({ data, templateProps, fieldId }) => {
-    return data.map(externalLink => {
-        const { uniqueKey } = templateProps;
+    return data.map((externalLink, index) => {
         return (
             <LinkTemplate
-                key={`${fieldId}-link-${uniqueKey(externalLink)}`}
-                fieldId={fieldId}
+                key={`${fieldId}-${index}`}
+                fieldId={`${fieldId}-${index}`}
                 data={externalLink}
                 templateProps={templateProps}
             />

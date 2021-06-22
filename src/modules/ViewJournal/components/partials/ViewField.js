@@ -26,13 +26,12 @@ export const useData = (dataConfig = [], getData, mergeData, separator) => {
         const dataConfigIterator = dataConfig.entries();
 
         // eslint-disable-next-line no-unused-vars
-        for (const [_, { isArray, index, primaryKey, path, filterFn }] of dataConfigIterator) {
+        for (const [_, { isArray, primaryKey, path, filterFn }] of dataConfigIterator) {
             if (!!isArray) {
                 const subKey = path[0];
-                const data =
-                    !!journalDetails[primaryKey] &&
-                    ((!!filterFn && journalDetails[primaryKey].filter(filterFn).map(item => item[subKey])) ||
-                        journalDetails[primaryKey].map(item => item[subKey]));
+                let data = !!primaryKey && !!journalDetails[primaryKey] && journalDetails[primaryKey];
+                data = (!!filterFn && !!data && data.length > 0 && data.filter(filterFn)) || data;
+                data = (!!subKey && !!data && data.length > 0 && data.map(item => item[subKey])) || data;
 
                 if (!!data && data.length > 0) {
                     fieldData = data;

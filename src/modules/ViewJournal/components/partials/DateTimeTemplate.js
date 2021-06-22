@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 export const DateTimeTemplate = ({ data, templateProps, fieldId }) => {
     const { format } = templateProps;
     return (
-        <Typography variant="body2" id={fieldId} data-testid={fieldId}>
+        <Typography variant="body2" id={`${fieldId}-value`} data-testid={`${fieldId}-value`}>
             {moment(String(data)).isValid && moment(String(data)).format(format)}
         </Typography>
     );

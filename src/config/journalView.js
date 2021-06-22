@@ -7,7 +7,7 @@ export const journalViewConfig = {
             [
                 {
                     heading: 'ISO abbreviated title',
-                    fieldId: 'jnl-jcr-scie-abbrev-title',
+                    fieldId: 'ulr-abbrev-title',
                     getData: journalDetails =>
                         (!!journalDetails.fez_journal_jcr_scie &&
                             !!journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title &&
@@ -160,7 +160,6 @@ export const journalViewConfig = {
                     ],
                     template: 'MultiLinkTemplate',
                     templateProps: {
-                        uniqueKey: item => item.ulr_title_id,
                         href: item => globalLocale.global.ulrichsLink.externalUrl.replace('[id]', item.ulr_title_id),
                         text: item => item.ulr_title,
                         title: 'View Ulrichs details in a new tab',
@@ -261,7 +260,7 @@ export const journalViewConfig = {
             [
                 {
                     heading: 'View in DOAJ',
-                    fieldId: 'jnl-issn',
+                    fieldId: 'ulr-open-access-jnl-issn',
                     getData: journalDetails =>
                         !!journalDetails.fez_journal_issn &&
                         journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access === '1' &&
@@ -288,7 +287,6 @@ export const journalViewConfig = {
                     ],
                     template: 'MultiLinkTemplate',
                     templateProps: {
-                        uniqueKey: item => item.srm_issn,
                         href: item => item.srm_journal_link,
                         title: 'View SHERPA/RoMEO details in a new tab',
                         text: item => item.srm_issn,
@@ -352,7 +350,7 @@ export const journalViewConfig = {
             [
                 {
                     heading: 'JCR home page',
-                    fieldId: 'jcr-home-page',
+                    fieldId: 'jcr-home-page-scie',
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
@@ -463,7 +461,7 @@ export const journalViewConfig = {
             [
                 {
                     heading: 'JCR home page',
-                    fieldId: 'jcr-home-page',
+                    fieldId: 'jcr-home-page-ssci',
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
@@ -686,10 +684,13 @@ export const journalViewConfig = {
                 {
                     heading: 'Essential Science Indicators Research Fields',
                     fieldId: 'jnl-esi-subject-lookup',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_esi &&
-                        journalDetails.fez_journal_esi.length > 0 &&
-                        journalDetails.fez_journal_esi,
+                    data: [
+                        {
+                            isArray: true,
+                            primaryKey: 'fez_journal_esi',
+                            path: [],
+                        },
+                    ],
                     template: 'MultiValueTemplate',
                     templateProps: {
                         getData: item => `${item.jnl_esi_subject_lookup} (${item.jnl_esi_issn})`,
@@ -861,7 +862,6 @@ export const journalViewConfig = {
                     ],
                     template: 'MultiValueTemplate',
                     templateProps: {
-                        uniqueKey: item => item.jnl_era_for_code_id,
                         getData: item =>
                             `${item.jnl_era_source_year} - ${(Array.isArray(item.fez_journal_era_for_code) &&
                                 item.fez_journal_era_for_code.map(code => code.jnl_era_for_code_lookup).join(', ')) ||

@@ -43,7 +43,13 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
                                 }}
                             >
                                 {contentConfig.rows.map((field, index) => {
-                                    return <ViewRow key={`${tabId}-${index}`} fields={field} />;
+                                    return (
+                                        <ViewRow
+                                            viewRowId={`${tabId}-view-row-${index}`}
+                                            key={`${tabId}-${index}`}
+                                            fields={field}
+                                        />
+                                    );
                                 })}
                             </JournalDetailsContext.Provider>
                         </StandardCard>

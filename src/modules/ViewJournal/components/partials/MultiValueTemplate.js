@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DefaultTemplate from './DefaultTemplate';
 
-import Typography from '@material-ui/core/Typography';
-
-export const MultiValueTemplate = ({ data, templateProps }) => {
+export const MultiValueTemplate = ({ data, templateProps, fieldId }) => {
     return data.map((item, index) => (
-        <Typography variant="body2" key={index}>
-            {templateProps.getData(item)}
-        </Typography>
+        <DefaultTemplate data={templateProps.getData(item)} key={index} fieldId={`${fieldId}-${index}`} />
     ));
 };
 
 MultiValueTemplate.propTypes = {
     data: PropTypes.array,
+    fieldId: PropTypes.string,
     templateProps: PropTypes.object,
 };
 
