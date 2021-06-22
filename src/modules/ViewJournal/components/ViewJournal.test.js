@@ -2,7 +2,7 @@ import React from 'react';
 import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
-import { render, waitForElementToBeRemoved, WithReduxStore } from 'test-utils';
+import { render, waitForElementToBeRemoved, WithReduxStore, fireEvent } from 'test-utils';
 import ViewJournal from './ViewJournal';
 
 jest.mock('react-router', () => ({
@@ -152,9 +152,106 @@ describe('ViewJournal', () => {
         );
 
         expect(getByTestId('jcr-more-info-scie-header')).toHaveTextContent('JCR more info');
+        expect(getByTestId('jcr-more-info-scie-value')).toHaveTextContent('More info about JCR SCIE');
         expect(getByTestId('jcr-more-info-scie-value')).toHaveAttribute(
             'href',
             'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
+        );
+
+        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveTextContent(
+            'Public, Environmental & Occupational Health',
+        );
+        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-1-heading')).toHaveTextContent(
+            'Computer Science, Software Engineering',
+        );
+
+        expect(getByTestId('jnl-jcr-scie-category-ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('jnl-jcr-scie-category-ranking-value')).toHaveTextContent('12/185');
+
+        expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q1');
+
+        fireEvent.click(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-1-heading'));
+
+        expect(getByTestId('jnl-jcr-scie-category-ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('jnl-jcr-scie-category-ranking-value')).toHaveTextContent('35/107');
+
+        expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q2');
+
+        // ******************************************************************
+        // Clarivate Journal Citation Reports - Social Science Citation index
+        // ******************************************************************
+        expect(getByTestId('jnl-jcr-ssci-abbrev-title-header')).toHaveTextContent('Abbreviated title');
+        expect(getByTestId('jnl-jcr-ssci-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
+
+        expect(getByTestId('jnl-jcr-ssci-impact-factor-header')).toHaveTextContent('Impact factor');
+        expect(getByTestId('jnl-jcr-ssci-impact-factor-value')).toHaveTextContent('5.381');
+
+        expect(getByTestId('jnl-jcr-ssci-5yr-impact-factor-header')).toHaveTextContent('5 year impact factor');
+        expect(getByTestId('jnl-jcr-ssci-5yr-impact-factor-value')).toHaveTextContent('5.600');
+
+        expect(getByTestId('jnl-jcr-ssci-source-date-header')).toHaveTextContent('JCR version');
+        expect(getByTestId('jnl-jcr-ssci-source-date-value')).toHaveTextContent('2018');
+
+        expect(getByTestId('jcr-home-page-ssci-header')).toHaveTextContent('JCR home page');
+        expect(getByTestId('jcr-home-page-ssci-value')).toHaveTextContent('Go to JCR website');
+        expect(getByTestId('jcr-home-page-ssci-value')).toHaveAttribute(
+            'href',
+            'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
+        );
+
+        expect(getByTestId('jcr-more-info-ssci-header')).toHaveTextContent('JCR more info');
+        expect(getByTestId('jcr-more-info-ssci-value')).toHaveTextContent('More info about JCR SSCI');
+        expect(getByTestId('jcr-more-info-ssci-value')).toHaveAttribute(
+            'href',
+            'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
+        );
+
+        expect(getByTestId('journal-details-tab-fez-journal-jcr-ssci-category-0-heading')).toHaveTextContent(
+            'Public, Environmental & Occupational Health',
+        );
+
+        expect(getByTestId('jnl-jcr-ssci-category-ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('jnl-jcr-ssci-category-ranking-value')).toHaveTextContent('6/162');
+
+        expect(getByTestId('jnl-jcr-ssci-category-quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('jnl-jcr-ssci-category-quartile-value')).toHaveTextContent('Q1');
+
+        // ******************************************************************
+        // Elsevier CiteScore
+        // ******************************************************************
+        expect(getByTestId('jnl-cite-score-source-year-header')).toHaveTextContent('CiteScore version');
+        expect(getByTestId('jnl-cite-score-source-year-value')).toHaveTextContent('2019');
+
+        expect(getByTestId('jnl-cite-score-header')).toHaveTextContent('CiteScore');
+        expect(getByTestId('jnl-cite-score-value')).toHaveTextContent('3.7');
+
+        expect(getByTestId('jnl-cite-score-source-id-header')).toHaveTextContent('CiteScore score');
+        expect(getByTestId('jnl-cite-score-source-id-value')).toHaveTextContent('Go to record in CiteScore');
+        expect(getByTestId('jnl-cite-score-source-id-value')).toHaveAttribute(
+            'href',
+            'https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/19561',
+        );
+
+        expect(getByTestId('jnl-cite-score-snip-header')).toHaveTextContent('SNIP');
+        expect(getByTestId('jnl-cite-score-snip-value')).toHaveTextContent('1.64');
+
+        expect(getByTestId('jnl-cite-score-more-info-header')).toHaveTextContent('CiteScore more info');
+        expect(getByTestId('jnl-cite-score-more-info-value')).toHaveTextContent('More info about CiteScore');
+        expect(getByTestId('jnl-cite-score-more-info-value')).toHaveAttribute(
+            'href',
+            'https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/',
+        );
+
+        expect(getByTestId('jnl-cite-score-sjr-header')).toHaveTextContent('SJR');
+        expect(getByTestId('jnl-cite-score-sjr-value')).toHaveTextContent('0.767');
+
+        expect(getByTestId('jnl-cite-score-percent-cited-header')).toHaveTextContent('Percent Cited');
+        expect(getByTestId('jnl-cite-score-percent-cited-value')).toHaveTextContent('58');
+
+        expect(getByTestId('journal-details-tab-fez-journal-cite-score-asjc-code-0-heading')).toHaveTextContent(
+            '2739 Public Health, Environmental and Occupational Health',
         );
     });
 });

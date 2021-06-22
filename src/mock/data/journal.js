@@ -245,6 +245,14 @@ export const journalDetails = {
                 'jnl_jcr_scie_category_quartile': 'Q1',
                 'jnl_jcr_scie_category_order': 1,
                 'jnl_jcr_scie_category_description_lookup': 'Public, Environmental & Occupational Health',
+            },{
+                jnl_jcr_scie_category_code: "EW",
+                jnl_jcr_scie_category_description: "456497",
+                jnl_jcr_scie_category_description_lookup: "Computer Science, Software Engineering",
+                jnl_jcr_scie_category_id: 44,
+                jnl_jcr_scie_category_order: 1,
+                jnl_jcr_scie_category_quartile: "Q2",
+                jnl_jcr_scie_category_ranking: "35\/107",
             }],
         },
         'fez_journal_jcr_ssci': {
