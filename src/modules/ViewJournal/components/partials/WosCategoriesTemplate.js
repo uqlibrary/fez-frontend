@@ -7,15 +7,15 @@ const WosCategoriesTemplate = ({ data, templateProps, fieldId }) => {
     const { filterFn } = templateProps;
 
     return data.filter(filterFn).map((categoryItem, index) => {
-        const categoryNames = (categoryItem.jnl_wos_category_lookup || '').split('|');
-        const categoryIssns = (categoryItem.jnl_wos_category_issn || '').split('|');
+        const categoryNames = !!categoryItem.jnl_wos_category_lookup && categoryItem.jnl_wos_category_lookup.split('|');
+        const categoryIssns = !!categoryItem.jnl_wos_category_issn && categoryItem.jnl_wos_category_issn.split('|');
         return categoryNames.map((categoryName, categoryIndex) => (
             <DefaultTemplate
-                key={`${fieldId}${categoryName}`}
+                key={`${fieldId}-${index}-${categoryIndex}`}
                 data={`${categoryName.trim()}${(!!categoryIssns[categoryIndex] &&
-                    ' (' + categoryIssns[categoryIndex] + ')') ||
+                    ' (' + categoryIssns[categoryIndex].trim() + ')') ||
                     ''}`}
-                fieldId={`${fieldId}-${index}`}
+                fieldId={`${fieldId}-${index}-${categoryIndex}`}
             />
         ));
     });

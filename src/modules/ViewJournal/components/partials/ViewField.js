@@ -103,7 +103,7 @@ export const ViewField = ({ fieldConfig, headerColumnWidth }) => {
     const data = useData(dataConfig, getData, mergeData, separator);
     const [TemplateComponent, templateProps] = useTemplate(template, props);
 
-    if (!!data || !!staticData) {
+    if (!!data || !!staticData || template === 'BooleanTemplate') {
         return (
             <Grid container className={classes.gridRow}>
                 <Grid item xs={12} sm={headerColumnWidth}>

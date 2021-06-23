@@ -1129,6 +1129,7 @@ export default {
                 pageId: 'journal-view',
                 loadingMessage: 'Loading journal data',
                 loadFailureAlert: {
+                    alertId: 'alert-error-journal-load',
                     title: 'Loading failed',
                     message: 'Unable to load journal details',
                     type: 'error_outline',

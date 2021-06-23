@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Typography from '@material-ui/core/Typography';
+import DefaultTemplate from './DefaultTemplate';
 
 export const DateTimeTemplate = ({ data, templateProps, fieldId }) => {
     const { format } = templateProps;
     return (
-        <Typography variant="body2" id={`${fieldId}-value`} data-testid={`${fieldId}-value`}>
-            {moment(String(data)).isValid && moment(String(data)).format(format)}
-        </Typography>
+        <DefaultTemplate fieldId={fieldId} data={moment(String(data)).isValid && moment(String(data)).format(format)} />
     );
 };
 

@@ -18,10 +18,31 @@ const setup = () => {
 };
 
 describe('ViewJournal', () => {
+    it('should display error alert if journal is not loaded correctly', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(404);
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('alert-error-journal-load')).toBeInTheDocument();
+    });
+
     it('should display journal details basic section', async () => {
-        mockApi
-            .onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl))
-            .reply(200, { ...journalDetails });
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_cite_score: {
+                    ...journalDetails.data.fez_journal_cite_score,
+                    fez_journal_cite_score_asjc_code: [
+                        {
+                            ...journalDetails.data.fez_journal_cite_score.fez_journal_cite_score_asjc_code[0],
+                            jnl_cite_score_asjc_code_top_10_percent: false,
+                        },
+                    ],
+                },
+            },
+        });
 
         const { getByTestId, getByText, queryByTestId } = setup();
 
@@ -67,11 +88,11 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('ulr-title-header')).toHaveTextContent('View journal in Ulrichs');
         expect(getByTestId('ulr-title-0-value')).toHaveTextContent('American Journal of Public Health');
-        expect(getByTestId('ulr-title-0-value')).toHaveAttribute(
+        expect(getByTestId('ulr-title-0-lookup')).toHaveAttribute(
             'href',
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41698',
         );
-        expect(getByTestId('ulr-title-1-value')).toHaveAttribute(
+        expect(getByTestId('ulr-title-1-lookup')).toHaveAttribute(
             'href',
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41699',
         );
@@ -88,7 +109,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-doaj-homepage-url-header')).toHaveTextContent('Journal home page');
         expect(getByTestId('jnl-doaj-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
-        expect(getByTestId('jnl-doaj-homepage-url-value')).toHaveAttribute(
+        expect(getByTestId('jnl-doaj-homepage-url-lookup')).toHaveAttribute(
             'href',
             'https://www.hindawi.com/journals/aaa',
         );
@@ -113,18 +134,21 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('ulr-open-access-jnl-issn-header')).toHaveTextContent('View in DOAJ');
         expect(getByTestId('ulr-open-access-jnl-issn-value')).toHaveTextContent('0090-0036');
-        expect(getByTestId('ulr-open-access-jnl-issn-value')).toHaveAttribute('href', 'https://doaj.org/toc/0090-0036');
+        expect(getByTestId('ulr-open-access-jnl-issn-lookup')).toHaveAttribute(
+            'href',
+            'https://doaj.org/toc/0090-0036',
+        );
 
         expect(getByTestId('srm-journal-link-header')).toHaveTextContent(
             'Sherpa Romeo open access and archiving policies',
         );
         expect(getByTestId('srm-journal-link-0-value')).toHaveTextContent('0090-0036');
-        expect(getByTestId('srm-journal-link-0-value')).toHaveAttribute(
+        expect(getByTestId('srm-journal-link-0-lookup')).toHaveAttribute(
             'href',
             'https://v2.sherpa.ac.uk/id/publication/10303',
         );
         expect(getByTestId('srm-journal-link-1-value')).toHaveTextContent('1541-0048');
-        expect(getByTestId('srm-journal-link-1-value')).toHaveAttribute(
+        expect(getByTestId('srm-journal-link-1-lookup')).toHaveAttribute(
             'href',
             'https://v2.sherpa.ac.uk/id/publication/10303',
         );
@@ -146,14 +170,14 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jcr-home-page-scie-header')).toHaveTextContent('JCR home page');
         expect(getByTestId('jcr-home-page-scie-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-scie-value')).toHaveAttribute(
+        expect(getByTestId('jcr-home-page-scie-lookup')).toHaveAttribute(
             'href',
             'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
         );
 
         expect(getByTestId('jcr-more-info-scie-header')).toHaveTextContent('JCR more info');
         expect(getByTestId('jcr-more-info-scie-value')).toHaveTextContent('More info about JCR SCIE');
-        expect(getByTestId('jcr-more-info-scie-value')).toHaveAttribute(
+        expect(getByTestId('jcr-more-info-scie-lookup')).toHaveAttribute(
             'href',
             'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
         );
@@ -196,14 +220,14 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jcr-home-page-ssci-header')).toHaveTextContent('JCR home page');
         expect(getByTestId('jcr-home-page-ssci-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-ssci-value')).toHaveAttribute(
+        expect(getByTestId('jcr-home-page-ssci-lookup')).toHaveAttribute(
             'href',
             'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
         );
 
         expect(getByTestId('jcr-more-info-ssci-header')).toHaveTextContent('JCR more info');
         expect(getByTestId('jcr-more-info-ssci-value')).toHaveTextContent('More info about JCR SSCI');
-        expect(getByTestId('jcr-more-info-ssci-value')).toHaveAttribute(
+        expect(getByTestId('jcr-more-info-ssci-lookup')).toHaveAttribute(
             'href',
             'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
         );
@@ -229,7 +253,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-cite-score-source-id-header')).toHaveTextContent('CiteScore score');
         expect(getByTestId('jnl-cite-score-source-id-value')).toHaveTextContent('Go to record in CiteScore');
-        expect(getByTestId('jnl-cite-score-source-id-value')).toHaveAttribute(
+        expect(getByTestId('jnl-cite-score-source-id-lookup')).toHaveAttribute(
             'href',
             'https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/19561',
         );
@@ -239,7 +263,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-cite-score-more-info-header')).toHaveTextContent('CiteScore more info');
         expect(getByTestId('jnl-cite-score-more-info-value')).toHaveTextContent('More info about CiteScore');
-        expect(getByTestId('jnl-cite-score-more-info-value')).toHaveAttribute(
+        expect(getByTestId('jnl-cite-score-more-info-lookup')).toHaveAttribute(
             'href',
             'https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/',
         );
@@ -264,7 +288,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-asjc-code-top-10-percent-header')).toHaveTextContent(
             'Top 10% (CiteScore Percentile)',
         );
-        expect(getByTestId('jnl-cite-score-asjc-code-top-10-percent-value')).toHaveTextContent('Yes');
+        expect(getByTestId('jnl-cite-score-asjc-code-top-10-percent-value')).toHaveTextContent('No');
 
         expect(getByTestId('jnl-cite-score-asjc-code-rank-header')).toHaveTextContent('Ranked');
         expect(getByTestId('jnl-cite-score-asjc-code-rank-value')).toHaveTextContent('29 out of 516');
@@ -289,20 +313,20 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
             'Science Citation Index Expanded - WOS Subject Categories',
         );
-        expect(getByTestId('jnl-wos-category-scie-0-value')).toHaveTextContent(
+        expect(getByTestId('jnl-wos-category-scie-0-0-value')).toHaveTextContent(
             'Public, Environmental & Occupational Health (0090-0036)',
         );
-        expect(getByTestId('jnl-wos-category-scie-1-value')).toHaveTextContent(
+        expect(getByTestId('jnl-wos-category-scie-1-0-value')).toHaveTextContent(
             'Public, Environmental & Occupational Health (1541-0048)',
         );
 
         expect(getByTestId('jnl-wos-category-ssci-header')).toHaveTextContent(
             'Social Science Citation Index - WOS Subject Categories',
         );
-        expect(getByTestId('jnl-wos-category-ssci-0-value')).toHaveTextContent(
+        expect(getByTestId('jnl-wos-category-ssci-0-0-value')).toHaveTextContent(
             'Public, Environmental & Occupational Health (0090-0036)',
         );
-        expect(getByTestId('jnl-wos-category-ssci-1-value')).toHaveTextContent(
+        expect(getByTestId('jnl-wos-category-ssci-1-0-value')).toHaveTextContent(
             'Public, Environmental & Occupational Health (1541-0048)',
         );
 
@@ -344,5 +368,134 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('No');
+    });
+
+    it('should render correct creative licenses (BY-ND)', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_doaj: {
+                    ...journalDetails.data.fez_journal_doaj,
+                    jnl_doaj_nd: true,
+                },
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
+            'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)',
+        );
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup')).toHaveAttribute(
+            'href',
+            'https://creativecommons.org/licenses/by-nd/4.0/deed.en',
+        );
+    });
+
+    it('should render correct creative licenses (BY-NC)', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_doaj: {
+                    ...journalDetails.data.fez_journal_doaj,
+                    jnl_doaj_nc: true,
+                },
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
+            'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)',
+        );
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup')).toHaveAttribute(
+            'href',
+            'https://creativecommons.org/licenses/by-nc/4.0/deed.en',
+        );
+    });
+
+    it('should render correct creative licenses (BY-SA)', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_doaj: {
+                    ...journalDetails.data.fez_journal_doaj,
+                    jnl_doaj_sa: true,
+                },
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
+            'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+        );
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup')).toHaveAttribute(
+            'href',
+            'https://creativecommons.org/licenses/by-sa/4.0/deed.en',
+        );
+    });
+
+    it('should display WoS categories correctly with and without ISSN', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_wos_category: [
+                    {
+                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        jnl_wos_category: '456676',
+                        jnl_wos_category_index: 'SCIE',
+                        jnl_wos_category_issn: '0090-0036 | 0090-1234',
+                        jnl_wos_category_source_date: '2020-09-29',
+                        fez_journal_cwts: {
+                            jnl_cwts_source_year: 2020,
+                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        },
+                        jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental Health',
+                    },
+                    {
+                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        jnl_wos_category: '456676',
+                        jnl_wos_category_index: 'SSCI',
+                        jnl_wos_category_issn: '0090-0036',
+                        jnl_wos_category_source_date: '2020-09-29',
+                        fez_journal_cwts: {
+                            jnl_cwts_source_year: 2020,
+                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        },
+                        jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental & Dental Health',
+                    },
+                ],
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
+            'Science Citation Index Expanded - WOS Subject Categories',
+        );
+        expect(getByTestId('jnl-wos-category-scie-0-0-value')).toHaveTextContent(
+            'Public, Environmental & Occupational Health (0090-0036)',
+        );
+        expect(getByTestId('jnl-wos-category-scie-0-1-value')).toHaveTextContent('Mental Health (0090-1234)');
+
+        expect(getByTestId('jnl-wos-category-ssci-header')).toHaveTextContent(
+            'Social Science Citation Index - WOS Subject Categories',
+        );
+        expect(getByTestId('jnl-wos-category-ssci-0-0-value')).toHaveTextContent(
+            'Public, Environmental & Occupational Health (0090-0036)',
+        );
+        expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
     });
 });
