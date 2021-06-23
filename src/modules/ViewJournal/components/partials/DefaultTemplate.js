@@ -12,7 +12,7 @@ export const DefaultTemplate = ({ data, fieldId }) => {
 };
 
 DefaultTemplate.propTypes = {
-    data: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    data: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.element]),
     fieldId: PropTypes.string,
 };
 

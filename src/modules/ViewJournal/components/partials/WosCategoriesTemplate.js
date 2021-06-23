@@ -1,27 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Typography from '@material-ui/core/Typography';
+import DefaultTemplate from './DefaultTemplate';
 
-const WosCategoriesTemplate = ({ data, templateProps }) => {
-    const { filterFn, categoryId } = templateProps;
+const WosCategoriesTemplate = ({ data, templateProps, fieldId }) => {
+    const { filterFn } = templateProps;
 
     return data.filter(filterFn).map((categoryItem, index) => {
-        const idPrefix = `wos-${categoryId}-${index}-category`;
         const categoryNames = (categoryItem.jnl_wos_category_lookup || '').split('|');
         const categoryIssns = (categoryItem.jnl_wos_category_issn || '').split('|');
         return categoryNames.map((categoryName, categoryIndex) => (
-            <Typography variant="body2" key={`${idPrefix}${categoryName}`} data-testid={`${idPrefix}${categoryIndex}`}>
-                {`${categoryName.trim()}${(!!categoryIssns[categoryIndex] &&
+            <DefaultTemplate
+                key={`${fieldId}${categoryName}`}
+                data={`${categoryName.trim()}${(!!categoryIssns[categoryIndex] &&
                     ' (' + categoryIssns[categoryIndex] + ')') ||
                     ''}`}
-            </Typography>
+                fieldId={`${fieldId}-${index}`}
+            />
         ));
     });
 };
 
 WosCategoriesTemplate.propTypes = {
     data: PropTypes.array,
+    fieldId: PropTypes.string,
     templateProps: PropTypes.object,
 };
 

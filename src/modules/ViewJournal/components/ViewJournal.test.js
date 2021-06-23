@@ -253,5 +253,96 @@ describe('ViewJournal', () => {
         expect(getByTestId('journal-details-tab-fez-journal-cite-score-asjc-code-0-heading')).toHaveTextContent(
             '2739 Public Health, Environmental and Occupational Health',
         );
+
+        expect(getByTestId('jnl-cite-score-asjc-code-lookup-header')).toHaveTextContent(
+            'Scopus ASJC Code and sub-subject area',
+        );
+        expect(getByTestId('jnl-cite-score-asjc-code-lookup-value')).toHaveTextContent(
+            '2739 Public Health, Environmental and Occupational Health',
+        );
+
+        expect(getByTestId('jnl-cite-score-asjc-code-top-10-percent-header')).toHaveTextContent(
+            'Top 10% (CiteScore Percentile)',
+        );
+        expect(getByTestId('jnl-cite-score-asjc-code-top-10-percent-value')).toHaveTextContent('Yes');
+
+        expect(getByTestId('jnl-cite-score-asjc-code-rank-header')).toHaveTextContent('Ranked');
+        expect(getByTestId('jnl-cite-score-asjc-code-rank-value')).toHaveTextContent('29 out of 516');
+
+        expect(getByTestId('jnl-cite-score-asjc-code-quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('jnl-cite-score-asjc-code-quartile-value')).toHaveTextContent('1');
+
+        expect(getByTestId('jnl-cite-score-asjc-code-percentile-header')).toHaveTextContent('Percentile');
+        expect(getByTestId('jnl-cite-score-asjc-code-percentile-value')).toHaveTextContent('94');
+
+        // ******************************************************************
+        // Indexed in
+        // ******************************************************************
+        expect(getByTestId('jnl-esi-subject-lookup-header')).toHaveTextContent(
+            'Essential Science Indicators Research Fields',
+        );
+        expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Social Sciences, General (0090-0036)');
+        expect(getByTestId('jnl-esi-subject-lookup-1-value')).toHaveTextContent('Social Sciences, General (1541-0048)');
+
+        expect(queryByTestId('jnl-wos-category-ahci-header')).not.toBeInTheDocument();
+
+        expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
+            'Science Citation Index Expanded - WOS Subject Categories',
+        );
+        expect(getByTestId('jnl-wos-category-scie-0-value')).toHaveTextContent(
+            'Public, Environmental & Occupational Health (0090-0036)',
+        );
+        expect(getByTestId('jnl-wos-category-scie-1-value')).toHaveTextContent(
+            'Public, Environmental & Occupational Health (1541-0048)',
+        );
+
+        expect(getByTestId('jnl-wos-category-ssci-header')).toHaveTextContent(
+            'Social Science Citation Index - WOS Subject Categories',
+        );
+        expect(getByTestId('jnl-wos-category-ssci-0-value')).toHaveTextContent(
+            'Public, Environmental & Occupational Health (0090-0036)',
+        );
+        expect(getByTestId('jnl-wos-category-ssci-1-value')).toHaveTextContent(
+            'Public, Environmental & Occupational Health (1541-0048)',
+        );
+
+        expect(queryByTestId('jnl-wos-category-esci-header')).not.toBeInTheDocument();
+
+        expect(getByTestId('has-scopus-header')).toHaveTextContent('Scopus');
+        expect(getByTestId('has-scopus-value')).toHaveTextContent('Yes');
+
+        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
+        expect(getByTestId('has-pubmed-value')).toHaveTextContent('Yes');
+
+        // ******************************************************************
+        // Listed in
+        // ******************************************************************
+        expect(queryByTestId('jnl-abdc-rating-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-abdc-for-code-lookup-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-abdc-source-date-header')).not.toBeInTheDocument();
+
+        expect(getByTestId('jnl-cwts-source-year-header')).toHaveTextContent('CWTS Leiden Ranking');
+        expect(getByTestId('jnl-cwts-source-year-value')).toHaveTextContent('Yes, 2020');
+
+        expect(getByTestId('fez-journal-era-header')).toHaveTextContent('Excellence in Research for Australia (ERA)');
+        expect(getByTestId('fez-journal-era-value')).toHaveTextContent('Yes');
+        expect(getByTestId('jnl-era-for-code-lookup-header')).toHaveTextContent(
+            'ERA Years with Field of Research codes',
+        );
+        expect(getByTestId('jnl-era-for-code-lookup-0-value')).toHaveTextContent(
+            '2010 - 1117 Public Health and Health Services',
+        );
+        expect(getByTestId('jnl-era-for-code-lookup-1-value')).toHaveTextContent(
+            '2012 - 11 Medical and Health Sciences',
+        );
+        expect(getByTestId('jnl-era-for-code-lookup-2-value')).toHaveTextContent(
+            '2015 - 11 Medical and Health Sciences',
+        );
+        expect(getByTestId('jnl-era-for-code-lookup-3-value')).toHaveTextContent(
+            '2018 - 11 Medical and Health Sciences',
+        );
+
+        expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
+        expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('No');
     });
 });

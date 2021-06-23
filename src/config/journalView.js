@@ -732,7 +732,7 @@ export const journalViewConfig = {
             [
                 {
                     heading: 'Social Science Citation Index - WOS Subject Categories',
-                    fieldId: 'wos-category-ssci',
+                    fieldId: 'jnl-wos-category-ssci',
                     getData: journalDetails =>
                         !!journalDetails.fez_journal_wos_category &&
                         journalDetails.fez_journal_wos_category.filter(item => item.jnl_wos_category_index === 'SSCI')
