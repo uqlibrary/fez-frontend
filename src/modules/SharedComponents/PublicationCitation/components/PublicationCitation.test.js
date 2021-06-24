@@ -120,6 +120,50 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render button disabled on action buttons for publication without any authors metadata from crossref', () => {
+        const customActions = [
+            {
+                label: 'Claim now',
+                primary: true,
+                handleAction: jest.fn(),
+            },
+            {
+                label: 'Not mine',
+                handleAction: jest.fn(),
+            },
+            {
+                label: 'View stats',
+                handleAction: jest.fn(),
+            },
+        ];
+        const wrapper = setup({
+            showDefaultActions: false,
+            customActions: customActions,
+            publicationsLoading: true,
+            publication: {
+                rek_display_type: 179,
+                rek_date: '2019-07-01T00:00:00Z',
+                fez_record_search_key_doi: { rek_doi: '10.1111/1440-1630.12585' },
+                fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:639325', rek_ismemberof_order: 1 }],
+                fez_record_search_key_issn: [
+                    { rek_issn: '0045-0766', rek_issn_order: 1 },
+                    { rek_issn: '1440-1630', rek_issn_order: 2 },
+                ],
+                fez_record_search_key_keywords: [{ rek_keywords: 'Occupational Therapy', rek_keywords_order: 1 }],
+                rek_object_type: 3,
+                fez_record_search_key_start_page: { rek_start_page: '39' },
+                fez_record_search_key_end_page: { rek_end_page: '82' },
+                fez_record_search_key_publisher: { rek_publisher: 'Wiley' },
+                rek_status: 2,
+                rek_title: 'Oral Presentations \u2013 Thursday 11 July 2019',
+                fez_record_search_key_issue_number: { rek_issue_number: 'S1' },
+                fez_record_search_key_journal_name: { rek_journal_name: 'Australian Occupational Therapy Journal' },
+                fez_record_search_key_volume_number: { rek_volume_number: '66' },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with publication from multiple sources', () => {
         const publicationWithSources = { ...mockRecordToFix, sources: [{ source: 'espace', id: 'UQ:224457' }] };
         const wrapper = setup({ publication: publicationWithSources, showSources: true });
