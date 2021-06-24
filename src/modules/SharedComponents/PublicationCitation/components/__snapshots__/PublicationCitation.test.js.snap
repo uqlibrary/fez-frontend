@@ -37,6 +37,303 @@ Object {
 }
 `;
 
+exports[`PublicationCitation  should render button disabled on action buttons for publication without any authors metadata from crossref 1`] = `
+<div
+  className="publicationCitation"
+>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={0}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={0}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          style={
+            Object {
+              "minWidth": 1,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="h6"
+            variant="h6"
+          >
+            Oral Presentations – Thursday 11 July 2019
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <JournalArticleCitation
+            citationStyle="header"
+            hideDoiLink={false}
+            publication={
+              Object {
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1111/1440-1630.12585",
+                },
+                "fez_record_search_key_end_page": Object {
+                  "rek_end_page": "82",
+                },
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:639325",
+                    "rek_ismemberof_order": 1,
+                  },
+                ],
+                "fez_record_search_key_issn": Array [
+                  Object {
+                    "rek_issn": "0045-0766",
+                    "rek_issn_order": 1,
+                  },
+                  Object {
+                    "rek_issn": "1440-1630",
+                    "rek_issn_order": 2,
+                  },
+                ],
+                "fez_record_search_key_issue_number": Object {
+                  "rek_issue_number": "S1",
+                },
+                "fez_record_search_key_journal_name": Object {
+                  "rek_journal_name": "Australian Occupational Therapy Journal",
+                },
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Occupational Therapy",
+                    "rek_keywords_order": 1,
+                  },
+                ],
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Wiley",
+                },
+                "fez_record_search_key_start_page": Object {
+                  "rek_start_page": "39",
+                },
+                "fez_record_search_key_volume_number": Object {
+                  "rek_volume_number": "66",
+                },
+                "rek_date": "2019-07-01T00:00:00Z",
+                "rek_display_type": 179,
+                "rek_object_type": 3,
+                "rek_status": 2,
+                "rek_title": "Oral Presentations – Thursday 11 July 2019",
+              }
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Grid))
+            alignItems="center"
+            container={true}
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              style={
+                Object {
+                  "flexGrow": 1,
+                }
+              }
+              xs="auto"
+            >
+              <WithStyles(CitationCounts)
+                hideViewFullStatisticsLink={false}
+                publication={
+                  Object {
+                    "fez_record_search_key_doi": Object {
+                      "rek_doi": "10.1111/1440-1630.12585",
+                    },
+                    "fez_record_search_key_end_page": Object {
+                      "rek_end_page": "82",
+                    },
+                    "fez_record_search_key_ismemberof": Array [
+                      Object {
+                        "rek_ismemberof": "UQ:639325",
+                        "rek_ismemberof_order": 1,
+                      },
+                    ],
+                    "fez_record_search_key_issn": Array [
+                      Object {
+                        "rek_issn": "0045-0766",
+                        "rek_issn_order": 1,
+                      },
+                      Object {
+                        "rek_issn": "1440-1630",
+                        "rek_issn_order": 2,
+                      },
+                    ],
+                    "fez_record_search_key_issue_number": Object {
+                      "rek_issue_number": "S1",
+                    },
+                    "fez_record_search_key_journal_name": Object {
+                      "rek_journal_name": "Australian Occupational Therapy Journal",
+                    },
+                    "fez_record_search_key_keywords": Array [
+                      Object {
+                        "rek_keywords": "Occupational Therapy",
+                        "rek_keywords_order": 1,
+                      },
+                    ],
+                    "fez_record_search_key_publisher": Object {
+                      "rek_publisher": "Wiley",
+                    },
+                    "fez_record_search_key_start_page": Object {
+                      "rek_start_page": "39",
+                    },
+                    "fez_record_search_key_volume_number": Object {
+                      "rek_volume_number": "66",
+                    },
+                    "rek_date": "2019-07-01T00:00:00Z",
+                    "rek_display_type": 179,
+                    "rek_object_type": 3,
+                    "rek_status": 2,
+                    "rek_title": "Oral Presentations – Thursday 11 July 2019",
+                  }
+                }
+              />
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={1}
+  >
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={true}
+      />
+    </Hidden>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="action_key_0"
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Button))
+        className="publicationAction buttonOrder0"
+        classes={
+          Object {
+            "label": undefined,
+            "root": undefined,
+          }
+        }
+        color="primary"
+        data-testid="publication-action-undefined-primary"
+        disabled={true}
+        fullWidth={true}
+        onClick={[Function]}
+        variant="contained"
+      >
+        Claim now
+        <WithStyles(ForwardRef(CircularProgress))
+          aria-label="Waiting for records to finish loading"
+          color="secondary"
+          size={12}
+          style={
+            Object {
+              "marginLeft": 12,
+              "marginTop": -2,
+            }
+          }
+          thickness={3}
+          variant="indeterminate"
+        />
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="action_key_1"
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Button))
+        className="publicationAction buttonOrder1"
+        classes={
+          Object {
+            "label": undefined,
+            "root": undefined,
+          }
+        }
+        color="primary"
+        data-testid="publication-action-undefined-secondary"
+        fullWidth={true}
+        onClick={[Function]}
+        variant="text"
+      >
+        Not mine
+        <WithStyles(ForwardRef(CircularProgress))
+          aria-label="Waiting for records to finish loading"
+          color="secondary"
+          size={12}
+          style={
+            Object {
+              "marginLeft": 12,
+              "marginTop": -2,
+            }
+          }
+          thickness={3}
+          variant="indeterminate"
+        />
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="action_key_2"
+      sm="auto"
+      xs={12}
+    >
+      <WithStyles(ForwardRef(Button))
+        className="publicationAction buttonOrder2"
+        classes={
+          Object {
+            "label": undefined,
+            "root": undefined,
+          }
+        }
+        color="primary"
+        data-testid="publication-action-undefined-secondary"
+        fullWidth={true}
+        onClick={[Function]}
+        variant="text"
+      >
+        View stats
+        <WithStyles(ForwardRef(CircularProgress))
+          aria-label="Waiting for records to finish loading"
+          color="secondary"
+          size={12}
+          style={
+            Object {
+              "marginLeft": 12,
+              "marginTop": -2,
+            }
+          }
+          thickness={3}
+          variant="indeterminate"
+        />
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Divider)) />
+</div>
+`;
+
 exports[`PublicationCitation  should render button disabled with spinners on action buttons while loading 1`] = `
 <div
   className="publicationCitation"
@@ -972,6 +1269,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
         }
         color="primary"
         data-testid="publication-action-UQ41878-primary"
+        disabled={true}
         fullWidth={true}
         onClick={[Function]}
         variant="contained"
@@ -8454,6 +8752,7 @@ Array [
       }
       color="primary"
       data-testid="publication-action-UQ41878-primary"
+      disabled={false}
       fullWidth={true}
       onClick={[Function]}
       variant="contained"
