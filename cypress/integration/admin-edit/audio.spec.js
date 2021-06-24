@@ -145,8 +145,8 @@ context('Audio admin edit', () => {
                 cy.readCKEditor('rek-advisory-statement').should(text => {
                     // prettier-ignore
                     expect(text).to.contain(
-                            'Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities. The University of Queensland has approval from traditional owners and or descendants of the people who participated in the Queensland Speech Survey by Elwyn Flint in the 1960s.'
-                        );
+                        record.fez_record_search_key_advisory_statement.rek_advisory_statement
+                    );
                 });
             });
     });

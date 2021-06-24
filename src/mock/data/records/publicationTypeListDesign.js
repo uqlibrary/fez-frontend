@@ -8,35 +8,35 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:367344",
-            "rek_title_xsdmf_id": 16753,
+            "rek_title_xsdmf_id": null,
             "rek_title": "New Victoria Bridge, Drawing No. 1, general drawing, Brisbane, 16 Oct 1893",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 316,
-            "rek_status_xsdmf_id": 16816,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 16739,
+            "rek_date_xsdmf_id": null,
             "rek_date": "1000-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 16811,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 16818,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 3946,
-            "rek_created_date_xsdmf_id": 16813,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2015-08-17T14:47:18Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-24T04:21:14Z",
             "rek_file_downloads": 0,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 16740,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "image/tiff",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
             "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": 16773,
+            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "Alfred Barton Brady designed the new Victoria Bridge in 1897. Born in England in 1856, Brady migrated to Queensland with his wife in 1884, gaining employment with the Queensland Government in 1885. By 1893, he held the position of Government Architect and Engineer for Bridges with the Public Works Department. In addition to being responsible for the design and construction of the new Victoria Bridge, Brady supervised the construction of the temporary bridge. A paper he wrote on the Victoria Bridge in 1903 won the Crampton Prize of the Institution of Civil Engineers, of which he was a member.<br /><br />The new Victoria Bridge was the fourth bridge to span the Brisbane River at the spot running between Queen Street on the north bank and Melbourne Street on the south bank . The first structure was a temporary wooden bridge, constructed in 1865, which lasted only 2 years. Construction of the first permanent bridge, old Victoria Bridge, had commenced in 1864, but it did not open until 1874, operating as a toll bridge until 1877. Old Victoria Bridge was destroyed by the 1893 floods. A second temporary bridge was built in 1893, with construction of new Victoria Bridge beginning soon after. The second temporary bridge was washed away in floods in 1896, by which time the new Victoria bridge was nearing completion. The new Victoria Bridge opened in 1897, and it remained in service until replaced by the current Victoria Bridge in 1969, at which time the new Victoria Bridge was demolished. One of the stone archways which flanked the pedestrian access to the bridge remains on the south side of the Brisbane River, near the entrance to the South Bank parklands.<br />",
-            "rek_depositor_affiliation_xsdmf_id": 16822,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 789,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -56,7 +56,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 16815,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": null,
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -69,7 +69,7 @@ export default {
                 {
                     "rek_assigned_user_id_id": 907342,
                     "rek_assigned_user_id_pid": "UQ:367344",
-                    "rek_assigned_user_id_xsdmf_id": 16820,
+                    "rek_assigned_user_id_xsdmf_id": null,
                     "rek_assigned_user_id": 3946,
                     "rek_assigned_user_id_order": 1
                 }
@@ -78,7 +78,7 @@ export default {
                 {
                     "rek_author_id": 28808751,
                     "rek_author_pid": "UQ:367344",
-                    "rek_author_xsdmf_id": 16722,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Brady, Alfred Barton, 1856-1932",
                     "rek_author_order": 1
                 }
@@ -92,7 +92,7 @@ export default {
                 {
                     "rek_author_id_id": 29523904,
                     "rek_author_id_pid": "UQ:367344",
-                    "rek_author_id_xsdmf_id": 12120,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 0,
                     "rek_author_id_order": 1
                 }
@@ -102,7 +102,7 @@ export default {
                 {
                     "rek_contributor_id": 3080622,
                     "rek_contributor_pid": "UQ:367344",
-                    "rek_contributor_xsdmf_id": 16730,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Queensland Public Works Department",
                     "rek_contributor_order": 1
                 }
@@ -111,7 +111,7 @@ export default {
                 {
                     "rek_contributor_id_id": 2389942,
                     "rek_contributor_id_pid": "UQ:367344",
-                    "rek_contributor_id_xsdmf_id": 12128,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 }
@@ -125,7 +125,7 @@ export default {
                 {
                     "rek_creator_id_id": 26,
                     "rek_creator_id_pid": "UQ:367344",
-                    "rek_creator_id_xsdmf_id": 17311,
+                    "rek_creator_id_xsdmf_id": null,
                     "rek_creator_id": 0,
                     "rek_creator_id_order": 1
                 }
@@ -134,7 +134,7 @@ export default {
                 {
                     "rek_creator_name_id": 29,
                     "rek_creator_name_pid": "UQ:367344",
-                    "rek_creator_name_xsdmf_id": 17309,
+                    "rek_creator_name_xsdmf_id": null,
                     "rek_creator_name": "Brady, Alfred Barton, 1856-1932",
                     "rek_creator_name_order": 1
                 }
@@ -143,7 +143,7 @@ export default {
             "fez_record_search_key_date_available": {
                 "rek_date_available_id": 910850,
                 "rek_date_available_pid": "UQ:367344",
-                "rek_date_available_xsdmf_id": 16761,
+                "rek_date_available_xsdmf_id": null,
                 "rek_date_available": "2015-01-01T00:00:00Z"
             },
             "fez_record_search_key_doi": null,
@@ -160,42 +160,42 @@ export default {
                 {
                     "rek_file_attachment_name_id": 4229810,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_UQ_367344.xml",
                     "rek_file_attachment_name_order": 1
                 },
                 {
                     "rek_file_attachment_name_id": 4229811,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "presmd_UQFL454_b1_0001a.xml",
                     "rek_file_attachment_name_order": 2
                 },
                 {
                     "rek_file_attachment_name_id": 4229812,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "preview_UQFL454_b1_0001a.jpg",
                     "rek_file_attachment_name_order": 3
                 },
                 {
                     "rek_file_attachment_name_id": 4229813,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "thumbnail_UQFL454_b1_0001a.jpg",
                     "rek_file_attachment_name_order": 4
                 },
                 {
                     "rek_file_attachment_name_id": 4229814,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "UQFL454_b1_0001a.tif",
                     "rek_file_attachment_name_order": 5
                 },
                 {
                     "rek_file_attachment_name_id": 4229815,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "web_UQFL454_b1_0001a.jpg",
                     "rek_file_attachment_name_order": 6
                 }
@@ -204,7 +204,7 @@ export default {
                 {
                     "rek_geographic_area_id": 19472,
                     "rek_geographic_area_pid": "UQ:367344",
-                    "rek_geographic_area_xsdmf_id": 17293,
+                    "rek_geographic_area_xsdmf_id": null,
                     "rek_geographic_area": "153.022788,-27.471529 153.019725,-27.471529 153.019725,-27.473194 153.022788,-27.473194 153.022788,-27.471529",
                     "rek_geographic_area_order": 1
                 }
@@ -224,7 +224,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11487930,
                     "rek_ismemberof_pid": "UQ:367344",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:278419",
                     "rek_ismemberof_order": 1,
                     "parent": {
@@ -238,49 +238,49 @@ export default {
             "fez_record_search_key_job_number": {
                 "rek_job_number_id": 39,
                 "rek_job_number_pid": "UQ:367344",
-                "rek_job_number_xsdmf_id": 17313,
+                "rek_job_number_xsdmf_id": null,
                 "rek_job_number": "UQFL158, job no. 1006-2"
             },
             "fez_record_search_key_keywords": [
                 {
                     "rek_keywords_id": 30248429,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Brady, Alfred Barton, 1856-1932",
                     "rek_keywords_order": 1
                 },
                 {
                     "rek_keywords_id": 30248430,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Civil engineers",
                     "rek_keywords_order": 2
                 },
                 {
                     "rek_keywords_id": 30248431,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Victoria Bridge (Brisbane, Qld.)",
                     "rek_keywords_order": 3
                 },
                 {
                     "rek_keywords_id": 30248432,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Bridges -- Queensland -- Brisbane",
                     "rek_keywords_order": 4
                 },
                 {
                     "rek_keywords_id": 30248433,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Engineering drawings",
                     "rek_keywords_order": 5
                 },
                 {
                     "rek_keywords_id": 30248434,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Architectural drawings",
                     "rek_keywords_order": 6
                 }
@@ -294,7 +294,7 @@ export default {
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 304208,
                 "rek_oa_status_pid": "UQ:367344",
-                "rek_oa_status_xsdmf_id": 16989,
+                "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
@@ -302,7 +302,7 @@ export default {
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 9791,
                 "rek_original_format_pid": "UQ:367344",
-                "rek_original_format_xsdmf_id": 16742,
+                "rek_original_format_xsdmf_id": null,
                 "rek_original_format": "Engineering drawing; drawing on linen; 78 x 238 cm."
             },
             "fez_record_search_key_place_of_publication": null,
@@ -325,20 +325,20 @@ export default {
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2593947,
                 "rek_refereed_pid": "UQ:367344",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 1
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1438079,
                 "rek_refereed_source_pid": "UQ:367344",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_rights": {
                 "rek_rights_id": 124869,
                 "rek_rights_pid": "UQ:367344",
-                "rek_rights_xsdmf_id": 17300,
+                "rek_rights_xsdmf_id": null,
                 "rek_rights": "This work is made available by the UQ Library for your personal research or study. For further information and access please contact the Fryer Library, The University of Queensland Library."
             },
             "fez_record_search_key_scale": {
@@ -351,14 +351,14 @@ export default {
             "fez_record_search_key_series": {
                 "rek_series_id": 190707,
                 "rek_series_pid": "UQ:367344",
-                "rek_series_xsdmf_id": 16748,
+                "rek_series_xsdmf_id": null,
                 "rek_series": "Alfred Barton Brady Collection, UQFL454"
             },
             "fez_record_search_key_significance": [],
             "fez_record_search_key_source": {
                 "rek_source_id": 59464,
                 "rek_source_pid": "UQ:367344",
-                "rek_source_xsdmf_id": 16746,
+                "rek_source_xsdmf_id": null,
                 "rek_source": "Alfred Barton Brady Collection, UQFL454 , Tube 1, item 1"
             },
             "fez_record_search_key_start_page": null,
@@ -815,35 +815,35 @@ export default {
         },
         {
             "rek_pid": "UQ:367345",
-            "rek_title_xsdmf_id": 16753,
+            "rek_title_xsdmf_id": null,
             "rek_title": "New Victoria Bridge, Drawing No. 1, general drawing, Brisbane, 16 Oct 1893",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 316,
-            "rek_status_xsdmf_id": 16816,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 16739,
+            "rek_date_xsdmf_id": null,
             "rek_date": "1000-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 16811,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 16818,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 3946,
-            "rek_created_date_xsdmf_id": 16813,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2015-08-17T14:47:18Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-24T04:21:14Z",
             "rek_file_downloads": 0,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 16740,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "image/tiff",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
             "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": 16773,
+            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "Alfred Barton Brady designed the new Victoria Bridge in 1897. Born in England in 1856, Brady migrated to Queensland with his wife in 1884, gaining employment with the Queensland Government in 1885. By 1893, he held the position of Government Architect and Engineer for Bridges with the Public Works Department. In addition to being responsible for the design and construction of the new Victoria Bridge, Brady supervised the construction of the temporary bridge. A paper he wrote on the Victoria Bridge in 1903 won the Crampton Prize of the Institution of Civil Engineers, of which he was a member.<br /><br />The new Victoria Bridge was the fourth bridge to span the Brisbane River at the spot running between Queen Street on the north bank and Melbourne Street on the south bank . The first structure was a temporary wooden bridge, constructed in 1865, which lasted only 2 years. Construction of the first permanent bridge, old Victoria Bridge, had commenced in 1864, but it did not open until 1874, operating as a toll bridge until 1877. Old Victoria Bridge was destroyed by the 1893 floods. A second temporary bridge was built in 1893, with construction of new Victoria Bridge beginning soon after. The second temporary bridge was washed away in floods in 1896, by which time the new Victoria bridge was nearing completion. The new Victoria Bridge opened in 1897, and it remained in service until replaced by the current Victoria Bridge in 1969, at which time the new Victoria Bridge was demolished. One of the stone archways which flanked the pedestrian access to the bridge remains on the south side of the Brisbane River, near the entrance to the South Bank parklands.<br />",
-            "rek_depositor_affiliation_xsdmf_id": 16822,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 789,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -863,7 +863,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 16815,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": null,
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -876,7 +876,7 @@ export default {
                 {
                     "rek_assigned_user_id_id": 907342,
                     "rek_assigned_user_id_pid": "UQ:367344",
-                    "rek_assigned_user_id_xsdmf_id": 16820,
+                    "rek_assigned_user_id_xsdmf_id": null,
                     "rek_assigned_user_id": 3946,
                     "rek_assigned_user_id_order": 1
                 }
@@ -885,7 +885,7 @@ export default {
                 {
                     "rek_author_id": 28808751,
                     "rek_author_pid": "UQ:367344",
-                    "rek_author_xsdmf_id": 16722,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Brady, Alfred Barton, 1856-1932",
                     "rek_author_order": 1
                 }
@@ -899,7 +899,7 @@ export default {
                 {
                     "rek_author_id_id": 29523904,
                     "rek_author_id_pid": "UQ:367344",
-                    "rek_author_id_xsdmf_id": 12120,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 0,
                     "rek_author_id_order": 1
                 }
@@ -909,7 +909,7 @@ export default {
                 {
                     "rek_contributor_id": 3080622,
                     "rek_contributor_pid": "UQ:367344",
-                    "rek_contributor_xsdmf_id": 16730,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Queensland Public Works Department",
                     "rek_contributor_order": 1
                 }
@@ -918,7 +918,7 @@ export default {
                 {
                     "rek_contributor_id_id": 2389942,
                     "rek_contributor_id_pid": "UQ:367344",
-                    "rek_contributor_id_xsdmf_id": 12128,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 }
@@ -932,7 +932,7 @@ export default {
                 {
                     "rek_creator_id_id": 26,
                     "rek_creator_id_pid": "UQ:367344",
-                    "rek_creator_id_xsdmf_id": 17311,
+                    "rek_creator_id_xsdmf_id": null,
                     "rek_creator_id": 0,
                     "rek_creator_id_order": 1
                 }
@@ -941,7 +941,7 @@ export default {
                 {
                     "rek_creator_name_id": 29,
                     "rek_creator_name_pid": "UQ:367344",
-                    "rek_creator_name_xsdmf_id": 17309,
+                    "rek_creator_name_xsdmf_id": null,
                     "rek_creator_name": "Brady, Alfred Barton, 1856-1932",
                     "rek_creator_name_order": 1
                 }
@@ -950,7 +950,7 @@ export default {
             "fez_record_search_key_date_available": {
                 "rek_date_available_id": 910850,
                 "rek_date_available_pid": "UQ:367344",
-                "rek_date_available_xsdmf_id": 16761,
+                "rek_date_available_xsdmf_id": null,
                 "rek_date_available": "2015-01-01T00:00:00Z"
             },
             "fez_record_search_key_doi": null,
@@ -967,42 +967,42 @@ export default {
                 {
                     "rek_file_attachment_name_id": 4229810,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_UQ_367344.xml",
                     "rek_file_attachment_name_order": 1
                 },
                 {
                     "rek_file_attachment_name_id": 4229811,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "presmd_UQFL454_b1_0001a.xml",
                     "rek_file_attachment_name_order": 2
                 },
                 {
                     "rek_file_attachment_name_id": 4229812,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "preview_UQFL454_b1_0001a.jpg",
                     "rek_file_attachment_name_order": 3
                 },
                 {
                     "rek_file_attachment_name_id": 4229813,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "thumbnail_UQFL454_b1_0001a.jpg",
                     "rek_file_attachment_name_order": 4
                 },
                 {
                     "rek_file_attachment_name_id": 4229814,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "UQFL454_b1_0001a.tif",
                     "rek_file_attachment_name_order": 5
                 },
                 {
                     "rek_file_attachment_name_id": 4229815,
                     "rek_file_attachment_name_pid": "UQ:367344",
-                    "rek_file_attachment_name_xsdmf_id": 12253,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "web_UQFL454_b1_0001a.jpg",
                     "rek_file_attachment_name_order": 6
                 }
@@ -1011,7 +1011,7 @@ export default {
                 {
                     "rek_geographic_area_id": 19472,
                     "rek_geographic_area_pid": "UQ:367344",
-                    "rek_geographic_area_xsdmf_id": 17293,
+                    "rek_geographic_area_xsdmf_id": null,
                     "rek_geographic_area": "153.022788,-27.471529 153.019725,-27.471529 153.019725,-27.473194 153.022788,-27.473194 153.022788,-27.471529",
                     "rek_geographic_area_order": 1
                 }
@@ -1031,7 +1031,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11487930,
                     "rek_ismemberof_pid": "UQ:367344",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:278419",
                     "rek_ismemberof_order": 1,
                     "parent": {
@@ -1045,49 +1045,49 @@ export default {
             "fez_record_search_key_job_number": {
                 "rek_job_number_id": 39,
                 "rek_job_number_pid": "UQ:367344",
-                "rek_job_number_xsdmf_id": 17313,
+                "rek_job_number_xsdmf_id": null,
                 "rek_job_number": "UQFL158, job no. 1006-2"
             },
             "fez_record_search_key_keywords": [
                 {
                     "rek_keywords_id": 30248429,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Brady, Alfred Barton, 1856-1932",
                     "rek_keywords_order": 1
                 },
                 {
                     "rek_keywords_id": 30248430,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Civil engineers",
                     "rek_keywords_order": 2
                 },
                 {
                     "rek_keywords_id": 30248431,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Victoria Bridge (Brisbane, Qld.)",
                     "rek_keywords_order": 3
                 },
                 {
                     "rek_keywords_id": 30248432,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Bridges -- Queensland -- Brisbane",
                     "rek_keywords_order": 4
                 },
                 {
                     "rek_keywords_id": 30248433,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Engineering drawings",
                     "rek_keywords_order": 5
                 },
                 {
                     "rek_keywords_id": 30248434,
                     "rek_keywords_pid": "UQ:367344",
-                    "rek_keywords_xsdmf_id": 12138,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Architectural drawings",
                     "rek_keywords_order": 6
                 }
@@ -1101,7 +1101,7 @@ export default {
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 304208,
                 "rek_oa_status_pid": "UQ:367344",
-                "rek_oa_status_xsdmf_id": 16989,
+                "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
@@ -1109,7 +1109,7 @@ export default {
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 9791,
                 "rek_original_format_pid": "UQ:367344",
-                "rek_original_format_xsdmf_id": 16742,
+                "rek_original_format_xsdmf_id": null,
                 "rek_original_format": "Engineering drawing; drawing on linen; 78 x 238 cm."
             },
             "fez_record_search_key_place_of_publication": null,
@@ -1132,20 +1132,20 @@ export default {
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2593947,
                 "rek_refereed_pid": "UQ:367344",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 1
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1438079,
                 "rek_refereed_source_pid": "UQ:367344",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_rights": {
                 "rek_rights_id": 124869,
                 "rek_rights_pid": "UQ:367344",
-                "rek_rights_xsdmf_id": 17300,
+                "rek_rights_xsdmf_id": null,
                 "rek_rights": "This work is made available by the UQ Library for your personal research or study. For further information and access please contact the Fryer Library, The University of Queensland Library."
             },
             "fez_record_search_key_scale": {
@@ -1158,14 +1158,14 @@ export default {
             "fez_record_search_key_series": {
                 "rek_series_id": 190707,
                 "rek_series_pid": "UQ:367344",
-                "rek_series_xsdmf_id": 16748,
+                "rek_series_xsdmf_id": null,
                 "rek_series": "Alfred Barton Brady Collection, UQFL454"
             },
             "fez_record_search_key_significance": [],
             "fez_record_search_key_source": {
                 "rek_source_id": 59464,
                 "rek_source_pid": "UQ:367344",
-                "rek_source_xsdmf_id": 16746,
+                "rek_source_xsdmf_id": null,
                 "rek_source": "Alfred Barton Brady Collection, UQFL454 , Tube 1, item 1"
             },
             "fez_record_search_key_start_page": null,

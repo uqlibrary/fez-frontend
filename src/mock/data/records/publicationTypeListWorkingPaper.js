@@ -8,27 +8,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:333631",
-            "rek_title_xsdmf_id": 10736,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Information technology's impacts on productivity, welfare and social change: general observations",
-            "rek_description_xsdmf_id": 11371,
+            "rek_description_xsdmf_id": null,
             "rek_description": "There has been a rapid increase in global expenditure on information technology and there is still much to learn about its effects on productivity, welfare and social change. At the macro-level, it has been estimated that Internet-related value accounts for as much as 7% of GDP of some OECD economies. As discussed, two basic methods have been used to estimate the contribution of ICT to the growth in GDP. Estimates of this vary considerably but it seems that ICT’s contribution is increasing. Currently, GDP is expected to increase by about 1% for a 10% rise in ICT-capital. All industries have had added value as a result of the introduction of ICT but the overall aggregate effect is largest for the tertiary (service) sector. It is shown how the Internet can increase economic productivity (1) by reducing input costs and (2) raising allocative efficiency within enterprises. Other ways in which Internet access can increase economic welfare are via reduced market transaction costs and a decline in material and transport costs as well as by increasing the variety of available commodities. These aspects are analyzed and discussed critically. Attention is also given to the employment consequences of the use of ICT, associated health issues, and the impacts of ICT on social interaction and the environment. It is suggested that the use of the Internet for consumption may exceed it use for production. Additional matters touched on are the consequences for economic performance of ICT in education and research and in the health industry, as well as the comparative benefit of ICT to rural residents compared to city-dwellers. In conclusion, it is noted that not all IT depends on the Internet and that non-Internet IT has had little economic attention.",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 183,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6623,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2014-06-26T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 12409,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2014-06-26T12:02:12Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2020-07-06T06:13:10Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Tisdell, Clem\" href=\"/records/search?searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=610&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=Tisdell%2C+Clem&searchMode=advanced\">Tisdell, Clem</a> (<span class=\"citation_date\">2014</span>).<i><a class=\"citation_title\" title=\"Click to view Working Paper: Information technology's impacts on productivity, welfare and social change: general observations\" href=\"/view/UQ:333631\">Information technology's impacts on productivity, welfare and social change: general observations</a></i>.  <span class=\"citation_series\">Economic Theory, Applications and Issues Working Paper Series</span>. <span class=\"citation_report_number\">67</span>. <span class=\"citation_org_unit_name\">School of Economics</span>, <span class=\"citation_org_name\">The University of Queensland</span>.",
-            "rek_genre_xsdmf_id": 7215,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Working Paper",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -36,7 +36,7 @@ export default {
             "rek_formatted_title": "Information technology's impacts on productivity, welfare and social change: general observations",
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "There has been a rapid increase in global expenditure on information technology and there is still much to learn about its effects on productivity, welfare and social change. At the macro-level, it has been estimated that Internet-related value accounts for as much as 7% of GDP of some OECD economies. As discussed, two basic methods have been used to estimate the contribution of ICT to the growth in GDP. Estimates of this vary considerably but it seems that ICT’s contribution is increasing. Currently, GDP is expected to increase by about 1% for a 10% rise in ICT-capital. All industries have had added value as a result of the introduction of ICT but the overall aggregate effect is largest for the tertiary (service) sector. It is shown how the Internet can increase economic productivity (1) by reducing input costs and (2) raising allocative efficiency within enterprises. Other ways in which Internet access can increase economic welfare are via reduced market transaction costs and a decline in material and transport costs as well as by increasing the variety of available commodities. These aspects are analyzed and discussed critically. Attention is also given to the employment consequences of the use of ICT, associated health issues, and the impacts of ICT on social interaction and the environment. It is suggested that the use of the Internet for consumption may exceed it use for production. Additional matters touched on are the consequences for economic performance of ICT in education and research and in the health industry, as well as the comparative benefit of ICT to rural residents compared to city-dwellers. In conclusion, it is noted that not all IT depends on the Internet and that non-Internet IT has had little economic attention.",
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 831,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -55,7 +55,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -150,7 +150,7 @@ export default {
                 {
                     "rek_language_id": 5266188,
                     "rek_language_pid": "UQ:333631",
-                    "rek_language_xsdmf_id": 10742,
+                    "rek_language_xsdmf_id": null,
                     "rek_language": "eng",
                     "rek_language_order": 1
                 }
@@ -158,7 +158,7 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 28752,
                 "rek_license_pid": "UQ:333631",
-                "rek_license_xsdmf_id": 16246,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
@@ -166,7 +166,7 @@ export default {
                 {
                     "rek_link_id": 3199085,
                     "rek_link_pid": "UQ:333631",
-                    "rek_link_xsdmf_id": 6685,
+                    "rek_link_xsdmf_id": null,
                     "rek_link": "http://ageconsearch.umn.edu/handle/174091",
                     "rek_link_order": 1
                 }
@@ -175,7 +175,7 @@ export default {
                 {
                     "rek_link_description_id": 3199054,
                     "rek_link_description_pid": "UQ:333631",
-                    "rek_link_description_xsdmf_id": 6684,
+                    "rek_link_description_xsdmf_id": null,
                     "rek_link_description": "Fulltext (open access)",
                     "rek_link_description_order": 1
                 }
@@ -183,62 +183,62 @@ export default {
             "fez_record_search_key_notes": {
                 "rek_notes_id": 1122188,
                 "rek_notes_pid": "UQ:333631",
-                "rek_notes_xsdmf_id": 12526,
+                "rek_notes_xsdmf_id": null,
                 "rek_notes": "ISSN 1444-8890. The first draft of a background paper for a guest presentation at the “Symposium on Broadband Enabled Communities and Regional Economic Development” to be held at the University of Southern Queensland, 10-11 November, 2014 in Toowoomba. This Symposium is supported through the Australian Government’s Collaboration Research Networks (CRN) programme’s ‘Digital Futures’ theme."
             },
             "fez_record_search_key_oa_status": null,
             "fez_record_search_key_org_name": {
                 "rek_org_name_id": 351888,
                 "rek_org_name_pid": "UQ:333631",
-                "rek_org_name_xsdmf_id": 6613,
+                "rek_org_name_xsdmf_id": null,
                 "rek_org_name": "The University of Queensland"
             },
             "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_org_unit_name": {
                 "rek_org_unit_name_id": 341470,
                 "rek_org_unit_name_pid": "UQ:333631",
-                "rek_org_unit_name_xsdmf_id": 6610,
+                "rek_org_unit_name_xsdmf_id": null,
                 "rek_org_unit_name": "School of Economics"
             },
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4469839,
                 "rek_publisher_pid": "UQ:333631",
-                "rek_publisher_xsdmf_id": 6621,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "School of Economics, The University of Queensland"
             },
             "fez_record_search_key_refereed": null,
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1225812,
                 "rek_refereed_source_pid": "UQ:333631",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_report_number": {
                 "rek_report_number_id": 16533,
                 "rek_report_number_pid": "UQ:333631",
-                "rek_report_number_xsdmf_id": 6619,
+                "rek_report_number_xsdmf_id": null,
                 "rek_report_number": "67"
             },
             "fez_record_search_key_scopus_id": null,
             "fez_record_search_key_series": {
                 "rek_series_id": 197447,
                 "rek_series_pid": "UQ:333631",
-                "rek_series_xsdmf_id": 6608,
+                "rek_series_xsdmf_id": null,
                 "rek_series": "Economic Theory, Applications and Issues Working Paper Series"
             },
             "fez_record_search_key_start_page": {
                 "rek_start_page_id": 5608032,
                 "rek_start_page_pid": "UQ:333631",
-                "rek_start_page_xsdmf_id": 10745,
+                "rek_start_page_xsdmf_id": null,
                 "rek_start_page": "1"
             },
             "fez_record_search_key_subject": [],
             "fez_record_search_key_total_pages": {
                 "rek_total_pages_id": 5521534,
                 "rek_total_pages_pid": "UQ:333631",
-                "rek_total_pages_xsdmf_id": 10747,
+                "rek_total_pages_xsdmf_id": null,
                 "rek_total_pages": "21"
             },
             "fez_record_search_key_translated_title": null,
@@ -477,7 +477,7 @@ export default {
                 {
                     "rek_author_affiliation_name_id": 2633969,
                     "rek_author_affiliation_name_pid": "UQ:333631",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "Missing",
                     "rek_author_affiliation_name_order": 1
                 }

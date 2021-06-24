@@ -1537,7 +1537,7 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 28752,
                 "rek_license_pid": "UQ:696826",
-                "rek_license_xsdmf_id": 16246,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },

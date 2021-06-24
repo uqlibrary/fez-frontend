@@ -1,26 +1,26 @@
 export default {
     "rek_pid": "UQ:341923",
-    "rek_title_xsdmf_id": 10659,
+    "rek_title_xsdmf_id": null,
     "rek_title": "Retention of foliar-applied fluoride in forage plants. Santos Ltd.",
     "rek_description_xsdmf_id": null,
     "rek_description": "This study investigated whether overhead irrigation with high-fluoride CSG-water (up to 6 mg\/L) may result in the production of forage with fluoride levels that exceed the recommended daily intake of fluoride by cattle and other fauna. Lucerne, Rhodes grass, and leucaena were grown in the glasshouse and irrigated weekly with artificial CSG-water for five weeks. Under the experimental conditions, the average plant tissue concentrations of fluoride in the 0 and 3 mg\/L treatments were less than the detection limit (approximately 15 mg\/kg) thereby indicating that the concentrations of fluoride in the present study are either \u2018low risk\u2019 or \u2018no risk\u2019. In the 6 mg\/L treatment, concentrations in foliage after 5 weeks (36-93 mg\/L) may potentially pose a risk to fauna consuming this plant material.",
-    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type_xsdmf_id": null,
     "rek_display_type": 275,
-    "rek_status_xsdmf_id": 3680,
+    "rek_status_xsdmf_id": null,
     "rek_status": 2,
-    "rek_date_xsdmf_id": 10089,
+    "rek_date_xsdmf_id": null,
     "rek_date": "2012-11-12T00:00:00Z",
-    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type_xsdmf_id": null,
     "rek_object_type": 3,
-    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor_xsdmf_id": null,
     "rek_depositor": 7293,
-    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date_xsdmf_id": null,
     "rek_created_date": "2014-10-16T11:11:47Z",
-    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date_xsdmf_id": null,
     "rek_updated_date": "2020-03-17T07:41:13Z",
     "rek_file_downloads": 0,
     "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Kopittke, Peter M.\" href=\"\/list\/author_id\/1742\/\">Kopittke, Peter M.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Blamey, Pax\" href=\"\/list\/author_id\/4783\/\">Blamey, Pax<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Wehr, Johannes B.\" href=\"\/list\/author_id\/1325\/\">Wehr, Johannes B.<\/a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Menzies, Neal W.\" href=\"\/list\/author_id\/539\/\">Menzies, Neal W.<\/a> (<span class=\"citation_date\">2012<\/span>) <i><a class=\"citation_title\" title=\"Click to view Research Report: Retention of foliar-applied fluoride in forage plants. Santos Ltd.\" href=\"\/view\/UQ:341923\">Retention of foliar-applied fluoride in forage plants. Santos Ltd.<\/a><\/i> <span class=\"citation_place_of_publication\">Brisbane, Australia<\/span>: ",
-    "rek_genre_xsdmf_id": 10091,
+    "rek_genre_xsdmf_id": null,
     "rek_genre": "Research Report",
     "rek_genre_type_xsdmf_id": null,
     "rek_genre_type": null,
@@ -28,7 +28,7 @@ export default {
     "rek_formatted_title": null,
     "rek_formatted_abstract_xsdmf_id": null,
     "rek_formatted_abstract": "<p>This study investigated whether overhead irrigation with high-fluoride CSG-water (up to 6 mg\/L) may result in the production of forage with fluoride levels that exceed the recommended daily intake of fluoride by cattle and other fauna. Lucerne, Rhodes grass, and leucaena were grown in the glasshouse and irrigated weekly with artificial CSG-water for five weeks. Under the experimental conditions, the average plant tissue concentrations of fluoride in the 0 and 3 mg\/L treatments were less than the detection limit (approximately 15 mg\/kg) thereby indicating that the concentrations of fluoride in the present study are either &lsquo;low risk&rsquo; or &lsquo;no risk&rsquo;. In the 6 mg\/L treatment, concentrations in foliage after 5 weeks (36-93 mg\/L) may potentially pose a risk to fauna consuming this plant material.<\/p>",
-    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation_xsdmf_id": null,
     "rek_depositor_affiliation": 1162,
     "rek_thomson_citation_count": null,
     "rek_thomson_citation_count_xsdmf_id": null,
@@ -48,7 +48,7 @@ export default {
     "rek_altmetric_score_xsdmf_id": null,
     "rek_altmetric_id": null,
     "rek_altmetric_id_xsdmf_id": null,
-    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright_xsdmf_id": null,
     "rek_copyright": "on",
     "rek_security_policy": 1,
     "rek_datastream_policy": null,
@@ -163,7 +163,7 @@ export default {
         {
             "rek_file_attachment_access_condition_id": 18551,
             "rek_file_attachment_access_condition_pid": "UQ:341923",
-            "rek_file_attachment_access_condition_xsdmf_id": 0,
+            "rek_file_attachment_access_condition_xsdmf_id": null,
             "rek_file_attachment_access_condition": "8",
             "rek_file_attachment_access_condition_order": 2
         }
@@ -190,14 +190,14 @@ export default {
         {
             "rek_grant_agency_id": 184483,
             "rek_grant_agency_pid": "UQ:341923",
-            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_xsdmf_id": null,
             "rek_grant_agency": "Santos GLNG Ltd",
             "rek_grant_agency_order": 1
         },
         {
             "rek_grant_agency_id": 189204,
             "rek_grant_agency_pid": "UQ:341923",
-            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency_xsdmf_id": null,
             "rek_grant_agency": "Santos",
             "rek_grant_agency_order": 2
         }
@@ -207,14 +207,14 @@ export default {
         {
             "rek_grant_id_id": 113350,
             "rek_grant_id_pid": "UQ:341923",
-            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_xsdmf_id": null,
             "rek_grant_id": "Not set",
             "rek_grant_id_order": 1
         },
         {
             "rek_grant_id_id": 116184,
             "rek_grant_id_pid": "UQ:341923",
-            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id_xsdmf_id": null,
             "rek_grant_id": "Not set",
             "rek_grant_id_order": 2
         }
@@ -384,28 +384,28 @@ export default {
         {
             "rek_author_affiliation_name_id": 2521023,
             "rek_author_affiliation_name_pid": "UQ:341923",
-            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name_xsdmf_id": null,
             "rek_author_affiliation_name": "Missing",
             "rek_author_affiliation_name_order": 1
         },
         {
             "rek_author_affiliation_name_id": 2521024,
             "rek_author_affiliation_name_pid": "UQ:341923",
-            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name_xsdmf_id": null,
             "rek_author_affiliation_name": "Missing",
             "rek_author_affiliation_name_order": 2
         },
         {
             "rek_author_affiliation_name_id": 2521025,
             "rek_author_affiliation_name_pid": "UQ:341923",
-            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name_xsdmf_id": null,
             "rek_author_affiliation_name": "The University of Queensland",
             "rek_author_affiliation_name_order": 3
         },
         {
             "rek_author_affiliation_name_id": 2521026,
             "rek_author_affiliation_name_pid": "UQ:341923",
-            "rek_author_affiliation_name_xsdmf_id": 0,
+            "rek_author_affiliation_name_xsdmf_id": null,
             "rek_author_affiliation_name": "Missing",
             "rek_author_affiliation_name_order": 4
         }

@@ -3,27 +3,27 @@ export const trendingPublications = {
     "data": [
         {
             "rek_pid": "UQ:330391",
-            "rek_title_xsdmf_id": 10588,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Development and implementation of papillomavirus prophylactic vaccines",
-            "rek_description_xsdmf_id": 11441,
+            "rek_description_xsdmf_id": null,
             "rek_description": "Translation of basic scientific findings into practical patient outcomes is a significant exercise even when the goal is conceptually straightforward, as in the development of a vaccine for an infectious disease. Recognition of the association of cervical cancer with papillomavirus infection encouraged development of a vaccine to help with prevention of this very common cancer, causing over 250,000 deaths each year worldwide. To introduce a vaccine program, it was however necessary to develop a technology for making viral Ag, demonstrate that systemic immunization could provide mucosal surface protection in the genital tract, develop assays for vaccine potency, and understand enough about the epidemiology and natural history of the infection to plan effective intervention strategies. This process took ~25 years. The major hurdle, now that effective vaccines are available, is to ensure their deployment in the countries where they are most needed. The development and deployment of human papillomavirus vaccines demonstrate the benefits of collaborative research activity across the globe, and between academia and industry, to translate scientific discoveries into public health benefits.",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 179,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6386,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2014-05-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 8524,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2014-05-20T00:24:11Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2018-01-19T02:57:37Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Frazer, Ian H.\" href=\"/list/author_id/410/\">Frazer, Ian H.</a> (<span class=\"citation_date\">2014</span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Development and implementation of papillomavirus prophylactic vaccines\" href=\"/view/UQ:330391\">Development and implementation of papillomavirus prophylactic vaccines</a>. <i><span class=\"citation_journal_name\">Journal of Immunology</span></i>, <i><span class=\"citation_volume_number\">192</span></i> <span class=\"citation_issue_number\">9</span>: <span class=\"citation_start_page\">4007</span>-<span class=\"citation_end_page\">4011</span>. doi:<span class=\"citation_doi\">10.4049/jimmunol.1490012</span>",
-            "rek_genre_xsdmf_id": 7207,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Journal Article",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": "Article (original research)",
@@ -31,18 +31,18 @@ export const trendingPublications = {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1048,
             "rek_thomson_citation_count": 12,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12379,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Article (original research)",
             "rek_scopus_citation_count": 13,
-            "rek_herdc_notes_xsdmf_id": 12472,
+            "rek_herdc_notes_xsdmf_id": null,
             "rek_herdc_notes": "&nbsp;Ian H. Frazer, University of Queensland Diamantina Institute, Translational Research Institute, 37 Kent Street, Woolloongabba, QLD 4102, Australia.",
-            "rek_scopus_doc_type_xsdmf_id": 12550,
+            "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": "ar",
-            "rek_wok_doc_type_xsdmf_id": 12551,
+            "rek_wok_doc_type_xsdmf_id": null,
             "rek_wok_doc_type": "@",
             "rek_pubmed_doc_type_xsdmf_id": null,
             "rek_pubmed_doc_type": null,
@@ -51,7 +51,7 @@ export const trendingPublications = {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": 2291601,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": [],
@@ -69,7 +69,7 @@ export const trendingPublications = {
                 {
                     "rek_author_affiliation_country_id": 344457,
                     "rek_author_affiliation_country_pid": "UQ:330391",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country_order": 1,
                     "rek_author_affiliation_country": "aus"
                 }
@@ -78,7 +78,7 @@ export const trendingPublications = {
                 {
                     "rek_author_affiliation_full_address_id": 377945,
                     "rek_author_affiliation_full_address_pid": "UQ:330391",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address_order": 1,
                     "rek_author_affiliation_full_address": "Woolloongabba, QLD 4102"
                 }
@@ -88,7 +88,7 @@ export const trendingPublications = {
                 {
                     "rek_author_affiliation_name_id": 345319,
                     "rek_author_affiliation_name_pid": "UQ:330391",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name_order": 1,
                     "rek_author_affiliation_name": "University of Queensland Diamantina Institute, Translational Research Institute, University of Queensland"
                 }
@@ -110,7 +110,7 @@ export const trendingPublications = {
                 {
                     "rek_corresponding_country_id": 285972,
                     "rek_corresponding_country_pid": "UQ:330391",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                     "rek_corresponding_country_order": 1,
                     "rek_corresponding_country": "aus"
                 }
@@ -119,7 +119,7 @@ export const trendingPublications = {
                 {
                     "rek_corresponding_email_id": 63548,
                     "rek_corresponding_email_pid": "UQ:330391",
-                    "rek_corresponding_email_xsdmf_id": 0,
+                    "rek_corresponding_email_xsdmf_id": null,
                     "rek_corresponding_email_order": 1,
                     "rek_corresponding_email": "i.frazer@uq.edu.au"
                 }
@@ -128,7 +128,7 @@ export const trendingPublications = {
                 {
                     "rek_corresponding_name_id": 56163,
                     "rek_corresponding_name_pid": "UQ:330391",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                     "rek_corresponding_name_order": 1,
                     "rek_corresponding_name": "Frazer I.H."
                 }
@@ -585,27 +585,27 @@ export const trendingPublications = {
         },
         {
             "rek_pid": "UQ:103860",
-            "rek_title_xsdmf_id": 10588,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Prophylactic HPV vaccines: Underlying mechanisms",
-            "rek_description_xsdmf_id": 11441,
+            "rek_description_xsdmf_id": null,
             "rek_description": "Human papillomavirus virus-like particles (HPV VLP) can be generated by the synthesis and self-assembly in vitro of the major virus capsid protein L1. HPV L1 VLPs are morphologically and antigenically almost identical to native virions, and this technology has been exploited to produce HPV L1 VLP subunit vaccines. The vaccines elicit high titres of anti-L I VLP antibodies that persist at levels 10 times that of natural infections for at least 48 months. At present the assumption is that the protection achieved by these vaccines against incident HPV infection and HPV-associated ano-genital pathology is mediated via serum neutralising Immunoglobulin G (IgG). However, since there have been very few vaccine failures thus far, immune correlates of protection have not been established. The available evidence is that the immunodominant neutralising antibodies generated by L1 VLPs are type-specific and are not cross-neutralising, although highly homologous HPV pairs share minor cross-neutralisation epitopes. Important issues remaining to be addressed include the duration of protection and genotype replacement. (c) 2006 Elsevier Ltd. All rights reserved.",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 179,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6386,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2006-08-21T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
             "rek_depositor_xsdmf_id": null,
             "rek_depositor": null,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2007-08-23T21:53:06Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2018-01-29T01:11:58Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Stanley, Margaret\" href=\"/list/author/Stanley%2C+Margaret/\">Stanley, Margaret</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Lowy, Douglas R.\" href=\"/list/author/Lowy%2C+Douglas+R./\">Lowy, Douglas R.</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Frazer, Ian\" href=\"/list/author_id/410/\">Frazer, Ian</a> (<span class=\"citation_date\">2006</span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Prophylactic HPV vaccines: Underlying mechanisms\" href=\"/view/UQ:103860\">Prophylactic HPV vaccines: Underlying mechanisms</a>. <i><span class=\"citation_journal_name\">Vaccine</span></i>, <i><span class=\"citation_volume_number\">24</span></i> <span class=\"citation_issue_number\">Supplement 3: HPV Vaccines and Screening in the Prevention of Cervical Cancer</span>: <span class=\"citation_start_page\">S106</span>-<span class=\"citation_end_page\">S113</span>. doi:<span class=\"citation_doi\">10.1016/j.vaccine.2006.05.110</span>",
-            "rek_genre_xsdmf_id": 7207,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Journal Article",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": "Article (original research)",
@@ -613,18 +613,18 @@ export const trendingPublications = {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1048,
             "rek_thomson_citation_count": 87,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12379,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Article (original research)",
             "rek_scopus_citation_count": 135,
             "rek_herdc_notes_xsdmf_id": null,
             "rek_herdc_notes": null,
-            "rek_scopus_doc_type_xsdmf_id": 12550,
+            "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": "ar",
-            "rek_wok_doc_type_xsdmf_id": 12551,
+            "rek_wok_doc_type_xsdmf_id": null,
             "rek_wok_doc_type": "@",
             "rek_pubmed_doc_type_xsdmf_id": null,
             "rek_pubmed_doc_type": null,
@@ -633,7 +633,7 @@ export const trendingPublications = {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": 5488391,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": [],
@@ -665,21 +665,21 @@ export const trendingPublications = {
                 {
                     "rek_author_affiliation_country_id": 341560,
                     "rek_author_affiliation_country_pid": "UQ:103860",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country_order": 1,
                     "rek_author_affiliation_country": "gbr"
                 },
                 {
                     "rek_author_affiliation_country_id": 341561,
                     "rek_author_affiliation_country_pid": "UQ:103860",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country_order": 2,
                     "rek_author_affiliation_country": "usa"
                 },
                 {
                     "rek_author_affiliation_country_id": 341562,
                     "rek_author_affiliation_country_pid": "UQ:103860",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country_order": 3,
                     "rek_author_affiliation_country": "aus"
                 }
@@ -688,21 +688,21 @@ export const trendingPublications = {
                 {
                     "rek_author_affiliation_full_address_id": 375728,
                     "rek_author_affiliation_full_address_pid": "UQ:103860",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address_order": 1,
                     "rek_author_affiliation_full_address": "Tennis Court Road,Cambridge, CB2 1QP"
                 },
                 {
                     "rek_author_affiliation_full_address_id": 375729,
                     "rek_author_affiliation_full_address_pid": "UQ:103860",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address_order": 2,
                     "rek_author_affiliation_full_address": "Bethesda, MD"
                 },
                 {
                     "rek_author_affiliation_full_address_id": 375730,
                     "rek_author_affiliation_full_address_pid": "UQ:103860",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address_order": 3,
                     "rek_author_affiliation_full_address": "QLD"
                 }
@@ -712,21 +712,21 @@ export const trendingPublications = {
                 {
                     "rek_author_affiliation_name_id": 342411,
                     "rek_author_affiliation_name_pid": "UQ:103860",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name_order": 1,
                     "rek_author_affiliation_name": "Department of Pathology,University of Cambridge"
                 },
                 {
                     "rek_author_affiliation_name_id": 342412,
                     "rek_author_affiliation_name_pid": "UQ:103860",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name_order": 2,
                     "rek_author_affiliation_name": "Laboratory of Cellular Oncology,National Cancer Institute"
                 },
                 {
                     "rek_author_affiliation_name_id": 342413,
                     "rek_author_affiliation_name_pid": "UQ:103860",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name_order": 3,
                     "rek_author_affiliation_name": "Centre for Immunology and Cancer Research,University of Queensland"
                 }
@@ -862,7 +862,7 @@ export const trendingPublications = {
                 {
                     "rek_corresponding_country_id": 285607,
                     "rek_corresponding_country_pid": "UQ:103860",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                     "rek_corresponding_country_order": 1,
                     "rek_corresponding_country": "gbr"
                 }
@@ -871,7 +871,7 @@ export const trendingPublications = {
                 {
                     "rek_corresponding_email_id": 63042,
                     "rek_corresponding_email_pid": "UQ:103860",
-                    "rek_corresponding_email_xsdmf_id": 0,
+                    "rek_corresponding_email_xsdmf_id": null,
                     "rek_corresponding_email_order": 1,
                     "rek_corresponding_email": "mas1001@cam.ac.uk"
                 }
@@ -880,7 +880,7 @@ export const trendingPublications = {
                 {
                     "rek_corresponding_name_id": 55437,
                     "rek_corresponding_name_pid": "UQ:103860",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                     "rek_corresponding_name_order": 1,
                     "rek_corresponding_name": "Stanley M."
                 }
@@ -1307,13 +1307,13 @@ export const trendingPublicationsWithNoSources = {
         "rek_pid": "UQ:d8ece17",
         "rek_title_xsdmf_id": null,
         "rek_title": "Nutritional status, dietary intake, and health-related quality of life in outpatients with COPD",
-        "rek_description_xsdmf_id": 11441,
+        "rek_description_xsdmf_id": null,
         "rek_description": "Background: Malnutrition is common in patients with COPD; however, little is known about its impacts on health-related quality of life (QoL) among patients with COPD. This study aimed to explore the nutritional status and dietary intake among outpatients with COPD in Vietnam and its possible associations with QoL. Methods: A cross-sectional study was carried out in COPD outpatients visiting the COPD management unit at the National Lung Hospital, Hanoi, Vietnam between May 2017 and July 2017. Consecutive outpatients with a confirmed diagnosis of COPD were recruited with written inform consent. The nutritional status of participants was assessed using Subjective Global Assessment (SGA), and dietary intake via a 24-hour recall interview. The St George Respiratory Questionnaire (SGRQ) for COPD was used to investigate the participants' QoL. Sociodemographic and clinical data were extracted from hospital records. Results: Of 168 COPD outpatients involved in the study, three-quarters (74.4%) were diagnosed as malnourished (SGA B\/C) and 81.5% reported unintentional weight loss. Most of the patients did not meet their estimated energy and protein requirements (85.7% and 89.9%, respectively). Malnutrition was significantly associated with disease severity (P=0.039) and ratio of protein intake to estimated requirement (P=0.005). QoL was low for all levels of malnutrition or disease severity, with well-nourished participants and those with less disease severity having better QoL (P=0.006 and P<0.001, respectively). With an extra meal per day, the odds of having malnutrition decreased 5.6 times (P<0.05) and the total SGRQ reduced 3.61 scores (P<0.05) indicating a better QoL. Conclusion: Malnutrition and weight loss are prevalent among COPD outpatients. Most of the patients had inadequate dietary intake and low QoL. Nutrition counselling including increasing the number of meals per day with a focus on energy-and protein-rich foods may help improving nutritional status and QoL of patients with COPD in Vietnam.",
         "rek_display_type_xsdmf_id": null,
         "rek_display_type": 179,
         "rek_status_xsdmf_id": null,
         "rek_status": 2,
-        "rek_date_xsdmf_id": 6386,
+        "rek_date_xsdmf_id": null,
         "rek_date": "2019-01-14T00:00:00Z",
         "rek_object_type_xsdmf_id": null,
         "rek_object_type": 3,
@@ -1321,7 +1321,7 @@ export const trendingPublicationsWithNoSources = {
         "rek_depositor": 1003338941,
         "rek_created_date_xsdmf_id": null,
         "rek_created_date": "2019-03-15T00:07:32Z",
-        "rek_updated_date_xsdmf_id": 3678,
+        "rek_updated_date_xsdmf_id": null,
         "rek_updated_date": "2019-03-20T03:00:24Z",
         "rek_file_downloads": 0,
         "rek_citation": "",
@@ -1333,7 +1333,7 @@ export const trendingPublicationsWithNoSources = {
         "rek_formatted_title": null,
         "rek_formatted_abstract_xsdmf_id": null,
         "rek_formatted_abstract": null,
-        "rek_depositor_affiliation_xsdmf_id": 11881,
+        "rek_depositor_affiliation_xsdmf_id": null,
         "rek_depositor_affiliation": 1247,
         "rek_thomson_citation_count": 0,
         "rek_thomson_citation_count_xsdmf_id": null,
@@ -1342,7 +1342,7 @@ export const trendingPublicationsWithNoSources = {
         "rek_scopus_citation_count": 0,
         "rek_herdc_notes_xsdmf_id": null,
         "rek_herdc_notes": null,
-        "rek_scopus_doc_type_xsdmf_id": 12550,
+        "rek_scopus_doc_type_xsdmf_id": null,
         "rek_scopus_doc_type": "ar",
         "rek_wok_doc_type_xsdmf_id": null,
         "rek_wok_doc_type": "@",
@@ -1353,7 +1353,7 @@ export const trendingPublicationsWithNoSources = {
         "rek_altmetric_score_xsdmf_id": null,
         "rek_altmetric_id": 54035076,
         "rek_altmetric_id_xsdmf_id": null,
-        "rek_copyright_xsdmf_id": 3679,
+        "rek_copyright_xsdmf_id": null,
         "rek_copyright": "on",
         "fez_record_search_key_advisory_statement": null,
         "fez_record_search_key_article_number": null,
@@ -1404,38 +1404,38 @@ export const trendingPublicationsWithNoSources = {
         "fez_record_search_key_author_id": [{
             "rek_author_id_id": 32331212,
             "rek_author_id_pid": "UQ:d8ece17",
-            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 1
         }, {
             "rek_author_id_id": 32331213,
             "rek_author_id_pid": "UQ:d8ece17",
-            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 5573848,
             "rek_author_id_order": 2,
             "rek_author_id_lookup": "Peter Collins"
         }, {
             "rek_author_id_id": 32331214,
             "rek_author_id_pid": "UQ:d8ece17",
-            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 3
         }, {
             "rek_author_id_id": 32331215,
             "rek_author_id_pid": "UQ:d8ece17",
-            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 4
         }, {
             "rek_author_id_id": 32331216,
             "rek_author_id_pid": "UQ:d8ece17",
-            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 5
         }, {
             "rek_author_id_id": 32331217,
             "rek_author_id_pid": "UQ:d8ece17",
-            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 6
         }],
@@ -1447,76 +1447,76 @@ export const trendingPublicationsWithNoSources = {
         "fez_record_search_key_corresponding_country": [{
             "rek_corresponding_country_id": 464324,
             "rek_corresponding_country_pid": "UQ:d8ece17",
-            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country_xsdmf_id": null,
             "rek_corresponding_country": "Australia",
             "rek_corresponding_country_order": 1
         }, {
             "rek_corresponding_country_id": 464325,
             "rek_corresponding_country_pid": "UQ:d8ece17",
-            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country_xsdmf_id": null,
             "rek_corresponding_country": "Vietnam",
             "rek_corresponding_country_order": 2
         }, {
             "rek_corresponding_country_id": 464326,
             "rek_corresponding_country_pid": "UQ:d8ece17",
-            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country_xsdmf_id": null,
             "rek_corresponding_country": "Australia",
             "rek_corresponding_country_order": 3
         }, {
             "rek_corresponding_country_id": 464327,
             "rek_corresponding_country_pid": "UQ:d8ece17",
-            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country_xsdmf_id": null,
             "rek_corresponding_country": "Vietnam",
             "rek_corresponding_country_order": 4
         }],
         "fez_record_search_key_corresponding_email": [{
             "rek_corresponding_email_id": 124572,
             "rek_corresponding_email_pid": "UQ:d8ece17",
-            "rek_corresponding_email_xsdmf_id": 0,
+            "rek_corresponding_email_xsdmf_id": null,
             "rek_corresponding_email": "thanhha.nguyen@hdr.qut.edu.au",
             "rek_corresponding_email_order": 1
         }, {
             "rek_corresponding_email_id": 124573,
             "rek_corresponding_email_pid": "UQ:d8ece17",
-            "rek_corresponding_email_xsdmf_id": 0,
+            "rek_corresponding_email_xsdmf_id": null,
             "rek_corresponding_email": "thanhha.nguyen@hdr.qut.edu.au",
             "rek_corresponding_email_order": 2
         }],
         "fez_record_search_key_corresponding_name": [{
             "rek_corresponding_name_id": 162227,
             "rek_corresponding_name_pid": "UQ:d8ece17",
-            "rek_corresponding_name_xsdmf_id": 0,
+            "rek_corresponding_name_xsdmf_id": null,
             "rek_corresponding_name": "Ha Thanh Nguyen",
             "rek_corresponding_name_order": 1
         }, {
             "rek_corresponding_name_id": 162228,
             "rek_corresponding_name_pid": "UQ:d8ece17",
-            "rek_corresponding_name_xsdmf_id": 0,
+            "rek_corresponding_name_xsdmf_id": null,
             "rek_corresponding_name": "Ha Thanh Nguyen",
             "rek_corresponding_name_order": 2
         }],
         "fez_record_search_key_corresponding_organisation": [{
             "rek_corresponding_organisation_id": 433827,
             "rek_corresponding_organisation_pid": "UQ:d8ece17",
-            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation_xsdmf_id": null,
             "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
             "rek_corresponding_organisation_order": 1
         }, {
             "rek_corresponding_organisation_id": 433828,
             "rek_corresponding_organisation_pid": "UQ:d8ece17",
-            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation_xsdmf_id": null,
             "rek_corresponding_organisation": "Hanoi Medical University",
             "rek_corresponding_organisation_order": 2
         }, {
             "rek_corresponding_organisation_id": 433829,
             "rek_corresponding_organisation_pid": "UQ:d8ece17",
-            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation_xsdmf_id": null,
             "rek_corresponding_organisation": "Princess Alexandra Hosp",
             "rek_corresponding_organisation_order": 3
         }, {
             "rek_corresponding_organisation_id": 433830,
             "rek_corresponding_organisation_pid": "UQ:d8ece17",
-            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation_xsdmf_id": null,
             "rek_corresponding_organisation": "Natl Lung Hosp",
             "rek_corresponding_organisation_order": 4
         }],
@@ -1797,7 +1797,7 @@ export const trendingPublicationsWithNoSources = {
         "fez_record_search_key_refereed": {
             "rek_refereed_id": 2863948,
             "rek_refereed_pid": "UQ:d8ece17",
-            "rek_refereed_xsdmf_id": 7940,
+            "rek_refereed_xsdmf_id": null,
             "rek_refereed": 0
         },
         "fez_record_search_key_refereed_source": {
@@ -1810,7 +1810,7 @@ export const trendingPublicationsWithNoSources = {
         "fez_record_search_key_retracted": {
             "rek_retracted_id": 511326,
             "rek_retracted_pid": "UQ:d8ece17",
-            "rek_retracted_xsdmf_id": 16603,
+            "rek_retracted_xsdmf_id": null,
             "rek_retracted": 0
         },
         "fez_record_search_key_roman_script_journal_name": null,
