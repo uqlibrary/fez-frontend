@@ -265,9 +265,16 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.editorialAppointments.list,
                       component: components.MyEditorialAppointments,
-                      access: [roles.researcher],
+                      access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.editorialAppointments.title,
+                  },
+                  {
+                      path: pathConfig.journal.view(id),
+                      component: components.ViewJournal,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.journal.view.title,
                   },
               ]
             : []),
