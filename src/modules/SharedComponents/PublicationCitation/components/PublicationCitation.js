@@ -197,6 +197,13 @@ export class PublicationCitation extends PureComponent {
     renderActions = actions => {
         const { publication, showDefaultActions, publicationsLoading } = this.props;
         const pid = publication && publication.rek_pid && publication.rek_pid.replace(':', '');
+        const primaryButtonDisabled =
+            !publication.rek_pid &&
+            !publication.fez_record_search_key_author &&
+            !publication.fez_record_search_key_author_id &&
+            !publication.fez_record_search_key_contributor &&
+            !publication.fez_record_search_key_contributor_id;
+
         return actions && actions.length > 0
             ? actions.map((action, index) => {
                   const testId = `publication-action-${pid}`;
@@ -215,10 +222,10 @@ export class PublicationCitation extends PureComponent {
                       <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
                           {action.primary ? (
                               <Button
-                                  disabled={!!publicationsLoading}
+                                  {...buttonProps}
+                                  disabled={!!publicationsLoading || primaryButtonDisabled}
                                   classes={{ label: pid, root: pid }}
                                   variant="contained"
-                                  {...buttonProps}
                                   data-testid={`${testId}-primary`}
                               >
                                   {action.label}
