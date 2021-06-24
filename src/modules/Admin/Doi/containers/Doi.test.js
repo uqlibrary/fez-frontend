@@ -6,7 +6,7 @@ jest.mock('actions', () => ({
 
 import * as actions from 'actions';
 
-describe('Doi container', () => {
+describe('Doi containers', () => {
     it('should call action on submit', async () => {
         const record = {
             rek_pid: 'UQ:123456',

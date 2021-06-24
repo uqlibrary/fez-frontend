@@ -5,7 +5,7 @@ exports[`TabContainer component should render default view 1`] = `
   item={true}
   xs={12}
 >
-  &lt;p&gt;Test container&lt;/p&gt;
+  &lt;p&gt;Test containers&lt;/p&gt;
 </WithStyles(ForwardRef(Grid))>
 `;
 

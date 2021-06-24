@@ -54,6 +54,10 @@ export const flattedPathConfig = [
     '/records/mine',
     '/records/possible',
     '/records/search',
+    '/strategicpublishing/search',
+    '/strategicpublishing/results',
+    '/strategicpublishing/compare',
+    '/strategicpublishing/favourites',
     '/view',
 ];
 
@@ -270,6 +274,26 @@ export const getRoutesConfig = ({
                       access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.journal.view.title,
+                  },
+                  {
+                      path: pathConfig.strategicpublishing.search,
+                      component: components.StrategicPublishingSearch,
+                      pageTitle: locale.pages.strategicpublishing.search.title,
+                  },
+                  {
+                      path: pathConfig.strategicpublishing.results,
+                      component: components.StrategicPublishingResults,
+                      pageTitle: locale.pages.strategicpublishing.results.title,
+                  },
+                  {
+                      path: pathConfig.strategicpublishing.compare,
+                      component: components.StrategicPublishingCompare,
+                      pageTitle: locale.pages.strategicpublishing.compare.title,
+                  },
+                  {
+                      path: pathConfig.strategicpublishing.favourites,
+                      component: components.StrategicPublishingFavourites,
+                      pageTitle: locale.pages.strategicpublishing.favourites.title,
                   },
               ]
             : []),
@@ -520,6 +544,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.editorialAppointments.list,
                       ...locale.menu.myEditorialAppointments,
+                  },
+                  {
+                      linkTo: pathConfig.strategicpublishing.search,
+                      ...locale.menu.strategicpublishing.search,
                   },
                   {
                       linkTo: pathConfig.authorStatistics.url(account.id),

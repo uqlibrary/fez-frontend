@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component FileUploader should mount and unmount container and clear file uploader 1`] = `
+exports[`Component FileUploader should mount and unmount containers and clear file uploader 1`] = `
 <Provider
   store={
     Object {
@@ -2545,7 +2545,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
 </Provider>
 `;
 
-exports[`Component FileUploader should mount and unmount container and clear file uploader 2`] = `
+exports[`Component FileUploader should mount and unmount containers and clear file uploader 2`] = `
 <Provider
   store={
     Object {

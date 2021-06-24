@@ -85,6 +85,11 @@ export default {
         manageUsers: {
             primaryText: 'Manage users',
         },
+        strategicpublishing: {
+            search: {
+                primaryText: 'Strategic publishing tool',
+            },
+        },
     },
     footer: {
         cricos: {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component FileUploadRowStatus should mount the container 1`] = `
+exports[`Component FileUploadRowStatus should mount the containers 1`] = `
 <Provider
   store={
     Object {

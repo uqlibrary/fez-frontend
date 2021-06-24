@@ -5,7 +5,7 @@ function setup(testProps = {}) {
         value: 'ping',
         currentTab: 'pong',
         tabbed: false,
-        children: '<p>Test container</p>',
+        children: '<p>Test containers</p>',
         ...testProps,
     };
 

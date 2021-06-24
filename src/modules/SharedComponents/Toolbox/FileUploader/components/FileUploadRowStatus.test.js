@@ -49,7 +49,7 @@ describe('Component FileUploadRowStatus', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should mount the container', () => {
+    it('should mount the containers', () => {
         const wrapper = getElement(FileUploadRowStatusContainer, getProps(), { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -42,7 +42,7 @@ context('Search', () => {
         cy.contains('button', 'Add another field')
             .should('have.attr', 'aria-label', 'Click to add another advanced search field')
             .click();
-        cy.get('.content-container').scrollTo('top');
+        cy.get('.content-containers').scrollTo('top');
         cy.contains('Select a field')
             .closest('[class*="MuiInput-root"]')
             .should(

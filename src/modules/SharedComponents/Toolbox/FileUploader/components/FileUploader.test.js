@@ -41,7 +41,7 @@ describe('Component FileUploader', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('should mount and unmount container and clear file uploader', () => {
+    it('should mount and unmount containers and clear file uploader', () => {
         const wrapper = getElement(
             FileUploaderContainer,
             getProps({

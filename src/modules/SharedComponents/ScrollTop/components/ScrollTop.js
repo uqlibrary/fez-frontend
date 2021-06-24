@@ -24,12 +24,12 @@ export const styles = () => ({
 /* istanbul ignore next */
 const scrollWindowToTop = event => {
     event.preventDefault();
-    document.getElementById('content-container').scrollTop = 0;
+    document.getElementById('content-containers').scrollTop = 0;
 };
 
 export const ScrollTop = ({ show, showAfter, classes }) => {
     /* istanbul ignore next */
-    const scrollableContainer = document.getElementById('content-container');
+    const scrollableContainer = document.getElementById('content-containers');
     /* istanbul ignore next */
     if (
         !!show &&

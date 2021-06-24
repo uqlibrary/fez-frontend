@@ -666,6 +666,54 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing search",
+          "path": "/strategicpublishing/search/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing results",
+          "path": "/strategicpublishing/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/strategicpublishing/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/strategicpublishing/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -1293,14 +1341,74 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_19"
+            pageTitle="Strategic publishing search"
+            path="/strategicpublishing/search/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing results"
+            path="/strategicpublishing/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing compare"
+            path="/strategicpublishing/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Strategic publishing favourites"
+            path="/strategicpublishing/favourites/"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_23"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_24"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1317,14 +1425,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_21"
+            key="route_25"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_26"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -1339,7 +1447,7 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_23"
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1595,6 +1703,54 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing search",
+          "path": "/strategicpublishing/search/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing results",
+          "path": "/strategicpublishing/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/strategicpublishing/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/strategicpublishing/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -2222,14 +2378,74 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_19"
+            pageTitle="Strategic publishing search"
+            path="/strategicpublishing/search/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing results"
+            path="/strategicpublishing/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing compare"
+            path="/strategicpublishing/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Strategic publishing favourites"
+            path="/strategicpublishing/favourites/"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_23"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_24"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -2246,14 +2462,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_21"
+            key="route_25"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_26"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -2268,7 +2484,7 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_23"
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2942,6 +3158,54 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing search",
+          "path": "/strategicpublishing/search/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing results",
+          "path": "/strategicpublishing/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/strategicpublishing/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/strategicpublishing/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -3586,14 +3850,74 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/journal/view/:id([0-9]+)"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_19"
+            pageTitle="Strategic publishing search"
+            path="/strategicpublishing/search/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing results"
+            path="/strategicpublishing/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing compare"
+            path="/strategicpublishing/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Strategic publishing favourites"
+            path="/strategicpublishing/favourites/"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_23"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_24"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -3610,14 +3934,14 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_21"
+            key="route_25"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_26"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -3632,7 +3956,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 },
               }
             }
-            key="route_23"
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3886,6 +4210,54 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing search",
+          "path": "/strategicpublishing/search/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing results",
+          "path": "/strategicpublishing/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/strategicpublishing/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/strategicpublishing/favourites/",
         },
         Object {
           "component": [Function],
@@ -4142,6 +4514,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "linkTo": "/editorial-appointments",
           "primaryText": "My editorial appointments",
+        },
+        Object {
+          "linkTo": "/strategicpublishing/search/",
+          "primaryText": "Strategic publishing tool",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
@@ -4552,14 +4928,74 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_19"
+            pageTitle="Strategic publishing search"
+            path="/strategicpublishing/search/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing results"
+            path="/strategicpublishing/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing compare"
+            path="/strategicpublishing/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Strategic publishing favourites"
+            path="/strategicpublishing/favourites/"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_23"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_24"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -4576,14 +5012,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_21"
+            key="route_25"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_26"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -4598,7 +5034,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 },
               }
             }
-            key="route_23"
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4852,6 +5288,54 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing search",
+          "path": "/strategicpublishing/search/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing results",
+          "path": "/strategicpublishing/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/strategicpublishing/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/strategicpublishing/favourites/",
         },
         Object {
           "component": [Function],
@@ -5108,6 +5592,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/editorial-appointments",
           "primaryText": "My editorial appointments",
+        },
+        Object {
+          "linkTo": "/strategicpublishing/search/",
+          "primaryText": "Strategic publishing tool",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -5503,14 +5991,74 @@ exports[`Application component should render app for account with fez author wit
             path="/journal/view/:id([0-9]+)"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_19"
+            pageTitle="Strategic publishing search"
+            path="/strategicpublishing/search/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing results"
+            path="/strategicpublishing/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing compare"
+            path="/strategicpublishing/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            key="route_22"
+            pageTitle="Strategic publishing favourites"
+            path="/strategicpublishing/favourites/"
+          />
+          <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_23"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_24"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -5527,14 +6075,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_21"
+            key="route_25"
             path="/view/:pid(UQ:[a-z0-9]+)"
             regExPath="/view/(UQ:[a-z0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_26"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -5549,7 +6097,7 @@ exports[`Application component should render app for account with fez author wit
                 },
               }
             }
-            key="route_23"
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5803,6 +6351,54 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing search",
+          "path": "/strategicpublishing/search/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing results",
+          "path": "/strategicpublishing/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/strategicpublishing/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/strategicpublishing/favourites/",
         },
         Object {
           "component": [Function],
@@ -7823,6 +8419,54 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journal/view/:id([0-9]+)",
                           },
                           Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
+                            },
+                            "pageTitle": "Strategic publishing search",
+                            "path": "/strategicpublishing/search/",
+                          },
+                          Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
+                            },
+                            "pageTitle": "Strategic publishing results",
+                            "path": "/strategicpublishing/results/",
+                          },
+                          Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
+                            },
+                            "pageTitle": "Strategic publishing compare",
+                            "path": "/strategicpublishing/compare/",
+                          },
+                          Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
+                            },
+                            "pageTitle": "Strategic publishing favourites",
+                            "path": "/strategicpublishing/favourites/",
+                          },
+                          Object {
                             "component": [Function],
                             "exact": true,
                             "pageTitle": "eSpace",
@@ -8151,6 +8795,54 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "exact": true,
                               "pageTitle": "Journal details",
                               "path": "/journal/view/:id([0-9]+)",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
+                              },
+                              "pageTitle": "Strategic publishing search",
+                              "path": "/strategicpublishing/search/",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
+                              },
+                              "pageTitle": "Strategic publishing results",
+                              "path": "/strategicpublishing/results/",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
+                              },
+                              "pageTitle": "Strategic publishing compare",
+                              "path": "/strategicpublishing/compare/",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
+                              },
+                              "pageTitle": "Strategic publishing favourites",
+                              "path": "/strategicpublishing/favourites/",
                             },
                             Object {
                               "component": [Function],
@@ -8482,6 +9174,54 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "exact": true,
                                 "pageTitle": "Journal details",
                                 "path": "/journal/view/:id([0-9]+)",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
+                                },
+                                "pageTitle": "Strategic publishing search",
+                                "path": "/strategicpublishing/search/",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
+                                },
+                                "pageTitle": "Strategic publishing results",
+                                "path": "/strategicpublishing/results/",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
+                                },
+                                "pageTitle": "Strategic publishing compare",
+                                "path": "/strategicpublishing/compare/",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
+                                },
+                                "pageTitle": "Strategic publishing favourites",
+                                "path": "/strategicpublishing/favourites/",
                               },
                               Object {
                                 "component": [Function],
