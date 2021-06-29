@@ -150,7 +150,7 @@ export const NewListEditor = ({
             <div id={`${listEditorId}-list`} data-testid={`${listEditorId}-list`} {...scrollStyle.current}>
                 {itemsList.map((item, index) => (
                     <ListRow
-                        key={JSON.stringify(item)}
+                        key={JSON.stringify(item) + index}
                         item={item}
                         index={index}
                         canEdit={canEdit}
