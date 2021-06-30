@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const JournalSearchKeyword = ({ keyword, onClickKeyword, variant }) => {
+export const SearchKeyword = ({ keyword, onClickKeyword, variant }) => {
     const classes = useStyles();
 
     return (
@@ -32,10 +32,10 @@ export const JournalSearchKeyword = ({ keyword, onClickKeyword, variant }) => {
     );
 };
 
-JournalSearchKeyword.propTypes = {
+SearchKeyword.propTypes = {
     keyword: PropTypes.string.isRequired,
     onClickKeyword: PropTypes.func.isRequired,
     variant: PropTypes.oneOf(['default', 'addable']),
 };
 
-export default React.memo(JournalSearchKeyword);
+export default React.memo(SearchKeyword);

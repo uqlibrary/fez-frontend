@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import JournalSearchKeyword from './JournalSearchKeyword';
+import SearchKeyword from './SearchKeyword';
 import ForCodeSource from './ForCodeSource';
 
-export const JournalSearchForCodeKeyword = ({ forCode, onClickKeyword, sources }) => {
+export const ForCodeSearchKeyword = ({ keyword, onClickKeyword, sources }) => {
     return (
         <React.Fragment>
-            <JournalSearchKeyword keyword={forCode} variant="addable" onClickKeyword={onClickKeyword} />
+            <SearchKeyword keyword={keyword} variant="addable" onClickKeyword={onClickKeyword} />
             {sources.map(source => {
                 return (
                     <React.Fragment>
@@ -20,10 +20,10 @@ export const JournalSearchForCodeKeyword = ({ forCode, onClickKeyword, sources }
     );
 };
 
-JournalSearchForCodeKeyword.propTypes = {
-    forCode: PropTypes.string.isRequired,
+ForCodeSearchKeyword.propTypes = {
+    keyword: PropTypes.string.isRequired,
     onClickKeyword: PropTypes.func.isRequired,
     sources: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default React.memo(JournalSearchForCodeKeyword);
+export default React.memo(ForCodeSearchKeyword);
