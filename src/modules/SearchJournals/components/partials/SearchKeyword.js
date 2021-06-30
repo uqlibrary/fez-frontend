@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const SearchKeyword = ({ keyword, onClickKeyword, variant }) => {
+export const SearchKeyword = ({ keyword, onKeywordClick, variant }) => {
     const classes = useStyles();
 
     return (
@@ -25,7 +25,7 @@ export const SearchKeyword = ({ keyword, onClickKeyword, variant }) => {
             variant="body2"
             classes={{ root: classes.root }}
             className={classes[variant || 'default']}
-            onClick={onClickKeyword}
+            onClick={onKeywordClick}
         >
             {keyword}
         </Typography>
@@ -34,7 +34,7 @@ export const SearchKeyword = ({ keyword, onClickKeyword, variant }) => {
 
 SearchKeyword.propTypes = {
     keyword: PropTypes.string.isRequired,
-    onClickKeyword: PropTypes.func.isRequired,
+    onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
 };
 

@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import SearchKeyword from './SearchKeyword';
 import ForCodeSource from './ForCodeSource';
 
-export const ForCodeSearchKeyword = ({ keyword, onClickKeyword, sources }) => {
+export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources }) => {
     return (
         <React.Fragment>
-            <SearchKeyword keyword={keyword} variant="addable" onClickKeyword={onClickKeyword} />
+            <SearchKeyword keyword={keyword} variant="addable" onKeywordClick={onKeywordClick} />
             {sources.map(source => {
                 return (
                     <React.Fragment>
@@ -22,7 +22,7 @@ export const ForCodeSearchKeyword = ({ keyword, onClickKeyword, sources }) => {
 
 ForCodeSearchKeyword.propTypes = {
     keyword: PropTypes.string.isRequired,
-    onClickKeyword: PropTypes.func.isRequired,
+    onKeywordClick: PropTypes.func.isRequired,
     sources: PropTypes.arrayOf(PropTypes.object),
 };
 

@@ -23,7 +23,7 @@ ForCodeSearchKeywordsList.propTypes = {
     keywordsList: PropTypes.arrayOf(
         PropTypes.shape({
             keyword: PropTypes.string.isRequired,
-            onClickKeyword: PropTypes.func.isRequired,
+            onKeywordClick: PropTypes.func.isRequired,
             sources: PropTypes.array.isRequired,
         }),
     ).isRequired,
