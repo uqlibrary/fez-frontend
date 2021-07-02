@@ -1346,14 +1346,21 @@ export const getRemoveFromCollectionData = (records, data) => {
 };
 
 export const getCopyToCollectionData = (records, data) => {
-    return records.map(record => ({
-        rek_pid: record.rek_pid,
-        fez_record_search_key_ismemberof: [
-            ...record.fez_record_search_key_ismemberof,
-            ...data.collections.map((collection, index) => ({
-                rek_ismemberof: collection.rek_pid,
-                rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
-            })),
-        ],
-    }));
+    return records.map(record => {
+        const existingCollectionPids = record.fez_record_search_key_ismemberof.map(
+            existingCollection => existingCollection.rek_pid,
+        );
+        return {
+            rek_pid: record.rek_pid,
+            fez_record_search_key_ismemberof: [
+                ...record.fez_record_search_key_ismemberof,
+                ...data.collections
+                    .filter(newCollection => existingCollectionPids.indexOf(newCollection.rek_pid) === -1)
+                    .map((collection, index) => ({
+                        rek_ismemberof: collection.rek_pid,
+                        rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
+                    })),
+            ],
+        };
+    });
 };
