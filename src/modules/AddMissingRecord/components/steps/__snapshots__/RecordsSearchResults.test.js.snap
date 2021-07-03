@@ -1710,11 +1710,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                   <Cards
                                     classes={
                                       Object {
-                                        "card": "Cards-card-104",
-                                        "cardContentNoPadding": "Cards-cardContentNoPadding-105",
-                                        "cardHeaderAccent": "Cards-cardHeaderAccent-107",
-                                        "cardHeaderPrimary": "Cards-cardHeaderPrimary-106",
-                                        "fullHeight": "Cards-fullHeight-108",
+                                        "card": "Cards-card-1",
+                                        "cardContentNoPadding": "Cards-cardContentNoPadding-2",
+                                        "cardHeaderAccent": "Cards-cardHeaderAccent-4",
+                                        "cardHeaderPrimary": "Cards-cardHeaderPrimary-3",
+                                        "fullHeight": "Cards-fullHeight-5",
                                       }
                                     }
                                     resultsText="Top [noOfResults] potential match(es) displayed for \\"[searchQuery]\\"."
@@ -2105,13 +2105,13 @@ exports[`Search record results should render a single unclaimable item with no a
                                     title="Possible matches found"
                                   >
                                     <WithStyles(ForwardRef(Card))
-                                      className="Cards-card-104 StandardCard"
+                                      className="Cards-card-1 StandardCard"
                                       data-testid="standard-card-possible-matches-found"
                                       id="standard-card-possible-matches-found"
                                       style={Object {}}
                                     >
                                       <ForwardRef(Card)
-                                        className="Cards-card-104 StandardCard"
+                                        className="Cards-card-1 StandardCard"
                                         classes={
                                           Object {
                                             "root": "MuiCard-root",
@@ -2122,14 +2122,14 @@ exports[`Search record results should render a single unclaimable item with no a
                                         style={Object {}}
                                       >
                                         <WithStyles(ForwardRef(Paper))
-                                          className="MuiCard-root Cards-card-104 StandardCard"
+                                          className="MuiCard-root Cards-card-1 StandardCard"
                                           data-testid="standard-card-possible-matches-found"
                                           elevation={1}
                                           id="standard-card-possible-matches-found"
                                           style={Object {}}
                                         >
                                           <ForwardRef(Paper)
-                                            className="MuiCard-root Cards-card-104 StandardCard"
+                                            className="MuiCard-root Cards-card-1 StandardCard"
                                             classes={
                                               Object {
                                                 "elevation0": "MuiPaper-elevation0",
@@ -2168,7 +2168,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                             style={Object {}}
                                           >
                                             <div
-                                              className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                              className="MuiPaper-root MuiCard-root Cards-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                               data-testid="standard-card-possible-matches-found"
                                               id="standard-card-possible-matches-found"
                                               style={Object {}}

@@ -88,7 +88,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             aria-label="Close menu"
             onClick={[MockFunction]}
           >
-            <KeyboardArrowLeftIcon />
+            <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </Hidden>
@@ -225,7 +225,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             aria-label="Close menu"
             onClick={[MockFunction]}
           >
-            <KeyboardArrowLeftIcon />
+            <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </Hidden>
@@ -380,7 +380,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             aria-label="Close menu"
             onClick={[MockFunction]}
           >
-            <KeyboardArrowLeftIcon />
+            <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </Hidden>

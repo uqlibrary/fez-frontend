@@ -3336,11 +3336,11 @@ exports[`Related publications Component  should render component 2`] = `
                             className="relatedPublications"
                             classes={
                               Object {
-                                "card": "Cards-card-105",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-106",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-108",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-107",
-                                "fullHeight": "Cards-fullHeight-109",
+                                "card": "Cards-card-2",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-3",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-5",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-4",
+                                "fullHeight": "Cards-fullHeight-6",
                               }
                             }
                             theme={
@@ -3700,13 +3700,13 @@ exports[`Related publications Component  should render component 2`] = `
                             title="Title"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-105 StandardCard"
+                              className="Cards-card-2 StandardCard"
                               data-testid="standard-card-title"
                               id="standard-card-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-105 StandardCard"
+                                className="Cards-card-2 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -3717,14 +3717,14 @@ exports[`Related publications Component  should render component 2`] = `
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-105 StandardCard"
+                                  className="MuiCard-root Cards-card-2 StandardCard"
                                   data-testid="standard-card-title"
                                   elevation={1}
                                   id="standard-card-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-105 StandardCard"
+                                    className="MuiCard-root Cards-card-2 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -3763,7 +3763,7 @@ exports[`Related publications Component  should render component 2`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-2 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-title"
                                       id="standard-card-title"
                                       style={Object {}}
@@ -7339,11 +7339,11 @@ exports[`Related publications Component  should render with a publication title 
                             className="relatedPublications"
                             classes={
                               Object {
-                                "card": "Cards-card-105",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-106",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-108",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-107",
-                                "fullHeight": "Cards-fullHeight-109",
+                                "card": "Cards-card-2",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-3",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-5",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-4",
+                                "fullHeight": "Cards-fullHeight-6",
                               }
                             }
                             theme={
@@ -7703,13 +7703,13 @@ exports[`Related publications Component  should render with a publication title 
                             title="A test Title"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-105 StandardCard"
+                              className="Cards-card-2 StandardCard"
                               data-testid="standard-card-a-test-title"
                               id="standard-card-a-test-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-105 StandardCard"
+                                className="Cards-card-2 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -7720,14 +7720,14 @@ exports[`Related publications Component  should render with a publication title 
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-105 StandardCard"
+                                  className="MuiCard-root Cards-card-2 StandardCard"
                                   data-testid="standard-card-a-test-title"
                                   elevation={1}
                                   id="standard-card-a-test-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-105 StandardCard"
+                                    className="MuiCard-root Cards-card-2 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -7766,7 +7766,7 @@ exports[`Related publications Component  should render with a publication title 
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-2 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-a-test-title"
                                       id="standard-card-a-test-title"
                                       style={Object {}}
@@ -11421,11 +11421,11 @@ exports[`Related publications Component  should render without a child search ke
                             className="relatedPublications"
                             classes={
                               Object {
-                                "card": "Cards-card-105",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-106",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-108",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-107",
-                                "fullHeight": "Cards-fullHeight-109",
+                                "card": "Cards-card-2",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-3",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-5",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-4",
+                                "fullHeight": "Cards-fullHeight-6",
                               }
                             }
                             theme={
@@ -11785,13 +11785,13 @@ exports[`Related publications Component  should render without a child search ke
                             title="Title"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-105 StandardCard"
+                              className="Cards-card-2 StandardCard"
                               data-testid="standard-card-title"
                               id="standard-card-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-105 StandardCard"
+                                className="Cards-card-2 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -11802,14 +11802,14 @@ exports[`Related publications Component  should render without a child search ke
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-105 StandardCard"
+                                  className="MuiCard-root Cards-card-2 StandardCard"
                                   data-testid="standard-card-title"
                                   elevation={1}
                                   id="standard-card-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-105 StandardCard"
+                                    className="MuiCard-root Cards-card-2 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -11848,7 +11848,7 @@ exports[`Related publications Component  should render without a child search ke
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-2 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-title"
                                       id="standard-card-title"
                                       style={Object {}}
@@ -23606,11 +23606,11 @@ exports[`Related publications Component  should render without a parent search k
                             className="relatedPublications"
                             classes={
                               Object {
-                                "card": "Cards-card-105",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-106",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-108",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-107",
-                                "fullHeight": "Cards-fullHeight-109",
+                                "card": "Cards-card-2",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-3",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-5",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-4",
+                                "fullHeight": "Cards-fullHeight-6",
                               }
                             }
                             theme={
@@ -23970,13 +23970,13 @@ exports[`Related publications Component  should render without a parent search k
                             title="Title"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-105 StandardCard"
+                              className="Cards-card-2 StandardCard"
                               data-testid="standard-card-title"
                               id="standard-card-title"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-105 StandardCard"
+                                className="Cards-card-2 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -23987,14 +23987,14 @@ exports[`Related publications Component  should render without a parent search k
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-105 StandardCard"
+                                  className="MuiCard-root Cards-card-2 StandardCard"
                                   data-testid="standard-card-title"
                                   elevation={1}
                                   id="standard-card-title"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-105 StandardCard"
+                                    className="MuiCard-root Cards-card-2 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -24033,7 +24033,7 @@ exports[`Related publications Component  should render without a parent search k
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-105 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-2 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-title"
                                       id="standard-card-title"
                                       style={Object {}}

@@ -570,7 +570,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                               <span
                                 className="MuiIconButton-label"
                               >
-                                <DeleteIcon>
+                                <ForwardRef(DeleteIcon)>
                                   <WithStyles(ForwardRef(SvgIcon))>
                                     <ForwardRef(SvgIcon)
                                       classes={
@@ -588,7 +588,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                                       }
                                     >
                                       <svg
-                                        aria-hidden="true"
+                                        aria-hidden={true}
                                         className="MuiSvgIcon-root"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -599,7 +599,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </DeleteIcon>
+                                </ForwardRef(DeleteIcon)>
                               </span>
                               <WithStyles(memo)
                                 center={true}
@@ -721,7 +721,7 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
         data-testid="undefined-delete"
         onClick={[MockFunction]}
       >
-        <DeleteIcon />
+        <Memo(ForwardRef(DeleteIcon)) />
       </WithStyles(ForwardRef(IconButton))>
     </span>
   </WithStyles(ForwardRef(Tooltip))>
@@ -739,7 +739,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
         disabled={true}
         onClick={[MockFunction]}
       >
-        <DeleteIcon />
+        <Memo(ForwardRef(DeleteIcon)) />
       </WithStyles(ForwardRef(IconButton))>
     </span>
   </WithStyles(ForwardRef(Tooltip))>
@@ -749,7 +749,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
 <Fragment>
   <WithStyles(ForwardRef(IconButton))>
-    <DoneIcon />
+    <Memo(ForwardRef(DoneIcon)) />
   </WithStyles(ForwardRef(IconButton))>
 </Fragment>
 `;
@@ -779,7 +779,7 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
         data-testid="undefined-delete"
         onClick={[MockFunction]}
       >
-        <DeleteIcon />
+        <Memo(ForwardRef(DeleteIcon)) />
       </WithStyles(ForwardRef(IconButton))>
     </span>
   </WithStyles(ForwardRef(Tooltip))>
