@@ -1,27 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
-
 import SearchKeyword from './SearchKeyword';
+import KeywordsList from './KeywordsList';
 import ExternalLink from 'modules/SharedComponents/ExternalLink';
 
-export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList }) => {
-    return (
-        <Grid container>
-            <Grid item xs={12}>
-                {keywordsListTitle}
-            </Grid>
-            {!!keywordsList &&
-                keywordsList.length > 0 &&
-                keywordsList.map(keywordItem => (
-                    <ExternalLink title={keywordItem.title} href={keywordItem.href}>
-                        <SearchKeyword keyword={keywordItem.keyword} />
-                    </ExternalLink>
-                ))}
-        </Grid>
-    );
-};
+export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList }) => (
+    <KeywordsList
+        title={keywordsListTitle}
+        list={
+            !!keywordsList &&
+            keywordsList.length > 0 &&
+            keywordsList.map(keywordItem => (
+                <ExternalLink title={keywordItem.title} href={keywordItem.href}>
+                    <SearchKeyword keyword={keywordItem.keyword} />
+                </ExternalLink>
+            ))
+        }
+    />
+);
 
 ExactMatchSearchKeywordsList.propTypes = {
     keywordsListTitle: PropTypes.string.isRequired,

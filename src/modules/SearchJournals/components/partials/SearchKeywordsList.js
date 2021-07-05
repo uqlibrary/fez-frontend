@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
+import KeywordsList from 'KeywordsList';
 
 import SearchKeyword from './SearchKeyword';
 
-export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => {
-    return (
-        <Grid container>
-            <Grid item xs={12}>
-                {keywordsListTitle}
-            </Grid>
-            {!!keywordsList &&
-                keywordsList.length > 0 &&
-                keywordsList.map(keywordItem => <SearchKeyword {...keywordItem} onKeywordClick={onKeywordClick} />)}
-        </Grid>
-    );
-};
+export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => (
+    <KeywordsList
+        title={keywordsListTitle}
+        list={
+            !!keywordsList &&
+            keywordsList.length > 0 &&
+            keywordsList.map(keywordItem => <SearchKeyword {...keywordItem} onKeywordClick={onKeywordClick} />)
+        }
+    />
+);
 
 SearchKeywordsList.propTypes = {
     keywordsListTitle: PropTypes.string.isRequired,

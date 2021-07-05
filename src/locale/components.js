@@ -3588,6 +3588,10 @@ export default {
                     chipTitle: 'Subject',
                 },
             },
+            selectedKeywords: {
+                title: 'Searching for journals containing',
+                combiner: ' + ',
+            },
         },
     },
 };
