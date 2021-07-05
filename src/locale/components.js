@@ -3567,5 +3567,27 @@ export default {
                 message: 'A user could not be deleted.',
             },
         },
+        journalSearch: {
+            input: {
+                placeholder: 'Enter a journal title, keyword, subject or field of research code',
+            },
+            keywordsBrowser: {
+                exactMatch: {
+                    title: 'Exact title match',
+                },
+                titleMatch: {
+                    title: 'Title containing',
+                    chipTitle: 'Title',
+                },
+                keywordMatch: {
+                    title: 'Keyword matching',
+                    chipTitle: 'Keyword',
+                },
+                forCodeMatch: {
+                    title: 'Subjects & Field of research',
+                    chipTitle: 'Subject',
+                },
+            },
+        },
     },
 };

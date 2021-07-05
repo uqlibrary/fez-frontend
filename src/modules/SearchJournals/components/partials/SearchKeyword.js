@@ -19,13 +19,14 @@ const useStyles = makeStyles(theme => ({
 
 export const SearchKeyword = ({ keyword, onKeywordClick, variant }) => {
     const classes = useStyles();
+    const handleKeywordClick = () => onKeywordClick(keyword);
 
     return (
         <Typography
             variant="body2"
             classes={{ root: classes.root }}
             className={classes[variant || 'default']}
-            onClick={onKeywordClick}
+            onClick={handleKeywordClick}
         >
             {keyword}
         </Typography>

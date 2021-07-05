@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import SearchKeyword from './SearchKeyword';
 import ExternalLink from 'modules/SharedComponents/ExternalLink';
 
-export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => {
+export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList }) => {
     return (
         <Grid container>
             <Grid item xs={12}>
@@ -15,7 +15,7 @@ export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList, 
             {!!keywordsList &&
                 keywordsList.length > 0 &&
                 keywordsList.map(keywordItem => (
-                    <ExternalLink title={keywordItem.title} href={keywordItem.href} onClick={onKeywordClick}>
+                    <ExternalLink title={keywordItem.title} href={keywordItem.href}>
                         <SearchKeyword keyword={keywordItem.keyword} />
                     </ExternalLink>
                 ))}
@@ -32,7 +32,6 @@ ExactMatchSearchKeywordsList.propTypes = {
             href: PropTypes.string.isRequired,
         }),
     ).isRequired,
-    onKeywordClick: PropTypes.func.isRequired,
 };
 
 export default React.memo(ExactMatchSearchKeywordsList);
