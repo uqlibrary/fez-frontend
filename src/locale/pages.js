@@ -551,6 +551,16 @@ export default {
                 alertId: 'alert-error',
             },
         },
+        searchJournals: {
+            title: 'Journal search',
+            loadingMessage: 'Searching for journals',
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message => message,
+                alertId: 'alert-error',
+            },
+        },
         collection: {
             title: 'Add a missing collection',
             cancelWorkflowConfirmation: {

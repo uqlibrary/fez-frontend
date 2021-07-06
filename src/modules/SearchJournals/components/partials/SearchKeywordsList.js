@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import KeywordsList from 'KeywordsList';
+import KeywordsList from './KeywordsList';
 
 import SearchKeyword from './SearchKeyword';
 

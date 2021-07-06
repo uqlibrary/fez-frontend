@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import SelectedKeywordItem from './partials/SelectedKeywordItem';
 
-import { componentLocale } from 'locale/components';
+import locale from 'locale/components';
 
 export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
-    const txt = componentLocale.components.journalSearch;
+    const txt = locale.components.journalSearch;
     return (
         <React.Fragment>
-            <Typography variant="h6">{txt.selectedKeywords.title}</Typography>
+            <Typography variant="h6" color="primary">
+                {txt.selectedKeywords.title}
+            </Typography>
             {keywords
                 .map((keyword, index) => (
                     <SelectedKeywordItem key={`keyword-${keyword.type}-${index}`} onKeywordDelete={onKeywordDelete} />

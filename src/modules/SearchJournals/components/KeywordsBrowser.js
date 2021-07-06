@@ -8,12 +8,14 @@ import ExactMatchSearchKeywordsList from './partials/ExactMatchSearchKeywordsLis
 import SearchKeywordsList from './partials/SearchKeywordsList';
 import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 
-import { componentLocale } from 'locale/components';
+import locale from 'locale/components';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
-    const txt = componentLocale.components.journalSearch;
+    const txt = locale.components.journalSearch;
     // Subject to change
-    const journalSearchKeywords = useSelector(state => state.get('journalSearchReducer').journalSearchKeywords);
+    const journalSearchKeywords = useSelector(
+        state => (state.get('journalSearchReducer') || {}).journalSearchKeywords || [],
+    );
 
     /**
      * Handle click event on keyword
@@ -23,7 +25,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @returns void
      */
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleKeywordClick = React.useCallback((type, keyword) => onKeywordAdd(type, keyword), []);
+    const handleKeywordClick = React.useCallback((type, keyword) => onKeywordAdd({ type, text: keyword }), []);
 
     /**
      * Handle click event on FoR code matching keyword

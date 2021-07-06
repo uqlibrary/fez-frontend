@@ -3568,6 +3568,9 @@ export default {
             },
         },
         journalSearch: {
+            journalSearchInterface: {
+                title: 'Journal search',
+            },
             input: {
                 placeholder: 'Enter a journal title, keyword, subject or field of research code',
             },

@@ -41,4 +41,5 @@ export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
 export { SearchRecords } from 'modules/SearchRecords';
+export { SearchJournals } from 'modules/SearchJournals';
 export { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';

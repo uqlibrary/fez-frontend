@@ -8,7 +8,9 @@ export const KeywordsList = ({ title, list }) => {
     return (
         <Grid container>
             <Grid item xs={12}>
-                <Typography variant="h5">{title}</Typography>
+                <Typography variant="h5" color="primary">
+                    {title}
+                </Typography>
             </Grid>
             {!!list && list.length > 0 && list}
         </Grid>

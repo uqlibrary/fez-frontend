@@ -43,6 +43,7 @@ export const flattedPathConfig = [
     '/data-collections/mine',
     '/editorial-appointments',
     '/journal/view',
+    '/journals/search',
     '/rhdsubmission',
     '/sbslodge_new',
     '/tool/lookup',
@@ -105,6 +106,12 @@ export const getRoutesConfig = ({
             component: components.ViewJournal,
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
+        },
+        {
+            path: pathConfig.journal.search,
+            component: components.SearchJournals,
+            exact: true,
+            pageTitle: locale.pages.searchJournals.title,
         },
         ...(!account
             ? [

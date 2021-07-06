@@ -5,14 +5,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { loadJournalSearchKeywords } from 'actions';
 
-import { componentLocale } from 'locale/components';
+import locale from 'locale/components';
 
 export const JournalSearchInput = ({ initialValue }) => {
-    const txt = componentLocale.components.journalSearch;
+    const txt = locale.components.journalSearch;
     const dispatch = useDispatch();
 
     const loadingJournalSearchKeywords = useSelector(
-        state => state.get('journalSearchReducer').loadingJournalSearchKeywords,
+        state => (state.get('journalSearchReducer') || {}).loadingJournalSearchKeywords,
     );
 
     const handleJournalSearchInput = searchQuery => dispatch(loadJournalSearchKeywords(searchQuery));
@@ -25,6 +25,7 @@ export const JournalSearchInput = ({ initialValue }) => {
             itemsList={[]}
             loadSuggestions={handleJournalSearchInput}
             placeholder={txt.input.placeholder}
+            filterOptions={() => {}}
         />
     );
 };
