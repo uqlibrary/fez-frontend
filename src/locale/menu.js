@@ -85,7 +85,7 @@ export default {
         manageUsers: {
             primaryText: 'Manage users',
         },
-        strategicpublishing: {
+        journals: {
             search: {
                 primaryText: 'Strategic publishing tool',
             },

@@ -1414,7 +1414,7 @@ export default {
             title: 'Manage users',
             loadingMessage: 'Loading users',
         },
-        strategicpublishing: {
+        journals: {
             search: {
                 title: 'Strategic publishing search',
             },

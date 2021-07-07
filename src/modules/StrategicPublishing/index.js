@@ -1,4 +1,4 @@
-export { Search as StrategicPublishingSearch } from './components/Search';
-export { Results as StrategicPublishingResults } from './components/Results';
-export { Compare as StrategicPublishingCompare } from './components/Compare';
-export { Favourites as StrategicPublishingFavourites } from './components/Favourites';
+export { Search as journalsSearch } from './components/Search';
+export { Results as journalsResults } from './components/Results';
+export { Compare as journalsCompare } from './components/Compare';
+export { Favourites as journalsFavourites } from './components/Favourites';

@@ -675,7 +675,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing search",
-          "path": "/strategicpublishing/search/",
+          "path": "/journals/search/",
         },
         Object {
           "component": Object {
@@ -687,7 +687,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing results",
-          "path": "/strategicpublishing/results/",
+          "path": "/journals/results/",
         },
         Object {
           "component": Object {
@@ -699,7 +699,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing compare",
-          "path": "/strategicpublishing/compare/",
+          "path": "/journals/compare/",
         },
         Object {
           "component": Object {
@@ -711,7 +711,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing favourites",
-          "path": "/strategicpublishing/favourites/",
+          "path": "/journals/favourites/",
         },
         Object {
           "component": [Function],
@@ -1353,7 +1353,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_19"
             pageTitle="Strategic publishing search"
-            path="/strategicpublishing/search/"
+            path="/journals/search/"
           />
           <Route
             component={
@@ -1368,7 +1368,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_20"
             pageTitle="Strategic publishing results"
-            path="/strategicpublishing/results/"
+            path="/journals/results/"
           />
           <Route
             component={
@@ -1383,7 +1383,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_21"
             pageTitle="Strategic publishing compare"
-            path="/strategicpublishing/compare/"
+            path="/journals/compare/"
           />
           <Route
             component={
@@ -1398,7 +1398,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_22"
             pageTitle="Strategic publishing favourites"
-            path="/strategicpublishing/favourites/"
+            path="/journals/favourites/"
           />
           <Route
             component={[Function]}
@@ -1712,7 +1712,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing search",
-          "path": "/strategicpublishing/search/",
+          "path": "/journals/search/",
         },
         Object {
           "component": Object {
@@ -1724,7 +1724,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing results",
-          "path": "/strategicpublishing/results/",
+          "path": "/journals/results/",
         },
         Object {
           "component": Object {
@@ -1736,7 +1736,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing compare",
-          "path": "/strategicpublishing/compare/",
+          "path": "/journals/compare/",
         },
         Object {
           "component": Object {
@@ -1748,7 +1748,7 @@ exports[`Application component should determine if it has incomplete works from 
             },
           },
           "pageTitle": "Strategic publishing favourites",
-          "path": "/strategicpublishing/favourites/",
+          "path": "/journals/favourites/",
         },
         Object {
           "component": [Function],
@@ -2390,7 +2390,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_19"
             pageTitle="Strategic publishing search"
-            path="/strategicpublishing/search/"
+            path="/journals/search/"
           />
           <Route
             component={
@@ -2405,7 +2405,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_20"
             pageTitle="Strategic publishing results"
-            path="/strategicpublishing/results/"
+            path="/journals/results/"
           />
           <Route
             component={
@@ -2420,7 +2420,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_21"
             pageTitle="Strategic publishing compare"
-            path="/strategicpublishing/compare/"
+            path="/journals/compare/"
           />
           <Route
             component={
@@ -2435,7 +2435,7 @@ exports[`Application component should determine if it has incomplete works from 
             }
             key="route_22"
             pageTitle="Strategic publishing favourites"
-            path="/strategicpublishing/favourites/"
+            path="/journals/favourites/"
           />
           <Route
             component={[Function]}
@@ -3167,7 +3167,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             },
           },
           "pageTitle": "Strategic publishing search",
-          "path": "/strategicpublishing/search/",
+          "path": "/journals/search/",
         },
         Object {
           "component": Object {
@@ -3179,7 +3179,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             },
           },
           "pageTitle": "Strategic publishing results",
-          "path": "/strategicpublishing/results/",
+          "path": "/journals/results/",
         },
         Object {
           "component": Object {
@@ -3191,7 +3191,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             },
           },
           "pageTitle": "Strategic publishing compare",
-          "path": "/strategicpublishing/compare/",
+          "path": "/journals/compare/",
         },
         Object {
           "component": Object {
@@ -3203,7 +3203,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             },
           },
           "pageTitle": "Strategic publishing favourites",
-          "path": "/strategicpublishing/favourites/",
+          "path": "/journals/favourites/",
         },
         Object {
           "component": [Function],
@@ -3862,7 +3862,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             }
             key="route_19"
             pageTitle="Strategic publishing search"
-            path="/strategicpublishing/search/"
+            path="/journals/search/"
           />
           <Route
             component={
@@ -3877,7 +3877,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             }
             key="route_20"
             pageTitle="Strategic publishing results"
-            path="/strategicpublishing/results/"
+            path="/journals/results/"
           />
           <Route
             component={
@@ -3892,7 +3892,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             }
             key="route_21"
             pageTitle="Strategic publishing compare"
-            path="/strategicpublishing/compare/"
+            path="/journals/compare/"
           />
           <Route
             component={
@@ -3907,7 +3907,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             }
             key="route_22"
             pageTitle="Strategic publishing favourites"
-            path="/strategicpublishing/favourites/"
+            path="/journals/favourites/"
           />
           <Route
             component={[Function]}
@@ -4221,7 +4221,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             },
           },
           "pageTitle": "Strategic publishing search",
-          "path": "/strategicpublishing/search/",
+          "path": "/journals/search/",
         },
         Object {
           "component": Object {
@@ -4233,7 +4233,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             },
           },
           "pageTitle": "Strategic publishing results",
-          "path": "/strategicpublishing/results/",
+          "path": "/journals/results/",
         },
         Object {
           "component": Object {
@@ -4245,7 +4245,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             },
           },
           "pageTitle": "Strategic publishing compare",
-          "path": "/strategicpublishing/compare/",
+          "path": "/journals/compare/",
         },
         Object {
           "component": Object {
@@ -4257,7 +4257,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             },
           },
           "pageTitle": "Strategic publishing favourites",
-          "path": "/strategicpublishing/favourites/",
+          "path": "/journals/favourites/",
         },
         Object {
           "component": [Function],
@@ -4516,7 +4516,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My editorial appointments",
         },
         Object {
-          "linkTo": "/strategicpublishing/search/",
+          "linkTo": "/journals/search/",
           "primaryText": "Strategic publishing tool",
         },
         Object {
@@ -4940,7 +4940,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             }
             key="route_19"
             pageTitle="Strategic publishing search"
-            path="/strategicpublishing/search/"
+            path="/journals/search/"
           />
           <Route
             component={
@@ -4955,7 +4955,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             }
             key="route_20"
             pageTitle="Strategic publishing results"
-            path="/strategicpublishing/results/"
+            path="/journals/results/"
           />
           <Route
             component={
@@ -4970,7 +4970,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             }
             key="route_21"
             pageTitle="Strategic publishing compare"
-            path="/strategicpublishing/compare/"
+            path="/journals/compare/"
           />
           <Route
             component={
@@ -4985,7 +4985,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             }
             key="route_22"
             pageTitle="Strategic publishing favourites"
-            path="/strategicpublishing/favourites/"
+            path="/journals/favourites/"
           />
           <Route
             component={[Function]}
@@ -5299,7 +5299,7 @@ exports[`Application component should render app for account with fez author wit
             },
           },
           "pageTitle": "Strategic publishing search",
-          "path": "/strategicpublishing/search/",
+          "path": "/journals/search/",
         },
         Object {
           "component": Object {
@@ -5311,7 +5311,7 @@ exports[`Application component should render app for account with fez author wit
             },
           },
           "pageTitle": "Strategic publishing results",
-          "path": "/strategicpublishing/results/",
+          "path": "/journals/results/",
         },
         Object {
           "component": Object {
@@ -5323,7 +5323,7 @@ exports[`Application component should render app for account with fez author wit
             },
           },
           "pageTitle": "Strategic publishing compare",
-          "path": "/strategicpublishing/compare/",
+          "path": "/journals/compare/",
         },
         Object {
           "component": Object {
@@ -5335,7 +5335,7 @@ exports[`Application component should render app for account with fez author wit
             },
           },
           "pageTitle": "Strategic publishing favourites",
-          "path": "/strategicpublishing/favourites/",
+          "path": "/journals/favourites/",
         },
         Object {
           "component": [Function],
@@ -5594,7 +5594,7 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My editorial appointments",
         },
         Object {
-          "linkTo": "/strategicpublishing/search/",
+          "linkTo": "/journals/search/",
           "primaryText": "Strategic publishing tool",
         },
         Object {
@@ -6003,7 +6003,7 @@ exports[`Application component should render app for account with fez author wit
             }
             key="route_19"
             pageTitle="Strategic publishing search"
-            path="/strategicpublishing/search/"
+            path="/journals/search/"
           />
           <Route
             component={
@@ -6018,7 +6018,7 @@ exports[`Application component should render app for account with fez author wit
             }
             key="route_20"
             pageTitle="Strategic publishing results"
-            path="/strategicpublishing/results/"
+            path="/journals/results/"
           />
           <Route
             component={
@@ -6033,7 +6033,7 @@ exports[`Application component should render app for account with fez author wit
             }
             key="route_21"
             pageTitle="Strategic publishing compare"
-            path="/strategicpublishing/compare/"
+            path="/journals/compare/"
           />
           <Route
             component={
@@ -6048,7 +6048,7 @@ exports[`Application component should render app for account with fez author wit
             }
             key="route_22"
             pageTitle="Strategic publishing favourites"
-            path="/strategicpublishing/favourites/"
+            path="/journals/favourites/"
           />
           <Route
             component={[Function]}
@@ -6362,7 +6362,7 @@ exports[`Application component should render application with routing for the us
             },
           },
           "pageTitle": "Strategic publishing search",
-          "path": "/strategicpublishing/search/",
+          "path": "/journals/search/",
         },
         Object {
           "component": Object {
@@ -6374,7 +6374,7 @@ exports[`Application component should render application with routing for the us
             },
           },
           "pageTitle": "Strategic publishing results",
-          "path": "/strategicpublishing/results/",
+          "path": "/journals/results/",
         },
         Object {
           "component": Object {
@@ -6386,7 +6386,7 @@ exports[`Application component should render application with routing for the us
             },
           },
           "pageTitle": "Strategic publishing compare",
-          "path": "/strategicpublishing/compare/",
+          "path": "/journals/compare/",
         },
         Object {
           "component": Object {
@@ -6398,7 +6398,7 @@ exports[`Application component should render application with routing for the us
             },
           },
           "pageTitle": "Strategic publishing favourites",
-          "path": "/strategicpublishing/favourites/",
+          "path": "/journals/favourites/",
         },
         Object {
           "component": [Function],
@@ -8428,7 +8428,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                             },
                             "pageTitle": "Strategic publishing search",
-                            "path": "/strategicpublishing/search/",
+                            "path": "/journals/search/",
                           },
                           Object {
                             "component": Object {
@@ -8440,7 +8440,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                             },
                             "pageTitle": "Strategic publishing results",
-                            "path": "/strategicpublishing/results/",
+                            "path": "/journals/results/",
                           },
                           Object {
                             "component": Object {
@@ -8452,7 +8452,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                             },
                             "pageTitle": "Strategic publishing compare",
-                            "path": "/strategicpublishing/compare/",
+                            "path": "/journals/compare/",
                           },
                           Object {
                             "component": Object {
@@ -8464,7 +8464,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                             },
                             "pageTitle": "Strategic publishing favourites",
-                            "path": "/strategicpublishing/favourites/",
+                            "path": "/journals/favourites/",
                           },
                           Object {
                             "component": [Function],
@@ -8806,7 +8806,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                               },
                               "pageTitle": "Strategic publishing search",
-                              "path": "/strategicpublishing/search/",
+                              "path": "/journals/search/",
                             },
                             Object {
                               "component": Object {
@@ -8818,7 +8818,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                               },
                               "pageTitle": "Strategic publishing results",
-                              "path": "/strategicpublishing/results/",
+                              "path": "/journals/results/",
                             },
                             Object {
                               "component": Object {
@@ -8830,7 +8830,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                               },
                               "pageTitle": "Strategic publishing compare",
-                              "path": "/strategicpublishing/compare/",
+                              "path": "/journals/compare/",
                             },
                             Object {
                               "component": Object {
@@ -8842,7 +8842,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                               },
                               "pageTitle": "Strategic publishing favourites",
-                              "path": "/strategicpublishing/favourites/",
+                              "path": "/journals/favourites/",
                             },
                             Object {
                               "component": [Function],
@@ -9185,7 +9185,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 },
                                 "pageTitle": "Strategic publishing search",
-                                "path": "/strategicpublishing/search/",
+                                "path": "/journals/search/",
                               },
                               Object {
                                 "component": Object {
@@ -9197,7 +9197,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 },
                                 "pageTitle": "Strategic publishing results",
-                                "path": "/strategicpublishing/results/",
+                                "path": "/journals/results/",
                               },
                               Object {
                                 "component": Object {
@@ -9209,7 +9209,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 },
                                 "pageTitle": "Strategic publishing compare",
-                                "path": "/strategicpublishing/compare/",
+                                "path": "/journals/compare/",
                               },
                               Object {
                                 "component": Object {
@@ -9221,7 +9221,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 },
                                 "pageTitle": "Strategic publishing favourites",
-                                "path": "/strategicpublishing/favourites/",
+                                "path": "/journals/favourites/",
                               },
                               Object {
                                 "component": [Function],

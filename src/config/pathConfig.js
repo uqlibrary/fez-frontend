@@ -176,10 +176,10 @@ export const pathConfig = {
     journal: {
         view: id => `/journal/view/${id}`,
     },
-    strategicpublishing: {
-        search: '/strategicpublishing/search/',
-        results: '/strategicpublishing/results/',
-        compare: '/strategicpublishing/compare/',
-        favourites: '/strategicpublishing/favourites/',
+    journals: {
+        search: '/journals/search/',
+        results: '/journals/results/',
+        compare: '/journals/compare/',
+        favourites: '/journals/favourites/',
     },
 };
