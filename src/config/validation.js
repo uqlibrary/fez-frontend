@@ -79,14 +79,14 @@ export const maxListEditorTextLength = max => value => {
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
 export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
 
-// TODO: fix validation, make it generic etc....
+// TODO: make it generic
 export const isValidDOIValue = value => {
     const regexGroup = [
-        /^10.\d{4,9}\/[-._;()\/:A-Z0-9]+$/i,
-        /^10.1002\/[^\s]+$/i,
-        /^10.\d{4}\/\d+-\d+X?\(\d+\)\d+<[\d\w]+:[\d\w]*>\d+.\d+.\w+;\d$/i,
-        /^10.1021\/\w\w\d+$/i,
-        /^10.1207\/[\w\d]+\&\d+_\d+$/i,
+        /^10\.\d{4,9}\/[-._;()\/:A-Z0-9]+$/i,
+        /^10\.1002\/[^\s]+$/i,
+        /^10\.\d{4}\/\d+-\d+X?\(\d+\)\d+[<\[][\d\w]+:[\d\w]*[>\]]\d+.\d+.\w+;\d$/i,
+        /^10\.1021\/\w\w\d+\+$/i,
+        /^10\.1207\/[\w\d]+\&\d+_\d+$/i,
     ];
 
     return regexGroup.reduce((isValid, regex) => regex.test(value) || isValid, false);
