@@ -110,12 +110,6 @@ export const getRoutesConfig = ({
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
         },
-        {
-            path: pathConfig.journal.search,
-            component: components.SearchJournals,
-            exact: true,
-            pageTitle: locale.pages.searchJournals.title,
-        },
         ...(!account
             ? [
                   {
@@ -289,8 +283,9 @@ export const getRoutesConfig = ({
                   },
                   {
                       path: pathConfig.journals.search,
-                      component: components.JournalsSearch,
-                      pageTitle: locale.pages.journals.search.title,
+                      component: components.SearchJournals,
+                      exact: true,
+                      pageTitle: locale.pages.searchJournals.title,
                   },
                   {
                       path: pathConfig.journals.results,
