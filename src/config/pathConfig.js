@@ -175,6 +175,7 @@ export const pathConfig = {
     },
     journal: {
         view: id => `/journal/view/${id}`,
+        search: '/journals/search',
     },
     journals: {
         search: '/journals/search/',

@@ -165,7 +165,7 @@ describe('Routes getMenuConfig method', () => {
 describe('Routes getRoutesConfig method', () => {
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: null });
-        expect(testRoutes.length).toEqual(6);
+        expect(testRoutes.length).toEqual(7);
     });
 
     it('should return a list of routes for researcher', () => {
@@ -198,7 +198,7 @@ describe('Routes getRoutesConfig method', () => {
             forceOrcidRegistration: true,
             isHdrStudent: true,
         });
-        expect(testRoutes.length).toEqual(7);
+        expect(testRoutes.length).toEqual(8);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {

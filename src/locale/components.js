@@ -3567,5 +3567,48 @@ export default {
                 message: 'A user could not be deleted.',
             },
         },
+        journalSearch: {
+            journalSearchInterface: {
+                title: 'Journal search',
+                buttons: {
+                    myFavouriteJournals: {
+                        title: 'My favourite journals',
+                        aria: 'My favourite journals',
+                    },
+                    browseAllJournals: {
+                        title: 'Browse all journals',
+                        aria: 'Browse all journals',
+                    },
+                    searchJournals: {
+                        title: 'Search',
+                        aria: 'Search',
+                    },
+                },
+            },
+            input: {
+                placeholder: 'Enter a journal title, keyword, subject or field of research code',
+            },
+            keywordsBrowser: {
+                exactMatch: {
+                    title: 'Exact title match',
+                },
+                titleMatch: {
+                    title: 'Title containing',
+                    chipTitle: 'Title',
+                },
+                keywordMatch: {
+                    title: 'Keyword matching',
+                    chipTitle: 'Keyword',
+                },
+                forCodeMatch: {
+                    title: 'Subjects & Field of research',
+                    chipTitle: 'Subject',
+                },
+            },
+            selectedKeywords: {
+                title: 'Searching for journals containing: ',
+                combiner: ' + ',
+            },
+        },
     },
 };

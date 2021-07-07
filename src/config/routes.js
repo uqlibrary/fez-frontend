@@ -104,6 +104,18 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.searchRecords.title,
         },
+        {
+            path: pathConfig.journal.view(id),
+            component: components.ViewJournal,
+            access: [roles.admin],
+            pageTitle: locale.pages.journal.view.title,
+        },
+        {
+            path: pathConfig.journal.search,
+            component: components.SearchJournals,
+            exact: true,
+            pageTitle: locale.pages.searchJournals.title,
+        },
         ...(!account
             ? [
                   {
@@ -270,7 +282,7 @@ export const getRoutesConfig = ({
                   },
                   {
                       path: pathConfig.journal.view(id),
-                      component: components.JournalView,
+                      component: components.ViewJournal,
                       access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.journal.view.title,
@@ -388,6 +400,12 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.bulkUpdates.title,
+                  },
+                  {
+                      path: pathConfig.journal.view(id),
+                      component: components.ViewJournal,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.journal.view.title,
                   },
                   {
                       path: pathConfig.admin.manageAuthors,
