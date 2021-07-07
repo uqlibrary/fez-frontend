@@ -9,14 +9,18 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
     const txt = locale.components.journalSearch;
     return (
         <React.Fragment>
-            <Typography variant="subtitle2" color="primary">
+            <Typography variant="subtitle2" color="primary" component="span">
                 {txt.selectedKeywords.title}
             </Typography>
-            {keywords
-                .map((keyword, index) => (
-                    <SelectedKeywordItem key={`keyword-${keyword.type}-${index}`} onKeywordDelete={onKeywordDelete} />
-                ))
-                .join(txt.selectedKeywords.combiner)}
+            <React.Fragment>
+                {keywords.map((keyword, index) => (
+                    <SelectedKeywordItem
+                        key={`keyword-${keyword.type}-${index}`}
+                        keyword={keyword}
+                        onKeywordDelete={onKeywordDelete}
+                    />
+                ))}
+            </React.Fragment>
         </React.Fragment>
     );
 };

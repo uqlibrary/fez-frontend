@@ -50,7 +50,10 @@ export const JournalSearchInterface = () => {
                     <JournalSearchInput />
                 </Grid>
                 <Grid item xs={12}>
-                    <SelectedKeywords onKeywordDelete={handleKeywordDelete} keywords={selectedKeywords || []} />
+                    <SelectedKeywords
+                        onKeywordDelete={handleKeywordDelete}
+                        keywords={(!!selectedKeywords && Object.values(selectedKeywords)) || []}
+                    />
                 </Grid>
                 <Grid item xs={12}>
                     <KeywordsBrowser onKeywordAdd={handleKeywordAdd} />

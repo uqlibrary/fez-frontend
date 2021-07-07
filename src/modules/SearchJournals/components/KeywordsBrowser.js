@@ -81,7 +81,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @returns void
      */
     const handleKeywordsKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.keywordsBrowser.keywordsMatch.chipTitle, keyword),
+        keyword => handleKeywordClick(txt.keywordsBrowser.keywordMatch.chipTitle, keyword),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
