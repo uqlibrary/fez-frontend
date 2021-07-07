@@ -9,7 +9,7 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
     const txt = locale.components.journalSearch;
     return (
         <React.Fragment>
-            <Typography variant="h6" color="primary">
+            <Typography variant="subtitle2" color="primary">
                 {txt.selectedKeywords.title}
             </Typography>
             {keywords

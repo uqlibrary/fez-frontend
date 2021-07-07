@@ -14,7 +14,30 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const txt = locale.components.journalSearch;
     // Subject to change
     const journalSearchKeywords = useSelector(
-        state => (state.get('journalSearchReducer') || {}).journalSearchKeywords || [],
+        state =>
+            (state.get('journalSearchReducer') || {}).journalSearchKeywords || {
+                exactMatch: [
+                    { keyword: 'Medicine', title: 'Medicine', href: '/journal/view/1' },
+                    { keyword: 'Engineering', title: 'Engineering', href: '/journal/view/2' },
+                ],
+                titleMatch: [
+                    { keyword: 'Medicine' },
+                    { keyword: 'Medicines' },
+                    { keyword: 'Audiological Medicine' },
+                    { keyword: 'Gender Medicine' },
+                ],
+                keywordMatch: [{ keyword: 'Medicine' }, { keyword: 'Medicines' }, { keyword: 'Medical' }],
+                subjectMatch: [
+                    {
+                        keyword: '1001 Medicine',
+                        sources: [{ name: 'asic' }, { name: 'abdc' }, { name: 'wos', index: 'ssci' }],
+                    },
+                    {
+                        keyword: '1003 Medicines',
+                        sources: [{ name: 'asic' }, { name: 'era' }, { name: 'wos', index: 'scie' }],
+                    },
+                ],
+            },
     );
 
     /**
@@ -85,14 +108,14 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             <Grid item xs={12} md={4}>
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
-                    keywordsList={journalSearchKeywords.keywordsMatch}
+                    keywordsList={journalSearchKeywords.keywordMatch}
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
             </Grid>
             <Grid item xs={12} md={4}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
-                    keywordsList={journalSearchKeywords.forCodesMatch}
+                    keywordsList={journalSearchKeywords.subjectMatch}
                     onKeywordClick={handleSubjectKeywordClick}
                 />
             </Grid>

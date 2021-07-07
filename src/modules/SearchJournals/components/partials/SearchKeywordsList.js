@@ -9,9 +9,17 @@ export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordC
     <KeywordsList
         title={keywordsListTitle}
         list={
-            !!keywordsList &&
-            keywordsList.length > 0 &&
-            keywordsList.map(keywordItem => <SearchKeyword {...keywordItem} onKeywordClick={onKeywordClick} />)
+            (!!keywordsList &&
+                keywordsList.length > 0 &&
+                keywordsList.map(keywordItem => (
+                    <SearchKeyword
+                        key={keywordItem.keyword}
+                        keyword={keywordItem.keyword}
+                        variant="addable"
+                        onKeywordClick={onKeywordClick}
+                    />
+                ))) ||
+            []
         }
     />
 );
@@ -21,7 +29,6 @@ SearchKeywordsList.propTypes = {
     keywordsList: PropTypes.arrayOf(
         PropTypes.shape({
             keyword: PropTypes.string.isRequired,
-            variant: PropTypes.string,
         }),
     ).isRequired,
     onKeywordClick: PropTypes.func.isRequired,

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
@@ -22,19 +23,22 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant }) => {
     const handleKeywordClick = () => onKeywordClick(keyword);
 
     return (
-        <Typography
-            variant="body2"
-            classes={{ root: classes.root }}
-            className={classes[variant || 'default']}
-            onClick={handleKeywordClick}
-        >
-            {keyword}
-        </Typography>
+        <Grid item xs={12}>
+            <Typography
+                variant="body2"
+                component="span"
+                classes={{ root: classes.root }}
+                className={classes[variant || 'default']}
+                onClick={handleKeywordClick}
+            >
+                {keyword}
+            </Typography>
+        </Grid>
     );
 };
 
 SearchKeyword.propTypes = {
-    keyword: PropTypes.string.isRequired,
+    keyword: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
 };

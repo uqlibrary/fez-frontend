@@ -8,24 +8,27 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
     root: {
         textTransform: 'uppercase',
+        color: 'white',
+        paddingLeft: theme.spacing(1),
+        paddingRight: theme.spacing(1),
     },
     asic: {
-        color: theme.palette.error.main,
+        backgroundColor: theme.palette.error.main,
     },
     abdc: {
-        color: theme.palette.accent.main,
+        backgroundColor: theme.palette.accent.main,
     },
     era: {
-        color: theme.palette.success.main,
+        backgroundColor: theme.palette.success.main,
     },
     wos: {
-        color: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary.main,
     },
     ssci: {
-        color: theme.palette.primary.dark,
+        backgroundColor: theme.palette.primary.dark,
     },
     scie: {
-        color: theme.palette.primary.dark,
+        backgroundColor: theme.palette.primary.dark,
     },
 }));
 

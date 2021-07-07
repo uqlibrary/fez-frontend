@@ -8,7 +8,7 @@ export const KeywordsList = ({ title, list }) => {
     return (
         <Grid container>
             <Grid item xs={12}>
-                <Typography variant="h5" color="primary">
+                <Typography variant="subtitle1" color="primary">
                     {title}
                 </Typography>
             </Grid>

@@ -20,7 +20,8 @@ export const JournalSearchInput = ({ initialValue }) => {
     return (
         <AutoCompleteAsynchronousField
             autoCompleteAsynchronousFieldId="journal-search-keywords"
-            defaultValue={initialValue}
+            defaultValue={initialValue || ''}
+            getOptionLabel={f => f}
             itemsLoading={loadingJournalSearchKeywords || false}
             itemsList={[]}
             loadSuggestions={handleJournalSearchInput}

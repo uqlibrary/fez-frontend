@@ -3570,6 +3570,20 @@ export default {
         journalSearch: {
             journalSearchInterface: {
                 title: 'Journal search',
+                buttons: {
+                    myFavouriteJournals: {
+                        title: 'My favourite journals',
+                        aria: 'My favourite journals',
+                    },
+                    browseAllJournals: {
+                        title: 'Browse all journals',
+                        aria: 'Browse all journals',
+                    },
+                    searchJournals: {
+                        title: 'Search',
+                        aria: 'Search',
+                    },
+                },
             },
             input: {
                 placeholder: 'Enter a journal title, keyword, subject or field of research code',
@@ -3592,7 +3606,7 @@ export default {
                 },
             },
             selectedKeywords: {
-                title: 'Searching for journals containing',
+                title: 'Searching for journals containing: ',
                 combiner: ' + ',
             },
         },

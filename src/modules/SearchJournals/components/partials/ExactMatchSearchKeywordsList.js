@@ -3,19 +3,25 @@ import PropTypes from 'prop-types';
 
 import SearchKeyword from './SearchKeyword';
 import KeywordsList from './KeywordsList';
-import ExternalLink from 'modules/SharedComponents/ExternalLink';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList }) => (
     <KeywordsList
         title={keywordsListTitle}
         list={
-            !!keywordsList &&
-            keywordsList.length > 0 &&
-            keywordsList.map(keywordItem => (
-                <ExternalLink title={keywordItem.title} href={keywordItem.href}>
-                    <SearchKeyword keyword={keywordItem.keyword} />
-                </ExternalLink>
-            ))
+            (!!keywordsList &&
+                keywordsList.length > 0 &&
+                keywordsList.map(keywordItem => (
+                    <SearchKeyword
+                        key={keywordItem.keyword}
+                        keyword={
+                            <ExternalLink title={keywordItem.title} href={keywordItem.href}>
+                                {keywordItem.keyword}
+                            </ExternalLink>
+                        }
+                    />
+                ))) ||
+            []
         }
     />
 );
