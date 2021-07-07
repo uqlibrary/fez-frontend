@@ -737,11 +737,11 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                   accentHeader={true}
                                   classes={
                                     Object {
-                                      "card": "Cards-card-104",
-                                      "cardContentNoPadding": "Cards-cardContentNoPadding-105",
-                                      "cardHeaderAccent": "Cards-cardHeaderAccent-107",
-                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-106",
-                                      "fullHeight": "Cards-fullHeight-108",
+                                      "card": "Cards-card-1",
+                                      "cardContentNoPadding": "Cards-cardContentNoPadding-2",
+                                      "cardHeaderAccent": "Cards-cardHeaderAccent-4",
+                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-3",
+                                      "fullHeight": "Cards-fullHeight-5",
                                     }
                                   }
                                   standardCardId="record-security-card"
@@ -1111,13 +1111,13 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                   }
                                 >
                                   <WithStyles(ForwardRef(Card))
-                                    className="Cards-card-104 StandardCard"
+                                    className="Cards-card-1 StandardCard"
                                     data-testid="record-security-card"
                                     id="record-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
-                                      className="Cards-card-104 StandardCard"
+                                      className="Cards-card-1 StandardCard"
                                       classes={
                                         Object {
                                           "root": "MuiCard-root",
@@ -1128,14 +1128,14 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
-                                        className="MuiCard-root Cards-card-104 StandardCard"
+                                        className="MuiCard-root Cards-card-1 StandardCard"
                                         data-testid="record-security-card"
                                         elevation={1}
                                         id="record-security-card"
                                         style={Object {}}
                                       >
                                         <ForwardRef(Paper)
-                                          className="MuiCard-root Cards-card-104 StandardCard"
+                                          className="MuiCard-root Cards-card-1 StandardCard"
                                           classes={
                                             Object {
                                               "elevation0": "MuiPaper-elevation0",
@@ -1174,7 +1174,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                           style={Object {}}
                                         >
                                           <div
-                                            className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            className="MuiPaper-root MuiCard-root Cards-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                             data-testid="record-security-card"
                                             id="record-security-card"
                                             style={Object {}}
@@ -1183,7 +1183,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                               action={false}
                                               classes={
                                                 Object {
-                                                  "root": "Cards-cardHeaderAccent-107",
+                                                  "root": "Cards-cardHeaderAccent-4",
                                                 }
                                               }
                                               style={Object {}}
@@ -1213,7 +1213,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                     "action": "MuiCardHeader-action",
                                                     "avatar": "MuiCardHeader-avatar",
                                                     "content": "MuiCardHeader-content",
-                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-107",
+                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-4",
                                                     "subheader": "MuiCardHeader-subheader",
                                                     "title": "MuiCardHeader-title",
                                                   }
@@ -1239,7 +1239,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-107"
+                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-4"
                                                   style={Object {}}
                                                 >
                                                   <div
@@ -3360,11 +3360,11 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                   accentHeader={true}
                                   classes={
                                     Object {
-                                      "card": "Cards-card-104",
-                                      "cardContentNoPadding": "Cards-cardContentNoPadding-105",
-                                      "cardHeaderAccent": "Cards-cardHeaderAccent-107",
-                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-106",
-                                      "fullHeight": "Cards-fullHeight-108",
+                                      "card": "Cards-card-1",
+                                      "cardContentNoPadding": "Cards-cardContentNoPadding-2",
+                                      "cardHeaderAccent": "Cards-cardHeaderAccent-4",
+                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-3",
+                                      "fullHeight": "Cards-fullHeight-5",
                                     }
                                   }
                                   standardCardId="record-security-card"
@@ -3734,13 +3734,13 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                   }
                                 >
                                   <WithStyles(ForwardRef(Card))
-                                    className="Cards-card-104 StandardCard"
+                                    className="Cards-card-1 StandardCard"
                                     data-testid="record-security-card"
                                     id="record-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
-                                      className="Cards-card-104 StandardCard"
+                                      className="Cards-card-1 StandardCard"
                                       classes={
                                         Object {
                                           "root": "MuiCard-root",
@@ -3751,14 +3751,14 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
-                                        className="MuiCard-root Cards-card-104 StandardCard"
+                                        className="MuiCard-root Cards-card-1 StandardCard"
                                         data-testid="record-security-card"
                                         elevation={1}
                                         id="record-security-card"
                                         style={Object {}}
                                       >
                                         <ForwardRef(Paper)
-                                          className="MuiCard-root Cards-card-104 StandardCard"
+                                          className="MuiCard-root Cards-card-1 StandardCard"
                                           classes={
                                             Object {
                                               "elevation0": "MuiPaper-elevation0",
@@ -3797,7 +3797,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                           style={Object {}}
                                         >
                                           <div
-                                            className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            className="MuiPaper-root MuiCard-root Cards-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                             data-testid="record-security-card"
                                             id="record-security-card"
                                             style={Object {}}
@@ -3806,7 +3806,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                               action={false}
                                               classes={
                                                 Object {
-                                                  "root": "Cards-cardHeaderAccent-107",
+                                                  "root": "Cards-cardHeaderAccent-4",
                                                 }
                                               }
                                               style={Object {}}
@@ -3836,7 +3836,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                     "action": "MuiCardHeader-action",
                                                     "avatar": "MuiCardHeader-avatar",
                                                     "content": "MuiCardHeader-content",
-                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-107",
+                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-4",
                                                     "subheader": "MuiCardHeader-subheader",
                                                     "title": "MuiCardHeader-title",
                                                   }
@@ -3862,7 +3862,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                 }
                                               >
                                                 <div
-                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-107"
+                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-4"
                                                   style={Object {}}
                                                 >
                                                   <div
@@ -6872,11 +6872,11 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                   accentHeader={true}
                                   classes={
                                     Object {
-                                      "card": "Cards-card-104",
-                                      "cardContentNoPadding": "Cards-cardContentNoPadding-105",
-                                      "cardHeaderAccent": "Cards-cardHeaderAccent-107",
-                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-106",
-                                      "fullHeight": "Cards-fullHeight-108",
+                                      "card": "Cards-card-1",
+                                      "cardContentNoPadding": "Cards-cardContentNoPadding-2",
+                                      "cardHeaderAccent": "Cards-cardHeaderAccent-4",
+                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-3",
+                                      "fullHeight": "Cards-fullHeight-5",
                                     }
                                   }
                                   standardCardId="record-security-card"
@@ -7246,13 +7246,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                   }
                                 >
                                   <WithStyles(ForwardRef(Card))
-                                    className="Cards-card-104 StandardCard"
+                                    className="Cards-card-1 StandardCard"
                                     data-testid="record-security-card"
                                     id="record-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
-                                      className="Cards-card-104 StandardCard"
+                                      className="Cards-card-1 StandardCard"
                                       classes={
                                         Object {
                                           "root": "MuiCard-root",
@@ -7263,14 +7263,14 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
-                                        className="MuiCard-root Cards-card-104 StandardCard"
+                                        className="MuiCard-root Cards-card-1 StandardCard"
                                         data-testid="record-security-card"
                                         elevation={1}
                                         id="record-security-card"
                                         style={Object {}}
                                       >
                                         <ForwardRef(Paper)
-                                          className="MuiCard-root Cards-card-104 StandardCard"
+                                          className="MuiCard-root Cards-card-1 StandardCard"
                                           classes={
                                             Object {
                                               "elevation0": "MuiPaper-elevation0",
@@ -7309,7 +7309,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                           style={Object {}}
                                         >
                                           <div
-                                            className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            className="MuiPaper-root MuiCard-root Cards-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                             data-testid="record-security-card"
                                             id="record-security-card"
                                             style={Object {}}
@@ -7318,7 +7318,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                               action={false}
                                               classes={
                                                 Object {
-                                                  "root": "Cards-cardHeaderAccent-107",
+                                                  "root": "Cards-cardHeaderAccent-4",
                                                 }
                                               }
                                               style={Object {}}
@@ -7348,7 +7348,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     "action": "MuiCardHeader-action",
                                                     "avatar": "MuiCardHeader-avatar",
                                                     "content": "MuiCardHeader-content",
-                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-107",
+                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-4",
                                                     "subheader": "MuiCardHeader-subheader",
                                                     "title": "MuiCardHeader-title",
                                                   }
@@ -7374,7 +7374,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 }
                                               >
                                                 <div
-                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-107"
+                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-4"
                                                   style={Object {}}
                                                 >
                                                   <div
@@ -8879,11 +8879,11 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                   accentHeader={true}
                                   classes={
                                     Object {
-                                      "card": "Cards-card-104",
-                                      "cardContentNoPadding": "Cards-cardContentNoPadding-105",
-                                      "cardHeaderAccent": "Cards-cardHeaderAccent-107",
-                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-106",
-                                      "fullHeight": "Cards-fullHeight-108",
+                                      "card": "Cards-card-1",
+                                      "cardContentNoPadding": "Cards-cardContentNoPadding-2",
+                                      "cardHeaderAccent": "Cards-cardHeaderAccent-4",
+                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-3",
+                                      "fullHeight": "Cards-fullHeight-5",
                                     }
                                   }
                                   standardCardId="datastream-security-card"
@@ -9253,13 +9253,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                   }
                                 >
                                   <WithStyles(ForwardRef(Card))
-                                    className="Cards-card-104 StandardCard"
+                                    className="Cards-card-1 StandardCard"
                                     data-testid="datastream-security-card"
                                     id="datastream-security-card"
                                     style={Object {}}
                                   >
                                     <ForwardRef(Card)
-                                      className="Cards-card-104 StandardCard"
+                                      className="Cards-card-1 StandardCard"
                                       classes={
                                         Object {
                                           "root": "MuiCard-root",
@@ -9270,14 +9270,14 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(Paper))
-                                        className="MuiCard-root Cards-card-104 StandardCard"
+                                        className="MuiCard-root Cards-card-1 StandardCard"
                                         data-testid="datastream-security-card"
                                         elevation={1}
                                         id="datastream-security-card"
                                         style={Object {}}
                                       >
                                         <ForwardRef(Paper)
-                                          className="MuiCard-root Cards-card-104 StandardCard"
+                                          className="MuiCard-root Cards-card-1 StandardCard"
                                           classes={
                                             Object {
                                               "elevation0": "MuiPaper-elevation0",
@@ -9316,7 +9316,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                           style={Object {}}
                                         >
                                           <div
-                                            className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                            className="MuiPaper-root MuiCard-root Cards-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                             data-testid="datastream-security-card"
                                             id="datastream-security-card"
                                             style={Object {}}
@@ -9325,7 +9325,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                               action={false}
                                               classes={
                                                 Object {
-                                                  "root": "Cards-cardHeaderAccent-107",
+                                                  "root": "Cards-cardHeaderAccent-4",
                                                 }
                                               }
                                               style={Object {}}
@@ -9355,7 +9355,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     "action": "MuiCardHeader-action",
                                                     "avatar": "MuiCardHeader-avatar",
                                                     "content": "MuiCardHeader-content",
-                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-107",
+                                                    "root": "MuiCardHeader-root Cards-cardHeaderAccent-4",
                                                     "subheader": "MuiCardHeader-subheader",
                                                     "title": "MuiCardHeader-title",
                                                   }
@@ -9381,7 +9381,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 }
                                               >
                                                 <div
-                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-107"
+                                                  className="MuiCardHeader-root Cards-cardHeaderAccent-4"
                                                   style={Object {}}
                                                 >
                                                   <div

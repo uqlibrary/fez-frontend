@@ -2922,6 +2922,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                     "clearIndicatorDirty": "MuiAutocomplete-clearIndicatorDirty",
                                                     "endAdornment": "MuiAutocomplete-endAdornment",
                                                     "focused": "Mui-focused",
+                                                    "fullWidth": "MuiAutocomplete-fullWidth",
                                                     "groupLabel": "MuiAutocomplete-groupLabel",
                                                     "groupUl": "MuiAutocomplete-groupUl",
                                                     "hasClearIcon": "MuiAutocomplete-hasClearIcon",
@@ -2991,7 +2992,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                               tabIndex={-1}
                                                               title="Clear"
                                                             >
-                                                              <Memo(CloseIcon)
+                                                              <Memo
                                                                 fontSize="small"
                                                               />
                                                             </WithStyles(ForwardRef(IconButton))>
@@ -3074,7 +3075,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                 tabIndex={-1}
                                                                 title="Clear"
                                                               >
-                                                                <Memo(CloseIcon)
+                                                                <Memo
                                                                   fontSize="small"
                                                                 />
                                                               </WithStyles(ForwardRef(IconButton))>
@@ -3254,7 +3255,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                       tabIndex={-1}
                                                                       title="Clear"
                                                                     >
-                                                                      <Memo(CloseIcon)
+                                                                      <Memo
                                                                         fontSize="small"
                                                                       />
                                                                     </WithStyles(ForwardRef(IconButton))>
@@ -3343,7 +3344,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                         tabIndex={-1}
                                                                         title="Clear"
                                                                       >
-                                                                        <Memo(CloseIcon)
+                                                                        <Memo
                                                                           fontSize="small"
                                                                         />
                                                                       </WithStyles(ForwardRef(IconButton))>
@@ -3432,7 +3433,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                           tabIndex={-1}
                                                                           title="Clear"
                                                                         >
-                                                                          <Memo(CloseIcon)
+                                                                          <Memo
                                                                             fontSize="small"
                                                                           />
                                                                         </WithStyles(ForwardRef(IconButton))>
@@ -3527,7 +3528,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                             tabIndex={-1}
                                                                             title="Clear"
                                                                           >
-                                                                            <Memo(CloseIcon)
+                                                                            <Memo
                                                                               fontSize="small"
                                                                             />
                                                                           </WithStyles(ForwardRef(IconButton))>
@@ -3692,7 +3693,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                                   <span
                                                                                     className="MuiIconButton-label"
                                                                                   >
-                                                                                    <CloseIcon
+                                                                                    <ForwardRef(CloseIcon)
                                                                                       fontSize="small"
                                                                                     >
                                                                                       <WithStyles(ForwardRef(SvgIcon))
@@ -3715,7 +3716,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                                           fontSize="small"
                                                                                         >
                                                                                           <svg
-                                                                                            aria-hidden="true"
+                                                                                            aria-hidden={true}
                                                                                             className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
                                                                                             focusable="false"
                                                                                             viewBox="0 0 24 24"
@@ -3726,7 +3727,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                                                           </svg>
                                                                                         </ForwardRef(SvgIcon)>
                                                                                       </WithStyles(ForwardRef(SvgIcon))>
-                                                                                    </CloseIcon>
+                                                                                    </ForwardRef(CloseIcon)>
                                                                                   </span>
                                                                                   <WithStyles(memo)
                                                                                     center={true}
@@ -5739,6 +5740,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         "iconFilled": "MuiSelect-iconFilled",
                                                         "iconOpen": "MuiSelect-iconOpen",
                                                         "iconOutlined": "MuiSelect-iconOutlined",
+                                                        "nativeInput": "MuiSelect-nativeInput",
                                                         "outlined": "MuiSelect-outlined",
                                                         "root": "MuiSelect-root",
                                                         "select": "MuiSelect-select",
@@ -5780,7 +5782,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "open": [Function],
                                                             "readOnly": [Function],
                                                             "renderValue": [Function],
-                                                            "required": [Function],
                                                             "tabIndex": [Function],
                                                             "type": [Function],
                                                             "value": [Function],
@@ -5794,7 +5795,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           "IconComponent": Object {
                                                             "$$typeof": Symbol(react.memo),
                                                             "compare": null,
-                                                            "muiName": "SvgIcon",
                                                             "type": Object {
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "render": [Function],
@@ -5836,6 +5836,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "iconFilled": "MuiSelect-iconFilled",
                                                             "iconOpen": "MuiSelect-iconOpen",
                                                             "iconOutlined": "MuiSelect-iconOutlined",
+                                                            "nativeInput": "MuiSelect-nativeInput",
                                                             "outlined": "MuiSelect-outlined",
                                                             "root": "MuiSelect-root",
                                                             "select": "MuiSelect-select",
@@ -5904,7 +5905,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "open": [Function],
                                                               "readOnly": [Function],
                                                               "renderValue": [Function],
-                                                              "required": [Function],
                                                               "tabIndex": [Function],
                                                               "type": [Function],
                                                               "value": [Function],
@@ -5918,7 +5918,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                             "IconComponent": Object {
                                                               "$$typeof": Symbol(react.memo),
                                                               "compare": null,
-                                                              "muiName": "SvgIcon",
                                                               "type": Object {
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "render": [Function],
@@ -5960,6 +5959,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "iconFilled": "MuiSelect-iconFilled",
                                                               "iconOpen": "MuiSelect-iconOpen",
                                                               "iconOutlined": "MuiSelect-iconOutlined",
+                                                              "nativeInput": "MuiSelect-nativeInput",
                                                               "outlined": "MuiSelect-outlined",
                                                               "root": "MuiSelect-root",
                                                               "select": "MuiSelect-select",
@@ -6029,7 +6029,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "open": [Function],
                                                                 "readOnly": [Function],
                                                                 "renderValue": [Function],
-                                                                "required": [Function],
                                                                 "tabIndex": [Function],
                                                                 "type": [Function],
                                                                 "value": [Function],
@@ -6043,7 +6042,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               "IconComponent": Object {
                                                                 "$$typeof": Symbol(react.memo),
                                                                 "compare": null,
-                                                                "muiName": "SvgIcon",
                                                                 "type": Object {
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "render": [Function],
@@ -6085,6 +6083,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "iconFilled": "MuiSelect-iconFilled",
                                                                 "iconOpen": "MuiSelect-iconOpen",
                                                                 "iconOutlined": "MuiSelect-iconOutlined",
+                                                                "nativeInput": "MuiSelect-nativeInput",
                                                                 "outlined": "MuiSelect-outlined",
                                                                 "root": "MuiSelect-root",
                                                                 "select": "MuiSelect-select",
@@ -6160,7 +6159,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "open": [Function],
                                                                   "readOnly": [Function],
                                                                   "renderValue": [Function],
-                                                                  "required": [Function],
                                                                   "tabIndex": [Function],
                                                                   "type": [Function],
                                                                   "value": [Function],
@@ -6174,7 +6172,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                 "IconComponent": Object {
                                                                   "$$typeof": Symbol(react.memo),
                                                                   "compare": null,
-                                                                  "muiName": "SvgIcon",
                                                                   "type": Object {
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "render": [Function],
@@ -6216,6 +6213,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   "iconFilled": "MuiSelect-iconFilled",
                                                                   "iconOpen": "MuiSelect-iconOpen",
                                                                   "iconOutlined": "MuiSelect-iconOutlined",
+                                                                  "nativeInput": "MuiSelect-nativeInput",
                                                                   "outlined": "MuiSelect-outlined",
                                                                   "root": "MuiSelect-root",
                                                                   "select": "MuiSelect-select",
@@ -6249,7 +6247,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   Object {
                                                                     "$$typeof": Symbol(react.memo),
                                                                     "compare": null,
-                                                                    "muiName": "SvgIcon",
                                                                     "type": Object {
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "render": [Function],
@@ -6279,6 +6276,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                     "iconFilled": "MuiSelect-iconFilled",
                                                                     "iconOpen": "MuiSelect-iconOpen",
                                                                     "iconOutlined": "MuiSelect-iconOutlined",
+                                                                    "nativeInput": "MuiSelect-nativeInput",
                                                                     "outlined": "MuiSelect-outlined",
                                                                     "root": "MuiSelect-root",
                                                                     "select": "MuiSelect-select",
@@ -6321,12 +6319,16 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                   />
                                                                 </div>
                                                                 <input
+                                                                  aria-hidden={true}
+                                                                  className="MuiSelect-nativeInput"
                                                                   name="org-affiliation"
                                                                   onAnimationStart={[Function]}
-                                                                  type="hidden"
+                                                                  onChange={[Function]}
+                                                                  required={true}
+                                                                  tabIndex={-1}
                                                                   value=""
                                                                 />
-                                                                <ArrowDropDownIcon
+                                                                <ForwardRef(ArrowDropDownIcon)
                                                                   className="MuiSelect-icon"
                                                                 >
                                                                   <WithStyles(ForwardRef(SvgIcon))
@@ -6349,7 +6351,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       }
                                                                     >
                                                                       <svg
-                                                                        aria-hidden="true"
+                                                                        aria-hidden={true}
                                                                         className="MuiSvgIcon-root MuiSelect-icon"
                                                                         focusable="false"
                                                                         viewBox="0 0 24 24"
@@ -6360,7 +6362,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       </svg>
                                                                     </ForwardRef(SvgIcon)>
                                                                   </WithStyles(ForwardRef(SvgIcon))>
-                                                                </ArrowDropDownIcon>
+                                                                </ForwardRef(ArrowDropDownIcon)>
                                                                 <WithStyles(ForwardRef(Menu))
                                                                   MenuListProps={
                                                                     Object {
@@ -7249,6 +7251,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     "clearIndicatorDirty": "MuiAutocomplete-clearIndicatorDirty",
                                                     "endAdornment": "MuiAutocomplete-endAdornment",
                                                     "focused": "Mui-focused",
+                                                    "fullWidth": "MuiAutocomplete-fullWidth",
                                                     "groupLabel": "MuiAutocomplete-groupLabel",
                                                     "groupUl": "MuiAutocomplete-groupUl",
                                                     "hasClearIcon": "MuiAutocomplete-hasClearIcon",

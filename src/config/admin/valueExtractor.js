@@ -251,7 +251,13 @@ export default {
     },
     collections: {
         getValue: record => {
-            const returnValue = record.fez_record_search_key_ismemberof.map(collection => ({
+            const uniqueCollections = [];
+            record.fez_record_search_key_ismemberof.forEach(collection => {
+                if (!uniqueCollections.find(uniqueItem => collection.rek_ismemberof === uniqueItem.rek_ismemberof)) {
+                    uniqueCollections.push(collection);
+                }
+            });
+            const returnValue = uniqueCollections.map(collection => ({
                 rek_pid: collection.rek_ismemberof,
                 rek_title: collection.rek_ismemberof_lookup,
                 id: collection.rek_ismemberof,

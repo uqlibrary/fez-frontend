@@ -3047,7 +3047,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -3070,7 +3070,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3081,7 +3081,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.1111/dar.12222
                       </a>
                     </ExternalLink>
