@@ -55,3 +55,33 @@ export const journalLookup = {
         },
     ],
 };
+
+export const journalSearchKeywords = {
+    exact: [
+        {
+            jnl_id: 1,
+            jnl_title: 'Medicine'
+        },
+        {
+            jnl_id: 2,
+            jnl_title: 'Engineering'
+        }
+    ],
+    title: [
+        'Medicine',
+        'Medicines',
+        'Audiological Medicine',
+        'Gender Medicine',
+    ],
+    keyword: ['Medicine', 'Medicines', 'Medical'],
+    subject: [
+        {
+            keyword: '1001 Medicine',
+            sources: [{ name: 'asic' }, { name: 'abdc' }, { name: 'wos', index: 'ssci' }],
+        },
+        {
+            keyword: '1003 Medicines',
+            sources: [{ name: 'asic' }, { name: 'era' }, { name: 'wos', index: 'scie' }],
+        },
+    ],
+}
