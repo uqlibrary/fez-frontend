@@ -16,7 +16,8 @@ const getKeywordKey = keyword => `${keyword.type}-${keyword.text.replace(/ /g, '
 export const JournalSearchInterface = () => {
     const theme = useTheme();
     const txt = locale.components.journalSearch;
-    const [selectedKeywords, setSelectedKeywords] = React.useState(null);
+    const [selectedKeywords, setSelectedKeywords] = React.useState({});
+    const hasAnySelectedKeywords = Object.values(selectedKeywords).length > 0;
 
     const handleKeywordAdd = React.useCallback(
         keyword =>
@@ -30,9 +31,9 @@ export const JournalSearchInterface = () => {
     const handleKeywordDelete = React.useCallback(
         keyword =>
             setSelectedKeywords(prevSelectedKeywords => {
-                // eslint-disable-next-line no-unused-vars
-                const { [keyword.id]: keywordToDelete, ...rest } = prevSelectedKeywords;
-                return { ...rest };
+                const newSelectedKeywords = { ...prevSelectedKeywords };
+                delete newSelectedKeywords[keyword.id];
+                return { ...newSelectedKeywords };
             }),
         [],
     );
@@ -53,12 +54,14 @@ export const JournalSearchInterface = () => {
                 <Grid item xs={12}>
                     <JournalSearchInput />
                 </Grid>
-                <Grid item xs={12}>
-                    <SelectedKeywords
-                        onKeywordDelete={handleKeywordDelete}
-                        keywords={(!!selectedKeywords && Object.values(selectedKeywords)) || []}
-                    />
-                </Grid>
+                {hasAnySelectedKeywords && (
+                    <Grid item xs={12}>
+                        <SelectedKeywords
+                            onKeywordDelete={handleKeywordDelete}
+                            keywords={Object.values(selectedKeywords)}
+                        />
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <KeywordsBrowser onKeywordAdd={handleKeywordAdd} />
                 </Grid>

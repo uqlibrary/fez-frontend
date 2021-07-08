@@ -47,7 +47,6 @@ const getKeywords = keywordsResponse => {
 
 const journalSearchKeywordsEnhancer = () => next => action => {
     if (action.type === actions.JOURNAL_SEARCH_KEYWORDS_LOADED) {
-        console.log(action.payload);
         const keywords = getKeywords(action.payload);
         return next({ ...action, payload: keywords });
     }
