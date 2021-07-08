@@ -4,41 +4,28 @@ import { useSelector } from 'react-redux';
 
 import Grid from '@material-ui/core/Grid';
 
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+
 import ExactMatchSearchKeywordsList from './partials/ExactMatchSearchKeywordsList';
 import SearchKeywordsList from './partials/SearchKeywordsList';
 import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
+
+import {
+    getJournalSearchKeywords,
+    getHasJournalSearchKeywordsError,
+    getJournalSearchKeywordsError,
+    getHasAnyKeywordsLoaded,
+} from '../selectors';
 
 import locale from 'locale/components';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const txt = locale.components.journalSearch;
     // Subject to change
-    const journalSearchKeywords = useSelector(
-        state =>
-            (state.get('journalSearchReducer') || {}).journalSearchKeywords || {
-                exactMatch: [
-                    { keyword: 'Medicine', title: 'Medicine', href: '/journal/view/1' },
-                    { keyword: 'Engineering', title: 'Engineering', href: '/journal/view/2' },
-                ],
-                titleMatch: [
-                    { keyword: 'Medicine' },
-                    { keyword: 'Medicines' },
-                    { keyword: 'Audiological Medicine' },
-                    { keyword: 'Gender Medicine' },
-                ],
-                keywordMatch: [{ keyword: 'Medicine' }, { keyword: 'Medicines' }, { keyword: 'Medical' }],
-                subjectMatch: [
-                    {
-                        keyword: '1001 Medicine',
-                        sources: [{ name: 'asic' }, { name: 'abdc' }, { name: 'wos', index: 'ssci' }],
-                    },
-                    {
-                        keyword: '1003 Medicines',
-                        sources: [{ name: 'asic' }, { name: 'era' }, { name: 'wos', index: 'scie' }],
-                    },
-                ],
-            },
-    );
+    const journalSearchKeywords = useSelector(getJournalSearchKeywords);
+    const hasJournalSearchKeywordsFailed = useSelector(getHasJournalSearchKeywordsError);
+    const journalSearchKeywordsError = useSelector(getJournalSearchKeywordsError);
+    const hasAnyKeywordsLoaded = useSelector(getHasAnyKeywordsLoaded);
 
     /**
      * Handle click event on keyword
@@ -86,39 +73,58 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
         [],
     );
 
+    if (!hasAnyKeywordsLoaded) {
+        return <div />;
+    }
+
     return (
         <Grid container>
-            <Grid item xs={12} md={4}>
-                <Grid container>
-                    <Grid item xs={12}>
-                        <ExactMatchSearchKeywordsList
-                            keywordsListTitle={txt.keywordsBrowser.exactMatch.title}
-                            keywordsList={journalSearchKeywords.exactMatch}
-                        />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <SearchKeywordsList
-                            keywordsListTitle={txt.keywordsBrowser.titleMatch.title}
-                            keywordsList={journalSearchKeywords.titleMatch}
-                            onKeywordClick={handleTitleKeywordClick}
-                        />
+            {hasJournalSearchKeywordsFailed && (
+                <Grid item>
+                    <Alert {...journalSearchKeywordsError} />
+                </Grid>
+            )}
+            {(journalSearchKeywords.exactMatch.length > 0 || journalSearchKeywords.titleMatch.length > 0) && (
+                <Grid item xs={12} md={4}>
+                    <Grid container>
+                        {journalSearchKeywords.exactMatch.length > 0 && (
+                            <Grid item xs={12}>
+                                <ExactMatchSearchKeywordsList
+                                    keywordsListTitle={txt.keywordsBrowser.exactMatch.title}
+                                    keywordsList={journalSearchKeywords.exactMatch}
+                                />
+                            </Grid>
+                        )}
+                        {journalSearchKeywords.titleMatch.length > 0 && (
+                            <Grid item xs={12}>
+                                <SearchKeywordsList
+                                    keywordsListTitle={txt.keywordsBrowser.titleMatch.title}
+                                    keywordsList={journalSearchKeywords.titleMatch}
+                                    onKeywordClick={handleTitleKeywordClick}
+                                />
+                            </Grid>
+                        )}
                     </Grid>
                 </Grid>
-            </Grid>
-            <Grid item xs={12} md={4}>
-                <SearchKeywordsList
-                    keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
-                    keywordsList={journalSearchKeywords.keywordMatch}
-                    onKeywordClick={handleKeywordsKeywordClick}
-                />
-            </Grid>
-            <Grid item xs={12} md={4}>
-                <ForCodeSearchKeywordsList
-                    keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
-                    keywordsList={journalSearchKeywords.subjectMatch}
-                    onKeywordClick={handleSubjectKeywordClick}
-                />
-            </Grid>
+            )}
+            {journalSearchKeywords.keywordMatch.length > 0 && (
+                <Grid item xs={12} md={4}>
+                    <SearchKeywordsList
+                        keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
+                        keywordsList={journalSearchKeywords.keywordMatch}
+                        onKeywordClick={handleKeywordsKeywordClick}
+                    />
+                </Grid>
+            )}
+            {journalSearchKeywords.subjectMatch.length > 0 && (
+                <Grid item xs={12} md={4}>
+                    <ForCodeSearchKeywordsList
+                        keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
+                        keywordsList={journalSearchKeywords.subjectMatch}
+                        onKeywordClick={handleSubjectKeywordClick}
+                    />
+                </Grid>
+            )}
         </Grid>
     );
 };

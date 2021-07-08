@@ -44,7 +44,11 @@ export const JournalSearchInterface = () => {
     const handleSearchJournalsClick = React.useCallback(() => history.push(pathConfig.journal.result), []);
 
     return (
-        <StandardCard customTitleColor={theme.palette.primary.main} title={txt.journalSearchInterface.title}>
+        <StandardCard
+            customTitleColor={theme.palette.primary.main}
+            title={txt.journalSearchInterface.title}
+            style={{ padding: 16 }}
+        >
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <JournalSearchInput />
