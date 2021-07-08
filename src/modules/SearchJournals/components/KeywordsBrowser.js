@@ -21,17 +21,22 @@ import locale from 'locale/components';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const txt = locale.components.journalSearch;
-    // Subject to change
+
     const journalSearchKeywords = useSelector(getJournalSearchKeywords);
     const hasJournalSearchKeywordsFailed = useSelector(getHasJournalSearchKeywordsError);
     const journalSearchKeywordsError = useSelector(getJournalSearchKeywordsError);
     const hasAnyKeywordsLoaded = useSelector(getHasAnyKeywordsLoaded);
 
+    const hasExactKeywords = journalSearchKeywords.exactMatch.length > 0;
+    const hasTitleKeywords = journalSearchKeywords.titleMatch.length > 0;
+    const hasKeywordKeywords = journalSearchKeywords.keywordMatch.length > 0;
+    const hasSubjectKeywords = journalSearchKeywords.subjectMatch.length > 0;
+
     /**
      * Handle click event on keyword
      *
-     * @param {*} type Type of keyword (Title|Keyword|Subject)
-     * @param {*} keyword Keyword string
+     * @param {string} type Type of keyword (Title|Keyword|Subject)
+     * @param {string} keyword Keyword string
      * @returns void
      */
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,7 +45,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     /**
      * Handle click event on FoR code matching keyword
      *
-     * @param {*} keyword Keyword string
+     * @param {string} keyword Keyword string
      * @returns void
      */
     const handleSubjectKeywordClick = React.useCallback(
@@ -52,7 +57,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     /**
      * Handle click event on Title containing keyword
      *
-     * @param {*} keyword Keyword string
+     * @param {string} keyword Keyword string
      * @returns void
      */
     const handleTitleKeywordClick = React.useCallback(
@@ -64,7 +69,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     /**
      * Handle click event on Keyword matching keyword
      *
-     * @param {*} keyword Keyword string
+     * @param {string} keyword Keyword string
      * @returns void
      */
     const handleKeywordsKeywordClick = React.useCallback(
@@ -84,10 +89,10 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     <Alert {...journalSearchKeywordsError} />
                 </Grid>
             )}
-            {(journalSearchKeywords.exactMatch.length > 0 || journalSearchKeywords.titleMatch.length > 0) && (
+            {(hasExactKeywords || hasTitleKeywords) && (
                 <Grid item xs={12} md={4}>
                     <Grid container>
-                        {journalSearchKeywords.exactMatch.length > 0 && (
+                        {hasExactKeywords && (
                             <Grid item xs={12}>
                                 <ExactMatchSearchKeywordsList
                                     keywordsListTitle={txt.keywordsBrowser.exactMatch.title}
@@ -95,7 +100,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                                 />
                             </Grid>
                         )}
-                        {journalSearchKeywords.titleMatch.length > 0 && (
+                        {hasTitleKeywords && (
                             <Grid item xs={12}>
                                 <SearchKeywordsList
                                     keywordsListTitle={txt.keywordsBrowser.titleMatch.title}
@@ -107,7 +112,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     </Grid>
                 </Grid>
             )}
-            {journalSearchKeywords.keywordMatch.length > 0 && (
+            {hasKeywordKeywords && (
                 <Grid item xs={12} md={4}>
                     <SearchKeywordsList
                         keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
@@ -116,7 +121,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     />
                 </Grid>
             )}
-            {journalSearchKeywords.subjectMatch.length > 0 && (
+            {hasSubjectKeywords && (
                 <Grid item xs={12} md={4}>
                     <ForCodeSearchKeywordsList
                         keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}

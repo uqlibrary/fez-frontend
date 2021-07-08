@@ -15,6 +15,13 @@ export const JournalSearchInput = () => {
     //     state => (state.get('journalSearchReducer') || {}).loadingJournalSearchKeywords,
     // );
 
+    /**
+     * Journal search input handler
+     *
+     * @param {object} event keypress event object
+     * @returns {Promise}
+     * @todo Implement throttling
+     */
     const handleJournalSearchInput = event => dispatch(loadJournalSearchKeywords(event.target.value));
 
     return (
