@@ -10,27 +10,22 @@ import ExactMatchSearchKeywordsList from './partials/ExactMatchSearchKeywordsLis
 import SearchKeywordsList from './partials/SearchKeywordsList';
 import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 
-import {
-    getJournalSearchKeywords,
-    getHasJournalSearchKeywordsError,
-    getJournalSearchKeywordsError,
-    getHasAnyKeywordsLoaded,
-} from '../selectors';
-
 import locale from 'locale/components';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const txt = locale.components.journalSearch;
 
-    const journalSearchKeywords = useSelector(getJournalSearchKeywords);
-    const hasJournalSearchKeywordsFailed = useSelector(getHasJournalSearchKeywordsError);
-    const journalSearchKeywordsError = useSelector(getJournalSearchKeywordsError);
-    const hasAnyKeywordsLoaded = useSelector(getHasAnyKeywordsLoaded);
+    const journalSearchKeywords = useSelector(state => state.get('journalReducer').journalSearchKeywords);
+    const journalSearchKeywordsError = useSelector(state => state.get('journalReducer').journalSearchKeywordsError);
+
+    const hasJournalSearchKeywordsFailed = !!journalSearchKeywordsError;
 
     const hasExactKeywords = journalSearchKeywords.exactMatch.length > 0;
     const hasTitleKeywords = journalSearchKeywords.titleMatch.length > 0;
     const hasKeywordKeywords = journalSearchKeywords.keywordMatch.length > 0;
     const hasSubjectKeywords = journalSearchKeywords.subjectMatch.length > 0;
+
+    const hasAnyKeywordsLoaded = hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords;
 
     /**
      * Handle click event on keyword
