@@ -144,6 +144,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     /* istanbul ignore next */
     const onGoogleMapLoad = React.useCallback(map => {
         setMap(map);
+        document.getElementById('rek-geographic-area').setAttribute('data-testid', 'rek-geographic-area');
     }, []);
 
     /* istanbul ignore next */
@@ -186,6 +187,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                 zoom={zoom}
                 onLoad={onGoogleMapLoad}
                 onUnmount={onUnmount}
+                id="rek-geographic-area"
             >
                 {(readOnly || isSearch) &&
                     geoCoords.length >= 1 &&
