@@ -221,12 +221,13 @@ export const journalViewConfig = {
                 {
                     heading: 'Journal licence',
                     fieldId: 'jnl-doaj-by-sa-nd-nc',
-                    getData: journalDetails => ({
-                        by: !!journalDetails.fez_journal_doaj.jnl_doaj_by,
-                        sa: !!journalDetails.fez_journal_doaj.jnl_doaj_sa,
-                        nd: !!journalDetails.fez_journal_doaj.jnl_doaj_nd,
-                        nc: !!journalDetails.fez_journal_doaj.jnl_doaj_nc,
-                    }),
+                    getData: journalDetails =>
+                        journalDetails.fez_journal_doaj && {
+                            by: !!journalDetails.fez_journal_doaj.jnl_doaj_by,
+                            sa: !!journalDetails.fez_journal_doaj.jnl_doaj_sa,
+                            nd: !!journalDetails.fez_journal_doaj.jnl_doaj_nd,
+                            nc: !!journalDetails.fez_journal_doaj.jnl_doaj_nc,
+                        },
                     template: 'CreativeCommonsLicenceTemplate',
                 },
             ],
@@ -262,7 +263,9 @@ export const journalViewConfig = {
                     heading: 'View in DOAJ',
                     fieldId: 'ulr-open-access-jnl-issn',
                     getData: journalDetails =>
-                        !!journalDetails.fez_journal_issn &&
+                        Array.isArray(journalDetails.fez_journal_issn) &&
+                        journalDetails.fez_journal_issn.length &&
+                        journalDetails.fez_journal_issn[0].fez_ulrichs &&
                         journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access === '1' &&
                         journalDetails.fez_journal_issn[0].jnl_issn,
                     template: 'LinkTemplate',
