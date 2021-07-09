@@ -2,6 +2,7 @@
 
 exports[`GeoCoordinatesField component should render default view 1`] = `
 <Memo(PublicationMap)
+  coordinates=""
   country="AU"
   input={
     Object {
@@ -14,6 +15,7 @@ exports[`GeoCoordinatesField component should render default view 1`] = `
 
 exports[`GeoCoordinatesField component should render default view for AU 1`] = `
 <Memo(PublicationMap)
+  coordinates=""
   country="AU"
   input={
     Object {
@@ -26,6 +28,7 @@ exports[`GeoCoordinatesField component should render default view for AU 1`] = `
 
 exports[`GeoCoordinatesField component should render default view for CN 1`] = `
 <Memo(PublicationMap)
+  coordinates=""
   country="CN"
   input={
     Object {
