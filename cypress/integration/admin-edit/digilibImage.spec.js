@@ -274,5 +274,15 @@ context('Digilib Image admin edit', () => {
                         });
                     });
             });
+
+        // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
+        cy.log('Identifiers tab');
+        cy.get('[data-testid=identifiers-section-content]').within(() => {
+            cy.get('h4').should('contain', 'Location');
+            const locations = record.fez_record_search_key_location.map(item => item.rek_location);
+            locations.forEach((location, index) => {
+                cy.get(`[data-testid=rek-location-list-row-${index}]`).should('have.text', location);
+            });
+        });
     });
 });
