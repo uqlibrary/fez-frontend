@@ -93,6 +93,10 @@ export default {
             ],
         },
         {
+            title: 'Geographic co-ordinates',
+            groups: [['geoCoordinates']],
+        },
+        {
             title: 'Keyword(s)',
             groups: [['fez_record_search_key_keywords']],
         },
