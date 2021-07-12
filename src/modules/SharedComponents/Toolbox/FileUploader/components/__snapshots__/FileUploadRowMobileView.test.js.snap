@@ -16,7 +16,7 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -54,7 +54,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -81,7 +81,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <LockOutlinedIcon />
+      <Memo(ForwardRef(LockOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
@@ -144,7 +144,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <CalendarTodayOutlinedIcon />
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
@@ -201,7 +201,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -228,7 +228,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <LockOutlinedIcon />
+      <Memo(ForwardRef(LockOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
@@ -291,7 +291,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <CalendarTodayOutlinedIcon />
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
@@ -348,7 +348,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -375,7 +375,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <LockOutlinedIcon />
+      <Memo(ForwardRef(LockOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
@@ -442,7 +442,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <CalendarTodayOutlinedIcon />
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
@@ -529,7 +529,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -556,7 +556,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <LockOutlinedIcon />
+      <Memo(ForwardRef(LockOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
@@ -619,7 +619,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <CalendarTodayOutlinedIcon />
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={

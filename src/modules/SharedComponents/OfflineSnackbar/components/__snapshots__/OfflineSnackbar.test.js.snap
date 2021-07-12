@@ -64,7 +64,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
             }
           }
         >
-          <Memo(LinkIcon) />
+          <Memo />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
@@ -114,7 +114,7 @@ exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
             }
           }
         >
-          <Memo(LinkIcon) />
+          <Memo />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
@@ -164,7 +164,7 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
             }
           }
         >
-          <Memo(LinkOffIcon) />
+          <Memo />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}

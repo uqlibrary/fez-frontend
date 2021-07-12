@@ -700,8 +700,8 @@ exports[`File Name Component  should display file name link 1`] = `
                             className=""
                             classes={
                               Object {
-                                "externalLink": "ExternalLink-externalLink-134",
-                                "externalLinkIcon": "ExternalLink-externalLinkIcon-135",
+                                "externalLink": "ExternalLink-externalLink-1",
+                                "externalLinkIcon": "ExternalLink-externalLinkIcon-2",
                               }
                             }
                             href="http://localhost/view/UQ:676287/test.jpg?dsi_version=d96659e552c8eb09fd5f1b9511b66d71"
@@ -1065,21 +1065,21 @@ exports[`File Name Component  should display file name link 1`] = `
                             title="test.jpg"
                           >
                             <a
-                              className=" ExternalLink-externalLink-134"
+                              className=" ExternalLink-externalLink-1"
                               href="http://localhost/view/UQ:676287/test.jpg?dsi_version=d96659e552c8eb09fd5f1b9511b66d71"
                               rel="noopener noreferrer"
                               tabIndex="0"
                               target="_blank"
                               title="test.jpg"
                             >
-                              <OpenInNewIcon
-                                className="ExternalLink-externalLinkIcon-135"
+                              <ForwardRef(OpenInNewIcon)
+                                className="ExternalLink-externalLinkIcon-2"
                               >
                                 <WithStyles(ForwardRef(SvgIcon))
-                                  className="ExternalLink-externalLinkIcon-135"
+                                  className="ExternalLink-externalLinkIcon-2"
                                 >
                                   <ForwardRef(SvgIcon)
-                                    className="ExternalLink-externalLinkIcon-135"
+                                    className="ExternalLink-externalLinkIcon-2"
                                     classes={
                                       Object {
                                         "colorAction": "MuiSvgIcon-colorAction",
@@ -1095,8 +1095,8 @@ exports[`File Name Component  should display file name link 1`] = `
                                     }
                                   >
                                     <svg
-                                      aria-hidden="true"
-                                      className="MuiSvgIcon-root ExternalLink-externalLinkIcon-135"
+                                      aria-hidden={true}
+                                      className="MuiSvgIcon-root ExternalLink-externalLinkIcon-2"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                     >
@@ -1106,7 +1106,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                     </svg>
                                   </ForwardRef(SvgIcon)>
                                 </WithStyles(ForwardRef(SvgIcon))>
-                              </OpenInNewIcon>
+                              </ForwardRef(OpenInNewIcon)>
                               test.jpg
                             </a>
                           </ExternalLink>
@@ -1841,8 +1841,8 @@ exports[`File Name Component  should render audio player 1`] = `
                             className=""
                             classes={
                               Object {
-                                "externalLink": "ExternalLink-externalLink-134",
-                                "externalLinkIcon": "ExternalLink-externalLinkIcon-135",
+                                "externalLink": "ExternalLink-externalLink-1",
+                                "externalLinkIcon": "ExternalLink-externalLinkIcon-2",
                               }
                             }
                             href="http://localhost/view/UQ:676287/test.mp3?dsi_version=96ba1368c9263ef0c5200d522eaf3488"
@@ -2206,21 +2206,21 @@ exports[`File Name Component  should render audio player 1`] = `
                             title="test.mp3"
                           >
                             <a
-                              className=" ExternalLink-externalLink-134"
+                              className=" ExternalLink-externalLink-1"
                               href="http://localhost/view/UQ:676287/test.mp3?dsi_version=96ba1368c9263ef0c5200d522eaf3488"
                               rel="noopener noreferrer"
                               tabIndex="0"
                               target="_blank"
                               title="test.mp3"
                             >
-                              <OpenInNewIcon
-                                className="ExternalLink-externalLinkIcon-135"
+                              <ForwardRef(OpenInNewIcon)
+                                className="ExternalLink-externalLinkIcon-2"
                               >
                                 <WithStyles(ForwardRef(SvgIcon))
-                                  className="ExternalLink-externalLinkIcon-135"
+                                  className="ExternalLink-externalLinkIcon-2"
                                 >
                                   <ForwardRef(SvgIcon)
-                                    className="ExternalLink-externalLinkIcon-135"
+                                    className="ExternalLink-externalLinkIcon-2"
                                     classes={
                                       Object {
                                         "colorAction": "MuiSvgIcon-colorAction",
@@ -2236,8 +2236,8 @@ exports[`File Name Component  should render audio player 1`] = `
                                     }
                                   >
                                     <svg
-                                      aria-hidden="true"
-                                      className="MuiSvgIcon-root ExternalLink-externalLinkIcon-135"
+                                      aria-hidden={true}
+                                      className="MuiSvgIcon-root ExternalLink-externalLinkIcon-2"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                     >
@@ -2247,7 +2247,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                     </svg>
                                   </ForwardRef(SvgIcon)>
                                 </WithStyles(ForwardRef(SvgIcon))>
-                              </OpenInNewIcon>
+                              </ForwardRef(OpenInNewIcon)>
                               test.mp3
                             </a>
                           </ExternalLink>

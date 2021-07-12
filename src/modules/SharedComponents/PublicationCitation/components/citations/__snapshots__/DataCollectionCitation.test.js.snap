@@ -3662,7 +3662,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -3685,7 +3685,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3696,7 +3696,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -7370,7 +7370,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -7393,7 +7393,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -7404,7 +7404,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -11078,7 +11078,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -11101,7 +11101,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -11112,7 +11112,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -14601,7 +14601,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -14624,7 +14624,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -14635,7 +14635,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -18309,7 +18309,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -18332,7 +18332,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -18343,7 +18343,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>
@@ -25275,7 +25275,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <OpenInNewIcon
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -25298,7 +25298,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -25309,7 +25309,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </OpenInNewIcon>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.14264/uql.2016.841
                       </a>
                     </ExternalLink>

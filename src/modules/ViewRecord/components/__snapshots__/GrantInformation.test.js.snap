@@ -1808,11 +1808,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                       <Cards
                         classes={
                           Object {
-                            "card": "Cards-card-104",
-                            "cardContentNoPadding": "Cards-cardContentNoPadding-105",
-                            "cardHeaderAccent": "Cards-cardHeaderAccent-107",
-                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-106",
-                            "fullHeight": "Cards-fullHeight-108",
+                            "card": "Cards-card-1",
+                            "cardContentNoPadding": "Cards-cardContentNoPadding-2",
+                            "cardHeaderAccent": "Cards-cardHeaderAccent-4",
+                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-3",
+                            "fullHeight": "Cards-fullHeight-5",
                           }
                         }
                         theme={
@@ -2172,13 +2172,13 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                         title="Grant information"
                       >
                         <WithStyles(ForwardRef(Card))
-                          className="Cards-card-104 StandardCard"
+                          className="Cards-card-1 StandardCard"
                           data-testid="standard-card-grant-information"
                           id="standard-card-grant-information"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
-                            className="Cards-card-104 StandardCard"
+                            className="Cards-card-1 StandardCard"
                             classes={
                               Object {
                                 "root": "MuiCard-root",
@@ -2189,14 +2189,14 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
-                              className="MuiCard-root Cards-card-104 StandardCard"
+                              className="MuiCard-root Cards-card-1 StandardCard"
                               data-testid="standard-card-grant-information"
                               elevation={1}
                               id="standard-card-grant-information"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
-                                className="MuiCard-root Cards-card-104 StandardCard"
+                                className="MuiCard-root Cards-card-1 StandardCard"
                                 classes={
                                   Object {
                                     "elevation0": "MuiPaper-elevation0",
@@ -2235,7 +2235,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                 style={Object {}}
                               >
                                 <div
-                                  className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  className="MuiPaper-root MuiCard-root Cards-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-grant-information"
                                   id="standard-card-grant-information"
                                   style={Object {}}
@@ -2462,14 +2462,14 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
-                                              className="makeStyles-gridRow-175"
+                                              className="makeStyles-gridRow-6"
                                               container={true}
                                               key="1"
                                               spacing={2}
                                             >
                                               <ForwardRef(Grid)
                                                 alignItems="flex-start"
-                                                className="makeStyles-gridRow-175"
+                                                className="makeStyles-gridRow-6"
                                                 classes={
                                                   Object {
                                                     "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -2581,7 +2581,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 spacing={2}
                                               >
                                                 <div
-                                                  className="MuiGrid-root makeStyles-gridRow-175 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                                  className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     item={true}
@@ -3022,14 +3022,14 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
-                                              className="makeStyles-gridRow-175"
+                                              className="makeStyles-gridRow-6"
                                               container={true}
                                               key="2"
                                               spacing={2}
                                             >
                                               <ForwardRef(Grid)
                                                 alignItems="flex-start"
-                                                className="makeStyles-gridRow-175"
+                                                className="makeStyles-gridRow-6"
                                                 classes={
                                                   Object {
                                                     "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -3141,7 +3141,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 spacing={2}
                                               >
                                                 <div
-                                                  className="MuiGrid-root makeStyles-gridRow-175 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                                  className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     item={true}
@@ -3582,14 +3582,14 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
-                                              className="makeStyles-gridRow-175"
+                                              className="makeStyles-gridRow-6"
                                               container={true}
                                               key="3"
                                               spacing={2}
                                             >
                                               <ForwardRef(Grid)
                                                 alignItems="flex-start"
-                                                className="makeStyles-gridRow-175"
+                                                className="makeStyles-gridRow-6"
                                                 classes={
                                                   Object {
                                                     "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -3701,7 +3701,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 spacing={2}
                                               >
                                                 <div
-                                                  className="MuiGrid-root makeStyles-gridRow-175 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                                  className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     item={true}
