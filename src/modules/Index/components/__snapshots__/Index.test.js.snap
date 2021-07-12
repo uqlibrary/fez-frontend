@@ -2132,9 +2132,9 @@ exports[`Index page should render placeholders 1`] = `
                                                       }
                                                       classes={
                                                         Object {
-                                                          "tab": "WithWidth(TopCitedPublicationsClass)-tab-108",
-                                                          "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-109",
-                                                          "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-107",
+                                                          "tab": "WithWidth(TopCitedPublicationsClass)-tab-5",
+                                                          "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-6",
+                                                          "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-4",
                                                         }
                                                       }
                                                       history={
@@ -2558,11 +2558,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                 <Cards
                                                                   classes={
                                                                     Object {
-                                                                      "card": "Cards-card-110",
-                                                                      "cardContentNoPadding": "Cards-cardContentNoPadding-111",
-                                                                      "cardHeaderAccent": "Cards-cardHeaderAccent-113",
-                                                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-112",
-                                                                      "fullHeight": "Cards-fullHeight-114",
+                                                                      "card": "Cards-card-7",
+                                                                      "cardContentNoPadding": "Cards-cardContentNoPadding-8",
+                                                                      "cardHeaderAccent": "Cards-cardHeaderAccent-10",
+                                                                      "cardHeaderPrimary": "Cards-cardHeaderPrimary-9",
+                                                                      "fullHeight": "Cards-fullHeight-11",
                                                                     }
                                                                   }
                                                                   primaryHeader={true}
@@ -2923,13 +2923,13 @@ exports[`Index page should render placeholders 1`] = `
                                                                   title="What is eSpace?"
                                                                 >
                                                                   <WithStyles(ForwardRef(Card))
-                                                                    className="Cards-card-110 StandardCard"
+                                                                    className="Cards-card-7 StandardCard"
                                                                     data-testid="standard-card-what-is-espace?"
                                                                     id="standard-card-what-is-espace?"
                                                                     style={Object {}}
                                                                   >
                                                                     <ForwardRef(Card)
-                                                                      className="Cards-card-110 StandardCard"
+                                                                      className="Cards-card-7 StandardCard"
                                                                       classes={
                                                                         Object {
                                                                           "root": "MuiCard-root",
@@ -2940,14 +2940,14 @@ exports[`Index page should render placeholders 1`] = `
                                                                       style={Object {}}
                                                                     >
                                                                       <WithStyles(ForwardRef(Paper))
-                                                                        className="MuiCard-root Cards-card-110 StandardCard"
+                                                                        className="MuiCard-root Cards-card-7 StandardCard"
                                                                         data-testid="standard-card-what-is-espace?"
                                                                         elevation={1}
                                                                         id="standard-card-what-is-espace?"
                                                                         style={Object {}}
                                                                       >
                                                                         <ForwardRef(Paper)
-                                                                          className="MuiCard-root Cards-card-110 StandardCard"
+                                                                          className="MuiCard-root Cards-card-7 StandardCard"
                                                                           classes={
                                                                             Object {
                                                                               "elevation0": "MuiPaper-elevation0",
@@ -2986,7 +2986,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                           style={Object {}}
                                                                         >
                                                                           <div
-                                                                            className="MuiPaper-root MuiCard-root Cards-card-110 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                            className="MuiPaper-root MuiCard-root Cards-card-7 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                             data-testid="standard-card-what-is-espace?"
                                                                             id="standard-card-what-is-espace?"
                                                                             style={Object {}}
@@ -2995,7 +2995,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                               action={false}
                                                                               classes={
                                                                                 Object {
-                                                                                  "root": "Cards-cardHeaderPrimary-112",
+                                                                                  "root": "Cards-cardHeaderPrimary-9",
                                                                                 }
                                                                               }
                                                                               style={Object {}}
@@ -3017,7 +3017,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                     "action": "MuiCardHeader-action",
                                                                                     "avatar": "MuiCardHeader-avatar",
                                                                                     "content": "MuiCardHeader-content",
-                                                                                    "root": "MuiCardHeader-root Cards-cardHeaderPrimary-112",
+                                                                                    "root": "MuiCardHeader-root Cards-cardHeaderPrimary-9",
                                                                                     "subheader": "MuiCardHeader-subheader",
                                                                                     "title": "MuiCardHeader-title",
                                                                                   }
@@ -3035,7 +3035,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                 }
                                                                               >
                                                                                 <div
-                                                                                  className="MuiCardHeader-root Cards-cardHeaderPrimary-112"
+                                                                                  className="MuiCardHeader-root Cards-cardHeaderPrimary-9"
                                                                                   style={Object {}}
                                                                                 >
                                                                                   <div
@@ -3559,7 +3559,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 }
                                                                 classes={
                                                                   Object {
-                                                                    "newsItem": "NewsFeed-newsItem-181",
+                                                                    "newsItem": "NewsFeed-newsItem-12",
                                                                   }
                                                                 }
                                                                 loadingNewsFeedList={true}

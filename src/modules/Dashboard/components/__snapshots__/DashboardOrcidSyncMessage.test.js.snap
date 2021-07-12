@@ -25,7 +25,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
         item={true}
         xs={2}
       >
-        <DoneIcon
+        <Memo(ForwardRef(DoneIcon))
           color="action"
           style={
             Object {

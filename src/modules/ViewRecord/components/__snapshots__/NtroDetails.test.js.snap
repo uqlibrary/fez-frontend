@@ -1924,11 +1924,11 @@ exports[`NtroDetails  rendered full mount 1`] = `
                           <Cards
                             classes={
                               Object {
-                                "card": "Cards-card-106",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-107",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-109",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-108",
-                                "fullHeight": "Cards-fullHeight-110",
+                                "card": "Cards-card-3",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-4",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-6",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-5",
+                                "fullHeight": "Cards-fullHeight-7",
                               }
                             }
                             theme={
@@ -2288,13 +2288,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                             title="Non-traditional research output metadata"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-106 StandardCard"
+                              className="Cards-card-3 StandardCard"
                               data-testid="standard-card-non-traditional-research-output-metadata"
                               id="standard-card-non-traditional-research-output-metadata"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-106 StandardCard"
+                                className="Cards-card-3 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -2305,14 +2305,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-106 StandardCard"
+                                  className="MuiCard-root Cards-card-3 StandardCard"
                                   data-testid="standard-card-non-traditional-research-output-metadata"
                                   elevation={1}
                                   id="standard-card-non-traditional-research-output-metadata"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-106 StandardCard"
+                                    className="MuiCard-root Cards-card-3 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -2351,7 +2351,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-106 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-3 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-non-traditional-research-output-metadata"
                                       id="standard-card-non-traditional-research-output-metadata"
                                       style={Object {}}

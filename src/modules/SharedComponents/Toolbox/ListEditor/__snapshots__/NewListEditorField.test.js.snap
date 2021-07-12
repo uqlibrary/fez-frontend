@@ -64,7 +64,7 @@ exports[`NewListEditorField component should render new list editor component wi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root makeStyles-header-489 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+        class="MuiGrid-root makeStyles-header-13 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6"
@@ -76,7 +76,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-right-487 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
+          class="MuiGrid-root makeStyles-right-11 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
         >
           <span
             class="MuiTypography-root MuiTypography-caption"
@@ -85,7 +85,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-center-488 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          class="MuiGrid-root makeStyles-center-12 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
         >
           <span
             class=""
@@ -130,7 +130,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-566 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root makeStyles-row-16 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
@@ -142,7 +142,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-565 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
@@ -184,7 +184,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-565 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
           >
             <span
               class=""
@@ -225,7 +225,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-566 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root makeStyles-row-16 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
@@ -237,7 +237,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-565 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
@@ -279,7 +279,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-565 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
           >
             <span
               class=""
@@ -388,7 +388,7 @@ exports[`NewListEditorField component should render new list editor component wi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root makeStyles-header-197 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+        class="MuiGrid-root makeStyles-header-5 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6"
@@ -400,7 +400,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-right-195 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
+          class="MuiGrid-root makeStyles-right-3 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
         >
           <span
             class="MuiTypography-root MuiTypography-caption"
@@ -409,7 +409,7 @@ exports[`NewListEditorField component should render new list editor component wi
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-center-196 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          class="MuiGrid-root makeStyles-center-4 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
         >
           <span
             class=""
@@ -454,7 +454,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-274 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root makeStyles-row-8 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
@@ -466,7 +466,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-273 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
@@ -508,7 +508,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-273 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
           >
             <span
               class=""
@@ -549,7 +549,7 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-274 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root makeStyles-row-8 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
         >
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
@@ -561,7 +561,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-273 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
@@ -603,7 +603,7 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-273 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
           >
             <span
               class=""
