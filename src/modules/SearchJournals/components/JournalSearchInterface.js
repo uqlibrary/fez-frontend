@@ -9,70 +9,13 @@ import JournalSearchInput from './JournalSearchInput';
 import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
 
-import { useJournalSearchQueryParams } from 'hooks';
 import locale from 'locale/components';
 import { pathConfig } from 'config/pathConfig';
-import { useHistory } from 'react-router';
-import param from 'can-param';
-
-const getKeywordKey = keyword => `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
-
-export const useJournalSearchInterfaceState = initialState => {
-    const [showKeywordsBrowser, setKeywordsBrowserVisibility] = React.useState(initialState);
-    const [showJournalSearchInput, setJournalSearchInputVisibility] = React.useState(initialState);
-    const [showButtons, setButtonsVisibility] = React.useState(initialState);
-
-    const toggleKeywordsBrowser = () => setKeywordsBrowserVisibility(on => !on);
-    const toggleJournalSearchInput = () => setJournalSearchInputVisibility(on => !on);
-    const toggleButtons = () => setButtonsVisibility(on => !on);
-
-    return {
-        showKeywordsBrowser,
-        showJournalSearchInput,
-        showButtons,
-        toggleJournalSearchInput,
-        toggleKeywordsBrowser,
-        toggleButtons,
-    };
-};
-
-export const useSelectedKeywords = (initialKeywords = {}) => {
-    const [selectedKeywords, setSelectedKeywords] = React.useState(initialKeywords);
-
-    const handleKeywordAdd = React.useCallback(
-        keyword =>
-            setSelectedKeywords(prevSelectedKeywords => ({
-                ...prevSelectedKeywords,
-                [getKeywordKey(keyword)]: { ...keyword, id: getKeywordKey(keyword) },
-            })),
-        [],
-    );
-
-    const handleKeywordDelete = React.useCallback(
-        keyword =>
-            setSelectedKeywords(prevSelectedKeywords => {
-                const newSelectedKeywords = { ...prevSelectedKeywords };
-                delete newSelectedKeywords[keyword.id];
-                return { ...newSelectedKeywords };
-            }),
-        [],
-    );
-
-    const hasAnySelectedKeywords = Object.values(selectedKeywords).length > 0;
-
-    return {
-        selectedKeywords,
-        setSelectedKeywords,
-        handleKeywordAdd,
-        handleKeywordDelete,
-        hasAnySelectedKeywords,
-    };
-};
+import { useJournalSearchInterfaceState, useSelectedKeywords, useJournalSearchQueryParams } from '../hooks';
 
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
     const theme = useTheme();
-    const history = useHistory();
-    const { journalSearchQueryParams, locationKey } = useJournalSearchQueryParams();
+    const { journalSearchQueryParams } = useJournalSearchQueryParams();
 
     const {
         showKeywordsBrowser,
@@ -86,10 +29,8 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
     const txt = locale.components.journalSearch;
 
     const { selectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } = useSelectedKeywords(
-        journalSearchQueryParams.keywords || initialSelectedKeywords,
+        initialSelectedKeywords,
     );
-
-    console.log(initialSelectedKeywords, selectedKeywords);
 
     const handleFavouriteJournalsClick = React.useCallback(() => history.push(pathConfig.journal.favourite), []);
 
@@ -100,7 +41,6 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
         toggleKeywordsBrowser();
         toggleButtons();
         onSearch(selectedKeywords);
-        history.push({ pathname: pathConfig.journals.search, search: param({ keywords: selectedKeywords }) });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKeywords]);
 
@@ -113,13 +53,12 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
             <Grid container spacing={2}>
                 {showJournalSearchInput && (
                     <Grid item xs={12}>
-                        <JournalSearchInput key={locationKey} />
+                        <JournalSearchInput />
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && (
                     <Grid item xs={12}>
                         <SelectedKeywords
-                            key={locationKey}
                             onKeywordDelete={handleKeywordDelete}
                             keywords={Object.values(selectedKeywords)}
                         />
@@ -127,7 +66,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                 )}
                 {showKeywordsBrowser && (
                     <Grid item xs={12}>
-                        <KeywordsBrowser key={locationKey} onKeywordAdd={handleKeywordAdd} />
+                        <KeywordsBrowser onKeywordAdd={handleKeywordAdd} />
                     </Grid>
                 )}
                 {showButtons && (
