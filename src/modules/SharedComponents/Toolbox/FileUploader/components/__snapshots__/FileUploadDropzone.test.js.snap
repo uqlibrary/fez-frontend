@@ -777,20 +777,20 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                 <FileUploadDropzoneStaticContent
                                   classes={
                                     Object {
-                                      "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-107",
-                                      "dropzone": "FileUploadDropzoneStaticContent-dropzone-104",
-                                      "heading": "FileUploadDropzoneStaticContent-heading-105",
-                                      "instructions": "FileUploadDropzoneStaticContent-instructions-106",
+                                      "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-4",
+                                      "dropzone": "FileUploadDropzoneStaticContent-dropzone-1",
+                                      "heading": "FileUploadDropzoneStaticContent-heading-2",
+                                      "instructions": "FileUploadDropzoneStaticContent-instructions-3",
                                     }
                                   }
                                   locale={Object {}}
                                 >
                                   <WithStyles(ForwardRef(Grid))
-                                    className="FileUploadDropzoneStaticContent-dropzone-104"
+                                    className="FileUploadDropzoneStaticContent-dropzone-1"
                                     container={true}
                                   >
                                     <ForwardRef(Grid)
-                                      className="FileUploadDropzoneStaticContent-dropzone-104"
+                                      className="FileUploadDropzoneStaticContent-dropzone-1"
                                       classes={
                                         Object {
                                           "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -901,7 +901,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                       container={true}
                                     >
                                       <div
-                                        className="MuiGrid-root FileUploadDropzoneStaticContent-dropzone-104 MuiGrid-container"
+                                        className="MuiGrid-root FileUploadDropzoneStaticContent-dropzone-1 MuiGrid-container"
                                       >
                                         <WithStyles(ForwardRef(Grid))
                                           item={true}
@@ -1024,10 +1024,10 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                               className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
                                             >
                                               <WithStyles(ForwardRef(Typography))
-                                                className="FileUploadDropzoneStaticContent-heading-105"
+                                                className="FileUploadDropzoneStaticContent-heading-2"
                                               >
                                                 <ForwardRef(Typography)
-                                                  className="FileUploadDropzoneStaticContent-heading-105"
+                                                  className="FileUploadDropzoneStaticContent-heading-2"
                                                   classes={
                                                     Object {
                                                       "alignCenter": "MuiTypography-alignCenter",
@@ -1064,7 +1064,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                   }
                                                 >
                                                   <p
-                                                    className="MuiTypography-root FileUploadDropzoneStaticContent-heading-105 MuiTypography-body1"
+                                                    className="MuiTypography-root FileUploadDropzoneStaticContent-heading-2 MuiTypography-body1"
                                                   />
                                                 </ForwardRef(Typography)>
                                               </WithStyles(ForwardRef(Typography))>
@@ -1193,14 +1193,14 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignItems="center"
-                                                className="FileUploadDropzoneStaticContent-instructions-106"
+                                                className="FileUploadDropzoneStaticContent-instructions-3"
                                                 container={true}
                                                 direction="column"
                                                 justify="center"
                                               >
                                                 <ForwardRef(Grid)
                                                   alignItems="center"
-                                                  className="FileUploadDropzoneStaticContent-instructions-106"
+                                                  className="FileUploadDropzoneStaticContent-instructions-3"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -1313,7 +1313,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                   justify="center"
                                                 >
                                                   <div
-                                                    className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-106 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+                                                    className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-3 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       item={true}
@@ -1431,14 +1431,14 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item"
                                                         >
-                                                          <CloudUploadIcon
-                                                            className="FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                          <ForwardRef(CloudUploadIcon)
+                                                            className="FileUploadDropzoneStaticContent-cloudIcon-4"
                                                           >
                                                             <WithStyles(ForwardRef(SvgIcon))
-                                                              className="FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                              className="FileUploadDropzoneStaticContent-cloudIcon-4"
                                                             >
                                                               <ForwardRef(SvgIcon)
-                                                                className="FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                                className="FileUploadDropzoneStaticContent-cloudIcon-4"
                                                                 classes={
                                                                   Object {
                                                                     "colorAction": "MuiSvgIcon-colorAction",
@@ -1454,8 +1454,8 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                                 }
                                                               >
                                                                 <svg
-                                                                  aria-hidden="true"
-                                                                  className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                                  aria-hidden={true}
+                                                                  className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-4"
                                                                   focusable="false"
                                                                   viewBox="0 0 24 24"
                                                                 >
@@ -1465,7 +1465,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                                 </svg>
                                                               </ForwardRef(SvgIcon)>
                                                             </WithStyles(ForwardRef(SvgIcon))>
-                                                          </CloudUploadIcon>
+                                                          </ForwardRef(CloudUploadIcon)>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
@@ -2459,20 +2459,20 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                 <FileUploadDropzoneStaticContent
                                   classes={
                                     Object {
-                                      "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-107",
-                                      "dropzone": "FileUploadDropzoneStaticContent-dropzone-104",
-                                      "heading": "FileUploadDropzoneStaticContent-heading-105",
-                                      "instructions": "FileUploadDropzoneStaticContent-instructions-106",
+                                      "cloudIcon": "FileUploadDropzoneStaticContent-cloudIcon-4",
+                                      "dropzone": "FileUploadDropzoneStaticContent-dropzone-1",
+                                      "heading": "FileUploadDropzoneStaticContent-heading-2",
+                                      "instructions": "FileUploadDropzoneStaticContent-instructions-3",
                                     }
                                   }
                                   locale={Object {}}
                                 >
                                   <WithStyles(ForwardRef(Grid))
-                                    className="FileUploadDropzoneStaticContent-dropzone-104"
+                                    className="FileUploadDropzoneStaticContent-dropzone-1"
                                     container={true}
                                   >
                                     <ForwardRef(Grid)
-                                      className="FileUploadDropzoneStaticContent-dropzone-104"
+                                      className="FileUploadDropzoneStaticContent-dropzone-1"
                                       classes={
                                         Object {
                                           "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -2583,7 +2583,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                       container={true}
                                     >
                                       <div
-                                        className="MuiGrid-root FileUploadDropzoneStaticContent-dropzone-104 MuiGrid-container"
+                                        className="MuiGrid-root FileUploadDropzoneStaticContent-dropzone-1 MuiGrid-container"
                                       >
                                         <WithStyles(ForwardRef(Grid))
                                           item={true}
@@ -2706,10 +2706,10 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                               className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
                                             >
                                               <WithStyles(ForwardRef(Typography))
-                                                className="FileUploadDropzoneStaticContent-heading-105"
+                                                className="FileUploadDropzoneStaticContent-heading-2"
                                               >
                                                 <ForwardRef(Typography)
-                                                  className="FileUploadDropzoneStaticContent-heading-105"
+                                                  className="FileUploadDropzoneStaticContent-heading-2"
                                                   classes={
                                                     Object {
                                                       "alignCenter": "MuiTypography-alignCenter",
@@ -2746,7 +2746,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                   }
                                                 >
                                                   <p
-                                                    className="MuiTypography-root FileUploadDropzoneStaticContent-heading-105 MuiTypography-body1"
+                                                    className="MuiTypography-root FileUploadDropzoneStaticContent-heading-2 MuiTypography-body1"
                                                   />
                                                 </ForwardRef(Typography)>
                                               </WithStyles(ForwardRef(Typography))>
@@ -2875,14 +2875,14 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignItems="center"
-                                                className="FileUploadDropzoneStaticContent-instructions-106"
+                                                className="FileUploadDropzoneStaticContent-instructions-3"
                                                 container={true}
                                                 direction="column"
                                                 justify="center"
                                               >
                                                 <ForwardRef(Grid)
                                                   alignItems="center"
-                                                  className="FileUploadDropzoneStaticContent-instructions-106"
+                                                  className="FileUploadDropzoneStaticContent-instructions-3"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -2995,7 +2995,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                   justify="center"
                                                 >
                                                   <div
-                                                    className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-106 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+                                                    className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-3 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       item={true}
@@ -3113,14 +3113,14 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item"
                                                         >
-                                                          <CloudUploadIcon
-                                                            className="FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                          <ForwardRef(CloudUploadIcon)
+                                                            className="FileUploadDropzoneStaticContent-cloudIcon-4"
                                                           >
                                                             <WithStyles(ForwardRef(SvgIcon))
-                                                              className="FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                              className="FileUploadDropzoneStaticContent-cloudIcon-4"
                                                             >
                                                               <ForwardRef(SvgIcon)
-                                                                className="FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                                className="FileUploadDropzoneStaticContent-cloudIcon-4"
                                                                 classes={
                                                                   Object {
                                                                     "colorAction": "MuiSvgIcon-colorAction",
@@ -3136,8 +3136,8 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                                 }
                                                               >
                                                                 <svg
-                                                                  aria-hidden="true"
-                                                                  className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-107"
+                                                                  aria-hidden={true}
+                                                                  className="MuiSvgIcon-root FileUploadDropzoneStaticContent-cloudIcon-4"
                                                                   focusable="false"
                                                                   viewBox="0 0 24 24"
                                                                 >
@@ -3147,7 +3147,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                                 </svg>
                                                               </ForwardRef(SvgIcon)>
                                                             </WithStyles(ForwardRef(SvgIcon))>
-                                                          </CloudUploadIcon>
+                                                          </ForwardRef(CloudUploadIcon)>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
@@ -3322,7 +3322,7 @@ exports[`Component FileUploadDropzone should render with styles 1`] = `
 <FileUploadDropzone
   classes={
     Object {
-      "hideLabel": "FileUploadDropzone-hideLabel-147",
+      "hideLabel": "FileUploadDropzone-hideLabel-5",
     }
   }
   fileNameRestrictions={/\\.\\+/}

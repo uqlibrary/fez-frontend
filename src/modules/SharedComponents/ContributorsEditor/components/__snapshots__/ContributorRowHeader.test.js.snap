@@ -27,7 +27,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -116,7 +116,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -150,7 +150,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -221,7 +221,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={true}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -255,7 +255,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -326,7 +326,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -360,7 +360,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -444,7 +444,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -478,7 +478,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -549,7 +549,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>

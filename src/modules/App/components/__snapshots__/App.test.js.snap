@@ -102,9 +102,14 @@ exports[`Application component Should display mobile correctly 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -125,7 +130,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -835,9 +840,14 @@ exports[`Application component should determine if it has incomplete works from 
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -858,7 +868,7 @@ exports[`Application component should determine if it has incomplete works from 
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -1903,9 +1913,14 @@ exports[`Application component should determine if it has incomplete works from 
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -1926,7 +1941,7 @@ exports[`Application component should determine if it has incomplete works from 
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -2695,9 +2710,14 @@ exports[`Application component should redirect to login page with correct return
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -2718,7 +2738,7 @@ exports[`Application component should redirect to login page with correct return
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -3424,9 +3444,14 @@ exports[`Application component should render alert if user is not fez author 1`]
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -3447,7 +3472,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -4509,9 +4534,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -4532,7 +4562,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -5618,9 +5648,14 @@ exports[`Application component should render app for account with fez author wit
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -5641,7 +5676,7 @@ exports[`Application component should render app for account with fez author wit
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -6712,9 +6747,14 @@ exports[`Application component should render application with routing for the us
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -6735,7 +6775,7 @@ exports[`Application component should render application with routing for the us
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -7036,9 +7076,14 @@ exports[`Application component should render for anon user 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
                   "children": [Function],
+                  "disableStrictModeCompat": [Function],
                   "in": [Function],
                   "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
                   "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
                   "style": [Function],
                   "timeout": [Function],
                 },
@@ -7059,7 +7104,7 @@ exports[`Application component should render for anon user 1`] = `
                 }
               }
             >
-              <MenuIcon
+              <Memo(ForwardRef(MenuIcon))
                 style={
                   Object {
                     "color": "white",
@@ -10009,9 +10054,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "propTypes": Object {
                                                         "children": [Function],
+                                                        "disableStrictModeCompat": [Function],
                                                         "in": [Function],
                                                         "onEnter": [Function],
+                                                        "onEntered": [Function],
+                                                        "onEntering": [Function],
                                                         "onExit": [Function],
+                                                        "onExited": [Function],
+                                                        "onExiting": [Function],
                                                         "style": [Function],
                                                         "timeout": [Function],
                                                       },
@@ -10027,9 +10077,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "propTypes": Object {
                                                           "children": [Function],
+                                                          "disableStrictModeCompat": [Function],
                                                           "in": [Function],
                                                           "onEnter": [Function],
+                                                          "onEntered": [Function],
+                                                          "onEntering": [Function],
                                                           "onExit": [Function],
+                                                          "onExited": [Function],
+                                                          "onExiting": [Function],
                                                           "style": [Function],
                                                           "timeout": [Function],
                                                         },
@@ -10192,7 +10247,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               <span
                                                                 className="MuiIconButton-label"
                                                               >
-                                                                <MenuIcon
+                                                                <ForwardRef(MenuIcon)
                                                                   style={
                                                                     Object {
                                                                       "color": "white",
@@ -10227,7 +10282,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       }
                                                                     >
                                                                       <svg
-                                                                        aria-hidden="true"
+                                                                        aria-hidden={true}
                                                                         className="MuiSvgIcon-root"
                                                                         focusable="false"
                                                                         style={
@@ -10243,7 +10298,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       </svg>
                                                                     </ForwardRef(SvgIcon)>
                                                                   </WithStyles(ForwardRef(SvgIcon))>
-                                                                </MenuIcon>
+                                                                </ForwardRef(MenuIcon)>
                                                               </span>
                                                               <WithStyles(memo)
                                                                 center={true}
@@ -11185,13 +11240,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           autoFocus={true}
                                                           classes={
                                                             Object {
-                                                              "inHeader": "SimpleSearchComponent-inHeader-215",
-                                                              "mobileBackArrow": "SimpleSearchComponent-mobileBackArrow-217",
-                                                              "mobileBackArrowButton": "SimpleSearchComponent-mobileBackArrowButton-218",
-                                                              "mobileHeader": "SimpleSearchComponent-mobileHeader-219",
-                                                              "mobileSearchInput": "SimpleSearchComponent-mobileSearchInput-220",
-                                                              "searchIconMobile": "SimpleSearchComponent-searchIconMobile-216",
-                                                              "searchIconPrefix": "SimpleSearchComponent-searchIconPrefix-214",
+                                                              "inHeader": "SimpleSearchComponent-inHeader-7",
+                                                              "mobileBackArrow": "SimpleSearchComponent-mobileBackArrow-9",
+                                                              "mobileBackArrowButton": "SimpleSearchComponent-mobileBackArrowButton-10",
+                                                              "mobileHeader": "SimpleSearchComponent-mobileHeader-11",
+                                                              "mobileSearchInput": "SimpleSearchComponent-mobileSearchInput-12",
+                                                              "searchIconMobile": "SimpleSearchComponent-searchIconMobile-8",
+                                                              "searchIconPrefix": "SimpleSearchComponent-searchIconPrefix-6",
                                                             }
                                                           }
                                                           isInHeader={true}
@@ -11774,9 +11829,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "propTypes": Object {
                                                             "children": [Function],
+                                                            "disableStrictModeCompat": [Function],
                                                             "in": [Function],
                                                             "onEnter": [Function],
+                                                            "onEntered": [Function],
+                                                            "onEntering": [Function],
                                                             "onExit": [Function],
+                                                            "onExited": [Function],
+                                                            "onExiting": [Function],
                                                             "style": [Function],
                                                             "timeout": [Function],
                                                           },
@@ -11798,9 +11858,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "propTypes": Object {
                                                               "children": [Function],
+                                                              "disableStrictModeCompat": [Function],
                                                               "in": [Function],
                                                               "onEnter": [Function],
+                                                              "onEntered": [Function],
+                                                              "onEntering": [Function],
                                                               "onExit": [Function],
+                                                              "onExited": [Function],
+                                                              "onExiting": [Function],
                                                               "style": [Function],
                                                               "timeout": [Function],
                                                             },
@@ -11934,16 +11999,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                   <span
                                                                     className="MuiIconButton-label"
                                                                   >
-                                                                    <PersonIcon
-                                                                      className="makeStyles-iconButton-228"
+                                                                    <ForwardRef(PersonIcon)
+                                                                      className="makeStyles-iconButton-13"
                                                                       id="logged-in-icon"
                                                                     >
                                                                       <WithStyles(ForwardRef(SvgIcon))
-                                                                        className="makeStyles-iconButton-228"
+                                                                        className="makeStyles-iconButton-13"
                                                                         id="logged-in-icon"
                                                                       >
                                                                         <ForwardRef(SvgIcon)
-                                                                          className="makeStyles-iconButton-228"
+                                                                          className="makeStyles-iconButton-13"
                                                                           classes={
                                                                             Object {
                                                                               "colorAction": "MuiSvgIcon-colorAction",
@@ -11960,8 +12025,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           id="logged-in-icon"
                                                                         >
                                                                           <svg
-                                                                            aria-hidden="true"
-                                                                            className="MuiSvgIcon-root makeStyles-iconButton-228"
+                                                                            aria-hidden={true}
+                                                                            className="MuiSvgIcon-root makeStyles-iconButton-13"
                                                                             focusable="false"
                                                                             id="logged-in-icon"
                                                                             viewBox="0 0 24 24"
@@ -11972,7 +12037,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           </svg>
                                                                         </ForwardRef(SvgIcon)>
                                                                       </WithStyles(ForwardRef(SvgIcon))>
-                                                                    </PersonIcon>
+                                                                    </ForwardRef(PersonIcon)>
                                                                   </span>
                                                                   <WithStyles(memo)
                                                                     center={true}
@@ -12021,7 +12086,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               >
                                                                 <svg
                                                                   aria-hidden="true"
-                                                                  class="MuiSvgIcon-root makeStyles-iconButton-228"
+                                                                  class="MuiSvgIcon-root makeStyles-iconButton-13"
                                                                   focusable="false"
                                                                   id="logged-in-icon"
                                                                   viewBox="0 0 24 24"
@@ -12125,16 +12190,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       <MenuDrawer
                         classes={
                           Object {
-                            "ListItemTextPrimary": "MenuDrawer-ListItemTextPrimary-235",
-                            "ListItemTextSecondary": "MenuDrawer-ListItemTextSecondary-236",
-                            "docked": "MenuDrawer-docked-230",
-                            "header": "MenuDrawer-header-232",
-                            "iconButton": "MenuDrawer-iconButton-238",
-                            "mainMenu": "MenuDrawer-mainMenu-234",
-                            "mainMenuFooter": "MenuDrawer-mainMenuFooter-237",
-                            "paper": "MenuDrawer-paper-229",
-                            "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-231",
-                            "skipNav": "MenuDrawer-skipNav-233",
+                            "ListItemTextPrimary": "MenuDrawer-ListItemTextPrimary-20",
+                            "ListItemTextSecondary": "MenuDrawer-ListItemTextSecondary-21",
+                            "docked": "MenuDrawer-docked-15",
+                            "header": "MenuDrawer-header-17",
+                            "iconButton": "MenuDrawer-iconButton-23",
+                            "mainMenu": "MenuDrawer-mainMenu-19",
+                            "mainMenuFooter": "MenuDrawer-mainMenuFooter-22",
+                            "paper": "MenuDrawer-paper-14",
+                            "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-16",
+                            "skipNav": "MenuDrawer-skipNav-18",
                           }
                         }
                         docked={false}
@@ -12546,9 +12611,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           anchor="left"
                           classes={
                             Object {
-                              "docked": "MenuDrawer-docked-230",
-                              "paper": "MenuDrawer-paper-229",
-                              "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-231",
+                              "docked": "MenuDrawer-docked-15",
+                              "paper": "MenuDrawer-paper-14",
+                              "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-16",
                             }
                           }
                           id="menudrawer"
@@ -12560,12 +12625,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             anchor="left"
                             classes={
                               Object {
-                                "docked": "MuiDrawer-docked MenuDrawer-docked-230",
+                                "docked": "MuiDrawer-docked MenuDrawer-docked-15",
                                 "modal": "MuiDrawer-modal",
-                                "paper": "MuiDrawer-paper MenuDrawer-paper-229",
+                                "paper": "MuiDrawer-paper MenuDrawer-paper-14",
                                 "paperAnchorBottom": "MuiDrawer-paperAnchorBottom",
                                 "paperAnchorDockedBottom": "MuiDrawer-paperAnchorDockedBottom",
-                                "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft MenuDrawer-paperAnchorDockedLeft-231",
+                                "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft MenuDrawer-paperAnchorDockedLeft-16",
                                 "paperAnchorDockedRight": "MuiDrawer-paperAnchorDockedRight",
                                 "paperAnchorDockedTop": "MuiDrawer-paperAnchorDockedTop",
                                 "paperAnchorLeft": "MuiDrawer-paperAnchorLeft",
@@ -12948,7 +13013,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         <ConfirmDialogBox
                           classes={
                             Object {
-                              "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-251",
+                              "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-24",
                             }
                           }
                           confirmDialogBoxId="dialog-box"
@@ -13993,9 +14058,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       <Page
                                         classes={
                                           Object {
-                                            "helpIcon": "Page-helpIcon-269",
-                                            "layoutCard": "Page-layoutCard-267",
-                                            "layoutTitle": "Page-layoutTitle-268",
+                                            "helpIcon": "Page-helpIcon-27",
+                                            "layoutCard": "Page-layoutCard-25",
+                                            "layoutTitle": "Page-layoutTitle-26",
                                           }
                                         }
                                         theme={
@@ -14592,11 +14657,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 </ForwardRef(Grid)>
                                               </WithStyles(ForwardRef(Grid))>
                                               <WithStyles(ForwardRef(Grid))
-                                                className="Page-layoutCard-267"
+                                                className="Page-layoutCard-25"
                                                 item={true}
                                               >
                                                 <ForwardRef(Grid)
-                                                  className="Page-layoutCard-267"
+                                                  className="Page-layoutCard-25"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -14707,7 +14772,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   item={true}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root Page-layoutCard-267 MuiGrid-item"
+                                                    className="MuiGrid-root Page-layoutCard-25 MuiGrid-item"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       container={true}
@@ -15277,9 +15342,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         }
                                                                         classes={
                                                                           Object {
-                                                                            "tab": "WithWidth(TopCitedPublicationsClass)-tab-271",
-                                                                            "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-272",
-                                                                            "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-270",
+                                                                            "tab": "WithWidth(TopCitedPublicationsClass)-tab-29",
+                                                                            "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-30",
+                                                                            "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-28",
                                                                           }
                                                                         }
                                                                         history={
@@ -15703,11 +15768,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <Cards
                                                                                     classes={
                                                                                       Object {
-                                                                                        "card": "Cards-card-273",
-                                                                                        "cardContentNoPadding": "Cards-cardContentNoPadding-274",
-                                                                                        "cardHeaderAccent": "Cards-cardHeaderAccent-276",
-                                                                                        "cardHeaderPrimary": "Cards-cardHeaderPrimary-275",
-                                                                                        "fullHeight": "Cards-fullHeight-277",
+                                                                                        "card": "Cards-card-31",
+                                                                                        "cardContentNoPadding": "Cards-cardContentNoPadding-32",
+                                                                                        "cardHeaderAccent": "Cards-cardHeaderAccent-34",
+                                                                                        "cardHeaderPrimary": "Cards-cardHeaderPrimary-33",
+                                                                                        "fullHeight": "Cards-fullHeight-35",
                                                                                       }
                                                                                     }
                                                                                     primaryHeader={true}
@@ -16068,13 +16133,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     title="What is eSpace?"
                                                                                   >
                                                                                     <WithStyles(ForwardRef(Card))
-                                                                                      className="Cards-card-273 StandardCard"
+                                                                                      className="Cards-card-31 StandardCard"
                                                                                       data-testid="standard-card-what-is-espace?"
                                                                                       id="standard-card-what-is-espace?"
                                                                                       style={Object {}}
                                                                                     >
                                                                                       <ForwardRef(Card)
-                                                                                        className="Cards-card-273 StandardCard"
+                                                                                        className="Cards-card-31 StandardCard"
                                                                                         classes={
                                                                                           Object {
                                                                                             "root": "MuiCard-root",
@@ -16085,14 +16150,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         style={Object {}}
                                                                                       >
                                                                                         <WithStyles(ForwardRef(Paper))
-                                                                                          className="MuiCard-root Cards-card-273 StandardCard"
+                                                                                          className="MuiCard-root Cards-card-31 StandardCard"
                                                                                           data-testid="standard-card-what-is-espace?"
                                                                                           elevation={1}
                                                                                           id="standard-card-what-is-espace?"
                                                                                           style={Object {}}
                                                                                         >
                                                                                           <ForwardRef(Paper)
-                                                                                            className="MuiCard-root Cards-card-273 StandardCard"
+                                                                                            className="MuiCard-root Cards-card-31 StandardCard"
                                                                                             classes={
                                                                                               Object {
                                                                                                 "elevation0": "MuiPaper-elevation0",
@@ -16131,7 +16196,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                             style={Object {}}
                                                                                           >
                                                                                             <div
-                                                                                              className="MuiPaper-root MuiCard-root Cards-card-273 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                                              className="MuiPaper-root MuiCard-root Cards-card-31 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                                               data-testid="standard-card-what-is-espace?"
                                                                                               id="standard-card-what-is-espace?"
                                                                                               style={Object {}}
@@ -16140,7 +16205,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                 action={false}
                                                                                                 classes={
                                                                                                   Object {
-                                                                                                    "root": "Cards-cardHeaderPrimary-275",
+                                                                                                    "root": "Cards-cardHeaderPrimary-33",
                                                                                                   }
                                                                                                 }
                                                                                                 style={Object {}}
@@ -16162,7 +16227,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       "action": "MuiCardHeader-action",
                                                                                                       "avatar": "MuiCardHeader-avatar",
                                                                                                       "content": "MuiCardHeader-content",
-                                                                                                      "root": "MuiCardHeader-root Cards-cardHeaderPrimary-275",
+                                                                                                      "root": "MuiCardHeader-root Cards-cardHeaderPrimary-33",
                                                                                                       "subheader": "MuiCardHeader-subheader",
                                                                                                       "title": "MuiCardHeader-title",
                                                                                                     }
@@ -16180,7 +16245,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   }
                                                                                                 >
                                                                                                   <div
-                                                                                                    className="MuiCardHeader-root Cards-cardHeaderPrimary-275"
+                                                                                                    className="MuiCardHeader-root Cards-cardHeaderPrimary-33"
                                                                                                     style={Object {}}
                                                                                                   >
                                                                                                     <div
@@ -16704,7 +16769,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   }
                                                                                   classes={
                                                                                     Object {
-                                                                                      "newsItem": "NewsFeed-newsItem-286",
+                                                                                      "newsItem": "NewsFeed-newsItem-36",
                                                                                     }
                                                                                   }
                                                                                   loadingNewsFeedList={true}
@@ -17106,9 +17171,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           buttonLabel="CLOSE"
                           classes={
                             Object {
-                              "button": "HelpDrawer-button-289",
-                              "paper": "HelpDrawer-paper-287",
-                              "title": "HelpDrawer-title-288",
+                              "button": "HelpDrawer-button-39",
+                              "paper": "HelpDrawer-paper-37",
+                              "title": "HelpDrawer-title-38",
                             }
                           }
                           hide={[Function]}
@@ -17474,7 +17539,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             anchor="right"
                             classes={
                               Object {
-                                "paper": "HelpDrawer-paper-287",
+                                "paper": "HelpDrawer-paper-37",
                               }
                             }
                             onClose={[Function]}
@@ -17486,7 +17551,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 Object {
                                   "docked": "MuiDrawer-docked",
                                   "modal": "MuiDrawer-modal",
-                                  "paper": "MuiDrawer-paper HelpDrawer-paper-287",
+                                  "paper": "MuiDrawer-paper HelpDrawer-paper-37",
                                   "paperAnchorBottom": "MuiDrawer-paperAnchorBottom",
                                   "paperAnchorDockedBottom": "MuiDrawer-paperAnchorDockedBottom",
                                   "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft",
@@ -17837,8 +17902,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       <OfflineSnackbar
                         classes={
                           Object {
-                            "error": "OfflineSnackbar-error-291",
-                            "success": "OfflineSnackbar-success-290",
+                            "error": "OfflineSnackbar-error-41",
+                            "success": "OfflineSnackbar-success-40",
                           }
                         }
                         theme={
@@ -18226,8 +18291,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     }
                                   }
                                 >
-                                  <Memo(LinkIcon)
-                                    className="OfflineSnackbar-success-290"
+                                  <Memo
+                                    className="OfflineSnackbar-success-40"
                                   />
                                 </WithStyles(ForwardRef(Grid))>
                                 <WithStyles(ForwardRef(Grid))
@@ -18282,8 +18347,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       }
                                     }
                                   >
-                                    <Memo(LinkIcon)
-                                      className="OfflineSnackbar-success-290"
+                                    <Memo
+                                      className="OfflineSnackbar-success-40"
                                     />
                                   </WithStyles(ForwardRef(Grid))>
                                   <WithStyles(ForwardRef(Grid))

@@ -10,7 +10,7 @@ exports[`ExternalLink test  should render component with open-in-new window icon
   text="Google"
   title="Link to www.google.com will open in a new window."
 >
-  <OpenInNewIcon />
+  <Memo(ForwardRef(OpenInNewIcon)) />
 </a>
 `;
 

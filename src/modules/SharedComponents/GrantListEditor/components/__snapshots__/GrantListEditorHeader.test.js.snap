@@ -158,7 +158,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <DeleteForeverIcon />
+                    <Memo(ForwardRef(DeleteForeverIcon)) />
                   </WithStyles(ForwardRef(IconButton))>
                 </div>
               </WithStyles(ForwardRef(Tooltip))>
@@ -323,7 +323,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <DeleteForeverIcon />
+                    <Memo(ForwardRef(DeleteForeverIcon)) />
                   </WithStyles(ForwardRef(IconButton))>
                 </div>
               </WithStyles(ForwardRef(Tooltip))>
@@ -488,7 +488,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <DeleteForeverIcon />
+                    <Memo(ForwardRef(DeleteForeverIcon)) />
                   </WithStyles(ForwardRef(IconButton))>
                 </div>
               </WithStyles(ForwardRef(Tooltip))>
@@ -653,7 +653,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
                     disabled={false}
                     onClick={[Function]}
                   >
-                    <DeleteForeverIcon />
+                    <Memo(ForwardRef(DeleteForeverIcon)) />
                   </WithStyles(ForwardRef(IconButton))>
                 </div>
               </WithStyles(ForwardRef(Tooltip))>

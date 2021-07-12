@@ -22,7 +22,7 @@ exports[`Audio Player Component  should play audio 1`] = `
       }
     }
   >
-    <PauseIcon
+    <Memo(ForwardRef(PauseIcon))
       className="pause"
     />
   </WithStyles(ForwardRef(IconButton))>
@@ -583,7 +583,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                         <span
                           className="MuiIconButton-label"
                         >
-                          <PlayArrowIcon
+                          <ForwardRef(PlayArrowIcon)
                             className="play"
                           >
                             <WithStyles(ForwardRef(SvgIcon))
@@ -606,7 +606,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                                 }
                               >
                                 <svg
-                                  aria-hidden="true"
+                                  aria-hidden={true}
                                   className="MuiSvgIcon-root play"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -617,7 +617,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                                 </svg>
                               </ForwardRef(SvgIcon)>
                             </WithStyles(ForwardRef(SvgIcon))>
-                          </PlayArrowIcon>
+                          </ForwardRef(PlayArrowIcon)>
                         </span>
                         <WithStyles(memo)
                           center={true}
@@ -683,7 +683,7 @@ exports[`Audio Player Component  should render component 1`] = `
       }
     }
   >
-    <PlayArrowIcon
+    <Memo(ForwardRef(PlayArrowIcon))
       className="play"
     />
   </WithStyles(ForwardRef(IconButton))>
@@ -712,7 +712,7 @@ exports[`Audio Player Component  should render when image ends 1`] = `
       }
     }
   >
-    <PauseIcon
+    <Memo(ForwardRef(PauseIcon))
       className="pause"
     />
   </WithStyles(ForwardRef(IconButton))>
@@ -741,7 +741,7 @@ exports[`Audio Player Component  should render when image ends 2`] = `
       }
     }
   >
-    <PlayArrowIcon
+    <Memo(ForwardRef(PlayArrowIcon))
       className="play"
     />
   </WithStyles(ForwardRef(IconButton))>
@@ -770,7 +770,7 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
       }
     }
   >
-    <PlayArrowIcon
+    <Memo(ForwardRef(PlayArrowIcon))
       className="play"
     />
   </WithStyles(ForwardRef(IconButton))>
@@ -799,7 +799,7 @@ exports[`Audio Player Component  should set component state to playing 2`] = `
       }
     }
   >
-    <PauseIcon
+    <Memo(ForwardRef(PauseIcon))
       className="pause"
     />
   </WithStyles(ForwardRef(IconButton))>

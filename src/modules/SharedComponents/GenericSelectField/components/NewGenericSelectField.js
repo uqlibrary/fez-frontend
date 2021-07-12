@@ -111,7 +111,7 @@ export const NewGenericSelectField = ({
     }, [error]);
 
     const handleChange = React.useCallback(
-        !!input ? event => input.onChange(event.target.value) : event => onChange(event.target.value),
+        event => (!!input ? input.onChange(event.target.value) : onChange(event.target.value)),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );

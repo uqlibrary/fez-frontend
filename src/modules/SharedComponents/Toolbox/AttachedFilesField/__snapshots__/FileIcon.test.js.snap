@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileIcon component should render Image for image 1`] = `
-<ImageIcon
+<Memo(ForwardRef(ImageIcon))
   color="secondary"
 />
 `;
 
 exports[`FileIcon component should render PictureAsPdf for PDF 1`] = `
-<PictureAsPdfIcon
+<Memo(ForwardRef(PictureAsPdfIcon))
   color="secondary"
 />
 `;
 
 exports[`FileIcon component should render Videocam for video 1`] = `
-<VideocamIcon
+<Memo(ForwardRef(VideocamIcon))
   color="secondary"
 />
 `;
 
 exports[`FileIcon component should render VolumeUp for audio 1`] = `
-<VolumeUpIcon
+<Memo(ForwardRef(VolumeUpIcon))
   color="secondary"
 />
 `;
@@ -43,7 +43,7 @@ exports[`FileIcon component should render a thumbnail when applicable 2`] = `
 `;
 
 exports[`FileIcon component should render the default view 1`] = `
-<InsertDriveFileIcon
+<Memo(ForwardRef(InsertDriveFileIcon))
   color="secondary"
 />
 `;

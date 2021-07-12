@@ -6,7 +6,7 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
 >
-  <LockIcon
+  <Memo(ForwardRef(LockIcon))
     color="secondary"
   />
 </a>
@@ -18,7 +18,7 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
 >
-  <LockIcon
+  <Memo(ForwardRef(LockIcon))
     color="secondary"
   />
 </a>
@@ -30,7 +30,7 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
 >
-  <LockIcon
+  <Memo(ForwardRef(LockIcon))
     color="secondary"
   />
 </a>
@@ -42,7 +42,7 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
 >
-  <LockIcon
+  <Memo(ForwardRef(LockIcon))
     color="secondary"
   />
 </a>
@@ -54,7 +54,7 @@ exports[`Thumbnail component should render FLV files as a thumbnail only for spe
   onKeyPress={[Function]}
   title="Click to open a preview of video.flv"
 >
-  <LockIcon
+  <Memo(ForwardRef(LockIcon))
     color="secondary"
   />
 </a>
@@ -80,7 +80,7 @@ exports[`Thumbnail component should render PDF files as a thumbnail only plus li
     }
     src="/test/thumbnail/mediaUrl"
     unloader={
-      <Memo(BrokenImageIcon)
+      <Memo
         color="secondary"
       />
     }
@@ -94,7 +94,7 @@ exports[`Thumbnail component should show a broken thumbnail icon when the thumbn
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
 >
-  <LockIcon
+  <Memo(ForwardRef(LockIcon))
     color="secondary"
   />
 </a>
@@ -106,7 +106,7 @@ exports[`Thumbnail component should show a broken thumbnail icon when the thumbn
   onKeyPress={[Function]}
   title=""
 >
-  <LockIcon
+  <Memo(ForwardRef(LockIcon))
     color="secondary"
   />
 </a>
