@@ -54,16 +54,6 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -434,22 +424,9 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_5"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_6"
+            key="route_5"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -464,7 +441,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 },
               }
             }
-            key="route_7"
+            key="route_6"
             pageTitle="Page not found"
           />
         </Switch>
@@ -725,14 +702,12 @@ exports[`Application component should determine if it has incomplete works from 
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
           },
-          "pageTitle": "Strategic publishing search",
+          "exact": true,
+          "pageTitle": "Journal search",
           "path": "/journals/search/",
         },
         Object {
@@ -816,16 +791,6 @@ exports[`Application component should determine if it has incomplete works from 
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": Object {
@@ -1426,16 +1391,14 @@ exports[`Application component should determine if it has incomplete works from 
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
               }
             }
+            exact={true}
             key="route_19"
-            pageTitle="Strategic publishing search"
+            pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
@@ -1542,19 +1505,6 @@ exports[`Application component should determine if it has incomplete works from 
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_28"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
-            component={
-              Object {
                 "$$typeof": Symbol(react.lazy),
                 "_init": [Function],
                 "_payload": Object {
@@ -1563,7 +1513,7 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_29"
+            key="route_28"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1820,14 +1770,12 @@ exports[`Application component should determine if it has incomplete works from 
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
           },
-          "pageTitle": "Strategic publishing search",
+          "exact": true,
+          "pageTitle": "Journal search",
           "path": "/journals/search/",
         },
         Object {
@@ -1911,16 +1859,6 @@ exports[`Application component should determine if it has incomplete works from 
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": Object {
@@ -2521,16 +2459,14 @@ exports[`Application component should determine if it has incomplete works from 
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
               }
             }
+            exact={true}
             key="route_19"
-            pageTitle="Strategic publishing search"
+            pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
@@ -2637,19 +2573,6 @@ exports[`Application component should determine if it has incomplete works from 
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_28"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
-            component={
-              Object {
                 "$$typeof": Symbol(react.lazy),
                 "_init": [Function],
                 "_payload": Object {
@@ -2658,7 +2581,7 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_29"
+            key="route_28"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2722,16 +2645,6 @@ exports[`Application component should redirect to login page with correct return
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": [Function],
@@ -3104,22 +3017,9 @@ exports[`Application component should redirect to login page with correct return
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_5"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_6"
+            key="route_5"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -3134,7 +3034,7 @@ exports[`Application component should redirect to login page with correct return
                 },
               }
             }
-            key="route_7"
+            key="route_6"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3391,14 +3291,12 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
           },
-          "pageTitle": "Strategic publishing search",
+          "exact": true,
+          "pageTitle": "Journal search",
           "path": "/journals/search/",
         },
         Object {
@@ -3482,16 +3380,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": Object {
@@ -4109,16 +3997,14 @@ exports[`Application component should render alert if user is not fez author 1`]
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
               }
             }
+            exact={true}
             key="route_19"
-            pageTitle="Strategic publishing search"
+            pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
@@ -4225,19 +4111,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_28"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
-            component={
-              Object {
                 "$$typeof": Symbol(react.lazy),
                 "_init": [Function],
                 "_payload": Object {
@@ -4246,7 +4119,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 },
               }
             }
-            key="route_29"
+            key="route_28"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4503,14 +4376,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
           },
-          "pageTitle": "Strategic publishing search",
+          "exact": true,
+          "pageTitle": "Journal search",
           "path": "/journals/search/",
         },
         Object {
@@ -4594,16 +4465,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": Object {
@@ -5245,16 +5106,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
               }
             }
+            exact={true}
             key="route_19"
-            pageTitle="Strategic publishing search"
+            pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
@@ -5361,19 +5220,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_28"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
-            component={
-              Object {
                 "$$typeof": Symbol(react.lazy),
                 "_init": [Function],
                 "_payload": Object {
@@ -5382,7 +5228,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 },
               }
             }
-            key="route_29"
+            key="route_28"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5639,14 +5485,12 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
           },
-          "pageTitle": "Strategic publishing search",
+          "exact": true,
+          "pageTitle": "Journal search",
           "path": "/journals/search/",
         },
         Object {
@@ -5730,16 +5574,6 @@ exports[`Application component should render app for account with fez author wit
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": Object {
@@ -6366,16 +6200,14 @@ exports[`Application component should render app for account with fez author wit
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
               }
             }
+            exact={true}
             key="route_19"
-            pageTitle="Strategic publishing search"
+            pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
@@ -6482,19 +6314,6 @@ exports[`Application component should render app for account with fez author wit
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_28"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
-            component={
-              Object {
                 "$$typeof": Symbol(react.lazy),
                 "_init": [Function],
                 "_payload": Object {
@@ -6503,7 +6322,7 @@ exports[`Application component should render app for account with fez author wit
                 },
               }
             }
-            key="route_29"
+            key="route_28"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6760,14 +6579,12 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
           },
-          "pageTitle": "Strategic publishing search",
+          "exact": true,
+          "pageTitle": "Journal search",
           "path": "/journals/search/",
         },
         Object {
@@ -6851,16 +6668,6 @@ exports[`Application component should render application with routing for the us
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": Object {
@@ -7179,16 +6986,6 @@ exports[`Application component should render for anon user 1`] = `
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "component": [Function],
@@ -7524,22 +7321,9 @@ exports[`Application component should render for anon user 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
-            key="route_5"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
             component={[Function]}
             exact={true}
-            key="route_6"
+            key="route_5"
             pageTitle="eSpace"
             path="/dashboard"
           />
@@ -7554,7 +7338,7 @@ exports[`Application component should render for anon user 1`] = `
                 },
               }
             }
-            key="route_7"
+            key="route_6"
             pageTitle="Page not found"
           />
         </Switch>
@@ -7636,16 +7420,6 @@ exports[`Application component should render thesis submission for HDR without m
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "compare": null,
-            "type": [Function],
-          },
-          "exact": true,
-          "pageTitle": "Journal search",
-          "path": "/journals/search",
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
@@ -7907,26 +7681,13 @@ exports[`Application component should render thesis submission for HDR without m
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "compare": null,
-                "type": [Function],
-              }
-            }
-            exact={true}
             key="route_5"
-            pageTitle="Journal search"
-            path="/journals/search"
-          />
-          <Route
-            key="route_6"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_7"
+            key="route_6"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -7942,7 +7703,7 @@ exports[`Application component should render thesis submission for HDR without m
                 },
               }
             }
-            key="route_8"
+            key="route_7"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -8967,14 +8728,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           },
                           Object {
                             "component": Object {
-                              "$$typeof": Symbol(react.lazy),
-                              "_init": [Function],
-                              "_payload": Object {
-                                "_result": [Function],
-                                "_status": -1,
-                              },
+                              "$$typeof": Symbol(react.memo),
+                              "compare": null,
+                              "type": [Function],
                             },
-                            "pageTitle": "Strategic publishing search",
+                            "exact": true,
+                            "pageTitle": "Journal search",
                             "path": "/journals/search/",
                           },
                           Object {
@@ -9058,16 +8817,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             },
                             "pageTitle": "Journal details",
                             "path": "/journal/view/:id([0-9]+)",
-                          },
-                          Object {
-                            "component": Object {
-                              "$$typeof": Symbol(react.memo),
-                              "compare": null,
-                              "type": [Function],
-                            },
-                            "exact": true,
-                            "pageTitle": "Journal search",
-                            "path": "/journals/search",
                           },
                           Object {
                             "component": Object {
@@ -9370,14 +9119,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             },
                             Object {
                               "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_init": [Function],
-                                "_payload": Object {
-                                  "_result": [Function],
-                                  "_status": -1,
-                                },
+                                "$$typeof": Symbol(react.memo),
+                                "compare": null,
+                                "type": [Function],
                               },
-                              "pageTitle": "Strategic publishing search",
+                              "exact": true,
+                              "pageTitle": "Journal search",
                               "path": "/journals/search/",
                             },
                             Object {
@@ -9461,16 +9208,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               "pageTitle": "Journal details",
                               "path": "/journal/view/:id([0-9]+)",
-                            },
-                            Object {
-                              "component": Object {
-                                "$$typeof": Symbol(react.memo),
-                                "compare": null,
-                                "type": [Function],
-                              },
-                              "exact": true,
-                              "pageTitle": "Journal search",
-                              "path": "/journals/search",
                             },
                             Object {
                               "component": Object {
@@ -9774,14 +9511,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               Object {
                                 "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_init": [Function],
-                                  "_payload": Object {
-                                    "_result": [Function],
-                                    "_status": -1,
-                                  },
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": null,
+                                  "type": [Function],
                                 },
-                                "pageTitle": "Strategic publishing search",
+                                "exact": true,
+                                "pageTitle": "Journal search",
                                 "path": "/journals/search/",
                               },
                               Object {
@@ -9865,16 +9600,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                                 "pageTitle": "Journal details",
                                 "path": "/journal/view/:id([0-9]+)",
-                              },
-                              Object {
-                                "component": Object {
-                                  "$$typeof": Symbol(react.memo),
-                                  "compare": null,
-                                  "type": [Function],
-                                },
-                                "exact": true,
-                                "pageTitle": "Journal search",
-                                "path": "/journals/search",
                               },
                               Object {
                                 "component": Object {
