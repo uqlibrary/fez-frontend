@@ -5,6 +5,7 @@ import {
     JOURNAL_API,
     MASTER_JOURNAL_LIST_INGEST_API,
     JOURNAL_KEYWORDS_LOOKUP_API,
+    JOURNAL_SEARCH_API,
 } from 'repositories/routes';
 
 export const loadJournalLookup = searchText => dispatch => {
@@ -82,7 +83,16 @@ export const loadJournalSearchKeywords = searchQuery => async dispatch => {
         const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data });
     } catch (e) {
-        console.log(e);
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });
+    }
+};
+
+export const searchJournals = searchQuery => async dispatch => {
+    dispatch({ type: actions.SEARCH_JOURNALS_LOADING });
+    try {
+        const searchResponse = await get(JOURNAL_SEARCH_API({ query: searchQuery }));
+        dispatch({ type: actions.SEARCH_JOURNALS_LOADED, payload: searchResponse });
+    } catch (e) {
+        dispatch({ type: actions.SEARCH_JOURNALS_FAILED, payload: e });
     }
 };

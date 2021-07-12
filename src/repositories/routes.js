@@ -432,3 +432,45 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
 export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
     apiUrl: `journals/search?rule=keywords&query=${query}`,
 });
+
+/**
+ * Construct keywords query as per API requirement
+ *
+ * @param {Object} keywords
+ * @returns
+ */
+export const getKeywordsParams = keywords => {
+    if (!!keywords && Object.values(keywords).length > 0) {
+        /**
+         * @todo Form keywords params for API
+         */
+    } else {
+        return '';
+    }
+
+    return '';
+};
+
+export const JOURNAL_SEARCH_API = ({
+    keywords,
+    page = 1,
+    pageSize = 20,
+    sortBy = 'score',
+    sortDirection = 'desc',
+    facets = {},
+}) => {
+    const query = getKeywordsParams(keywords);
+    return {
+        apiUrl: 'journals/search',
+        options: {
+            params: {
+                query: query,
+                page: page,
+                page_size: pageSize,
+                sort: sortBy,
+                order_by: sortDirection.toLowerCase(),
+                ...getFacetsParams(facets),
+            },
+        },
+    };
+};
