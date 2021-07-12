@@ -44,3 +44,4 @@ export { userIsAdmin } from './userIsAdmin';
 export { useIsUserSuperAdmin } from './useIsUserSuperAdmin';
 export { useRecordsSelector } from './useRecordsSelector';
 export { useWidth } from './useWidth';
+export { useJournalSearchQueryParams } from './useJournalSearchQueryParams';
