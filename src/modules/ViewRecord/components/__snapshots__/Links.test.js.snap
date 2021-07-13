@@ -3425,11 +3425,11 @@ exports[`Component Links  Full mount render 1`] = `
                           <Cards
                             classes={
                               Object {
-                                "card": "Cards-card-107",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-108",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-110",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-109",
-                                "fullHeight": "Cards-fullHeight-111",
+                                "card": "Cards-card-4",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-5",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-7",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-6",
+                                "fullHeight": "Cards-fullHeight-8",
                               }
                             }
                             theme={
@@ -3789,13 +3789,13 @@ exports[`Component Links  Full mount render 1`] = `
                             title="Links"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-107 StandardCard"
+                              className="Cards-card-4 StandardCard"
                               data-testid="standard-card-links"
                               id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-107 StandardCard"
+                                className="Cards-card-4 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -3806,14 +3806,14 @@ exports[`Component Links  Full mount render 1`] = `
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-107 StandardCard"
+                                  className="MuiCard-root Cards-card-4 StandardCard"
                                   data-testid="standard-card-links"
                                   elevation={1}
                                   id="standard-card-links"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-107 StandardCard"
+                                    className="MuiCard-root Cards-card-4 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -3852,7 +3852,7 @@ exports[`Component Links  Full mount render 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-4 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-links"
                                       id="standard-card-links"
                                       style={Object {}}
@@ -4331,8 +4331,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       className="pubmedCentralLinkUrl"
                                                                       classes={
                                                                         Object {
-                                                                          "externalLink": "ExternalLink-externalLink-178",
-                                                                          "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                          "externalLink": "ExternalLink-externalLink-9",
+                                                                          "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                         }
                                                                       }
                                                                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345678"
@@ -4697,21 +4697,21 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     >
                                                                       <a
                                                                         aria-label="Full text via Pubmed Central (open access)"
-                                                                        className="pubmedCentralLinkUrl ExternalLink-externalLink-178"
+                                                                        className="pubmedCentralLinkUrl ExternalLink-externalLink-9"
                                                                         href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345678"
                                                                         rel="noopener noreferrer"
                                                                         tabIndex="0"
                                                                         target="_blank"
                                                                         title="Full text via Pubmed Central (open access)"
                                                                       >
-                                                                        <OpenInNewIcon
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                        <ForwardRef(OpenInNewIcon)
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                         >
                                                                           <WithStyles(ForwardRef(SvgIcon))
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                           >
                                                                             <ForwardRef(SvgIcon)
-                                                                              className="ExternalLink-externalLinkIcon-179"
+                                                                              className="ExternalLink-externalLinkIcon-10"
                                                                               classes={
                                                                                 Object {
                                                                                   "colorAction": "MuiSvgIcon-colorAction",
@@ -4727,8 +4727,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                               }
                                                                             >
                                                                               <svg
-                                                                                aria-hidden="true"
-                                                                                className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                                aria-hidden={true}
+                                                                                className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                                 focusable="false"
                                                                                 viewBox="0 0 24 24"
                                                                               >
@@ -4738,7 +4738,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                               </svg>
                                                                             </ForwardRef(SvgIcon)>
                                                                           </WithStyles(ForwardRef(SvgIcon))>
-                                                                        </OpenInNewIcon>
+                                                                        </ForwardRef(OpenInNewIcon)>
                                                                         https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345678
                                                                       </a>
                                                                     </ExternalLink>
@@ -5071,8 +5071,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
-                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                                 }
                                                               }
                                                               embargoDate={null}
@@ -5087,9 +5087,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "propTypes": Object {
                                                                       "children": [Function],
+                                                                      "disableStrictModeCompat": [Function],
                                                                       "in": [Function],
                                                                       "onEnter": [Function],
+                                                                      "onEntered": [Function],
+                                                                      "onEntering": [Function],
                                                                       "onExit": [Function],
+                                                                      "onExited": [Function],
+                                                                      "onExiting": [Function],
                                                                       "style": [Function],
                                                                       "timeout": [Function],
                                                                     },
@@ -5105,9 +5110,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
+                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
+                                                                        "onEntered": [Function],
+                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
+                                                                        "onExited": [Function],
+                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -5501,8 +5511,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                         className="citationDoiLink"
                                                                         classes={
                                                                           Object {
-                                                                            "externalLink": "ExternalLink-externalLink-178",
-                                                                            "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                            "externalLink": "ExternalLink-externalLink-9",
+                                                                            "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                           }
                                                                         }
                                                                         href="https://doi.org/10.1093/hmg/ddw177"
@@ -5867,21 +5877,21 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       >
                                                                         <a
                                                                           aria-label="Open this DOI in an new window"
-                                                                          className="citationDoiLink ExternalLink-externalLink-178"
+                                                                          className="citationDoiLink ExternalLink-externalLink-9"
                                                                           href="https://doi.org/10.1093/hmg/ddw177"
                                                                           rel="noopener noreferrer"
                                                                           tabIndex="0"
                                                                           target="_blank"
                                                                           title="Open this DOI in an new window"
                                                                         >
-                                                                          <OpenInNewIcon
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                          <ForwardRef(OpenInNewIcon)
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                           >
                                                                             <WithStyles(ForwardRef(SvgIcon))
-                                                                              className="ExternalLink-externalLinkIcon-179"
+                                                                              className="ExternalLink-externalLinkIcon-10"
                                                                             >
                                                                               <ForwardRef(SvgIcon)
-                                                                                className="ExternalLink-externalLinkIcon-179"
+                                                                                className="ExternalLink-externalLinkIcon-10"
                                                                                 classes={
                                                                                   Object {
                                                                                     "colorAction": "MuiSvgIcon-colorAction",
@@ -5897,8 +5907,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                                 }
                                                                               >
                                                                                 <svg
-                                                                                  aria-hidden="true"
-                                                                                  className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                                  aria-hidden={true}
+                                                                                  className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                                   focusable="false"
                                                                                   viewBox="0 0 24 24"
                                                                                 >
@@ -5908,7 +5918,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                                 </svg>
                                                                               </ForwardRef(SvgIcon)>
                                                                             </WithStyles(ForwardRef(SvgIcon))>
-                                                                          </OpenInNewIcon>
+                                                                          </ForwardRef(OpenInNewIcon)>
                                                                           https://doi.org/10.1093/hmg/ddw177
                                                                         </a>
                                                                       </ExternalLink>
@@ -6238,8 +6248,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
-                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                                 }
                                                               }
                                                               embargoDate={null}
@@ -6580,8 +6590,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     className=""
                                                                     classes={
                                                                       Object {
-                                                                        "externalLink": "ExternalLink-externalLink-178",
-                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                       }
                                                                     }
                                                                     href="http://www.thisisatest.com"
@@ -6945,21 +6955,21 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     title="Link to publication"
                                                                   >
                                                                     <a
-                                                                      className=" ExternalLink-externalLink-178"
+                                                                      className=" ExternalLink-externalLink-9"
                                                                       href="http://www.thisisatest.com"
                                                                       rel="noopener noreferrer"
                                                                       tabIndex="0"
                                                                       target="_blank"
                                                                       title="Link to publication"
                                                                     >
-                                                                      <OpenInNewIcon
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                      <ForwardRef(OpenInNewIcon)
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <WithStyles(ForwardRef(SvgIcon))
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                         >
                                                                           <ForwardRef(SvgIcon)
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                             classes={
                                                                               Object {
                                                                                 "colorAction": "MuiSvgIcon-colorAction",
@@ -6975,8 +6985,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                             }
                                                                           >
                                                                             <svg
-                                                                              aria-hidden="true"
-                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                              aria-hidden={true}
+                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                               focusable="false"
                                                                               viewBox="0 0 24 24"
                                                                             >
@@ -6986,7 +6996,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                             </svg>
                                                                           </ForwardRef(SvgIcon)>
                                                                         </WithStyles(ForwardRef(SvgIcon))>
-                                                                      </OpenInNewIcon>
+                                                                      </ForwardRef(OpenInNewIcon)>
                                                                       http://www.thisisatest.com
                                                                     </a>
                                                                   </ExternalLink>
@@ -7318,8 +7328,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
-                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                                 }
                                                               }
                                                               embargoDate={null}
@@ -7334,9 +7344,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "propTypes": Object {
                                                                       "children": [Function],
+                                                                      "disableStrictModeCompat": [Function],
                                                                       "in": [Function],
                                                                       "onEnter": [Function],
+                                                                      "onEntered": [Function],
+                                                                      "onEntering": [Function],
                                                                       "onExit": [Function],
+                                                                      "onExited": [Function],
+                                                                      "onExiting": [Function],
                                                                       "style": [Function],
                                                                       "timeout": [Function],
                                                                     },
@@ -7352,9 +7367,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
+                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
+                                                                        "onEntered": [Function],
+                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
+                                                                        "onExited": [Function],
+                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -7749,8 +7769,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     className=""
                                                                     classes={
                                                                       Object {
-                                                                        "externalLink": "ExternalLink-externalLink-178",
-                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                       }
                                                                     }
                                                                     href="http://www.thisisanothertest.com"
@@ -8114,21 +8134,21 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     title="Click to open link in a new window"
                                                                   >
                                                                     <a
-                                                                      className=" ExternalLink-externalLink-178"
+                                                                      className=" ExternalLink-externalLink-9"
                                                                       href="http://www.thisisanothertest.com"
                                                                       rel="noopener noreferrer"
                                                                       tabIndex="0"
                                                                       target="_blank"
                                                                       title="Click to open link in a new window"
                                                                     >
-                                                                      <OpenInNewIcon
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                      <ForwardRef(OpenInNewIcon)
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <WithStyles(ForwardRef(SvgIcon))
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                         >
                                                                           <ForwardRef(SvgIcon)
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                             classes={
                                                                               Object {
                                                                                 "colorAction": "MuiSvgIcon-colorAction",
@@ -8144,8 +8164,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                                             }
                                                                           >
                                                                             <svg
-                                                                              aria-hidden="true"
-                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                              aria-hidden={true}
+                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                               focusable="false"
                                                                               viewBox="0 0 24 24"
                                                                             >
@@ -8155,7 +8175,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                             </svg>
                                                                           </ForwardRef(SvgIcon)>
                                                                         </WithStyles(ForwardRef(SvgIcon))>
-                                                                      </OpenInNewIcon>
+                                                                      </ForwardRef(OpenInNewIcon)>
                                                                       http://www.thisisanothertest.com
                                                                     </a>
                                                                   </ExternalLink>
@@ -8487,8 +8507,8 @@ exports[`Component Links  Full mount render 1`] = `
                                                             <OpenAccessIcon
                                                               classes={
                                                                 Object {
-                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                                  "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                                 }
                                                               }
                                                               embargoDate={null}
@@ -8503,9 +8523,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "propTypes": Object {
                                                                       "children": [Function],
+                                                                      "disableStrictModeCompat": [Function],
                                                                       "in": [Function],
                                                                       "onEnter": [Function],
+                                                                      "onEntered": [Function],
+                                                                      "onEntering": [Function],
                                                                       "onExit": [Function],
+                                                                      "onExited": [Function],
+                                                                      "onExiting": [Function],
                                                                       "style": [Function],
                                                                       "timeout": [Function],
                                                                     },
@@ -8521,9 +8546,14 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
+                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
+                                                                        "onEntered": [Function],
+                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
+                                                                        "onExited": [Function],
+                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -9602,11 +9632,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                       <Cards
                         classes={
                           Object {
-                            "card": "Cards-card-107",
-                            "cardContentNoPadding": "Cards-cardContentNoPadding-108",
-                            "cardHeaderAccent": "Cards-cardHeaderAccent-110",
-                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-109",
-                            "fullHeight": "Cards-fullHeight-111",
+                            "card": "Cards-card-4",
+                            "cardContentNoPadding": "Cards-cardContentNoPadding-5",
+                            "cardHeaderAccent": "Cards-cardHeaderAccent-7",
+                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-6",
+                            "fullHeight": "Cards-fullHeight-8",
                           }
                         }
                         theme={
@@ -9966,13 +9996,13 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                         title="Links"
                       >
                         <WithStyles(ForwardRef(Card))
-                          className="Cards-card-107 StandardCard"
+                          className="Cards-card-4 StandardCard"
                           data-testid="standard-card-links"
                           id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
-                            className="Cards-card-107 StandardCard"
+                            className="Cards-card-4 StandardCard"
                             classes={
                               Object {
                                 "root": "MuiCard-root",
@@ -9983,14 +10013,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
-                              className="MuiCard-root Cards-card-107 StandardCard"
+                              className="MuiCard-root Cards-card-4 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
                               id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
-                                className="MuiCard-root Cards-card-107 StandardCard"
+                                className="MuiCard-root Cards-card-4 StandardCard"
                                 classes={
                                   Object {
                                     "elevation0": "MuiPaper-elevation0",
@@ -10029,7 +10059,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                 style={Object {}}
                               >
                                 <div
-                                  className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  className="MuiPaper-root MuiCard-root Cards-card-4 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
                                   id="standard-card-links"
                                   style={Object {}}
@@ -10508,8 +10538,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                   className="pubmedCentralLinkUrl"
                                                                   classes={
                                                                     Object {
-                                                                      "externalLink": "ExternalLink-externalLink-178",
-                                                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                      "externalLink": "ExternalLink-externalLink-9",
+                                                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                     }
                                                                   }
                                                                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -10874,21 +10904,21 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 >
                                                                   <a
                                                                     aria-label="Full text via Pubmed Central (open access)"
-                                                                    className="pubmedCentralLinkUrl ExternalLink-externalLink-178"
+                                                                    className="pubmedCentralLinkUrl ExternalLink-externalLink-9"
                                                                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                                     rel="noopener noreferrer"
                                                                     tabIndex="0"
                                                                     target="_blank"
                                                                     title="Full text via Pubmed Central (open access)"
                                                                   >
-                                                                    <OpenInNewIcon
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                    <ForwardRef(OpenInNewIcon)
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <WithStyles(ForwardRef(SvgIcon))
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <ForwardRef(SvgIcon)
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                           classes={
                                                                             Object {
                                                                               "colorAction": "MuiSvgIcon-colorAction",
@@ -10904,8 +10934,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           }
                                                                         >
                                                                           <svg
-                                                                            aria-hidden="true"
-                                                                            className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                            aria-hidden={true}
+                                                                            className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                             focusable="false"
                                                                             viewBox="0 0 24 24"
                                                                           >
@@ -10915,7 +10945,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                           </svg>
                                                                         </ForwardRef(SvgIcon)>
                                                                       </WithStyles(ForwardRef(SvgIcon))>
-                                                                    </OpenInNewIcon>
+                                                                    </ForwardRef(OpenInNewIcon)>
                                                                     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
                                                                   </a>
                                                                 </ExternalLink>
@@ -11246,8 +11276,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -11262,9 +11292,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "propTypes": Object {
                                                                   "children": [Function],
+                                                                  "disableStrictModeCompat": [Function],
                                                                   "in": [Function],
                                                                   "onEnter": [Function],
+                                                                  "onEntered": [Function],
+                                                                  "onEntering": [Function],
                                                                   "onExit": [Function],
+                                                                  "onExited": [Function],
+                                                                  "onExiting": [Function],
                                                                   "style": [Function],
                                                                   "timeout": [Function],
                                                                 },
@@ -11280,9 +11315,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "propTypes": Object {
                                                                     "children": [Function],
+                                                                    "disableStrictModeCompat": [Function],
                                                                     "in": [Function],
                                                                     "onEnter": [Function],
+                                                                    "onEntered": [Function],
+                                                                    "onEntering": [Function],
                                                                     "onExit": [Function],
+                                                                    "onExited": [Function],
+                                                                    "onExiting": [Function],
                                                                     "style": [Function],
                                                                     "timeout": [Function],
                                                                   },
@@ -11682,8 +11722,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                     className="citationDoiLink"
                                                                     classes={
                                                                       Object {
-                                                                        "externalLink": "ExternalLink-externalLink-178",
-                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                       }
                                                                     }
                                                                     href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -12048,21 +12088,21 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                   >
                                                                     <a
                                                                       aria-label="Open this DOI in an new window"
-                                                                      className="citationDoiLink ExternalLink-externalLink-178"
+                                                                      className="citationDoiLink ExternalLink-externalLink-9"
                                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                                       rel="noopener noreferrer"
                                                                       tabIndex="0"
                                                                       target="_blank"
                                                                       title="Open this DOI in an new window"
                                                                     >
-                                                                      <OpenInNewIcon
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                      <ForwardRef(OpenInNewIcon)
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <WithStyles(ForwardRef(SvgIcon))
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                         >
                                                                           <ForwardRef(SvgIcon)
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                             classes={
                                                                               Object {
                                                                                 "colorAction": "MuiSvgIcon-colorAction",
@@ -12078,8 +12118,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                             }
                                                                           >
                                                                             <svg
-                                                                              aria-hidden="true"
-                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                              aria-hidden={true}
+                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                               focusable="false"
                                                                               viewBox="0 0 24 24"
                                                                             >
@@ -12089,7 +12129,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                             </svg>
                                                                           </ForwardRef(SvgIcon)>
                                                                         </WithStyles(ForwardRef(SvgIcon))>
-                                                                      </OpenInNewIcon>
+                                                                      </ForwardRef(OpenInNewIcon)>
                                                                       https://doi.org/10.1016/j.pnsc.2012.12.004
                                                                     </a>
                                                                   </ExternalLink>
@@ -12421,8 +12461,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -12437,9 +12477,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "propTypes": Object {
                                                                   "children": [Function],
+                                                                  "disableStrictModeCompat": [Function],
                                                                   "in": [Function],
                                                                   "onEnter": [Function],
+                                                                  "onEntered": [Function],
+                                                                  "onEntering": [Function],
                                                                   "onExit": [Function],
+                                                                  "onExited": [Function],
+                                                                  "onExiting": [Function],
                                                                   "style": [Function],
                                                                   "timeout": [Function],
                                                                 },
@@ -12455,9 +12500,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "propTypes": Object {
                                                                     "children": [Function],
+                                                                    "disableStrictModeCompat": [Function],
                                                                     "in": [Function],
                                                                     "onEnter": [Function],
+                                                                    "onEntered": [Function],
+                                                                    "onEntering": [Function],
                                                                     "onExit": [Function],
+                                                                    "onExited": [Function],
+                                                                    "onExiting": [Function],
                                                                     "style": [Function],
                                                                     "timeout": [Function],
                                                                   },
@@ -12846,8 +12896,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisatest.com"
@@ -13211,21 +13261,21 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 title="Link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisatest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -13241,8 +13291,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -13252,7 +13302,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisatest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -13578,8 +13628,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -13914,8 +13964,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisanothertest.com"
@@ -14279,21 +14329,21 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 title="Another link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisanothertest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Another link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -14309,8 +14359,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -14320,7 +14370,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisanothertest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -14646,8 +14696,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -14982,8 +15032,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.nodescription.com"
@@ -15347,21 +15397,21 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                 title="Click to open link in a new window"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.nodescription.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Click to open link in a new window"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -15377,8 +15427,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -15388,7 +15438,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.nodescription.com
                                                                 </a>
                                                               </ExternalLink>
@@ -15714,8 +15764,8 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -16530,11 +16580,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                       <Cards
                         classes={
                           Object {
-                            "card": "Cards-card-107",
-                            "cardContentNoPadding": "Cards-cardContentNoPadding-108",
-                            "cardHeaderAccent": "Cards-cardHeaderAccent-110",
-                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-109",
-                            "fullHeight": "Cards-fullHeight-111",
+                            "card": "Cards-card-4",
+                            "cardContentNoPadding": "Cards-cardContentNoPadding-5",
+                            "cardHeaderAccent": "Cards-cardHeaderAccent-7",
+                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-6",
+                            "fullHeight": "Cards-fullHeight-8",
                           }
                         }
                         theme={
@@ -16894,13 +16944,13 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                         title="Links"
                       >
                         <WithStyles(ForwardRef(Card))
-                          className="Cards-card-107 StandardCard"
+                          className="Cards-card-4 StandardCard"
                           data-testid="standard-card-links"
                           id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
-                            className="Cards-card-107 StandardCard"
+                            className="Cards-card-4 StandardCard"
                             classes={
                               Object {
                                 "root": "MuiCard-root",
@@ -16911,14 +16961,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
-                              className="MuiCard-root Cards-card-107 StandardCard"
+                              className="MuiCard-root Cards-card-4 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
                               id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
-                                className="MuiCard-root Cards-card-107 StandardCard"
+                                className="MuiCard-root Cards-card-4 StandardCard"
                                 classes={
                                   Object {
                                     "elevation0": "MuiPaper-elevation0",
@@ -16957,7 +17007,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                 style={Object {}}
                               >
                                 <div
-                                  className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  className="MuiPaper-root MuiCard-root Cards-card-4 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
                                   id="standard-card-links"
                                   style={Object {}}
@@ -17436,8 +17486,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                   className="pubmedCentralLinkUrl"
                                                                   classes={
                                                                     Object {
-                                                                      "externalLink": "ExternalLink-externalLink-178",
-                                                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                      "externalLink": "ExternalLink-externalLink-9",
+                                                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                     }
                                                                   }
                                                                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -17802,21 +17852,21 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 >
                                                                   <a
                                                                     aria-label="Full text via Pubmed Central (open access)"
-                                                                    className="pubmedCentralLinkUrl ExternalLink-externalLink-178"
+                                                                    className="pubmedCentralLinkUrl ExternalLink-externalLink-9"
                                                                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                                     rel="noopener noreferrer"
                                                                     tabIndex="0"
                                                                     target="_blank"
                                                                     title="Full text via Pubmed Central (open access)"
                                                                   >
-                                                                    <OpenInNewIcon
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                    <ForwardRef(OpenInNewIcon)
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <WithStyles(ForwardRef(SvgIcon))
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <ForwardRef(SvgIcon)
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                           classes={
                                                                             Object {
                                                                               "colorAction": "MuiSvgIcon-colorAction",
@@ -17832,8 +17882,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           }
                                                                         >
                                                                           <svg
-                                                                            aria-hidden="true"
-                                                                            className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                            aria-hidden={true}
+                                                                            className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                             focusable="false"
                                                                             viewBox="0 0 24 24"
                                                                           >
@@ -17843,7 +17893,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                           </svg>
                                                                         </ForwardRef(SvgIcon)>
                                                                       </WithStyles(ForwardRef(SvgIcon))>
-                                                                    </OpenInNewIcon>
+                                                                    </ForwardRef(OpenInNewIcon)>
                                                                     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
                                                                   </a>
                                                                 </ExternalLink>
@@ -18174,8 +18224,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -18190,9 +18240,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "propTypes": Object {
                                                                   "children": [Function],
+                                                                  "disableStrictModeCompat": [Function],
                                                                   "in": [Function],
                                                                   "onEnter": [Function],
+                                                                  "onEntered": [Function],
+                                                                  "onEntering": [Function],
                                                                   "onExit": [Function],
+                                                                  "onExited": [Function],
+                                                                  "onExiting": [Function],
                                                                   "style": [Function],
                                                                   "timeout": [Function],
                                                                 },
@@ -18208,9 +18263,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "propTypes": Object {
                                                                     "children": [Function],
+                                                                    "disableStrictModeCompat": [Function],
                                                                     "in": [Function],
                                                                     "onEnter": [Function],
+                                                                    "onEntered": [Function],
+                                                                    "onEntering": [Function],
                                                                     "onExit": [Function],
+                                                                    "onExited": [Function],
+                                                                    "onExiting": [Function],
                                                                     "style": [Function],
                                                                     "timeout": [Function],
                                                                   },
@@ -18599,8 +18659,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisatest.com"
@@ -18964,21 +19024,21 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 title="Link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisatest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -18994,8 +19054,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -19005,7 +19065,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisatest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -19331,8 +19391,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -19667,8 +19727,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisanothertest.com"
@@ -20032,21 +20092,21 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 title="Another link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisanothertest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Another link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -20062,8 +20122,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -20073,7 +20133,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisanothertest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -20399,8 +20459,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -20735,8 +20795,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.nodescription.com"
@@ -21100,21 +21160,21 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                 title="Click to open link in a new window"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.nodescription.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Click to open link in a new window"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -21130,8 +21190,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -21141,7 +21201,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.nodescription.com
                                                                 </a>
                                                               </ExternalLink>
@@ -21467,8 +21527,8 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -22156,11 +22216,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                       <Cards
                         classes={
                           Object {
-                            "card": "Cards-card-107",
-                            "cardContentNoPadding": "Cards-cardContentNoPadding-108",
-                            "cardHeaderAccent": "Cards-cardHeaderAccent-110",
-                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-109",
-                            "fullHeight": "Cards-fullHeight-111",
+                            "card": "Cards-card-4",
+                            "cardContentNoPadding": "Cards-cardContentNoPadding-5",
+                            "cardHeaderAccent": "Cards-cardHeaderAccent-7",
+                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-6",
+                            "fullHeight": "Cards-fullHeight-8",
                           }
                         }
                         theme={
@@ -22520,13 +22580,13 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                         title="Links"
                       >
                         <WithStyles(ForwardRef(Card))
-                          className="Cards-card-107 StandardCard"
+                          className="Cards-card-4 StandardCard"
                           data-testid="standard-card-links"
                           id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
-                            className="Cards-card-107 StandardCard"
+                            className="Cards-card-4 StandardCard"
                             classes={
                               Object {
                                 "root": "MuiCard-root",
@@ -22537,14 +22597,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
-                              className="MuiCard-root Cards-card-107 StandardCard"
+                              className="MuiCard-root Cards-card-4 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
                               id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
-                                className="MuiCard-root Cards-card-107 StandardCard"
+                                className="MuiCard-root Cards-card-4 StandardCard"
                                 classes={
                                   Object {
                                     "elevation0": "MuiPaper-elevation0",
@@ -22583,7 +22643,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                 style={Object {}}
                               >
                                 <div
-                                  className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  className="MuiPaper-root MuiCard-root Cards-card-4 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
                                   id="standard-card-links"
                                   style={Object {}}
@@ -23062,8 +23122,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                   className="pubmedCentralLinkUrl"
                                                                   classes={
                                                                     Object {
-                                                                      "externalLink": "ExternalLink-externalLink-178",
-                                                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                      "externalLink": "ExternalLink-externalLink-9",
+                                                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                     }
                                                                   }
                                                                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
@@ -23428,21 +23488,21 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 >
                                                                   <a
                                                                     aria-label="Full text via Pubmed Central (open access)"
-                                                                    className="pubmedCentralLinkUrl ExternalLink-externalLink-178"
+                                                                    className="pubmedCentralLinkUrl ExternalLink-externalLink-9"
                                                                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                                     rel="noopener noreferrer"
                                                                     tabIndex="0"
                                                                     target="_blank"
                                                                     title="Full text via Pubmed Central (open access)"
                                                                   >
-                                                                    <OpenInNewIcon
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                    <ForwardRef(OpenInNewIcon)
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <WithStyles(ForwardRef(SvgIcon))
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <ForwardRef(SvgIcon)
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                           classes={
                                                                             Object {
                                                                               "colorAction": "MuiSvgIcon-colorAction",
@@ -23458,8 +23518,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           }
                                                                         >
                                                                           <svg
-                                                                            aria-hidden="true"
-                                                                            className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                            aria-hidden={true}
+                                                                            className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                             focusable="false"
                                                                             viewBox="0 0 24 24"
                                                                           >
@@ -23469,7 +23529,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                           </svg>
                                                                         </ForwardRef(SvgIcon)>
                                                                       </WithStyles(ForwardRef(SvgIcon))>
-                                                                    </OpenInNewIcon>
+                                                                    </ForwardRef(OpenInNewIcon)>
                                                                     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926
                                                                   </a>
                                                                 </ExternalLink>
@@ -23800,8 +23860,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -23816,9 +23876,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "propTypes": Object {
                                                                   "children": [Function],
+                                                                  "disableStrictModeCompat": [Function],
                                                                   "in": [Function],
                                                                   "onEnter": [Function],
+                                                                  "onEntered": [Function],
+                                                                  "onEntering": [Function],
                                                                   "onExit": [Function],
+                                                                  "onExited": [Function],
+                                                                  "onExiting": [Function],
                                                                   "style": [Function],
                                                                   "timeout": [Function],
                                                                 },
@@ -23834,9 +23899,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "propTypes": Object {
                                                                     "children": [Function],
+                                                                    "disableStrictModeCompat": [Function],
                                                                     "in": [Function],
                                                                     "onEnter": [Function],
+                                                                    "onEntered": [Function],
+                                                                    "onEntering": [Function],
                                                                     "onExit": [Function],
+                                                                    "onExited": [Function],
+                                                                    "onExiting": [Function],
                                                                     "style": [Function],
                                                                     "timeout": [Function],
                                                                   },
@@ -24230,8 +24300,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                     className="citationDoiLink"
                                                                     classes={
                                                                       Object {
-                                                                        "externalLink": "ExternalLink-externalLink-178",
-                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                       }
                                                                     }
                                                                     href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -24596,21 +24666,21 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                   >
                                                                     <a
                                                                       aria-label="Open this DOI in an new window"
-                                                                      className="citationDoiLink ExternalLink-externalLink-178"
+                                                                      className="citationDoiLink ExternalLink-externalLink-9"
                                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                                       rel="noopener noreferrer"
                                                                       tabIndex="0"
                                                                       target="_blank"
                                                                       title="Open this DOI in an new window"
                                                                     >
-                                                                      <OpenInNewIcon
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                      <ForwardRef(OpenInNewIcon)
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <WithStyles(ForwardRef(SvgIcon))
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                         >
                                                                           <ForwardRef(SvgIcon)
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                             classes={
                                                                               Object {
                                                                                 "colorAction": "MuiSvgIcon-colorAction",
@@ -24626,8 +24696,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                             }
                                                                           >
                                                                             <svg
-                                                                              aria-hidden="true"
-                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                              aria-hidden={true}
+                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                               focusable="false"
                                                                               viewBox="0 0 24 24"
                                                                             >
@@ -24637,7 +24707,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                             </svg>
                                                                           </ForwardRef(SvgIcon)>
                                                                         </WithStyles(ForwardRef(SvgIcon))>
-                                                                      </OpenInNewIcon>
+                                                                      </ForwardRef(OpenInNewIcon)>
                                                                       https://doi.org/10.1016/j.pnsc.2012.12.004
                                                                     </a>
                                                                   </ExternalLink>
@@ -24965,8 +25035,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -25301,8 +25371,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisatest.com"
@@ -25666,21 +25736,21 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 title="Link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisatest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -25696,8 +25766,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -25707,7 +25777,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisatest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -26033,8 +26103,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -26369,8 +26439,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisanothertest.com"
@@ -26734,21 +26804,21 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 title="Another link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisanothertest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Another link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -26764,8 +26834,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -26775,7 +26845,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisanothertest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -27101,8 +27171,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -27437,8 +27507,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.nodescription.com"
@@ -27802,21 +27872,21 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                 title="Click to open link in a new window"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.nodescription.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Click to open link in a new window"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -27832,8 +27902,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -27843,7 +27913,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.nodescription.com
                                                                 </a>
                                                               </ExternalLink>
@@ -28169,8 +28239,8 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -28985,11 +29055,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                       <Cards
                         classes={
                           Object {
-                            "card": "Cards-card-107",
-                            "cardContentNoPadding": "Cards-cardContentNoPadding-108",
-                            "cardHeaderAccent": "Cards-cardHeaderAccent-110",
-                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-109",
-                            "fullHeight": "Cards-fullHeight-111",
+                            "card": "Cards-card-4",
+                            "cardContentNoPadding": "Cards-cardContentNoPadding-5",
+                            "cardHeaderAccent": "Cards-cardHeaderAccent-7",
+                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-6",
+                            "fullHeight": "Cards-fullHeight-8",
                           }
                         }
                         theme={
@@ -29349,13 +29419,13 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                         title="Links"
                       >
                         <WithStyles(ForwardRef(Card))
-                          className="Cards-card-107 StandardCard"
+                          className="Cards-card-4 StandardCard"
                           data-testid="standard-card-links"
                           id="standard-card-links"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
-                            className="Cards-card-107 StandardCard"
+                            className="Cards-card-4 StandardCard"
                             classes={
                               Object {
                                 "root": "MuiCard-root",
@@ -29366,14 +29436,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
-                              className="MuiCard-root Cards-card-107 StandardCard"
+                              className="MuiCard-root Cards-card-4 StandardCard"
                               data-testid="standard-card-links"
                               elevation={1}
                               id="standard-card-links"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
-                                className="MuiCard-root Cards-card-107 StandardCard"
+                                className="MuiCard-root Cards-card-4 StandardCard"
                                 classes={
                                   Object {
                                     "elevation0": "MuiPaper-elevation0",
@@ -29412,7 +29482,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                 style={Object {}}
                               >
                                 <div
-                                  className="MuiPaper-root MuiCard-root Cards-card-107 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  className="MuiPaper-root MuiCard-root Cards-card-4 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-links"
                                   id="standard-card-links"
                                   style={Object {}}
@@ -29894,8 +29964,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                     className="citationDoiLink"
                                                                     classes={
                                                                       Object {
-                                                                        "externalLink": "ExternalLink-externalLink-178",
-                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                       }
                                                                     }
                                                                     href="https://doi.org/10.1016/j.pnsc.2012.12.004"
@@ -30260,21 +30330,21 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                   >
                                                                     <a
                                                                       aria-label="Open this DOI in an new window"
-                                                                      className="citationDoiLink ExternalLink-externalLink-178"
+                                                                      className="citationDoiLink ExternalLink-externalLink-9"
                                                                       href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                                       rel="noopener noreferrer"
                                                                       tabIndex="0"
                                                                       target="_blank"
                                                                       title="Open this DOI in an new window"
                                                                     >
-                                                                      <OpenInNewIcon
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                      <ForwardRef(OpenInNewIcon)
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                       >
                                                                         <WithStyles(ForwardRef(SvgIcon))
-                                                                          className="ExternalLink-externalLinkIcon-179"
+                                                                          className="ExternalLink-externalLinkIcon-10"
                                                                         >
                                                                           <ForwardRef(SvgIcon)
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                             classes={
                                                                               Object {
                                                                                 "colorAction": "MuiSvgIcon-colorAction",
@@ -30290,8 +30360,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                             }
                                                                           >
                                                                             <svg
-                                                                              aria-hidden="true"
-                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                              aria-hidden={true}
+                                                                              className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                               focusable="false"
                                                                               viewBox="0 0 24 24"
                                                                             >
@@ -30301,7 +30371,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                             </svg>
                                                                           </ForwardRef(SvgIcon)>
                                                                         </WithStyles(ForwardRef(SvgIcon))>
-                                                                      </OpenInNewIcon>
+                                                                      </ForwardRef(OpenInNewIcon)>
                                                                       https://doi.org/10.1016/j.pnsc.2012.12.004
                                                                     </a>
                                                                   </ExternalLink>
@@ -30633,8 +30703,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate="24th December 2020"
@@ -30645,16 +30715,16 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         >
                                                           <WithStyles(ForwardRef(Badge))
                                                             badgeContent={
-                                                              <Memo(AccessTimeIcon)
-                                                                className="OpenAccessIcon-embargoedBadgeStyle-190"
+                                                              <Memo
+                                                                className="OpenAccessIcon-embargoedBadgeStyle-12"
                                                                 fontSize="small"
                                                               />
                                                             }
                                                           >
                                                             <ForwardRef(Badge)
                                                               badgeContent={
-                                                                <Memo(AccessTimeIcon)
-                                                                  className="OpenAccessIcon-embargoedBadgeStyle-190"
+                                                                <Memo
+                                                                  className="OpenAccessIcon-embargoedBadgeStyle-12"
                                                                   fontSize="small"
                                                                 />
                                                               }
@@ -30687,9 +30757,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
+                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
+                                                                        "onEntered": [Function],
+                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
+                                                                        "onExited": [Function],
+                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -30705,9 +30780,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
+                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
+                                                                          "onEntered": [Function],
+                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
+                                                                          "onExited": [Function],
+                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -30775,16 +30855,16 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                 <span
                                                                   className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
                                                                 >
-                                                                  <AccessTimeIcon
-                                                                    className="OpenAccessIcon-embargoedBadgeStyle-190"
+                                                                  <ForwardRef(AccessTimeIcon)
+                                                                    className="OpenAccessIcon-embargoedBadgeStyle-12"
                                                                     fontSize="small"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="OpenAccessIcon-embargoedBadgeStyle-190"
+                                                                      className="OpenAccessIcon-embargoedBadgeStyle-12"
                                                                       fontSize="small"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="OpenAccessIcon-embargoedBadgeStyle-190"
+                                                                        className="OpenAccessIcon-embargoedBadgeStyle-12"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -30801,8 +30881,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         fontSize="small"
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-190 MuiSvgIcon-fontSizeSmall"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-12 MuiSvgIcon-fontSizeSmall"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -30815,7 +30895,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </AccessTimeIcon>
+                                                                  </ForwardRef(AccessTimeIcon)>
                                                                 </span>
                                                               </span>
                                                             </ForwardRef(Badge)>
@@ -31144,8 +31224,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisatest.com"
@@ -31509,21 +31589,21 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                 title="Link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisatest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -31539,8 +31619,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -31550,7 +31630,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisatest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -31876,8 +31956,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -32212,8 +32292,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.thisisanothertest.com"
@@ -32577,21 +32657,21 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                 title="Another link to publication"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.thisisanothertest.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Another link to publication"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -32607,8 +32687,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -32618,7 +32698,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.thisisanothertest.com
                                                                 </a>
                                                               </ExternalLink>
@@ -32944,8 +33024,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}
@@ -33280,8 +33360,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                 className=""
                                                                 classes={
                                                                   Object {
-                                                                    "externalLink": "ExternalLink-externalLink-178",
-                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                    "externalLink": "ExternalLink-externalLink-9",
+                                                                    "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                   }
                                                                 }
                                                                 href="http://www.nodescription.com"
@@ -33645,21 +33725,21 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                 title="Click to open link in a new window"
                                                               >
                                                                 <a
-                                                                  className=" ExternalLink-externalLink-178"
+                                                                  className=" ExternalLink-externalLink-9"
                                                                   href="http://www.nodescription.com"
                                                                   rel="noopener noreferrer"
                                                                   tabIndex="0"
                                                                   target="_blank"
                                                                   title="Click to open link in a new window"
                                                                 >
-                                                                  <OpenInNewIcon
-                                                                    className="ExternalLink-externalLinkIcon-179"
+                                                                  <ForwardRef(OpenInNewIcon)
+                                                                    className="ExternalLink-externalLinkIcon-10"
                                                                   >
                                                                     <WithStyles(ForwardRef(SvgIcon))
-                                                                      className="ExternalLink-externalLinkIcon-179"
+                                                                      className="ExternalLink-externalLinkIcon-10"
                                                                     >
                                                                       <ForwardRef(SvgIcon)
-                                                                        className="ExternalLink-externalLinkIcon-179"
+                                                                        className="ExternalLink-externalLinkIcon-10"
                                                                         classes={
                                                                           Object {
                                                                             "colorAction": "MuiSvgIcon-colorAction",
@@ -33675,8 +33755,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         }
                                                                       >
                                                                         <svg
-                                                                          aria-hidden="true"
-                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                          aria-hidden={true}
+                                                                          className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                           focusable="false"
                                                                           viewBox="0 0 24 24"
                                                                         >
@@ -33686,7 +33766,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         </svg>
                                                                       </ForwardRef(SvgIcon)>
                                                                     </WithStyles(ForwardRef(SvgIcon))>
-                                                                  </OpenInNewIcon>
+                                                                  </ForwardRef(OpenInNewIcon)>
                                                                   http://www.nodescription.com
                                                                 </a>
                                                               </ExternalLink>
@@ -34012,8 +34092,8 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         <OpenAccessIcon
                                                           classes={
                                                             Object {
-                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-189",
-                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-190",
+                                                              "badgeStyle": "OpenAccessIcon-badgeStyle-11",
+                                                              "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-12",
                                                             }
                                                           }
                                                           embargoDate={null}

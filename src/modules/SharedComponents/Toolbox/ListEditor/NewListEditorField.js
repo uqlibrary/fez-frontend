@@ -49,7 +49,7 @@ NewListEditorField.defaultProps = {
 NewListEditorField.propTypes = {
     searchKey: PropTypes.object,
     normalize: PropTypes.func,
-    remindToAdd: PropTypes.string,
+    remindToAdd: PropTypes.bool,
     input: PropTypes.object,
     meta: PropTypes.object,
 };

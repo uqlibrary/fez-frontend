@@ -39,7 +39,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -115,7 +115,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -169,7 +169,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -245,7 +245,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -299,7 +299,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -346,7 +346,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -400,7 +400,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -447,7 +447,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -501,7 +501,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -577,7 +577,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
             id="test-list-row-move-up-0"
             onClick={[Function]}
           >
-            <KeyboardArrowUpIcon
+            <Memo(ForwardRef(KeyboardArrowUpIcon))
               classes={
                 Object {
                   "root": "",
@@ -601,7 +601,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
             id="test-list-row-move-down-0"
             onClick={[Function]}
           >
-            <KeyboardArrowDownIcon
+            <Memo(ForwardRef(KeyboardArrowDownIcon))
               classes={
                 Object {
                   "root": "",
@@ -625,7 +625,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -679,7 +679,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           }
         }
       >
-        <PersonIcon />
+        <Memo(ForwardRef(PersonIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -727,7 +727,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "makeStyles-selected-6",
@@ -781,7 +781,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           }
         }
       >
-        <PersonIcon />
+        <Memo(ForwardRef(PersonIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -829,7 +829,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "makeStyles-selected-6",
@@ -883,7 +883,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -959,7 +959,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -1013,7 +1013,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           }
         }
       >
-        <PersonIcon />
+        <Memo(ForwardRef(PersonIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1062,7 +1062,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "makeStyles-selected-6",
@@ -1116,7 +1116,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           }
         }
       >
-        <PersonIcon />
+        <Memo(ForwardRef(PersonIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1165,7 +1165,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "makeStyles-selected-6",
@@ -1219,7 +1219,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
           }
         }
       >
-        <PersonIcon />
+        <Memo(ForwardRef(PersonIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1270,7 +1270,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "makeStyles-selected-6",
@@ -1324,7 +1324,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
           }
         }
       >
-        <PersonIcon />
+        <Memo(ForwardRef(PersonIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1375,7 +1375,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "makeStyles-selected-6",
@@ -1429,7 +1429,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1476,7 +1476,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
             id="test-list-row-edit-2"
             onClick={[Function]}
           >
-            <EditIcon
+            <Memo(ForwardRef(EditIcon))
               classes={
                 Object {
                   "root": "",
@@ -1500,7 +1500,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
             id="test-list-row-delete-2"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -1557,7 +1557,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         <WithStyles(ForwardRef(Tooltip))
           title="You are not able to edit this row"
         >
-          <LockIcon />
+          <Memo(ForwardRef(LockIcon)) />
         </WithStyles(ForwardRef(Tooltip))>
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
@@ -1605,7 +1605,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -1659,7 +1659,7 @@ exports[`Component ContributorRow should render contributor row linked class for
           }
         }
       >
-        <HowToRegIcon />
+        <Memo(ForwardRef(HowToRegIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1710,7 +1710,7 @@ exports[`Component ContributorRow should render contributor row linked class for
             id="test-list-row-edit-0"
             onClick={[Function]}
           >
-            <EditIcon
+            <Memo(ForwardRef(EditIcon))
               classes={
                 Object {
                   "root": "",
@@ -1734,7 +1734,7 @@ exports[`Component ContributorRow should render contributor row linked class for
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -1788,7 +1788,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1838,7 +1838,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",
@@ -1884,7 +1884,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           }
         }
       >
-        <PersonOutlinedIcon />
+        <Memo(ForwardRef(PersonOutlinedIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <ContributorRowText
@@ -1928,7 +1928,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
             id="test-list-row-delete-0"
             onClick={[Function]}
           >
-            <DeleteIcon
+            <Memo(ForwardRef(DeleteIcon))
               classes={
                 Object {
                   "root": "",

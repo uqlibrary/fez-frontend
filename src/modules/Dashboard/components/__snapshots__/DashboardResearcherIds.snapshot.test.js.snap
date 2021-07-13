@@ -521,7 +521,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-104"
+        class=" ExternalLink-externalLink-1"
         href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
         id="publons"
         rel="noopener noreferrer"
@@ -539,7 +539,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-104"
+        class=" ExternalLink-externalLink-1"
         href="http://www.researcherid.com/rid/A-1137-2007"
         id="researcher"
         rel="noopener noreferrer"
@@ -557,7 +557,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-104"
+        class=" ExternalLink-externalLink-1"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
         id="scopus"
         rel="noopener noreferrer"
@@ -575,7 +575,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-104"
+        class=" ExternalLink-externalLink-1"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
         id="google_scholar"
         rel="noopener noreferrer"
@@ -593,7 +593,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class=" ExternalLink-externalLink-104"
+        class=" ExternalLink-externalLink-1"
         href="https://orcid.org/0000-0001-1111-1111"
         id="orcid"
         rel="noopener noreferrer"
@@ -620,7 +620,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
             class="MuiIconButton-label"
           >
             <svg
-              class="MuiSvgIcon-root makeStyles-helpIcon-117"
+              class="MuiSvgIcon-root makeStyles-helpIcon-3"
               focusable="false"
               role="img"
               size="20"

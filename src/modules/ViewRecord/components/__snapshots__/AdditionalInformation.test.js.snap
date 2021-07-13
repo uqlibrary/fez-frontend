@@ -3907,11 +3907,11 @@ exports[`Additional Information Component  Full mount render 1`] = `
                           <Cards
                             classes={
                               Object {
-                                "card": "Cards-card-106",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-107",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-109",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-108",
-                                "fullHeight": "Cards-fullHeight-110",
+                                "card": "Cards-card-3",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-4",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-6",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-5",
+                                "fullHeight": "Cards-fullHeight-7",
                               }
                             }
                             theme={
@@ -4271,13 +4271,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
                             title="Additional information"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-106 StandardCard"
+                              className="Cards-card-3 StandardCard"
                               data-testid="standard-card-additional-information"
                               id="standard-card-additional-information"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-106 StandardCard"
+                                className="Cards-card-3 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
@@ -4288,14 +4288,14 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-106 StandardCard"
+                                  className="MuiCard-root Cards-card-3 StandardCard"
                                   data-testid="standard-card-additional-information"
                                   elevation={1}
                                   id="standard-card-additional-information"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-106 StandardCard"
+                                    className="MuiCard-root Cards-card-3 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -4334,7 +4334,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-106 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-3 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-additional-information"
                                       id="standard-card-additional-information"
                                       style={Object {}}
@@ -5950,7 +5950,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                     className="citationAuthors"
                                                                     classes={
                                                                       Object {
-                                                                        "authorIdLink": "AuthorsCitationView-authorIdLink-177",
+                                                                        "authorIdLink": "AuthorsCitationView-authorIdLink-8",
                                                                       }
                                                                     }
                                                                     getLink={[Function]}
@@ -7318,19 +7318,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       className="citationAuthors"
                                                                     >
                                                                       <Link
-                                                                        className="AuthorsCitationView-authorIdLink-177"
+                                                                        className="AuthorsCitationView-authorIdLink-8"
                                                                         data-testid="rek-author-0-link"
                                                                         key="citationAuthor_1"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="AuthorsCitationView-authorIdLink-177"
+                                                                          className="AuthorsCitationView-authorIdLink-8"
                                                                           data-testid="rek-author-0-link"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            className="AuthorsCitationView-authorIdLink-8"
                                                                             data-testid="rek-author-0-link"
                                                                             href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=88893&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=88893+(Azimi%2C+Iman)&searchMode=advanced"
                                                                             onClick={[Function]}
@@ -7392,19 +7392,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       </Link>
                                                                       , 
                                                                       <Link
-                                                                        className="AuthorsCitationView-authorIdLink-177"
+                                                                        className="AuthorsCitationView-authorIdLink-8"
                                                                         data-testid="rek-author-2-link"
                                                                         key="citationAuthor_3"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="AuthorsCitationView-authorIdLink-177"
+                                                                          className="AuthorsCitationView-authorIdLink-8"
                                                                           data-testid="rek-author-2-link"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            className="AuthorsCitationView-authorIdLink-8"
                                                                             data-testid="rek-author-2-link"
                                                                             href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1706239&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1706239+(Kaemmerer%2C+Elke)&searchMode=advanced"
                                                                             onClick={[Function]}
@@ -7429,19 +7429,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       </Link>
                                                                       , 
                                                                       <Link
-                                                                        className="AuthorsCitationView-authorIdLink-177"
+                                                                        className="AuthorsCitationView-authorIdLink-8"
                                                                         data-testid="rek-author-3-link"
                                                                         key="citationAuthor_4"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="AuthorsCitationView-authorIdLink-177"
+                                                                          className="AuthorsCitationView-authorIdLink-8"
                                                                           data-testid="rek-author-3-link"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            className="AuthorsCitationView-authorIdLink-8"
                                                                             data-testid="rek-author-3-link"
                                                                             href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=97626&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=97626+(Turner%2C+Dane)&searchMode=advanced"
                                                                             onClick={[Function]}
@@ -7466,19 +7466,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       </Link>
                                                                       , 
                                                                       <Link
-                                                                        className="AuthorsCitationView-authorIdLink-177"
+                                                                        className="AuthorsCitationView-authorIdLink-8"
                                                                         data-testid="rek-author-4-link"
                                                                         key="citationAuthor_5"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="AuthorsCitationView-authorIdLink-177"
+                                                                          className="AuthorsCitationView-authorIdLink-8"
                                                                           data-testid="rek-author-4-link"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            className="AuthorsCitationView-authorIdLink-8"
                                                                             data-testid="rek-author-4-link"
                                                                             href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=95450&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=95450+(Yapa%2C+Kunsala+T.+D.+S.)&searchMode=advanced"
                                                                             onClick={[Function]}
@@ -7503,19 +7503,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       </Link>
                                                                       , 
                                                                       <Link
-                                                                        className="AuthorsCitationView-authorIdLink-177"
+                                                                        className="AuthorsCitationView-authorIdLink-8"
                                                                         data-testid="rek-author-5-link"
                                                                         key="citationAuthor_6"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="AuthorsCitationView-authorIdLink-177"
+                                                                          className="AuthorsCitationView-authorIdLink-8"
                                                                           data-testid="rek-author-5-link"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            className="AuthorsCitationView-authorIdLink-8"
                                                                             data-testid="rek-author-5-link"
                                                                             href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1671&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1671+(Brown%2C+Melissa+A.)&searchMode=advanced"
                                                                             onClick={[Function]}
@@ -7577,19 +7577,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       </Link>
                                                                       , 
                                                                       <Link
-                                                                        className="AuthorsCitationView-authorIdLink-177"
+                                                                        className="AuthorsCitationView-authorIdLink-8"
                                                                         data-testid="rek-author-7-link"
                                                                         key="citationAuthor_8"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="AuthorsCitationView-authorIdLink-177"
+                                                                          className="AuthorsCitationView-authorIdLink-8"
                                                                           data-testid="rek-author-7-link"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            className="AuthorsCitationView-authorIdLink-8"
                                                                             data-testid="rek-author-7-link"
                                                                             href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=973&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=973+(Roberts-Thomson%2C+Sarah+J.)&searchMode=advanced"
                                                                             onClick={[Function]}
@@ -7615,19 +7615,19 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       , 
                                                                        and 
                                                                       <Link
-                                                                        className="AuthorsCitationView-authorIdLink-177"
+                                                                        className="AuthorsCitationView-authorIdLink-8"
                                                                         data-testid="rek-author-8-link"
                                                                         key="citationAuthor_9"
                                                                         to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
                                                                       >
                                                                         <LinkAnchor
-                                                                          className="AuthorsCitationView-authorIdLink-177"
+                                                                          className="AuthorsCitationView-authorIdLink-8"
                                                                           data-testid="rek-author-8-link"
                                                                           href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
                                                                           navigate={[Function]}
                                                                         >
                                                                           <a
-                                                                            className="AuthorsCitationView-authorIdLink-177"
+                                                                            className="AuthorsCitationView-authorIdLink-8"
                                                                             data-testid="rek-author-8-link"
                                                                             href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=972&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=972+(Monteith%2C+Gregory+R.)&searchMode=advanced"
                                                                             onClick={[Function]}
@@ -10151,8 +10151,8 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                           className=""
                                                                           classes={
                                                                             Object {
-                                                                              "externalLink": "ExternalLink-externalLink-178",
-                                                                              "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                              "externalLink": "ExternalLink-externalLink-9",
+                                                                              "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                             }
                                                                           }
                                                                           href="https://example.com/"
@@ -10516,21 +10516,21 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         >
                                                                           <a
                                                                             aria-label="Check publisher's OA archiving policy in a new window"
-                                                                            className=" ExternalLink-externalLink-178"
+                                                                            className=" ExternalLink-externalLink-9"
                                                                             href="https://example.com/"
                                                                             rel="noopener noreferrer"
                                                                             tabIndex="0"
                                                                             target="_blank"
                                                                             title="Link to https://example.com/ will open in a new window."
                                                                           >
-                                                                            <OpenInNewIcon
-                                                                              className="ExternalLink-externalLinkIcon-179"
+                                                                            <ForwardRef(OpenInNewIcon)
+                                                                              className="ExternalLink-externalLinkIcon-10"
                                                                             >
                                                                               <WithStyles(ForwardRef(SvgIcon))
-                                                                                className="ExternalLink-externalLinkIcon-179"
+                                                                                className="ExternalLink-externalLinkIcon-10"
                                                                               >
                                                                                 <ForwardRef(SvgIcon)
-                                                                                  className="ExternalLink-externalLinkIcon-179"
+                                                                                  className="ExternalLink-externalLinkIcon-10"
                                                                                   classes={
                                                                                     Object {
                                                                                       "colorAction": "MuiSvgIcon-colorAction",
@@ -10546,8 +10546,8 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                   }
                                                                                 >
                                                                                   <svg
-                                                                                    aria-hidden="true"
-                                                                                    className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                                    aria-hidden={true}
+                                                                                    className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                                     focusable="false"
                                                                                     viewBox="0 0 24 24"
                                                                                   >
@@ -10557,7 +10557,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                   </svg>
                                                                                 </ForwardRef(SvgIcon)>
                                                                               </WithStyles(ForwardRef(SvgIcon))>
-                                                                            </OpenInNewIcon>
+                                                                            </ForwardRef(OpenInNewIcon)>
                                                                             Check publisher's open access policy
                                                                           </a>
                                                                         </ExternalLink>
@@ -12574,8 +12574,8 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                         className="citationDoiLink"
                                                                         classes={
                                                                           Object {
-                                                                            "externalLink": "ExternalLink-externalLink-178",
-                                                                            "externalLinkIcon": "ExternalLink-externalLinkIcon-179",
+                                                                            "externalLink": "ExternalLink-externalLink-9",
+                                                                            "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                           }
                                                                         }
                                                                         href="https://doi.org/10.1242/jcs.196659"
@@ -12940,21 +12940,21 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       >
                                                                         <a
                                                                           aria-label="Open this DOI in an new window"
-                                                                          className="citationDoiLink ExternalLink-externalLink-178"
+                                                                          className="citationDoiLink ExternalLink-externalLink-9"
                                                                           href="https://doi.org/10.1242/jcs.196659"
                                                                           rel="noopener noreferrer"
                                                                           tabIndex="0"
                                                                           target="_blank"
                                                                           title="Open this DOI in an new window"
                                                                         >
-                                                                          <OpenInNewIcon
-                                                                            className="ExternalLink-externalLinkIcon-179"
+                                                                          <ForwardRef(OpenInNewIcon)
+                                                                            className="ExternalLink-externalLinkIcon-10"
                                                                           >
                                                                             <WithStyles(ForwardRef(SvgIcon))
-                                                                              className="ExternalLink-externalLinkIcon-179"
+                                                                              className="ExternalLink-externalLinkIcon-10"
                                                                             >
                                                                               <ForwardRef(SvgIcon)
-                                                                                className="ExternalLink-externalLinkIcon-179"
+                                                                                className="ExternalLink-externalLinkIcon-10"
                                                                                 classes={
                                                                                   Object {
                                                                                     "colorAction": "MuiSvgIcon-colorAction",
@@ -12970,8 +12970,8 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 }
                                                                               >
                                                                                 <svg
-                                                                                  aria-hidden="true"
-                                                                                  className="MuiSvgIcon-root ExternalLink-externalLinkIcon-179"
+                                                                                  aria-hidden={true}
+                                                                                  className="MuiSvgIcon-root ExternalLink-externalLinkIcon-10"
                                                                                   focusable="false"
                                                                                   viewBox="0 0 24 24"
                                                                                 >
@@ -12981,7 +12981,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                                 </svg>
                                                                               </ForwardRef(SvgIcon)>
                                                                             </WithStyles(ForwardRef(SvgIcon))>
-                                                                          </OpenInNewIcon>
+                                                                          </ForwardRef(OpenInNewIcon)>
                                                                           https://doi.org/10.1242/jcs.196659
                                                                         </a>
                                                                       </ExternalLink>

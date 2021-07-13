@@ -136,7 +136,7 @@ exports[`SimpleSearchComponent should render mobile view 1`] = `
     <WithStyles(ForwardRef(Button))
       onClick={[Function]}
     >
-      <ArrowBackIcon />
+      <Memo(ForwardRef(ArrowBackIcon)) />
     </WithStyles(ForwardRef(Button))>
   </WithStyles(ForwardRef(Grid))>
 </Hidden>
@@ -273,9 +273,14 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
             "$$typeof": Symbol(react.forward_ref),
             "propTypes": Object {
               "children": [Function],
+              "disableStrictModeCompat": [Function],
               "in": [Function],
               "onEnter": [Function],
+              "onEntered": [Function],
+              "onEntering": [Function],
               "onExit": [Function],
+              "onExited": [Function],
+              "onExiting": [Function],
               "style": [Function],
               "timeout": [Function],
             },
@@ -294,7 +299,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
           aria-label="Click to search eSpace"
           onClick={[Function]}
         >
-          <SearchIcon />
+          <Memo(ForwardRef(SearchIcon)) />
         </WithStyles(ForwardRef(IconButton))>
       </WithStyles(ForwardRef(Tooltip))>
     </Hidden>

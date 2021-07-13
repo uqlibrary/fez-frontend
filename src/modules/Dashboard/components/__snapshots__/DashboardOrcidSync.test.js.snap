@@ -11,7 +11,6 @@ exports[`DashboardOrcidSync should render Done status, and be able to click the 
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
-          "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
@@ -57,7 +56,6 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
     Object {
       "$$typeof": Symbol(react.memo),
       "compare": null,
-      "muiName": "SvgIcon",
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "render": [Function],
@@ -73,7 +71,6 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
-          "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
@@ -1497,7 +1494,6 @@ exports[`DashboardOrcidSync should render properly 1`] = `
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
-          "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
