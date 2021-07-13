@@ -23,10 +23,6 @@ export const ManageUsers = React.lazy(() => import('modules/Admin/ManageUsers'))
 export const MasterJournalListIngest = React.lazy(() =>
     import('modules/Admin/MasterJournalListIngest/components/MasterJournalListIngest'),
 );
-export const JournalsSearch = React.lazy(() => import('modules/StrategicPublishing/components/Search'));
-export const JournalsResults = React.lazy(() => import('modules/StrategicPublishing/components/Results'));
-export const JournalsCompare = React.lazy(() => import('modules/StrategicPublishing/components/Compare'));
-export const JournalsFavourites = React.lazy(() => import('modules/StrategicPublishing/components/Favourites'));
 export const MyEditorialAppointments = React.lazy(() => import('modules/MyEditorialAppointments'));
 export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
 export const NewViewRecord = React.lazy(() => import('modules/ViewRecord/containers/NewViewRecord'));
