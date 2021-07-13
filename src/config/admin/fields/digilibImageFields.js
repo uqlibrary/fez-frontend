@@ -21,6 +21,10 @@ export default {
             ],
         },
         {
+            title: 'Geographic co-ordinates',
+            groups: [['geoCoordinates']],
+        },
+        {
             title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
         },
