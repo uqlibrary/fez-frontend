@@ -39,6 +39,7 @@ export const JournalSearchInput = () => {
         } else {
             dispatch(loadJournalSearchKeywords(null));
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [journalSearchInput]);
 
     return (
@@ -67,9 +68,10 @@ export const JournalSearchInput = () => {
                         <InputAdornment position="end">
                             <IconButton
                                 color="secondary"
-                                aria-label="upload picture"
                                 component="span"
                                 onClick={handleClearSearchInput}
+                                id="clear-journal-search-keywords"
+                                data-testid="clear-journal-search-keywords"
                             >
                                 <CloseIcon />
                             </IconButton>
