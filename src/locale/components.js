@@ -3586,7 +3586,7 @@ export default {
                 },
             },
             input: {
-                placeholder: 'Enter a journal title, keyword, subject or field of research code',
+                placeholder: 'Step 1. Enter a journal title, keyword, subject or field of research code',
             },
             keywordsBrowser: {
                 exactMatch: {
