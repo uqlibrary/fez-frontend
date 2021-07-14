@@ -81,7 +81,7 @@ export const loadJournalSearchKeywords = searchQuery => async dispatch => {
     dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
     try {
         const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
-        dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data });
+        dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data, query: searchQuery });
     } catch (e) {
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });
     }

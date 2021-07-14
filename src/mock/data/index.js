@@ -64,7 +64,8 @@ export { batchImportDirectories } from './batchImportDirectories';
 export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
 export { mockRecordToFix } from './testing/records';
-export { journalLookup, journalSearchKeywords } from './journalLookup';
+export { journalLookup } from './journalLookup';
+export { keywordsSearch } from './journalSearchKeywords';
 export { journalDetails } from './journal';
 
 export { bulkUpdatesList } from './bulkUpdates';

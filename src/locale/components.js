@@ -3609,6 +3609,9 @@ export default {
                 title: 'Searching for journals containing: ',
                 combiner: ' + ',
             },
+            journalSearchResult: {
+                loadingMessage: 'Loading journals list',
+            },
         },
     },
 };

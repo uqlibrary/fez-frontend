@@ -14,7 +14,7 @@ import locale from 'locale/components';
 export const JournalSearchInput = () => {
     const txt = locale.components.journalSearch;
     const dispatch = useDispatch();
-    const [journalSearchInput, setJournalSearchInput] = React.useState(null);
+    const [journalSearchInput, setJournalSearchInput] = React.useState('');
 
     const loadingJournalSearchKeywords = useSelector(
         state => (state.get('journalReducer') || {}).journalSearchKeywordsLoading,
