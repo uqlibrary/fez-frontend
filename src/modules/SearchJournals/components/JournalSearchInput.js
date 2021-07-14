@@ -8,13 +8,15 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { loadJournalSearchKeywords } from 'actions';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
 import locale from 'locale/components';
 
 export const JournalSearchInput = () => {
     const txt = locale.components.journalSearch;
     const dispatch = useDispatch();
-    const [journalSearchInput, setJournalSearchInput] = React.useState(null);
+    const [journalSearchInput, setJournalSearchInput] = React.useState('');
 
     const loadingJournalSearchKeywords = useSelector(
         state => (state.get('journalReducer') || {}).journalSearchKeywordsLoading,
@@ -29,10 +31,13 @@ export const JournalSearchInput = () => {
      * @param {object} event keypress event object
      */
     const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value.trim()), []);
+    const handleClearSearchInput = React.useCallback(() => setJournalSearchInput(''), []);
 
     React.useEffect(() => {
-        if (journalSearchInput && throttledLoadSuggestions) {
+        if (journalSearchInput && journalSearchInput.length > 3 && throttledLoadSuggestions) {
             throttledLoadSuggestions.current(journalSearchInput);
+        } else {
+            dispatch(loadJournalSearchKeywords(null));
         }
     }, [journalSearchInput]);
 
@@ -57,8 +62,20 @@ export const JournalSearchInput = () => {
                             />
                         </InputAdornment>
                     ),
-                }) ||
-                    {}),
+                }) || {
+                    endAdornment: (
+                        <InputAdornment position="end">
+                            <IconButton
+                                color="secondary"
+                                aria-label="upload picture"
+                                component="span"
+                                onClick={handleClearSearchInput}
+                            >
+                                <CloseIcon />
+                            </IconButton>
+                        </InputAdornment>
+                    ),
+                }),
             }}
         />
     );
