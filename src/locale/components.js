@@ -3611,6 +3611,10 @@ export default {
             },
             journalSearchResult: {
                 loadingMessage: 'Loading journals list',
+                noResultsFound: {
+                    title: 'No journals found',
+                    text: <div>We were unable to find any results.</div>,
+                },
             },
         },
     },
