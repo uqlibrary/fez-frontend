@@ -58,8 +58,14 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
         .map(keyword => ({ keyword }));
 };
 
-const getSubjectMatchKeywords = keywordsResponse => {
-    const subjectMatch = !!keywordsResponse.subject && keywordsResponse.subject.map(keyword => ({ ...keyword }));
+const getSubjectMatchKeywords = subjectFuzzyMatch => {
+    const subjectMatch =
+        !!subjectFuzzyMatch &&
+        subjectFuzzyMatch.length > 0 &&
+        subjectFuzzyMatch.map(subject => ({
+            keyword: subject.jnl_subject_title,
+            sources: [{ name: subject.jnl_subject_sources.toLowerCase() }],
+        }));
 
     return subjectMatch;
 };
@@ -68,7 +74,7 @@ const getKeywords = (keywordsResponse, query) => {
     const exactMatch = getExactMatchKeywords(keywordsResponse);
     const titleMatch = getTitleMatchKeywords([...keywordsResponse.titleFuzzyMatch], query);
     const keywordMatch = getKeywordMatchKeywords([...keywordsResponse.descriptionFuzzyMatch], query);
-    const subjectMatch = getSubjectMatchKeywords(keywordsResponse);
+    const subjectMatch = getSubjectMatchKeywords([...keywordsResponse.subjectFuzzyMatch]);
 
     return {
         exactMatch,

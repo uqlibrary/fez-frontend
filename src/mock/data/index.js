@@ -67,6 +67,7 @@ export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
 export { keywordsSearch } from './journalSearchKeywords';
 export { journalDetails } from './journal';
+export { journalsList } from './journals';
 
 export { bulkUpdatesList } from './bulkUpdates';
 

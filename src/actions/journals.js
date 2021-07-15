@@ -87,6 +87,10 @@ export const loadJournalSearchKeywords = searchQuery => async dispatch => {
     }
 };
 
+export const clearJournalSearchKeywords = () => ({
+    type: actions.CLEAR_JOURNAL_SEARCH_KEYWORDS,
+});
+
 export const searchJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.SEARCH_JOURNALS_LOADING });
     try {

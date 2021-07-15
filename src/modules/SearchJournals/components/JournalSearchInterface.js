@@ -94,6 +94,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                             </Grid>
                             <Grid item xs="auto">
                                 <Button
+                                    disabled={!hasAnySelectedKeywords}
                                     variant="contained"
                                     children={txt.journalSearchInterface.buttons.searchJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.searchJournals.aria}
