@@ -10,6 +10,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { loadJournalSearchKeywords } from 'actions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import MicIcon from '@material-ui/icons/Mic';
 
 import locale from 'locale/components';
 
@@ -66,8 +67,17 @@ export const JournalSearchInput = () => {
                     endAdornment: (
                         <InputAdornment position="end">
                             <IconButton
+                                style={{ marginRight: -18 }}
                                 color="secondary"
-                                aria-label="upload picture"
+                                aria-label="Enter search keyword by voice"
+                                component="span"
+                            >
+                                <MicIcon />
+                            </IconButton>
+                            <IconButton
+                                style={{ marginRight: -12 }}
+                                color="secondary"
+                                aria-label="Clear search keyword input"
                                 component="span"
                                 onClick={handleClearSearchInput}
                             >
