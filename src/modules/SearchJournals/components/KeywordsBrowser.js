@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -85,6 +86,13 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 </Grid>
             )}
             {(hasExactKeywords || hasTitleKeywords) && (
+                <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
+                    <Typography>
+                        <b>Step 2.</b> Select at least one of the following to narrow the scope before searching.
+                    </Typography>
+                </Grid>
+            )}
+            {(hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords) && (
                 <Grid item xs={12} md={4}>
                     <Grid container>
                         {hasExactKeywords && (

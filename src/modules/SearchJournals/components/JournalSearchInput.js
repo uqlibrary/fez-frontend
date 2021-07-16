@@ -50,6 +50,7 @@ export const JournalSearchInput = () => {
                     textFieldId="journal-search-keywords"
                     label={txt.input.placeholder}
                     name="journal-search-keywords-input"
+                    autoComplete="off"
                     onChange={handleJournalSearchInput}
                     value={journalSearchInput}
                     fullWidth

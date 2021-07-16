@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 export const KeywordsList = ({ title, list }) => {
     return (
         <Grid container>
-            <Grid item xs={12}>
-                <Typography variant="subtitle1" color="primary">
+            <Grid item xs={12} style={{ margin: '10px 0 10px 0' }}>
+                <Typography variant="subtitle1" color="primary" variant="h5">
                     {title}
                 </Typography>
             </Grid>

@@ -3593,11 +3593,11 @@ export default {
                     title: 'Exact title match',
                 },
                 titleMatch: {
-                    title: 'Title containing',
+                    title: 'Titles containing',
                     chipTitle: 'Title',
                 },
                 keywordMatch: {
-                    title: 'Keyword matching',
+                    title: 'Keyword matches',
                     chipTitle: 'Keyword',
                 },
                 forCodeMatch: {
