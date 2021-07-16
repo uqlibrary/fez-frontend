@@ -65,7 +65,7 @@ export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
 export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
-export { keywordsSearch } from './journalSearchKeywords';
+export { keywordsSearch } from './journalKeywordSearches/bio';
 export { journalDetails } from './journal';
 export { journalsList } from './journals';
 
