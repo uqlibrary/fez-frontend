@@ -30,7 +30,7 @@ export const JournalSearchInput = () => {
      *
      * @param {object} event keypress event object
      */
-    const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value.trim()), []);
+    const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value), []);
     const handleClearSearchInput = React.useCallback(() => {
         setJournalSearchInput('');
         dispatch(clearJournalSearchKeywords());
