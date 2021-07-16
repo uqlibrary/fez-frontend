@@ -1,11 +1,11 @@
 import React from 'react';
 import param from 'can-param';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 
 import Grid from '@material-ui/core/Grid';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import JournalSearchInterface from './JournalSearchInterface';
 import JournalSearchResult from './JournalSearchResult';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
@@ -13,8 +13,10 @@ import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import { searchJournals } from 'actions';
 
 export const SearchJournals = () => {
+    const dispatch = useDispatch();
     const history = useHistory();
     const { journalSearchQueryParams, locationKey } = useJournalSearchQueryParams();
     const { selectedKeywords, setSelectedKeywords } = useSelectedKeywords(journalSearchQueryParams.keywords);
@@ -61,8 +63,9 @@ export const SearchJournals = () => {
      */
     React.useEffect(() => {
         if (!!journalSearchQueryParams.keywords && Object.values(journalSearchQueryParams.keywords).length > 0) {
-            console.log('Call journal search action here...');
+            dispatch(searchJournals(journalSearchQueryParams));
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [journalSearchQueryParams]);
 
     return (
@@ -76,9 +79,7 @@ export const SearchJournals = () => {
                     />
                 </Grid>
                 <Grid item xs={9}>
-                    <StandardCard noHeader>
-                        <JournalSearchResult key={`journal-search-result-${locationKey}`} />
-                    </StandardCard>
+                    <JournalSearchResult key={`journal-search-result-${locationKey}`} />
                 </Grid>
                 <Grid item xs={3}>
                     <StandardRighthandCard>

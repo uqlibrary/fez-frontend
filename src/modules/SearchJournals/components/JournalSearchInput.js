@@ -7,7 +7,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { loadJournalSearchKeywords } from 'actions';
+import { loadJournalSearchKeywords, clearJournalSearchKeywords } from 'actions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import MicIcon from '@material-ui/icons/Mic';
@@ -32,14 +32,17 @@ export const JournalSearchInput = () => {
      * @param {object} event keypress event object
      */
     const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value.trim()), []);
-    const handleClearSearchInput = React.useCallback(() => setJournalSearchInput(''), []);
+    const handleClearSearchInput = React.useCallback(() => {
+        setJournalSearchInput('');
+        dispatch(clearJournalSearchKeywords());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     React.useEffect(() => {
         if (journalSearchInput && journalSearchInput.length > 3 && throttledLoadSuggestions) {
             throttledLoadSuggestions.current(journalSearchInput);
-        } else {
-            dispatch(loadJournalSearchKeywords(null));
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [journalSearchInput]);
 
     return (
@@ -71,6 +74,8 @@ export const JournalSearchInput = () => {
                                 color="secondary"
                                 aria-label="Enter search keyword by voice"
                                 component="span"
+                                id="voice-to-text-keywords"
+                                data-testid="voice-to-text-keywords"
                             >
                                 <MicIcon />
                             </IconButton>
@@ -80,6 +85,8 @@ export const JournalSearchInput = () => {
                                 aria-label="Clear search keyword input"
                                 component="span"
                                 onClick={handleClearSearchInput}
+                                id="clear-journal-search-keywords"
+                                data-testid="clear-journal-search-keywords"
                             >
                                 <CloseIcon />
                             </IconButton>

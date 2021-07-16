@@ -69,6 +69,10 @@ const handlers = {
         journalSearchKeywords: { ...initialJournalSearchKeywords },
         journalSearchKeywordsError: action.payload,
     }),
+    [actions.CLEAR_JOURNAL_SEARCH_KEYWORDS]: state => ({
+        ...state,
+        journalSearchKeywords: { ...initialJournalSearchKeywords },
+    }),
 };
 
 export default function journalReducer(state = initialState, action) {

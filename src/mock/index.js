@@ -383,7 +383,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         if(config.url.indexOf('query=null') > -1) {
             return [200, { data: {}}]
         }
-        return [200, { data: {...mockData.journalSearchKeywords }}]
+        return [200, { ...mockData.keywordsSearch }]
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
