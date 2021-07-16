@@ -39,6 +39,8 @@ export const JournalSearchInput = () => {
     React.useEffect(() => {
         if (journalSearchInput && journalSearchInput.length > 2 && throttledLoadSuggestions) {
             throttledLoadSuggestions.current(journalSearchInput);
+        } else {
+            dispatch(clearJournalSearchKeywords());
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [journalSearchInput]);
