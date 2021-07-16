@@ -430,7 +430,8 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
 };
 
 export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
-    apiUrl: `journals/search?rule=keywords&query=${query}`,
+    apiUrl: `journals/search?query=${query}`,
+    // apiUrl: `journals/search?rule=keywords&query=${query}`,
 });
 
 /**
