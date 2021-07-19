@@ -191,45 +191,6 @@ describe('getRecordFileAttachmentSearchKey test', () => {
         expect(result).toEqual(expected);
     });
 
-    it('should return request object structure for files with inherit most secure policy from collection', () => {
-        const files = [
-            {
-                name: 'file.txt',
-                access_condition_id: 99,
-            },
-            {
-                name: 'file2.txt',
-                access_condition_id: 5,
-            },
-        ];
-        const record = { collections: [{ rek_datastream_policy: 4 }, { rek_datastream_policy: 5 }] };
-        const expected = {
-            fez_record_search_key_file_attachment_name: [
-                {
-                    rek_file_attachment_name: 'file.txt',
-                    rek_file_attachment_name_order: 1,
-                },
-                {
-                    rek_file_attachment_name: 'file2.txt',
-                    rek_file_attachment_name_order: 2,
-                },
-            ],
-            fez_record_search_key_file_attachment_embargo_date: [],
-            fez_record_search_key_file_attachment_access_condition: [
-                {
-                    rek_file_attachment_access_condition: 4,
-                    rek_file_attachment_access_condition_order: 1,
-                },
-                {
-                    rek_file_attachment_access_condition: 5,
-                    rek_file_attachment_access_condition_order: 2,
-                },
-            ],
-        };
-        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
-        expect(result).toEqual(expected);
-    });
-
     it('should return request object structure for files and empty record', () => {
         const files = [
             {

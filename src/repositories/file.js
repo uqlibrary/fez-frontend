@@ -3,6 +3,7 @@ import {
     MIME_TYPE_WHITELIST,
     FILE_ACCESS_CONDITION_CLOSED,
     FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_INHERIT,
 } from 'modules/SharedComponents/Toolbox/FileUploader/config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
 import { FILE_UPLOAD_API } from './routes';
@@ -10,6 +11,23 @@ import { post, put } from './generic';
 import Raven from 'raven-js';
 import locale from 'locale/global';
 const moment = require('moment');
+
+export const getFileUploadMetadata = file => {
+    const securityInherited = file.access_condition_id === FILE_ACCESS_CONDITION_INHERIT;
+    const metadata = {
+        dsi_security_inherited: securityInherited ? 1 : 0,
+        ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !moment(file.date).isSame(moment(), 'day')
+            ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
+            : {}),
+    };
+    if (!securityInherited) {
+        metadata.dsi_security_policy =
+            file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !!file.date && moment(file.date).isAfter()
+                ? FILE_ACCESS_CONDITION_CLOSED
+                : file.access_condition_id;
+    }
+    return metadata;
+};
 
 /**
  * Uploads a file directly into an S3 bucket via API
@@ -21,25 +39,11 @@ const moment = require('moment');
  */
 export function putUploadFile(pid, file, dispatch, formName) {
     let retried = false;
+
     const uploadFile = () =>
         post(FILE_UPLOAD_API(), {
             Key: `${pid}/${file.name}`,
-            Metadata: {
-                ...(!!file.access_condition_id
-                    ? {
-                          dsi_security_policy:
-                              file.access_condition_id === FILE_ACCESS_CONDITION_OPEN &&
-                              !!file.date &&
-                              moment(file.date).isAfter()
-                                  ? FILE_ACCESS_CONDITION_CLOSED
-                                  : file.access_condition_id,
-                      }
-                    : {}),
-                ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN &&
-                !moment(file.date).isSame(moment(), 'day')
-                    ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
-                    : {}),
-            },
+            Metadata: getFileUploadMetadata(file),
         })
             .then(uploadUrl => {
                 const extension = file.name
