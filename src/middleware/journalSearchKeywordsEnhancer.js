@@ -76,10 +76,16 @@ const getSubjectMatchKeywords = subjectFuzzyMatch => {
     const subjectMatch =
         !!subjectFuzzyMatch &&
         subjectFuzzyMatch.length > 0 &&
-        subjectFuzzyMatch.map(subject => ({
-            keyword: subject.jnl_subject_title,
-            sources: [{ name: subject.jnl_subject_sources.toLowerCase() }],
-        }));
+        subjectFuzzyMatch.map(subject => {
+            const sourcesArray = subject.jnl_subject_sources.split(',');
+            const combinedSources = sourcesArray.map(source => ({
+                name: source.replace(/\s/g, '').toLowerCase(),
+            }));
+            return {
+                keyword: subject.jnl_subject_title,
+                sources: combinedSources,
+            };
+        });
 
     return subjectMatch;
 };

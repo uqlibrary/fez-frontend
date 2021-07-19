@@ -93,7 +93,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 </Grid>
             )}
             {(hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords) && (
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={3}>
                     <Grid container>
                         {hasExactKeywords && (
                             <Grid item xs={12}>
@@ -116,7 +116,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 </Grid>
             )}
             {hasKeywordKeywords && (
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={3}>
                     <SearchKeywordsList
                         keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
                         keywordsList={journalSearchKeywords.keywordMatch}
@@ -125,7 +125,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 </Grid>
             )}
             {hasSubjectKeywords && (
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={6}>
                     <ForCodeSearchKeywordsList
                         keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
                         keywordsList={journalSearchKeywords.subjectMatch}
