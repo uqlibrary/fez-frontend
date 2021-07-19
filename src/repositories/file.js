@@ -12,6 +12,23 @@ import Raven from 'raven-js';
 import locale from 'locale/global';
 const moment = require('moment');
 
+export const getFileUploadMetadata = file => {
+    const securityInherited = file.access_condition_id === FILE_ACCESS_CONDITION_INHERIT;
+    const metadata = {
+        dsi_security_inherited: securityInherited ? 1 : 0,
+        ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !moment(file.date).isSame(moment(), 'day')
+            ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
+            : {}),
+    };
+    if (!securityInherited) {
+        metadata.dsi_security_policy =
+            file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !!file.date && moment(file.date).isAfter()
+                ? FILE_ACCESS_CONDITION_CLOSED
+                : file.access_condition_id;
+    }
+    return metadata;
+};
+
 /**
  * Uploads a file directly into an S3 bucket via API
  * @param {string} pid of object, folder name to where file will be uploaded
@@ -23,27 +40,10 @@ const moment = require('moment');
 export function putUploadFile(pid, file, dispatch, formName) {
     let retried = false;
 
-    const getFileUploadMetadata = () => {
-        const securityInherited = file.access_condition_id === FILE_ACCESS_CONDITION_INHERIT;
-        const metadata = {
-            dsi_security_inherited: securityInherited ? 1 : 0,
-            ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !moment(file.date).isSame(moment(), 'day')
-                ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
-                : {}),
-        };
-        if (!securityInherited) {
-            metadata.dsi_security_policy =
-                file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !!file.date && moment(file.date).isAfter()
-                    ? FILE_ACCESS_CONDITION_CLOSED
-                    : file.access_condition_id;
-        }
-        return metadata;
-    };
-
     const uploadFile = () =>
         post(FILE_UPLOAD_API(), {
             Key: `${pid}/${file.name}`,
-            Metadata: getFileUploadMetadata(),
+            Metadata: getFileUploadMetadata(file),
         })
             .then(uploadUrl => {
                 const extension = file.name
