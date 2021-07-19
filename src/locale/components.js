@@ -3580,13 +3580,13 @@ export default {
                         aria: 'Browse all journals',
                     },
                     searchJournals: {
-                        title: 'Search',
+                        title: 'Step 3. Search',
                         aria: 'Search',
                     },
                 },
             },
             input: {
-                placeholder: 'Step 1. Enter a journal title, keyword, subject or field of research code',
+                placeholder: 'Enter a journal title, keyword, subject or field of research code',
             },
             keywordsBrowser: {
                 exactMatch: {

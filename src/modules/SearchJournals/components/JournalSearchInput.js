@@ -10,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import MicIcon from '@material-ui/icons/Mic';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import locale from 'locale/components';
 
 export const JournalSearchInput = () => {
@@ -46,11 +47,16 @@ export const JournalSearchInput = () => {
     }, [journalSearchInput]);
 
     return (
-        <Grid container spacing={1}>
+        <Grid container spacing={0}>
+            <Grid item xs={12} style={{ padding: '10px 0 0 0' }}>
+                <Typography>
+                    <b>Step 1.</b> Enter a journal title, keyword, subject or field of research code.
+                </Typography>
+            </Grid>
             <Grid item xs={12}>
                 <TextField
                     textFieldId="journal-search-keywords"
-                    label={txt.input.placeholder}
+                    placeholder={txt.input.placeholder}
                     name="journal-search-keywords-input"
                     autoComplete="off"
                     onChange={handleJournalSearchInput}

@@ -79,7 +79,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     }
 
     return (
-        <Grid container>
+        <Grid container spacing={0}>
             {hasJournalSearchKeywordsFailed && (
                 <Grid item>
                     <Alert {...journalSearchKeywordsError} />
@@ -88,7 +88,8 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             {(hasExactKeywords || hasTitleKeywords) && (
                 <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
                     <Typography>
-                        <b>Step 2.</b> Select at least one of the following to narrow the scope before searching.
+                        <b>Step 2.</b> Select at least one of the following to narrow the scope narrow the scope before
+                        searching.
                     </Typography>
                 </Grid>
             )}
