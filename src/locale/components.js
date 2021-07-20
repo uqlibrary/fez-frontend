@@ -3586,7 +3586,7 @@ export default {
                 },
             },
             input: {
-                placeholder: 'Enter a journal title, keyword, subject or field of research code',
+                placeholder: 'Type at least 3 characters to start a search',
             },
             keywordsBrowser: {
                 exactMatch: {
