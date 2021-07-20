@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import SelectedKeywordItem from './partials/SelectedKeywordItem';
-
 import locale from 'locale/components';
 
 export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {

@@ -17,7 +17,6 @@ export const JournalSearchInput = () => {
     const txt = locale.components.journalSearch;
     const dispatch = useDispatch();
     const [journalSearchInput, setJournalSearchInput] = React.useState('');
-
     const loadingJournalSearchKeywords = useSelector(
         state => (state.get('journalReducer') || {}).journalSearchKeywordsLoading,
     );
@@ -40,7 +39,9 @@ export const JournalSearchInput = () => {
 
     React.useEffect(() => {
         if (journalSearchInput && journalSearchInput.length > 2 && throttledLoadSuggestions) {
-            const timeOutId = setTimeout(() => throttledLoadSuggestions.current(journalSearchInput), 1000);
+            const timeOutId = setTimeout(() => {
+                throttledLoadSuggestions.current(journalSearchInput);
+            }, 1000);
             return () => clearTimeout(timeOutId);
         } else {
             dispatch(clearJournalSearchKeywords());

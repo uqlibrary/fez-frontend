@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import JournalSearchInput from './JournalSearchInput';
 import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
+import Snackbar from '@material-ui/core/Snackbar';
 
 import locale from 'locale/components';
 import { pathConfig } from 'config/pathConfig';
@@ -16,7 +17,7 @@ import { useJournalSearchInterfaceState, useSelectedKeywords, useJournalSearchQu
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
     const theme = useTheme();
     const { journalSearchQueryParams } = useJournalSearchQueryParams();
-
+    const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const {
         showKeywordsBrowser,
         showJournalSearchInput,
@@ -40,13 +41,37 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
         onSearch(selectedKeywords);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKeywords]);
+    const handleSnackbarOpen = () => {
+        setSnackbarNotify(true);
+    };
+    const handleSnackbarClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setSnackbarNotify(false);
+    };
 
+    React.useEffect(() => {
+        if (initialSelectedKeywords !== selectedKeywords) {
+            handleSnackbarOpen();
+        }
+    }, [selectedKeywords]);
     return (
         <StandardCard
             customTitleColor={theme.palette.primary.main}
             title={txt.journalSearchInterface.title}
             style={{ padding: 16 }}
         >
+            <Snackbar
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'center',
+                }}
+                open={snackbarNotify}
+                onClose={handleSnackbarClose}
+                autoHideDuration={1000}
+                message={<span>Search list updated</span>}
+            />
             <Grid container spacing={2}>
                 {showJournalSearchInput && (
                     <Grid item xs={12}>
