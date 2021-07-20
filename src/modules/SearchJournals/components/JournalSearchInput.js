@@ -55,7 +55,6 @@ export const JournalSearchInput = () => {
                 </Typography>
             </Grid>
             <Grid item xs={12}>
-                {journalSearchInput}
                 <TextField
                     textFieldId="journal-search-keywords"
                     placeholder={txt.input.placeholder}
