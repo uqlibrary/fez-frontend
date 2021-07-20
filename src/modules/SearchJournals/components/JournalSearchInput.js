@@ -56,6 +56,7 @@ export const JournalSearchInput = () => {
             </Grid>
             <Grid item xs={12}>
                 <TextField
+                    autoFocus
                     textFieldId="journal-search-keywords"
                     placeholder={txt.input.placeholder}
                     name="journal-search-keywords-input"
