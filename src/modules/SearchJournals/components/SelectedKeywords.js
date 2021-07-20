@@ -13,13 +13,19 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
                 {txt.selectedKeywords.title}
             </Typography>
             <React.Fragment>
-                {keywords.map((keyword, index) => (
-                    <SelectedKeywordItem
-                        key={`keyword-${keyword.type}-${index}`}
-                        keyword={keyword}
-                        onKeywordDelete={onKeywordDelete}
-                    />
-                ))}
+                {keywords.map((keyword, index) => {
+                    const addSeparator = index + 1 !== keywords.length;
+                    return (
+                        <React.Fragment>
+                            <SelectedKeywordItem
+                                key={`keyword-${keyword.type}-${index}`}
+                                keyword={keyword}
+                                onKeywordDelete={onKeywordDelete}
+                            />
+                            {addSeparator && <span>+</span>}
+                        </React.Fragment>
+                    );
+                })}
             </React.Fragment>
         </React.Fragment>
     );

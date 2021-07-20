@@ -31,11 +31,8 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
     const { selectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } = useSelectedKeywords(
         initialSelectedKeywords,
     );
-
     const handleFavouriteJournalsClick = React.useCallback(() => history.push(pathConfig.journal.favourite), []);
-
     const handleBrowseAllJournalsClick = React.useCallback(() => history.push(pathConfig.journal.browseAll), []);
-
     const handleSearchJournalsClick = React.useCallback(() => {
         toggleJournalSearchInput();
         toggleKeywordsBrowser();
