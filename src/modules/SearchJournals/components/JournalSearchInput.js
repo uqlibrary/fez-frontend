@@ -8,10 +8,10 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { loadJournalSearchKeywords, clearJournalSearchKeywords } from 'actions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import MicIcon from '@material-ui/icons/Mic';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import locale from 'locale/components';
+import { VoiceToText } from './partials/voiceToText';
 
 export const JournalSearchInput = () => {
     const txt = locale.components.journalSearch;
@@ -31,6 +31,7 @@ export const JournalSearchInput = () => {
      * @param {object} event keypress event object
      */
     const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value), []);
+    const handleJournalVoiceSearchInput = React.useCallback(value => !!value && setJournalSearchInput(value), []);
     const handleClearSearchInput = React.useCallback(() => {
         setJournalSearchInput('');
         dispatch(clearJournalSearchKeywords());
@@ -54,6 +55,7 @@ export const JournalSearchInput = () => {
                 </Typography>
             </Grid>
             <Grid item xs={12}>
+                {journalSearchInput}
                 <TextField
                     textFieldId="journal-search-keywords"
                     placeholder={txt.input.placeholder}
@@ -78,16 +80,7 @@ export const JournalSearchInput = () => {
                         }) || {
                             endAdornment: (
                                 <InputAdornment position="end">
-                                    <IconButton
-                                        style={{ marginRight: -18 }}
-                                        color="secondary"
-                                        aria-label="Enter search keyword by voice"
-                                        component="span"
-                                        id="voice-to-text-keywords"
-                                        data-testid="voice-to-text-keywords"
-                                    >
-                                        <MicIcon />
-                                    </IconButton>
+                                    <VoiceToText sendHandler={handleJournalVoiceSearchInput} />
                                     <IconButton
                                         style={{ marginRight: -12 }}
                                         color="secondary"

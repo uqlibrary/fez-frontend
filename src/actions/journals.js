@@ -78,6 +78,7 @@ export const loadJournal = id => dispatch => {
 };
 
 export const loadJournalSearchKeywords = searchQuery => async dispatch => {
+    console.log('searchQuery', searchQuery);
     dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
     try {
         const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
