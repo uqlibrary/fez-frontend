@@ -16,13 +16,13 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
                 {keywords.map((keyword, index) => {
                     const addSeparator = index + 1 !== keywords.length;
                     return (
-                        <React.Fragment>
+                        <React.Fragment key={`fragment-${index}`}>
                             <SelectedKeywordItem
                                 key={`keyword-${keyword.type}-${index}`}
                                 keyword={keyword}
                                 onKeywordDelete={onKeywordDelete}
                             />
-                            {addSeparator && <span>+</span>}
+                            {addSeparator && <span key={`separator-${index}`}>+</span>}
                         </React.Fragment>
                     );
                 })}
