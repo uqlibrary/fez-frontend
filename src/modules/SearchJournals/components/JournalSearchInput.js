@@ -23,7 +23,7 @@ export const JournalSearchInput = () => {
     );
 
     const throttledLoadSuggestions = React.useRef(
-        throttle(3000, newValue => dispatch(loadJournalSearchKeywords(newValue))),
+        throttle(2000, newValue => dispatch(loadJournalSearchKeywords(newValue))),
     );
     /**
      * Journal search input handler
@@ -40,9 +40,11 @@ export const JournalSearchInput = () => {
 
     React.useEffect(() => {
         if (journalSearchInput && journalSearchInput.length > 2 && throttledLoadSuggestions) {
-            setTimeout(throttledLoadSuggestions.current(journalSearchInput), 1000);
+            const timeOutId = setTimeout(() => throttledLoadSuggestions.current(journalSearchInput), 1000);
+            return () => clearTimeout(timeOutId);
         } else {
             dispatch(clearJournalSearchKeywords());
+            return null;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [journalSearchInput]);
