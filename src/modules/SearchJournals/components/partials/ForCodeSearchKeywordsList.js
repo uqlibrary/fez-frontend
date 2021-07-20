@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import KeywordsList from './KeywordsList';
 import ForCodeSearchKeyword from './ForCodeSearchKeyword';
+import { helpLocale } from './JournalSearchHelpLocale';
 
 export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => (
     <KeywordsList
@@ -15,6 +15,7 @@ export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onK
                 ))) ||
             []
         }
+        help={helpLocale.KeywordSearchFORSubject}
     />
 );
 

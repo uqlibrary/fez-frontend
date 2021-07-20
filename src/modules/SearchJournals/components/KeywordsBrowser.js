@@ -15,17 +15,14 @@ import locale from 'locale/components';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const txt = locale.components.journalSearch;
-
     const journalSearchKeywords = useSelector(state => state.get('journalReducer').journalSearchKeywords);
+    const isInitialValues = useSelector(state => state.get('journalReducer').isInitialValues);
     const journalSearchKeywordsError = useSelector(state => state.get('journalReducer').journalSearchKeywordsError);
-
     const hasJournalSearchKeywordsFailed = !!journalSearchKeywordsError;
-
     const hasExactKeywords = journalSearchKeywords.exactMatch.length > 0;
     const hasTitleKeywords = journalSearchKeywords.titleMatch.length > 0;
     const hasKeywordKeywords = journalSearchKeywords.keywordMatch.length > 0;
     const hasSubjectKeywords = journalSearchKeywords.subjectMatch.length > 0;
-
     const hasAnyKeywordsLoaded = hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords;
 
     /**
@@ -74,7 +71,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
         [],
     );
 
-    if (!hasAnyKeywordsLoaded) {
+    if (!hasAnyKeywordsLoaded && isInitialValues) {
         return <div />;
     }
 
@@ -85,55 +82,45 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     <Alert {...journalSearchKeywordsError} />
                 </Grid>
             )}
-            {(hasExactKeywords || hasTitleKeywords) && (
-                <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
-                    <Typography>
-                        <b>Step 2.</b> Select at least one of the following to narrow the scope narrow the scope before
-                        searching.
-                    </Typography>
-                </Grid>
-            )}
-            {(hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords) && (
-                <Grid item xs={12} md={3}>
-                    <Grid container>
-                        {hasExactKeywords && (
-                            <Grid item xs={12}>
-                                <ExactMatchSearchKeywordsList
-                                    keywordsListTitle={txt.keywordsBrowser.exactMatch.title}
-                                    keywordsList={journalSearchKeywords.exactMatch}
-                                />
-                            </Grid>
-                        )}
-                        {hasTitleKeywords && (
-                            <Grid item xs={12}>
-                                <SearchKeywordsList
-                                    keywordsListTitle={txt.keywordsBrowser.titleMatch.title}
-                                    keywordsList={journalSearchKeywords.titleMatch}
-                                    onKeywordClick={handleTitleKeywordClick}
-                                />
-                            </Grid>
-                        )}
+            <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
+                <Typography>
+                    <b>Step 2.</b> Select at least one of the following to narrow the scope narrow the scope before
+                    searching.
+                </Typography>
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <Grid container>
+                    {hasExactKeywords && (
+                        <Grid item xs={12}>
+                            <ExactMatchSearchKeywordsList
+                                keywordsListTitle={txt.keywordsBrowser.exactMatch.title}
+                                keywordsList={journalSearchKeywords.exactMatch || []}
+                            />
+                        </Grid>
+                    )}
+                    <Grid item xs={12}>
+                        <SearchKeywordsList
+                            keywordsListTitle={txt.keywordsBrowser.titleMatch.title}
+                            keywordsList={journalSearchKeywords.titleMatch || []}
+                            onKeywordClick={handleTitleKeywordClick}
+                        />
                     </Grid>
                 </Grid>
-            )}
-            {hasKeywordKeywords && (
-                <Grid item xs={12} md={3}>
-                    <SearchKeywordsList
-                        keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
-                        keywordsList={journalSearchKeywords.keywordMatch}
-                        onKeywordClick={handleKeywordsKeywordClick}
-                    />
-                </Grid>
-            )}
-            {hasSubjectKeywords && (
-                <Grid item xs={12} md={6}>
-                    <ForCodeSearchKeywordsList
-                        keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
-                        keywordsList={journalSearchKeywords.subjectMatch}
-                        onKeywordClick={handleSubjectKeywordClick}
-                    />
-                </Grid>
-            )}
+            </Grid>
+            <Grid item xs={12} md={3}>
+                <SearchKeywordsList
+                    keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
+                    keywordsList={journalSearchKeywords.keywordMatch || []}
+                    onKeywordClick={handleKeywordsKeywordClick}
+                />
+            </Grid>
+            <Grid item xs={12} md={5}>
+                <ForCodeSearchKeywordsList
+                    keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
+                    keywordsList={journalSearchKeywords.subjectMatch || []}
+                    onKeywordClick={handleSubjectKeywordClick}
+                />
+            </Grid>
         </Grid>
     );
 };

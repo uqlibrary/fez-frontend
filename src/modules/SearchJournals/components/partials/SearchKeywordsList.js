@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import KeywordsList from './KeywordsList';
-
 import SearchKeyword from './SearchKeyword';
-
-export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => (
+export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick, help }) => (
     <KeywordsList
         title={keywordsListTitle}
         list={
@@ -21,6 +18,7 @@ export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordC
                 ))) ||
             []
         }
+        help={help}
     />
 );
 
@@ -32,6 +30,7 @@ SearchKeywordsList.propTypes = {
         }),
     ).isRequired,
     onKeywordClick: PropTypes.func.isRequired,
+    help: PropTypes.object,
 };
 
 export default React.memo(SearchKeywordsList);

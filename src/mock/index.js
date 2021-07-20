@@ -7,7 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
 import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
-import { bio, brain, cats, tech, lungCancer, none } from './data/journalKeywordSearches/index';
+import { bio, brain, cats, tech, lungCancer, none, forCode } from './data/journalKeywordSearches/index';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -394,6 +394,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, { ...cats }]
         } else if(config.url.indexOf('query=lung cancer') > -1) {
             return [200, { ...lungCancer }]
+        } else if(config.url.indexOf('query=1405') > -1) {
+            console.log('data: ', { ...forCode })
+            return [200, { ...forCode }]
         }
         return [200, { ...none }]
     })

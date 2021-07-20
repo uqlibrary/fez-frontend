@@ -17,6 +17,7 @@ export const initialState = {
     journalSearchKeywordsLoading: false,
     journalSearchKeywords: { ...initialJournalSearchKeywords },
     journalSearchKeywordsError: null,
+    isInitialValues: true,
 };
 
 const handlers = {
@@ -63,6 +64,7 @@ const handlers = {
         journalSearchKeywordsLoading: false,
         journalSearchKeywords: action.payload,
         journalSearchKeywordsError: null,
+        isInitialValues: false,
     }),
     [actions.JOURNAL_SEARCH_KEYWORDS_FAILED]: (state, action) => ({
         journalSearchKeywordsLoading: false,
@@ -72,6 +74,7 @@ const handlers = {
     [actions.CLEAR_JOURNAL_SEARCH_KEYWORDS]: state => ({
         ...state,
         journalSearchKeywords: { ...initialJournalSearchKeywords },
+        isInitialValues: true,
     }),
 };
 

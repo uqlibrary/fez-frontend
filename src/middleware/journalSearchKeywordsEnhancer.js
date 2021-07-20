@@ -22,12 +22,16 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
             !!titleFuzzyMatch &&
             titleFuzzyMatch.length > 0 &&
             titleFuzzyMatch.reduce((matches, journal) => [...matches, ...journal.jnl_title.match(regex)], []);
-        return [
-            ...titleMatches,
-            ...Array.from(new Set(titleMatch))
-                .filter(keyword => !!keyword)
-                .map(keyword => ({ keyword })),
-        ];
+        if (titleMatch) {
+            return [
+                ...titleMatches,
+                ...Array.from(new Set(titleMatch))
+                    .filter(keyword => !!keyword)
+                    .map(keyword => ({ keyword })),
+            ];
+        } else {
+            return [];
+        }
     }, []);
 
     return titleMatchKeywords;
@@ -37,14 +41,13 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
     const keywordMatchKeywords = query.split(' ').reduce((keywordMatches, keywordQuery) => {
         const regexString = `\\w*${keywordQuery}\\w*`;
         const regex = new RegExp(regexString, 'ig');
-
         const keywordMatch =
             !!descriptionFuzzyMatch &&
             descriptionFuzzyMatch.length > 0 &&
             descriptionFuzzyMatch.reduce(
                 // Loop through each journal
                 (matches, journal) =>
-                    !!journal.fez_journal_issn && journal.fez_journal_issn.length > 0
+                    !!journal && !!journal.fez_journal_issn && journal.fez_journal_issn.length > 0
                         ? [
                               ...matches,
                               ...journal.fez_journal_issn.reduce(
@@ -61,12 +64,16 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
                 [],
             );
 
-        return [
-            ...keywordMatches,
-            ...Array.from(new Set(keywordMatch))
-                .filter(keyword => !!keyword)
-                .map(keyword => ({ keyword })),
-        ];
+        if (keywordMatch) {
+            return [
+                ...keywordMatches,
+                ...Array.from(new Set(keywordMatch))
+                    .filter(keyword => !!keyword)
+                    .map(keyword => ({ keyword })),
+            ];
+        } else {
+            return [];
+        }
     }, []);
 
     return keywordMatchKeywords;
