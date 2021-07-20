@@ -21,7 +21,7 @@ export const KeywordsList = ({ title, list, help }) => {
                 list
             ) : (
                 <Grid item xs={12}>
-                    No matches found.
+                    <Typography color="secondary">No matches found.</Typography>
                 </Grid>
             )}
         </Grid>

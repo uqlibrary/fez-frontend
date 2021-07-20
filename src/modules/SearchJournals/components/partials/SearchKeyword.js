@@ -25,7 +25,6 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant }) => {
     return (
         <Grid item xs={12}>
             <Typography
-                variant="body2"
                 component="span"
                 classes={{ root: classes.root }}
                 className={classes[variant || 'default']}

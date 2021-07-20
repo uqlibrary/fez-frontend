@@ -23,7 +23,7 @@ export const JournalSearchInput = () => {
     );
 
     const throttledLoadSuggestions = React.useRef(
-        throttle(1000, newValue => dispatch(loadJournalSearchKeywords(newValue))),
+        throttle(3000, newValue => dispatch(loadJournalSearchKeywords(newValue))),
     );
     /**
      * Journal search input handler
@@ -40,7 +40,7 @@ export const JournalSearchInput = () => {
 
     React.useEffect(() => {
         if (journalSearchInput && journalSearchInput.length > 2 && throttledLoadSuggestions) {
-            setTimeout(throttledLoadSuggestions.current(journalSearchInput), 500);
+            setTimeout(throttledLoadSuggestions.current(journalSearchInput), 1000);
         } else {
             dispatch(clearJournalSearchKeywords());
         }

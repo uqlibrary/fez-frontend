@@ -74,6 +74,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     if (!hasAnyKeywordsLoaded && isInitialValues) {
         return <div />;
     }
+    const separator = <div style={{ width: 1, borderRight: '1px dashed #CCC', marginTop: 12 }} />;
 
     return (
         <Grid container spacing={0}>
@@ -88,7 +89,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     searching.
                 </Typography>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px' }}>
                 <Grid container>
                     {hasExactKeywords && (
                         <Grid item xs={12}>
@@ -107,14 +108,16 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12} md={3}>
+            {separator}
+            <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch || []}
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
             </Grid>
-            <Grid item xs={12} md={5}>
+            {separator}
+            <Grid item xs={12} sm={12} md style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch || []}
