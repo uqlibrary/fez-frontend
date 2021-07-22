@@ -63,6 +63,8 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
             style={{ padding: 16 }}
         >
             <Snackbar
+                id="journal-search-snackbar"
+                data-testid="journal-search-snackbar"
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'center',
@@ -99,15 +101,15 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
                                     onClick={handleFavouriteJournalsClick}
-                                    id="my-favourite-journals-button"
-                                    data-testid="my-favourite-journals-button"
+                                    id="journal-search-favourite-journals-button"
+                                    data-testid="journal-search-favourite-journals-button"
                                     fullWidth
                                 />
                             </Grid>
                             <Grid item xs={12} sm="auto">
                                 <Button
-                                    id="browse-all-journals-button"
-                                    data-testid="browse-all-journals-button"
+                                    id="journal-search-browse-all-button"
+                                    data-testid="journal-search-browse-all-button"
                                     children={txt.journalSearchInterface.buttons.browseAllJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.browseAllJournals.aria}
                                     onClick={handleBrowseAllJournalsClick}
@@ -123,8 +125,8 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                                     type="submit"
                                     color="primary"
                                     onClick={handleSearchJournalsClick}
-                                    id="search-journals-button"
-                                    data-testid="search-journals-button"
+                                    id="journal-search-button"
+                                    data-testid="journal-search-button"
                                 />
                             </Grid>
                         </Grid>

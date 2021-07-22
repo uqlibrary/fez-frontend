@@ -23,11 +23,15 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.success.main,
         color: theme.palette.white.main,
     },
-    'wos-ssci': {
+    wosssci: {
         backgroundColor: theme.palette.primary.dark,
         color: theme.palette.white.main,
     },
-    'wos-scie': {
+    wosscie: {
+        backgroundColor: theme.palette.primary.dark,
+        color: theme.palette.white.main,
+    },
+    wosesci: {
         backgroundColor: theme.palette.primary.dark,
         color: theme.palette.white.main,
     },
