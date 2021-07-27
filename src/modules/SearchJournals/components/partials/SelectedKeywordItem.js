@@ -21,6 +21,8 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     return (
         <Chip
             className={classes.chip}
+            id={`journal-search-chip-${keyword.type}-${keyword.text}`}
+            data-testid={`journal-search-chip-${keyword.type}-${keyword.text}`}
             label={
                 <React.Fragment>
                     <Typography variant="body2" component="span" color="secondary">

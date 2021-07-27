@@ -13,6 +13,7 @@ export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList }
                 keywordsList.length > 0 &&
                 keywordsList.map(keywordItem => (
                     <SearchKeyword
+                        title={keywordsListTitle}
                         key={keywordItem.keyword}
                         keyword={
                             <ExternalLink title={keywordItem.title} href={keywordItem.href}>

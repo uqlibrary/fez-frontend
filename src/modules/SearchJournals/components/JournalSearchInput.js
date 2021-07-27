@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import locale from 'locale/components';
 import { VoiceToText } from './partials/voiceToText';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export const JournalSearchInput = () => {
     const txt = locale.components.journalSearch;
@@ -85,17 +86,23 @@ export const JournalSearchInput = () => {
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <VoiceToText sendHandler={handleJournalVoiceSearchInput} />
-                                    <IconButton
-                                        style={{ marginRight: -12 }}
-                                        color="secondary"
-                                        aria-label="Clear search keyword input"
-                                        component="span"
-                                        onClick={handleClearSearchInput}
-                                        id="clear-journal-search-keywords"
-                                        data-testid="clear-journal-search-keywords"
+                                    <Tooltip
+                                        id="strategic-publishing-voice-record"
+                                        data-testid="strategic-publishing-voice-record"
+                                        title={'Click to clear search keywords'}
                                     >
-                                        <CloseIcon />
-                                    </IconButton>
+                                        <IconButton
+                                            style={{ marginRight: -12 }}
+                                            color="secondary"
+                                            aria-label="Clear search keyword input"
+                                            component="span"
+                                            onClick={handleClearSearchInput}
+                                            id="clear-journal-search-keywords"
+                                            data-testid="clear-journal-search-keywords"
+                                        >
+                                            <CloseIcon />
+                                        </IconButton>
+                                    </Tooltip>
                                 </InputAdornment>
                             ),
                         }),

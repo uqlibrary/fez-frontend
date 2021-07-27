@@ -14,6 +14,7 @@ import { pathConfig } from 'config/pathConfig';
 import { useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { searchJournals } from 'actions';
+import locale from 'locale/components';
 
 export const SearchJournals = () => {
     const dispatch = useDispatch();
@@ -67,9 +68,13 @@ export const SearchJournals = () => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [journalSearchQueryParams]);
-
+    const txt = locale.components.journalSearch;
     return (
-        <StandardPage>
+        <StandardPage
+            title={txt.journalSearchInterface.title}
+            id="journal-search-page"
+            data-testid="journal-search-page"
+        >
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <JournalSearchInterface

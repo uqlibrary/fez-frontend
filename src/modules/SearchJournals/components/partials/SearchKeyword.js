@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const SearchKeyword = ({ keyword, onKeywordClick, variant }) => {
+export const SearchKeyword = ({ keyword, title, onKeywordClick, variant }) => {
     const classes = useStyles();
     const handleKeywordClick = () => onKeywordClick(keyword);
 
@@ -29,6 +29,12 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant }) => {
                 classes={{ root: classes.root }}
                 className={classes[variant || 'default']}
                 onClick={handleKeywordClick}
+                id={`journal-search-item-${title
+                    .toLowerCase()
+                    .trim()}-${variant.toLowerCase().trim()}-${keyword.trim()}`}
+                data-testid={`journal-search-item-${title
+                    .toLowerCase()
+                    .trim()}-${variant.toLowerCase().trim()}-${keyword.trim()}`}
             >
                 {keyword}
             </Typography>
@@ -38,6 +44,7 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant }) => {
 
 SearchKeyword.propTypes = {
     keyword: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+    title: PropTypes.string.isRequired,
     onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
 };

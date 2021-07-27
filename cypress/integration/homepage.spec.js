@@ -64,7 +64,7 @@ context('Homepage', () => {
     it('Has expected menu items for a Masqueradable staff member', () => {
         cy.visit('/?user=uqmasquerade');
         checkMenuItemCount(15);
-        cy.get('#mainMenu .menu-item-containers p').contains('uq.masquerader@example.uq.edu.au');
+        cy.get('#mainMenu .menu-item-container p').contains('uq.masquerader@example.uq.edu.au');
     });
 
     it('Shows help panel as expected', () => {

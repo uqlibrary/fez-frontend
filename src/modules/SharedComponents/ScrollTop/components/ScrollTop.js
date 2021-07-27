@@ -24,12 +24,12 @@ export const styles = () => ({
 /* istanbul ignore next */
 const scrollWindowToTop = event => {
     event.preventDefault();
-    document.getElementById('content-containers').scrollTop = 0;
+    document.getElementById('content-container').scrollTop = 0;
 };
 
 export const ScrollTop = ({ show, showAfter, classes }) => {
     /* istanbul ignore next */
-    const scrollableContainer = document.getElementById('content-containers');
+    const scrollableContainer = document.getElementById('content-container');
     /* istanbul ignore next */
     if (
         !!show &&
@@ -41,6 +41,7 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
         scrollableContainer.onscroll = () => {
             const scrollTopButton = document.getElementById('scrolltopbtn');
             if (!scrollTopButton) {
+                console.log('not found scroll');
                 return;
             }
             if (scrollableContainer.scrollTop > showAfter) {

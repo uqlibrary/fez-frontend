@@ -6,9 +6,13 @@ import { HelpIcon } from '../../../SharedComponents/Toolbox/HelpDrawer';
 
 export const KeywordsList = ({ title, list, help }) => {
     return (
-        <Grid container>
+        <Grid
+            container
+            id={`journal-search-keyword-list-${title.trim().toLowerCase()}`}
+            data-testid={`journal-search-keyword-list-${title.trim().toLowerCase()}`}
+        >
             <Grid item xs="auto" style={{ margin: '10px 0 10px 0' }}>
-                <Typography variant="subtitle1" color="primary" variant="h5">
+                <Typography variant="subtitle1" color="primary" component="h3" variant="h5">
                     {title}
                 </Typography>
             </Grid>
@@ -20,7 +24,12 @@ export const KeywordsList = ({ title, list, help }) => {
             {!!list && list.length > 0 ? (
                 list
             ) : (
-                <Grid item xs={12}>
+                <Grid
+                    item
+                    xs={12}
+                    id={`journal-search-keyword-list-${title.toLowerCase().trim()}-no-matches`}
+                    data-testid={`journal-search-keyword-list-${title.toLowerCase().trim()}-no-matches`}
+                >
                     <Typography color="secondary">No matches found.</Typography>
                 </Grid>
             )}

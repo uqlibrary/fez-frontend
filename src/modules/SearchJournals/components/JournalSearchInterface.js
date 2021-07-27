@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from '@material-ui/core/styles';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import JournalSearchInput from './JournalSearchInput';
 import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
 import Snackbar from '@material-ui/core/Snackbar';
-
 import locale from 'locale/components';
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearchInterfaceState, useSelectedKeywords, useJournalSearchQueryParams } from '../hooks';
 
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
-    const theme = useTheme();
     const { journalSearchQueryParams } = useJournalSearchQueryParams();
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const {
@@ -50,18 +46,13 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
         }
         setSnackbarNotify(false);
     };
-
     React.useEffect(() => {
         if (initialSelectedKeywords !== selectedKeywords) {
             handleSnackbarOpen();
         }
     }, [selectedKeywords]);
     return (
-        <StandardCard
-            customTitleColor={theme.palette.primary.main}
-            title={txt.journalSearchInterface.title}
-            style={{ padding: 16 }}
-        >
+        <StandardCard style={{ padding: 16 }} noHeader id="journal-search-card" data-testid="journal-search-card">
             <Snackbar
                 id="journal-search-snackbar"
                 data-testid="journal-search-snackbar"

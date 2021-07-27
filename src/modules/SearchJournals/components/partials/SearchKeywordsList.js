@@ -12,6 +12,7 @@ export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordC
                     <SearchKeyword
                         key={keywordItem.keyword}
                         keyword={keywordItem.keyword}
+                        title={keywordsListTitle}
                         variant="addable"
                         onKeywordClick={onKeywordClick}
                     />

@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.white.main,
     },
     citescore: {
-        backgroundColor: theme.palette.accent.light,
+        backgroundColor: theme.palette.accent.main,
         color: theme.palette.white.main,
     },
 }));

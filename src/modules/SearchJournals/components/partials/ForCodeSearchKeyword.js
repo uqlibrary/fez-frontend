@@ -10,7 +10,12 @@ export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources }) => {
     return (
         <Grid container spacing={1}>
             <Grid item xs="auto">
-                <SearchKeyword keyword={keyword} variant="addable" onKeywordClick={onKeywordClick} />
+                <SearchKeyword
+                    title="subject & field of research"
+                    keyword={keyword}
+                    variant="addable"
+                    onKeywordClick={onKeywordClick}
+                />
             </Grid>
             {sources.map(source => {
                 return (
