@@ -191,28 +191,6 @@ describe('getRecordFileAttachmentSearchKey test', () => {
         expect(result).toEqual(expected);
     });
 
-    it('should return empty file attachment access condition key when inheriting security', () => {
-        const files = [
-            {
-                name: 'file.txt',
-                access_condition_id: 99,
-            },
-        ];
-        const record = null;
-        const expected = {
-            fez_record_search_key_file_attachment_name: [
-                {
-                    rek_file_attachment_name: 'file.txt',
-                    rek_file_attachment_name_order: 1,
-                },
-            ],
-            fez_record_search_key_file_attachment_embargo_date: [],
-            fez_record_search_key_file_attachment_access_condition: [],
-        };
-        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
-        expect(result).toEqual(expected);
-    });
-
     it('should return request object structure for files and empty record', () => {
         const files = [
             {
