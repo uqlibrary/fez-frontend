@@ -57,10 +57,10 @@ describe('File repository', () => {
             },
             {
                 input: { access_condition_id: FILE_ACCESS_CONDITION_INHERIT },
-                output: { dsi_security_inherited: 1 },
+                output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 1 },
             },
         ];
-        testCases.forEach(testCase => expect(getFileUploadMetadata(testCase.input)).toEqual(testCase.output));
+        testCases.forEach(testCase => expect(getFileUploadMetadata(testCase.input, [])).toEqual(testCase.output));
         MockDate.reset();
     });
 

@@ -510,9 +510,17 @@ export function adminUpdate(data) {
         });
 
         const [patchRecordRequest, hasFilesToUpload, patchFilesRequest] = getAdminRecordRequest(data);
+        const collections = transformers.getCollectionsOnRecordWithSecurity({
+            ...data.publication,
+            collections: data.adminSection.collections,
+        });
 
         return Promise.resolve([])
-            .then(() => (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch) : null))
+            .then(() =>
+                hasFilesToUpload
+                    ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch, '', collections)
+                    : null,
+            )
             .then(() =>
                 hasFilesToUpload
                     ? put(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
@@ -588,7 +596,20 @@ export function adminCreate(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, files.queue, dispatch) : newRecord))
+            .then(() =>
+                hasFilesToUpload
+                    ? putUploadFiles(
+                          newRecord.rek_pid,
+                          files.queue,
+                          dispatch,
+                          '',
+                          transformers.getCollectionsOnRecordWithSecurity({
+                              ...newRecord,
+                              collections: data.adminSection.collections,
+                          }),
+                      )
+                    : newRecord,
+            )
             .then(() =>
                 hasFilesToUpload
                     ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), patchFilesRequest)
