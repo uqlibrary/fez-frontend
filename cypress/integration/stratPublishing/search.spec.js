@@ -91,7 +91,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 
-        cy.get('[data-testid="journal-search-item-titles containing-addable-Microbiology"]').click();
+        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
         cy.get('[data-testid="journal-search-chip-Title-Microbiology"]').should('exist');
 
         cy.get('button[data-testid="journal-search-button"]').should('not.have.attr', 'disabled');

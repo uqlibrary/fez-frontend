@@ -17,11 +17,15 @@ const useStyles = makeStyles(theme => ({
         },
     },
 }));
-
-export const SearchKeyword = ({ keyword, title, onKeywordClick, variant }) => {
+export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
     const classes = useStyles();
     const handleKeywordClick = () => onKeywordClick(keyword);
-
+    let formedId;
+    if (typeof keyword === 'string') {
+        formedId = `${variant}-${keyword}-${index}`;
+    } else {
+        formedId = `exact-match-${index}`;
+    }
     return (
         <Grid item xs={12}>
             <Typography
@@ -29,12 +33,8 @@ export const SearchKeyword = ({ keyword, title, onKeywordClick, variant }) => {
                 classes={{ root: classes.root }}
                 className={classes[variant || 'default']}
                 onClick={handleKeywordClick}
-                id={`journal-search-item-${title
-                    .toLowerCase()
-                    .trim()}-${variant.toLowerCase().trim()}-${keyword.trim()}`}
-                data-testid={`journal-search-item-${title
-                    .toLowerCase()
-                    .trim()}-${variant.toLowerCase().trim()}-${keyword.trim()}`}
+                id={`journal-search-item-${formedId}`}
+                data-testid={`journal-search-item-${formedId}`}
             >
                 {keyword}
             </Typography>
@@ -44,7 +44,7 @@ export const SearchKeyword = ({ keyword, title, onKeywordClick, variant }) => {
 
 SearchKeyword.propTypes = {
     keyword: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-    title: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
     onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
 };

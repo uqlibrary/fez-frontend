@@ -11,8 +11,9 @@ export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList }
         list={
             (!!keywordsList &&
                 keywordsList.length > 0 &&
-                keywordsList.map(keywordItem => (
+                keywordsList.map((keywordItem, index) => (
                     <SearchKeyword
+                        index={index}
                         title={keywordsListTitle}
                         key={keywordItem.keyword}
                         keyword={

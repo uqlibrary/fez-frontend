@@ -6,11 +6,12 @@ import Grid from '@material-ui/core/Grid';
 import SearchKeyword from './SearchKeyword';
 import ForCodeSource from './ForCodeSource';
 
-export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources }) => {
+export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index }) => {
     return (
         <Grid container spacing={1}>
             <Grid item xs="auto">
                 <SearchKeyword
+                    index={index}
                     title="subject & field of research"
                     keyword={keyword}
                     variant="addable"
@@ -33,6 +34,7 @@ ForCodeSearchKeyword.propTypes = {
     keyword: PropTypes.string.isRequired,
     onKeywordClick: PropTypes.func.isRequired,
     sources: PropTypes.arrayOf(PropTypes.object),
+    index: PropTypes.number.isRequired,
 };
 
 export default React.memo(ForCodeSearchKeyword);

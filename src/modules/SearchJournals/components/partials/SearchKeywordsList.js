@@ -8,8 +8,9 @@ export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordC
         list={
             (!!keywordsList &&
                 keywordsList.length > 0 &&
-                keywordsList.map(keywordItem => (
+                keywordsList.map((keywordItem, index) => (
                     <SearchKeyword
+                        index={index}
                         key={keywordItem.keyword}
                         keyword={keywordItem.keyword}
                         title={keywordsListTitle}

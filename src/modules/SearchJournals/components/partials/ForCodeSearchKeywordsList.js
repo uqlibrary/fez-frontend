@@ -10,8 +10,13 @@ export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onK
         list={
             (!!keywordsList &&
                 keywordsList.length > 0 &&
-                keywordsList.map(keywordItem => (
-                    <ForCodeSearchKeyword key={keywordItem.keyword} {...keywordItem} onKeywordClick={onKeywordClick} />
+                keywordsList.map((keywordItem, index) => (
+                    <ForCodeSearchKeyword
+                        index={index}
+                        key={keywordItem.keyword}
+                        {...keywordItem}
+                        onKeywordClick={onKeywordClick}
+                    />
                 ))) ||
             []
         }

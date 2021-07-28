@@ -5,3 +5,4 @@ export { keywordsSearch as tech } from './tech';
 export { keywordsSearch as lungCancer } from './lungCancer';
 export { keywordsSearch as none } from './none';
 export { keywordsSearch as forCode } from './1405';
+export { keywordsSearch as virus } from './virus';
