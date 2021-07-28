@@ -76,6 +76,28 @@ export const getRecordLinkSearchKey = data => {
     };
 };
 
+/**
+ * getCollectionsOnRecordWithSecurity - Copies security policy from existing collections to current collections list.
+ * @param {object} record - The updated work object
+ *
+ * @return {array} The updated array of collections with security policy
+ */
+export const getCollectionsOnRecordWithSecurity = record =>
+    ((!!record && record.collections) || []).map(collection => {
+        if (collection.hasOwnProperty('rek_datastream_policy') || !record.rek_pid) {
+            // Newly added collection or new record
+            return collection;
+        }
+        // Existing collection. Retrieve security policy from search key
+        const existingCollection = record.fez_record_search_key_ismemberof.find(
+            collection2 => collection2.rek_ismemberof === collection.rek_pid,
+        );
+        return {
+            ...collection,
+            ...existingCollection.parent,
+        };
+    });
+
 /* getRecordFileAttachmentSearchKey - returns files object formatted for record request
  * @param {array} of objects in format {nameAsPublished: {string}}
  * @returns {Object} formatted {fez_record_search_key_file_attachment_*} for record request
@@ -105,6 +127,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             };
         })
         .filter(file => file !== null);
+    const collections = getCollectionsOnRecordWithSecurity(record);
     const attachmentAccessConditions = files
         .map((item, index) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
@@ -112,7 +135,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             if (accessCondition === FILE_ACCESS_CONDITION_OPEN && item.date && moment(item.date).isAfter()) {
                 accessCondition = FILE_ACCESS_CONDITION_CLOSED;
             } else if (accessCondition === FILE_ACCESS_CONDITION_INHERIT) {
-                const parentPolicy = record.collections.reduce(
+                const parentPolicy = collections.reduce(
                     (policy, collection) =>
                         collection.rek_datastream_policy < policy ? collection.rek_datastream_policy : policy,
                     FILE_ACCESS_CONDITION_OPEN,

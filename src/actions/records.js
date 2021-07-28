@@ -510,11 +510,15 @@ export function adminUpdate(data) {
         });
 
         const [patchRecordRequest, hasFilesToUpload, patchFilesRequest] = getAdminRecordRequest(data);
+        const collections = transformers.getCollectionsOnRecordWithSecurity({
+            ...data.publication,
+            collections: data.adminSection.collections,
+        });
 
         return Promise.resolve([])
             .then(() =>
                 hasFilesToUpload
-                    ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch, '', data.adminSection.collections)
+                    ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch, '', collections)
                     : null,
             )
             .then(() =>
@@ -594,7 +598,16 @@ export function adminCreate(data) {
             })
             .then(() =>
                 hasFilesToUpload
-                    ? putUploadFiles(newRecord.rek_pid, files.queue, dispatch, '', data.adminSection.collections)
+                    ? putUploadFiles(
+                          newRecord.rek_pid,
+                          files.queue,
+                          dispatch,
+                          '',
+                          transformers.getCollectionsOnRecordWithSecurity({
+                              ...newRecord,
+                              collections: data.adminSection.collections,
+                          }),
+                      )
                     : newRecord,
             )
             .then(() =>
