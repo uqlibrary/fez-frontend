@@ -20,6 +20,13 @@ export const initialState = {
     isInitialValues: true,
 };
 
+export const initialJournalFavourites = {
+    favouriteJournals: [],
+    favouriteJournalsLoading: 'false',
+    favouriteJournalsLoaded: 'false',
+    favouriteJournalsError: null,
+};
+
 const handlers = {
     [actions.JOURNAL_LOOKUP_LOADING]: state => ({
         ...state,
