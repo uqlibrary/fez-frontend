@@ -42,6 +42,12 @@ export const JournalSearchInput = () => {
         if (journalSearchInput && journalSearchInput.length > 2 && throttledLoadSuggestions) {
             const timeOutId = setTimeout(() => {
                 throttledLoadSuggestions.current(journalSearchInput);
+                window.dataLayer.push({
+                    event: 'journal-search-keyword',
+                    value: journalSearchInput,
+                    label: 'Journal search keywords searched for',
+                    'data-testid': 'journal-search-keywords-input',
+                });
             }, 1000);
             return () => clearTimeout(timeOutId);
         } else {
