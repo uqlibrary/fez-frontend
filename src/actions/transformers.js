@@ -4,6 +4,7 @@ import { CONTENT_INDICATORS } from 'config/general';
 import {
     FILE_ACCESS_CONDITION_CLOSED,
     FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_INHERIT,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
 
 const moment = require('moment');
@@ -110,6 +111,13 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             let accessCondition = item.access_condition_id;
             if (accessCondition === FILE_ACCESS_CONDITION_OPEN && item.date && moment(item.date).isAfter()) {
                 accessCondition = FILE_ACCESS_CONDITION_CLOSED;
+            } else if (accessCondition === FILE_ACCESS_CONDITION_INHERIT) {
+                const parentPolicy = record.collections.reduce(
+                    (policy, collection) =>
+                        collection.rek_datastream_policy < policy ? collection.rek_datastream_policy : policy,
+                    FILE_ACCESS_CONDITION_OPEN,
+                );
+                accessCondition = parentPolicy;
             }
             return {
                 rek_file_attachment_access_condition: accessCondition,

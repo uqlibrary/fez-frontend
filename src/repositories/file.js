@@ -16,16 +16,14 @@ export const getFileUploadMetadata = file => {
     const securityInherited = file.access_condition_id === FILE_ACCESS_CONDITION_INHERIT;
     const metadata = {
         dsi_security_inherited: securityInherited ? 1 : 0,
+        dsi_security_policy:
+            file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !!file.date && moment(file.date).isAfter()
+                ? FILE_ACCESS_CONDITION_CLOSED
+                : file.access_condition_id,
         ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !moment(file.date).isSame(moment(), 'day')
             ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
             : {}),
     };
-    if (!securityInherited) {
-        metadata.dsi_security_policy =
-            file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !!file.date && moment(file.date).isAfter()
-                ? FILE_ACCESS_CONDITION_CLOSED
-                : file.access_condition_id;
-    }
     return metadata;
 };
 
