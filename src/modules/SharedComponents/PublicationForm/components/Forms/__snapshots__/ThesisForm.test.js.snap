@@ -23,6 +23,7 @@ exports[`ThesisForm  should render component 1`] = `
           <Alert
             action={[Function]}
             actionButtonLabel="Upload HDR thesis"
+            alertId="alert-warning-rdm-redirect"
             allowDismiss={false}
             customIcon={null}
             customType={null}

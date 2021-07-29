@@ -1,7 +1,7 @@
 jest.dontMock('./ThesisForm');
 
 import ThesisForm from './ThesisForm';
-import { pathConfig } from 'config';
+import { default as formLocale } from 'locale/publicationForm';
 
 function setup(testProps = {}) {
     const props = {
@@ -43,15 +43,13 @@ describe('ThesisForm ', () => {
     });
 
     it('should redirect to Thesis submission page on click', () => {
-        const pushFn = jest.fn();
-        const wrapper = setup({
-            history: {
-                push: pushFn,
-            },
-        });
+        const windowOpenSpy = jest.spyOn(global.window, 'open').mockImplementation(() => {});
+        const wrapper = setup();
 
-        wrapper.instance()._visitHdrSubmissionPage();
+        wrapper.instance().rdmRedirect();
 
-        expect(pushFn).toHaveBeenCalledWith(pathConfig.hdrSubmission);
+        expect(global.window.open).toHaveBeenCalledWith(formLocale.thesis.information.alertButtonTarget);
+
+        windowOpenSpy.mockClear();
     });
 });

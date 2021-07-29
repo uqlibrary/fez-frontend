@@ -532,6 +532,7 @@ export default {
                     <p> To deposit another thesis type, use the form below.</p>
                 </React.Fragment>
             ),
+            alertButtonTarget: 'https://my-research.research.uq.edu.au/',
             // help: {
             //     title: 'Thesis information',
             //     text: 'Some help',
