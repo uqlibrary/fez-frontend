@@ -43,13 +43,15 @@ describe('ThesisForm ', () => {
     });
 
     it('should redirect to Thesis submission page on click', () => {
-        const windowOpenSpy = jest.spyOn(global.window, 'open').mockImplementation(() => {});
+        const location = window.location;
+        delete window.location;
+        window.location = { assign: jest.fn() };
         const wrapper = setup();
 
         wrapper.instance().rdmRedirect();
 
-        expect(global.window.open).toHaveBeenCalledWith(formLocale.thesis.information.alertButtonTarget);
+        expect(window.location.assign).toHaveBeenCalledWith(formLocale.thesis.information.alertButtonTarget);
 
-        windowOpenSpy.mockClear();
+        window.location = location;
     });
 });

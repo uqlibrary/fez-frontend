@@ -32,7 +32,7 @@ export default class ThesisForm extends Component {
     };
 
     rdmRedirect = () => {
-        window.open(formLocale.thesis.information.alertButtonTarget);
+        window.location.assign(formLocale.thesis.information.alertButtonTarget);
     };
 
     render() {
