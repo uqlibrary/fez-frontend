@@ -85,6 +85,21 @@ describe('ThesisSubmission', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should redirect on alert click', () => {
+        const location = window.location;
+        delete window.location;
+        window.location = { assign: jest.fn() };
+
+        const wrapper = setup({ isHdrThesis: true });
+        wrapper
+            .find('[alertId="alert-warning-rdm-redirect"]')
+            .props()
+            .action();
+        expect(window.location.assign).toBeCalledWith(formLocale.thesis.information.alertButtonTarget);
+
+        window.location = location;
+    });
+
     it('should render hdr thesis submission acknowledgement', () => {
         const wrapper = setup({ isHdrThesis: true, submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
