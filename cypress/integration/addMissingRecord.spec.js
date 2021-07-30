@@ -123,33 +123,23 @@ context('Add missing record', () => {
 
 // a NON RHD student is prompted in case they have a student account
 context('Non RHD adding a Thesis', () => {
-    beforeEach(() => {
-        cy.visit('http://localhost:3000/records/add/new?user=uqstaff');
-        cy.wait(2000);
-    });
-
     afterEach(() => {
         cy.killWindowUnloadHandler();
     });
 
     it('is prompted that theses could be added elsewhere', () => {
-        const myResearchUrl = 'https://my-research.research.uq.edu.au/';
-
-        cy.intercept(myResearchUrl, 'My Research').as('myResearch');
-
+        const baseUrl = Cypress.config('baseUrl');
+        cy.visit(`${baseUrl}/records/add/new?user=uqstaff`);
         cy.get('[data-testid=rek-display-type-select]').click();
         cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Thesis')
             .eq(0)
             .click();
-        cy.get('#submit-work').should('be.disabled');
-        cy.get('[data-testid=standard-card-thesis-information-content]').get('#warning-icon');
+
         cy.get('[data-testid=standard-card-thesis-information-content]')
-            .contains('Upload HDR thesis')
-            .get('#action-button')
-            .should('be.enabled')
-            .click();
-        cy.url().should('equal', myResearchUrl);
+            .find('[data-testid="alert-warning-rdm-redirect"]')
+            .should('exist')
+            .should('be.visible');
     });
 });

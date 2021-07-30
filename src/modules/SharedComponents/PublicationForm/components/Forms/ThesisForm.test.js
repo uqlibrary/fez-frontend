@@ -1,7 +1,6 @@
 jest.dontMock('./ThesisForm');
 
 import ThesisForm from './ThesisForm';
-import { default as formLocale } from 'locale/publicationForm';
 
 function setup(testProps = {}) {
     const props = {
@@ -40,18 +39,5 @@ describe('ThesisForm ', () => {
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         });
-    });
-
-    it('should redirect to Thesis submission page on click', () => {
-        const location = window.location;
-        delete window.location;
-        window.location = { assign: jest.fn() };
-        const wrapper = setup();
-
-        wrapper.instance().rdmRedirect();
-
-        expect(window.location.assign).toHaveBeenCalledWith(formLocale.thesis.information.alertButtonTarget);
-
-        window.location = location;
     });
 });

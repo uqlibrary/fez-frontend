@@ -176,8 +176,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
           xs={12}
         >
           <Alert
-            action={[Function]}
-            actionButtonLabel="Upload HDR thesis"
             alertId="alert-warning-rdm-redirect"
             allowDismiss={false}
             customIcon={null}
@@ -185,14 +183,29 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message={
-              <React.Fragment>
-                <p>
-                  Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS button to submit.
-                </p>
-                <p>
-                   To deposit another thesis type, use the form below.
-                </p>
-              </React.Fragment>
+              <ul>
+                <li>
+                  If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
+                   
+                  <a
+                    href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
+                  >
+                    this process
+                  </a>
+                  . Please see the
+                   
+                  <a
+                    href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                  >
+                    UQRDM thesis submission guide
+                  </a>
+                   
+                  for more information.
+                </li>
+                <li>
+                  If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please use the form below.
+                </li>
+              </ul>
             }
             showLoader={false}
             type="warning"
@@ -759,8 +772,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
           xs={12}
         >
           <Alert
-            action={[Function]}
-            actionButtonLabel="Upload HDR thesis"
             alertId="alert-warning-rdm-redirect"
             allowDismiss={false}
             customIcon={null}
@@ -768,14 +779,29 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             message={
-              <React.Fragment>
-                <p>
-                  Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS button to submit.
-                </p>
-                <p>
-                   To deposit another thesis type, use the form below.
-                </p>
-              </React.Fragment>
+              <ul>
+                <li>
+                  If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
+                   
+                  <a
+                    href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
+                  >
+                    this process
+                  </a>
+                  . Please see the
+                   
+                  <a
+                    href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                  >
+                    UQRDM thesis submission guide
+                  </a>
+                   
+                  for more information.
+                </li>
+                <li>
+                  If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please use the form below.
+                </li>
+              </ul>
             }
             showLoader={false}
             type="warning"

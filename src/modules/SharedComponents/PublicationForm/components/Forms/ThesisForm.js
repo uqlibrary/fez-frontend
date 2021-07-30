@@ -31,10 +31,6 @@ export default class ThesisForm extends Component {
         return value.replace(/[^\d]/g, '');
     };
 
-    rdmRedirect = () => {
-        window.location.assign(formLocale.thesis.information.alertButtonTarget);
-    };
-
     render() {
         const txt = formLocale.thesis;
         return (
@@ -44,8 +40,6 @@ export default class ThesisForm extends Component {
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Alert
-                                    action={this.rdmRedirect}
-                                    actionButtonLabel={txt.information.actionButtonLabel}
                                     message={txt.information.message}
                                     type="warning"
                                     alertId="alert-warning-rdm-redirect"

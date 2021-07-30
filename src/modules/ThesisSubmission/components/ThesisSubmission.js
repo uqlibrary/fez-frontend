@@ -86,12 +86,6 @@ export const ThesisSubmission = ({
     submitSucceeded,
     submitting,
 }) => {
-    const txt = formLocale.thesis;
-    const txtFoR = locale.components.fieldOfResearchForm;
-    const txtSupervisors = locale.components.thesisSubmissionSupervisors;
-    const thesisLocale = formLocale.thesisSubmission;
-    const pageTitle = isHdrThesis ? thesisLocale.hdrTitle : thesisLocale.sbsTitle;
-
     const deposit = () => {
         actions.checkSession();
     };
@@ -117,16 +111,18 @@ export const ThesisSubmission = ({
         actions.clearSessionExpiredFlag();
     };
 
-    const rdmRedirect = () => {
-        window.location.assign(txt.information.alertButtonTarget);
-    };
-
     React.useEffect(() => {
         if (isSessionValid && !submitting) {
             openDepositConfirmation();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isSessionValid, submitting]);
+
+    const txt = formLocale.thesis;
+    const txtFoR = locale.components.fieldOfResearchForm;
+    const txtSupervisors = locale.components.thesisSubmissionSupervisors;
+    const thesisLocale = formLocale.thesisSubmission;
+    const pageTitle = isHdrThesis ? thesisLocale.hdrTitle : thesisLocale.sbsTitle;
 
     if (submitSucceeded) {
         return (
@@ -186,6 +182,10 @@ export const ThesisSubmission = ({
         submitSucceeded,
     });
 
+    if (alertProps) {
+        alertProps.alertId = 'thesis-submission-validation';
+    }
+
     return (
         <StandardPage title={pageTitle}>
             <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
@@ -201,9 +201,7 @@ export const ThesisSubmission = ({
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <Alert
-                                action={rdmRedirect}
-                                actionButtonLabel={txt.information.actionButtonLabel}
-                                message={txt.information.message}
+                                message={formLocale.thesisSubmission.message}
                                 type="warning"
                                 alertId="alert-warning-rdm-redirect"
                             />
