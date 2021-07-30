@@ -123,34 +123,23 @@ context('Add missing record', () => {
 
 // a NON RHD student is prompted in case they have a student account
 context('Non RHD adding a Thesis', () => {
-    const baseUrl = Cypress.config('baseUrl');
-    beforeEach(() => {
-        cy.visit('http://localhost:3000/records/add/new?user=uqstaff');
-        cy.wait(2000);
-    });
-
     afterEach(() => {
         cy.killWindowUnloadHandler();
     });
 
     it('is prompted that theses could be added elsewhere', () => {
+        const baseUrl = Cypress.config('baseUrl');
+        cy.visit(`${baseUrl}/records/add/new?user=uqstaff`);
         cy.get('[data-testid=rek-display-type-select]').click();
         cy.get('[data-testid=rek-display-type-options]')
             .find('li[role=option]')
             .contains('Thesis')
             .eq(0)
             .click();
-        cy.get('#submit-work').should('be.disabled');
-        // we see the blue info bar
-        cy.get('[data-testid=standard-card-thesis-information-content]').get('#warning-icon');
+
         cy.get('[data-testid=standard-card-thesis-information-content]')
-            .contains('Upload HDR thesis')
-            .get('#action-button')
-            .should('be.enabled')
-            .click();
-        cy.get('[data-testid=confirm-dialog-box]').click();
-        cy.url().should('equal', `${baseUrl}/rhdsubmission`);
-        // but it turns out they logged in with their staff account
-        cy.contains('Thesis deposit access denied');
+            .find('[data-testid="alert-warning-rdm-redirect"]')
+            .should('exist')
+            .should('be.visible');
     });
 });

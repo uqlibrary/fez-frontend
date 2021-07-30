@@ -1,20 +1,16 @@
 {
   "baseUrl": "http://localhost:3000",
-  "waitForAnimations": true,
-  "pageLoadTimeout": 30000,
-  "video": false,
+  "blockHosts": ["www.googletagmanager.com"],
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 10000,
-  "videoUploadOnPasses": false,
-  "projectId": "mvfnrv",
-  "blockHosts": ["www.googletagmanager.com"],
-  "firefoxGcInterval": {
-    "runMode": 1,
-    "openMode": 1
-  },
   "numTestsKeptInMemory": 1,
+  "pageLoadTimeout": 30000,
+  "projectId": "mvfnrv",
+  "video": false,
   "retries": {
     "openMode": 0,
     "runMode": 2
-  }
+  },
+  "videoUploadOnPasses": false,
+  "waitForAnimations": true
 }

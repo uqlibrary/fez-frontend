@@ -182,6 +182,10 @@ export const ThesisSubmission = ({
         submitSucceeded,
     });
 
+    if (alertProps) {
+        alertProps.alertId = 'thesis-submission-validation';
+    }
+
     return (
         <StandardPage title={pageTitle}>
             <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
@@ -195,6 +199,13 @@ export const ThesisSubmission = ({
                         locale={formLocale.thesisSubmission.depositConfirmation}
                     />
                     <Grid container spacing={3}>
+                        <Grid item xs={12}>
+                            <Alert
+                                message={formLocale.thesisSubmission.message}
+                                type="warning"
+                                alertId="alert-warning-rdm-redirect"
+                            />
+                        </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.title} help={txt.information.help}>
                                 <Grid container spacing={3}>
