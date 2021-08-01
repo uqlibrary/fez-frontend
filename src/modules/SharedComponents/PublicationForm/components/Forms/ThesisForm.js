@@ -12,7 +12,6 @@ import { OrgNameField, OrgUnitNameField, FieldOfResearchListField } from 'module
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 
 import { validation } from 'config';
-import { pathConfig } from 'config/pathConfig';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 
@@ -32,10 +31,6 @@ export default class ThesisForm extends Component {
         return value.replace(/[^\d]/g, '');
     };
 
-    _visitHdrSubmissionPage = () => {
-        this.props.history.push(pathConfig.hdrSubmission);
-    };
-
     render() {
         const txt = formLocale.thesis;
         return (
@@ -45,10 +40,9 @@ export default class ThesisForm extends Component {
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Alert
-                                    action={this._visitHdrSubmissionPage}
-                                    actionButtonLabel={txt.information.actionButtonLabel}
                                     message={txt.information.message}
                                     type="warning"
+                                    alertId="alert-warning-rdm-redirect"
                                 />
                             </Grid>
                         </Grid>
