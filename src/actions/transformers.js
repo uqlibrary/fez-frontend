@@ -41,12 +41,16 @@ const getIssuesRequest = text => ({
     issue: text,
 });
 
-/* getFixIssueRequest - returns fix record issue request object
+/**
+ * getFixIssueRequest - returns fix record issue request object
+ *
  * @returns {Object} issue request
  */
 export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
-/* getClaimIssueRequest - returns claim record issue request object
+/**
+ * getClaimIssueRequest - returns claim record issue request object
+ *
  * @returns {Object} issue request
  */
 export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
@@ -76,8 +80,33 @@ export const getRecordLinkSearchKey = data => {
     };
 };
 
-/* getRecordFileAttachmentSearchKey - returns files object formatted for record request
+/**
+ * getCollectionsOnRecordWithSecurity - Copies security policy from existing collections to current collections list.
+ * @param {object} record - The updated work object
+ *
+ * @return {array} The updated array of collections with security policy
+ */
+export const getCollectionsOnRecordWithSecurity = record =>
+    ((!!record && record.collections) || []).map(collection => {
+        if (collection.hasOwnProperty('rek_datastream_policy') || !record.rek_pid) {
+            // Newly added collection or new record
+            return collection;
+        }
+        // Existing collection. Retrieve security policy from search key
+        const existingCollection = record.fez_record_search_key_ismemberof.find(
+            collection2 => collection2.rek_ismemberof === collection.rek_pid,
+        );
+        return {
+            ...collection,
+            ...existingCollection.parent,
+        };
+    });
+
+/**
+ * getRecordFileAttachmentSearchKey - returns files object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: {string}}
+ *
  * @returns {Object} formatted {fez_record_search_key_file_attachment_*} for record request
  */
 export const getRecordFileAttachmentSearchKey = (files, record) => {
@@ -105,6 +134,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             };
         })
         .filter(file => file !== null);
+    const collections = getCollectionsOnRecordWithSecurity(record);
     const attachmentAccessConditions = files
         .map((item, index) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
@@ -112,10 +142,10 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             if (accessCondition === FILE_ACCESS_CONDITION_OPEN && item.date && moment(item.date).isAfter()) {
                 accessCondition = FILE_ACCESS_CONDITION_CLOSED;
             } else if (accessCondition === FILE_ACCESS_CONDITION_INHERIT) {
-                const parentPolicy = record.collections.reduce(
+                const parentPolicy = collections.reduce(
                     (policy, collection) =>
                         collection.rek_datastream_policy < policy ? collection.rek_datastream_policy : policy,
-                    5,
+                    FILE_ACCESS_CONDITION_OPEN,
                 );
                 accessCondition = parentPolicy;
             }
@@ -142,8 +172,11 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     };
 };
 
-/* getRecordAuthorsSearchKey - returns authors object formatted for record request
+/**
+ * getRecordAuthorsSearchKey - returns authors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: {string}}
+ *
  * @returns {Object} formatted {fez_record_search_key_author} for record request
  */
 export const getRecordAuthorsSearchKey = authors => {
@@ -186,9 +219,13 @@ export const getRecordSupervisorsSearchKey = supervisors => {
     };
 };
 
-/* getRecordAuthorsIdSearchKey - returns authors id object formatted for record request
- * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
+/**
+ * getRecordAuthorsIdSearchKey - returns authors id object formatted for record request
+ *
+ * @param {array} authors - array of objects in format
+ * {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
  * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
+ *
  * @returns {Object} formatted {fez_record_search_key_author_id} for record request
  */
 export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
@@ -244,10 +281,13 @@ export const getRecordAuthorAffiliationTypeSearchKey = authors => {
     };
 };
 
-/* unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
+/**
+ * unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
  * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
  * @param {number} if of a current user in case authors is empty, return auhtors structure with a solo current author id
+ *
  * @returns {Object} formatted {fez_record_search_key_author_id} for record request
  */
 export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
@@ -273,7 +313,9 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
     };
 };
 
-/* unclaimRecordContributorsIdSearchKey - returns contributors id object formatted for record request
+/**
+ * unclaimRecordContributorsIdSearchKey - returns contributors id object formatted for record request
+ *
  * @param {array} of objects in format {
  *     nameAsPublished: "string",
  *     disabled: false,
@@ -286,6 +328,7 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
  *     rek_contributor_id: 683,
  *     rek_contributor_id_order: 12
  * }
+ *
  * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
  */
 export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId) => {
@@ -311,8 +354,11 @@ export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId
     };
 };
 
-/* getRecordContributorsSearchKey - returns editors object formatted for record request
+/**
+ * getRecordContributorsSearchKey - returns editors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ *
  * @returns {Object} formatted {fez_record_search_key_contributor} for record request
  */
 export const getRecordContributorsSearchKey = authors => {
@@ -326,11 +372,14 @@ export const getRecordContributorsSearchKey = authors => {
     };
 };
 
-/* getRecordContributorsIdSearchKey - returns editors id object formatted for record request
+/**
+ * getRecordContributorsIdSearchKey - returns editors id object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
  * {rek_contributor_id: 100, rek_contributor_id_order: 1}
  * @param {number} defaultAuthorId - if of a current user in case authors is empty, return contributors
  * structure with a solo current author id
+ *
  * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
  */
 export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
@@ -364,8 +413,11 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
-/* getRecordCreatorsSearchKey - returns editors object formatted for record request
+/**
+ * getRecordCreatorsSearchKey - returns editors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ *
  * @returns {Object} formatted {fez_record_search_key_creator} for record request
  */
 export const getRecordCreatorsSearchKey = creators => {
@@ -398,8 +450,11 @@ export const getRecordCreatorsIdSearchKey = creators => {
     };
 };
 
-/* getRecordArchitectSearchKey - returns editors object formatted for record request
+/**
+ * getRecordArchitectSearchKey - returns editors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ *
  * @returns {Object} formatted {fez_record_search_key_architect} for record request
  */
 export const getRecordArchitectsSearchKey = architects => {
@@ -432,8 +487,11 @@ export const getRecordArchitectsIdSearchKey = architects => {
     };
 };
 
-/* getRecordSubjectSearchKey - returns subjects for record request
+/**
+ * getRecordSubjectSearchKey - returns subjects for record request
+ *
  * @param {array} of objects in format {rek_value: {key: id, value: value}, rek_order}
+ *
  * @returns {Object} formatted {fez_record_search_key_subject} for record request
  */
 export const getRecordSubjectSearchKey = subject => {
@@ -447,11 +505,13 @@ export const getRecordSubjectSearchKey = subject => {
     };
 };
 
-/*
+/**
  * getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
+ *
  * @param {string} authorId - fez-authors id (eg 1671)
  * @param {string} orcidId - new orcid id
  * @param {object} additional data
+ *
  * @returns {Object} formatted for author patch request
  */
 export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = null) => {
