@@ -66,6 +66,69 @@ describe('getRecordLinkSearchKey test', () => {
     });
 });
 
+describe('getCollectionsOnRecordWithSecurity', () => {
+    it('should retrieve security policy of existing collections from search key', () => {
+        const record = {
+            rek_pid: 'UQ:0a963e6',
+            collections: [
+                {
+                    rek_pid: 'UQ:275689',
+                    rek_title: 'UQ Library - Digitised Materials - Out of Print - UQ Staff and Students Only',
+                    id: 'UQ:275689',
+                    value: 'UQ Library - Digitised Materials - Out of Print - UQ Staff and Students Only',
+                },
+                {
+                    rek_datastream_policy: 5,
+                    rek_display_type_lookup: 'Collection',
+                    rek_pid: 'UQ:120743',
+                    rek_security_inherited: 0,
+                    rek_security_policy: 5,
+                    rek_title: '16th Australasian Fluid Mechanics Conference',
+                },
+            ],
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof_id: 12704305,
+                    rek_ismemberof_pid: 'UQ:0a963e6',
+                    rek_ismemberof_xsdmf_id: null,
+                    rek_ismemberof: 'UQ:275689',
+                    rek_ismemberof_order: 1,
+                    parent: {
+                        rek_pid: 'UQ:275689',
+                        rek_security_policy: 5,
+                        rek_datastream_policy: 4,
+                    },
+                    rek_ismemberof_lookup:
+                        'UQ Library - Digitised Materials - Out of Print - UQ Staff and Students Only',
+                },
+            ],
+        };
+        const expected = [
+            {
+                rek_pid: 'UQ:275689',
+                rek_title: 'UQ Library - Digitised Materials - Out of Print - UQ Staff and Students Only',
+                id: 'UQ:275689',
+                value: 'UQ Library - Digitised Materials - Out of Print - UQ Staff and Students Only',
+                rek_security_policy: 5,
+                rek_datastream_policy: 4,
+            },
+            {
+                rek_datastream_policy: 5,
+                rek_display_type_lookup: 'Collection',
+                rek_pid: 'UQ:120743',
+                rek_security_inherited: 0,
+                rek_security_policy: 5,
+                rek_title: '16th Australasian Fluid Mechanics Conference',
+            },
+        ];
+        expect(transformers.getCollectionsOnRecordWithSecurity(record)).toEqual(expected);
+    });
+
+    it('should handle empty list of collections', () => {
+        expect(transformers.getCollectionsOnRecordWithSecurity({ rek_pid: 'UQ:275689' })).toEqual([]);
+    });
+});
+
 describe('getRecordFileAttachmentSearchKey test', () => {
     const MockDate = require('mockdate');
     beforeEach(() => {

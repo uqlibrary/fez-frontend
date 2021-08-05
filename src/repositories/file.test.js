@@ -1,9 +1,15 @@
-import { putUploadFile } from './file';
+import { putUploadFile, getFileUploadMetadata } from './file';
 import * as repositories from 'repositories';
 import { locale } from 'locale';
 import * as actions from 'actions/actionTypes';
+import {
+    FILE_ACCESS_CONDITION_CLOSED,
+    FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_INHERIT,
+} from 'modules/SharedComponents/Toolbox/FileUploader/config';
+import MockDate from 'mockdate';
 
-describe('File repository tests ', () => {
+describe('File repository', () => {
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
@@ -14,7 +20,7 @@ describe('File repository tests ', () => {
         mockActionsStore.clearActions();
     });
 
-    it('uploading a file', async () => {
+    it('can uploading a file successfully', async () => {
         mockApi
             .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
             .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
@@ -24,6 +30,38 @@ describe('File repository tests ', () => {
         await expect(putUploadFile('PID:111111', { name: 'a.txt' }, mockActionsStore.dispatch)).resolves.toEqual(
             'File has been uploaded',
         );
+    });
+
+    it('can set appropriate metadata based on the selected access condition', () => {
+        MockDate.set('2020-02-19T12:00:00.000Z', 10);
+        const testCases = [
+            {
+                input: { access_condition_id: FILE_ACCESS_CONDITION_OPEN },
+                output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 0 },
+            },
+            {
+                input: { access_condition_id: FILE_ACCESS_CONDITION_OPEN, date: '2020-02-19T00:00:00+10:00' },
+                output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 0 },
+            },
+            {
+                input: { access_condition_id: FILE_ACCESS_CONDITION_OPEN, date: '2020-02-20T12:00:00+10:00' },
+                output: {
+                    dsi_security_policy: FILE_ACCESS_CONDITION_CLOSED,
+                    dsi_embargo_date: '2020-02-20',
+                    dsi_security_inherited: 0,
+                },
+            },
+            {
+                input: { access_condition_id: FILE_ACCESS_CONDITION_CLOSED },
+                output: { dsi_security_policy: FILE_ACCESS_CONDITION_CLOSED, dsi_security_inherited: 0 },
+            },
+            {
+                input: { access_condition_id: FILE_ACCESS_CONDITION_INHERIT },
+                output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 1 },
+            },
+        ];
+        testCases.forEach(testCase => expect(getFileUploadMetadata(testCase.input, [])).toEqual(testCase.output));
+        MockDate.reset();
     });
 
     it('dispatches an upload failed action for uploading a file', async () => {
