@@ -522,14 +522,28 @@ export default {
     thesis: {
         information: {
             title: 'Thesis information',
-            actionButtonLabel: 'Upload HDR thesis',
             message: (
                 <React.Fragment>
-                    <p>
-                        Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS
-                        button to submit.
-                    </p>
-                    <p> To deposit another thesis type, use the form below.</p>
+                    <p>Are you submitting a UQ Higher Degree by Research (HDR) thesis?</p>
+                    <ul>
+                        <li>
+                            If you currently have a thesis already under examination and submitted your original thesis
+                            via UQ eSpace please click <a href="/rhdsubmission">here</a>.
+                        </li>
+                        <li>
+                            If you are submitting your thesis for the first time, please submit via UQ Research Data
+                            Manager (UQRDM) following{' '}
+                            <a href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission">
+                                this process
+                            </a>
+                            . Please see the{' '}
+                            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376">
+                                UQRDM thesis submission guide
+                            </a>{' '}
+                            for more information.
+                        </li>
+                    </ul>
+                    <p>To deposit another thesis type, use the form below.</p>
                 </React.Fragment>
             ),
             // help: {
@@ -1284,6 +1298,26 @@ export default {
                     <label>&nbsp;</label>
                 </span>
             </span>
+        ),
+        message: (
+            <ul>
+                <li>
+                    If you are submitting your thesis for the first time, please submit via UQ Research Data Manager
+                    (UQRDM) following{' '}
+                    <a href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission">
+                        this process
+                    </a>
+                    . Please see the{' '}
+                    <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376">
+                        UQRDM thesis submission guide
+                    </a>{' '}
+                    for more information.
+                </li>
+                <li>
+                    If you currently have a thesis already under examination and submitted your original thesis via UQ
+                    eSpace please use the form below.
+                </li>
+            </ul>
         ),
         fileUpload: {
             title: 'Upload files',

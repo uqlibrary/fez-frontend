@@ -1,7 +1,6 @@
 jest.dontMock('./ThesisForm');
 
 import ThesisForm from './ThesisForm';
-import { pathConfig } from 'config';
 
 function setup(testProps = {}) {
     const props = {
@@ -40,18 +39,5 @@ describe('ThesisForm ', () => {
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         });
-    });
-
-    it('should redirect to Thesis submission page on click', () => {
-        const pushFn = jest.fn();
-        const wrapper = setup({
-            history: {
-                push: pushFn,
-            },
-        });
-
-        wrapper.instance()._visitHdrSubmissionPage();
-
-        expect(pushFn).toHaveBeenCalledWith(pathConfig.hdrSubmission);
     });
 });
