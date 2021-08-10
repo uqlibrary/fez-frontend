@@ -539,6 +539,7 @@ export default {
             noResultsFound: {
                 title: 'No works found',
                 text: <div>We were unable to find any results.</div>,
+                standardCardId: 'search-records-no-results',
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,

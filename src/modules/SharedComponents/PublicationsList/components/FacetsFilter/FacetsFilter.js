@@ -120,7 +120,7 @@ export const FacetsFilter = ({
         ...activeFacets.ranges,
     });
 
-    const [showOpenAccessOnly, setShowOpenAccessOnly] = useState(false);
+    const [showOpenAccessOnly, setShowOpenAccessOnly] = useState(!!activeFacets.showOpenAccessOnly);
 
     const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
