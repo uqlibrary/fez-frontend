@@ -18,6 +18,7 @@ exports[`ThesisSubmission should display confirmation box before submission 1`] 
 
 exports[`ThesisSubmission should display successfull submission screen 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
   <WithStyles(ForwardRef(Grid))
@@ -81,6 +82,7 @@ Object {
 
 exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Higher degree by research thesis deposit"
 >
   <WithStyles(ForwardRef(Grid))
@@ -136,6 +138,7 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
 
 exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
 <StandardPage
+  standardPageId="rhd-submission"
   title="Higher degree by research thesis deposit"
 >
   <ConfirmDiscardFormChanges
@@ -285,7 +288,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   ariaLabel="Select a thesis type"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
@@ -677,6 +679,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
 
 exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
   <WithStyles(ForwardRef(Grid))
@@ -732,6 +735,7 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
 
 exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
 <StandardPage
+  standardPageId="rhd-submission"
   title="Professional doctorate deposit"
 >
   <ConfirmDiscardFormChanges
@@ -881,7 +885,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   ariaLabel="Select a thesis type"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
@@ -1285,6 +1288,7 @@ Array [
 
 exports[`ThesisSubmission should show the file upload failure alert 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
   <WithStyles(ForwardRef(Grid))

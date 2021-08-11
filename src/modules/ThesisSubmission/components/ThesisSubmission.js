@@ -126,7 +126,7 @@ export const ThesisSubmission = ({
 
     if (submitSucceeded) {
         return (
-            <StandardPage title={pageTitle}>
+            <StandardPage title={pageTitle} standardPageId="rhd-submission-succeeded">
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard title={thesisLocale.afterSubmitTitle}>
@@ -182,12 +182,8 @@ export const ThesisSubmission = ({
         submitSucceeded,
     });
 
-    if (alertProps) {
-        alertProps.alertId = 'thesis-submission-validation';
-    }
-
     return (
-        <StandardPage title={pageTitle}>
+        <StandardPage title={pageTitle} standardPageId="rhd-submission">
             <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
                 <form>
                     <NavigationDialogBox when={dirty && !submitSucceeded} txt={formLocale.cancelWorkflowConfirmation} />
@@ -241,7 +237,6 @@ export const ThesisSubmission = ({
                                             id="thesis-subtype"
                                             itemsList={THESIS_SUBMISSION_SUBTYPES}
                                             name="rek_genre_type"
-                                            genericSelectFieldId="rek-genre-type"
                                             disabled={submitting}
                                             validate={[validation.required]}
                                             {...txt.information.fieldLabels.thesisType}
@@ -340,7 +335,7 @@ export const ThesisSubmission = ({
 
                         {alertProps && (
                             <Grid item xs={12}>
-                                <Alert {...alertProps} />
+                                <Alert {...alertProps} alertId="thesis-submission-validation" />
                             </Grid>
                         )}
                     </Grid>
