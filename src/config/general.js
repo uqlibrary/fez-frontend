@@ -1661,4 +1661,4 @@ export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked
 
 export const SCOPUS_INGESTED_AUTHORS = 'SCOPUS_INGESTED_AUTHORS';
 
-export const TRANSITION_COHORT = ['s3333333', 's4512837', 'student_test'];
+export const TRANSITION_COHORT = ['s2222222', 's4512837', 'student_test'];
