@@ -17,10 +17,13 @@ import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 
 import { validation } from 'config';
+import { TRANSITION_COHORT } from 'config/general';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { THESIS_SUBMISSION_SUBTYPES, THESIS_UPLOAD_RETRIES } from 'config/general';
+
+import { useAccountContext } from 'context';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -124,6 +127,25 @@ export const ThesisSubmission = ({
     const thesisLocale = formLocale.thesisSubmission;
     const pageTitle = isHdrThesis ? thesisLocale.hdrTitle : thesisLocale.sbsTitle;
 
+    const { account } = useAccountContext();
+    const userIsAllowed = TRANSITION_COHORT.includes(account.id);
+
+    if (!userIsAllowed) {
+        return (
+            <StandardPage title={pageTitle} standardPageId="rhd-submission-user-blocked">
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <Alert
+                            message={formLocale.thesisSubmission.message}
+                            type="warning"
+                            alertId="alert-warning-rdm-redirect"
+                        />
+                    </Grid>
+                </Grid>
+            </StandardPage>
+        );
+    }
+
     if (submitSucceeded) {
         return (
             <StandardPage title={pageTitle} standardPageId="rhd-submission-succeeded">
@@ -195,13 +217,6 @@ export const ThesisSubmission = ({
                         locale={formLocale.thesisSubmission.depositConfirmation}
                     />
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
-                            <Alert
-                                message={formLocale.thesisSubmission.message}
-                                type="warning"
-                                alertId="alert-warning-rdm-redirect"
-                            />
-                        </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.title} help={txt.information.help}>
                                 <Grid container spacing={3}>
