@@ -137,8 +137,8 @@ export const ThesisSubmission = ({
                     <Grid item xs={12}>
                         <Alert
                             message={formLocale.thesisSubmission.message}
-                            type="warning"
-                            alertId="alert-warning-rdm-redirect"
+                            type="info"
+                            alertId="alert-info-rdm-redirect"
                         />
                     </Grid>
                 </Grid>
