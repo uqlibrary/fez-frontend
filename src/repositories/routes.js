@@ -464,13 +464,14 @@ export const JOURNAL_SEARCH_API = ({
     facets = {},
 }) => {
     const query = getKeywordsParams(keywords);
+    console.log('JOURNAL_SEARCH_API', keywords);
     return {
         apiUrl: 'journals/search',
         options: {
             params: {
                 query: query,
                 page: page,
-                page_size: pageSize,
+                per_page: pageSize,
                 sort: sortBy,
                 order_by: sortDirection.toLowerCase(),
                 ...getFacetsParams(facets),

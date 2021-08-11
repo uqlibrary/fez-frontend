@@ -20,8 +20,6 @@ export const JournalSearchResult = () => {
     const journalsListLoaded = useSelector(state => state.get('searchJournalsReducer').journalsListLoaded);
     const journalsListError = useSelector(state => state.get('searchJournalsReducer').journalsListError);
 
-    console.log(journalsListLoading, journalsList, journalsListLoaded, journalsListError);
-
     if (!journalsListLoaded) {
         return <div />;
     }

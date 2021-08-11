@@ -78,13 +78,11 @@ export const loadJournal = id => dispatch => {
 };
 
 export const loadJournalSearchKeywords = searchQuery => async dispatch => {
-    console.log('searchQuery', searchQuery);
     dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
     try {
         const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data, query: searchQuery });
     } catch (e) {
-        console.log('ERROR ======>>>>>>>', e);
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });
     }
 };
@@ -94,6 +92,7 @@ export const clearJournalSearchKeywords = () => ({
 });
 
 export const searchJournals = searchQuery => async dispatch => {
+    console.log('searchJournals', searchQuery);
     dispatch({ type: actions.SEARCH_JOURNALS_LOADING });
     try {
         const searchResponse = await get(JOURNAL_SEARCH_API({ query: searchQuery }));
