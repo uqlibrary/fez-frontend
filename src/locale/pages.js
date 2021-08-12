@@ -881,7 +881,10 @@ export default {
                 hasDoi: 'DOI (Existing)',
                 noDoi: 'DOI (Preview)',
             },
-            doiTemplate: (pid, displayType) => displayType === PUBLICATION_TYPE_DATA_COLLECTION ? `${DATACITE_DOI_PREFIX}/${pid.slice(3)}` : `${CROSSREF_DOI_PREFIX}/${pid.slice(3)}`,
+            doiTemplate: (pid, displayType) =>
+                displayType === PUBLICATION_TYPE_DATA_COLLECTION
+                    ? `${DATACITE_DOI_PREFIX}/${pid.slice(3)}`
+                    : `${CROSSREF_DOI_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
             depositorEmailTitle: 'Email',
             alertMessages: {

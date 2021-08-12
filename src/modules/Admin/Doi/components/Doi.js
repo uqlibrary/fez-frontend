@@ -162,7 +162,7 @@ export const getErrorMessage = record => {
         }
 
         // Should not allow updates of existing Non-UQ DOIs
-        if (!!doi && (doi.indexOf(CROSSREF_DOI_PREFIX) !== 0 && doi.indexOf(DATACITE_DOI_PREFIX) !== 0 )) {
+        if (!!doi && doi.indexOf(CROSSREF_DOI_PREFIX) !== 0 && doi.indexOf(DATACITE_DOI_PREFIX) !== 0) {
             errorMessages.push(txt.alertMessages.uqIsNotPublisher);
         }
 
