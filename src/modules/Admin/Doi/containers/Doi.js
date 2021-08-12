@@ -15,7 +15,7 @@ export const onSubmit = (record, dispatch) => {
 
     if (!doi) {
         updatedRecord.fez_record_search_key_doi = {
-            rek_doi: pagesLocale.pages.doi.doiTemplate(updatedRecord.rek_pid),
+            rek_doi: pagesLocale.pages.doi.doiTemplate(updatedRecord.rek_pid, updatedRecord.rek_display_type),
         };
     }
 

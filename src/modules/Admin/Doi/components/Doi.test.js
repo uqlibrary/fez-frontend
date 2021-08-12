@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import { Doi, getErrorMessage, getWarningMessage, isArrayValid } from './Doi';
 
-import { DOI_ORG_PREFIX } from 'config/doi';
+import { CROSSREF_DOI_PREFIX } from 'config/doi';
 
 import publicationTypeListConferencePaper from 'mock/data/records/publicationTypeListConferencePaper';
 import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
@@ -13,7 +13,7 @@ import collectionRecord from 'mock/data/records/collectionRecord';
 const confPaperRecord = {
     ...publicationTypeListConferencePaper.data[0],
     fez_record_search_key_doi: {
-        rek_doi: DOI_ORG_PREFIX,
+        rek_doi: CROSSREF_DOI_PREFIX,
     },
     fez_record_search_key_publisher: {
         rek_publisher: 'The University of Queensland',
@@ -198,7 +198,7 @@ describe('DOI component', () => {
             record: {
                 ...mockRecord,
                 fez_record_search_key_doi: {
-                    rek_doi: `${DOI_ORG_PREFIX}/uql.2004.1`,
+                    rek_doi: `${CROSSREF_DOI_PREFIX}/uql.2004.1`,
                 },
             },
         });

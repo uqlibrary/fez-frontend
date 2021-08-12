@@ -12,7 +12,7 @@ import viewRecordLocale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
-import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
+import { CROSSREF_DOI_PREFIX, DATACITE_DOI_PREFIX, doiFields } from 'config/doi';
 import { validation } from 'config';
 
 import { useConfirmationState } from 'hooks';
@@ -162,7 +162,7 @@ export const getErrorMessage = record => {
         }
 
         // Should not allow updates of existing Non-UQ DOIs
-        if (!!doi && doi.indexOf(DOI_ORG_PREFIX) !== 0) {
+        if (!!doi && (doi.indexOf(CROSSREF_DOI_PREFIX) !== 0 && doi.indexOf(DATACITE_DOI_PREFIX) !== 0 )) {
             errorMessages.push(txt.alertMessages.uqIsNotPublisher);
         }
 
