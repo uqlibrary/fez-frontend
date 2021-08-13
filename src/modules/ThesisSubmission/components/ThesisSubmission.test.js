@@ -2,7 +2,7 @@ import React from 'react';
 import ThesisSubmission, { afterSubmit, cancelSubmit, getFormSubmitAlertProps } from './ThesisSubmission';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
-import { THESIS_UPLOAD_RETRIES, TRANSITION_COHORT } from 'config/general';
+import { THESIS_UPLOAD_RETRIES } from 'config/general';
 
 import { useAccountContext } from 'context';
 jest.mock('../../../context');
@@ -72,7 +72,7 @@ describe('ThesisSubmission', () => {
 
         useAccountContext.mockImplementation(() => ({
             account: {
-                id: TRANSITION_COHORT[0],
+                id: 's2222222',
             },
         }));
     });

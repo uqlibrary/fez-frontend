@@ -16,8 +16,7 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 
-import { validation } from 'config';
-import { TRANSITION_COHORT } from 'config/general';
+import { validation, TRANSITION_COHORT } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
