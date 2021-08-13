@@ -30,3 +30,4 @@ export { history } from './history';
 export * as BULK_UPDATES from './bulkUpdates';
 export { pathConfig } from './pathConfig';
 export { journalViewConfig } from './journalView';
+export { TRANSITION_COHORT } from './thesisSubmissionTransition';

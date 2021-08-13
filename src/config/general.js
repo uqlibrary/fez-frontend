@@ -1660,5 +1660,3 @@ export const BULK_DELETE_AUTHOR_NOT_FOUND = 'Author not found';
 export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked works';
 
 export const SCOPUS_INGESTED_AUTHORS = 'SCOPUS_INGESTED_AUTHORS';
-
-export const TRANSITION_COHORT = ['s2222222', 's4512837', 'student_test'];
