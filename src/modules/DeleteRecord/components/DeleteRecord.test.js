@@ -1,7 +1,7 @@
 import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
 import Immutable from 'immutable';
-import { UQ_DOI_PREFIX } from 'config/general';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 
 function setup(testProps) {
     const props = {
@@ -64,9 +64,24 @@ describe('Component DeleteRecord', () => {
         expect(wrapper.find('Field').length).toEqual(1);
     });
 
-    it('should display alert and disable delete button on records with UQ DOIs', () => {
+    it('should display alert and disable delete button on records with Crossref UQ DOIs', () => {
         const wrapper = setup({
-            recordToDelete: { ...mockRecordToDelete, fez_record_search_key_doi: { rek_doi: `${UQ_DOI_PREFIX}12345` } },
+            recordToDelete: {
+                ...mockRecordToDelete,
+                fez_record_search_key_doi: { rek_doi: `${DOI_CROSSREF_PREFIX}12345` },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);
+        expect(wrapper.find('Field').length).toEqual(0);
+    });
+
+    it('should display alert and disable delete button on records with DataCite UQ DOIs', () => {
+        const wrapper = setup({
+            recordToDelete: {
+                ...mockRecordToDelete,
+                fez_record_search_key_doi: { rek_doi: `${DOI_DATACITE_PREFIX}12345` },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('#submit-delete-record').props().disabled).toEqual(true);

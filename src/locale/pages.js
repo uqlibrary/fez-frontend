@@ -8,8 +8,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import locale from 'locale/components';
 
 import { pathConfig } from 'config/pathConfig';
-import { CROSSREF_DOI_PREFIX, DATACITE_DOI_PREFIX } from 'config/doi';
-import { PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
 /*
 
 NOTE:
@@ -883,8 +882,8 @@ export default {
             },
             doiTemplate: (pid, displayType) =>
                 displayType === PUBLICATION_TYPE_DATA_COLLECTION
-                    ? `${DATACITE_DOI_PREFIX}/${pid.slice(3)}`
-                    : `${CROSSREF_DOI_PREFIX}/${pid.slice(3)}`,
+                    ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
+                    : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
             depositorEmailTitle: 'Email',
             alertMessages: {

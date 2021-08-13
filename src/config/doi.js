@@ -9,9 +9,6 @@ import {
     PUBLICATION_TYPE_WORKING_PAPER,
 } from './general';
 
-export const CROSSREF_DOI_PREFIX = '10.14264';
-export const DATACITE_DOI_PREFIX = '10.23643';
-
 // Field order values copied from locale/viewRecord.js:viewRecord.fields
 export const doiFields = {
     [PUBLICATION_TYPE_BOOK]: {
