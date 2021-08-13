@@ -246,7 +246,9 @@ describe('DOI component', () => {
             doiRequesting: true,
         });
         expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(expect.stringMatching(DOI_CROSSREF_NAME));
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
+            expect.stringMatching(DOI_CROSSREF_NAME),
+        );
     });
 
     it('should show request progress dialogue for DataCite DOI', () => {
@@ -258,6 +260,8 @@ describe('DOI component', () => {
             },
         });
         expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
-        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(expect.stringMatching(DOI_DATACITE_NAME));
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
+            expect.stringMatching(DOI_DATACITE_NAME),
+        );
     });
 });
