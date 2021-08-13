@@ -32,8 +32,8 @@ describe('Component AdvancedSearchCaption', () => {
         const { getByTestId } = setup();
 
         expect(getByTestId('all-caption-title')).toHaveTextContent('Any field');
-        expect(getByTestId('all-caption-combiner')).toHaveTextContent('contains');
-        expect(getByTestId('all-caption-value')).toHaveTextContent('anything');
+
+        expect(getByTestId('all-captiexpect(getByTestId(\'all-caption-combiner\')).toHaveTextContent(\'contains\');on-value')).toHaveTextContent('anything');
 
         expect(getByTestId('rek-ismemberof-caption-title')).toHaveTextContent('Collection');
         expect(getByTestId('rek-ismemberof-caption-combiner')).toHaveTextContent('is one of');

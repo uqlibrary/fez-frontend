@@ -434,7 +434,6 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
 
 export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
     apiUrl: `journals/search?query=${query}`,
-    // apiUrl: `journals/search?rule=keywords&query=${query}`,
 });
 
 /**
@@ -444,6 +443,7 @@ export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
  * @returns
  */
 export const getKeywordsParams = keywords => {
+    console.log('to translate: ', keywords);
     if (!!keywords && Object.values(keywords).length > 0) {
         /**
          * @todo Form keywords params for API
@@ -455,26 +455,25 @@ export const getKeywordsParams = keywords => {
     return '';
 };
 
-export const JOURNAL_SEARCH_API = ({
-    keywords,
-    page = 1,
-    pageSize = 20,
-    sortBy = 'score',
-    sortDirection = 'desc',
-    facets = {},
-}) => {
-    const query = getKeywordsParams(keywords);
-    console.log('JOURNAL_SEARCH_API', keywords);
+export const JOURNAL_SEARCH_API = query => {
+    // const keywords = query,
+    //     page = 1,
+    //     pageSize = 20,
+    //     sortBy = 'score',
+    //     sortDirection = 'desc',
+    //     facets = {},
+    const searchQuery = getKeywordsParams(query);
+    console.log(searchQuery);
     return {
         apiUrl: 'journals/search',
         options: {
             params: {
-                query: query,
-                page: page,
-                per_page: pageSize,
-                sort: sortBy,
-                order_by: sortDirection.toLowerCase(),
-                ...getFacetsParams(facets),
+                query: '',
+                page: '',
+                per_page: '',
+                sort: '',
+                order_by: '', // sortDirection.toLowerCase(),
+                // ...getFacetsParams(facets),
             },
         },
     };

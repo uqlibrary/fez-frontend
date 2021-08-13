@@ -95,7 +95,7 @@ export const searchJournals = searchQuery => async dispatch => {
     console.log('searchJournals', searchQuery);
     dispatch({ type: actions.SEARCH_JOURNALS_LOADING });
     try {
-        const searchResponse = await get(JOURNAL_SEARCH_API({ query: searchQuery }));
+        const searchResponse = await get(JOURNAL_SEARCH_API(searchQuery));
         dispatch({ type: actions.SEARCH_JOURNALS_LOADED, payload: searchResponse });
     } catch (e) {
         dispatch({ type: actions.SEARCH_JOURNALS_FAILED, payload: e });
