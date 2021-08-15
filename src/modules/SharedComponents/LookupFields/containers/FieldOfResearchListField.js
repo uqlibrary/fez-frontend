@@ -18,6 +18,7 @@ export const FieldOfResearchListField = fieldProps => {
 export const FilteredFieldOfResearchListField = fieldProps => {
     return (
         <LookupListEditor
+            listEditorId="filtered-field-of-research"
             inputField={FilteredFieldOfResearchField}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
