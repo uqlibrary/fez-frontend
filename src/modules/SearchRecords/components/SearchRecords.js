@@ -353,6 +353,7 @@ export const SearchRecords = ({
                                         pagingData={pagingData}
                                         onPageChanged={pageChanged}
                                         disabled={isLoadingOrExporting || state.bulkExportSelected}
+                                        pagingId="search-records-paging-top"
                                     />
                                 </Grid>
                                 {isLoadingOrExporting && (
@@ -392,6 +393,7 @@ export const SearchRecords = ({
                                         pagingData={pagingData}
                                         onPageChanged={pageChanged}
                                         disabled={isLoadingOrExporting || state.bulkExportSelected}
+                                        pagingId="search-records-paging-bottom"
                                     />
                                 </Grid>
                             </Grid>

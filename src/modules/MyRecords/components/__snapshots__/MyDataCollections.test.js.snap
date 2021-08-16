@@ -120,6 +120,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   "total": 2,
                 }
               }
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -179,6 +180,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   "total": 2,
                 }
               }
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -265,6 +267,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   "total": 2,
                 }
               }
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -324,6 +327,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   "total": 2,
                 }
               }
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -510,6 +514,7 @@ exports[`myDatasets test renders loading screen while loading publications while
               loading={true}
               onPageChanged={[Function]}
               pagingData={Object {}}
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -558,6 +563,7 @@ exports[`myDatasets test renders loading screen while loading publications while
               loading={true}
               onPageChanged={[Function]}
               pagingData={Object {}}
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
