@@ -5,6 +5,11 @@ import SearchRecords from './SearchRecords';
 import { renderWithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
 
+jest.mock('actions', () => ({
+    searchEspacePublications: jest.fn(() => ({ type: '' })),
+}));
+import * as actions from 'actions';
+
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 /**
@@ -273,45 +278,166 @@ describe('SearchRecords page', () => {
     //     expect(testPushFn).toHaveBeenCalled();
     // });
 
-    // it('should set state and update history and search records when page is changed', () => {
-    //     const testAction = jest.fn();
-    //     const testPushFn = jest.fn();
+    const searchQuery = {
+        page: 1,
+        pageSize: 20,
+        sortBy: 'score',
+        sortDirection: 'Desc',
+        activeFacets: {
+            filters: {},
+            ranges: {},
+        },
+        bulkExportSelected: false,
+    };
 
-    //     const { debug } = setup({
-    //         actions: {
-    //             searchEspacePublications: testAction,
-    //         },
-    //         history: {
-    //             push: testPushFn,
-    //         },
-    //     });
+    const props = {
+        publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+        publicationsListPagingData: {
+            from: 10,
+            to: 30,
+            total: 100,
+            per_page: 20,
+            current_page: 1,
+        },
+        searchQuery,
+    };
 
-    //     wrapper.instance().pageChanged(2);
-    //     wrapper.update();
-    //     expect(testAction).toHaveBeenCalled();
-    //     expect(testPushFn).toHaveBeenCalled();
-    // });
+    it('should update history and search records when page size is changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
 
-    // it('should set state and update history and search records when sort by dropdown is changed', () => {
-    //     const testAction = jest.fn();
-    //     const testPushFn = jest.fn();
+        const { getByTestId, getAllByRole } = setup({
+            ...props,
+            actions: {
+                searchEspacePublications: testAction,
+            },
+            history: {
+                push: testPushFn,
+            },
+        });
 
-    //     const { debug } = setup({
-    //         actions: {
-    //             searchEspacePublications: testAction,
-    //         },
-    //         history: {
-    //             push: testPushFn,
-    //         },
-    //     });
+        act(() => {
+            fireEvent.mouseDown(getByTestId('pageSize'));
+        });
+        expect(getAllByRole('option').length).toBe(3);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[1]);
+        });
 
-    //     wrapper.instance().sortByChanged('publication_date', 'Asc');
-    //     wrapper.update();
-    //     expect(testAction).toHaveBeenCalled();
-    //     expect(testPushFn).toHaveBeenCalled();
-    // });
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search:
+                'searchQueryParams%5Ball%5D=test&bulkExportSelected=false&pageSize=50&sortDirection=Desc&sortBy=score&page=1',
+            state: {
+                ...searchQuery,
+                pageSize: 50,
+                searchQueryParams: {
+                    all: 'test',
+                },
+            },
+        });
+    });
 
-    // it('should set state and update history and search records when facet is changed', () => {
+    it('should update history and search records when page is changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
+
+        const { getByTestId } = setup({
+            ...props,
+            actions: {
+                searchEspacePublications: testAction,
+            },
+            history: {
+                push: testPushFn,
+            },
+        });
+
+        act(() => {
+            fireEvent.click(getByTestId('search-records-paging-top-select-page-2'));
+        });
+
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search:
+                'searchQueryParams%5Ball%5D=test&bulkExportSelected=false&pageSize=20&sortDirection=Desc&sortBy=score&page=2',
+            state: {
+                ...searchQuery,
+                page: 2,
+                searchQueryParams: {
+                    all: 'test',
+                },
+            },
+        });
+    });
+
+    it('should update history and search records when sort direction is changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
+
+        const { getByTestId, getAllByRole } = setup({
+            ...props,
+            actions: {
+                searchEspacePublications: testAction,
+            },
+            history: {
+                push: testPushFn,
+            },
+        });
+
+        act(() => {
+            fireEvent.mouseDown(getByTestId('sortOrder'));
+        });
+        expect(getAllByRole('option').length).toBe(2);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[1]);
+        });
+
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search:
+                'searchQueryParams%5Ball%5D=test&bulkExportSelected=false&pageSize=20&sortDirection=Asc&sortBy=score&page=1',
+            state: {
+                ...searchQuery,
+                sortDirection: 'Asc',
+                searchQueryParams: {
+                    all: 'test',
+                },
+            },
+        });
+    });
+
+    it('should search records when advanced search options are updated', () => {
+        const { getByTestId } = setup(props);
+
+        act(() => {
+            fireEvent.click(getByTestId('show-advanced-search'));
+        });
+
+        fireEvent.change(getByTestId('from'), { target: { value: '2015' } });
+        fireEvent.change(getByTestId('to'), { target: { value: '2018' } });
+
+        act(() => {
+            fireEvent.click(getByTestId('advanced-search'));
+        });
+
+        expect(actions.searchEspacePublications).toHaveBeenCalledWith({
+            ...searchQuery,
+            bulkExportSelected: undefined,
+            searchMode: 'advanced',
+            searchQueryParams: {
+                rek_display_type: [],
+            },
+            activeFacets: {
+                filters: {},
+                ranges: { 'Year published': { from: 2015, to: 2018 } },
+            },
+        });
+    });
+
+    // it('should update history and search records when facet is changed', () => {
     //     const testAction = jest.fn();
     //     const testPushFn = jest.fn();
 
@@ -614,6 +740,73 @@ describe('SearchRecords page', () => {
     });
 
     it('should handle export publications correctly', () => {
+        const testExportAction = jest.fn();
+        const searchQuery = {
+            page: 1,
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023',
+                    },
+                },
+                showOpenAccessOnly: false,
+            },
+            bulkExportSelected: false,
+        };
+
+        const { getByTestId, getAllByRole } = setup({
+            actions: {
+                exportEspacePublications: testExportAction,
+                searchEspacePublications: jest.fn(),
+            },
+            publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+            publicationsListPagingData: {
+                from: 10,
+                current_page: 1,
+                page_size: 20,
+                to: 20,
+                total: 100,
+            },
+            location: {
+                search:
+                    'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5B' +
+                    'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
+                    'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false',
+            },
+            canUseExport: true,
+            searchQuery,
+        });
+
+        act(() => {
+            fireEvent.mouseDown(getByTestId('pageSize'));
+        });
+        expect(getAllByRole('option').length).toBe(3);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[1]);
+        });
+
+        act(() => {
+            fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
+        });
+        expect(getAllByRole('option').length).toBe(3);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[1]);
+        });
+
+        expect(testExportAction).toHaveBeenCalledWith({
+            ...searchQuery,
+            age: '1', // not sure what this is!
+            pageSize: 50,
+            exportPublicationsFormat: 'excel',
+        });
+    });
+
+    it('should handle bulk export correctly', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
 
@@ -636,15 +829,17 @@ describe('SearchRecords page', () => {
             bulkExportSelected: false,
         };
 
-        const { getByTestId, getAllByRole /* , getByText, debug */ } = setup({
+        const { getByTestId, getAllByRole } = setup({
             actions: {
                 exportEspacePublications: testExportAction,
                 searchEspacePublications: jest.fn(),
             },
             publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
             publicationsListPagingData: {
+                current_page: 1,
                 from: 10,
-                to: 30,
+                page_size: 20,
+                to: 20,
                 total: 100,
             },
             location: {
@@ -665,22 +860,19 @@ describe('SearchRecords page', () => {
             fireEvent.click(getAllByRole('option')[4]);
         });
 
-        // debug(getByTestId('search-records-results'));
-        // expect(getByText('The export will have the first 500 works.')).toBeInTheDocument();
-
         act(() => {
             fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
         });
         expect(getAllByRole('option').length).toBe(3);
         act(() => {
-            fireEvent.click(getAllByRole('option')[1]);
+            fireEvent.click(getAllByRole('option')[2]);
         });
 
         expect(testExportAction).toHaveBeenCalledWith({
             ...searchQuery,
-            age: '1',
+            age: '1', // not sure what this is!
             pageSize: 500,
-            exportPublicationsFormat: 'excel',
+            exportPublicationsFormat: 'endnote',
         });
     });
 
@@ -741,7 +933,6 @@ describe('SearchRecords page', () => {
         const { unmount } = setup({
             actions: {
                 clearSearchQuery: clearSearchQueryFn,
-                searchEspacePublications: jest.fn(),
             },
         });
         unmount();

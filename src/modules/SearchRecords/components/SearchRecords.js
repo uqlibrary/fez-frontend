@@ -1,5 +1,3 @@
-/** istanbul ignore file */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import param from 'can-param';
@@ -38,10 +36,10 @@ const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublished
     if (providedSearchQuery.hasOwnProperty('activeFacets')) {
         providedSearchQuery.activeFacets = {
             filters: providedSearchQuery.activeFacets.filters || {},
-            ranges: providedSearchQuery.activeFacets.ranges || {},
+            ranges: providedSearchQuery.activeFacets.ranges || /* istanbul ignore next */ {},
             ...(providedSearchQuery.activeFacets.hasOwnProperty('showOpenAccessOnly')
                 ? { showOpenAccessOnly: providedSearchQuery.activeFacets.showOpenAccessOnly === 'true' }
-                : {}),
+                : /* istanbul ignore next */ {}),
         };
     } else {
         providedSearchQuery.activeFacets = {
@@ -51,6 +49,7 @@ const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublished
     }
 
     const pageSize = parseInt(providedSearchQuery.pageSize, 10);
+    /* istanbul ignore if */
     if (canBulkExport && pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
         providedSearchQuery.bulkExportSelected = true;
         providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
@@ -74,6 +73,10 @@ const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublished
         delete providedSearchQuery.searchQueryParams.rek_created_date;
         delete providedSearchQuery.searchQueryParams.rek_updated_date;
     }
+
+    providedSearchQuery.page =
+        (providedSearchQuery.page && /* istanbul ignore next */ parseInt(providedSearchQuery.page, 10)) || 1;
+
     return providedSearchQuery;
 };
 
@@ -102,7 +105,7 @@ export const SearchRecords = ({
             ranges: {},
             ...{
                 ...(((searchQuery || {}).activeFacets || {}).showOpenAccessOnly === 'true'
-                    ? { showOpenAccessOnly: true }
+                    ? /* istanbul ignore next */ { showOpenAccessOnly: true }
                     : {}),
             },
         },
@@ -131,7 +134,8 @@ export const SearchRecords = ({
 
     React.useEffect(() => {
         // handle browser back button - set state from location/dispatch action for this state
-        if (history.action === 'POP' && location.pathname === pathConfig.records.search) {
+        /* istanbul ignore if */
+        if (history.action === 'POP' && /* istanbul ignore next */ location.pathname === pathConfig.records.search) {
             if (location.state) {
                 setState(
                     parseSearchQueryStringFromUrl(
@@ -167,7 +171,7 @@ export const SearchRecords = ({
         history.push({
             pathname:
                 location.pathname === pathConfig.admin.unpublished
-                    ? pathConfig.admin.unpublished
+                    ? /* istanbul ignore next */ pathConfig.admin.unpublished
                     : pathConfig.records.search,
             search: param(state),
             state,
@@ -209,6 +213,7 @@ export const SearchRecords = ({
         });
     };
 
+    /* istanbul ignore next */
     const facetsChanged = activeFacets => {
         updateSemaphore.current = true;
         setState({
@@ -226,18 +231,25 @@ export const SearchRecords = ({
         const exportResponse = actions.exportEspacePublications({
             ...exportFormat,
             ...state,
-            pageSize: state.bulkExportSelected ? PUB_SEARCH_BULK_EXPORT_SIZE : state.pageSize,
+            pageSize: state.bulkExportSelected
+                ? /* istanbul ignore next */ PUB_SEARCH_BULK_EXPORT_SIZE
+                : state.pageSize,
         });
 
         state.bulkExportSelected &&
+            /* istanbul ignore next */
             !!exportResponse &&
-            exportResponse.then(() => {
-                successConfirmationBox.current.showConfirmation();
-            });
+            /* istanbul ignore next */
+            exportResponse.then(
+                /* istanbul ignore next */ () => {
+                    successConfirmationBox.current.showConfirmation();
+                },
+            );
 
         return exportResponse;
     };
 
+    /* istanbul ignore next */
     const handleFacetExcludesFromSearchFields = searchFields => {
         const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
         // Iterate the searchfields and add their map from locale into the excluded facets array
@@ -325,7 +337,7 @@ export const SearchRecords = ({
                                         <span>{txt.loadingPagingMessage}</span>
                                     )}
                                     {state.bulkExportSelected && (
-                                        <span data-testid="search-bulk-export-size-message">
+                                        /* istanbul ignore next */ <span data-testid="search-bulk-export-size-message">
                                             {txt.bulkExportSizeMessage.replace(
                                                 '[bulkExportSize]',
                                                 PUB_SEARCH_BULK_EXPORT_SIZE,
@@ -412,6 +424,7 @@ export const SearchRecords = ({
                                     excludeFacetsList={
                                         (state.advancedSearchFields &&
                                             state.advancedSearchFields.length &&
+                                            /* istanbul ignore next */
                                             state.advancedSearchFields) ||
                                         locale.pages.searchRecords.facetsFilter.excludeFacetsList
                                     }
