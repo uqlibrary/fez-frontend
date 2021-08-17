@@ -39,7 +39,7 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
   - runs <http://localhost:3000/>
   - uses mock data from src/mock
 - `SESSION_COOKIE_NAME='${X-Uql-Token}' npm run start:url`
-  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `MY-VPN-IP    dev-espace.library.uq.edu.au` to your /etc/hosts)
+  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `MY-VPN-IP dev-espace.library.uq.edu.au` to your /etc/hosts)
   - uses **staging** api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
     - `${X-Uql-Token}` is the value of X-Uql-Token that can be found after logging into <https://www.library.uq.edu.au/> and using the Network tab
     - you will need to launch the browser with CORS disabled:
