@@ -9,8 +9,6 @@ import {
     PUBLICATION_TYPE_WORKING_PAPER,
 } from './general';
 
-export const DOI_ORG_PREFIX = '10.14264';
-
 // Field order values copied from locale/viewRecord.js:viewRecord.fields
 export const doiFields = {
     [PUBLICATION_TYPE_BOOK]: {

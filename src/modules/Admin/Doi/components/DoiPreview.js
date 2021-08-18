@@ -107,7 +107,7 @@ export const DoiPreview = ({ publication }) => {
                     <DoiField
                         label={!!doi ? txt.doiLabel.hasDoi : txt.doiLabel.noDoi}
                         field="rek_doi"
-                        data={doi || txt.doiTemplate(publication.rek_pid)}
+                        data={doi || txt.doiTemplate(publication.rek_pid, publication.rek_display_type)}
                     />
                 </StandardCard>
             </Grid>

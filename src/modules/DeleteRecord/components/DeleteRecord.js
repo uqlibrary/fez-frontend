@@ -18,7 +18,7 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { pathConfig, validation } from 'config';
-import { UQ_DOI_PREFIX } from 'config/general';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 export default class DeleteRecord extends PureComponent {
@@ -62,7 +62,8 @@ export default class DeleteRecord extends PureComponent {
             this.props.recordToDelete &&
             this.props.recordToDelete.fez_record_search_key_doi &&
             this.props.recordToDelete.fez_record_search_key_doi.rek_doi &&
-            this.props.recordToDelete.fez_record_search_key_doi.rek_doi.startsWith(UQ_DOI_PREFIX)
+            (this.props.recordToDelete.fez_record_search_key_doi.rek_doi.startsWith(DOI_CROSSREF_PREFIX) ||
+                this.props.recordToDelete.fez_record_search_key_doi.rek_doi.startsWith(DOI_DATACITE_PREFIX))
         );
     };
 
