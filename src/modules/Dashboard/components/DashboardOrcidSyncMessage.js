@@ -1,5 +1,5 @@
 import Grid from '@material-ui/core/Grid';
-import { Button } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 import React from 'react';
 import PropTypes from 'prop-types';
 import DoneIcon from '@material-ui/icons/Done';
