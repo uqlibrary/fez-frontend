@@ -274,7 +274,11 @@ export const journalDetails = {
                 'jnl_jcr_ssci_category_description_lookup': 'Public, Environmental & Occupational Health',
             }],
         },
-        'fez_journal_nature_index': null,
+        'fez_journal_nature_index': {
+            'jnl_nature_index_issn': '0090-0036',
+            'jnl_nature_index_source_date': '2019-01-01',
+            'jnl_nature_index_title': 'American journal of public health'
+        },
         'fez_journal_pubmed': {
             'jnl_pubmed_last_updated': '2021-01-28 22:36:22',
             'jnl_pubmed_source_id': '1254074',
