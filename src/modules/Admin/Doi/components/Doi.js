@@ -10,9 +10,17 @@ import Button from '@material-ui/core/Button';
 import pagesLocale from 'locale/pages';
 import viewRecordLocale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
-import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
+import {
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    RECORD_TYPE_COLLECTION,
+    RECORD_TYPE_COMMUNITY,
+    DOI_CROSSREF_PREFIX,
+    DOI_DATACITE_PREFIX,
+    DOI_DATACITE_NAME,
+    DOI_CROSSREF_NAME,
+} from 'config/general';
 import { pathConfig } from 'config/pathConfig';
-import { DOI_ORG_PREFIX, doiFields } from 'config/doi';
+import { doiFields } from 'config/doi';
 import { validation } from 'config';
 
 import { useConfirmationState } from 'hooks';
@@ -162,7 +170,7 @@ export const getErrorMessage = record => {
         }
 
         // Should not allow updates of existing Non-UQ DOIs
-        if (!!doi && doi.indexOf(DOI_ORG_PREFIX) !== 0) {
+        if (!!doi && doi.indexOf(DOI_CROSSREF_PREFIX) !== 0 && doi.indexOf(DOI_DATACITE_PREFIX) !== 0) {
             errorMessages.push(txt.alertMessages.uqIsNotPublisher);
         }
 
@@ -256,6 +264,17 @@ export const Doi = ({
     const navigateToViewPage = () => {
         window.location.assign(pathConfig.records.view(pid, true));
     };
+
+    if (record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION) {
+        txt.alertProps.progressAlert.message = txt.alertProps.progressAlert.message.replace(
+            DOI_CROSSREF_NAME,
+            DOI_DATACITE_NAME,
+        );
+        txt.alertProps.progressAlert.message = txt.alertProps.successAlert.message.replace(
+            DOI_CROSSREF_NAME,
+            DOI_DATACITE_NAME,
+        );
+    }
 
     const alertProps = validation.getErrorAlertProps({
         alertLocale: txt.alertProps,

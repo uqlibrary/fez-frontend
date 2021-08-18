@@ -38,24 +38,19 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
 - `npm run start:mock`
   - runs <http://localhost:3000/>
   - uses mock data from src/mock
-- `npm run start:url`
-
-  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
-  - uses staging data from the aws api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
-  - for a logged in session: `./scripts/dev-tools.sh start:staging-session` or `SESSION_COOKIE_NAME='mysessiontoken' npm run start:url`
-
-    - you may need to block CORS errors - eg with [Allow CORS: Access-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) Chrome Extension, or by launching the browser with CORS disabled.
-
+- `SESSION_COOKIE_NAME='${X-Uql-Token}' npm run start:url`
+  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `MY-VPN-IP dev-espace.library.uq.edu.au` to your /etc/hosts)
+  - uses **staging** api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
+    - `${X-Uql-Token}` is the value of X-Uql-Token that can be found after logging into <https://www.library.uq.edu.au/> and using the Network tab
+    - you will need to launch the browser with CORS disabled:
       ```sh
       google-chrome --disable-web-security --user-data-dir=/tmp/chrome-dev
       ```
-
-    - session token x-uql-token can easily be found by logging in at <https://www.library.uq.edu.au/> and
-      observing the header value in Network tab of Inspections
-    - You will also need to run Chrome in no-security mode by adding the alias `alias chrome-no-cors='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=~/chrome-dev-profile > /dev/null 2>&1'` and then running chrome by `chrome-no-cors`. or `open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
-
-  - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-
+      On Mac:
+      ```sh
+      open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+      ```
+  - for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
   - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/1>) as a backend!! Careful!!
