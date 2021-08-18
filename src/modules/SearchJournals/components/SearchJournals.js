@@ -31,7 +31,6 @@ export const SearchJournals = () => {
      * @returns void
      */
     const handleSearch = searchQuery => {
-        console.log('handleSearch');
         history.push({
             pathname: pathConfig.journals.search,
             search: param(searchQuery),
@@ -65,7 +64,6 @@ export const SearchJournals = () => {
      * @todo    Call journal search action
      */
     React.useEffect(() => {
-        console.log('Performing search');
         if (!!journalSearchQueryParams.keywords && Object.values(journalSearchQueryParams.keywords).length > 0) {
             dispatch(searchJournals(journalSearchQueryParams));
         }

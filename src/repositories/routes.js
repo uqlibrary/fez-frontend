@@ -443,37 +443,49 @@ export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
  * @returns
  */
 export const getKeywordsParams = keywords => {
-    console.log('to translate: ', keywords);
     if (!!keywords && Object.values(keywords).length > 0) {
-        /**
-         * @todo Form keywords params for API
-         */
+        const title = [];
+        const description = [];
+        const subject = [];
+        Object.keys(keywords).map(item => {
+            switch (keywords[item].type) {
+                case 'Title':
+                    title.push(keywords[item].text);
+                    break;
+                case 'Keyword':
+                    description.push(keywords[item].text);
+                    break;
+                case 'Subject':
+                    subject.push(keywords[item].text);
+                    break;
+                default:
+                    break;
+            }
+        });
+        return {
+            title: [...title],
+            description: [...description],
+            subject: [...subject],
+        };
     } else {
-        return '';
+        return {};
     }
-
-    return '';
 };
 
 export const JOURNAL_SEARCH_API = query => {
-    // const keywords = query,
-    //     page = 1,
-    //     pageSize = 20,
-    //     sortBy = 'score',
-    //     sortDirection = 'desc',
-    //     facets = {},
-    const searchQuery = getKeywordsParams(query);
-    console.log(searchQuery);
+    const searchQuery = getKeywordsParams(query.keywords);
+    // const searchFacets = getFacetsParams(query);
+    // filters[facets][Indexed in]
     return {
         apiUrl: 'journals/search',
         options: {
             params: {
-                query: '',
-                page: '',
-                per_page: '',
-                sort: '',
-                order_by: '', // sortDirection.toLowerCase(),
-                // ...getFacetsParams(facets),
+                ...searchQuery,
+                // ...searchFacets,
+                // page: '',
+                // per_page: '',
+                // sort: '',
+                // order_by: '', // sortDirection.toLowerCase(),
             },
         },
     };

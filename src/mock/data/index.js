@@ -68,6 +68,7 @@ export { journalLookup } from './journalLookup';
 export { keywordsSearch } from './journalKeywordSearches/bio';
 export { journalDetails } from './journal';
 export { journalsList } from './journals';
+export { journalList } from './journalList';
 
 export { bulkUpdatesList } from './bulkUpdates';
 
