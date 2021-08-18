@@ -1,181 +1,33 @@
 import React from 'react';
 import { locale } from 'locale';
+import { pathConfig, getSearchUrl } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
-import param from 'can-param';
-import { DEFAULT_QUERY_PARAMS } from 'config/general';
-import { createHash } from 'crypto';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+export const numericIdRegExp = '[0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
-
-const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUrl = '/records/search') => {
-    const params = {
-        ...DEFAULT_QUERY_PARAMS,
-        searchQueryParams: {
-            ...searchQuery,
-        },
-        activeFacets: {
-            ...DEFAULT_QUERY_PARAMS.activeFacets,
-            ...activeFacets,
-        },
-    };
-
-    if (searchQuery && !searchQuery.hasOwnProperty('all')) {
-        params.searchMode = 'advanced';
-    }
-
-    return `${searchUrl}?${param(params)}`;
-};
 
 const isAdmin = authorDetails => {
     return authorDetails && (!!authorDetails.is_administrator || !!authorDetails.is_super_administrator);
 };
 
-export const getDatastreamVersionQueryString = (fileName, checksum) => {
-    if (!checksum) {
-        return '';
-    }
-
-    const hash = createHash('md5')
-        .update(`${fileName}${checksum.trim()}`)
-        .digest('hex');
-
-    return hash;
-};
-
-export const pathConfig = {
-    index: '/',
-    dashboard: '/dashboard',
-    contact: '/contact',
-    hdrSubmission: '/rhdsubmission',
-    sbsSubmission: '/habslodge',
-    records: {
-        add: {
-            // the ordering below should not be changed. It's used in AddMissingRecord::getStepperIndex
-            find: '/records/add/find',
-            results: '/records/add/results',
-            new: '/records/add/new',
-        },
-        claim: '/records/claim',
-        fix: pid => `/records/${pid}/fix`,
-        incomplete: '/records/incomplete',
-        incompleteFix: pid => `/records/${pid}/incomplete`,
-        mine: '/records/mine',
-        possible: '/records/possible',
-        search: '/records/search',
-        view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
-    },
-    dataset: {
-        mine: '/data-collections/mine',
-        // legacy: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
-        add: '/data-collections/add',
-    },
-    // TODO: update how we get files after security is implemented in fez file api
-    // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
-    file: {
-        url: (pid, fileName, checksum = '') => {
-            let version = getDatastreamVersionQueryString(fileName, checksum);
-            if (version) {
-                version = `?dsi_version=${version}`;
-            }
-
-            return `${fullPath}/view/${pid}/${fileName}${version}`;
-        },
-    },
-    // TODO: review institutional status and herdc status links when we start administrative epic
-    list: {
-        author: (author, authorId) =>
-            getSearchUrl(
-                authorId
-                    ? {
-                          searchQuery: {
-                              rek_author_id: {
-                                  value: authorId,
-                                  label: `${authorId} (${author})`,
-                              },
-                          },
-                      }
-                    : {
-                          searchQuery: {
-                              rek_author: {
-                                  value: author,
-                              },
-                          },
-                      },
-            ),
-        journalName: journalName => getSearchUrl({ searchQuery: { rek_journal_name: { value: journalName } } }),
-        bookTitle: bookTitle => getSearchUrl({ searchQuery: { rek_book_title: { value: bookTitle } } }),
-        collection: collectionId => getSearchUrl({ searchQuery: { rek_ismemberof: { value: [collectionId] } } }),
-        contributor: contributor => getSearchUrl({ searchQuery: { rek_contributor: { value: contributor } } }),
-        conferenceName: conferenceName =>
-            getSearchUrl({ searchQuery: { rek_conference_name: { value: conferenceName } } }),
-        orgUnitName: orgUnitName => getSearchUrl({ searchQuery: { rek_org_unit_name: { value: orgUnitName } } }),
-        publisher: publisher => getSearchUrl({ searchQuery: { rek_publisher: { value: publisher } } }),
-        series: series => getSearchUrl({ searchQuery: { rek_series: { value: series } } }),
-        license: license => getSearchUrl({ searchQuery: { all: license } }),
-        jobNumber: jobNumber => getSearchUrl({ searchQuery: { all: jobNumber } }),
-        proceedingsTitle: proceedingsTitle => getSearchUrl({ searchQuery: { all: proceedingsTitle } }),
-        // Exact match on Any Field
-        keyword: keyword =>
-            getSearchUrl({
-                searchQuery: { all: '' },
-                activeFacets: {
-                    filters: {
-                        Keywords: keyword,
-                    },
-                },
-            }),
-        herdcStatus: herdcStatus => getSearchUrl({ searchQuery: { all: herdcStatus } }),
-        institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
-    },
-    admin: {
-        add: '/admin/add',
-        changeDisplayType: pid => `/admin/change-display-type/${pid}`,
-        collection: '/admin/collection',
-        community: '/admin/community',
-        delete: pid => `/admin/delete/${pid}`,
-        doi: pid => `/admin/doi/${pid}`,
-        edit: pid => `/admin/edit/${pid}`,
-        editCollection: pid => `/collections/${pid}/edit`,
-        editCommunity: pid => `/communities/${pid}/edit`,
-        editRecord: pid => `/records/${pid}/edit`,
-        favouriteSearch: '/admin/favourite-search',
-        legacyEspace: `${fullPath}/my_upo_tools.php`,
-        masquerade: '/admin/masquerade',
-        thirdPartyTools: '/tool/lookup',
-        unpublished: '/admin/unpublished',
-    },
-    authorIdentifiers: {
-        orcid: {
-            link: '/author-identifiers/orcid/link',
-            absoluteLink: `${window.location.origin}${
-                process.env.BRANCH === 'development' ? window.location.pathname : ''
-            }/author-identifiers/orcid/link`,
-            // unlink: '/author-identifiers/orcid/link'
-        },
-        googleScholar: {
-            link: '/author-identifiers/google-scholar/link',
-            // unlink: '/author-identifiers/google-scholar/link'
-        },
-    },
-    authorStatistics: {
-        url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
-    },
-    help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
-    digiteam: {
-        batchImport: '/batch-import',
-    },
+const isSuperAdmin = authorDetails => {
+    return authorDetails && !!authorDetails.is_super_administrator;
 };
 
 // a duplicate list of routes for
 export const flattedPathConfig = [
     '/admin/add',
+    '/admin/authors',
+    '/admin/bulk-updates',
     '/admin/change-display-type',
     '/admin/collection',
     '/admin/community',
+    '/admin/master-journal-list-ingest',
     '/admin/masquerade',
     '/admin/unpublished',
+    '/admin/users',
     '/admin/add',
     '/admin/edit',
     '/admin/delete',
@@ -189,25 +41,19 @@ export const flattedPathConfig = [
     '/dashboard',
     '/data-collections/add',
     '/data-collections/mine',
-    '/contact',
+    '/editorial-appointments',
+    '/journal/view',
     '/rhdsubmission',
     '/sbslodge_new',
     '/tool/lookup',
-    '/records/search',
-    '/records/mine',
-    '/records/possible',
-    '/records/incomplete',
     '/records/claim',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',
-    '/records/claim',
     '/records/incomplete',
     '/records/mine',
     '/records/possible',
     '/records/search',
-    '/rhdsubmission',
-    '/sbslodge_new',
     '/view',
 ];
 
@@ -228,6 +74,7 @@ export const getRoutesConfig = ({
     isHdrStudent = false,
 }) => {
     const pid = `:pid(${pidRegExp})`;
+    const id = `:id(${numericIdRegExp})`;
     const publicPages = [
         {
             path: pathConfig.index,
@@ -252,6 +99,12 @@ export const getRoutesConfig = ({
             component: components.SearchRecords,
             exact: true,
             pageTitle: locale.pages.searchRecords.title,
+        },
+        {
+            path: pathConfig.journal.view(id),
+            component: components.ViewJournal,
+            access: [roles.admin],
+            pageTitle: locale.pages.journal.view.title,
         },
         ...(!account
             ? [
@@ -410,9 +263,24 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.googleScholarLink.title,
                   },
+                  {
+                      path: pathConfig.editorialAppointments.list,
+                      component: components.MyEditorialAppointments,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.editorialAppointments.title,
+                  },
+                  {
+                      path: pathConfig.journal.view(id),
+                      component: components.ViewJournal,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.journal.view.title,
+                  },
               ]
             : []),
-        ...(authorDetails && isAdmin(authorDetails)
+
+        ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
                       path: pathConfig.admin.community,
@@ -428,6 +296,10 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.collection.title,
                   },
+              ]
+            : []),
+        ...(authorDetails && isAdmin(authorDetails)
+            ? [
                   {
                       path: pathConfig.admin.add,
                       render: props => <components.Admin {...props} createMode />,
@@ -492,6 +364,33 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
                   },
+                  {
+                      path: pathConfig.admin.bulkUpdates,
+                      component: components.BulkUpdates,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.bulkUpdates.title,
+                  },
+                  {
+                      path: pathConfig.journal.view(id),
+                      component: components.ViewJournal,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.journal.view.title,
+                  },
+                  {
+                      path: pathConfig.admin.manageAuthors,
+                      component: components.ManageAuthors,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.authors.title,
+                  },
+                  {
+                      path: pathConfig.admin.manageUsers,
+                      component: components.ManageUsers,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.users.title,
+                  },
               ]
             : []),
         ...(account && account.canMasquerade
@@ -527,6 +426,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.digiteam],
                       pageTitle: locale.components.digiTeam.batchImport.title,
+                  },
+                  {
+                      path: pathConfig.admin.masterJournalListIngest,
+                      component: components.MasterJournalListIngest,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.components.MasterJournalListIngest.title,
                   },
               ]
             : []),
@@ -624,6 +530,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.addMissingDataset,
                   },
                   {
+                      linkTo: pathConfig.editorialAppointments.list,
+                      ...locale.menu.myEditorialAppointments,
+                  },
+                  {
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
@@ -633,7 +543,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   },
               ]
             : []),
-        ...(authorDetails && isAdmin(authorDetails)
+        ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
                       linkTo: pathConfig.admin.community,
@@ -672,12 +582,28 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.unpublished,
                   },
                   {
+                      linkTo: pathConfig.admin.manageAuthors,
+                      ...locale.menu.manageAuthors,
+                  },
+                  {
+                      linkTo: pathConfig.admin.manageUsers,
+                      ...locale.menu.manageUsers,
+                  },
+                  {
                       linkTo: pathConfig.admin.legacyEspace,
                       ...locale.menu.legacyEspace,
                   },
                   {
                       linkTo: pathConfig.digiteam.batchImport,
                       ...locale.menu.digiteam.batchImport,
+                  },
+                  {
+                      linkTo: pathConfig.admin.masterJournalListIngest,
+                      ...locale.menu.masterJournalListIngest,
+                  },
+                  {
+                      linkTo: pathConfig.admin.bulkUpdates,
+                      ...locale.menu.bulkUpdates,
                   },
                   {
                       linkTo: pathConfig.admin.favouriteSearch,

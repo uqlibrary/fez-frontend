@@ -185,10 +185,10 @@ describe('Component ContributorRow', () => {
             { isShallow: true },
         );
 
-        const button = wrapper.find('KeyboardArrowUpIcon');
+        const button = wrapper.find('Memo(ForwardRef(KeyboardArrowUpIcon))');
         expect(button.length).toBe(1);
 
-        const buttonDown = wrapper.find('KeyboardArrowDownIcon');
+        const buttonDown = wrapper.find('Memo(ForwardRef(KeyboardArrowDownIcon))');
         expect(buttonDown.length).toBe(0);
 
         wrapper.find('#test-list-row-move-up-0').simulate('click');
@@ -206,13 +206,13 @@ describe('Component ContributorRow', () => {
             { isShallow: true },
         );
 
-        const button = wrapper.find('KeyboardArrowDownIcon');
+        const button = wrapper.find('Memo(ForwardRef(KeyboardArrowDownIcon))');
         expect(button.length).toBe(1);
 
         wrapper.find('#test-list-row-move-down-0').simulate('click');
         expect(testFunction).toBeCalled();
 
-        const buttonUp = wrapper.find('KeyboardArrowUpIcon');
+        const buttonUp = wrapper.find('Memo(ForwardRef(KeyboardArrowUpIcon))');
         expect(buttonUp.length).toBe(0);
         testFunction.mockReset();
     });
@@ -240,9 +240,9 @@ describe('Component ContributorRow', () => {
             },
             { isShallow: true },
         );
-        const button = wrapper.find('DeleteIcon');
+        const button = wrapper.find('Memo(ForwardRef(DeleteIcon))');
         expect(button.length).toBe(1);
-        wrapper.find('DeleteIcon').simulate('click');
+        wrapper.find('Memo(ForwardRef(DeleteIcon))').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
@@ -343,13 +343,13 @@ describe('Component ContributorRow', () => {
                 uqIdentifier: 123,
             },
         });
-        expect(wrapper.find('HowToRegIcon').length).toBe(1);
+        expect(wrapper.find('Memo(ForwardRef(HowToRegIcon))').length).toBe(1);
 
         const wrapper2 = setup({
             locale: {},
             disabled: true,
         });
-        expect(wrapper2.find('LockIcon').length).toBe(1);
+        expect(wrapper2.find('Memo(ForwardRef(LockIcon))').length).toBe(1);
     });
 
     it('Row should be clickable when showContributorAssignment set to true', () => {
@@ -389,7 +389,7 @@ describe('Component ContributorRow', () => {
         wrapper.update();
 
         wrapper
-            .find('ConfirmationBox')
+            .find('Memo(ConfirmationBox)')
             .props()
             .onAction();
         expect(onDeleteFn).toBeCalled();
@@ -418,7 +418,7 @@ describe('Component ContributorRow', () => {
 
         wrapper.find('#test-list-row-delete-0').simulate('click');
         wrapper
-            .find('ConfirmationBox')
+            .find('Memo(ConfirmationBox)')
             .props()
             .onAction();
         expect(onDeleteFn).not.toBeCalled();
@@ -465,10 +465,6 @@ describe('Component ContributorRow', () => {
                 orgtype: '453983',
             },
             width: 'xs',
-            classes: {
-                identifierName: 'test-class-1',
-                identifierSubtitle: 'test-class-2',
-            },
         });
 
         wrapper
@@ -490,9 +486,22 @@ describe('Component ContributorRow', () => {
                 affilication: AFFILIATION_TYPE_NOT_UQ,
                 orgtype: 'NGO',
             },
-            classes: {
-                highlighted: 'highlighted',
+            required: true,
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render contributor row linked class for admin users', () => {
+        const wrapper = setup({
+            contributor: {
+                nameAsPublished: 'Test',
+                orgaff: 'Test',
+                affilication: AFFILIATION_TYPE_NOT_UQ,
+                orgtype: 'NGO',
+                uqIdentifier: '123456',
             },
+            canEdit: true,
             required: true,
         });
 

@@ -29,7 +29,7 @@ context('Request correction form', () => {
             // .contains('h3', fixPageLocale.subTitle);
             .contains('h3', 'Work to be amended');
         cy.contains('.StandardCard .publicationCitation h6 a', record.rek_title);
-        cy.get('[class*="PublicationCitation-divider"] + div').contains('Scholarship of Teaching and Learning');
+        cy.get('[data-testid=rek-content-indicator]').contains('Scholarship of Teaching and Learning');
         cy.contains('Select an action');
         cy.contains('.Alert', 'Validation');
         cy.contains('button', 'Cancel');
@@ -58,9 +58,8 @@ context('Request correction form', () => {
             .contains(unfixFormLocale.title)
             .closest('.StandardCard')
             .should('contain', unfixFormLocale.alert.title)
-            .should('contain', unfixFormLocale.alert.message)
-            .contains('button', 'Submit')
-            .should('not.be.disabled');
+            .should('contain', unfixFormLocale.alert.message);
+        cy.contains('button', 'Submit').should('not.be.disabled');
     });
 
     it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {

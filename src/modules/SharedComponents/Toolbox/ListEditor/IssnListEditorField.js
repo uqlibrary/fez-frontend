@@ -7,10 +7,9 @@ export default function IssnListEditorField(fieldProps) {
         <ListEditor
             formComponent={IssnForm}
             errorText={fieldProps.meta ? fieldProps.meta.error : null}
-            error={fieldProps.meta && fieldProps.meta.error}
+            error={fieldProps.meta && !!fieldProps.meta.error}
             onChange={fieldProps.input.onChange}
             remindToAdd={fieldProps.remindToAdd}
-            maxInputLength={fieldProps.maxInputLength}
             {...fieldProps}
         />
     );

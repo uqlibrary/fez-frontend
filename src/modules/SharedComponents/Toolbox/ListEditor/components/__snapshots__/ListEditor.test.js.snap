@@ -7,7 +7,6 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -51,7 +50,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={0}
       item="one"
       itemTemplate={[Function]}
-      key="one"
+      key="one-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -67,7 +66,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={1}
       item="two"
       itemTemplate={[Function]}
-      key="two"
+      key="two-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -83,7 +82,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={2}
       item="three"
       itemTemplate={[Function]}
-      key="three"
+      key="three-2"
       listRowId="test-list-editor-list-row-2"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -99,7 +98,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={3}
       item="four"
       itemTemplate={[Function]}
-      key="four"
+      key="four-3"
       listRowId="test-list-editor-list-row-3"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -115,7 +114,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={4}
       item="five"
       itemTemplate={[Function]}
-      key="five"
+      key="five-4"
       listRowId="test-list-editor-list-row-4"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -131,7 +130,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={5}
       item="six"
       itemTemplate={[Function]}
-      key="six"
+      key="six-5"
       listRowId="test-list-editor-list-row-5"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -147,7 +146,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={6}
       item="seven"
       itemTemplate={[Function]}
-      key="seven"
+      key="seven-6"
       listRowId="test-list-editor-list-row-6"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -163,7 +162,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={7}
       item="eight"
       itemTemplate={[Function]}
-      key="eight"
+      key="eight-7"
       listRowId="test-list-editor-list-row-7"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -179,7 +178,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={8}
       item="nine"
       itemTemplate={[Function]}
-      key="nine"
+      key="nine-8"
       listRowId="test-list-editor-list-row-8"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -195,7 +194,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       index={9}
       item="ten"
       itemTemplate={[Function]}
-      key="ten"
+      key="ten-9"
       listRowId="test-list-editor-list-row-9"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -203,6 +202,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -213,7 +213,6 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -248,7 +247,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={0}
       item="one"
       itemTemplate={[Function]}
-      key="one"
+      key="one-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -264,7 +263,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={1}
       item="two"
       itemTemplate={[Function]}
-      key="two"
+      key="two-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -280,7 +279,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={2}
       item="three"
       itemTemplate={[Function]}
-      key="three"
+      key="three-2"
       listRowId="test-list-editor-list-row-2"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -296,7 +295,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={3}
       item="four"
       itemTemplate={[Function]}
-      key="four"
+      key="four-3"
       listRowId="test-list-editor-list-row-3"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -312,7 +311,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={4}
       item="five"
       itemTemplate={[Function]}
-      key="five"
+      key="five-4"
       listRowId="test-list-editor-list-row-4"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -328,7 +327,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={5}
       item="six"
       itemTemplate={[Function]}
-      key="six"
+      key="six-5"
       listRowId="test-list-editor-list-row-5"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -344,7 +343,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={6}
       item="seven"
       itemTemplate={[Function]}
-      key="seven"
+      key="seven-6"
       listRowId="test-list-editor-list-row-6"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -360,7 +359,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={7}
       item="eight"
       itemTemplate={[Function]}
-      key="eight"
+      key="eight-7"
       listRowId="test-list-editor-list-row-7"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -376,7 +375,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={8}
       item="nine"
       itemTemplate={[Function]}
-      key="nine"
+      key="nine-8"
       listRowId="test-list-editor-list-row-8"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -392,7 +391,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       index={9}
       item="ten"
       itemTemplate={[Function]}
-      key="ten"
+      key="ten-9"
       listRowId="test-list-editor-list-row-9"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -400,6 +399,7 @@ exports[`ListEditor tests Should render a list of many items inline 1`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -410,7 +410,6 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -445,7 +444,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={0}
       item="one"
       itemTemplate={[Function]}
-      key="one"
+      key="one-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -461,7 +460,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={1}
       item="two"
       itemTemplate={[Function]}
-      key="two"
+      key="two-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -477,7 +476,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={2}
       item="three"
       itemTemplate={[Function]}
-      key="three"
+      key="three-2"
       listRowId="test-list-editor-list-row-2"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -493,7 +492,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={3}
       item="four"
       itemTemplate={[Function]}
-      key="four"
+      key="four-3"
       listRowId="test-list-editor-list-row-3"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -509,7 +508,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={4}
       item="five"
       itemTemplate={[Function]}
-      key="five"
+      key="five-4"
       listRowId="test-list-editor-list-row-4"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -525,7 +524,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={5}
       item="six"
       itemTemplate={[Function]}
-      key="six"
+      key="six-5"
       listRowId="test-list-editor-list-row-5"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -541,7 +540,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={6}
       item="seven"
       itemTemplate={[Function]}
-      key="seven"
+      key="seven-6"
       listRowId="test-list-editor-list-row-6"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -557,7 +556,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={7}
       item="eight"
       itemTemplate={[Function]}
-      key="eight"
+      key="eight-7"
       listRowId="test-list-editor-list-row-7"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -573,7 +572,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={8}
       item="nine"
       itemTemplate={[Function]}
-      key="nine"
+      key="nine-8"
       listRowId="test-list-editor-list-row-8"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -589,7 +588,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       index={9}
       item="ten"
       itemTemplate={[Function]}
-      key="ten"
+      key="ten-9"
       listRowId="test-list-editor-list-row-9"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -597,6 +596,7 @@ exports[`ListEditor tests Should render a list of many items inline 2`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -607,7 +607,6 @@ exports[`ListEditor tests should add an object item and set state 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -622,6 +621,7 @@ exports[`ListEditor tests should add an object item and set state 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -632,7 +632,6 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -675,6 +674,7 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -685,7 +685,6 @@ exports[`ListEditor tests should add item and set state 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -700,6 +699,7 @@ exports[`ListEditor tests should add item and set state 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -710,7 +710,6 @@ exports[`ListEditor tests should add item and set state 2`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -753,6 +752,7 @@ exports[`ListEditor tests should add item and set state 2`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -763,7 +763,6 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
 >
   <formComponent
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -778,6 +777,7 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -788,7 +788,6 @@ exports[`ListEditor tests should move down an item 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -823,7 +822,7 @@ exports[`ListEditor tests should move down an item 1`] = `
       index={0}
       item="one"
       itemTemplate={[Function]}
-      key="one"
+      key="one-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -839,7 +838,7 @@ exports[`ListEditor tests should move down an item 1`] = `
       index={1}
       item="three"
       itemTemplate={[Function]}
-      key="three"
+      key="three-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -855,7 +854,7 @@ exports[`ListEditor tests should move down an item 1`] = `
       index={2}
       item="two"
       itemTemplate={[Function]}
-      key="two"
+      key="two-2"
       listRowId="test-list-editor-list-row-2"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -863,6 +862,7 @@ exports[`ListEditor tests should move down an item 1`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -873,7 +873,6 @@ exports[`ListEditor tests should move up an item 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -908,7 +907,7 @@ exports[`ListEditor tests should move up an item 1`] = `
       index={0}
       item="two"
       itemTemplate={[Function]}
-      key="two"
+      key="two-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -924,7 +923,7 @@ exports[`ListEditor tests should move up an item 1`] = `
       index={1}
       item="one"
       itemTemplate={[Function]}
-      key="one"
+      key="one-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -940,7 +939,7 @@ exports[`ListEditor tests should move up an item 1`] = `
       index={2}
       item="three"
       itemTemplate={[Function]}
-      key="three"
+      key="three-2"
       listRowId="test-list-editor-list-row-2"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -948,6 +947,7 @@ exports[`ListEditor tests should move up an item 1`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -958,7 +958,6 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -978,6 +977,7 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -988,7 +988,6 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
 >
   <mockConstructor
     disabled={true}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -1008,6 +1007,7 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -1018,7 +1018,6 @@ exports[`ListEditor tests should render full component with a defined className 
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -1038,6 +1037,7 @@ exports[`ListEditor tests should render full component with a defined className 
     data-testid="test-list-editor-list"
     id="test-list-editor-list"
   />
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -1048,7 +1048,6 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -1083,7 +1082,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
       index={0}
       item="test 1"
       itemTemplate={[Function]}
-      key="test 1"
+      key="test 1-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1099,7 +1098,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
       index={1}
       item="test 2"
       itemTemplate={[Function]}
-      key="test 2"
+      key="test 2-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1107,6 +1106,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -1117,7 +1117,6 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -1152,7 +1151,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
       index={0}
       item="test 1"
       itemTemplate={[Function]}
-      key="test 1"
+      key="test 1-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1168,7 +1167,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
       index={1}
       item="test 2"
       itemTemplate={[Function]}
-      key="test 2"
+      key="test 2-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1176,6 +1175,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -1186,7 +1186,6 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -1259,6 +1258,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;
 
@@ -1269,7 +1269,6 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
 >
   <mockConstructor
     disabled={false}
-    errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
     itemIndexSelectedToEdit={null}
@@ -1304,7 +1303,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
       index={0}
       item="one"
       itemTemplate={[Function]}
-      key="one"
+      key="one-0"
       listRowId="test-list-editor-list-row-0"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1320,7 +1319,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
       index={1}
       item="four"
       itemTemplate={[Function]}
-      key="four"
+      key="four-1"
       listRowId="test-list-editor-list-row-1"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1336,7 +1335,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
       index={2}
       item="three"
       itemTemplate={[Function]}
-      key="three"
+      key="three-2"
       listRowId="test-list-editor-list-row-2"
       onDelete={[Function]}
       onEdit={[Function]}
@@ -1344,5 +1343,6 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
       onMoveUp={[Function]}
     />
   </div>
+  <WithStyles(ForwardRef(FormHelperText)) />
 </div>
 `;

@@ -1,11 +1,12 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import FileUploadAccessSelector from './FileUploadAccessSelector';
 import FileUploadEmbargoDate from './FileUploadEmbargoDate';
 import FileUploadRowStatus from './FileUploadRowStatus';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
-import * as config from '../config';
+import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, INHERIT_OPTION } from '../config';
+import { selectFields } from 'locale/selectFields';
 
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
@@ -16,6 +17,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Attachment from '@material-ui/icons/Attachment';
 import CalendarTodayOutlined from '@material-ui/icons/CalendarTodayOutlined';
 import LockOutlined from '@material-ui/icons/LockOutlined';
+import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
 
 export class FileUploadRowMobileView extends PureComponent {
@@ -35,6 +37,7 @@ export class FileUploadRowMobileView extends PureComponent {
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -84,14 +87,39 @@ export class FileUploadRowMobileView extends PureComponent {
                                 secondary={fileAccessColumn}
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
-                                <FileUploadAccessSelector
-                                    value={accessConditionId}
+                                <NewGenericSelectField
+                                    value={accessConditionId || ''}
                                     onChange={this.props.onAccessConditionChange}
                                     disabled={disabled}
                                     ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
-                                    fileUploadAccessSelectorId={`dsi-open-access-${index}`}
+                                    genericSelectFieldId={`dsi-open-access-${index}`}
+                                    itemsList={
+                                        this.props.isAdmin
+                                            ? [...FILE_ACCESS_OPTIONS, INHERIT_OPTION]
+                                            : FILE_ACCESS_OPTIONS
+                                    }
+                                    displayEmpty
+                                    hideLabel
+                                    required
+                                    selectProps={{
+                                        className: classes.selector,
+                                        input: (
+                                            <Input
+                                                disableUnderline
+                                                autoFocus={index === focusOnIndex}
+                                                classes={{
+                                                    root: !!accessConditionId ? classes.selected : classes.placeholder,
+                                                }}
+                                            />
+                                        ),
+                                    }}
+                                    formHelperTextProps={{
+                                        className: classes.error,
+                                    }}
+                                    error={!accessConditionId && selectFields.accessCondition.errorMessage}
+                                    selectPrompt={selectFields.accessCondition.selectPrompt}
                                 />
                             </ListItemText>
                         </ListItem>
@@ -104,12 +132,12 @@ export class FileUploadRowMobileView extends PureComponent {
                                 primaryTypographyProps={{ variant: 'body1' }}
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
-                                {requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID && (
+                                {requireOpenAccessStatus && accessConditionId !== FILE_ACCESS_CONDITION_OPEN && (
                                     <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
                                         {embargoDateClosedAccess}
                                     </Typography>
                                 )}
-                                {requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID && (
+                                {requireOpenAccessStatus && accessConditionId === FILE_ACCESS_CONDITION_OPEN && (
                                     <FileUploadEmbargoDate
                                         value={embargoDate}
                                         onChange={this.props.onEmbargoDateChange}

@@ -193,7 +193,8 @@ describe('Backend routes method', () => {
     it('should construct url for SEARCH_INTERNAL_RECORDS_API', () => {
         const testCases = [
             {
-                values: { searchQuery: 'title search' },
+                query: { searchQuery: 'title search' },
+                route: 'search',
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -209,7 +210,7 @@ describe('Backend routes method', () => {
                 },
             },
             {
-                values: {
+                query: {
                     searchQuery: 'title search',
                     page: 2,
                     pageSize: 30,
@@ -217,6 +218,7 @@ describe('Backend routes method', () => {
                     sortDirection: 'asc',
                     facets: { filters: { one: 'one facet' } },
                 },
+                route: 'search',
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -232,10 +234,37 @@ describe('Backend routes method', () => {
                     },
                 },
             },
+            {
+                query: {
+                    searchQuery: 'title search',
+                    page: 2,
+                    pageSize: 500,
+                    sortBy: 'score',
+                    sortDirection: 'asc',
+                    facets: { filters: { one: 'one facet' } },
+                },
+                route: 'export',
+                expected: {
+                    apiUrl: 'records/export',
+                    options: {
+                        params: {
+                            export_to: '',
+                            order_by: 'asc',
+                            page: 2,
+                            per_page: 500,
+                            sort: 'score',
+                            title: 'title search',
+                            ['filters[facets][one]']: 'one facet',
+                            querystring:
+                                'searchQuery%3Dtitle%2Bsearch%26page%3D2%26pageSize%3D500%26sortBy%3Dscore%26sortDirection%3Dasc%26facets%255Bfilters%255D%255Bone%255D%3Done%2Bfacet',
+                        },
+                    },
+                },
+            },
         ];
 
         testCases.map(item => {
-            expect(routes.SEARCH_INTERNAL_RECORDS_API({ ...item.values })).toEqual(item.expected);
+            expect(routes.SEARCH_INTERNAL_RECORDS_API({ ...item.query }, item.route)).toEqual(item.expected);
         });
     });
 
@@ -575,6 +604,12 @@ describe('Backend routes method', () => {
         });
     });
 
+    it('should construct url for AUTHORS_SEARCH_API without search query', () => {
+        expect(routes.AUTHORS_SEARCH_API()).toEqual({
+            apiUrl: 'fez-authors/search',
+        });
+    });
+
     it('should construct url for AUTHOR_DETAILS_API', () => {
         expect(routes.AUTHOR_DETAILS_API({ userId: '410' })).toEqual({ apiUrl: 'authors/details/410' });
     });
@@ -640,10 +675,6 @@ describe('Backend routes method', () => {
 
     it('should construct url for GET_NEWS_API', () => {
         expect(routes.GET_NEWS_API()).toEqual({ apiUrl: 'fez-news' });
-    });
-
-    it('should construct url for GET_ACML_QUICK_TEMPLATES_API', () => {
-        expect(routes.GET_ACML_QUICK_TEMPLATES_API()).toEqual({ apiUrl: 'acml/quick-templates' });
     });
 
     it('should construct url for AUTHOR_TRENDING_PUBLICATIONS_API', () => {
@@ -742,7 +773,7 @@ describe('Backend routes method', () => {
             options: {
                 params: {
                     rule: 'lookup',
-                    query: 'a b c ',
+                    query: 'a b-c ',
                 },
             },
         });
@@ -805,6 +836,12 @@ describe('Backend routes method', () => {
         });
     });
 
+    it('should construct url for BULK_UPDATES_API', () => {
+        expect(routes.BULK_UPDATES_API()).toEqual({
+            apiUrl: 'records/bulk-updates',
+        });
+    });
+
     it('should construct url for UNLOCK_RECORD_API', () => {
         const pid = 'UQ:123456';
         expect(routes.UNLOCK_RECORD_API({ pid })).toEqual({
@@ -812,9 +849,27 @@ describe('Backend routes method', () => {
         });
     });
 
-    it('should construct url for favourite search list api', () => {
+    it('should construct url for favourite search list api without id', () => {
         expect(routes.FAVOURITE_SEARCH_LIST_API()).toEqual({
             apiUrl: 'favourite_search',
+        });
+    });
+
+    it('should construct url for favourite search list api with id', () => {
+        expect(routes.FAVOURITE_SEARCH_LIST_API({ id: '1' })).toEqual({
+            apiUrl: 'favourite_search/1',
+        });
+    });
+
+    it('should construct url for journal lookup api', () => {
+        expect(routes.JOURNAL_LOOKUP_API({ query: 'test' })).toEqual({
+            apiUrl: 'journals/search?rule=lookup&query=test',
+        });
+    });
+
+    it('should construct url for journal details api', () => {
+        expect(routes.JOURNAL_API({ id: '12' })).toEqual({
+            apiUrl: 'journals/12',
         });
     });
 });

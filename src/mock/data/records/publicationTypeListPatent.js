@@ -8,42 +8,42 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:324188",
-            "rek_title_xsdmf_id": 10860,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Immunogenic compositions and methods therefor",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 185,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6714,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2013-02-14T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 9148,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2014-02-26T13:32:41Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-22T13:18:32Z",
             "rek_file_downloads": 0,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 7210,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Patent",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
             "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": 11400,
+            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "&nbsp;The present invention provides compositions relating to viral capsomeres which comprise foreign immunogenic sequences for use in pharmaceutical compositions and methods of producing such compositions, and related isolated or purified protein and nucleic acid molecules, vectors, host cells, compositions, and methods of use to augment an immune response, immunise an animal and prophylactically or therapeutically treat a disease, disorder or condition. The viral capsomere may be derived from a polyomavirus and comprise an immunogen of interest at the N-terminus and further at the C-terminus and/or at one or more exposed loops of the capsomere.",
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1015,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
             "rek_subtype_xsdmf_id": null,
             "rek_subtype": null,
             "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": 12492,
+            "rek_herdc_notes_xsdmf_id": null,
             "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": null,
             "rek_wok_doc_type_xsdmf_id": null,
@@ -55,7 +55,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -66,14 +66,14 @@ export default {
                 {
                     "rek_author_id": 28781641,
                     "rek_author_pid": "UQ:324188",
-                    "rek_author_xsdmf_id": 6704,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Middelberg, Anton P. J.",
                     "rek_author_order": 1
                 },
                 {
                     "rek_author_id": 28781642,
                     "rek_author_pid": "UQ:324188",
-                    "rek_author_xsdmf_id": 6704,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Lua, Linda H. L",
                     "rek_author_order": 2
                 }
@@ -87,7 +87,7 @@ export default {
                 {
                     "rek_author_id_id": 28156989,
                     "rek_author_id_pid": "UQ:324188",
-                    "rek_author_id_xsdmf_id": 6699,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 2797,
                     "rek_author_id_order": 1,
                     "rek_author_id_lookup": "Middelberg, Anton P.J."
@@ -95,7 +95,7 @@ export default {
                 {
                     "rek_author_id_id": 28156990,
                     "rek_author_id_pid": "UQ:324188",
-                    "rek_author_id_xsdmf_id": 6699,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 6948,
                     "rek_author_id_order": 2,
                     "rek_author_id_lookup": "Linda Lua"
@@ -111,14 +111,14 @@ export default {
             "fez_record_search_key_country_of_issue": {
                 "rek_country_of_issue_id": 1754,
                 "rek_country_of_issue_pid": "UQ:324188",
-                "rek_country_of_issue_xsdmf_id": 6740,
+                "rek_country_of_issue_xsdmf_id": null,
                 "rek_country_of_issue": "Australia"
             },
             "fez_record_search_key_datastream_policy": null,
             "fez_record_search_key_date_available": {
                 "rek_date_available_id": 909459,
                 "rek_date_available_pid": "UQ:324188",
-                "rek_date_available_xsdmf_id": 10866,
+                "rek_date_available_xsdmf_id": null,
                 "rek_date_available": "2013-01-01T00:00:00Z"
             },
             "fez_record_search_key_file_attachment_access_condition": [],
@@ -134,7 +134,7 @@ export default {
             "fez_record_search_key_institutional_status": {
                 "rek_institutional_status_id": 3216780,
                 "rek_institutional_status_pid": "UQ:324188",
-                "rek_institutional_status_xsdmf_id": 12406,
+                "rek_institutional_status_xsdmf_id": null,
                 "rek_institutional_status": 453223,
                 "rek_institutional_status_lookup": "UQ"
             },
@@ -144,7 +144,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11479388,
                     "rek_ismemberof_pid": "UQ:324188",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:3860",
                     "rek_ismemberof_order": 1,
                     "parent": {
@@ -160,7 +160,7 @@ export default {
                 {
                     "rek_language_id": 5204858,
                     "rek_language_pid": "UQ:324188",
-                    "rek_language_xsdmf_id": 10867,
+                    "rek_language_xsdmf_id": null,
                     "rek_language": "eng",
                     "rek_language_order": 1
                 }
@@ -168,7 +168,7 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 28752,
                 "rek_license_pid": "UQ:324188",
-                "rek_license_xsdmf_id": 16246,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
@@ -180,21 +180,21 @@ export default {
             "fez_record_search_key_patent_number": {
                 "rek_patent_number_id": 2616,
                 "rek_patent_number_pid": "UQ:324188",
-                "rek_patent_number_xsdmf_id": 10869,
+                "rek_patent_number_xsdmf_id": null,
                 "rek_patent_number": "WO2013020183 A1"
             },
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4414951,
                 "rek_publisher_pid": "UQ:324188",
-                "rek_publisher_xsdmf_id": 10567,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "The University of Queensland"
             },
             "fez_record_search_key_refereed": null,
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1161254,
                 "rek_refereed_source_pid": "UQ:324188",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
@@ -205,7 +205,7 @@ export default {
             "fez_record_search_key_issn": [],
             "fez_record_search_key_doi": null,
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Patent",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

@@ -1,7 +1,9 @@
 import React from 'react';
-import AttachedFiles from './AttachedFiles';
+import AttachedFiles, { getFileOpenAccessStatus } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
 import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+
+import { openAccessConfig } from 'config';
 
 import mediaQuery from 'css-mediaquery';
 
@@ -13,11 +15,10 @@ function createMatchMedia(width) {
     });
 }
 
-jest.mock('hooks');
-import { userIsAdmin } from 'hooks';
+import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 jest.mock('context');
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -32,11 +33,14 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('AttachedFiles component', () => {
-    beforeEach(() => {
+    beforeAll(() => {
         window.matchMedia = createMatchMedia(window.innerWidth);
 
         useRecordContext.mockImplementation(() => ({
             record: recordWithDatastreams,
+        }));
+        useFormValuesContext.mockImplementation(() => ({
+            openAccessStatusId: 0,
         }));
     });
 
@@ -73,6 +77,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should render admin view', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const { getByText } = setup({ canEdit: true });
         expect(getByText('MyUQeSpace_Researcher_Guidelines_current.pdf')).toBeInTheDocument();
@@ -111,6 +116,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should render admin edit view', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const onDeleteFn = jest.fn();
         const onDescriptionChangeFn = jest.fn();
@@ -124,14 +130,17 @@ describe('AttachedFiles component', () => {
         expect(onDeleteFn).toHaveBeenCalledWith(3);
 
         fireEvent.change(getByTestId('dsi-label-2-input'), { target: { value: 'test file description' } });
-        fireEvent.blur(getByTestId('dsi-label-2-input'));
         expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
     });
 
     it('should render embargo date field for open access file with embargo date in future', async () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
+        }));
+        useFormValuesContext.mockImplementation(() => ({
+            openAccessStatusId: 453695,
         }));
         const onDateChangeFn = jest.fn();
         const { getByText, getAllByRole } = setup({
@@ -158,12 +167,12 @@ describe('AttachedFiles component', () => {
             fireEvent.click(getAllByRole('button')[0]);
         });
         const calendar = await waitFor(() => getAllByRole('presentation')[0]);
-
-        fireEvent.click(getByText('28', calendar));
-        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-28', 0);
+        fireEvent.click(getByText('26', calendar));
+        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-26', 0);
     });
 
     it('should show alert for advisory statement', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: 'test advisory statement' } },
@@ -181,6 +190,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should show alert for advisory statement from locale', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         useRecordContext.mockImplementation(() => ({
             record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: null } },
@@ -199,6 +209,7 @@ describe('AttachedFiles component', () => {
 
     it('should toggle preview', async done => {
         Object.defineProperty(window.navigator, 'userAgent', { value: 'FireFox' });
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const onDateChangeFn = jest.fn();
         const { getByTitle, getByTestId, queryByTestId, getByText } = setup({
@@ -290,5 +301,23 @@ describe('AttachedFiles component', () => {
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
         done();
+    });
+
+    it('should have helper to get the open access status of a file', () => {
+        const testDate = '2040-09-09';
+        const openAccessStatusId = openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION;
+        const expected1 = {
+            isOpenAccess: false,
+            embargoDate: testDate,
+            openAccessStatusId,
+            securityStatus: true,
+        };
+        const expected2 = {
+            isOpenAccess: true,
+            embargoDate: null,
+            openAccessStatusId,
+        };
+        expect(getFileOpenAccessStatus(openAccessStatusId, { dsi_embargo_date: testDate })).toEqual(expected1);
+        expect(getFileOpenAccessStatus(openAccessStatusId, { dsi_embargo_date: '1920-09-09' })).toEqual(expected2);
     });
 });

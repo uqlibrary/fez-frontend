@@ -11,7 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 
 import { DOCUMENT_TYPES_EDIT_ONLY, publicationTypes } from 'config/general';
-import { routes, validation } from 'config';
+import { pathConfig, validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 import viewRecordLocale from 'locale/viewRecord';
@@ -40,7 +40,7 @@ const renderTitle = record => {
     const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
     const pageTitle = ReactHtmlParser(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
     return (
-        <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="changeDisplayType-page-title">
+        <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="change-display-type-page-title">
             {pageTitle}
         </Typography>
     );
@@ -127,7 +127,7 @@ export const ChangeDisplayType = ({
     const navigateToViewPage = () => {
         /* istanbul ignore else */
         if (!!pid && validation.isValidPid(pid)) {
-            window.location.assign(routes.pathConfig.records.view(pid, true));
+            window.location.assign(pathConfig.records.view(pid, true));
         }
     };
 
@@ -135,7 +135,7 @@ export const ChangeDisplayType = ({
     /* istanbul ignore next */
     const navigateToEditRecord = () => {
         if (!!pid && validation.isValidPid(pid)) {
-            window.location.assign(routes.pathConfig.admin.edit(pid));
+            window.location.assign(pathConfig.admin.edit(pid));
         }
     };
 
@@ -209,8 +209,8 @@ export const ChangeDisplayType = ({
                             /* istanbul ignore next */
                             <Grid item xs={12}>
                                 <Alert
-                                    testId="changeDisplayType-submit-status"
-                                    alertId="changeDisplayType-submit-status"
+                                    testId="change-display-type-submit-status"
+                                    alertId="change-display-type-submit-status"
                                     {...alertProps}
                                 />
                             </Grid>
@@ -220,8 +220,8 @@ export const ChangeDisplayType = ({
                                 <Grid item xs={false} sm />
                                 <Grid item xs={12} sm="auto">
                                     <Button
-                                        id="rek-changeDisplayType-cancel"
-                                        data-testid="rek-changeDisplayType-cancel"
+                                        id="rek-change-display-type-cancel"
+                                        data-testid="rek-change-display-type-cancel"
                                         disabled={saveRequesting}
                                         variant="contained"
                                         fullWidth
@@ -233,8 +233,8 @@ export const ChangeDisplayType = ({
 
                                 <Grid item xs={12} sm="auto">
                                     <Button
-                                        id="changeDisplayType-submit"
-                                        data-testid="changeDisplayType-submit"
+                                        id="change-display-type-submit"
+                                        data-testid="change-display-type-submit"
                                         variant="contained"
                                         color="primary"
                                         fullWidth

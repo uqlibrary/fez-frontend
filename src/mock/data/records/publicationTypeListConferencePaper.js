@@ -8,42 +8,42 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:228367",
-            "rek_title_xsdmf_id": 10605,
+            "rek_title_xsdmf_id": null,
             'rek_title': 'Cost analysis: outsourcing radiofrequency ablution for massiv<sub>e</sub>&nbsp;renal m<sup>a</sup>sses&nbsp;™&nbsp;♦',
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 130,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 4041,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2009-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 12996,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2011-02-08T15:55:10Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-04-25T16:53:46Z",
             "rek_file_downloads": 61,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 7203,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Conference Paper",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": "Fully published paper",
-            "rek_formatted_title_xsdmf_id": 11473,
+            "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": "Von eingebetteten systemen zu cyber-physical systems: Eine neue forschungsdimension f&uuml;r verteilte eingebettete realzeitsysteme<br />",
-            "rek_formatted_abstract_xsdmf_id": 11477,
+            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "Das Hauptanliegen des Papiers ist, ein Paradigma f&uuml;r Probleme mit neuartigen Integrationsanforderungen f&uuml;r Forschung und Entwicklung in verteilten eingebetteten Echtzeitsystemen zu motivieren und vorzustellen, n&auml;mlich den Begriff Cyber-Physical Systems. Bei einer in letzter Zeit stark zunehmenden Anzahl von Realzeitanwendungen k&ouml;nnen ohne die Ber&uuml;cksichtigung solcher Forderungen keine praktisch brauchbaren L&ouml;sungen erwartet werden. Einige Anwendungsfelder werden angesprochen. Im Einzelnen werden dann f&uuml;r Elektroautos, die mit erneuerbaren Energien betrieben werden sollen, einerseits die Management-, verteilte Verhandlungs- und Verteilungsprobleme der ben&ouml;tigten Energie in einem bottom-up Ansatz gel&ouml;st. Andererseits wird als Teil unserer Projektarbeit die Bereitstellung von Reserveenergie (bei Spannungseinbr&uml;uchen oder lokalen Verbrauchsspitzen) f&uuml;r den allgemeinen Bedarf durch Autobatterien vorgestellt. Es zeigt sich, dass dies effizienter und wesentlich kurzfristiger in unserem verteilten Vorgehen geschehen kann als in traditionellen Verfahren. <br /><br /> <i>[The main purpose of the paper is to motivate a new paradigm for problems with integration requirements for research and development in distributed embedded real-time systems and present, namely the term Cyber​​-Physical Systems. In a recently rapidly increasing number of real-time applications without the consideration of such claims can not practically useful solutions are expected. Some fields of application are addressed. In detail, then for electric cars to be powered by renewable energy, released on the one hand the management, distributed negotiation and distribution problems of the energy required in a bottom-up approach. On the other hand, is presented as part of our project work, the provision of reserve energy (for voltage drops in claim local consumption or tips) for general use by car batteries. It turns out that this can be done more efficiently and significantly short of our distributed approach than traditional methods.]</i>",
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 949,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12548,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Fully published paper",
             "rek_scopus_citation_count": 0,
-            "rek_herdc_notes_xsdmf_id": 12432,
+            "rek_herdc_notes_xsdmf_id": null,
             "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": "cp",
             "rek_wok_doc_type_xsdmf_id": null,
@@ -55,7 +55,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": 39659874,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -275,14 +275,14 @@ export default {
                 {
                     "rek_grant_acronym_id": 15442,
                     "rek_grant_acronym_pid": "UQ:228367",
-                    "rek_grant_acronym_xsdmf_id": 0,
+                    "rek_grant_acronym_xsdmf_id": null,
                     "rek_grant_acronym": "DFG",
                     "rek_grant_acronym_order": 1
                 },
                 {
                     "rek_grant_acronym_id": 15443,
                     "rek_grant_acronym_pid": "UQ:228367",
-                    "rek_grant_acronym_xsdmf_id": 0,
+                    "rek_grant_acronym_xsdmf_id": null,
                     "rek_grant_acronym": "DFG",
                     "rek_grant_acronym_order": 2
                 }
@@ -291,14 +291,14 @@ export default {
                 {
                     "rek_grant_agency_id": 115266,
                     "rek_grant_agency_pid": "UQ:228367",
-                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_xsdmf_id": null,
                     "rek_grant_agency": "Deutsche Forschungsgemeinschaft",
                     "rek_grant_agency_order": 1
                 },
                 {
                     "rek_grant_agency_id": 115267,
                     "rek_grant_agency_pid": "UQ:228367",
-                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_xsdmf_id": null,
                     "rek_grant_agency": "Deutsche Forschungsgemeinschaft",
                     "rek_grant_agency_order": 2
                 }
@@ -309,14 +309,14 @@ export default {
                 {
                     "rek_grant_id_id": 57910,
                     "rek_grant_id_pid": "UQ:228367",
-                    "rek_grant_id_xsdmf_id": 0,
+                    "rek_grant_id_xsdmf_id": null,
                     "rek_grant_id": "HA 937/32-1",
                     "rek_grant_id_order": 1
                 },
                 {
                     "rek_grant_id_id": 57911,
                     "rek_grant_id_pid": "UQ:228367",
-                    "rek_grant_id_xsdmf_id": 0,
+                    "rek_grant_id_xsdmf_id": null,
                     "rek_grant_id": "WE 2816/4-1",
                     "rek_grant_id_order": 2
                 }
@@ -325,7 +325,7 @@ export default {
                 {
                     "rek_grant_text_id": 3153,
                     "rek_grant_text_pid": "UQ:228367",
-                    "rek_grant_text_xsdmf_id": 0,
+                    "rek_grant_text_xsdmf_id": null,
                     "rek_grant_text": "Diese Projekte werden teilweise gefördert von der DFG unter WE 2816/4-1 und HA 937/32-1 sowie von E.on unter 2007/GI_UoDort-ESW_IEODN",
                     "rek_grant_text_order": 1
                 }
@@ -469,9 +469,9 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 24759,
                 "rek_license_pid": "UQ:228367",
-                "rek_license_xsdmf_id": 16636,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 453609,
-                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+                "rek_license_lookup": "Creative Commons Attribution-NoDerivatives 3.0 International (CC BY-ND 3.0)"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
@@ -672,7 +672,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Conference Paper",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -689,28 +689,28 @@ export default {
                 {
                     "rek_author_affiliation_country_id": 988464,
                     "rek_author_affiliation_country_pid": "UQ:228367",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country": "deu",
                     "rek_author_affiliation_country_order": 1
                 },
                 {
                     "rek_author_affiliation_country_id": 988465,
                     "rek_author_affiliation_country_pid": "UQ:228367",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country": "deu",
                     "rek_author_affiliation_country_order": 2
                 },
                 {
                     "rek_author_affiliation_country_id": 988466,
                     "rek_author_affiliation_country_pid": "UQ:228367",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country": "deu",
                     "rek_author_affiliation_country_order": 3
                 },
                 {
                     "rek_author_affiliation_country_id": 988467,
                     "rek_author_affiliation_country_pid": "UQ:228367",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country": "deu",
                     "rek_author_affiliation_country_order": 4
                 }
@@ -719,28 +719,28 @@ export default {
                 {
                     "rek_author_affiliation_full_address_id": 1049904,
                     "rek_author_affiliation_full_address_pid": "UQ:228367",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address": "Dortmund",
                     "rek_author_affiliation_full_address_order": 1
                 },
                 {
                     "rek_author_affiliation_full_address_id": 1049905,
                     "rek_author_affiliation_full_address_pid": "UQ:228367",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address": "Dortmund",
                     "rek_author_affiliation_full_address_order": 2
                 },
                 {
                     "rek_author_affiliation_full_address_id": 1049906,
                     "rek_author_affiliation_full_address_pid": "UQ:228367",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address": "Dortmund",
                     "rek_author_affiliation_full_address_order": 3
                 },
                 {
                     "rek_author_affiliation_full_address_id": 1049907,
                     "rek_author_affiliation_full_address_pid": "UQ:228367",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address": "Dortmund",
                     "rek_author_affiliation_full_address_order": 4
                 }
@@ -749,28 +749,28 @@ export default {
                 {
                     "rek_author_affiliation_name_id": 989840,
                     "rek_author_affiliation_name_pid": "UQ:228367",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "Fakultät für Informatik,Technische Universität Dortmund",
                     "rek_author_affiliation_name_order": 1
                 },
                 {
                     "rek_author_affiliation_name_id": 989841,
                     "rek_author_affiliation_name_pid": "UQ:228367",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "Fakultät für Informatik,Technische Universität Dortmund",
                     "rek_author_affiliation_name_order": 2
                 },
                 {
                     "rek_author_affiliation_name_id": 989842,
                     "rek_author_affiliation_name_pid": "UQ:228367",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "Fakultät für Elektrotechnik,Technische Universität Dortmund",
                     "rek_author_affiliation_name_order": 3
                 },
                 {
                     "rek_author_affiliation_name_id": 989843,
                     "rek_author_affiliation_name_pid": "UQ:228367",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "Fakultät für Elektrotechnik,Technische Universität Dortmund",
                     "rek_author_affiliation_name_order": 4
                 }

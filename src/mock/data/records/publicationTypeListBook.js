@@ -8,39 +8,39 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:335214",
-            "rek_title_xsdmf_id": 10612,
+            "rek_title_xsdmf_id": null,
             "rek_title": "El Reino Del Galapago: Volviendo A Su Edad De Oro",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 174,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6044,
+            "rek_date_xsdmf_id": null,
             "rek_date": "1999-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 10202,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2014-07-23T14:14:54Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-05-19T02:31:36Z",
             "rek_file_downloads": 1,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 7202,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Book",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
-            "rek_formatted_title_xsdmf_id": 11480,
+            "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": "El Reino Del Gala\u0301pago: Volviendo A Su Edad De Oro<br \/>",
-            "rek_formatted_abstract_xsdmf_id": 11484,
+            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "Relatos de mas de treinta a&ntilde;os de conservaci&oacute;n de las tortugas por parte de las organizaciones que se dedican a tales fines, as&iacute; como tambi&eacute;n relata la historia de las islas Gal&aacute;pagos desde su descubrimiento en 1535 y el proceso de desaparici&oacute;n de las tortugas de su habitad natural por parte del ser humano. Informa del trabajo realizado por organizaciones de conservaci&oacute;n que llevan a&ntilde;os dedicados a la conservaci&oacute;n de la fauna y la flora de las islas. <br \/>",
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 923,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12377,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Research book (original research)",
             "rek_scopus_citation_count": null,
             "rek_herdc_notes_xsdmf_id": null,
@@ -56,7 +56,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -68,13 +68,13 @@ export default {
             "fez_record_search_key_author": [{
                 "rek_author_id": 28921814,
                 "rek_author_pid": "UQ:335214",
-                "rek_author_xsdmf_id": 6034,
+                "rek_author_xsdmf_id": null,
                 "rek_author": "Merlen, Godfrey",
                 "rek_author_order": 1
             }, {
                 "rek_author_id": 28921815,
                 "rek_author_pid": "UQ:335214",
-                "rek_author_xsdmf_id": 6034,
+                "rek_author_xsdmf_id": null,
                 "rek_author": "Rojas-Lizana, Isolda",
                 "rek_author_order": 2
             }],
@@ -86,13 +86,13 @@ export default {
             "fez_record_search_key_author_id": [{
                 "rek_author_id_id": 28291133,
                 "rek_author_id_pid": "UQ:335214",
-                "rek_author_id_xsdmf_id": 6029,
+                "rek_author_id_xsdmf_id": null,
                 "rek_author_id": 0,
                 "rek_author_id_order": 1
             }, {
                 "rek_author_id_id": 28291134,
                 "rek_author_id_pid": "UQ:335214",
-                "rek_author_id_xsdmf_id": 6029,
+                "rek_author_id_xsdmf_id": null,
                 "rek_author_id": 7970,
                 "rek_author_id_order": 2,
                 "rek_author_id_lookup": "Rojas-Lizana, Isolda "
@@ -116,13 +116,13 @@ export default {
             "fez_record_search_key_file_attachment_name": [{
                 "rek_file_attachment_name_id": 3910826,
                 "rek_file_attachment_name_pid": "UQ:335214",
-                "rek_file_attachment_name_xsdmf_id": 6166,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "UQ335214_frontmatter.pdf",
                 "rek_file_attachment_name_order": 1
             }, {
                 "rek_file_attachment_name_id": 3910827,
                 "rek_file_attachment_name_pid": "UQ:335214",
-                "rek_file_attachment_name_xsdmf_id": 6166,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "presmd_UQ335214_frontmatter.xml",
                 "rek_file_attachment_name_order": 2
             }],
@@ -136,34 +136,34 @@ export default {
             "fez_record_search_key_herdc_code": {
                 "rek_herdc_code_id": 4665435,
                 "rek_herdc_code_pid": "UQ:335214",
-                "rek_herdc_code_xsdmf_id": 12392,
+                "rek_herdc_code_xsdmf_id": null,
                 "rek_herdc_code": 450005,
                 "rek_herdc_code_lookup": "AX"
             },
             "fez_record_search_key_herdc_status": {
                 "rek_herdc_status_id": 3576518,
                 "rek_herdc_status_pid": "UQ:335214",
-                "rek_herdc_status_xsdmf_id": 12405,
+                "rek_herdc_status_xsdmf_id": null,
                 "rek_herdc_status": 453220,
                 "rek_herdc_status_lookup": "Provisional Code"
             },
             "fez_record_search_key_institutional_status": {
                 "rek_institutional_status_id": 3237719,
                 "rek_institutional_status_pid": "UQ:335214",
-                "rek_institutional_status_xsdmf_id": 12406,
+                "rek_institutional_status_xsdmf_id": null,
                 "rek_institutional_status": 453225,
                 "rek_institutional_status_lookup": "Unknown"
             },
             "fez_record_search_key_isbn": [{
                 "rek_isbn_id": 1052269,
                 "rek_isbn_pid": "UQ:335214",
-                "rek_isbn_xsdmf_id": 10813,
+                "rek_isbn_xsdmf_id": null,
                 "rek_isbn": "9978530169",
                 "rek_isbn_order": 1
             }, {
                 "rek_isbn_id": 1052270,
                 "rek_isbn_pid": "UQ:335214",
-                "rek_isbn_xsdmf_id": 10813,
+                "rek_isbn_xsdmf_id": null,
                 "rek_isbn": "9789978530160",
                 "rek_isbn_order": 2
             }],
@@ -172,7 +172,7 @@ export default {
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": 11538896,
                 "rek_ismemberof_pid": "UQ:335214",
-                "rek_ismemberof_xsdmf_id": 149,
+                "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:3838",
                 "rek_ismemberof_order": 1,
                 "parent": {
@@ -188,14 +188,14 @@ export default {
             "fez_record_search_key_language": [{
                 "rek_language_id": 5234915,
                 "rek_language_pid": "UQ:335214",
-                "rek_language_xsdmf_id": 12380,
+                "rek_language_xsdmf_id": null,
                 "rek_language": "spa",
                 "rek_language_order": 1
             }],
             "fez_record_search_key_language_of_title": [{
                 "rek_language_of_title_id": 23721,
                 "rek_language_of_title_pid": "UQ:335214",
-                "rek_language_of_title_xsdmf_id": 12615,
+                "rek_language_of_title_xsdmf_id": null,
                 "rek_language_of_title": "spa",
                 "rek_language_of_title_order": 1
             }],
@@ -205,13 +205,13 @@ export default {
             "fez_record_search_key_native_script_title": {
                 "rek_native_script_title_id": 6900,
                 "rek_native_script_title_pid": "UQ:335214",
-                "rek_native_script_title_xsdmf_id": 12573,
+                "rek_native_script_title_xsdmf_id": null,
                 "rek_native_script_title": "El Reino Del Gala\u0301pago: Volviendo A Su Edad De Oro"
             },
             "fez_record_search_key_notes": {
                 "rek_notes_id": 1114227,
                 "rek_notes_pid": "UQ:335214",
-                "rek_notes_xsdmf_id": 12421,
+                "rek_notes_xsdmf_id": null,
                 "rek_notes": "Spanish translation of Merlen, Godfrey (1999). \"Restoring the tortoise dynasty: the decline and recovery of the Galapagos giant tortoise\", Charles Darwin Foundation, Quito, Ecuador."
             },
             "fez_record_search_key_oa_embargo_days": null,
@@ -221,14 +221,14 @@ export default {
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4176022,
                 "rek_place_of_publication_pid": "UQ:335214",
-                "rek_place_of_publication_xsdmf_id": 6116,
+                "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "Quito, Ecuador"
             },
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4440902,
                 "rek_publisher_pid": "UQ:335214",
-                "rek_publisher_xsdmf_id": 6114,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "Fundacio\u0301n Charles Darwin"
             },
             "fez_record_search_key_pubmed_id": null,
@@ -237,14 +237,14 @@ export default {
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1193130,
                 "rek_refereed_source_pid": "UQ:335214",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_roman_script_title": {
                 "rek_roman_script_title_id": 5898,
                 "rek_roman_script_title_pid": "UQ:335214",
-                "rek_roman_script_title_xsdmf_id": 12574,
+                "rek_roman_script_title_xsdmf_id": null,
                 "rek_roman_script_title": "El Reino Del Galapago: Volviendo A Su Edad De Oro"
             },
             "fez_record_search_key_scopus_id": null,
@@ -255,13 +255,13 @@ export default {
             "fez_record_search_key_total_pages": {
                 "rek_total_pages_id": 5490083,
                 "rek_total_pages_pid": "UQ:335214",
-                "rek_total_pages_xsdmf_id": 9649,
+                "rek_total_pages_xsdmf_id": null,
                 "rek_total_pages": "53"
             },
             "fez_record_search_key_translated_title": {
                 "rek_translated_title_id": 8401,
                 "rek_translated_title_pid": "UQ:335214",
-                "rek_translated_title_xsdmf_id": 10614,
+                "rek_translated_title_xsdmf_id": null,
                 "rek_translated_title": "Restoring the tortoise dynasty: the decline and recovery of the Galapagos giant tortoise"
             },
             "fez_record_search_key_volume_number": null,
@@ -316,7 +316,7 @@ export default {
                 "dsi_security_policy": 1,
                 "dsi_security_inherited": 0
             }],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Book",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -690,9 +690,9 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 24759,
                 "rek_license_pid": "UQ:2d7b8a8",
-                "rek_license_xsdmf_id": 16636,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 453608,
-                "rek_license_lookup": "Creative Commons Attribution (only)"
+                "rek_license_lookup": "Creative Commons Attribution 3.0 International (CC BY 3.0)"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
@@ -751,7 +751,7 @@ export default {
             "fez_record_search_key_zoorec_id": null,
             "fez_record_search_key_isdatasetof": [],
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Book",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

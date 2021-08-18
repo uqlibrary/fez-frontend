@@ -6,6 +6,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 export const AutoCompleteSelectField = ({
     allowFreeText,
     autoCompleteSelectFieldId,
+    clearable,
     defaultValue,
     disabled,
     error,
@@ -14,6 +15,7 @@ export const AutoCompleteSelectField = ({
     getOptionLabel,
     itemsList,
     onChange,
+    onClear,
     required,
 }) => {
     const [open, setOpen] = useState(false);
@@ -29,9 +31,13 @@ export const AutoCompleteSelectField = ({
         (event, value, reason) => {
             if (!!allowFreeText && !!value && reason === 'input') {
                 onChange({ value });
+            } else if (!!event && event.type === 'click' && reason === 'clear') {
+                onClear();
+            } else if (!value && reason === 'input') {
+                onClear();
             }
         },
-        [allowFreeText, onChange],
+        [allowFreeText, onChange, onClear],
     );
 
     const handleChange = useCallback(
@@ -54,7 +60,8 @@ export const AutoCompleteSelectField = ({
             id={autoCompleteSelectFieldId}
             open={open}
             clearOnEscape
-            disableClearable
+            disableClearable={!clearable}
+            openOnFocus
             onOpen={() => {
                 setOpen(true);
             }}
@@ -65,6 +72,7 @@ export const AutoCompleteSelectField = ({
             onInputChange={handleInputChange}
             onChange={handleChange}
             getOptionLabel={getOptionLabel}
+            getOptionSelected={(option, value) => option.value === value.value}
             options={options}
             popupIcon={false}
             disabled={disabled}
@@ -97,7 +105,8 @@ export const AutoCompleteSelectField = ({
 AutoCompleteSelectField.propTypes = {
     allowFreeText: PropTypes.bool,
     autoCompleteSelectFieldId: PropTypes.string.isRequired,
-    defaultValue: PropTypes.object,
+    clearable: PropTypes.bool,
+    defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     errorText: PropTypes.string,
@@ -105,6 +114,7 @@ AutoCompleteSelectField.propTypes = {
     getOptionLabel: PropTypes.func.isRequired,
     itemsList: PropTypes.array,
     onChange: PropTypes.func,
+    onClear: PropTypes.func,
     required: PropTypes.bool,
 };
 

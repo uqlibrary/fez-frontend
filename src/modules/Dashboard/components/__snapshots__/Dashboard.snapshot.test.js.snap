@@ -677,7 +677,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
               },
             ]
           }
-          yAxisTitle="Total publications"
+          yAxisTitle="Total works"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -1222,7 +1222,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
               },
             ]
           }
-          yAxisTitle="Total publications"
+          yAxisTitle="Total works"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -2710,7 +2710,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
               },
             ]
           }
-          yAxisTitle="Total publications"
+          yAxisTitle="Total works"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -4004,7 +4004,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
               },
             ]
           }
-          yAxisTitle="Total publications"
+          yAxisTitle="Total works"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -4806,7 +4806,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
               },
             ]
           }
-          yAxisTitle="Total publications"
+          yAxisTitle="Total works"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -5166,7 +5166,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
               },
             ]
           }
-          yAxisTitle="Total publications"
+          yAxisTitle="Total works"
         />
       </StandardCard>
     </WithStyles(ForwardRef(Grid))>
@@ -7484,7 +7484,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                               }
                                               classes={
                                                 Object {
-                                                  "wrapper": "DashboardAuthorProfile-wrapper-107",
+                                                  "wrapper": "DashboardAuthorProfile-wrapper-4",
                                                 }
                                               }
                                               history={Object {}}
@@ -7844,10 +7844,10 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                               }
                                             >
                                               <WithStyles(ForwardRef(Card))
-                                                className="DashboardAuthorProfile-wrapper-107"
+                                                className="DashboardAuthorProfile-wrapper-4"
                                               >
                                                 <ForwardRef(Card)
-                                                  className="DashboardAuthorProfile-wrapper-107"
+                                                  className="DashboardAuthorProfile-wrapper-4"
                                                   classes={
                                                     Object {
                                                       "root": "MuiCard-root",
@@ -7855,11 +7855,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   }
                                                 >
                                                   <WithStyles(ForwardRef(Paper))
-                                                    className="MuiCard-root DashboardAuthorProfile-wrapper-107"
+                                                    className="MuiCard-root DashboardAuthorProfile-wrapper-4"
                                                     elevation={1}
                                                   >
                                                     <ForwardRef(Paper)
-                                                      className="MuiCard-root DashboardAuthorProfile-wrapper-107"
+                                                      className="MuiCard-root DashboardAuthorProfile-wrapper-4"
                                                       classes={
                                                         Object {
                                                           "elevation0": "MuiPaper-elevation0",
@@ -7895,7 +7895,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                       elevation={1}
                                                     >
                                                       <div
-                                                        className="MuiPaper-root MuiCard-root DashboardAuthorProfile-wrapper-107 MuiPaper-elevation1 MuiPaper-rounded"
+                                                        className="MuiPaper-root MuiCard-root DashboardAuthorProfile-wrapper-4 MuiPaper-elevation1 MuiPaper-rounded"
                                                       >
                                                         <WithStyles(ForwardRef(Grid))
                                                           alignContent="center"
@@ -8381,7 +8381,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                   <DashboardAuthorDetails
                                                                                     classes={
                                                                                       Object {
-                                                                                        "authorDetails": "DashboardAuthorDetails-authorDetails-137",
+                                                                                        "authorDetails": "DashboardAuthorDetails-authorDetails-5",
                                                                                       }
                                                                                     }
                                                                                     familyName=""
@@ -8979,11 +8979,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                 className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                                                               >
                                                                                                 <WithStyles(ForwardRef(Typography))
-                                                                                                  className="DashboardAuthorDetails-authorDetails-137"
+                                                                                                  className="DashboardAuthorDetails-authorDetails-5"
                                                                                                   variant="h6"
                                                                                                 >
                                                                                                   <ForwardRef(Typography)
-                                                                                                    className="DashboardAuthorDetails-authorDetails-137"
+                                                                                                    className="DashboardAuthorDetails-authorDetails-5"
                                                                                                     classes={
                                                                                                       Object {
                                                                                                         "alignCenter": "MuiTypography-alignCenter",
@@ -9021,7 +9021,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                     variant="h6"
                                                                                                   >
                                                                                                     <h6
-                                                                                                      className="MuiTypography-root DashboardAuthorDetails-authorDetails-137 MuiTypography-h6"
+                                                                                                      className="MuiTypography-root DashboardAuthorDetails-authorDetails-5 MuiTypography-h6"
                                                                                                     >
                                                                                                        
                                                                                                        
@@ -9310,9 +9310,9 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                     }
                                                                                     classes={
                                                                                       Object {
-                                                                                        "orcidLink": "DashboardResearcherIdsClass-orcidLink-170",
-                                                                                        "orcidSyncBadge": "DashboardResearcherIdsClass-orcidSyncBadge-169",
-                                                                                        "researcherIDlink": "DashboardResearcherIdsClass-researcherIDlink-168",
+                                                                                        "orcidLink": "DashboardResearcherIdsClass-orcidLink-8",
+                                                                                        "orcidSyncBadge": "DashboardResearcherIdsClass-orcidSyncBadge-7",
+                                                                                        "researcherIDlink": "DashboardResearcherIdsClass-researcherIDlink-6",
                                                                                       }
                                                                                     }
                                                                                     history={Object {}}
@@ -9933,17 +9933,17 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                 className="MuiGrid-root MuiGrid-item"
                                                                                               >
                                                                                                 <WithStyles(ExternalLink)
-                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                   href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
                                                                                                   id="publons"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <ExternalLink
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                     classes={
                                                                                                       Object {
-                                                                                                        "externalLink": "ExternalLink-externalLink-171",
-                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-172",
+                                                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                                                       }
                                                                                                     }
                                                                                                     href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
@@ -10307,7 +10307,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                     }
                                                                                                   >
                                                                                                     <a
-                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-168 ExternalLink-externalLink-171"
+                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-6 ExternalLink-externalLink-9"
                                                                                                       href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
                                                                                                       id="publons"
                                                                                                       rel="noopener noreferrer"
@@ -10503,17 +10503,17 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                 className="MuiGrid-root MuiGrid-item"
                                                                                               >
                                                                                                 <WithStyles(ExternalLink)
-                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                   href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid"
                                                                                                   id="researcher"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <ExternalLink
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                     classes={
                                                                                                       Object {
-                                                                                                        "externalLink": "ExternalLink-externalLink-171",
-                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-172",
+                                                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                                                       }
                                                                                                     }
                                                                                                     href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid"
@@ -10877,7 +10877,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                     }
                                                                                                   >
                                                                                                     <a
-                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-168 ExternalLink-externalLink-171"
+                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-6 ExternalLink-externalLink-9"
                                                                                                       href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid"
                                                                                                       id="researcher"
                                                                                                       rel="noopener noreferrer"
@@ -11073,17 +11073,17 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                 className="MuiGrid-root MuiGrid-item"
                                                                                               >
                                                                                                 <WithStyles(ExternalLink)
-                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                   href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid"
                                                                                                   id="scopus"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <ExternalLink
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                     classes={
                                                                                                       Object {
-                                                                                                        "externalLink": "ExternalLink-externalLink-171",
-                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-172",
+                                                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                                                       }
                                                                                                     }
                                                                                                     href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid"
@@ -11447,7 +11447,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                     }
                                                                                                   >
                                                                                                     <a
-                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-168 ExternalLink-externalLink-171"
+                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-6 ExternalLink-externalLink-9"
                                                                                                       href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid"
                                                                                                       id="scopus"
                                                                                                       rel="noopener noreferrer"
@@ -11643,17 +11643,17 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                 className="MuiGrid-root MuiGrid-item"
                                                                                               >
                                                                                                 <WithStyles(ExternalLink)
-                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                   href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile"
                                                                                                   id="google_scholar"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <ExternalLink
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                     classes={
                                                                                                       Object {
-                                                                                                        "externalLink": "ExternalLink-externalLink-171",
-                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-172",
+                                                                                                        "externalLink": "ExternalLink-externalLink-9",
+                                                                                                        "externalLinkIcon": "ExternalLink-externalLinkIcon-10",
                                                                                                       }
                                                                                                     }
                                                                                                     href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile"
@@ -12017,7 +12017,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                     }
                                                                                                   >
                                                                                                     <a
-                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-168 ExternalLink-externalLink-171"
+                                                                                                      className="DashboardResearcherIdsClass-researcherIDlink-6 ExternalLink-externalLink-9"
                                                                                                       href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile"
                                                                                                       id="google_scholar"
                                                                                                       rel="noopener noreferrer"
@@ -12213,7 +12213,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                 className="MuiGrid-root MuiGrid-item"
                                                                                               >
                                                                                                 <a
-                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-168"
+                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                   id="orcid"
                                                                                                   onClick={[Function]}
                                                                                                   onKeyPress={[Function]}
@@ -12429,7 +12429,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"
                                                 alignItems="flex-start"
-                                                className="makeStyles-info_outline-198 makeStyles-common-184"
+                                                className="makeStyles-info_outline-25 makeStyles-common-11"
                                                 container={true}
                                                 justify="center"
                                                 spacing={3}
@@ -12437,7 +12437,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                 <ForwardRef(Grid)
                                                   alignContent="center"
                                                   alignItems="flex-start"
-                                                  className="makeStyles-info_outline-198 makeStyles-common-184"
+                                                  className="makeStyles-info_outline-25 makeStyles-common-11"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -12550,16 +12550,16 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   spacing={3}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root makeStyles-info_outline-198 makeStyles-common-184 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
+                                                    className="MuiGrid-root makeStyles-info_outline-25 makeStyles-common-11 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-linked-191"
+                                                      className="makeStyles-linked-18"
                                                       item={true}
                                                       sm={true}
                                                       xs={12}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-linked-191"
+                                                        className="makeStyles-linked-18"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -12672,7 +12672,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={12}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-linked-191 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
+                                                          className="MuiGrid-root makeStyles-linked-18 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
                                                         >
                                                           <WithStyles(ForwardRef(Grid))
                                                             alignContent="center"
@@ -12797,13 +12797,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                 className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-xs-center"
                                                               >
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-icon-187 alert-icon "
+                                                                  className="makeStyles-icon-14 alert-icon "
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-icon-187 alert-icon "
+                                                                    className="makeStyles-icon-14 alert-icon "
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -12916,11 +12916,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     onKeyDown={[Function]}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-icon-187 alert-icon  MuiGrid-item"
+                                                                      className="MuiGrid-root makeStyles-icon-14 alert-icon  MuiGrid-item"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
-                                                                      <ForwardRef
+                                                                      <ForwardRef(InfoOutlinedIcon)
                                                                         className="icon"
                                                                         id="info-outline-icon"
                                                                       >
@@ -12946,7 +12946,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                             id="info-outline-icon"
                                                                           >
                                                                             <svg
-                                                                              aria-hidden="true"
+                                                                              aria-hidden={true}
                                                                               className="MuiSvgIcon-root icon"
                                                                               focusable="false"
                                                                               id="info-outline-icon"
@@ -12958,19 +12958,19 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                             </svg>
                                                                           </ForwardRef(SvgIcon)>
                                                                         </WithStyles(ForwardRef(SvgIcon))>
-                                                                      </ForwardRef>
+                                                                      </ForwardRef(InfoOutlinedIcon)>
                                                                     </div>
                                                                   </ForwardRef(Grid)>
                                                                 </WithStyles(ForwardRef(Grid))>
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-text-188 alert-text"
+                                                                  className="makeStyles-text-15 alert-text"
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                   xs={true}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-text-188 alert-text"
+                                                                    className="makeStyles-text-15 alert-text"
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -13084,7 +13084,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     xs={true}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-text-188 alert-text MuiGrid-item MuiGrid-grid-xs-true"
+                                                                      className="MuiGrid-root makeStyles-text-15 alert-text MuiGrid-item MuiGrid-grid-xs-true"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -13102,13 +13102,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-actionButton-189"
+                                                      className="makeStyles-actionButton-16"
                                                       item={true}
                                                       sm="auto"
                                                       xs={true}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-actionButton-189"
+                                                        className="makeStyles-actionButton-16"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -13221,7 +13221,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={true}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-actionButton-189 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
+                                                          className="MuiGrid-root makeStyles-actionButton-16 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
                                                         >
                                                           <WithStyles(ForwardRef(Button))
                                                             className="action alert-button"

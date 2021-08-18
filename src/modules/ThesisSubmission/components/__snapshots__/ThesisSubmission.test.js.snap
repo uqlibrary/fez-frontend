@@ -175,6 +175,47 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
           item={true}
           xs={12}
         >
+          <Alert
+            alertId="alert-warning-rdm-redirect"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message={
+              <ul>
+                <li>
+                  If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
+                   
+                  <a
+                    href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
+                  >
+                    this process
+                  </a>
+                  . Please see the
+                   
+                  <a
+                    href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                  >
+                    UQRDM thesis submission guide
+                  </a>
+                   
+                  for more information.
+                </li>
+                <li>
+                  If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please use the form below.
+                </li>
+              </ul>
+            }
+            showLoader={false}
+            type="warning"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
           <StandardCard
             title="Thesis information"
           >
@@ -192,6 +233,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   height={50}
                   name="thesisTitle"
                   required={true}
+                  richEditorId="rek-title"
                   title="Thesis title"
                   validate={
                     Array [
@@ -206,7 +248,18 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Author name"
@@ -229,23 +282,13 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "WrappedComponent": [Function],
-                      "compare": null,
-                      "displayName": "Connect(GenericSelectField)",
-                      "type": [Function],
-                    }
-                  }
+                  ariaLabel="Select a thesis type"
+                  component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
-                      Object {
-                        "text": "Select a thesis type",
-                        "value": undefined,
-                      },
                       Object {
                         "text": "MPhil Thesis",
                         "value": "MPhil Thesis",
@@ -263,6 +306,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   label="Thesis type"
                   name="rek_genre_type"
                   required={true}
+                  selectPrompt="Please select a thesis type"
                   validate={
                     Array [
                       [Function],
@@ -284,7 +328,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -309,6 +352,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   disabled={false}
                   name="thesisAbstract"
                   required={true}
+                  richEditorId="rek-description"
                   title="Abstract"
                   validate={
                     Array [
@@ -461,6 +505,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             <Field
               component={[Function]}
               disabled={false}
+              isValid={[Function]}
               listEditorId="rek-keywords"
               locale={
                 Object {
@@ -503,7 +548,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                 }
               }
               maxCount={10}
-              maxInputLength={111}
               name="fez_record_search_key_keywords"
               required={true}
               searchKey={
@@ -542,7 +586,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
-                    Maximum file size is 8GB. 
+                    Maximum file size is 5GB. 
                     <br />
                     PDF files must be saved using the following naming structure
                      
@@ -727,6 +771,47 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
           item={true}
           xs={12}
         >
+          <Alert
+            alertId="alert-warning-rdm-redirect"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message={
+              <ul>
+                <li>
+                  If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
+                   
+                  <a
+                    href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
+                  >
+                    this process
+                  </a>
+                  . Please see the
+                   
+                  <a
+                    href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                  >
+                    UQRDM thesis submission guide
+                  </a>
+                   
+                  for more information.
+                </li>
+                <li>
+                  If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please use the form below.
+                </li>
+              </ul>
+            }
+            showLoader={false}
+            type="warning"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
           <StandardCard
             title="Thesis information"
           >
@@ -744,6 +829,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   height={50}
                   name="thesisTitle"
                   required={true}
+                  richEditorId="rek-title"
                   title="Thesis title"
                   validate={
                     Array [
@@ -758,7 +844,18 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Author name"
@@ -781,23 +878,13 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={
-                    Object {
-                      "$$typeof": Symbol(react.memo),
-                      "WrappedComponent": [Function],
-                      "compare": null,
-                      "displayName": "Connect(GenericSelectField)",
-                      "type": [Function],
-                    }
-                  }
+                  ariaLabel="Select a thesis type"
+                  component={[Function]}
                   disabled={false}
+                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
-                      Object {
-                        "text": "Select a thesis type",
-                        "value": undefined,
-                      },
                       Object {
                         "text": "MPhil Thesis",
                         "value": "MPhil Thesis",
@@ -815,6 +902,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   label="Thesis type"
                   name="rek_genre_type"
                   required={true}
+                  selectPrompt="Please select a thesis type"
                   validate={
                     Array [
                       [Function],
@@ -836,7 +924,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                         "type": [Function],
                       },
                       "compare": null,
-                      "displayName": "Connect(Component)",
                       "type": [Function],
                     }
                   }
@@ -861,6 +948,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   disabled={false}
                   name="thesisAbstract"
                   required={true}
+                  richEditorId="rek-description"
                   title="Abstract"
                   validate={
                     Array [
@@ -1013,6 +1101,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             <Field
               component={[Function]}
               disabled={false}
+              isValid={[Function]}
               listEditorId="rek-keywords"
               locale={
                 Object {
@@ -1055,7 +1144,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                 }
               }
               maxCount={10}
-              maxInputLength={111}
               name="fez_record_search_key_keywords"
               required={true}
               searchKey={
@@ -1094,7 +1182,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
-                    Maximum file size is 8GB. 
+                    Maximum file size is 5GB. 
                     <br />
                     PDF files must be saved using the following naming structure
                      

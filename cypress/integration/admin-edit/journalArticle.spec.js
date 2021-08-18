@@ -1,4 +1,5 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListJournalArticle';
+import moment from 'moment';
 
 context('Journal Article admin edit', () => {
     const record = recordList.data[0];
@@ -9,9 +10,9 @@ context('Journal Article admin edit', () => {
             .should('have.length', 1)
             .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
 
-        // cy.get('button[title="Learn about keyboard shortcuts"]').should('exist');
+        cy.get('button[title="Learn about keyboard shortcuts"]').should('exist');
 
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -23,34 +24,28 @@ context('Journal Article admin edit', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.viewport(1000, 1000);
 
-        // ---------------------------------------------- ADMIN TAB --------------------------------------------------
-        cy.log('Admin tab');
-        cy.get('.StandardPage form >div >div')
-            .get('.StandardCard')
-            .eq(3)
-            .within(() => {
-                cy.get('h3').should('have.text', 'Admin');
-                cy.get('#cke_editor3').should('exist');
-                cy.get('#cke_editor4').should('exist');
-                cy.get('#cke_editor5').should('exist');
-            });
+        // ---------------------------------------------- NOTES TAB --------------------------------------------------
+        cy.log('Notes tab');
+        cy.get('[data-testid=notes-section-header]').should('have.text', 'Notes');
+        cy.get('[data-testid=notes-section-content]').within(() => {
+            cy.get('#cke_rek-notes-editor').should('exist');
+            cy.get('#cke_ain-notes-editor').should('exist');
+            cy.get('#cke_rek-herdc-notes-editor').should('exist');
+        });
 
-        cy.readCKEditor('editor4').should(text => {
+        cy.readCKEditor('ain-notes').should(text => {
             expect(text).to.contain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13
         });
-        cy.readCKEditor('editor5').should(text => {
+        cy.readCKEditor('rek-herdc-notes').should(text => {
             expect(text).to.contain(record.rek_herdc_notes); // 12/1/12 Amended ID at author request #886821
         });
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         cy.log('Identifiers tab');
-        cy.get('.StandardPage form >div > div')
-            .get('.StandardCard')
-            .eq(0)
+        cy.get('[data-testid=identifiers-section-header]').should('have.text', 'Identifiers');
+        cy.get('[data-testid=identifiers-section-content]')
             .as('indentifiesTab')
             .within(() => {
-                cy.get('h3').should('have.text', 'Identifiers');
-
                 cy.get('.AdminCard')
                     .eq(0)
                     .within(() => {
@@ -101,13 +96,10 @@ context('Journal Article admin edit', () => {
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form >div >div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-header]').should('have.text', 'Bibliographic');
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
-                cy.get('h3').should('have.text', 'Bibliographic');
-
                 cy.get('.AdminCard')
                     .as('cards')
                     .eq(0)
@@ -116,8 +108,8 @@ context('Journal Article admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.get('#cke_editor1').should('exist');
-                        cy.readCKEditor('editor1').should(text => {
+                        cy.get('#cke_rek-title-editor').should('exist');
+                        cy.readCKEditor('rek-title').should(text => {
                             expect(text).to.contain(record.rek_title);
                         });
                     });
@@ -209,15 +201,13 @@ context('Journal Article admin edit', () => {
                         cy.checkPartialDateFromRecordValue('rek-date', record.rek_date);
                         cy.get('[data-testid=rek-date-available-input]').should(
                             'have.value',
-                            Cypress.moment(record.fez_record_search_key_date_available.rek_date_available).format(
-                                'YYYY',
-                            ),
+                            moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY'),
                         );
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Abstract / Description');
-                        cy.get('#cke_editor2').should('exist');
-                        cy.readCKEditor('editor2').should(text => {
+                        cy.get('#cke_rek-description-editor').should('exist');
+                        cy.readCKEditor('rek-description').should(text => {
                             expect(text).to.contain(record.rek_description);
                         });
                     });
@@ -269,131 +259,127 @@ context('Journal Article admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(2)
-            .within(() => {
-                cy.get('h3').should('have.text', 'Author details');
-
-                cy.get('.AdminCard')
-                    .eq(0)
-                    .as('authorsCard')
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Authors');
-                        const authors = record.fez_record_search_key_author.map(item => item.rek_author);
-                        const authorUsernames = record.fez_record_search_key_author_id.map(
-                            item => item.author.aut_org_username,
+        cy.get('[data-testid=authors-section-header]').should('have.text', 'Authors');
+        cy.get('[data-testid=authors-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .eq(0)
+                .as('authorsCard')
+                .within(() => {
+                    cy.get('h4').should('contain', 'Authors');
+                    const authors = record.fez_record_search_key_author.map(item => item.rek_author);
+                    const authorUsernames = record.fez_record_search_key_author_id.map(
+                        item => item.author.aut_org_username,
+                    );
+                    // const authorNames = record.fez_record_search_key_author_id.map(item => item.rek_author_id_lookup);
+                    const authorIDs = record.fez_record_search_key_author_id.map(item => item.rek_author_id);
+                    // const authorAffs = record.fez_record_search_key_author_affiliation_name.map(
+                    //     item => item.rek_author_affiliation_name,
+                    // );
+                    authors.forEach((author, index) => {
+                        cy.get(`[data-testid=rek-author-list-row-${index}-name-as-published]`).should(
+                            'contain.text',
+                            author,
                         );
-                        const authorNames = record.fez_record_search_key_author_id.map(
-                            item => item.rek_author_id_lookup,
+                        cy.get(`[data-testid=rek-author-list-row-${index}-uq-identifiers]`).should(
+                            'contain.text',
+                            `${authorUsernames[index]} - ${authorIDs[index]}`,
                         );
-                        const authorIDs = record.fez_record_search_key_author_id.map(item => item.rek_author_id);
-                        const authorAffs = record.fez_record_search_key_author_affiliation_name.map(
-                            item => item.rek_author_affiliation_name,
-                        );
-                        authors.forEach((author, index) => {
-                            cy.get(`#rek-author-list-row-${index}-name-as-published`).should('contain.text', author);
-                            cy.get(`#rek-author-list-row-${index}-uq-details p`).should(
-                                'contain.text',
-                                authorNames[index],
-                            );
-                            cy.get(`#rek-author-list-row-${index}-uq-details span`).should(
-                                'contain.text',
-                                `${authorAffs[index]} (${authorUsernames[index]} - ${authorIDs[index]})`,
-                            );
-                        });
                     });
-            });
+                });
+        });
 
-        cy.get('@authorsCard')
-            .find('button[aria-label="Remove all items"]')
-            .click();
-        cy.get('body > div[role=presentation]')
-            .contains('Yes')
-            .click();
-        cy.get('@authorsCard')
-            .find('span[class*="colorError-"]')
-            .should('have.length', 1)
-            .should('have.text', 'Author/creator names are required');
+        // cy.get('@authorsCard')
+        //     .find('button[aria-label="Remove all items"]')
+        //     .click();
+        // cy.get('body > div[role=presentation]')
+        //     .contains('Yes')
+        //     .click();
+        // cy.get('@authorsCard')
+        //     .find('span[class*="colorError-"]')
+        //     .should('have.length', 1)
+        //     .should('have.text', 'Author/creator names are required');
 
-        cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
+        // cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
 
         // -------------------------------------- ADMIN TAB -----------------------------------------
         cy.log('Admin tab');
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
-        cy.get('.StandardPage form >div > div')
-            .get('.StandardCard')
-            .eq(3)
-            .within(() => {
-                cy.get('h3').should('have.text', 'Admin');
 
-                cy.get('.AdminCard')
-                    .as('cards')
-                    .eq(0)
-                    .as('collectionsCard')
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Member of collections');
-                        cy.get('#rek-ismemberof-label').should('contain', 'Member of collections');
-                        cy.get('[class*="MuiAutocomplete-tag-"]')
-                            .eq(0)
-                            .should('have.text', 'Official 2013 Collection');
-                        cy.get('[class*="MuiAutocomplete-tag-"]')
-                            .eq(1)
-                            .should('have.text', 'School of Nursing, Midwifery and Social Work Publications');
-                    });
+        cy.get('[data-testid=admin-section-header]').should('have.text', 'Admin');
+        cy.get('[data-testid=admin-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .as('cards')
+                .eq(0)
+                .as('collectionsCard')
+                .within(() => {
+                    cy.get('h4').should('contain', 'Member of collections');
+                    cy.get('#rek-ismemberof-label').should('contain', 'Member of collections');
+                    cy.get('[class*="MuiAutocomplete-tag-"]')
+                        .eq(0)
+                        .should('have.text', 'School of Nursing, Midwifery and Social Work Publications');
+                    cy.get('[class*="MuiAutocomplete-tag-"]')
+                        .eq(1)
+                        .should('have.text', 'Official 2013 Collection');
+                });
 
-                cy.get('@cards')
-                    .eq(1)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Additional information');
-                        cy.get('[data-testid=rek-subtype-input]')
-                            .should('have.value', record.rek_subtype)
-                            .get('[data-testid=rek-subtype-select]')
-                            .should('have.text', record.rek_subtype);
-                        cy.get('[data-testid=rek-herdc-code-input]')
-                            .should('have.value', record.fez_record_search_key_herdc_code.rek_herdc_code.toString())
-                            .get('[data-testid=rek-herdc-code-select]')
-                            .invoke('text')
-                            .should(
-                                'match',
-                                new RegExp(`^${record.fez_record_search_key_herdc_code.rek_herdc_code_lookup}`),
-                            );
-                        cy.get('[data-testid=rek-herdc-status-input]')
-                            .should('have.value', record.fez_record_search_key_herdc_status.rek_herdc_status.toString())
-                            .get('[data-testid=rek-herdc-status-select]')
-                            .should('have.text', record.fez_record_search_key_herdc_status.rek_herdc_status_lookup);
-                        cy.get('[data-testid=rek-institutional-status-input]')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_institutional_status.rek_institutional_status.toString(),
-                            )
-                            .get('[data-testid=rek-institutional-status-select]')
-                            .should(
-                                'have.text',
-                                record.fez_record_search_key_institutional_status.rek_institutional_status_lookup,
-                            );
-                        cy.get('[data-testid=rek-oa-status-input]')
-                            .should('have.value', record.fez_record_search_key_oa_status.rek_oa_status.toString())
-                            .get('[data-testid=rek-oa-status-select]')
-                            .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
-                        cy.get('[data-testid=rek-oa-status-type-input]')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_oa_status_type.rek_oa_status_type.toString(),
-                            )
-                            .get('[data-testid=rek-oa-status-type-select]')
-                            .should('have.text', record.fez_record_search_key_oa_status_type.rek_oa_status_type_lookup);
-                        // No content indicators selected in mock
-                        // No licence selected in mock
-                        cy.get('span span')
-                            .eq(0)
-                            .should('have.text', 'Additional notes');
-                        cy.get('#cke_editor3').should('exist');
-                        cy.readCKEditor('editor3').should(text => {
-                            expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
-                        });
+            cy.get('@cards')
+                .eq(1)
+                .within(() => {
+                    cy.get('h4').should('contain', 'Additional information');
+                    cy.get('[data-testid=rek-subtype-input]')
+                        .should('have.value', record.rek_subtype)
+                        .get('[data-testid=rek-subtype-select]')
+                        .should('have.text', record.rek_subtype);
+                    cy.get('[data-testid=rek-herdc-code-input]')
+                        .should('have.value', record.fez_record_search_key_herdc_code.rek_herdc_code.toString())
+                        .get('[data-testid=rek-herdc-code-select]')
+                        .invoke('text')
+                        .should(
+                            'match',
+                            new RegExp(`^${record.fez_record_search_key_herdc_code.rek_herdc_code_lookup}`),
+                        );
+                    cy.get('[data-testid=rek-herdc-status-input]')
+                        .should('have.value', record.fez_record_search_key_herdc_status.rek_herdc_status.toString())
+                        .get('[data-testid=rek-herdc-status-select]')
+                        .should('have.text', record.fez_record_search_key_herdc_status.rek_herdc_status_lookup);
+                    cy.get('[data-testid=rek-institutional-status-input]')
+                        .should(
+                            'have.value',
+                            record.fez_record_search_key_institutional_status.rek_institutional_status.toString(),
+                        )
+                        .get('[data-testid=rek-institutional-status-select]')
+                        .should(
+                            'have.text',
+                            record.fez_record_search_key_institutional_status.rek_institutional_status_lookup,
+                        );
+                    cy.get('[data-testid=rek-oa-status-input]')
+                        .should('have.value', record.fez_record_search_key_oa_status.rek_oa_status.toString())
+                        .get('[data-testid=rek-oa-status-select]')
+                        .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
+                    cy.get('[data-testid=rek-oa-status-type-input]')
+                        .should('have.value', record.fez_record_search_key_oa_status_type.rek_oa_status_type.toString())
+                        .get('[data-testid=rek-oa-status-type-select]')
+                        .should('have.text', record.fez_record_search_key_oa_status_type.rek_oa_status_type_lookup);
+                    // No content indicators selected in mock
+                    // No licence selected in mock
+                });
+        });
+
+        cy.get('[data-testid=notes-section-header]').should('have.text', 'Notes');
+        cy.get('[data-testid=notes-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .as('cards')
+                .eq(0)
+                .within(() => {
+                    cy.get('span span')
+                        .eq(0)
+                        .should('have.text', 'Additional notes (public)');
+                    cy.get('#cke_rek-notes-editor').should('exist');
+                    cy.readCKEditor('rek-notes').should(text => {
+                        expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                     });
-            });
+                });
+        });
 
         cy.get('@collectionsCard').within(() => {
             collections.forEach(() => {
@@ -406,23 +392,20 @@ context('Journal Article admin edit', () => {
                 .should('have.text', 'This field is required');
         });
 
-        cy.adminEditVerifyAlerts(2, ['You must select atleast one collection']);
+        cy.adminEditVerifyAlerts(1, ['You must select atleast one collection']);
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
         cy.log('Grant Information tab');
-        cy.get('.StandardPage form >div > div')
-            .get('.StandardCard')
-            .eq(4)
-            .within(() => {
-                cy.get('h3').should('have.text', 'Grant information');
 
-                cy.get('.AdminCard')
-                    .eq(0)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Grant information');
-                        // No grant information in mock
-                    });
-            });
+        cy.get('[data-testid=grants-section-header]').should('have.text', 'Grants');
+        cy.get('[data-testid=grants-section-content]').within(() => {
+            cy.get('.AdminCard')
+                .eq(0)
+                .within(() => {
+                    cy.get('h4').should('contain', 'Grant information');
+                    // No grant information in mock
+                });
+        });
 
         // ---------------------------------------------- SECURITY TAB -----------------------------------------------
         cy.log('Security tab');
@@ -484,14 +467,14 @@ context('Journal Article admin edit', () => {
                 .should('have.text', `${fileSizeInMB} MB`);
             cy.get('input')
                 .eq(1)
-                .should(
-                    'have.value',
-                    Cypress.moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'),
-                );
+                .should('have.value', moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'));
         });
         cy.get('[data-testid=files-section-content]').within(() => {
             cy.get('h4')
                 .eq(2)
+                .should('contain', 'Advisory statement');
+            cy.get('h4')
+                .eq(3)
                 .should('contain', 'Copyright agreement');
             cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
                 if (record.rek_copyright === 'on') {

@@ -22,7 +22,18 @@ exports[`BookChapterForm renders  component 1`] = `
         >
           <Field
             autoFocus={true}
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Book chapter title"
@@ -43,7 +54,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Book title"
@@ -65,7 +87,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Place of publication"
@@ -85,7 +118,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Publisher"
@@ -207,6 +251,7 @@ exports[`BookChapterForm renders  component 1`] = `
                 </div>,
                 "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
+                "organisationColumn": "Organisation",
                 "reorderColumn": "Reorder items",
               },
             },
@@ -430,6 +475,7 @@ exports[`BookChapterForm renders  component 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -489,12 +535,30 @@ exports[`BookChapterForm renders  component 1`] = `
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -514,7 +578,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Edition"
@@ -528,7 +603,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             error={false}
             errorText=""
@@ -550,7 +636,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             error={false}
             errorText=""
@@ -576,7 +673,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
@@ -590,7 +698,18 @@ exports[`BookChapterForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Link (URL)"
@@ -631,7 +750,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
         >
           <Field
             autoFocus={true}
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Book chapter title"
@@ -652,7 +782,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Book title"
@@ -674,7 +815,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Place of publication"
@@ -694,7 +846,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Publisher"
@@ -816,6 +979,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                 </div>,
                 "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
+                "organisationColumn": "Organisation",
                 "reorderColumn": "Reorder items",
               },
             },
@@ -1039,6 +1203,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
       <Field
         component={[Function]}
         disabled={false}
+        inputNormalizer={[Function]}
         isValid={[Function]}
         listEditorId="issn"
         locale={
@@ -1098,12 +1263,30 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
         maxCount={5}
         name="fez_record_search_key_issn"
         remindToAdd={true}
+        rowItemTemplate={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "propTypes": Object {
+                "actions": [Function],
+                "hasPreload": [Function],
+                "item": [Function],
+              },
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          }
+        }
         searchKey={
           Object {
             "order": "rek_issn_order",
             "value": "rek_issn",
           }
         }
+        transformFunction={[Function]}
       />
     </StandardCard>
   </WithStyles(ForwardRef(Grid))>
@@ -1123,7 +1306,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Edition"
@@ -1137,7 +1331,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             error={true}
             errorText="Page range invalid"
@@ -1159,7 +1364,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             error={true}
             errorText="Page range invalid"
@@ -1185,7 +1401,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
@@ -1199,7 +1426,18 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Link (URL)"

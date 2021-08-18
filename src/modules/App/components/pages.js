@@ -3,7 +3,8 @@ import React from 'react';
 // lazy loaded components
 export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
 export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
-export const BatchImport = React.lazy(() => import('modules/BatchImport/containers/BatchImport'));
+export const BatchImport = React.lazy(() => import('modules/BatchImport/components/BatchImport'));
+export const BulkUpdates = React.lazy(() => import('modules/BulkUpdates'));
 export const ChangeDisplayType = React.lazy(() =>
     import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType'),
 );
@@ -15,7 +16,14 @@ export const DeleteRecord = React.lazy(() => import('modules/DeleteRecord/contai
 export const Doi = React.lazy(() => import('modules/Admin/Doi/containers/Doi'));
 export const FavouriteSearch = React.lazy(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch'));
 export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
-export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/containers/GoogleScholar'));
+export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/components/GoogleScholar'));
+export const ViewJournal = React.lazy(() => import('modules/ViewJournal/components/ViewJournal'));
+export const ManageAuthors = React.lazy(() => import('modules/Admin/ManageAuthors'));
+export const ManageUsers = React.lazy(() => import('modules/Admin/ManageUsers'));
+export const MasterJournalListIngest = React.lazy(() =>
+    import('modules/Admin/MasterJournalListIngest/components/MasterJournalListIngest'),
+);
+export const MyEditorialAppointments = React.lazy(() => import('modules/MyEditorialAppointments'));
 export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
 export const NewViewRecord = React.lazy(() => import('modules/ViewRecord/containers/NewViewRecord'));
 export const NotFound = React.lazy(() => import('modules/NotFound/components/NotFound'));

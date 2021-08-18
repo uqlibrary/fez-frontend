@@ -1,20 +1,18 @@
-jest.mock('./exportPublicationsDataTransformers');
-
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as exportPublicationsActions from './exportPublications';
 import { exportSearchToExcel as exportSearchToExcelResponse } from 'mock/data/testing/searchRecords';
-import { promptForDownload } from './exportPublicationsDataTransformers';
+import * as ExportPublicationsTransformers from './exportPublicationsDataTransformers';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
-beforeEach(() => {
-    promptForDownload.mockClear();
-});
-
 describe('Export publications actions', () => {
+    let promptForDownload;
+
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
+
+        promptForDownload = jest.spyOn(ExportPublicationsTransformers, 'promptForDownload');
     });
 
     afterEach(() => {
@@ -35,7 +33,6 @@ describe('Export publications actions', () => {
         });
 
         it('dispatches expected actions on successful search export', async () => {
-            // mock promptForDownload
             promptForDownload.mockImplementation(() => exportPublicationsFormat);
 
             mockApi.onGet(requestParams.apiUrl).reply(200, exportSearchToExcelResponse);
@@ -46,8 +43,31 @@ describe('Export publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on failed search export', async () => {
-            // mock promptForDownload
+        it('dispatches expected actions on successful bulk search export', async () => {
+            const testFn = jest.fn();
+            promptForDownload.mockImplementation(testFn);
+
+            mockApi.onGet(requestParams.apiUrl).reply(200, exportSearchToExcelResponse);
+
+            const expectedActions = [actions.EXPORT_PUBLICATIONS_LOADING, actions.EXPORT_PUBLICATIONS_LOADED];
+
+            await mockActionsStore.dispatch(
+                exportPublicationsActions.exportPublications({
+                    ...requestParams,
+                    options: {
+                        ...requestParams.options,
+                        params: {
+                            ...requestParams.options.params,
+                            per_page: 500,
+                        },
+                    },
+                }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(testFn).toHaveBeenCalledTimes(0);
+        });
+
+        it('dispatches expected actions on unexpected export format', async () => {
             promptForDownload.mockImplementation(() => {
                 throw 'Error';
             });

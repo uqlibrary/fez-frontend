@@ -20,6 +20,67 @@ exports[`FormViewToggler component should render default view 1`] = `
       />
     </WithStyles(ForwardRef(Tooltip))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <Connect(HelpIcon)
+      IconComponent={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        }
+      }
+      buttonLabel="Got it"
+      text={
+        <div>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
+            Tab navigation
+          </WithStyles(ForwardRef(Typography))>
+          <p>
+            To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.
+          </p>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
+            Form style
+          </WithStyles(ForwardRef(Typography))>
+          <p>
+            To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.
+          </p>
+          <p>
+            Your preference is saved as a cookie on this browser and it will remember your preference.
+          </p>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
+            Page zoom
+          </WithStyles(ForwardRef(Typography))>
+          <p>
+            Using 
+            <b>
+              CTRL
+            </b>
+             & 
+            <b>
+              +/-
+            </b>
+             will zoom the page in/out further for more screen real estate.
+          </p>
+        </div>
+      }
+      title="Keyboard shortcuts"
+      tooltip="Learn about keyboard shortcuts"
+    />
+  </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;
 
@@ -42,6 +103,67 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
         value="tabbed"
       />
     </WithStyles(ForwardRef(Tooltip))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <Connect(HelpIcon)
+      IconComponent={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        }
+      }
+      buttonLabel="Got it"
+      text={
+        <div>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
+            Tab navigation
+          </WithStyles(ForwardRef(Typography))>
+          <p>
+            To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.
+          </p>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
+            Form style
+          </WithStyles(ForwardRef(Typography))>
+          <p>
+            To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.
+          </p>
+          <p>
+            Your preference is saved as a cookie on this browser and it will remember your preference.
+          </p>
+          <WithStyles(ForwardRef(Typography))
+            component="h4"
+            variant="h6"
+          >
+            Page zoom
+          </WithStyles(ForwardRef(Typography))>
+          <p>
+            Using 
+            <b>
+              CTRL
+            </b>
+             & 
+            <b>
+              +/-
+            </b>
+             will zoom the page in/out further for more screen real estate.
+          </p>
+        </div>
+      }
+      title="Keyboard shortcuts"
+      tooltip="Learn about keyboard shortcuts"
+    />
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;

@@ -16,7 +16,7 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -54,7 +54,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -81,7 +81,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <LockOutlinedIcon />
+      <Memo(ForwardRef(LockOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
@@ -91,12 +91,48 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         }
       }
     >
-      <WithStyles(FileUploadAccessSelector)
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={8}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value={1}
       />
     </WithStyles(ForwardRef(ListItemText))>
   </WithStyles(ForwardRef(ListItem))>
@@ -108,7 +144,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <CalendarTodayOutlinedIcon />
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
@@ -165,7 +201,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -192,7 +228,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <LockOutlinedIcon />
+      <Memo(ForwardRef(LockOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
@@ -202,12 +238,48 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         }
       }
     >
-      <WithStyles(FileUploadAccessSelector)
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error="This field is required"
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={null}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value=""
       />
     </WithStyles(ForwardRef(ListItemText))>
   </WithStyles(ForwardRef(ListItem))>
@@ -219,7 +291,158 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <CalendarTodayOutlinedIcon />
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primaryTypographyProps={
+        Object {
+          "variant": "body1",
+        }
+      }
+      secondary="Embargo date"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
+    >
+      <WithStyles(ForwardRef(Typography))
+        data-testid="dsi-embargo-date-0"
+        gutterBottom={true}
+        variant="body2"
+      >
+        No date required
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(ListItemText))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+    >
+      <Connect(FileUploadRowStatus)
+        disabled={false}
+        fileUploadRowStatusId="dsi-dsid-0"
+        name="test.pdf"
+        onDelete={[MockFunction]}
+      />
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</WithStyles(ForwardRef(List))>
+`;
+
+exports[`Component FileUploadRowMobileView should render default view for admin 1`] = `
+<WithStyles(ForwardRef(List))
+  classes={
+    Object {
+      "root": "root",
+    }
+  }
+>
+  <WithStyles(ForwardRef(ListItem))
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo(ForwardRef(AttachmentIcon)) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      data-testid="dsi-dsid-0"
+      primary="test.pdf (100 MB)"
+      primaryTypographyProps={
+        Object {
+          "noWrap": true,
+          "variant": "body1",
+        }
+      }
+      secondary="File name"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo(ForwardRef(LockOutlinedIcon)) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      secondary="File access"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
+    >
+      <Memo(NewGenericSelectField)
+        autoFocus={false}
+        disabled={false}
+        displayEmpty={true}
+        error="This field is required"
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+            Object {
+              "text": "Inherit from parent collection",
+              "value": 99,
+            },
+          ]
+        }
+        onChange={[MockFunction]}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value=""
+      />
+    </WithStyles(ForwardRef(ListItemText))>
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    classes={
+      Object {
+        "root": "listItem",
+      }
+    }
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={
@@ -306,7 +529,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <AttachmentIcon />
+      <Memo(ForwardRef(AttachmentIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       data-testid="dsi-dsid-0"
@@ -333,7 +556,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <LockOutlinedIcon />
+      <Memo(ForwardRef(LockOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       secondary="File access"
@@ -343,12 +566,48 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         }
       }
     >
-      <WithStyles(FileUploadAccessSelector)
+      <Memo(NewGenericSelectField)
         autoFocus={false}
         disabled={false}
-        fileUploadAccessSelectorId="dsi-open-access-0"
+        displayEmpty={true}
+        error={false}
+        formHelperTextProps={
+          Object {
+            "className": undefined,
+          }
+        }
+        genericSelectFieldId="dsi-open-access-0"
+        hideLabel={true}
+        itemsList={
+          Array [
+            Object {
+              "text": "Open Access",
+              "value": 5,
+            },
+            Object {
+              "text": "Closed Access",
+              "value": 1,
+            },
+          ]
+        }
         onChange={[MockFunction]}
-        value={9}
+        required={true}
+        selectPrompt="Select access conditions"
+        selectProps={
+          Object {
+            "className": undefined,
+            "input": <WithStyles(ForwardRef(Input))
+              autoFocus={false}
+              classes={
+                Object {
+                  "root": undefined,
+                }
+              }
+              disableUnderline={true}
+            />,
+          }
+        }
+        value={5}
       />
     </WithStyles(ForwardRef(ListItemText))>
   </WithStyles(ForwardRef(ListItem))>
@@ -360,7 +619,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
     }
   >
     <WithStyles(ForwardRef(ListItemIcon))>
-      <CalendarTodayOutlinedIcon />
+      <Memo(ForwardRef(CalendarTodayOutlinedIcon)) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
       primaryTypographyProps={

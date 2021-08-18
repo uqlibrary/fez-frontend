@@ -20,6 +20,7 @@ export default class RichEditor extends PureComponent {
         inputRef: PropTypes.object,
         instanceRef: PropTypes.object,
         required: PropTypes.bool,
+        richEditorId: PropTypes.string,
     };
 
     static defaultProps = {
@@ -36,18 +37,23 @@ export default class RichEditor extends PureComponent {
     componentDidMount() {
         this.editorInstance =
             !!window.CKEDITOR &&
-            window.CKEDITOR.appendTo(
-                this.props.inputRef.current,
-                {
-                    removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
-                    height: this.props.height,
-                    pasteFilter: 'semantic-content',
-                },
-                (!!this.props.value && this.props.value.get('htmlText')) || null,
-            );
+            window.CKEDITOR.replace(this.props.inputRef.current, {
+                bodyId: `${this.props.richEditorId}-input`,
+                removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
+                height: this.props.height,
+                pasteFilter: 'semantic-content',
+            });
+
+        !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
+        !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);
+        !!this.editorInstance && !!this.props.value && this.editorInstance.setData(this.props.value.get('htmlText'));
+
+        !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
+        !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);
 
         !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
         !!this.editorInstance && this.editorInstance.on('change', this.onChange);
+        !!this.editorInstance && this.editorInstance.on('contentDom', this.onContentDom);
         this.props.instanceRef.current = this.editorInstance;
     }
 
@@ -60,6 +66,10 @@ export default class RichEditor extends PureComponent {
 
     onInstanceReady = () => {
         this.editorInstance.setReadOnly(!!this.props.disabled);
+    };
+
+    onContentDom = e => {
+        e.editor.document.getBody().setAttribute('data-testid', `${this.props.richEditorId}-input`);
     };
 
     onChange = evt => {
@@ -103,8 +113,8 @@ export default class RichEditor extends PureComponent {
                 <span>
                     {this.props.title && (
                         <Typography
-                            {...this.props.titleProps}
                             color={this.props.meta && this.props.meta.error && 'error'}
+                            {...this.props.titleProps}
                         >
                             {this.props.title}
                             {this.props.required && <span> *</span>}
@@ -116,7 +126,12 @@ export default class RichEditor extends PureComponent {
                         </Typography>
                     )}
                 </span>
-                <div className={this.props.className} ref={this.props.inputRef} />
+                <div
+                    className={this.props.className}
+                    id={this.props.richEditorId}
+                    data-testid={this.props.richEditorId}
+                    ref={this.props.inputRef}
+                />
                 {this.props.meta && this.props.meta.error && (
                     <Typography
                         color="error"

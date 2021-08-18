@@ -62,16 +62,10 @@ export default values => {
     let errors = {
         bibliographicSection: {},
         adminSection: {},
+        filesSection: {},
     };
 
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
-
-    dateTimeYear(
-        ((data.bibliographicSection || {}).fez_record_search_key_project_date_start || {}).rek_project_date_start,
-    ) &&
-        (errors.bibliographicSection.fez_record_search_key_project_date_start = {
-            rek_project_date_start: summary.rek_project_date_start,
-        });
 
     dateTimeYear(((data.bibliographicSection || {}).fez_record_search_key_date_available || {}).rek_date_available) &&
         (errors.bibliographicSection.fez_record_search_key_date_available = {
@@ -84,6 +78,14 @@ export default values => {
     (data.adminSection || {}).hasOwnProperty('rek_subtype') &&
         !data.adminSection.rek_subtype &&
         (errors.adminSection.rek_subtype = summary.rek_subtype);
+
+    ((data.filesSection || {}).files || {}).hasOwnProperty('isValid') &&
+        !data.filesSection.files.isValid &&
+        (errors.filesSection.files = summary.files);
+
+    (data.filesSection || {}).hasOwnProperty('rek_copyright') &&
+        data.filesSection.rek_copyright !== 'on' &&
+        (errors.filesSection.rek_copyright = summary.rek_copyright);
 
     switch (data.rek_display_type) {
         case PUBLICATION_TYPE_AUDIO_DOCUMENT:

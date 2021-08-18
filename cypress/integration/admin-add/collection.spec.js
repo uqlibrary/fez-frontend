@@ -6,7 +6,7 @@ context('As an admin,', () => {
             .contains('Add a missing collection')
             .should('exist')
             .parents('.StandardCard')
-            .should('contain', 'Select community')
+            .should('contain', 'Select a community')
             .find('[data-testid=rek-ismemberof-select]')
             .as('communitySelector')
             .should('exist');

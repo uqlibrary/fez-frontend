@@ -1,15 +1,17 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import FileUploadAccessSelector from './FileUploadAccessSelector';
 import FileUploadEmbargoDate from './FileUploadEmbargoDate';
 import FileUploadRowStatus from './FileUploadRowStatus';
 
-import * as config from '../config';
+import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, INHERIT_OPTION } from '../config';
+import { selectFields } from 'locale/selectFields';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 export class FileUploadRowDefaultView extends PureComponent {
     static propTypes = {
@@ -28,6 +30,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
+        isAdmin: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -61,23 +64,48 @@ export class FileUploadRowDefaultView extends PureComponent {
                     {requireOpenAccessStatus && (
                         <Fragment>
                             <Grid item md={3} sm={4}>
-                                <FileUploadAccessSelector
-                                    value={accessConditionId}
+                                <NewGenericSelectField
+                                    value={accessConditionId || ''}
                                     onChange={this.props.onAccessConditionChange}
                                     disabled={disabled}
                                     ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
-                                    fileUploadAccessSelectorId={`dsi-open-access-${index}`}
+                                    genericSelectFieldId={`dsi-open-access-${index}`}
+                                    itemsList={
+                                        this.props.isAdmin
+                                            ? [...FILE_ACCESS_OPTIONS, INHERIT_OPTION]
+                                            : FILE_ACCESS_OPTIONS
+                                    }
+                                    displayEmpty
+                                    hideLabel
+                                    required
+                                    selectProps={{
+                                        className: classes.selector,
+                                        input: (
+                                            <Input
+                                                disableUnderline
+                                                autoFocus={index === focusOnIndex}
+                                                classes={{
+                                                    root: !!accessConditionId ? classes.selected : classes.placeholder,
+                                                }}
+                                            />
+                                        ),
+                                    }}
+                                    formHelperTextProps={{
+                                        className: classes.error,
+                                    }}
+                                    error={!accessConditionId && selectFields.accessCondition.errorMessage}
+                                    selectPrompt={selectFields.accessCondition.selectPrompt}
                                 />
                             </Grid>
                             <Grid item md={2} sm={2}>
-                                {accessConditionId !== config.OPEN_ACCESS_ID && (
+                                {accessConditionId !== FILE_ACCESS_CONDITION_OPEN && (
                                     <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
                                         {embargoDateClosedAccess}
                                     </Typography>
                                 )}
-                                {accessConditionId === config.OPEN_ACCESS_ID && (
+                                {accessConditionId === FILE_ACCESS_CONDITION_OPEN && (
                                     <FileUploadEmbargoDate
                                         value={embargoDate}
                                         minDate={new Date()}
@@ -110,6 +138,20 @@ const styles = () => ({
     row: {
         borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
         marginBottom: '12px',
+    },
+    selector: {
+        maxWidth: 200,
+        fontSize: 14,
+    },
+    placeholder: {
+        color: 'rgba(0, 0, 0, 0.5)',
+    },
+    selected: {
+        fontWeight: 400,
+    },
+    error: {
+        marginTop: 0,
+        fontSize: 10,
     },
 });
 

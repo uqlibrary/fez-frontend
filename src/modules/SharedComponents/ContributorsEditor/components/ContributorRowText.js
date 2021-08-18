@@ -71,7 +71,7 @@ export const ContributorRowText = ({
                 )}
             </Grid>
             {isAuthorLinked(contributor) && haveFullAuthorDetails(contributor) && (
-                <Grid item xs={10} sm={5} md={idColWidth} id={`${contributorRowId}-uq-details`}>
+                <Grid item xs={10} sm={5} md={showRoleInput ? 4 : idColWidth} id={`${contributorRowId}-uq-details`}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
                         `${(contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && contributor.orgaff) ||

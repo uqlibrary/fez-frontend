@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { default as globalLocale } from 'locale/global';
 import { default as viewRecordLocale } from 'locale/viewRecord';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Link } from 'react-router-dom';
 
@@ -11,18 +11,16 @@ export default class JournalName extends PureComponent {
         publication: PropTypes.object.isRequired,
     };
 
-    // fez_journal_issns returns era data
-    getERAYears = (issns = []) => {
+    // fez_journal returns era data
+    getERAYears = matchedJournal => {
         const years = [];
-        issns.map(issn => {
-            if (Array.isArray(issn.fez_journal_issns) && issn.fez_journal_issns.length > 0) {
-                issn.fez_journal_issns.map(journalIssn => {
-                    if (journalIssn.fez_journal && !years.includes(journalIssn.fez_journal.jnl_era_year)) {
-                        years.push(journalIssn.fez_journal.jnl_era_year);
-                    }
-                });
-            }
-        });
+        if (matchedJournal && matchedJournal.fez_journal && matchedJournal.fez_journal.fez_journal_era) {
+            matchedJournal.fez_journal.fez_journal_era.map(journalEra => {
+                if (journalEra.jnl_era_source_year && !years.includes(journalEra.jnl_era_source_year)) {
+                    years.push(journalEra.jnl_era_source_year);
+                }
+            });
+        }
 
         return years;
     };
@@ -51,8 +49,8 @@ export default class JournalName extends PureComponent {
         return sherpaRomeoElement;
     };
 
-    renderJournalName = (journalName, issns) => {
-        const eraYears = this.getERAYears(issns);
+    renderJournalName = (journalName, matchedJournal) => {
+        const eraYears = this.getERAYears(matchedJournal);
         const eraJournalListedText =
             eraYears && eraYears.length > 0
                 ? viewRecordLocale.viewRecord.linkTexts.eraJournalListed.replace('[year]', eraYears.join(', '))
@@ -76,7 +74,7 @@ export default class JournalName extends PureComponent {
                     publication.fez_record_search_key_journal_name.rek_journal_name &&
                     this.renderJournalName(
                         publication.fez_record_search_key_journal_name.rek_journal_name,
-                        publication.fez_record_search_key_issn,
+                        publication.fez_matched_journals,
                     )}
                 {publication.fez_record_search_key_journal_name &&
                     publication.fez_record_search_key_issn &&

@@ -15,7 +15,7 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
     item={true}
   >
     <WithStyles(InlineLoader)
-      message="Loading your trending publications"
+      message="Loading your trending works"
     />
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
@@ -74,7 +74,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
               </p>
               <p>
-                You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
+                You can click on the number as a link to see who is citing each work, or in the case of Altmetric who is referencing the work in social media and news outlets.
               </p>
               For more information visit :
               <br />
@@ -94,34 +94,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         item={true}
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           publicationsList={
             Array [
               Object {
                 "fez_datastream_info": Array [],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 3283,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 30578,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 47977,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 100768,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 3283,
+                  "mtj_pid": "UQ:330391",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
@@ -140,7 +122,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_country_id": 344457,
                     "rek_author_affiliation_country_order": 1,
                     "rek_author_affiliation_country_pid": "UQ:330391",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_full_address": Array [
@@ -149,7 +131,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_full_address_id": 377945,
                     "rek_author_affiliation_full_address_order": 1,
                     "rek_author_affiliation_full_address_pid": "UQ:330391",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_id": Array [],
@@ -159,7 +141,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_name_id": 345319,
                     "rek_author_affiliation_name_order": 1,
                     "rek_author_affiliation_name_pid": "UQ:330391",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_id": Array [
@@ -181,7 +163,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_country_id": 285972,
                     "rek_corresponding_country_order": 1,
                     "rek_corresponding_country_pid": "UQ:330391",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_email": Array [
@@ -190,7 +172,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_email_id": 63548,
                     "rek_corresponding_email_order": 1,
                     "rek_corresponding_email_pid": "UQ:330391",
-                    "rek_corresponding_email_xsdmf_id": 0,
+                    "rek_corresponding_email_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_name": Array [
@@ -199,7 +181,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_name_id": 56163,
                     "rek_corresponding_name_order": 1,
                     "rek_corresponding_name_pid": "UQ:330391",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_organisation": Array [],
@@ -651,20 +633,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_altmetric_score_xsdmf_id": null,
                 "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Frazer, Ian H.\\" href=\\"/list/author_id/410/\\">Frazer, Ian H.</a> (<span class=\\"citation_date\\">2014</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Development and implementation of papillomavirus prophylactic vaccines\\" href=\\"/view/UQ:330391\\">Development and implementation of papillomavirus prophylactic vaccines</a>. <i><span class=\\"citation_journal_name\\">Journal of Immunology</span></i>, <i><span class=\\"citation_volume_number\\">192</span></i> <span class=\\"citation_issue_number\\">9</span>: <span class=\\"citation_start_page\\">4007</span>-<span class=\\"citation_end_page\\">4011</span>. doi:<span class=\\"citation_doi\\">10.4049/jimmunol.1490012</span>",
                 "rek_copyright": "on",
-                "rek_copyright_xsdmf_id": 3679,
+                "rek_copyright_xsdmf_id": null,
                 "rek_created_date": "2014-05-20T00:24:11Z",
-                "rek_created_date_xsdmf_id": 3677,
+                "rek_created_date_xsdmf_id": null,
                 "rek_date": "2014-05-01T00:00:00Z",
-                "rek_date_xsdmf_id": 6386,
+                "rek_date_xsdmf_id": null,
                 "rek_depositor": 8524,
                 "rek_depositor_affiliation": 1048,
-                "rek_depositor_affiliation_xsdmf_id": 11881,
-                "rek_depositor_xsdmf_id": 7578,
+                "rek_depositor_affiliation_xsdmf_id": null,
+                "rek_depositor_xsdmf_id": null,
                 "rek_description": "Translation of basic scientific findings into practical patient outcomes is a significant exercise even when the goal is conceptually straightforward, as in the development of a vaccine for an infectious disease. Recognition of the association of cervical cancer with papillomavirus infection encouraged development of a vaccine to help with prevention of this very common cancer, causing over 250,000 deaths each year worldwide. To introduce a vaccine program, it was however necessary to develop a technology for making viral Ag, demonstrate that systemic immunization could provide mucosal surface protection in the genital tract, develop assays for vaccine potency, and understand enough about the epidemiology and natural history of the infection to plan effective intervention strategies. This process took ~25 years. The major hurdle, now that effective vaccines are available, is to ensure their deployment in the countries where they are most needed. The development and deployment of human papillomavirus vaccines demonstrate the benefits of collaborative research activity across the globe, and between academia and industry, to translate scientific discoveries into public health benefits.",
-                "rek_description_xsdmf_id": 11441,
+                "rek_description_xsdmf_id": null,
                 "rek_display_type": 179,
                 "rek_display_type_lookup": "Journal Article",
-                "rek_display_type_xsdmf_id": 3673,
+                "rek_display_type_xsdmf_id": null,
                 "rek_file_downloads": 0,
                 "rek_formatted_abstract": null,
                 "rek_formatted_abstract_xsdmf_id": null,
@@ -673,12 +655,12 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_genre": "Journal Article",
                 "rek_genre_type": "Article (original research)",
                 "rek_genre_type_xsdmf_id": null,
-                "rek_genre_xsdmf_id": 7207,
+                "rek_genre_xsdmf_id": null,
                 "rek_herdc_notes": "&nbsp;Ian H. Frazer, University of Queensland Diamantina Institute, Translational Research Institute, 37 Kent Street, Woolloongabba, QLD 4102, Australia.",
-                "rek_herdc_notes_xsdmf_id": 12472,
+                "rek_herdc_notes_xsdmf_id": null,
                 "rek_object_type": 3,
                 "rek_object_type_lookup": "Record",
-                "rek_object_type_xsdmf_id": 3674,
+                "rek_object_type_xsdmf_id": null,
                 "rek_pid": "UQ:330391",
                 "rek_pubmed_doc_type": null,
                 "rek_pubmed_doc_type_lookup": null,
@@ -686,33 +668,26 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_scopus_citation_count": 13,
                 "rek_scopus_doc_type": "ar",
                 "rek_scopus_doc_type_lookup": null,
-                "rek_scopus_doc_type_xsdmf_id": 12550,
+                "rek_scopus_doc_type_xsdmf_id": null,
                 "rek_security_inherited": 1,
                 "rek_status": 2,
                 "rek_status_lookup": "Published",
-                "rek_status_xsdmf_id": 3680,
+                "rek_status_xsdmf_id": null,
                 "rek_subtype": "Article (original research)",
-                "rek_subtype_xsdmf_id": 12379,
+                "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": 12,
                 "rek_thomson_citation_count_xsdmf_id": null,
                 "rek_title": "Development and implementation of papillomavirus prophylactic vaccines",
-                "rek_title_xsdmf_id": 10588,
+                "rek_title_xsdmf_id": null,
                 "rek_updated_date": "2018-01-19T02:57:37Z",
-                "rek_updated_date_xsdmf_id": 3678,
+                "rek_updated_date_xsdmf_id": null,
                 "rek_wok_doc_type": "@",
                 "rek_wok_doc_type_lookup": null,
-                "rek_wok_doc_type_xsdmf_id": 12551,
+                "rek_wok_doc_type_xsdmf_id": null,
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -759,7 +734,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
               </p>
               <p>
-                You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
+                You can click on the number as a link to see who is citing each work, or in the case of Altmetric who is referencing the work in social media and news outlets.
               </p>
               For more information visit :
               <br />
@@ -779,24 +754,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         item={true}
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           publicationsList={
             Array [
               Object {
                 "fez_datastream_info": Array [],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 7532,
-                    "mtj_pid": "UQ:103860",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 34245,
-                    "mtj_pid": "UQ:103860",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 7532,
+                  "mtj_pid": "UQ:103860",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
@@ -829,21 +796,21 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_country_id": 341560,
                     "rek_author_affiliation_country_order": 1,
                     "rek_author_affiliation_country_pid": "UQ:103860",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "usa",
                     "rek_author_affiliation_country_id": 341561,
                     "rek_author_affiliation_country_order": 2,
                     "rek_author_affiliation_country_pid": "UQ:103860",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_id": 341562,
                     "rek_author_affiliation_country_order": 3,
                     "rek_author_affiliation_country_pid": "UQ:103860",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_full_address": Array [
@@ -852,21 +819,21 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_full_address_id": 375728,
                     "rek_author_affiliation_full_address_order": 1,
                     "rek_author_affiliation_full_address_pid": "UQ:103860",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "Bethesda, MD",
                     "rek_author_affiliation_full_address_id": 375729,
                     "rek_author_affiliation_full_address_order": 2,
                     "rek_author_affiliation_full_address_pid": "UQ:103860",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "QLD",
                     "rek_author_affiliation_full_address_id": 375730,
                     "rek_author_affiliation_full_address_order": 3,
                     "rek_author_affiliation_full_address_pid": "UQ:103860",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_id": Array [],
@@ -876,21 +843,21 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_name_id": 342411,
                     "rek_author_affiliation_name_order": 1,
                     "rek_author_affiliation_name_pid": "UQ:103860",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Laboratory of Cellular Oncology,National Cancer Institute",
                     "rek_author_affiliation_name_id": 342412,
                     "rek_author_affiliation_name_order": 2,
                     "rek_author_affiliation_name_pid": "UQ:103860",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Centre for Immunology and Cancer Research,University of Queensland",
                     "rek_author_affiliation_name_id": 342413,
                     "rek_author_affiliation_name_order": 3,
                     "rek_author_affiliation_name_pid": "UQ:103860",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_id": Array [
@@ -1026,7 +993,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_country_id": 285607,
                     "rek_corresponding_country_order": 1,
                     "rek_corresponding_country_pid": "UQ:103860",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_email": Array [
@@ -1035,7 +1002,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_email_id": 63042,
                     "rek_corresponding_email_order": 1,
                     "rek_corresponding_email_pid": "UQ:103860",
-                    "rek_corresponding_email_xsdmf_id": 0,
+                    "rek_corresponding_email_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_name": Array [
@@ -1044,7 +1011,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_name_id": 55437,
                     "rek_corresponding_name_order": 1,
                     "rek_corresponding_name_pid": "UQ:103860",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_organisation": Array [],
@@ -1459,20 +1426,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_altmetric_score_xsdmf_id": null,
                 "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Stanley, Margaret\\" href=\\"/list/author/Stanley%2C+Margaret/\\">Stanley, Margaret</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Lowy, Douglas R.\\" href=\\"/list/author/Lowy%2C+Douglas+R./\\">Lowy, Douglas R.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Frazer, Ian\\" href=\\"/list/author_id/410/\\">Frazer, Ian</a> (<span class=\\"citation_date\\">2006</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Prophylactic HPV vaccines: Underlying mechanisms\\" href=\\"/view/UQ:103860\\">Prophylactic HPV vaccines: Underlying mechanisms</a>. <i><span class=\\"citation_journal_name\\">Vaccine</span></i>, <i><span class=\\"citation_volume_number\\">24</span></i> <span class=\\"citation_issue_number\\">Supplement 3: HPV Vaccines and Screening in the Prevention of Cervical Cancer</span>: <span class=\\"citation_start_page\\">S106</span>-<span class=\\"citation_end_page\\">S113</span>. doi:<span class=\\"citation_doi\\">10.1016/j.vaccine.2006.05.110</span>",
                 "rek_copyright": "on",
-                "rek_copyright_xsdmf_id": 3679,
+                "rek_copyright_xsdmf_id": null,
                 "rek_created_date": "2007-08-23T21:53:06Z",
-                "rek_created_date_xsdmf_id": 3677,
+                "rek_created_date_xsdmf_id": null,
                 "rek_date": "2006-08-21T00:00:00Z",
-                "rek_date_xsdmf_id": 6386,
+                "rek_date_xsdmf_id": null,
                 "rek_depositor": null,
                 "rek_depositor_affiliation": 1048,
-                "rek_depositor_affiliation_xsdmf_id": 11881,
+                "rek_depositor_affiliation_xsdmf_id": null,
                 "rek_depositor_xsdmf_id": null,
                 "rek_description": "Human papillomavirus virus-like particles (HPV VLP) can be generated by the synthesis and self-assembly in vitro of the major virus capsid protein L1. HPV L1 VLPs are morphologically and antigenically almost identical to native virions, and this technology has been exploited to produce HPV L1 VLP subunit vaccines. The vaccines elicit high titres of anti-L I VLP antibodies that persist at levels 10 times that of natural infections for at least 48 months. At present the assumption is that the protection achieved by these vaccines against incident HPV infection and HPV-associated ano-genital pathology is mediated via serum neutralising Immunoglobulin G (IgG). However, since there have been very few vaccine failures thus far, immune correlates of protection have not been established. The available evidence is that the immunodominant neutralising antibodies generated by L1 VLPs are type-specific and are not cross-neutralising, although highly homologous HPV pairs share minor cross-neutralisation epitopes. Important issues remaining to be addressed include the duration of protection and genotype replacement. (c) 2006 Elsevier Ltd. All rights reserved.",
-                "rek_description_xsdmf_id": 11441,
+                "rek_description_xsdmf_id": null,
                 "rek_display_type": 179,
                 "rek_display_type_lookup": "Journal Article",
-                "rek_display_type_xsdmf_id": 3673,
+                "rek_display_type_xsdmf_id": null,
                 "rek_file_downloads": 0,
                 "rek_formatted_abstract": null,
                 "rek_formatted_abstract_xsdmf_id": null,
@@ -1481,12 +1448,12 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_genre": "Journal Article",
                 "rek_genre_type": "Article (original research)",
                 "rek_genre_type_xsdmf_id": null,
-                "rek_genre_xsdmf_id": 7207,
+                "rek_genre_xsdmf_id": null,
                 "rek_herdc_notes": null,
                 "rek_herdc_notes_xsdmf_id": null,
                 "rek_object_type": 3,
                 "rek_object_type_lookup": "Record",
-                "rek_object_type_xsdmf_id": 3674,
+                "rek_object_type_xsdmf_id": null,
                 "rek_pid": "UQ:103860",
                 "rek_pubmed_doc_type": null,
                 "rek_pubmed_doc_type_lookup": null,
@@ -1494,33 +1461,26 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_scopus_citation_count": 135,
                 "rek_scopus_doc_type": "ar",
                 "rek_scopus_doc_type_lookup": null,
-                "rek_scopus_doc_type_xsdmf_id": 12550,
+                "rek_scopus_doc_type_xsdmf_id": null,
                 "rek_security_inherited": 1,
                 "rek_status": 2,
                 "rek_status_lookup": "Published",
-                "rek_status_xsdmf_id": 3680,
+                "rek_status_xsdmf_id": null,
                 "rek_subtype": "Article (original research)",
-                "rek_subtype_xsdmf_id": 12379,
+                "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": 87,
                 "rek_thomson_citation_count_xsdmf_id": null,
                 "rek_title": "Prophylactic HPV vaccines: Underlying mechanisms",
-                "rek_title_xsdmf_id": 10588,
+                "rek_title_xsdmf_id": null,
                 "rek_updated_date": "2018-01-29T01:11:58Z",
-                "rek_updated_date_xsdmf_id": 3678,
+                "rek_updated_date_xsdmf_id": null,
                 "rek_wok_doc_type": "@",
                 "rek_wok_doc_type_lookup": null,
-                "rek_wok_doc_type_xsdmf_id": 12551,
+                "rek_wok_doc_type_xsdmf_id": null,
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
@@ -1567,7 +1527,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
               </p>
               <p>
-                You can click on the number as a link to see who is citing each publication, or in the case of Altmetric who is referencing the publication in social media and news outlets.
+                You can click on the number as a link to see who is citing each work, or in the case of Altmetric who is referencing the work in social media and news outlets.
               </p>
               For more information visit :
               <br />
@@ -1587,34 +1547,16 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         item={true}
         xs={12}
       >
-        <PublicationsList
-          hideCountDiff={false}
+        <Memo(PublicationsList)
           publicationsList={
             Array [
               Object {
                 "fez_datastream_info": Array [],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 3283,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 30578,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 47977,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 100768,
-                    "mtj_pid": "UQ:330391",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 3283,
+                  "mtj_pid": "UQ:330391",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
@@ -1633,7 +1575,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_country_id": 344457,
                     "rek_author_affiliation_country_order": 1,
                     "rek_author_affiliation_country_pid": "UQ:330391",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_full_address": Array [
@@ -1642,7 +1584,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_full_address_id": 377945,
                     "rek_author_affiliation_full_address_order": 1,
                     "rek_author_affiliation_full_address_pid": "UQ:330391",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_id": Array [],
@@ -1652,7 +1594,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_author_affiliation_name_id": 345319,
                     "rek_author_affiliation_name_order": 1,
                     "rek_author_affiliation_name_pid": "UQ:330391",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_id": Array [
@@ -1674,7 +1616,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_country_id": 285972,
                     "rek_corresponding_country_order": 1,
                     "rek_corresponding_country_pid": "UQ:330391",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_email": Array [
@@ -1683,7 +1625,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_email_id": 63548,
                     "rek_corresponding_email_order": 1,
                     "rek_corresponding_email_pid": "UQ:330391",
-                    "rek_corresponding_email_xsdmf_id": 0,
+                    "rek_corresponding_email_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_name": Array [
@@ -1692,7 +1634,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                     "rek_corresponding_name_id": 56163,
                     "rek_corresponding_name_order": 1,
                     "rek_corresponding_name_pid": "UQ:330391",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_organisation": Array [],
@@ -2144,20 +2086,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_altmetric_score_xsdmf_id": null,
                 "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Frazer, Ian H.\\" href=\\"/list/author_id/410/\\">Frazer, Ian H.</a> (<span class=\\"citation_date\\">2014</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Development and implementation of papillomavirus prophylactic vaccines\\" href=\\"/view/UQ:330391\\">Development and implementation of papillomavirus prophylactic vaccines</a>. <i><span class=\\"citation_journal_name\\">Journal of Immunology</span></i>, <i><span class=\\"citation_volume_number\\">192</span></i> <span class=\\"citation_issue_number\\">9</span>: <span class=\\"citation_start_page\\">4007</span>-<span class=\\"citation_end_page\\">4011</span>. doi:<span class=\\"citation_doi\\">10.4049/jimmunol.1490012</span>",
                 "rek_copyright": "on",
-                "rek_copyright_xsdmf_id": 3679,
+                "rek_copyright_xsdmf_id": null,
                 "rek_created_date": "2014-05-20T00:24:11Z",
-                "rek_created_date_xsdmf_id": 3677,
+                "rek_created_date_xsdmf_id": null,
                 "rek_date": "2014-05-01T00:00:00Z",
-                "rek_date_xsdmf_id": 6386,
+                "rek_date_xsdmf_id": null,
                 "rek_depositor": 8524,
                 "rek_depositor_affiliation": 1048,
-                "rek_depositor_affiliation_xsdmf_id": 11881,
-                "rek_depositor_xsdmf_id": 7578,
+                "rek_depositor_affiliation_xsdmf_id": null,
+                "rek_depositor_xsdmf_id": null,
                 "rek_description": "Translation of basic scientific findings into practical patient outcomes is a significant exercise even when the goal is conceptually straightforward, as in the development of a vaccine for an infectious disease. Recognition of the association of cervical cancer with papillomavirus infection encouraged development of a vaccine to help with prevention of this very common cancer, causing over 250,000 deaths each year worldwide. To introduce a vaccine program, it was however necessary to develop a technology for making viral Ag, demonstrate that systemic immunization could provide mucosal surface protection in the genital tract, develop assays for vaccine potency, and understand enough about the epidemiology and natural history of the infection to plan effective intervention strategies. This process took ~25 years. The major hurdle, now that effective vaccines are available, is to ensure their deployment in the countries where they are most needed. The development and deployment of human papillomavirus vaccines demonstrate the benefits of collaborative research activity across the globe, and between academia and industry, to translate scientific discoveries into public health benefits.",
-                "rek_description_xsdmf_id": 11441,
+                "rek_description_xsdmf_id": null,
                 "rek_display_type": 179,
                 "rek_display_type_lookup": "Journal Article",
-                "rek_display_type_xsdmf_id": 3673,
+                "rek_display_type_xsdmf_id": null,
                 "rek_file_downloads": 0,
                 "rek_formatted_abstract": null,
                 "rek_formatted_abstract_xsdmf_id": null,
@@ -2166,12 +2108,12 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_genre": "Journal Article",
                 "rek_genre_type": "Article (original research)",
                 "rek_genre_type_xsdmf_id": null,
-                "rek_genre_xsdmf_id": 7207,
+                "rek_genre_xsdmf_id": null,
                 "rek_herdc_notes": "&nbsp;Ian H. Frazer, University of Queensland Diamantina Institute, Translational Research Institute, 37 Kent Street, Woolloongabba, QLD 4102, Australia.",
-                "rek_herdc_notes_xsdmf_id": 12472,
+                "rek_herdc_notes_xsdmf_id": null,
                 "rek_object_type": 3,
                 "rek_object_type_lookup": "Record",
-                "rek_object_type_xsdmf_id": 3674,
+                "rek_object_type_xsdmf_id": null,
                 "rek_pid": "UQ:330391",
                 "rek_pubmed_doc_type": null,
                 "rek_pubmed_doc_type_lookup": null,
@@ -2179,33 +2121,26 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 "rek_scopus_citation_count": 13,
                 "rek_scopus_doc_type": "ar",
                 "rek_scopus_doc_type_lookup": null,
-                "rek_scopus_doc_type_xsdmf_id": 12550,
+                "rek_scopus_doc_type_xsdmf_id": null,
                 "rek_security_inherited": 1,
                 "rek_status": 2,
                 "rek_status_lookup": "Published",
-                "rek_status_xsdmf_id": 3680,
+                "rek_status_xsdmf_id": null,
                 "rek_subtype": "Article (original research)",
-                "rek_subtype_xsdmf_id": 12379,
+                "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": 12,
                 "rek_thomson_citation_count_xsdmf_id": null,
                 "rek_title": "Development and implementation of papillomavirus prophylactic vaccines",
-                "rek_title_xsdmf_id": 10588,
+                "rek_title_xsdmf_id": null,
                 "rek_updated_date": "2018-01-19T02:57:37Z",
-                "rek_updated_date_xsdmf_id": 3678,
+                "rek_updated_date_xsdmf_id": null,
                 "rek_wok_doc_type": "@",
                 "rek_wok_doc_type_lookup": null,
-                "rek_wok_doc_type_xsdmf_id": 12551,
+                "rek_wok_doc_type_xsdmf_id": null,
               },
             ]
           }
-          publicationsListSubset={Array []}
-          showAdminActions={false}
-          showDefaultActions={false}
           showMetrics={true}
-          showSourceCountIcon={false}
-          showSources={false}
-          showUnpublishedBufferFields={false}
-          subsetCustomActions={Array []}
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>

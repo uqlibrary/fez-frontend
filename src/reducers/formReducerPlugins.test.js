@@ -11,7 +11,20 @@ describe('Form reducer plugin', () => {
                 const nextState = plugins.resetValue(falsy, {
                     type: actionTypes.UNREGISTER_FIELD,
                     payload: {
-                        name: '',
+                        name: 'test',
+                    },
+                });
+                expect(nextState).toBeNull;
+            });
+        });
+
+        it('returns state if name is undefined', () => {
+            const falsies = [false, null, undefined, ''];
+            falsies.forEach(falsy => {
+                const nextState = plugins.resetValue(falsy, {
+                    type: actionTypes.UNREGISTER_FIELD,
+                    payload: {
+                        name: undefined,
                     },
                 });
                 expect(nextState).toBeNull;
@@ -160,11 +173,12 @@ describe('Form reducer plugin', () => {
         });
     });
 
-    describe('deleteFileFromSecuritySection: ', () => {
+    describe('adminReduxFormPlugin: ', () => {
         let initialState;
         beforeEach(() => {
             initialState = Map({
                 values: Map({
+                    rek_display_type: 179,
                     securitySection: Map({
                         dataStreams: List([
                             Map({
@@ -175,12 +189,55 @@ describe('Form reducer plugin', () => {
                             }),
                         ]),
                     }),
+                    publication: Map({
+                        fez_record_search_key_file_attachment_name: List([
+                            Map({
+                                rek_file_attachment_name: 'test.mp4',
+                                rek_file_attachment_name_order: 1,
+                            }),
+                            Map({
+                                rek_file_attachment_name: 'testing.jpg',
+                                rek_file_attachment_name_order: 2,
+                            }),
+                        ]),
+                        fez_record_search_key_file_attachment_access_condition: List([
+                            Map({
+                                rek_file_attachment_access_condition: '1',
+                                rek_file_attachment_access_condition_order: 1,
+                            }),
+                            Map({
+                                rek_file_attachment_access_condition: '1',
+                                rek_file_attachment_access_condition_order: 2,
+                            }),
+                        ]),
+                        fez_record_search_key_file_attachment_embargo_date: List([
+                            Map({
+                                rek_file_attachment_embargo_date: '2020-11-30T00:00:00Z',
+                                rek_file_attachment_embargo_date_order: 1,
+                            }),
+                            Map({
+                                rek_file_attachment_embargo_date: '2020-11-30T00:00:00Z',
+                                rek_file_attachment_embargo_date_order: 2,
+                            }),
+                        ]),
+                    }),
+                    bibliographicSection: Map({
+                        issns: List([
+                            Map({
+                                rek_value: {
+                                    key: '1111-1111',
+                                    value: {},
+                                },
+                                rek_order: 1,
+                            }),
+                        ]),
+                    }),
                 }),
             });
         });
 
         it('should remove file provided in action payload from security section datastreams', () => {
-            const nextState = plugins.deleteFileFromSecuritySection(initialState, {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
                 type: ADMIN_DELETE_ATTACHED_FILE,
                 payload: {
                     dsi_dsid: 'test.mp4',
@@ -193,12 +250,19 @@ describe('Form reducer plugin', () => {
                 .get('dataStreams')
                 .toJS();
             expect(dataStreams.length).toEqual(1);
+            expect(
+                nextState
+                    .get('values')
+                    .get('publication')
+                    .get('fez_record_search_key_file_attachment_name')
+                    .toJS().length,
+            ).toEqual(1);
 
             expect(dataStreams).toEqual([{ dsi_dsid: 'testing.jpg' }]);
         });
 
         it('should not delete any file if the file provided in action payload is not present in security section', () => {
-            const nextState = plugins.deleteFileFromSecuritySection(initialState, {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
                 type: ADMIN_DELETE_ATTACHED_FILE,
                 payload: {
                     dsi_dsid: 'testing.mp4',
@@ -216,7 +280,7 @@ describe('Form reducer plugin', () => {
         });
 
         it('should return given state as it is for action not listed in the plugin', () => {
-            const nextState = plugins.deleteFileFromSecuritySection(initialState, {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
                 type: 'SOME_OTHER_ACTION',
                 payload: {
                     dsi_dsid: 'testing.mp4',
@@ -231,6 +295,116 @@ describe('Form reducer plugin', () => {
             expect(dataStreams.length).toEqual(2);
 
             expect(dataStreams).toEqual([{ dsi_dsid: 'test.mp4' }, { dsi_dsid: 'testing.jpg' }]);
+        });
+
+        it('should update issns from the selected journal object in the journal ID field', () => {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
+                type: actionTypes.CHANGE,
+                meta: {
+                    field: 'bibliographicSection.fez_matched_journals',
+                    touch: false,
+                },
+                payload: {
+                    value: 'Testing update from form reducer',
+                    fez_journal_issn: [
+                        {
+                            jnl_issn: '2222-2222',
+                        },
+                        {
+                            jnl_issn: '3333-3333',
+                        },
+                    ],
+                },
+            });
+
+            expect(
+                nextState
+                    .get('values')
+                    .get('bibliographicSection')
+                    .get('fez_record_search_key_journal_name')
+                    .get('rek_journal_name'),
+            ).toEqual('Testing update from form reducer');
+
+            expect(
+                nextState
+                    .get('values')
+                    .get('bibliographicSection')
+                    .get('issns')
+                    .toJS(),
+            ).toEqual([
+                {
+                    rek_value: {
+                        key: '1111-1111',
+                        value: {},
+                    },
+                    rek_order: 1,
+                },
+                {
+                    rek_value: {
+                        key: '2222-2222',
+                        value: {
+                            sherpaRomeo: { link: false },
+                            ulrichs: { link: false, linkText: '' },
+                        },
+                    },
+                },
+                {
+                    rek_value: {
+                        key: '3333-3333',
+                        value: {
+                            sherpaRomeo: { link: false },
+                            ulrichs: { link: false, linkText: '' },
+                        },
+                    },
+                },
+            ]);
+
+            const nextStateWithoutUpdate = plugins.adminReduxFormPlugin(initialState, {
+                type: actionTypes.CHANGE,
+                meta: {
+                    field: 'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
+                    touch: false,
+                },
+                payload: {
+                    value: 'Testing update from form reducer',
+                    fez_journal_issn: [
+                        {
+                            jnl_issn: '2222-2222',
+                        },
+                        {
+                            jnl_issn: '3333-3333',
+                        },
+                    ],
+                },
+            });
+
+            expect(
+                nextStateWithoutUpdate
+                    .get('values')
+                    .get('bibliographicSection')
+                    .get('issns')
+                    .toJS(),
+            ).toEqual([
+                {
+                    rek_value: {
+                        key: '1111-1111',
+                        value: {},
+                    },
+                    rek_order: 1,
+                },
+            ]);
+        });
+
+        it('should leave state unchanged if fez_matched_journals is set to empty', () => {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
+                type: actionTypes.CHANGE,
+                meta: {
+                    field: 'bibliographicSection.fez_matched_journals',
+                    touch: false,
+                },
+                payload: null,
+            });
+            expect(nextState).toEqual(initialState);
         });
     });
 });

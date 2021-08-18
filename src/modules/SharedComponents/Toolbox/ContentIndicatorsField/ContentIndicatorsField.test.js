@@ -55,7 +55,7 @@ describe('ContentIndicatorsField component', () => {
 
     it('should not mark existing indicators as disabled for admins', () => {
         const input = {
-            unselectable: true,
+            canUnselect: true,
             meta: {
                 initial: Immutable.List([CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value]),
             },
@@ -83,7 +83,7 @@ describe('ContentIndicatorsField component', () => {
             meta: {
                 initial: Immutable.List(CONTENT_INDICATORS),
             },
-            unselectable: true,
+            canUnselect: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

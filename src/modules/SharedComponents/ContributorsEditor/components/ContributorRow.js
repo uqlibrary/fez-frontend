@@ -32,10 +32,7 @@ export const useStyles = makeStyles(theme => ({
         margin: '0',
     },
     disabledListItem: {
-        width: '100%',
-        margin: '0',
-        outline: 'none !important',
-        '&:focus': {
+        '&, &:focus': {
             outline: 'none !important',
         },
     },
@@ -43,7 +40,10 @@ export const useStyles = makeStyles(theme => ({
         borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: (theme.palette.accent || {}).main,
+        backgroundColor: `${(theme.palette.accent || {}).main} !important`,
+        '& svg': {
+            color: 'white !important',
+        },
     },
     selected: {
         color: 'white !important',
@@ -61,6 +61,16 @@ export const useStyles = makeStyles(theme => ({
     },
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
+    },
+    contributorLinked: {
+        color: theme.palette.primary.main,
+        backgroundColor: theme.palette.secondary.light,
+        '& p': {
+            fontWeight: 500,
+        },
+        '& svg': {
+            color: theme.palette.primary.main,
+        },
     },
 }));
 
@@ -97,29 +107,33 @@ export const ContributorRow = ({
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
-    const _onDelete = () => {
+    const _onDelete = React.useCallback(() => {
         if (!disabled && onDelete) {
             onDelete(contributor, index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [contributor, index]);
 
-    const _onMoveUp = () => {
+    const _onMoveUp = React.useCallback(() => {
         if (!disabled && onMoveUp) {
             onMoveUp(contributor, index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [contributor, index]);
 
-    const _onMoveDown = () => {
+    const _onMoveDown = React.useCallback(() => {
         if (!disabled && onMoveDown) {
             onMoveDown(contributor, index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [contributor, index]);
 
-    const _select = () => {
+    const _select = React.useCallback(() => {
         if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [index]);
 
     const _onSelectKeyboard = event => {
         if (event.key === 'Enter') {
@@ -127,14 +141,19 @@ export const ContributorRow = ({
         }
     };
 
-    const _onSelect = event => {
-        _select();
-        event && event.currentTarget.blur();
-    };
+    const _onSelect = React.useCallback(
+        event => {
+            _select();
+            event && event.currentTarget.blur();
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [index],
+    );
 
-    const _handleEdit = () => {
+    const _handleEdit = React.useCallback(() => {
         canEdit && !!onEdit && onEdit(index);
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [index]);
 
     const getRowIcon = () => {
         if (parseInt(contributor.uqIdentifier, 10)) {
@@ -162,6 +181,12 @@ export const ContributorRow = ({
                 ''}`.trim()) ||
         '';
 
+    const listClasses = [classes.listItem];
+    required && listClasses.push(classes.highlighted);
+    contributor.selected && listClasses.push(classes.rowSelected);
+    contributor.disabled && listClasses.push(classes.disabledListItem);
+    canEdit && parseInt(contributor.uqIdentifier, 10) && listClasses.push(classes.contributorLinked);
+
     return (
         <Fragment>
             <ConfirmationBox
@@ -174,9 +199,7 @@ export const ContributorRow = ({
             <ListItem
                 divider
                 classes={{
-                    root: `${classes.listItem} ${(required && classes.highlighted) || ''} ${(contributor.selected &&
-                        classes.rowSelected) ||
-                        ''} ${(!contributor.disabled && classes.disabledListItem) || ''}`.trim(),
+                    root: listClasses.join(' '),
                 }}
                 onClick={_onSelect}
                 tabIndex={contributor.disabled || disabled ? -1 : 0}
@@ -326,4 +349,12 @@ ContributorRow.defaultProps = {
     required: false,
     enableSelect: false,
 };
-export default React.memo(ContributorRow);
+export default React.memo(ContributorRow, (pp, np) => {
+    return (
+        pp.disabled === np.disabled &&
+        pp.index === np.index &&
+        !np.contributor.selected &&
+        !pp.contributor.selected &&
+        pp.contributor.nameAsPublished === np.contributor.nameAsPublished
+    );
+});

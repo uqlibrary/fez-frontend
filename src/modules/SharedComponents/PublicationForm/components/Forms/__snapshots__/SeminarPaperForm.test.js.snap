@@ -22,7 +22,18 @@ exports[`SeminarPaperForm renders  component 1`] = `
         >
           <Field
             autoFocus={true}
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Title"
@@ -53,7 +64,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -77,7 +87,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -101,7 +110,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -222,6 +230,7 @@ exports[`SeminarPaperForm renders  component 1`] = `
                 </div>,
                 "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
+                "organisationColumn": "Organisation",
                 "reorderColumn": "Reorder items",
               },
             },
@@ -273,7 +282,18 @@ exports[`SeminarPaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"
@@ -288,7 +308,18 @@ exports[`SeminarPaperForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Link"

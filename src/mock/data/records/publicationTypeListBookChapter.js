@@ -8,27 +8,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:173575",
-            "rek_title_xsdmf_id": 10623,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Summary and discussion of studies in the acquisition of Japanese as a second language in Australia",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 177,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6260,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2008-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 1639,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2009-04-02T15:47:51Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-24T04:21:14Z",
             "rek_file_downloads": 0,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 7201,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Book Chapter",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -36,14 +36,14 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 923,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12378,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Research book chapter (original research)",
             "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": 12417,
+            "rek_herdc_notes_xsdmf_id": null,
             "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": null,
             "rek_wok_doc_type_xsdmf_id": null,
@@ -55,7 +55,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -67,14 +67,14 @@ export default {
                 {
                     "rek_author_id": 29132133,
                     "rek_author_pid": "UQ:173575",
-                    "rek_author_xsdmf_id": 6230,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Iwashita, N.",
                     "rek_author_order": 1
                 },
                 {
                     "rek_author_id": 29132134,
                     "rek_author_pid": "UQ:173575",
-                    "rek_author_xsdmf_id": 6230,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Harrington, M. W.",
                     "rek_author_order": 2
                 }
@@ -88,7 +88,7 @@ export default {
                 {
                     "rek_author_id_id": 28499281,
                     "rek_author_id_pid": "UQ:173575",
-                    "rek_author_id_xsdmf_id": 6225,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 3191,
                     "rek_author_id_order": 1,
                     "rek_author_id_lookup": "Iwashita, Noriko"
@@ -96,7 +96,7 @@ export default {
                 {
                     "rek_author_id_id": 28499282,
                     "rek_author_id_pid": "UQ:173575",
-                    "rek_author_id_xsdmf_id": 6225,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 782,
                     "rek_author_id_order": 2,
                     "rek_author_id_lookup": "Harrington, Michael W."
@@ -106,13 +106,13 @@ export default {
             "fez_record_search_key_book_title": {
                 "rek_book_title_id": 297182,
                 "rek_book_title_pid": "UQ:173575",
-                "rek_book_title_xsdmf_id": 10630,
+                "rek_book_title_xsdmf_id": null,
                 "rek_book_title": "多様化する言語習得環境とこれからの日本語教育"
             },
             "fez_record_search_key_chapter_number": {
                 "rek_chapter_number_id": 139017,
                 "rek_chapter_number_pid": "UQ:173575",
-                "rek_chapter_number_xsdmf_id": 9642,
+                "rek_chapter_number_xsdmf_id": null,
                 "rek_chapter_number": "4"
             },
             "fez_record_search_key_content_indicator": [],
@@ -120,21 +120,21 @@ export default {
                 {
                     "rek_contributor_id": 3140050,
                     "rek_contributor_pid": "UQ:173575",
-                    "rek_contributor_xsdmf_id": 6238,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Sakamoto Akira",
                     "rek_contributor_order": 1
                 },
                 {
                     "rek_contributor_id": 3140051,
                     "rek_contributor_pid": "UQ:173575",
-                    "rek_contributor_xsdmf_id": 6238,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Nagatomo Kazuhiko",
                     "rek_contributor_order": 2
                 },
                 {
                     "rek_contributor_id": 3140052,
                     "rek_contributor_pid": "UQ:173575",
-                    "rek_contributor_xsdmf_id": 6238,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Koyanagi Kaoru",
                     "rek_contributor_order": 3
                 }
@@ -143,21 +143,21 @@ export default {
                 {
                     "rek_contributor_id_id": 2343122,
                     "rek_contributor_id_pid": "UQ:173575",
-                    "rek_contributor_id_xsdmf_id": 6233,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 },
                 {
                     "rek_contributor_id_id": 2343123,
                     "rek_contributor_id_pid": "UQ:173575",
-                    "rek_contributor_id_xsdmf_id": 6233,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 2
                 },
                 {
                     "rek_contributor_id_id": 2343124,
                     "rek_contributor_id_pid": "UQ:173575",
-                    "rek_contributor_id_xsdmf_id": 6233,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 3
                 }
@@ -179,7 +179,7 @@ export default {
             "fez_record_search_key_end_page": {
                 "rek_end_page_id": 5557209,
                 "rek_end_page_pid": "UQ:173575",
-                "rek_end_page_xsdmf_id": 6266,
+                "rek_end_page_xsdmf_id": null,
                 "rek_end_page": "96"
             },
             "fez_record_search_key_file_attachment_access_condition": [],
@@ -195,21 +195,21 @@ export default {
             "fez_record_search_key_herdc_code": {
                 "rek_herdc_code_id": 4724546,
                 "rek_herdc_code_pid": "UQ:173575",
-                "rek_herdc_code_xsdmf_id": 12389,
+                "rek_herdc_code_xsdmf_id": null,
                 "rek_herdc_code": 450006,
                 "rek_herdc_code_lookup": "B1"
             },
             "fez_record_search_key_herdc_status": {
                 "rek_herdc_status_id": 3616131,
                 "rek_herdc_status_pid": "UQ:173575",
-                "rek_herdc_status_xsdmf_id": 12405,
+                "rek_herdc_status_xsdmf_id": null,
                 "rek_herdc_status": 453221,
                 "rek_herdc_status_lookup": "Confirmed Code"
             },
             "fez_record_search_key_institutional_status": {
                 "rek_institutional_status_id": 3274228,
                 "rek_institutional_status_pid": "UQ:173575",
-                "rek_institutional_status_xsdmf_id": 12406,
+                "rek_institutional_status_xsdmf_id": null,
                 "rek_institutional_status": 453225,
                 "rek_institutional_status_lookup": "Unknown"
             },
@@ -217,7 +217,7 @@ export default {
                 {
                     "rek_isbn_id": 1080952,
                     "rek_isbn_pid": "UQ:173575",
-                    "rek_isbn_xsdmf_id": 10820,
+                    "rek_isbn_xsdmf_id": null,
                     "rek_isbn": "9784883194636",
                     "rek_isbn_order": 1
                 }
@@ -228,7 +228,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11652102,
                     "rek_ismemberof_pid": "UQ:173575",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:138536",
                     "rek_ismemberof_order": 1,
                     "parent": {
@@ -241,7 +241,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11652103,
                     "rek_ismemberof_pid": "UQ:173575",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:3838",
                     "rek_ismemberof_order": 2,
                     "parent": {
@@ -254,7 +254,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11652104,
                     "rek_ismemberof_pid": "UQ:173575",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:3803",
                     "rek_ismemberof_order": 3,
                     "parent": {
@@ -267,7 +267,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11652105,
                     "rek_ismemberof_pid": "UQ:173575",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:152266",
                     "rek_ismemberof_order": 4,
                     "parent": {
@@ -284,14 +284,14 @@ export default {
                 {
                     "rek_keywords_id": 29307982,
                     "rek_keywords_pid": "UQ:173575",
-                    "rek_keywords_xsdmf_id": 7942,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Japanese language",
                     "rek_keywords_order": 1
                 },
                 {
                     "rek_keywords_id": 29307983,
                     "rek_keywords_pid": "UQ:173575",
-                    "rek_keywords_xsdmf_id": 7942,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Second language acquisition",
                     "rek_keywords_order": 2
                 }
@@ -300,14 +300,14 @@ export default {
                 {
                     "rek_language_id": 5286891,
                     "rek_language_pid": "UQ:173575",
-                    "rek_language_xsdmf_id": 10620,
+                    "rek_language_xsdmf_id": null,
                     "rek_language": "jpn",
                     "rek_language_order": 1
                 },
                 {
                     "rek_language_id": 5286892,
                     "rek_language_pid": "UQ:173575",
-                    "rek_language_xsdmf_id": 10620,
+                    "rek_language_xsdmf_id": null,
                     "rek_language": "eng",
                     "rek_language_order": 2
                 }
@@ -316,7 +316,7 @@ export default {
                 {
                     "rek_language_of_book_title_id": 4029,
                     "rek_language_of_book_title_pid": "UQ:173575",
-                    "rek_language_of_book_title_xsdmf_id": 12619,
+                    "rek_language_of_book_title_xsdmf_id": null,
                     "rek_language_of_book_title": "jpn",
                     "rek_language_of_book_title_order": 1
                 }
@@ -325,23 +325,23 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 24759,
                 "rek_license_pid": "UQ:173575",
-                "rek_license_xsdmf_id": 16636,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 453609,
-                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+                "rek_license_lookup": "Creative Commons Attribution-NoDerivatives 3.0 International (CC BY-ND 3.0)"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_native_script_book_title": {
                 "rek_native_script_book_title_id": 2288,
                 "rek_native_script_book_title_pid": "UQ:173575",
-                "rek_native_script_book_title_xsdmf_id": 12581,
+                "rek_native_script_book_title_xsdmf_id": null,
                 "rek_native_script_book_title": "多様化する言語習得環境とこれからの日本語教育"
             },
             "fez_record_search_key_native_script_title": null,
             "fez_record_search_key_notes": {
                 "rek_notes_id": 1126072,
                 "rek_notes_pid": "UQ:173575",
-                "rek_notes_xsdmf_id": 12416,
+                "rek_notes_xsdmf_id": null,
                 "rek_notes": "Translated Book title: 'Japanese Language Education in Diverse Learning Environments'."
             },
             "fez_record_search_key_oa_embargo_days": null,
@@ -351,14 +351,14 @@ export default {
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4227054,
                 "rek_place_of_publication_pid": "UQ:173575",
-                "rek_place_of_publication_xsdmf_id": 6258,
+                "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "Tokyo, Japan"
             },
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4493319,
                 "rek_publisher_pid": "UQ:173575",
-                "rek_publisher_xsdmf_id": 6259,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "3A Corporation"
             },
             "fez_record_search_key_pubmed_id": null,
@@ -367,14 +367,14 @@ export default {
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1256597,
                 "rek_refereed_source_pid": "UQ:173575",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_roman_script_book_title": {
                 "rek_roman_script_book_title_id": 2179,
                 "rek_roman_script_book_title_pid": "UQ:173575",
-                "rek_roman_script_book_title_xsdmf_id": 12582,
+                "rek_roman_script_book_title_xsdmf_id": null,
                 "rek_roman_script_book_title": "Tayō-ka suru gengo shūtoku kankyō to korekara no nihongo kyōiku"
             },
             "fez_record_search_key_roman_script_title": null,
@@ -384,14 +384,14 @@ export default {
             "fez_record_search_key_start_page": {
                 "rek_start_page_id": 5629552,
                 "rek_start_page_pid": "UQ:173575",
-                "rek_start_page_xsdmf_id": 6265,
+                "rek_start_page_xsdmf_id": null,
                 "rek_start_page": "79"
             },
             "fez_record_search_key_subject": [
                 {
                     "rek_subject_id": 9205376,
                     "rek_subject_pid": "UQ:173575",
-                    "rek_subject_xsdmf_id": 6244,
+                    "rek_subject_xsdmf_id": null,
                     "rek_subject": 450006,
                     "rek_subject_order": 1,
                     "rek_subject_lookup": "B1"
@@ -399,7 +399,7 @@ export default {
                 {
                     "rek_subject_id": 9205377,
                     "rek_subject_pid": "UQ:173575",
-                    "rek_subject_xsdmf_id": 6244,
+                    "rek_subject_xsdmf_id": null,
                     "rek_subject": 453090,
                     "rek_subject_order": 2,
                     "rek_subject_lookup": "200401 Applied Linguistics and Educational Linguistics"
@@ -407,7 +407,7 @@ export default {
                 {
                     "rek_subject_id": 9205378,
                     "rek_subject_pid": "UQ:173575",
-                    "rek_subject_xsdmf_id": 6244,
+                    "rek_subject_xsdmf_id": null,
                     "rek_subject": 453076,
                     "rek_subject_order": 3,
                     "rek_subject_lookup": "200312 Japanese Language"
@@ -415,7 +415,7 @@ export default {
                 {
                     "rek_subject_id": 9205379,
                     "rek_subject_pid": "UQ:173575",
-                    "rek_subject_xsdmf_id": 6244,
+                    "rek_subject_xsdmf_id": null,
                     "rek_subject": 451553,
                     "rek_subject_order": 4,
                     "rek_subject_lookup": "950201 Communication Across Languages and Culture"
@@ -424,19 +424,19 @@ export default {
             "fez_record_search_key_total_chapters": {
                 "rek_total_chapters_id": 195063,
                 "rek_total_chapters_pid": "UQ:173575",
-                "rek_total_chapters_xsdmf_id": 9644,
+                "rek_total_chapters_xsdmf_id": null,
                 "rek_total_chapters": "16"
             },
             "fez_record_search_key_total_pages": {
                 "rek_total_pages_id": 5543376,
                 "rek_total_pages_pid": "UQ:173575",
-                "rek_total_pages_xsdmf_id": 9632,
+                "rek_total_pages_xsdmf_id": null,
                 "rek_total_pages": "18"
             },
             "fez_record_search_key_translated_book_title": {
                 "rek_translated_book_title_id": 2488,
                 "rek_translated_book_title_pid": "UQ:173575",
-                "rek_translated_book_title_xsdmf_id": 10632,
+                "rek_translated_book_title_xsdmf_id": null,
                 "rek_translated_book_title": "Japanese language education in diverse learning environments"
             },
             "fez_record_search_key_translated_title": null,
@@ -458,7 +458,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Book Chapter",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -493,7 +493,7 @@ export default {
             "rek_depositor": 41783,
             "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2019-05-17T15:50:53Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2020-03-13T06:53:31Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Power, Colin\" href=\"/list/author/Power%2C+Colin/\">Power, Colin</a> (<span class=\"citation_date\">2015</span>). <a class=\"citation_title\" title=\"Click to view Book Chapter: Higher education: The engine of development\" href=\"/view/UQ:0048ce9\">Higher education: The engine of development</a>. In  <i><span class=\"citation_book_title\">The Power of Education</span></i>  (pp. <span class=\"citation_start_page\">163</span>-<span class=\"citation_end_page\">186</span>)  <span class=\"citation_place_of_publication\">Singapore</span>: <span class=\"citation_publisher\">Springer Nature</span>. doi:<span class=\"citation_doi\">10.1007/978-981-287-221-0_10</span>",
@@ -505,7 +505,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1247,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -525,7 +525,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": 40181792,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "off",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -569,7 +569,7 @@ export default {
                 {
                     "rek_corresponding_country_id": 476691,
                     "rek_corresponding_country_pid": "UQ:0048ce9",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                     "rek_corresponding_country": "aus",
                     "rek_corresponding_country_order": 1
                 }
@@ -579,7 +579,7 @@ export default {
                 {
                     "rek_corresponding_name_id": 167189,
                     "rek_corresponding_name_pid": "UQ:0048ce9",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                     "rek_corresponding_name": "Power C.",
                     "rek_corresponding_name_order": 1
                 }
@@ -968,7 +968,7 @@ export default {
             "fez_record_search_key_zoorec_id": null,
             "fez_record_search_key_isdatasetof": [],
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Book Chapter",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -984,7 +984,7 @@ export default {
                 {
                     "rek_author_affiliation_country_id": 2441957,
                     "rek_author_affiliation_country_pid": "UQ:0048ce9",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_order": 1
                 }
@@ -993,7 +993,7 @@ export default {
                 {
                     "rek_author_affiliation_full_address_id": 2457682,
                     "rek_author_affiliation_full_address_pid": "UQ:0048ce9",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                     "rek_author_affiliation_full_address": "Brisbane,QLD",
                     "rek_author_affiliation_full_address_order": 1
                 }
@@ -1002,7 +1002,7 @@ export default {
                 {
                     "rek_author_affiliation_name_id": 2476069,
                     "rek_author_affiliation_name_pid": "UQ:0048ce9",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "University of Queensland",
                     "rek_author_affiliation_name_order": 1
                 }
@@ -1010,42 +1010,42 @@ export default {
         },
         {
             "rek_pid": "UQ:278002",
-            "rek_title_xsdmf_id": 10623,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Kurt Weill, Mahagonny and the commercialization of Berlin musical theatre in the Weimar Republic",
             "rek_description_xsdmf_id": null,
             "rek_description": "The title is sufficient indication of the chapter's content. Particular attention is paid to the correspondence between Kurt Weill and his musical peers.",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 177,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6260,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2012-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 10202,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2012-07-24T09:27:58Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2020-03-13T06:53:31Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Grosch, Nils\" href=\"/list/author/Grosch%2C+Nils/\">Grosch, Nils</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Wilkes, Geoff\" href=\"/list/author_id/850/\">Wilkes, Geoff</a> (<span class=\"citation_date\">2012</span>). <a class=\"citation_title\" title=\"Click to view Book Chapter: Kurt Weill, Mahagonny and the commercialization of Berlin musical theatre in the Weimar Republic\" href=\"/view/UQ:278002\">Kurt Weill, Mahagonny and the commercialization of Berlin musical theatre in the Weimar Republic</a>. In <span class=\"citation_contributor\"><span class=\"citation_contributor\">Jochen Hung</span>, <span class=\"citation_contributor\">Godela Weiss-Sussex</span> and <span class=\"citation_contributor\">Geoffrey Wilkes</span></span> (Ed.), <i><span class=\"citation_book_title\">Beyond glitter and doom: the contingency of the Weimar Republic</span></i>  (pp. <span class=\"citation_start_page\">192</span>-<span class=\"citation_end_page\">208</span>)  <span class=\"citation_place_of_publication\">Munchen, Germany</span>: <span class=\"citation_publisher\">Iudicium</span>.",
-            "rek_genre_xsdmf_id": 7201,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Book Chapter",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
-            "rek_formatted_title_xsdmf_id": 11487,
+            "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": "Kurt Weill, <i>Mahagonny </i>and the commercialization of Berlin musical theatre in the Weimar Republic",
-            "rek_formatted_abstract_xsdmf_id": 11491,
+            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "<p>The title is sufficient indication of the chapter's content. Particular attention is paid to the correspondence between Kurt Weill and his musical peers.</p>",
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 923,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12378,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Creative Work - Textual",
             "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": 12417,
+            "rek_herdc_notes_xsdmf_id": null,
             "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": null,
             "rek_wok_doc_type_xsdmf_id": null,
@@ -1057,7 +1057,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -1182,7 +1182,7 @@ export default {
                 {
                     "rek_file_attachment_access_condition_id": 23036,
                     "rek_file_attachment_access_condition_pid": "UQ:278002",
-                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                    "rek_file_attachment_access_condition_xsdmf_id": null,
                     "rek_file_attachment_access_condition": "8",
                     "rek_file_attachment_access_condition_order": 1
                 }
@@ -1439,7 +1439,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Book Chapter",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -1456,14 +1456,14 @@ export default {
                 {
                     "rek_author_affiliation_name_id": 2601387,
                     "rek_author_affiliation_name_pid": "UQ:278002",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "University of Salzburg",
                     "rek_author_affiliation_name_order": 1
                 },
                 {
                     "rek_author_affiliation_name_id": 2601388,
                     "rek_author_affiliation_name_pid": "UQ:278002",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "The University of Queensland",
                     "rek_author_affiliation_name_order": 2
                 }

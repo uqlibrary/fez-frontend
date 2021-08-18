@@ -1,4 +1,4 @@
-import { AuthorsCitationView } from './AuthorsCitationView';
+import { AuthorsCitationView, styles } from './AuthorsCitationView';
 
 function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
@@ -13,11 +13,22 @@ function setup(testProps = {}, args = { isShallow: false }) {
     return getElement(AuthorsCitationView, props, args);
 }
 
-describe('AuthorsCitationView test ', () => {
+describe('AuthorsCitationView', () => {
     it('should render component with no authors', () => {
         const wrapper = setup();
         expect(wrapper.find('.empty').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have helper to generated styles', () => {
+        const themeObject = {
+            palette: {
+                success: {
+                    main: '#fff',
+                },
+            },
+        };
+        expect(styles(themeObject).authorIdLink.color).toBe('#fff');
     });
 
     it('should set class on component with no authors', () => {
@@ -305,7 +316,7 @@ describe('AuthorsCitationView test ', () => {
     });
 
     it('should not fail with missing data', () => {
-        const wrapper = setup({ publication: null, prefix: 'Authored by: ', suffix: ' people.' }, true);
+        const wrapper = setup({ prefix: 'Authored by: ', suffix: ' people.' }, true);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(0);
         expect(wrapper.find('.citationAuthor').length).toEqual(0);
@@ -556,14 +567,14 @@ describe('AuthorsCitationView test ', () => {
         const wrapper = setup(
             {
                 publication: testObject,
-                maxAuthorDisplayNumber: 3,
+                maxAuthorDisplayNumber: 2,
                 citationStyle: 'header',
             },
             { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().authors.length).toEqual(4);
-        expect(wrapper.find('.citationAuthor').length).toEqual(4);
+        expect(wrapper.find('.citationAuthor').length).toEqual(3);
     });
 
     it('should render a header correctly when all authors are provided', () => {

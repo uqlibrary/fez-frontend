@@ -12,7 +12,7 @@ context('Conference Paper admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -22,9 +22,7 @@ context('Conference Paper admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
                 cy.get('h4')
@@ -133,10 +131,7 @@ context('Conference Paper admin edit', () => {
             cy.get('@bibliographicTab')
                 .find(selector)
                 .clear();
-            cy.get('.StandardPage form > div:first-child .Alert .alert-text li')
-                .should('have.length', index + 1)
-                .eq(index)
-                .should('have.text', errorMessages[index]);
+            cy.get('[data-testid=alert-warning]').should('contain', errorMessages[index]);
         });
     });
 });

@@ -1,5 +1,4 @@
 import React from 'react';
-import { OPEN_ACCESS_ID, CLOSED_ACCESS_ID } from './config';
 
 export default {
     instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
@@ -54,8 +53,8 @@ export default {
                 </li>
                 <li>
                     file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v,
-                    m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif,
-                    tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                    m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar,
+                    tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                 </li>
                 <li>files are uploaded individually and not inside a folder</li>
             </ul>
@@ -83,20 +82,22 @@ export default {
         uploadInProgressText: 'Uploading...',
         defaultView: {
             embargoDateClosedAccess: 'No date required',
+            accessCondition: {
+                label: 'Access conditions',
+                selectPrompt: 'Select access conditions',
+                errorMessage: 'This field is required',
+            },
         },
         mobileView: {
             filenameColumn: 'File name',
             fileAccessColumn: 'File access',
             embargoDateColumn: 'Embargo date',
             embargoDateClosedAccess: 'No date required',
-        },
-        fileUploadRowAccessSelector: {
-            initialValue: 'Select access conditions',
-            accessSelectOptionsText: {
-                [OPEN_ACCESS_ID]: 'Open Access',
-                [CLOSED_ACCESS_ID]: 'Closed Access',
+            accessCondition: {
+                label: 'Access conditions',
+                selectPrompt: 'Select access conditions',
+                errorMessage: 'This field is required',
             },
-            errorMessage: 'This field is required',
         },
     },
 };

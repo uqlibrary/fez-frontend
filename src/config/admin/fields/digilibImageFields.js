@@ -21,6 +21,10 @@ export default {
             ],
         },
         {
+            title: 'Geographic co-ordinates',
+            groups: [['geoCoordinates']],
+        },
+        {
             title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
         },
@@ -94,19 +98,14 @@ export default {
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_refereed_source'],
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],
 };
 
 export const validateDigilibImage = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -122,11 +121,6 @@ export const validateDigilibImage = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {

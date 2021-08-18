@@ -13,9 +13,10 @@ const mapStateToProps = (state, props) => {
         useExtendedSearch: true,
         ignoreLocation: false,
         ignoreFieldNorm: false,
-        keys: ['id', 'value'],
+        keys: ['id', 'value', 'aut_orcid_id'],
     };
     return {
+        ...(!!props.name ? { name: props.name } : {}),
         id: props.id,
         autoCompleteAsynchronousFieldId: props.authorIdFieldId,
         itemsList: itemsList.filter(item => !!item.id && item.id !== 0),

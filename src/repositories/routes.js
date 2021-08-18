@@ -1,5 +1,14 @@
 import { validation, openAccessConfig } from 'config';
-import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
+import {
+    IN_CREATION,
+    IN_DRAFT,
+    IN_REVIEW,
+    UNPUBLISHED,
+    RETRACTED,
+    SUBMITTED_FOR_APPROVAL,
+    PUB_SEARCH_BULK_EXPORT_SIZE,
+} from 'config/general';
+import param from 'can-param';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
@@ -81,15 +90,48 @@ export const CURRENT_ACCOUNT_API = () => ({
     apiUrl: 'account',
     options: { params: { ts: `${new Date().getTime()}` } },
 });
-export const AUTHORS_SEARCH_API = ({ query }) => ({
+export const AUTHORS_SEARCH_API = ({ query } = { query: null }) => ({
     apiUrl: 'fez-authors/search',
-    options: { params: { query: query, rule: 'lookup' } },
+    ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
 });
+
+export const MANAGE_AUTHORS_LIST_API = params => {
+    return {
+        apiUrl: 'fez-authors/search',
+        options: {
+            params: {
+                sort: 'updated_date',
+                order_by: 'desc',
+                page: params.page + 1,
+                per_page: params.pageSize,
+                query: params.query,
+            },
+        },
+    };
+};
+
 export const CURRENT_AUTHOR_API = () => ({ apiUrl: 'fez-authors' });
-export const AUTHOR_API = ({ authorId }) => ({ apiUrl: `fez-authors/${authorId}` });
+
+export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, authorIds: undefined }) => {
+    if (!!authorId && !authorIds) {
+        return {
+            apiUrl: `fez-authors/${authorId}`,
+        };
+    }
+
+    if (!authorId && !!authorIds && authorIds.length > 0) {
+        return {
+            apiUrl: 'fez-authors/delete-list',
+        };
+    }
+
+    return { apiUrl: 'fez-authors' };
+};
+
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
     apiUrl: `authors/details/${userId}`,
 });
+
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
     apiUrl: `orcid/${userId}/request`,
     options: { params: { ...params } },
@@ -101,10 +143,12 @@ export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: 
 export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-trending' });
 
 // lookup apis
-export const GET_ACML_QUICK_TEMPLATES_API = () => ({ apiUrl: 'acml/quick-templates' });
 export const GET_NEWS_API = () => ({ apiUrl: 'fez-news' });
 export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies?cvo_ids=${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
+export const JOURNAL_LOOKUP_API = ({ query }) => ({
+    apiUrl: `journals/search?rule=lookup&query=${query}`,
+});
 
 // file uploading apis
 export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
@@ -249,6 +293,13 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         };
     }
 
+    const exportParams = {};
+    if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
+        // eslint-disable-next-line no-unused-vars
+        const { exportPublicationsFormat, ...queryValuesToSend } = query;
+        exportParams.querystring = encodeURIComponent(param(queryValuesToSend));
+    }
+
     return {
         apiUrl: `records/${route}`,
         options: {
@@ -256,6 +307,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
                 ...getSearchType(values.searchQuery),
                 ...getStandardSearchParams(values),
                 ...(advancedSearchQueryParams || searchQueryParams),
+                ...exportParams,
             },
         },
     };
@@ -282,7 +334,7 @@ export const SEARCH_AUTHOR_LOOKUP_API = ({ searchQuery }) => ({
     options: {
         params: {
             rule: 'lookup',
-            query: searchQuery.replace(/[.,\/?#!$%\^&\*;:{}=\-_`~()]/g, ' ').replace(/ +(?= )/g, ''),
+            query: searchQuery.replace(/[.,\/?#!$%\^&\*;:{}=\_`~()]/g, ' ').replace(/ +(?= )/g, ''),
         },
     },
 });
@@ -307,6 +359,10 @@ export const BATCH_IMPORT_API = () => ({
     apiUrl: 'external/records/batch-import',
 });
 
+export const MASTER_JOURNAL_LIST_INGEST_API = () => ({
+    apiUrl: 'journals/batch-import',
+});
+
 export const ISSN_LINKS_API = ({ type, issn }) => ({
     apiUrl: `tool/lookup/local/${type}/${issn}`,
 });
@@ -315,10 +371,60 @@ export const ORCID_SYNC_API = () => ({
     apiUrl: 'external/orcid/jobs/sync',
 });
 
+export const INGEST_WORKS_API = () => ({
+    apiUrl: 'external/records/import',
+});
+
 export const UNLOCK_RECORD_API = ({ pid }) => ({
     apiUrl: `records/${pid}/unlock`,
+});
+
+export const BULK_UPDATES_API = () => ({
+    apiUrl: 'records/bulk-updates',
 });
 
 export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
 });
+
+export const JOURNAL_API = ({ id }) => ({
+    apiUrl: `journals/${id}`,
+});
+
+export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
+    apiUrl: `editorial-appointment${!!id ? `/${id}` : ''}`,
+});
+
+export const MANAGE_USERS_LIST_API = params => {
+    return {
+        apiUrl: 'fez-users/search',
+        options: {
+            params: {
+                page: params.page + 1,
+                per_page: params.pageSize,
+                query: params.query,
+            },
+        },
+    };
+};
+
+export const USERS_SEARCH_API = ({ query } = { query: null }) => ({
+    apiUrl: 'fez-users/search',
+    ...(!!query ? { options: { params: { query: query, rule: 'lookup' } } } : {}),
+});
+
+export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: undefined }) => {
+    if (!!userId && !userIds) {
+        return {
+            apiUrl: `fez-users/${userId}`,
+        };
+    }
+
+    if (!userId && !!userIds && userIds.length > 0) {
+        return {
+            apiUrl: 'fez-users/delete-list',
+        };
+    }
+
+    return { apiUrl: 'fez-users' };
+};

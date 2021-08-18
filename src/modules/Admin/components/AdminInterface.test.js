@@ -1,6 +1,7 @@
 import React from 'react';
 import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useRecordContext, useTabbedContext } from 'context';
+import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
@@ -290,7 +291,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(4);
+        expect(wrapper.find('WithStyles(WithStyles(ForwardRef(Tab)))')).toHaveLength(4);
         expect(wrapper.find('TabContainer')).toHaveLength(1);
     });
 
@@ -322,7 +323,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(0);
+        expect(wrapper.find('WithStyles(AdminTab)')).toHaveLength(0);
         expect(wrapper.find('TabContainer')).toHaveLength(3);
     });
 
@@ -357,8 +358,75 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(wrapper.find('WithStyles(ForwardRef(Tab))')).toHaveLength(5);
+        expect(wrapper.find('WithStyles(WithStyles(ForwardRef(Tab)))')).toHaveLength(5);
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
+    });
+
+    it('should respond to keyboard shortcuts', () => {
+        const toggleTabbed = jest.fn();
+        useTabbedContext.mockImplementation(() => ({
+            tabbed: false,
+            toggleTabbed,
+        }));
+
+        const setTab = jest.fn();
+        const mockUseState = jest.spyOn(React, 'useState');
+        mockUseState.mockImplementation(() => ['bibliographic', setTab]);
+
+        const mockUseCallback = jest.spyOn(React, 'useCallback');
+        mockUseCallback.mockImplementation(f => f);
+
+        const map = {};
+        window.addEventListener = jest.fn((event, cb) => {
+            map[event] = cb;
+        });
+
+        const createWrapper = () => {
+            setup({
+                createMode: true,
+                tabs: {
+                    bibliographic: {
+                        activated: true,
+                        component: () => 'BibliographySectionComponent',
+                    },
+                    files: {
+                        activated: true,
+                        component: () => 'FilesSectionComponent',
+                    },
+                    security: {
+                        activated: true,
+                        component: () => 'SecuritySectionComponent',
+                    },
+                },
+            });
+        };
+
+        createWrapper();
+        expect(toggleTabbed).toHaveBeenCalledTimes(0);
+        map.keydown({ key: 'ArrowUp', ctrlKey: true });
+        expect(toggleTabbed).toHaveBeenCalledTimes(1);
+        toggleTabbed.mockClear();
+
+        useTabbedContext.mockImplementation(() => ({
+            tabbed: true,
+            toggleTabbed,
+        }));
+
+        createWrapper();
+        map.keydown({ key: 'ArrowDown', ctrlKey: true });
+        expect(toggleTabbed).toHaveBeenCalledTimes(1);
+
+        map.keydown({ key: 'ArrowRight', ctrlKey: true });
+        expect(setTab).toHaveBeenCalledWith('files');
+        setTab.mockClear();
+
+        mockUseState.mockImplementation(() => ['files', setTab]);
+        createWrapper();
+
+        map.keydown({ key: 'ArrowLeft', ctrlKey: true });
+        expect(setTab).toHaveBeenCalledWith('bibliographic');
+
+        mockUseState.mockRestore();
     });
 
     it('should render alert message for retracted records', () => {
@@ -369,9 +437,7 @@ describe('AdminInterface component', () => {
                 rek_title: 'This is test record',
                 rek_object_type_lookup: RECORD_TYPE_RECORD,
                 rek_display_type_lookup: 'Journal Article',
-                fez_record_search_key_retracted: {
-                    rek_retracted: 1,
-                },
+                rek_status: 7,
                 rek_display_type: 179,
             },
         }));
@@ -404,7 +470,7 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(toJson(wrapper.find('WithStyles(Tab)'))).toMatchSnapshot();
+        expect(toJson(wrapper.find('WithStyles(AdminTab)'))).toMatchSnapshot();
     });
 
     it('should switch the tab', () => {
@@ -480,6 +546,27 @@ describe('AdminInterface component', () => {
     it('should display successful alert', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
         const wrapper = setup({
+            submitSucceeded: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper
+            .find('WithStyles(ConfirmDialogBox)')
+            .props()
+            .onAction();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should display job created alert', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        const wrapper = setup({
+            isJobCreated: true,
             submitSucceeded: true,
             tabs: {
                 bibliographic: {
@@ -579,7 +666,7 @@ describe('AdminInterface component', () => {
         expect(pushFn).toHaveBeenCalledWith('/admin/add');
     });
 
-    it('should call method through reference', () => {
+    it('should call method to show submit confirmation', () => {
         const mockUseRef = jest.spyOn(React, 'useRef');
         const testFn = jest.fn();
         mockUseRef.mockImplementation(() => ({
@@ -588,7 +675,7 @@ describe('AdminInterface component', () => {
             },
         }));
         const mockUseCallback = jest.spyOn(React, 'useCallback');
-        mockUseCallback.mockImplementationOnce(f => f());
+        mockUseCallback.mockImplementation(f => f());
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({}));
 
@@ -596,7 +683,6 @@ describe('AdminInterface component', () => {
             submitSucceeded: true,
         });
         expect(testFn).toHaveBeenCalledTimes(1);
-        expect(mockUseCallback).toHaveBeenCalledTimes(1);
 
         mockUseRef.mockRestore();
         mockUseCallback.mockRestore();
@@ -756,5 +842,38 @@ describe('AdminInterface component', () => {
         }));
         const wrapper2 = setup({ tabs });
         expect(wrapper2.find('#admin-work-publish').length).toEqual(1);
+    });
+
+    it('should render retract button for super admin user', () => {
+        const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
+        useIsUserSuperAdmin.mockImplementation(() => true);
+
+        onSubmit.mockImplementation(() => {});
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_status: 2,
+                rek_title: 'This is test record',
+                rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_display_type: 179,
+            },
+        }));
+        const handleSubmit = jest.fn(f => f({ setIn: jest.fn() }));
+        const wrapper = setup({
+            handleSubmit,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+
+        expect(wrapper.find('#admin-work-retract-top').length).toEqual(1);
+        wrapper.find('#admin-work-retract-top').simulate('click');
+        expect(handleSubmit).toHaveBeenCalled();
+        expect(onSubmit).toHaveBeenCalled();
     });
 });

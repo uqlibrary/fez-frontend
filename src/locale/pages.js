@@ -1,9 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import LockIcon from '@material-ui/icons/Lock';
-import { pathConfig } from 'config/routes';
+import Typography from '@material-ui/core/Typography';
+
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+
 import locale from 'locale/components';
+
+import { pathConfig } from 'config/pathConfig';
 import { DOI_ORG_PREFIX } from 'config/doi';
 /*
 
@@ -36,20 +40,13 @@ export default {
                 <StandardCard>
                     <h3>General Enquiries</h3>
                     <p>
-                        Tel: 07 334 69775 <br />
+                        Tel: 07 334 69981 <br />
                         Email: <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
                         <br />
                     </p>
-                    <h3>Staff contact</h3>
                     <p>
-                        Andrew Heath
-                        <br />
-                        Manager, UQ eSpace
-                        <br />
-                        Tel: 07 334 69981
-                        <br />
-                        Email: <a href="mailto:a.heath@library.uq.edu.au">a.heath@library.uq.edu.au</a>
-                        <br />
+                        Due to COVID-19 measures the phones may not always be monitored by on-site staff. Please email
+                        us for assistance if you are unable to reach us.
                     </p>
                     <h3>About UQ eSpace</h3>
                     The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
@@ -57,20 +54,18 @@ export default {
                     <ul>
                         <li>Enhancing discovery of UQ research via search engines such as Google and Trove</li>
                         <li>
-                            Allowing researchers to deposit publications, datasets and open access materials and to view
-                            publication metrics
+                            Allowing researchers to deposit scholarly works, datasets and open access materials and to
+                            view associated metrics
                         </li>
                         <li>
-                            Maintaining a complete and accurate work of all UQ research publications and research data
-                            sets that feeds into central UQ systems including UQ Researchers and the Academic Portal
+                            Maintaining a complete and accurate collection of all UQ scholarly works and data sets that
+                            feeds into central UQ systems including UQ Researchers and the Academic Portal
                         </li>
                         <li>
                             Enabling government reporting such as Australian Research Council’s Excellence in Research
                             for Australia and the Engagement and Impact Assessment
                         </li>
-                        <li>
-                            Supporting the deposit of open access publications to make UQ research globally accessible
-                        </li>
+                        <li>Supporting the deposit of open access works to make UQ research globally accessible</li>
                         <li>
                             Preserving and making digitised materials accessible to the world including HDR theses,
                             photographs, audio materials, videos, manuscripts and other original works.
@@ -98,9 +93,13 @@ export default {
                 title: 'Browse eSpace help',
                 text: (
                     <div>
-                        <h3>Browse</h3>
+                        <Typography component="h4" variant="h6">
+                            Browse
+                        </Typography>
                         <p>Latest articles....</p>
-                        <h3>Browse collections</h3>
+                        <Typography component="h4" variant="h6">
+                            Browse collections
+                        </Typography>
                         <p>Latest collections....</p>
                     </div>
                 ),
@@ -253,7 +252,7 @@ export default {
             },
             publicationsByYearChart: {
                 title: 'eSpace works per year',
-                yAxisTitle: 'Total publications',
+                yAxisTitle: 'Total works',
             },
             publicationTypesCountChart: {
                 title: 'Work types overview',
@@ -266,8 +265,9 @@ export default {
             },
         },
         myResearch: {
-            pageTitle: 'My research',
+            pageTitle: 'My works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (
                 <span>
                     Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
@@ -332,9 +332,10 @@ export default {
                     title: 'File upload and/or notes post failed',
                     message: 'lorem ipsum',
                     type: 'warning',
+                    alertId: 'alert-warning',
                 },
                 cancelButtonLabel: 'Add another missing dataset',
-                confirmButtonLabel: 'Go to my datasets',
+                confirmButtonLabel: 'Go to my research data',
             },
         },
         claimPublications: {
@@ -377,6 +378,7 @@ export default {
                 message: message =>
                     `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
                 type: 'error',
+                alertId: 'alert-error',
             },
             hideAllPublicationsConfirmation: {
                 confirmationTitle: 'Hide works',
@@ -476,9 +478,10 @@ export default {
                     title: 'File upload and/or notes post failed',
                     message: 'Retry via "Fix work" screen or contact eSpace administrators.',
                     type: 'warning',
+                    alertId: 'alert-warning',
                 },
                 cancelButtonLabel: 'Add another missing work',
-                confirmButtonLabel: 'Go to my research',
+                confirmButtonLabel: 'Go to my works',
                 alternateActionButtonLabel: 'Fix work',
             },
         },
@@ -511,6 +514,7 @@ export default {
                 type: 'info_outline',
                 title: '',
                 message: 'This work has been deleted.',
+                alertId: 'alert-info',
             },
             notFound: {
                 title: 'Work not found',
@@ -529,6 +533,7 @@ export default {
             title: 'eSpace search',
             loadingMessage: 'Searching for works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
@@ -543,6 +548,7 @@ export default {
                 type: 'error_outline',
                 title: 'Error',
                 message: message => message,
+                alertId: 'alert-error',
             },
         },
         collection: {
@@ -595,7 +601,9 @@ export default {
                 title: 'About Google Scholar',
                 text: (
                     <div>
-                        <h3>How to create Google Scholar profile?</h3>
+                        <Typography component="h4" variant="h6">
+                            How to create Google Scholar profile?
+                        </Typography>
                         <ol>
                             <li>Sign to your Google account, or create one if you don't have one.</li>
                             <li>
@@ -621,8 +629,8 @@ export default {
                 submit: 'Save Google Scholar ID',
                 cancel: 'Cancel',
                 googleScholarIdField: {
-                    floatingLabelText: 'Google Scholar ID',
-                    hintText: 'Enter your Google Scholar ID',
+                    label: 'Google Scholar ID',
+                    placeholder: 'Enter your Google Scholar ID',
                 },
             },
             add: {
@@ -667,18 +675,19 @@ export default {
             },
             errorAlert: {
                 type: 'error_outline',
+                alertId: 'alert-error',
                 title: 'Error',
-                message: message =>
-                    `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
             },
             progressAlert: {
                 type: 'info_outline',
+                alertId: 'alert-info',
                 title: 'Saving',
                 message: 'Request is being processed.',
                 showLoader: true,
             },
             successAlert: {
                 type: 'done',
+                alertId: 'alert-done',
                 title: 'Google Scholar ID updated',
                 message: 'Your Google Scholar ID has been updated in your eSpace profile.',
                 allowDismiss: true,
@@ -821,6 +830,7 @@ export default {
             },
             errorAlert: {
                 type: 'error_outline',
+                alertId: 'alert-error',
                 title: 'Error',
                 message: message =>
                     `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
@@ -828,6 +838,7 @@ export default {
             },
             successAlert: {
                 type: 'done',
+                alertId: 'alert-done',
                 title: 'ORCID linked',
                 message:
                     'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and Crossref will be synced to your eSpace profile within the next 7 days.',
@@ -835,6 +846,7 @@ export default {
             },
             progressAlert: {
                 type: 'info_outline',
+                alertId: 'alert-info',
                 title: 'Linking ORCID',
                 message: 'Request is being processed.',
                 showLoader: true,
@@ -921,17 +933,20 @@ export default {
                 bibliographic: {
                     title: 'Bibliographic',
                 },
-                grantInformation: {
-                    title: 'Grant information',
+                grants: {
+                    title: 'Grants',
                 },
-                authorDetails: {
-                    title: 'Author details',
+                authors: {
+                    title: 'Authors',
                 },
                 admin: {
                     title: 'Admin',
                 },
                 ntro: {
                     title: 'NTRO',
+                },
+                notes: {
+                    title: 'Notes',
                 },
                 files: {
                     title: 'Files',
@@ -945,13 +960,16 @@ export default {
                 title: 'Keyboard shortcuts',
                 text: (
                     <div>
-                        <br />
-                        <h3>Tab navigation</h3>
+                        <Typography component="h4" variant="h6">
+                            Tab navigation
+                        </Typography>
                         <p>
                             To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow
                             keys.
                         </p>
-                        <h3>Form style</h3>
+                        <Typography component="h4" variant="h6">
+                            Form style
+                        </Typography>
                         <p>
                             To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN
                             arrow keys.
@@ -959,7 +977,9 @@ export default {
                         <p>
                             Your preference is saved as a cookie on this browser and it will remember your preference.
                         </p>
-                        <h3>Page zoom</h3>
+                        <Typography component="h4" variant="h6">
+                            Page zoom
+                        </Typography>
                         <p>
                             Using <b>CTRL</b> & <b>+/-</b> will zoom the page in/out further for more screen real
                             estate.
@@ -995,38 +1015,40 @@ export default {
                 cancelButtonLabel: 'View new work',
                 confirmButtonLabel: 'Add another work',
             },
+            successJobCreatedConfirmation: {
+                confirmationTitle: 'Work is now updating',
+                confirmationMessage:
+                    'This work requires additional time to fully process.  You will receive a status update via email soon.',
+                cancelButtonLabel: 'Return to view page',
+                confirmButtonLabel: 'Edit another work',
+            },
             alerts: {
                 errorAlert: {
                     type: 'error_outline',
+                    alertId: 'alert-error',
                     title: 'Error',
                     message: message =>
                         `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
                 },
                 successAlert: {
                     type: 'done',
+                    alertId: 'alert-done',
                     title: 'Success',
                     message: 'Work has been saved successfully',
                     allowDismiss: true,
                 },
                 progressAlert: {
                     type: 'info_outline',
+                    alertId: 'alert-info',
                     title: 'Saving',
                     message: 'Request is being processed.',
                     showLoader: true,
                 },
                 validationAlert: {
                     type: 'warning',
+                    alertId: 'alert-warning',
                     title: 'Validation',
                     message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
-                },
-                selfLockedAlert: {
-                    type: 'custom',
-                    title: 'THIS WORK IS LOCKED',
-                    message:
-                        'You currently have this work locked ([username]). Complete your changes and submit, or cancel your changes so others may access this work.',
-                    actionButtonLabel: 'UNLOCK WORK',
-                    customIcon: <LockIcon id="locked-icon" className="icon" />,
-                    customType: 'info',
                 },
                 lockedAlert: {
                     type: 'custom',
@@ -1036,6 +1058,7 @@ export default {
                     actionButtonLabel: 'IGNORE LOCK',
                     customIcon: <LockIcon id="locked-icon" className="icon" />,
                     customType: 'error',
+                    alertId: 'alert-error',
                 },
             },
         },
@@ -1091,6 +1114,35 @@ export default {
         },
         incompletePublication: {
             title: 'Complete my work',
+        },
+        bulkUpdates: {
+            title: 'Bulk updates',
+            loadingMessage: 'Loading bulk updates',
+        },
+        editorialAppointments: {
+            title: 'My editorial appointments',
+            loadingMessage: 'Loading editorial appointments',
+        },
+        journal: {
+            view: {
+                title: 'Journal details',
+                pageId: 'journal-view',
+                loadingMessage: 'Loading journal data',
+                loadFailureAlert: {
+                    alertId: 'alert-error-journal-load',
+                    title: 'Loading failed',
+                    message: 'Unable to load journal details',
+                    type: 'error_outline',
+                },
+            },
+        },
+        authors: {
+            title: 'Manage authors',
+            loadingMessage: 'Loading authors',
+        },
+        users: {
+            title: 'Manage users',
+            loadingMessage: 'Loading users',
         },
     },
 };

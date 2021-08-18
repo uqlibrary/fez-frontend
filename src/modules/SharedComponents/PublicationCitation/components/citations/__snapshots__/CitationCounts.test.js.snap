@@ -1098,8 +1098,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={1}
@@ -1463,18 +1463,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Web of science will open in a new window"
-                                className="wosCitationCount CitationCountView-citationCount-107"
+                                className="wosCitationCount CitationCountView-citationCount-4"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 openInNewIcon={false}
                                 title="Full citation in Web of science will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  className="wosCitationCount CitationCountView-citationCount-107"
+                                  className="wosCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
@@ -1839,7 +1839,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="wosCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -1850,7 +1850,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon wos large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       1
                                     </span>
@@ -1868,8 +1868,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={0}
@@ -2233,18 +2233,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
-                                className="scopusCitationCount CitationCountView-citationCount-107"
+                                className="scopusCitationCount CitationCountView-citationCount-4"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 openInNewIcon={false}
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  className="scopusCitationCount CitationCountView-citationCount-107"
+                                  className="scopusCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
@@ -2609,7 +2609,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="scopusCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -2620,7 +2620,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon scopus large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       0
                                     </span>
@@ -2638,8 +2638,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={1}
@@ -3003,18 +3003,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
-                                className="altmetricCitationCount CitationCountView-citationCount-107"
+                                className="altmetricCitationCount CitationCountView-citationCount-4"
                                 href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  className="altmetricCitationCount CitationCountView-citationCount-107"
+                                  className="altmetricCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="https://queensland.altmetric.com/details/12345"
@@ -3379,7 +3379,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="altmetricCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="https://queensland.altmetric.com/details/12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -3390,7 +3390,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon altmetric large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       1
                                     </span>
@@ -3408,8 +3408,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={1}
@@ -3773,18 +3773,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
-                                className="googleCitationCount CitationCountView-citationCount-107"
+                                className="googleCitationCount CitationCountView-citationCount-4"
                                 href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  className="googleCitationCount CitationCountView-citationCount-107"
+                                  className="googleCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -4149,7 +4149,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="googleCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -4160,7 +4160,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon google large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       1
                                     </span>
@@ -4173,8 +4173,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <OpenAccessIcon
                               classes={
                                 Object {
-                                  "badgeStyle": "OpenAccessIcon-badgeStyle-105",
-                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-106",
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-2",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
                                 }
                               }
                               embargoDate={null}
@@ -4790,28 +4790,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "dsi_state": "A",
                   },
                 ],
-                "fez_matched_journals": Array [
-                  Object {
-                    "mtj_jnl_id": 2528,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 29907,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 47227,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                  Object {
-                    "mtj_jnl_id": 100120,
-                    "mtj_pid": "UQ:678728",
-                    "mtj_status": "A",
-                  },
-                ],
+                "fez_matched_journals": Object {
+                  "mtj_jnl_id": 2528,
+                  "mtj_pid": "UQ:678728",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_article_number": null,
                 "fez_record_search_key_assigned_group_id": Array [],
                 "fez_record_search_key_assigned_user_id": Array [],
@@ -4872,49 +4855,49 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_author_affiliation_country_id": 349769,
                     "rek_author_affiliation_country_order": 1,
                     "rek_author_affiliation_country_pid": "UQ:678728",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_id": 349770,
                     "rek_author_affiliation_country_order": 2,
                     "rek_author_affiliation_country_pid": "UQ:678728",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_id": 349771,
                     "rek_author_affiliation_country_order": 3,
                     "rek_author_affiliation_country_pid": "UQ:678728",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_id": 349772,
                     "rek_author_affiliation_country_order": 4,
                     "rek_author_affiliation_country_pid": "UQ:678728",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_id": 349773,
                     "rek_author_affiliation_country_order": 5,
                     "rek_author_affiliation_country_pid": "UQ:678728",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_id": 349774,
                     "rek_author_affiliation_country_order": 6,
                     "rek_author_affiliation_country_pid": "UQ:678728",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_country": "aus",
                     "rek_author_affiliation_country_id": 349775,
                     "rek_author_affiliation_country_order": 7,
                     "rek_author_affiliation_country_pid": "UQ:678728",
-                    "rek_author_affiliation_country_xsdmf_id": 0,
+                    "rek_author_affiliation_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_full_address": Array [
@@ -4923,49 +4906,49 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_author_affiliation_full_address_id": 382478,
                     "rek_author_affiliation_full_address_order": 1,
                     "rek_author_affiliation_full_address_pid": "UQ:678728",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "Brisbane,Queensland",
                     "rek_author_affiliation_full_address_id": 382479,
                     "rek_author_affiliation_full_address_order": 2,
                     "rek_author_affiliation_full_address_pid": "UQ:678728",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "Queensland",
                     "rek_author_affiliation_full_address_id": 382480,
                     "rek_author_affiliation_full_address_order": 3,
                     "rek_author_affiliation_full_address_pid": "UQ:678728",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "Queensland",
                     "rek_author_affiliation_full_address_id": 382481,
                     "rek_author_affiliation_full_address_order": 4,
                     "rek_author_affiliation_full_address_pid": "UQ:678728",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "Queensland",
                     "rek_author_affiliation_full_address_id": 382482,
                     "rek_author_affiliation_full_address_order": 5,
                     "rek_author_affiliation_full_address_pid": "UQ:678728",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "Queensland",
                     "rek_author_affiliation_full_address_id": 382483,
                     "rek_author_affiliation_full_address_order": 6,
                     "rek_author_affiliation_full_address_pid": "UQ:678728",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_full_address": "Queensland",
                     "rek_author_affiliation_full_address_id": 382484,
                     "rek_author_affiliation_full_address_order": 7,
                     "rek_author_affiliation_full_address_pid": "UQ:678728",
-                    "rek_author_affiliation_full_address_xsdmf_id": 0,
+                    "rek_author_affiliation_full_address_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_affiliation_id": Array [],
@@ -4975,49 +4958,49 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_author_affiliation_name_id": 350555,
                     "rek_author_affiliation_name_order": 1,
                     "rek_author_affiliation_name_pid": "UQ:678728",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Queensland Brain Institute,The University of Queensland",
                     "rek_author_affiliation_name_id": 350556,
                     "rek_author_affiliation_name_order": 2,
                     "rek_author_affiliation_name_pid": "UQ:678728",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                     "rek_author_affiliation_name_id": 350557,
                     "rek_author_affiliation_name_order": 3,
                     "rek_author_affiliation_name_pid": "UQ:678728",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                     "rek_author_affiliation_name_id": 350558,
                     "rek_author_affiliation_name_order": 4,
                     "rek_author_affiliation_name_pid": "UQ:678728",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                     "rek_author_affiliation_name_id": 350559,
                     "rek_author_affiliation_name_order": 5,
                     "rek_author_affiliation_name_pid": "UQ:678728",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                     "rek_author_affiliation_name_id": 350560,
                     "rek_author_affiliation_name_order": 6,
                     "rek_author_affiliation_name_pid": "UQ:678728",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                   Object {
                     "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                     "rek_author_affiliation_name_id": 350561,
                     "rek_author_affiliation_name_order": 7,
                     "rek_author_affiliation_name_pid": "UQ:678728",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_author_id": Array [
@@ -5088,7 +5071,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_corresponding_country_id": 286607,
                     "rek_corresponding_country_order": 1,
                     "rek_corresponding_country_pid": "UQ:678728",
-                    "rek_corresponding_country_xsdmf_id": 0,
+                    "rek_corresponding_country_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_email": Array [
@@ -5097,7 +5080,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_corresponding_email_id": 64300,
                     "rek_corresponding_email_order": 1,
                     "rek_corresponding_email_pid": "UQ:678728",
-                    "rek_corresponding_email_xsdmf_id": 0,
+                    "rek_corresponding_email_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_name": Array [
@@ -5106,7 +5089,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_corresponding_name_id": 57197,
                     "rek_corresponding_name_order": 1,
                     "rek_corresponding_name_pid": "UQ:678728",
-                    "rek_corresponding_name_xsdmf_id": 0,
+                    "rek_corresponding_name_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_corresponding_organisation": Array [],
@@ -5141,14 +5124,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_grant_acronym_id": 8492,
                     "rek_grant_acronym_order": 1,
                     "rek_grant_acronym_pid": "UQ:678728",
-                    "rek_grant_acronym_xsdmf_id": 0,
+                    "rek_grant_acronym_xsdmf_id": null,
                   },
                   Object {
                     "rek_grant_acronym": "ARC",
                     "rek_grant_acronym_id": 8493,
                     "rek_grant_acronym_order": 2,
                     "rek_grant_acronym_pid": "UQ:678728",
-                    "rek_grant_acronym_xsdmf_id": 0,
+                    "rek_grant_acronym_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_grant_agency": Array [
@@ -5157,14 +5140,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_grant_agency_id": 95185,
                     "rek_grant_agency_order": 1,
                     "rek_grant_agency_pid": "UQ:678728",
-                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_xsdmf_id": null,
                   },
                   Object {
                     "rek_grant_agency": "Australian Research Council",
                     "rek_grant_agency_id": 95186,
                     "rek_grant_agency_order": 2,
                     "rek_grant_agency_pid": "UQ:678728",
-                    "rek_grant_agency_xsdmf_id": 0,
+                    "rek_grant_agency_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_grant_agency_id": Array [],
@@ -5174,14 +5157,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_grant_id_id": 45417,
                     "rek_grant_id_order": 1,
                     "rek_grant_id_pid": "UQ:678728",
-                    "rek_grant_id_xsdmf_id": 0,
+                    "rek_grant_id_xsdmf_id": null,
                   },
                   Object {
                     "rek_grant_id": "LE130100078",
                     "rek_grant_id_id": 45418,
                     "rek_grant_id_order": 2,
                     "rek_grant_id_pid": "UQ:678728",
-                    "rek_grant_id_xsdmf_id": 0,
+                    "rek_grant_id_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_grant_text": Array [
@@ -5190,7 +5173,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_grant_text_id": 1255,
                     "rek_grant_text_order": 1,
                     "rek_grant_text_pid": "UQ:678728",
-                    "rek_grant_text_xsdmf_id": 0,
+                    "rek_grant_text_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_has_datasets": Array [],
@@ -5574,20 +5557,20 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                 "rek_altmetric_score_xsdmf_id": null,
                 "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Tomatis, Vanesa M.\\" href=\\"/list/author_id/84876/\\">Tomatis, Vanesa M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Josh, Peter\\" href=\\"/list/author_id/91082/\\">Josh, Peter</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Papadopulos, Andreas\\" href=\\"/list/author_id/89985/\\">Papadopulos, Andreas</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Gormal, Rachel S.\\" href=\\"/list/author_id/10992/\\">Gormal, Rachel S.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Lanoue, Vanessa\\" href=\\"/list/author_id/727162/\\">Lanoue, Vanessa</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Martin, Sally\\" href=\\"/list/author_id/745/\\">Martin, Sally</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Meunier, Frédéric A.\\" href=\\"/list/author_id/2746/\\">Meunier, Frédéric A.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network\\" href=\\"/view/UQ:678728\\">ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network</a>. <i><span class=\\"citation_journal_name\\">Molecular and Cellular Neuroscience</span></i>, <i></i>  . doi:<span class=\\"citation_doi\\">10.1016/j.mcn.2017.07.005</span>",
                 "rek_copyright": "on",
-                "rek_copyright_xsdmf_id": 3679,
+                "rek_copyright_xsdmf_id": null,
                 "rek_created_date": "2019-12-25T00:00:00Z",
-                "rek_created_date_xsdmf_id": 3677,
+                "rek_created_date_xsdmf_id": null,
                 "rek_date": "2017-08-07T00:00:00Z",
-                "rek_date_xsdmf_id": 6386,
+                "rek_date_xsdmf_id": null,
                 "rek_depositor": 48432,
                 "rek_depositor_affiliation": 1017,
-                "rek_depositor_affiliation_xsdmf_id": 11881,
-                "rek_depositor_xsdmf_id": 7578,
+                "rek_depositor_affiliation_xsdmf_id": null,
+                "rek_depositor_xsdmf_id": null,
                 "rek_description": "In neurosecretory cells, myosin VI associated with secretory granules (SGs) mediates their activity-dependent recruitment to the cortical actin network and is necessary to sustain exocytosis. The mechanism by which myosin VI interacts with SGs is unknown. Using a myosin VI pull-down assay and mass spectrometry we identified Mena, a member of the ENA/VASP family, as a myosin VI binding partner in PC12 cells, and confirmed that Mena colocalized with myosin VI on SGs. Using a knock-sideways approach to inactivate the ENA/VASP family members by mitochondrial relocation, we revealed a concomitant redistribution of myosin VI. This was ensued by a reduction in the association of myosin VI with SGs, a decreased SG mobility and density in proximity to the plasma membrane as well as decreased evoked exocytosis. These data demonstrate that ENA/VASP proteins regulate SG exocytosis through modulating the activity of myosin VI.",
-                "rek_description_xsdmf_id": 11441,
+                "rek_description_xsdmf_id": null,
                 "rek_display_type": 179,
                 "rek_display_type_lookup": "Journal Article",
-                "rek_display_type_xsdmf_id": 3673,
+                "rek_display_type_xsdmf_id": null,
                 "rek_file_downloads": 0,
                 "rek_formatted_abstract": null,
                 "rek_formatted_abstract_xsdmf_id": null,
@@ -5596,12 +5579,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                 "rek_genre": "Journal Article",
                 "rek_genre_type": "Article (original research)",
                 "rek_genre_type_xsdmf_id": null,
-                "rek_genre_xsdmf_id": 7207,
+                "rek_genre_xsdmf_id": null,
                 "rek_herdc_notes": null,
                 "rek_herdc_notes_xsdmf_id": null,
                 "rek_object_type": 3,
                 "rek_object_type_lookup": "Record",
-                "rek_object_type_xsdmf_id": 3674,
+                "rek_object_type_xsdmf_id": null,
                 "rek_pid": "UQ:678728",
                 "rek_pubmed_doc_type": null,
                 "rek_pubmed_doc_type_lookup": null,
@@ -5609,19 +5592,19 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                 "rek_scopus_citation_count": 0,
                 "rek_scopus_doc_type": "ip",
                 "rek_scopus_doc_type_lookup": null,
-                "rek_scopus_doc_type_xsdmf_id": 12550,
+                "rek_scopus_doc_type_xsdmf_id": null,
                 "rek_security_inherited": 1,
                 "rek_status": 2,
                 "rek_status_lookup": "Published",
-                "rek_status_xsdmf_id": 3680,
+                "rek_status_xsdmf_id": null,
                 "rek_subtype": "Article (original research)",
-                "rek_subtype_xsdmf_id": 12379,
+                "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
                 "rek_title": "ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
-                "rek_title_xsdmf_id": 10588,
+                "rek_title_xsdmf_id": null,
                 "rek_updated_date": "2018-01-19T16:27:39Z",
-                "rek_updated_date_xsdmf_id": 3678,
+                "rek_updated_date_xsdmf_id": null,
                 "rek_wok_doc_type": null,
                 "rek_wok_doc_type_lookup": null,
                 "rek_wok_doc_type_xsdmf_id": null,
@@ -5649,28 +5632,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "dsi_state": "A",
                     },
                   ],
-                  "fez_matched_journals": Array [
-                    Object {
-                      "mtj_jnl_id": 2528,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 29907,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 47227,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                    Object {
-                      "mtj_jnl_id": 100120,
-                      "mtj_pid": "UQ:678728",
-                      "mtj_status": "A",
-                    },
-                  ],
+                  "fez_matched_journals": Object {
+                    "mtj_jnl_id": 2528,
+                    "mtj_pid": "UQ:678728",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_article_number": null,
                   "fez_record_search_key_assigned_group_id": Array [],
                   "fez_record_search_key_assigned_user_id": Array [],
@@ -5731,49 +5697,49 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_author_affiliation_country_id": 349769,
                       "rek_author_affiliation_country_order": 1,
                       "rek_author_affiliation_country_pid": "UQ:678728",
-                      "rek_author_affiliation_country_xsdmf_id": 0,
+                      "rek_author_affiliation_country_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_country": "aus",
                       "rek_author_affiliation_country_id": 349770,
                       "rek_author_affiliation_country_order": 2,
                       "rek_author_affiliation_country_pid": "UQ:678728",
-                      "rek_author_affiliation_country_xsdmf_id": 0,
+                      "rek_author_affiliation_country_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_country": "aus",
                       "rek_author_affiliation_country_id": 349771,
                       "rek_author_affiliation_country_order": 3,
                       "rek_author_affiliation_country_pid": "UQ:678728",
-                      "rek_author_affiliation_country_xsdmf_id": 0,
+                      "rek_author_affiliation_country_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_country": "aus",
                       "rek_author_affiliation_country_id": 349772,
                       "rek_author_affiliation_country_order": 4,
                       "rek_author_affiliation_country_pid": "UQ:678728",
-                      "rek_author_affiliation_country_xsdmf_id": 0,
+                      "rek_author_affiliation_country_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_country": "aus",
                       "rek_author_affiliation_country_id": 349773,
                       "rek_author_affiliation_country_order": 5,
                       "rek_author_affiliation_country_pid": "UQ:678728",
-                      "rek_author_affiliation_country_xsdmf_id": 0,
+                      "rek_author_affiliation_country_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_country": "aus",
                       "rek_author_affiliation_country_id": 349774,
                       "rek_author_affiliation_country_order": 6,
                       "rek_author_affiliation_country_pid": "UQ:678728",
-                      "rek_author_affiliation_country_xsdmf_id": 0,
+                      "rek_author_affiliation_country_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_country": "aus",
                       "rek_author_affiliation_country_id": 349775,
                       "rek_author_affiliation_country_order": 7,
                       "rek_author_affiliation_country_pid": "UQ:678728",
-                      "rek_author_affiliation_country_xsdmf_id": 0,
+                      "rek_author_affiliation_country_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_author_affiliation_full_address": Array [
@@ -5782,49 +5748,49 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_author_affiliation_full_address_id": 382478,
                       "rek_author_affiliation_full_address_order": 1,
                       "rek_author_affiliation_full_address_pid": "UQ:678728",
-                      "rek_author_affiliation_full_address_xsdmf_id": 0,
+                      "rek_author_affiliation_full_address_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_full_address": "Brisbane,Queensland",
                       "rek_author_affiliation_full_address_id": 382479,
                       "rek_author_affiliation_full_address_order": 2,
                       "rek_author_affiliation_full_address_pid": "UQ:678728",
-                      "rek_author_affiliation_full_address_xsdmf_id": 0,
+                      "rek_author_affiliation_full_address_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_full_address": "Queensland",
                       "rek_author_affiliation_full_address_id": 382480,
                       "rek_author_affiliation_full_address_order": 3,
                       "rek_author_affiliation_full_address_pid": "UQ:678728",
-                      "rek_author_affiliation_full_address_xsdmf_id": 0,
+                      "rek_author_affiliation_full_address_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_full_address": "Queensland",
                       "rek_author_affiliation_full_address_id": 382481,
                       "rek_author_affiliation_full_address_order": 4,
                       "rek_author_affiliation_full_address_pid": "UQ:678728",
-                      "rek_author_affiliation_full_address_xsdmf_id": 0,
+                      "rek_author_affiliation_full_address_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_full_address": "Queensland",
                       "rek_author_affiliation_full_address_id": 382482,
                       "rek_author_affiliation_full_address_order": 5,
                       "rek_author_affiliation_full_address_pid": "UQ:678728",
-                      "rek_author_affiliation_full_address_xsdmf_id": 0,
+                      "rek_author_affiliation_full_address_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_full_address": "Queensland",
                       "rek_author_affiliation_full_address_id": 382483,
                       "rek_author_affiliation_full_address_order": 6,
                       "rek_author_affiliation_full_address_pid": "UQ:678728",
-                      "rek_author_affiliation_full_address_xsdmf_id": 0,
+                      "rek_author_affiliation_full_address_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_full_address": "Queensland",
                       "rek_author_affiliation_full_address_id": 382484,
                       "rek_author_affiliation_full_address_order": 7,
                       "rek_author_affiliation_full_address_pid": "UQ:678728",
-                      "rek_author_affiliation_full_address_xsdmf_id": 0,
+                      "rek_author_affiliation_full_address_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_author_affiliation_id": Array [],
@@ -5834,49 +5800,49 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_author_affiliation_name_id": 350555,
                       "rek_author_affiliation_name_order": 1,
                       "rek_author_affiliation_name_pid": "UQ:678728",
-                      "rek_author_affiliation_name_xsdmf_id": 0,
+                      "rek_author_affiliation_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_name": "Queensland Brain Institute,The University of Queensland",
                       "rek_author_affiliation_name_id": 350556,
                       "rek_author_affiliation_name_order": 2,
                       "rek_author_affiliation_name_pid": "UQ:678728",
-                      "rek_author_affiliation_name_xsdmf_id": 0,
+                      "rek_author_affiliation_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                       "rek_author_affiliation_name_id": 350557,
                       "rek_author_affiliation_name_order": 3,
                       "rek_author_affiliation_name_pid": "UQ:678728",
-                      "rek_author_affiliation_name_xsdmf_id": 0,
+                      "rek_author_affiliation_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                       "rek_author_affiliation_name_id": 350558,
                       "rek_author_affiliation_name_order": 4,
                       "rek_author_affiliation_name_pid": "UQ:678728",
-                      "rek_author_affiliation_name_xsdmf_id": 0,
+                      "rek_author_affiliation_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                       "rek_author_affiliation_name_id": 350559,
                       "rek_author_affiliation_name_order": 5,
                       "rek_author_affiliation_name_pid": "UQ:678728",
-                      "rek_author_affiliation_name_xsdmf_id": 0,
+                      "rek_author_affiliation_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                       "rek_author_affiliation_name_id": 350560,
                       "rek_author_affiliation_name_order": 6,
                       "rek_author_affiliation_name_pid": "UQ:678728",
-                      "rek_author_affiliation_name_xsdmf_id": 0,
+                      "rek_author_affiliation_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_affiliation_name": "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
                       "rek_author_affiliation_name_id": 350561,
                       "rek_author_affiliation_name_order": 7,
                       "rek_author_affiliation_name_pid": "UQ:678728",
-                      "rek_author_affiliation_name_xsdmf_id": 0,
+                      "rek_author_affiliation_name_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_author_id": Array [
@@ -5947,7 +5913,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_corresponding_country_id": 286607,
                       "rek_corresponding_country_order": 1,
                       "rek_corresponding_country_pid": "UQ:678728",
-                      "rek_corresponding_country_xsdmf_id": 0,
+                      "rek_corresponding_country_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_corresponding_email": Array [
@@ -5956,7 +5922,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_corresponding_email_id": 64300,
                       "rek_corresponding_email_order": 1,
                       "rek_corresponding_email_pid": "UQ:678728",
-                      "rek_corresponding_email_xsdmf_id": 0,
+                      "rek_corresponding_email_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_corresponding_name": Array [
@@ -5965,7 +5931,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_corresponding_name_id": 57197,
                       "rek_corresponding_name_order": 1,
                       "rek_corresponding_name_pid": "UQ:678728",
-                      "rek_corresponding_name_xsdmf_id": 0,
+                      "rek_corresponding_name_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_corresponding_organisation": Array [],
@@ -6000,14 +5966,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_grant_acronym_id": 8492,
                       "rek_grant_acronym_order": 1,
                       "rek_grant_acronym_pid": "UQ:678728",
-                      "rek_grant_acronym_xsdmf_id": 0,
+                      "rek_grant_acronym_xsdmf_id": null,
                     },
                     Object {
                       "rek_grant_acronym": "ARC",
                       "rek_grant_acronym_id": 8493,
                       "rek_grant_acronym_order": 2,
                       "rek_grant_acronym_pid": "UQ:678728",
-                      "rek_grant_acronym_xsdmf_id": 0,
+                      "rek_grant_acronym_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_grant_agency": Array [
@@ -6016,14 +5982,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_grant_agency_id": 95185,
                       "rek_grant_agency_order": 1,
                       "rek_grant_agency_pid": "UQ:678728",
-                      "rek_grant_agency_xsdmf_id": 0,
+                      "rek_grant_agency_xsdmf_id": null,
                     },
                     Object {
                       "rek_grant_agency": "Australian Research Council",
                       "rek_grant_agency_id": 95186,
                       "rek_grant_agency_order": 2,
                       "rek_grant_agency_pid": "UQ:678728",
-                      "rek_grant_agency_xsdmf_id": 0,
+                      "rek_grant_agency_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_grant_agency_id": Array [],
@@ -6033,14 +5999,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_grant_id_id": 45417,
                       "rek_grant_id_order": 1,
                       "rek_grant_id_pid": "UQ:678728",
-                      "rek_grant_id_xsdmf_id": 0,
+                      "rek_grant_id_xsdmf_id": null,
                     },
                     Object {
                       "rek_grant_id": "LE130100078",
                       "rek_grant_id_id": 45418,
                       "rek_grant_id_order": 2,
                       "rek_grant_id_pid": "UQ:678728",
-                      "rek_grant_id_xsdmf_id": 0,
+                      "rek_grant_id_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_grant_text": Array [
@@ -6049,7 +6015,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_grant_text_id": 1255,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:678728",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_has_datasets": Array [],
@@ -6433,20 +6399,20 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   "rek_altmetric_score_xsdmf_id": null,
                   "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Tomatis, Vanesa M.\\" href=\\"/list/author_id/84876/\\">Tomatis, Vanesa M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Josh, Peter\\" href=\\"/list/author_id/91082/\\">Josh, Peter</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Papadopulos, Andreas\\" href=\\"/list/author_id/89985/\\">Papadopulos, Andreas</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Gormal, Rachel S.\\" href=\\"/list/author_id/10992/\\">Gormal, Rachel S.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Lanoue, Vanessa\\" href=\\"/list/author_id/727162/\\">Lanoue, Vanessa</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Martin, Sally\\" href=\\"/list/author_id/745/\\">Martin, Sally</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Meunier, Frédéric A.\\" href=\\"/list/author_id/2746/\\">Meunier, Frédéric A.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network\\" href=\\"/view/UQ:678728\\">ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network</a>. <i><span class=\\"citation_journal_name\\">Molecular and Cellular Neuroscience</span></i>, <i></i>  . doi:<span class=\\"citation_doi\\">10.1016/j.mcn.2017.07.005</span>",
                   "rek_copyright": "on",
-                  "rek_copyright_xsdmf_id": 3679,
+                  "rek_copyright_xsdmf_id": null,
                   "rek_created_date": "2019-12-25T00:00:00Z",
-                  "rek_created_date_xsdmf_id": 3677,
+                  "rek_created_date_xsdmf_id": null,
                   "rek_date": "2017-08-07T00:00:00Z",
-                  "rek_date_xsdmf_id": 6386,
+                  "rek_date_xsdmf_id": null,
                   "rek_depositor": 48432,
                   "rek_depositor_affiliation": 1017,
-                  "rek_depositor_affiliation_xsdmf_id": 11881,
-                  "rek_depositor_xsdmf_id": 7578,
+                  "rek_depositor_affiliation_xsdmf_id": null,
+                  "rek_depositor_xsdmf_id": null,
                   "rek_description": "In neurosecretory cells, myosin VI associated with secretory granules (SGs) mediates their activity-dependent recruitment to the cortical actin network and is necessary to sustain exocytosis. The mechanism by which myosin VI interacts with SGs is unknown. Using a myosin VI pull-down assay and mass spectrometry we identified Mena, a member of the ENA/VASP family, as a myosin VI binding partner in PC12 cells, and confirmed that Mena colocalized with myosin VI on SGs. Using a knock-sideways approach to inactivate the ENA/VASP family members by mitochondrial relocation, we revealed a concomitant redistribution of myosin VI. This was ensued by a reduction in the association of myosin VI with SGs, a decreased SG mobility and density in proximity to the plasma membrane as well as decreased evoked exocytosis. These data demonstrate that ENA/VASP proteins regulate SG exocytosis through modulating the activity of myosin VI.",
-                  "rek_description_xsdmf_id": 11441,
+                  "rek_description_xsdmf_id": null,
                   "rek_display_type": 179,
                   "rek_display_type_lookup": "Journal Article",
-                  "rek_display_type_xsdmf_id": 3673,
+                  "rek_display_type_xsdmf_id": null,
                   "rek_file_downloads": 0,
                   "rek_formatted_abstract": null,
                   "rek_formatted_abstract_xsdmf_id": null,
@@ -6455,12 +6421,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   "rek_genre": "Journal Article",
                   "rek_genre_type": "Article (original research)",
                   "rek_genre_type_xsdmf_id": null,
-                  "rek_genre_xsdmf_id": 7207,
+                  "rek_genre_xsdmf_id": null,
                   "rek_herdc_notes": null,
                   "rek_herdc_notes_xsdmf_id": null,
                   "rek_object_type": 3,
                   "rek_object_type_lookup": "Record",
-                  "rek_object_type_xsdmf_id": 3674,
+                  "rek_object_type_xsdmf_id": null,
                   "rek_pid": "UQ:678728",
                   "rek_pubmed_doc_type": null,
                   "rek_pubmed_doc_type_lookup": null,
@@ -6468,19 +6434,19 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   "rek_scopus_citation_count": 0,
                   "rek_scopus_doc_type": "ip",
                   "rek_scopus_doc_type_lookup": null,
-                  "rek_scopus_doc_type_xsdmf_id": 12550,
+                  "rek_scopus_doc_type_xsdmf_id": null,
                   "rek_security_inherited": 1,
                   "rek_status": 2,
                   "rek_status_lookup": "Published",
-                  "rek_status_xsdmf_id": 3680,
+                  "rek_status_xsdmf_id": null,
                   "rek_subtype": "Article (original research)",
-                  "rek_subtype_xsdmf_id": 12379,
+                  "rek_subtype_xsdmf_id": null,
                   "rek_thomson_citation_count": null,
                   "rek_thomson_citation_count_xsdmf_id": null,
                   "rek_title": "ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
-                  "rek_title_xsdmf_id": 10588,
+                  "rek_title_xsdmf_id": null,
                   "rek_updated_date": "2018-01-19T16:27:39Z",
-                  "rek_updated_date_xsdmf_id": 3678,
+                  "rek_updated_date_xsdmf_id": null,
                   "rek_wok_doc_type": null,
                   "rek_wok_doc_type_lookup": null,
                   "rek_wok_doc_type_xsdmf_id": null,
@@ -7088,8 +7054,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={0}
@@ -7453,18 +7419,18 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
-                                className="scopusCitationCount CitationCountView-citationCount-107"
+                                className="scopusCitationCount CitationCountView-citationCount-4"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                 openInNewIcon={false}
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  className="scopusCitationCount CitationCountView-citationCount-107"
+                                  className="scopusCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
@@ -7829,7 +7795,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="scopusCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -7840,7 +7806,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       className="fez-icon scopus large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       0
                                     </span>
@@ -7858,8 +7824,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={1}
@@ -8223,18 +8189,18 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
-                                className="altmetricCitationCount CitationCountView-citationCount-107"
+                                className="altmetricCitationCount CitationCountView-citationCount-4"
                                 href="https://queensland.altmetric.com/details/23535331"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  className="altmetricCitationCount CitationCountView-citationCount-107"
+                                  className="altmetricCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="https://queensland.altmetric.com/details/23535331"
@@ -8599,7 +8565,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="altmetricCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="https://queensland.altmetric.com/details/23535331"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -8610,7 +8576,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       className="fez-icon altmetric large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       1
                                     </span>
@@ -8628,8 +8594,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={null}
@@ -8993,18 +8959,18 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
-                                className="googleCitationCount CitationCountView-citationCount-107"
+                                className="googleCitationCount CitationCountView-citationCount-4"
                                 href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                 openInNewIcon={false}
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  className="googleCitationCount CitationCountView-citationCount-107"
+                                  className="googleCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
@@ -9369,7 +9335,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="googleCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -9388,8 +9354,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <OpenAccessIcon
                               classes={
                                 Object {
-                                  "badgeStyle": "OpenAccessIcon-badgeStyle-105",
-                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-106",
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-2",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
                                 }
                               }
                               embargoDate={null}
@@ -9530,8 +9496,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               className="CitationCounts-statsLink-1"
                               classes={
                                 Object {
-                                  "externalLink": "ExternalLink-externalLink-109",
-                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                  "externalLink": "ExternalLink-externalLink-6",
+                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                 }
                               }
                               href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
@@ -9895,21 +9861,21 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-109"
+                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-6"
                                 href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
                                 rel="noopener noreferrer"
                                 tabIndex="0"
                                 target="_blank"
                                 title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                               >
-                                <ForwardRef
-                                  className="ExternalLink-externalLinkIcon-110"
+                                <ForwardRef(OpenInNewIcon)
+                                  className="ExternalLink-externalLinkIcon-7"
                                 >
                                   <WithStyles(ForwardRef(SvgIcon))
-                                    className="ExternalLink-externalLinkIcon-110"
+                                    className="ExternalLink-externalLinkIcon-7"
                                   >
                                     <ForwardRef(SvgIcon)
-                                      className="ExternalLink-externalLinkIcon-110"
+                                      className="ExternalLink-externalLinkIcon-7"
                                       classes={
                                         Object {
                                           "colorAction": "MuiSvgIcon-colorAction",
@@ -9925,8 +9891,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       }
                                     >
                                       <svg
-                                        aria-hidden="true"
-                                        className="MuiSvgIcon-root ExternalLink-externalLinkIcon-110"
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root ExternalLink-externalLinkIcon-7"
                                         focusable="false"
                                         viewBox="0 0 24 24"
                                       >
@@ -9936,7 +9902,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </ForwardRef>
+                                </ForwardRef(OpenInNewIcon)>
                                 View full statistics
                               </a>
                             </ExternalLink>
@@ -11068,8 +11034,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={0}
@@ -11433,18 +11399,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Web of science will open in a new window"
-                                className="wosCitationCount CitationCountView-citationCount-107"
+                                className="wosCitationCount CitationCountView-citationCount-4"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 openInNewIcon={false}
                                 title="Full citation in Web of science will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  className="wosCitationCount CitationCountView-citationCount-107"
+                                  className="wosCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
@@ -11809,7 +11775,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="wosCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -11820,7 +11786,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon wos large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       0
                                     </span>
@@ -11838,8 +11804,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={1}
@@ -12203,18 +12169,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
-                                className="scopusCitationCount CitationCountView-citationCount-107"
+                                className="scopusCitationCount CitationCountView-citationCount-4"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 openInNewIcon={false}
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  className="scopusCitationCount CitationCountView-citationCount-107"
+                                  className="scopusCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
@@ -12579,7 +12545,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="scopusCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -12590,7 +12556,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon scopus large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       1
                                     </span>
@@ -12608,8 +12574,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={1}
@@ -12973,18 +12939,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
-                                className="altmetricCitationCount CitationCountView-citationCount-107"
+                                className="altmetricCitationCount CitationCountView-citationCount-4"
                                 href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  className="altmetricCitationCount CitationCountView-citationCount-107"
+                                  className="altmetricCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="https://queensland.altmetric.com/details/12345"
@@ -13349,7 +13315,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="altmetricCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="https://queensland.altmetric.com/details/12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -13360,7 +13326,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon altmetric large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       1
                                     </span>
@@ -13378,8 +13344,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-107",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-108",
+                                  "citationCount": "CitationCountView-citationCount-4",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-5",
                                 }
                               }
                               count={1}
@@ -13743,18 +13709,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
-                                className="googleCitationCount CitationCountView-citationCount-107"
+                                className="googleCitationCount CitationCountView-citationCount-4"
                                 href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  className="googleCitationCount CitationCountView-citationCount-107"
+                                  className="googleCitationCount CitationCountView-citationCount-4"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-109",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                      "externalLink": "ExternalLink-externalLink-6",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -14119,7 +14085,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-107 ExternalLink-externalLink-109"
+                                    className="googleCitationCount CitationCountView-citationCount-4 ExternalLink-externalLink-6"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -14130,7 +14096,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon google large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-108"
+                                      className="CitationCountView-citationCountNumber-5"
                                     >
                                       1
                                     </span>
@@ -14143,8 +14109,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <OpenAccessIcon
                               classes={
                                 Object {
-                                  "badgeStyle": "OpenAccessIcon-badgeStyle-105",
-                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-106",
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-2",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
                                 }
                               }
                               embargoDate={null}
@@ -14285,8 +14251,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               className="CitationCounts-statsLink-1"
                               classes={
                                 Object {
-                                  "externalLink": "ExternalLink-externalLink-109",
-                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-110",
+                                  "externalLink": "ExternalLink-externalLink-6",
+                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-7",
                                 }
                               }
                               href="https://app.library.uq.edu.au/#/authors/view/pid:111"
@@ -14650,21 +14616,21 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               title="This is test title"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-109"
+                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-6"
                                 href="https://app.library.uq.edu.au/#/authors/view/pid:111"
                                 rel="noopener noreferrer"
                                 tabIndex="0"
                                 target="_blank"
                                 title="This is test title"
                               >
-                                <ForwardRef
-                                  className="ExternalLink-externalLinkIcon-110"
+                                <ForwardRef(OpenInNewIcon)
+                                  className="ExternalLink-externalLinkIcon-7"
                                 >
                                   <WithStyles(ForwardRef(SvgIcon))
-                                    className="ExternalLink-externalLinkIcon-110"
+                                    className="ExternalLink-externalLinkIcon-7"
                                   >
                                     <ForwardRef(SvgIcon)
-                                      className="ExternalLink-externalLinkIcon-110"
+                                      className="ExternalLink-externalLinkIcon-7"
                                       classes={
                                         Object {
                                           "colorAction": "MuiSvgIcon-colorAction",
@@ -14680,8 +14646,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       }
                                     >
                                       <svg
-                                        aria-hidden="true"
-                                        className="MuiSvgIcon-root ExternalLink-externalLinkIcon-110"
+                                        aria-hidden={true}
+                                        className="MuiSvgIcon-root ExternalLink-externalLinkIcon-7"
                                         focusable="false"
                                         viewBox="0 0 24 24"
                                       >
@@ -14691,7 +14657,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </ForwardRef>
+                                </ForwardRef(OpenInNewIcon)>
                                 View full statistics
                               </a>
                             </ExternalLink>
@@ -15772,8 +15738,8 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                             <OpenAccessIcon
                               classes={
                                 Object {
-                                  "badgeStyle": "OpenAccessIcon-badgeStyle-105",
-                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-106",
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-2",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
                                 }
                               }
                               embargoDate={null}
@@ -15939,8 +15905,8 @@ exports[`CitationCounts should render open access icon when required 1`] = `
 <OpenAccessIcon
   classes={
     Object {
-      "badgeStyle": "OpenAccessIcon-badgeStyle-105",
-      "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-106",
+      "badgeStyle": "OpenAccessIcon-badgeStyle-2",
+      "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-3",
     }
   }
   embargoDate={null}

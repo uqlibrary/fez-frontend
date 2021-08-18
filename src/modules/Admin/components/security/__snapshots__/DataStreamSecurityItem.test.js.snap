@@ -32,6 +32,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       >
         Test Policy Dropdown Label
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
         >
            *
@@ -56,11 +57,14 @@ exports[`DataStreamSecurityItem component should render default view with inheri
           Theses Assessors
         </div>
         <input
+          aria-hidden="true"
           aria-labelledby="dsi-security-policy-0-label"
+          class="MuiSelect-nativeInput"
           data-testid="dsi-security-policy-0-input"
           id="dsi-security-policy-0-input"
           name="test.jpg"
-          type="hidden"
+          required=""
+          tabindex="-1"
           value="2"
         />
         <svg
@@ -111,6 +115,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
       >
         Test Policy Dropdown Label
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
         >
            *
@@ -135,11 +140,14 @@ exports[`DataStreamSecurityItem component should render default view with overri
           Theses Assessors
         </div>
         <input
+          aria-hidden="true"
           aria-labelledby="dsi-security-policy-0-label"
+          class="MuiSelect-nativeInput"
           data-testid="dsi-security-policy-0-input"
           id="dsi-security-policy-0-input"
           name="test.jpg"
-          type="hidden"
+          required=""
+          tabindex="-1"
           value="2"
         />
         <svg
@@ -190,6 +198,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       >
         Test Policy Dropdown Label
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
         >
            *
@@ -214,11 +223,14 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
           Theses Assessors
         </div>
         <input
+          aria-hidden="true"
           aria-labelledby="dsi-security-policy-2-label"
+          class="MuiSelect-nativeInput"
           data-testid="dsi-security-policy-2-input"
           id="dsi-security-policy-2-input"
           name="test.jpg"
-          type="hidden"
+          required=""
+          tabindex="-1"
           value="2"
         />
         <svg

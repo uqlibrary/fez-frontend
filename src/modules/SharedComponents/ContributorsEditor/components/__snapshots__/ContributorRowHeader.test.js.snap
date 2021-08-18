@@ -27,7 +27,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -103,13 +103,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         />
       </Hidden>
     </WithStyles(ForwardRef(ListItemSecondaryAction))>
-    <WithStyles(ForwardRef(ListItemSecondaryAction))
-      classes={
-        Object {
-          "root": "",
-        }
-      }
-    >
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
       <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
@@ -122,7 +116,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -156,7 +150,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -214,13 +208,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         />
       </Hidden>
     </WithStyles(ForwardRef(ListItemSecondaryAction))>
-    <WithStyles(ForwardRef(ListItemSecondaryAction))
-      classes={
-        Object {
-          "root": "",
-        }
-      }
-    >
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
       <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={true}
         disableHoverListener={true}
@@ -233,7 +221,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={true}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -267,7 +255,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -325,13 +313,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         />
       </Hidden>
     </WithStyles(ForwardRef(ListItemSecondaryAction))>
-    <WithStyles(ForwardRef(ListItemSecondaryAction))
-      classes={
-        Object {
-          "root": "",
-        }
-      }
-    >
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
       <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
@@ -344,7 +326,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -378,7 +360,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -449,13 +431,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         />
       </Hidden>
     </WithStyles(ForwardRef(ListItemSecondaryAction))>
-    <WithStyles(ForwardRef(ListItemSecondaryAction))
-      classes={
-        Object {
-          "root": "",
-        }
-      }
-    >
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
       <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
@@ -468,7 +444,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -502,7 +478,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       xsDown={true}
     >
       <WithStyles(ForwardRef(ListItemIcon))>
-        <PeopleIcon />
+        <Memo(ForwardRef(PeopleIcon)) />
       </WithStyles(ForwardRef(ListItemIcon))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
@@ -560,13 +536,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
         />
       </Hidden>
     </WithStyles(ForwardRef(ListItemSecondaryAction))>
-    <WithStyles(ForwardRef(ListItemSecondaryAction))
-      classes={
-        Object {
-          "root": "test-class-2",
-        }
-      }
-    >
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
       <WithStyles(ForwardRef(Tooltip))
         disableFocusListener={false}
         disableHoverListener={false}
@@ -579,7 +549,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <DeleteForeverIcon />
+            <Memo(ForwardRef(DeleteForeverIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </span>
       </WithStyles(ForwardRef(Tooltip))>
@@ -593,9 +563,6 @@ Object {
   "header": Object {
     "borderBottom": "1px solid rgba(0, 0, 0, 0.2)",
     "marginTop": 8,
-  },
-  "paddingRight14": Object {
-    "paddingRight": 14,
   },
   "paddingRight24": Object {
     "paddingRight": 24,

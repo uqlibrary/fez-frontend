@@ -12,12 +12,12 @@ context('Data Collection admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditVerifyAlerts(1, ['Publication date is required']);
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1);
+        cy.adminEditCheckTabErrorBadge('bibliographic');
 
         cy.log('Finished testing tabs'); // This makes the test suite a bit more stable. It's magic :p
     });
@@ -25,19 +25,15 @@ context('Data Collection admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Dataset name');
             });
 
-        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
-        cy.log('Additional Information tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(3)
+        // -------------------------------------- ADMIN TAB -----------------------------------------
+        cy.log('Admin tab');
+        cy.get('[data-testid=admin-section-content]')
             .as('additionalInformationTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Additional information');
@@ -45,7 +41,7 @@ context('Data Collection admin edit', () => {
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())
                     .get('[data-testid=rek-license-select]')
                     .invoke('text')
-                    .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
+                    .should('equal', record.fez_record_search_key_license.rek_license_lookup);
                 cy.checkPartialDateFromRecordValue('rek-end-date', record.fez_record_search_key_end_date.rek_end_date);
             });
     });

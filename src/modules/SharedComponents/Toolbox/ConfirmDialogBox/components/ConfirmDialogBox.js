@@ -81,7 +81,7 @@ export class ConfirmDialogBox extends Component {
 
     _onAction() {
         this._hideConfirmation();
-        this.props.onAction();
+        this.props.onAction && this.props.onAction();
     }
 
     _onCancelAction() {
@@ -98,9 +98,11 @@ export class ConfirmDialogBox extends Component {
         const { classes } = this.props;
         return (
             <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
-                <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
+                <DialogTitle data-testid="message-title">{this.props.locale.confirmationTitle}</DialogTitle>
                 <DialogContent>
-                    <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
+                    <DialogContentText data-testid="message-content">
+                        {this.props.locale.confirmationMessage}
+                    </DialogContentText>
                 </DialogContent>
                 <DialogActions>
                     <Grid container spacing={1}>

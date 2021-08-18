@@ -1,6 +1,6 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import Files, { getFileOpenAccessStatus } from './Files';
+import Files, { formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
 import { FilesClass } from './Files';
 import * as mock from 'mock/data';
 
@@ -929,11 +929,10 @@ describe('Files Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render bytes correctly', () => {
-        const wrapper = setup({});
-        expect(wrapper.instance().formatBytes(0)).toEqual('0 Bytes');
-        expect(wrapper.instance().formatBytes(1024)).toEqual('1 KB');
-        expect(wrapper.instance().formatBytes(1048576)).toEqual('1 MB');
+    it('should have helper to render bytes correctly', () => {
+        expect(formatBytes(0)).toEqual('0 Bytes');
+        expect(formatBytes(1024)).toEqual('1 KB');
+        expect(formatBytes(1048576)).toEqual('1 MB');
     });
 
     it('should render icon for mimeType', () => {
@@ -1081,6 +1080,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 5,
                 },
                 {
                     dsi_pid: 'UQ:1232313',
@@ -1092,6 +1092,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 5,
                 },
                 {
                     dsi_pid: 'UQ:1232313',
@@ -1103,6 +1104,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 5,
                 },
                 {
                     dsi_pid: 'UQ:1232313',
@@ -1114,6 +1116,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 4,
                 },
             ],
         };
@@ -1124,7 +1127,8 @@ describe('Files Component ', () => {
             embargoDate: '1st December 2021',
             isOpenAccess: false,
             openAccessStatusId: 453695,
-            securityStatus: false,
+            securityStatus: true,
+            allowDownload: false,
         });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[1], props),
@@ -1132,14 +1136,15 @@ describe('Files Component ', () => {
             embargoDate: '1st November 2021',
             isOpenAccess: false,
             openAccessStatusId: 453695,
-            securityStatus: false,
+            securityStatus: true,
+            allowDownload: false,
         });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2], props),
-        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
+        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: true });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3], props),
-        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
+        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: false });
     });
 
     it('should calculate OA status of files as an admin', () => {
@@ -1160,6 +1165,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 5,
                 },
                 {
                     dsi_pid: 'UQ:1232313',
@@ -1171,6 +1177,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 5,
                 },
                 {
                     dsi_pid: 'UQ:1232313',
@@ -1182,6 +1189,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 5,
                 },
                 {
                     dsi_pid: 'UQ:1232313',
@@ -1193,6 +1201,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 4,
                 },
             ],
         };
@@ -1206,6 +1215,7 @@ describe('Files Component ', () => {
             isOpenAccess: false,
             openAccessStatusId: 453695,
             securityStatus: true,
+            allowDownload: false,
         });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[1], props),
@@ -1214,13 +1224,14 @@ describe('Files Component ', () => {
             isOpenAccess: false,
             openAccessStatusId: 453695,
             securityStatus: true,
+            allowDownload: false,
         });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2], props),
-        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
+        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: true });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3], props),
-        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
+        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: false });
     });
 
     it('should clean up state on hidePreview', () => {
@@ -1235,10 +1246,9 @@ describe('Files Component ', () => {
         expect(wrapper.state().preview.mimeType).toEqual(null);
     });
 
-    it('should return the file name with an _xt suffix', () => {
-        const wrapper = setup({});
+    it('should have a helper to return the file name with an _xt suffix', () => {
         const fileName = 'test_xt.jpg';
-        expect(wrapper.instance().untranscodedItem(fileName)).toEqual('test');
+        expect(untranscodedItem(fileName)).toEqual('test');
     });
 
     it('should return checksums', () => {
@@ -1284,16 +1294,30 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
+                    dsi_security_policy: 5,
+                },
+
+                {
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'UQ357538_OA_1.pdf',
+                    dsi_embargo_date: '2021-12-01',
+                    dsi_open_access: null,
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
+                    dsi_security_policy: 4,
                 },
             ],
         };
         expect(
-            getFileOpenAccessStatus(
-                publicationEmbargoOAFile,
-                publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date,
-                {},
-            ),
-        ).toEqual({ embargoDate: null, isOpenAccess: false, openAccessStatusId: null });
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0], {}),
+        ).toEqual({ embargoDate: null, isOpenAccess: false, openAccessStatusId: null, allowDownload: true });
+
+        expect(
+            getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[1], {}),
+        ).toEqual({ embargoDate: null, isOpenAccess: false, openAccessStatusId: null, allowDownload: false });
     });
 
     it('should show embargoed files to admins and not non-admins', () => {
@@ -1547,6 +1571,11 @@ describe('Files Component ', () => {
 
     it('getFileData{} branch 1', () => {
         const wrapper = setup({ publication: fileDataRecord });
+        expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
+    });
+
+    it('getFileData{} branch 1', () => {
+        const wrapper = setup({ publication: fileDataRecord, isAdmin: false, author: null });
         expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
     });
 

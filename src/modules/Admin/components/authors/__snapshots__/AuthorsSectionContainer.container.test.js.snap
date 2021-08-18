@@ -4,11 +4,16 @@ exports[`AuthorsSectionContainer component should render default view 1`] = `
 <ContextProvider
   value={
     Object {
-      "formValues": Object {},
+      "formValues": Object {
+        "isNtro": false,
+      },
     }
   }
 >
-  <Memo(AuthorsSection) />
+  <Memo(AuthorsSection)
+    isNtro={false}
+    key="disabled-undefined-isNtro-false"
+  />
 </ContextProvider>
 `;
 
@@ -16,12 +21,16 @@ exports[`AuthorsSectionContainer component should render disabled view 1`] = `
 <ContextProvider
   value={
     Object {
-      "formValues": Object {},
+      "formValues": Object {
+        "isNtro": false,
+      },
     }
   }
 >
   <Memo(AuthorsSection)
     disabled={true}
+    isNtro={false}
+    key="disabled-true-isNtro-false"
   />
 </ContextProvider>
 `;

@@ -1924,11 +1924,11 @@ exports[`NtroDetails  rendered full mount 1`] = `
                           <Cards
                             classes={
                               Object {
-                                "card": "Cards-card-106",
-                                "cardContentNoPadding": "Cards-cardContentNoPadding-107",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-109",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-108",
-                                "fullHeight": "Cards-fullHeight-110",
+                                "card": "Cards-card-3",
+                                "cardContentNoPadding": "Cards-cardContentNoPadding-4",
+                                "cardHeaderAccent": "Cards-cardHeaderAccent-6",
+                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-5",
+                                "fullHeight": "Cards-fullHeight-7",
                               }
                             }
                             theme={
@@ -2288,28 +2288,31 @@ exports[`NtroDetails  rendered full mount 1`] = `
                             title="Non-traditional research output metadata"
                           >
                             <WithStyles(ForwardRef(Card))
-                              className="Cards-card-106 StandardCard"
+                              className="Cards-card-3 StandardCard"
                               data-testid="standard-card-non-traditional-research-output-metadata"
+                              id="standard-card-non-traditional-research-output-metadata"
                               style={Object {}}
                             >
                               <ForwardRef(Card)
-                                className="Cards-card-106 StandardCard"
+                                className="Cards-card-3 StandardCard"
                                 classes={
                                   Object {
                                     "root": "MuiCard-root",
                                   }
                                 }
                                 data-testid="standard-card-non-traditional-research-output-metadata"
+                                id="standard-card-non-traditional-research-output-metadata"
                                 style={Object {}}
                               >
                                 <WithStyles(ForwardRef(Paper))
-                                  className="MuiCard-root Cards-card-106 StandardCard"
+                                  className="MuiCard-root Cards-card-3 StandardCard"
                                   data-testid="standard-card-non-traditional-research-output-metadata"
                                   elevation={1}
+                                  id="standard-card-non-traditional-research-output-metadata"
                                   style={Object {}}
                                 >
                                   <ForwardRef(Paper)
-                                    className="MuiCard-root Cards-card-106 StandardCard"
+                                    className="MuiCard-root Cards-card-3 StandardCard"
                                     classes={
                                       Object {
                                         "elevation0": "MuiPaper-elevation0",
@@ -2344,11 +2347,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                     }
                                     data-testid="standard-card-non-traditional-research-output-metadata"
                                     elevation={1}
+                                    id="standard-card-non-traditional-research-output-metadata"
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root MuiCard-root Cards-card-106 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                      className="MuiPaper-root MuiCard-root Cards-card-3 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                       data-testid="standard-card-non-traditional-research-output-metadata"
+                                      id="standard-card-non-traditional-research-output-metadata"
                                       style={Object {}}
                                     >
                                       <WithStyles(ForwardRef(CardHeader))
@@ -2365,6 +2370,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             "color": "inherit",
                                             "component": "h3",
                                             "data-testid": "standard-card-non-traditional-research-output-metadata-header",
+                                            "id": "standard-card-non-traditional-research-output-metadata-header",
                                             "variant": "h5",
                                           }
                                         }
@@ -2388,6 +2394,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               "color": "inherit",
                                               "component": "h3",
                                               "data-testid": "standard-card-non-traditional-research-output-metadata-header",
+                                              "id": "standard-card-non-traditional-research-output-metadata-header",
                                               "variant": "h5",
                                             }
                                           }
@@ -2405,6 +2412,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                 component="h3"
                                                 data-testid="standard-card-non-traditional-research-output-metadata-header"
                                                 display="block"
+                                                id="standard-card-non-traditional-research-output-metadata-header"
                                                 variant="h5"
                                               >
                                                 <ForwardRef(Typography)
@@ -2447,11 +2455,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   component="h3"
                                                   data-testid="standard-card-non-traditional-research-output-metadata-header"
                                                   display="block"
+                                                  id="standard-card-non-traditional-research-output-metadata-header"
                                                   variant="h5"
                                                 >
                                                   <h3
                                                     className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                     data-testid="standard-card-non-traditional-research-output-metadata-header"
+                                                    id="standard-card-non-traditional-research-output-metadata-header"
                                                   >
                                                     Non-traditional research output metadata
                                                   </h3>
@@ -2464,6 +2474,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                       <WithStyles(ForwardRef(CardContent))
                                         className=""
                                         data-testid="standard-card-non-traditional-research-output-metadata-content"
+                                        id="standard-card-non-traditional-research-output-metadata-content"
                                       >
                                         <ForwardRef(CardContent)
                                           className=""
@@ -2473,10 +2484,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             }
                                           }
                                           data-testid="standard-card-non-traditional-research-output-metadata-content"
+                                          id="standard-card-non-traditional-research-output-metadata-content"
                                         >
                                           <div
                                             className="MuiCardContent-root"
                                             data-testid="standard-card-non-traditional-research-output-metadata-content"
+                                            id="standard-card-non-traditional-research-output-metadata-content"
                                           >
                                             <Component
                                               data="Major"
@@ -9995,6 +10008,184 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       key="1"
       rowId="rek-creator-contribution-statement-1"
       subheading="(Someone else)"
+    />
+    <Component
+      data={
+        Array [
+          <p>
+            This is an abstract
+          </p>,
+        ]
+      }
+      heading="Abstract/Description"
+      rowId="rek-formatted-abstract"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-ismn-0"
+          >
+            979-0-7062-0805-4
+          </span>,
+        ]
+      }
+      heading="ISMN"
+      rowId="rek-ismn"
+    />
+    <Component
+      data="Volume"
+      heading="Volume"
+      rowId="rek-description"
+    />
+    <Component
+      data="Issue"
+      heading="Issue"
+      rowId="rek-issue-number"
+    />
+    <Component
+      data="Extent"
+      heading="Extent"
+      rowId="rek-total-pages"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-language-0"
+          >
+            English
+            , 
+          </span>,
+          <span
+            data-testid="rek-language-1"
+          >
+            Elamite
+            , 
+          </span>,
+          <span
+            data-testid="rek-language-2"
+          >
+            Egyptian (Ancient)
+            , 
+          </span>,
+          <span
+            data-testid="rek-language-3"
+          >
+            Dutch
+          </span>,
+        ]
+      }
+      heading="Language(s)"
+      rowId="rek-language"
+    />
+    <Component
+      data="Description"
+      heading="Physical description"
+      rowId="rek-original-format"
+    />
+    <Component
+      data={
+        Array [
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-0"
+            >
+              Disseminated via nationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-1"
+            >
+              Disseminated via internationally recognised outlet or entity
+            </span>
+            , 
+          </React.Fragment>,
+          <React.Fragment>
+            <span
+              data-testid="rek-content-indicator-2"
+            >
+              Association with recognised national entities, distinct from co-creation
+            </span>
+          </React.Fragment>,
+        ]
+      }
+      heading="Quality indicators"
+      rowId="rek-quality-indicator"
+    />
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`NtroDetails  renders minor significance as an admin 2`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Non-traditional research output metadata"
+  >
+    <Component
+      data="Minor"
+      heading="Scale/Significance of work"
+      key="0"
+      rowId="rek-significance-0"
+      subheading="(Ky Lane)"
+    />
+    <Component
+      data="Missing"
+      heading="Scale/Significance of work"
+      key="1"
+      rowId="rek-significance-1"
+      subheading="(Someone else)"
+    />
+    <Component
+      data="Missing"
+      heading="Scale/Significance of work"
+      key="2"
+      rowId="rek-significance-2"
+      subheading="(Someone else again)"
+    />
+    <Component
+      data="Missing"
+      heading="Scale/Significance of work"
+      key="3"
+      rowId="rek-significance-3"
+      subheading="()"
+    />
+    <Component
+      data={
+        Array [
+          "A statement",
+        ]
+      }
+      heading="Creator research statement"
+      key="0"
+      rowId="rek-creator-contribution-statement-0"
+      subheading="(Ky Lane)"
+    />
+    <Component
+      data="Missing"
+      heading="Creator research statement"
+      key="1"
+      rowId="rek-creator-contribution-statement-1"
+      subheading="(Someone else)"
+    />
+    <Component
+      data="Missing"
+      heading="Creator research statement"
+      key="2"
+      rowId="rek-creator-contribution-statement-2"
+      subheading="(Someone else again)"
+    />
+    <Component
+      data="Missing"
+      heading="Creator research statement"
+      key="3"
+      rowId="rek-creator-contribution-statement-3"
+      subheading=""
     />
     <Component
       data={

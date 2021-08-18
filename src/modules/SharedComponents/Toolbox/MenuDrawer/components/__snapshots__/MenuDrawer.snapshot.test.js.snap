@@ -887,7 +887,6 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                           },
                           "render": [Function],
                         },
-                        "displayName": "WithStyles(ForwardRef(Backdrop))",
                         "options": Object {
                           "defaultTheme": Object {
                             "breakpoints": Object {

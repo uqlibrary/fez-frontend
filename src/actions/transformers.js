@@ -1,6 +1,11 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
 import { CONTENT_INDICATORS } from 'config/general';
+import {
+    FILE_ACCESS_CONDITION_CLOSED,
+    FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_INHERIT,
+} from 'modules/SharedComponents/Toolbox/FileUploader';
 
 const moment = require('moment');
 
@@ -36,12 +41,16 @@ const getIssuesRequest = text => ({
     issue: text,
 });
 
-/* getFixIssueRequest - returns fix record issue request object
+/**
+ * getFixIssueRequest - returns fix record issue request object
+ *
  * @returns {Object} issue request
  */
 export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
-/* getClaimIssueRequest - returns claim record issue request object
+/**
+ * getClaimIssueRequest - returns claim record issue request object
+ *
  * @returns {Object} issue request
  */
 export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
@@ -71,20 +80,46 @@ export const getRecordLinkSearchKey = data => {
     };
 };
 
-/* getRecordFileAttachmentSearchKey - returns files object formatted for record request
+/**
+ * getCollectionsOnRecordWithSecurity - Copies security policy from existing collections to current collections list.
+ * @param {object} record - The updated work object
+ *
+ * @return {array} The updated array of collections with security policy
+ */
+export const getCollectionsOnRecordWithSecurity = record =>
+    ((!!record && record.collections) || []).map(collection => {
+        if (collection.hasOwnProperty('rek_datastream_policy') || !record.rek_pid) {
+            // Newly added collection or new record
+            return collection;
+        }
+        // Existing collection. Retrieve security policy from search key
+        const existingCollection = record.fez_record_search_key_ismemberof.find(
+            collection2 => collection2.rek_ismemberof === collection.rek_pid,
+        );
+        return {
+            ...collection,
+            ...existingCollection.parent,
+        };
+    });
+
+/**
+ * getRecordFileAttachmentSearchKey - returns files object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: {string}}
+ *
  * @returns {Object} formatted {fez_record_search_key_file_attachment_*} for record request
  */
 export const getRecordFileAttachmentSearchKey = (files, record) => {
     if (!files || files.length === 0) return {};
 
-    const OPEN_ACCESS_ID = 9;
-    const CLOSED_ACCESS_ID = 8;
-
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount =
-        record && record.fez_record_search_key_file_attachment_name
-            ? record.fez_record_search_key_file_attachment_name.length
+        record &&
+        record.fez_record_search_key_file_attachment_name &&
+        record.fez_record_search_key_file_attachment_name.length > 0
+            ? record.fez_record_search_key_file_attachment_name[
+                  record.fez_record_search_key_file_attachment_name.length - 1
+              ].rek_file_attachment_name_order
             : 0;
     const attachmentNames = files.map((item, index) => ({
         rek_file_attachment_name: item.name,
@@ -99,14 +134,23 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             };
         })
         .filter(file => file !== null);
+    const collections = getCollectionsOnRecordWithSecurity(record);
     const attachmentAccessConditions = files
         .map((item, index) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
+            let accessCondition = item.access_condition_id;
+            if (accessCondition === FILE_ACCESS_CONDITION_OPEN && item.date && moment(item.date).isAfter()) {
+                accessCondition = FILE_ACCESS_CONDITION_CLOSED;
+            } else if (accessCondition === FILE_ACCESS_CONDITION_INHERIT) {
+                const parentPolicy = collections.reduce(
+                    (policy, collection) =>
+                        collection.rek_datastream_policy < policy ? collection.rek_datastream_policy : policy,
+                    FILE_ACCESS_CONDITION_OPEN,
+                );
+                accessCondition = parentPolicy;
+            }
             return {
-                rek_file_attachment_access_condition:
-                    item.access_condition_id === OPEN_ACCESS_ID && item.date && moment(item.date).isAfter()
-                        ? CLOSED_ACCESS_ID
-                        : item.access_condition_id,
+                rek_file_attachment_access_condition: accessCondition,
                 rek_file_attachment_access_condition_order: initialCount + index + 1,
             };
         })
@@ -128,8 +172,11 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     };
 };
 
-/* getRecordAuthorsSearchKey - returns authors object formatted for record request
+/**
+ * getRecordAuthorsSearchKey - returns authors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: {string}}
+ *
  * @returns {Object} formatted {fez_record_search_key_author} for record request
  */
 export const getRecordAuthorsSearchKey = authors => {
@@ -172,9 +219,13 @@ export const getRecordSupervisorsSearchKey = supervisors => {
     };
 };
 
-/* getRecordAuthorsIdSearchKey - returns authors id object formatted for record request
- * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
+/**
+ * getRecordAuthorsIdSearchKey - returns authors id object formatted for record request
+ *
+ * @param {array} authors - array of objects in format
+ * {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
  * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
+ *
  * @returns {Object} formatted {fez_record_search_key_author_id} for record request
  */
 export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
@@ -230,10 +281,13 @@ export const getRecordAuthorAffiliationTypeSearchKey = authors => {
     };
 };
 
-/* unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
+/**
+ * unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
  * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
  * @param {number} if of a current user in case authors is empty, return auhtors structure with a solo current author id
+ *
  * @returns {Object} formatted {fez_record_search_key_author_id} for record request
  */
 export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
@@ -259,7 +313,9 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
     };
 };
 
-/* unclaimRecordContributorsIdSearchKey - returns contributors id object formatted for record request
+/**
+ * unclaimRecordContributorsIdSearchKey - returns contributors id object formatted for record request
+ *
  * @param {array} of objects in format {
  *     nameAsPublished: "string",
  *     disabled: false,
@@ -272,6 +328,7 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
  *     rek_contributor_id: 683,
  *     rek_contributor_id_order: 12
  * }
+ *
  * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
  */
 export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId) => {
@@ -297,8 +354,11 @@ export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId
     };
 };
 
-/* getRecordContributorsSearchKey - returns editors object formatted for record request
+/**
+ * getRecordContributorsSearchKey - returns editors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ *
  * @returns {Object} formatted {fez_record_search_key_contributor} for record request
  */
 export const getRecordContributorsSearchKey = authors => {
@@ -312,11 +372,14 @@ export const getRecordContributorsSearchKey = authors => {
     };
 };
 
-/* getRecordContributorsIdSearchKey - returns editors id object formatted for record request
+/**
+ * getRecordContributorsIdSearchKey - returns editors id object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
  * {rek_contributor_id: 100, rek_contributor_id_order: 1}
  * @param {number} defaultAuthorId - if of a current user in case authors is empty, return contributors
  * structure with a solo current author id
+ *
  * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
  */
 export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
@@ -350,8 +413,11 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
-/* getRecordCreatorsSearchKey - returns editors object formatted for record request
+/**
+ * getRecordCreatorsSearchKey - returns editors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ *
  * @returns {Object} formatted {fez_record_search_key_creator} for record request
  */
 export const getRecordCreatorsSearchKey = creators => {
@@ -384,8 +450,11 @@ export const getRecordCreatorsIdSearchKey = creators => {
     };
 };
 
-/* getRecordArchitectSearchKey - returns editors object formatted for record request
+/**
+ * getRecordArchitectSearchKey - returns editors object formatted for record request
+ *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ *
  * @returns {Object} formatted {fez_record_search_key_architect} for record request
  */
 export const getRecordArchitectsSearchKey = architects => {
@@ -418,8 +487,11 @@ export const getRecordArchitectsIdSearchKey = architects => {
     };
 };
 
-/* getRecordSubjectSearchKey - returns subjects for record request
+/**
+ * getRecordSubjectSearchKey - returns subjects for record request
+ *
  * @param {array} of objects in format {rek_value: {key: id, value: value}, rek_order}
+ *
  * @returns {Object} formatted {fez_record_search_key_subject} for record request
  */
 export const getRecordSubjectSearchKey = subject => {
@@ -433,11 +505,13 @@ export const getRecordSubjectSearchKey = subject => {
     };
 };
 
-/*
+/**
  * getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
+ *
  * @param {string} authorId - fez-authors id (eg 1671)
  * @param {string} orcidId - new orcid id
  * @param {object} additional data
+ *
  * @returns {Object} formatted for author patch request
  */
 export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = null) => {
@@ -834,6 +908,34 @@ export const getRecordIsDerivationOfSearchKey = relatedPubs => {
           };
 };
 
+export const getFezMatchedJournalsKey = matchedJournal => {
+    // No match was present in unedited record
+    if (matchedJournal === undefined) {
+        return {};
+    }
+
+    // Match was deleted
+    if (!matchedJournal) {
+        return {
+            fez_matched_journals: null,
+        };
+    }
+
+    // Match was untouched
+    if (!!matchedJournal.mtj_status) {
+        delete matchedJournal.id;
+        delete matchedJournal.jnl_jid;
+        return {
+            fez_matched_journals: matchedJournal,
+        };
+    }
+
+    // New match
+    return {
+        fez_matched_journals: { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' },
+    };
+};
+
 export const getBibliographicSectionSearchKeys = (data = {}) => {
     const {
         rek_title: title,
@@ -849,15 +951,14 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         fez_record_search_key_date_recorded: dateRecorded,
         fez_record_search_key_end_date: endDate,
         fez_record_search_key_isderivationof: relatedPubs,
-        fez_record_search_key_license: license,
         fez_record_search_key_location: location,
         fez_record_search_key_isdatasetof: datasets,
         fez_record_search_key_related_datasets: relatedDatasets,
         fez_record_search_key_related_publications: relatedPublications,
-        issnField,
+        issns,
+        fez_matched_journals: matchedJournal,
         ...rest
     } = data;
-
     return {
         ...cleanBlankEntries(rest),
         ...(!!relatedDatasets && relatedDatasets.hasOwnProperty('htmlText')
@@ -878,6 +979,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             !data.rek_date || !moment(data.rek_date).isValid()
                 ? '1000-01-01 00:00:00'
                 : moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
+        ...(!!data.rek_genre_type ? { rek_subtype: data.rek_genre_type } : {}),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
         ...{
@@ -941,13 +1043,12 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),
-        ...(!!issnField
+        ...(!!issns
             ? {
-                  fez_record_search_key_issn: issnField.map(({ rek_value: value, rek_order: order }) => ({
+                  fez_record_search_key_issn: issns.map(({ rek_value: value, rek_order: order }) => ({
                       rek_issn: value.key || value,
                       rek_issn_order: order,
                   })),
@@ -955,6 +1056,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             : {}),
         ...(!!relatedPubs ? getRecordIsDerivationOfSearchKey(relatedPubs) : {}),
         ...getRecordIsDatasetOfSearchKey(datasets),
+        ...getFezMatchedJournalsKey(matchedJournal),
     };
 };
 
@@ -1024,7 +1126,7 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
     return {
         fez_record_search_key_ismemberof: collections.map((collection, index) => ({
-            rek_ismemberof: !!collection.id ? collection.id : collection,
+            rek_ismemberof: !!collection.id ? collection.id : collection.rek_pid,
             rek_ismemberof_order: index + 1,
         })),
     };
@@ -1112,12 +1214,10 @@ export const getOpenAccessStatusSearchKey = record => {
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
-        additionalNotes,
         contentIndicators,
         contactName,
         contactNameId,
         contactEmail,
-        internalNotes,
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
@@ -1125,15 +1225,11 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
         fez_record_search_key_end_date: endDate,
-        rek_herdc_notes: herdcNotes,
         ...rest
     } = data;
 
     return {
         ...getRecordIsMemberOfSearchKey(collections),
-        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
-            ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
-            : {}),
         ...getContentIndicatorSearchKey(contentIndicators),
         ...(!!contactName && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
@@ -1143,11 +1239,11 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
-        ...(!!license && !!license.rek_license ? { fez_record_search_key_license: { ...license } } : {}),
-        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
-            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
-            : { fez_internal_notes: null }),
-        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
+        ...{
+            fez_record_search_key_license: {
+                ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),
+            },
+        },
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...rest,
     };
@@ -1217,4 +1313,114 @@ export const getDatastreamInfo = (
             })),
         },
     };
+};
+
+export const getNotesSectionSearchKeys = (data = {}) => {
+    const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes } = data;
+    return {
+        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
+            ? {
+                  fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText },
+                  fez_record_search_key_additional_notes: { rek_additional_notes: additionalNotes.htmlText },
+              }
+            : {}),
+        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
+            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
+            : { fez_internal_notes: null }),
+        ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
+    };
+};
+
+export const getChangeSearchKeyValues = (records, data) => {
+    const { search_key: searchKey } = data;
+    const [primaryKey, subKey] = searchKey.split('.');
+    const getSearchKeyValue = (primaryKey, subKey, item) => {
+        switch (primaryKey) {
+            case 'fez_record_search_key_notes':
+                return {
+                    [primaryKey]: {
+                        ...item,
+                        [subKey]: `${(!!item && item[subKey]) || ''}${data[primaryKey][subKey]}`,
+                    },
+                };
+            default:
+                return {
+                    [primaryKey]: !!subKey ? { ...item, ...data[primaryKey] } : data[primaryKey],
+                };
+        }
+    };
+    return records.map(({ rek_pid: pid, [primaryKey]: item }) => ({
+        rek_pid: pid,
+        ...getSearchKeyValue(primaryKey, subKey, item),
+        edit_reason: data.edit_reason || '',
+    }));
+};
+
+/**
+ *
+ * @param {array} records records that needs to be bulk updated
+ * @param {array} data form data in the form of the object
+ *
+ * data = {
+ *      search_author_by: 'author' || 'author_id',
+ *      search_author: {
+ *          author: 'Test, User',
+ *          author_id: 123455,
+ *      },
+ *      rek_author_id: 222222,
+ * }
+ */
+export const getChangeAuthorIdValues = (records, data) => {
+    const { search_author_by: searchAuthorBy } = data;
+    return records.map(record => {
+        const [item] = record[`fez_record_search_key_${searchAuthorBy}`].filter(
+            author => author[`rek_${searchAuthorBy}`] === data.search_author[searchAuthorBy],
+        );
+
+        if (!!item) {
+            return {
+                rek_pid: record.rek_pid,
+                fez_record_search_key_author_id: record.fez_record_search_key_author_id.map((authorId, index) => ({
+                    ...authorId,
+                    ...(index + 1 === item[`rek_${searchAuthorBy}_order`]
+                        ? { rek_author_id: data.rek_author_id, rek_author_id_order: index + 1 }
+                        : {}),
+                })),
+            };
+        } else {
+            return {
+                rek_pid: record.rek_pid,
+            };
+        }
+    });
+};
+
+export const getRemoveFromCollectionData = (records, data) => {
+    const selectedCollections = data.collections.map(collection => collection.rek_pid);
+    return records.map(record => ({
+        rek_pid: record.rek_pid,
+        fez_record_search_key_ismemberof: record.fez_record_search_key_ismemberof.filter(
+            collection => !selectedCollections.includes(collection.rek_ismemberof),
+        ),
+    }));
+};
+
+export const getCopyToCollectionData = (records, data) => {
+    return records.map(record => {
+        const existingCollectionPids = record.fez_record_search_key_ismemberof.map(
+            existingCollection => existingCollection.rek_pid,
+        );
+        return {
+            rek_pid: record.rek_pid,
+            fez_record_search_key_ismemberof: [
+                ...record.fez_record_search_key_ismemberof,
+                ...data.collections
+                    .filter(newCollection => existingCollectionPids.indexOf(newCollection.rek_pid) === -1)
+                    .map((collection, index) => ({
+                        rek_ismemberof: collection.rek_pid,
+                        rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
+                    })),
+            ],
+        };
+    });
 };

@@ -17,7 +17,7 @@ export default {
         },
         {
             title: 'ISSN',
-            groups: [['issnField']],
+            groups: [['issns']],
         },
         {
             title: 'Bibliographic',
@@ -45,6 +45,10 @@ export default {
             title: 'Subject',
             groups: [['subjects']],
         },
+        {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
+        },
     ],
     authors: () => [
         {
@@ -68,21 +72,13 @@ export default {
                 ['fez_record_search_key_refereed_source', 'contentIndicators'],
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],
 };
 
-export const validateVideo = (
-    { bibliographicSection: bs, filesSection: fs },
-    { validationErrorsSummary: summary },
-) => ({
+export const validateVideo = ({ bibliographicSection: bs }, { validationErrorsSummary: summary }) => ({
     bibliographicSection: {
         ...((!((bs || {}).fez_record_search_key_rights || {}).rek_rights && {
             fez_record_search_key_rights: {
@@ -90,10 +86,5 @@ export const validateVideo = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
 });

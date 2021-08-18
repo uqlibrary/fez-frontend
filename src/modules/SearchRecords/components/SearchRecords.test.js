@@ -1,5 +1,5 @@
 import SearchRecords from './SearchRecords';
-import { routes } from 'config';
+import { pathConfig } from 'config';
 import { locale } from 'locale';
 
 function setup(testProps = {}) {
@@ -9,15 +9,18 @@ function setup(testProps = {}) {
         exportPublicationsLoading: false,
         isAdvancedSearch: false,
         isUnpublishedBufferPage: false,
-        actions: {
-            exportEspacePublications: jest.fn(),
-            searchEspacePublications: jest.fn(),
-        },
         location: {
             search: '?searchQueryParams%5Ball%5D=test',
         },
-        history: {},
+        history: {
+            push: jest.fn(),
+        },
         ...testProps,
+        actions: {
+            exportEspacePublications: jest.fn(),
+            searchEspacePublications: jest.fn(),
+            ...testProps.actions,
+        },
     };
     return getElement(SearchRecords, props);
 }
@@ -188,7 +191,7 @@ describe('SearchRecords page', () => {
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.search, state: { page: 2 } },
+            location: { pathname: pathConfig.records.search, state: { page: 2 } },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(2);
@@ -199,7 +202,7 @@ describe('SearchRecords page', () => {
         const wrapper = setup({ actions: { searchEspacePublications: testAction } });
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.search, state: null },
+            location: { pathname: pathConfig.records.search, state: null },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
@@ -294,11 +297,11 @@ describe('SearchRecords page', () => {
         const wrapper = setup({
             history: {
                 push: jest.fn(history => {
-                    expect(history.pathname).toBe(routes.pathConfig.admin.unpublished);
+                    expect(history.pathname).toBe(pathConfig.admin.unpublished);
                 }),
             },
             location: {
-                pathname: routes.pathConfig.admin.unpublished,
+                pathname: pathConfig.admin.unpublished,
                 search: '',
             },
         });
@@ -341,6 +344,7 @@ describe('SearchRecords page', () => {
                 filters: {},
                 ranges: {},
             },
+            bulkExportSelected: false,
         });
     });
 
@@ -379,6 +383,7 @@ describe('SearchRecords page', () => {
                     ranges: {},
                     showOpenAccessOnly: false,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -412,6 +417,7 @@ describe('SearchRecords page', () => {
                     ranges: {},
                     showOpenAccessOnly: true,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -446,6 +452,7 @@ describe('SearchRecords page', () => {
                 },
                 showOpenAccessOnly: false,
             },
+            bulkExportSelected: false,
         });
     });
 
@@ -481,6 +488,7 @@ describe('SearchRecords page', () => {
                     },
                     showOpenAccessOnly: false,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -517,6 +525,7 @@ describe('SearchRecords page', () => {
                     },
                     showOpenAccessOnly: false,
                 },
+                bulkExportSelected: false,
             });
         },
     );
@@ -550,6 +559,7 @@ describe('SearchRecords page', () => {
                 },
                 showOpenAccessOnly: false,
             },
+            bulkExportSelected: false,
         });
     });
 
@@ -584,6 +594,7 @@ describe('SearchRecords page', () => {
                 showOpenAccessOnly: false,
             },
             advancedSearchFields: [],
+            bulkExportSelected: false,
         };
 
         const wrapper = setup({
@@ -647,6 +658,7 @@ describe('SearchRecords page', () => {
             pageSize: 20,
             sortBy: 'score',
             sortDirection: 'Desc',
+            bulkExportSelected: false,
         };
         const result = wrapper.instance().parseSearchQueryStringFromUrl('');
         expect(result).toEqual(expected);
@@ -664,5 +676,65 @@ describe('SearchRecords page', () => {
         wrapper.unmount();
         expect(componentWillUnmount).toHaveBeenCalled();
         expect(clearSearchQueryFn).toHaveBeenCalled();
+    });
+
+    it('sets bulk export size as expected', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: testFn,
+            },
+            publicationsList: [1],
+        });
+        wrapper.setState({ pageSize: 500, bulkExportSelected: true }, () => {
+            wrapper.instance().updateHistoryAndSearch();
+        });
+        expect(testFn).toHaveBeenCalledTimes(0);
+        expect(wrapper.find('[data-testid="search-bulk-export-size-message"]').text()).toBe(
+            'The export will have the first 500 works.',
+        );
+
+        wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
+        expect(testFn).toHaveBeenCalledWith({
+            activeFacets: {
+                filters: {},
+                ranges: {},
+            },
+            bulkExportSelected: true,
+            exportPublicationsFormat: 'excel',
+            advancedSearchFields: [],
+            page: 1,
+            pageSize: 500,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+            searchQueryParams: {
+                all: 'test',
+            },
+        });
+
+        const ret = wrapper.instance().parseSearchQueryStringFromUrl('pageSize=500', true);
+        expect(ret.bulkExportSelected).toBe(true);
+        expect(ret.pageSize).toBe(500);
+    });
+
+    it('shows confirmation message on success confirmation for bulk export', done => {
+        const wrapper = setup({
+            actions: {
+                exportEspacePublications: jest.fn(() => Promise.resolve()),
+            },
+        });
+        const showConfirmation = jest.fn();
+        wrapper.instance()._setSuccessConfirmation({
+            showConfirmation,
+        });
+        wrapper.setState({ bulkExportSelected: true }, () => {
+            wrapper
+                .instance()
+                .handleExportPublications('excel')
+                .then(() => {
+                    expect(showConfirmation).toHaveBeenCalledTimes(1);
+                    done();
+                });
+        });
     });
 });

@@ -2,10 +2,11 @@
 import { api, sessionApi } from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
-import { SESSION_COOKIE_NAME } from 'config';
+import { SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
+import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -14,6 +15,7 @@ const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(
 // const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
+Cookies.set(SESSION_USER_GROUP_COOKIE_NAME, 'LIBRARYSTAFFB');
 
 // Get user from query string
 let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
@@ -49,6 +51,22 @@ mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
         return [403, {}];
     }
     return [404, {}];
+});
+
+mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
+    const headers = {
+        excel: {
+            'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        },
+        endnote: {
+            'content-type': 'application/vnd.endnote',
+        },
+    };
+    if (PUB_LIST_BULK_EXPORT_SIZES.includes(config.params.per_page)) {
+        return [200, {}];
+    } else {
+        return [200, 'Exported file contents', headers[config.params.export_to]];
+    }
 });
 
 mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
@@ -188,16 +206,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(routes.TRENDING_PUBLICATIONS_API().apiUrl)
     // .reply(500, {})
     .reply(200, mockData.trendingPublications)
-    .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
-    .reply(200, mockData.quickTemplates)
     .onGet(routes.AUTHORS_SEARCH_API({ query: '.*' }).apiUrl)
     .reply(config => {
-        if (config.params.rule === 'lookup') {
+        if (!!config.params && !!config.params.rule && config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList.author];
         } else {
             return [200, mockData.authorsSearch];
         }
     })
+    .onGet(`${routes.AUTHORS_SEARCH_API().apiUrl}?sort=updated_date&order_by=desc`)
+    .reply(200, mockData.authorsSearch)
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
@@ -219,6 +237,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ),
     )
     .reply(200, mockData.lookupToolIncites)
+    .onGet(new RegExp(routes.BULK_UPDATES_API().apiUrl))
+    .reply(200, { ...mockData.bulkUpdatesList })
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
@@ -230,12 +250,14 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
             { ...mockData.recordWithoutAuthorIds },
+            { ...mockData.recordWithLotOfAuthors },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.UQ716942uqagrinb },
             { ...mockTestingData.dataCollection },
             ...mockData.collectionSearchList.data,
             ...mockData.communitySearchList.data,
             ...mockData.incompleteNTROlist.data,
+            ...mockData.internalTitleSearchList.data,
             ...mockData.mockRecordToFix,
             ...mockData.myRecordsList.data,
             ...mockData.myDatasetList.data,
@@ -265,7 +287,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListThesis.data,
             ...mockData.publicationTypeListVideo.data,
             ...mockData.publicationTypeListWorkingPaper.data,
+            ...mockData.trendingPublications.data,
             ...mockData.unpublishedSearchList.data,
+            ...mockData.UQ353708.data,
+            ...mockData.UQ339703,
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
         // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
@@ -306,6 +331,12 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.favouriteSearchItem })
     // .reply(404)
+    .onGet(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)
+    .reply(200, mockData.myEditorialAppointmentsList)
+    // .reply(500)
+    .onGet(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.myEditorialAppointmentItem })
+    // .reply(404)
     .onGet(new RegExp(escapeRegExp(routes.ISSN_LINKS_API({ type: 'sherpa-romeo', issn: '.*' }).apiUrl)))
     .reply(config => {
         const issn = config.url.split(/[\s,\/]+/).pop();
@@ -344,7 +375,13 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             });
         }
         return [200, { data }];
-    });
+    })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.journalLookup })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.journalDetails })
+    .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
+    .reply(200, { ...mockData.userList });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -361,9 +398,19 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
     .onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(config => {
         return [200, { data: { ...mockData.favouriteSearchItem } }];
+    })
+    .onPut(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl)))
+    .reply(config => {
+        return [200, { ...mockData.myEditorialAppointmentItem }];
     });
 
-mock.onDelete(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' })).reply(200, { data: {} });
+mock.onDelete(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl))).reply(200, { data: {} });
+mock.onDelete(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API({ id: '.*' }).apiUrl))).reply(200, {
+    data: {},
+});
+mock.onDelete(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl))).reply(200, {
+    data: {},
+});
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
@@ -398,7 +445,35 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
     .reply(() => [200, { data: mockData.communityRecord }])
     .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
-    .reply(200, { data: { ...mockData.favouriteSearchItem } });
+    .reply(200, { data: { ...mockData.favouriteSearchItem } })
+    .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
+    .reply(200, { ...mockData.myEditorialAppointmentItem })
+    .onPost(routes.MASTER_JOURNAL_LIST_INGEST_API().apiUrl)
+    .reply(200, { data: {} })
+    .onPost('fez-users/delete-list')
+    .reply(200, {
+        data: {
+            '1000000293': 'User deleted',
+            '9999999999': 'User not found',
+        },
+    })
+    // .reply(500)
+    .onPost('fez-authors/delete-list')
+    .reply(200, {
+        data: {
+            '410': 'Author deleted',
+            '9999999999': 'Author not found',
+        },
+    })
+    .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))
+    .reply(200, {
+        data: {
+            aut_id: 111,
+            aut_display_name: 'Mock Test',
+        },
+    });
+// .networkErrorOnce();
+// .reply(409, { data: 'Server error' });
 
 mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {
     data: 'Record deleted',
@@ -410,6 +485,9 @@ mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).
 mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
     // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
+
+    .onPatch(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
+    .reply(200)
 
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(200, { data: { ...mockData.record } })
@@ -427,6 +505,8 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .reply(200, { ...mockData.currentAuthor.uqresearcher })
     // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })
 
+    .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
+    .reply(200, mockData.currentAuthor.uqstaff)
     .onAny()
     .reply(config => {
         console.log('url not found...', config);

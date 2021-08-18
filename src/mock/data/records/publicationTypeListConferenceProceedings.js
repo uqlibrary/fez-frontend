@@ -8,27 +8,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:242447",
-            "rek_title_xsdmf_id": 10639,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Cooperative learning: Pedagogy, policy and practice",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 197,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 7352,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2010-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 11315,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2011-06-17T14:08:17Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-22T13:18:32Z",
             "rek_file_downloads": 227,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 7378,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Conference Proceedings",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -36,7 +36,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 854,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -56,7 +56,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -73,19 +73,19 @@ export default {
             "fez_record_search_key_conference_dates": {
                 "rek_conference_dates_id": 1007568,
                 "rek_conference_dates_pid": "UQ:242447",
-                "rek_conference_dates_xsdmf_id": 7365,
+                "rek_conference_dates_xsdmf_id": null,
                 "rek_conference_dates": "25-27 November 2010"
             },
             "fez_record_search_key_conference_location": {
                 "rek_conference_location_id": 1017889,
                 "rek_conference_location_pid": "UQ:242447",
-                "rek_conference_location_xsdmf_id": 7363,
+                "rek_conference_location_xsdmf_id": null,
                 "rek_conference_location": "Brisbane, Australia"
             },
             "fez_record_search_key_conference_name": {
                 "rek_conference_name_id": 1002477,
                 "rek_conference_name_pid": "UQ:242447",
-                "rek_conference_name_xsdmf_id": 10647,
+                "rek_conference_name_xsdmf_id": null,
                 "rek_conference_name": "The International Association for the Study of Cooperation in Education (IASCE) 2010"
             },
             "fez_record_search_key_content_indicator": [],
@@ -106,14 +106,14 @@ export default {
                 {
                     "rek_file_attachment_name_id": 3943055,
                     "rek_file_attachment_name_pid": "UQ:242447",
-                    "rek_file_attachment_name_xsdmf_id": 7476,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "IASCE2010.pdf",
                     "rek_file_attachment_name_order": 1
                 },
                 {
                     "rek_file_attachment_name_id": 3943056,
                     "rek_file_attachment_name_pid": "UQ:242447",
-                    "rek_file_attachment_name_xsdmf_id": 7476,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "presmd_IASCE2010.xml",
                     "rek_file_attachment_name_order": 2
                 }
@@ -132,7 +132,7 @@ export default {
                 {
                     "rek_isbn_id": 1058875,
                     "rek_isbn_pid": "UQ:242447",
-                    "rek_isbn_xsdmf_id": 10827,
+                    "rek_isbn_xsdmf_id": null,
                     "rek_isbn": "9781742720241",
                     "rek_isbn_order": 1
                 }
@@ -143,7 +143,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11560464,
                     "rek_ismemberof_pid": "UQ:242447",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:3856",
                     "rek_ismemberof_order": 1,
                     "parent": {
@@ -161,7 +161,7 @@ export default {
                 {
                     "rek_language_id": 5245358,
                     "rek_language_pid": "UQ:242447",
-                    "rek_language_xsdmf_id": 10636,
+                    "rek_language_xsdmf_id": null,
                     "rek_language": "eng",
                     "rek_language_order": 1
                 }
@@ -169,9 +169,9 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 24759,
                 "rek_license_pid": "UQ:242447",
-                "rek_license_xsdmf_id": 16636,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 453609,
-                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+                "rek_license_lookup": "Creative Commons Attribution-NoDerivatives 3.0 International (CC BY-ND 3.0)"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
@@ -185,7 +185,7 @@ export default {
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1203227,
                 "rek_refereed_source_pid": "UQ:242447",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
@@ -195,7 +195,7 @@ export default {
             "fez_record_search_key_total_pages": {
                 "rek_total_pages_id": 5500315,
                 "rek_total_pages_pid": "UQ:242447",
-                "rek_total_pages_xsdmf_id": 10557,
+                "rek_total_pages_xsdmf_id": null,
                 "rek_total_pages": "5"
             },
             "fez_record_search_key_translated_conference_name": null,
@@ -231,7 +231,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Conference Proceedings",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

@@ -928,7 +928,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
             >
               <WithStyles(ForwardRef(Badge))
                 badgeContent={
-                  <Memo(AccessTimeIcon)
+                  <Memo
                     className="OpenAccessIcon-embargoedBadgeStyle-2"
                     fontSize="small"
                   />
@@ -936,7 +936,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
               >
                 <ForwardRef(Badge)
                   badgeContent={
-                    <Memo(AccessTimeIcon)
+                    <Memo
                       className="OpenAccessIcon-embargoedBadgeStyle-2"
                       fontSize="small"
                     />
@@ -970,9 +970,14 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "propTypes": Object {
                             "children": [Function],
+                            "disableStrictModeCompat": [Function],
                             "in": [Function],
                             "onEnter": [Function],
+                            "onEntered": [Function],
+                            "onEntering": [Function],
                             "onExit": [Function],
+                            "onExited": [Function],
+                            "onExiting": [Function],
                             "style": [Function],
                             "timeout": [Function],
                           },
@@ -988,9 +993,14 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "propTypes": Object {
                               "children": [Function],
+                              "disableStrictModeCompat": [Function],
                               "in": [Function],
                               "onEnter": [Function],
+                              "onEntered": [Function],
+                              "onEntering": [Function],
                               "onExit": [Function],
+                              "onExited": [Function],
+                              "onExiting": [Function],
                               "style": [Function],
                               "timeout": [Function],
                             },
@@ -1058,7 +1068,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                     <span
                       className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
                     >
-                      <ForwardRef
+                      <ForwardRef(AccessTimeIcon)
                         className="OpenAccessIcon-embargoedBadgeStyle-2"
                         fontSize="small"
                       >
@@ -1084,7 +1094,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                             fontSize="small"
                           >
                             <svg
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-2 MuiSvgIcon-fontSizeSmall"
                               focusable="false"
                               viewBox="0 0 24 24"
@@ -1098,7 +1108,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                             </svg>
                           </ForwardRef(SvgIcon)>
                         </WithStyles(ForwardRef(SvgIcon))>
-                      </ForwardRef>
+                      </ForwardRef(AccessTimeIcon)>
                     </span>
                   </span>
                 </ForwardRef(Badge)>
@@ -1577,7 +1587,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
               </span>
               <WithStyles(ForwardRef(Badge))
                 badgeContent={
-                  <Memo(AccessTimeIcon)
+                  <Memo
                     className="OpenAccessIcon-embargoedBadgeStyle-2"
                     fontSize="small"
                   />
@@ -1585,7 +1595,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
               >
                 <ForwardRef(Badge)
                   badgeContent={
-                    <Memo(AccessTimeIcon)
+                    <Memo
                       className="OpenAccessIcon-embargoedBadgeStyle-2"
                       fontSize="small"
                     />
@@ -1619,9 +1629,14 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "propTypes": Object {
                             "children": [Function],
+                            "disableStrictModeCompat": [Function],
                             "in": [Function],
                             "onEnter": [Function],
+                            "onEntered": [Function],
+                            "onEntering": [Function],
                             "onExit": [Function],
+                            "onExited": [Function],
+                            "onExiting": [Function],
                             "style": [Function],
                             "timeout": [Function],
                           },
@@ -1637,9 +1652,14 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "propTypes": Object {
                               "children": [Function],
+                              "disableStrictModeCompat": [Function],
                               "in": [Function],
                               "onEnter": [Function],
+                              "onEntered": [Function],
+                              "onEntering": [Function],
                               "onExit": [Function],
+                              "onExited": [Function],
+                              "onExiting": [Function],
                               "style": [Function],
                               "timeout": [Function],
                             },
@@ -1707,7 +1727,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                     <span
                       className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
                     >
-                      <ForwardRef
+                      <ForwardRef(AccessTimeIcon)
                         className="OpenAccessIcon-embargoedBadgeStyle-2"
                         fontSize="small"
                       >
@@ -1733,7 +1753,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                             fontSize="small"
                           >
                             <svg
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-2 MuiSvgIcon-fontSizeSmall"
                               focusable="false"
                               viewBox="0 0 24 24"
@@ -1747,7 +1767,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                             </svg>
                           </ForwardRef(SvgIcon)>
                         </WithStyles(ForwardRef(SvgIcon))>
-                      </ForwardRef>
+                      </ForwardRef(AccessTimeIcon)>
                     </span>
                   </span>
                 </ForwardRef(Badge)>
@@ -2225,9 +2245,14 @@ exports[`Journal Name Component test  should render locked 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "propTypes": Object {
                       "children": [Function],
+                      "disableStrictModeCompat": [Function],
                       "in": [Function],
                       "onEnter": [Function],
+                      "onEntered": [Function],
+                      "onEntering": [Function],
                       "onExit": [Function],
+                      "onExited": [Function],
+                      "onExiting": [Function],
                       "style": [Function],
                       "timeout": [Function],
                     },
@@ -2243,9 +2268,14 @@ exports[`Journal Name Component test  should render locked 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
                         "children": [Function],
+                        "disableStrictModeCompat": [Function],
                         "in": [Function],
                         "onEnter": [Function],
+                        "onEntered": [Function],
+                        "onEntering": [Function],
                         "onExit": [Function],
+                        "onExited": [Function],
+                        "onExiting": [Function],
                         "style": [Function],
                         "timeout": [Function],
                       },
@@ -2273,7 +2303,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                   <WithStyles(ForwardRef(Badge))
                     aria-describedby={null}
                     badgeContent={
-                      <Memo(LockIcon)
+                      <Memo
                         className="OpenAccessIcon-badgeStyle-1"
                         color="secondary"
                         fontSize="small"
@@ -2291,7 +2321,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                     <ForwardRef(Badge)
                       aria-describedby={null}
                       badgeContent={
-                        <Memo(LockIcon)
+                        <Memo
                           className="OpenAccessIcon-badgeStyle-1"
                           color="secondary"
                           fontSize="small"
@@ -2344,7 +2374,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                         <span
                           className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
                         >
-                          <ForwardRef
+                          <ForwardRef(LockIcon)
                             className="OpenAccessIcon-badgeStyle-1"
                             color="secondary"
                             fontSize="small"
@@ -2373,7 +2403,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                                 fontSize="small"
                               >
                                 <svg
-                                  aria-hidden="true"
+                                  aria-hidden={true}
                                   className="MuiSvgIcon-root OpenAccessIcon-badgeStyle-1 MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -2384,7 +2414,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                                 </svg>
                               </ForwardRef(SvgIcon)>
                             </WithStyles(ForwardRef(SvgIcon))>
-                          </ForwardRef>
+                          </ForwardRef(LockIcon)>
                         </span>
                       </span>
                     </ForwardRef(Badge)>
@@ -3376,9 +3406,14 @@ exports[`Journal Name Component test  should render open access 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "propTypes": Object {
                       "children": [Function],
+                      "disableStrictModeCompat": [Function],
                       "in": [Function],
                       "onEnter": [Function],
+                      "onEntered": [Function],
+                      "onEntering": [Function],
                       "onExit": [Function],
+                      "onExited": [Function],
+                      "onExiting": [Function],
                       "style": [Function],
                       "timeout": [Function],
                     },
@@ -3394,9 +3429,14 @@ exports[`Journal Name Component test  should render open access 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
                         "children": [Function],
+                        "disableStrictModeCompat": [Function],
                         "in": [Function],
                         "onEnter": [Function],
+                        "onEntered": [Function],
+                        "onEntering": [Function],
                         "onExit": [Function],
+                        "onExited": [Function],
+                        "onExiting": [Function],
                         "style": [Function],
                         "timeout": [Function],
                       },
@@ -3933,9 +3973,14 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                     "$$typeof": Symbol(react.forward_ref),
                     "propTypes": Object {
                       "children": [Function],
+                      "disableStrictModeCompat": [Function],
                       "in": [Function],
                       "onEnter": [Function],
+                      "onEntered": [Function],
+                      "onEntering": [Function],
                       "onExit": [Function],
+                      "onExited": [Function],
+                      "onExiting": [Function],
                       "style": [Function],
                       "timeout": [Function],
                     },
@@ -3951,9 +3996,14 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
                         "children": [Function],
+                        "disableStrictModeCompat": [Function],
                         "in": [Function],
                         "onEnter": [Function],
+                        "onEntered": [Function],
+                        "onEntering": [Function],
                         "onExit": [Function],
+                        "onExited": [Function],
+                        "onExiting": [Function],
                         "style": [Function],
                         "timeout": [Function],
                       },

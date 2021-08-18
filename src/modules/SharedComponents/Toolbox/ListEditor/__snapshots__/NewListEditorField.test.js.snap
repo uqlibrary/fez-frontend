@@ -1,0 +1,720 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewListEditorField component should render new list editor component with the given List 1`] = `
+<DocumentFragment>
+  <div
+    id="test-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      data-testid="test-form-add"
+      display="row"
+      id="test-form-add"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+          data-testid="test-input"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="test-input"
+            id="test-input-label"
+          >
+            Item name
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="test-input"
+              placeholder="Please type the item name"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          data-testid="test-add"
+          disabled=""
+          id="test-add"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Add
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root makeStyles-header-13 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-right-11 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption"
+          >
+            Reorder items
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-center-12 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+        >
+          <span
+            class=""
+            title="Remove all items"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              data-testid="delete-all-test"
+              id="delete-all-test"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list"
+      id="test-list"
+    >
+      <div
+        data-testid="test-list-row-0"
+        id="test-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root makeStyles-row-16 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2"
+            >
+              test
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <span
+                  class=""
+                  title="Move item down the order"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root"
+                    data-testid="test-list-row-0-move-down"
+                    id="test-list-row-0-move-down"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          >
+            <span
+              class=""
+              title="Remove this item"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                data-testid="test-list-row-0-delete"
+                id="test-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="test-list-row-1"
+        id="test-list-row-1"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root makeStyles-row-16 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2"
+            >
+              testing
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <span
+                  class=""
+                  title="Move item up the order"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root"
+                    data-testid="test-list-row-1-move-up"
+                    id="test-list-row-1-move-up"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          >
+            <span
+              class=""
+              title="Remove this item"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                data-testid="test-list-row-1-delete"
+                id="test-list-row-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error"
+    >
+      test1
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NewListEditorField component should render new list editor component with the given array 1`] = `
+<DocumentFragment>
+  <div
+    id="test-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      data-testid="test-form-add"
+      display="row"
+      id="test-form-add"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+          data-testid="test-input"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="test-input"
+            id="test-input-label"
+          >
+            Item name
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="test-input"
+              placeholder="Please type the item name"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          data-testid="test-add"
+          disabled=""
+          id="test-add"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Add
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      style="flex-grow: 1; padding: 8px;"
+    >
+      <div
+        class="MuiGrid-root makeStyles-header-5 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-right-3 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption"
+          >
+            Reorder items
+          </span>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-center-4 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+        >
+          <span
+            class=""
+            title="Remove all items"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              data-testid="delete-all-test"
+              id="delete-all-test"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="test-list"
+      id="test-list"
+    >
+      <div
+        data-testid="test-list-row-0"
+        id="test-list-row-0"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root makeStyles-row-8 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2"
+            >
+              test
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <span
+                  class=""
+                  title="Move item down the order"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root"
+                    data-testid="test-list-row-0-move-down"
+                    id="test-list-row-0-move-down"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          >
+            <span
+              class=""
+              title="Remove this item"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                data-testid="test-list-row-0-delete"
+                id="test-list-row-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="test-list-row-1"
+        id="test-list-row-1"
+        style="flex-grow: 1; padding: 8px;"
+      >
+        <div
+          class="MuiGrid-root makeStyles-row-8 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2"
+            >
+              testing
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <span
+                  class=""
+                  title="Move item up the order"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root"
+                    data-testid="test-list-row-1-move-up"
+                    id="test-list-row-1-move-up"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          >
+            <span
+              class=""
+              title="Remove this item"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                data-testid="test-list-row-1-delete"
+                id="test-list-row-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error"
+    >
+      test1
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NewListEditorField component should render new list editor component without any list items 1`] = `
+<DocumentFragment>
+  <div
+    id="test-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      data-testid="test-form-add"
+      display="row"
+      id="test-form-add"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+          data-testid="test-input"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="test-input"
+            id="test-input-label"
+          >
+            Item name
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="test-input"
+              placeholder="Please type the item name"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          data-testid="test-add"
+          disabled=""
+          id="test-add"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Add
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      data-testid="test-list"
+      id="test-list"
+    />
+    <p
+      class="MuiFormHelperText-root"
+    />
+  </div>
+</DocumentFragment>
+`;

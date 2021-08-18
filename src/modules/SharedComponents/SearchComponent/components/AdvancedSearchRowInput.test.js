@@ -1,453 +1,374 @@
 import React from 'react';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
-import { rtlRender } from 'test-utils';
+import { AdvancedSearchField } from './AdvancedSearchRow';
+import { act, render, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
-        render: jest.fn(),
+        AdvancedSearchField: AdvancedSearchField,
         inputField: {
             type: 'TextField',
             validation: [],
             hint: 'Field hint',
+            id: 'any-field',
         },
+        searchField: 'all',
         ...testProps,
     };
 
-    return rtlRender(<AdvancedSearchRowInput {...props} />);
+    return render(
+        <WithReduxStore>
+            <AdvancedSearchRowInput {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('AdvancedSearchRowInput', () => {
-    it('should render given render function with component and props', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('TextField');
-            expect(inputProps).toEqual({
-                'aria-label': undefined,
-                autoComplete: 'search',
-                error: false,
-                errorText: undefined,
-                hideLabel: true,
-                id: 'textfield',
-                label: undefined,
-                placeholder: 'Field hint',
-                onChange: inputProps.onChange,
-            });
-        });
-        setup({
-            render: renderFn,
-            onChange: jest.fn(),
+    beforeEach(() => {
+        document.createRange = () => ({
+            setStart: () => {},
+            setEnd: () => {},
+            commonAncestorContainer: {
+                nodeName: 'BODY',
+                ownerDocument: document,
+            },
         });
     });
 
-    it('should render given render function with component and props and show error', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('TextField');
-            expect(inputProps).toEqual({
-                'aria-label': undefined,
-                autoComplete: 'search',
-                error: true,
-                errorText: 'Must be at least 10 characters',
-                hideLabel: true,
-                id: 'textfield',
-                label: undefined,
-                placeholder: 'This is hint for text input',
-                onChange: inputProps.onChange,
-            });
+    it('should render default component for search field', () => {
+        const { getByTestId } = setup({
+            onChange: jest.fn(),
         });
-        setup({
-            render: renderFn,
+
+        const searchField = getByTestId('any-field-input');
+
+        expect(searchField).toHaveAttribute('aria-invalid', 'false');
+        expect(searchField).toHaveAttribute('name', 'search-field-any-field');
+        expect(searchField).toHaveAttribute('placeholder', 'Field hint');
+    });
+
+    it('should render title with given value and display error for max length', () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId } = setup({
             inputField: {
                 type: 'TextField',
                 hint: 'This is hint for text input',
                 validation: ['minLength10'],
+                id: 'rek-title',
             },
+            searchField: 'rek_title',
             value: 'Test',
-            onChange: jest.fn(),
+            onChange: onChangeFn,
         });
+
+        const searchField = getByTestId('rek-title-input');
+        const searchFieldError = getByTestId('rek-title-helper-text');
+
+        expect(searchField).toHaveAttribute('name', 'search-field-rek-title');
+        expect(searchField).toHaveAttribute('aria-invalid', 'true');
+        expect(searchField).toHaveAttribute('placeholder', 'This is hint for text input');
+        expect(searchField).toHaveAttribute('value', 'Test');
+        expect(searchField.closest('div')).toHaveClass('Mui-error');
+
+        expect(searchFieldError).toHaveTextContent('Must be at least 10 characters');
+        expect(searchFieldError).toHaveClass('Mui-error');
+
+        fireEvent.change(searchField, { target: { value: 'Testing' } });
+
+        expect(onChangeFn).toHaveBeenCalledWith('Testing');
     });
 
-    it('should render given render function with input component and props and display error for maxLength9', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(Component)');
-            expect(inputProps.errorText).toEqual('Must be 9 characters or less');
+    it('should render author id search field with given value', async () => {
+        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
+            data: [
+                {
+                    id: 111,
+                    value: 'Testing',
+                    aut_id: 111,
+                    aut_org_username: 'uqtest',
+                    aut_fname: 'UQ',
+                    aut_lname: 'Test',
+                },
+            ],
         });
-        setup({
-            render: renderFn,
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'AuthorIdLookup',
                 hint: 'Add an author id',
                 validation: ['required', 'maxLength9'],
+                id: 'rek-author-id',
             },
-            value: 'uqtestuser',
+            label: 'Test user (uqtest)',
+            searchField: 'rek_author_id',
+            value: '12345',
+            onChange: onChangeFn,
+        });
+
+        const searchField = getByTestId('rek-author-id-input');
+
+        expect(searchField).toHaveAttribute('name', 'search-field-rek-author-id');
+        expect(searchField).toHaveAttribute('aria-invalid', 'false');
+        expect(searchField).toHaveAttribute('placeholder', 'Add an author id');
+        expect(searchField).toHaveAttribute('value', '12345 (Test user (uqtest))');
+
+        act(() => {
+            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
+        });
+        await waitFor(() => getByTestId('rek-author-id-options'));
+        fireEvent.click(getByText('Testing'));
+
+        expect(onChangeFn).toHaveBeenCalledWith(111, 'Testing');
+    });
+
+    it('should render author id search field with given value and display error', () => {
+        const { getByTestId } = setup({
+            inputField: {
+                type: 'AuthorIdLookup',
+                hint: 'Add an author id',
+                validation: ['required', 'maxLength9'],
+                id: 'rek-author-id',
+            },
+            label: 'Test user (uqtest)',
+            searchField: 'rek_author_id',
+            value: '1234567890',
             onChange: jest.fn(),
         });
+
+        const searchField = getByTestId('rek-author-id-input');
+        const searchFieldError = getByTestId('rek-author-id-helper-text');
+
+        expect(searchField).toHaveAttribute('name', 'search-field-rek-author-id');
+        expect(searchField).toHaveAttribute('aria-invalid', 'true');
+        expect(searchField).toHaveAttribute('placeholder', 'Add an author id');
+        expect(searchField).toHaveAttribute('value', '1234567890 (Test user (uqtest))');
+        expect(searchField.closest('div')).toHaveClass('Mui-error');
+
+        expect(searchFieldError).toHaveTextContent('Must be 9 characters or less');
+        expect(searchFieldError).toHaveClass('Mui-error');
     });
 
     it('should render error text for required rule', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(Component)');
-            expect(inputProps.errorText).toEqual('This field is required');
-        });
-        setup({
-            render: renderFn,
+        const { getByTestId } = setup({
             inputField: {
                 type: 'ContributorIdLookup',
                 validation: ['required', 'maxLength9'],
+                id: 'rek-contributor-id',
+                hint: 'Add an contributor id',
             },
+            searchField: 'rek_contributor_id',
             value: undefined,
             onChange: jest.fn(),
         });
+
+        const searchField = getByTestId('rek-author-id-input');
+        const searchFieldError = getByTestId('rek-author-id-helper-text');
+
+        expect(searchField).toHaveAttribute('name', 'search-field-rek-contributor-id');
+        expect(searchField).toHaveAttribute('aria-invalid', 'true');
+        expect(searchField).toHaveAttribute('placeholder', 'Add an contributor id');
+        expect(searchField).toHaveAttribute('value', '');
+
+        expect(searchFieldError).toHaveTextContent('This field is required');
+        expect(searchFieldError).toHaveClass('Mui-error');
     });
 
     it('should render correct error message for publisher lookup field', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(Component)');
-            expect(inputProps.errorText).toEqual('This field is required');
-        });
-        setup({
-            render: renderFn,
+        const { getByTestId } = setup({
             inputField: {
                 type: 'PublisherLookup',
                 validation: ['required'],
+                id: 'rek-publisher',
+                hint: 'Add a publisher',
             },
             value: null,
             onChange: jest.fn(),
         });
+
+        const searchField = getByTestId('rek-publisher-input');
+        const searchFieldError = getByTestId('rek-publisher-helper-text');
+
+        expect(searchField).toHaveAttribute('name', 'search-field-rek-publisher');
+        expect(searchField).toHaveAttribute('aria-invalid', 'true');
+        expect(searchField).toHaveAttribute('placeholder', 'Add a publisher');
+        expect(searchField).toHaveAttribute('value', '');
+
+        expect(searchFieldError).toHaveTextContent('This field is required');
+        expect(searchFieldError).toHaveClass('Mui-error');
     });
 
-    it('should render correct input props for publisher lookup field', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(Component)');
-            expect(inputProps).toEqual({
-                allowFreeText: true,
-                'aria-label': 'Type a publisher to search for',
-                error: false,
-                errorText: undefined,
-                floatingLabelText: 'Type a publisher to search for',
-                hideLabel: true,
-                hintText: 'Add your publisher',
-                label: undefined,
-                onChange: inputProps.onChange,
-                value: 'Test',
-            });
-        });
-        setup({
-            render: renderFn,
+    it('should render correct value for publisher lookup field', () => {
+        const { getByTestId } = setup({
             inputField: {
                 type: 'PublisherLookup',
                 validation: ['required'],
-                ariaLabel: 'Type a publisher to search for',
-                title: 'Publisher lookup',
-                hint: 'Add your publisher',
+                id: 'rek-publisher',
+                hint: 'Add a publisher',
             },
             value: 'Test',
             onChange: jest.fn(),
         });
+
+        const searchField = getByTestId('rek-publisher-input');
+
+        expect(searchField).toHaveAttribute('name', 'search-field-rek-publisher');
+        expect(searchField).toHaveAttribute('aria-invalid', 'false');
+        expect(searchField).toHaveAttribute('placeholder', 'Add a publisher');
+        expect(searchField).toHaveAttribute('value', 'Test');
     });
 
-    it('should render correct input props for org unit lookup field', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(Component)');
-            expect(inputProps).toEqual({
-                allowFreeText: true,
-                'aria-label': 'Type a org unit to search for',
-                error: false,
-                errorText: undefined,
-                floatingLabelText: 'Type a org unit to search for',
-                hideLabel: true,
-                hintText: 'Add your org unit',
-                label: undefined,
-                onChange: inputProps.onChange,
-                value: 'Test',
-            });
-        });
-        setup({
-            render: renderFn,
+    it('should render correct input for org unit lookup field', async () => {
+        mockApi
+            .onGet(
+                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'test', searchKey: 'org_unit_name' }).apiUrl,
+                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'test', searchKey: 'org_unit_name' }).options,
+            )
+            .replyOnce(200, { data: [{ value: 'Search org unit test' }, { value: 'Testing org unit input' }] });
+
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'OrgUnitLookup',
                 validation: ['required'],
-                ariaLabel: 'Type a org unit to search for',
-                title: 'Org unit lookup',
                 hint: 'Add your org unit',
+                id: 'rek-org-unit',
             },
             value: 'Test',
-            onChange: jest.fn(),
+            onChange: onChangeFn,
         });
+
+        const searchField = getByTestId('rek-org-unit-name-input');
+
+        expect(searchField).toHaveAttribute('name', 'search-field-rek-org-unit');
+        expect(searchField).toHaveAttribute('aria-invalid', 'false');
+        expect(searchField).toHaveAttribute('placeholder', 'Add your org unit');
+        expect(searchField).toHaveAttribute('value', 'Test');
+
+        act(() => {
+            fireEvent.change(searchField, { target: { value: 'test' } });
+        });
+        await waitFor(() => getByTestId('rek-org-unit-name-options'));
+        fireEvent.click(getByText('Search org unit test'));
+
+        expect(onChangeFn).toHaveBeenCalledWith('Search org unit test', 'Search org unit test');
     });
 
-    it('should render correct input props for thesis type select field', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(GenericSelectField)');
-            expect(inputProps).toEqual({
-                'aria-label': 'Select multiple thesis types to search for',
-                error: false,
-                errorText: undefined,
-                hintText: 'Select as many thesis types as you want',
-                label: undefined,
-                onChange: inputProps.onChange,
-                autoWidth: false,
-                displayEmpty: true,
-                hideLabel: true,
-                multiple: true,
-                selectedValue: [],
-                style: { marginTop: 0 },
-            });
-        });
-        setup({
-            render: renderFn,
+    it('should render correct input for thesis type select field and display error', () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'ThesisTypeLookup',
-                validation: ['required'],
+                validation: ['requiredList'],
                 ariaLabel: 'Select multiple thesis types to search for',
                 title: 'Thesis type',
                 multiple: true,
-                hint: 'Select as many thesis types as you want',
+                id: 'rek-genre-type',
+                selectPrompt: 'Select as many thesis types as you want',
             },
             value: [],
-            onChange: jest.fn(),
+            onChange: onChangeFn,
         });
+
+        const searchField = getByTestId('rek-genre-type-select');
+        const searchFieldError = getByTestId('rek-genre-type-helper-text');
+
+        expect(searchField).toHaveTextContent('Select as many thesis types as you want');
+
+        expect(searchFieldError).toHaveTextContent('This field is required');
+        expect(searchFieldError).toHaveClass('Mui-error');
+
+        fireEvent.mouseDown(getByTestId('rek-genre-type-select'));
+        fireEvent.click(getByText('B.A. Thesis'));
+
+        expect(onChangeFn).toHaveBeenCalledWith(['B.A. Thesis'], ['B.A. Thesis']);
     });
 
-    it('should render correct input props for collection lookup field', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(Component)');
-            expect(inputProps).toEqual({
-                'aria-label': 'Select multiple collections to search for',
-                disableClearable: true,
-                error: false,
-                errorText: undefined,
-                hintText: 'Select as many genres as you want',
-                label: undefined,
-                onChange: inputProps.onChange,
-                selectedValue: [],
-                style: { marginTop: 0 },
-            });
+    it('should render correct input for thesis type select field with given values', () => {
+        const { getByTestId } = setup({
+            inputField: {
+                type: 'ThesisTypeLookup',
+                validation: ['requiredList'],
+                ariaLabel: 'Select multiple thesis types to search for',
+                title: 'Thesis type',
+                multiple: true,
+                selectPrompt: 'Select as many thesis types as you want',
+            },
+            value: ['B.A. Thesis'],
+            onChange: jest.fn(),
         });
-        setup({
-            render: renderFn,
+
+        expect(getByTestId('rek-genre-type-select')).toHaveTextContent('B.A. Thesis');
+    });
+
+    it('should render correct input for collection lookup field', () => {
+        const { getByTestId } = setup({
             inputField: {
                 type: 'CollectionsLookup',
-                validation: ['required'],
+                validation: ['requiredList'],
                 ariaLabel: 'Select multiple collections to search for',
-                title: 'Genre type',
                 multiple: true,
-                hint: 'Select as many genres as you want',
+                hint: 'Select multiple collections to search for',
+                collectionFieldId: 'rek-ismemberof',
             },
             value: [],
             onChange: jest.fn(),
         });
+
+        const searchField = getByTestId('rek-ismemberof-input');
+        const searchFieldError = getByTestId('rek-ismemberof-helper-text');
+
+        expect(searchField).toHaveAttribute('aria-invalid', 'true');
+        expect(searchField).toHaveAttribute('placeholder', 'Select multiple collections to search for');
+        expect(searchField.closest('div')).toHaveClass('Mui-error');
+
+        expect(searchFieldError).toHaveTextContent('This field is required');
+        expect(searchFieldError).toHaveClass('Mui-error');
     });
 
-    it('should render correct input props for publication status field', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('Connect(GenericSelectField)');
-            expect(inputProps).toEqual({
-                'aria-label': 'Select status to search for',
-                error: false,
-                errorText: undefined,
-                hintText: 'Select status you want',
-                label: undefined,
-                onChange: inputProps.onChange,
-                autoWidth: false,
-                displayEmpty: false,
-                hideLabel: true,
-                selectedValue: [],
-                style: { marginTop: 0 },
-            });
-        });
-        setup({
-            render: renderFn,
+    it('should render correct input for publication status field', () => {
+        const onChangeFn = jest.fn();
+        const { getByTestId, getByText } = setup({
             inputField: {
                 type: 'StatusLookup',
                 validation: ['required'],
                 ariaLabel: 'Select status to search for',
                 title: 'Status',
                 multiple: false,
-                hint: 'Select status you want',
                 isUnpublishedField: true,
+                id: 'rek-status',
+                selectPrompt: 'Please select a status',
             },
-            value: [],
-            onChange: jest.fn(),
+            value: '',
+            onChange: onChangeFn,
         });
+
+        expect(getByTestId('rek-status-select')).toHaveTextContent('Please select a status');
+        expect(getByTestId('rek-status-helper-text')).toHaveTextContent('This field is required');
+        expect(getByTestId('rek-status-helper-text')).toHaveClass('Mui-error');
+
+        fireEvent.mouseDown(getByTestId('rek-status-select'));
+
+        act(() => {
+            fireEvent.click(getByText('Unpublished'));
+        });
+
+        expect(onChangeFn).toHaveBeenCalledWith('Unpublished');
     });
 
-    it('should not render any props to children function if field is not in the list', () => {
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            expect(InputComponent.displayName).toEqual('TextField');
-            expect(inputProps).toEqual({
-                error: false,
-                errorText: undefined,
-            });
-        });
-        setup({
-            render: renderFn,
+    it('should render default text field if field is not in the list', () => {
+        const { getByTestId } = setup({
             inputField: {
                 type: 'StrangeLookup',
                 validation: ['required'],
+                textFieldId: 'test',
             },
             value: 'test',
             onChange: jest.fn(),
         });
-    });
 
-    it('should call onChange from input props for TextField', () => {
-        const onChangeFn = jest.fn(value => expect(value).toEqual('Testing'));
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps);
-            expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('WithStyles(ForwardRef(TextField))').simulate('change', { target: { value: 'Testing' } });
-            expect(onChangeFn).toHaveBeenCalled();
-        });
-        setup({
-            render: renderFn,
-            inputField: {
-                type: 'TextField',
-                id: 'text-field',
-                validation: ['required'],
-            },
-            value: null,
-            onChange: onChangeFn,
-        });
-    });
-
-    it('should call onChange from input props for AuthorIdLookup for numeric value', () => {
-        const onChangeFn = jest.fn((id, value) => {
-            expect(id).toEqual('1234');
-            expect(value).toEqual('Test value');
-        });
-
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
-            expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(Component)').simulate('change', { id: '1234', value: 'Test value' });
-            expect(onChangeFn).toHaveBeenCalled();
-        });
-
-        setup({
-            render: renderFn,
-            inputField: {
-                type: 'AuthorIdLookup',
-                validation: ['required'],
-            },
-            value: null,
-            onChange: onChangeFn,
-        });
-    });
-
-    it('should call onChange from input props for AuthorIdLookup for non-numeric value', () => {
-        const onChangeFn = jest.fn((id, value) => {
-            expect(id).toEqual(0);
-            expect(value).toEqual('');
-        });
-
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
-            expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(Component)').simulate('change', { id: 'test', value: 'Test value' });
-            expect(onChangeFn).toHaveBeenCalled();
-        });
-
-        setup({
-            render: renderFn,
-            inputField: {
-                type: 'AuthorIdLookup',
-                validation: ['required'],
-            },
-            value: null,
-            onChange: onChangeFn,
-        });
-    });
-
-    it('should call onChange from input props for OrgUnitLookup field', () => {
-        const onChangeFn = jest.fn((value, label) => {
-            expect(value).toEqual('Test Value');
-            expect(label).toEqual('Test Value');
-        });
-
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
-            expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(Component)').simulate('change', { id: '1245', value: 'Test Value' });
-            expect(onChangeFn).toHaveBeenCalled();
-        });
-
-        setup({
-            render: renderFn,
-            inputField: {
-                type: 'OrgUnitLookup',
-                validation: ['required'],
-            },
-            value: null,
-            onChange: onChangeFn,
-        });
-    });
-
-    it('should call onChange from input props for StatusLookup field', () => {
-        const onChangeFn = jest.fn(value => {
-            expect(value).toEqual('Test Value');
-        });
-
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
-            expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(GenericSelectField)').simulate('change', 'Test Value');
-            expect(onChangeFn).toHaveBeenCalled();
-        });
-
-        setup({
-            render: renderFn,
-            inputField: {
-                type: 'StatusLookup',
-                validation: ['required'],
-            },
-            value: null,
-            onChange: onChangeFn,
-        });
-    });
-
-    it('should call onChange from input props for CollectionsLookup field', () => {
-        const onChangeFn = jest.fn(value => {
-            expect(value).toEqual('Test Value');
-        });
-
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
-            expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(Component)').simulate('change', 'Test Value');
-            expect(onChangeFn).toHaveBeenCalled();
-        });
-
-        setup({
-            render: renderFn,
-            inputField: {
-                type: 'CollectionsLookup',
-                validation: ['required'],
-            },
-            value: [],
-            onChange: onChangeFn,
-        });
-    });
-
-    it('should call onChange from input props from ThesisTypeLookup field', () => {
-        const onChangeFn = jest.fn((value, label) => {
-            expect(value).toEqual('Test');
-            expect(label).toEqual('Test');
-        });
-
-        const renderFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
-            expect(toJson(wrapper)).toMatchSnapshot();
-            wrapper.find('Connect(GenericSelectField)').simulate('change', 'Test');
-            expect(onChangeFn).toHaveBeenCalled();
-        });
-
-        setup({
-            render: renderFn,
-            inputField: {
-                type: 'ThesisTypeLookup',
-                validation: ['required'],
-            },
-            value: [],
-            onChange: onChangeFn,
-        });
+        expect(getByTestId('text-field-input')).toBeInTheDocument();
+        expect(getByTestId('text-field-input')).toHaveAttribute('name', 'search-field-text-field');
+        expect(getByTestId('text-field-input')).toHaveAttribute('value', 'test');
     });
 });

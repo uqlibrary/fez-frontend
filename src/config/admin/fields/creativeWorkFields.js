@@ -17,7 +17,7 @@ export default {
         },
         {
             title: 'ISSN',
-            groups: [['issnField']],
+            groups: [['issns']],
         },
         {
             title: 'Bibliographic',
@@ -53,13 +53,13 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: () => [
+    authors: ({ isNtro = false }) => [
         {
             title: 'Authors',
             groups: [['authors']],
         },
         {
-            title: 'Editors',
+            title: isNtro ? 'Contributors' : 'Editors',
             groups: [['editors']],
         },
     ],
@@ -80,12 +80,7 @@ export default {
                 ['fez_record_search_key_refereed_source', 'contentIndicators'],
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: (displayAudienceSize = false) => {
@@ -111,7 +106,7 @@ export default {
 };
 
 export const validateCreativeWork = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -121,11 +116,6 @@ export const validateCreativeWork = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {

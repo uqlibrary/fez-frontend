@@ -5,14 +5,12 @@ import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 import { PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
-import { publicationTypeHasAdvisoryStatement } from '../common/helpers';
 
 export const FilesSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].files({
             isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
-            displayAdvisoryStatement: publicationTypeHasAdvisoryStatement(record),
         }),
     );
 

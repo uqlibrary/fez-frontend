@@ -13,6 +13,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       color="primary"
       component="h2"
       data-testid="page-title"
+      id="page-title"
       variant="h4"
     >
       Test
@@ -50,6 +51,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
       color="primary"
       component="h2"
       data-testid="page-title"
+      id="page-title"
       variant="h4"
     >
       standard page title
@@ -1157,6 +1159,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               color="primary"
                               component="h2"
                               data-testid="page-title"
+                              id="page-title"
                               variant="h4"
                             >
                               <ForwardRef(Typography)
@@ -1198,11 +1201,13 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 color="primary"
                                 component="h2"
                                 data-testid="page-title"
+                                id="page-title"
                                 variant="h4"
                               >
                                 <h2
                                   className="MuiTypography-root Page-layoutTitle-2 MuiTypography-h4 MuiTypography-colorPrimary"
                                   data-testid="page-title"
+                                  id="page-title"
                                 >
                                   Test
                                 </h2>
@@ -1224,8 +1229,6 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               Object {
                                 "$$typeof": Symbol(react.memo),
                                 "compare": null,
-                                "displayName": "HelpOutlineIcon",
-                                "muiName": "SvgIcon",
                                 "type": Object {
                                   "$$typeof": Symbol(react.forward_ref),
                                   "render": [Function],
@@ -1244,9 +1247,14 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   "$$typeof": Symbol(react.forward_ref),
                                   "propTypes": Object {
                                     "children": [Function],
+                                    "disableStrictModeCompat": [Function],
                                     "in": [Function],
                                     "onEnter": [Function],
+                                    "onEntered": [Function],
+                                    "onEntering": [Function],
                                     "onExit": [Function],
+                                    "onExited": [Function],
+                                    "onExiting": [Function],
                                     "style": [Function],
                                     "timeout": [Function],
                                   },
@@ -1262,9 +1270,14 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     "$$typeof": Symbol(react.forward_ref),
                                     "propTypes": Object {
                                       "children": [Function],
+                                      "disableStrictModeCompat": [Function],
                                       "in": [Function],
                                       "onEnter": [Function],
+                                      "onEntered": [Function],
+                                      "onEntering": [Function],
                                       "onExit": [Function],
+                                      "onExited": [Function],
+                                      "onExiting": [Function],
                                       "style": [Function],
                                       "timeout": [Function],
                                     },
@@ -1397,16 +1410,16 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                           <span
                                             className="MuiIconButton-label"
                                           >
-                                            <ForwardRef
-                                              className="makeStyles-helpIcon-137"
+                                            <ForwardRef(HelpOutlineIcon)
+                                              className="makeStyles-helpIcon-4"
                                               titleAccess="Click for more information"
                                             >
                                               <WithStyles(ForwardRef(SvgIcon))
-                                                className="makeStyles-helpIcon-137"
+                                                className="makeStyles-helpIcon-4"
                                                 titleAccess="Click for more information"
                                               >
                                                 <ForwardRef(SvgIcon)
-                                                  className="makeStyles-helpIcon-137"
+                                                  className="makeStyles-helpIcon-4"
                                                   classes={
                                                     Object {
                                                       "colorAction": "MuiSvgIcon-colorAction",
@@ -1423,7 +1436,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                                   titleAccess="Click for more information"
                                                 >
                                                   <svg
-                                                    className="MuiSvgIcon-root makeStyles-helpIcon-137"
+                                                    className="MuiSvgIcon-root makeStyles-helpIcon-4"
                                                     focusable="false"
                                                     role="img"
                                                     viewBox="0 0 24 24"
@@ -1437,7 +1450,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                                   </svg>
                                                 </ForwardRef(SvgIcon)>
                                               </WithStyles(ForwardRef(SvgIcon))>
-                                            </ForwardRef>
+                                            </ForwardRef(HelpOutlineIcon)>
                                           </span>
                                           <WithStyles(memo)
                                             center={true}
@@ -1486,7 +1499,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         class="MuiIconButton-label"
                                       >
                                         <svg
-                                          class="MuiSvgIcon-root makeStyles-helpIcon-137"
+                                          class="MuiSvgIcon-root makeStyles-helpIcon-4"
                                           focusable="false"
                                           role="img"
                                           viewBox="0 0 24 24"

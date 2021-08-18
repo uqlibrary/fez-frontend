@@ -1,6 +1,6 @@
 import React from 'react';
 import { APP_URL } from 'config/general';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 /*
 
@@ -68,6 +68,13 @@ export default {
             actionButtonLabel: 'Click to login',
             alertId: 'login',
         },
+        loginAlertForFiles: {
+            title: 'You are not logged in',
+            message: 'Login to UQ eSpace to access the files on this work',
+            type: 'info_outline',
+            actionButtonLabel: 'Click to login',
+            alertId: 'login-info-alert',
+        },
         errorMessages: {
             401: {
                 message:
@@ -83,6 +90,10 @@ export default {
                 message: 'The requested page could not be found.',
                 status: 404,
             },
+            409: {
+                message: 'Duplicate entry',
+                status: 409,
+            },
             410: {
                 message: 'This work has been deleted.',
                 status: 410,
@@ -91,7 +102,7 @@ export default {
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact ' +
                     'eSpace administrators or try again later.',
-                status: 500,
+                status: 422,
             },
             500: {
                 message:

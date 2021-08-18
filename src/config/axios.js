@@ -8,7 +8,7 @@ import { showAppAlert } from 'actions/app';
 import locale from 'locale/global';
 import Raven from 'raven-js';
 import param from 'can-param';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -89,7 +89,7 @@ const reportToSentry = error => {
 api.interceptors.response.use(
     response => {
         if (!isGet) {
-            return cache.store.clear().then(() => Promise.resolve(response.data));
+            return cache.store.clear().then(() => Promise.resolve(response.status === 201 ? response : response.data));
         }
         return Promise.resolve(response.data);
     },
@@ -114,6 +114,7 @@ api.interceptors.response.use(
             if (!!error.response && !!error.response.status && error.response.status === 403) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
                     Cookies.remove(SESSION_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
                     delete api.defaults.headers.common[TOKEN_NAME];
                 }
 
@@ -134,7 +135,7 @@ api.interceptors.response.use(
                 }
             } else if (!!error.response && !!error.response.status) {
                 errorMessage = locale.global.errorMessages[error.response.status];
-                if (error.response.status === 410) {
+                if ([410, 422].includes(error.response.status)) {
                     errorMessage = {
                         ...errorMessage,
                         ...error.response.data,

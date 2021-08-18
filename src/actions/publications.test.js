@@ -1,15 +1,9 @@
-jest.mock('./exportPublications');
-
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
-import { exportPublications } from './exportPublications';
+import * as ExportActions from './exportPublications';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
-
-beforeEach(() => {
-    exportPublications.mockClear();
-});
 
 describe('Publications actions', () => {
     beforeEach(() => {
@@ -364,6 +358,7 @@ describe('Publications actions', () => {
 
     describe('exportAuthorPublications()', () => {
         it('calls exportPublications with expected params', async () => {
+            const exportPublications = jest.spyOn(ExportActions, 'exportPublications');
             const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
             const testRequest = {
                 exportPublicationsFormat,
@@ -381,6 +376,7 @@ describe('Publications actions', () => {
         });
 
         it('handles defaults', () => {
+            const exportPublications = jest.spyOn(ExportActions, 'exportPublications');
             publicationsActions.exportAuthorPublications({});
             expect(exportPublications).toHaveBeenCalledWith({
                 apiUrl: 'records/export',

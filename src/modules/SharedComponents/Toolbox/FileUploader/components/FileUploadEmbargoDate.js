@@ -6,18 +6,12 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
-        canBeCleared: PropTypes.bool,
         classes: PropTypes.object,
         disabled: PropTypes.bool,
         minDate: PropTypes.instanceOf(Date),
         onChange: PropTypes.func,
         value: PropTypes.string,
         fileUploadEmbargoDateId: PropTypes.string,
-    };
-
-    static defaultProps = {
-        // minDate: new Date(),
-        canBeCleared: false,
     };
 
     _onChange = value => {
@@ -45,7 +39,6 @@ export class FileUploadEmbargoDate extends PureComponent {
                 allowKeyboardControl
                 autoOk
                 data-testid={`${this.props.fileUploadEmbargoDateId}-input`}
-                {...(this.props.canBeCleared ? { clearable: true } : {})}
             />
         );
     }

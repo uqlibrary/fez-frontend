@@ -19,11 +19,12 @@ context('As an admin,', () => {
             .click();
 
         // Fill required fields
-        cy.typeCKEditor('editor1', 'Test title');
+        cy.typeCKEditor('rek-title', 'Test title');
         cy.get('[data-testid=rek-date-year-input]').type('2020');
         cy.get('[data-testid=rek-rights-input]').type('All rights reserved');
-        cy.get('[data-testid=rek-author-input]').type('Test author');
         cy.get('[data-testid=rek-author-add]').click();
+        cy.get('[data-testid=rek-author-input]').type('Test author');
+        cy.get('[data-testid=rek-author-add-save]').click();
         cy.get('[data-testid=rek-copyright-input]').click();
 
         // Submit form

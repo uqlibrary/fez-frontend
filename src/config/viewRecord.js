@@ -1,4 +1,4 @@
-import { routes } from 'config';
+import { pathConfig } from 'config';
 
 const prefixFileNameSuffix = (prefix = '', fileName, suffix = '', extension) =>
     `${prefix}${prefix !== '' ? '_' : ''}${fileName.substr(0, fileName.lastIndexOf('.'))}${
@@ -34,6 +34,30 @@ export const viewRecordsConfig = {
         453613: {
             className: 'cc-by-sa',
             url: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_US',
+        },
+        456710: {
+            className: 'cc-by',
+            url: 'http://creativecommons.org/licenses/by/4.0/deed.en',
+        },
+        456711: {
+            className: 'cc-by-sa',
+            url: 'http://creativecommons.org/licenses/by-sa/4.0/deed.en',
+        },
+        456712: {
+            className: 'cc-by-nd',
+            url: 'http://creativecommons.org/licenses/by-nd/4.0/deed.en',
+        },
+        456713: {
+            className: 'cc-by-nc',
+            url: 'http://creativecommons.org/licenses/by-nc/4.0/deed.en',
+        },
+        456714: {
+            className: 'cc-by-nc-sa',
+            url: 'http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en',
+        },
+        456715: {
+            className: 'cc-by-nc-nd',
+            url: 'http://creativecommons.org/licenses/by-nc-nd/4.0/deed.en',
         },
         453701: {
             className: 'uq',
@@ -120,7 +144,7 @@ export const viewRecordsConfig = {
                     isMultiple: false,
                 },
             ],
-            url: pid => routes.pathConfig.records.view(pid, true),
+            url: pid => pathConfig.records.view(pid, true),
         },
         {
             searchKey: 'fez_record_search_key_subject',
@@ -142,7 +166,7 @@ export const viewRecordsConfig = {
                 },
             ],
             // TODO add dsi_checksum as a third param, if this function ever gets used in the future
-            url: (pid, fileName) => routes.pathConfig.file.url(pid, fileName),
+            url: (pid, fileName) => pathConfig.file.url(pid, fileName),
         },
         {
             searchKey: null,

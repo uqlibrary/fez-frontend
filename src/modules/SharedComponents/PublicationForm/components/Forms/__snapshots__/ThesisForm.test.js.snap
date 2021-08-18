@@ -21,8 +21,7 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Alert
-            action={[Function]}
-            actionButtonLabel="Upload HDR thesis"
+            alertId="alert-warning-rdm-redirect"
             allowDismiss={false}
             customIcon={null}
             customType={null}
@@ -31,10 +30,39 @@ exports[`ThesisForm  should render component 1`] = `
             message={
               <React.Fragment>
                 <p>
-                  Are you submitting a UQ Higher Degree Research (HDR) thesis? If yes, click the UPLOAD HDR THESIS button to submit.
+                  Are you submitting a UQ Higher Degree by Research (HDR) thesis?
                 </p>
+                <ul>
+                  <li>
+                    If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please click 
+                    <a
+                      href="/rhdsubmission"
+                    >
+                      here
+                    </a>
+                    .
+                  </li>
+                  <li>
+                    If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
+                     
+                    <a
+                      href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
+                    >
+                      this process
+                    </a>
+                    . Please see the
+                     
+                    <a
+                      href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                    >
+                      UQRDM thesis submission guide
+                    </a>
+                     
+                    for more information.
+                  </li>
+                </ul>
                 <p>
-                   To deposit another thesis type, use the form below.
+                  To deposit another thesis type, use the form below.
                 </p>
               </React.Fragment>
             }
@@ -54,7 +82,18 @@ exports[`ThesisForm  should render component 1`] = `
         >
           <Field
             autoFocus={true}
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Title"
@@ -87,7 +126,6 @@ exports[`ThesisForm  should render component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -118,7 +156,6 @@ exports[`ThesisForm  should render component 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -140,23 +177,13 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": [Function],
-                "compare": null,
-                "displayName": "Connect(GenericSelectField)",
-                "type": [Function],
-              }
-            }
+            ariaLabel="Select a thesis type"
+            component={[Function]}
             disabled={false}
-            locale={
-              Object {
-                "label": "Thesis type",
-              }
-            }
+            label="Thesis type"
             name="rek_genre_type"
             required={true}
+            selectPrompt="Please select a thesis type"
             validate={
               Array [
                 [Function],
@@ -191,7 +218,18 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Author name"
@@ -381,7 +419,18 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="DOI"
@@ -402,7 +451,18 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Total pages"
@@ -418,7 +478,18 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Abstract"
@@ -434,7 +505,18 @@ exports[`ThesisForm  should render component 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Notes (not publicly viewable)"

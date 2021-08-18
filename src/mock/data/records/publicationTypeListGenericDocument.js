@@ -8,27 +8,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:151480",
-            "rek_title_xsdmf_id": 7623,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Minutes Project Team Meetings",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 202,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 7660,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2008-06-19T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 2101,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2008-06-19T16:00:09Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-24T13:43:01Z",
             "rek_file_downloads": 78,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 7661,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Generic Document",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -56,7 +56,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -64,7 +64,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11520694,
                     "rek_ismemberof_pid": "UQ:151480",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:151282",
                     "rek_ismemberof_order": 1,
                     "parent": {
@@ -81,20 +81,20 @@ export default {
             "fez_record_search_key_keywords": [{
                 "rek_keywords_id": 30800253,
                 "rek_keywords_pid": "UQ:151480",
-                "rek_keywords_xsdmf_id": 7954,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "University of Queensland. Library",
                 "rek_keywords_order": 1
             }, {
                 "rek_keywords_id": 30800256,
                 "rek_keywords_pid": "UQ:151480",
-                "rek_keywords_xsdmf_id": 7954,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "University of Queensland. Library -- Exhibitions",
                 "rek_keywords_order": 2
             }],
             "fez_record_search_key_license": {
                 "rek_license_id": 28752,
                 "rek_license_pid": "UQ:151480",
-                "rek_license_xsdmf_id": 16246,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
@@ -109,7 +109,7 @@ export default {
             "fez_record_search_key_notes": {
                 "rek_notes_id": 1185841,
                 "rek_notes_pid": "UQ:692945",
-                "rek_notes_xsdmf_id": 12441,
+                "rek_notes_xsdmf_id": null,
                 "rek_notes": "https://brisbanepowerhouse.org/events/2017/07/07/joh-for-pm/"
             },
             "fez_record_search_key_scopus_id": null,
@@ -206,7 +206,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Generic Document",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

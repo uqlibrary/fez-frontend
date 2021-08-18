@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
 import ReactHtmlParser from 'react-html-parser';
+import queryString from 'query-string';
+
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
@@ -10,27 +12,33 @@ import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import Badge from '@material-ui/core/Badge';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
-import { useTabbedContext, useRecordContext } from 'context';
-
-import pageLocale from 'locale/pages';
-import queryString from 'query-string';
-import { validation, publicationTypes } from 'config';
-import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED } from 'config/general';
-import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 import { FORM_NAME } from '../constants';
-import { routes } from 'config';
-import { adminInterfaceConfig } from 'config/admin';
 import { onSubmit } from '../submitHandler';
+
+import { useTabbedContext, useRecordContext } from 'context';
+import pageLocale from 'locale/pages';
+import { pathConfig, validation, publicationTypes } from 'config';
+import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED, RETRACTED } from 'config/general';
+import { adminInterfaceConfig } from 'config/admin';
+import { useIsUserSuperAdmin } from 'hooks';
+
+const AdminTab = withStyles({
+    root: {
+        minWidth: 84,
+    },
+})(Tab);
 
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
@@ -42,7 +50,7 @@ export const getQueryStringValue = (location, varName, initialValue) => {
 
 export const navigateToSearchResult = (createMode, authorDetails, history, location) => {
     if (createMode) {
-        history.push(routes.pathConfig.admin.add);
+        history.push(pathConfig.admin.add);
     }
     const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
     if (
@@ -52,15 +60,18 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
     ) {
         history.push(decodeURIComponent(navigatedFrom));
     } else {
-        history.push(routes.pathConfig.records.mine);
+        history.push(pathConfig.records.mine);
     }
 };
+
+const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
 
 export const AdminInterface = ({
     authorDetails,
     classes,
     createMode,
     isDeleted,
+    isJobCreated,
     destroy,
     dirty,
     disableSubmit,
@@ -75,11 +86,13 @@ export const AdminInterface = ({
     unlockRecord,
 }) => {
     const { record } = useRecordContext();
-    const { tabbed } = useTabbedContext();
+    const { tabbed, toggleTabbed } = useTabbedContext();
+    const isSuperAdmin = useIsUserSuperAdmin();
     const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
     const defaultTab = objectType === RECORD_TYPE_RECORD ? 'bibliographic' : 'security';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
+    const activeTabNames = React.useRef(getActiveTabs(tabs));
     const successConfirmationRef = React.useRef();
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
@@ -90,6 +103,10 @@ export const AdminInterface = ({
         formErrors,
         alertLocale: txt.current.alerts,
     });
+
+    React.useEffect(() => {
+        activeTabNames.current = getActiveTabs(tabs);
+    }, [tabs]);
 
     React.useEffect(() => {
         return () => {
@@ -109,9 +126,30 @@ export const AdminInterface = ({
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
 
+    const keyHandler = React.useCallback(
+        event => {
+            if (!!event && event.ctrlKey && event.key !== 'Control') {
+                ((event.key === 'ArrowUp' && !tabbed) || (event.key === 'ArrowDown' && tabbed)) && toggleTabbed();
+                const activeTabIndex = activeTabNames.current.indexOf(currentTabValue);
+                if (event.key === 'ArrowLeft' && activeTabIndex > 0) {
+                    setCurrentTabValue(activeTabNames.current[activeTabIndex - 1]);
+                }
+                if (event.key === 'ArrowRight' && activeTabIndex < activeTabNames.current.length - 1) {
+                    setCurrentTabValue(activeTabNames.current[activeTabIndex + 1]);
+                }
+            }
+        },
+        [tabbed, toggleTabbed, currentTabValue],
+    );
+
+    React.useEffect(() => {
+        window.addEventListener('keydown', keyHandler);
+        return () => window.removeEventListener('keydown', keyHandler);
+    });
+
     const handleCancel = event => {
         event.preventDefault();
-        const pushToHistory = () => history.push(routes.pathConfig.records.view(record.rek_pid));
+        const pushToHistory = () => history.push(pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
             /* istanbul ignore next */
             record.rek_editing_user === authorDetails.username
@@ -119,7 +157,7 @@ export const AdminInterface = ({
                 : pushToHistory();
         } else {
             // Else this is a new record, so just go to the homepage
-            history.push(routes.pathConfig.index);
+            history.push(pathConfig.index);
         }
     };
 
@@ -152,7 +190,7 @@ export const AdminInterface = ({
 
     const navigateToViewRecord = pid => {
         if (!!pid && validation.isValidPid(pid)) {
-            history.push(routes.pathConfig.records.view(pid));
+            history.push(pathConfig.records.view(pid));
         }
     };
 
@@ -176,7 +214,7 @@ export const AdminInterface = ({
 
     const saveConfirmationLocale = createMode
         ? txt.current.successAddWorkflowConfirmation
-        : txt.current.successWorkflowConfirmation;
+        : (!isJobCreated && txt.current.successWorkflowConfirmation) || txt.current.successJobCreatedConfirmation;
 
     const pageTitlePrefix = !isDeleted ? 'Edit' : 'Undelete';
 
@@ -200,6 +238,20 @@ export const AdminInterface = ({
                     onClick={handleCancel}
                 />
             </Grid>
+            {!!isSuperAdmin && record.rek_status !== RETRACTED && (
+                <Grid item xs={12} sm={3}>
+                    <Button
+                        id={`admin-work-retract${placement}`}
+                        data-testid={`retract-admin${placement}`}
+                        disabled={!!submitting || !!disableSubmit}
+                        variant="contained"
+                        color="secondary"
+                        fullWidth
+                        children="Retract"
+                        onClick={setPublicationStatusAndSubmit(RETRACTED)}
+                    />
+                </Grid>
+            )}
             {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status !== PUBLISHED && !isDeleted && (
                 <Grid item xs={12} sm={3}>
                     <Button
@@ -236,7 +288,15 @@ export const AdminInterface = ({
                     />
                 </Grid>
             )}
-            <Grid item xs={12} sm={!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted ? 7 : 10}>
+            <Grid
+                item
+                xs={12}
+                sm={
+                    (!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted && !isSuperAdmin && 7) ||
+                    (!!record.rek_pid && objectType === RECORD_TYPE_RECORD && !isDeleted && isSuperAdmin && 4) ||
+                    10
+                }
+            >
                 <Button
                     id={`admin-work-submit${placement}`}
                     data-testid={`submit-admin${placement}`}
@@ -269,7 +329,7 @@ export const AdminInterface = ({
 
     return (
         <StandardPage>
-            <React.Fragment>
+            <form>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
@@ -278,7 +338,7 @@ export const AdminInterface = ({
                         onCancelAction={() => navigateToViewRecord(record.rek_pid)}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
-                        <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
+                        <Typography variant="h2" color="primary" style={{ fontSize: 18, fontWeight: 400 }}>
                             {!createMode
                                 ? ReactHtmlParser(
                                       `${pageTitlePrefix} ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
@@ -291,7 +351,7 @@ export const AdminInterface = ({
                             <FormViewToggler />
                         </Grid>
                     </Hidden>
-                    {(record.fez_record_search_key_retracted || {}).rek_retracted === 1 && (
+                    {record.rek_status === RETRACTED && (
                         <Grid
                             container
                             alignContent="center"
@@ -305,48 +365,47 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && <LockedAlert handleCancel={handleCancel} />}
+                    {!!locked && <LockedAlert />}
+                    <Grid container spacing={1}>
+                        <Grid item xs={12}>
+                            <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
+                                {renderButtonBar('-top')}
+                            </Grid>
+                        </Grid>
+                    </Grid>
                     <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
                                 <Grid item xs={12}>
                                     <Tabs
                                         value={currentTabValue}
-                                        variant="fullWidth"
-                                        style={{
-                                            marginRight: -40,
-                                            marginLeft: -40,
-                                        }}
                                         classes={{
                                             indicator: classes.tabIndicator,
                                         }}
                                         onChange={handleTabChange}
-                                        variant="scrollable"
-                                        scrollButtons="on"
                                         indicatorColor="primary"
                                         textColor="primary"
                                     >
-                                        {Object.keys(tabs)
-                                            .filter(tab => tabs[tab].activated)
-                                            .map(tab => (
-                                                <Tab
-                                                    key={tab}
-                                                    value={tab}
-                                                    label={
-                                                        !!tabs[tab].numberOfErrors ? (
-                                                            <Badge
-                                                                className={classes.padding}
-                                                                color="error"
-                                                                badgeContent={tabs[tab].numberOfErrors}
-                                                            >
-                                                                {txt.current.sections[tab].title}
-                                                            </Badge>
-                                                        ) : (
-                                                            txt.current.sections[tab].title
-                                                        )
-                                                    }
-                                                />
-                                            ))}
+                                        {activeTabNames.current.map(tab => (
+                                            <AdminTab
+                                                key={tab}
+                                                value={tab}
+                                                data-testid={`${tab}-tab`}
+                                                label={
+                                                    !!tabs[tab].numberOfErrors ? (
+                                                        <Badge
+                                                            className={classes.padding}
+                                                            color="error"
+                                                            badgeContent={tabs[tab].numberOfErrors}
+                                                        >
+                                                            {txt.current.sections[tab].title}
+                                                        </Badge>
+                                                    ) : (
+                                                        txt.current.sections[tab].title
+                                                    )
+                                                }
+                                            />
+                                        ))}
                                     </Tabs>
                                 </Grid>
                             )}
@@ -354,33 +413,19 @@ export const AdminInterface = ({
                     </Hidden>
                 </Grid>
                 <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
-                    <form>
-                        <Grid container spacing={1}>
-                            {renderSaveStatusAlert}
-                            <Grid item xs={12}>
-                                <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
-                                    {renderButtonBar('-top')}
-                                </Grid>
+                    <Grid container spacing={0}>
+                        {!tabbed ? activeTabNames.current.map(renderTabContainer) : renderTabContainer(currentTabValue)}
+                    </Grid>
+                    <Grid container spacing={1}>
+                        {renderSaveStatusAlert}
+                        <Grid item xs={12}>
+                            <Grid container spacing={1} style={{ marginTop: 8 }}>
+                                {renderButtonBar()}
                             </Grid>
                         </Grid>
-                        <Grid container spacing={0}>
-                            {!tabbed
-                                ? Object.keys(tabs)
-                                      .filter(tab => tabs[tab].activated)
-                                      .map(renderTabContainer)
-                                : renderTabContainer(currentTabValue)}
-                        </Grid>
-                        <Grid container spacing={1}>
-                            {renderSaveStatusAlert}
-                            <Grid item xs={12}>
-                                <Grid container spacing={1} style={{ marginTop: 8 }}>
-                                    {renderButtonBar()}
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </form>
+                    </Grid>
                 </ConfirmDiscardFormChanges>
-            </React.Fragment>
+            </form>
         </StandardPage>
     );
 };
@@ -390,6 +435,7 @@ AdminInterface.propTypes = {
     classes: PropTypes.object,
     createMode: PropTypes.bool,
     isDeleted: PropTypes.bool,
+    isJobCreated: PropTypes.bool,
     destroy: PropTypes.func,
     dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,

@@ -515,6 +515,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     "dsi_state": "A",
                   },
                 ],
+                "fez_matched_journals": Object {
+                  "fez_journal": Object {
+                    "fez_journal_era": Array [
+                      Object {
+                        "jnl_era_jid": 20339,
+                        "jnl_era_source_id": "122966",
+                        "jnl_era_source_year": 2010,
+                      },
+                    ],
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
+                  },
+                  "mtj_jnl_id": 13071,
+                  "mtj_pid": "UQ:676287",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -1005,7 +1023,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     "rek_file_attachment_access_condition_id": 17,
                     "rek_file_attachment_access_condition_order": 3,
                     "rek_file_attachment_access_condition_pid": "UQ:792099",
-                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                    "rek_file_attachment_access_condition_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -1014,7 +1032,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     "rek_file_attachment_embargo_date_id": 83,
                     "rek_file_attachment_embargo_date_order": 3,
                     "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                    "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                    "rek_file_attachment_embargo_date_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -1111,7 +1129,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     "rek_grant_text_id": 583,
                     "rek_grant_text_order": 1,
                     "rek_grant_text_pid": "UQ:676287",
-                    "rek_grant_text_xsdmf_id": 0,
+                    "rek_grant_text_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_herdc_code": Object {
@@ -1173,24 +1191,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                 ],
                 "fez_record_search_key_issn": Array [
                   Object {
-                    "fez_journal_issns": Array [
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2010-11-19 00:00:00",
-                          "jnl_era_id": 2234,
-                          "jnl_era_year": 2010,
-                          "jnl_foreign_name": null,
-                          "jnl_id": 7538,
-                          "jnl_journal_name": "Journal of Cell Science",
-                          "jnl_rank": "A",
-                          "jnl_updated_date": "2010-11-19 00:00:00",
-                        },
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
-                    ],
                     "fez_sherpa_romeo": Object {
                       "srm_date_updated": "2017-09-30 18:26:18",
                       "srm_id": 13764,
@@ -1507,6 +1507,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "dsi_state": "A",
                       },
                     ],
+                    "fez_matched_journals": Object {
+                      "fez_journal": Object {
+                        "fez_journal_era": Array [
+                          Object {
+                            "jnl_era_jid": 20339,
+                            "jnl_era_source_id": "122966",
+                            "jnl_era_source_year": 2010,
+                          },
+                        ],
+                        "jni_id": 13071,
+                        "jni_issn": "1477-9137",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 7538,
+                      },
+                      "mtj_jnl_id": 13071,
+                      "mtj_pid": "UQ:676287",
+                      "mtj_status": "A",
+                    },
                     "fez_record_search_key_access_conditions": null,
                     "fez_record_search_key_acknowledgements": null,
                     "fez_record_search_key_additional_notes": null,
@@ -1997,7 +2015,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "rek_file_attachment_access_condition_id": 17,
                         "rek_file_attachment_access_condition_order": 3,
                         "rek_file_attachment_access_condition_pid": "UQ:792099",
-                        "rek_file_attachment_access_condition_xsdmf_id": 0,
+                        "rek_file_attachment_access_condition_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -2006,7 +2024,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "rek_file_attachment_embargo_date_id": 83,
                         "rek_file_attachment_embargo_date_order": 3,
                         "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                        "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                        "rek_file_attachment_embargo_date_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_file_attachment_name": Array [
@@ -2103,7 +2121,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "rek_grant_text_id": 583,
                         "rek_grant_text_order": 1,
                         "rek_grant_text_pid": "UQ:676287",
-                        "rek_grant_text_xsdmf_id": 0,
+                        "rek_grant_text_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_herdc_code": Object {
@@ -2165,24 +2183,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     ],
                     "fez_record_search_key_issn": Array [
                       Object {
-                        "fez_journal_issns": Array [
-                          Object {
-                            "fez_journal": Object {
-                              "jnl_created_date": "2010-11-19 00:00:00",
-                              "jnl_era_id": 2234,
-                              "jnl_era_year": 2010,
-                              "jnl_foreign_name": null,
-                              "jnl_id": 7538,
-                              "jnl_journal_name": "Journal of Cell Science",
-                              "jnl_rank": "A",
-                              "jnl_updated_date": "2010-11-19 00:00:00",
-                            },
-                            "jni_id": 13071,
-                            "jni_issn": "1477-9137",
-                            "jni_issn_order": 2,
-                            "jni_jnl_id": 7538,
-                          },
-                        ],
                         "fez_sherpa_romeo": Object {
                           "srm_date_updated": "2017-09-30 18:26:18",
                           "srm_id": 13764,
@@ -2510,6 +2510,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                           "dsi_state": "A",
                         },
                       ],
+                      "fez_matched_journals": Object {
+                        "fez_journal": Object {
+                          "fez_journal_era": Array [
+                            Object {
+                              "jnl_era_jid": 20339,
+                              "jnl_era_source_id": "122966",
+                              "jnl_era_source_year": 2010,
+                            },
+                          ],
+                          "jni_id": 13071,
+                          "jni_issn": "1477-9137",
+                          "jni_issn_order": 2,
+                          "jni_jnl_id": 7538,
+                        },
+                        "mtj_jnl_id": 13071,
+                        "mtj_pid": "UQ:676287",
+                        "mtj_status": "A",
+                      },
                       "fez_record_search_key_access_conditions": null,
                       "fez_record_search_key_acknowledgements": null,
                       "fez_record_search_key_additional_notes": null,
@@ -3000,7 +3018,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                           "rek_file_attachment_access_condition_id": 17,
                           "rek_file_attachment_access_condition_order": 3,
                           "rek_file_attachment_access_condition_pid": "UQ:792099",
-                          "rek_file_attachment_access_condition_xsdmf_id": 0,
+                          "rek_file_attachment_access_condition_xsdmf_id": null,
                         },
                       ],
                       "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -3009,7 +3027,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                           "rek_file_attachment_embargo_date_id": 83,
                           "rek_file_attachment_embargo_date_order": 3,
                           "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                          "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                          "rek_file_attachment_embargo_date_xsdmf_id": null,
                         },
                       ],
                       "fez_record_search_key_file_attachment_name": Array [
@@ -3106,7 +3124,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                           "rek_grant_text_id": 583,
                           "rek_grant_text_order": 1,
                           "rek_grant_text_pid": "UQ:676287",
-                          "rek_grant_text_xsdmf_id": 0,
+                          "rek_grant_text_xsdmf_id": null,
                         },
                       ],
                       "fez_record_search_key_herdc_code": Object {
@@ -3168,24 +3186,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                       ],
                       "fez_record_search_key_issn": Array [
                         Object {
-                          "fez_journal_issns": Array [
-                            Object {
-                              "fez_journal": Object {
-                                "jnl_created_date": "2010-11-19 00:00:00",
-                                "jnl_era_id": 2234,
-                                "jnl_era_year": 2010,
-                                "jnl_foreign_name": null,
-                                "jnl_id": 7538,
-                                "jnl_journal_name": "Journal of Cell Science",
-                                "jnl_rank": "A",
-                                "jnl_updated_date": "2010-11-19 00:00:00",
-                              },
-                              "jni_id": 13071,
-                              "jni_issn": "1477-9137",
-                              "jni_issn_order": 2,
-                              "jni_jnl_id": 7538,
-                            },
-                          ],
                           "fez_sherpa_romeo": Object {
                             "srm_date_updated": "2017-09-30 18:26:18",
                             "srm_id": 13764,
@@ -3940,6 +3940,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
               <DateCitationView
                 className="citationDate"
                 date="2017-07-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -4102,6 +4103,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "dsi_state": "A",
                       },
                     ],
+                    "fez_matched_journals": Object {
+                      "fez_journal": Object {
+                        "fez_journal_era": Array [
+                          Object {
+                            "jnl_era_jid": 20339,
+                            "jnl_era_source_id": "122966",
+                            "jnl_era_source_year": 2010,
+                          },
+                        ],
+                        "jni_id": 13071,
+                        "jni_issn": "1477-9137",
+                        "jni_issn_order": 2,
+                        "jni_jnl_id": 7538,
+                      },
+                      "mtj_jnl_id": 13071,
+                      "mtj_pid": "UQ:676287",
+                      "mtj_status": "A",
+                    },
                     "fez_record_search_key_access_conditions": null,
                     "fez_record_search_key_acknowledgements": null,
                     "fez_record_search_key_additional_notes": null,
@@ -4592,7 +4611,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "rek_file_attachment_access_condition_id": 17,
                         "rek_file_attachment_access_condition_order": 3,
                         "rek_file_attachment_access_condition_pid": "UQ:792099",
-                        "rek_file_attachment_access_condition_xsdmf_id": 0,
+                        "rek_file_attachment_access_condition_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -4601,7 +4620,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "rek_file_attachment_embargo_date_id": 83,
                         "rek_file_attachment_embargo_date_order": 3,
                         "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                        "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                        "rek_file_attachment_embargo_date_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_file_attachment_name": Array [
@@ -4698,7 +4717,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         "rek_grant_text_id": 583,
                         "rek_grant_text_order": 1,
                         "rek_grant_text_pid": "UQ:676287",
-                        "rek_grant_text_xsdmf_id": 0,
+                        "rek_grant_text_xsdmf_id": null,
                       },
                     ],
                     "fez_record_search_key_herdc_code": Object {
@@ -4760,24 +4779,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                     ],
                     "fez_record_search_key_issn": Array [
                       Object {
-                        "fez_journal_issns": Array [
-                          Object {
-                            "fez_journal": Object {
-                              "jnl_created_date": "2010-11-19 00:00:00",
-                              "jnl_era_id": 2234,
-                              "jnl_era_year": 2010,
-                              "jnl_foreign_name": null,
-                              "jnl_id": 7538,
-                              "jnl_journal_name": "Journal of Cell Science",
-                              "jnl_rank": "A",
-                              "jnl_updated_date": "2010-11-19 00:00:00",
-                            },
-                            "jni_id": 13071,
-                            "jni_issn": "1477-9137",
-                            "jni_issn_order": 2,
-                            "jni_jnl_id": 7538,
-                          },
-                        ],
                         "fez_sherpa_romeo": Object {
                           "srm_date_updated": "2017-09-30 18:26:18",
                           "srm_id": 13764,
@@ -5108,6 +5109,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "dsi_state": "A",
                           },
                         ],
+                        "fez_matched_journals": Object {
+                          "fez_journal": Object {
+                            "fez_journal_era": Array [
+                              Object {
+                                "jnl_era_jid": 20339,
+                                "jnl_era_source_id": "122966",
+                                "jnl_era_source_year": 2010,
+                              },
+                            ],
+                            "jni_id": 13071,
+                            "jni_issn": "1477-9137",
+                            "jni_issn_order": 2,
+                            "jni_jnl_id": 7538,
+                          },
+                          "mtj_jnl_id": 13071,
+                          "mtj_pid": "UQ:676287",
+                          "mtj_status": "A",
+                        },
                         "fez_record_search_key_access_conditions": null,
                         "fez_record_search_key_acknowledgements": null,
                         "fez_record_search_key_additional_notes": null,
@@ -5598,7 +5617,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "rek_file_attachment_access_condition_id": 17,
                             "rek_file_attachment_access_condition_order": 3,
                             "rek_file_attachment_access_condition_pid": "UQ:792099",
-                            "rek_file_attachment_access_condition_xsdmf_id": 0,
+                            "rek_file_attachment_access_condition_xsdmf_id": null,
                           },
                         ],
                         "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -5607,7 +5626,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "rek_file_attachment_embargo_date_id": 83,
                             "rek_file_attachment_embargo_date_order": 3,
                             "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                            "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                            "rek_file_attachment_embargo_date_xsdmf_id": null,
                           },
                         ],
                         "fez_record_search_key_file_attachment_name": Array [
@@ -5704,7 +5723,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "rek_grant_text_id": 583,
                             "rek_grant_text_order": 1,
                             "rek_grant_text_pid": "UQ:676287",
-                            "rek_grant_text_xsdmf_id": 0,
+                            "rek_grant_text_xsdmf_id": null,
                           },
                         ],
                         "fez_record_search_key_herdc_code": Object {
@@ -5766,24 +5785,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         ],
                         "fez_record_search_key_issn": Array [
                           Object {
-                            "fez_journal_issns": Array [
-                              Object {
-                                "fez_journal": Object {
-                                  "jnl_created_date": "2010-11-19 00:00:00",
-                                  "jnl_era_id": 2234,
-                                  "jnl_era_year": 2010,
-                                  "jnl_foreign_name": null,
-                                  "jnl_id": 7538,
-                                  "jnl_journal_name": "Journal of Cell Science",
-                                  "jnl_rank": "A",
-                                  "jnl_updated_date": "2010-11-19 00:00:00",
-                                },
-                                "jni_id": 13071,
-                                "jni_issn": "1477-9137",
-                                "jni_issn_order": 2,
-                                "jni_jnl_id": 7538,
-                              },
-                            ],
                             "fez_sherpa_romeo": Object {
                               "srm_date_updated": "2017-09-30 18:26:18",
                               "srm_id": 13764,
@@ -6111,6 +6112,24 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "dsi_state": "A",
                           },
                         ],
+                        "fez_matched_journals": Object {
+                          "fez_journal": Object {
+                            "fez_journal_era": Array [
+                              Object {
+                                "jnl_era_jid": 20339,
+                                "jnl_era_source_id": "122966",
+                                "jnl_era_source_year": 2010,
+                              },
+                            ],
+                            "jni_id": 13071,
+                            "jni_issn": "1477-9137",
+                            "jni_issn_order": 2,
+                            "jni_jnl_id": 7538,
+                          },
+                          "mtj_jnl_id": 13071,
+                          "mtj_pid": "UQ:676287",
+                          "mtj_status": "A",
+                        },
                         "fez_record_search_key_access_conditions": null,
                         "fez_record_search_key_acknowledgements": null,
                         "fez_record_search_key_additional_notes": null,
@@ -6601,7 +6620,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "rek_file_attachment_access_condition_id": 17,
                             "rek_file_attachment_access_condition_order": 3,
                             "rek_file_attachment_access_condition_pid": "UQ:792099",
-                            "rek_file_attachment_access_condition_xsdmf_id": 0,
+                            "rek_file_attachment_access_condition_xsdmf_id": null,
                           },
                         ],
                         "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -6610,7 +6629,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "rek_file_attachment_embargo_date_id": 83,
                             "rek_file_attachment_embargo_date_order": 3,
                             "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                            "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                            "rek_file_attachment_embargo_date_xsdmf_id": null,
                           },
                         ],
                         "fez_record_search_key_file_attachment_name": Array [
@@ -6707,7 +6726,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                             "rek_grant_text_id": 583,
                             "rek_grant_text_order": 1,
                             "rek_grant_text_pid": "UQ:676287",
-                            "rek_grant_text_xsdmf_id": 0,
+                            "rek_grant_text_xsdmf_id": null,
                           },
                         ],
                         "fez_record_search_key_herdc_code": Object {
@@ -6769,24 +6788,6 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         ],
                         "fez_record_search_key_issn": Array [
                           Object {
-                            "fez_journal_issns": Array [
-                              Object {
-                                "fez_journal": Object {
-                                  "jnl_created_date": "2010-11-19 00:00:00",
-                                  "jnl_era_id": 2234,
-                                  "jnl_era_year": 2010,
-                                  "jnl_foreign_name": null,
-                                  "jnl_id": 7538,
-                                  "jnl_journal_name": "Journal of Cell Science",
-                                  "jnl_rank": "A",
-                                  "jnl_updated_date": "2010-11-19 00:00:00",
-                                },
-                                "jni_id": 13071,
-                                "jni_issn": "1477-9137",
-                                "jni_issn_order": 2,
-                                "jni_jnl_id": 7538,
-                              },
-                            ],
                             "fez_sherpa_romeo": Object {
                               "srm_date_updated": "2017-09-30 18:26:18",
                               "srm_id": 13764,
@@ -7430,7 +7431,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <ForwardRef
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -7453,7 +7454,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -7464,7 +7465,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.1242/jcs.196659
                       </a>
                     </ExternalLink>
@@ -8315,6 +8316,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("

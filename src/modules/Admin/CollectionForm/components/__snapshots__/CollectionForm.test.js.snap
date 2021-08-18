@@ -33,13 +33,15 @@ exports[`Collection form should display successfull submission screen 1`] = `
                 xs={12}
               >
                 <Field
-                  communitiesSelectFieldId="rek-ismemberof"
+                  ariaLabel="Select a community"
                   component={[Function]}
                   disabled={false}
-                  label="Select community"
+                  genericSelectFieldId="rek-ismemberof"
+                  label="Select a community"
+                  loadingHint="Loading communities..."
                   name="fez_record_search_key_ismemberof"
-                  placeholder="Select a community this collection is a member of"
                   required={true}
+                  selectPrompt="Select a community this collection is a member of"
                   validate={
                     Array [
                       [Function],
@@ -146,13 +148,15 @@ exports[`Collection form should render form with only the community dropdown 1`]
                 xs={12}
               >
                 <Field
-                  communitiesSelectFieldId="rek-ismemberof"
+                  ariaLabel="Select a community"
                   component={[Function]}
                   disabled={false}
-                  label="Select community"
+                  genericSelectFieldId="rek-ismemberof"
+                  label="Select a community"
+                  loadingHint="Loading communities..."
                   name="fez_record_search_key_ismemberof"
-                  placeholder="Select a community this collection is a member of"
                   required={true}
+                  selectPrompt="Select a community this collection is a member of"
                   validate={
                     Array [
                       [Function],
@@ -298,13 +302,15 @@ exports[`Collection form should render the full form 1`] = `
                 xs={12}
               >
                 <Field
-                  communitiesSelectFieldId="rek-ismemberof"
+                  ariaLabel="Select a community"
                   component={[Function]}
                   disabled={false}
-                  label="Select community"
+                  genericSelectFieldId="rek-ismemberof"
+                  label="Select a community"
+                  loadingHint="Loading communities..."
                   name="fez_record_search_key_ismemberof"
-                  placeholder="Select a community this collection is a member of"
                   required={true}
+                  selectPrompt="Select a community this collection is a member of"
                   validate={
                     Array [
                       [Function],
@@ -333,7 +339,18 @@ exports[`Collection form should render the full form 1`] = `
               >
                 <Field
                   autoFocus={true}
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Title of collection"
@@ -354,7 +371,18 @@ exports[`Collection form should render the full form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Collection description"
@@ -379,7 +407,20 @@ exports[`Collection form should render the full form 1`] = `
                   Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)
                 </WithStyles(ForwardRef(Typography))>
                 <Field
-                  component={[Function]}
+                  ListEditorForm={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.memo),
+                      "compare": null,
+                      "type": [Function],
+                    }
+                  }
                   disabled={false}
                   listEditorId="rek-keywords"
                   locale={
@@ -421,7 +462,6 @@ exports[`Collection form should render the full form 1`] = `
                     }
                   }
                   maxCount={10}
-                  maxInputLength={111}
                   name="fez_record_search_key_keywords"
                   searchKey={
                     Object {

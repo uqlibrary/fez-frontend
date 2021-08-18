@@ -7,12 +7,11 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { OrgNameField, OrgUnitNameField, FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 
 import { validation } from 'config';
-import { pathConfig } from 'config/routes';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 
@@ -32,10 +31,6 @@ export default class ThesisForm extends Component {
         return value.replace(/[^\d]/g, '');
     };
 
-    _visitHdrSubmissionPage = () => {
-        this.props.history.push(pathConfig.hdrSubmission);
-    };
-
     render() {
         const txt = formLocale.thesis;
         return (
@@ -45,10 +40,9 @@ export default class ThesisForm extends Component {
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
                                 <Alert
-                                    action={this._visitHdrSubmissionPage}
-                                    actionButtonLabel={txt.information.actionButtonLabel}
                                     message={txt.information.message}
                                     type="warning"
+                                    alertId="alert-warning-rdm-redirect"
                                 />
                             </Grid>
                         </Grid>
@@ -91,11 +85,11 @@ export default class ThesisForm extends Component {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
-                                    component={ThesisSubtypeField}
+                                    component={ThesisSubtypeSelectField}
                                     name="rek_genre_type"
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
-                                    locale={txt.information.fieldLabels.thesisType}
+                                    {...txt.information.fieldLabels.thesisType}
                                     required
                                 />
                             </Grid>

@@ -1,15 +1,11 @@
 import MyRecords from './MyRecords';
-import { routes, general } from 'config';
+import { pathConfig, general } from 'config';
 import { locale } from 'locale';
 
 function setup(testProps = {}) {
     const props = {
-        actions: {
-            loadAuthorPublications: jest.fn(),
-            setFixRecord: jest.fn(),
-        },
         location: {
-            pathname: routes.pathConfig.records.mine,
+            pathname: pathConfig.records.mine,
             state: null,
         },
         history: {
@@ -26,6 +22,11 @@ function setup(testProps = {}) {
         publicationsListFacets: {},
         publicationsListCustomActions: [],
         ...testProps,
+        actions: {
+            loadAuthorPublications: jest.fn(),
+            setFixRecord: jest.fn(),
+            ...(testProps.actions || {}),
+        },
     };
     return getElement(MyRecords, props);
 }
@@ -180,12 +181,12 @@ describe('MyRecords test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
-            thisUrl: routes.pathConfig.records.mine,
+            thisUrl: pathConfig.records.mine,
         });
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.mine, state: { page: 2, hasPublications: true } },
+            location: { pathname: pathConfig.records.mine, state: { page: 2, hasPublications: true } },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().hasPublications).toEqual(true);
@@ -197,11 +198,11 @@ describe('MyRecords test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: { loadAuthorPublications: testAction },
-            thisUrl: routes.pathConfig.records.mine,
+            thisUrl: pathConfig.records.mine,
         });
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'POP' },
-            location: { pathname: routes.pathConfig.records.mine, state: null },
+            location: { pathname: pathConfig.records.mine, state: null },
             loadingPublicationsList: false,
             publicationsList: [],
         });
@@ -215,7 +216,7 @@ describe('MyRecords test', () => {
 
         wrapper.instance().UNSAFE_componentWillReceiveProps({
             history: { action: 'PUSH' },
-            location: { pathname: routes.pathConfig.records.mine },
+            location: { pathname: pathConfig.records.mine },
             mine: {
                 loadingPublicationsList: false,
                 publicationsList: [],
@@ -232,7 +233,7 @@ describe('MyRecords test', () => {
                 loadAuthorPublications: jest.fn(),
             },
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
+            publicationsListPagingData: { total: 147, per_page: 500, current_page: 1, from: 1, to: 20 },
             publicationsListFacets: {
                 'Display type': {
                     doc_count_error_upper_bound: 0,
@@ -288,5 +289,60 @@ describe('MyRecords test', () => {
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('sets bulk export size as expected', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                exportAuthorPublications: testFn,
+            },
+            publicationsListCustomActions: null,
+            publicationsList: [1],
+        });
+        wrapper.setState({ pageSize: 1000 }, () => {
+            wrapper.instance().pushPageHistory();
+        });
+        expect(wrapper.instance().state.bulkExportSelected).toBe(true);
+        expect(wrapper.find('[data-testid="my-records-bulk-export-size-message"]').text()).toBe(
+            'The export will have the first 1000 works.',
+        );
+
+        wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
+        expect(testFn).toHaveBeenCalledWith({
+            activeFacets: {
+                filters: {},
+                ranges: {},
+            },
+            bulkExportSelected: true,
+            exportPublicationsFormat: 'excel',
+            hasPublications: true,
+            page: 1,
+            pageSize: 1000,
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+        });
+    });
+
+    it('shows confirmation message on success confirmation for bulk export', done => {
+        const wrapper = setup({
+            actions: {
+                exportAuthorPublications: jest.fn(() => Promise.resolve()),
+            },
+            publicationsListCustomActions: null,
+        });
+        const showConfirmation = jest.fn();
+        wrapper.instance()._setSuccessConfirmation({
+            showConfirmation,
+        });
+        wrapper.setState({ bulkExportSelected: true }, () => {
+            wrapper
+                .instance()
+                .handleExportPublications('excel')
+                .then(() => {
+                    expect(showConfirmation).toHaveBeenCalledTimes(1);
+                    done();
+                });
+        });
     });
 });

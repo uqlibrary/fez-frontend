@@ -10,8 +10,8 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { OrgUnitNameField, FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -182,6 +182,10 @@ export const ThesisSubmission = ({
         submitSucceeded,
     });
 
+    if (alertProps) {
+        alertProps.alertId = 'thesis-submission-validation';
+    }
+
     return (
         <StandardPage title={pageTitle}>
             <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
@@ -196,6 +200,13 @@ export const ThesisSubmission = ({
                     />
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
+                            <Alert
+                                message={formLocale.thesisSubmission.message}
+                                type="warning"
+                                alertId="alert-warning-rdm-redirect"
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
                             <StandardCard title={txt.information.title} help={txt.information.help}>
                                 <Grid container spacing={3}>
                                     <Grid item xs={12}>
@@ -207,6 +218,7 @@ export const ThesisSubmission = ({
                                             height={50}
                                             required
                                             validate={[validation.required]}
+                                            richEditorId="rek-title"
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
@@ -225,10 +237,11 @@ export const ThesisSubmission = ({
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <Field
-                                            component={ThesisSubtypeField}
+                                            component={ThesisSubtypeSelectField}
                                             id="thesis-subtype"
                                             itemsList={THESIS_SUBMISSION_SUBTYPES}
                                             name="rek_genre_type"
+                                            genericSelectFieldId="rek-genre-type"
                                             disabled={submitting}
                                             validate={[validation.required]}
                                             {...txt.information.fieldLabels.thesisType}
@@ -253,6 +266,7 @@ export const ThesisSubmission = ({
                                             name="thesisAbstract"
                                             required
                                             validate={[validation.required]}
+                                            richEditorId="rek-description"
                                         />
                                     </Grid>
                                 </Grid>
@@ -297,11 +311,11 @@ export const ThesisSubmission = ({
                                     required
                                     maxCount={10}
                                     validate={[validation.requiredList]}
-                                    maxInputLength={111}
                                     searchKey={{
                                         value: 'rek_keywords',
                                         order: 'rek_keywords_order',
                                     }}
+                                    isValid={validation.isValidKeyword(111)}
                                     listEditorId="rek-keywords"
                                     locale={locale.components.keywordsForm.field}
                                     disabled={submitting}

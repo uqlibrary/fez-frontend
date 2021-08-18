@@ -12,7 +12,7 @@ context('Book Chapter admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(7);
+        cy.adminEditCountCards(8);
         cy.adminEditNoAlerts();
 
         cy.adminEditTabbedView();
@@ -22,9 +22,7 @@ context('Book Chapter admin edit', () => {
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(1)
+        cy.get('[data-testid=bibliographic-section-content]')
             .as('bibliographicTab')
             .within(() => {
                 cy.get('[data-testid=rek-chapter-number-input]').should(
@@ -70,23 +68,16 @@ context('Book Chapter admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('.StandardPage form > div > div')
-            .get('.StandardCard')
-            .eq(2)
+        cy.get('[data-testid=authors-section-content]')
             .as('authorDetailsTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Editors');
             });
         const editors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
-        cy.get('@authorDetailsTab')
-            .get('.contributorEditor')
-            .eq(1)
-            .within(() => {
-                editors.forEach((editor, index) => {
-                    cy.get('p')
-                        .eq(index)
-                        .should('have.text', editor);
-                });
+        cy.get('@authorDetailsTab').within(() => {
+            editors.forEach((editor, index) => {
+                cy.get(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`).should('have.text', editor);
             });
+        });
     });
 });

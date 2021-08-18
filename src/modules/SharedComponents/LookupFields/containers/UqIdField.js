@@ -1,7 +1,7 @@
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-// import matchSorter from 'match-sorter';
+
 import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 import Fuse from 'fuse.js';
 
@@ -16,7 +16,15 @@ const mapStateToProps = (state, props) => {
         useExtendedSearch: true,
         ignoreLocation: false,
         ignoreFieldNorm: false,
-        keys: ['id', 'aut_id', 'aut_display_name', 'aut_org_username', 'aut_student_username', 'aut_ref_num'],
+        keys: [
+            'id',
+            'aut_id',
+            'aut_display_name',
+            'aut_org_username',
+            'aut_student_username',
+            'aut_ref_num',
+            'aut_orcid_id',
+        ],
     };
     return {
         autoCompleteAsynchronousFieldId: props.uqIdFieldId || 'aut-id',
@@ -34,14 +42,15 @@ const mapStateToProps = (state, props) => {
                   }))
             : [],
         itemsLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
-        defaultValue: (!!props.value && { value: props.value }) || '',
-        getOptionLabel: option => option.value || '',
+        defaultValue: (!!props.value && { value: props.value }) || null,
+        getOptionLabel: (!!props.getOptionLabel && props.getOptionLabel) || (option => (option && option.value) || ''),
         filterOptions: (options, { inputValue }) => {
             const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
             return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
         },
+        error: !!props.meta && !!props.meta.error,
+        errorText: (!!props.meta && props.meta.error) || props.hintText || 'Enter a value to search',
         floatingLabelText: props.floatingLabelText || 'UQ Identifier',
-        hintText: props.hintText || 'Enter a value to search',
         OptionTemplate: GenericOptionTemplate,
         disabled: props.disabled,
     };
@@ -50,9 +59,8 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => ({
     loadSuggestions: (searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
     clearSuggestions: () => dispatch(actions.clearAuthorsSuggestions()),
-    onChange: props.onChange,
-    onClear: !!props.value ? props.onClear : () => {},
+    onChange: (!!props.input && props.input.onChange) || props.onChange,
+    onClear: !!props.value || (!!props.input && !!props.input.value) ? props.onClear : () => {},
 });
 
-// prettier-ignore
 export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);

@@ -100,6 +100,24 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -502,7 +520,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -511,7 +529,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -608,7 +626,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -670,24 +688,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -931,8 +931,8 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -975,7 +975,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -996,7 +996,18 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -1011,7 +1022,18 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -1350,19 +1372,19 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "rek_access_conditions": "453619",
                     "rek_access_conditions_id": 3968,
                     "rek_access_conditions_pid": "UQ:407731",
-                    "rek_access_conditions_xsdmf_id": 16213,
+                    "rek_access_conditions_xsdmf_id": null,
                   },
                   "fez_record_search_key_additional_notes": Object {
                     "rek_additional_notes": "CheckM is open source software available at http://ecogenomics.github.io/CheckM",
                     "rek_additional_notes_id": 103,
                     "rek_additional_notes_pid": "UQ:407731",
-                    "rek_additional_notes_xsdmf_id": 3441,
+                    "rek_additional_notes_xsdmf_id": null,
                   },
                   "fez_record_search_key_ands_collection_type": Object {
                     "rek_ands_collection_type": "453616",
                     "rek_ands_collection_type_id": 3813,
                     "rek_ands_collection_type_pid": "UQ:407731",
-                    "rek_ands_collection_type_xsdmf_id": 16272,
+                    "rek_ands_collection_type_xsdmf_id": null,
                   },
                   "fez_record_search_key_assigned_group_id": Array [],
                   "fez_record_search_key_assigned_user_id": Array [],
@@ -1381,35 +1403,35 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_author_role_id": 7448,
                       "rek_author_role_order": 1,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7449,
                       "rek_author_role_order": 2,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7450,
                       "rek_author_role_order": 3,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7451,
                       "rek_author_role_order": 4,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7452,
                       "rek_author_role_order": 5,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_contact_details_email": Array [
@@ -1418,7 +1440,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_contact_details_email_id": 4821,
                       "rek_contact_details_email_order": 1,
                       "rek_contact_details_email_pid": "UQ:407731",
-                      "rek_contact_details_email_xsdmf_id": 16274,
+                      "rek_contact_details_email_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_contributor": Array [
@@ -1437,13 +1459,13 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "rek_doi": "10.14264/uql.2016.841",
                     "rek_doi_id": 1642473,
                     "rek_doi_pid": "UQ:407731",
-                    "rek_doi_xsdmf_id": 16572,
+                    "rek_doi_xsdmf_id": null,
                   },
                   "fez_record_search_key_end_date": Object {
                     "rek_end_date": "2005-01-05 00:00:00",
                     "rek_end_date_id": 8,
                     "rek_end_date_pid": "UQ:162308",
-                    "rek_end_date_xsdmf_id": 12154,
+                    "rek_end_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_file_attachment_access_condition": Array [],
                   "fez_record_search_key_file_attachment_embargo_date": Array [],
@@ -1453,105 +1475,105 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_file_attachment_name_id": 4194724,
                       "rek_file_attachment_name_order": 1,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supplemental_information.xml",
                       "rek_file_attachment_name_id": 4194725,
                       "rek_file_attachment_name_order": 2,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Material.xml",
                       "rek_file_attachment_name_id": 4194726,
                       "rek_file_attachment_name_order": 3,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S16.xml",
                       "rek_file_attachment_name_id": 4194727,
                       "rek_file_attachment_name_order": 4,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S19.xml",
                       "rek_file_attachment_name_id": 4194728,
                       "rek_file_attachment_name_order": 5,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S20.xml",
                       "rek_file_attachment_name_id": 4194729,
                       "rek_file_attachment_name_order": 6,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S21.xml",
                       "rek_file_attachment_name_id": 4194730,
                       "rek_file_attachment_name_order": 7,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S22.xml",
                       "rek_file_attachment_name_id": 4194731,
                       "rek_file_attachment_name_order": 8,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supplemental_information.docx",
                       "rek_file_attachment_name_id": 4194732,
                       "rek_file_attachment_name_order": 9,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Material.zip",
                       "rek_file_attachment_name_id": 4194733,
                       "rek_file_attachment_name_order": 10,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S16.xls",
                       "rek_file_attachment_name_id": 4194734,
                       "rek_file_attachment_name_order": 11,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S19.xls",
                       "rek_file_attachment_name_id": 4194735,
                       "rek_file_attachment_name_order": 12,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S20.xls",
                       "rek_file_attachment_name_id": 4194736,
                       "rek_file_attachment_name_order": 13,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S21.xls",
                       "rek_file_attachment_name_id": 4194737,
                       "rek_file_attachment_name_order": 14,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S22.xls",
                       "rek_file_attachment_name_id": 4194738,
                       "rek_file_attachment_name_order": 15,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_geographic_area": Array [
@@ -1560,7 +1582,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_geographic_area_id": 18585,
                       "rek_geographic_area_order": 1,
                       "rek_geographic_area_pid": "UQ:407731",
-                      "rek_geographic_area_xsdmf_id": 16217,
+                      "rek_geographic_area_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_grant_id": Array [
@@ -1569,14 +1591,14 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_grant_id_id": 444,
                       "rek_grant_id_order": 1,
                       "rek_grant_id_pid": "UQ:407731",
-                      "rek_grant_id_xsdmf_id": 16200,
+                      "rek_grant_id_xsdmf_id": null,
                     },
                     Object {
                       "rek_grant_id": "DP1093175",
                       "rek_grant_id_id": 445,
                       "rek_grant_id_order": 2,
                       "rek_grant_id_pid": "UQ:407731",
-                      "rek_grant_id_xsdmf_id": 16200,
+                      "rek_grant_id_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_has_derivations": Array [
@@ -1620,7 +1642,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_isdatasetof_lookup": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes",
                       "rek_isdatasetof_order": 1,
                       "rek_isdatasetof_pid": "UQ:407731",
-                      "rek_isdatasetof_xsdmf_id": 16601,
+                      "rek_isdatasetof_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_isderivationof": Array [],
@@ -1631,7 +1653,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_ismemberof_lookup": "Research Data Collections",
                       "rek_ismemberof_order": 1,
                       "rek_ismemberof_pid": "UQ:407731",
-                      "rek_ismemberof_xsdmf_id": 16597,
+                      "rek_ismemberof_xsdmf_id": null,
                     },
                     Object {
                       "rek_ismemberof": "UQ:3825",
@@ -1639,7 +1661,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_ismemberof_lookup": "School of Chemistry and Molecular Biosciences",
                       "rek_ismemberof_order": 2,
                       "rek_ismemberof_pid": "UQ:407731",
-                      "rek_ismemberof_xsdmf_id": 16597,
+                      "rek_ismemberof_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_keywords": Array [
@@ -1648,35 +1670,35 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_keywords_id": 29854347,
                       "rek_keywords_order": 1,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "Single cells",
                       "rek_keywords_id": 29854348,
                       "rek_keywords_order": 2,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "Metagenomic data",
                       "rek_keywords_id": 29854349,
                       "rek_keywords_order": 3,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "Genome quality",
                       "rek_keywords_id": 29854350,
                       "rek_keywords_order": 4,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "CheckM",
                       "rek_keywords_id": 29854351,
                       "rek_keywords_order": 5,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_language": Array [
@@ -1685,14 +1707,14 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_language_id": 5415217,
                       "rek_language_order": 1,
                       "rek_language_pid": "UQ:407731",
-                      "rek_language_xsdmf_id": 16066,
+                      "rek_language_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_license": Object {
                     "rek_license": 453701,
                     "rek_license_id": 26396,
                     "rek_license_pid": "UQ:407731",
-                    "rek_license_xsdmf_id": 16246,
+                    "rek_license_xsdmf_id": null,
                   },
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
@@ -1700,27 +1722,27 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "rek_project_description": "ARC DP120103498 - Genome sequencing has revolutionised biology, but for most microorganisms this revolution has not arrived because the majority cannot be grown in the laboratory. This project will address this grand challenge by targeted sequencing of single cells from the environment that will fill in many major gaps in the microbial tree of life.<br /><br />ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes. <br />",
                     "rek_project_description_id": 3635,
                     "rek_project_description_pid": "UQ:407731",
-                    "rek_project_description_xsdmf_id": 16513,
+                    "rek_project_description_xsdmf_id": null,
                   },
                   "fez_record_search_key_project_id": null,
                   "fez_record_search_key_project_name": Object {
                     "rek_project_name": "Toward a complete view of life on earth via single cell genomics",
                     "rek_project_name_id": 3226,
                     "rek_project_name_pid": "UQ:407731",
-                    "rek_project_name_xsdmf_id": 16099,
+                    "rek_project_name_xsdmf_id": null,
                   },
                   "fez_record_search_key_publisher": Object {
                     "rek_publisher": "Cold Spring Harbor Laboratory Press",
                     "rek_publisher_id": 4601714,
                     "rek_publisher_pid": "UQ:407731",
-                    "rek_publisher_xsdmf_id": 16050,
+                    "rek_publisher_xsdmf_id": null,
                   },
                   "fez_record_search_key_related_datasets": Array [],
                   "fez_record_search_key_rights": Object {
                     "rek_rights": "2015, The University of Queensland",
                     "rek_rights_id": 116537,
                     "rek_rights_pid": "UQ:407731",
-                    "rek_rights_xsdmf_id": 16211,
+                    "rek_rights_xsdmf_id": null,
                   },
                   "fez_record_search_key_seo_code": Array [
                     Object {
@@ -1738,14 +1760,14 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_software_required_id": 156,
                       "rek_software_required_order": 1,
                       "rek_software_required_pid": "UQ:407731",
-                      "rek_software_required_xsdmf_id": 16208,
+                      "rek_software_required_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_start_date": Object {
                     "rek_start_date": "2005-01-05 00:00:00",
                     "rek_start_date_id": 8,
                     "rek_start_date_pid": "UQ:162308",
-                    "rek_start_date_xsdmf_id": 12154,
+                    "rek_start_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_subject": Array [
                     Object {
@@ -1753,27 +1775,27 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_subject_id": 8831,
                       "rek_subject_order": 1,
                       "rek_subject_pid": "UQ:407731",
-                      "rek_subject_xsdmf_id": 16043,
+                      "rek_subject_xsdmf_id": null,
                     },
                     Object {
                       "rek_subject": 452109,
                       "rek_subject_id": 8832,
                       "rek_subject_order": 2,
                       "rek_subject_pid": "UQ:407731",
-                      "rek_subject_xsdmf_id": 16043,
+                      "rek_subject_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_time_period_end_date": Object {
                     "rek_time_period_end_date": "2009-01-01T00:00:00Z",
                     "rek_time_period_end_date_id": 867,
                     "rek_time_period_end_date_pid": "UQ:407731",
-                    "rek_time_period_end_date_xsdmf_id": 16538,
+                    "rek_time_period_end_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_time_period_start_date": Object {
                     "rek_time_period_start_date": "2001-01-01T00:00:00Z",
                     "rek_time_period_start_date_id": 965,
                     "rek_time_period_start_date_pid": "UQ:407731",
-                    "rek_time_period_start_date_xsdmf_id": 16537,
+                    "rek_time_period_start_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_type_of_data": Array [
                     Object {
@@ -1781,28 +1803,28 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_type_of_data_id": 1111,
                       "rek_type_of_data_order": 1,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                     Object {
                       "rek_type_of_data": "Figures",
                       "rek_type_of_data_id": 1112,
                       "rek_type_of_data_order": 2,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                     Object {
                       "rek_type_of_data": "Spreadsheets",
                       "rek_type_of_data_id": 1113,
                       "rek_type_of_data_order": 3,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                     Object {
                       "rek_type_of_data": "Python files",
                       "rek_type_of_data_id": 1114,
                       "rek_type_of_data_order": 4,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                   ],
                   "rek_altmetric_id": 0,
@@ -1811,20 +1833,20 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   "rek_altmetric_score_xsdmf_id": null,
                   "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Parks, Donovan H.\\" href=\\"/list/author_id/96310/\\">Parks, Donovan H.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Imelfort, Michael\\" href=\\"/list/author_id/6366/\\">Imelfort, Michael</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Skennerton, Connor T.\\" href=\\"/list/author_id/76682/\\">Skennerton, Connor T.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Hugenholtz, Philip\\" href=\\"/list/author_id/20288/\\">Hugenholtz, Philip</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Tyson, Gene W.\\" href=\\"/list/author_id/79391/\\">Tyson, Gene W.</a> (<span class=\\"citation_date\\">2015</span>): <a class=\\"citation_title\\" title=\\"Click to view Data Collection: CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material\\" href=\\"/view/UQ:407731\\">CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material</a>. <span class=\\"citation_publisher\\">Cold Spring Harbor Laboratory Press</span>. <span class=\\"citation_ands_collection_type\\">Dataset</span>. doi:<span class=\\"citation_doi\\">10.14264/uql.2016.841</span>",
                   "rek_copyright": "on",
-                  "rek_copyright_xsdmf_id": 537,
+                  "rek_copyright_xsdmf_id": null,
                   "rek_created_date": "2016-10-05T09:23:32Z",
-                  "rek_created_date_xsdmf_id": 527,
+                  "rek_created_date_xsdmf_id": null,
                   "rek_date": "2015-01-01T00:00:00Z",
-                  "rek_date_xsdmf_id": 16037,
+                  "rek_date_xsdmf_id": null,
                   "rek_depositor": 5376,
                   "rek_depositor_affiliation": null,
                   "rek_depositor_affiliation_xsdmf_id": null,
-                  "rek_depositor_xsdmf_id": 7575,
+                  "rek_depositor_xsdmf_id": null,
                   "rek_description": "<strong>Supplementary Results</strong><br />Refinement for Gene Loss and Duplication<br />Estimates under Opal Stop Codon Recodings<br /><br /><strong>Supplementary Methods</strong><br />Identification of Trusted Reference Genomes<br />Refining Marker Sets for Lineage-specific Gene Loss and Duplication<br />Determination of Coding Table<br />Systematic Bias of Completeness and Contamination Estimates<br /><br /><strong>Supplemental Figure S1.</strong> Distribution of the 104 bacterial and 281 gammaproteobacterial marker genes around the E. coli K12 genome.<br /><br /><strong>Supplemental Figure S2.</strong> Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random contig model.<br /><br /><strong>Supplemental Figure S3.</strong> Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. <br /><br /><strong>Supplemental Figure S4. </strong>Maximum-likelihood genome tree inferred from 5656 reference genomes. <br /><br /><strong>Supplemental Figure S5. </strong>Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.<br /><br /><strong>Supplemental Figure S6. </strong>Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. <br /><br /><strong>Supplemental Figure S7. </strong>Error in completeness and contamination estimates on simulated genomes from different phyla.<br /><br /><strong>Supplemental Figure S8. </strong>Bias in completeness and contamination estimates when modelled as a binomial distribution. <br /><br /><strong>Supplemental Figure S9. </strong>GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.<br /><br /><strong>Supplemental Figure S10. </strong>Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.<br /><br /><strong>Supplemental Figure S11.</strong> Completeness estimates for 90 putative population genomes recovered from an acetate-amended aquifer.<br /><br /><strong>Supplemental Figure S12. </strong>Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.<br /><br /><strong>Supplemental Figure S13.</strong> Identification of the 213 marker genes within the Meyerdierks et al. (2010) ANME-1 genome.<br /><br /><strong>Supplemental Figure S14.</strong> Refining a marker set for lineage-specific gene loss and duplication. <br /><br /><strong>Supplemental Tables<br />Supplemental Table S1.</strong> Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using different universal- and domain-specific marker gene sets.<br /><br /><strong>Supplemental Table S2. </strong>Number of marker genes and marker sets for taxonomic groups with &ge; 20 reference genomes. <br /><br /><strong>Supplemental Table S3. </strong>Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). <br /><br /><br /><strong>Supplemental Table S4. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).<br /><br /><strong>Supplemental Table S5.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). <br /><br /><strong>Supplemental Table S6. </strong>Phylogenetically informative marker genes used to infer the reference genome tree <br />along with matching PhyloSift genes.<br /><br /><strong>Supplemental Table S7. </strong>Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.<br /><br /><strong>Supplemental Table S8. </strong>Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).<br /><br /><strong>Supplemental Table S9.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). <br /><br /><strong>Supplemental Table S10. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).<br /><br /><br /><strong>Supplemental Table S11. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). <br /><br /><strong>Supplemental Table S12.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). <br /><br /><br /><strong>Supplemental Table S13.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).<br /><br /><strong>Supplemental Table S14. T</strong>axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. <br /><br /><strong>Supplemental Table S15. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.<br /><br /><strong>Supplemental Table S16. </strong>Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.<br />(see Excel file)<br /><br /><strong>Supplemental Table S17</strong>. Completeness and contamination estimates of the Lactobacillus gasseri MV-22 genome for increasingly basal lineage-specific marker sets.<br /><br /><strong>Supplemental Table S18</strong>. Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. <br /><br /><strong>Supplemental Table S19</strong>. Lineage-specific completeness and contamination estimates for genomes annotated as finished at IMG, along with predicted translation tables and calculated coding density. (see Excel file)<br /><br /><strong>Supplemental Table S20</strong>: Lineage-specific completeness and contamination estimates for single-cell genomes from the GEBA-MDM initiative along with traditional assembly statistics. (see Excel file)<br /><br /><strong>Supplemental Table S21</strong>: Lineage-specific completeness and contamination estimates for population genomes, plasmids, and phage recovered from metagenomic datasets along with traditional assembly statistics. (see Excel file)<br /><br /><strong>Supplemental Table S22</strong>: Completeness and contamination estimates for population genomes recovered from an acetate-amended aquifer determined using domain-level and lineage-specific marker sets. (see Excel file)<br /><br /><br />",
-                  "rek_description_xsdmf_id": 16079,
+                  "rek_description_xsdmf_id": null,
                   "rek_display_type": 371,
                   "rek_display_type_lookup": "Data Collection",
-                  "rek_display_type_xsdmf_id": 106,
+                  "rek_display_type_xsdmf_id": null,
                   "rek_file_downloads": 0,
                   "rek_formatted_abstract": null,
                   "rek_formatted_abstract_xsdmf_id": null,
@@ -1833,12 +1855,12 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   "rek_genre": "Dataset Collection",
                   "rek_genre_type": null,
                   "rek_genre_type_xsdmf_id": null,
-                  "rek_genre_xsdmf_id": 16248,
+                  "rek_genre_xsdmf_id": null,
                   "rek_herdc_notes": null,
                   "rek_herdc_notes_xsdmf_id": null,
                   "rek_object_type": 3,
                   "rek_object_type_lookup": "Record",
-                  "rek_object_type_xsdmf_id": 236,
+                  "rek_object_type_xsdmf_id": null,
                   "rek_pid": null,
                   "rek_pubmed_doc_type": null,
                   "rek_pubmed_doc_type_lookup": null,
@@ -1850,15 +1872,15 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   "rek_security_inherited": 1,
                   "rek_status": 2,
                   "rek_status_lookup": "Published",
-                  "rek_status_xsdmf_id": 538,
+                  "rek_status_xsdmf_id": null,
                   "rek_subtype": null,
                   "rek_subtype_xsdmf_id": null,
                   "rek_thomson_citation_count": null,
                   "rek_thomson_citation_count_xsdmf_id": null,
                   "rek_title": "Data collection mock testing record",
-                  "rek_title_xsdmf_id": 16197,
+                  "rek_title_xsdmf_id": null,
                   "rek_updated_date": "2017-02-01T03:50:57Z",
-                  "rek_updated_date_xsdmf_id": 528,
+                  "rek_updated_date_xsdmf_id": null,
                   "rek_wok_doc_type": null,
                   "rek_wok_doc_type_lookup": null,
                   "rek_wok_doc_type_xsdmf_id": null,
@@ -1872,8 +1894,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -1916,7 +1938,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -2018,7 +2040,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -2033,7 +2066,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -2217,6 +2261,24 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -2604,7 +2666,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -2613,7 +2675,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -2710,7 +2772,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -2772,24 +2834,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -3033,8 +3077,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -3077,7 +3121,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -3141,7 +3185,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -3156,7 +3211,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -3495,19 +3561,19 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "rek_access_conditions": "453619",
                     "rek_access_conditions_id": 3968,
                     "rek_access_conditions_pid": "UQ:407731",
-                    "rek_access_conditions_xsdmf_id": 16213,
+                    "rek_access_conditions_xsdmf_id": null,
                   },
                   "fez_record_search_key_additional_notes": Object {
                     "rek_additional_notes": "CheckM is open source software available at http://ecogenomics.github.io/CheckM",
                     "rek_additional_notes_id": 103,
                     "rek_additional_notes_pid": "UQ:407731",
-                    "rek_additional_notes_xsdmf_id": 3441,
+                    "rek_additional_notes_xsdmf_id": null,
                   },
                   "fez_record_search_key_ands_collection_type": Object {
                     "rek_ands_collection_type": "453616",
                     "rek_ands_collection_type_id": 3813,
                     "rek_ands_collection_type_pid": "UQ:407731",
-                    "rek_ands_collection_type_xsdmf_id": 16272,
+                    "rek_ands_collection_type_xsdmf_id": null,
                   },
                   "fez_record_search_key_assigned_group_id": Array [],
                   "fez_record_search_key_assigned_user_id": Array [],
@@ -3519,35 +3585,35 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_author_role_id": 7448,
                       "rek_author_role_order": 1,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7449,
                       "rek_author_role_order": 2,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7450,
                       "rek_author_role_order": 3,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7451,
                       "rek_author_role_order": 4,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                     Object {
                       "rek_author_role": "Investigator",
                       "rek_author_role_id": 7452,
                       "rek_author_role_order": 5,
                       "rek_author_role_pid": "UQ:407731",
-                      "rek_author_role_xsdmf_id": 16244,
+                      "rek_author_role_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_contact_details_email": Array [
@@ -3556,7 +3622,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_contact_details_email_id": 4821,
                       "rek_contact_details_email_order": 1,
                       "rek_contact_details_email_pid": "UQ:407731",
-                      "rek_contact_details_email_xsdmf_id": 16274,
+                      "rek_contact_details_email_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_contributor": Array [
@@ -3575,13 +3641,13 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "rek_doi": "10.14264/uql.2016.841",
                     "rek_doi_id": 1642473,
                     "rek_doi_pid": "UQ:407731",
-                    "rek_doi_xsdmf_id": 16572,
+                    "rek_doi_xsdmf_id": null,
                   },
                   "fez_record_search_key_end_date": Object {
                     "rek_end_date": "2005-01-05 00:00:00",
                     "rek_end_date_id": 8,
                     "rek_end_date_pid": "UQ:162308",
-                    "rek_end_date_xsdmf_id": 12154,
+                    "rek_end_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_file_attachment_access_condition": Array [],
                   "fez_record_search_key_file_attachment_embargo_date": Array [],
@@ -3591,105 +3657,105 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_file_attachment_name_id": 4194724,
                       "rek_file_attachment_name_order": 1,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supplemental_information.xml",
                       "rek_file_attachment_name_id": 4194725,
                       "rek_file_attachment_name_order": 2,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Material.xml",
                       "rek_file_attachment_name_id": 4194726,
                       "rek_file_attachment_name_order": 3,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S16.xml",
                       "rek_file_attachment_name_id": 4194727,
                       "rek_file_attachment_name_order": 4,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S19.xml",
                       "rek_file_attachment_name_id": 4194728,
                       "rek_file_attachment_name_order": 5,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S20.xml",
                       "rek_file_attachment_name_id": 4194729,
                       "rek_file_attachment_name_order": 6,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S21.xml",
                       "rek_file_attachment_name_id": 4194730,
                       "rek_file_attachment_name_order": 7,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "presmd_Supp_Table_S22.xml",
                       "rek_file_attachment_name_id": 4194731,
                       "rek_file_attachment_name_order": 8,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supplemental_information.docx",
                       "rek_file_attachment_name_id": 4194732,
                       "rek_file_attachment_name_order": 9,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Material.zip",
                       "rek_file_attachment_name_id": 4194733,
                       "rek_file_attachment_name_order": 10,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S16.xls",
                       "rek_file_attachment_name_id": 4194734,
                       "rek_file_attachment_name_order": 11,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S19.xls",
                       "rek_file_attachment_name_id": 4194735,
                       "rek_file_attachment_name_order": 12,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S20.xls",
                       "rek_file_attachment_name_id": 4194736,
                       "rek_file_attachment_name_order": 13,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S21.xls",
                       "rek_file_attachment_name_id": 4194737,
                       "rek_file_attachment_name_order": 14,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                     Object {
                       "rek_file_attachment_name": "Supp_Table_S22.xls",
                       "rek_file_attachment_name_id": 4194738,
                       "rek_file_attachment_name_order": 15,
                       "rek_file_attachment_name_pid": "UQ:407731",
-                      "rek_file_attachment_name_xsdmf_id": 16175,
+                      "rek_file_attachment_name_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_geographic_area": Array [
@@ -3698,7 +3764,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_geographic_area_id": 18585,
                       "rek_geographic_area_order": 1,
                       "rek_geographic_area_pid": "UQ:407731",
-                      "rek_geographic_area_xsdmf_id": 16217,
+                      "rek_geographic_area_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_grant_id": Array [
@@ -3707,14 +3773,14 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_grant_id_id": 444,
                       "rek_grant_id_order": 1,
                       "rek_grant_id_pid": "UQ:407731",
-                      "rek_grant_id_xsdmf_id": 16200,
+                      "rek_grant_id_xsdmf_id": null,
                     },
                     Object {
                       "rek_grant_id": "DP1093175",
                       "rek_grant_id_id": 445,
                       "rek_grant_id_order": 2,
                       "rek_grant_id_pid": "UQ:407731",
-                      "rek_grant_id_xsdmf_id": 16200,
+                      "rek_grant_id_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_has_derivations": Array [
@@ -3758,7 +3824,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_isdatasetof_lookup": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes",
                       "rek_isdatasetof_order": 1,
                       "rek_isdatasetof_pid": "UQ:407731",
-                      "rek_isdatasetof_xsdmf_id": 16601,
+                      "rek_isdatasetof_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_isderivationof": Array [],
@@ -3769,7 +3835,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_ismemberof_lookup": "Research Data Collections",
                       "rek_ismemberof_order": 1,
                       "rek_ismemberof_pid": "UQ:407731",
-                      "rek_ismemberof_xsdmf_id": 16597,
+                      "rek_ismemberof_xsdmf_id": null,
                     },
                     Object {
                       "rek_ismemberof": "UQ:3825",
@@ -3777,7 +3843,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_ismemberof_lookup": "School of Chemistry and Molecular Biosciences",
                       "rek_ismemberof_order": 2,
                       "rek_ismemberof_pid": "UQ:407731",
-                      "rek_ismemberof_xsdmf_id": 16597,
+                      "rek_ismemberof_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_keywords": Array [
@@ -3786,35 +3852,35 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_keywords_id": 29854347,
                       "rek_keywords_order": 1,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "Single cells",
                       "rek_keywords_id": 29854348,
                       "rek_keywords_order": 2,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "Metagenomic data",
                       "rek_keywords_id": 29854349,
                       "rek_keywords_order": 3,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "Genome quality",
                       "rek_keywords_id": 29854350,
                       "rek_keywords_order": 4,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                     Object {
                       "rek_keywords": "CheckM",
                       "rek_keywords_id": 29854351,
                       "rek_keywords_order": 5,
                       "rek_keywords_pid": "UQ:407731",
-                      "rek_keywords_xsdmf_id": 16041,
+                      "rek_keywords_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_language": Array [
@@ -3823,14 +3889,14 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_language_id": 5415217,
                       "rek_language_order": 1,
                       "rek_language_pid": "UQ:407731",
-                      "rek_language_xsdmf_id": 16066,
+                      "rek_language_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_license": Object {
                     "rek_license": 453701,
                     "rek_license_id": 26396,
                     "rek_license_pid": "UQ:407731",
-                    "rek_license_xsdmf_id": 16246,
+                    "rek_license_xsdmf_id": null,
                   },
                   "fez_record_search_key_link": Array [],
                   "fez_record_search_key_link_description": Array [],
@@ -3838,27 +3904,27 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "rek_project_description": "ARC DP120103498 - Genome sequencing has revolutionised biology, but for most microorganisms this revolution has not arrived because the majority cannot be grown in the laboratory. This project will address this grand challenge by targeted sequencing of single cells from the environment that will fill in many major gaps in the microbial tree of life.<br /><br />ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes. <br />",
                     "rek_project_description_id": 3635,
                     "rek_project_description_pid": "UQ:407731",
-                    "rek_project_description_xsdmf_id": 16513,
+                    "rek_project_description_xsdmf_id": null,
                   },
                   "fez_record_search_key_project_id": null,
                   "fez_record_search_key_project_name": Object {
                     "rek_project_name": "Toward a complete view of life on earth via single cell genomics",
                     "rek_project_name_id": 3226,
                     "rek_project_name_pid": "UQ:407731",
-                    "rek_project_name_xsdmf_id": 16099,
+                    "rek_project_name_xsdmf_id": null,
                   },
                   "fez_record_search_key_publisher": Object {
                     "rek_publisher": "Cold Spring Harbor Laboratory Press",
                     "rek_publisher_id": 4601714,
                     "rek_publisher_pid": "UQ:407731",
-                    "rek_publisher_xsdmf_id": 16050,
+                    "rek_publisher_xsdmf_id": null,
                   },
                   "fez_record_search_key_related_datasets": Array [],
                   "fez_record_search_key_rights": Object {
                     "rek_rights": "2015, The University of Queensland",
                     "rek_rights_id": 116537,
                     "rek_rights_pid": "UQ:407731",
-                    "rek_rights_xsdmf_id": 16211,
+                    "rek_rights_xsdmf_id": null,
                   },
                   "fez_record_search_key_seo_code": Array [
                     Object {
@@ -3876,14 +3942,14 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_software_required_id": 156,
                       "rek_software_required_order": 1,
                       "rek_software_required_pid": "UQ:407731",
-                      "rek_software_required_xsdmf_id": 16208,
+                      "rek_software_required_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_start_date": Object {
                     "rek_start_date": "2005-01-05 00:00:00",
                     "rek_start_date_id": 8,
                     "rek_start_date_pid": "UQ:162308",
-                    "rek_start_date_xsdmf_id": 12154,
+                    "rek_start_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_subject": Array [
                     Object {
@@ -3891,27 +3957,27 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_subject_id": 8831,
                       "rek_subject_order": 1,
                       "rek_subject_pid": "UQ:407731",
-                      "rek_subject_xsdmf_id": 16043,
+                      "rek_subject_xsdmf_id": null,
                     },
                     Object {
                       "rek_subject": 452109,
                       "rek_subject_id": 8832,
                       "rek_subject_order": 2,
                       "rek_subject_pid": "UQ:407731",
-                      "rek_subject_xsdmf_id": 16043,
+                      "rek_subject_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_time_period_end_date": Object {
                     "rek_time_period_end_date": "2009-01-01T00:00:00Z",
                     "rek_time_period_end_date_id": 867,
                     "rek_time_period_end_date_pid": "UQ:407731",
-                    "rek_time_period_end_date_xsdmf_id": 16538,
+                    "rek_time_period_end_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_time_period_start_date": Object {
                     "rek_time_period_start_date": "2001-01-01T00:00:00Z",
                     "rek_time_period_start_date_id": 965,
                     "rek_time_period_start_date_pid": "UQ:407731",
-                    "rek_time_period_start_date_xsdmf_id": 16537,
+                    "rek_time_period_start_date_xsdmf_id": null,
                   },
                   "fez_record_search_key_type_of_data": Array [
                     Object {
@@ -3919,28 +3985,28 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_type_of_data_id": 1111,
                       "rek_type_of_data_order": 1,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                     Object {
                       "rek_type_of_data": "Figures",
                       "rek_type_of_data_id": 1112,
                       "rek_type_of_data_order": 2,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                     Object {
                       "rek_type_of_data": "Spreadsheets",
                       "rek_type_of_data_id": 1113,
                       "rek_type_of_data_order": 3,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                     Object {
                       "rek_type_of_data": "Python files",
                       "rek_type_of_data_id": 1114,
                       "rek_type_of_data_order": 4,
                       "rek_type_of_data_pid": "UQ:407731",
-                      "rek_type_of_data_xsdmf_id": 16250,
+                      "rek_type_of_data_xsdmf_id": null,
                     },
                   ],
                   "rek_altmetric_id": 0,
@@ -3949,20 +4015,20 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   "rek_altmetric_score_xsdmf_id": null,
                   "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Parks, Donovan H.\\" href=\\"/list/author_id/96310/\\">Parks, Donovan H.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Imelfort, Michael\\" href=\\"/list/author_id/6366/\\">Imelfort, Michael</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Skennerton, Connor T.\\" href=\\"/list/author_id/76682/\\">Skennerton, Connor T.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Hugenholtz, Philip\\" href=\\"/list/author_id/20288/\\">Hugenholtz, Philip</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Tyson, Gene W.\\" href=\\"/list/author_id/79391/\\">Tyson, Gene W.</a> (<span class=\\"citation_date\\">2015</span>): <a class=\\"citation_title\\" title=\\"Click to view Data Collection: CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material\\" href=\\"/view/UQ:407731\\">CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material</a>. <span class=\\"citation_publisher\\">Cold Spring Harbor Laboratory Press</span>. <span class=\\"citation_ands_collection_type\\">Dataset</span>. doi:<span class=\\"citation_doi\\">10.14264/uql.2016.841</span>",
                   "rek_copyright": "on",
-                  "rek_copyright_xsdmf_id": 537,
+                  "rek_copyright_xsdmf_id": null,
                   "rek_created_date": "2016-10-05T09:23:32Z",
-                  "rek_created_date_xsdmf_id": 527,
+                  "rek_created_date_xsdmf_id": null,
                   "rek_date": "2015-01-01T00:00:00Z",
-                  "rek_date_xsdmf_id": 16037,
+                  "rek_date_xsdmf_id": null,
                   "rek_depositor": 5376,
                   "rek_depositor_affiliation": null,
                   "rek_depositor_affiliation_xsdmf_id": null,
-                  "rek_depositor_xsdmf_id": 7575,
+                  "rek_depositor_xsdmf_id": null,
                   "rek_description": "<strong>Supplementary Results</strong><br />Refinement for Gene Loss and Duplication<br />Estimates under Opal Stop Codon Recodings<br /><br /><strong>Supplementary Methods</strong><br />Identification of Trusted Reference Genomes<br />Refining Marker Sets for Lineage-specific Gene Loss and Duplication<br />Determination of Coding Table<br />Systematic Bias of Completeness and Contamination Estimates<br /><br /><strong>Supplemental Figure S1.</strong> Distribution of the 104 bacterial and 281 gammaproteobacterial marker genes around the E. coli K12 genome.<br /><br /><strong>Supplemental Figure S2.</strong> Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random contig model.<br /><br /><strong>Supplemental Figure S3.</strong> Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. <br /><br /><strong>Supplemental Figure S4. </strong>Maximum-likelihood genome tree inferred from 5656 reference genomes. <br /><br /><strong>Supplemental Figure S5. </strong>Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.<br /><br /><strong>Supplemental Figure S6. </strong>Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. <br /><br /><strong>Supplemental Figure S7. </strong>Error in completeness and contamination estimates on simulated genomes from different phyla.<br /><br /><strong>Supplemental Figure S8. </strong>Bias in completeness and contamination estimates when modelled as a binomial distribution. <br /><br /><strong>Supplemental Figure S9. </strong>GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.<br /><br /><strong>Supplemental Figure S10. </strong>Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.<br /><br /><strong>Supplemental Figure S11.</strong> Completeness estimates for 90 putative population genomes recovered from an acetate-amended aquifer.<br /><br /><strong>Supplemental Figure S12. </strong>Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.<br /><br /><strong>Supplemental Figure S13.</strong> Identification of the 213 marker genes within the Meyerdierks et al. (2010) ANME-1 genome.<br /><br /><strong>Supplemental Figure S14.</strong> Refining a marker set for lineage-specific gene loss and duplication. <br /><br /><strong>Supplemental Tables<br />Supplemental Table S1.</strong> Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using different universal- and domain-specific marker gene sets.<br /><br /><strong>Supplemental Table S2. </strong>Number of marker genes and marker sets for taxonomic groups with &ge; 20 reference genomes. <br /><br /><strong>Supplemental Table S3. </strong>Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). <br /><br /><br /><strong>Supplemental Table S4. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).<br /><br /><strong>Supplemental Table S5.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). <br /><br /><strong>Supplemental Table S6. </strong>Phylogenetically informative marker genes used to infer the reference genome tree <br />along with matching PhyloSift genes.<br /><br /><strong>Supplemental Table S7. </strong>Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.<br /><br /><strong>Supplemental Table S8. </strong>Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).<br /><br /><strong>Supplemental Table S9.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). <br /><br /><strong>Supplemental Table S10. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).<br /><br /><br /><strong>Supplemental Table S11. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). <br /><br /><strong>Supplemental Table S12.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). <br /><br /><br /><strong>Supplemental Table S13.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).<br /><br /><strong>Supplemental Table S14. T</strong>axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. <br /><br /><strong>Supplemental Table S15. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.<br /><br /><strong>Supplemental Table S16. </strong>Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.<br />(see Excel file)<br /><br /><strong>Supplemental Table S17</strong>. Completeness and contamination estimates of the Lactobacillus gasseri MV-22 genome for increasingly basal lineage-specific marker sets.<br /><br /><strong>Supplemental Table S18</strong>. Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. <br /><br /><strong>Supplemental Table S19</strong>. Lineage-specific completeness and contamination estimates for genomes annotated as finished at IMG, along with predicted translation tables and calculated coding density. (see Excel file)<br /><br /><strong>Supplemental Table S20</strong>: Lineage-specific completeness and contamination estimates for single-cell genomes from the GEBA-MDM initiative along with traditional assembly statistics. (see Excel file)<br /><br /><strong>Supplemental Table S21</strong>: Lineage-specific completeness and contamination estimates for population genomes, plasmids, and phage recovered from metagenomic datasets along with traditional assembly statistics. (see Excel file)<br /><br /><strong>Supplemental Table S22</strong>: Completeness and contamination estimates for population genomes recovered from an acetate-amended aquifer determined using domain-level and lineage-specific marker sets. (see Excel file)<br /><br /><br />",
-                  "rek_description_xsdmf_id": 16079,
+                  "rek_description_xsdmf_id": null,
                   "rek_display_type": 371,
                   "rek_display_type_lookup": "Data Collection",
-                  "rek_display_type_xsdmf_id": 106,
+                  "rek_display_type_xsdmf_id": null,
                   "rek_file_downloads": 0,
                   "rek_formatted_abstract": null,
                   "rek_formatted_abstract_xsdmf_id": null,
@@ -3971,12 +4037,12 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   "rek_genre": "Dataset Collection",
                   "rek_genre_type": null,
                   "rek_genre_type_xsdmf_id": null,
-                  "rek_genre_xsdmf_id": 16248,
+                  "rek_genre_xsdmf_id": null,
                   "rek_herdc_notes": null,
                   "rek_herdc_notes_xsdmf_id": null,
                   "rek_object_type": 3,
                   "rek_object_type_lookup": "Record",
-                  "rek_object_type_xsdmf_id": 236,
+                  "rek_object_type_xsdmf_id": null,
                   "rek_pid": null,
                   "rek_pubmed_doc_type": null,
                   "rek_pubmed_doc_type_lookup": null,
@@ -3988,15 +4054,15 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   "rek_security_inherited": 1,
                   "rek_status": 2,
                   "rek_status_lookup": "Published",
-                  "rek_status_xsdmf_id": 538,
+                  "rek_status_xsdmf_id": null,
                   "rek_subtype": null,
                   "rek_subtype_xsdmf_id": null,
                   "rek_thomson_citation_count": null,
                   "rek_thomson_citation_count_xsdmf_id": null,
                   "rek_title": "Data collection mock testing record",
-                  "rek_title_xsdmf_id": 16197,
+                  "rek_title_xsdmf_id": null,
                   "rek_updated_date": "2017-02-01T03:50:57Z",
-                  "rek_updated_date_xsdmf_id": 528,
+                  "rek_updated_date_xsdmf_id": null,
                   "rek_wok_doc_type": null,
                   "rek_wok_doc_type_lookup": null,
                   "rek_wok_doc_type_xsdmf_id": null,
@@ -4010,8 +4076,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -4054,7 +4120,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -4113,7 +4179,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -4128,7 +4205,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -4312,6 +4400,24 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -4802,7 +4908,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -4811,7 +4917,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -4908,7 +5014,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -4970,24 +5076,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -5231,8 +5319,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -5275,7 +5363,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -5444,7 +5532,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -5459,7 +5558,18 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -5701,6 +5811,24 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -6191,7 +6319,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -6200,7 +6328,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -6297,7 +6425,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -6359,24 +6487,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -6620,8 +6730,8 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -6664,7 +6774,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -6833,7 +6943,18 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -6848,7 +6969,18 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -7090,6 +7222,24 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -7580,7 +7730,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -7589,7 +7739,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -7686,7 +7836,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -7748,24 +7898,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -8009,8 +8141,8 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -8053,7 +8185,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -8222,7 +8354,18 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -8237,7 +8380,18 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -8479,6 +8633,24 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -8969,7 +9141,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -8978,7 +9150,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -9075,7 +9247,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -9137,24 +9309,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -9398,8 +9552,8 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -9442,7 +9596,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -9611,7 +9765,18 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -9626,7 +9791,18 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -9868,6 +10044,24 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -10270,7 +10464,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -10279,7 +10473,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -10376,7 +10570,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -10438,24 +10632,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -10854,6 +11030,24 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -11344,7 +11538,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -11353,7 +11547,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -11450,7 +11644,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -11512,24 +11706,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -11773,8 +11949,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <WithStyles(ForwardRef(Grid))
                   container={true}
@@ -11839,7 +12015,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -12008,7 +12184,18 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -12023,7 +12210,18 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -12265,6 +12463,24 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -12755,7 +12971,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -12764,7 +12980,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -12861,7 +13077,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -12923,24 +13139,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -13184,8 +13382,8 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -13228,7 +13426,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -13397,7 +13595,18 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -13412,7 +13621,18 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -13654,6 +13874,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -14144,7 +14382,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -14153,7 +14391,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -14250,7 +14488,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -14312,24 +14550,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -14573,8 +14793,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -14617,7 +14837,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -14786,7 +15006,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={true}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -14801,7 +15032,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={true}
                   fullWidth={true}
                   label="Link (URL)"
@@ -15062,6 +15304,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -15552,7 +15812,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -15561,7 +15821,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -15658,7 +15918,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -15720,24 +15980,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -15981,8 +16223,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -16025,7 +16267,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={false}
@@ -16194,7 +16436,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -16209,7 +16462,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -16469,6 +16733,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -16959,7 +17241,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -16968,7 +17250,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -17065,7 +17347,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -17127,24 +17409,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -17388,8 +17652,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -17432,7 +17696,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -17601,7 +17865,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -17616,7 +17891,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -17877,6 +18163,24 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -18367,7 +18671,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -18376,7 +18680,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -18473,7 +18777,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -18535,24 +18839,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,
@@ -18796,8 +19082,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -18840,7 +19126,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -19009,7 +19295,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -19024,7 +19321,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -19237,8 +19545,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -19281,7 +19589,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -19302,7 +19610,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -19317,7 +19636,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -19511,8 +19841,8 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             Object {
               "addRecordButtonLabel": "Add another missing work",
               "alternateActionButtonLabel": "Fix work",
-              "cancelButtonLabel": "Claim more publications",
-              "confirmButtonLabel": "Go to my research",
+              "cancelButtonLabel": "Claim more works",
+              "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
                 <span
                   style={
@@ -19555,7 +19885,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               "cancelButtonLabel": "No",
               "confirmButtonLabel": "Yes",
               "confirmationMessage": "Are you sure you want to cancel claiming this work?",
-              "confirmationTitle": "Cancel claiming a publication",
+              "confirmationTitle": "Cancel claiming a work",
             }
           }
           when={true}
@@ -19576,7 +19906,18 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Type edits/changes/comments here"
@@ -19591,7 +19932,18 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                 xs={12}
               >
                 <Field
-                  component={[Function]}
+                  component={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "propTypes": Object {
+                        "classes": [Function],
+                        "help": [Function],
+                        "innerRef": [Function],
+                        "textFieldId": [Function],
+                      },
+                      "render": [Function],
+                    }
+                  }
                   disabled={false}
                   fullWidth={true}
                   label="Link (URL)"
@@ -19837,6 +20189,24 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                       "dsi_state": "A",
                     },
                   ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
                   "fez_record_search_key_access_conditions": null,
                   "fez_record_search_key_acknowledgements": null,
                   "fez_record_search_key_additional_notes": null,
@@ -20336,7 +20706,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                       "rek_file_attachment_access_condition_id": 17,
                       "rek_file_attachment_access_condition_order": 3,
                       "rek_file_attachment_access_condition_pid": "UQ:792099",
-                      "rek_file_attachment_access_condition_xsdmf_id": 0,
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -20345,7 +20715,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                       "rek_file_attachment_embargo_date_id": 83,
                       "rek_file_attachment_embargo_date_order": 3,
                       "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                      "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_file_attachment_name": Array [
@@ -20442,7 +20812,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                       "rek_grant_text_id": 583,
                       "rek_grant_text_order": 1,
                       "rek_grant_text_pid": "UQ:676287",
-                      "rek_grant_text_xsdmf_id": 0,
+                      "rek_grant_text_xsdmf_id": null,
                     },
                   ],
                   "fez_record_search_key_herdc_code": Object {
@@ -20504,24 +20874,6 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                   ],
                   "fez_record_search_key_issn": Array [
                     Object {
-                      "fez_journal_issns": Array [
-                        Object {
-                          "fez_journal": Object {
-                            "jnl_created_date": "2010-11-19 00:00:00",
-                            "jnl_era_id": 2234,
-                            "jnl_era_year": 2010,
-                            "jnl_foreign_name": null,
-                            "jnl_id": 7538,
-                            "jnl_journal_name": "Journal of Cell Science",
-                            "jnl_rank": "A",
-                            "jnl_updated_date": "2010-11-19 00:00:00",
-                          },
-                          "jni_id": 13071,
-                          "jni_issn": "1477-9137",
-                          "jni_issn_order": 2,
-                          "jni_jnl_id": 7538,
-                        },
-                      ],
                       "fez_sherpa_romeo": Object {
                         "srm_date_updated": "2017-09-30 18:26:18",
                         "srm_id": 13764,

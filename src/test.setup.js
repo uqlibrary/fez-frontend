@@ -2,7 +2,7 @@
 import React from 'react';
 
 import Enzyme, { shallow, render, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import toJson from 'enzyme-to-json';
 import '@babel/polyfill';
 
@@ -104,3 +104,5 @@ jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 
 const MockDate = require('mockdate');
 MockDate.set('6/30/2017');
+
+global.mockDate = MockDate;

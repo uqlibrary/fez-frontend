@@ -8,27 +8,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:285760",
-            "rek_title_xsdmf_id": 12038,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Recent developments in organizational culture and climate research",
             "rek_description_xsdmf_id": null,
             "rek_description": "Review of  research on organizational culture and climate, based on the recently published Handbook of Organizational Culture and Climate, Second Edition (Sage Publishing).",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 313,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 11989,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2012-07-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 21815,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2012-11-16T09:46:39Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-07-17T02:54:13Z",
             "rek_file_downloads": 0,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 11991,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Creative Work",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -36,14 +36,14 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "<p>Review of&nbsp; research on organizational culture and climate, based on the recently published Handbook of Organizational Culture and Climate, Second Edition (Sage Publishing).</p>",
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 962,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
             "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Recorded or Rendered Creative Work - Audio or Visual",
             "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": 12442,
+            "rek_herdc_notes_xsdmf_id": null,
             "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": null,
             "rek_wok_doc_type_xsdmf_id": null,
@@ -55,7 +55,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -66,7 +66,7 @@ export default {
             "fez_record_search_key_audience_size": {
                 "rek_audience_size_id": 52,
                 "rek_audience_size_pid": "UQ:285760",
-                "rek_audience_size_xsdmf_id": 17395,
+                "rek_audience_size_xsdmf_id": null,
                 "rek_audience_size": 453992,
                 "rek_audience_size_lookup": "Less than 100"
             },
@@ -105,7 +105,7 @@ export default {
                 {
                     "rek_contributor_id_id": 2407194,
                     "rek_contributor_id_pid": "UQ:285760",
-                    "rek_contributor_id_xsdmf_id": 11963,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 }
@@ -126,112 +126,112 @@ export default {
                 {
                     "rek_file_attachment_name_id": 4506267,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "EC15UQ285760.ppt",
                     "rek_file_attachment_name_order": 1
                 },
                 {
                     "rek_file_attachment_name_id": 4506268,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "EC15UQ285760_contents.pdf",
                     "rek_file_attachment_name_order": 2
                 },
                 {
                     "rek_file_attachment_name_id": 4506269,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "EC15UQ285760_part1.mp3",
                     "rek_file_attachment_name_order": 3
                 },
                 {
                     "rek_file_attachment_name_id": 4506270,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "EC15UQ285760_part2.mp3",
                     "rek_file_attachment_name_order": 4
                 },
                 {
                     "rek_file_attachment_name_id": 4506271,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_EC15UQ285760.ppt.xml",
                     "rek_file_attachment_name_order": 5
                 },
                 {
                     "rek_file_attachment_name_id": 4506272,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_EC15UQ285760.xls.xml",
                     "rek_file_attachment_name_order": 6
                 },
                 {
                     "rek_file_attachment_name_id": 4506273,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_EC15UQ285760_contents.pdf.xml",
                     "rek_file_attachment_name_order": 7
                 },
                 {
                     "rek_file_attachment_name_id": 4506274,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_EC15UQ285760_part1.mp3.xml",
                     "rek_file_attachment_name_order": 8
                 },
                 {
                     "rek_file_attachment_name_id": 4506275,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_EC15UQ285760_part2.mp3.xml",
                     "rek_file_attachment_name_order": 9
                 },
                 {
                     "rek_file_attachment_name_id": 4506276,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_UQ_285760.xml",
                     "rek_file_attachment_name_order": 10
                 },
                 {
                     "rek_file_attachment_name_id": 4506277,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "presmd_EC15UQ285760.xml",
                     "rek_file_attachment_name_order": 11
                 },
                 {
                     "rek_file_attachment_name_id": 4506278,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "presmd_EC15UQ285760_contents.xml",
                     "rek_file_attachment_name_order": 12
                 },
                 {
                     "rek_file_attachment_name_id": 4506279,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "presmd_EC15UQ285760_part1.xml",
                     "rek_file_attachment_name_order": 13
                 },
                 {
                     "rek_file_attachment_name_id": 4506280,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "presmd_EC15UQ285760_part2.xml",
                     "rek_file_attachment_name_order": 14
                 },
                 {
                     "rek_file_attachment_name_id": 4506281,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "stream_EC15UQ285760_part1.flv",
                     "rek_file_attachment_name_order": 15
                 },
                 {
                     "rek_file_attachment_name_id": 4506282,
                     "rek_file_attachment_name_pid": "UQ:285760",
-                    "rek_file_attachment_name_xsdmf_id": 12088,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "stream_EC15UQ285760_part2.flv",
                     "rek_file_attachment_name_order": 16
                 }
@@ -263,7 +263,7 @@ export default {
                 {
                     "rek_isderivationof_id": 14268,
                     "rek_isderivationof_pid": "UQ:285760",
-                    "rek_isderivationof_xsdmf_id": 8648,
+                    "rek_isderivationof_xsdmf_id": null,
                     "rek_isderivationof": "UQ:259612",
                     "rek_isderivationof_order": 1,
                     "rek_isderivationof_lookup": "Recent developments in organizational culture and climate research"
@@ -330,9 +330,9 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 24759,
                 "rek_license_pid": "UQ:285760",
-                "rek_license_xsdmf_id": 16636,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 453609,
-                "rek_license_lookup": "Creative Commons Attribution no derivatives"
+                "rek_license_lookup": "Creative Commons Attribution-NoDerivatives 3.0 International (CC BY-ND 3.0)"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
@@ -367,7 +367,7 @@ export default {
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2888323,
                 "rek_refereed_pid": "UQ:285760",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
@@ -627,7 +627,7 @@ export default {
                     "dsi_security_inherited": 0
                 }
             ],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Creative Work",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -644,7 +644,7 @@ export default {
                 {
                     "rek_author_affiliation_name_id": 2490535,
                     "rek_author_affiliation_name_pid": "UQ:285760",
-                    "rek_author_affiliation_name_xsdmf_id": 0,
+                    "rek_author_affiliation_name_xsdmf_id": null,
                     "rek_author_affiliation_name": "The University of Queensland",
                     "rek_author_affiliation_name_order": 1
                 }
@@ -663,7 +663,7 @@ export default {
                 {
                     "rek_content_indicator_id": 799,
                     "rek_content_indicator_pid": "UQ:285760",
-                    "rek_content_indicator_xsdmf_id": 17438,
+                    "rek_content_indicator_xsdmf_id": null,
                     "rek_content_indicator": 454079,
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning"

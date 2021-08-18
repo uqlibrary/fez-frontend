@@ -20,6 +20,7 @@ export const mapStateToProps = (state, ownProps) => {
     const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList && publicationsList.length > 0;
 
     return {
+        ...state.get('accountReducer'),
         searchQueryParams: (!!searchQuery && searchQuery.searchQueryParams) || {},
         isAdvancedSearch: isAdvancedSearch,
         isAdvancedSearchMinimised: isAdvancedSearchMinimised,

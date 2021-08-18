@@ -630,28 +630,45 @@ export default {
                     'dsi_security_inherited': 0,
                 },
             ],
-            'fez_matched_journals': [
-                {
-                    'mtj_pid': 'UQ:288291',
-                    'mtj_jnl_id': 2236,
-                    'mtj_status': 'M',
-                },
-                {
-                    'mtj_pid': 'UQ:288291',
-                    'mtj_jnl_id': 29670,
-                    'mtj_status': 'M',
-                },
-                {
-                    'mtj_pid': 'UQ:288291',
-                    'mtj_jnl_id': 46937,
-                    'mtj_status': 'A',
-                },
-                {
-                    'mtj_pid': 'UQ:288291',
-                    'mtj_jnl_id': 99890,
-                    'mtj_status': 'A',
-                },
-            ],
+            'fez_matched_journals': {
+                "mtj_pid": "UQ:288291",
+                "mtj_jnl_id": 10412,
+                "mtj_status": "A",
+                "fez_journal": {
+                    "jnl_jid": 10412,
+                    "jnl_title": "Musculoskeletal Science & Practice",
+                    "jnl_publisher": "Elsevier Ltd",
+                    "jnl_created_date": "2020-11-16 07:55:32",
+                    "jnl_updated_date": "2021-03-02 23:37:12",
+                    "jnl_era_source_id": "16579",
+                    "fez_journal_era": [
+                        {
+                            "jnl_era_id": 75673,
+                            "jnl_era_source_id": "16579",
+                            "jnl_era_source_year": 2010,
+                            "jnl_era_title": ""
+                        },
+                        {
+                            "jnl_era_id": 59748,
+                            "jnl_era_source_id": "16579",
+                            "jnl_era_source_year": 2012,
+                            "jnl_era_title": ""
+                        },
+                        {
+                            "jnl_era_id": 30791,
+                            "jnl_era_source_id": "16579",
+                            "jnl_era_source_year": 2015,
+                            "jnl_era_title": ""
+                        },
+                        {
+                            "jnl_era_id": 10412,
+                            "jnl_era_source_id": "16579",
+                            "jnl_era_source_year": 2018,
+                            "jnl_era_title": "Manual Therapy"
+                        }
+                    ]
+                }
+            },
             'rek_display_type_lookup': 'Journal Article',
             'rek_pubmed_doc_type_lookup': null,
             'rek_object_type_lookup': 'Record',
@@ -1520,7 +1537,7 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 28752,
                 "rek_license_pid": "UQ:696826",
-                "rek_license_xsdmf_id": 16246,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
@@ -1657,28 +1674,11 @@ export default {
                     'dsi_security_inherited': 0,
                 },
             ],
-            'fez_matched_journals': [
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 8463,
-                    'mtj_status': 'A',
-                },
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 22918,
-                    'mtj_status': 'A',
-                },
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 54790,
-                    'mtj_status': 'A',
-                },
-                {
-                    'mtj_pid': 'UQ:696826',
-                    'mtj_jnl_id': 93348,
-                    'mtj_status': 'A',
-                },
-            ],
+            'fez_matched_journals': {
+                'mtj_pid': 'UQ:696826',
+                'mtj_jnl_id': 8463,
+                'mtj_status': 'M',
+            },
             'rek_display_type_lookup': 'Journal Article',
             'rek_pubmed_doc_type_lookup': null,
             'rek_object_type_lookup': 'Record',

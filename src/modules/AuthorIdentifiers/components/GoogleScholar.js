@@ -1,7 +1,9 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { useHistory } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form/immutable';
-import { Field } from 'redux-form/immutable';
+import { Field, reduxForm, SubmissionError } from 'redux-form/immutable';
+
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -11,134 +13,178 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/pages';
-import { routes, validation } from 'config';
+import { pathConfig, validation } from 'config';
+import { showAppAlert, dismissAppAlert, resetSavingAuthorState, updateCurrentAuthor } from 'actions';
 
-export default class GoogleScholar extends PureComponent {
-    static propTypes = {
-        ...propTypes,
-        author: PropTypes.object,
-        accountAuthorLoading: PropTypes.bool,
-        history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired,
+const FORM_NAME = 'GoogleScholar';
+
+/**
+ * Function to redirect user to Dashboard page
+ *
+ * @param {object} history History object from react-router
+ */
+export const navigateToDashboard = history => {
+    history.push(pathConfig.dashboard);
+};
+
+/**
+ * A submit handler for the Google Scholar ID form
+ *
+ * @param {object} values Values from redux form
+ * @param {function} dispatch Dispatch function from redux store
+ * @param {object} props All the props passed from the component
+ */
+const onSubmit = (values, dispatch, props) => {
+    return dispatch(updateCurrentAuthor(props.author.aut_id, values.toJS())).catch(error => {
+        throw new SubmissionError({ _error: error.message });
+    });
+};
+
+export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, submitSucceeded, submitting }) => {
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const txt = locale.pages.googleScholarLink;
+    const cardLocale = !!author && !author.aut_google_scholar_id ? txt.add : txt.edit;
+
+    React.useEffect(
+        () => {
+            if (submitSucceeded) {
+                dispatch(
+                    showAppAlert({
+                        ...locale.pages.googleScholarLink.successAlert,
+                        dismissAction /* istanbul ignore next */: () => dispatch(dismissAppAlert()),
+                    }),
+                );
+                navigateToDashboard(history);
+            }
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [submitSucceeded],
+    );
+
+    const handleKeyboardFormSubmit = event => {
+        event.key === 'Enter' && handleSubmit();
     };
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillMount() {
-        // user should have a fez-author record to proceed
-        if (!this.props.accountAuthorLoading && !this.props.author) {
-            this._navigateToDashboard();
-        }
-    }
+    const handleCancel = () => navigateToDashboard(history);
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
-            // show app level alert on success
-            this.props.actions.showAppAlert({
-                ...locale.pages.googleScholarLink.successAlert,
-                dismissAction: this.props.actions.dismissAppAlert,
-            });
-            this._navigateToDashboard();
-        }
-    }
-
-    componentWillUnmount() {
-        // reset any saving state for current author on exit
-        this.props.actions.resetSavingAuthorState();
-    }
-
-    _handleKeyboardFormSubmit = event => {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            this.props.handleSubmit();
-        }
-    };
-
-    _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
-    };
-
-    getAlert = ({ submitFailed = false, submitting = false, error, alertLocale = {} }) => {
+    const getAlert = () => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {
-                ...alertLocale.errorAlert,
-                message:
-                    !!alertLocale.errorAlert && alertLocale.errorAlert.message
-                        ? alertLocale.errorAlert.message(error)
-                        : error,
+                ...txt.errorAlert,
+                message: error,
             };
         } else if (submitting) {
-            alertProps = { ...alertLocale.progressAlert };
+            alertProps = { ...txt.progressAlert };
         }
         return alertProps ? <Alert {...alertProps} /> : null;
     };
 
-    render() {
-        // wait for author details to be loaded
-        if (!this.props.author) {
-            return <div />;
+    return (
+        <StandardPage title={txt.title}>
+            <form onKeyDown={handleKeyboardFormSubmit}>
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <StandardCard title={cardLocale.title} help={txt.help}>
+                            {cardLocale.description}
+                            <Grid container spacing={2}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={submitting}
+                                        textFieldId="aut-google-scholar-id"
+                                        name="aut_google_scholar_id"
+                                        fullWidth
+                                        validate={[validation.required, validation.isValidGoogleScholarId]}
+                                        {...txt.labels.googleScholarIdField}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+
+                    {
+                        <Grid item xs={12}>
+                            {getAlert()}
+                        </Grid>
+                    }
+                </Grid>
+                <Grid container spacing={2}>
+                    <Hidden xsDown>
+                        <Grid item xs />
+                    </Hidden>
+                    <Grid item xs={12} sm={'auto'}>
+                        <Button
+                            id="cancel-aut-google-scholar-id"
+                            data-testid="cancel-aut-google-scholar-id"
+                            variant={'contained'}
+                            color={'primary'}
+                            fullWidth
+                            disabled={submitting}
+                            children={txt.labels.cancel}
+                            onClick={handleCancel}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={'auto'}>
+                        <Button
+                            id="submit-aut-google-scholar-id"
+                            data-testid="submit-aut-google-scholar-id"
+                            variant={'contained'}
+                            color={'secondary'}
+                            fullWidth
+                            disabled={submitting}
+                            children={txt.labels.submit}
+                            onClick={handleSubmit}
+                        />
+                    </Grid>
+                </Grid>
+            </form>
+        </StandardPage>
+    );
+};
+
+GoogleScholarForm.propTypes = {
+    author: PropTypes.object,
+    error: PropTypes.string,
+    handleSubmit: PropTypes.func,
+    submitFailed: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.bool,
+};
+
+export const GoogleScholarReduxForm = reduxForm({
+    form: FORM_NAME,
+    onSubmit,
+})(GoogleScholarForm);
+
+export const GoogleScholar = () => {
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const author = useSelector(state => state.get('accountReducer').author);
+    const accountAuthorLoading = useSelector(state => state.get('accountReducer').accountAuthorLoading);
+
+    React.useEffect(function callback() {
+        if (!accountAuthorLoading && !author) {
+            navigateToDashboard(history);
         }
 
-        const txt = locale.pages.googleScholarLink;
-        const cardLocale = !this.props.author.aut_google_scholar_id ? txt.add : txt.edit;
+        return () => dispatch(resetSavingAuthorState());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-        return (
-            <StandardPage title={txt.title}>
-                <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12}>
-                            <StandardCard title={cardLocale.title} help={txt.help}>
-                                {cardLocale.description}
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            component={TextField}
-                                            disabled={this.props.submitting}
-                                            name="aut_google_scholar_id"
-                                            fullWidth
-                                            {...txt.labels.googleScholarIdField}
-                                            validate={[validation.required, validation.isValidGoogleScholarId]}
-                                            className="requiredField"
-                                        />
-                                    </Grid>
-                                </Grid>
-                            </StandardCard>
-                        </Grid>
+    const initialValues = !!author
+        ? { aut_id: author.aut_id, aut_google_scholar_id: author.aut_google_scholar_id }
+        : null;
 
-                        {
-                            <Grid item xs={12}>
-                                {this.getAlert({ ...this.props, alertLocale: txt })}
-                            </Grid>
-                        }
-                    </Grid>
-                    <Grid container spacing={2}>
-                        <Hidden xsDown>
-                            <Grid item xs />
-                        </Hidden>
-                        <Grid item xs={12} sm={'auto'}>
-                            <Button
-                                variant={'contained'}
-                                color={'primary'}
-                                fullWidth
-                                disabled={this.props.submitting}
-                                children={txt.labels.cancel}
-                                onClick={this._navigateToDashboard}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={'auto'}>
-                            <Button
-                                variant={'contained'}
-                                color={'secondary'}
-                                fullWidth
-                                disabled={this.props.submitting || this.props.invalid}
-                                children={txt.labels.submit}
-                                onClick={this.props.handleSubmit}
-                            />
-                        </Grid>
-                    </Grid>
-                </form>
-            </StandardPage>
-        );
-    }
-}
+    return (
+        <GoogleScholarReduxForm
+            initialValues={initialValues}
+            author={author}
+            accountAuthorLoading={accountAuthorLoading}
+        />
+    );
+};
+
+export default React.memo(GoogleScholar);

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import locale from 'locale/viewRecord';
-import { viewRecordsConfig, routes } from 'config';
+import { viewRecordsConfig, pathConfig } from 'config';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import {
     AuthorsCitationView,
@@ -15,7 +15,7 @@ import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { GOOGLE_MAPS_API_CHINA_URL, GOOGLE_MAPS_API_URL, CURRENT_LICENCES } from 'config/general';
+import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -131,15 +131,17 @@ export class AdditionalInformationClass extends PureComponent {
             case 'rek_contributor':
                 return this.renderContributors(this.props.publication);
             case 'rek_keywords':
-                return this.renderList(objects, subkey, routes.pathConfig.list.keyword);
+                return this.renderList(objects, subkey, pathConfig.list.keyword);
             case 'rek_seo_code':
-                return this.renderList(objects, subkey, routes.pathConfig.list.subject);
+                return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_alternate_genre':
-                return this.renderList(objects, subkey, routes.pathConfig.list.subject);
+                return this.renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_contact_details_email':
                 return this.renderContactEmail();
             case 'rek_geographic_area':
                 return this.renderMap(objects);
+            case 'rek_subject':
+                return this.renderList(objects, subkey, pathConfig.list.subject);
             default:
                 return this.renderList(objects, subkey);
         }
@@ -167,34 +169,30 @@ export class AdditionalInformationClass extends PureComponent {
             case 'rek_journal_name':
                 return this.renderJournalName();
             case 'rek_publisher':
-                return this.renderLink(routes.pathConfig.list.publisher(data), data, testId);
+                return this.renderLink(pathConfig.list.publisher(data), data, testId);
             case 'rek_herdc_code':
-                return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data, testId);
+                return this.renderLink(pathConfig.list.herdcStatus(object[subkey]), data, testId);
             case 'rek_herdc_status':
-                return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data, testId);
+                return this.renderLink(pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data, testId);
             case 'rek_ands_collection_type':
             case 'rek_access_conditions':
                 return !!data && <span data-testid={testId}>{data}</span>;
             case 'rek_series':
-                return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey], testId);
+                return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
             case 'rek_org_unit_name':
-                return this.renderLink(routes.pathConfig.list.orgUnitName(data), data, testId);
+                return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
-                return this.renderLink(
-                    routes.pathConfig.list.institutionalStatus(object[`${subkey}_lookup`]),
-                    data,
-                    testId,
-                );
+                return this.renderLink(pathConfig.list.institutionalStatus(object[`${subkey}_lookup`]), data, testId);
             case 'rek_book_title':
-                return this.renderLink(routes.pathConfig.list.bookTitle(object[subkey]), data, testId);
+                return this.renderLink(pathConfig.list.bookTitle(object[subkey]), data, testId);
             case 'rek_job_number':
-                return this.renderLink(routes.pathConfig.list.jobNumber(object[subkey]), data, testId);
+                return this.renderLink(pathConfig.list.jobNumber(object[subkey]), data, testId);
             case 'rek_conference_name':
-                return this.renderLink(routes.pathConfig.list.conferenceName(object[subkey]), data, testId);
+                return this.renderLink(pathConfig.list.conferenceName(object[subkey]), data, testId);
             case 'rek_proceedings_title':
-                return this.renderLink(routes.pathConfig.list.proceedingsTitle(object[subkey]), data, testId);
+                return this.renderLink(pathConfig.list.proceedingsTitle(object[subkey]), data, testId);
             default:
                 return <span data-testid={testId}>{data}</span>;
         }
@@ -229,7 +227,7 @@ export class AdditionalInformationClass extends PureComponent {
     };
 
     renderLicense = (cvoId, lookup) => {
-        const licenseLookup = this.renderLink(routes.pathConfig.list.license(lookup), lookup, 'rek-license-lookup');
+        const licenseLookup = this.renderLink(pathConfig.list.license(lookup), lookup, 'rek-license-lookup');
         const licenseLink = viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
         const uqLicenseLinkText =
             licenseLink && licenseLink.className.indexOf('uq') === 0
@@ -272,7 +270,6 @@ export class AdditionalInformationClass extends PureComponent {
                 prefix={''}
                 suffix={''}
                 separator={', '}
-                initialNumberOfEditors={publication.fez_record_search_key_contributor.length}
                 showLink
             />
         );
@@ -282,17 +279,10 @@ export class AdditionalInformationClass extends PureComponent {
         if (coordinatesList.length === 0 || !coordinatesList[0].rek_geographic_area) {
             return <span />;
         }
-        const mapApiUrl = this.context.userCountry === 'CN' ? GOOGLE_MAPS_API_CHINA_URL : GOOGLE_MAPS_API_URL;
-        return (
-            <PublicationMap
-                googleMapURL={mapApiUrl}
-                loadingElement={<div className="googleMap loading" />}
-                containerElement={<div style={{ height: '400px' }} data-testid="rek-geographic-area" />}
-                mapElement={<div style={{ height: '100%' }} />}
-                coordinates={coordinatesList[0].rek_geographic_area}
-                readOnly
-            />
-        );
+        /*
+         *  New map doesn't support the dynamic google URLs. e.g. GOOGLE_MAPS_API_CHINA_URL
+         */
+        return <PublicationMap coordinates={coordinatesList[0].rek_geographic_area} readOnly />;
     };
 
     renderDoi = doi => {
@@ -339,6 +329,18 @@ export class AdditionalInformationClass extends PureComponent {
         return fields.filter(item => !locale.viewRecord.adminFields.includes(item.field));
     };
 
+    getFieldHeading = (displayTypeHeadings, headings, field, isNtro) => {
+        if (displayTypeHeadings[field]) {
+            return typeof displayTypeHeadings[field] === 'function'
+                ? displayTypeHeadings[field](
+                      isNtro && this.props.publication.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+                  )
+                : displayTypeHeadings[field];
+        } else {
+            return headings.default[field];
+        }
+    };
+
     renderColumns = () => {
         const rows = [];
         const publication = this.props.publication;
@@ -374,7 +376,7 @@ export class AdditionalInformationClass extends PureComponent {
                 // do not display field when value is null, empty array
                 if (value && Object.keys(value).length > 0) {
                     const subkey = this.transformFieldNameToSubkey(field);
-                    const heading = displayTypeHeadings[field] ? displayTypeHeadings[field] : headings.default[field];
+                    const heading = this.getFieldHeading(displayTypeHeadings, headings, field, this.props.isNtro);
 
                     // logic to get values from fez_record_search_key fields
                     if (subkey) {

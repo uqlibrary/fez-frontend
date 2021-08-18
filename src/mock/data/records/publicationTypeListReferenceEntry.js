@@ -8,27 +8,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:191549",
-            "rek_title_xsdmf_id": 10676,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Australia",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 272,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 9959,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2009-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 7974,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2010-01-07T09:49:20Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2020-03-09T05:48:35Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Hall, W. D.\" href=\"/list/author_id/1968/\">Hall, W. D.</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Gartner, C. E.\" href=\"/list/author_id/5852/\">Gartner, C. E.</a> (<span class=\"citation_date\">2009</span>) <a class=\"citation_title\" title=\"Click to view Reference Entry: Australia\" href=\"/view/UQ:191549\">Australia</a> in <span class=\"citation_contributor\"><span class=\"citation_contributor\">Pamela Korsmeyer</span> and <span class=\"citation_contributor\">Henry R. Kranzler</span></span> (eds.) <i><span class=\"citation_parent_publication\">Encyclopedia of drugs, alcohol &amp; addictive behavior</span></i>. <span class=\"citation_edition\">3rd</span> <span class=\"citation_place_of_publication\">Detroit, MI, U.S.</span>: <span class=\"citation_publisher\">Macmillan Reference</span>",
-            "rek_genre_xsdmf_id": 9961,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Reference Entry",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -36,7 +36,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 839,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -56,7 +56,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
@@ -66,14 +66,14 @@ export default {
                 {
                     "rek_author_id": 29144881,
                     "rek_author_pid": "UQ:191549",
-                    "rek_author_xsdmf_id": 9928,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Hall, W. D.",
                     "rek_author_order": 1
                 },
                 {
                     "rek_author_id": 29144882,
                     "rek_author_pid": "UQ:191549",
-                    "rek_author_xsdmf_id": 9928,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Gartner, C. E.",
                     "rek_author_order": 2
                 }
@@ -87,7 +87,7 @@ export default {
                 {
                     "rek_author_id_id": 28511798,
                     "rek_author_id_pid": "UQ:191549",
-                    "rek_author_id_xsdmf_id": 9923,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 1968,
                     "rek_author_id_order": 1,
                     "author": {
@@ -103,7 +103,7 @@ export default {
                 {
                     "rek_author_id_id": 28511799,
                     "rek_author_id_pid": "UQ:191549",
-                    "rek_author_id_xsdmf_id": 9923,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 5852,
                     "rek_author_id_order": 2,
                     "author": {
@@ -122,14 +122,14 @@ export default {
                 {
                     "rek_contributor_id": 3148013,
                     "rek_contributor_pid": "UQ:191549",
-                    "rek_contributor_xsdmf_id": 9936,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Pamela Korsmeyer",
                     "rek_contributor_order": 1
                 },
                 {
                     "rek_contributor_id": 3148014,
                     "rek_contributor_pid": "UQ:191549",
-                    "rek_contributor_xsdmf_id": 9936,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Henry R. Kranzler",
                     "rek_contributor_order": 2
                 }
@@ -138,14 +138,14 @@ export default {
                 {
                     "rek_contributor_id_id": 2350242,
                     "rek_contributor_id_pid": "UQ:191549",
-                    "rek_contributor_id_xsdmf_id": 9931,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 },
                 {
                     "rek_contributor_id_id": 2350243,
                     "rek_contributor_id_pid": "UQ:191549",
-                    "rek_contributor_id_xsdmf_id": 9931,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 2
                 }
@@ -159,7 +159,7 @@ export default {
             "fez_record_search_key_edition": {
                 "rek_edition_id": 88983,
                 "rek_edition_pid": "UQ:191549",
-                "rek_edition_xsdmf_id": 10047,
+                "rek_edition_xsdmf_id": null,
                 "rek_edition": "3rd"
             },
             "fez_record_search_key_end_page": null,
@@ -180,14 +180,14 @@ export default {
                 {
                     "rek_isbn_id": 1087550,
                     "rek_isbn_pid": "UQ:191549",
-                    "rek_isbn_xsdmf_id": 10834,
+                    "rek_isbn_xsdmf_id": null,
                     "rek_isbn": "9780028660646",
                     "rek_isbn_order": 1
                 },
                 {
                     "rek_isbn_id": 1087551,
                     "rek_isbn_pid": "UQ:191549",
-                    "rek_isbn_xsdmf_id": 10834,
+                    "rek_isbn_xsdmf_id": null,
                     "rek_isbn": "0028660641",
                     "rek_isbn_order": 2
                 }
@@ -197,7 +197,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11661979,
                     "rek_ismemberof_pid": "UQ:191549",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:152266",
                     "rek_ismemberof_order": 1,
                     "parent": {
@@ -210,7 +210,7 @@ export default {
                 {
                     "rek_ismemberof_id": 11661980,
                     "rek_ismemberof_pid": "UQ:191549",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:3751",
                     "rek_ismemberof_order": 2,
                     "parent": {
@@ -226,21 +226,21 @@ export default {
                 {
                     "rek_keywords_id": 29313561,
                     "rek_keywords_pid": "UQ:191549",
-                    "rek_keywords_xsdmf_id": 9941,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Substance abuse",
                     "rek_keywords_order": 1
                 },
                 {
                     "rek_keywords_id": 29313562,
                     "rek_keywords_pid": "UQ:191549",
-                    "rek_keywords_xsdmf_id": 9941,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Addictive behaviour",
                     "rek_keywords_order": 2
                 },
                 {
                     "rek_keywords_id": 29313563,
                     "rek_keywords_pid": "UQ:191549",
-                    "rek_keywords_xsdmf_id": 9941,
+                    "rek_keywords_xsdmf_id": null,
                     "rek_keywords": "Australia",
                     "rek_keywords_order": 3
                 }
@@ -249,7 +249,7 @@ export default {
                 {
                     "rek_language_id": 5291550,
                     "rek_language_pid": "UQ:191549",
-                    "rek_language_xsdmf_id": 10673,
+                    "rek_language_xsdmf_id": null,
                     "rek_language": "eng",
                     "rek_language_order": 1
                 }
@@ -257,7 +257,7 @@ export default {
             "fez_record_search_key_license": {
                 "rek_license_id": 28752,
                 "rek_license_pid": "UQ:191549",
-                "rek_license_xsdmf_id": 16246,
+                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
@@ -267,20 +267,20 @@ export default {
             "fez_record_search_key_parent_publication": {
                 "rek_parent_publication_id": 6303,
                 "rek_parent_publication_pid": "UQ:191549",
-                "rek_parent_publication_xsdmf_id": 10683,
+                "rek_parent_publication_xsdmf_id": null,
                 "rek_parent_publication": "Encyclopedia of drugs, alcohol & addictive behavior"
             },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4232840,
                 "rek_place_of_publication_pid": "UQ:191549",
-                "rek_place_of_publication_xsdmf_id": 10046,
+                "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "Detroit, MI, U.S."
             },
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4499201,
                 "rek_publisher_pid": "UQ:191549",
-                "rek_publisher_xsdmf_id": 10044,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "Macmillan Reference"
             },
             "fez_record_search_key_scopus_id": null,
@@ -297,7 +297,7 @@ export default {
                 {
                     "rek_subject_id": 9217671,
                     "rek_subject_pid": "UQ:191549",
-                    "rek_subject_xsdmf_id": 9940,
+                    "rek_subject_xsdmf_id": null,
                     "rek_subject": 452942,
                     "rek_subject_order": 1,
                     "rek_subject_lookup": "170101 Biological Psychology (Neuropsychology, Psychopharmacology, Physiological Psychology)"
@@ -308,14 +308,14 @@ export default {
             "fez_record_search_key_volume_number": {
                 "rek_volume_number_id": 5146835,
                 "rek_volume_number_pid": "UQ:191549",
-                "rek_volume_number_xsdmf_id": 9952,
+                "rek_volume_number_xsdmf_id": null,
                 "rek_volume_number": "1; A–C"
             },
             "fez_record_search_key_issn": [],
             "fez_record_search_key_doi": null,
             "fez_record_search_key_isdatasetof": [],
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Reference Entry",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

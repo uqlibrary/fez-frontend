@@ -10,11 +10,11 @@ context('Design admin edit', () => {
 
     it('should load expected tabs', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(9);
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
-        cy.adminEditCheckTabErrorBadge(1, '1');
+        cy.adminEditCheckTabErrorBadge('bibliographic', '2');
     });
 
     it('should render the different sections as expected', () => {
@@ -25,8 +25,8 @@ context('Design admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('[data-testid=author-details-section-header]').contains('Author details');
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-header]').contains('Authors');
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(0)
                 .should('contain', 'Designers');
@@ -36,7 +36,7 @@ context('Design admin edit', () => {
             });
         });
 
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(1)
                 .should('contain', 'Consultants');
@@ -46,19 +46,9 @@ context('Design admin edit', () => {
             });
         });
 
-        cy.get('[data-testid=author-details-section-content]').within(() => {
-            cy.get('h4')
-                .eq(2)
-                .should('contain', 'Creators');
-            const creators = record.fez_record_search_key_creator_name.map(item => item.rek_creator_name);
-            creators.forEach((creator, index) => {
-                cy.get(`[id=rek-creator-name-list-row-${index}-name-as-published]`).should('contain', creator);
-            });
-        });
-
         // ----------------------------------------- GRANT INFORMATION TAB ---------------------------------------------
         cy.log('Grant information tab');
-        cy.get('[data-testid=grant-information-section-header]').contains('Grant information');
+        cy.get('[data-testid=grants-section-header]').contains('Grants');
     });
 
     it('should render different sections as expected for non-NTRO subtype', () => {
@@ -73,8 +63,8 @@ context('Design admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
-        cy.get('[data-testid=author-details-section-header]').contains('Author details');
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-header]').contains('Authors');
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(0)
                 .should('contain', 'Designers');
@@ -84,7 +74,7 @@ context('Design admin edit', () => {
             });
         });
 
-        cy.get('[data-testid=author-details-section-content]').within(() => {
+        cy.get('[data-testid=authors-section-content]').within(() => {
             cy.get('h4')
                 .eq(1)
                 .should('contain', 'Contributors');

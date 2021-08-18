@@ -38,6 +38,10 @@ export default {
             title: 'Subject',
             groups: [['subjects']],
         },
+        {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
+        },
     ],
     authors: () => [
         {
@@ -59,21 +63,10 @@ export default {
             groups: [
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [],
 };
 
-export const validateManuscript = ({ filesSection: fs }, { validationErrorsSummary: summary }) => ({
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
-    },
-});
+export const validateManuscript = () => ({});

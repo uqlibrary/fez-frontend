@@ -1,8 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import { selectFields } from 'locale/selectFields';
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 export default {
     components: {
+        publicationsList: {
+            selectAllText: 'Select all',
+        },
         facetsFilter: {
             title: 'Refine results',
             resetButtonText: 'Reset',
@@ -83,7 +91,7 @@ export default {
             },
         },
         myTrendingPublications: {
-            loading: 'Loading your trending publications',
+            loading: 'Loading your trending works',
             metrics: {
                 altmetric: {
                     title: 'Altmetric score',
@@ -118,8 +126,8 @@ export default {
                         social media activity over time.
                     </p>
                     <p>
-                        You can click on the number as a link to see who is citing each publication, or in the case of
-                        Altmetric who is referencing the publication in social media and news outlets.
+                        You can click on the number as a link to see who is citing each work, or in the case of
+                        Altmetric who is referencing the work in social media and news outlets.
                     </p>
                     For more information visit :<br />
                     <a
@@ -134,15 +142,16 @@ export default {
             buttonLabel: 'CLOSE',
         },
         myLatestPublications: {
-            loading: 'Loading your latest publications',
+            loading: 'Loading your latest works',
             viewAllButtonLabel: 'View all',
         },
         topCitedPublications: {
-            loading: 'Loading trending publications',
+            loading: 'Loading trending works',
             notAvailableAlert: {
                 type: 'error',
+                alertId: 'alert-error',
                 title: 'There has been an error',
-                message: 'Trending publications are temporarily unavailable',
+                message: 'Trending works are temporarily unavailable',
             },
             altmetric: {
                 title: <span>Trending on Altmetric</span>,
@@ -886,12 +895,57 @@ export default {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
                             type: 'info',
+                            alertId: 'alert-info',
                         },
                     },
                 },
                 header: {
                     locale: {
                         nameColumn: 'Scale/significance of work - Creator contribution statement',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        scaleOfSignificanceListAdminForm: {
+            field: {
+                form: {
+                    locale: {
+                        significanceInputFieldLabel: 'Scale/Significance of work',
+                        significanceInputFieldHint: 'Please select scale of significance',
+                        contributionStatementInputFieldLabel: 'Creator research statement',
+                        contributionStatementFieldHint: 'Enter description',
+                        addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        authorOrderAlert: {
+                            message:
+                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                            type: 'info',
+                        },
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Scale/significance of work - Creator research statement',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -977,6 +1031,7 @@ export default {
                         nameColumn: "Author's name as published",
                         identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
+                        organisationColumn: 'Organisation',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
@@ -1007,6 +1062,40 @@ export default {
                 },
             },
         },
+        authorsList: suffix => ({
+            title: `${capitalizeFirstLetter(suffix)}s`,
+            field: {
+                form: {
+                    locale: {
+                        nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: `Add ${suffix}`,
+                        creatorRoleLabel: "Enter creator's role",
+                        creatorRoleHint:
+                            'Select role from list or type the role of the creator in relation to the dataset',
+                    },
+                },
+                header: {
+                    locale: {
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        identifierColumn: 'UQ identifiers',
+                        organisationColumn: 'Organisation/Organisation type',
+                        roleColumn: 'Creator role',
+                    },
+                },
+                row: {
+                    locale: {
+                        suffix: ` listed ${suffix}`,
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                    },
+                },
+            },
+        }),
         editors: {
             title: 'Editors',
             description: 'Please provide a list of editors and then select your name from the list.',
@@ -1647,6 +1736,17 @@ export default {
             ],
             sortDirection: ['Desc', 'Asc'],
             recordsPerPage: [20, 50, 100],
+            exportOnlyLabel: 'Export Only:',
+            bulkExportConfirmation: {
+                confirmationTitle: 'Export queued successfully',
+                confirmationMessage: (
+                    <span style={{ display: 'block', margin: '1em 0' }}>
+                        Bulk export request has been queued. When the request has been processed, you will receive an
+                        email with the exported file as an attachment.
+                    </span>
+                ),
+                confirmButtonLabel: 'Close',
+            },
         },
         newsFeed: {
             title: 'Latest news',
@@ -1687,7 +1787,9 @@ export default {
                     title: 'NTRO data',
                     text: (
                         <React.Fragment>
-                            <h3>Quality indicators</h3>
+                            <Typography component="h4" variant="h6">
+                                Quality indicators
+                            </Typography>
                             <p>
                                 For more information about each quality indicator option, click{' '}
                                 <b>
@@ -1895,9 +1997,9 @@ export default {
                         title: 'Thesis type',
                         combiner: 'is one of',
                         type: 'ThesisTypeLookup',
-                        hint: 'Select a Thesis type',
+                        selectPrompt: 'Select a Thesis type',
                         multiple: true,
-                        validation: ['required'],
+                        validation: ['requiredList'],
                         ariaLabel: 'Select multiple thesis types to search for',
                         id: 'rek-genre-type',
                     },
@@ -1940,10 +2042,10 @@ export default {
                         title: 'Work type',
                         combiner: 'is one of',
                         type: null,
-                        hint: 'Select document types',
+                        hint: 'Select work types',
                         validation: [],
                         id: 'rek-display-type',
-                        ariaLabel: 'Select multiple publications types to search on',
+                        ariaLabel: 'Select work types to search on',
                     },
                     facet_year_range: {
                         order: 21,
@@ -1966,9 +2068,11 @@ export default {
                         combiner: 'is',
                         type: 'StatusLookup',
                         hint: 'Select status',
-                        validation: [],
+                        validation: ['required'],
                         ariaLabel: 'Select a status to search on',
                         isUnpublishedField: true,
+                        id: 'rek-status',
+                        selectPrompt: 'Select a status',
                     },
                     rek_created_date: {
                         order: 22,
@@ -2019,7 +2123,7 @@ export default {
                     title: 'Open access',
                     combiner: 'is',
                     captionText: <span className="value">open access/full text</span>,
-                    ariaLabel: 'Check to search for publications with are only open access / full text',
+                    ariaLabel: 'Check to search for open access / full text works',
                 },
                 addField: {
                     title: 'Add another field',
@@ -2170,45 +2274,47 @@ export default {
                 help: {},
                 formLabels: {
                     community: {
-                        label: 'Select a community',
-                        placeholder: 'Select a community',
-                        ariaLabel: 'Select a community',
+                        ...selectFields.community,
                     },
                     collection: {
-                        label: 'Select a collection',
-                        placeholder: 'Select a collection',
-                        ariaLabel: 'Select a collection',
+                        ...selectFields.collection,
                     },
                     docType: {
                         label: 'Select a document type',
                         placeholder: 'Select a document type',
                         ariaLabel: 'Select a document type',
+                        selectPrompt: 'Please select a document type',
                     },
                     subType: {
                         label: 'Select a document subtype',
                         placeholder: 'Select a document subtype',
                         ariaLabel: 'Select a document subtype',
+                        selectPrompt: 'Please select a document subtype',
                     },
                     directory: {
-                        label: 'Select folder where CSV and datastream files are located',
-                        placeholder: 'Select folder where CSV and datastream files are located',
-                        ariaLabel: 'Select folder where CSV and datastream files are located',
+                        ...selectFields.directory,
+                    },
+                    bulkFileIngest: {
+                        label: 'Switch to bulk file/edit ingest',
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
                     submitButtonLabel: 'Ingest now',
                 },
                 submitProgressAlert: {
                     type: 'info',
+                    alertId: 'alert-info-batch-import',
                     title: 'Requesting CSV ingest',
                     message: 'Waiting for response...',
                 },
                 submitSuccessAlert: {
                     type: 'done',
+                    alertId: 'alert-done-batch-import',
                     title: 'Success',
                     message: 'The request to batch-import has been submitted successfully.',
                 },
                 submitFailureAlert: {
                     type: 'error',
+                    alertId: 'alert-error-batch-import',
                     title: 'Error',
                     message: 'The batch-import request could not be submitted.',
                 },
@@ -2814,6 +2920,38 @@ export default {
         audienceSizeField: {
             label: 'Audience size',
         },
+        bulkUpdatesList: {
+            tableTitle: '',
+            columns: {
+                startedAt: {
+                    title: 'Started at',
+                },
+                createdAt: {
+                    title: 'Created at',
+                },
+                finishedAt: {
+                    title: 'Finished at',
+                },
+                user: {
+                    title: 'User',
+                },
+                name: {
+                    title: 'Name',
+                },
+                status: {
+                    title: 'Status',
+                },
+                failedRecords: {
+                    title: 'Failed records',
+                },
+                processedCount: {
+                    title: 'Processed count',
+                },
+                totalCount: {
+                    title: 'Total count',
+                },
+            },
+        },
         favouriteSearchList: {
             tableTitle: '',
             columns: {
@@ -2839,6 +2977,134 @@ export default {
                         invalid: 'Alias is not valid',
                     },
                     regex: /^[a-z0-9]+[a-z0-9-]*$/gi,
+                },
+            },
+        },
+        bulkUpdates: {
+            selectPrompt: 'Please select an action',
+            inputForm: action => ({
+                confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
+            }),
+            bulkUpdatesForms: {
+                copyToOrRemoveFromCollectionForm: {
+                    formLabels: {
+                        collection: 'Collection(s)',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: (isRemoveFrom = false) => ({
+                        title: `Bulk ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message:
+                            'Select destination collection if moving or copying to a collection, source collection if removing from a collection',
+                        type: 'info',
+                    }),
+                    submittingAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    }),
+                    successAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    }),
+                    errorAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} collection`,
+                        type: 'error',
+                    }),
+                    warningAlert: {
+                        title: 'Note',
+                        message: 'Please retain membership of at least one collection',
+                        type: 'warning',
+                    },
+                },
+                changeAuthorIdForm: {
+                    selectPrompt: 'Please select an option to search author by',
+                    formLabels: {
+                        searchBy: 'Search author by',
+                        searchByAuthorName: 'Search by Author Name',
+                        searchByAuthorId: 'Search by Author Id',
+                        authorId: 'Author Id',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: {
+                        title: 'Bulk change author ID',
+                        message:
+                            'This will find all authors for each record that match author name string and update the author id with the value selected in author ID. It is case sensitive and will fail if multiple authors are matched. Such as Lee matching Lee and Leep',
+                        type: 'info',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change author ID',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change author ID',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change author ID',
+                        type: 'error',
+                    },
+                    warningAlert: {
+                        title: 'Note',
+                        message:
+                            '[authorNameNoMatchCount] of the [numberOfSelectedWorks] works you have selected do not match and will not be updated',
+                        type: 'warning',
+                    },
+                },
+                changeDisplayTypeForm: {
+                    formLabels: {
+                        displayType: 'New display type',
+                        subtype: 'New subtype',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: {
+                        title: 'Bulk change display type',
+                        message:
+                            'Change a list of display types from a search or ad-hoc query to a different display type.  This will cause data loss where the display types don`t overlap next time the pid is updated.',
+                        type: 'info',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change display type',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change display type',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change display type',
+                        type: 'error',
+                    },
+                },
+                changeSearchKeyValueForm: {
+                    formLabels: {
+                        searchKey: 'Search key',
+                        searchKeyValue: 'Search key value',
+                        editNotes: 'Edit notes',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk update - change search key value',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk update - change search key value',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk update - change search key value',
+                        type: 'error',
+                    },
                 },
             },
         },
@@ -2871,6 +3137,434 @@ export default {
                 type: 'done',
                 title: 'Success',
                 message: 'Display type has been changed successfully.',
+            },
+        },
+        selectField: {
+            community: {
+                loadingHint: 'Loading communities...',
+                selectPrompt: 'Please select a community',
+            },
+            collection: {
+                loadingHint: 'Loading collections...',
+                selectPrompt: 'Please select a collection',
+            },
+        },
+        myEditorialAppointmentsList: {
+            infoTextAlert: {
+                type: 'info',
+                message:
+                    'Please record your current editorial appointment on this page. This information will be made available to downstream systems such as the Individual Activity Profile (IAP). You should only record your current editorial appointments.',
+            },
+            header: {
+                columns: {
+                    journalName: {
+                        title: 'Journal name',
+                    },
+                    role: {
+                        title: 'Editorial role',
+                    },
+                    startYear: {
+                        title: 'Start year',
+                    },
+                    endYear: {
+                        title: 'End year',
+                    },
+                },
+            },
+            form: {
+                locale: {
+                    journalNameLabel: 'Journal name',
+                    journalNameHint: 'Type journal name or issn',
+                    editorialRoleLabel: 'Editorial role',
+                    editorialRoleHint: 'Please select an editorial role or type in',
+                    otherRoleLabel: 'Other role name',
+                    otherRoleHint: 'Please specify the other role name',
+                    startYearLabel: 'Start year',
+                    startYearHint: 'Please type in start year',
+                    startYearErrorMessage: 'Year must be current or previous year',
+                    endYearLabel: 'End year',
+                    endYearCurrentYearLabel: 'Current',
+                    endYearHint: 'Current or future year only',
+                    endYearErrorMessage: 'Year must be current or future year',
+                    addButtonTooltip: 'Add new editorial appointment',
+                    editButtonTooltip: 'Edit this editorial appointment',
+                    deleteButtonTooltip: 'Delete this editorial appointment',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            successAlert: {
+                alertId: 'alert-done-editorial-appointment-add',
+                allowDismiss: true,
+                type: 'done',
+                message:
+                    'An editorial role has been successfully added. It will take up to 24 hours before it appears in downstream systems such as IAP and Academic Portal.',
+            },
+        },
+        JournalIdField: {
+            placeholder: 'Enter ISSN or Journal Title',
+            detailsLink: {
+                title: 'View journal details in a new tab',
+                linkText: 'View details',
+            },
+        },
+        MasterJournalListIngest: {
+            title: 'Master Journal List Ingest',
+            help: {},
+            formLabels: {
+                directory: {
+                    label: 'Choose ingest directory',
+                },
+                submitButtonLabel: 'Request ingest',
+                cancelButtonLabel: 'Cancel',
+            },
+            submitProgressAlert: {
+                type: 'info',
+                alertId: 'alert-info-mjl-ingest',
+                title: 'Requesting master journal list ingest',
+                message: 'Waiting for response...',
+            },
+            submitSuccessAlert: {
+                type: 'done',
+                alertId: 'alert-done-mjl-ingest',
+                title: 'Success',
+                message: 'The request to ingest master journal list has been submitted successfully.',
+            },
+            submitFailureAlert: {
+                type: 'error',
+                alertId: 'alert-error-mjl-ingest',
+                title: 'Error',
+                message: 'The request to ingest master journal list could not be submitted.',
+            },
+        },
+        manageAuthors: {
+            loadingText: 'Loading authors',
+            header: {
+                columns: {
+                    id: {
+                        title: 'ID',
+                    },
+                    displayName: {
+                        title: 'Display name',
+                    },
+                    uqUsername: {
+                        title: 'UQ username',
+                    },
+                },
+            },
+            editRow: {
+                fields: {
+                    title: {
+                        label: 'Title',
+                    },
+                    firstName: {
+                        label: 'First name',
+                    },
+                    middleName: {
+                        label: 'Middle name',
+                    },
+                    lastName: {
+                        label: 'Last name',
+                    },
+                    email: {
+                        label: 'Email',
+                    },
+                    displayName: {
+                        label: 'Display name',
+                    },
+                    position: {
+                        label: 'Position',
+                    },
+                    orgStaffId: {
+                        label: 'Staff ID',
+                        helperText: 'This is a 7 digit number, usually preceded by a 0',
+                    },
+                    orgStudentId: {
+                        label: 'Student ID',
+                        helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
+                    },
+                    orgUsername: {
+                        label: 'Staff username',
+                    },
+                    studentUsername: {
+                        label: 'Student username',
+                        helperText:
+                            "This is an 8 characters string: remove last digit from student ID and add prefix 's'.",
+                    },
+                    refNum: {
+                        label: 'Ref num',
+                    },
+                    orgMembership: {
+                        label: 'Org membership',
+                    },
+                    notes: {
+                        label: 'Notes',
+                    },
+                    scopusId: {
+                        label: 'Scopus ID',
+                    },
+                    googleScholarId: {
+                        label: 'Google scholar ID',
+                    },
+                    peopleAustraliaId: {
+                        label: 'People Australia ID',
+                    },
+                    orcidId: {
+                        label: 'Orcid ID',
+                    },
+                    researcherId: {
+                        label: 'Researcher ID',
+                    },
+                    isScopusIdAuthenticated: {
+                        label: 'Is Scopus ID authenticated?',
+                    },
+                    isOrcidSyncEnabled: {
+                        label: 'Is pub sync with ORCID profile enabled?',
+                    },
+                    openOrcidProfileInNewWindow: {
+                        label: 'Open ORCID profile in new window',
+                    },
+                    isUsernameOverridden: {
+                        label: 'Is username overridden by an admin?',
+                    },
+                },
+                validation: {
+                    aut_org_staff_id: 'The supplied Organisation Staff ID is already on file for another author.',
+                    aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
+                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
+                    aut_student_username: 'The supplied Student username is already on file for another author.',
+                },
+            },
+            form: {
+                editButton: 'Update author',
+                addButton: 'Save author',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete author',
+                    confirmationMessage: 'Are you sure you want to delete this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected authors',
+                    confirmationMessage: 'Are you sure you want to delete selected authors?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                scopusIngestConfirmationLocale: {
+                    confirmationTitle: 'Ingest from Scopus',
+                    confirmationMessage:
+                        'Are you sure you want to start the ingest process from Scopus for this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                locale: {
+                    addButtonTooltip: 'Add new author',
+                    bulkDeleteButtonTooltip: 'Delete selected authors',
+                    editButtonTooltip: 'Edit this author',
+                    deleteButtonTooltip: 'Delete this author',
+                    notesButtonTooltip: 'View notes for this author',
+                    updateNotesButton: 'Update notes',
+                    scopusIngestButtonTooltip: 'Ingest from Scopus',
+                    searchAriaLabel: 'Search authors',
+                    searchPlaceholder: 'Search authors',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            listAuthorErrorAlert: {
+                alertId: 'alert-error-author-list',
+                allowDismiss: true,
+                type: 'error',
+                message: 'There was some error loading author list',
+            },
+            addAuthorSuccessAlert: {
+                alertId: 'alert-done-author-add',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully added.',
+            },
+            updateAuthorSuccessAlert: {
+                alertId: 'alert-done-author-update',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully updated.',
+            },
+            deleteAuthorSuccessAlert: {
+                alertId: 'alert-done-author-delete',
+                allowDismiss: true,
+                type: 'done',
+                message: 'An author has been successfully deleted.',
+            },
+            scopusIngestRequestingAlert: {
+                alertId: 'alert-info-scopus-ingest-requesting',
+                allowDismiss: true,
+                type: 'info',
+                message: 'Scopus ingest requesting',
+            },
+            scopusIngestSuccessAlert: {
+                alertId: 'alert-done-scopus-ingest-requested',
+                allowDismiss: true,
+                type: 'done',
+                message: 'Scopus ingest requested',
+            },
+            scopusIngestErrorAlert: {
+                alertId: 'alert-error-scopus-ingest-requested',
+                allowDismiss: true,
+                type: 'error',
+                message: 'Scopus ingest request failed',
+            },
+            addAuthorErrorAlert: {
+                alertId: 'alert-error-author-add',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An author could not be added.',
+            },
+            updateAuthorErrorAlert: {
+                alertId: 'alert-error-author-update',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An author could not be updated.',
+            },
+            deleteAuthorErrorAlert: {
+                alertId: 'alert-error-author-delete',
+                allowDismiss: true,
+                type: 'error',
+                message: 'Cannot delete author with linked works',
+            },
+            bulkAuthorDeleteAlert: {
+                alertId: 'alert-info-author-bulk-delete',
+                allowDismiss: true,
+                type: 'info',
+            },
+        },
+        manageUsers: {
+            loadingText: 'Loading users',
+            header: {
+                columns: {
+                    id: {
+                        title: 'ID',
+                    },
+                    fullName: {
+                        title: 'Full name',
+                    },
+                    username: {
+                        title: 'Username',
+                    },
+                    email: {
+                        title: 'Email',
+                    },
+                    status: {
+                        title: 'Status',
+                    },
+                    isAdmin: {
+                        title: 'Is admin?',
+                    },
+                    isSuperAdmin: {
+                        title: 'Is superadmin?',
+                    },
+                },
+            },
+            editRow: {
+                fields: {
+                    username: {
+                        label: 'Username',
+                    },
+                    email: {
+                        label: 'Email',
+                    },
+                    fullName: {
+                        label: 'Full name',
+                    },
+                    isAdmin: {
+                        label: 'Administrator?',
+                    },
+                    isSuperAdmin: {
+                        label: 'Super administrator?',
+                        helperText: 'Only super admin users can update this flag',
+                    },
+                },
+                validation: {
+                    usr_username: 'The supplied username is already on file for another user.',
+                },
+            },
+            form: {
+                editButton: 'Update user',
+                addButton: 'Save user',
+                cancelButton: 'Cancel',
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete user',
+                    confirmationMessage: 'Are you sure you want to delete this user?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                bulkDeleteConfirmationLocale: {
+                    confirmationTitle: 'Delete selected users',
+                    confirmationMessage: 'Are you sure you want to delete selected users?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
+                locale: {
+                    addButtonTooltip: 'Add new user',
+                    bulkDeleteButtonTooltip: 'Delete selected users',
+                    deleteButtonTooltip: 'Delete this user',
+                    editButtonTooltip: 'Edit this user',
+                    searchAriaLabel: 'Search users',
+                    searchPlaceholder: 'Search users',
+                },
+            },
+            row: {
+                locale: {
+                    editHint: 'Edit this item',
+                },
+            },
+            listUserErrorAlert: {
+                alertId: 'alert-error-user-list',
+                allowDismiss: true,
+                type: 'error',
+                message: 'There was some error loading user list',
+            },
+            addUserSuccessAlert: {
+                alertId: 'alert-done-user-add',
+                allowDismiss: true,
+                type: 'done',
+                message: 'A user has been successfully added.',
+            },
+            updateUserSuccessAlert: {
+                alertId: 'alert-done-user-update',
+                allowDismiss: true,
+                type: 'done',
+                message: 'A user has been successfully updated.',
+            },
+            deleteUserSuccessAlert: {
+                alertId: 'alert-done-user-delete',
+                allowDismiss: true,
+                type: 'done',
+                message: 'A user has been successfully deleted.',
+            },
+            addUserErrorAlert: {
+                alertId: 'alert-error-user-add',
+                allowDismiss: true,
+                type: 'error',
+                message: 'A user could not be added.',
+            },
+            updateUserErrorAlert: {
+                alertId: 'alert-error-user-update',
+                allowDismiss: true,
+                type: 'error',
+                message: 'A user could not be updated.',
+            },
+            deleteUserErrorAlert: {
+                alertId: 'alert-error-user-delete',
+                allowDismiss: true,
+                type: 'error',
+                message: 'A user could not be deleted.',
             },
         },
     },

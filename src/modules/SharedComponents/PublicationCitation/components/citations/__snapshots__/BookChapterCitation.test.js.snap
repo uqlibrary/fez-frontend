@@ -2166,6 +2166,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
               <DateCitationView
                 className="citationDate"
                 date="2016-01-01T00:00:00Z"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("
@@ -3899,6 +3900,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         </span>
                       </CitationView>
                       , 
+                       and 
                       <CitationView
                         citationId="rek-contributor-2"
                         className="citationAuthor"
@@ -5642,7 +5644,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                         target="_blank"
                         title="Open this DOI in an new window"
                       >
-                        <ForwardRef
+                        <ForwardRef(OpenInNewIcon)
                           className="ExternalLink-externalLinkIcon-3"
                         >
                           <WithStyles(ForwardRef(SvgIcon))
@@ -5665,7 +5667,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                               }
                             >
                               <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 className="MuiSvgIcon-root ExternalLink-externalLinkIcon-3"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5676,7 +5678,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(OpenInNewIcon)>
                         https://doi.org/10.1007/978-94-017-7417-8_7
                       </a>
                     </ExternalLink>
@@ -6527,6 +6529,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
               </WithStyles(AuthorsCitationView)>
               <DateCitationView
                 className="citationDate"
+                forceSpecifiedFormat={false}
                 format="YYYY"
                 isLocalised={false}
                 prefix="("

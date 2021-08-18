@@ -38,7 +38,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
             onClick={[Function]}
             tooltip="Show form for Test Form"
           >
-            <KeyboardArrowDownIcon />
+            <Memo(ForwardRef(KeyboardArrowDownIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -85,7 +85,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
             onClick={[Function]}
             tooltip="Hide form for Incites"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -162,7 +162,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
             onClick={[Function]}
             tooltip="Hide form for Test Lookup Action Fired"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -239,7 +239,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
             onClick={[Function]}
             tooltip="Hide form for Test Lookup Action Fired7"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -331,7 +331,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             onClick={[Function]}
             tooltip="Hide form for Test Form"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -421,7 +421,7 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
             onClick={[Function]}
             tooltip="Hide form for Incites"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -498,7 +498,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
             onClick={[Function]}
             tooltip="Show form for Test Form"
           >
-            <KeyboardArrowDownIcon />
+            <Memo(ForwardRef(KeyboardArrowDownIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -545,7 +545,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             onClick={[Function]}
             tooltip="Hide form for Test Form"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -635,7 +635,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
             onClick={[Function]}
             tooltip="Show form for Test Form"
           >
-            <KeyboardArrowDownIcon />
+            <Memo(ForwardRef(KeyboardArrowDownIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -682,7 +682,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
             onClick={[Function]}
             tooltip="Test hide this form"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -774,7 +774,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
             onClick={[Function]}
             tooltip="Hide form for this form"
           >
-            <KeyboardArrowUpIcon />
+            <Memo(ForwardRef(KeyboardArrowUpIcon)) />
           </WithStyles(ForwardRef(IconButton))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>

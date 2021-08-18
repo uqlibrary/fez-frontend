@@ -4,6 +4,8 @@ import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
 import { GenericTemplate } from './GenericTemplate';
 
+import FormHelperText from '@material-ui/core/FormHelperText';
+
 export default class ListEditor extends Component {
     static propTypes = {
         formComponent: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
@@ -20,6 +22,7 @@ export default class ListEditor extends Component {
         locale: PropTypes.object,
         hideReorder: PropTypes.bool,
         distinctOnly: PropTypes.bool,
+        error: PropTypes.bool,
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
         input: PropTypes.object,
@@ -246,7 +249,7 @@ export default class ListEditor extends Component {
     render() {
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
-                key={item.key || item.id || item}
+                key={item.key || item.id || `${item}-${index}`}
                 index={index}
                 item={item}
                 canMoveDown={index !== this.state.itemList.length - 1}
@@ -275,11 +278,11 @@ export default class ListEditor extends Component {
                     remindToAdd={this.props.remindToAdd}
                     {...((this.props.locale && this.props.locale.form) || {})}
                     isValid={this.props.isValid}
+                    error={this.props.error}
                     disabled={
                         this.props.disabled ||
                         (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)
                     }
-                    errorText={this.props.errorText}
                     maxInputLength={this.props.maxInputLength}
                     normalize={this.props.inputNormalizer}
                     category={this.props.category}
@@ -319,6 +322,7 @@ export default class ListEditor extends Component {
                         {renderListsRows}
                     </div>
                 )}
+                <FormHelperText error={this.props.error} children={this.props.errorText} />
             </div>
         );
     }

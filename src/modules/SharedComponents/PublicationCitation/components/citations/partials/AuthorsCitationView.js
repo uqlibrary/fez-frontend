@@ -2,11 +2,11 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
 import { locale } from 'locale';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     authorIdLink: {
         color: theme.palette.success.main,
     },
@@ -52,13 +52,12 @@ export class AuthorsCitationView extends PureComponent {
         const {
             publication,
             searchKey: { key, order, subkey },
-            idSearchKey: { idKey },
         } = props;
 
         // copy authors to separate variable so sorting doesn't change original record
         const publicationAuthors = publication && publication[key] && [...publication[key]];
         this.state = {
-            authorsTotal: publication && publication[idKey] && publication[idKey].length,
+            authorsTotal: publication && publication[key] && publication[key].length,
             authors:
                 publicationAuthors && Array.isArray(publicationAuthors)
                     ? publicationAuthors.map(author => ({

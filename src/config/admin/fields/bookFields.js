@@ -29,7 +29,7 @@ export default {
         },
         {
             title: 'ISSN',
-            groups: [['issnField']],
+            groups: [['issns']],
         },
         {
             title: 'Bibliographic',
@@ -45,7 +45,7 @@ export default {
                 ['rek_date'],
                 ['fez_record_search_key_date_available'],
                 ['rek_description'],
-                [],
+                ['fez_record_search_key_original_format'],
             ],
         },
         {
@@ -62,12 +62,14 @@ export default {
         },
     ],
     authors: ({ onlyEditors = false } = {}) => [
-        ...[
-            !onlyEditors && {
-                title: 'Authors',
-                groups: [['authors']],
-            },
-        ].filter(Boolean),
+        ...(!onlyEditors
+            ? [
+                  {
+                      title: 'Authors',
+                      groups: [['authors']],
+                  },
+              ]
+            : []),
         {
             title: 'Editors',
             groups: [['editors']],
@@ -90,12 +92,7 @@ export default {
                 ['fez_record_search_key_refereed_source', 'contentIndicators'],
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
-                ['additionalNotes'],
             ],
-        },
-        {
-            title: 'Notes',
-            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     ntro: () => [
@@ -111,7 +108,7 @@ export default {
 };
 
 export const validateBook = (
-    { bibliographicSection: bs, filesSection: fs, authorsSection: as, adminSection: ais },
+    { bibliographicSection: bs, authorsSection: as, adminSection: ais },
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
@@ -127,11 +124,6 @@ export const validateBook = (
             },
         }) ||
             {}),
-    },
-    filesSection: {
-        ...((fs || {}).rek_copyright !== 'on' && {
-            rek_copyright: summary.rek_copyright,
-        }),
     },
     authorsSection: isAuthorOrEditorSelected(as || {}, true, true, ais.rek_subtype === SUBTYPE_EDITED_BOOK),
 });

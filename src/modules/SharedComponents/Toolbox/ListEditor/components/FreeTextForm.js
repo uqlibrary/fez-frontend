@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { isValidKeyword } from 'config/validation';
+import { indexOf } from 'lodash';
 
 const useStyles = makeStyles(theme => ({
     MUITextLabel: theme.overrides.MuiFormLabel,
@@ -25,13 +27,15 @@ export const FreeTextForm = ({
     isValid,
     locale,
     disabled,
-    errorText,
+    error,
     remindToAdd,
-    maxInputLength,
+    mode,
     normalize,
     required,
     itemSelectedToEdit,
+    listEditorFormId,
     listEditorId,
+    onSubmit,
 }) => {
     const classes = useStyles();
     const [item, setItem] = useState(itemSelectedToEdit || '');
@@ -54,24 +58,30 @@ export const FreeTextForm = ({
 
     const addItem = event => {
         // add item if user hits 'enter' key on input field
-        if (disabled || isValid(item) !== '' || (event && event.key && event.key !== 'Enter') || item.length === 0) {
+        if (disabled || (event && event.key && event.key !== 'Enter') || item.length === 0) {
             return;
         }
 
         // pass on the selected item
-        onAdd(item);
+        !!onAdd ? onAdd(item) : onSubmit(mode === 'add' ? [item] : item, indexOf);
         setItemSubmitted(true);
     };
 
-    const { inputFieldLabel, inputFieldHint, remindToAddText, addButtonLabel, id, editButtonLabel } = locale;
-    const inputLengthText = item && item.length > maxInputLength && `Limited to ${maxInputLength} characters`;
-    const validationErrorText = isValid(item) || errorText;
+    const { inputFieldLabel, inputFieldHint, remindToAddText, addButtonLabel, editButtonLabel } = locale;
+    const inputLengthText = isValid(item);
     return (
-        <Grid container spacing={2} display="row" alignItems="center">
+        <Grid
+            container
+            spacing={2}
+            display="row"
+            alignItems="center"
+            id={listEditorFormId}
+            data-testid={listEditorFormId}
+        >
             <Grid item style={{ flexGrow: 1 }}>
                 <TextField
                     fullWidth
-                    id={id}
+                    id={`${listEditorId}-input`}
                     data-testid={`${listEditorId}-input`}
                     inputProps={{
                         ref: textField,
@@ -81,14 +91,8 @@ export const FreeTextForm = ({
                     value={item}
                     onChange={onItemChange}
                     onKeyDown={addItem}
-                    error={!!errorText || !!isValid(item) || !!inputLengthText}
-                    helperText={
-                        validationErrorText || inputLengthText
-                            ? `${!!validationErrorText ? validationErrorText : ''}${
-                                  !!validationErrorText && !!inputLengthText ? ' - ' : ''
-                              }${!!inputLengthText ? inputLengthText : ''}`
-                            : null
-                    }
+                    error={!!inputLengthText || (error && item.length === 0)}
+                    helperText={inputLengthText}
                     disabled={disabled}
                     required={required}
                 />
@@ -101,12 +105,12 @@ export const FreeTextForm = ({
             <Grid item xs={12} sm={2}>
                 <Button
                     fullWidth
-                    id={`add-${listEditorId}`}
-                    data-testid={`${listEditorId}-add`}
+                    id={`${listEditorId}-${mode}`}
+                    data-testid={`${listEditorId}-${mode}`}
                     color="primary"
                     variant="contained"
                     children={!!itemSelectedToEdit ? editButtonLabel : addButtonLabel}
-                    disabled={disabled || isValid(item) !== '' || item.trim().length === 0 || !!inputLengthText}
+                    disabled={disabled || item.trim().length === 0 || !!inputLengthText}
                     onClick={addItem}
                 />
             </Grid>
@@ -115,23 +119,24 @@ export const FreeTextForm = ({
 };
 
 FreeTextForm.propTypes = {
-    onAdd: PropTypes.func.isRequired,
+    onAdd: PropTypes.func,
     isValid: PropTypes.func,
     locale: PropTypes.object,
+    mode: PropTypes.string,
     disabled: PropTypes.bool,
-    errorText: PropTypes.string,
+    error: PropTypes.bool,
     remindToAdd: PropTypes.bool,
-    maxInputLength: PropTypes.number,
     normalize: PropTypes.func,
     required: PropTypes.bool,
     itemSelectedToEdit: PropTypes.any,
+    listEditorFormId: PropTypes.string,
     listEditorId: PropTypes.string,
+    onSubmit: PropTypes.func,
 };
 
 FreeTextForm.defaultProps = {
-    isValid: () => '',
+    isValid: isValidKeyword(2000),
     remindToAdd: false,
-    maxInputLength: 2000,
     locale: {
         id: 'free-text-input',
         inputFieldLabel: 'Item name',
@@ -140,6 +145,7 @@ FreeTextForm.defaultProps = {
     },
     required: false,
     itemSelectedToEdit: '',
+    mode: 'add',
 };
 
 export default React.memo(FreeTextForm);

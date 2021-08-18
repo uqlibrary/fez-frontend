@@ -769,6 +769,24 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                     "dsi_state": "A",
                   },
                 ],
+                "fez_matched_journals": Object {
+                  "fez_journal": Object {
+                    "fez_journal_era": Array [
+                      Object {
+                        "jnl_era_jid": 20339,
+                        "jnl_era_source_id": "122966",
+                        "jnl_era_source_year": 2010,
+                      },
+                    ],
+                    "jni_id": 13071,
+                    "jni_issn": "1477-9137",
+                    "jni_issn_order": 2,
+                    "jni_jnl_id": 7538,
+                  },
+                  "mtj_jnl_id": 13071,
+                  "mtj_pid": "UQ:676287",
+                  "mtj_status": "A",
+                },
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -1259,7 +1277,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                     "rek_file_attachment_access_condition_id": 17,
                     "rek_file_attachment_access_condition_order": 3,
                     "rek_file_attachment_access_condition_pid": "UQ:792099",
-                    "rek_file_attachment_access_condition_xsdmf_id": 0,
+                    "rek_file_attachment_access_condition_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_file_attachment_embargo_date": Array [
@@ -1268,7 +1286,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                     "rek_file_attachment_embargo_date_id": 83,
                     "rek_file_attachment_embargo_date_order": 3,
                     "rek_file_attachment_embargo_date_pid": "UQ:795494",
-                    "rek_file_attachment_embargo_date_xsdmf_id": 0,
+                    "rek_file_attachment_embargo_date_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_file_attachment_name": Array [
@@ -1365,7 +1383,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                     "rek_grant_text_id": 583,
                     "rek_grant_text_order": 1,
                     "rek_grant_text_pid": "UQ:676287",
-                    "rek_grant_text_xsdmf_id": 0,
+                    "rek_grant_text_xsdmf_id": null,
                   },
                 ],
                 "fez_record_search_key_herdc_code": Object {
@@ -1427,24 +1445,6 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                 ],
                 "fez_record_search_key_issn": Array [
                   Object {
-                    "fez_journal_issns": Array [
-                      Object {
-                        "fez_journal": Object {
-                          "jnl_created_date": "2010-11-19 00:00:00",
-                          "jnl_era_id": 2234,
-                          "jnl_era_year": 2010,
-                          "jnl_foreign_name": null,
-                          "jnl_id": 7538,
-                          "jnl_journal_name": "Journal of Cell Science",
-                          "jnl_rank": "A",
-                          "jnl_updated_date": "2010-11-19 00:00:00",
-                        },
-                        "jni_id": 13071,
-                        "jni_issn": "1477-9137",
-                        "jni_issn_order": 2,
-                        "jni_jnl_id": 7538,
-                      },
-                    ],
                     "fez_sherpa_romeo": Object {
                       "srm_date_updated": "2017-09-30 18:26:18",
                       "srm_id": 13764,
@@ -1808,11 +1808,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                       <Cards
                         classes={
                           Object {
-                            "card": "Cards-card-104",
-                            "cardContentNoPadding": "Cards-cardContentNoPadding-105",
-                            "cardHeaderAccent": "Cards-cardHeaderAccent-107",
-                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-106",
-                            "fullHeight": "Cards-fullHeight-108",
+                            "card": "Cards-card-1",
+                            "cardContentNoPadding": "Cards-cardContentNoPadding-2",
+                            "cardHeaderAccent": "Cards-cardHeaderAccent-4",
+                            "cardHeaderPrimary": "Cards-cardHeaderPrimary-3",
+                            "fullHeight": "Cards-fullHeight-5",
                           }
                         }
                         theme={
@@ -2172,28 +2172,31 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                         title="Grant information"
                       >
                         <WithStyles(ForwardRef(Card))
-                          className="Cards-card-104 StandardCard"
+                          className="Cards-card-1 StandardCard"
                           data-testid="standard-card-grant-information"
+                          id="standard-card-grant-information"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
-                            className="Cards-card-104 StandardCard"
+                            className="Cards-card-1 StandardCard"
                             classes={
                               Object {
                                 "root": "MuiCard-root",
                               }
                             }
                             data-testid="standard-card-grant-information"
+                            id="standard-card-grant-information"
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
-                              className="MuiCard-root Cards-card-104 StandardCard"
+                              className="MuiCard-root Cards-card-1 StandardCard"
                               data-testid="standard-card-grant-information"
                               elevation={1}
+                              id="standard-card-grant-information"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
-                                className="MuiCard-root Cards-card-104 StandardCard"
+                                className="MuiCard-root Cards-card-1 StandardCard"
                                 classes={
                                   Object {
                                     "elevation0": "MuiPaper-elevation0",
@@ -2228,11 +2231,13 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                 }
                                 data-testid="standard-card-grant-information"
                                 elevation={1}
+                                id="standard-card-grant-information"
                                 style={Object {}}
                               >
                                 <div
-                                  className="MuiPaper-root MuiCard-root Cards-card-104 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  className="MuiPaper-root MuiCard-root Cards-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-grant-information"
+                                  id="standard-card-grant-information"
                                   style={Object {}}
                                 >
                                   <WithStyles(ForwardRef(CardHeader))
@@ -2249,6 +2254,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                         "color": "inherit",
                                         "component": "h3",
                                         "data-testid": "standard-card-grant-information-header",
+                                        "id": "standard-card-grant-information-header",
                                         "variant": "h5",
                                       }
                                     }
@@ -2272,6 +2278,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           "color": "inherit",
                                           "component": "h3",
                                           "data-testid": "standard-card-grant-information-header",
+                                          "id": "standard-card-grant-information-header",
                                           "variant": "h5",
                                         }
                                       }
@@ -2289,6 +2296,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                             component="h3"
                                             data-testid="standard-card-grant-information-header"
                                             display="block"
+                                            id="standard-card-grant-information-header"
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
@@ -2331,11 +2339,13 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                               component="h3"
                                               data-testid="standard-card-grant-information-header"
                                               display="block"
+                                              id="standard-card-grant-information-header"
                                               variant="h5"
                                             >
                                               <h3
                                                 className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-grant-information-header"
+                                                id="standard-card-grant-information-header"
                                               >
                                                 Grant information
                                               </h3>
@@ -2348,6 +2358,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                   <WithStyles(ForwardRef(CardContent))
                                     className=""
                                     data-testid="standard-card-grant-information-content"
+                                    id="standard-card-grant-information-content"
                                   >
                                     <ForwardRef(CardContent)
                                       className=""
@@ -2357,10 +2368,12 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                         }
                                       }
                                       data-testid="standard-card-grant-information-content"
+                                      id="standard-card-grant-information-content"
                                     >
                                       <div
                                         className="MuiCardContent-root"
                                         data-testid="standard-card-grant-information-content"
+                                        id="standard-card-grant-information-content"
                                       >
                                         <WithStyles(ForwardRef(Typography))
                                           data-testid="rek-grant-text"
@@ -2449,14 +2462,14 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
-                                              className="makeStyles-gridRow-175"
+                                              className="makeStyles-gridRow-6"
                                               container={true}
                                               key="1"
                                               spacing={2}
                                             >
                                               <ForwardRef(Grid)
                                                 alignItems="flex-start"
-                                                className="makeStyles-gridRow-175"
+                                                className="makeStyles-gridRow-6"
                                                 classes={
                                                   Object {
                                                     "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -2568,7 +2581,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 spacing={2}
                                               >
                                                 <div
-                                                  className="MuiGrid-root makeStyles-gridRow-175 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                                  className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     item={true}
@@ -3009,14 +3022,14 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
-                                              className="makeStyles-gridRow-175"
+                                              className="makeStyles-gridRow-6"
                                               container={true}
                                               key="2"
                                               spacing={2}
                                             >
                                               <ForwardRef(Grid)
                                                 alignItems="flex-start"
-                                                className="makeStyles-gridRow-175"
+                                                className="makeStyles-gridRow-6"
                                                 classes={
                                                   Object {
                                                     "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -3128,7 +3141,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 spacing={2}
                                               >
                                                 <div
-                                                  className="MuiGrid-root makeStyles-gridRow-175 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                                  className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     item={true}
@@ -3569,14 +3582,14 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
-                                              className="makeStyles-gridRow-175"
+                                              className="makeStyles-gridRow-6"
                                               container={true}
                                               key="3"
                                               spacing={2}
                                             >
                                               <ForwardRef(Grid)
                                                 alignItems="flex-start"
-                                                className="makeStyles-gridRow-175"
+                                                className="makeStyles-gridRow-6"
                                                 classes={
                                                   Object {
                                                     "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -3688,7 +3701,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 spacing={2}
                                               >
                                                 <div
-                                                  className="MuiGrid-root makeStyles-gridRow-175 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                                  className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                                 >
                                                   <WithStyles(ForwardRef(Grid))
                                                     item={true}

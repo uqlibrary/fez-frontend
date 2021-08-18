@@ -29,10 +29,8 @@ Cypress.Commands.add('adminEditNoAlerts', () => {
 });
 
 Cypress.Commands.add('adminEditVerifyAlerts', (count, messages) => {
-    cy.get('.StandardPage form > div:first-child').within(() => {
-        cy.get('.Alert')
-            .should('exist')
-            .find('.alert-text')
+    cy.get('[data-testid=alert-warning]').within(() => {
+        cy.get('.alert-text')
             .should('contain', 'Validation -')
             .find('li')
             .as('alertMessages')
@@ -67,9 +65,8 @@ Cypress.Commands.add('adminEditCheckDefaultTab', tabTitle => {
         .should('have.text', tabTitle);
 });
 
-Cypress.Commands.add('adminEditCheckTabErrorBadge', (tabIndex, value = '1') => {
-    cy.get('[role="tab"]')
-        .eq(tabIndex)
+Cypress.Commands.add('adminEditCheckTabErrorBadge', (tab, value = '1') => {
+    cy.get(`[data-testid=${tab}-tab]`)
         .find('[class*="MuiBadge-colorError"]')
         .should('have.text', value);
 });

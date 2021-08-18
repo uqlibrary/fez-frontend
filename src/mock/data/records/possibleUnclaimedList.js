@@ -7,27 +7,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:641272",
-            "rek_title_xsdmf_id": 10612,
+            "rek_title_xsdmf_id": null,
             "rek_title": "One author and one editor",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 174,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 6044,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2017-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 5376,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2017-06-22T00:28:20Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2017-06-22T01:06:33Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Saha, Tapan Kumar\" href=\"/list/author_id/147/\">Saha, Tapan Kumar</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Prithwiraj, Purkait\" href=\"/list/author/Prithwiraj%2C+Purkait/\">Prithwiraj, Purkait</a> <i><a class=\"citation_title\" title=\"Click to view Book: Transformer ageing: monitoring and estimation techniques\" href=\"/view/UQ:641272\">Transformer ageing: monitoring and estimation techniques</a></i>.   <span class=\"citation_place_of_publication\">Hoboken, NJ, United States</span>: <span class=\"citation_publisher\">Wiley-IEEE Press</span>, <span class=\"citation_date\">2017</span>.",
-            "rek_genre_xsdmf_id": 7202,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Book",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -35,11 +35,11 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1247,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": 12377,
+            "rek_subtype_xsdmf_id": null,
             "rek_subtype": "Research book (original research)",
             "rek_scopus_citation_count": null,
             "rek_herdc_notes_xsdmf_id": null,
@@ -55,7 +55,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": [],
@@ -64,7 +64,7 @@ export default {
                 {
                     "rek_author_id": 3208183,
                     "rek_author_pid": "UQ:641272",
-                    "rek_author_xsdmf_id": 6042,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Tapan Kumar Saha",
                     "rek_author_order": 1
                 }
@@ -77,7 +77,7 @@ export default {
                 {
                     "rek_author_id_id": 3208183,
                     "rek_author_id_pid": "UQ:641272",
-                    "rek_author_id_xsdmf_id": 6042,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 0,
                     "rek_author_id_order": 1
                 }
@@ -95,7 +95,7 @@ export default {
                 {
                     "rek_contributor_id": 3208183,
                     "rek_contributor_pid": "UQ:641272",
-                    "rek_contributor_xsdmf_id": 6042,
+                    "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Tapan Kumar Saha",
                     "rek_contributor_order": 1
                 }
@@ -104,7 +104,7 @@ export default {
                 {
                     "rek_contributor_id_id": 2391649,
                     "rek_contributor_id_pid": "UQ:641272",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 }
@@ -124,7 +124,7 @@ export default {
                 {
                     "rek_file_attachment_name_id": 4265657,
                     "rek_file_attachment_name_pid": "UQ:641272",
-                    "rek_file_attachment_name_xsdmf_id": 6166,
+                    "rek_file_attachment_name_xsdmf_id": null,
                     "rek_file_attachment_name": "FezACML_UQ_641272.xml",
                     "rek_file_attachment_name_order": 1
                 }
@@ -137,21 +137,21 @@ export default {
             "fez_record_search_key_herdc_code": {
                 "rek_herdc_code_id": 4911191,
                 "rek_herdc_code_pid": "UQ:641272",
-                "rek_herdc_code_xsdmf_id": 12392,
+                "rek_herdc_code_xsdmf_id": null,
                 "rek_herdc_code": 450001,
                 "rek_herdc_code_lookup": "A1"
             },
             "fez_record_search_key_herdc_status": {
                 "rek_herdc_status_id": 3776606,
                 "rek_herdc_status_pid": "UQ:641272",
-                "rek_herdc_status_xsdmf_id": 12405,
+                "rek_herdc_status_xsdmf_id": null,
                 "rek_herdc_status": 453220,
                 "rek_herdc_status_lookup": "Provisional Code"
             },
             "fez_record_search_key_institutional_status": {
                 "rek_institutional_status_id": 3415191,
                 "rek_institutional_status_pid": "UQ:641272",
-                "rek_institutional_status_xsdmf_id": 12406,
+                "rek_institutional_status_xsdmf_id": null,
                 "rek_institutional_status": 453223,
                 "rek_institutional_status_lookup": "UQ"
             },
@@ -159,14 +159,14 @@ export default {
                 {
                     "rek_isbn_id": 1111666,
                     "rek_isbn_pid": "UQ:641272",
-                    "rek_isbn_xsdmf_id": 10813,
+                    "rek_isbn_xsdmf_id": null,
                     "rek_isbn": "1119239966",
                     "rek_isbn_order": 1
                 },
                 {
                     "rek_isbn_id": 1111667,
                     "rek_isbn_pid": "UQ:641272",
-                    "rek_isbn_xsdmf_id": 10813,
+                    "rek_isbn_xsdmf_id": null,
                     "rek_isbn": "9781119239963",
                     "rek_isbn_order": 2
                 }
@@ -177,7 +177,7 @@ export default {
                 {
                     "rek_ismemberof_id": 12078695,
                     "rek_ismemberof_pid": "UQ:641272",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:3801",
                     "rek_ismemberof_order": 1,
                     "rek_ismemberof_lookup": "School of Information Technology and Electrical Engineering Publications"
@@ -185,7 +185,7 @@ export default {
                 {
                     "rek_ismemberof_id": 12078696,
                     "rek_ismemberof_pid": "UQ:641272",
-                    "rek_ismemberof_xsdmf_id": 149,
+                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:218311",
                     "rek_ismemberof_order": 2,
                     "rek_ismemberof_lookup": "HERDC Pre-Audit"
@@ -197,7 +197,7 @@ export default {
                 {
                     "rek_language_id": 5515328,
                     "rek_language_pid": "UQ:641272",
-                    "rek_language_xsdmf_id": 12380,
+                    "rek_language_xsdmf_id": null,
                     "rek_language": "eng",
                     "rek_language_order": 1
                 }
@@ -212,7 +212,7 @@ export default {
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 379552,
                 "rek_oa_status_pid": "UQ:641272",
-                "rek_oa_status_xsdmf_id": 16611,
+                "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
@@ -220,25 +220,25 @@ export default {
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4355257,
                 "rek_place_of_publication_pid": "UQ:641272",
-                "rek_place_of_publication_xsdmf_id": 6116,
+                "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "Hoboken, NJ, United States"
             },
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4647571,
                 "rek_publisher_pid": "UQ:641272",
-                "rek_publisher_xsdmf_id": 6114,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "Wiley-IEEE Press"
             },
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2610152,
                 "rek_refereed_pid": "UQ:641272",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1445027,
                 "rek_refereed_source_pid": "UQ:641272",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453636",
                 "rek_refereed_source_lookup": "Other"
             },
@@ -250,7 +250,7 @@ export default {
             "fez_record_search_key_total_pages": {
                 "rek_total_pages_id": 5765424,
                 "rek_total_pages_pid": "UQ:641272",
-                "rek_total_pages_xsdmf_id": 9649,
+                "rek_total_pages_xsdmf_id": null,
                 "rek_total_pages": "500"
             },
             "fez_record_search_key_translated_title": null,
@@ -2502,35 +2502,35 @@ export default {
         },
         {
             "rek_pid": "UQ:321386",
-            "rek_title_xsdmf_id": 11786,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Already assigned to current author",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 310,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 11771,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2013-07-14T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 16272,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2014-01-23T16:37:17Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2014-09-11T03:02:47Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_title\" title=\"Click to view Video Document: Innerview: David Campbell on Embedding\" href=\"\/view\/UQ:321386\">Innerview: David Campbell on Embedding<\/a> (<span class=\"citation_date\">2013<\/span>) <a class=\"citation_author_name\" title=\"Browse by Author Name for Kaempf, Sebastian\" href=\"\/list\/author\/Kaempf%2C+Sebastian\/\">Kaempf, Sebastian<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Mantello, Peter\" href=\"\/list\/author\/Mantello%2C+Peter\/\">Mantello, Peter<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Rae, Ali\" href=\"\/list\/author\/Rae%2C+Ali\/\">Rae, Ali<\/a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Walker, Ben\" href=\"\/list\/author\/Walker%2C+Ben\/\">Walker, Ben<\/a>",
-            "rek_genre_xsdmf_id": 11772,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Generic Document",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
             "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": 11807,
+            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": "Professor David Campbell (http:\/\/www.david-campbell.org\/) is a writer, researcher, teacher, videographer, and producer engaged in the analysis and production of visual storytelling. With his writing and research he focuses on photography, multimedia and politics. He examines how documentary photography and photojournalism work, the opportunities multimedia bring, and the challenges presented by the revolutions in the new media economy. With his creative practice he works both as a multimedia producer collaborating with photographers and as a documentarian flying solo. <br \/><br \/>David has written or edited six books and some 50 articles and essays. This research deals with how atrocity, famine, war and &lsquo;Africa&rsquo; are represented, how photographs function to visualize the global landscape, and how US foreign policy and wars in Bosnia and Iraq have been produced. He has curated three large visual projects (Atrocity, Memory, Photography, Imaging Famine, and the Visual Economy of HIV-AIDS). <br \/><br \/>For the past two decades he has taught visual culture, geography and politics at universities in the US, Australia and the UK, most recently as Professor of International Politics at Newcastle University (1997-2004) and then Professor of Cultural and Political Geography at Durham University (2004-10). <br \/><br \/>Now he works free-lance and independently, but retains a number of affiliations. He&rsquo;s a member of the Durham Centre for Advanced Photography Studies at Durham University, Visiting Professor in the Northern Centre of Photography at Sunderland University, and Honorary Professor in the School of Political Science and International Studies at the University of Queensland, Australia (where he is part of the Australian Research Council funded project on how images shape our response to humanitarian crises). <br \/><br \/>This innerview with David for TheVisionMachine was conducted by Sebastian Kaempf and Peter Mantello in Alphabet City, New York City, on 9 February 2010 and edited by Ali Rae and Ben Walker. http:\/\/thevisionmachine.com\/2013\/07\/innerview-david-campbell-on-embedding-2\/<br \/>",
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 852,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -2550,7 +2550,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "fez_record_search_key_access_conditions": null,
             "fez_record_search_key_acknowledgements": null,
@@ -2566,25 +2566,25 @@ export default {
             "fez_record_search_key_author": [{
                 "rek_author_id": 29542891,
                 "rek_author_pid": "UQ:321386",
-                "rek_author_xsdmf_id": 11754,
+                "rek_author_xsdmf_id": null,
                 "rek_author": "Kaempf, Sebastian",
                 "rek_author_order": 1
             }, {
                 "rek_author_id": 29542892,
                 "rek_author_pid": "UQ:321386",
-                "rek_author_xsdmf_id": 11754,
+                "rek_author_xsdmf_id": null,
                 "rek_author": "Mantello, Peter",
                 "rek_author_order": 2
             }, {
                 "rek_author_id": 29542893,
                 "rek_author_pid": "UQ:321386",
-                "rek_author_xsdmf_id": 11754,
+                "rek_author_xsdmf_id": null,
                 "rek_author": "Rae, Ali",
                 "rek_author_order": 3
             }, {
                 "rek_author_id": 29542894,
                 "rek_author_pid": "UQ:321386",
-                "rek_author_xsdmf_id": 11754,
+                "rek_author_xsdmf_id": null,
                 "rek_author": "Walker, Ben",
                 "rek_author_order": 4
             }],
@@ -2609,26 +2609,26 @@ export default {
             "fez_record_search_key_contributor_id": [{
                 "rek_contributor_id_id": 2372401,
                 "rek_contributor_id_pid": "UQ:321386",
-                "rek_contributor_id_xsdmf_id": 11749,
+                "rek_contributor_id_xsdmf_id": null,
                 "rek_contributor_id": 410,
                 "rek_contributor_id_order": 1,
                 "rek_contributor_id_lookup": "Sebastian Kaempf"
             }, {
                 "rek_contributor_id_id": 2372402,
                 "rek_contributor_id_pid": "UQ:321386",
-                "rek_contributor_id_xsdmf_id": 11749,
+                "rek_contributor_id_xsdmf_id": null,
                 "rek_contributor_id": 0,
                 "rek_contributor_id_order": 2
             }, {
                 "rek_contributor_id_id": 2372403,
                 "rek_contributor_id_pid": "UQ:321386",
-                "rek_contributor_id_xsdmf_id": 11749,
+                "rek_contributor_id_xsdmf_id": null,
                 "rek_contributor_id": 0,
                 "rek_contributor_id_order": 3
             }, {
                 "rek_contributor_id_id": 2372404,
                 "rek_contributor_id_pid": "UQ:321386",
-                "rek_contributor_id_xsdmf_id": 11749,
+                "rek_contributor_id_xsdmf_id": null,
                 "rek_contributor_id": 0,
                 "rek_contributor_id_order": 4
             }],
@@ -2665,7 +2665,7 @@ export default {
             "fez_record_search_key_herdc_status": {
                 "rek_herdc_status_id": 3685871,
                 "rek_herdc_status_pid": "UQ:321386",
-                "rek_herdc_status_xsdmf_id": 12405,
+                "rek_herdc_status_xsdmf_id": null,
                 "rek_herdc_status": 453220,
                 "rek_herdc_status_lookup": "Provisional Code"
             },
@@ -2673,7 +2673,7 @@ export default {
             "fez_record_search_key_institutional_status": {
                 "rek_institutional_status_id": 3332710,
                 "rek_institutional_status_pid": "UQ:321386",
-                "rek_institutional_status_xsdmf_id": 12406,
+                "rek_institutional_status_xsdmf_id": null,
                 "rek_institutional_status": 453223,
                 "rek_institutional_status_lookup": "UQ"
             },
@@ -2685,7 +2685,7 @@ export default {
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": 11824589,
                 "rek_ismemberof_pid": "UQ:321386",
-                "rek_ismemberof_xsdmf_id": 149,
+                "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:3850",
                 "rek_ismemberof_order": 1,
                 "rek_ismemberof_lookup": "School of Political Science and International Studies Publications"
@@ -2697,26 +2697,26 @@ export default {
             "fez_record_search_key_keywords": [{
                 "rek_keywords_id": 29735883,
                 "rek_keywords_pid": "UQ:321386",
-                "rek_keywords_xsdmf_id": 11767,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Embedded journalism",
                 "rek_keywords_order": 1
             }, {
                 "rek_keywords_id": 29735884,
                 "rek_keywords_pid": "UQ:321386",
-                "rek_keywords_xsdmf_id": 11767,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Media",
                 "rek_keywords_order": 2
             }, {
                 "rek_keywords_id": 29735885,
                 "rek_keywords_pid": "UQ:321386",
-                "rek_keywords_xsdmf_id": 11767,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "War",
                 "rek_keywords_order": 3
             }],
             "fez_record_search_key_language": [{
                 "rek_language_id": 5378016,
                 "rek_language_pid": "UQ:321386",
-                "rek_language_xsdmf_id": 11783,
+                "rek_language_xsdmf_id": null,
                 "rek_language": "eng",
                 "rek_language_order": 1
             }],
@@ -2745,7 +2745,7 @@ export default {
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 13679,
                 "rek_original_format_pid": "UQ:321386",
-                "rek_original_format_xsdmf_id": 11774,
+                "rek_original_format_xsdmf_id": null,
                 "rek_original_format": "Video"
             },
             "fez_record_search_key_parent_publication": null,
@@ -2754,7 +2754,7 @@ export default {
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4307786,
                 "rek_place_of_publication_pid": "UQ:321386",
-                "rek_place_of_publication_xsdmf_id": 11796,
+                "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "Beppu, Oita, Japan"
             },
             "fez_record_search_key_proceedings_title": null,
@@ -2765,7 +2765,7 @@ export default {
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4575264,
                 "rek_publisher_pid": "UQ:321386",
-                "rek_publisher_xsdmf_id": 11782,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "the vision machine"
             },
             "fez_record_search_key_pubmed_id": null,
@@ -2773,13 +2773,13 @@ export default {
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2573113,
                 "rek_refereed_pid": "UQ:321386",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1433059,
                 "rek_refereed_source_pid": "UQ:321386",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
@@ -2790,7 +2790,7 @@ export default {
             "fez_record_search_key_rights": {
                 "rek_rights_id": 115351,
                 "rek_rights_pid": "UQ:321386",
-                "rek_rights_xsdmf_id": 11784,
+                "rek_rights_xsdmf_id": null,
                 "rek_rights": "Sebastian Kaempf and Peter Mantello"
             },
             "fez_record_search_key_roman_script_book_title": null,
@@ -2805,7 +2805,7 @@ export default {
             "fez_record_search_key_series": {
                 "rek_series_id": 200181,
                 "rek_series_pid": "UQ:321386",
-                "rek_series_xsdmf_id": 11780,
+                "rek_series_xsdmf_id": null,
                 "rek_series": "TheVisionMachine Spotlight; Innerviews"
             },
             "fez_record_search_key_software_required": [],
@@ -2818,7 +2818,7 @@ export default {
             "fez_record_search_key_subject": [{
                 "rek_subject_id": 9348881,
                 "rek_subject_pid": "UQ:321386",
-                "rek_subject_xsdmf_id": 11766,
+                "rek_subject_xsdmf_id": null,
                 "rek_subject": 453648,
                 "rek_subject_order": 1,
                 "rek_subject_lookup": "Recorded\/Rendered Creative Work - Audio\/Visual recording"
@@ -2864,11 +2864,11 @@ export default {
             "rek_depositor": 5389,
             "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2018-02-23T04:07:01Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2018-02-23T04:09:16Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Melissa Brown\" href=\"/list/author/Melissa+Brown/\">Melissa Brown</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Two\" href=\"/list/author/Author+Two/\">Author Two</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Three\" href=\"/list/author/Author+Three/\">Author Three</a> <i><a class=\"citation_title\" title=\"Click to view Book: Book with authors and editors\" href=\"/view/UQ:795332\">Book with authors and editors</a></i>. Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Editor One</span>, <span class=\"citation_contributor\">Editor Two</span> and <span class=\"citation_contributor\">Editor Three</span></span>  <span class=\"citation_place_of_publication\">Test</span>: <span class=\"citation_publisher\">Test</span>, <span class=\"citation_date\">2018</span>.",
-            "rek_genre_xsdmf_id": 7202,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Book",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -2876,7 +2876,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1248,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -2896,7 +2896,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "off",
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": [],
@@ -2905,21 +2905,21 @@ export default {
                 {
                     "rek_author_id": 30445021,
                     "rek_author_pid": "UQ:795332",
-                    "rek_author_xsdmf_id": 6034,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Melissa Brown",
                     "rek_author_order": 1
                 },
                 {
                     "rek_author_id": 30445022,
                     "rek_author_pid": "UQ:795332",
-                    "rek_author_xsdmf_id": 6034,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Author Two",
                     "rek_author_order": 2
                 },
                 {
                     "rek_author_id": 30445023,
                     "rek_author_pid": "UQ:795332",
-                    "rek_author_xsdmf_id": 6034,
+                    "rek_author_xsdmf_id": null,
                     "rek_author": "Author Three",
                     "rek_author_order": 3
                 }
@@ -2932,21 +2932,21 @@ export default {
                 {
                     "rek_author_id_id": 29722788,
                     "rek_author_id_pid": "UQ:795332",
-                    "rek_author_id_xsdmf_id": 6029,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 0,
                     "rek_author_id_order": 1
                 },
                 {
                     "rek_author_id_id": 29722789,
                     "rek_author_id_pid": "UQ:795332",
-                    "rek_author_id_xsdmf_id": 6029,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 0,
                     "rek_author_id_order": 2
                 },
                 {
                     "rek_author_id_id": 29722790,
                     "rek_author_id_pid": "UQ:795332",
-                    "rek_author_id_xsdmf_id": 6029,
+                    "rek_author_id_xsdmf_id": null,
                     "rek_author_id": 0,
                     "rek_author_id_order": 3
                 }
@@ -2979,21 +2979,21 @@ export default {
                 {
                     "rek_contributor_id_id": 2393317,
                     "rek_contributor_id_pid": "UQ:795332",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 },
                 {
                     "rek_contributor_id_id": 2393318,
                     "rek_contributor_id_pid": "UQ:795332",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 2
                 },
                 {
                     "rek_contributor_id_id": 2393319,
                     "rek_contributor_id_pid": "UQ:795332",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 3
                 }
@@ -3078,13 +3078,13 @@ export default {
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2721600,
                 "rek_refereed_pid": "UQ:795332",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1468808,
                 "rek_refereed_source_pid": "UQ:795332",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
@@ -3098,7 +3098,7 @@ export default {
             "fez_record_search_key_volume_number": null,
             "fez_record_search_key_wok_doc_types": [],
             "fez_record_search_key_zoorec_id": null,
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_status_lookup": "Published",
             "rek_object_type_lookup": "Record",
             "rek_wok_doc_type_lookup": null,
@@ -3125,11 +3125,11 @@ export default {
             "rek_depositor": 5389,
             "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2018-02-23T04:07:01Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2018-02-23T04:09:16Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Melissa Brown\" href=\"/list/author/Melissa+Brown/\">Melissa Brown</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Two\" href=\"/list/author/Author+Two/\">Author Two</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Three\" href=\"/list/author/Author+Three/\">Author Three</a> <i><a class=\"citation_title\" title=\"Click to view Book: Book with authors and editors\" href=\"/view/UQ:795333\">Book with authors and editors</a></i>. Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Editor One</span>, <span class=\"citation_contributor\">Editor Two</span> and <span class=\"citation_contributor\">Editor Three</span></span>  <span class=\"citation_place_of_publication\">Test</span>: <span class=\"citation_publisher\">Test</span>, <span class=\"citation_date\">2018</span>.",
-            "rek_genre_xsdmf_id": 7202,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Book",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -3137,7 +3137,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1248,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -3157,7 +3157,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "off",
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": [],
@@ -3196,21 +3196,21 @@ export default {
                 {
                     "rek_contributor_id_id": 2393317,
                     "rek_contributor_id_pid": "UQ:795333",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 },
                 {
                     "rek_contributor_id_id": 2393318,
                     "rek_contributor_id_pid": "UQ:795333",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 2
                 },
                 {
                     "rek_contributor_id_id": 2393319,
                     "rek_contributor_id_pid": "UQ:795333",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 3
                 }
@@ -3295,13 +3295,13 @@ export default {
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2721600,
                 "rek_refereed_pid": "UQ:795333",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1468808,
                 "rek_refereed_source_pid": "UQ:795333",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
@@ -3315,7 +3315,7 @@ export default {
             "fez_record_search_key_volume_number": null,
             "fez_record_search_key_wok_doc_types": [],
             "fez_record_search_key_zoorec_id": null,
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_status_lookup": "Published",
             "rek_object_type_lookup": "Record",
             "rek_wok_doc_type_lookup": null,
@@ -3342,11 +3342,11 @@ export default {
             "rek_depositor": 5389,
             "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2018-02-23T04:07:01Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2018-02-23T04:09:16Z",
             "rek_file_downloads": 0,
             "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Melissa Brown\" href=\"/list/author/Melissa+Brown/\">Melissa Brown</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Two\" href=\"/list/author/Author+Two/\">Author Two</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Three\" href=\"/list/author/Author+Three/\">Author Three</a> <i><a class=\"citation_title\" title=\"Click to view Book: Book with authors and editors\" href=\"/view/UQ:795334\">Book with authors and editors</a></i>. Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Editor One</span>, <span class=\"citation_contributor\">Editor Two</span> and <span class=\"citation_contributor\">Editor Three</span></span>  <span class=\"citation_place_of_publication\">Test</span>: <span class=\"citation_publisher\">Test</span>, <span class=\"citation_date\">2018</span>.",
-            "rek_genre_xsdmf_id": 7202,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Book",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -3354,7 +3354,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 1248,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -3374,7 +3374,7 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "off",
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": [],
@@ -3399,7 +3399,7 @@ export default {
                 {
                     "rek_contributor_id_id": 2393317,
                     "rek_contributor_id_pid": "UQ:795334",
-                    "rek_contributor_id_xsdmf_id": 6037,
+                    "rek_contributor_id_xsdmf_id": null,
                     "rek_contributor_id": 410,
                     "rek_contributor_id_order": 1
                 }
@@ -3484,13 +3484,13 @@ export default {
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2721600,
                 "rek_refereed_pid": "UQ:795334",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1468808,
                 "rek_refereed_source_pid": "UQ:795334",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
@@ -3504,7 +3504,7 @@ export default {
             "fez_record_search_key_volume_number": null,
             "fez_record_search_key_wok_doc_types": [],
             "fez_record_search_key_zoorec_id": null,
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_status_lookup": "Published",
             "rek_object_type_lookup": "Record",
             "rek_wok_doc_type_lookup": null,

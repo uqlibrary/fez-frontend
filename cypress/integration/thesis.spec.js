@@ -1,78 +1,66 @@
 context('Thesis', () => {
-    beforeEach(() => {
-        cy.visit('http://localhost:3000/rhdsubmission?user=s2222222');
-        cy.wait(2000);
-    });
+    const baseUrl = Cypress.config('baseUrl');
 
     afterEach(() => {
         cy.killWindowUnloadHandler();
     });
 
+    it('is prompted that theses could be added elsewhere', () => {
+        cy.visit(`${baseUrl}/rhdsubmission?user=s2222222`);
+        cy.get('[data-testid="alert-warning-rdm-redirect"]')
+            .should('exist')
+            .should('be.visible');
+    });
+
+    it('is denied access if they have logged in with a non-student account', () => {
+        cy.visit(`${baseUrl}/rhdsubmission?user=uqstaff`);
+        cy.contains('Thesis deposit access denied');
+    });
+
     it('Submitting a thesis successfully', () => {
+        cy.visit(`${baseUrl}/rhdsubmission?user=s2222222`);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 8);
+        cy.get('[data-testid="thesis-submission-validation"] li').as('validationAlerts');
+
+        const ensureErrorCount = count => {
+            cy.get('@validationAlerts').should('have.length', count);
+        };
+        ensureErrorCount(8);
 
         // Title
-        cy.typeCKEditor('editor1', '<p>This is a thesis title</p>');
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 7);
+        cy.typeCKEditor('rek-title', '<p>This is a thesis title</p>');
+        ensureErrorCount(7);
         // Abstract
-        cy.typeCKEditor('editor2', '<p>This is the thesis abstract</p>');
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 6);
+        cy.typeCKEditor('rek-description', '<p>This is the thesis abstract</p>');
+        ensureErrorCount(6);
 
         // Thesis subtype
         cy.get('[data-testid=rek-genre-type-select]').click();
         cy.get('li[data-value="MPhil Thesis"]').click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 5);
+        ensureErrorCount(5);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
 
         // Enrolling unit
         cy.get('[data-testid=rek-org-unit-name-input]').type('a');
         cy.clickAutoSuggestion('rek-org-unit-name', 0);
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 4);
+        ensureErrorCount(4);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
 
         // Supervisors
         cy.get('[data-testid=rek-supervisor-input]').type('Ky Lane', { delay: 30 });
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 4);
+        ensureErrorCount(4);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('[data-testid=rek-supervisor-input]').type('{enter}', { delay: 30 });
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 3);
+        ensureErrorCount(3);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('button[aria-label="Remove this item"]').click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 4);
+        ensureErrorCount(4);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('[data-testid=rek-supervisor-input]').type('Vishal Asai{enter}', { delay: 30 });
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 3);
+        ensureErrorCount(3);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('[data-testid=rek-supervisor-input]').type('Ky Lane{enter}', { delay: 30 });
         cy.get('ul.ContributorList')
@@ -99,23 +87,14 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 4);
+        ensureErrorCount(4);
         cy.get('[data-testid=rek-supervisor-input]').type('Ky Lane{enter}', { delay: 30 });
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 3);
+        ensureErrorCount(3);
 
         // Field of Research
         cy.get('[data-testid=rek-subject-input]').type('a');
         cy.clickAutoSuggestion('rek-subject', 0);
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 2);
+        ensureErrorCount(2);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('#rek-subject-list-row-0')
             .should('contain.text', '0101 Pure Mathematics')
@@ -124,73 +103,46 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 3);
+        ensureErrorCount(3);
         cy.get('[data-testid=rek-subject-input]').type('b');
         cy.clickAutoSuggestion('rek-subject', 0);
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 2);
+        ensureErrorCount(2);
         cy.get('#delete-all-rek-subject').click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 3);
+        ensureErrorCount(3);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('[data-testid=rek-subject-input]').type('a');
         cy.clickAutoSuggestion('rek-subject', 0);
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 2);
+        ensureErrorCount(2);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
 
         // Keywords
         cy.get('[data-testid=rek-keywords-input]').type('First Keyword{enter}', {
             delay: 30,
         });
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 1);
+        ensureErrorCount(1);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('#rek-keywords-list-row-0-delete').click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 2);
+        ensureErrorCount(2);
         cy.get('[data-testid=rek-keywords-input]').type('Second Keyword{enter}', {
             delay: 30,
         });
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 1);
+        ensureErrorCount(1);
         cy.get('#delete-all-rek-keywords').click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 2);
+        ensureErrorCount(2);
         cy.get('[data-testid=rek-keywords-input]').type('Third Keyword{enter}', {
             delay: 30,
         });
         cy.get('#rek-keywords-list').should('have.length', 1);
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 1);
+        ensureErrorCount(1);
         cy.get('[data-testid=rek-keywords-input]').type('Fourth Keyword|Fifth Keyword|Sixth Keyword{enter}', {
             delay: 30,
         });
@@ -209,24 +161,18 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 1);
+        ensureErrorCount(1);
 
         uploadFile('test_two.jpg');
         cy.get('[id="delete-all-files"]').click();
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.get('.Alert')
-            .find('ul')
-            .children()
-            .should('have.length', 1);
+        ensureErrorCount(1);
 
         uploadFile('test three.jpg');
 
-        cy.get('div.Alert').should('have.length', 2);
+        cy.get('div.Alert').should('have.length', 3);
 
         uploadFile('test.jpg');
         uploadFile('test_two.jpg');

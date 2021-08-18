@@ -2,7 +2,7 @@
 
 exports[`ListEditorField function should return <FreeTextListEditor> with specified props 1`] = `
 <FreeTextListEditor
-  error="test1"
+  error={true}
   errorText="test1"
   input={
     Object {

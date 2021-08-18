@@ -11,24 +11,26 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Creator research statement
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about the research statement, click
-              <b>
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
+               
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                style={
+                  Object {
+                    "fontWeight": 700,
                   }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </b>
+                }
+                target="_blank"
+              >
+                here
+              </a>
             </p>
           </React.Fragment>,
           "title": "Author/Creator research statement",
@@ -124,24 +126,26 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Creator research statement
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about the research statement, click
-              <b>
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
+               
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                style={
+                  Object {
+                    "fontWeight": 700,
                   }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </b>
+                }
+                target="_blank"
+              >
+                here
+              </a>
             </p>
           </React.Fragment>,
           "title": "Author/Creator research statement",
@@ -217,6 +221,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             maxValue={2000}
             name="impactStatement"
             required={true}
+            richEditorId="rek-creator-contribution-statement"
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
@@ -251,9 +256,12 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Quality indicators
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about each quality indicator option, click
                
@@ -292,6 +300,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -479,7 +488,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -495,7 +503,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Volume"
@@ -510,7 +529,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Issue"
@@ -525,7 +555,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Start page"
@@ -540,7 +581,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="End page"
@@ -555,7 +607,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             id="rek-total-pages"
@@ -578,7 +641,18 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={true}
             fullWidth={true}
             label="Physical description"
@@ -632,11 +706,271 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={true}
+            genericSelectFieldId="rek-language"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Afrikaans",
+                  "value": "afr",
+                },
+                Object {
+                  "text": "Albanian",
+                  "value": "alb",
+                },
+                Object {
+                  "text": "Arabic",
+                  "value": "ara",
+                },
+                Object {
+                  "text": "Australian Indigenous",
+                  "value": "aus",
+                },
+                Object {
+                  "text": "Bosnian",
+                  "value": "bos",
+                },
+                Object {
+                  "text": "Catalan",
+                  "value": "cat",
+                },
+                Object {
+                  "text": "Chinese",
+                  "value": "chi",
+                },
+                Object {
+                  "text": "Coptic",
+                  "value": "cop",
+                },
+                Object {
+                  "text": "Czech",
+                  "value": "cze",
+                },
+                Object {
+                  "text": "Danish",
+                  "value": "dan",
+                },
+                Object {
+                  "text": "Dutch",
+                  "value": "dut",
+                },
+                Object {
+                  "text": "Egyptian (Ancient)",
+                  "value": "egy",
+                },
+                Object {
+                  "text": "Elamite",
+                  "value": "elx",
+                },
+                Object {
+                  "text": "English",
+                  "value": "eng",
+                },
+                Object {
+                  "text": "English (Ancient)",
+                  "value": "enm",
+                },
+                Object {
+                  "text": "Esperanto",
+                  "value": "epo",
+                },
+                Object {
+                  "text": "Estonian",
+                  "value": "est",
+                },
+                Object {
+                  "text": "Finnish",
+                  "value": "fin",
+                },
+                Object {
+                  "text": "French",
+                  "value": "fre",
+                },
+                Object {
+                  "text": "German",
+                  "value": "ger",
+                },
+                Object {
+                  "text": "Germanic",
+                  "value": "gem",
+                },
+                Object {
+                  "text": "Greek (Ancient)",
+                  "value": "grc",
+                },
+                Object {
+                  "text": "Greek",
+                  "value": "gre",
+                },
+                Object {
+                  "text": "Hebrew",
+                  "value": "heb",
+                },
+                Object {
+                  "text": "Croatian",
+                  "value": "hrv",
+                },
+                Object {
+                  "text": "Hungarian",
+                  "value": "hun",
+                },
+                Object {
+                  "text": "Indonesian",
+                  "value": "ind",
+                },
+                Object {
+                  "text": "Iranian",
+                  "value": "ira",
+                },
+                Object {
+                  "text": "Italian",
+                  "value": "ita",
+                },
+                Object {
+                  "text": "Japanese",
+                  "value": "jpn",
+                },
+                Object {
+                  "text": "Korean",
+                  "value": "kor",
+                },
+                Object {
+                  "text": "Lao",
+                  "value": "lao",
+                },
+                Object {
+                  "text": "Latin",
+                  "value": "lat",
+                },
+                Object {
+                  "text": "Latvian",
+                  "value": "lav",
+                },
+                Object {
+                  "text": "Lithuanian",
+                  "value": "lit",
+                },
+                Object {
+                  "text": "Macedonian",
+                  "value": "mac",
+                },
+                Object {
+                  "text": "Malayalam",
+                  "value": "mal",
+                },
+                Object {
+                  "text": "Malay",
+                  "value": "may",
+                },
+                Object {
+                  "text": "Mongolian",
+                  "value": "mon",
+                },
+                Object {
+                  "text": "Nahuatl",
+                  "value": "nah",
+                },
+                Object {
+                  "text": "Norwegian",
+                  "value": "nor",
+                },
+                Object {
+                  "text": "Turkish (Ottoman)",
+                  "value": "ota",
+                },
+                Object {
+                  "text": "Papuan",
+                  "value": "paa",
+                },
+                Object {
+                  "text": "Persian",
+                  "value": "per",
+                },
+                Object {
+                  "text": "Polish",
+                  "value": "pol",
+                },
+                Object {
+                  "text": "Portuguese",
+                  "value": "por",
+                },
+                Object {
+                  "text": "Romanian",
+                  "value": "rum",
+                },
+                Object {
+                  "text": "Russian",
+                  "value": "rus",
+                },
+                Object {
+                  "text": "Slovak",
+                  "value": "slo",
+                },
+                Object {
+                  "text": "Slovenian",
+                  "value": "slv",
+                },
+                Object {
+                  "text": "Spanish",
+                  "value": "spa",
+                },
+                Object {
+                  "text": "Serbian",
+                  "value": "srp",
+                },
+                Object {
+                  "text": "Swedish",
+                  "value": "swe",
+                },
+                Object {
+                  "text": "Classical Syriac",
+                  "value": "syc",
+                },
+                Object {
+                  "text": "Syriac",
+                  "value": "syr",
+                },
+                Object {
+                  "text": "Tetum",
+                  "value": "tet",
+                },
+                Object {
+                  "text": "Thai",
+                  "value": "tha",
+                },
+                Object {
+                  "text": "Turkish",
+                  "value": "tur",
+                },
+                Object {
+                  "text": "Ukrainian",
+                  "value": "ukr",
+                },
+                Object {
+                  "text": "Vietnamese",
+                  "value": "vie",
+                },
+                Object {
+                  "text": "Waray",
+                  "value": "war",
+                },
+                Object {
+                  "text": "Yiddish",
+                  "value": "yid",
+                },
+              ]
+            }
             label="Language"
             multiple={true}
             name="languages"
+            selectPrompt="Please select languages as required"
             validate={
               Array [
                 [Function],
@@ -650,9 +984,60 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={true}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -702,24 +1087,26 @@ exports[`Component NtroFields should render contribution statement fields as wel
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Creator research statement
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about the research statement, click
-              <b>
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
+               
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                style={
+                  Object {
+                    "fontWeight": 700,
                   }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </b>
+                }
+                target="_blank"
+              >
+                here
+              </a>
             </p>
           </React.Fragment>,
           "title": "Author/Creator research statement",
@@ -795,6 +1182,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             maxValue={2000}
             name="impactStatement"
             required={true}
+            richEditorId="rek-creator-contribution-statement"
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
@@ -829,9 +1217,12 @@ exports[`Component NtroFields should render contribution statement fields as wel
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Quality indicators
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about each quality indicator option, click
                
@@ -870,6 +1261,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -1057,7 +1449,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -1073,7 +1464,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -1088,7 +1490,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -1103,7 +1516,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -1118,7 +1542,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -1133,7 +1568,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -1156,7 +1602,18 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -1210,11 +1667,271 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-language"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Afrikaans",
+                  "value": "afr",
+                },
+                Object {
+                  "text": "Albanian",
+                  "value": "alb",
+                },
+                Object {
+                  "text": "Arabic",
+                  "value": "ara",
+                },
+                Object {
+                  "text": "Australian Indigenous",
+                  "value": "aus",
+                },
+                Object {
+                  "text": "Bosnian",
+                  "value": "bos",
+                },
+                Object {
+                  "text": "Catalan",
+                  "value": "cat",
+                },
+                Object {
+                  "text": "Chinese",
+                  "value": "chi",
+                },
+                Object {
+                  "text": "Coptic",
+                  "value": "cop",
+                },
+                Object {
+                  "text": "Czech",
+                  "value": "cze",
+                },
+                Object {
+                  "text": "Danish",
+                  "value": "dan",
+                },
+                Object {
+                  "text": "Dutch",
+                  "value": "dut",
+                },
+                Object {
+                  "text": "Egyptian (Ancient)",
+                  "value": "egy",
+                },
+                Object {
+                  "text": "Elamite",
+                  "value": "elx",
+                },
+                Object {
+                  "text": "English",
+                  "value": "eng",
+                },
+                Object {
+                  "text": "English (Ancient)",
+                  "value": "enm",
+                },
+                Object {
+                  "text": "Esperanto",
+                  "value": "epo",
+                },
+                Object {
+                  "text": "Estonian",
+                  "value": "est",
+                },
+                Object {
+                  "text": "Finnish",
+                  "value": "fin",
+                },
+                Object {
+                  "text": "French",
+                  "value": "fre",
+                },
+                Object {
+                  "text": "German",
+                  "value": "ger",
+                },
+                Object {
+                  "text": "Germanic",
+                  "value": "gem",
+                },
+                Object {
+                  "text": "Greek (Ancient)",
+                  "value": "grc",
+                },
+                Object {
+                  "text": "Greek",
+                  "value": "gre",
+                },
+                Object {
+                  "text": "Hebrew",
+                  "value": "heb",
+                },
+                Object {
+                  "text": "Croatian",
+                  "value": "hrv",
+                },
+                Object {
+                  "text": "Hungarian",
+                  "value": "hun",
+                },
+                Object {
+                  "text": "Indonesian",
+                  "value": "ind",
+                },
+                Object {
+                  "text": "Iranian",
+                  "value": "ira",
+                },
+                Object {
+                  "text": "Italian",
+                  "value": "ita",
+                },
+                Object {
+                  "text": "Japanese",
+                  "value": "jpn",
+                },
+                Object {
+                  "text": "Korean",
+                  "value": "kor",
+                },
+                Object {
+                  "text": "Lao",
+                  "value": "lao",
+                },
+                Object {
+                  "text": "Latin",
+                  "value": "lat",
+                },
+                Object {
+                  "text": "Latvian",
+                  "value": "lav",
+                },
+                Object {
+                  "text": "Lithuanian",
+                  "value": "lit",
+                },
+                Object {
+                  "text": "Macedonian",
+                  "value": "mac",
+                },
+                Object {
+                  "text": "Malayalam",
+                  "value": "mal",
+                },
+                Object {
+                  "text": "Malay",
+                  "value": "may",
+                },
+                Object {
+                  "text": "Mongolian",
+                  "value": "mon",
+                },
+                Object {
+                  "text": "Nahuatl",
+                  "value": "nah",
+                },
+                Object {
+                  "text": "Norwegian",
+                  "value": "nor",
+                },
+                Object {
+                  "text": "Turkish (Ottoman)",
+                  "value": "ota",
+                },
+                Object {
+                  "text": "Papuan",
+                  "value": "paa",
+                },
+                Object {
+                  "text": "Persian",
+                  "value": "per",
+                },
+                Object {
+                  "text": "Polish",
+                  "value": "pol",
+                },
+                Object {
+                  "text": "Portuguese",
+                  "value": "por",
+                },
+                Object {
+                  "text": "Romanian",
+                  "value": "rum",
+                },
+                Object {
+                  "text": "Russian",
+                  "value": "rus",
+                },
+                Object {
+                  "text": "Slovak",
+                  "value": "slo",
+                },
+                Object {
+                  "text": "Slovenian",
+                  "value": "slv",
+                },
+                Object {
+                  "text": "Spanish",
+                  "value": "spa",
+                },
+                Object {
+                  "text": "Serbian",
+                  "value": "srp",
+                },
+                Object {
+                  "text": "Swedish",
+                  "value": "swe",
+                },
+                Object {
+                  "text": "Classical Syriac",
+                  "value": "syc",
+                },
+                Object {
+                  "text": "Syriac",
+                  "value": "syr",
+                },
+                Object {
+                  "text": "Tetum",
+                  "value": "tet",
+                },
+                Object {
+                  "text": "Thai",
+                  "value": "tha",
+                },
+                Object {
+                  "text": "Turkish",
+                  "value": "tur",
+                },
+                Object {
+                  "text": "Ukrainian",
+                  "value": "ukr",
+                },
+                Object {
+                  "text": "Vietnamese",
+                  "value": "vie",
+                },
+                Object {
+                  "text": "Waray",
+                  "value": "war",
+                },
+                Object {
+                  "text": "Yiddish",
+                  "value": "yid",
+                },
+              ]
+            }
             label="Language"
             multiple={true}
             name="languages"
+            selectPrompt="Please select languages as required"
             validate={
               Array [
                 [Function],
@@ -1228,9 +1945,60 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -1280,9 +2048,12 @@ exports[`Component NtroFields should render default view 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Quality indicators
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about each quality indicator option, click
                
@@ -1321,6 +2092,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -1508,7 +2280,6 @@ exports[`Component NtroFields should render default view 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -1524,7 +2295,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -1539,7 +2321,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -1554,7 +2347,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -1569,7 +2373,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -1584,7 +2399,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -1607,7 +2433,18 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -1661,11 +2498,271 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-language"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Afrikaans",
+                  "value": "afr",
+                },
+                Object {
+                  "text": "Albanian",
+                  "value": "alb",
+                },
+                Object {
+                  "text": "Arabic",
+                  "value": "ara",
+                },
+                Object {
+                  "text": "Australian Indigenous",
+                  "value": "aus",
+                },
+                Object {
+                  "text": "Bosnian",
+                  "value": "bos",
+                },
+                Object {
+                  "text": "Catalan",
+                  "value": "cat",
+                },
+                Object {
+                  "text": "Chinese",
+                  "value": "chi",
+                },
+                Object {
+                  "text": "Coptic",
+                  "value": "cop",
+                },
+                Object {
+                  "text": "Czech",
+                  "value": "cze",
+                },
+                Object {
+                  "text": "Danish",
+                  "value": "dan",
+                },
+                Object {
+                  "text": "Dutch",
+                  "value": "dut",
+                },
+                Object {
+                  "text": "Egyptian (Ancient)",
+                  "value": "egy",
+                },
+                Object {
+                  "text": "Elamite",
+                  "value": "elx",
+                },
+                Object {
+                  "text": "English",
+                  "value": "eng",
+                },
+                Object {
+                  "text": "English (Ancient)",
+                  "value": "enm",
+                },
+                Object {
+                  "text": "Esperanto",
+                  "value": "epo",
+                },
+                Object {
+                  "text": "Estonian",
+                  "value": "est",
+                },
+                Object {
+                  "text": "Finnish",
+                  "value": "fin",
+                },
+                Object {
+                  "text": "French",
+                  "value": "fre",
+                },
+                Object {
+                  "text": "German",
+                  "value": "ger",
+                },
+                Object {
+                  "text": "Germanic",
+                  "value": "gem",
+                },
+                Object {
+                  "text": "Greek (Ancient)",
+                  "value": "grc",
+                },
+                Object {
+                  "text": "Greek",
+                  "value": "gre",
+                },
+                Object {
+                  "text": "Hebrew",
+                  "value": "heb",
+                },
+                Object {
+                  "text": "Croatian",
+                  "value": "hrv",
+                },
+                Object {
+                  "text": "Hungarian",
+                  "value": "hun",
+                },
+                Object {
+                  "text": "Indonesian",
+                  "value": "ind",
+                },
+                Object {
+                  "text": "Iranian",
+                  "value": "ira",
+                },
+                Object {
+                  "text": "Italian",
+                  "value": "ita",
+                },
+                Object {
+                  "text": "Japanese",
+                  "value": "jpn",
+                },
+                Object {
+                  "text": "Korean",
+                  "value": "kor",
+                },
+                Object {
+                  "text": "Lao",
+                  "value": "lao",
+                },
+                Object {
+                  "text": "Latin",
+                  "value": "lat",
+                },
+                Object {
+                  "text": "Latvian",
+                  "value": "lav",
+                },
+                Object {
+                  "text": "Lithuanian",
+                  "value": "lit",
+                },
+                Object {
+                  "text": "Macedonian",
+                  "value": "mac",
+                },
+                Object {
+                  "text": "Malayalam",
+                  "value": "mal",
+                },
+                Object {
+                  "text": "Malay",
+                  "value": "may",
+                },
+                Object {
+                  "text": "Mongolian",
+                  "value": "mon",
+                },
+                Object {
+                  "text": "Nahuatl",
+                  "value": "nah",
+                },
+                Object {
+                  "text": "Norwegian",
+                  "value": "nor",
+                },
+                Object {
+                  "text": "Turkish (Ottoman)",
+                  "value": "ota",
+                },
+                Object {
+                  "text": "Papuan",
+                  "value": "paa",
+                },
+                Object {
+                  "text": "Persian",
+                  "value": "per",
+                },
+                Object {
+                  "text": "Polish",
+                  "value": "pol",
+                },
+                Object {
+                  "text": "Portuguese",
+                  "value": "por",
+                },
+                Object {
+                  "text": "Romanian",
+                  "value": "rum",
+                },
+                Object {
+                  "text": "Russian",
+                  "value": "rus",
+                },
+                Object {
+                  "text": "Slovak",
+                  "value": "slo",
+                },
+                Object {
+                  "text": "Slovenian",
+                  "value": "slv",
+                },
+                Object {
+                  "text": "Spanish",
+                  "value": "spa",
+                },
+                Object {
+                  "text": "Serbian",
+                  "value": "srp",
+                },
+                Object {
+                  "text": "Swedish",
+                  "value": "swe",
+                },
+                Object {
+                  "text": "Classical Syriac",
+                  "value": "syc",
+                },
+                Object {
+                  "text": "Syriac",
+                  "value": "syr",
+                },
+                Object {
+                  "text": "Tetum",
+                  "value": "tet",
+                },
+                Object {
+                  "text": "Thai",
+                  "value": "tha",
+                },
+                Object {
+                  "text": "Turkish",
+                  "value": "tur",
+                },
+                Object {
+                  "text": "Ukrainian",
+                  "value": "ukr",
+                },
+                Object {
+                  "text": "Vietnamese",
+                  "value": "vie",
+                },
+                Object {
+                  "text": "Waray",
+                  "value": "war",
+                },
+                Object {
+                  "text": "Yiddish",
+                  "value": "yid",
+                },
+              ]
+            }
             label="Language"
             multiple={true}
             name="languages"
+            selectPrompt="Please select languages as required"
             validate={
               Array [
                 [Function],
@@ -1679,9 +2776,60 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -1731,24 +2879,26 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Creator research statement
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about the research statement, click
-              <b>
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
+               
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                style={
+                  Object {
+                    "fontWeight": 700,
                   }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </b>
+                }
+                target="_blank"
+              >
+                here
+              </a>
             </p>
           </React.Fragment>,
           "title": "Author/Creator research statement",
@@ -1824,6 +2974,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             maxValue={2000}
             name="impactStatement"
             required={true}
+            richEditorId="rek-creator-contribution-statement"
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
@@ -1858,9 +3009,12 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Quality indicators
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about each quality indicator option, click
                
@@ -1899,6 +3053,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -2086,7 +3241,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -2102,7 +3256,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -2117,7 +3282,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -2132,7 +3308,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -2147,7 +3334,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -2162,7 +3360,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -2185,7 +3394,18 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -2239,11 +3459,271 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-language"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Afrikaans",
+                  "value": "afr",
+                },
+                Object {
+                  "text": "Albanian",
+                  "value": "alb",
+                },
+                Object {
+                  "text": "Arabic",
+                  "value": "ara",
+                },
+                Object {
+                  "text": "Australian Indigenous",
+                  "value": "aus",
+                },
+                Object {
+                  "text": "Bosnian",
+                  "value": "bos",
+                },
+                Object {
+                  "text": "Catalan",
+                  "value": "cat",
+                },
+                Object {
+                  "text": "Chinese",
+                  "value": "chi",
+                },
+                Object {
+                  "text": "Coptic",
+                  "value": "cop",
+                },
+                Object {
+                  "text": "Czech",
+                  "value": "cze",
+                },
+                Object {
+                  "text": "Danish",
+                  "value": "dan",
+                },
+                Object {
+                  "text": "Dutch",
+                  "value": "dut",
+                },
+                Object {
+                  "text": "Egyptian (Ancient)",
+                  "value": "egy",
+                },
+                Object {
+                  "text": "Elamite",
+                  "value": "elx",
+                },
+                Object {
+                  "text": "English",
+                  "value": "eng",
+                },
+                Object {
+                  "text": "English (Ancient)",
+                  "value": "enm",
+                },
+                Object {
+                  "text": "Esperanto",
+                  "value": "epo",
+                },
+                Object {
+                  "text": "Estonian",
+                  "value": "est",
+                },
+                Object {
+                  "text": "Finnish",
+                  "value": "fin",
+                },
+                Object {
+                  "text": "French",
+                  "value": "fre",
+                },
+                Object {
+                  "text": "German",
+                  "value": "ger",
+                },
+                Object {
+                  "text": "Germanic",
+                  "value": "gem",
+                },
+                Object {
+                  "text": "Greek (Ancient)",
+                  "value": "grc",
+                },
+                Object {
+                  "text": "Greek",
+                  "value": "gre",
+                },
+                Object {
+                  "text": "Hebrew",
+                  "value": "heb",
+                },
+                Object {
+                  "text": "Croatian",
+                  "value": "hrv",
+                },
+                Object {
+                  "text": "Hungarian",
+                  "value": "hun",
+                },
+                Object {
+                  "text": "Indonesian",
+                  "value": "ind",
+                },
+                Object {
+                  "text": "Iranian",
+                  "value": "ira",
+                },
+                Object {
+                  "text": "Italian",
+                  "value": "ita",
+                },
+                Object {
+                  "text": "Japanese",
+                  "value": "jpn",
+                },
+                Object {
+                  "text": "Korean",
+                  "value": "kor",
+                },
+                Object {
+                  "text": "Lao",
+                  "value": "lao",
+                },
+                Object {
+                  "text": "Latin",
+                  "value": "lat",
+                },
+                Object {
+                  "text": "Latvian",
+                  "value": "lav",
+                },
+                Object {
+                  "text": "Lithuanian",
+                  "value": "lit",
+                },
+                Object {
+                  "text": "Macedonian",
+                  "value": "mac",
+                },
+                Object {
+                  "text": "Malayalam",
+                  "value": "mal",
+                },
+                Object {
+                  "text": "Malay",
+                  "value": "may",
+                },
+                Object {
+                  "text": "Mongolian",
+                  "value": "mon",
+                },
+                Object {
+                  "text": "Nahuatl",
+                  "value": "nah",
+                },
+                Object {
+                  "text": "Norwegian",
+                  "value": "nor",
+                },
+                Object {
+                  "text": "Turkish (Ottoman)",
+                  "value": "ota",
+                },
+                Object {
+                  "text": "Papuan",
+                  "value": "paa",
+                },
+                Object {
+                  "text": "Persian",
+                  "value": "per",
+                },
+                Object {
+                  "text": "Polish",
+                  "value": "pol",
+                },
+                Object {
+                  "text": "Portuguese",
+                  "value": "por",
+                },
+                Object {
+                  "text": "Romanian",
+                  "value": "rum",
+                },
+                Object {
+                  "text": "Russian",
+                  "value": "rus",
+                },
+                Object {
+                  "text": "Slovak",
+                  "value": "slo",
+                },
+                Object {
+                  "text": "Slovenian",
+                  "value": "slv",
+                },
+                Object {
+                  "text": "Spanish",
+                  "value": "spa",
+                },
+                Object {
+                  "text": "Serbian",
+                  "value": "srp",
+                },
+                Object {
+                  "text": "Swedish",
+                  "value": "swe",
+                },
+                Object {
+                  "text": "Classical Syriac",
+                  "value": "syc",
+                },
+                Object {
+                  "text": "Syriac",
+                  "value": "syr",
+                },
+                Object {
+                  "text": "Tetum",
+                  "value": "tet",
+                },
+                Object {
+                  "text": "Thai",
+                  "value": "tha",
+                },
+                Object {
+                  "text": "Turkish",
+                  "value": "tur",
+                },
+                Object {
+                  "text": "Ukrainian",
+                  "value": "ukr",
+                },
+                Object {
+                  "text": "Vietnamese",
+                  "value": "vie",
+                },
+                Object {
+                  "text": "Waray",
+                  "value": "war",
+                },
+                Object {
+                  "text": "Yiddish",
+                  "value": "yid",
+                },
+              ]
+            }
             label="Language"
             multiple={true}
             name="languages"
+            selectPrompt="Please select languages as required"
             validate={
               Array [
                 [Function],
@@ -2257,9 +3737,60 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -2289,24 +3820,26 @@ exports[`Component NtroFields should show significance field even if contributio
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Creator research statement
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about the research statement, click
-              <b>
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
+               
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                style={
+                  Object {
+                    "fontWeight": 700,
                   }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </b>
+                }
+                target="_blank"
+              >
+                here
+              </a>
             </p>
           </React.Fragment>,
           "title": "Author/Creator research statement",
@@ -2377,9 +3910,12 @@ exports[`Component NtroFields should show significance field even if contributio
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <h3>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
               Quality indicators
-            </h3>
+            </WithStyles(ForwardRef(Typography))>
             <p>
               For more information about each quality indicator option, click
                
@@ -2418,6 +3954,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             maxValue={800}
             name="ntroAbstract"
+            richEditorId="rek-description"
             title={
               <span>
                 Abstract/Description* 
@@ -2605,7 +4142,6 @@ exports[`Component NtroFields should show significance field even if contributio
                   "type": [Function],
                 },
                 "compare": null,
-                "displayName": "Connect(Component)",
                 "type": [Function],
               }
             }
@@ -2621,7 +4157,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Volume"
@@ -2636,7 +4183,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Issue"
@@ -2651,7 +4209,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Start page"
@@ -2666,7 +4235,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="End page"
@@ -2681,7 +4261,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             id="rek-total-pages"
@@ -2704,7 +4295,18 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
             disabled={false}
             fullWidth={true}
             label="Physical description"
@@ -2758,11 +4360,271 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-language"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Afrikaans",
+                  "value": "afr",
+                },
+                Object {
+                  "text": "Albanian",
+                  "value": "alb",
+                },
+                Object {
+                  "text": "Arabic",
+                  "value": "ara",
+                },
+                Object {
+                  "text": "Australian Indigenous",
+                  "value": "aus",
+                },
+                Object {
+                  "text": "Bosnian",
+                  "value": "bos",
+                },
+                Object {
+                  "text": "Catalan",
+                  "value": "cat",
+                },
+                Object {
+                  "text": "Chinese",
+                  "value": "chi",
+                },
+                Object {
+                  "text": "Coptic",
+                  "value": "cop",
+                },
+                Object {
+                  "text": "Czech",
+                  "value": "cze",
+                },
+                Object {
+                  "text": "Danish",
+                  "value": "dan",
+                },
+                Object {
+                  "text": "Dutch",
+                  "value": "dut",
+                },
+                Object {
+                  "text": "Egyptian (Ancient)",
+                  "value": "egy",
+                },
+                Object {
+                  "text": "Elamite",
+                  "value": "elx",
+                },
+                Object {
+                  "text": "English",
+                  "value": "eng",
+                },
+                Object {
+                  "text": "English (Ancient)",
+                  "value": "enm",
+                },
+                Object {
+                  "text": "Esperanto",
+                  "value": "epo",
+                },
+                Object {
+                  "text": "Estonian",
+                  "value": "est",
+                },
+                Object {
+                  "text": "Finnish",
+                  "value": "fin",
+                },
+                Object {
+                  "text": "French",
+                  "value": "fre",
+                },
+                Object {
+                  "text": "German",
+                  "value": "ger",
+                },
+                Object {
+                  "text": "Germanic",
+                  "value": "gem",
+                },
+                Object {
+                  "text": "Greek (Ancient)",
+                  "value": "grc",
+                },
+                Object {
+                  "text": "Greek",
+                  "value": "gre",
+                },
+                Object {
+                  "text": "Hebrew",
+                  "value": "heb",
+                },
+                Object {
+                  "text": "Croatian",
+                  "value": "hrv",
+                },
+                Object {
+                  "text": "Hungarian",
+                  "value": "hun",
+                },
+                Object {
+                  "text": "Indonesian",
+                  "value": "ind",
+                },
+                Object {
+                  "text": "Iranian",
+                  "value": "ira",
+                },
+                Object {
+                  "text": "Italian",
+                  "value": "ita",
+                },
+                Object {
+                  "text": "Japanese",
+                  "value": "jpn",
+                },
+                Object {
+                  "text": "Korean",
+                  "value": "kor",
+                },
+                Object {
+                  "text": "Lao",
+                  "value": "lao",
+                },
+                Object {
+                  "text": "Latin",
+                  "value": "lat",
+                },
+                Object {
+                  "text": "Latvian",
+                  "value": "lav",
+                },
+                Object {
+                  "text": "Lithuanian",
+                  "value": "lit",
+                },
+                Object {
+                  "text": "Macedonian",
+                  "value": "mac",
+                },
+                Object {
+                  "text": "Malayalam",
+                  "value": "mal",
+                },
+                Object {
+                  "text": "Malay",
+                  "value": "may",
+                },
+                Object {
+                  "text": "Mongolian",
+                  "value": "mon",
+                },
+                Object {
+                  "text": "Nahuatl",
+                  "value": "nah",
+                },
+                Object {
+                  "text": "Norwegian",
+                  "value": "nor",
+                },
+                Object {
+                  "text": "Turkish (Ottoman)",
+                  "value": "ota",
+                },
+                Object {
+                  "text": "Papuan",
+                  "value": "paa",
+                },
+                Object {
+                  "text": "Persian",
+                  "value": "per",
+                },
+                Object {
+                  "text": "Polish",
+                  "value": "pol",
+                },
+                Object {
+                  "text": "Portuguese",
+                  "value": "por",
+                },
+                Object {
+                  "text": "Romanian",
+                  "value": "rum",
+                },
+                Object {
+                  "text": "Russian",
+                  "value": "rus",
+                },
+                Object {
+                  "text": "Slovak",
+                  "value": "slo",
+                },
+                Object {
+                  "text": "Slovenian",
+                  "value": "slv",
+                },
+                Object {
+                  "text": "Spanish",
+                  "value": "spa",
+                },
+                Object {
+                  "text": "Serbian",
+                  "value": "srp",
+                },
+                Object {
+                  "text": "Swedish",
+                  "value": "swe",
+                },
+                Object {
+                  "text": "Classical Syriac",
+                  "value": "syc",
+                },
+                Object {
+                  "text": "Syriac",
+                  "value": "syr",
+                },
+                Object {
+                  "text": "Tetum",
+                  "value": "tet",
+                },
+                Object {
+                  "text": "Thai",
+                  "value": "tha",
+                },
+                Object {
+                  "text": "Turkish",
+                  "value": "tur",
+                },
+                Object {
+                  "text": "Ukrainian",
+                  "value": "ukr",
+                },
+                Object {
+                  "text": "Vietnamese",
+                  "value": "vie",
+                },
+                Object {
+                  "text": "Waray",
+                  "value": "war",
+                },
+                Object {
+                  "text": "Yiddish",
+                  "value": "yid",
+                },
+              ]
+            }
             label="Language"
             multiple={true}
             name="languages"
+            selectPrompt="Please select languages as required"
             validate={
               Array [
                 [Function],
@@ -2776,9 +4638,60 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
             id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"

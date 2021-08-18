@@ -141,9 +141,19 @@ export default class Meta extends PureComponent {
                     ? new RegExp(route.regExPath, 'i').test(this.props.location.pathname)
                     : route.path === this.props.location.pathname,
             );
-        const pageTitle = !!publication
-            ? publication.rek_title
-            : filteredRoutes.length > 0 && filteredRoutes[0].pageTitle;
+
+        let pageTitle = '';
+
+        if (!!publication) {
+            if (this.props.location.pathname.indexOf('/admin/edit/') >= 0) {
+                pageTitle = `Edit ${publication.rek_display_type_lookup} - ${publication.rek_title}`;
+            } else {
+                pageTitle = publication.rek_title;
+            }
+        } else {
+            pageTitle = filteredRoutes.length > 0 && filteredRoutes[0].pageTitle;
+        }
+
         const linkProps = !!publication
             ? {
                   link: [

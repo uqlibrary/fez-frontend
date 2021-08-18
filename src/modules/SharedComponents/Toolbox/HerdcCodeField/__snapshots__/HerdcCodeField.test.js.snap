@@ -1,12 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HerdcCodeField component should not render unknown value 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
-  hideLabel={false}
   input={
     Object {
       "value": "999",
@@ -14,10 +12,6 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -82,12 +76,10 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
 `;
 
 exports[`HerdcCodeField component should render a current value 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
-  hideLabel={false}
   input={
     Object {
       "value": "454028",
@@ -95,10 +87,6 @@ exports[`HerdcCodeField component should render a current value 1`] = `
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -163,12 +151,10 @@ exports[`HerdcCodeField component should render a current value 1`] = `
 `;
 
 exports[`HerdcCodeField component should render a deprecated value 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
-  hideLabel={false}
   input={
     Object {
       "value": "450033",
@@ -176,10 +162,6 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -248,18 +230,12 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
 `;
 
 exports[`HerdcCodeField component should render default view 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
-  hideLabel={false}
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -319,17 +295,15 @@ exports[`HerdcCodeField component should render default view 1`] = `
       "label": undefined,
     }
   }
-  value={Array []}
+  value=""
 />
 `;
 
 exports[`HerdcCodeField component should render immutable list as selected value with given field props 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-herdc-code"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -341,10 +315,6 @@ exports[`HerdcCodeField component should render immutable list as selected value
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -413,7 +383,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
   onChange={[MockFunction]}
   placeholder="Test placeholder"
   value={
-    Array [
+    Immutable.List [
       "One",
       "Two",
     ]
@@ -422,19 +392,13 @@ exports[`HerdcCodeField component should render immutable list as selected value
 `;
 
 exports[`HerdcCodeField component should render when given a default value field props 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   defaultValue="afr"
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
-  hideLabel={false}
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -496,21 +460,15 @@ exports[`HerdcCodeField component should render when given a default value field
     }
   }
   placeholder="Test placeholder"
-  value={
-    Array [
-      "afr",
-    ]
-  }
+  value=""
 />
 `;
 
 exports[`HerdcCodeField component should render with given field props 1`] = `
-<GenericSelectField
-  canUnselect={true}
+<Memo(NewGenericSelectField)
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-herdc-code"
-  hideLabel={false}
   input={
     Object {
       "onChange": [MockFunction],
@@ -522,10 +480,6 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   }
   itemsList={
     Array [
-      Object {
-        "text": "Please choose an option",
-        "value": null,
-      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",

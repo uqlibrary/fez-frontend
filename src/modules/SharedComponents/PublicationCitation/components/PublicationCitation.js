@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import { locale } from 'locale';
-import { routes, publicationTypes } from 'config';
+import { publicationTypes, pathConfig } from 'config';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -157,7 +157,7 @@ export class PublicationCitation extends PureComponent {
         const { history, publication } = this.props;
         switch (action) {
             case 'fixRecord':
-                history.push(routes.pathConfig.records.fix(publication.rek_pid));
+                history.push(pathConfig.records.fix(publication.rek_pid));
                 break;
             case 'shareRecord':
                 // TODO: display share interface
@@ -171,9 +171,7 @@ export class PublicationCitation extends PureComponent {
     renderTitle = () => {
         const { publication, hideLinks } = this.props;
         return publication.rek_pid && !hideLinks ? (
-            <Link to={routes.pathConfig.records.view(publication.rek_pid)}>
-                {ReactHtmlParser(publication.rek_title)}
-            </Link>
+            <Link to={pathConfig.records.view(publication.rek_pid)}>{ReactHtmlParser(publication.rek_title)}</Link>
         ) : (
             ReactHtmlParser(publication.rek_title)
         );
@@ -199,6 +197,13 @@ export class PublicationCitation extends PureComponent {
     renderActions = actions => {
         const { publication, showDefaultActions, publicationsLoading } = this.props;
         const pid = publication && publication.rek_pid && publication.rek_pid.replace(':', '');
+        const primaryButtonDisabled =
+            !publication.rek_pid &&
+            !publication.fez_record_search_key_author &&
+            !publication.fez_record_search_key_author_id &&
+            !publication.fez_record_search_key_contributor &&
+            !publication.fez_record_search_key_contributor_id;
+
         return actions && actions.length > 0
             ? actions.map((action, index) => {
                   const testId = `publication-action-${pid}`;
@@ -217,10 +222,10 @@ export class PublicationCitation extends PureComponent {
                       <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
                           {action.primary ? (
                               <Button
-                                  disabled={!!publicationsLoading}
+                                  {...buttonProps}
+                                  disabled={!!publicationsLoading || primaryButtonDisabled}
                                   classes={{ label: pid, root: pid }}
                                   variant="contained"
-                                  {...buttonProps}
                                   data-testid={`${testId}-primary`}
                               >
                                   {action.label}
@@ -419,6 +424,24 @@ export class PublicationCitation extends PureComponent {
                             )}
                         </Grid>
                     </Grid>
+                    {!hideContentIndicators &&
+                        publication.fez_record_search_key_content_indicator &&
+                        publication.fez_record_search_key_content_indicator.length > 0 && (
+                            <Grid item xs={12}>
+                                <Typography
+                                    variant="caption"
+                                    id="rek-content-indicator"
+                                    data-testid="rek-content-indicator"
+                                >
+                                    <span className={classes.contentIndicatorTitle}>
+                                        {locale.components.contentIndicators.label}:
+                                    </span>
+                                    {publication.fez_record_search_key_content_indicator
+                                        .map(item => item.rek_content_indicator_lookup)
+                                        .join(locale.components.contentIndicators.divider)}
+                                </Typography>
+                            </Grid>
+                        )}
                 </Grid>
                 {(showDefaultActions || customActions) && (
                     <Grid container spacing={1} className={classes.buttonMargin}>
@@ -429,20 +452,6 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 )}
                 <Divider className={classes.divider} />
-                {!hideContentIndicators &&
-                    publication.fez_record_search_key_content_indicator &&
-                    publication.fez_record_search_key_content_indicator.length > 0 && (
-                        <Grid item xs={12}>
-                            <Typography gutterBottom variant="caption">
-                                <span className={classes.contentIndicatorTitle}>
-                                    {locale.components.contentIndicators.label}:
-                                </span>
-                                {publication.fez_record_search_key_content_indicator
-                                    .map(item => item.rek_content_indicator_lookup)
-                                    .join(locale.components.contentIndicators.divider)}
-                            </Typography>
-                        </Grid>
-                    )}
             </div>
         );
     }

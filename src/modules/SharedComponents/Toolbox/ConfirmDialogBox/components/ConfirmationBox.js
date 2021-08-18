@@ -26,6 +26,7 @@ export const ConfirmationBox = ({
     cancelButtonColor,
     confirmationBoxId,
     InputForm,
+    hideActionButton,
     hideCancelButton,
     isOpen,
     locale,
@@ -55,9 +56,9 @@ export const ConfirmationBox = ({
 
     return (
         <Dialog style={{ padding: 6 }} open={isOpen}>
-            <DialogTitle>{locale.confirmationTitle}</DialogTitle>
+            <DialogTitle data-testid="message-title">{locale.confirmationTitle}</DialogTitle>
             <DialogContent>
-                <DialogContentText>{locale.confirmationMessage}</DialogContentText>
+                <DialogContentText data-testid="message-content">{locale.confirmationMessage}</DialogContentText>
                 {!!showInputForm && <InputForm />}
             </DialogContent>
             <DialogActions>
@@ -65,18 +66,20 @@ export const ConfirmationBox = ({
                     <Hidden xsDown>
                         <Grid item xs />
                     </Hidden>
-                    <Grid item xs={12} sm={'auto'}>
-                        <Button
-                            {...(!!actionButtonVariant ? { variant: actionButtonVariant } : {})}
-                            children={locale.confirmButtonLabel}
-                            autoFocus
-                            color={actionButtonColor || 'primary'}
-                            fullWidth
-                            onClick={_onAction}
-                            id="confirm-action"
-                            data-testid={`confirm-${confirmationBoxId}`}
-                        />
-                    </Grid>
+                    {!hideActionButton && (
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                {...(!!actionButtonVariant ? { variant: actionButtonVariant } : {})}
+                                children={locale.confirmButtonLabel}
+                                autoFocus
+                                color={actionButtonColor || 'primary'}
+                                fullWidth
+                                onClick={_onAction}
+                                id="confirm-action"
+                                data-testid={`confirm-${confirmationBoxId}`}
+                            />
+                        </Grid>
+                    )}
                     {showAlternateActionButton && (
                         // an optional middle button that will display in a warning colour
                         <Grid item xs={12} sm={'auto'}>
@@ -115,6 +118,7 @@ ConfirmationBox.propTypes = {
     actionButtonVariant: PropTypes.string,
     cancelButtonColor: PropTypes.string,
     confirmationBoxId: PropTypes.string.isRequired,
+    hideActionButton: PropTypes.bool,
     hideCancelButton: PropTypes.bool,
     InputForm: PropTypes.func,
     isOpen: PropTypes.bool,
@@ -128,6 +132,7 @@ ConfirmationBox.propTypes = {
 };
 
 ConfirmationBox.defaultProps = {
+    hideActionButton: false,
     hideCancelButton: false,
     isOpen: false,
     locale: {
@@ -141,4 +146,4 @@ ConfirmationBox.defaultProps = {
     showInputForm: false,
 };
 
-export default ConfirmationBox;
+export default React.memo(ConfirmationBox);

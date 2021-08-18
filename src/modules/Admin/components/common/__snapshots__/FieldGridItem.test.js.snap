@@ -12,6 +12,7 @@ exports[`FieldGridItem should render default view 1`] = `
     height={100}
     name="bibliographicSection.rek_title"
     required={true}
+    richEditorId="rek-title"
     title="Formatted title"
     titleProps={
       Object {
@@ -30,6 +31,54 @@ exports[`FieldGridItem should render default view 1`] = `
 </WithStyles(ForwardRef(Grid))>
 `;
 
+exports[`FieldGridItem should render with correct props 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  md={12}
+  xs={12}
+>
+  <Field
+    component={[Function]}
+    contributorEditorId="rek-contributor"
+    isAdmin={true}
+    locale={
+      Object {
+        "form": Object {
+          "locale": Object {
+            "addButton": "Add editor",
+            "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
+            "creatorRoleLabel": "Enter creator's role",
+            "identifierLabel": "UQ identifier (if available)",
+            "nameAsPublishedHint": "Type the name exactly as published (eg. Smith, John)",
+            "nameAsPublishedLabel": "Editor's name as published",
+          },
+        },
+        "header": Object {
+          "locale": Object {
+            "contributorAssignmentColumn": "Select your name",
+            "identifierColumn": "UQ identifiers",
+            "nameColumn": "Editor's name as published",
+            "organisationColumn": "Organisation/Organisation type",
+            "roleColumn": "Creator role",
+          },
+        },
+        "row": Object {
+          "locale": Object {
+            "deleteHint": "Remove this item",
+            "editHint": "Edit this item",
+            "moveDownHint": "Move item down the order",
+            "moveUpHint": "Move item up the order",
+            "suffix": " listed editor",
+          },
+        },
+      }
+    }
+    name="authorsSection.editors"
+    showIdentifierLookup={true}
+  />
+</WithStyles(ForwardRef(Grid))>
+`;
+
 exports[`FieldGridItem without record should render default view 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}
@@ -42,6 +91,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
     height={100}
     name="bibliographicSection.rek_title"
     required={true}
+    richEditorId="rek-title"
     title="Formatted title"
     titleProps={
       Object {

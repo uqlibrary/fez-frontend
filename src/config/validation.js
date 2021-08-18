@@ -1,10 +1,11 @@
 import React from 'react';
-import locale from 'locale/validationErrors';
-import { isAdded } from 'helpers/datastreams';
+import moment from 'moment';
 import Immutable from 'immutable';
+
+import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
 
-const moment = require('moment');
+import { isAdded } from 'helpers/datastreams';
 
 // Max Length
 export const maxLength = max => value =>
@@ -17,17 +18,32 @@ export const maxLengthWithWhitespace = max => value =>
         : undefined;
 export const maxLength9 = maxLength(9);
 export const maxLength10 = maxLength(10);
+export const maxLength11 = maxLength(11);
+export const maxLength12 = maxLength(12);
+export const maxLength20 = maxLength(20);
+export const maxLength30 = maxLength(30);
+export const maxLength50 = maxLength(50);
 export const maxLength255 = maxLength(255);
 export const maxLength800 = maxLength(800);
 export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
-// Min Length
+export const isValidResearcherId = value => {
+    const regexResearcherId = /^[A-Z]{1,3}-\d{4}-\d{4}$/g;
+    return (
+        (!!value &&
+            (new RegExp(regexResearcherId).test(value.trim()) ? undefined : locale.validationErrors.researcherId)) ||
+        undefined
+    );
+};
+
+// Min Lengt
 export const minLength = min => value =>
     (value !== null || value !== undefined) && value.trim().length < min
         ? locale.validationErrors.minLength.replace('[min]', min)
         : undefined;
 export const minLength10 = minLength(10);
+export const minLength0 = minLength(0);
 
 // Public Search Validation rules
 export const maxLength500 = maxLength(500);
@@ -63,17 +79,17 @@ export const maxListEditorTextLength = max => value => {
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
 export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
 
-// TODO: fix validation, make it generic etc....
+// TODO: make it generic
 export const isValidDOIValue = value => {
     const regexGroup = [
-        /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i,
-        /^10.1002\/[^\s]+$/i,
-        /^10.\d{4}\/\d+-\d+X?\(\d+\)\d+<[\d\w]+:[\d\w]*>\d+.\d+.\w+;\d$/i,
-        /^10.1021\/\w\w\d+$/i,
-        /^10.1207\/[\w\d]+\&\d+_\d+$/i,
+        /^10\.\d{4,9}\/[-._;()\/:A-Z0-9]+$/i,
+        /^10\.1002\/[^\s]+$/i,
+        /^10\.\d{4}\/\d+-\d+X?\(\d+\)\d+[<\[][\d\w]+:[\d\w]*[>\]]\d+.\d+.\w+;\d$/i,
+        /^10\.1021\/\w\w\d+\+$/i,
+        /^10\.1207\/[\w\d]+\&\d+_\d+$/i,
     ];
 
-    return regexGroup.reduce((isValid, regex) => regex.test(value.trim()) || isValid, false);
+    return regexGroup.reduce((isValid, regex) => regex.test(value) || isValid, false);
 };
 export const isValidPubMedValue = value => {
     // pubmed id is all digits, min 3 digits
@@ -183,6 +199,13 @@ export const isValidIsbn = subject => {
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
+export const isValidKeyword = maxKeywordLength => subject => {
+    const keywords = subject.split('|');
+
+    return keywords.some(keyword => keyword.length > maxKeywordLength)
+        ? locale.validationErrors.keywords.replace('[max]', maxKeywordLength)
+        : undefined;
+};
 export const checkDigit = subject => {
     const check =
         subject &&

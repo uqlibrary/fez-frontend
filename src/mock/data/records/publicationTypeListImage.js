@@ -8,27 +8,27 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:134700",
-            "rek_title_xsdmf_id": 10699,
+            "rek_title_xsdmf_id": null,
             "rek_title": "Crop choice: A decision support tool for dryland farmers in southwest Queensland",
-            "rek_description_xsdmf_id": 11448,
+            "rek_description_xsdmf_id": null,
             "rek_description": "Key to dryland planting decisions Purpose: to help dryland farmers in southwest Queensland make more informed planting decisions; Inputs: developed from various group discussions and workshops with dryland farmers as well as from experts' opinions and government websites; Authors: Nam Nguyen, Malcolm Wegener, and Iean Russell: School of Natural and Rural Systems Management, The University of Queensland (author for contact: n.nguyen@uq.edu.au); Sponsorships: The University of Queensland International Postgraduate Research Scholarship and Queensland Department of Primary Industries and Fisheries Western Farming Systems project; Version 1.1: (November 2006), created using Lucid3 software program available from the Centre for Biological Information Technology, The University of Queensland (http:\/\/www.cbit.uq.edu.au); Limitations: Gross margin, frost risk, and soil conditions were not included...; can not tell \"when it is the right time\" or \"when it is going to rain\"; but... Useful, Simple, Localy relevant, and User-friendly! This 'Key' will give dryland farmers the useful information to make the best planting decision! Warnings: This product contains information that was judged to be valid and appropriate at the time of its development but which may have since changed. The University of Queensland and persons concerned with the creation of the 'Key to dryland planting decisions' accept no legal liability or responsibility for any loss or damage that may be caused as a result of using this product. It is recommended that any conclusions about crop choice reached as a result of using this key should be verified by appropriate sources of information before they are used for decision-making.",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 238,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": 8563,
+            "rek_date_xsdmf_id": null,
             "rek_date": "2006-11-25T00:00:00Z",
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 1816,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2008-04-04T14:24:43Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-24T04:21:14Z",
             "rek_file_downloads": 0,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 8564,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "Generic Document",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -36,7 +36,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 849,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -56,14 +56,14 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_acknowledgements": {
                 "rek_acknowledgements_id": 22452,
                 "rek_acknowledgements_pid": "UQ:134700",
-                "rek_acknowledgements_xsdmf_id": 17128,
+                "rek_acknowledgements_xsdmf_id": null,
                 "rek_acknowledgements": "Information supplied by Kaye Mobsby."
             },
             "fez_record_search_key_additional_notes": null,
@@ -102,7 +102,7 @@ export default {
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": 11824977,
                 "rek_ismemberof_pid": "UQ:134700",
-                "rek_ismemberof_xsdmf_id": 149,
+                "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:152266",
                 "rek_ismemberof_order": 1,
                 "parent": {
@@ -114,7 +114,7 @@ export default {
             }, {
                 "rek_ismemberof_id": 11824978,
                 "rek_ismemberof_pid": "UQ:134700",
-                "rek_ismemberof_xsdmf_id": 149,
+                "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:240731",
                 "rek_ismemberof_order": 2,
                 "parent": {
@@ -127,59 +127,59 @@ export default {
             "fez_record_search_key_keywords": [{
                 "rek_keywords_id": 29736574,
                 "rek_keywords_pid": "UQ:134700",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Dryland planting decision",
                 "rek_keywords_order": 1
             }, {
                 "rek_keywords_id": 29736575,
                 "rek_keywords_pid": "UQ:134700",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "dryland farming systems",
                 "rek_keywords_order": 2
             }, {
                 "rek_keywords_id": 29736576,
                 "rek_keywords_pid": "UQ:134700",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "southwest Queensland",
                 "rek_keywords_order": 3
             }],
             "fez_record_search_key_language": [{
                 "rek_language_id": 5378282,
                 "rek_language_pid": "UQ:134700",
-                "rek_language_xsdmf_id": 8573,
+                "rek_language_xsdmf_id": null,
                 "rek_language": "eng",
                 "rek_language_order": 1
             }],
             "fez_record_search_key_license": {
                 "rek_license_id": 25068,
                 "rek_license_pid": "UQ:402976",
-                "rek_license_xsdmf_id": 17289,
+                "rek_license_xsdmf_id": null,
                 "rek_license": "453613",
-                "rek_license_lookup": "Creative Commons Attribution share alike"
+                "rek_license_lookup": "Creative Commons Attribution-ShareAlike 3.0 International (CC BY-SA 3.0)"
             },
             "fez_record_search_key_link": [{
                 "rek_link_id": 3238884,
                 "rek_link_pid": "UQ:134700",
-                "rek_link_xsdmf_id": 8637,
+                "rek_link_xsdmf_id": null,
                 "rek_link": "http:\/\/www.lucidcentral.org\/keys\/viewkeydetails.aspx?KeyId=417",
                 "rek_link_order": 1
             }, {
                 "rek_link_id": 3238885,
                 "rek_link_pid": "UQ:134700",
-                "rek_link_xsdmf_id": 8637,
+                "rek_link_xsdmf_id": null,
                 "rek_link": "http:\/\/www.lucidcentral.org\/keys\/v3\/Dry_Land_Planting\/",
                 "rek_link_order": 2
             }],
             "fez_record_search_key_link_description": [{
                 "rek_link_description_id": 3238852,
                 "rek_link_description_pid": "UQ:134700",
-                "rek_link_description_xsdmf_id": 8636,
+                "rek_link_description_xsdmf_id": null,
                 "rek_link_description": "Link to Lucidcentral",
                 "rek_link_description_order": 1
             }, {
                 "rek_link_description_id": 3238853,
                 "rek_link_description_pid": "UQ:134700",
-                "rek_link_description_xsdmf_id": 8636,
+                "rek_link_description_xsdmf_id": null,
                 "rek_link_description": "Link to \"Key to dryland planting decisions\"",
                 "rek_link_description_order": 2
             }],
@@ -187,67 +187,67 @@ export default {
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 271220,
                 "rek_oa_status_pid": "UQ:134700",
-                "rek_oa_status_xsdmf_id": 17010,
+                "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 454127,
-                "rek_oa_status_lookup": "File (Author Pre-print)"
+                "rek_oa_status_lookup": "Preprint"
             },
             "fez_record_search_key_oa_status_type": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 7396,
                 "rek_original_format_pid": "UQ:134700",
-                "rek_original_format_xsdmf_id": 8567,
+                "rek_original_format_xsdmf_id": null,
                 "rek_original_format": "Negative; b&w; 9 x 15 cm."
             },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4307808,
                 "rek_place_of_publication_pid": "UQ:134700",
-                "rek_place_of_publication_xsdmf_id": 11044,
+                "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "The University of Queensland"
             },
             "fez_record_search_key_possible_author_id": [],
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4575288,
                 "rek_publisher_pid": "UQ:134700",
-                "rek_publisher_xsdmf_id": 8569,
+                "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "School of Natural and Rural Systems Management"
             },
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2573081,
                 "rek_refereed_pid": "UQ:134700",
-                "rek_refereed_xsdmf_id": 7940,
+                "rek_refereed_xsdmf_id": null,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1433027,
                 "rek_refereed_source_pid": "UQ:134700",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_rights": {
                 "rek_rights_id": 103966,
                 "rek_rights_pid": "UQ:367646",
-                "rek_rights_xsdmf_id": 8574,
+                "rek_rights_xsdmf_id": null,
                 "rek_rights": "Copyright expired"
             },
             "fez_record_search_key_series": null,
             "fez_record_search_key_source": {
                 "rek_source_id": 54373,
                 "rek_source_pid": "UQ:134700",
-                "rek_source_xsdmf_id": 8572,
+                "rek_source_xsdmf_id": null,
                 "rek_source": "Henry William Mobsby Collection, UQFL181, Box 2, Folder 5, photo 119"
             },
             "fez_record_search_key_subject": [{
                 "rek_subject_id": 9349547,
                 "rek_subject_pid": "UQ:134700",
-                "rek_subject_xsdmf_id": 8554,
+                "rek_subject_xsdmf_id": null,
                 "rek_subject": 450049,
                 "rek_subject_order": 1,
                 "rek_subject_lookup": "J3"
             }, {
                 "rek_subject_id": 9349548,
                 "rek_subject_pid": "UQ:134700",
-                "rek_subject_xsdmf_id": 8554,
+                "rek_subject_xsdmf_id": null,
                 "rek_subject": 300200,
                 "rek_subject_order": 2,
                 "rek_subject_lookup": "300200 Crop and Pasture Production"
@@ -258,7 +258,7 @@ export default {
             "fez_record_search_key_isi_loc": null,
             "fez_record_search_key_scopus_id": null,
             "fez_datastream_info": [],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Image",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
@@ -268,27 +268,27 @@ export default {
         },
         {
             "rek_pid": "UQ:367646",
-            "rek_title_xsdmf_id": 10699,
+            "rek_title_xsdmf_id": null,
             "rek_title": "[View across Windsor Castle from Round Tower, showing State Apartments to the left and Brunswick Tower and the Prince of Wales Tower on the right, Berkshire, England, nd]",
-            "rek_description_xsdmf_id": 11448,
+            "rek_description_xsdmf_id": null,
             "rek_description": "Henry William Mobsby was born on 17 August 1860 at Hove, Sussex, England, and came to Queensland in 1883. He had diplomas and certificates from the London Chamber of Commerce, the City and Guilds Institute, the Cripplegate Institute and the South Kensington School of Arts. Mobsby was an instructor in Decoration and Photography at the Brisbane Technical College before being appointed artist and photographer with the Department of Agriculture and Stock in 1897. In 1899, he was also appointed to the Chief Secretary's Department and the Intelligence and Tourist Bureau. Mobsby's photography gained international distinction and he officially represented Queensland at the Franco-British Exhibition in London in 1908, the Panama Pacific International Exposition in San Francisco in 1915 (where he took a motion picture certificate course), the British Empire Exhibition at Wembley in 1924-25, and the New Zealand and South Seas Exhibition in Dunedin in 1925-26.",
-            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 238,
-            "rek_status_xsdmf_id": 3680,
+            "rek_status_xsdmf_id": null,
             "rek_status": 2,
             "rek_date_xsdmf_id": null,
             "rek_date": null,
-            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 3946,
-            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2015-08-21T09:32:40Z",
-            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-24T04:21:14Z",
             "rek_file_downloads": 0,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": 8564,
+            "rek_genre_xsdmf_id": null,
             "rek_genre": "image\/tiff",
             "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
@@ -296,7 +296,7 @@ export default {
             "rek_formatted_title": null,
             "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 789,
             "rek_thomson_citation_count": null,
             "rek_thomson_citation_count_xsdmf_id": null,
@@ -316,14 +316,14 @@ export default {
             "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_acknowledgements": {
                 "rek_acknowledgements_id": 22452,
                 "rek_acknowledgements_pid": "UQ:367646",
-                "rek_acknowledgements_xsdmf_id": 17128,
+                "rek_acknowledgements_xsdmf_id": null,
                 "rek_acknowledgements": "Information supplied by Kaye Mobsby."
             },
             "fez_record_search_key_additional_notes": null,
@@ -333,14 +333,14 @@ export default {
             "fez_record_search_key_assigned_user_id": [{
                 "rek_assigned_user_id_id": 890505,
                 "rek_assigned_user_id_pid": "UQ:367646",
-                "rek_assigned_user_id_xsdmf_id": 9501,
+                "rek_assigned_user_id_xsdmf_id": null,
                 "rek_assigned_user_id": 3946,
                 "rek_assigned_user_id_order": 1
             }],
             "fez_record_search_key_author": [{
                 "rek_author_id": 28508209,
                 "rek_author_pid": "UQ:367646",
-                "rek_author_xsdmf_id": 8542,
+                "rek_author_xsdmf_id": null,
                 "rek_author": "Mobsby, Henry William, 1860-1933",
                 "rek_author_order": 1
             }],
@@ -360,7 +360,7 @@ export default {
             "fez_record_search_key_date_available": {
                 "rek_date_available_id": 890840,
                 "rek_date_available_pid": "UQ:367646",
-                "rek_date_available_xsdmf_id": 10697,
+                "rek_date_available_xsdmf_id": null,
                 "rek_date_available": "2015-01-01T00:00:00Z"
             },
             "fez_record_search_key_file_attachment_access_condition": [],
@@ -368,98 +368,98 @@ export default {
             "fez_record_search_key_file_attachment_name": [{
                 "rek_file_attachment_name_id": 3721310,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "UQFL181_b2f05_119a.tif",
                 "rek_file_attachment_name_order": 1
             }, {
                 "rek_file_attachment_name_id": 3721311,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "UQFL181_b2f05_119i.tif",
                 "rek_file_attachment_name_order": 2
             }, {
                 "rek_file_attachment_name_id": 3721312,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "UQFL181_b2f05_119x.jpg",
                 "rek_file_attachment_name_order": 3
             }, {
                 "rek_file_attachment_name_id": 3721313,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "presmd_UQFL181_b2f05_119a.xml",
                 "rek_file_attachment_name_order": 4
             }, {
                 "rek_file_attachment_name_id": 3721314,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "presmd_UQFL181_b2f05_119i.xml",
                 "rek_file_attachment_name_order": 5
             }, {
                 "rek_file_attachment_name_id": 3721315,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "presmd_UQFL181_b2f05_119x.xml",
                 "rek_file_attachment_name_order": 6
             }, {
                 "rek_file_attachment_name_id": 3721316,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "preview_UQFL181_b2f05_119a.jpg",
                 "rek_file_attachment_name_order": 7
             }, {
                 "rek_file_attachment_name_id": 3721317,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "preview_UQFL181_b2f05_119i.jpg",
                 "rek_file_attachment_name_order": 8
             }, {
                 "rek_file_attachment_name_id": 3721318,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "preview_UQFL181_b2f05_119x.jpg",
                 "rek_file_attachment_name_order": 9
             }, {
                 "rek_file_attachment_name_id": 3721319,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "thumbnail_UQFL181_b2f05_119a.jpg",
                 "rek_file_attachment_name_order": 10
             }, {
                 "rek_file_attachment_name_id": 3721320,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "thumbnail_UQFL181_b2f05_119i.jpg",
                 "rek_file_attachment_name_order": 11
             }, {
                 "rek_file_attachment_name_id": 3721321,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "thumbnail_UQFL181_b2f05_119x.jpg",
                 "rek_file_attachment_name_order": 12
             }, {
                 "rek_file_attachment_name_id": 3721322,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "web_UQFL181_b2f05_119a.jpg",
                 "rek_file_attachment_name_order": 13
             }, {
                 "rek_file_attachment_name_id": 3721323,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "web_UQFL181_b2f05_119i.jpg",
                 "rek_file_attachment_name_order": 14
             }, {
                 "rek_file_attachment_name_id": 3721324,
                 "rek_file_attachment_name_pid": "UQ:367646",
-                "rek_file_attachment_name_xsdmf_id": 8625,
+                "rek_file_attachment_name_xsdmf_id": null,
                 "rek_file_attachment_name": "web_UQFL181_b2f05_119x.jpg",
                 "rek_file_attachment_name_order": 15
             }],
             "fez_record_search_key_geographic_area": [{
                 "rek_geographic_area_id": 10520,
                 "rek_geographic_area_pid": "UQ:367646",
-                "rek_geographic_area_xsdmf_id": 17125,
+                "rek_geographic_area_xsdmf_id": null,
                 "rek_geographic_area": "-0.605257,51.484911 -0.599549,51.484911 -0.599549,51.482746 -0.605257,51.482746 -0.605257,51.484911",
                 "rek_geographic_area_order": 1
             }],
@@ -475,7 +475,7 @@ export default {
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": 11352831,
                 "rek_ismemberof_pid": "UQ:367646",
-                "rek_ismemberof_xsdmf_id": 149,
+                "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:278419",
                 "rek_ismemberof_order": 1,
                 "parent": {
@@ -488,31 +488,31 @@ export default {
             "fez_record_search_key_keywords": [{
                 "rek_keywords_id": 28855411,
                 "rek_keywords_pid": "UQ:367646",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Mobsby, Henry William, 1860-1933 -- Archives",
                 "rek_keywords_order": 1
             }, {
                 "rek_keywords_id": 28855412,
                 "rek_keywords_pid": "UQ:367646",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Photographers -- Australia",
                 "rek_keywords_order": 2
             }, {
                 "rek_keywords_id": 28855413,
                 "rek_keywords_pid": "UQ:367646",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Windsor (Berkshire, England)",
                 "rek_keywords_order": 3
             }, {
                 "rek_keywords_id": 28855414,
                 "rek_keywords_pid": "UQ:367646",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Windsor Castle",
                 "rek_keywords_order": 4
             }, {
                 "rek_keywords_id": 28855415,
                 "rek_keywords_pid": "UQ:367646",
-                "rek_keywords_xsdmf_id": 8555,
+                "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Castles",
                 "rek_keywords_order": 5
             }],
@@ -524,7 +524,7 @@ export default {
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 271220,
                 "rek_oa_status_pid": "UQ:367646",
-                "rek_oa_status_xsdmf_id": 17010,
+                "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
@@ -532,7 +532,7 @@ export default {
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 7396,
                 "rek_original_format_pid": "UQ:367646",
-                "rek_original_format_xsdmf_id": 8567,
+                "rek_original_format_xsdmf_id": null,
                 "rek_original_format": "Negative; b&w; 9 x 15 cm."
             },
             "fez_record_search_key_place_of_publication": null,
@@ -542,26 +542,26 @@ export default {
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1098635,
                 "rek_refereed_source_pid": "UQ:367646",
-                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_rights": {
                 "rek_rights_id": 103966,
                 "rek_rights_pid": "UQ:367646",
-                "rek_rights_xsdmf_id": 8574,
+                "rek_rights_xsdmf_id": null,
                 "rek_rights": "Copyright expired"
             },
             "fez_record_search_key_series": {
                 "rek_series_id": 183024,
                 "rek_series_pid": "UQ:367646",
-                "rek_series_xsdmf_id": 11046,
+                "rek_series_xsdmf_id": null,
                 "rek_series": "Henry William Mobsby Collection, UQFL181"
             },
             "fez_record_search_key_source": {
                 "rek_source_id": 54373,
                 "rek_source_pid": "UQ:367646",
-                "rek_source_xsdmf_id": 8572,
+                "rek_source_xsdmf_id": null,
                 "rek_source": "Henry William Mobsby Collection, UQFL181, Box 2, Folder 5, photo 119"
             },
             "fez_record_search_key_subject": [],
@@ -811,7 +811,7 @@ export default {
                 "dsi_security_policy": 1,
                 "dsi_security_inherited": 0
             }],
-            "fez_matched_journals": [],
+            "fez_matched_journals": null,
             "rek_display_type_lookup": "Image",
             "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",

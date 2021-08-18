@@ -26,7 +26,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         }
         variant="text"
       >
-        <ChevronLeftIcon />
+        <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
@@ -198,7 +198,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         variant="text"
       >
         Next
-        <ChevronRightIcon />
+        <Memo(ForwardRef(ChevronRightIcon)) />
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -231,7 +231,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         }
         variant="text"
       >
-        <ChevronLeftIcon />
+        <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
@@ -329,7 +329,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         variant="text"
       >
         Next
-        <ChevronRightIcon />
+        <Memo(ForwardRef(ChevronRightIcon)) />
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -356,7 +356,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         }
         variant="text"
       >
-        <ChevronLeftIcon />
+        <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
@@ -454,7 +454,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         variant="text"
       >
         Next
-        <ChevronRightIcon />
+        <Memo(ForwardRef(ChevronRightIcon)) />
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -481,7 +481,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         }
         variant="text"
       >
-        <ChevronLeftIcon />
+        <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
@@ -579,7 +579,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         variant="text"
       >
         Next
-        <ChevronRightIcon />
+        <Memo(ForwardRef(ChevronRightIcon)) />
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>

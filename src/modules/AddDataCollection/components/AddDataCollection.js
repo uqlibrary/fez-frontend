@@ -13,10 +13,8 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
-import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
@@ -24,15 +22,17 @@ import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import DepositAgreementField from './DepositAgreementField';
 
-import { routes, validation } from 'config';
+import { pathConfig, validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import { CURRENT_LICENCES } from 'config/general';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
+import { selectFields } from 'locale/selectFields';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -77,7 +77,7 @@ export default class AddDataCollection extends Component {
     _navigateToMyDatasets = () => {
         this.props.resetForm();
         this.props.actions.clearNewRecord();
-        this.props.history.push(routes.pathConfig.dataset.mine);
+        this.props.history.push(pathConfig.dataset.mine);
     };
 
     _restartWorkflow = () => {
@@ -319,6 +319,7 @@ export default class AddDataCollection extends Component {
                                         name="authors"
                                         contributorEditorId="rek-author"
                                         showRoleInput
+                                        showIdentifierLookup
                                         locale={txt.information.creator.field}
                                         required
                                         disabled={this.props.submitting}
@@ -334,25 +335,28 @@ export default class AddDataCollection extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12} sm={12} md={4}>
                                             <Field
-                                                component={AccessSelectorField}
+                                                component={NewGenericSelectField}
                                                 id="data-collection-access-selector"
                                                 name="fez_record_search_key_access_conditions.rek_access_conditions"
                                                 required
                                                 validate={[validation.required]}
                                                 disabled={this.props.submitting}
+                                                itemsList={DATASET_ACCESS_CONDITIONS_OPTIONS}
+                                                genericSelectFieldId="rek-access-conditions"
                                                 {...txt.information.accessAndLicensing.fieldLabels.accessConditions}
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={4}>
                                             <Field
-                                                component={LicenceSelectorField}
+                                                component={NewGenericSelectField}
+                                                genericSelectFieldId="rek-license"
                                                 id="data-collection-licence-selector"
                                                 name="fez_record_search_key_license.rek_license"
                                                 required
                                                 validate={[validation.required]}
                                                 disabled={this.props.submitting}
-                                                {...txt.information.accessAndLicensing.fieldLabels
-                                                    .licensingAndTermsOfAccess}
+                                                itemsList={CURRENT_LICENCES}
+                                                {...selectFields.license}
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={4}>
@@ -405,8 +409,8 @@ export default class AddDataCollection extends Component {
 
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="grant-agency"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-grant-agency"
                                                 name="fez_record_search_key_grant_agency"
                                                 maxCount={10}
                                                 searchKey={{
@@ -419,8 +423,8 @@ export default class AddDataCollection extends Component {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="grant-id"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-grant-id"
                                                 name="fez_record_search_key_grant_id"
                                                 maxCount={10}
                                                 searchKey={{ value: 'rek_grant_id', order: 'rek_grant_id_order' }}
@@ -436,8 +440,8 @@ export default class AddDataCollection extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="type-of-data"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-type-of-data"
                                                 name="fez_record_search_key_type_of_data"
                                                 maxCount={10}
                                                 searchKey={{
@@ -453,8 +457,8 @@ export default class AddDataCollection extends Component {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="software-required"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-software-required"
                                                 name="fez_record_search_key_software_required"
                                                 maxCount={10}
                                                 searchKey={{
@@ -470,13 +474,14 @@ export default class AddDataCollection extends Component {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={ListEditorField}
-                                                listEditorId="keywords"
+                                                component={NewListEditorField}
+                                                listEditorId="rek-keywords"
                                                 name="fez_record_search_key_keywords"
                                                 maxCount={10}
                                                 searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                                 locale={locale.components.keywordsForm.field}
                                                 disabled={this.props.submitting}
+                                                ListEditorForm={KeywordsForm}
                                             />
                                         </Grid>
                                         <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>

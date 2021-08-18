@@ -7,16 +7,16 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
-import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { CommunitySelectField } from 'modules/SharedComponents/SelectFields';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { pathConfig } from 'config/routes';
+import { pathConfig } from 'config/pathConfig';
 
 export default class CollectionForm extends Component {
     static propTypes = {
@@ -110,14 +110,13 @@ export default class CollectionForm extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={CommunitiesSelectField}
+                                                component={CommunitySelectField}
                                                 disabled={this.props.submitting}
-                                                communitiesSelectFieldId="rek-ismemberof"
+                                                genericSelectFieldId="rek-ismemberof"
                                                 name="fez_record_search_key_ismemberof"
-                                                label={txt.formLabels.ismemberof.label}
-                                                placeholder={txt.formLabels.ismemberof.placeholder}
                                                 required
                                                 validate={[validation.required]}
+                                                {...txt.formLabels.ismemberof}
                                             />
                                         </Grid>
                                     </Grid>
@@ -161,15 +160,16 @@ export default class CollectionForm extends Component {
                                                 <Grid item xs={12}>
                                                     <Typography>{txt.formLabels.keywords.description}</Typography>
                                                     <Field
-                                                        component={ListEditorField}
+                                                        component={NewListEditorField}
                                                         name="fez_record_search_key_keywords"
                                                         maxCount={10}
                                                         // validate={[validation.requiredList]}
-                                                        maxInputLength={111}
                                                         searchKey={{
                                                             value: 'rek_keywords',
                                                             order: 'rek_keywords_order',
                                                         }}
+                                                        ListEditorForm={KeywordsForm}
+                                                        // isValid={validation.isValidKeyword(111)}
                                                         listEditorId="rek-keywords"
                                                         locale={txt.formLabels.keywords.field}
                                                         disabled={this.props.submitting}

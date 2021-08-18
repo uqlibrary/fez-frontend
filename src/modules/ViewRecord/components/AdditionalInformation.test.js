@@ -74,6 +74,30 @@ describe('Additional Information Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with creative work (Creative Work - Textual)', () => {
+        const wrapper = setup({
+            isNtro: true,
+            publication: {
+                ...records.creativeWork,
+                rek_subtype: 'Creative Work - Textual',
+                fez_record_search_key_contributor: { rek_contributor: 'Test' },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with creative work (Creative Work - Visual Art)', () => {
+        const wrapper = setup({
+            isNtro: true,
+            publication: {
+                ...records.creativeWork,
+                rek_subtype: 'Creative Work - Visual Art',
+                fez_record_search_key_contributor: { rek_contributor: 'Test' },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with design document', () => {
         const wrapper = setup({ publication: records.design });
         expect(toJson(wrapper)).toMatchSnapshot();

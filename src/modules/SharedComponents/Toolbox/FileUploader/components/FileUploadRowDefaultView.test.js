@@ -28,6 +28,11 @@ describe('Component FileUploadRowDefaultView', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render default view for admin', () => {
+        const wrapper = setup({ isAdmin: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render default view with styles', () => {
         const wrapper = getElement(FileUploadRowDefaultViewWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -35,14 +40,14 @@ describe('Component FileUploadRowDefaultView', () => {
 
     it('should not render embargo date picker if access condition is set to closed access', () => {
         const wrapper = setup({
-            accessConditionId: 8,
+            accessConditionId: 1,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render embargo date picker if access condition is set to open access', () => {
         const wrapper = setup({
-            accessConditionId: 9,
+            accessConditionId: 5,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

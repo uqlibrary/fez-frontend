@@ -3,15 +3,12 @@
   "version": "0.0.1",
   "main": "index.js",
   "bundleDependencies": [],
-  "devDependencies": {
-    "eslint": "^4.18.1",
-    "jest": "^22.4.3"
-  },
   "engines": {
-    "node": ">=7.2.0"
+    "npm": "^6",
+    "node": "^14"
   },
   "scripts": {
-    "jest": "jest --coverage 'lib/**/*.test.js'",
+    "jest": "jest --coverage lib/**/*.test.js",
     "test": "npm run jest"
   }
 }
