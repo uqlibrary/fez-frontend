@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
-import CheckIcon from '@material-ui/icons/Check';
+import CloudDoneIcon from '@material-ui/icons/CloudDone';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import CloseIcon from '@material-ui/icons/Close';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
@@ -45,9 +45,8 @@ const useStyles = makeStyles(theme => ({
             background: theme.palette.accent.dark,
             color: theme.palette.primary.contrastText,
         },
-        '&.success': {
-            background: theme.palette.success.dark,
-            color: theme.palette.success.contrastText,
+        '&.success svg': {
+            color: theme.palette.success.dark,
         },
         '&.error': {
             background: theme.palette.error.dark,
@@ -113,7 +112,7 @@ const BulkExport = ({
             hasSuccess.current = true;
             statusClass = 'success';
             statusIcon = (
-                <CheckIcon size="2rem" id={`${exportConfigKey}-loaded`} data-testid={`${exportConfigKey}-loaded`} />
+                <CloudDoneIcon size="2rem" id={`${exportConfigKey}-loaded`} data-testid={`${exportConfigKey}-loaded`} />
             );
         } else if (loadingByPage[exportConfigKey] === false) {
             statusClass = 'error';
