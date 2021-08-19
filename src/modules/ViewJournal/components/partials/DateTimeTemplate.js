@@ -7,7 +7,10 @@ import DefaultTemplate from './DefaultTemplate';
 export const DateTimeTemplate = ({ data, templateProps, fieldId }) => {
     const { format } = templateProps;
     return (
-        <DefaultTemplate fieldId={fieldId} data={moment(String(data)).isValid && moment(String(data)).format(format)} />
+        <DefaultTemplate
+            fieldId={fieldId}
+            data={moment(new Date(String(data))).isValid && moment(new Date(String(data))).format(format)}
+        />
     );
 };
 

@@ -787,7 +787,7 @@ export const journalViewConfig = {
         rows: [
             [
                 {
-                    heading: 'Australian Business Deans Council journal quality list',
+                    heading: 'Australian Business Deans Council (ABDC) Quality Rating',
                     fieldId: 'jnl-abdc-rating',
                     data: [
                         {
@@ -798,7 +798,7 @@ export const journalViewConfig = {
             ],
             [
                 {
-                    heading: 'Field of Research Codes',
+                    heading: 'ABDC Field of Research',
                     fieldId: 'jnl-abdc-for-code-lookup',
                     data: [
                         {
@@ -809,7 +809,7 @@ export const journalViewConfig = {
             ],
             [
                 {
-                    heading: 'Current list',
+                    heading: 'ABDC Listed Year',
                     fieldId: 'jnl-abdc-source-date',
                     data: [
                         {
@@ -818,7 +818,7 @@ export const journalViewConfig = {
                     ],
                     template: 'DateTimeTemplate',
                     templateProps: {
-                        format: 'Do MMMM YYYY',
+                        format: 'YYYY',
                     },
                 },
             ],

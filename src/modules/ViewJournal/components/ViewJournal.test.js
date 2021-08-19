@@ -341,9 +341,14 @@ describe('ViewJournal', () => {
         // ******************************************************************
         // Listed in
         // ******************************************************************
-        expect(queryByTestId('jnl-abdc-rating-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-abdc-for-code-lookup-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-abdc-source-date-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-abdc-rating-header')).toHaveTextContent(
+            'Australian Business Deans Council (ABDC) Quality Rating'
+        );
+        expect(queryByTestId('jnl-abdc-rating-value')).toHaveTextContent('A*');
+        expect(queryByTestId('jnl-abdc-for-code-lookup-header')).toHaveTextContent('ABDC Field of Research');
+        expect(queryByTestId('jnl-abdc-for-code-lookup-value')).toHaveTextContent('1503 Business and Management');
+        expect(queryByTestId('jnl-abdc-source-date-header')).toHaveTextContent('ABDC Listed Year');
+        expect(queryByTestId('jnl-abdc-source-date-value')).toHaveTextContent('2019');
 
         expect(getByTestId('jnl-cwts-source-year-header')).toHaveTextContent('CWTS Leiden Ranking');
         expect(getByTestId('jnl-cwts-source-year-value')).toHaveTextContent('Yes, 2020');
