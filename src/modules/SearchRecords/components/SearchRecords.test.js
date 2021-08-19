@@ -806,11 +806,10 @@ describe('SearchRecords page', () => {
         });
     });
 
-    it('should handle bulk export correctly', () => {
+    it('should show bulk export option to admins', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
 
-        const testExportAction = jest.fn();
         const searchQuery = {
             page: 1,
             pageSize: 20,
@@ -829,11 +828,7 @@ describe('SearchRecords page', () => {
             bulkExportSelected: false,
         };
 
-        const { getByTestId, getAllByRole } = setup({
-            actions: {
-                exportEspacePublications: testExportAction,
-                searchEspacePublications: jest.fn(),
-            },
+        const { getByTestId } = setup({
             publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
             publicationsListPagingData: {
                 current_page: 1,
@@ -852,28 +847,7 @@ describe('SearchRecords page', () => {
             searchQuery,
         });
 
-        act(() => {
-            fireEvent.mouseDown(getByTestId('pageSize'));
-        });
-        expect(getAllByRole('option').length).toBe(5);
-        act(() => {
-            fireEvent.click(getAllByRole('option')[4]);
-        });
-
-        act(() => {
-            fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
-        });
-        expect(getAllByRole('option').length).toBe(3);
-        act(() => {
-            fireEvent.click(getAllByRole('option')[2]);
-        });
-
-        expect(testExportAction).toHaveBeenCalledWith({
-            ...searchQuery,
-            age: '1', // not sure what this is!
-            pageSize: 500,
-            exportPublicationsFormat: 'endnote',
-        });
+        expect(getByTestId('bulk-export-open')).toBeInTheDocument();
     });
 
     // it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
@@ -938,25 +912,4 @@ describe('SearchRecords page', () => {
         unmount();
         expect(clearSearchQueryFn).toHaveBeenCalled();
     });
-
-    // it('shows confirmation message on success confirmation for bulk export', done => {
-    //     const { debug } = setup({
-    //         actions: {
-    //             exportEspacePublications: jest.fn(() => Promise.resolve()),
-    //         },
-    //     });
-    //     const showConfirmation = jest.fn();
-    //     wrapper.instance()._setSuccessConfirmation({
-    //         showConfirmation,
-    //     });
-    //     wrapper.setState({ bulkExportSelected: true }, () => {
-    //         wrapper
-    //             .instance()
-    //             .handleExportPublications('excel')
-    //             .then(() => {
-    //                 expect(showConfirmation).toHaveBeenCalledTimes(1);
-    //                 done();
-    //             });
-    //     });
-    // });
 });
