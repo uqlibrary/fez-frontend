@@ -42,10 +42,7 @@ const useStyles = makeStyles(theme => ({
             marginTop: theme.spacing(2),
         },
         '&.loading': {
-            background: theme.palette.primary.main,
-            color: theme.palette.primary.contrastText,
-        },
-        '&.loading [role="progressbar"]': {
+            background: theme.palette.accent.dark,
             color: theme.palette.primary.contrastText,
         },
         '&.success': {
@@ -109,6 +106,7 @@ const BulkExport = ({
                     size="1.25rem"
                     id={`${exportConfigKey}-loading`}
                     data-testid={`${exportConfigKey}-loading`}
+                    color="inherit"
                 />
             );
         } else if (loadedByPage[exportConfigKey] === true) {
