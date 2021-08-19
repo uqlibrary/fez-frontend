@@ -15,15 +15,15 @@ import * as UserIsAdminHook from 'hooks/userIsAdmin';
 /**
  * Unhide items hidden by MaterialUI based on screen size
  */
-function createMatchMedia(width) {
+const createMatchMedia = width => {
     return query => ({
         matches: mediaQuery.match(query, { width }),
         addListener: () => {},
         removeListener: () => {},
     });
-}
+};
 
-function setup(testProps = {}) {
+const setup = (testProps = {}) => {
     const props = {
         publicationsList: [],
         searchLoading: false,
@@ -38,9 +38,10 @@ function setup(testProps = {}) {
         },
         ...testProps,
         actions: {
-            exportEspacePublications: jest.fn(),
-            searchEspacePublications: jest.fn(),
             clearSearchQuery: jest.fn(),
+            exportEspacePublications: jest.fn(),
+            resetExportPublicationsStatus: jest.fn(),
+            searchEspacePublications: jest.fn(),
             ...testProps.actions,
         },
     };
@@ -49,7 +50,7 @@ function setup(testProps = {}) {
             <SearchRecords {...props} />
         </WithReduxStore>,
     );
-}
+};
 
 describe('SearchRecords page', () => {
     it('should render placeholders', () => {
