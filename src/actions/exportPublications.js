@@ -51,3 +51,11 @@ export function exportPublications(requestParams) {
             });
     };
 }
+
+export const resetExportPublicationsStatus = () => {
+    return dispatch => {
+        dispatch({
+            type: actions.EXPORT_PUBLICATIONS_RESET,
+        });
+    };
+};

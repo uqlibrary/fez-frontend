@@ -146,6 +146,7 @@ export const SearchRecords = ({
             }
 
             actions.searchEspacePublications(state);
+            actions.resetExportPublicationsStatus();
         } else {
             !!location.search &&
                 location.search.length > 1 &&
@@ -164,6 +165,7 @@ export const SearchRecords = ({
 
     const updateSearch = () => {
         actions.searchEspacePublications({ ...searchQuery, ...state });
+        actions.resetExportPublicationsStatus();
     };
 
     const updateHistoryAndSearch = () => {

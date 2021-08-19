@@ -50,6 +50,8 @@ const handlers = {
             },
         };
     },
+
+    [actions.EXPORT_PUBLICATIONS_RESET]: () => initialState,
 };
 
 export default function exportPublicationsReducer(state = initialState, action) {
