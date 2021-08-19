@@ -882,8 +882,8 @@ export const journalViewConfig = {
                                 ? ', ' +
                                   moment(
                                       journalDetails.fez_journal_nature_index.jnl_nature_index_source_date,
-                                      'Do MMMM YYYY',
-                                  )
+                                      ' YYYY-MM-DD',
+                                  ).format('YYYY')
                                 : ''
                         }`,
                 },

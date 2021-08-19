@@ -367,7 +367,7 @@ describe('ViewJournal', () => {
         );
 
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
-        expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('No');
+        expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
     });
 
     it('should render correct creative licenses (BY-ND)', async () => {
