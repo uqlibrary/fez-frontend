@@ -106,4 +106,12 @@ describe('Export publications actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
+
+    describe('resetExportPublicationsStatus()', () => {
+        it('dispatches expected actions', () => {
+            const expectedActions = [actions.EXPORT_PUBLICATIONS_RESET];
+            mockActionsStore.dispatch(exportPublicationsActions.resetExportPublicationsStatus());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
 });

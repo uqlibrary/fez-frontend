@@ -30,16 +30,16 @@ import { pathConfig } from 'config';
  * Parse provided query string and return active filters, facets etc
  * @returns object
  */
-const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublishedBufferPage) => {
+export const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublishedBufferPage) => {
     const providedSearchQuery = deparam(searchQuery);
 
     if (providedSearchQuery.hasOwnProperty('activeFacets')) {
         providedSearchQuery.activeFacets = {
             filters: providedSearchQuery.activeFacets.filters || {},
-            ranges: providedSearchQuery.activeFacets.ranges || /* istanbul ignore next */ {},
+            ranges: providedSearchQuery.activeFacets.ranges || {},
             ...(providedSearchQuery.activeFacets.hasOwnProperty('showOpenAccessOnly')
                 ? { showOpenAccessOnly: providedSearchQuery.activeFacets.showOpenAccessOnly === 'true' }
-                : /* istanbul ignore next */ {}),
+                : {}),
         };
     } else {
         providedSearchQuery.activeFacets = {
@@ -49,7 +49,7 @@ const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublished
     }
 
     const pageSize = parseInt(providedSearchQuery.pageSize, 10);
-    /* istanbul ignore if */
+
     if (canBulkExport && pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
         providedSearchQuery.bulkExportSelected = true;
         providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
@@ -74,13 +74,27 @@ const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublished
         delete providedSearchQuery.searchQueryParams.rek_updated_date;
     }
 
-    providedSearchQuery.page =
-        (providedSearchQuery.page && /* istanbul ignore next */ parseInt(providedSearchQuery.page, 10)) || 1;
+    providedSearchQuery.page = (providedSearchQuery.page && parseInt(providedSearchQuery.page, 10)) || 1;
 
     return providedSearchQuery;
 };
 
-export const SearchRecords = ({
+export const getAdvancedSearchFields = searchFields => {
+    const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
+    // Iterate the searchfields and add their map from locale into the excluded facets array
+    const importedFacetExcludes = [];
+    searchFields.map(searchFieldItem => {
+        if (searchFieldItem.searchField) {
+            const fieldType = locale.components.searchComponent.advancedSearch.fieldTypes[searchFieldItem.searchField];
+            if (fieldType.map) {
+                importedFacetExcludes.push(fieldType.map);
+            }
+        }
+    });
+    return excludesFromLocale.concat(importedFacetExcludes);
+};
+
+const SearchRecords = ({
     searchQuery,
     publicationsList,
     publicationsListFacets,
@@ -105,7 +119,7 @@ export const SearchRecords = ({
             ranges: {},
             ...{
                 ...(((searchQuery || {}).activeFacets || {}).showOpenAccessOnly === 'true'
-                    ? /* istanbul ignore next */ { showOpenAccessOnly: true }
+                    ? { showOpenAccessOnly: true }
                     : {}),
             },
         },
@@ -133,9 +147,8 @@ export const SearchRecords = ({
 
     React.useEffect(() => {
         // handle browser back button - set state from location/dispatch action for this state
-        /* istanbul ignore if */
-        if (history.action === 'POP' && /* istanbul ignore next */ location.pathname === pathConfig.records.search) {
-            if (location.state) {
+        if (history.action === 'POP' && location.pathname === pathConfig.records.search) {
+            !!location.state &&
                 setState(
                     parseSearchQueryStringFromUrl(
                         param(location.state),
@@ -143,7 +156,6 @@ export const SearchRecords = ({
                         isUnpublishedBufferPage,
                     ),
                 );
-            }
 
             actions.searchEspacePublications(state);
             actions.resetExportPublicationsStatus();
@@ -172,7 +184,7 @@ export const SearchRecords = ({
         history.push({
             pathname:
                 location.pathname === pathConfig.admin.unpublished
-                    ? /* istanbul ignore next */ pathConfig.admin.unpublished
+                    ? pathConfig.admin.unpublished
                     : pathConfig.records.search,
             search: param(state),
             state,
@@ -213,7 +225,6 @@ export const SearchRecords = ({
         });
     };
 
-    /* istanbul ignore next */
     const facetsChanged = activeFacets => {
         updateSemaphore.current = true;
         setState({
@@ -229,26 +240,12 @@ export const SearchRecords = ({
             ...exportFormat,
         });
 
-    /* istanbul ignore next */
     const handleFacetExcludesFromSearchFields = searchFields => {
-        const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
-        // Iterate the searchfields and add their map from locale into the excluded facets array
-        if (searchFields) {
-            const importedFacetExcludes = [];
-            Object.keys(searchFields).map(key => {
-                if (searchFields[key].searchField) {
-                    const fieldType =
-                        locale.components.searchComponent.advancedSearch.fieldTypes[searchFields[key].searchField];
-                    if (fieldType.map) {
-                        importedFacetExcludes.push(fieldType.map);
-                    }
-                }
-            });
+        !!searchFields &&
             setState({
                 ...state,
-                advancedSearchFields: excludesFromLocale.concat(importedFacetExcludes),
+                advancedSearchFields: getAdvancedSearchFields(searchFields),
             });
-        }
     };
 
     const txt = locale.pages.searchRecords;
@@ -391,7 +388,7 @@ export const SearchRecords = ({
                 )}
                 {publicationsListFacets && Object.keys(publicationsListFacets).length !== 0 && (
                     <Hidden smDown>
-                        <Grid item md={3}>
+                        <Grid item md={3} id="refine-results-facets" data-testid="refine-results-facets">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
                                     facetsData={publicationsListFacets}
@@ -401,7 +398,6 @@ export const SearchRecords = ({
                                     excludeFacetsList={
                                         (state.advancedSearchFields &&
                                             state.advancedSearchFields.length &&
-                                            /* istanbul ignore next */
                                             state.advancedSearchFields) ||
                                         locale.pages.searchRecords.facetsFilter.excludeFacetsList
                                     }

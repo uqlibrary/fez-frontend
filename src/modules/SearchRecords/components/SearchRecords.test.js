@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchRecords from './SearchRecords';
-// import { pathConfig } from 'config';
+import { default as SearchRecords, parseSearchQueryStringFromUrl, getAdvancedSearchFields } from './SearchRecords';
+import { pathConfig } from 'config';
 // import { locale } from 'locale';
 import { renderWithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
@@ -11,6 +11,8 @@ jest.mock('actions', () => ({
 import * as actions from 'actions';
 
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
+
+import { EXPORT_FORMAT_TO_EXTENSION, PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 
 /**
  * Unhide items hidden by MaterialUI based on screen size
@@ -53,6 +55,10 @@ const setup = (testProps = {}) => {
 };
 
 describe('SearchRecords page', () => {
+    beforeAll(() => {
+        window.matchMedia = createMatchMedia(window.innerWidth);
+    });
+
     it('should render placeholders', () => {
         const { getByText, getByTestId } = setup();
         expect(getByTestId('simple-search-input')).toBeInTheDocument();
@@ -122,161 +128,57 @@ describe('SearchRecords page', () => {
         expect(getByText('Displaying works 10 to 20 of 100 total works.')).toBeInTheDocument();
     });
 
-    describe('should show available filters or selected filters if', () => {
-        beforeAll(() => {
-            window.matchMedia = createMatchMedia(window.innerWidth);
-        });
-
-        it('publicationsListFacets returned (even if there are no results)', () => {
-            const { getByText } = setup({
-                publicationsListFacets: {
-                    'Some Facet': {
-                        buckets: [{ key: 'example 1' }],
-                    },
-                    'Another Facet': {
-                        buckets: [{ key: 'example 2' }],
-                    },
+    it('should show facets even if there are no results', () => {
+        const { getByText } = setup({
+            publicationsListFacets: {
+                'Some Facet': {
+                    buckets: [{ key: 'example 1' }],
                 },
-                searchQuery: {
-                    title: 'this is test',
+                'Another Facet': {
+                    buckets: [{ key: 'example 2' }],
                 },
-                publicationsList: [],
-            });
-            expect(getByText('Some Facet')).toBeInTheDocument();
-            expect(getByText('Another Facet')).toBeInTheDocument();
+            },
+            searchQuery: {
+                title: 'this is test',
+            },
+            publicationsList: [],
         });
-
-        // it.only(
-        //     'publicationsListFacets returned (even if there are no results) and ' +
-        //         'should exclude facets from advanced search field',
-        //     () => {
-        //         const { debug, getByTestId, asFragment } = setup({
-        //             publicationsListFacets: {
-        //                 'Some Facet': {
-        //                     buckets: [{ value: 'example 1' }],
-        //                 },
-        //                 'Another Facet': {
-        //                     buckets: [{ value: 'example 2' }],
-        //                 },
-        //             },
-        //             searchQuery: {
-        //                 title: 'this is test',
-        //             },
-        //             publicationsList: [],
-        //         });
-
-        //         debug(getByTestId('clickable-facet-category-open-access').closest('nav'));
-
-        //         // wrapper.setState({
-        //         //     advancedSearchFields: ['Author'],
-        //         // });
-        //     },
-        // );
-
-        // it.only('activeFacets OA selected (even if there are no results)', () => {
-        //     const { debug, getByTestId } = setup({
-        //         searchQuery: {
-        //             title: 'this is test',
-        //             activeFacets: {
-        //                 showOpenAccessOnly: 'true',
-        //             },
-        //         },
-        //         publicationsList: [],
-        //         publicationsListFacets: {
-        //             'Some Facet': {
-        //                 buckets: [{ key: 'example 1' }],
-        //             },
-        //         },
-        //     });
-        //     fireEvent.click(getByTestId('clickable-facet-category-open-access'));
-        //     debug(getByTestId('clickable-facet-category-open-access').closest('nav'));
-        // });
-
-        // it.only('activeFacets filter selected (even if there are no results)', () => {
-        //     const { debug } = setup({
-        //         searchQuery: {
-        //             title: 'this is test',
-        //             activeFacets: {
-        //                 filters: {
-        //                     'Display type': 179,
-        //                 },
-        //             },
-        //         },
-        //         publicationsList: [],
-        //     });
-        //     debug();
-        // });
-
-        // it.only('activeFacets range selected (even if there are no results)', () => {
-        //     const { debug } = setup({
-        //         searchQuery: {
-        //             title: 'this is test',
-        //             activeFacets: {
-        //                 ranges: {
-        //                     'Year published': {
-        //                         from: 2015,
-        //                         to: 2018,
-        //                     },
-        //                 },
-        //             },
-        //         },
-        //         publicationsList: [],
-        //     });
-        //     debug();
-        // });
+        expect(getByText('Some Facet')).toBeInTheDocument();
+        expect(getByText('Another Facet')).toBeInTheDocument();
     });
 
-    // it.only('should get publications when user clicks back and state is set', () => {
-    //     const testAction = jest.fn();
-    //     const { debug } = setup({
-    //         actions: { searchEspacePublications: testAction },
-    //         history: { action: 'POP' },
-    //         location: { pathname: pathConfig.records.search, state: { page: 2 }, search: 'something' },
-    //     });
-    //     debug();
-    //     expect(testAction).toHaveBeenCalled();
-    // });
+    it('should get publications when user clicks back and state is set', () => {
+        const history = { action: 'POP' };
+        const location = { pathname: pathConfig.records.search, state: { page: 2 }, search: 'something' };
+
+        const mockUseEffect = jest.spyOn(React, 'useEffect');
+        let called = false;
+        mockUseEffect.mockImplementation((f, dependencies) => {
+            if (
+                !called &&
+                JSON.stringify(dependencies[0]) === JSON.stringify(location) &&
+                dependencies[1] === history.action
+            ) {
+                called = true;
+                f();
+            }
+        });
+
+        const testAction = jest.fn();
+        setup({
+            actions: { searchEspacePublications: testAction },
+            history,
+            location,
+        });
+        expect(testAction).toHaveBeenCalled();
+        mockUseEffect.mockRestore();
+    });
 
     // it('should get publications when user clicks back and state is not set', () => {
     //     const testAction = jest.fn();
     //     const { debug } = setup({ actions: { searchEspacePublications: testAction } });
     //     expect(testAction).toHaveBeenCalled();
     //     expect(wrapper.state().page).toEqual(1);
-    // });
-
-    // it.only('should set state and update history and search records when page size changed', () => {
-    //     const testAction = jest.fn();
-    //     const testPushFn = jest.fn();
-
-    //     const { debug, getByText, getByTestId, getByRole } = setup({
-    //         actions: {
-    //             searchEspacePublications: testAction,
-    //         },
-    //         history: {
-    //             push: testPushFn,
-    //         },
-    //         publicationsList: [
-    //             { rek_pid: 'UQ1', rek_title: 'Title 1', rek_date: '2021-01-01T00:00:00Z' },
-    //             { rek_pid: 'UQ2', rek_title: 'Title 2', rek_date: '2021-02-01T00:00:00Z' },
-    //             { rek_pid: 'UQ3', rek_title: 'Title 3', rek_date: '2021-03-01T00:00:00Z' },
-    //         ],
-    //         publicationsListPagingData: {
-    //             current_page: 1,
-    //             from: 1,
-    //             per_page: 10,
-    //             to: 10,
-    //             total: 20,
-    //         },
-    //     });
-
-    //     fireEvent.click(getByTestId('pageSize'));
-    //     // debug(getByText('Works per page').closest('div'));
-    //     debug(getByTestId('menu-'));
-
-    //     // wrapper.instance().pageSizeChanged(30);
-    //     // wrapper.update();
-    //     expect(testAction).toHaveBeenCalled();
-    //     expect(testPushFn).toHaveBeenCalled();
     // });
 
     const searchQuery = {
@@ -301,6 +203,52 @@ describe('SearchRecords page', () => {
             current_page: 1,
         },
         searchQuery,
+        publicationsListFacets: {
+            'Author (lookup)': {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 185,
+                buckets: [
+                    { key: 'Martin, Sally', doc_count: 68 },
+                    { key: 'Parton, Robert G.', doc_count: 22 },
+                    { key: 'Meunier, Frederic A.', doc_count: 13 },
+                    { key: 'Andreas Papadopulos', doc_count: 9 },
+                    { key: 'Rachel Sarah Gormal', doc_count: 8 },
+                ],
+            },
+            Subject: {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 66,
+                buckets: [
+                    { key: 450009, doc_count: 19 },
+                    { key: 453239, doc_count: 9 },
+                    { key: 270104, doc_count: 8 },
+                    { key: 450774, doc_count: 8 },
+                    { key: 453253, doc_count: 7 },
+                ],
+            },
+            Author: {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 185,
+                buckets: [
+                    { key: 745, doc_count: 68 },
+                    { key: 824, doc_count: 22 },
+                    { key: 2746, doc_count: 13 },
+                    { key: 89985, doc_count: 9 },
+                    { key: 10992, doc_count: 8 },
+                ],
+            },
+            Subtype: {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 2,
+                buckets: [
+                    { key: 'Article (original research)', doc_count: 50 },
+                    { key: 'Published abstract', doc_count: 9 },
+                    { key: 'Critical review of research, literature review, critical commentary', doc_count: 3 },
+                    { key: 'Fully published paper', doc_count: 2 },
+                    { key: 'Editorial', doc_count: 1 },
+                ],
+            },
+        },
     };
 
     it('should update history and search records when page size is changed', () => {
@@ -438,43 +386,135 @@ describe('SearchRecords page', () => {
         });
     });
 
-    // it('should update history and search records when facet is changed', () => {
-    //     const testAction = jest.fn();
-    //     const testPushFn = jest.fn();
+    it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
+        const { getByTestId, getAllByRole } = setup(props);
 
-    //     const { debug } = setup({
-    //         actions: {
-    //             searchEspacePublications: testAction,
-    //         },
-    //         history: {
-    //             push: testPushFn,
-    //         },
-    //     });
+        // Do one advanced search
+        act(() => {
+            fireEvent.click(getByTestId('show-advanced-search'));
+        });
+        act(() => {
+            fireEvent.click(getByTestId('advanced-search'));
+        });
 
-    //     wrapper.instance().facetsChanged({ filters: {}, ranges: { 'Publication year': { from: 2015, to: 2018 } } });
-    //     wrapper.update();
-    //     expect(wrapper.instance().state.activeFacets).toEqual({
-    //         filters: {},
-    //         ranges: { 'Publication year': { from: 2015, to: 2018 } },
-    //     });
-    //     expect(testAction).toHaveBeenCalled();
-    //     expect(testPushFn).toHaveBeenCalled();
-    // });
+        expect(getByTestId('facets-filter')).toHaveTextContent('Author');
 
-    // it('should set history to unpublished path if pathname matches it', () => {
-    //     const { debug } = setup({
-    //         history: {
-    //             push: jest.fn(history => {
-    //                 expect(history.pathname).toBe(pathConfig.admin.unpublished);
-    //             }),
-    //         },
-    //         location: {
-    //             pathname: pathConfig.admin.unpublished,
-    //             search: '',
-    //         },
-    //     });
-    //     wrapper.instance().updateHistoryAndSearch();
-    // });
+        // Do another advanced search
+        act(() => {
+            fireEvent.mouseDown(getByTestId('field-type-select'));
+        });
+        expect(getAllByRole('option').length).toBe(18);
+        expect(getAllByRole('option')[5]).toHaveTextContent('Author Name');
+        act(() => {
+            fireEvent.click(getAllByRole('option')[5]);
+        });
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        act(() => {
+            fireEvent.click(getByTestId('advanced-search'));
+        });
+
+        expect(getByTestId('facets-filter')).not.toHaveTextContent('Author');
+    });
+
+    it('should update history and search records when facet is changed', () => {
+        const testAction = jest.fn();
+        const testPushFn = jest.fn();
+
+        const { getByTestId, getByText } = setup({
+            ...props,
+            isAdvancedSearch: true,
+            actions: {
+                searchEspacePublications: testAction,
+            },
+            history: {
+                push: testPushFn,
+            },
+        });
+
+        act(() => {
+            fireEvent.click(getByTestId('clickable-facet-category-author'));
+        });
+        act(() => {
+            fireEvent.click(getByText('Martin, Sally (68)'));
+        });
+
+        expect(testAction).toHaveBeenCalled();
+        expect(testPushFn).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search:
+                'searchQueryParams%5Ball%5D=test&activeFacets%5Bfilters%5D%5BAuthor%5D=745&' +
+                'activeFacets%5BshowOpenAccessOnly%5D=false&bulkExportSelected=false&pageSize=20' +
+                '&sortDirection=Desc&sortBy=score&page=1',
+            state: {
+                activeFacets: {
+                    filters: {
+                        Author: 745,
+                    },
+                    ranges: {},
+                    showOpenAccessOnly: false,
+                },
+                bulkExportSelected: false,
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: {
+                    all: 'test',
+                },
+                sortBy: 'score',
+                sortDirection: 'Desc',
+            },
+        });
+    });
+
+    it('should set history to unpublished path if pathname matches it', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
+
+        const testFn = jest.fn();
+
+        const { getByTestId, getAllByRole } = setup({
+            history: {
+                push: testFn,
+            },
+            location: {
+                pathname: pathConfig.admin.unpublished,
+                search: '',
+            },
+            publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+            publicationsListPagingData: {
+                current_page: 1,
+                from: 10,
+                page_size: 20,
+                to: 20,
+                total: 100,
+            },
+        });
+
+        act(() => {
+            fireEvent.mouseDown(getByTestId('pageSize'));
+        });
+        expect(getAllByRole('option').length).toBe(3);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[1]);
+        });
+
+        expect(testFn).toHaveBeenCalledWith({
+            pathname: pathConfig.admin.unpublished,
+            search: 'page=1&pageSize=50&sortBy=score&sortDirection=Desc&bulkExportSelected=false',
+            state: {
+                activeFacets: {
+                    filters: {},
+                    ranges: {},
+                },
+                advancedSearchFields: [],
+                bulkExportSelected: false,
+                page: 1,
+                pageSize: 50,
+                sortBy: 'score',
+                sortDirection: 'Desc',
+            },
+        });
+        userIsAdmin.mockRestore();
+    });
 
     // it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
     //     const testAction = jest.fn();
@@ -486,251 +526,13 @@ describe('SearchRecords page', () => {
     //             searchEspacePublications: testAction,
     //         },
     //     });
-
     //     expect(testAction).toHaveBeenCalled();
     // });
 
-    // it('should correctly parse search query string from location search (default filters + title', () => {
-    //     const { debug } = setup();
-
-    //     const result = wrapper
-    //         .instance()
-    //         .parseSearchQueryStringFromUrl(
-    //             'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata',
-    //         );
-
-    //     expect(result).toEqual({
-    //         page: '1',
-    //         pageSize: 20,
-    //         sortBy: 'published_date',
-    //         sortDirection: 'Desc',
-    //         searchQueryParams: {
-    //             title: 'sometestdata',
-    //         },
-    //         activeFacets: {
-    //             filters: {},
-    //             ranges: {},
-    //         },
-    //         bulkExportSelected: false,
-    //     });
-    // });
-
-    // it('should parse properly when activeFacets.showOpenAccessOnly is not present in url', () => {
-    //     const { debug } = setup();
-    //     const test = wrapper.instance().parseSearchQueryStringFromUrl('activeFacets%5Btest1%5D=test2');
-    // });
-
-    // it(
-    //     'should correctly parse search query string from location search ' +
-    //         '(default filters + publication type facet + title',
-    //     () => {
-    //         const { debug } = setup();
-
-    //         const result = wrapper
-    //             .instance()
-    //             .parseSearchQueryStringFromUrl(
-    //                 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
-    //                     'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5B' +
-    //                     'title%5D=some+test+data',
-    //             );
-
-    //         expect(result).toEqual({
-    //             page: '1',
-    //             pageSize: 20,
-    //             sortBy: 'published_date',
-    //             sortDirection: 'Desc',
-    //             searchQueryParams: {
-    //                 title: 'some test data',
-    //             },
-    //             activeFacets: {
-    //                 filters: {
-    //                     'Display type': '130',
-    //                 },
-    //                 ranges: {},
-    //                 showOpenAccessOnly: false,
-    //             },
-    //             bulkExportSelected: false,
-    //         });
-    //     },
-    // );
-
-    // it(
-    //     'should correctly parse search query string from location search ' +
-    //         '(changed filters + publication type + open access)',
-    //     () => {
-    //         const { debug } = setup();
-
-    //         const result = wrapper
-    //             .instance()
-    //             .parseSearchQueryStringFromUrl(
-    //                 'page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
-    //                     'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5B' +
-    //                     'title%5D=some+test+data',
-    //             );
-
-    //         expect(result).toEqual({
-    //             page: '2',
-    //             pageSize: 50,
-    //             sortBy: 'published_date',
-    //             sortDirection: 'Desc',
-    //             searchQueryParams: {
-    //                 title: 'some test data',
-    //             },
-    //             activeFacets: {
-    //                 filters: {
-    //                     'Display type': '130',
-    //                 },
-    //                 ranges: {},
-    //                 showOpenAccessOnly: true,
-    //             },
-    //             bulkExportSelected: false,
-    //         });
-    //     },
-    // );
-
-    // it('should correctly parse search query string from location search (published year)', () => {
-    //     const { debug } = setup();
-
-    //     const result = wrapper
-    //         .instance()
-    //         .parseSearchQueryStringFromUrl(
-    //             'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5B' +
-    //                 'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
-    //                 'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&' +
-    //                 'searchQueryParams%5Btitle%5D=some+test+data',
-    //         );
-
-    //     expect(result).toEqual({
-    //         page: '1',
-    //         pageSize: 20,
-    //         sortBy: 'published_date',
-    //         sortDirection: 'Desc',
-    //         searchQueryParams: {
-    //             title: 'some test data',
-    //         },
-    //         activeFacets: {
-    //             filters: {},
-    //             ranges: {
-    //                 'Year published': {
-    //                     from: '2008',
-    //                     to: '2023',
-    //                 },
-    //             },
-    //             showOpenAccessOnly: false,
-    //         },
-    //         bulkExportSelected: false,
-    //     });
-    // });
-
-    // it(
-    //     'should correctly parse search query string from location search and ' +
-    //         'reset pageSize if not in valid values (20, 50, 100)',
-    //     () => {
-    //         const { debug } = setup();
-
-    //         const result = wrapper
-    //             .instance()
-    //             .parseSearchQueryStringFromUrl(
-    //                 'page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5B' +
-    //                     'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-    //                     '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
-    //             );
-
-    //         expect(result).toEqual({
-    //             page: '1',
-    //             pageSize: 20,
-    //             sortBy: 'published_date',
-    //             sortDirection: 'Desc',
-    //             searchQueryParams: {
-    //                 title: 'some test data',
-    //             },
-    //             activeFacets: {
-    //                 filters: {},
-    //                 ranges: {
-    //                     'Year published': {
-    //                         from: '2008',
-    //                         to: '2023',
-    //                     },
-    //                 },
-    //                 showOpenAccessOnly: false,
-    //             },
-    //             bulkExportSelected: false,
-    //         });
-    //     },
-    // );
-
-    // it(
-    //     'should correctly parse search query string from location search and ' +
-    //         'reset sortDirection if not in valid values (Desc, Asc)',
-    //     () => {
-    //         const { debug } = setup({});
-
-    //         const result = wrapper
-    //             .instance()
-    //             .parseSearchQueryStringFromUrl(
-    //                 'page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5B' +
-    //                     'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-    //                     '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
-    //             );
-
-    //         expect(result).toEqual({
-    //             page: '1',
-    //             pageSize: 20,
-    //             sortBy: 'published_date',
-    //             sortDirection: 'Desc',
-    //             searchQueryParams: {
-    //                 title: 'some test data',
-    //             },
-    //             activeFacets: {
-    //                 filters: {},
-    //                 ranges: {
-    //                     'Year published': {
-    //                         from: '2008',
-    //                         to: '2023',
-    //                     },
-    //                 },
-    //                 showOpenAccessOnly: false,
-    //             },
-    //             bulkExportSelected: false,
-    //         });
-    //     },
-    // );
-
-    // it('should correctly parse search query string from location search & reset sortBy if not in valid values', () => {
-    //     const { debug } = setup({});
-
-    //     const result = wrapper
-    //         .instance()
-    //         .parseSearchQueryStringFromUrl(
-    //             'page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5B' +
-    //                 'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-    //                 '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
-    //         );
-
-    //     expect(result).toEqual({
-    //         page: '1',
-    //         pageSize: 100,
-    //         sortBy: 'published_date',
-    //         sortDirection: 'Asc',
-    //         searchQueryParams: {
-    //             title: 'some test data',
-    //         },
-    //         activeFacets: {
-    //             filters: {},
-    //             ranges: {
-    //                 'Year published': {
-    //                     from: '2008',
-    //                     to: '2023',
-    //                 },
-    //             },
-    //             showOpenAccessOnly: false,
-    //         },
-    //         bulkExportSelected: false,
-    //     });
-    // });
-
     it('renders loading screen while export publications loading', () => {
-        const { getByText } = setup({ exportPublicationsLoading: true });
+        const { getByText } = setup({
+            exportPublicationsLoading: true,
+        });
         expect(getByText('Searching for works')).toBeInTheDocument();
     });
 
@@ -741,6 +543,7 @@ describe('SearchRecords page', () => {
     });
 
     it('should handle export publications correctly', () => {
+        const format = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const testExportAction = jest.fn();
         const searchQuery = {
             page: 1,
@@ -803,7 +606,7 @@ describe('SearchRecords page', () => {
             ...searchQuery,
             age: '1', // not sure what this is!
             pageSize: 50,
-            exportPublicationsFormat: 'excel',
+            exportPublicationsFormat: format,
         });
     });
 
@@ -824,7 +627,7 @@ describe('SearchRecords page', () => {
                         to: '2023',
                     },
                 },
-                showOpenAccessOnly: false,
+                showOpenAccessOnly: 'true',
             },
             bulkExportSelected: false,
         };
@@ -846,62 +649,12 @@ describe('SearchRecords page', () => {
             },
             canUseExport: true,
             searchQuery,
+            isAdvancedSearch: true,
         });
 
         expect(getByTestId('bulk-export-open')).toBeInTheDocument();
+        userIsAdmin.mockRestore();
     });
-
-    // it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
-    //     const { debug } = setup();
-    //     const test = [
-    //         { searchField: 'rek_title', value: 'Test', label: '' },
-    //         { searchField: 'rek_author', value: 'Ky Lane', label: '' },
-    //     ];
-    //     const result = ['Scopus document type', 'Genre', 'Year published', 'Published year range', 'Title', 'Author'];
-    //     wrapper.instance().handleFacetExcludesFromSearchFields(test);
-    //     expect(wrapper.instance().state.advancedSearchFields).toEqual(result);
-
-    //     // handle null input
-    //     wrapper.setState({
-    //         advancedSearchFields: [],
-    //     });
-    //     wrapper.instance().handleFacetExcludesFromSearchFields(null);
-    //     expect(wrapper.instance().state.advancedSearchFields.length).toBe(0);
-
-    //     // handle searchField entry not having the searchField property
-    //     wrapper.instance().handleFacetExcludesFromSearchFields({
-    //         test: {},
-    //     });
-    //     expect(wrapper.instance().state.advancedSearchFields.length).toBe(
-    //         locale.pages.searchRecords.facetsFilter.excludeFacetsList.length,
-    //     );
-
-    //     // handle fieldType.map being falsy
-    //     wrapper.instance().handleFacetExcludesFromSearchFields({
-    //         test: {
-    //             searchField: '0',
-    //         },
-    //     });
-    //     expect(wrapper.instance().state.advancedSearchFields.length).toBe(
-    //         locale.pages.searchRecords.facetsFilter.excludeFacetsList.length,
-    //     );
-    // });
-
-    // it('should handle empty search query string and should not fail to WSoD', () => {
-    //     const { debug } = setup();
-    //     const expected = {
-    //         activeFacets: {
-    //             filters: {},
-    //             ranges: {},
-    //         },
-    //         pageSize: 20,
-    //         sortBy: 'score',
-    //         sortDirection: 'Desc',
-    //         bulkExportSelected: false,
-    //     };
-    //     const result = wrapper.instance().parseSearchQueryStringFromUrl('');
-    //     expect(result).toEqual(expected);
-    // });
 
     it('should call unmount component', () => {
         const clearSearchQueryFn = jest.fn();
@@ -912,5 +665,221 @@ describe('SearchRecords page', () => {
         });
         unmount();
         expect(clearSearchQueryFn).toHaveBeenCalled();
+    });
+});
+
+describe('parseSearchQueryStringFromUrl helper', () => {
+    it('should correctly parse search query string from location search (default filters + title', () => {
+        const result = parseSearchQueryStringFromUrl(
+            'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata',
+        );
+
+        expect(result).toEqual({
+            activeFacets: { filters: {}, ranges: {} },
+            bulkExportSelected: false,
+            page: 1,
+            pageSize: 20,
+            searchQueryParams: { title: 'sometestdata' },
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+        });
+    });
+
+    it('should parse properly when activeFacets.showOpenAccessOnly is not present in url', () => {
+        const result = parseSearchQueryStringFromUrl('activeFacets%5Btest1%5D=test2');
+        expect(result).toEqual({
+            activeFacets: { filters: {}, ranges: {} },
+            bulkExportSelected: false,
+            page: 1,
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+        });
+    });
+
+    it(
+        'should correctly parse search query string from location search ' +
+            '(default filters + publication type facet + title',
+        () => {
+            const result = parseSearchQueryStringFromUrl(
+                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
+                    'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5B' +
+                    'title%5D=some+test+data',
+            );
+
+            expect(result).toEqual({
+                activeFacets: { filters: { 'Display type': '130' }, ranges: {}, showOpenAccessOnly: false },
+                bulkExportSelected: false,
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: { title: 'some test data' },
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+            });
+        },
+    );
+
+    it(
+        'should correctly parse search query string from location search ' +
+            '(changed filters + publication type + open access)',
+        () => {
+            const result = parseSearchQueryStringFromUrl(
+                'page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
+                    'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5B' +
+                    'title%5D=some+test+data',
+            );
+
+            expect(result).toEqual({
+                activeFacets: { filters: { 'Display type': '130' }, ranges: {}, showOpenAccessOnly: true },
+                bulkExportSelected: false,
+                page: 2,
+                pageSize: 50,
+                searchQueryParams: { title: 'some test data' },
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+            });
+        },
+    );
+
+    it('should correctly parse search query string from location search (published year)', () => {
+        const result = parseSearchQueryStringFromUrl(
+            'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5B' +
+                'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
+                'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&' +
+                'searchQueryParams%5Btitle%5D=some+test+data',
+        );
+
+        expect(result).toEqual({
+            activeFacets: {
+                filters: {},
+                ranges: { 'Year published': { from: '2008', to: '2023' } },
+                showOpenAccessOnly: false,
+            },
+            bulkExportSelected: false,
+            page: 1,
+            pageSize: 20,
+            searchQueryParams: { title: 'some test data' },
+            sortBy: 'published_date',
+            sortDirection: 'Desc',
+        });
+    });
+
+    it(
+        'should correctly parse search query string from location search and ' +
+            'reset pageSize if not in valid values (20, 50, 100)',
+        () => {
+            const result = parseSearchQueryStringFromUrl(
+                'page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5B' +
+                    'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
+                    '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
+            );
+
+            expect(result).toEqual({
+                activeFacets: {
+                    filters: {},
+                    ranges: { 'Year published': { from: '2008', to: '2023' } },
+                    showOpenAccessOnly: false,
+                },
+                bulkExportSelected: false,
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: { title: 'some test data' },
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+            });
+        },
+    );
+
+    it(
+        'should correctly parse search query string from location search and ' +
+            'reset sortDirection if not in valid values (Desc, Asc)',
+        () => {
+            const result = parseSearchQueryStringFromUrl(
+                'page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5B' +
+                    'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
+                    '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
+            );
+
+            expect(result).toEqual({
+                activeFacets: {
+                    filters: {},
+                    ranges: { 'Year published': { from: '2008', to: '2023' } },
+                    showOpenAccessOnly: false,
+                },
+                bulkExportSelected: false,
+                page: 1,
+                pageSize: 20,
+                searchQueryParams: { title: 'some test data' },
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+            });
+        },
+    );
+
+    it('should correctly parse search query string from location search & reset sortBy if not in valid values', () => {
+        const result = parseSearchQueryStringFromUrl(
+            'page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5B' +
+                'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
+                '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
+        );
+
+        expect(result).toEqual({
+            activeFacets: {
+                filters: {},
+                ranges: { 'Year published': { from: '2008', to: '2023' } },
+                showOpenAccessOnly: false,
+            },
+            bulkExportSelected: false,
+            page: 1,
+            pageSize: 100,
+            searchQueryParams: { title: 'some test data' },
+            sortBy: 'published_date',
+            sortDirection: 'Asc',
+        });
+    });
+
+    it('should handle empty search query string', () => {
+        const expected = {
+            activeFacets: { filters: {}, ranges: {} },
+            bulkExportSelected: false,
+            page: 1,
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+        };
+        const result = parseSearchQueryStringFromUrl('');
+        expect(result).toEqual(expected);
+    });
+
+    it('sets bulkExportSelected to true if specific page size is detected', () => {
+        const searchQuery = `pageSize=${PUB_SEARCH_BULK_EXPORT_SIZE}&page=1&activeFacets`;
+        const canBulkExport = true;
+        const isUnpublishedBufferPage = false;
+        expect(parseSearchQueryStringFromUrl(searchQuery, canBulkExport, isUnpublishedBufferPage)).toStrictEqual({
+            activeFacets: { filters: {}, ranges: {} },
+            bulkExportSelected: true,
+            page: 1,
+            pageSize: PUB_SEARCH_BULK_EXPORT_SIZE,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+        });
+    });
+});
+
+describe('getAdvancedSearchFields helper', () => {
+    it('should add specified search field names to the returned list', () => {
+        const input = [
+            {
+                searchField: 'rek_title',
+                value: 'test title',
+            },
+            {
+                searchField: 'all',
+                value: 'test',
+            },
+            {},
+        ];
+        const expected = ['Scopus document type', 'Genre', 'Year published', 'Published year range', 'Title'];
+        expect(getAdvancedSearchFields(input)).toStrictEqual(expected);
     });
 });
