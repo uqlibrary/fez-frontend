@@ -12,13 +12,13 @@ import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/Standard
 import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {
     PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
     FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
+import { BulkExport } from 'modules/BulkExport';
 
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
@@ -113,7 +113,6 @@ export const SearchRecords = ({
         bulkExportSelected: false,
     });
 
-    const successConfirmationBox = React.useRef(null);
     const updateSemaphore = React.useRef(false);
 
     const isAdmin = userIsAdmin();
@@ -176,9 +175,8 @@ export const SearchRecords = ({
             search: param(state),
             state,
         });
-        if (state.pageSize !== PUB_SEARCH_BULK_EXPORT_SIZE) {
-            updateSearch();
-        }
+
+        updateSearch();
     };
 
     React.useEffect(() => {
@@ -223,31 +221,11 @@ export const SearchRecords = ({
         });
     };
 
-    const _setSuccessConfirmation = ref => {
-        successConfirmationBox.current = ref;
-    };
-
-    const handleExportPublications = exportFormat => {
-        const exportResponse = actions.exportEspacePublications({
-            ...exportFormat,
+    const handleExportPublications = exportFormat =>
+        actions.exportEspacePublications({
             ...state,
-            pageSize: state.bulkExportSelected
-                ? /* istanbul ignore next */ PUB_SEARCH_BULK_EXPORT_SIZE
-                : state.pageSize,
+            ...exportFormat,
         });
-
-        state.bulkExportSelected &&
-            /* istanbul ignore next */
-            !!exportResponse &&
-            /* istanbul ignore next */
-            exportResponse.then(
-                /* istanbul ignore next */ () => {
-                    successConfirmationBox.current.showConfirmation();
-                },
-            );
-
-        return exportResponse;
-    };
 
     /* istanbul ignore next */
     const handleFacetExcludesFromSearchFields = searchFields => {
@@ -279,7 +257,6 @@ export const SearchRecords = ({
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
-    const confirmationLocale = locale.components.sorting.bulkExportConfirmation;
 
     return (
         <StandardPage className="page-search-records">
@@ -297,9 +274,6 @@ export const SearchRecords = ({
                             isUnpublishedBufferPage={isUnpublishedBufferPage}
                         />
                     </StandardCard>
-                </Grid>
-                <Grid item xs={12}>
-                    <ConfirmDialogBox locale={confirmationLocale} hideCancelButton onRef={_setSuccessConfirmation} />
                 </Grid>
                 {// first time loading search results
                 !hasSearchParams && searchLoading && (
@@ -324,8 +298,8 @@ export const SearchRecords = ({
                     (!!publicationsList && publicationsList.length > 0)) && (
                     <Grid item xs sm md={9}>
                         <StandardCard noHeader standardCardId="search-records-results">
-                            <Grid container spacing={2}>
-                                <Grid item xs={12}>
+                            <Grid container spacing={2} justify="space-between">
+                                <Grid item xs="auto">
                                     {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
                                         <span>
                                             {txt.recordCount
@@ -336,13 +310,15 @@ export const SearchRecords = ({
                                     ) : (
                                         <span>{txt.loadingPagingMessage}</span>
                                     )}
-                                    {state.bulkExportSelected && (
-                                        /* istanbul ignore next */ <span data-testid="search-bulk-export-size-message">
-                                            {txt.bulkExportSizeMessage.replace(
-                                                '[bulkExportSize]',
-                                                PUB_SEARCH_BULK_EXPORT_SIZE,
-                                            )}
-                                        </span>
+                                </Grid>
+                                <Grid item xs="auto">
+                                    {(isAdmin || isResearcher) && (
+                                        <BulkExport
+                                            locale={txt.bulkExport}
+                                            exportPublications={handleExportPublications}
+                                            pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
+                                            totalMatches={publicationsListPagingData.total}
+                                        />
                                     )}
                                 </Grid>
                                 <Grid item xs={12}>
@@ -356,7 +332,6 @@ export const SearchRecords = ({
                                         onPageSizeChanged={pageSizeChanged}
                                         onExportPublications={handleExportPublications}
                                         disabled={isLoadingOrExporting}
-                                        bulkExportSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
@@ -364,7 +339,7 @@ export const SearchRecords = ({
                                         loading={isLoadingOrExporting}
                                         pagingData={pagingData}
                                         onPageChanged={pageChanged}
-                                        disabled={isLoadingOrExporting || state.bulkExportSelected}
+                                        disabled={isLoadingOrExporting}
                                         pagingId="search-records-paging-top"
                                     />
                                 </Grid>
@@ -404,7 +379,7 @@ export const SearchRecords = ({
                                         loading={isLoadingOrExporting}
                                         pagingData={pagingData}
                                         onPageChanged={pageChanged}
-                                        disabled={isLoadingOrExporting || state.bulkExportSelected}
+                                        disabled={isLoadingOrExporting}
                                         pagingId="search-records-paging-bottom"
                                     />
                                 </Grid>

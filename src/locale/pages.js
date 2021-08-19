@@ -534,6 +534,14 @@ export default {
             loadingMessage: 'Searching for works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
+            bulkExport: {
+                buttonText: 'Bulk Export',
+                sizeMessage: 'Each export will have [bulkExportSize] works. Use the links below to queue exports.',
+                successMessage:
+                    'Bulk export requests have been queued. When the requests have been processed, ' +
+                    'you will receive an email for each request with the exported file as an attachment.',
+                rowLabel: 'Export works [start] to [end]',
+            },
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
