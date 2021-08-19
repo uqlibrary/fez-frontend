@@ -27,7 +27,6 @@ export const JournalSearchResult = () => {
     if (!journalsList || (!!journalsList && journalsList.length === 0)) {
         return 'No journals found';
     }
-
     return (
         <StandardCard noHeader>
             <Grid container spacing={2}>
@@ -56,7 +55,7 @@ export const JournalSearchResult = () => {
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    <JournalsList />
+                    <JournalsList journals={journalsList.data} />
                 </Grid>
                 <Grid item xs={12}>
                     <PublicationsListPaging

@@ -84,10 +84,10 @@ export const SearchJournals = () => {
                         initialSelectedKeywords={selectedKeywords}
                     />
                 </Grid>
-                <Grid item xs={9}>
+                <Grid item xs>
                     <JournalSearchResult key={`journal-search-result-${locationKey}`} />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} style={{ display: 'none' }}>
                     <StandardRighthandCard>
                         <JournalSearchFacetsFilter key={`journal-search-facets-filter-${locationKey}`} />
                     </StandardRighthandCard>
