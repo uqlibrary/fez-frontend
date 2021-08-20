@@ -158,7 +158,6 @@ const SearchRecords = ({
                 );
 
             actions.searchEspacePublications(state);
-            actions.resetExportPublicationsStatus();
         } else {
             !!location.search &&
                 location.search.length > 1 &&
@@ -170,6 +169,8 @@ const SearchRecords = ({
                     ),
                 );
         }
+
+        actions.resetExportPublicationsStatus();
 
         return actions.clearSearchQuery();
         // eslint-disable-next-line react-hooks/exhaustive-deps
