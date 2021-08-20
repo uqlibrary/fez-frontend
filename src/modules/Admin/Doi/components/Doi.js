@@ -18,6 +18,9 @@ import {
     DOI_DATACITE_PREFIX,
     DOI_DATACITE_NAME,
     DOI_CROSSREF_NAME,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
+    SUBTYPE_EDITED_BOOK,
+    UQ_NAME,
 } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { doiFields } from 'config/doi';
@@ -132,6 +135,59 @@ export const getInvalidPreviewFields = record => {
     return invalidPreviewFields;
 };
 
+export const addBookChaptersParentErrorMessage = (record, displayType, errorMessages) => {
+    if (displayType !== PUBLICATION_TYPE_BOOK_CHAPTER) {
+        return;
+    }
+
+    if (
+        !(
+            !!record.fez_record_search_key_isderivationof &&
+            !!record.fez_record_search_key_isderivationof[0] &&
+            !!record.fez_record_search_key_isderivationof[0].parent &&
+            !!record.fez_record_search_key_isderivationof[0].parent.rek_pid
+        )
+    ) {
+        errorMessages.push(txt.alertMessages.bookChapter.parent.missing);
+        return;
+    }
+
+    const parent = record.fez_record_search_key_isderivationof[0].parent;
+    const parentText = `Book Chapter's Book ${parent.rek_pid}`;
+    if (!(!!parent.rek_subtype && parent.rek_subtype.toLowerCase() === SUBTYPE_EDITED_BOOK.toLowerCase())) {
+        errorMessages.push(
+            txt.alertMessages.wrongSubtype
+                .replace('[TYPE]', `the ${parentText}`)
+                .replace('[SUBTYPES]', SUBTYPE_EDITED_BOOK),
+        );
+    }
+
+    if (
+        !(
+            !!parent.fez_record_search_key_doi &&
+            !!parent.fez_record_search_key_doi.rek_doi &&
+            parent.fez_record_search_key_doi.rek_doi.indexOf(DOI_CROSSREF_PREFIX) === 0
+        )
+    ) {
+        errorMessages.push(txt.alertMessages.uqIsNotPublisher.replace('[SUBJECT]', `The ${parentText}`));
+    }
+
+    if (
+        !(
+            !!parent.fez_record_search_key_publisher &&
+            !!parent.fez_record_search_key_publisher.rek_publisher &&
+            parent.fez_record_search_key_publisher.rek_publisher === UQ_NAME
+        )
+    ) {
+        errorMessages.push(
+            txt.alertMessages.uqCheckMessage.replace(
+                '[FIELDNAME]',
+                `The ${parentText} ${txt.headings.default.fez_record_search_key_publisher}`,
+            ),
+        );
+    }
+};
+
 export const getErrorMessage = record => {
     const alertTitle = txt.alertMessages.errorTitle;
     const alertType = 'error';
@@ -156,6 +212,8 @@ export const getErrorMessage = record => {
         const type = displayTypeLookup || recordType;
         errorMessages.push(txt.alertMessages.unsupportedMessage.replace('[TYPE]', type));
     } else {
+        addBookChaptersParentErrorMessage(record, displayType, errorMessages);
+
         // Subtype restrictions
         const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
         if (!!supportedSubtypes) {
@@ -171,7 +229,7 @@ export const getErrorMessage = record => {
 
         // Should not allow updates of existing Non-UQ DOIs
         if (!!doi && doi.indexOf(DOI_CROSSREF_PREFIX) !== 0 && doi.indexOf(DOI_DATACITE_PREFIX) !== 0) {
-            errorMessages.push(txt.alertMessages.uqIsNotPublisher);
+            errorMessages.push(txt.alertMessages.uqIsNotPublisher.replace('[SUBJECT]', 'This work'));
         }
 
         // Preview fields
