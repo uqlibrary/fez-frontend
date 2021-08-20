@@ -405,6 +405,17 @@ export const journalViewConfig = {
                             ],
                         },
                     ],
+                    [
+                        {
+                            heading: 'JIF Percentile',
+                            fieldId: 'jnl-jcr-scie-category-jif-percentile',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_scie_category_jif_percentile'],
+                                },
+                            ],
+                        },
+                    ],
                 ],
             },
         },
@@ -512,6 +523,17 @@ export const journalViewConfig = {
                             data: [
                                 {
                                     path: ['jnl_jcr_ssci_category_quartile'],
+                                },
+                            ],
+                        },
+                    ],
+                    [
+                        {
+                            heading: 'JIF Percentile',
+                            fieldId: 'jnl-jcr-ssci-category-jif-percentile',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_ssci_category_jif_percentile'],
                                 },
                             ],
                         },
