@@ -499,7 +499,7 @@ describe('SearchRecords page', () => {
 
         expect(testFn).toHaveBeenCalledWith({
             pathname: pathConfig.admin.unpublished,
-            search: 'page=1&pageSize=50&sortBy=score&sortDirection=Desc&bulkExportSelected=false',
+            search: 'bulkExportSelected=false&page=1&pageSize=50&sortBy=score&sortDirection=Desc',
             state: {
                 activeFacets: {
                     filters: {},

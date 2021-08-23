@@ -95,28 +95,24 @@ export const getAdvancedSearchFields = searchFields => {
 };
 
 const SearchRecords = ({
-    searchQuery,
-    publicationsList,
-    publicationsListFacets,
-    publicationsListPagingData,
-    exportPublicationsLoading,
+    actions,
     canUseExport,
-    searchLoading,
-    searchLoadingError,
+    exportPublicationsLoading,
+    history,
     isAdvancedSearch,
     isUnpublishedBufferPage,
     location,
-    history,
-    actions,
+    publicationsList,
+    publicationsListFacets,
+    publicationsListPagingData,
+    searchLoading,
+    searchLoadingError,
+    searchQuery,
 }) => {
     const isAdmin = userIsAdmin();
     const isResearcher = userIsResearcher();
 
     const [state, setState] = React.useState({
-        page: 1,
-        pageSize: 20,
-        sortBy: locale.components.sorting.sortBy[1].value,
-        sortDirection: locale.components.sorting.sortDirection[0],
         activeFacets: {
             filters: {},
             ranges: {},
@@ -128,6 +124,10 @@ const SearchRecords = ({
         },
         advancedSearchFields: [],
         bulkExportSelected: false,
+        page: 1,
+        pageSize: 20,
+        sortBy: locale.components.sorting.sortBy[1].value,
+        sortDirection: locale.components.sorting.sortDirection[0],
         ...((!!location &&
             location.search.indexOf('?') >= 0 &&
             parseSearchQueryStringFromUrl(
@@ -259,14 +259,14 @@ const SearchRecords = ({
                 <Grid item xs={12}>
                     <StandardCard className="searchComponent" noHeader standardCardId="search-records-queries">
                         <SearchComponent
-                            showAdvancedSearchButton
                             activeFacets={state.activeFacets}
-                            searchLoading={searchLoading}
                             clearSearchQuery={actions.clearSearchQuery}
-                            updateFacetExcludesFromSearchFields={handleFacetExcludesFromSearchFields}
-                            isAdvancedSearch={isAdvancedSearch}
                             isAdmin={isAdmin}
+                            isAdvancedSearch={isAdvancedSearch}
                             isUnpublishedBufferPage={isUnpublishedBufferPage}
+                            searchLoading={searchLoading}
+                            showAdvancedSearchButton
+                            updateFacetExcludesFromSearchFields={handleFacetExcludesFromSearchFields}
                         />
                     </StandardCard>
                 </Grid>
@@ -309,8 +309,8 @@ const SearchRecords = ({
                                 <Grid item xs="auto">
                                     {(isAdmin || isResearcher) && (
                                         <BulkExport
-                                            locale={txt.bulkExport}
                                             exportPublications={handleExportPublications}
+                                            locale={txt.bulkExport}
                                             pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                             totalMatches={publicationsListPagingData.total}
                                         />
@@ -318,23 +318,23 @@ const SearchRecords = ({
                                 </Grid>
                                 <Grid item xs={12}>
                                     <PublicationsListSorting
-                                        sortBy={state.sortBy}
-                                        sortDirection={state.sortDirection}
+                                        canUseExport={canUseExport}
+                                        disabled={isLoadingOrExporting}
+                                        onExportPublications={handleExportPublications}
+                                        onPageSizeChanged={pageSizeChanged}
+                                        onSortByChanged={sortByChanged}
                                         pageSize={state.pageSize}
                                         pagingData={pagingData}
-                                        canUseExport={canUseExport}
-                                        onSortByChanged={sortByChanged}
-                                        onPageSizeChanged={pageSizeChanged}
-                                        onExportPublications={handleExportPublications}
-                                        disabled={isLoadingOrExporting}
+                                        sortBy={state.sortBy}
+                                        sortDirection={state.sortDirection}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <PublicationsListPaging
-                                        loading={isLoadingOrExporting}
-                                        pagingData={pagingData}
-                                        onPageChanged={pageChanged}
                                         disabled={isLoadingOrExporting}
+                                        loading={isLoadingOrExporting}
+                                        onPageChanged={pageChanged}
+                                        pagingData={pagingData}
                                         pagingId="search-records-paging-top"
                                     />
                                 </Grid>
@@ -343,12 +343,12 @@ const SearchRecords = ({
                                         <Grid container justify={'center'}>
                                             <Grid item xs={12}>
                                                 <InlineLoader
+                                                    loaderId="search-records-page-loading"
                                                     message={
                                                         searchLoading
                                                             ? txt.loadingPagingMessage
                                                             : txt.exportPublicationsLoadingMessage
                                                     }
-                                                    loaderId="search-records-page-loading"
                                                 />
                                             </Grid>
                                         </Grid>
@@ -362,19 +362,19 @@ const SearchRecords = ({
                                             }}
                                         >
                                             <PublicationsList
+                                                publicationsList={publicationsList}
                                                 showAdminActions={isAdmin || isUnpublishedBufferPage}
                                                 showUnpublishedBufferFields={isUnpublishedBufferPage}
-                                                publicationsList={publicationsList}
                                             />
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
                                 )}
                                 <Grid item xs={12}>
                                     <PublicationsListPaging
-                                        loading={isLoadingOrExporting}
-                                        pagingData={pagingData}
-                                        onPageChanged={pageChanged}
                                         disabled={isLoadingOrExporting}
+                                        loading={isLoadingOrExporting}
+                                        onPageChanged={pageChanged}
+                                        pagingData={pagingData}
                                         pagingId="search-records-paging-bottom"
                                     />
                                 </Grid>
@@ -387,8 +387,6 @@ const SearchRecords = ({
                         <Grid item md={3} id="refine-results-facets" data-testid="refine-results-facets">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
-                                    facetsData={publicationsListFacets}
-                                    onFacetsChanged={facetsChanged}
                                     activeFacets={state.activeFacets}
                                     disabled={isLoadingOrExporting}
                                     excludeFacetsList={
@@ -397,8 +395,10 @@ const SearchRecords = ({
                                             state.advancedSearchFields) ||
                                         locale.pages.searchRecords.facetsFilter.excludeFacetsList
                                     }
-                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    facetsData={publicationsListFacets}
                                     lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                    onFacetsChanged={facetsChanged}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
                                     showOpenAccessFilter
                                 />
                             </StandardRighthandCard>
@@ -411,20 +411,19 @@ const SearchRecords = ({
 };
 
 SearchRecords.propTypes = {
-    searchQuery: PropTypes.object,
+    actions: PropTypes.object,
+    canUseExport: PropTypes.bool,
+    exportPublicationsLoading: PropTypes.bool,
+    history: PropTypes.object.isRequired,
+    isAdvancedSearch: PropTypes.bool,
+    isUnpublishedBufferPage: PropTypes.bool,
+    location: PropTypes.object.isRequired,
     publicationsList: PropTypes.array,
     publicationsListFacets: PropTypes.object,
     publicationsListPagingData: PropTypes.object,
-    exportPublicationsLoading: PropTypes.bool,
-    canUseExport: PropTypes.bool,
     searchLoading: PropTypes.bool,
     searchLoadingError: PropTypes.bool,
-    isAdvancedSearch: PropTypes.bool,
-    isUnpublishedBufferPage: PropTypes.bool,
-
-    location: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired,
-    actions: PropTypes.object,
+    searchQuery: PropTypes.object,
 };
 
 export default SearchRecords;
