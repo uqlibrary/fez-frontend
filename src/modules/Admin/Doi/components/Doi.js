@@ -20,7 +20,7 @@ import {
     DOI_CROSSREF_NAME,
     PUBLICATION_TYPE_BOOK_CHAPTER,
     SUBTYPE_EDITED_BOOK,
-    UQ_NAME,
+    UQ_FULL_NAME,
 } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { doiFields } from 'config/doi';
@@ -176,7 +176,7 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
         !(
             !!parent.fez_record_search_key_publisher &&
             !!parent.fez_record_search_key_publisher.rek_publisher &&
-            parent.fez_record_search_key_publisher.rek_publisher === UQ_NAME
+            parent.fez_record_search_key_publisher.rek_publisher === UQ_FULL_NAME
         )
     ) {
         errorMessages.push(

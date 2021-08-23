@@ -13,6 +13,7 @@ import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_NAME,
     PUBLICATION_TYPE_DATA_COLLECTION,
+    UQ_FULL_NAME,
 } from '../../../../config/general';
 
 const confPaperRecord = {
@@ -21,14 +22,14 @@ const confPaperRecord = {
         rek_doi: DOI_CROSSREF_PREFIX,
     },
     fez_record_search_key_publisher: {
-        rek_publisher: 'The University of Queensland',
+        rek_publisher: UQ_FULL_NAME,
     },
 };
 const journalArticleRecord = publicationTypeListJournalArticle.data[0];
 const mockRecord = {
     ...publicationTypeListResearchReport.data[0],
     fez_record_search_key_publisher: {
-        rek_publisher: 'The University of Queensland',
+        rek_publisher: UQ_FULL_NAME,
     },
 };
 const bookChapterRecord = {
@@ -37,7 +38,7 @@ const bookChapterRecord = {
         rek_doi: DOI_CROSSREF_PREFIX,
     },
     fez_record_search_key_publisher: {
-        rek_publisher: 'The University of Queensland',
+        rek_publisher: UQ_FULL_NAME,
     },
 };
 
@@ -179,7 +180,7 @@ describe('DOI component', () => {
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
         expect(renderedWarningMessage.text()).toBe(
             "Error:The Book Chapter's Book UQ:123456 does not appear to be have an UQ DOI" +
-                'The Book Chapter\'s Book UQ:123456 Publisher should contain "The University of Queensland".',
+                `The Book Chapter's Book UQ:123456 Publisher should contain "${UQ_FULL_NAME}".`,
         );
     });
 
@@ -198,7 +199,7 @@ describe('DOI component', () => {
                             rek_subtype: 'Edited Book',
                             fez_record_search_key_publisher: {
                                 rek_publisher_pid: 'UQ:123456',
-                                rek_publisher: 'The University Of Queensland',
+                                rek_publisher: UQ_FULL_NAME,
                             },
                         },
                     },
@@ -235,7 +236,7 @@ describe('DOI component', () => {
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
         expect(renderedWarningMessage.text()).toBe(
-            'Error:The Book Chapter\'s Book UQ:123456 Publisher should contain "The University of Queensland".',
+            `Error:The Book Chapter's Book UQ:123456 Publisher should contain "${UQ_FULL_NAME}".`,
         );
     });
 
