@@ -109,6 +109,9 @@ const SearchRecords = ({
     history,
     actions,
 }) => {
+    const isAdmin = userIsAdmin();
+    const isResearcher = userIsResearcher();
+
     const [state, setState] = React.useState({
         page: 1,
         pageSize: 20,
@@ -125,12 +128,17 @@ const SearchRecords = ({
         },
         advancedSearchFields: [],
         bulkExportSelected: false,
+        ...((!!location &&
+            location.search.indexOf('?') >= 0 &&
+            parseSearchQueryStringFromUrl(
+                location.search.substr(1),
+                isResearcher || isAdmin,
+                isUnpublishedBufferPage,
+            )) ||
+            {}),
     });
 
     const updateSemaphore = React.useRef(false);
-
-    const isAdmin = userIsAdmin();
-    const isResearcher = userIsResearcher();
 
     React.useEffect(() => {
         if (!!location && location.search.indexOf('?') >= 0) {
