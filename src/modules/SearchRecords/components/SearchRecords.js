@@ -247,7 +247,7 @@ const SearchRecords = ({
     const txt = locale.pages.searchRecords;
     const pagingData = publicationsListPagingData;
     const isLoadingOrExporting = searchLoading || exportPublicationsLoading;
-    const hasSearchParams = !!searchQuery && searchQuery.constructor === Object && Object.keys(searchQuery).length > 0;
+    const hasSearchParams = !!location.search;
     const alertProps = searchLoadingError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
@@ -271,7 +271,7 @@ const SearchRecords = ({
                     </StandardCard>
                 </Grid>
                 {// first time loading search results
-                !hasSearchParams && searchLoading && (
+                searchLoading && (
                     <Grid item xs={12}>
                         <InlineLoader message={txt.loadingMessage} loaderId="search-records-loading" />
                     </Grid>

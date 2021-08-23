@@ -77,8 +77,8 @@ describe('SearchRecords page', () => {
     });
 
     it('should render loading screen while loading search results', () => {
-        const { getByText } = setup({ searchLoading: true });
-        expect(getByText('Searching for works')).toBeInTheDocument();
+        const { getAllByText } = setup({ searchLoading: true });
+        expect(getAllByText('Searching for works').length).toBe(3);
     });
 
     it('should render loading screen while loading publications while filtering', () => {
