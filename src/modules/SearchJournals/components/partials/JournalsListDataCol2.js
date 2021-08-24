@@ -1,25 +1,56 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Checkbox from '@material-ui/core/Checkbox';
 import Typography from '@material-ui/core/Typography';
+import { JournalFieldsMap } from './JournalFieldsMap';
+import Tooltip from '@material-ui/core/Tooltip';
+import moment from 'moment';
 
-const JournalsListDataCol1 = (journal, index) => {
-    console.log(journal.journal);
+const JournalsListDataCol2 = (journal, index) => {
+    const translateDate = date => {
+        return moment(date).format('L');
+    };
     return (
         <Grid container spacing={1} id={`journal-list-data-${index}`} alignItems="center">
-            <Grid item xs="auto" id={`journal-list-data-select-${index}`}>
-                <Checkbox style={{ padding: 2 }} />
-            </Grid>
-            <Grid item xs id={`journal-list-header-title-${index}`}>
-                <Typography
-                    style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
-                    name={journal.journal.jnl_title || 'Not found'}
-                >
-                    {journal.journal.jnl_title || 'Not found'}
-                </Typography>
-            </Grid>
+            {JournalFieldsMap.slice(1).map((item, index) => {
+                let labelData = '';
+                switch (item.translate) {
+                    case 'Date':
+                        labelData = translateDate(journal.journal[item.key]);
+                        break;
+                    default:
+                        labelData = journal.journal[item.key] || '';
+                }
+                return (
+                    <Grid
+                        key={index}
+                        item
+                        id={`journal-list-header-title-${index}`}
+                        style={{
+                            height: 37,
+                            borderBottom: '1px dashed #e6e6e6',
+                            borderLeft: '1px dashed #e6e6e6',
+                            width: item.size,
+                            marginBottom: 4,
+                        }}
+                    >
+                        <Tooltip title={labelData} placement="left">
+                            <Typography
+                                variant="body1"
+                                style={{
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    lineHeight: 1.8,
+                                }}
+                            >
+                                {labelData || ''}
+                            </Typography>
+                        </Tooltip>
+                    </Grid>
+                );
+            })}
         </Grid>
     );
 };
 
-export default React.memo(JournalsListDataCol1);
+export default React.memo(JournalsListDataCol2);

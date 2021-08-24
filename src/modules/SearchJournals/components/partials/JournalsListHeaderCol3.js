@@ -4,9 +4,15 @@ import InputLabel from '@material-ui/core/InputLabel';
 
 const JournalsListHeaderCol3 = () => {
     return (
-        <Grid container spacing={1} id="journal-list-header-1" alignItems="center">
+        <Grid
+            container
+            spacing={0}
+            id="journal-list-header-1"
+            alignItems="center"
+            style={{ height: 32, borderBottom: '1px solid #CCC', marginBottom: 6 }}
+        >
             <Grid item xs id="journal-list-header-title">
-                <InputLabel shrink>Actions</InputLabel>
+                <InputLabel shrink>&nbsp;Actions</InputLabel>
             </Grid>
         </Grid>
     );

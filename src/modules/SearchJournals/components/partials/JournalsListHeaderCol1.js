@@ -8,10 +8,10 @@ const JournalsListHeaderCol1 = () => {
     return (
         <Grid
             container
-            spacing={1}
+            spacing={0}
             id="journal-list-header-1"
             alignItems="center"
-            style={{ width: JournalFieldsMap[0].size }}
+            style={{ height: 32, borderBottom: '1px solid #CCC', marginBottom: 6 }}
         >
             <Grid item xs="auto" id="journal-list-header-select">
                 <Checkbox disabled style={{ padding: 2 }} />

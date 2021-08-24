@@ -49,19 +49,23 @@ export const JournalSearchResult = () => {
                         pageSize={20}
                     />
                 </Grid>
-                <Grid item xs={12}>
-                    <PublicationsListPaging
-                        pagingData={{ from: 1, to: 20, total: 100, per_page: 20, current_page: 1 }}
-                    />
-                </Grid>
+                {journalsList.length > 20 && (
+                    <Grid item xs={12}>
+                        <PublicationsListPaging
+                            pagingData={{ from: 1, to: 20, total: 100, per_page: 20, current_page: 1 }}
+                        />
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <JournalsList journals={journalsList.data} />
                 </Grid>
-                <Grid item xs={12}>
-                    <PublicationsListPaging
-                        pagingData={{ from: 1, to: 20, total: 100, per_page: 20, current_page: 1 }}
-                    />
-                </Grid>
+                {journalsList.length > 20 && (
+                    <Grid item xs={12}>
+                        <PublicationsListPaging
+                            pagingData={{ from: 1, to: 20, total: 100, per_page: 20, current_page: 1 }}
+                        />
+                    </Grid>
+                )}
             </Grid>
         </StandardCard>
     );
