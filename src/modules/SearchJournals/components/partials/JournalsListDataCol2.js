@@ -10,7 +10,7 @@ const JournalsListDataCol2 = (journal, index) => {
         return moment(date).format('L');
     };
     return (
-        <Grid container spacing={1} id={`journal-list-data-${index}`} alignItems="center">
+        <Grid container spacing={1} id={`journal-list-data-${index}`} alignItems="center" style={{ marginTop: 0 }}>
             {JournalFieldsMap.slice(1).map((item, index) => {
                 let labelData = '';
                 switch (item.translate) {
@@ -26,7 +26,7 @@ const JournalsListDataCol2 = (journal, index) => {
                         item
                         id={`journal-list-header-title-${index}`}
                         style={{
-                            height: 37,
+                            height: 45,
                             borderBottom: '1px dashed #e6e6e6',
                             borderLeft: '1px dashed #e6e6e6',
                             width: item.size,
@@ -40,7 +40,7 @@ const JournalsListDataCol2 = (journal, index) => {
                                     whiteSpace: 'nowrap',
                                     overflow: 'hidden',
                                     textOverflow: 'ellipsis',
-                                    lineHeight: 1.8,
+                                    lineHeight: 2,
                                 }}
                             >
                                 {labelData || ''}
