@@ -195,6 +195,9 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q1');
 
+        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
+        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-value')).toHaveTextContent('89.99');
+
         fireEvent.click(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-1-heading'));
 
         expect(getByTestId('jnl-jcr-scie-category-ranking-header')).toHaveTextContent('Ranking');
@@ -202,6 +205,9 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q2');
+
+        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-value')).not.toBeInTheDocument();
 
         // ******************************************************************
         // Clarivate Journal Citation Reports - Social Science Citation index
@@ -241,6 +247,9 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-jcr-ssci-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-ssci-category-quartile-value')).toHaveTextContent('Q1');
+
+        expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
+        expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-value')).toHaveTextContent('99.00');
 
         // ******************************************************************
         // Elsevier CiteScore
@@ -341,9 +350,14 @@ describe('ViewJournal', () => {
         // ******************************************************************
         // Listed in
         // ******************************************************************
-        expect(queryByTestId('jnl-abdc-rating-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-abdc-for-code-lookup-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-abdc-source-date-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-abdc-rating-header')).toHaveTextContent(
+            'Australian Business Deans Council (ABDC) Quality Rating',
+        );
+        expect(queryByTestId('jnl-abdc-rating-value')).toHaveTextContent('A*');
+        expect(queryByTestId('jnl-abdc-for-code-lookup-header')).toHaveTextContent('ABDC Field of Research');
+        expect(queryByTestId('jnl-abdc-for-code-lookup-value')).toHaveTextContent('1503 Business and Management');
+        expect(queryByTestId('jnl-abdc-source-date-header')).toHaveTextContent('ABDC Listed Year');
+        expect(queryByTestId('jnl-abdc-source-date-value')).toHaveTextContent('2019');
 
         expect(getByTestId('jnl-cwts-source-year-header')).toHaveTextContent('CWTS Leiden Ranking');
         expect(getByTestId('jnl-cwts-source-year-value')).toHaveTextContent('Yes, 2020');

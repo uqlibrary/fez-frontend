@@ -1600,7 +1600,7 @@ export const AFFILIATION_TYPE_UQ = 'UQ';
 export const DOI_CROSSREF_NAME = 'Crossref';
 export const DOI_CROSSREF_PREFIX = '10.14264';
 export const DOI_DATACITE_NAME = 'DataCite';
-export const DOI_DATACITE_PREFIX = '10.23643';
+export const DOI_DATACITE_PREFIX = process.env.NODE_ENV === 'production' ? '10.48610' : '10.23643';
 
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
 
