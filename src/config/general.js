@@ -21,6 +21,7 @@ export const UQ_FULL_NAME = 'The University of Queensland';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = process.env.APP_URL || STAGING_URL;
+export const IS_PRODUCTION = APP_URL.indexOf('staging') === -1;
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
@@ -1600,7 +1601,7 @@ export const AFFILIATION_TYPE_UQ = 'UQ';
 export const DOI_CROSSREF_NAME = 'Crossref';
 export const DOI_CROSSREF_PREFIX = '10.14264';
 export const DOI_DATACITE_NAME = 'DataCite';
-export const DOI_DATACITE_PREFIX = process.env.NODE_ENV === 'production' ? '10.48610' : '10.23643';
+export const DOI_DATACITE_PREFIX = IS_PRODUCTION ? '10.48610' : '10.23643';
 
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
 
