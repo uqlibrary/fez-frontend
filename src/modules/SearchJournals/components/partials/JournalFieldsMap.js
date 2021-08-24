@@ -21,5 +21,4 @@ export const JournalFieldsMap = [
         translate: 'Date',
     },
     { key: 'jnl_era_source_id', label: 'ERA source ID', size: 200, prefix: '', suffix: '', compactView: true },
-    { key: 'jnl_era_source_id', label: 'ERA source ID', size: 200, prefix: '', suffix: '', compactView: true },
 ];

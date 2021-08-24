@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import Tooltip from '@material-ui/core/Tooltip';
 import Checkbox from '@material-ui/core/Checkbox';
 import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -22,11 +23,13 @@ const JournalsListDataCol1 = ({ journal, index }) => {
                     style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
                     name={journal.jnl_title || 'Not found'}
                 >
-                    <Typography variant="body1" component="span">
-                        <ExternalLink href={`/journal/view/${journal.jnl_jid}`} title={journal.jnl_title}>
-                            {journal.jnl_title}
-                        </ExternalLink>
-                    </Typography>
+                    <Tooltip title={`Click to view ${journal.jnl_title}`} placement="right">
+                        <Typography variant="body1" component="span">
+                            <ExternalLink href={`/journal/view/${journal.jnl_jid}`} title={journal.jnl_title}>
+                                {journal.jnl_title}
+                            </ExternalLink>
+                        </Typography>
+                    </Tooltip>
                 </Typography>
             </Grid>
         </Grid>
