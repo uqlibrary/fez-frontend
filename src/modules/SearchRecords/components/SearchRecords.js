@@ -141,6 +141,20 @@ const SearchRecords = ({
     const updateSemaphore = React.useRef(false);
 
     React.useEffect(() => {
+        if (!!location.search && location.search.length > 1) {
+            updateSemaphore.current = true;
+            setState(
+                parseSearchQueryStringFromUrl(
+                    location.search.substr(1),
+                    isResearcher || isAdmin,
+                    isUnpublishedBufferPage,
+                ),
+            );
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    React.useEffect(() => {
         // handle browser back button - set state from location/dispatch action for this state
         if (history.action === 'POP' && location.pathname === pathConfig.records.search) {
             !!location.state &&
