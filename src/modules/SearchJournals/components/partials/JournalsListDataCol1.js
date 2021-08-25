@@ -15,7 +15,11 @@ const JournalsListDataCol1 = ({ journal, index }) => {
             id={`journal-list-data-${index}`}
             alignItems="center"
             alignContent="center"
-            style={{ borderBottom: '1px dashed #e6e6e6', padding: 0 }}
+            style={{
+                borderBottom: '1px dashed #e6e6e6',
+                borderRight: '1px dashed #e6e6e6',
+                padding: 0,
+            }}
         >
             <Grid item xs={1} id={`journal-list-data-select-${index}`}>
                 <Checkbox style={{ paddingLeft: 2, paddingTop: 8, paddingBottom: 0, paddingRight: 0 }} />
@@ -28,7 +32,7 @@ const JournalsListDataCol1 = ({ journal, index }) => {
                     whiteSpace: 'nowrap',
                     textOverflow: 'ellipsis',
                     overflow: 'hidden',
-                    paddingLeft: 8,
+                    paddingLeft: 12,
                     paddingRight: 16,
                     lineHeight: 2,
                 }}

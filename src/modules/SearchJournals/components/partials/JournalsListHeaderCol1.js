@@ -11,7 +11,13 @@ const JournalsListHeaderCol1 = () => {
             spacing={0}
             id="journal-list-header-1"
             alignItems="center"
-            style={{ height: 32, borderBottom: '1px solid #CCC', marginBottom: 6 }}
+            style={{
+                width: '101%',
+                height: 32,
+                borderBottom: '1px solid #CCC',
+                marginBottom: 6,
+                overflow: 'hidden',
+            }}
         >
             <Grid item xs="auto" id="journal-list-header-select">
                 <Checkbox disabled style={{ padding: 2 }} />

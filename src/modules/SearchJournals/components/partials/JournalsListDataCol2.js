@@ -3,23 +3,12 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import Tooltip from '@material-ui/core/Tooltip';
-import moment from 'moment';
 
 const JournalsListDataCol2 = (journal, index) => {
-    const translateDate = date => {
-        return moment(date).format('L');
-    };
     return (
         <Grid container spacing={1} id={`journal-list-data-${index}`} alignItems="center" style={{ marginTop: 0 }}>
             {JournalFieldsMap.slice(1).map((item, index) => {
-                let labelData = '';
-                switch (item.translate) {
-                    case 'Date':
-                        labelData = translateDate(journal.journal[item.key]);
-                        break;
-                    default:
-                        labelData = journal.journal[item.key] || '';
-                }
+                const itemData = item.translateFn(journal.journal[item.key]);
                 return (
                     <Grid
                         key={index}
@@ -33,7 +22,13 @@ const JournalsListDataCol2 = (journal, index) => {
                             marginBottom: 4,
                         }}
                     >
-                        <Tooltip title={labelData} placement="left">
+                        <Tooltip
+                            title={itemData || ''}
+                            placement="left"
+                            disableFocusListener={!item.showTooltip}
+                            disableHoverListener={!item.showTooltip}
+                            disableTouchListener={!item.showTooltip}
+                        >
                             <Typography
                                 variant="body1"
                                 style={{
@@ -43,7 +38,9 @@ const JournalsListDataCol2 = (journal, index) => {
                                     lineHeight: 2,
                                 }}
                             >
-                                {labelData || ''}
+                                {item.prefix || ''}
+                                {itemData || ''}
+                                {item.suffix || ''}
                             </Typography>
                         </Tooltip>
                     </Grid>
