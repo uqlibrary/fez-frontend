@@ -34,13 +34,10 @@ const useStyles = makeStyles(theme => ({
     dialogBody: {
         gap: '1rem',
         marginBottom: '2rem',
+        maxWidth: '40em',
     },
     exportButton: {
-        width: '10rem',
-        marginLeft: theme.spacing(1),
-        [theme.breakpoints.down('xs')]: {
-            marginTop: theme.spacing(2),
-        },
+        width: '100%',
         '&.loading': {
             background: theme.palette.accent.dark,
             color: theme.palette.primary.contrastText,
@@ -124,9 +121,14 @@ const BulkExport = ({
         const id = `bulk-export-${format.value}-${page.start}-to-${page.end}`;
         return (
             <Button
-                variant="contained"
                 children={format.label}
+                className={`${classes.exportButton} ${statusClass}`}
+                data-testid={id}
+                disabled={['success', 'loading'].includes(statusClass)}
                 endIcon={statusIcon}
+                fullwidth
+                id={id}
+                key={format.value}
                 onClick={() => {
                     exportPublications({
                         exportPublicationsFormat: format.value,
@@ -135,11 +137,7 @@ const BulkExport = ({
                         bulkExportSelected: true,
                     });
                 }}
-                data-testid={id}
-                id={id}
-                className={`${classes.exportButton} ${statusClass}`}
-                key={format.value}
-                disabled={['success', 'loading'].includes(statusClass)}
+                variant="contained"
             />
         );
     };
@@ -148,9 +146,19 @@ const BulkExport = ({
         const id = `bulk-export-row-heading-${page.number}`;
         return (
             <Grid item data-testid={id} id={id} xs={12} key={page.number}>
-                <Grid container justify="space-between" alignItems="center">
-                    <Grid item>{rowLabel.replace('[start]', page.start).replace('[end]', page.end)}</Grid>
-                    <Grid item>{exportConfig.format.map(format => exportButtonsRender(format, page))}</Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs="auto" sm={6} md={5}>
+                        {rowLabel.replace('[start]', page.start).replace('[end]', page.end)}
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={7}>
+                        <Grid container spacing={2}>
+                            {exportConfig.format.map(format => (
+                                <Grid item xs={12} md={6} key={`page-${page.start}-${format.value}`}>
+                                    {exportButtonsRender(format, page)}
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
         );
@@ -171,6 +179,7 @@ const BulkExport = ({
                 aria-labelledby="bulk-export-dialog-title"
                 aria-describedby="bulk-export-instructions"
                 className={classes.root}
+                maxWidth="md"
             >
                 <MuiDialogTitle disableTypography>
                     <Typography variant="h4" id="bulk-export-dialog-title">
