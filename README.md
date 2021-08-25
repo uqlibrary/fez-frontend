@@ -38,18 +38,19 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
 - `npm run start:mock`
   - runs <http://localhost:3000/>
   - uses mock data from src/mock
-- `SESSION_COOKIE_NAME='${X-Uql-Token}' npm run start:url`
-  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `MY-VPN-IP dev-espace.library.uq.edu.au` to your /etc/hosts)
+- `npm run start:url`
+  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `LOCAL-IP dev-espace.library.uq.edu.au` to your /etc/hosts)
+      e.g. 192.168.1.104 dev-epacellibrary.uq.edu.au
   - uses **staging** api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
-    - `${X-Uql-Token}` is the value of X-Uql-Token that can be found after logging into <https://www.library.uq.edu.au/> and using the Network tab
     - you will need to launch the browser with CORS disabled:
       ```sh
       google-chrome --disable-web-security --user-data-dir=/tmp/chrome-dev
       ```
       On Mac:
       ```sh
-      open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+      open -na Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
       ```
+  - add UQLID and UQLID_USER_GROUP cookies for logged-in users (values can be found under Developer Tools -> Application Tab -> Cookies after logging into <https://www.library.uq.edu.au/>)
   - for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
