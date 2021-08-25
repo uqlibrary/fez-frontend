@@ -68,18 +68,7 @@ export default {
     ntro: () => [],
 };
 
-export const validateSeminarPaper = (
-    { bibliographicSection: bs, authorsSection: as },
-    { validationErrorsSummary: summary },
-) => ({
-    bibliographicSection: {
-        ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
-            fez_record_search_key_publisher: {
-                rek_publisher: summary.rek_publisher,
-            },
-        }) ||
-            {}),
-    },
+export const validateSeminarPaper = ({ authorsSection: as }, { validationErrorsSummary: summary }) => ({
     authorsSection: {
         ...(((as || {}).authors || []).length === 0 && {
             authors: summary.authors,
