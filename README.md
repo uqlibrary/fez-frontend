@@ -43,12 +43,17 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
       e.g. 192.168.1.104 dev-epacellibrary.uq.edu.au
   - uses **staging** api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
     - you will need to launch the browser with CORS disabled:
+      On Linux:
       ```sh
       google-chrome --disable-web-security --user-data-dir=/tmp/chrome-dev
       ```
       On Mac:
       ```sh
       open -na Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+      ```
+      On Windows:
+      ```sh
+      "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/ChromeDevSession"
       ```
   - add UQLID and UQLID_USER_GROUP cookies for logged-in users (values can be found under Developer Tools -> Application Tab -> Cookies after logging into <https://www.library.uq.edu.au/>)
   - for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
