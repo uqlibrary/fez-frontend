@@ -326,7 +326,7 @@ export const Doi = ({
         txt.alertProps.progressAlert.message = txt.alertProps.progressAlert.message
             .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
             .replace('queued', 'submitted');
-        txt.alertProps.progressAlert.message = txt.alertProps.successAlert.message
+        txt.alertProps.successAlert.message = txt.alertProps.successAlert.message
             .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
             .replace('queued', 'submitted');
         txt.successConfirmation.confirmationMessage = `The DOI has been created/updated in ${DOI_DATACITE_NAME}`;
