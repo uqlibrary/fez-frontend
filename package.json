@@ -75,13 +75,13 @@
         "babel-plugin-istanbul": "^6.0.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "browser-update": "^3.3.28",
-        "canvas": "^2.6.1",
+        "canvas": "^2.8.0",
         "chalk": "2.4.1",
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
         "css-mediaquery": "^0.1.2",
-        "cypress": "^8.2.0",
+        "cypress": "^8.3.0",
         "cypress-file-upload": "^5.0.8",
         "cypress-plugin-tab": "^1.0.5",
         "cypress-wait-until": "^1.7.1",
@@ -128,8 +128,8 @@
         "terser-webpack-plugin": "^4.1.0",
         "webpack": "^4.44.1",
         "webpack-bundle-analyzer": "^3.6.1",
-        "webpack-cli": "^3.0.8",
-        "webpack-dev-server": "^3.11.0",
+        "webpack-cli": "^4.8.0",
+        "webpack-dev-server": "^4.0.0",
         "webpack-pwa-manifest": "^4.3.0"
     },
     "dependencies": {
@@ -209,8 +209,8 @@
         "wait-on": "^3.2.0"
     },
     "scripts": {
-        "analyse": "webpack --config=./webpack-dist.config --profile --json > stats.json",
-        "build": "webpack -p --config=./webpack-dist.config",
+        "analyse": "webpack --config=./webpack-dist.config --stats=detailed --json=stats.json",
+        "build": "webpack --config=./webpack-dist.config",
         "build:dev": "webpack --config=./webpack.config",
         "cc:reportAll": "scripts/code-coverage.sh",
         "clean": "rm -rf assets coverage **/coverage cypress/screenshots cypress/videos dist node_modules **/node_modules stats.json .nyc_output",

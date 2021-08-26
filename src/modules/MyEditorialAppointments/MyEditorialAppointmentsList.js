@@ -281,20 +281,21 @@ export const getColumns = () => {
                         : rowData.eap_end_year}
                 </Typography>
             ),
-            editComponent: props => {
+            editComponent: ({ value, rowData, onChange }) => {
                 const minDate = new Date();
+                minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
                 minDate.setDate(1);
                 minDate.setMonth(0);
                 return (
                     <KeyboardDatePicker
-                        value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
-                        onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
+                        value={(!!value && moment(String(value), 'YYYY')) || null}
+                        onChange={value => onChange((!!value && value.format('YYYY')) || null)}
                         error={
-                            !moment(String(props.value), 'YYYY').isValid() ||
-                            !moment(String(props.value), 'YYYY').isSameOrAfter(moment(), 'year')
+                            !moment(String(value), 'YYYY').isValid() ||
+                            moment(String(value)).isBefore(String(rowData.eap_start_year))
                         }
-                        {...((!!props.value &&
-                            moment(String(props.value)).format('YYYY') === moment(minDate).format('YYYY') && {
+                        {...((!!value &&
+                            moment(String(value)).format('YYYY') === moment().format('YYYY') && {
                                 format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
                             }) ||
                             {})}
@@ -330,7 +331,7 @@ export const getColumns = () => {
             },
             validate: rowData =>
                 moment(String(rowData.eap_end_year), 'YYYY').isValid() &&
-                moment(String(rowData.eap_end_year), 'YYYY').isSameOrAfter(moment(), 'year'),
+                moment(String(rowData.eap_end_year)).isSameOrAfter(String(rowData.eap_start_year)),
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
@@ -383,8 +384,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 EditRow: props => (
                     <MTableEditRow
                         {...props}
-                        id={`my-editorial-appointments-list-edit-row-${props.index}`}
-                        data-testid={`my-editorial-appointments-list-edit-row-${props.index}`}
+                        id={`my-editorial-appointments-list-${props.mode}-row`}
+                        data-testid={`my-editorial-appointments-list-${props.mode}-row`}
                         onEditingApproved={handleEditingApproved(props)}
                     />
                 ),
