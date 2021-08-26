@@ -179,8 +179,8 @@ describe('DOI component', () => {
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
         expect(renderedWarningMessage.text()).toBe(
-            "Error:The Book Chapter's Book UQ:123456 does not appear to be have an UQ DOI" +
-                `The Book Chapter's Book UQ:123456 Publisher should contain "${UQ_FULL_NAME}".`,
+            'Error:The parent Book does not appear to be have an UQ DOI' +
+                `The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
         );
     });
 
@@ -207,9 +207,7 @@ describe('DOI component', () => {
             },
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
-        expect(renderedWarningMessage.text()).toBe(
-            "Error:The Book Chapter's Book UQ:123456 does not appear to be have an UQ DOI",
-        );
+        expect(renderedWarningMessage.text()).toBe('Error:The parent Book does not appear to be have an UQ DOI');
     });
 
     it('should render error for book chapter with parent with missing missing UQ Publisher', () => {
@@ -236,7 +234,7 @@ describe('DOI component', () => {
         });
         const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
         expect(renderedWarningMessage.text()).toBe(
-            `Error:The Book Chapter's Book UQ:123456 Publisher should contain "${UQ_FULL_NAME}".`,
+            `Error:The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
         );
     });
 

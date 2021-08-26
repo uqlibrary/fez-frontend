@@ -153,11 +153,10 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
     }
 
     const parent = record.fez_record_search_key_isderivationof[0].parent;
-    const parentText = `Book Chapter's Book ${parent.rek_pid}`;
     if (!(!!parent.rek_subtype && parent.rek_subtype.toLowerCase() === SUBTYPE_EDITED_BOOK.toLowerCase())) {
         errorMessages.push(
             txt.alertMessages.wrongSubtype
-                .replace('[TYPE]', `the ${parentText}`)
+                .replace('[TYPE]', 'the parent Book')
                 .replace('[SUBTYPES]', SUBTYPE_EDITED_BOOK),
         );
     }
@@ -169,7 +168,7 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
             parent.fez_record_search_key_doi.rek_doi.indexOf(DOI_CROSSREF_PREFIX) === 0
         )
     ) {
-        errorMessages.push(txt.alertMessages.uqIsNotPublisher.replace('[SUBJECT]', `The ${parentText}`));
+        errorMessages.push(txt.alertMessages.uqIsNotPublisher.replace('[SUBJECT]', 'The parent Book'));
     }
 
     if (
@@ -182,7 +181,7 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
         errorMessages.push(
             txt.alertMessages.uqCheckMessage.replace(
                 '[FIELDNAME]',
-                `The ${parentText} ${txt.headings.default.fez_record_search_key_publisher}`,
+                `The parent Book's ${txt.headings.default.fez_record_search_key_publisher}`,
             ),
         );
     }
