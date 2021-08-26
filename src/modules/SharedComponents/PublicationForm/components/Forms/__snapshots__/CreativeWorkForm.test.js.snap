@@ -37,9 +37,11 @@ exports[`CreativeWorkForm renders  component 1`] = `
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of creative work"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [
@@ -426,9 +428,11 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of creative work"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [
@@ -977,9 +981,11 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of creative work"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [
