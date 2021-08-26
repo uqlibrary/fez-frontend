@@ -516,18 +516,18 @@ describe('SearchRecords page', () => {
         userIsAdmin.mockRestore();
     });
 
-    // it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
-    //     const testAction = jest.fn();
-    //     const { debug } = setup({
-    //         location: {
-    //             search: '?searchQueryParams=something%2Dinteresting',
-    //         },
-    //         actions: {
-    //             searchEspacePublications: testAction,
-    //         },
-    //     });
-    //     expect(testAction).toHaveBeenCalled();
-    // });
+    it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
+        const testAction = jest.fn();
+        setup({
+            location: {
+                search: '?searchQueryParams=something%2Dinteresting',
+            },
+            actions: {
+                searchEspacePublications: testAction,
+            },
+        });
+        expect(testAction).toHaveBeenCalled();
+    });
 
     it('renders loading screen while export publications loading', () => {
         const { getByText } = setup({
