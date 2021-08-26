@@ -43,6 +43,7 @@ export class PublicationsListPaging extends Component {
             per_page: PropTypes.number,
             current_page: PropTypes.number,
         }),
+        pagingId: PropTypes.string,
     };
 
     constructor(props) {
@@ -86,6 +87,8 @@ export class PublicationsListPaging extends Component {
                     .replace('[pageNumber]', key)
                     .replace('[totalPages]', totalPages)}
                 children={key}
+                data-testid={`${this.props.pagingId}-select-page-${key}`}
+                id={`${this.props.pagingId}-select-page-${key}`}
             />
         );
     };
@@ -115,7 +118,7 @@ export class PublicationsListPaging extends Component {
             return <span className="publicationsListControls empty" />;
         }
         return (
-            <div>
+            <div data-testid={this.props.pagingId} id={this.props.pagingId}>
                 {totalPages > 1 && (
                     <Grid container spacing={0}>
                         {currentPage >= 1 && (

@@ -3,7 +3,6 @@ import { rtlRender, fireEvent } from 'test-utils';
 import FacetsFilter from './FacetsFilter';
 import { possibleUnclaimedList } from 'mock/data';
 import { general } from 'config';
-import { waitFor } from '@testing-library/dom';
 
 function setup(testProps = {}) {
     return rtlRender(

@@ -256,6 +256,7 @@ export default class MyRecords extends PureComponent {
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
                                                 disabled={isLoadingOrExporting || this.state.bulkExportSelected}
+                                                pagingId="my-records-paging-top"
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -301,6 +302,7 @@ export default class MyRecords extends PureComponent {
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
                                                 disabled={isLoadingOrExporting || this.state.bulkExportSelected}
+                                                pagingId="my-records-paging-bottom"
                                             />
                                         </Grid>
                                     </Grid>

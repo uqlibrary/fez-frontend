@@ -23,8 +23,8 @@ context('Search', () => {
             .contains('label', 'Search eSpace');
 
         cy.get('[data-testid=simple-search-input]').type('cats and dogs{enter}');
-        cy.get('[data-testid=standard-card-content]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
-        cy.get('.StandardPage > div > div > div:nth-of-type(4) h6').should('contain', 'Refine results');
+        cy.get('[data-testid="search-records-results"]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
+        cy.get('.StandardPage > div > div > div:nth-of-type(3) h6').should('contain', 'Refine results');
 
         // Click through to advanced search UI
         cy.get('[data-testid=show-advanced-search]')
@@ -80,8 +80,9 @@ context('Search', () => {
         cy.get('[data-testid=advanced-search]')
             .should('not.be.disabled')
             .click();
-        cy.get('[data-testid="standard-card-content"]')
-            .should('contain', 'Searching for works')
-            .contains('Displaying works 1 to 7 of 7 total works.');
+        cy.get('[data-testid="search-records-loading"]')
+            .should('exist')
+            .should('contain', 'Searching for works');
+        cy.get('[data-testid="search-records-results"]').contains('Displaying works 1 to 7 of 7 total works.');
     });
 });

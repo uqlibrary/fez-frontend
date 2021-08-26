@@ -292,6 +292,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -377,6 +378,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -472,6 +474,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -565,6 +568,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -660,6 +664,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -745,6 +750,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -921,6 +927,7 @@ exports[`MyRecords test renders loading screen while export publications loading
               loading={true}
               onPageChanged={[Function]}
               pagingData={Object {}}
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -994,6 +1001,7 @@ exports[`MyRecords test renders loading screen while export publications loading
               loading={true}
               onPageChanged={[Function]}
               pagingData={Object {}}
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -1092,6 +1100,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
               loading={true}
               onPageChanged={[Function]}
               pagingData={Object {}}
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -1165,6 +1174,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
               loading={true}
               onPageChanged={[Function]}
               pagingData={Object {}}
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
@@ -1315,6 +1325,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-top"
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -1400,6 +1411,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                   "total": 147,
                 }
               }
+              pagingId="my-records-paging-bottom"
             />
           </WithStyles(ForwardRef(Grid))>
         </WithStyles(ForwardRef(Grid))>
