@@ -323,14 +323,13 @@ export const Doi = ({
     };
 
     if (record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION) {
-        txt.alertProps.progressAlert.message = txt.alertProps.progressAlert.message.replace(
-            DOI_CROSSREF_NAME,
-            DOI_DATACITE_NAME,
-        );
-        txt.alertProps.progressAlert.message = txt.alertProps.successAlert.message.replace(
-            DOI_CROSSREF_NAME,
-            DOI_DATACITE_NAME,
-        );
+        txt.alertProps.progressAlert.message = txt.alertProps.progressAlert.message
+            .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
+            .replace('queued', 'submitted');
+        txt.alertProps.progressAlert.message = txt.alertProps.successAlert.message
+            .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
+            .replace('queued', 'submitted');
+        txt.successConfirmation.confirmationMessage = `The DOI has been created/updated in ${DOI_DATACITE_NAME}`;
     }
 
     const alertProps = validation.getErrorAlertProps({
