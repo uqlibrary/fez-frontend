@@ -1,10 +1,4 @@
 import React from 'react';
-
-/**
- * Journal search list field map
- *
- *
- */
 export const JournalFieldsMap = [
     {
         key: 'jnl_title',
@@ -28,7 +22,7 @@ export const JournalFieldsMap = [
         compactView: true,
         showTooltip: true,
         translateFn: data => {
-            return <span style={{ paddingLeft: 12 }}>{data}</span>;
+            return (!!data && <span style={{ paddingLeft: 12 }}>{data}</span>) || null;
         },
     },
     {
@@ -70,7 +64,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_era_source_id',
         label: 'ERA source ID',
-        size: 100,
+        size: 200,
         prefix: '',
         suffix: '',
         compactView: true,

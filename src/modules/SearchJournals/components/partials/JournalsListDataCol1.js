@@ -22,7 +22,9 @@ const JournalsListDataCol1 = ({ journal, index }) => {
             }}
         >
             <Grid item xs={1} id={`journal-list-data-select-${index}`}>
-                <Checkbox style={{ paddingLeft: 2, paddingTop: 8, paddingBottom: 0, paddingRight: 0 }} />
+                <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
+                    <Checkbox style={{ paddingLeft: 2, paddingTop: 8, paddingBottom: 0, paddingRight: 0 }} />
+                </Tooltip>
             </Grid>
             <Grid
                 item

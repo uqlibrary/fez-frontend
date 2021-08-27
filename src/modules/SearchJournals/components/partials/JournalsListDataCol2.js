@@ -25,9 +25,9 @@ const JournalsListDataCol2 = (journal, index) => {
                         <Tooltip
                             title={itemData || ''}
                             placement="left"
-                            disableFocusListener={!item.showTooltip}
-                            disableHoverListener={!item.showTooltip}
-                            disableTouchListener={!item.showTooltip}
+                            disableFocusListener={!item.showTooltip && !!itemData}
+                            disableHoverListener={!item.showTooltip && !!itemData}
+                            disableTouchListener={!item.showTooltip && !!itemData}
                         >
                             <Typography
                                 variant="body1"

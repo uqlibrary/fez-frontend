@@ -5,6 +5,7 @@ import JournalsListHeaderCol2 from './partials/JournalsListHeaderCol2';
 import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
 import JournalsListDataCol2 from './partials/JournalsListDataCol2';
+import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
 // import ScrollContainer from 'react-indiana-drag-scroll';
 import PropTypes from 'prop-types';
@@ -55,10 +56,16 @@ const JournalsList = journals => {
                 </div>
                 {/* </ScrollContainer> */}
             </Grid>
-            <Grid item xs={1}>
+            <Grid item xs={'auto'}>
                 {/* Header */}
                 <JournalsListHeaderCol3 />
                 {/* Data */}
+                {journals &&
+                    journals.journals &&
+                    journals.journals.length > 0 &&
+                    journals.journals.map((item, index) => {
+                        return <JournalsListDataCol3 key={index} index={index} journal={item} />;
+                    })}
             </Grid>
         </Grid>
     );
