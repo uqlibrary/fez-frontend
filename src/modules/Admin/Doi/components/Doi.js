@@ -355,6 +355,7 @@ export const Doi = ({
                     </Grid>
                     <Grid item xs={12}>
                         <ConfirmationBox
+                            testId="rek-doi-confirmation-box"
                             confirmationBoxId="rek-doi"
                             hideCancelButton
                             isOpen={isOpen}
