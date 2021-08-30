@@ -924,7 +924,7 @@ export default {
             successConfirmation: {
                 confirmationTitle: 'Request successful',
                 confirmationMessage:
-                    'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
+                    'The request to create/update DOI has been submitted to Crossref. You will receive an email indicating whether the DOI is successfully generated.',
                 confirmButtonLabel: 'View work',
             },
         },
