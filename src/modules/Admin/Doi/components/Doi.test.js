@@ -101,6 +101,7 @@ describe('DOI component', () => {
         }
 
         expect(testFn2).toHaveBeenCalledTimes(1);
+        mockUseEffect.mockRestore();
     });
 
     it('should render error for unsupported subtype', () => {
@@ -247,7 +248,26 @@ describe('DOI component', () => {
         });
         expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
         expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
-            expect.stringMatching(DOI_CROSSREF_NAME),
+            `Upload to ${DOI_CROSSREF_NAME} is being queued.`,
+        );
+    });
+
+    it('should show request completed dialogue for Crossref DOI', () => {
+        const wrapper = setup({
+            doiUpdated: true,
+        });
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
+            `Upload to ${DOI_CROSSREF_NAME} has been queued successfully.`,
+        );
+    });
+
+    it('should contain a Crossref related confirmation message', () => {
+        const wrapper = setup({
+            doiUpdated: true,
+        });
+        expect(wrapper.find('[testId="rek-doi-confirmation-box"]').props().locale.confirmationMessage).toEqual(
+            `The request to create/update DOI has been submitted to ${DOI_CROSSREF_NAME}. You will receive an email indicating whether the DOI is successfully generated.`,
         );
     });
 
@@ -261,7 +281,34 @@ describe('DOI component', () => {
         });
         expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
         expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
-            expect.stringMatching(DOI_DATACITE_NAME),
+            `Upload to ${DOI_DATACITE_NAME} is being submitted.`,
+        );
+    });
+
+    it('should show request completed dialogue for DataCite DOI', () => {
+        const wrapper = setup({
+            doiUpdated: true,
+            record: {
+                ...confPaperRecord,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+            },
+        });
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().testId).toBe('rek-doi-submit-status');
+        expect(wrapper.find('[testId="rek-doi-submit-status"]').props().message).toEqual(
+            `Upload to ${DOI_DATACITE_NAME} has been submitted successfully.`,
+        );
+    });
+
+    it('should contain a DataCite related confirmation message', () => {
+        const wrapper = setup({
+            doiUpdated: true,
+            record: {
+                ...confPaperRecord,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+            },
+        });
+        expect(wrapper.find('[testId="rek-doi-confirmation-box"]').props().locale.confirmationMessage).toEqual(
+            `The DOI has been created/updated in ${DOI_DATACITE_NAME}`,
         );
     });
 });
