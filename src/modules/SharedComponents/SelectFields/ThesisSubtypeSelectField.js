@@ -13,6 +13,7 @@ export const ThesisSubtypeSelectField = fieldProps => {
             itemsList={itemsList}
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || fieldProps.onChange}
             value={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value || ''}
+            genericSelectFieldId="rek-genre-type"
             {...fieldProps}
         />
     );

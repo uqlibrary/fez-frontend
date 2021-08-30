@@ -4,6 +4,9 @@ import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
 import { THESIS_UPLOAD_RETRIES } from 'config/general';
 
+import { useAccountContext } from 'context';
+jest.mock('../../../context');
+
 function setup(testProps, isShallow = true) {
     const props = {
         anyTouched: true,
@@ -66,6 +69,12 @@ describe('ThesisSubmission', () => {
 
         mockUseCallback = jest.spyOn(React, 'useCallback');
         mockUseCallback.mockImplementationOnce(f => f);
+
+        useAccountContext.mockImplementation(() => ({
+            account: {
+                id: 's2222222',
+            },
+        }));
     });
 
     afterEach(() => {
@@ -244,6 +253,21 @@ describe('ThesisSubmission', () => {
     it('should have a helper to generate alert props', () => {
         expect(getFormSubmitAlertProps({ error: true })).toMatchSnapshot();
     });
+
+    it(
+        'should show alert message and not show the thesis submission ' +
+            'form to students not in the transition cohort',
+        () => {
+            useAccountContext.mockImplementation(() => ({
+                account: {
+                    id: 's333333',
+                },
+            }));
+            const wrapper = setup({});
+
+            expect(wrapper.find('[standardPageId="rhd-submission-user-blocked"]').length).toEqual(1);
+        },
+    );
 });
 
 describe('ThesisSubmission form - redirections', () => {

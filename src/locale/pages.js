@@ -8,7 +8,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import locale from 'locale/components';
 
 import { pathConfig } from 'config/pathConfig';
-import { DOI_ORG_PREFIX } from 'config/doi';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
 /*
 
 NOTE:
@@ -890,7 +890,10 @@ export default {
                 hasDoi: 'DOI (Existing)',
                 noDoi: 'DOI (Preview)',
             },
-            doiTemplate: pid => `${DOI_ORG_PREFIX}/${pid.slice(3)}`,
+            doiTemplate: (pid, displayType) =>
+                displayType === PUBLICATION_TYPE_DATA_COLLECTION
+                    ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
+                    : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
             depositorEmailTitle: 'Email',
             alertMessages: {
@@ -931,7 +934,7 @@ export default {
             successConfirmation: {
                 confirmationTitle: 'Request successful',
                 confirmationMessage:
-                    'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
+                    'The request to create/update DOI has been submitted to Crossref. You will receive an email indicating whether the DOI is successfully generated.',
                 confirmButtonLabel: 'View work',
             },
         },
