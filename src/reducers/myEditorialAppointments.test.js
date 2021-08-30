@@ -185,9 +185,35 @@ describe('editorial appointment reducer', () => {
     it('returns the correct state on editorial appointment added successfully', () => {
         const test = myEditorialAppointmentsReducer(initialState, {
             type: actions.MY_EDITORIAL_APPOINTMENT_ADD_SUCCESS,
+            payload: {
+                eap_aut_id: 5283470,
+                eap_jnl_id: 10805,
+                eap_journal_name: 'Nature',
+                eap_role_cvo_id: 454140,
+                eap_start_year: 2002,
+                eap_end_year: 2021,
+                eap_id: 228,
+                tableData: {
+                    id: 0,
+                },
+            },
         });
         expect(test.myEditorialAppointmentsAdding).toEqual(false);
         expect(test.myEditorialAppointmentsAddSuccess).toEqual(true);
+        expect(test.myEditorialAppointmentsList).toEqual([
+            {
+                eap_aut_id: 5283470,
+                eap_jnl_id: 10805,
+                eap_journal_name: 'Nature',
+                eap_role_cvo_id: 454140,
+                eap_start_year: 2002,
+                eap_end_year: 2021,
+                eap_id: 228,
+                tableData: {
+                    id: 0,
+                },
+            },
+        ]);
     });
 
     it('returns the correct state when editorial appointment item add failed', () => {
