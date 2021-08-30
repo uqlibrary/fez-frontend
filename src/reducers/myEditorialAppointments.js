@@ -89,7 +89,7 @@ const handlers = {
         ...state,
         myEditorialAppointmentsAdding: false,
         myEditorialAppointmentsAddSuccess: true,
-        myEditorialAppointmentsList: [action.payload, ...(state.myEditorialAppointmentsList || [])],
+        myEditorialAppointmentsList: [...(state.myEditorialAppointmentsList || []), action.payload],
     }),
 
     [actions.MY_EDITORIAL_APPOINTMENT_ADD_FAILED]: (state, action) => ({
@@ -97,6 +97,11 @@ const handlers = {
         myEditorialAppointmentsAdding: false,
         myEditorialAppointmentsAddSuccess: false,
         myEditorialAppointmentsAddError: action.payload,
+    }),
+
+    [actions.MY_EDITORIAL_APPOINTMENT_ADD_CLEAR]: state => ({
+        ...state,
+        myEditorialAppointmentsAddSuccess: false,
     }),
 };
 

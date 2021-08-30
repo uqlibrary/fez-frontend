@@ -224,4 +224,12 @@ describe('editorial appointment reducer', () => {
         expect(test.myEditorialAppointmentsAdding).toEqual(false);
         expect(test.myEditorialAppointmentsAddError).toEqual({ status: 403, message: 'Test error message' });
     });
+
+    it('returns expected state when editorial appointment state is cleared', () => {
+        const test = myEditorialAppointmentsReducer(
+            { ...initialState, myEditorialAppointmentsAddSuccess: true },
+            { type: actions.MY_EDITORIAL_APPOINTMENT_ADD_CLEAR },
+        );
+        expect(test.myEditorialAppointmentsAddSuccess).toEqual(false);
+    });
 });

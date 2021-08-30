@@ -12,33 +12,24 @@ import { default as componentLocale } from 'locale/components';
 import { default as locale } from 'locale/pages';
 import {
     addMyEditorialAppointments,
+    clearMyEditorialAppointmentsAddStatus,
     deleteMyEditorialAppointmentsListItem,
-    loadMyEditorialAppointmentsList,
-    updateMyEditorialAppointmentsListItem,
-    showAppAlert,
     dismissAppAlert,
+    loadMyEditorialAppointmentsList,
+    showAppAlert,
+    updateMyEditorialAppointmentsListItem,
 } from 'actions';
 
 export const MyEditorialAppointments = () => {
     const dispatch = useDispatch();
 
-    const myEditorialAppointmentsListLoading = useSelector(
-        state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsListLoading,
-    );
-    const myEditorialAppointmentsList = useSelector(
-        state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsList,
-    );
-    const myEditorialAppointmentsListError = useSelector(
-        state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsListError,
-    );
-
-    const myEditorialAppointmentsAddSuccess = useSelector(
-        state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsAddSuccess,
-    );
-
-    const myEditorialAppointmentsAddError = useSelector(
-        state => state.get('myEditorialAppointmentsReducer').myEditorialAppointmentsAddError,
-    );
+    const {
+        myEditorialAppointmentsAddError,
+        myEditorialAppointmentsAddSuccess,
+        myEditorialAppointmentsList,
+        myEditorialAppointmentsListError,
+        myEditorialAppointmentsListLoading,
+    } = useSelector(state => state.get('myEditorialAppointmentsReducer'));
 
     const handleRowAdd = newData => {
         return dispatch(addMyEditorialAppointments(newData));
@@ -56,6 +47,10 @@ export const MyEditorialAppointments = () => {
         if (!myEditorialAppointmentsList) {
             dispatch(loadMyEditorialAppointmentsList());
         }
+
+        return () => {
+            dispatch(dismissAppAlert());
+        };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -64,7 +59,10 @@ export const MyEditorialAppointments = () => {
             dispatch(
                 showAppAlert({
                     ...componentLocale.components.myEditorialAppointmentsList.successAlert,
-                    dismissAction: () => dispatch(dismissAppAlert()),
+                    dismissAction: () => {
+                        dispatch(dismissAppAlert());
+                        dispatch(clearMyEditorialAppointmentsAddStatus());
+                    },
                 }),
             );
         }
