@@ -3153,7 +3153,7 @@ export default {
             infoTextAlert: {
                 type: 'info',
                 message:
-                    'Please record your current editorial appointment on this page. This information will be made available to downstream systems such as the Individual Activity Profile (IAP). You should only record your current editorial appointments.',
+                    'Please record your editorial appointments on this page. This information will be made available to downstream systems such as the Individual Activity Profile (IAP). You only need to record your current editorial appointments.',
             },
             header: {
                 columns: {
@@ -3181,11 +3181,11 @@ export default {
                     otherRoleHint: 'Please specify the other role name',
                     startYearLabel: 'Start year',
                     startYearHint: 'Please type in start year',
-                    startYearErrorMessage: 'Year must be current or previous year',
+                    startYearErrorMessage: 'Year must be before or the same as the current year',
                     endYearLabel: 'End year',
                     endYearCurrentYearLabel: 'Current',
                     endYearHint: 'Current or future year only',
-                    endYearErrorMessage: 'Year must be current or future year',
+                    endYearErrorMessage: 'Year must be after or the same as the start year',
                     addButtonTooltip: 'Add new editorial appointment',
                     editButtonTooltip: 'Edit this editorial appointment',
                     deleteButtonTooltip: 'Delete this editorial appointment',
