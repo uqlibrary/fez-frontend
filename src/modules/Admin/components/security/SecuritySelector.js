@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import { PolicyDropdown } from './PolicyDropdown';
 import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';
 
