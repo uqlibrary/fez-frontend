@@ -68,10 +68,12 @@ const webpackConfig = {
         publicPath: config.publicPath,
     },
     devServer: {
-        contentBase: resolve(__dirname, './dist/', config.basePath),
         compress: true,
         port: port,
         host: '0.0.0.0',
+        static: {
+            publicPath: resolve(__dirname, './dist/', config.basePath),
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({
