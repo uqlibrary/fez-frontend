@@ -5,7 +5,7 @@ import AudioPlayer from './AudioPlayer';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { pathConfig } from 'config/pathConfig';
 
 export const styles = theme => ({

@@ -120,7 +120,7 @@ export const FacetsFilter = ({
         ...activeFacets.ranges,
     });
 
-    const [showOpenAccessOnly, setShowOpenAccessOnly] = useState(false);
+    const [showOpenAccessOnly, setShowOpenAccessOnly] = useState(!!activeFacets.showOpenAccessOnly);
 
     const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
@@ -213,7 +213,7 @@ export const FacetsFilter = ({
         return <span id="empty-facet-filters" className="facetsFilter empty" />;
     }
     return (
-        <div className="facetsFilter">
+        <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
             <List component="nav" dense>
                 {facetsToDisplay.map(item => {
                     // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
