@@ -319,7 +319,7 @@ exports[`Application component Should display mobile correctly 1`] = `
       }
       onRef={[Function]}
     />
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -996,7 +996,7 @@ exports[`Application component should determine if it has incomplete works from 
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -1965,7 +1965,7 @@ exports[`Application component should determine if it has incomplete works from 
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -2682,7 +2682,7 @@ exports[`Application component should redirect to login page with correct return
       }
       onRef={[Function]}
     />
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -3368,7 +3368,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         />
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -4356,7 +4356,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       }
       onRef={[Function]}
     />
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -5362,7 +5362,7 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -6316,7 +6316,7 @@ exports[`Application component should render application with routing for the us
       }
       onRef={[Function]}
     />
-    <Connect(AppAlert) />
+    <AppAlert />
     <WithStyles(InlineLoader)
       message="Loading account"
     />
@@ -6645,7 +6645,7 @@ exports[`Application component should render for anon user 1`] = `
       }
       onRef={[Function]}
     />
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -6981,7 +6981,7 @@ exports[`Application component should render thesis submission for HDR without m
       }
       onRef={[Function]}
     />
-    <Connect(AppAlert) />
+    <AppAlert />
     <ContextProvider
       value={
         Object {
@@ -10287,6 +10287,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "clearClaimPublication": [Function],
                                                           "clearDeleteRecord": [Function],
                                                           "clearFixRecord": [Function],
+                                                          "clearMyEditorialAppointmentsAddStatus": [Function],
                                                           "clearNewRecord": [Function],
                                                           "clearRecordToView": [Function],
                                                           "clearRedirectPath": [Function],
@@ -12620,127 +12621,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           </WithStyles(ForwardRef(Dialog))>
                         </ConfirmDialogBox>
                       </WithStyles(ConfirmDialogBox)>
-                      <Connect(AppAlert)>
-                        <AppAlert
-                          actions={
-                            Object {
-                              "addAuthor": [Function],
-                              "addFavouriteSearch": [Function],
-                              "addMyEditorialAppointments": [Function],
-                              "addUser": [Function],
-                              "adminCreate": [Function],
-                              "adminReset": [Function],
-                              "adminUpdate": [Function],
-                              "bulkDeleteAuthorListItems": [Function],
-                              "bulkDeleteUserListItems": [Function],
-                              "changeAuthorId": [Function],
-                              "changeDisplayType": [Function],
-                              "changeSearchKeyValue": [Function],
-                              "checkForExistingAuthor": [Function],
-                              "checkForExistingFavouriteSearchAlias": [Function],
-                              "checkForExistingUser": [Function],
-                              "checkSession": [Function],
-                              "claimPublication": [Function],
-                              "clearAuthorsSuggestions": [Function],
-                              "clearClaimPublication": [Function],
-                              "clearDeleteRecord": [Function],
-                              "clearFixRecord": [Function],
-                              "clearNewRecord": [Function],
-                              "clearRecordToView": [Function],
-                              "clearRedirectPath": [Function],
-                              "clearSearchQuery": [Function],
-                              "clearSessionExpiredFlag": [Function],
-                              "clearThirdPartyLookup": [Function],
-                              "collectionsList": [Function],
-                              "communitiesList": [Function],
-                              "copyToOrRemoveFromCollection": [Function],
-                              "countPossiblyYourPublications": [Function],
-                              "createBatchImport": [Function],
-                              "createCollection": [Function],
-                              "createCommunity": [Function],
-                              "createNewRecord": [Function],
-                              "createSearchPromise": [Function],
-                              "deleteAttachedFile": [Function],
-                              "deleteAuthorListItem": [Function],
-                              "deleteFavouriteSearchListItem": [Function],
-                              "deleteMyEditorialAppointmentsListItem": [Function],
-                              "deleteRecord": [Function],
-                              "deleteUserListItem": [Function],
-                              "dismissAppAlert": [Function],
-                              "exportAuthorPublications": [Function],
-                              "exportEspacePublications": [Function],
-                              "exportPublications": [Function],
-                              "fixRecord": [Function],
-                              "getBatchImportDirectories": [Function],
-                              "getCollectionsListAPI": [Function],
-                              "getFavouriteSearchAlias": [Function],
-                              "getSearchLookupApi": [Function],
-                              "getSherpaFromIssn": [Function],
-                              "getThirdPartyLookupApiUrl": [Function],
-                              "getUlrichsFromIssn": [Function],
-                              "hidePossiblyYourPublicationsLure": [Function],
-                              "hideRecord": [Function],
-                              "hideRecordErrorReset": [Function],
-                              "ingestFromScopus": [Function],
-                              "linkAuthorOrcidId": [Function],
-                              "loadAuthorList": [Function],
-                              "loadAuthorPublicationsStats": [Function],
-                              "loadBulkUpdatesList": [Function],
-                              "loadCollectionsList": [Function],
-                              "loadCurrentAccount": [Function],
-                              "loadFavouriteSearchList": [Function],
-                              "loadFullRecordToClaim": [Function],
-                              "loadJournal": [Function],
-                              "loadJournalLookup": [Function],
-                              "loadMyEditorialAppointmentsList": [Function],
-                              "loadNewsFeed": [Function],
-                              "loadOrcidSyncStatus": [Function],
-                              "loadPublicationList": [Function],
-                              "loadRecordToDelete": [Function],
-                              "loadRecordToFix": [Function],
-                              "loadRecordToView": [Function],
-                              "loadSearchKeyList": [Function],
-                              "loadThirdPartyResults": [Function],
-                              "loadUserList": [Function],
-                              "loadVocabulariesList": [Function],
-                              "logout": [Function],
-                              "requestMJLIngest": [Function],
-                              "requestOrcidSync": [Function],
-                              "resetDoi": [Function],
-                              "resetExportPublicationsStatus": [Function],
-                              "resetSavingAuthorState": [Function],
-                              "searchAuthorPublications": [Function],
-                              "searchAuthors": [Function],
-                              "searchEspacePublications": [Function],
-                              "searchLatestPublications": [Function],
-                              "searchPossiblyYourPublications": [Function],
-                              "searchPublications": [Function],
-                              "searchTopCitedPublications": [Function],
-                              "searchTrendingPublications": [Function],
-                              "setClaimPublication": [Function],
-                              "setDeleteRecord": [Function],
-                              "setFixRecord": [Function],
-                              "setHideCulturalSensitivityStatement": [Function],
-                              "setRedirectPath": [Function],
-                              "showAppAlert": [Function],
-                              "submitThesis": [Function],
-                              "unclaimRecord": [Function],
-                              "unlockRecord": [Function],
-                              "unlockRecordToView": [Function],
-                              "updateAuthorListItem": [Function],
-                              "updateCollection": [Function],
-                              "updateCommunity": [Function],
-                              "updateCurrentAuthor": [Function],
-                              "updateDoi": [Function],
-                              "updateFavouriteSearchListItem": [Function],
-                              "updateIncompleteRecord": [Function],
-                              "updateMyEditorialAppointmentsListItem": [Function],
-                              "updateUserListItem": [Function],
-                            }
-                          }
-                          appAlert={null}
-                        />
-                      </Connect(AppAlert)>
+                      <AppAlert />
                       <Suspense
                         fallback={
                           <ContentLoader
@@ -14303,6 +14184,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "clearClaimPublication": [Function],
                                                                           "clearDeleteRecord": [Function],
                                                                           "clearFixRecord": [Function],
+                                                                          "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                           "clearNewRecord": [Function],
                                                                           "clearRecordToView": [Function],
                                                                           "clearRedirectPath": [Function],
@@ -14467,6 +14349,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "clearClaimPublication": [Function],
                                                                             "clearDeleteRecord": [Function],
                                                                             "clearFixRecord": [Function],
+                                                                            "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                             "clearNewRecord": [Function],
                                                                             "clearRecordToView": [Function],
                                                                             "clearRedirectPath": [Function],
@@ -15778,6 +15661,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "clearClaimPublication": [Function],
                                                                                     "clearDeleteRecord": [Function],
                                                                                     "clearFixRecord": [Function],
+                                                                                    "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                                     "clearNewRecord": [Function],
                                                                                     "clearRecordToView": [Function],
                                                                                     "clearRedirectPath": [Function],
@@ -15896,6 +15780,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "clearClaimPublication": [Function],
                                                                                       "clearDeleteRecord": [Function],
                                                                                       "clearFixRecord": [Function],
+                                                                                      "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                                       "clearNewRecord": [Function],
                                                                                       "clearRecordToView": [Function],
                                                                                       "clearRedirectPath": [Function],
