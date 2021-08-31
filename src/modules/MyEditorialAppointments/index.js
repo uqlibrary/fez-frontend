@@ -43,14 +43,17 @@ export const MyEditorialAppointments = () => {
         return dispatch(deleteMyEditorialAppointmentsListItem(oldData));
     };
 
+    const clearAddStatus = () => {
+        dispatch(dismissAppAlert());
+        dispatch(clearMyEditorialAppointmentsAddStatus());
+    };
+
     React.useEffect(() => {
         if (!myEditorialAppointmentsList) {
             dispatch(loadMyEditorialAppointmentsList());
         }
 
-        return () => {
-            dispatch(dismissAppAlert());
-        };
+        return clearAddStatus;
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -59,10 +62,7 @@ export const MyEditorialAppointments = () => {
             dispatch(
                 showAppAlert({
                     ...componentLocale.components.myEditorialAppointmentsList.successAlert,
-                    dismissAction: () => {
-                        dispatch(dismissAppAlert());
-                        dispatch(clearMyEditorialAppointmentsAddStatus());
-                    },
+                    dismissAction: clearAddStatus,
                 }),
             );
         }

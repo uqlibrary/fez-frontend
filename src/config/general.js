@@ -1655,6 +1655,8 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR]: 'Single Issue Editor',
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
+export const EDITORIAL_APPOINTMENT_MIN_YEAR = 1900;
+export const EDITORIAL_APPOINTMENT_MAX_YEAR = 2100;
 
 export const BULK_DELETE_USER_SUCCESS = 'User deleted';
 export const BULK_DELETE_USER_NOT_FOUND = 'User not found';

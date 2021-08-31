@@ -13,7 +13,13 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
 
-import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
+import {
+    EDITORIAL_APPOINTMENT_MAX_YEAR,
+    EDITORIAL_APPOINTMENT_MIN_YEAR,
+    EDITORIAL_ROLE_MAP,
+    EDITORIAL_ROLE_OPTIONS,
+    EDITORIAL_ROLE_OTHER,
+} from 'config/general';
 
 export const CustomToolbar = props => {
     return (
@@ -251,9 +257,14 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData =>
-                moment(String(rowData.eap_start_year), 'YYYY').isValid() &&
-                moment(String(rowData.eap_start_year), 'YYYY').isSameOrBefore(moment(), 'year'),
+            validate: rowData => {
+                const startYearMoment = moment(String(rowData.eap_start_year), 'YYYY');
+                return (
+                    startYearMoment.isValid() &&
+                    startYearMoment.isSameOrBefore(moment(), 'year') &&
+                    startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
+                );
+            },
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
@@ -329,9 +340,14 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData =>
-                moment(String(rowData.eap_end_year), 'YYYY').isValid() &&
-                moment(String(rowData.eap_end_year)).isSameOrAfter(String(rowData.eap_start_year)),
+            validate: rowData => {
+                const endYearMoment = moment(String(rowData.eap_end_year), 'YYYY');
+                return (
+                    endYearMoment.isValid() &&
+                    endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
+                    endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'))
+                );
+            },
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
