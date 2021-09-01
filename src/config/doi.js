@@ -1,5 +1,6 @@
 import {
     PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
@@ -11,6 +12,35 @@ import {
 
 // Field order values copied from locale/viewRecord.js:viewRecord.fields
 export const doiFields = {
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: {
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 1,
+            },
+            {
+                field: 'rek_title',
+                order: 2,
+            },
+            {
+                field: 'rek_description',
+                order: 2.5,
+            },
+            {
+                field: 'rek_date',
+                order: 10,
+            },
+            {
+                field: 'fez_record_search_key_start_page',
+                order: 21,
+            },
+            {
+                field: 'fez_record_search_key_end_page',
+                order: 22,
+            },
+        ],
+    },
+
     [PUBLICATION_TYPE_BOOK]: {
         fields: [
             {

@@ -22,6 +22,7 @@ UQ's branding for Fez is UQ eSpace.
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: `Cypress`
+- [Supported Browsers](https://web.library.uq.edu.au/site-information/web-browser-compatibility)
 
 ## Development
 
