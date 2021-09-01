@@ -13,7 +13,13 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
 
-import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
+import {
+    EDITORIAL_APPOINTMENT_MAX_YEAR,
+    EDITORIAL_APPOINTMENT_MIN_YEAR,
+    EDITORIAL_ROLE_MAP,
+    EDITORIAL_ROLE_OPTIONS,
+    EDITORIAL_ROLE_OTHER,
+} from 'config/general';
 
 export const CustomToolbar = props => {
     return (
@@ -251,9 +257,14 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData =>
-                moment(String(rowData.eap_start_year), 'YYYY').isValid() &&
-                moment(String(rowData.eap_start_year), 'YYYY').isSameOrBefore(moment(), 'year'),
+            validate: rowData => {
+                const startYearMoment = moment(String(rowData.eap_start_year), 'YYYY');
+                return (
+                    startYearMoment.isValid() &&
+                    startYearMoment.isSameOrBefore(moment(), 'year') &&
+                    startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
+                );
+            },
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
@@ -281,20 +292,21 @@ export const getColumns = () => {
                         : rowData.eap_end_year}
                 </Typography>
             ),
-            editComponent: props => {
+            editComponent: ({ value, rowData, onChange }) => {
                 const minDate = new Date();
+                minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
                 minDate.setDate(1);
                 minDate.setMonth(0);
                 return (
                     <KeyboardDatePicker
-                        value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
-                        onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
+                        value={(!!value && moment(String(value), 'YYYY')) || null}
+                        onChange={value => onChange((!!value && value.format('YYYY')) || null)}
                         error={
-                            !moment(String(props.value), 'YYYY').isValid() ||
-                            !moment(String(props.value), 'YYYY').isSameOrAfter(moment(), 'year')
+                            !moment(String(value), 'YYYY').isValid() ||
+                            moment(String(value)).isBefore(String(rowData.eap_start_year))
                         }
-                        {...((!!props.value &&
-                            moment(String(props.value)).format('YYYY') === moment(minDate).format('YYYY') && {
+                        {...((!!value &&
+                            moment(String(value)).format('YYYY') === moment().format('YYYY') && {
                                 format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
                             }) ||
                             {})}
@@ -328,9 +340,14 @@ export const getColumns = () => {
                     />
                 );
             },
-            validate: rowData =>
-                moment(String(rowData.eap_end_year), 'YYYY').isValid() &&
-                moment(String(rowData.eap_end_year), 'YYYY').isSameOrAfter(moment(), 'year'),
+            validate: rowData => {
+                const endYearMoment = moment(String(rowData.eap_end_year), 'YYYY');
+                return (
+                    endYearMoment.isValid() &&
+                    endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
+                    endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'))
+                );
+            },
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
@@ -383,8 +400,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 EditRow: props => (
                     <MTableEditRow
                         {...props}
-                        id={`my-editorial-appointments-list-edit-row-${props.index}`}
-                        data-testid={`my-editorial-appointments-list-edit-row-${props.index}`}
+                        id={`my-editorial-appointments-list-${props.mode}-row`}
+                        data-testid={`my-editorial-appointments-list-${props.mode}-row`}
                         onEditingApproved={handleEditingApproved(props)}
                     />
                 ),

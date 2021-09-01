@@ -21,6 +21,7 @@ export const UQ_FULL_NAME = 'The University of Queensland';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = process.env.APP_URL || STAGING_URL;
+export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
@@ -1600,7 +1601,7 @@ export const AFFILIATION_TYPE_UQ = 'UQ';
 export const DOI_CROSSREF_NAME = 'Crossref';
 export const DOI_CROSSREF_PREFIX = '10.14264';
 export const DOI_DATACITE_NAME = 'DataCite';
-export const DOI_DATACITE_PREFIX = process.env.NODE_ENV === 'production' ? '10.48610' : '10.23643';
+export const DOI_DATACITE_PREFIX = IS_PRODUCTION ? '10.48610' : '10.23643';
 
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
 
@@ -1643,6 +1644,9 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR]: 'Single Issue Editor',
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
+export const EDITORIAL_APPOINTMENT_MIN_YEAR = 1900;
+export const EDITORIAL_APPOINTMENT_MAX_YEAR = 2100;
+
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
 export const DATASET_ACCESS_CONDITIONS_OPTIONS = [

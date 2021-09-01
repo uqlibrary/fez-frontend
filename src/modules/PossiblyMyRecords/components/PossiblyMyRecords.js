@@ -296,6 +296,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                                     disabled={
                                                                         this.props.loadingPossiblePublicationsList
                                                                     }
+                                                                    pagingId="possibly-my-records-paging-top"
                                                                 />
                                                             </Grid>
                                                         </React.Fragment>
@@ -321,6 +322,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                                 pagingData={pagingData}
                                                                 onPageChanged={this.pageChanged}
                                                                 disabled={this.props.loadingPossiblePublicationsList}
+                                                                pagingId="possibly-my-records-paging-bottom"
                                                             />
                                                         </Grid>
                                                     )}

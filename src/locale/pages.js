@@ -534,11 +534,20 @@ export default {
             loadingMessage: 'Searching for works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
+            bulkExport: {
+                buttonText: 'Bulk Export',
+                sizeMessage: 'Each export will have [bulkExportSize] works. Use the links below to queue exports.',
+                successMessage:
+                    'Bulk export requests have been queued. When the requests have been processed, ' +
+                    'you will receive an email for each request with the exported file as an attachment.',
+                rowLabel: 'Export works [start] to [end]',
+            },
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
                 title: 'No works found',
                 text: <div>We were unable to find any results.</div>,
+                standardCardId: 'search-records-no-results',
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,
@@ -929,7 +938,7 @@ export default {
             successConfirmation: {
                 confirmationTitle: 'Request successful',
                 confirmationMessage:
-                    'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
+                    'The request to create/update DOI has been submitted to Crossref. You will receive an email indicating whether the DOI is successfully generated.',
                 confirmButtonLabel: 'View work',
             },
         },
