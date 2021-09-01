@@ -51,7 +51,7 @@ export default class ConferencePaperForm extends Component {
                                     type="text"
                                     fullWidth
                                     multiline
-                                    rows={1}
+                                    rows={3}
                                     label={txt.information.fieldLabels.title}
                                     validate={[validation.required]}
                                 />

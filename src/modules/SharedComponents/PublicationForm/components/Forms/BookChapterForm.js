@@ -68,7 +68,7 @@ export default class BookChapterForm extends Component {
                                     type="text"
                                     fullWidth
                                     multiline
-                                    rows={1}
+                                    rows={3}
                                     label={txt.information.fieldLabels.bookChapterTitle}
                                     validate={[validation.required]}
                                 />
