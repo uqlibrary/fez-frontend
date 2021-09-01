@@ -141,19 +141,17 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
     }
 
     if (
-        !(
-            !!record.fez_record_search_key_isderivationof &&
-            !!record.fez_record_search_key_isderivationof[0] &&
-            !!record.fez_record_search_key_isderivationof[0].parent &&
-            !!record.fez_record_search_key_isderivationof[0].parent.rek_pid
-        )
+        !record.fez_record_search_key_isderivationof ||
+        !record.fez_record_search_key_isderivationof[0] ||
+        !record.fez_record_search_key_isderivationof[0].parent ||
+        !record.fez_record_search_key_isderivationof[0].parent.rek_pid
     ) {
         errorMessages.push(txt.alertMessages.bookChapter.parent.missing);
         return;
     }
 
     const parent = record.fez_record_search_key_isderivationof[0].parent;
-    if (!(!!parent.rek_subtype && parent.rek_subtype.toLowerCase() === SUBTYPE_EDITED_BOOK.toLowerCase())) {
+    if (!parent.rek_subtype || parent.rek_subtype.toLowerCase() !== SUBTYPE_EDITED_BOOK.toLowerCase()) {
         errorMessages.push(
             txt.alertMessages.wrongSubtype
                 .replace('[TYPE]', 'the parent Book')
@@ -162,21 +160,17 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
     }
 
     if (
-        !(
-            !!parent.fez_record_search_key_doi &&
-            !!parent.fez_record_search_key_doi.rek_doi &&
-            parent.fez_record_search_key_doi.rek_doi.indexOf(DOI_CROSSREF_PREFIX) === 0
-        )
+        !parent.fez_record_search_key_doi ||
+        !parent.fez_record_search_key_doi.rek_doi ||
+        parent.fez_record_search_key_doi.rek_doi.indexOf(DOI_CROSSREF_PREFIX) === -1
     ) {
         errorMessages.push(txt.alertMessages.uqIsNotPublisher.replace('[SUBJECT]', 'The parent Book'));
     }
 
     if (
-        !(
-            !!parent.fez_record_search_key_publisher &&
-            !!parent.fez_record_search_key_publisher.rek_publisher &&
-            parent.fez_record_search_key_publisher.rek_publisher === UQ_FULL_NAME
-        )
+        !parent.fez_record_search_key_publisher ||
+        !parent.fez_record_search_key_publisher.rek_publisher ||
+        parent.fez_record_search_key_publisher.rek_publisher.indexOf(UQ_FULL_NAME) === -1
     ) {
         errorMessages.push(
             txt.alertMessages.uqCheckMessage.replace(
