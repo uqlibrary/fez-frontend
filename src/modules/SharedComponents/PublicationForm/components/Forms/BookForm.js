@@ -69,7 +69,7 @@ export default class BookForm extends Component {
                                     type="text"
                                     fullWidth
                                     multiline
-                                    rows={1}
+                                    rows={3}
                                     label={txt.information.fieldLabels.bookTitle}
                                     validate={[validation.required]}
                                 />

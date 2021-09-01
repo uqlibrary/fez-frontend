@@ -41,7 +41,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             name="rek_title"
             placeholder="Proceedings title"
             required={true}
-            rows={1}
+            rows={3}
             style={
               Object {
                 "marginBottom": "-12px",

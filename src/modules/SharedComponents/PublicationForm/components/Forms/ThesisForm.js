@@ -57,7 +57,7 @@ export default class ThesisForm extends Component {
                                     type="text"
                                     fullWidth
                                     multiline
-                                    rows={1}
+                                    rows={3}
                                     {...txt.information.fieldLabels.documentTitle}
                                     required
                                     validate={[validation.required]}
