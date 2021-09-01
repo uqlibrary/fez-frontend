@@ -41,7 +41,7 @@ exports[`NewspaperArticleForm renders  component 1`] = `
             name="rek_title"
             placeholder="Enter article title"
             required={true}
-            rows={1}
+            rows={3}
             type="text"
             validate={
               Array [

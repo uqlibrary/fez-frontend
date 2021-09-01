@@ -182,7 +182,12 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
  * @returns {Object} formatted {fez_record_search_key_author} for record request
  */
 export const getRecordAuthorsSearchKey = authors => {
-    if (!authors || authors.length === 0) return {};
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author: [],
+        };
+    }
+
     return {
         fez_record_search_key_author: authors.map((item, index) => ({
             rek_author: item.nameAsPublished,
@@ -232,7 +237,11 @@ export const getRecordSupervisorsSearchKey = supervisors => {
  */
 export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
     // return empty object if all parameters are null
-    if ((!authors || authors.length === 0) && !defaultAuthorId) return {};
+    if ((!authors || authors.length === 0) && !defaultAuthorId) {
+        return {
+            fez_record_search_key_author_id: [],
+        };
+    }
 
     // return default author if provided
     if ((!authors || authors.length === 0) && defaultAuthorId) {
@@ -262,7 +271,14 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
 };
 
 export const getRecordAuthorAffiliationSearchKey = authors => {
-    if (!authors || authors.length === 0) return {};
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author_affiliation_id: [],
+            fez_record_search_key_author_affiliation_name: [],
+            fez_record_search_key_author_affiliation_country: [],
+            fez_record_search_key_author_affiliation_full_address: [],
+        };
+    }
 
     return {
         fez_record_search_key_author_affiliation_name: authors.map((item, index) => ({
@@ -273,7 +289,11 @@ export const getRecordAuthorAffiliationSearchKey = authors => {
 };
 
 export const getRecordAuthorAffiliationTypeSearchKey = authors => {
-    if (!authors || authors.length === 0) return {};
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author_affiliation_type: [],
+        };
+    }
 
     return {
         fez_record_search_key_author_affiliation_type: authors.map((item, index) => ({

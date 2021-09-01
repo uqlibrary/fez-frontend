@@ -72,7 +72,7 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     multiline
-                                    rows={1}
+                                    rows={3}
                                     {...txt.information.fieldLabels.documentTitle}
                                     validate={[validation.required]}
                                 />

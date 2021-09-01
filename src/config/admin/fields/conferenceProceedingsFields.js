@@ -60,6 +60,10 @@ export default {
     ],
     authors: () => [
         {
+            title: 'Authors',
+            groups: [['authors']],
+        },
+        {
             title: 'Editors',
             groups: [['editors']],
         },

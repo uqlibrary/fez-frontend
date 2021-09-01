@@ -69,6 +69,8 @@ export default class CreativeWorkForm extends Component {
                                     name="rek_title"
                                     type="text"
                                     fullWidth
+                                    multiline
+                                    rows={3}
                                     {...txt.information.fieldLabels.articleTitle}
                                     required
                                     validate={[validation.required]}
