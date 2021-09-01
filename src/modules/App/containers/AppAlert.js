@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as actions from 'actions';
+import { useSelector } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-const AppAlert = ({ appAlert }) => {
-    if (!appAlert) return null;
+const AppAlert = () => {
+    const appAlert = useSelector(state => (state.get('appReducer') || {}).appAlert);
+
+    if (!appAlert) return '';
 
     return (
         <div className="dashAlert">
@@ -23,15 +23,4 @@ AppAlert.propTypes = {
     appAlert: PropTypes.object,
 };
 
-const mapStateToProps = state => ({
-    appAlert:
-        state.get('appReducer') && state.get('appReducer').appAlert ? { ...state.get('appReducer').appAlert } : null,
-});
-
-const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(actions, dispatch),
-});
-
-const AppAlertContainer = connect(mapStateToProps, mapDispatchToProps)(AppAlert);
-
-export default AppAlertContainer;
+export default AppAlert;

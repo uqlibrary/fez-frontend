@@ -77,7 +77,6 @@ export const withRedux = (initialState = Immutable.Map()) => WrappedComponent =>
     return <Provider store={getStore(initialState)}>{WrappedComponent}</Provider>;
 };
 
-// eslint-disable-next-line react/prop-types
 export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => (
     <Provider store={getStore(initialState)}>
         <AllTheProviders>{children}</AllTheProviders>

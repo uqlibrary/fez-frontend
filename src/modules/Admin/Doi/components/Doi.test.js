@@ -22,14 +22,14 @@ const confPaperRecord = {
         rek_doi: DOI_CROSSREF_PREFIX,
     },
     fez_record_search_key_publisher: {
-        rek_publisher: UQ_FULL_NAME,
+        rek_publisher: `Test Publisher, ${UQ_FULL_NAME}`,
     },
 };
 const journalArticleRecord = publicationTypeListJournalArticle.data[0];
 const mockRecord = {
     ...publicationTypeListResearchReport.data[0],
     fez_record_search_key_publisher: {
-        rek_publisher: UQ_FULL_NAME,
+        rek_publisher: `Test Publisher, ${UQ_FULL_NAME}`,
     },
 };
 const bookChapterRecord = {
@@ -38,7 +38,7 @@ const bookChapterRecord = {
         rek_doi: DOI_CROSSREF_PREFIX,
     },
     fez_record_search_key_publisher: {
-        rek_publisher: UQ_FULL_NAME,
+        rek_publisher: `Test Publisher, ${UQ_FULL_NAME}`,
     },
 };
 
@@ -200,7 +200,7 @@ describe('DOI component', () => {
                             rek_subtype: 'Edited Book',
                             fez_record_search_key_publisher: {
                                 rek_publisher_pid: 'UQ:123456',
-                                rek_publisher: UQ_FULL_NAME,
+                                rek_publisher: `Test Publisher, ${UQ_FULL_NAME}`,
                             },
                         },
                     },
