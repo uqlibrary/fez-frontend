@@ -905,9 +905,14 @@ export default {
                 missingRequiredField: 'Required field [FIELDNAME] is either missing or invalid.',
                 unsupportedMessage: 'Sorry, type [TYPE] is not currently supported.',
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
-                uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',
+                uqIsNotPublisher: '[SUBJECT] does not appear to be have an UQ DOI',
                 warningTitle: 'Please note:',
                 wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
+                bookChapter: {
+                    parent: {
+                        missing: "Sorry, this book chapter doesn't seem to belong to a existing book",
+                    },
+                },
             },
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
