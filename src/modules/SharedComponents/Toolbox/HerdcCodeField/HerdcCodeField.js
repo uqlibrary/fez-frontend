@@ -10,7 +10,7 @@ import { DEPRECATED_HERDC_CODES, HERDC_CODES } from 'config/general';
  * @private
  */
 const _herdcCodes = input => {
-    const herdcCodes = HERDC_CODES;
+    const herdcCodes = [{ value: '0', text: '(None)' }, ...HERDC_CODES];
     if (!HERDC_CODES.find(herdc => herdc.value === input)) {
         const foundDeprecated = DEPRECATED_HERDC_CODES.filter(obj => {
             // just comparing obj.value === input works in tests but not in actual form :(
@@ -25,16 +25,17 @@ const _herdcCodes = input => {
 
 export default function HerdcCodeField(fieldProps) {
     const preselected = !!fieldProps.input && fieldProps.input.value;
-
+    const itemsList = [..._herdcCodes(preselected)];
     return (
         <NewGenericSelectField
-            itemsList={[..._herdcCodes(preselected)]}
+            itemsList={itemsList}
             locale={{ label: fieldProps.label }}
             value={(!!fieldProps.input && fieldProps.input.value) || ''}
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
             genericSelectFieldId="rek-herdc-code"
+            canUnselect
             {...fieldProps}
         />
     );
