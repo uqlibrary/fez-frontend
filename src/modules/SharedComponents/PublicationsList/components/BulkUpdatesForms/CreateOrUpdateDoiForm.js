@@ -29,7 +29,7 @@ export const CreateOrUpdateDoiForm = ({
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
     const hasCollectionsAmongSelectedRecords =
         Object.values(recordsSelected).filter(
-            record => !!record && record.rek_object_type_lookup === RECORD_TYPE_COLLECTION,
+            record => !!record && record.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION,
         ).length > 0;
 
     React.useEffect(() => {

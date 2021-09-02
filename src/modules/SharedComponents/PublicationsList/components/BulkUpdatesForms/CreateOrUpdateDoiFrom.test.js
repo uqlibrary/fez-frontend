@@ -45,7 +45,7 @@ describe('CreateOrUpdateDoiForm', () => {
         const { getByTestId } = setup({
             recordsSelected: {
                 'UQ:123456': { rek_pid: 'UQ:123456' },
-                'UQ:123457': { rek_pid: 'UQ:123457', rek_object_type_lookup: RECORD_TYPE_COLLECTION },
+                'UQ:123457': { rek_pid: 'UQ:123457', rek_object_type_lookup: 'Collection' },
             },
         });
         expect(getByTestId('collection-alert-warning-create-or-update-doi')).toBeInTheDocument();
