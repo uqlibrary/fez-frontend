@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 
 import { locale } from 'locale';
 import { createOrUpdateDoi } from 'actions';
+import { RECORD_TYPE_COLLECTION } from '../../../../../config/general';
 
 const FORM_NAME = 'CreateOrUpdateDoiForm';
 
@@ -17,8 +18,19 @@ const onSubmit = (values, dispatch, props) => {
     });
 };
 
-export const CreateOrUpdateDoiForm = ({ error, handleSubmit, onCancel, submitting, submitSucceeded }) => {
+export const CreateOrUpdateDoiForm = ({
+    error,
+    handleSubmit,
+    onCancel,
+    recordsSelected,
+    submitting,
+    submitSucceeded,
+}) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
+    const hasCollectionsAmongSelectedRecords =
+        Object.values(recordsSelected).filter(
+            record => !!record && record.rek_object_type_lookup === RECORD_TYPE_COLLECTION,
+        ).length > 0;
 
     React.useEffect(() => {
         if (submitSucceeded) {
@@ -33,6 +45,14 @@ export const CreateOrUpdateDoiForm = ({ error, handleSubmit, onCancel, submittin
                 <Grid item xs={12}>
                     <Alert alertId="alert-info-create-or-update-doi" {...txt.createOrUpdateDoiForm.alert} />
                 </Grid>
+                {!!hasCollectionsAmongSelectedRecords && (
+                    <Grid item xs={12}>
+                        <Alert
+                            alertId="collection-alert-warning-create-or-update-doi"
+                            {...txt.createOrUpdateDoiForm.collectionAlert}
+                        />
+                    </Grid>
+                )}
                 <Grid item xs={6}>
                     <Button
                         aria-label={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}

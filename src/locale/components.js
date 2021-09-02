@@ -2990,12 +2990,17 @@ export default {
                     formLabels: {
                         doi: 'DOIs',
                         cancelButtonLabel: 'Cancel',
-                        submitButtonLabel: 'Bulk create/update',
+                        submitButtonLabel: 'Confirm',
                     },
                     alert: {
-                        title: 'Bulk create/update DOIs',
-                        message: 'Would you like to create new or update the metadata of existing DOIs?',
+                        message: 'Would you like to create or update existing DOIs for the selected records?',
                         type: 'info',
+                    },
+                    collectionAlert: {
+                        title: 'Note:',
+                        message:
+                            'There are one or more collections among the selected records. The changes will be apply to child records too.',
+                        type: 'warning',
                     },
                     submittingAlert: {
                         title: 'Bulk create/update DOIs',

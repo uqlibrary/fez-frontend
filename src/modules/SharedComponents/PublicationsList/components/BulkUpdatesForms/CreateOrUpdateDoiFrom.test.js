@@ -2,6 +2,7 @@ import React from 'react';
 import CreateOrUpdateDoiForm from './CreateOrUpdateDoiForm';
 import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
+import { RECORD_TYPE_COLLECTION } from '../../../../../config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -31,6 +32,23 @@ describe('CreateOrUpdateDoiForm', () => {
                 ownerDocument: document,
             },
         });
+    });
+
+    it('should not show collection warning when no collections are selected', async () => {
+        const { getByTestId } = setup();
+        expect(() => getByTestId('collection-alert-warning-create-or-update-doi')).toThrow(
+            'Unable to find an element by: [id="collection-alert-warning-create-or-update-doi"]',
+        );
+    });
+
+    it('should show collection warning when collections are selected', async () => {
+        const { getByTestId } = setup({
+            recordsSelected: {
+                'UQ:123456': { rek_pid: 'UQ:123456' },
+                'UQ:123457': { rek_pid: 'UQ:123457', rek_object_type_lookup: RECORD_TYPE_COLLECTION },
+            },
+        });
+        expect(getByTestId('collection-alert-warning-create-or-update-doi')).toBeInTheDocument();
     });
 
     it('should correctly submit form and display success info', async () => {
