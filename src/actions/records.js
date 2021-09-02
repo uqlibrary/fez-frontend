@@ -19,6 +19,7 @@ import {
 } from 'config/general';
 import * as actions from './actionTypes';
 import Raven from 'raven-js';
+import { CREATE_UPDATE_DOI_FAILED } from './actionTypes';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -801,6 +802,34 @@ export const copyToOrRemoveFromCollection = (records, data, isRemoveFrom = false
         } catch (e) {
             dispatch({
                 type: actions.CHANGE_COLLECTIONS_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};
+
+/**
+ * @param {array} records
+ */
+export const createOrUpdateDoi = records => {
+    const request = transformers.createOrUpdateDoi(records);
+    return async dispatch => {
+        dispatch({
+            type: actions.CREATE_OR_UPDATE_DOI_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), request);
+            dispatch({
+                type: actions.CREATE_OR_UPDATE_DOI_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CREATE_OR_UPDATE_DOI_FAILED,
                 payload: e,
             });
 

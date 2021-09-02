@@ -2986,6 +2986,32 @@ export default {
                 confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
             }),
             bulkUpdatesForms: {
+                createOrUpdateDoiForm: {
+                    formLabels: {
+                        doi: 'DOIs',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk create/update',
+                    },
+                    alert: {
+                        title: 'Bulk create/update DOIs',
+                        message: 'Would you like to create new or update the metadata of existing DOIs?',
+                        type: 'info',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk create/update DOIs',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk create/update DOIs',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk create/update DOIs',
+                        type: 'error',
+                    },
+                },
                 copyToOrRemoveFromCollectionForm: {
                     formLabels: {
                         collection: 'Collection(s)',

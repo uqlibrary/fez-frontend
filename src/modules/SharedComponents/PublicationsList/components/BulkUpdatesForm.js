@@ -6,21 +6,24 @@ import {
     ChangeDisplayTypeForm,
     ChangeSearchKeyValueForm,
     CopyToOrRemoveFromCollectionForm,
+    CreateOrUpdateDoiForm,
 } from './BulkUpdatesForms';
 import {
     BUA_CHANGE_DISPLAY_TYPE,
-    BUA_CHANGE_SEARCHKEY_VALUE,
+    BUA_CHANGE_SEARCH_KEY_VALUE,
     BUA_CHANGE_AUTHOR_ID,
     BUA_COPY_TO_COLLECTION,
     BUA_REMOVE_FROM_COLLECTION,
+    BUA_CREATE_UPDATE_DOI,
 } from 'config/bulkUpdates';
 
 const BulkActionForms = {
     [BUA_CHANGE_AUTHOR_ID]: ChangeAuthorIdForm,
     [BUA_CHANGE_DISPLAY_TYPE]: ChangeDisplayTypeForm,
-    [BUA_CHANGE_SEARCHKEY_VALUE]: ChangeSearchKeyValueForm,
+    [BUA_CHANGE_SEARCH_KEY_VALUE]: ChangeSearchKeyValueForm,
     [BUA_COPY_TO_COLLECTION]: CopyToOrRemoveFromCollectionForm,
     [BUA_REMOVE_FROM_COLLECTION]: CopyToOrRemoveFromCollectionForm,
+    [BUA_CREATE_UPDATE_DOI]: CreateOrUpdateDoiForm,
 };
 
 export const BulkUpdatesForm = ({ selectedAction, recordsSelected, onCancel }) => {
