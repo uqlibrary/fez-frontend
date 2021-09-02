@@ -19,7 +19,6 @@ import {
 } from 'config/general';
 import * as actions from './actionTypes';
 import Raven from 'raven-js';
-import { CREATE_UPDATE_DOI_FAILED } from './actionTypes';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.

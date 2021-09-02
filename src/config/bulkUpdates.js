@@ -4,7 +4,7 @@ export const BUA_CHANGE_DISPLAY_TYPE = 'change-display-type';
 export const BUA_COPY_TO_COLLECTION = 'copy-to-collection';
 export const BUA_REMOVE_FROM_COLLECTION = 'remove-from-collection';
 export const BUA_CHANGE_SEARCH_KEY_VALUE = 'change-search-key-value';
-export const BUA_CREATE_UPDATE_DOI = 'create-update-doi-value';
+export const BUA_CREATE_OR_UPDATE_DOI = 'create-update-doi-value';
 
 // Bulk updates action options
 export const BUA_CHANGE_AUTHOR_ID_OPTION = {
@@ -32,8 +32,8 @@ export const BUA_CHANGE_SEARCH_KEY_VALUE_OPTION = {
     text: 'Change search key value',
 };
 
-export const BUA_CREATE_UPDATE_DOI_OPTION = {
-    value: BUA_CREATE_UPDATE_DOI,
+export const BUA_CREATE_OR_UPDATE_DOI_OPTION = {
+    value: BUA_CREATE_OR_UPDATE_DOI,
     text: 'Create/Update DOI',
 };
 
@@ -44,7 +44,7 @@ export const BULK_UPDATES_ACTIONS = {
     [BUA_COPY_TO_COLLECTION]: BUA_COPY_TO_COLLECTION_OPTION,
     [BUA_REMOVE_FROM_COLLECTION]: BUA_REMOVE_FROM_COLLECTION_OPTION,
     [BUA_CHANGE_SEARCH_KEY_VALUE]: BUA_CHANGE_SEARCH_KEY_VALUE_OPTION,
-    [BUA_CREATE_UPDATE_DOI]: BUA_CREATE_UPDATE_DOI_OPTION,
+    [BUA_CREATE_OR_UPDATE_DOI]: BUA_CREATE_OR_UPDATE_DOI_OPTION,
 };
 
 // Bulk updates search key options values
