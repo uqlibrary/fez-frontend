@@ -2707,7 +2707,7 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: { rek_oa_status_type: null },
             fez_record_search_key_license: {},
         });
     });
@@ -2767,7 +2767,7 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: { rek_oa_status_type: null },
             fez_record_search_key_license: {},
         });
     });
