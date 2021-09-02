@@ -37,9 +37,11 @@ exports[`DesignForm renders  component 1`] = `
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of design"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [
@@ -460,9 +462,11 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of design"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [

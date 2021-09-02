@@ -41,7 +41,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             name="rek_title"
             placeholder="Type title of research report"
             required={true}
-            rows={1}
+            rows={3}
             type="text"
             validate={
               Array [
@@ -687,7 +687,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
             name="rek_title"
             placeholder="Type title of research report"
             required={true}
-            rows={1}
+            rows={3}
             type="text"
             validate={
               Array [

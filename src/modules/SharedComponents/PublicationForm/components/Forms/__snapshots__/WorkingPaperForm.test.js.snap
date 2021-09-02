@@ -41,7 +41,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
             name="rek_title"
             placeholder="Title of paper"
             required={true}
-            rows={1}
+            rows={3}
             type="text"
             validate={
               Array [
