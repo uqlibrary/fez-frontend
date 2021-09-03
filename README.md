@@ -301,6 +301,18 @@ If you want Codebuild to run cypress tests before you merge to master, include t
 
 - If a test occasionally fails as "requires a DOM element." add a `.should()` test after the `.get()`, to make it wait for the element to appear (`.should()` loops)
 
+#### Gotchas
+
+When running ```npm test``` and related scripts natively in linux (without using a VM), jest can be quite demanding making the OS unresponsive.
+
+One way to avoid this is to restrict the number of CPU cores through jest's [--maxWorkers](https://jestjs.io/docs/cli#--maxworkersnumstring) option.
+
+You can either use ```test:cpu-restricted``` or the following if additional options are required:
+
+```bash
+NODE_ENV=test FULL_PATH=http://localhost node --expose-gc ./node_modules/.bin/jest --logHeapUsage --maxWorkers=50%
+```
+
 ## Mocking
 
 To run website on mock data run `npm run start:mock` webserver will start on `http://localhost:3000/`
