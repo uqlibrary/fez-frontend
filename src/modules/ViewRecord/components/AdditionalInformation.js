@@ -369,6 +369,10 @@ export class AdditionalInformationClass extends PureComponent {
                             ? null
                             : publication[field];
                         break;
+                    case 'fez_record_search_key_herdc_code':
+                        const subkey = this.transformFieldNameToSubkey(field);
+                        value = publication[field] && publication[field][subkey] !== 0 ? publication[field] : null;
+                        break;
                     default:
                         value = publication[field];
                 }

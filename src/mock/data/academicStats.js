@@ -966,11 +966,10 @@ export const trendingPublications = {
                 
             ],
             "fez_record_search_key_herdc_code":{
-                "rek_herdc_code_id":5035700,
-                "rek_herdc_code_pid":"UQ:caf3afd",
-                "rek_herdc_code_xsdmf_id":null,
-                "rek_herdc_code":450009,
-                "rek_herdc_code_lookup":"C1"
+                "rek_herdc_code_id": 5133885,
+                "rek_herdc_code_pid": "UQ:caf3afd",
+                "rek_herdc_code_xsdmf_id": null,
+                "rek_herdc_code": 0
             },
             "fez_record_search_key_herdc_status":{
                 "rek_herdc_status_id":3894010,
