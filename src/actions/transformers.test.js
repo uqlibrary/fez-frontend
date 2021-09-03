@@ -2688,7 +2688,9 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_record_search_key_herdc_code: null,
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: null,
+            },
             fez_record_search_key_herdc_status: {
                 rek_herdc_status: null,
             },
@@ -2746,7 +2748,9 @@ describe('getAdminSectionSearchKeys', () => {
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-            fez_record_search_key_herdc_code: null,
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: null,
+            },
             fez_record_search_key_herdc_status: {
                 rek_herdc_status: null,
             },
@@ -5048,7 +5052,9 @@ describe('getBibliographicSection for thesis', () => {
 describe('getHerdcCodeSearchKey', () => {
     it('should correctly transform data for category code', () => {
         expect(transformers.getHerdcCodeSearchKey({ rek_herdc_code: '0' })).toEqual({
-            fez_record_search_key_herdc_code: null,
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: null,
+            },
         });
     });
 });
