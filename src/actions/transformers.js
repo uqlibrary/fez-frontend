@@ -1190,9 +1190,12 @@ export const getHerdcStatusSearchKey = record => {
 
 export const getOpenAccessStatusTypeSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null) {
+    if (
+        record.rek_oa_status_type === '0' ||
+        (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null)
+    ) {
         return {
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: null,
         };
     }
 

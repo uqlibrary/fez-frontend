@@ -185,6 +185,32 @@ describe('DOI component', () => {
         );
     });
 
+    it('should render error for book chapter with parent with missing UQ DOI and UQ Publisher', () => {
+        const wrapper = setup({
+            record: {
+                ...bookChapterRecord,
+                fez_record_search_key_isderivationof: [
+                    {
+                        rek_isderivationof_pid: 'UQ:173575',
+                        rek_isderivationof: 'UQ:123456',
+                        rek_isderivationof_order: 1,
+                        rek_isderivationof_lookup: 'A Book',
+                        parent: {
+                            rek_pid: 'UQ:123456',
+                            rek_subtype: 'Other',
+                        },
+                    },
+                ],
+            },
+        });
+        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
+        expect(renderedWarningMessage.text()).toBe(
+            'Error:Sorry, only the following subytypes are supported for the parent Book: Edited book' +
+                'The parent Book does not appear to be have an UQ DOI' +
+                `The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
+        );
+    });
+
     it('should render error for book chapter with parent with missing missing UQ DOI', () => {
         const wrapper = setup({
             record: {
