@@ -2,6 +2,7 @@
 
 exports[`HerdcCodeField component should not render unknown value 1`] = `
 <Memo(NewGenericSelectField)
+  canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
@@ -12,6 +13,10 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
   }
   itemsList={
     Array [
+      Object {
+        "text": "(None)",
+        "value": "0",
+      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -77,6 +82,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
 
 exports[`HerdcCodeField component should render a current value 1`] = `
 <Memo(NewGenericSelectField)
+  canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
@@ -87,6 +93,10 @@ exports[`HerdcCodeField component should render a current value 1`] = `
   }
   itemsList={
     Array [
+      Object {
+        "text": "(None)",
+        "value": "0",
+      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -152,6 +162,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
 
 exports[`HerdcCodeField component should render a deprecated value 1`] = `
 <Memo(NewGenericSelectField)
+  canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
@@ -162,6 +173,10 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
   }
   itemsList={
     Array [
+      Object {
+        "text": "(None)",
+        "value": "0",
+      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -231,11 +246,16 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
 
 exports[`HerdcCodeField component should render default view 1`] = `
 <Memo(NewGenericSelectField)
+  canUnselect={true}
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
   itemsList={
     Array [
+      Object {
+        "text": "(None)",
+        "value": "0",
+      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -301,6 +321,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
 
 exports[`HerdcCodeField component should render immutable list as selected value with given field props 1`] = `
 <Memo(NewGenericSelectField)
+  canUnselect={true}
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-herdc-code"
@@ -315,6 +336,10 @@ exports[`HerdcCodeField component should render immutable list as selected value
   }
   itemsList={
     Array [
+      Object {
+        "text": "(None)",
+        "value": "0",
+      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -393,12 +418,17 @@ exports[`HerdcCodeField component should render immutable list as selected value
 
 exports[`HerdcCodeField component should render when given a default value field props 1`] = `
 <Memo(NewGenericSelectField)
+  canUnselect={true}
   defaultValue="afr"
   error={false}
   errorText=""
   genericSelectFieldId="rek-herdc-code"
   itemsList={
     Array [
+      Object {
+        "text": "(None)",
+        "value": "0",
+      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",
@@ -466,6 +496,7 @@ exports[`HerdcCodeField component should render when given a default value field
 
 exports[`HerdcCodeField component should render with given field props 1`] = `
 <Memo(NewGenericSelectField)
+  canUnselect={true}
   error={true}
   errorText="Test error"
   genericSelectFieldId="rek-herdc-code"
@@ -480,6 +511,10 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   }
   itemsList={
     Array [
+      Object {
+        "text": "(None)",
+        "value": "0",
+      },
       Object {
         "text": "A1 Authored Book (Research)",
         "value": "450001",

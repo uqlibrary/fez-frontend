@@ -68,7 +68,6 @@ export class FileUploadRowDefaultView extends PureComponent {
                                     value={accessConditionId || ''}
                                     onChange={this.props.onAccessConditionChange}
                                     disabled={disabled}
-                                    ref={`accessConditionSelector${index}`}
                                     autoFocus={index === focusOnIndex}
                                     locale={this.props.accessConditionLocale}
                                     genericSelectFieldId={`dsi-open-access-${index}`}
