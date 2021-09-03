@@ -1193,9 +1193,7 @@ export const getOpenAccessStatusTypeSearchKey = record => {
         (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null)
     ) {
         return {
-            fez_record_search_key_oa_status_type: {
-                rek_oa_status_type: null,
-            },
+            fez_record_search_key_oa_status_type: null,
         };
     }
 

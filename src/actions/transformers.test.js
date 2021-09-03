@@ -2707,7 +2707,7 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: { rek_oa_status_type: null },
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_license: {},
         });
     });
@@ -2767,7 +2767,7 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: { rek_oa_status_type: null },
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_license: {},
         });
     });
@@ -5064,6 +5064,14 @@ describe('getBibliographicSection for thesis', () => {
             ],
             rek_subtype: 'B.A. Thesis',
             rek_genre_type: 'B.A. Thesis',
+        });
+    });
+});
+
+describe('getOpenAccessStatusTypeSearchKey', () => {
+    it('should correctly transform data for OA status type', () => {
+        expect(transformers.getOpenAccessStatusTypeSearchKey({ rek_oa_status_type: '0' })).toEqual({
+            fez_record_search_key_oa_status_type: null,
         });
     });
 });
