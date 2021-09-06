@@ -4,6 +4,7 @@ import { ScrollToSectionContext, useScrollToSectionContext } from 'context';
 
 export const ScrollToSectionDiv = ({ children }) => {
     const { scrollToSection, sectionRef, scrollToSectionCallback } = useScrollToSectionContext();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(scrollToSectionCallback(scrollToSection, sectionRef), []);
     return <div ref={sectionRef}>{children}</div>;
 };
