@@ -83,8 +83,7 @@ export default values => {
         !data.filesSection.files.isValid &&
         (errors.filesSection.files = summary.files);
 
-    (data.filesSection || {}).hasOwnProperty('rek_copyright') &&
-        data.filesSection.rek_copyright !== 'on' &&
+    (!(data.filesSection || {}).hasOwnProperty('rek_copyright') || data.filesSection.rek_copyright !== 'on') &&
         (errors.filesSection.rek_copyright = summary.rek_copyright);
 
     switch (data.rek_display_type) {

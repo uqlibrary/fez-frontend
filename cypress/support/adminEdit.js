@@ -1,5 +1,7 @@
 /**
  * Common commands for admin edit tests
+ *
+ * Note: Even through these are named "adminEdit", some of these are also used in admin add tests.
  */
 
 const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > div > div > h3';
