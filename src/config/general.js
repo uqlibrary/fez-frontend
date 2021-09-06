@@ -15,6 +15,7 @@ export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
+export const UQ_FULL_NAME = 'The University of Queensland';
 
 // URLS - values are set in webpack build
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
@@ -119,6 +120,7 @@ export const DOCUMENT_TYPE_WORKING_PAPER = 'Working Paper';
 export const DOCUMENT_TYPES_EDIT_ONLY = [PUBLICATION_TYPE_REFERENCE_ENTRY];
 
 export const PUBLICATION_TYPES_WITH_DOI = [
+    PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_DATA_COLLECTION,
@@ -1642,6 +1644,9 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR]: 'Single Issue Editor',
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
+export const EDITORIAL_APPOINTMENT_MIN_YEAR = 1900;
+export const EDITORIAL_APPOINTMENT_MAX_YEAR = 2100;
+
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
 export const DATASET_ACCESS_CONDITIONS_OPTIONS = [

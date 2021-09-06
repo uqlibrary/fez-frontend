@@ -41,6 +41,7 @@ export const FreeTextForm = ({
     const [item, setItem] = useState(itemSelectedToEdit || '');
     const [itemSubmitted, setItemSubmitted] = useState(false);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const onItemChange = useCallback(...onItemChangeCallback(setItem, normalize));
     const textField = useRef(null);
 

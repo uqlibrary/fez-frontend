@@ -534,11 +534,20 @@ export default {
             loadingMessage: 'Searching for works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
+            bulkExport: {
+                buttonText: 'Bulk Export',
+                sizeMessage: 'Each export will have [bulkExportSize] works. Use the links below to queue exports.',
+                successMessage:
+                    'Bulk export requests have been queued. When the requests have been processed, ' +
+                    'you will receive an email for each request with the exported file as an attachment.',
+                rowLabel: 'Export works [start] to [end]',
+            },
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
                 title: 'No works found',
                 text: <div>We were unable to find any results.</div>,
+                standardCardId: 'search-records-no-results',
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,
@@ -896,9 +905,14 @@ export default {
                 missingRequiredField: 'Required field [FIELDNAME] is either missing or invalid.',
                 unsupportedMessage: 'Sorry, type [TYPE] is not currently supported.',
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
-                uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',
+                uqIsNotPublisher: '[SUBJECT] does not appear to be have an UQ DOI',
                 warningTitle: 'Please note:',
                 wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
+                bookChapter: {
+                    parent: {
+                        missing: "Sorry, this book chapter doesn't seem to belong to a existing book",
+                    },
+                },
             },
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
@@ -924,7 +938,7 @@ export default {
             successConfirmation: {
                 confirmationTitle: 'Request successful',
                 confirmationMessage:
-                    'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
+                    'The request to create/update DOI has been submitted to Crossref. You will receive an email indicating whether the DOI is successfully generated.',
                 confirmButtonLabel: 'View work',
             },
         },

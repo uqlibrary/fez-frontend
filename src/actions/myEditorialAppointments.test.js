@@ -1,8 +1,9 @@
 import {
+    addMyEditorialAppointments,
+    clearMyEditorialAppointmentsAddStatus,
     deleteMyEditorialAppointmentsListItem,
     loadMyEditorialAppointmentsList,
     updateMyEditorialAppointmentsListItem,
-    addMyEditorialAppointments,
 } from './myEditorialAppointments';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -186,6 +187,14 @@ describe('myEditorialAppointments actions', () => {
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             });
 
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('clearMyEditorialAppointmentsAddStatus action', () => {
+        it('should dispatch expected actions', () => {
+            const expectedActions = [actions.MY_EDITORIAL_APPOINTMENT_ADD_CLEAR];
+            mockActionsStore.dispatch(clearMyEditorialAppointmentsAddStatus());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

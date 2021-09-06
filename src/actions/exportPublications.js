@@ -13,7 +13,15 @@ import { MY_RECORDS_BULK_EXPORT_SIZE, PUB_SEARCH_BULK_EXPORT_SIZE } from 'config
  */
 export function exportPublications(requestParams) {
     return dispatch => {
-        dispatch({ type: actions.EXPORT_PUBLICATIONS_LOADING });
+        const exportConfig = {
+            format: requestParams.options.params.export_to,
+            page: requestParams.options.params.page,
+        };
+
+        dispatch({
+            type: actions.EXPORT_PUBLICATIONS_LOADING,
+            payload: exportConfig,
+        });
 
         const bulkExportSizes = [MY_RECORDS_BULK_EXPORT_SIZE, PUB_SEARCH_BULK_EXPORT_SIZE];
         const getOptions = {};
@@ -24,19 +32,30 @@ export function exportPublications(requestParams) {
         return get(requestParams, { ...getOptions })
             .then(response => {
                 if (getOptions.responseType === 'blob') {
-                    promptForDownload(requestParams.options.params.export_to, response);
+                    promptForDownload(exportConfig.format, response);
                 }
                 dispatch({
                     type: actions.EXPORT_PUBLICATIONS_LOADED,
-                    payload: requestParams.options.params.export_to,
+                    payload: exportConfig,
                 });
                 return Promise.resolve();
             })
             .catch(error => {
                 dispatch({
                     type: actions.EXPORT_PUBLICATIONS_FAILED,
-                    payload: error.message,
+                    payload: {
+                        ...exportConfig,
+                        errorMessage: error.message,
+                    },
                 });
             });
     };
 }
+
+export const resetExportPublicationsStatus = () => {
+    return dispatch => {
+        dispatch({
+            type: actions.EXPORT_PUBLICATIONS_RESET,
+        });
+    };
+};
