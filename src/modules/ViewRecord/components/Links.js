@@ -234,9 +234,12 @@ export class LinksClass extends PureComponent {
                         </Grid>
                     </Hidden>
                     {// if record has a PubMedCentral Id - display link, should be always OA
-                    // prettier-ignore
-                    !!pubmedCentralId &&
-                        <this.LinkRow linkId="rek-pubmed-central-id" {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />}
+                    !!pubmedCentralId && (
+                        <this.LinkRow
+                            linkId="rek-pubmed-central-id"
+                            {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)}
+                        />
+                    )}
                     {// if record has a DOI - display a link, should be OA or OA with a date
                     !!doi && <this.LinkRow linkId="rek-doi" {...this.getDOILink(doi, doiOpenAccessStatus)} />}
                     {// record has OA status of "Link (no DOI)" and has no actual links of its own

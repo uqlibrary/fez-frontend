@@ -449,10 +449,7 @@ context('Journal Article admin edit', () => {
         cy.log('Files Tab');
         cy.get('[data-testid=files-section-header]').should('have.text', 'Files');
         cy.get('[data-testid=files-section-content]').within(() => {
-            // prettier-ignore
-            const fileSizeInMB = Math.round(
-                            record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
-                        ) / 100;
+            const fileSizeInMB = Math.round((record.fez_datastream_info[1].dsi_size / 1024 / 1024) * 100) / 100;
             cy.get('h4')
                 .eq(0)
                 .should('have.text', 'Attached files');
