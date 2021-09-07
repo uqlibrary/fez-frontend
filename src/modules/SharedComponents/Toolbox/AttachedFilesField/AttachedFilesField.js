@@ -40,8 +40,11 @@ export const AttachedFilesField = ({ input, ...props }) => {
     );
     const { onChange } = input;
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamChange = useCallback(...datastreamChangeCallbackFactory(dataStreams, setDataStreams));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(...onChangeCallbackFactory(dataStreams, onChange));
 
     return (

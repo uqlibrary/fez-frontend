@@ -48,7 +48,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 1 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-1"
           disabled={false}
+          id="undefined-select-page-1"
           key="1"
           onClick={[Function]}
           size="small"
@@ -61,7 +63,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 7 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-7"
           disabled={false}
+          id="undefined-select-page-7"
           key="7"
           onClick={[Function]}
           size="small"
@@ -73,7 +77,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 8 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-8"
           disabled={false}
+          id="undefined-select-page-8"
           key="8"
           onClick={[Function]}
           size="small"
@@ -85,7 +91,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 9 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-9"
           disabled={false}
+          id="undefined-select-page-9"
           key="9"
           onClick={[Function]}
           size="small"
@@ -97,7 +105,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 10 of 50 result pages"
           className=" paging-button"
           color="primary"
+          data-testid="undefined-select-page-10"
           disabled={true}
+          id="undefined-select-page-10"
           key="10"
           onClick={[Function]}
           size="small"
@@ -109,7 +119,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 11 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-11"
           disabled={false}
+          id="undefined-select-page-11"
           key="11"
           onClick={[Function]}
           size="small"
@@ -121,7 +133,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 12 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-12"
           disabled={false}
+          id="undefined-select-page-12"
           key="12"
           onClick={[Function]}
           size="small"
@@ -133,7 +147,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 13 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-13"
           disabled={false}
+          id="undefined-select-page-13"
           key="13"
           onClick={[Function]}
           size="small"
@@ -146,7 +162,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           aria-label="Click to select page 50 of 50 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-50"
           disabled={false}
+          id="undefined-select-page-50"
           key="50"
           onClick={[Function]}
           size="small"
@@ -253,7 +271,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           aria-label="Click to select page 1 of 3 result pages"
           className=" paging-button"
           color="primary"
+          data-testid="undefined-select-page-1"
           disabled={true}
+          id="undefined-select-page-1"
           key="1"
           onClick={[Function]}
           size="small"
@@ -265,7 +285,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           aria-label="Click to select page 2 of 3 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-2"
           disabled={false}
+          id="undefined-select-page-2"
           key="2"
           onClick={[Function]}
           size="small"
@@ -277,7 +299,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           aria-label="Click to select page 3 of 3 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-3"
           disabled={false}
+          id="undefined-select-page-3"
           key="3"
           onClick={[Function]}
           size="small"
@@ -378,7 +402,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           aria-label="Click to select page 1 of 3 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-1"
           disabled={false}
+          id="undefined-select-page-1"
           key="1"
           onClick={[Function]}
           size="small"
@@ -390,7 +416,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           aria-label="Click to select page 2 of 3 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-2"
           disabled={false}
+          id="undefined-select-page-2"
           key="2"
           onClick={[Function]}
           size="small"
@@ -402,7 +430,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           aria-label="Click to select page 3 of 3 result pages"
           className=" paging-button"
           color="primary"
+          data-testid="undefined-select-page-3"
           disabled={true}
+          id="undefined-select-page-3"
           key="3"
           onClick={[Function]}
           size="small"
@@ -503,7 +533,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           aria-label="Click to select page 1 of 3 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-1"
           disabled={false}
+          id="undefined-select-page-1"
           key="1"
           onClick={[Function]}
           size="small"
@@ -515,7 +547,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           aria-label="Click to select page 2 of 3 result pages"
           className=" paging-button"
           color="primary"
+          data-testid="undefined-select-page-2"
           disabled={true}
+          id="undefined-select-page-2"
           key="2"
           onClick={[Function]}
           size="small"
@@ -527,7 +561,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           aria-label="Click to select page 3 of 3 result pages"
           className=" paging-button"
           color="default"
+          data-testid="undefined-select-page-3"
           disabled={false}
+          id="undefined-select-page-3"
           key="3"
           onClick={[Function]}
           size="small"
@@ -905,7 +941,9 @@ exports[`PublicationsListPaging renders  should render buttons with zero total p
   aria-label="Click to select page test of 0 result pages"
   className=" paging-button"
   color="default"
+  data-testid="undefined-select-page-test"
   disabled={false}
+  id="undefined-select-page-test"
   onClick={[Function]}
   size="small"
   variant="text"

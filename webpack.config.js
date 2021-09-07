@@ -35,24 +35,26 @@ module.exports = {
         publicPath: `http://${url}:${port}/${publicPath}`,
     },
     devServer: {
-        clientLogLevel: 'info',
+        allowedHosts: 'all',
         compress: true,
-        contentBase: __dirname,
         headers: { 'X-Custom-Header': 'yes' },
         historyApiFallback: true,
         host: url,
         hot: true,
         https: false,
-        inline: true,
-        lazy: false,
-        noInfo: true,
         open: false,
         port: port,
-        publicPath: `/${publicPath}`,
-        quiet: false,
-        stats: 'errors-only',
-        watchContentBase: false,
-        disableHostCheck: true,
+        client: {
+            logging: 'info',
+        },
+        devMiddleware: {
+            publicPath: `/${publicPath}`,
+            stats: 'errors-only',
+        },
+        static: {
+            publicPath: __dirname,
+            watch: false,
+        },
     },
     module: {
         rules: [
@@ -78,6 +80,11 @@ module.exports = {
                         ],
                     },
                 },
+            },
+            {
+                test: /\.js$/,
+                include: /node_modules/,
+                use: 'react-hot-loader/webpack',
             },
             {
                 test: /\.json$/,
@@ -122,8 +129,6 @@ module.exports = {
         }),
         new InjectPreloader(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.NamedModulesPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
                 sassLoader: {
@@ -168,6 +173,8 @@ module.exports = {
         },
     },
     optimization: {
+        noEmitOnErrors: true,
+        namedModules: true,
         splitChunks: {
             minChunks: 6,
             cacheGroups: {

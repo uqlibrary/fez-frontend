@@ -37,9 +37,11 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of creative work"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [

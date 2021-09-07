@@ -57,9 +57,11 @@ exports[`AudioDocumentForm renders  component 1`] = `
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of work"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [
@@ -503,9 +505,11 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             disabled={false}
             fullWidth={true}
             label="Title"
+            multiline={true}
             name="rek_title"
             placeholder="Title of work"
             required={true}
+            rows={3}
             type="text"
             validate={
               Array [

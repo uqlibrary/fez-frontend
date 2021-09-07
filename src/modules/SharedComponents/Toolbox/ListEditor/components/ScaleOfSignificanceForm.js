@@ -46,11 +46,15 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleContributionStatement = useCallback(
         ...handleContributionStatementCallbackFactory(setContributionStatement),
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleSignificance = useCallback(...handleSignificanceCallbackFactory(setSignificance));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const addItem = useCallback(
         ...addItemCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm),
     );
