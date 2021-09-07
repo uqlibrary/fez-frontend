@@ -45,11 +45,11 @@ export const JournalFieldsMap = [
             return data.fez_journal_doaj ? 'Open access available' : 'Open access not available';
         },
         translateFn: data => {
-            // Awaiting logic for OA from MF
+            // Awaiting final logic for OA from MF/EA
             return data.fez_journal_doaj ? (
                 <LockOpenIcon style={{ color: 'orange', marginTop: 6 }} />
             ) : (
-                <LockIcon style={{ color: '#CCC', marginTop: 6 }} />
+                <LockIcon style={{ color: '#e5e5e5', marginTop: 6 }} />
             );
         },
     },
@@ -194,7 +194,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_jcr_scie_category_ranking',
         label: 'Impact factor rank',
-        size: 250,
+        size: 150,
         prefix: '',
         suffix: '',
         compactView: true,
@@ -224,15 +224,13 @@ export const JournalFieldsMap = [
         },
         translateFn: data => {
             let label = undefined;
-            console.log(data.fez_journal_jcr_scie || data.fez_journal_jcr_ssci);
             if (
                 data.fez_journal_jcr_scie &&
                 data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
                 data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
             ) {
-                console.log('SCIE');
                 label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
-                    return `${item.jnl_jcr_scie_category_ranking} - ${item.jnl_jcr_scie_category_description_lookup}`;
+                    return item.jnl_jcr_scie_category_ranking;
                 });
                 label = label.join(' | ');
             } else if (
@@ -240,9 +238,8 @@ export const JournalFieldsMap = [
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
             ) {
-                console.log('SSCI');
                 label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
-                    return `${item.jnl_jcr_ssci_category_ranking} - ${item.jnl_jcr_ssci_category_description_lookup}`;
+                    return item.jnl_jcr_ssci_category_ranking;
                 });
                 label = label.join(' | ');
             }
@@ -252,7 +249,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_jcr_scie_category_quartile',
         label: 'Journal impact factor percentile',
-        size: 150,
+        size: 100,
         prefix: '',
         suffix: '',
         compactView: true,
