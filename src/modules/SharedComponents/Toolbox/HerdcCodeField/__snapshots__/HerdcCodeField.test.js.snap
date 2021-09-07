@@ -14,7 +14,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "(None)",
+        "text": "None",
         "value": "0",
       },
       Object {
@@ -94,7 +94,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "(None)",
+        "text": "None",
         "value": "0",
       },
       Object {
@@ -174,7 +174,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "(None)",
+        "text": "None",
         "value": "0",
       },
       Object {
@@ -253,7 +253,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "(None)",
+        "text": "None",
         "value": "0",
       },
       Object {
@@ -337,7 +337,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
   itemsList={
     Array [
       Object {
-        "text": "(None)",
+        "text": "None",
         "value": "0",
       },
       Object {
@@ -426,7 +426,7 @@ exports[`HerdcCodeField component should render when given a default value field
   itemsList={
     Array [
       Object {
-        "text": "(None)",
+        "text": "None",
         "value": "0",
       },
       Object {
@@ -512,7 +512,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "(None)",
+        "text": "None",
         "value": "0",
       },
       Object {
