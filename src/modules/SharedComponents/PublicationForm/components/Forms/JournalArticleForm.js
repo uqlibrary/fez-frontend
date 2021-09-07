@@ -52,7 +52,7 @@ export default class JournalArticleForm extends Component {
                                     name="rek_title"
                                     textFieldId="rek-title"
                                     type="text"
-                                    rows={1}
+                                    rows={3}
                                     multiline
                                     fullWidth
                                     {...txt.information.fieldLabels.documentTitle}

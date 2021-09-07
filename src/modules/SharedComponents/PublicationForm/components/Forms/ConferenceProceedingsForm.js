@@ -51,7 +51,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     type="text"
                                     fullWidth
                                     multiline
-                                    rows={1}
+                                    rows={3}
                                     {...txt.information.fieldLabels.title}
                                     validate={[validation.required]}
                                     style={{ marginBottom: '-12px' }}

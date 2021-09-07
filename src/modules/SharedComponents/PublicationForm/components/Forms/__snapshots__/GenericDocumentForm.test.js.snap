@@ -41,7 +41,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
             name="rek_title"
             placeholder="Title of generic document"
             required={true}
-            rows={1}
+            rows={3}
             type="text"
             validate={
               Array [

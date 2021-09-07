@@ -740,7 +740,9 @@ describe('getRecordSupervisorsSearchKey test', () => {
 
 describe('getRecordAuthorsSearchKey test', () => {
     it('should return empty request object', () => {
-        expect(transformers.getRecordAuthorsSearchKey()).toEqual({});
+        expect(transformers.getRecordAuthorsSearchKey()).toEqual({
+            fez_record_search_key_author: [],
+        });
     });
 
     it('should return authors name object', () => {
@@ -772,7 +774,9 @@ describe('getRecordAuthorsSearchKey test', () => {
 
 describe('getRecordAuthorsIdSearchKey test', () => {
     it('should return empty authors object', () => {
-        expect(transformers.getRecordAuthorsIdSearchKey()).toEqual({});
+        expect(transformers.getRecordAuthorsIdSearchKey()).toEqual({
+            fez_record_search_key_author_id: [],
+        });
     });
 
     it('should return authors object from authors control data', () => {
@@ -1158,7 +1162,12 @@ describe('getGeographicAreaSearchKey tests', () => {
 
 describe('getRecordAuthorAffiliationSearchKey tests', () => {
     it('should return an empty object', () => {
-        expect(transformers.getRecordAuthorAffiliationSearchKey()).toEqual({});
+        expect(transformers.getRecordAuthorAffiliationSearchKey()).toEqual({
+            fez_record_search_key_author_affiliation_country: [],
+            fez_record_search_key_author_affiliation_full_address: [],
+            fez_record_search_key_author_affiliation_name: [],
+            fez_record_search_key_author_affiliation_id: [],
+        });
     });
 
     it('should return search key with data', () => {
@@ -1414,7 +1423,9 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
 
 describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
     it('should return an empty object', () => {
-        expect(transformers.getRecordAuthorAffiliationTypeSearchKey()).toEqual({});
+        expect(transformers.getRecordAuthorAffiliationTypeSearchKey()).toEqual({
+            fez_record_search_key_author_affiliation_type: [],
+        });
     });
 
     it('should return search key with data', () => {
@@ -3844,7 +3855,15 @@ describe('getAuthorsSectionSearchKeys', () => {
             architects: [],
         };
 
-        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({});
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_author: [],
+            fez_record_search_key_author_affiliation_country: [],
+            fez_record_search_key_author_affiliation_full_address: [],
+            fez_record_search_key_author_affiliation_id: [],
+            fez_record_search_key_author_affiliation_name: [],
+            fez_record_search_key_author_affiliation_type: [],
+            fez_record_search_key_author_id: [],
+        });
     });
 
     it('should get authors search key', () => {

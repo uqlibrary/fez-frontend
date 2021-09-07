@@ -41,6 +41,8 @@ export default class ImageDocumentForm extends Component {
                                     name="rek_title"
                                     type="text"
                                     fullWidth
+                                    multiline
+                                    rows={3}
                                     {...txt.information.fieldLabels.documentTitle}
                                     required
                                     validate={[validation.required]}
