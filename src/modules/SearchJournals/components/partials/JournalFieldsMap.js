@@ -23,7 +23,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_publisher',
         // This one needs some padding to appear correct
-        label: <span style={{ paddingLeft: 12 }}>Journal publisher</span>,
+        label: 'Journal publisher',
         size: 300,
         prefix: '',
         suffix: '',
@@ -35,7 +35,7 @@ export const JournalFieldsMap = [
     },
     {
         key: 'fez_journal_doaj',
-        label: 'OA',
+        label: 'Open access',
         size: 50,
         prefix: '',
         suffix: '',
@@ -102,7 +102,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_cite_score_asjc_code_rank',
         label: 'CiteScore rank',
-        size: 125,
+        size: 250,
         prefix: '',
         suffix: '',
         compactView: true,
@@ -111,7 +111,9 @@ export const JournalFieldsMap = [
             let tooltip = undefined;
             if (data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0) {
                 tooltip = data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
-                    return `${item.jnl_cite_score_asjc_code_rank} out of ${item.jnl_cite_score_asjc_code_rank_out_of} for ${item.jnl_cite_score_asjc_code_lookup}`;
+                    return `${item.jnl_cite_score_asjc_code_rank}/${
+                        item.jnl_cite_score_asjc_code_rank_out_of
+                    } for ${item.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, '')}`;
                 });
                 tooltip = tooltip.join('  |  ');
             }
@@ -119,13 +121,214 @@ export const JournalFieldsMap = [
         },
         translateFn: data => {
             let label = undefined;
-            if (data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0) {
+            if (
+                data.fez_journal_cite_score &&
+                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code &&
+                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0
+            ) {
                 label = data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
-                    return `${item.jnl_cite_score_asjc_code_rank} of ${item.jnl_cite_score_asjc_code_rank_out_of}`;
+                    return `${item.jnl_cite_score_asjc_code_rank}/${item.jnl_cite_score_asjc_code_rank_out_of}`;
                 });
                 label = label.join(' | ');
             }
             return label;
+        },
+    },
+    {
+        key: 'fez_journal_cite_score',
+        label: 'CiteScore percentile',
+        size: 250,
+        prefix: '',
+        suffix: '',
+        compactView: true,
+        showTooltip: true,
+        toolTipLabel: data => {
+            let tooltip = undefined;
+            if (
+                data.fez_journal_cite_score &&
+                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code &&
+                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0
+            ) {
+                tooltip = data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
+                    return `${
+                        item.jnl_cite_score_asjc_code_percentile
+                    } - ${item.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, '')}`;
+                });
+                tooltip = tooltip.join(' | ');
+            }
+            return tooltip;
+        },
+        translateFn: data => {
+            let label = undefined;
+            if (
+                data.fez_journal_cite_score &&
+                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code &&
+                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0
+            ) {
+                label = data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
+                    return `${
+                        item.jnl_cite_score_asjc_code_percentile
+                    } - ${item.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, '')}`;
+                });
+                label = label.join(' | ');
+            }
+            return label;
+        },
+    },
+    {
+        key: 'jnl_jcr_scie_impact_factor',
+        label: 'Impact factor',
+        size: 100,
+        prefix: '',
+        suffix: '',
+        compactView: true,
+        showTooltip: false,
+        translateFn: data => {
+            return (
+                (data.fez_journal_jcr_scie && data.fez_journal_jcr_scie.jnl_jcr_scie_impact_factor) ||
+                (data.fez_journal_jcr_ssci && data.fez_journal_jcr_ssci.jnl_jcr_ssci_impact_factor) ||
+                null
+            );
+        },
+    },
+    {
+        key: 'jnl_jcr_scie_category_ranking',
+        label: 'Impact factor rank',
+        size: 250,
+        prefix: '',
+        suffix: '',
+        compactView: true,
+        showTooltip: true,
+        toolTipLabel: data => {
+            let label = undefined;
+            if (
+                data.fez_journal_jcr_scie &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
+            ) {
+                label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
+                    return `${item.jnl_jcr_scie_category_ranking} - ${item.jnl_jcr_scie_category_description_lookup}`;
+                });
+                label = label.join(' | ');
+            } else if (
+                data.fez_journal_jcr_ssci &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
+            ) {
+                label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
+                    return `${item.jnl_jcr_ssci_category_ranking} - ${item.jnl_jcr_ssci_category_description_lookup}`;
+                });
+                label = label.join(' | ');
+            }
+            return label;
+        },
+        translateFn: data => {
+            let label = undefined;
+            console.log(data.fez_journal_jcr_scie || data.fez_journal_jcr_ssci);
+            if (
+                data.fez_journal_jcr_scie &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
+            ) {
+                console.log('SCIE');
+                label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
+                    return `${item.jnl_jcr_scie_category_ranking} - ${item.jnl_jcr_scie_category_description_lookup}`;
+                });
+                label = label.join(' | ');
+            } else if (
+                data.fez_journal_jcr_ssci &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
+            ) {
+                console.log('SSCI');
+                label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
+                    return `${item.jnl_jcr_ssci_category_ranking} - ${item.jnl_jcr_ssci_category_description_lookup}`;
+                });
+                label = label.join(' | ');
+            }
+            return label;
+        },
+    },
+    {
+        key: 'jnl_jcr_scie_category_quartile',
+        label: 'Journal impact factor percentile',
+        size: 150,
+        prefix: '',
+        suffix: '',
+        compactView: true,
+        showTooltip: true,
+        toolTipLabel: data => {
+            let label = undefined;
+            if (
+                data.fez_journal_jcr_scie &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
+            ) {
+                label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
+                    return `${item.jnl_jcr_scie_category_quartile} - ${item.jnl_jcr_scie_category_description_lookup}`;
+                });
+                label = label.join(' | ');
+            } else if (
+                data.fez_journal_jcr_ssci &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
+            ) {
+                label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
+                    return `${item.jnl_jcr_ssci_category_quartile} - ${item.jnl_jcr_ssci_category_description_lookup}`;
+                });
+                label = label.join(' | ');
+            }
+            return label;
+        },
+        translateFn: data => {
+            let label = undefined;
+            console.log(data.fez_journal_jcr_scie || data.fez_journal_jcr_ssci);
+            if (
+                data.fez_journal_jcr_scie &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
+                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
+            ) {
+                console.log('SCIE');
+                label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
+                    return item.jnl_jcr_scie_category_quartile;
+                });
+                label = label.join(' | ');
+            } else if (
+                data.fez_journal_jcr_ssci &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
+                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
+            ) {
+                console.log('SSCI');
+                label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
+                    return item.jnl_jcr_ssci_category_quartile;
+                });
+                label = label.join(' | ');
+            }
+            return label;
+        },
+    },
+    {
+        key: 'jnl_cite_score_snip',
+        label: 'SNIP',
+        size: 70,
+        prefix: '',
+        suffix: '',
+        compactView: true,
+        showTooltip: false,
+        translateFn: data => {
+            return data.fez_journal_cite_score.jnl_cite_score_snip || '';
+        },
+    },
+    {
+        key: 'jnl_cite_score_sjr',
+        label: 'SJR',
+        size: 70,
+        prefix: '',
+        suffix: '',
+        compactView: true,
+        showTooltip: false,
+        translateFn: data => {
+            return data.fez_journal_cite_score.jnl_cite_score_sjr || '';
         },
     },
 ];
