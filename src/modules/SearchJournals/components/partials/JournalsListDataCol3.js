@@ -6,7 +6,6 @@ import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
 
 const JournalsListDataCol2 = ({ journal, index }) => {
-    console.log(journal, index);
     return (
         <Grid
             container

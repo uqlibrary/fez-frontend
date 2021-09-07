@@ -8,7 +8,7 @@ const JournalsListDataCol2 = (journal, index) => {
     return (
         <Grid container spacing={1} id={`journal-list-data-${index}`} alignItems="center" style={{ marginTop: 0 }}>
             {JournalFieldsMap.slice(1).map((item, index) => {
-                const itemData = item.translateFn(journal.journal[item.key]);
+                const itemData = (journal && item.translateFn(journal.journal)) || '';
                 return (
                     <Grid
                         key={index}
@@ -20,14 +20,22 @@ const JournalsListDataCol2 = (journal, index) => {
                             borderLeft: '1px dashed #e6e6e6',
                             width: item.size,
                             marginBottom: 4,
+                            paddingLeft: 12,
                         }}
                     >
                         <Tooltip
-                            title={itemData || ''}
+                            title={
+                                (itemData &&
+                                    item.showTooltip &&
+                                    item.toolTipLabel &&
+                                    item.toolTipLabel(journal.journal)) ||
+                                (item.showTooltip && itemData) ||
+                                ''
+                            }
                             placement="left"
-                            disableFocusListener={!item.showTooltip && !!itemData}
-                            disableHoverListener={!item.showTooltip && !!itemData}
-                            disableTouchListener={!item.showTooltip && !!itemData}
+                            disableFocusListener={!item.showTooltip || !itemData}
+                            disableHoverListener={!item.showTooltip || !itemData}
+                            disableTouchListener={!item.showTooltip || !itemData}
                         >
                             <Typography
                                 variant="body1"
