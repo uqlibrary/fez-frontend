@@ -82,6 +82,11 @@ module.exports = {
                 },
             },
             {
+                test: /\.js$/,
+                include: /node_modules/,
+                use: 'react-hot-loader/webpack',
+            },
+            {
                 test: /\.json$/,
                 exclude: [/node_modules/, /custom_modules/],
                 use: ['json-loader'],
