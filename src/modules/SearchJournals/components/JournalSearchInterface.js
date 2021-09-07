@@ -50,7 +50,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
         if (initialSelectedKeywords !== selectedKeywords) {
             handleSnackbarOpen();
         }
-    }, [selectedKeywords]);
+    }, [initialSelectedKeywords, selectedKeywords]);
     return (
         <StandardCard style={{ padding: 16 }} noHeader id="journal-search-card" data-testid="journal-search-card">
             <Snackbar
