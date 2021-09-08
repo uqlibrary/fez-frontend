@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
-import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
-import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck';
+import SwapHorizontalCircleOutlinedIcon from '@material-ui/icons/SwapHorizontalCircleOutlined';
+import SwapHorizontalCircleIcon from '@material-ui/icons/SwapHorizontalCircle';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
 
@@ -15,15 +15,17 @@ const JournalsListHeaderCol3 = ({ toggleView, minimalView }) => {
             alignItems="flex-end"
             style={{ height: 32, borderBottom: '1px solid #CCC', marginBottom: 6 }}
         >
-            <Tooltip title={!!minimalView ? 'Show more data' : 'Show less data'}>
-                <IconButton onClick={toggleView} style={{ marginTop: -6, marginLeft: 8, padding: 4 }}>
-                    {!minimalView ? (
-                        <PlaylistAddCheckIcon style={{ color: '#CCC' }} />
-                    ) : (
-                        <PlaylistAddIcon style={{ color: '#CCC' }} />
-                    )}
-                </IconButton>
-            </Tooltip>
+            <Grid item xs>
+                <Tooltip title={!!minimalView ? 'Show more data' : 'Show less data'}>
+                    <IconButton onClick={toggleView} style={{ marginTop: -12, marginLeft: 8, padding: 4 }}>
+                        {!minimalView ? (
+                            <SwapHorizontalCircleIcon style={{ color: '#CCC' }} />
+                        ) : (
+                            <SwapHorizontalCircleOutlinedIcon style={{ color: '#CCC' }} />
+                        )}
+                    </IconButton>
+                </Tooltip>
+            </Grid>
         </Grid>
     );
 };

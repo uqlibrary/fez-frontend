@@ -16,14 +16,15 @@ const JournalsListHeaderCol1 = () => {
                 height: 32,
                 borderBottom: '1px solid #CCC',
                 marginBottom: 6,
-                overflow: 'hidden',
             }}
         >
-            <Grid item xs="auto" id="journal-list-header-select">
-                <Checkbox disabled style={{ padding: 2 }} />
+            <Grid item xs="auto" id="journal-list-header-select" style={{ height: 32 }}>
+                <Checkbox disabled style={{ padding: 2, paddingTop: 0, marginTop: -6, opacity: 0 }} />
             </Grid>
-            <Grid item xs id="journal-list-header-title">
-                <InputLabel shrink>{JournalFieldsMap[0].label}</InputLabel>
+            <Grid item xs id="journal-list-header-title" style={{ height: 32, paddingLeft: 4 }}>
+                <InputLabel shrink style={{ fontWeight: 600 }}>
+                    {JournalFieldsMap[0].label}
+                </InputLabel>
             </Grid>
         </Grid>
     );

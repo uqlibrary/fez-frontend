@@ -12,7 +12,7 @@ const JournalsListDataCol2 = ({ journal, index, minimalView }) => {
             spacing={1}
             id={`journal-list-data-${index}`}
             alignItems="center"
-            style={{ marginTop: -4, borderBottom: '1px dashed #e6e6e6' }}
+            style={{ borderBottom: '1px dashed #e6e6e6' }}
         >
             {JournalFieldsMap.slice(1).map((item, index) => {
                 if ((minimalView && item.compactView) || !minimalView) {
@@ -23,8 +23,9 @@ const JournalsListDataCol2 = ({ journal, index, minimalView }) => {
                             item
                             id={`journal-list-header-title-${index}`}
                             style={{
-                                height: 48,
-                                borderLeft: '1px dashed #e6e6e6',
+                                height: 47,
+                                overflow: 'hidden',
+                                borderRight: '1px dashed #e6e6e6',
                                 width: minimalView ? item.compactSize : item.size,
                                 marginBottom: 0,
                                 paddingLeft: 12,

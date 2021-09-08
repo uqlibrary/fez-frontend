@@ -19,11 +19,13 @@ const JournalsListDataCol1 = ({ journal, index }) => {
                 borderBottom: '1px dashed #e6e6e6',
                 borderRight: '1px dashed #e6e6e6',
                 padding: 0,
+                height: 48,
+                overflow: 'hidden',
             }}
         >
-            <Grid item xs={1} id={`journal-list-data-select-${index}`}>
+            <Grid item xs={1} id={`journal-list-data-select-${index}`} style={{ height: 48 }}>
                 <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
-                    <Checkbox style={{ paddingLeft: 2, paddingTop: 8, paddingBottom: 0, paddingRight: 0 }} />
+                    <Checkbox style={{ padding: 2, marginTop: 10 }} />
                 </Tooltip>
             </Grid>
             <Grid

@@ -11,10 +11,6 @@ import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
 const JournalsList = journals => {
-    let colWidth = 0;
-    for (let i = 0; i < JournalFieldsMap.length - 1; i++) {
-        colWidth += JournalFieldsMap[i + 1].size;
-    }
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
             Cookies.set('minimalView', false);
@@ -25,6 +21,17 @@ const JournalsList = journals => {
         Cookies.set('minimalView', !minimalView);
         setMinimalView(!minimalView);
     };
+    let colWidth = 0;
+    if (!minimalView) {
+        for (let i = 0; i < JournalFieldsMap.length - 1; i++) {
+            colWidth += JournalFieldsMap[i + 1].size;
+        }
+    } else {
+        for (let i = 0; i < JournalFieldsMap.filter(item => item.compactView).length - 1; i++) {
+            colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].compactSize;
+        }
+    }
+    console.log(colWidth);
     return (
         <Grid container spacing={0} id="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
@@ -38,13 +45,13 @@ const JournalsList = journals => {
                         return <JournalsListDataCol1 key={index} index={index} journal={item} />;
                     })}
             </Grid>
-            <Grid item xs style={{ overflowX: minimalView ? 'auto' : 'scroll', overflowY: 'hidden', marginLeft: 4 }}>
-                <div style={{ width: minimalView ? 'calc(100% - 4px)' : colWidth }}>
+            <Grid item xs style={{ overflowX: 'scroll', overflowY: 'hidden', marginLeft: 4 }}>
+                <div style={{ width: minimalView ? '100%' : colWidth }}>
                     <Grid
                         container
                         spacing={0}
-                        alignItems="center"
-                        style={{ height: 32, borderBottom: '1px solid #CCC', marginBottom: 6 }}
+                        alignItems="flex-end"
+                        style={{ borderBottom: '1px solid #CCC', height: 32, width: '100%' }}
                     >
                         {/* Header */}
                         {JournalFieldsMap.slice(1).map((item, index) => {
@@ -58,7 +65,7 @@ const JournalsList = journals => {
                     </Grid>
                     {/* Data */}
                     <Grid container spacing={0} alignItems="center">
-                        <Grid item xs={12}>
+                        <Grid item xs={12} style={{ marginTop: 6 }}>
                             {journals &&
                                 journals.journals &&
                                 journals.journals.length > 0 &&

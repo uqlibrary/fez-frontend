@@ -27,7 +27,8 @@ export const JournalFieldsMap = [
         size: 300,
         prefix: '',
         suffix: '',
-        compactView: false,
+        compactView: true,
+        compactSize: 300,
         showTooltip: true,
         translateFn: data => {
             return data.jnl_publisher || 'NA';
@@ -36,11 +37,11 @@ export const JournalFieldsMap = [
     {
         key: 'fez_journal_doaj',
         label: 'Open access',
-        size: 50,
+        size: 55,
         prefix: '',
         suffix: '',
         compactView: true,
-        compactSize: 90,
+        compactSize: 55,
         showTooltip: true,
         toolTipLabel: data => {
             return data.fez_journal_doaj ? 'Open access available' : 'Open access not available';
@@ -48,20 +49,20 @@ export const JournalFieldsMap = [
         translateFn: data => {
             // Awaiting final logic for OA from MF/EA
             return data.fez_journal_doaj ? (
-                <LockOpenIcon style={{ color: 'orange', marginTop: 6 }} />
+                <LockOpenIcon style={{ color: 'orange', marginTop: 12 }} />
             ) : (
-                <LockOutlinedIcon style={{ color: '#e5e5e5', marginTop: 6 }} />
+                <LockOutlinedIcon style={{ color: '#e5e5e5', marginTop: 12 }} />
             );
         },
     },
     {
         key: '',
         label: 'Highest quartile reached',
-        size: 100,
+        size: 150,
         prefix: 'Q',
         suffix: '',
         compactView: true,
-        compactSize: 200,
+        compactSize: 150,
         showTooltip: false,
         translateFn: data => {
             const quartileList = [];
@@ -92,7 +93,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_cite_score',
         label: 'CiteScore',
-        size: 70,
+        size: 100,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -117,7 +118,7 @@ export const JournalFieldsMap = [
                         item.jnl_cite_score_asjc_code_rank_out_of
                     } for ${item.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, '')}`;
                 });
-                tooltip = tooltip.join('  |  ');
+                tooltip = tooltip.join(', ');
             }
             return tooltip;
         },
@@ -131,7 +132,7 @@ export const JournalFieldsMap = [
                 label = data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
                     return `${item.jnl_cite_score_asjc_code_rank}/${item.jnl_cite_score_asjc_code_rank_out_of}`;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             }
             return label;
         },
@@ -156,7 +157,7 @@ export const JournalFieldsMap = [
                         item.jnl_cite_score_asjc_code_percentile
                     } - ${item.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, '')}`;
                 });
-                tooltip = tooltip.join(' | ');
+                tooltip = tooltip.join(', ');
             }
             return tooltip;
         },
@@ -172,7 +173,7 @@ export const JournalFieldsMap = [
                         item.jnl_cite_score_asjc_code_percentile
                     } - ${item.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, '')}`;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             }
             return label;
         },
@@ -234,7 +235,7 @@ export const JournalFieldsMap = [
                 label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
                     return item.jnl_jcr_scie_category_ranking;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             } else if (
                 data.fez_journal_jcr_ssci &&
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
@@ -243,15 +244,15 @@ export const JournalFieldsMap = [
                 label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
                     return item.jnl_jcr_ssci_category_ranking;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             }
             return label;
         },
     },
     {
         key: 'jnl_jcr_scie_category_quartile',
-        label: 'Journal impact factor percentile',
-        size: 100,
+        label: 'Impact factor percentile',
+        size: 125,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -266,7 +267,7 @@ export const JournalFieldsMap = [
                 label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
                     return `${item.jnl_jcr_scie_category_quartile} - ${item.jnl_jcr_scie_category_description_lookup}`;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             } else if (
                 data.fez_journal_jcr_ssci &&
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
@@ -275,7 +276,7 @@ export const JournalFieldsMap = [
                 label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
                     return `${item.jnl_jcr_ssci_category_quartile} - ${item.jnl_jcr_ssci_category_description_lookup}`;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             }
             return label;
         },
@@ -289,7 +290,7 @@ export const JournalFieldsMap = [
                 label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
                     return item.jnl_jcr_scie_category_quartile;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             } else if (
                 data.fez_journal_jcr_ssci &&
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
@@ -298,7 +299,7 @@ export const JournalFieldsMap = [
                 label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
                     return item.jnl_jcr_ssci_category_quartile;
                 });
-                label = label.join(' | ');
+                label = label.join(', ');
             }
             return label;
         },

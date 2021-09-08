@@ -13,15 +13,14 @@ const JournalsListDataCol2 = ({ journal, index }) => {
             id={`journal-list-fav-${index}`}
             alignItems="flex-end"
             alignContent="flex-end"
-            style={{ marginTop: 0, borderBottom: '1px dashed #e6e6e6' }}
+            style={{ marginTop: 0, borderBottom: '1px dashed #e6e6e6', height: 44 }}
         >
             <Grid
                 key={index}
                 item
                 style={{
-                    height: 40,
+                    height: 44,
                     borderLeft: '1px dashed #e6e6e6',
-                    marginBottom: 4,
                 }}
             >
                 <Tooltip title={`Click to add - ${journal.jnl_title} - to your favourites`} placement="left">
