@@ -1,6 +1,6 @@
 import React from 'react';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
-import LockIcon from '@material-ui/icons/Lock';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 // This prototype mutation allows us to return the smallest integer value in an array
 Array.min = array => {
@@ -50,7 +50,7 @@ export const JournalFieldsMap = [
             return data.fez_journal_doaj ? (
                 <LockOpenIcon style={{ color: 'orange', marginTop: 6 }} />
             ) : (
-                <LockIcon style={{ color: '#e5e5e5', marginTop: 6 }} />
+                <LockOutlinedIcon style={{ color: '#e5e5e5', marginTop: 6 }} />
             );
         },
     },
