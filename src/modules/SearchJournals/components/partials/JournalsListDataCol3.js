@@ -26,7 +26,7 @@ const JournalsListDataCol2 = ({ journal, index }) => {
             >
                 <Tooltip title={`Click to add - ${journal.jnl_title} - to your favourites`} placement="left">
                     <IconButton
-                        style={{ paddingLeft: 4, paddingTop: 6, paddingBottom: 0, paddingRight: 4 }}
+                        style={{ padding: 4, marginLeft: 6, marginTop: 2 }}
                         id={`journal-list-fav-button-${index}`}
                     >
                         <FavoriteBorderIcon />

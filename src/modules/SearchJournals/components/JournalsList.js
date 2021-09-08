@@ -7,7 +7,7 @@ import JournalsListDataCol1 from './partials/JournalsListDataCol1';
 import JournalsListDataCol2 from './partials/JournalsListDataCol2';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
-// import ScrollContainer from 'react-indiana-drag-scroll';
+import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
 const JournalsList = journals => {
@@ -15,6 +15,16 @@ const JournalsList = journals => {
     for (let i = 0; i < JournalFieldsMap.length - 1; i++) {
         colWidth += JournalFieldsMap[i + 1].size;
     }
+    React.useEffect(() => {
+        if (!Cookies.get('minimalView')) {
+            Cookies.set('minimalView', false);
+        }
+    }, []);
+    const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') === 'true');
+    const toggleView = () => {
+        Cookies.set('minimalView', !minimalView);
+        setMinimalView(!minimalView);
+    };
     return (
         <Grid container spacing={0} id="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
@@ -39,7 +49,10 @@ const JournalsList = journals => {
                     >
                         {/* Header */}
                         {JournalFieldsMap.slice(1).map((item, index) => {
-                            return <JournalsListHeaderCol2 journal={item} key={index} />;
+                            if ((!!minimalView && !!item.compactView) || !minimalView) {
+                                return <JournalsListHeaderCol2 journal={item} key={index} />;
+                            }
+                            return null;
                         })}
                     </Grid>
                     {/* Data */}
@@ -49,7 +62,14 @@ const JournalsList = journals => {
                                 journals.journals &&
                                 journals.journals.length > 0 &&
                                 journals.journals.map((item, index) => {
-                                    return <JournalsListDataCol2 key={index} index={index} journal={item} />;
+                                    return (
+                                        <JournalsListDataCol2
+                                            minimalView={!!minimalView}
+                                            key={index}
+                                            index={index}
+                                            journal={item}
+                                        />
+                                    );
                                 })}
                         </Grid>
                     </Grid>
@@ -58,7 +78,7 @@ const JournalsList = journals => {
             </Grid>
             <Grid item xs={'auto'}>
                 {/* Header */}
-                <JournalsListHeaderCol3 />
+                <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
                 {/* Data */}
                 {journals &&
                     journals.journals &&

@@ -27,7 +27,7 @@ export const JournalFieldsMap = [
         size: 300,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: true,
         translateFn: data => {
             return data.jnl_publisher || 'NA';
@@ -56,7 +56,7 @@ export const JournalFieldsMap = [
     {
         key: '',
         label: 'Highest quartile reached',
-        size: 70,
+        size: 100,
         prefix: 'Q',
         suffix: '',
         compactView: true,
@@ -93,7 +93,7 @@ export const JournalFieldsMap = [
         size: 70,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: false,
         translateFn: data => {
             return data.fez_journal_cite_score.jnl_cite_score || '';
@@ -105,7 +105,7 @@ export const JournalFieldsMap = [
         size: 250,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: true,
         toolTipLabel: data => {
             let tooltip = undefined;
@@ -140,7 +140,7 @@ export const JournalFieldsMap = [
         size: 250,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: true,
         toolTipLabel: data => {
             let tooltip = undefined;
@@ -181,7 +181,7 @@ export const JournalFieldsMap = [
         size: 100,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: false,
         translateFn: data => {
             return (
@@ -197,7 +197,7 @@ export const JournalFieldsMap = [
         size: 150,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: true,
         toolTipLabel: data => {
             let label = undefined;
@@ -252,7 +252,7 @@ export const JournalFieldsMap = [
         size: 100,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: true,
         toolTipLabel: data => {
             let label = undefined;
@@ -279,13 +279,11 @@ export const JournalFieldsMap = [
         },
         translateFn: data => {
             let label = undefined;
-            console.log(data.fez_journal_jcr_scie || data.fez_journal_jcr_ssci);
             if (
                 data.fez_journal_jcr_scie &&
                 data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
                 data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
             ) {
-                console.log('SCIE');
                 label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
                     return item.jnl_jcr_scie_category_quartile;
                 });
@@ -295,7 +293,6 @@ export const JournalFieldsMap = [
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
             ) {
-                console.log('SSCI');
                 label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
                     return item.jnl_jcr_ssci_category_quartile;
                 });
@@ -310,7 +307,7 @@ export const JournalFieldsMap = [
         size: 70,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: false,
         translateFn: data => {
             return data.fez_journal_cite_score.jnl_cite_score_snip || '';
@@ -322,7 +319,7 @@ export const JournalFieldsMap = [
         size: 70,
         prefix: '',
         suffix: '',
-        compactView: true,
+        compactView: false,
         showTooltip: false,
         translateFn: data => {
             return data.fez_journal_cite_score.jnl_cite_score_sjr || '';
