@@ -10,7 +10,7 @@ import { DEPRECATED_HERDC_CODES, HERDC_CODES } from 'config/general';
  * @private
  */
 const _herdcCodes = input => {
-    const herdcCodes = [{ value: '0', text: '(None)' }, ...HERDC_CODES];
+    const herdcCodes = [{ value: '0', text: 'None' }, ...HERDC_CODES];
     if (!HERDC_CODES.find(herdc => herdc.value === input)) {
         const foundDeprecated = DEPRECATED_HERDC_CODES.filter(obj => {
             // just comparing obj.value === input works in tests but not in actual form :(
