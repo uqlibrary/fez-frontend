@@ -98,7 +98,7 @@ export const JournalFieldsMap = [
         compactView: false,
         showTooltip: false,
         translateFn: data => {
-            return data.fez_journal_cite_score.jnl_cite_score || '';
+            return (data.fez_journal_cite_score && data.fez_journal_cite_score.jnl_cite_score) || '';
         },
     },
     {
@@ -312,7 +312,7 @@ export const JournalFieldsMap = [
         compactView: false,
         showTooltip: false,
         translateFn: data => {
-            return data.fez_journal_cite_score.jnl_cite_score_snip || '';
+            return (data.fez_journal_cite_score && data.fez_journal_cite_score.jnl_cite_score_snip) || null;
         },
     },
     {
@@ -324,7 +324,7 @@ export const JournalFieldsMap = [
         compactView: false,
         showTooltip: false,
         translateFn: data => {
-            return data.fez_journal_cite_score.jnl_cite_score_sjr || '';
+            return (data.fez_journal_cite_score && data.fez_journal_cite_score.jnl_cite_score_sjr) || null;
         },
     },
 ];
