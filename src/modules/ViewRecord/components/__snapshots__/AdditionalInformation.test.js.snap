@@ -40481,7 +40481,7 @@ exports[`Additional Information Component  should render component with generic 
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Editor(s)"
+        key="additional-info-Contributor(s)"
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
@@ -40499,7 +40499,7 @@ exports[`Additional Information Component  should render component with generic 
             data-testid="rek-contributor-label"
             variant="body2"
           >
-            Editor(s)
+            Contributor(s)
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
