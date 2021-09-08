@@ -2,7 +2,7 @@ import React from 'react';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import LockIcon from '@material-ui/icons/Lock';
 
-// This small prototype mutation allows us to return the smallest integer value in an array
+// This prototype mutation allows us to return the smallest integer value in an array
 Array.min = array => {
     return Math.min.apply(Math, array);
 };

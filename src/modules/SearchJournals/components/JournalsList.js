@@ -38,8 +38,8 @@ const JournalsList = journals => {
                         return <JournalsListDataCol1 key={index} index={index} journal={item} />;
                     })}
             </Grid>
-            <Grid item xs style={{ overflowX: 'scroll', overflowY: 'hidden', marginLeft: 4 }}>
-                <div style={{ width: minimalView ? '100%' : colWidth }}>
+            <Grid item xs style={{ overflowX: minimalView ? 'auto' : 'scroll', overflowY: 'hidden', marginLeft: 4 }}>
+                <div style={{ width: minimalView ? 'calc(100% - 4px)' : colWidth }}>
                     <Grid
                         container
                         spacing={0}
