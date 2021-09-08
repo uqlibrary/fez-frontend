@@ -47,7 +47,7 @@ const JournalsListDataCol2 = ({ journal, index, minimalView }) => {
                                         whiteSpace: 'nowrap',
                                         overflow: 'hidden',
                                         textOverflow: 'ellipsis',
-                                        lineHeight: 2,
+                                        lineHeight: 2.75,
                                     }}
                                 >
                                     {item.prefix || ''}

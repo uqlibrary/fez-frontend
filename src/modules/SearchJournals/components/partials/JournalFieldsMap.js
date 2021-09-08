@@ -40,7 +40,7 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: true,
-        compactSize: 100,
+        compactSize: 90,
         showTooltip: true,
         toolTipLabel: data => {
             return data.fez_journal_doaj ? 'Open access available' : 'Open access not available';
