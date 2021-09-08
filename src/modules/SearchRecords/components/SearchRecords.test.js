@@ -268,9 +268,9 @@ describe('SearchRecords page', () => {
         act(() => {
             fireEvent.mouseDown(getByTestId('pageSize'));
         });
-        expect(getAllByRole('option').length).toBe(3);
+        expect(getAllByRole('option').length).toBe(4);
         act(() => {
-            fireEvent.click(getAllByRole('option')[1]);
+            fireEvent.click(getAllByRole('option')[2]);
         });
 
         expect(testAction).toHaveBeenCalled();
@@ -492,9 +492,9 @@ describe('SearchRecords page', () => {
         act(() => {
             fireEvent.mouseDown(getByTestId('pageSize'));
         });
-        expect(getAllByRole('option').length).toBe(3);
+        expect(getAllByRole('option').length).toBe(4);
         act(() => {
-            fireEvent.click(getAllByRole('option')[1]);
+            fireEvent.click(getAllByRole('option')[2]);
         });
 
         expect(testFn).toHaveBeenCalledWith({
@@ -589,9 +589,9 @@ describe('SearchRecords page', () => {
         act(() => {
             fireEvent.mouseDown(getByTestId('pageSize'));
         });
-        expect(getAllByRole('option').length).toBe(3);
+        expect(getAllByRole('option').length).toBe(4);
         act(() => {
-            fireEvent.click(getAllByRole('option')[1]);
+            fireEvent.click(getAllByRole('option')[2]);
         });
 
         act(() => {
