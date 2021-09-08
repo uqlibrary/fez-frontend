@@ -1735,7 +1735,7 @@ export default {
                 { value: 'thomson_citation_count', label: 'Web of Science citation count' },
             ],
             sortDirection: ['Desc', 'Asc'],
-            recordsPerPage: [20, 50, 100],
+            recordsPerPage: [10, 20, 50, 100],
             exportOnlyLabel: 'Export Only:',
             bulkExportConfirmation: {
                 confirmationTitle: 'Export queued successfully',

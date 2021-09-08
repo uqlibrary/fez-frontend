@@ -482,8 +482,8 @@ export const JOURNAL_SEARCH_API = query => {
             params: {
                 ...searchQuery,
                 // ...searchFacets,
-                // page: '',
-                // per_page: '',
+                page: '1',
+                per_page: '10',
                 // sort: '',
                 // order_by: '', // sortDirection.toLowerCase(),
             },
