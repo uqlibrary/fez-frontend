@@ -40,6 +40,7 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: true,
+        compactSize: 100,
         showTooltip: true,
         toolTipLabel: data => {
             return data.fez_journal_doaj ? 'Open access available' : 'Open access not available';
@@ -60,6 +61,7 @@ export const JournalFieldsMap = [
         prefix: 'Q',
         suffix: '',
         compactView: true,
+        compactSize: 200,
         showTooltip: false,
         translateFn: data => {
             const quartileList = [];

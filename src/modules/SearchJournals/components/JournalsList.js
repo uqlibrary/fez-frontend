@@ -39,8 +39,7 @@ const JournalsList = journals => {
                     })}
             </Grid>
             <Grid item xs style={{ overflowX: 'scroll', overflowY: 'hidden', marginLeft: 4 }}>
-                {/* <ScrollContainer vertical={false} horizontal> */}
-                <div style={{ width: colWidth }}>
+                <div style={{ width: minimalView ? '100%' : colWidth }}>
                     <Grid
                         container
                         spacing={0}
@@ -50,7 +49,9 @@ const JournalsList = journals => {
                         {/* Header */}
                         {JournalFieldsMap.slice(1).map((item, index) => {
                             if ((!!minimalView && !!item.compactView) || !minimalView) {
-                                return <JournalsListHeaderCol2 journal={item} key={index} />;
+                                return (
+                                    <JournalsListHeaderCol2 journal={item} key={index} minimalView={!!minimalView} />
+                                );
                             }
                             return null;
                         })}
@@ -74,7 +75,6 @@ const JournalsList = journals => {
                         </Grid>
                     </Grid>
                 </div>
-                {/* </ScrollContainer> */}
             </Grid>
             <Grid item xs={'auto'}>
                 {/* Header */}
