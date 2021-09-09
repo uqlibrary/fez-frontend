@@ -2707,7 +2707,7 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_license: {},
         });
     });
@@ -2767,7 +2767,7 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_license: {},
         });
     });
@@ -5074,6 +5074,14 @@ describe('getHerdcCodeSearchKey', () => {
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
             },
+        });
+    });
+});
+
+describe('getOpenAccessStatusTypeSearchKey', () => {
+    it('should correctly transform data for OA status type', () => {
+        expect(transformers.getOpenAccessStatusTypeSearchKey({ rek_oa_status_type: '0' })).toEqual({
+            fez_record_search_key_oa_status_type: null,
         });
     });
 });
