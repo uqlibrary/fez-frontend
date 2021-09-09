@@ -47,7 +47,7 @@ const JournalsList = journals => {
                     })}
             </Grid>
             <Grid item xs style={{ overflowX: 'auto', overflowY: 'hidden', marginLeft: 4 }}>
-                <div style={{ width: !minimalView ? colWidth : '100%' }}>
+                <div style={{ width: !minimalView ? colWidth : '100%', paddingBottom: !minimalView ? 4 : 0 }}>
                     <Grid
                         container
                         spacing={0}

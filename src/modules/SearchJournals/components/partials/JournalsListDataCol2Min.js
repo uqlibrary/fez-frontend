@@ -19,7 +19,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                             xs={item.compactSize}
                             id={`journal-list-header-title-${index}`}
                             style={{
-                                height: 44,
+                                height: 43,
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
                                 borderRight: '1px dashed #e6e6e6',
