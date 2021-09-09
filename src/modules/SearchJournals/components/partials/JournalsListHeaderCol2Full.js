@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
 import PropTypes from 'prop-types';
 
-const JournalsListHeaderCol2 = ({ journal, minimalView }) => {
+const JournalsListHeaderCol2Full = ({ journal, minimalView }) => {
     return (
         <Grid
             item
@@ -18,9 +18,9 @@ const JournalsListHeaderCol2 = ({ journal, minimalView }) => {
     );
 };
 
-JournalsListHeaderCol2.propTypes = {
+JournalsListHeaderCol2Full.propTypes = {
     journal: PropTypes.object.isRequired,
     minimalView: PropTypes.bool.isRequired,
 };
 
-export default React.memo(JournalsListHeaderCol2);
+export default React.memo(JournalsListHeaderCol2Full);

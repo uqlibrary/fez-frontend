@@ -15,6 +15,7 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: true,
+        compactSize: 3,
         showTooltip: true,
         translateFn: data => {
             return data.jnl_title;
@@ -28,7 +29,7 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: true,
-        compactSize: 300,
+        compactSize: true,
         showTooltip: true,
         translateFn: data => {
             return data.jnl_publisher || 'NA';
@@ -41,7 +42,7 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: true,
-        compactSize: 55,
+        compactSize: 2,
         showTooltip: true,
         toolTipLabel: data => {
             return data.fez_journal_doaj ? 'Open access available' : 'Open access not available';
@@ -62,7 +63,7 @@ export const JournalFieldsMap = [
         prefix: 'Q',
         suffix: '',
         compactView: true,
-        compactSize: 150,
+        compactSize: 3,
         showTooltip: false,
         translateFn: data => {
             const quartileList = [];

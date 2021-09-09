@@ -5,28 +5,24 @@ import { JournalFieldsMap } from './JournalFieldsMap';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
 
-const JournalsListDataCol2 = ({ journal, index, minimalView }) => {
+const JournalsListDataCol2Min = ({ journal, index }) => {
     return (
-        <Grid
-            container
-            spacing={1}
-            id={`journal-list-data-${index}`}
-            alignItems="center"
-            style={{ borderBottom: '1px dashed #e6e6e6' }}
-        >
-            {JournalFieldsMap.slice(1).map((item, index) => {
-                if ((minimalView && item.compactView) || !minimalView) {
+        <Grid container spacing={0} id={`journal-list-data-${index}`} style={{ borderBottom: '1px dashed #e6e6e6' }}>
+            {JournalFieldsMap.slice(1)
+                .filter(item => item.compactView)
+                .map((item, index) => {
                     const itemData = (journal && item.translateFn(journal)) || '';
                     return (
                         <Grid
                             key={index}
                             item
+                            xs={item.compactSize}
                             id={`journal-list-header-title-${index}`}
                             style={{
-                                height: 47,
+                                height: 44,
                                 overflow: 'hidden',
+                                textOverflow: 'ellipsis',
                                 borderRight: '1px dashed #e6e6e6',
-                                width: minimalView ? item.compactSize : item.size,
                                 marginBottom: 0,
                                 paddingLeft: 12,
                             }}
@@ -58,17 +54,15 @@ const JournalsListDataCol2 = ({ journal, index, minimalView }) => {
                             </Tooltip>
                         </Grid>
                     );
-                }
-                return null;
-            })}
+                })}
         </Grid>
     );
 };
 
-JournalsListDataCol2.propTypes = {
+JournalsListDataCol2Min.propTypes = {
     journal: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
     minimalView: PropTypes.bool.isRequired,
 };
 
-export default React.memo(JournalsListDataCol2);
+export default React.memo(JournalsListDataCol2Min);

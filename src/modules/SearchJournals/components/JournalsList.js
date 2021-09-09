@@ -1,10 +1,12 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
-import JournalsListHeaderCol2 from './partials/JournalsListHeaderCol2';
+import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
+import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
 import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
-import JournalsListDataCol2 from './partials/JournalsListDataCol2';
+import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
+import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
 import Cookies from 'js-cookie';
@@ -31,7 +33,6 @@ const JournalsList = journals => {
             colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].compactSize;
         }
     }
-    console.log(colWidth);
     return (
         <Grid container spacing={0} id="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
@@ -46,7 +47,7 @@ const JournalsList = journals => {
                     })}
             </Grid>
             <Grid item xs style={{ overflowX: 'auto', overflowY: 'hidden', marginLeft: 4 }}>
-                <div style={{ width: colWidth }}>
+                <div style={{ width: !minimalView ? colWidth : '100%' }}>
                     <Grid
                         container
                         spacing={0}
@@ -54,14 +55,15 @@ const JournalsList = journals => {
                         style={{ borderBottom: '1px solid #CCC', height: 32, width: '100%' }}
                     >
                         {/* Header */}
-                        {JournalFieldsMap.slice(1).map((item, index) => {
-                            if ((!!minimalView && !!item.compactView) || !minimalView) {
-                                return (
-                                    <JournalsListHeaderCol2 journal={item} key={index} minimalView={!!minimalView} />
-                                );
-                            }
-                            return null;
-                        })}
+                        {!minimalView
+                            ? JournalFieldsMap.slice(1).map((item, index) => {
+                                  return <JournalsListHeaderCol2Full journal={item} key={index} />;
+                              })
+                            : JournalFieldsMap.slice(1)
+                                  .filter(item => !!item.compactView)
+                                  .map((item, index) => {
+                                      return <JournalsListHeaderCol2Min journal={item} key={index} />;
+                                  })}
                     </Grid>
                     {/* Data */}
                     <Grid container spacing={0} alignItems="center">
@@ -70,13 +72,10 @@ const JournalsList = journals => {
                                 journals.journals &&
                                 journals.journals.length > 0 &&
                                 journals.journals.map((item, index) => {
-                                    return (
-                                        <JournalsListDataCol2
-                                            minimalView={!!minimalView}
-                                            key={index}
-                                            index={index}
-                                            journal={item}
-                                        />
+                                    return !minimalView ? (
+                                        <JournalsListDataCol2Full key={index} index={index} journal={item} />
+                                    ) : (
+                                        <JournalsListDataCol2Min key={index} index={index} journal={item} />
                                     );
                                 })}
                         </Grid>
