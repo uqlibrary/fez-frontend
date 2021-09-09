@@ -11,7 +11,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_title',
         label: 'Journal title',
-        size: 300,
+        size: 400,
         prefix: '',
         suffix: '',
         compactView: true,
