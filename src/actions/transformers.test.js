@@ -2456,7 +2456,7 @@ describe('getAdminSectionSearchKeys', () => {
         expect(transformers.getAdminSectionSearchKeys()).toEqual({ fez_record_search_key_license: {} });
     });
 
-    it('should transform all search keys for additional information section', () => {
+    it('should transform all search keys for admin section', () => {
         const data = {
             collections: [{ rek_pid: 'UQ:12344' }, { rek_pid: 'UQ:22343' }],
             contentIndicators: [123, 234],
@@ -2551,7 +2551,7 @@ describe('getAdminSectionSearchKeys', () => {
         });
     });
 
-    it('should transform all search keys for additional information section correctly', () => {
+    it('should transform all search keys for admin section correctly', () => {
         const data = {
             collections: [{ id: 12344 }, { id: 22343 }],
             contentIndicators: [123, 234],
@@ -2654,7 +2654,7 @@ describe('getAdminSectionSearchKeys', () => {
         });
     });
 
-    it('should transform unselected search keys for additional information section', () => {
+    it('should transform unselected search keys for admin section', () => {
         const data = {
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: {
@@ -2707,12 +2707,12 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_license: {},
         });
     });
 
-    it('should transform unselected search keys for additional information section', () => {
+    it('should transform unselected search keys for admin section', () => {
         const data = {
             collections: [],
             contentIndicators: [],
@@ -2767,12 +2767,12 @@ describe('getAdminSectionSearchKeys', () => {
             },
             fez_record_search_key_institutional_status: {},
             fez_record_search_key_oa_status: {},
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: null,
             fez_record_search_key_license: {},
         });
     });
 
-    it('should not transform unused search keys for additional information section', () => {
+    it('should not transform unused search keys for admin section', () => {
         const data = {
             collections: [],
             contentIndicators: [],
@@ -5064,6 +5064,24 @@ describe('getBibliographicSection for thesis', () => {
             ],
             rek_subtype: 'B.A. Thesis',
             rek_genre_type: 'B.A. Thesis',
+        });
+    });
+});
+
+describe('getHerdcCodeSearchKey', () => {
+    it('should correctly transform data for category code', () => {
+        expect(transformers.getHerdcCodeSearchKey({ rek_herdc_code: '0' })).toEqual({
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: null,
+            },
+        });
+    });
+});
+
+describe('getOpenAccessStatusTypeSearchKey', () => {
+    it('should correctly transform data for OA status type', () => {
+        expect(transformers.getOpenAccessStatusTypeSearchKey({ rek_oa_status_type: '0' })).toEqual({
+            fez_record_search_key_oa_status_type: null,
         });
     });
 });
