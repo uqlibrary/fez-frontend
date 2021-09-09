@@ -87,8 +87,8 @@ export const JournalFieldsMap = [
                     quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile.replace('Q', ''), 10));
                 });
             }
-            console.log('quartileList', quartileList);
-            return Array.min(quartileList);
+            const highestQuartile = quartileList.length > 0 ? Array.min(quartileList) : null;
+            return highestQuartile;
         },
     },
     {

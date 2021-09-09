@@ -21,7 +21,6 @@ const JournalsListHeaderCol2Min = ({ journal }) => {
 
 JournalsListHeaderCol2Min.propTypes = {
     journal: PropTypes.object.isRequired,
-    minimalView: PropTypes.bool.isRequired,
 };
 
 export default React.memo(JournalsListHeaderCol2Min);

@@ -47,9 +47,9 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                                         lineHeight: 2.75,
                                     }}
                                 >
-                                    {item.prefix || ''}
+                                    {(itemData && item.prefix) || ''}
                                     {itemData || ''}
-                                    {item.suffix || ''}
+                                    {(itemData && item.suffix) || ''}
                                 </Typography>
                             </Tooltip>
                         </Grid>
@@ -62,7 +62,6 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
 JournalsListDataCol2Min.propTypes = {
     journal: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
-    minimalView: PropTypes.bool.isRequired,
 };
 
 export default React.memo(JournalsListDataCol2Min);
