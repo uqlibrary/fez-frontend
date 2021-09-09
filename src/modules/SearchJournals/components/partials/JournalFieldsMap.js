@@ -11,11 +11,11 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_title',
         label: 'Journal title',
-        size: 400,
+        size: 400, // Pixels width - can be anything.
         prefix: '',
         suffix: '',
-        compactView: true,
-        compactSize: 3,
+        compactView: true, // Does this display in the minimal view?
+        compactSize: 3, // Grid size - number between 1 and 12 - or set to boolean true to fill space left
         showTooltip: true,
         translateFn: data => {
             return data.jnl_title;
@@ -23,7 +23,6 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_publisher',
-        // This one needs some padding to appear correct
         label: 'Journal publisher',
         size: 300,
         prefix: '',
@@ -88,6 +87,7 @@ export const JournalFieldsMap = [
                     quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile.replace('Q', ''), 10));
                 });
             }
+            console.log('quartileList', quartileList);
             return Array.min(quartileList);
         },
     },
