@@ -2,7 +2,6 @@ import React from 'react';
 import CreateOrUpdateDoiForm from './CreateOrUpdateDoiForm';
 import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
-import { RECORD_TYPE_COLLECTION } from '../../../../../config/general';
 
 function setup(testProps = {}) {
     const props = {
