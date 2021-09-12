@@ -304,7 +304,7 @@ export class FilesClass extends Component {
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
         const componentProps = this.props;
-        return this.isViewableByUser(publication, dataStreams)
+        return !!dataStreams && this.isViewableByUser(publication, dataStreams)
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                   const pid = publication.rek_pid;
                   const fileName = dataStream.dsi_dsid;

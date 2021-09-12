@@ -283,6 +283,7 @@ export default class ClaimRecord extends PureComponent {
                                                 <Grid item xs={12}>
                                                     <Field
                                                         component={TextField}
+                                                        textFieldId="claim-comments"
                                                         disabled={this.props.submitting}
                                                         name="comments"
                                                         type="text"
@@ -295,6 +296,7 @@ export default class ClaimRecord extends PureComponent {
                                                 <Grid item xs={12}>
                                                     <Field
                                                         component={TextField}
+                                                        textFieldId="claim-link"
                                                         disabled={this.props.submitting}
                                                         name="rek_link"
                                                         type="text"
