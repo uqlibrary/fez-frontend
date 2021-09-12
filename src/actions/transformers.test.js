@@ -1,5 +1,6 @@
 import * as transformers from './transformers';
 import { CONTENT_INDICATORS } from 'config/general';
+import { createOrUpdateDoi } from './transformers';
 
 const moment = require('moment');
 
@@ -5083,5 +5084,17 @@ describe('getOpenAccessStatusTypeSearchKey', () => {
         expect(transformers.getOpenAccessStatusTypeSearchKey({ rek_oa_status_type: '0' })).toEqual({
             fez_record_search_key_oa_status_type: null,
         });
+    });
+});
+
+describe('createOrUpdateDoi', () => {
+    it('should correctly transform data', () => {
+        const record = [{ rek_pid: 'UQ:1' }];
+        expect(transformers.createOrUpdateDoi(record)).toEqual([
+            {
+                ...record[0],
+                fez_record_search_key_doi: { rek_doi: true },
+            },
+        ]);
     });
 });
